@@ -4,7 +4,7 @@ description: Get an introduction to creating canvas or model-driven apps in Powe
 author: alaug
 ms.subservice: common
 ms.topic: overview
-ms.date: 11/01/2022
+ms.date: 1/25/2025
 ms.author: alaug
 ms.reviewer: mkaur-msft
 searchScope:
@@ -17,7 +17,6 @@ Power Apps is a high-productivity development platform for business apps, and ha
 
 - Canvas apps
 - Model-driven apps
-- Cards (preview)
 - Microsoft Dataverse
 
 Let's learn more about each of these.
@@ -27,6 +26,10 @@ Let's learn more about each of these.
 [Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of more than 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
 
 Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Allow your creativity and business sense to guide how you want your apps to look and feel.
+
+Create app using natural language with Copilot:
+
+- [Copilot in Power Apps overview](canvas-apps/ai-overview.md)
 
 You can start to build your app from Microsoft tools where your data lives, such as:
 
@@ -41,8 +44,8 @@ Creating a canvas app is easy. With Power Apps, you can find or create your app 
 - [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
 - [Via AppSource](../user/app-source.md)
 
-> [!NOTE]
-> In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
+
+In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
 
 ## Model-driven apps
 
@@ -67,16 +70,6 @@ Getting started with model-driven apps is simple. You can begin with these topic
 - [Add business logic](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 - [Converging model and canvas using custom page (preview)](model-driven-apps/model-app-page-overview.md)
 
-## Cards (preview)
-
-Cards (preview) are micro-apps with lightweight UI elements that can be used across multiple applications that doesn't require any coding or IT expertise. You can quickly design and develop cards that can surface business data through Power Platform connectors, or use your own business logic for more customization.
-
-Get started with cards (preview) with these topics:
-
-- [What are cards for Power Apps (preview)?](../cards/overview.md)
-- [Card designer overview](../cards/make-a-card/designer-overview.md)
-- [Add connectors to cards](../cards/make-a-card/connectors/connector-intro.md)
-- [Send cards using Microsoft Teams](../cards/send-a-card/send-card-in-teams.md)
 
 ## Dataverse
 

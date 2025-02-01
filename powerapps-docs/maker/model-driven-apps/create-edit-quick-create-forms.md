@@ -1,8 +1,8 @@
 ---
-title: "Create or edit model-driven app quick create forms in Power Apps | MicrosoftDocs"
+title: "Create or edit model-driven app quick create forms in Power Apps"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 08/28/2020
+ms.date: 01/22/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,89 +21,82 @@ search.audienceType:
 ---
 # Create or edit model-driven app quick create forms
 
-This article describes how to create and edit a quick create form.
+With quick create forms, an app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a Power Apps model-driven app, quick create forms appear when the **Create** button is selected in the navigation bar or when **+ New** is chosen when creating a new row from a **lookup** or **subgrid**.
+  
+Model-driven apps and Dynamics 365 mobile apps use quick create forms for creating new rows. If a table already has a quick create form configured for it, the mobile apps use that form. If a table doesn't have a configured quick create form, Power Apps generates a quick create form for creating rows in the mobile apps based on the main form definition.  
 
- With quick create forms, an app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a Power Apps model-driven app, quick create forms appear when the **Create** button is selected in the navigation bar or when **+ New** is chosen when creating a new row from a **lookup** or **subgrid**.
+Here's the quick create form for the standard Microsoft Dataverse account table.
   
- Model-driven apps and Dynamics 365 mobile apps use quick create forms for creating new rows. If a table already has a quick create form configured for it, the mobile apps use that form. If a table doesn't have a configured quick create form, Power Apps generates a quick create form for creating rows in the mobile apps based on the main form definition.  
+:::image type="content" source="media/quick-create-form-account.png" alt-text="Quick create form for account table in form designer":::
   
-<a name="BKMK_QuickCreateFormEntities"></a>   
 ## Tables with quick create forms
 
 By default only these system tables have quick create forms: account, <sup>1</sup>campaign response, <sup>1</sup>case, <sup>1</sup>competitor, contact, <sup>1</sup>lead, <sup>1</sup>opportunity.  
  
 <sup>1</sup>Requires a customer engagement app.
- 
-Although it is possible to create quick create forms for system activity tables (except for the appointment table), they do not support quick create forms. Currently, the option to disable the quick create form for the appointment table is not supported. Any of the other [updated tables](create-design-forms.md) and any custom tables can be enabled to support these forms by selecting **Enable quick create forms** in the table definition and creating a quick create form for the table. 
 
-Custom activity tables that support quick create forms can be enabled, and it is possible to create quick create forms for those tables. However, the quick create form for custom activity tables will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new row for a subgrid that displays that specific custom activity table.  
-  
-<a name="BKMK_CreateQuickCreate"></a>   
+Although it's possible to create quick create forms for system activity tables (except for the appointment table), system activity tables don't support quick create forms. Currently, the option to disable the quick create form for the appointment table isn't supported. Any of the other [updated tables](create-design-forms.md) and any custom tables can be enabled to support these forms by selecting **Enable quick create forms** in the table definition and creating a quick create form for the table.
+
+Custom activity tables that support quick create forms can be enabled, and it's possible to create quick create forms for those tables. However, the quick create form for custom activity tables aren't used when app users select **Create** on the navigation bar. These quick create forms can be used only when users add a new row for a subgrid that displays that specific custom activity table.
+
 ## Create a quick create form
 
- Although you can define multiple quick create forms, only one quick create form can be used by everyone. The form everyone will use is set using the form order. Quick create forms can't be assigned to security roles and they don't provide the capability for the user to switch forms.  
+Although you can define multiple quick create forms, only one quick create form can be used by everyone. The form everyone uses is set using the [form order](assign-form-order.md). Quick create forms can't be assigned to security roles and they don't provide the capability for the user to switch forms.  
   
 > [!NOTE]
->  - The table must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
->  - The table must be added to your app.
->  - Some columns, such as the CREATEDON column, aren't available to add to a quick create form.  
+>
+> - The table must have the **Enable quick create forms** option enabled for the quick create form to be available as an option for the table.
+> - The table must be added to your app.
+> - Some columns, such as the `CREATEDON` column, aren't available to add to a quick create form.  
   
 ### How to create a quick create form
   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Tables**, select the table, and then select the **Forms** area.  
-1. On the toolbar, select **Add form** > **Quick Create Form**.  
-1. In the form designer, drag any columns from the **Column Explorer** into the sections on the form.  
-1. When you are finished, select **Save**.  
-1. Select **Publish** to see the new form in the application.  
+1. On the toolbar, select **Add form** > **Quick create form**.  
+1. In the form designer, drag any columns from the **Table columns** left pane into the sections on the form.  
+1. When you're finished, select **Save and publish** to display the new form in the application.  
   
-<a name="BKMK_EditQuickCreate"></a>   
 ## Edit a quick create form
 
 While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add more sections or columns.
   
 The following controls can't be added to quick create forms:  
   
--   Subgrids  
+- Subgrids  
+- Quick view forms  
+- Web resources  
+- iFrames  
+- Notes  
+- Bing Maps  
   
--   Quick View Forms  
-  
--   Web resources  
-  
--   iFrames  
-  
--   Notes  
-  
--   Bing Maps  
-  
-If you add a composite column to a quick create form, it will be displayed as separate columns.  
+If you add a composite column to a quick create form, it's displayed as separate columns.
   
 ### To edit a quick create form  
   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 1. Select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Tables**, select the table, and then select the **Forms** area.
-1. In the form list, select a form where the form **Type** is **Quick Create**.  
-1. Drag any columns from the **Column Explorer** into the sections in the form.  
+1. Open the table, and then select the **Forms** area.
+1. In the form list, select a form where the form **Type** is **Quick create**.  
+1. Drag any columns from the **Table columns** left pane into the sections in the form.  
   
    See [Configure event handlers](configure-event-handlers-legacy.md) for information about editing event handlers for form scripts.  
 
    :::image type="content" source="media/create-and-edit-a-model-driven-form/create-quick-create-form.gif" alt-text="Default model-driven app site map":::
 
-1. When you're finished, select **Save**.  
-1. Select **Publish** to see the modified form in the application.  
+1. When you're finished, select **Save and publish** to display the modified form in the application.  
 
-## Enable Quick Create Form property behavior for activities
+## Enable quick create form property behavior for activities
 
-The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property allows the form that is displayed by default for most activities to be displayed. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity tables that support it.
+The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property allows the form that is displayed by default for most activities to display. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity tables that support it.
 
 >  <img src = "media/allow-quick-create.png" alt = "Allow Quick Create property on appointment table" width = "413" height = "975">
 
 ### Unified Interface client form display behavior
 
 The following table indicates what form is displayed by default when the **Enable quick create forms** property is *enabled* in the Unified Interface client.
- 
+
 |Location where form is accessed  |Form displayed  |
 |---------|---------|
 |Specific activity associated grid  | Quick create      |
@@ -116,7 +109,7 @@ The following table indicates what form is displayed by default when the **Enabl
 |Activities (`activitypointer`) grid   | Main   |
 |Specific activity grid    | Main   |
 
-<sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Enable quick create forms** property is enabled. In this case, the quick create form is used if it exists or the main form if it does not. If **Enable quick create forms** is disabled, the entry for the table will not appear.
+<sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Enable quick create forms** property is enabled. In this case, the quick create form is used if it exists or the main form if it doesn't. If **Enable quick create forms** is disabled, the entry for the table won't appear.
 
 ### Classic web client form display behavior
 
@@ -133,7 +126,7 @@ The following table indicates what form is displayed by default when the **Enabl
 |Specific activity grid   | Main    |
 
 #### Classic web client social pane behavior
- 
+
 The social pane is a special case because it doesn't use the **Enable quick create forms** property but uses different forms for different activity tables as indicated here.
 
 |Activity  |Form displayed  |
@@ -146,13 +139,14 @@ The social pane is a special case because it doesn't use the **Enable quick crea
 
 ### Solution import Allow Quick Create value behavior
 
-When a solution from version 8.2 is imported, regardless of the value of the **Enable quick create forms** property in the solution, the following tables will be reset to the default form display value. Also, the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity tables after the import.
+When a solution from version 8.2 is imported, regardless of the value of the **Enable quick create forms** property in the solution, the following tables are reset to the default form display value. Also, the main form displays: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity tables after the import.
 
-If there is a customization made in a version 9.0 solution to tables where **Enable quick create forms** is enabled, the value will not change after import.  However, if the **Enable quick create forms** option has been set to *disabled* for the task, phone call, email, and appointment tables, the value will be overwritten to enabled. In this situation, the **Enable quick create forms** option needs to be reset back to disabled for those activity tables after the import.
+If there's a customization made in a version 9.0 solution to tables where **Enable quick create forms** is enabled, the value won't change after import. However, if the **Enable quick create forms** option is set to *disabled* for the task, phone call, email, and appointment tables, the value is overwritten to enabled. In this situation, the **Enable quick create forms** option needs to be reset back to disabled for those activity tables after the import.
 
 > [!IMPORTANT]
-> - If a quick create form exists for a table but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
-> - Be aware of the behavior that occurs when a parent relationship is created with the same table. For example, if Account has a relationship to Account and lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent row id on the quick create form before saving the row.
+>
+> - If a quick create form exists for a table but isn't included in the app, the Unified Interface runtime will still open the quick create form. This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
+> - Be aware of the behavior that occurs when a parent relationship is created with the same table. For example, if Account has a relationship to Account and lookup is created that is used by a quick create form that creates a parent row, the first row won't be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If you experience this issue, you can resolve it by removing the parent row ID on the quick create form before saving the row.
 
 ## Next steps
 

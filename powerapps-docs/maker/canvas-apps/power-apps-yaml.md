@@ -1,5 +1,5 @@
 ---
-title: V source code files for canvas apps (pa.yaml)
+title: View source code files for canvas apps (pa.yaml)
 description: Learn about how to view source code files for canvas apps.
 author: marcelbf
 ms.author: marcelbf
@@ -147,16 +147,6 @@ Updates from the previous format include:
 2. Control Version Specification:
     - You can now specify the version of a control using the Control Keyword followed by the **@** operator. If no version is specified, the most current version of the control is used.
 3. Simplified Variant Names:
-    - Not all controls require a variant. For controls that do require a variant, the name is simplified and more user-friendly.
+    - Not all controls require a variant.
 4. Consistent ZIndex for All Controls:
     - All controls now use an ascending order to determine the ZIndex value, starting from 1. This behavior aligns with the [CSS 2 spec](https://drafts.csswg.org/css2/#z-index).
-
-
-
-## Schema updates
-
-|Change|Authoring version|Description|
-|---|---|---|
-|Initial Version|---|Initial version, support simple controls|
-
-

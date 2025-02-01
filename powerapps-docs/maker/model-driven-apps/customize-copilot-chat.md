@@ -15,6 +15,7 @@ search.audienceType:
 contributors:
   - makolomi
 ms.collection: bap-ai-copilot
+ai-usage: ai-assisted
 ---
 # Customize Copilot chat using Copilot Studio (preview)
 
@@ -34,47 +35,48 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 > - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
 > - This feature is only available in standalone model-driven apps and isn't yet supported for Dynamics 365 apps.
 
-1. Go to https://make.preview.powerapps.com. This is a preview feature and is only available in the [early release environments](/power-platform/admin/early-release).
-1. Open your model-driven app in edit mode to start customizing your Copilot chat.
-1. Check for **...** in the left navigation bar. If you don't see it, the feature isn't available yet in your environment. You can provision a new [early release environments](/power-platform/admin/early-release) to access the feature.
-1. Select **...**, and then select **Configure in Copilot Studio**. You're taken to Microsoft Copilot Studio where your app’s agent is set up. Every standalone model-driven app Copilot has its own dedicated agent available for customizations. Setting up the agent for the first time takes only a few seconds.
+1. Go to https://make.preview.powerapps.com. 
+1. Open your model-driven app in edit mode, and then on the left navigation bar select **...** > **Configure in Copilot Studio**. You're taken to Microsoft Copilot Studio where your app’s agent is set up. Every standalone model-driven app Copilot has its own dedicated agent available for customizations. Setting up the agent for the first time takes a few seconds.
    :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer." lightbox="media/mda-command-copilot-studio.png":::
-1. Customize your agent by adding [knowledge sources](#add-knowledge-to-copilot-chat) or [topics](#add-new-topic-to-copilot-chat). Customizing this agent only impacts the Copilot chat of the specific app it is provisioned for.
+   > [!IMPORTANT]
+   > - If **...** doesn't appear in the left navigation pane, the feature isn't available yet in your environment. You can provision a new [early release environments](/power-platform/admin/early-release) to access the feature. This is a preview feature and only available in early release environments.
+1. Customize your agent by adding [knowledge sources](#add-knowledge-to-copilot-chat) or [topics](#add-new-topic-to-copilot-chat). Customizing this agent only impacts the Copilot chat of the specific app it's provisioned for.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
 1. **Publish** the agent after you make customizations to ensure changes are available to users.
 
 ## Add knowledge to Copilot chat
 
-You can extend your app’s Copilot chat intelligence by adding additional knowledge sources in Copilot Studio. For example, you can add a link to an external public-facing website like Power Apps documentation (learn.microsoft.com/power-apps/) to enable your Copilot chat to respond to questions related to Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data.
+You can extend your app’s Copilot chat intelligence by adding additional knowledge sources in Copilot Studio. For example, you can add a link to an external public-facing website like Power Apps documentation by adding `https://learn.microsoft.com/power-apps/` as knowledge to enable your Copilot chat to respond to questions related to creating apps in Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data.
+
+:::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
 
 More information: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
 
 > [!NOTE]
 >
-> - Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website), [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) and [SharePoint](/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive) knowledge source types are supported. [Dataverse knowledge](/microsoft-copilot-studio/knowledge-add-dataverse) is not part of this preview.
+> - Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website), [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) and [SharePoint](/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive) knowledge source types are supported. [Dataverse knowledge](/microsoft-copilot-studio/knowledge-add-dataverse) isn't part of this preview.
 > - Copilot studio [Generative AI orchestration](/microsoft-copilot-studio/advanced-generative-actions) isn't supported currently. You can use classic orchestration topic whose trigger phrases match most closely with the user's query for a given skill.
->
->   :::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
 
 Once knowledge is enabled, app users can ask relevant questions to get responses along with the knowledge references.
 
-   :::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
+:::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
 
 ## Add new topic to Copilot chat
 
- In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, or generative answers. Additionally, topics can also initiate actions like flows, connectors, and Dataverse plug-ins enabling seamless point in time integration with external systems. Learn more about topics and how to add AI skills: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
+ In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, or generative answers. Additionally, topics can also initiate actions like flows, connectors, and Dataverse plug-ins enabling seamless point in time integration with external systems.
 
-   :::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
+:::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
+
+More information: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
 
 > [!NOTE]
-> Copilot Studio has inline capability to "Test your agent" and can be used to validate topics as they are added. However, topics using out-of-the-box model-driven app custom variables like  
-`Global.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
+> Copilot Studio has inline capability to "Test your agent" and can be used to validate topics as they're added. However, topics using out-of-the-box model-driven app custom variables like `Global.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
 
 ## Prompt guide customizations
 
 A prompt library is a collection of prewritten, tested, and optimized prompts designed to help shape the interactions and responses of the Copilot chat. They ensure that the Copilot chat provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
 
-   :::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
+:::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
 
 The following steps detail how to add specific queries to the prompt guide. A *Power Apps Help* section is appended to the existing out-of-the-box Copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from the [prompt guide sample](#prompt-guide-customizations-topic-sample). All the prompts shown to the end user via the prompt guide are stored in the Copilot Studio agent used for the app.
 
@@ -84,11 +86,11 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event received for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
 1. Select **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
    :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
-1. Optionally you can set the conditions to prompt entries in case they're specific to the app name, page context, and so on.
+1. Optionally, you can set the conditions to prompt entries in case they're specific to the app name, page context, and so on. For example, this prompt entry checks if the current app's unique name or the page context's table type name matches specified values. If either condition is true, the Copilot chat is activated.
 
    `condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName" or Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
-1. Add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10k range with 0 being highest. 200 is the example used here.
-1. Add a next step for variable management parsevalue.
+1. Add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. 200 is the example used here.
+1. Add a next step for variable management parse value.
    :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Add variable" lightbox="media/mda-copilot-promptguide-variable.png":::
 1. Set the parse value to following Power Fx formula and data type to table.
 
@@ -188,7 +190,7 @@ beginDialog:
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
 - **Configure in Copilot Studio** action can create agents with the same display name for apps that have the same initial characters in the app name. When this occurs, rename the agent while publishing to avoid confusion.
-- The [Image](/microsoft-copilot-studio/authoring-send-message#add-an-image) and [Video](/microsoft-copilot-studio/authoring-send-message#add-an-image) message types from agent to user are not supported. As a workaround, you can use Adaptive Cards.
+- The [Image](/microsoft-copilot-studio/authoring-send-message#add-an-image) and [Video](/microsoft-copilot-studio/authoring-send-message#add-an-image) message types from agent to user aren't supported. As a workaround, you can use Adaptive Cards.
 
 ## Related information
 

@@ -1,7 +1,6 @@
 ---
-title: "Customer Voice project (msfp_project) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Customer Voice project (msfp_project) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
+title: "Signal Registration (SignalRegistration) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Signal Registration (SignalRegistration) table/entity with Microsoft Dataverse."
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,39 +9,42 @@ search.audienceType:
   - developer
 ---
 
-# Customer Voice project (msfp_project) table/entity reference
+# Signal Registration (SignalRegistration) table/entity reference (Microsoft Dataverse)
 
-Set of surveys to collect feedback.
+
 
 ## Messages
 
-The following table lists the messages for the Customer Voice project (msfp_project) table.
+The following table lists the messages for the Signal Registration (SignalRegistration) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /msfp_projects(*msfp_projectid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Create`<br />Event: True |`POST` /msfp_projects<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Assign`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /signalregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /msfp_projects(*msfp_projectid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /signalregistrations(*signalregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /msfp_projects(*msfp_projectid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /msfp_projects<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retrieve`<br />Event: True |`GET` /signalregistrations(*signalregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /signalregistrations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /msfp_projects(*msfp_projectid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /msfp_projects(*msfp_projectid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /msfp_projects(*msfp_projectid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /signalregistrations(*signalregistrationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Customer Voice project (msfp_project) table.
+The following table lists the events for the Signal Registration (SignalRegistration) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,19 +57,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Customer Voice project (msfp_project) table.
+The following table lists selected properties for the Signal Registration (SignalRegistration) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Customer Voice project** |
-| **DisplayCollectionName** | **Customer Voice projects** |
-| **SchemaName** | `msfp_project` |
-| **CollectionSchemaName** | `msfp_projects` |
-| **EntitySetName** | `msfp_projects`|
-| **LogicalName** | `msfp_project` |
-| **LogicalCollectionName** | `msfp_projects` |
-| **PrimaryIdAttribute** | `msfp_projectid` |
-| **PrimaryNameAttribute** |`msfp_name` |
+| **DisplayName** | **Signal Registration** |
+| **DisplayCollectionName** | **Signal Registrations** |
+| **SchemaName** | `SignalRegistration` |
+| **CollectionSchemaName** | `SignalRegistrations` |
+| **EntitySetName** | `signalregistrations`|
+| **LogicalName** | `signalregistration` |
+| **LogicalCollectionName** | `signalregistrations` |
+| **PrimaryIdAttribute** | `signalregistrationid` |
+| **PrimaryNameAttribute** |`signalname` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -76,20 +78,11 @@ The following table lists selected properties for the Customer Voice project (ms
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [msfp_customerinsightsconfiguration](#BKMK_msfp_customerinsightsconfiguration)
-- [msfp_dataclassification](#BKMK_msfp_dataclassification)
-- [msfp_description](#BKMK_msfp_description)
-- [msfp_environmentid](#BKMK_msfp_environmentid)
-- [msfp_environmentregion](#BKMK_msfp_environmentregion)
-- [msfp_name](#BKMK_msfp_name)
-- [msfp_permanentID](#BKMK_msfp_permanentID)
-- [msfp_projectId](#BKMK_msfp_projectId)
-- [msfp_status](#BKMK_msfp_status)
-- [msfp_templateid](#BKMK_msfp_templateid)
-- [msfp_templateversion](#BKMK_msfp_templateversion)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [SignalName](#BKMK_SignalName)
+- [SignalRegistrationId](#BKMK_SignalRegistrationId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -108,192 +101,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
-
-### <a name="BKMK_msfp_customerinsightsconfiguration"></a> msfp_customerinsightsconfiguration
-
-|Property|Value|
-|---|---|
-|Description|**Stores Customer Insights configuration in JSON format.**|
-|DisplayName|**Customer Insights configuration**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_customerinsightsconfiguration`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_msfp_dataclassification"></a> msfp_dataclassification
-
-|Property|Value|
-|---|---|
-|Description|**Classification allows organization to protect data based on our policies and standards.**|
-|DisplayName|**Data Classification**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_dataclassification`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_description"></a> msfp_description
-
-|Property|Value|
-|---|---|
-|Description|**Description of the project.**|
-|DisplayName|**Description**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_description`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1000000|
-
-### <a name="BKMK_msfp_environmentid"></a> msfp_environmentid
-
-|Property|Value|
-|---|---|
-|Description|**Environment ID where project is stored.**|
-|DisplayName|**Environment ID**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_environmentid`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_environmentregion"></a> msfp_environmentregion
-
-|Property|Value|
-|---|---|
-|Description|**Environment region where project is stored.**|
-|DisplayName|**Environment region**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_environmentregion`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_name"></a> msfp_name
-
-|Property|Value|
-|---|---|
-|Description|**Name of the project.**|
-|DisplayName|**Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_name`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|450|
-
-### <a name="BKMK_msfp_permanentID"></a> msfp_permanentID
-
-|Property|Value|
-|---|---|
-|Description|**Permanent ID is auto-generated for a new project. For a copied project, the ID is carried over from the original project.**|
-|DisplayName|**Permanent ID**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_permanentid`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_projectId"></a> msfp_projectId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**Customer Voice project**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`msfp_projectid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_msfp_status"></a> msfp_status
-
-|Property|Value|
-|---|---|
-|Description|**Status of the project.**|
-|DisplayName|**Status**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_status`|
-|RequiredLevel|None|
-|Type|Picklist|
-|DefaultFormValue|647390000|
-|GlobalChoiceName|`msfp_project_msfp_status`|
-
-#### msfp_status Choices/Options
-
-|Value|Label|
-|---|---|
-|647390000|**Active**|
-|647390001|**InActive**|
-
-### <a name="BKMK_msfp_templateid"></a> msfp_templateid
-
-|Property|Value|
-|---|---|
-|Description|**Project template ID.**|
-|DisplayName|**Template ID**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_templateid`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_msfp_templateversion"></a> msfp_templateversion
-
-|Property|Value|
-|---|---|
-|Description|**Version number of the project template.**|
-|DisplayName|**Template version**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`msfp_templateversion`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -337,11 +144,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_SignalName"></a> SignalName
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Signal Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`signalname`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_SignalRegistrationId"></a> SignalRegistrationId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**SignalRegistration**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`signalregistrationid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Customer Voice project**|
+|Description|**Status of the Signal Registration**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -349,7 +185,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`msfp_project_statecode`|
+|GlobalChoiceName|`signalregistration_statecode`|
 
 #### statecode Choices/Options
 
@@ -362,7 +198,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Customer Voice project**|
+|Description|**Reason for the status of the Signal Registration**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -370,7 +206,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`msfp_project_statuscode`|
+|GlobalChoiceName|`signalregistration_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -429,12 +265,12 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**User who created the project.**|
+|Description|**Unique identifier of the user who created the record.**|
 |DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`createdby`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
 
@@ -442,12 +278,12 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Date and time when the project was created.**|
+|Description|**Date and time when the record was created.**|
 |DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`createdon`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|DateTime|
 |CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
@@ -472,12 +308,12 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**User who modified the project.**|
+|Description|**Unique identifier of the user who modified the record.**|
 |DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`modifiedby`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
 
@@ -485,7 +321,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Date and time when the project was modified.**|
+|Description|**Date and time when the record was modified.**|
 |DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -554,7 +390,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -602,18 +438,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_msfp_project](#BKMK_business_unit_msfp_project)
-- [lk_msfp_project_createdby](#BKMK_lk_msfp_project_createdby)
-- [lk_msfp_project_createdonbehalfby](#BKMK_lk_msfp_project_createdonbehalfby)
-- [lk_msfp_project_modifiedby](#BKMK_lk_msfp_project_modifiedby)
-- [lk_msfp_project_modifiedonbehalfby](#BKMK_lk_msfp_project_modifiedonbehalfby)
-- [owner_msfp_project](#BKMK_owner_msfp_project)
-- [team_msfp_project](#BKMK_team_msfp_project)
-- [user_msfp_project](#BKMK_user_msfp_project)
+- [business_unit_signalregistration](#BKMK_business_unit_signalregistration)
+- [lk_signalregistration_createdby](#BKMK_lk_signalregistration_createdby)
+- [lk_signalregistration_createdonbehalfby](#BKMK_lk_signalregistration_createdonbehalfby)
+- [lk_signalregistration_modifiedby](#BKMK_lk_signalregistration_modifiedby)
+- [lk_signalregistration_modifiedonbehalfby](#BKMK_lk_signalregistration_modifiedonbehalfby)
+- [owner_signalregistration](#BKMK_owner_signalregistration)
+- [team_signalregistration](#BKMK_team_signalregistration)
+- [user_signalregistration](#BKMK_user_signalregistration)
 
-### <a name="BKMK_business_unit_msfp_project"></a> business_unit_msfp_project
+### <a name="BKMK_business_unit_signalregistration"></a> business_unit_signalregistration
 
-One-To-Many Relationship: [businessunit business_unit_msfp_project](businessunit.md#BKMK_business_unit_msfp_project)
+One-To-Many Relationship: [businessunit business_unit_signalregistration](businessunit.md#BKMK_business_unit_signalregistration)
 
 |Property|Value|
 |---|---|
@@ -624,9 +460,9 @@ One-To-Many Relationship: [businessunit business_unit_msfp_project](businessunit
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_project_createdby"></a> lk_msfp_project_createdby
+### <a name="BKMK_lk_signalregistration_createdby"></a> lk_signalregistration_createdby
 
-One-To-Many Relationship: [systemuser lk_msfp_project_createdby](systemuser.md#BKMK_lk_msfp_project_createdby)
+One-To-Many Relationship: [systemuser lk_signalregistration_createdby](systemuser.md#BKMK_lk_signalregistration_createdby)
 
 |Property|Value|
 |---|---|
@@ -637,9 +473,9 @@ One-To-Many Relationship: [systemuser lk_msfp_project_createdby](systemuser.md#B
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_project_createdonbehalfby"></a> lk_msfp_project_createdonbehalfby
+### <a name="BKMK_lk_signalregistration_createdonbehalfby"></a> lk_signalregistration_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msfp_project_createdonbehalfby](systemuser.md#BKMK_lk_msfp_project_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_signalregistration_createdonbehalfby](systemuser.md#BKMK_lk_signalregistration_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -650,9 +486,9 @@ One-To-Many Relationship: [systemuser lk_msfp_project_createdonbehalfby](systemu
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_project_modifiedby"></a> lk_msfp_project_modifiedby
+### <a name="BKMK_lk_signalregistration_modifiedby"></a> lk_signalregistration_modifiedby
 
-One-To-Many Relationship: [systemuser lk_msfp_project_modifiedby](systemuser.md#BKMK_lk_msfp_project_modifiedby)
+One-To-Many Relationship: [systemuser lk_signalregistration_modifiedby](systemuser.md#BKMK_lk_signalregistration_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -663,9 +499,9 @@ One-To-Many Relationship: [systemuser lk_msfp_project_modifiedby](systemuser.md#
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_msfp_project_modifiedonbehalfby"></a> lk_msfp_project_modifiedonbehalfby
+### <a name="BKMK_lk_signalregistration_modifiedonbehalfby"></a> lk_signalregistration_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_msfp_project_modifiedonbehalfby](systemuser.md#BKMK_lk_msfp_project_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_signalregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_signalregistration_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -676,9 +512,9 @@ One-To-Many Relationship: [systemuser lk_msfp_project_modifiedonbehalfby](system
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_msfp_project"></a> owner_msfp_project
+### <a name="BKMK_owner_signalregistration"></a> owner_signalregistration
 
-One-To-Many Relationship: [owner owner_msfp_project](owner.md#BKMK_owner_msfp_project)
+One-To-Many Relationship: [owner owner_signalregistration](owner.md#BKMK_owner_signalregistration)
 
 |Property|Value|
 |---|---|
@@ -689,9 +525,9 @@ One-To-Many Relationship: [owner owner_msfp_project](owner.md#BKMK_owner_msfp_pr
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_msfp_project"></a> team_msfp_project
+### <a name="BKMK_team_signalregistration"></a> team_signalregistration
 
-One-To-Many Relationship: [team team_msfp_project](team.md#BKMK_team_msfp_project)
+One-To-Many Relationship: [team team_signalregistration](team.md#BKMK_team_signalregistration)
 
 |Property|Value|
 |---|---|
@@ -702,9 +538,9 @@ One-To-Many Relationship: [team team_msfp_project](team.md#BKMK_team_msfp_projec
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_msfp_project"></a> user_msfp_project
+### <a name="BKMK_user_signalregistration"></a> user_signalregistration
 
-One-To-Many Relationship: [systemuser user_msfp_project](systemuser.md#BKMK_user_msfp_project)
+One-To-Many Relationship: [systemuser user_signalregistration](systemuser.md#BKMK_user_signalregistration)
 
 |Property|Value|
 |---|---|
@@ -720,134 +556,95 @@ One-To-Many Relationship: [systemuser user_msfp_project](systemuser.md#BKMK_user
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [msfp_msfp_project_msfp_alert_project](#BKMK_msfp_msfp_project_msfp_alert_project)
-- [msfp_msfp_project_msfp_alertrule_project](#BKMK_msfp_msfp_project_msfp_alertrule_project)
-- [msfp_msfp_project_msfp_satisfactionmetric_project](#BKMK_msfp_msfp_project_msfp_satisfactionmetric_project)
-- [msfp_msfp_project_msfp_survey_project](#BKMK_msfp_msfp_project_msfp_survey_project)
-- [msfp_project_AsyncOperations](#BKMK_msfp_project_AsyncOperations)
-- [msfp_project_BulkDeleteFailures](#BKMK_msfp_project_BulkDeleteFailures)
-- [msfp_project_MailboxTrackingFolders](#BKMK_msfp_project_MailboxTrackingFolders)
-- [msfp_project_PrincipalObjectAttributeAccesses](#BKMK_msfp_project_PrincipalObjectAttributeAccesses)
-- [msfp_project_ProcessSession](#BKMK_msfp_project_ProcessSession)
-- [msfp_project_SyncErrors](#BKMK_msfp_project_SyncErrors)
+- [processorregistration_signalregistration_signalname](#BKMK_processorregistration_signalregistration_signalname)
+- [signalregistration_AsyncOperations](#BKMK_signalregistration_AsyncOperations)
+- [signalregistration_BulkDeleteFailures](#BKMK_signalregistration_BulkDeleteFailures)
+- [signalregistration_MailboxTrackingFolders](#BKMK_signalregistration_MailboxTrackingFolders)
+- [signalregistration_PrincipalObjectAttributeAccesses](#BKMK_signalregistration_PrincipalObjectAttributeAccesses)
+- [signalregistration_ProcessSession](#BKMK_signalregistration_ProcessSession)
+- [signalregistration_SyncErrors](#BKMK_signalregistration_SyncErrors)
 
-### <a name="BKMK_msfp_msfp_project_msfp_alert_project"></a> msfp_msfp_project_msfp_alert_project
+### <a name="BKMK_processorregistration_signalregistration_signalname"></a> processorregistration_signalregistration_signalname
 
-Many-To-One Relationship: [msfp_alert msfp_msfp_project_msfp_alert_project](msfp_alert.md#BKMK_msfp_msfp_project_msfp_alert_project)
+Many-To-One Relationship: [processorregistration processorregistration_signalregistration_signalname](processorregistration.md#BKMK_processorregistration_signalregistration_signalname)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`msfp_alert`|
-|ReferencingAttribute|`msfp_project`|
-|ReferencedEntityNavigationPropertyName|`msfp_msfp_project_msfp_alert_project`|
-|IsCustomizable|`True`|
+|ReferencingEntity|`processorregistration`|
+|ReferencingAttribute|`signalname`|
+|ReferencedEntityNavigationPropertyName|`processorregistration_signalregistration_signalname`|
+|IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_msfp_project_msfp_alertrule_project"></a> msfp_msfp_project_msfp_alertrule_project
+### <a name="BKMK_signalregistration_AsyncOperations"></a> signalregistration_AsyncOperations
 
-Many-To-One Relationship: [msfp_alertrule msfp_msfp_project_msfp_alertrule_project](msfp_alertrule.md#BKMK_msfp_msfp_project_msfp_alertrule_project)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_alertrule`|
-|ReferencingAttribute|`msfp_project`|
-|ReferencedEntityNavigationPropertyName|`msfp_msfp_project_msfp_alertrule_project`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msfp_msfp_project_msfp_satisfactionmetric_project"></a> msfp_msfp_project_msfp_satisfactionmetric_project
-
-Many-To-One Relationship: [msfp_satisfactionmetric msfp_msfp_project_msfp_satisfactionmetric_project](msfp_satisfactionmetric.md#BKMK_msfp_msfp_project_msfp_satisfactionmetric_project)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_satisfactionmetric`|
-|ReferencingAttribute|`msfp_project`|
-|ReferencedEntityNavigationPropertyName|`msfp_msfp_project_msfp_satisfactionmetric_project`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msfp_msfp_project_msfp_survey_project"></a> msfp_msfp_project_msfp_survey_project
-
-Many-To-One Relationship: [msfp_survey msfp_msfp_project_msfp_survey_project](msfp_survey.md#BKMK_msfp_msfp_project_msfp_survey_project)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msfp_survey`|
-|ReferencingAttribute|`msfp_project`|
-|ReferencedEntityNavigationPropertyName|`msfp_msfp_project_msfp_survey_project`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msfp_project_AsyncOperations"></a> msfp_project_AsyncOperations
-
-Many-To-One Relationship: [asyncoperation msfp_project_AsyncOperations](asyncoperation.md#BKMK_msfp_project_AsyncOperations)
+Many-To-One Relationship: [asyncoperation signalregistration_AsyncOperations](asyncoperation.md#BKMK_signalregistration_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_project_BulkDeleteFailures"></a> msfp_project_BulkDeleteFailures
+### <a name="BKMK_signalregistration_BulkDeleteFailures"></a> signalregistration_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure msfp_project_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msfp_project_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure signalregistration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_signalregistration_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_project_MailboxTrackingFolders"></a> msfp_project_MailboxTrackingFolders
+### <a name="BKMK_signalregistration_MailboxTrackingFolders"></a> signalregistration_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder msfp_project_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msfp_project_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder signalregistration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_signalregistration_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_project_PrincipalObjectAttributeAccesses"></a> msfp_project_PrincipalObjectAttributeAccesses
+### <a name="BKMK_signalregistration_PrincipalObjectAttributeAccesses"></a> signalregistration_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess msfp_project_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msfp_project_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess signalregistration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_signalregistration_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_project_ProcessSession"></a> msfp_project_ProcessSession
+### <a name="BKMK_signalregistration_ProcessSession"></a> signalregistration_ProcessSession
 
-Many-To-One Relationship: [processsession msfp_project_ProcessSession](processsession.md#BKMK_msfp_project_ProcessSession)
+Many-To-One Relationship: [processsession signalregistration_ProcessSession](processsession.md#BKMK_signalregistration_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msfp_project_SyncErrors"></a> msfp_project_SyncErrors
+### <a name="BKMK_signalregistration_SyncErrors"></a> signalregistration_SyncErrors
 
-Many-To-One Relationship: [syncerror msfp_project_SyncErrors](syncerror.md#BKMK_msfp_project_SyncErrors)
+Many-To-One Relationship: [syncerror signalregistration_SyncErrors](syncerror.md#BKMK_signalregistration_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`msfp_project_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`signalregistration_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -855,6 +652,6 @@ Many-To-One Relationship: [syncerror msfp_project_SyncErrors](syncerror.md#BKMK_
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 

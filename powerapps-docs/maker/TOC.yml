@@ -61,6 +61,8 @@
         href: ../user/record-summaries.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
+      - name: Use Copilot to visualize data in a view (preview)
+        href: ../user/visualize-data-in-copilot.md
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -2630,6 +2632,8 @@
     href: ./common/faq-plan-designer.md
   - name: FAQ about renaming controls with Copilot
     href: ./common/faq-rename-control.md
+  - name: FAQ about Copilot visualizations on a view
+    href: ./common/faq-visualize-view.md
 - name: Resources
   items:
   - name: Microsoft Credentials for Power Platform
@@ -2638,8 +2642,6 @@
     href: https://powerapps.microsoft.com/blog/
   - name: Forums
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
-  - name: Webinars
-    href: ../webinars.md
 - name: Troubleshoot
   items:
   - name: Debug Power Apps with Monitor

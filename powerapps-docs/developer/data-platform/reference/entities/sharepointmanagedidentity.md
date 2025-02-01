@@ -1,7 +1,6 @@
 ---
-title: "AI Skill Config (aiskillconfig) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the AI Skill Config (aiskillconfig) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
+title: "SharePoint Managed Identity (SharePointManagedIdentity) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the SharePoint Managed Identity (SharePointManagedIdentity) table/entity with Microsoft Dataverse."
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,39 +9,35 @@ search.audienceType:
   - developer
 ---
 
-# AI Skill Config (aiskillconfig) table/entity reference
+# SharePoint Managed Identity (SharePointManagedIdentity) table/entity reference (Microsoft Dataverse)
 
-
+Entity representing a managed identity for SharePoint, used for authentication and authorization purposes.
 
 ## Messages
 
-The following table lists the messages for the AI Skill Config (aiskillconfig) table.
+The following table lists the messages for the SharePoint Managed Identity (SharePointManagedIdentity) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /aiskillconfigs(*aiskillconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-| `Create`<br />Event: True |`POST` /aiskillconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /sharepointmanagedidentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /aiskillconfigs(*aiskillconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `Delete`<br />Event: True |`DELETE` /sharepointmanagedidentities(*sharepointmanagedidentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /aiskillconfigs(*aiskillconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /aiskillconfigs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
-| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /aiskillconfigs(*aiskillconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /aiskillconfigs(*aiskillconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Retrieve`<br />Event: True |`GET` /sharepointmanagedidentities(*sharepointmanagedidentityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /sharepointmanagedidentities<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /sharepointmanagedidentities(*sharepointmanagedidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /sharepointmanagedidentities(*sharepointmanagedidentityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /aiskillconfigs(*aiskillconfigid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /sharepointmanagedidentities(*sharepointmanagedidentityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the AI Skill Config (aiskillconfig) table.
+The following table lists the events for the SharePoint Managed Identity (SharePointManagedIdentity) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,131 +50,37 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the AI Skill Config (aiskillconfig) table.
+The following table lists selected properties for the SharePoint Managed Identity (SharePointManagedIdentity) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **AI Skill Config** |
-| **DisplayCollectionName** | **AI Skill Configs** |
-| **SchemaName** | `aiskillconfig` |
-| **CollectionSchemaName** | `aiskillconfigs` |
-| **EntitySetName** | `aiskillconfigs`|
-| **LogicalName** | `aiskillconfig` |
-| **LogicalCollectionName** | `aiskillconfigs` |
-| **PrimaryIdAttribute** | `aiskillconfigid` |
-| **PrimaryNameAttribute** |`description` |
+| **DisplayName** | **SharePoint Managed Identity** |
+| **DisplayCollectionName** | **SharePoint Managed Identities** |
+| **SchemaName** | `SharePointManagedIdentity` |
+| **CollectionSchemaName** | `SharePointManagedIdentities` |
+| **EntitySetName** | `sharepointmanagedidentities`|
+| **LogicalName** | `sharepointmanagedidentity` |
+| **LogicalCollectionName** | `sharepointmanagedidentities` |
+| **PrimaryIdAttribute** | `sharepointmanagedidentityid` |
+| **PrimaryNameAttribute** |`name` |
 | **TableType** | `Standard` |
-| **OwnershipType** | `UserOwned` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [AIModel](#BKMK_AIModel)
-- [AISkill](#BKMK_AISkill)
-- [aiskillconfigId](#BKMK_aiskillconfigId)
-- [Config](#BKMK_Config)
-- [description](#BKMK_description)
-- [Entity](#BKMK_Entity)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwnerId](#BKMK_OwnerId)
-- [OwnerIdType](#BKMK_OwnerIdType)
+- [SharePointManagedIdentityId](#BKMK_SharePointManagedIdentityId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-
-### <a name="BKMK_AIModel"></a> AIModel
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**AI Model**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`aimodel`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|msdyn_aimodel|
-
-### <a name="BKMK_AISkill"></a> AISkill
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**AI Skill**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`aiskill`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_aiskillconfigId"></a> aiskillconfigId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**AI Skill Config**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`aiskillconfigid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_Config"></a> Config
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Config**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`config`|
-|RequiredLevel|ApplicationRequired|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_description"></a> description
-
-|Property|Value|
-|---|---|
-|Description|**The description of the AI Skill**|
-|DisplayName|**Description**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`description`|
-|RequiredLevel|None|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_Entity"></a> Entity
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Entity**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`entity`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|entity|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -207,6 +108,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for Managed Identity associated with SharePoint Managed Identity as a lookup.**|
+|DisplayName|**Managed Identity Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
+### <a name="BKMK_Name"></a> Name
+
+|Property|Value|
+|---|---|
+|Description|**The name assigned to this Share Point Managed Identity.**|
+|DisplayName|**Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`name`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
@@ -224,36 +155,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Inactive|
 |SourceTypeMask|0|
 
-### <a name="BKMK_OwnerId"></a> OwnerId
+### <a name="BKMK_SharePointManagedIdentityId"></a> SharePointManagedIdentityId
 
 |Property|Value|
 |---|---|
-|Description|**Owner Id**|
-|DisplayName|**Owner**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`ownerid`|
-|RequiredLevel|SystemRequired|
-|Type|Owner|
-|Targets|systemuser, team|
-
-### <a name="BKMK_OwnerIdType"></a> OwnerIdType
-
-|Property|Value|
-|---|---|
-|Description|**Owner Id Type**|
-|DisplayName||
+|Description|**Unique identifier for SharePoint Managed Identity entity instances**|
+|DisplayName|**SharePoint Managed Identity Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`owneridtype`|
+|LogicalName|`sharepointmanagedidentityid`|
 |RequiredLevel|SystemRequired|
-|Type|EntityName|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the AI Skill Config**|
+|Description|**Status of the SharePointManagedIdentity**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -261,7 +179,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`aiskillconfig_statecode`|
+|GlobalChoiceName|`sharepointmanagedidentity_statecode`|
 
 #### statecode Choices/Options
 
@@ -274,7 +192,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the AI Skill Config**|
+|Description|**Reason for the status of the SharePointManagedIdentity**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -282,7 +200,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`aiskillconfig_statuscode`|
+|GlobalChoiceName|`sharepointmanagedidentity_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -350,12 +268,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
+- [OrganizationId](#BKMK_OrganizationId)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [OwnerIdName](#BKMK_OwnerIdName)
-- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
-- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningTeam](#BKMK_OwningTeam)
-- [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -497,6 +411,19 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_OrganizationId"></a> OrganizationId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`organizationid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|organization|
+
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
@@ -513,79 +440,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Format|DateAndTime|
 |ImeMode|Inactive|
 |SourceTypeMask|0|
-
-### <a name="BKMK_OwnerIdName"></a> OwnerIdName
-
-|Property|Value|
-|---|---|
-|Description|**Name of the owner**|
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owneridname`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
-
-|Property|Value|
-|---|---|
-|Description|**Yomi name of the owner**|
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owneridyominame`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the business unit that owns the record**|
-|DisplayName|**Owning Business Unit**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|businessunit|
-
-### <a name="BKMK_OwningTeam"></a> OwningTeam
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the team that owns the record.**|
-|DisplayName|**Owning Team**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owningteam`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|team|
-
-### <a name="BKMK_OwningUser"></a> OwningUser
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for the user that owns the record.**|
-|DisplayName|**Owning User**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owninguser`|
-|RequiredLevel|None|
-|Type|Lookup|
-|Targets|systemuser|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
@@ -629,46 +483,16 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_aiskillconfig](#BKMK_business_unit_aiskillconfig)
-- [entity_aiskillconfig_Entity](#BKMK_entity_aiskillconfig_Entity)
-- [lk_aiskillconfig_createdby](#BKMK_lk_aiskillconfig_createdby)
-- [lk_aiskillconfig_createdonbehalfby](#BKMK_lk_aiskillconfig_createdonbehalfby)
-- [lk_aiskillconfig_modifiedby](#BKMK_lk_aiskillconfig_modifiedby)
-- [lk_aiskillconfig_modifiedonbehalfby](#BKMK_lk_aiskillconfig_modifiedonbehalfby)
-- [msdyn_aimodel_aiskillconfig_AIModel](#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
-- [owner_aiskillconfig](#BKMK_owner_aiskillconfig)
-- [team_aiskillconfig](#BKMK_team_aiskillconfig)
-- [user_aiskillconfig](#BKMK_user_aiskillconfig)
+- [lk_sharepointmanagedidentity_createdby](#BKMK_lk_sharepointmanagedidentity_createdby)
+- [lk_sharepointmanagedidentity_createdonbehalfby](#BKMK_lk_sharepointmanagedidentity_createdonbehalfby)
+- [lk_sharepointmanagedidentity_modifiedby](#BKMK_lk_sharepointmanagedidentity_modifiedby)
+- [lk_sharepointmanagedidentity_modifiedonbehalfby](#BKMK_lk_sharepointmanagedidentity_modifiedonbehalfby)
+- [ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId](#BKMK_ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId)
+- [organization_sharepointmanagedidentity](#BKMK_organization_sharepointmanagedidentity)
 
-### <a name="BKMK_business_unit_aiskillconfig"></a> business_unit_aiskillconfig
+### <a name="BKMK_lk_sharepointmanagedidentity_createdby"></a> lk_sharepointmanagedidentity_createdby
 
-One-To-Many Relationship: [businessunit business_unit_aiskillconfig](businessunit.md#BKMK_business_unit_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`businessunit`|
-|ReferencedAttribute|`businessunitid`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_entity_aiskillconfig_Entity"></a> entity_aiskillconfig_Entity
-
-One-To-Many Relationship: [entity entity_aiskillconfig_Entity](entity.md#BKMK_entity_aiskillconfig_Entity)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`entity`|
-|ReferencedAttribute|`entityid`|
-|ReferencingAttribute|`entity`|
-|ReferencingEntityNavigationPropertyName|`Entity`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_lk_aiskillconfig_createdby"></a> lk_aiskillconfig_createdby
-
-One-To-Many Relationship: [systemuser lk_aiskillconfig_createdby](systemuser.md#BKMK_lk_aiskillconfig_createdby)
+One-To-Many Relationship: [systemuser lk_sharepointmanagedidentity_createdby](systemuser.md#BKMK_lk_sharepointmanagedidentity_createdby)
 
 |Property|Value|
 |---|---|
@@ -679,9 +503,9 @@ One-To-Many Relationship: [systemuser lk_aiskillconfig_createdby](systemuser.md#
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiskillconfig_createdonbehalfby"></a> lk_aiskillconfig_createdonbehalfby
+### <a name="BKMK_lk_sharepointmanagedidentity_createdonbehalfby"></a> lk_sharepointmanagedidentity_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_aiskillconfig_createdonbehalfby](systemuser.md#BKMK_lk_aiskillconfig_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_sharepointmanagedidentity_createdonbehalfby](systemuser.md#BKMK_lk_sharepointmanagedidentity_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -692,9 +516,9 @@ One-To-Many Relationship: [systemuser lk_aiskillconfig_createdonbehalfby](system
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiskillconfig_modifiedby"></a> lk_aiskillconfig_modifiedby
+### <a name="BKMK_lk_sharepointmanagedidentity_modifiedby"></a> lk_sharepointmanagedidentity_modifiedby
 
-One-To-Many Relationship: [systemuser lk_aiskillconfig_modifiedby](systemuser.md#BKMK_lk_aiskillconfig_modifiedby)
+One-To-Many Relationship: [systemuser lk_sharepointmanagedidentity_modifiedby](systemuser.md#BKMK_lk_sharepointmanagedidentity_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -705,9 +529,9 @@ One-To-Many Relationship: [systemuser lk_aiskillconfig_modifiedby](systemuser.md
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiskillconfig_modifiedonbehalfby"></a> lk_aiskillconfig_modifiedonbehalfby
+### <a name="BKMK_lk_sharepointmanagedidentity_modifiedonbehalfby"></a> lk_sharepointmanagedidentity_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_aiskillconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_aiskillconfig_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_sharepointmanagedidentity_modifiedonbehalfby](systemuser.md#BKMK_lk_sharepointmanagedidentity_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -718,55 +542,29 @@ One-To-Many Relationship: [systemuser lk_aiskillconfig_modifiedonbehalfby](syste
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msdyn_aimodel_aiskillconfig_AIModel"></a> msdyn_aimodel_aiskillconfig_AIModel
+### <a name="BKMK_ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId"></a> ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId
 
-One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_aiskillconfig_AIModel](msdyn_aimodel.md#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
+One-To-Many Relationship: [managedidentity ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId](managedidentity.md#BKMK_ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId)
 
 |Property|Value|
 |---|---|
-|ReferencedEntity|`msdyn_aimodel`|
-|ReferencedAttribute|`msdyn_aimodelid`|
-|ReferencingAttribute|`aimodel`|
-|ReferencingEntityNavigationPropertyName|`AIModel`|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencingEntityNavigationPropertyName|`ManagedIdentityId`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_aiskillconfig"></a> owner_aiskillconfig
+### <a name="BKMK_organization_sharepointmanagedidentity"></a> organization_sharepointmanagedidentity
 
-One-To-Many Relationship: [owner owner_aiskillconfig](owner.md#BKMK_owner_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`owner`|
-|ReferencedAttribute|`ownerid`|
-|ReferencingAttribute|`ownerid`|
-|ReferencingEntityNavigationPropertyName|`ownerid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_team_aiskillconfig"></a> team_aiskillconfig
-
-One-To-Many Relationship: [team team_aiskillconfig](team.md#BKMK_team_aiskillconfig)
+One-To-Many Relationship: [organization organization_sharepointmanagedidentity](organization.md#BKMK_organization_sharepointmanagedidentity)
 
 |Property|Value|
 |---|---|
-|ReferencedEntity|`team`|
-|ReferencedAttribute|`teamid`|
-|ReferencingAttribute|`owningteam`|
-|ReferencingEntityNavigationPropertyName|`owningteam`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_user_aiskillconfig"></a> user_aiskillconfig
-
-One-To-Many Relationship: [systemuser user_aiskillconfig](systemuser.md#BKMK_user_aiskillconfig)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`systemuser`|
-|ReferencedAttribute|`systemuserid`|
-|ReferencingAttribute|`owninguser`|
-|ReferencingEntityNavigationPropertyName|`owninguser`|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -775,82 +573,82 @@ One-To-Many Relationship: [systemuser user_aiskillconfig](systemuser.md#BKMK_use
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [aiskillconfig_AsyncOperations](#BKMK_aiskillconfig_AsyncOperations)
-- [aiskillconfig_BulkDeleteFailures](#BKMK_aiskillconfig_BulkDeleteFailures)
-- [aiskillconfig_MailboxTrackingFolders](#BKMK_aiskillconfig_MailboxTrackingFolders)
-- [aiskillconfig_PrincipalObjectAttributeAccesses](#BKMK_aiskillconfig_PrincipalObjectAttributeAccesses)
-- [aiskillconfig_ProcessSession](#BKMK_aiskillconfig_ProcessSession)
-- [aiskillconfig_SyncErrors](#BKMK_aiskillconfig_SyncErrors)
+- [sharepointmanagedidentity_AsyncOperations](#BKMK_sharepointmanagedidentity_AsyncOperations)
+- [sharepointmanagedidentity_BulkDeleteFailures](#BKMK_sharepointmanagedidentity_BulkDeleteFailures)
+- [sharepointmanagedidentity_MailboxTrackingFolders](#BKMK_sharepointmanagedidentity_MailboxTrackingFolders)
+- [sharepointmanagedidentity_PrincipalObjectAttributeAccesses](#BKMK_sharepointmanagedidentity_PrincipalObjectAttributeAccesses)
+- [sharepointmanagedidentity_ProcessSession](#BKMK_sharepointmanagedidentity_ProcessSession)
+- [sharepointmanagedidentity_SyncErrors](#BKMK_sharepointmanagedidentity_SyncErrors)
 
-### <a name="BKMK_aiskillconfig_AsyncOperations"></a> aiskillconfig_AsyncOperations
+### <a name="BKMK_sharepointmanagedidentity_AsyncOperations"></a> sharepointmanagedidentity_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation aiskillconfig_AsyncOperations](asyncoperation.md#BKMK_aiskillconfig_AsyncOperations)
+Many-To-One Relationship: [asyncoperation sharepointmanagedidentity_AsyncOperations](asyncoperation.md#BKMK_sharepointmanagedidentity_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiskillconfig_BulkDeleteFailures"></a> aiskillconfig_BulkDeleteFailures
+### <a name="BKMK_sharepointmanagedidentity_BulkDeleteFailures"></a> sharepointmanagedidentity_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure aiskillconfig_BulkDeleteFailures](bulkdeletefailure.md#BKMK_aiskillconfig_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure sharepointmanagedidentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_sharepointmanagedidentity_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiskillconfig_MailboxTrackingFolders"></a> aiskillconfig_MailboxTrackingFolders
+### <a name="BKMK_sharepointmanagedidentity_MailboxTrackingFolders"></a> sharepointmanagedidentity_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder aiskillconfig_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_aiskillconfig_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder sharepointmanagedidentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_sharepointmanagedidentity_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiskillconfig_PrincipalObjectAttributeAccesses"></a> aiskillconfig_PrincipalObjectAttributeAccesses
+### <a name="BKMK_sharepointmanagedidentity_PrincipalObjectAttributeAccesses"></a> sharepointmanagedidentity_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess aiskillconfig_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_aiskillconfig_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess sharepointmanagedidentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_sharepointmanagedidentity_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiskillconfig_ProcessSession"></a> aiskillconfig_ProcessSession
+### <a name="BKMK_sharepointmanagedidentity_ProcessSession"></a> sharepointmanagedidentity_ProcessSession
 
-Many-To-One Relationship: [processsession aiskillconfig_ProcessSession](processsession.md#BKMK_aiskillconfig_ProcessSession)
+Many-To-One Relationship: [processsession sharepointmanagedidentity_ProcessSession](processsession.md#BKMK_sharepointmanagedidentity_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiskillconfig_SyncErrors"></a> aiskillconfig_SyncErrors
+### <a name="BKMK_sharepointmanagedidentity_SyncErrors"></a> sharepointmanagedidentity_SyncErrors
 
-Many-To-One Relationship: [syncerror aiskillconfig_SyncErrors](syncerror.md#BKMK_aiskillconfig_SyncErrors)
+Many-To-One Relationship: [syncerror sharepointmanagedidentity_SyncErrors](syncerror.md#BKMK_sharepointmanagedidentity_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiskillconfig_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`sharepointmanagedidentity_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -858,6 +656,6 @@ Many-To-One Relationship: [syncerror aiskillconfig_SyncErrors](syncerror.md#BKMK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 

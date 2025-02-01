@@ -9,7 +9,7 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 10/10/2024
+  - ai-seo-date: 01/24/2025
 ai-usage: ai-assisted
 ms.reviewer: 
 ms.date: 12/20/2024
@@ -83,6 +83,7 @@ The following articles can help you build various apps in different scenarios us
 
 - [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
 - [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
+- [Visualize data in a view with Copilot (preview)](../../user/visualize-data-in-copilot.md)
 
 ### Microsoft Dataverse
 
