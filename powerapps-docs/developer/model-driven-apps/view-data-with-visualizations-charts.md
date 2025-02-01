@@ -3,7 +3,7 @@ title: "View data with visualizations (charts)  (model-driven apps)"
 description: "Visualizations let you see your business data graphically. A visualization is attached to a table in Microsoft Dataverse. You can attach multiple visualizations to a table, however, only one visualization can be displayed at a time alongside a grid. You can view multiple visualizations at the same time by using a dashboard."
 author: jasongre
 ms.author: jasongre
-ms.date: 01/10/2025
+ms.date: 01/31/2025
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 search.audienceType: 
@@ -135,8 +135,6 @@ UoMSchedule
 [SavedQueryVisualization table](../data-platform/reference/entities/savedqueryvisualization.md)   
 [UserQueryVisualization table](../data-platform/reference/entities/userqueryvisualization.md)   
 [Download: Chart Controls for .NET Framework documentation](/previous-versions/visualstudio/visual-studio-2010/dd456632(v=vs.100))   
-[Samples Environment for Microsoft Chart Controls](https://code.msdn.microsoft.com/mschart)   
-[Chart Controls forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
