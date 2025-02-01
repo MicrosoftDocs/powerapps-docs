@@ -1,7 +1,6 @@
 ---
 title: "Activity Party (ActivityParty) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Activity Party (ActivityParty) table/entity with Microsoft Dataverse."
-ms.date: 01/06/2025
 ms.service: powerapps
 ms.topic: reference
 author: phecke
@@ -10,7 +9,7 @@ search.audienceType:
   - developer
 ---
 
-# Activity Party (ActivityParty) table/entity reference
+# Activity Party (ActivityParty) table/entity reference (Microsoft Dataverse)
 
 Person or group associated with an activity. An activity can have multiple activity parties.
 
@@ -21,6 +20,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RetrieveMultiple`<br />Event: True |`GET` /activityparties<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
@@ -490,9 +491,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [knowledgearticle_activity_parties](#BKMK_knowledgearticle_activity_parties)
 - [letter_activity_parties](#BKMK_letter_activity_parties)
-- [msfp_alert_activity_parties](#BKMK_msfp_alert_activity_parties)
-- [msfp_surveyinvite_activity_parties](#BKMK_msfp_surveyinvite_activity_parties)
-- [msfp_surveyresponse_activity_parties](#BKMK_msfp_surveyresponse_activity_parties)
 - [phonecall_activity_parties](#BKMK_phonecall_activity_parties)
 - [queue_activity_parties](#BKMK_queue_activity_parties)
 - [recurringappointmentmaster_activity_parties](#BKMK_recurringappointmentmaster_activity_parties)
@@ -643,45 +641,6 @@ One-To-Many Relationship: [letter letter_activity_parties](letter.md#BKMK_letter
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_msfp_alert_activity_parties"></a> msfp_alert_activity_parties
-
-One-To-Many Relationship: [msfp_alert msfp_alert_activity_parties](msfp_alert.md#BKMK_msfp_alert_activity_parties)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_alert`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`activityid`|
-|ReferencingEntityNavigationPropertyName|`activityid_msfp_alert_activityparty`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyinvite_activity_parties"></a> msfp_surveyinvite_activity_parties
-
-One-To-Many Relationship: [msfp_surveyinvite msfp_surveyinvite_activity_parties](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_activity_parties)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyinvite`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`activityid`|
-|ReferencingEntityNavigationPropertyName|`activityid_msfp_surveyinvite_activityparty`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msfp_surveyresponse_activity_parties"></a> msfp_surveyresponse_activity_parties
-
-One-To-Many Relationship: [msfp_surveyresponse msfp_surveyresponse_activity_parties](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_activity_parties)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msfp_surveyresponse`|
-|ReferencedAttribute|`activityid`|
-|ReferencingAttribute|`activityid`|
-|ReferencingEntityNavigationPropertyName|`activityid_msfp_surveyresponse_activityparty`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
 
 One-To-Many Relationship: [phonecall phonecall_activity_parties](phonecall.md#BKMK_phonecall_activity_parties)
@@ -781,6 +740,6 @@ Many-To-One Relationship: [syncerror ActivityParty_SyncErrors](syncerror.md#BKMK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.activityparty?displayProperty=fullName>
