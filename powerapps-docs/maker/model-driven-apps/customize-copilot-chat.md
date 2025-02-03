@@ -136,7 +136,7 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    ```
    :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text=" Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::Merge
 
-   Replace the variable name with the variable name you used for the custom prompts. <!-- What was the example name for this used in this article? -->
+   Replace the variable name with the variable name you used for the custom prompts, which in this example is *SparkGroupCustom*.
 
 1. **Publish** the agent and play the app.
 
