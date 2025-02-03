@@ -77,8 +77,6 @@ The following app properties can't be edited in the app designer:
 
 - App Url Suffix
 - Manage App
-- Enable Mobile Offline
-- Mobile Offline Profiles
 
 ## See also
 
