@@ -72,7 +72,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * All custom pages share the connection infrastructure, as if they were part of the same canvas app. For instance, if a model-driven app has two custom pages and one is connected to SQL Server while the other isn't, the consent dialog will still appear and require permission for SQL access even if the page being opened doesn't require it.
 * Custom pages in model-driven apps don't support connection detection through the *Connected.connected* property.
 * The number of connectors in a model-driven app, across all custom pages, shouldn't exceed 10. The number of connection references, across all custom pages, shouldn't exceed 20. The number of connectors and connection references can increase the wait time an app user experiences when the user plays an app with custom pages.
-* The App Permissions dialog is not launched when a custom page is first opened by a user in the PowerApps Mobile App causing the page to appear frozen.  This is expected behavior.  To resolve this, a user should open the app in a browser to approve the permissions before using it in the mobile app, or the AdminPowerAppApisToBypassConsent PowerShell command should be used to bypass the need for this dialog by the app administrator.
+* The App Permissions dialog is not launched when a custom page is first opened by a user in the PowerApps Mobile App.  This causes the page to appear frozen, but is expected behavior.  To resolve this, a user should open the app in a browser to approve the permissions before using it in the mobile app, or the AdminPowerAppApisToBypassConsent PowerShell command should be used to bypass the need for this dialog by the app administrator.
 
 ## See also
 
