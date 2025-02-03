@@ -19,13 +19,14 @@ Web resources are *virtual files* that are stored in the Microsoft Dataverse dat
 
 > [!NOTE]
 > IFRAMEing content that is behind an authentication boundary isn't supported through web resources or Power Apps component framework. 
-Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this isn't supported in 
-mobile or tablet applications. The specific scenario of embedding a form within an IFRAME, embedded in another form, 
-isn't supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.
-<p/>In general, use of [Power Apps component framework](../component-framework/overview.md) and 
-[custom pages](../../maker/model-driven-apps/model-app-page-overview.md) is encouraged to build 
-configurable, reusable, and tighter external integrations. 
-More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+> Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this isn't supported in 
+> mobile or tablet applications. The specific scenario of embedding a form within an IFRAME, embedded in another form, 
+> isn't supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.
+> 
+> In general, use of [Power Apps component framework](../component-framework/overview.md) and 
+> [custom pages](../../maker/model-driven-apps/model-app-page-overview.md) is encouraged to build 
+> configurable, reusable, and tighter external integrations. 
+> More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
 
 
 <a name="BKMK_CapabilitiesOfWebResources"></a>
@@ -98,13 +99,11 @@ the allowed file extensions, and the type value that you use for each.
 
 ## Reference web resources
 
- There are several methods that you can use to reference web resources.  
+ There are several methods that you can use to reference web resources.
   
 > [!NOTE]
-> - When possible, use the [$webresource directive](#webresource-directive). Only references that use the `$webresource` directive in the site map or 
-ribbon commands establish dependencies. Dependencies aren't created when web resources reference each other.  
-> - To display a Silverlight web resource outside a form or chart, create an HTML web resource to be the host 
-page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
+> When possible, use the [$webresource directive](#webresource-directive). Only references that use the `$webresource` directive in the site map or 
+ribbon commands establish dependencies. Dependencies aren't created when web resources reference each other.
   
 <a name="BKMK_WebResourceDirective"></a>
 
