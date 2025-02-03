@@ -2066,6 +2066,8 @@
           href: ./data-platform/functions-overview.md
         - name: Example functions
           href: ./data-platform/functions-examples.md
+        - name: Supported Power Fx functions
+          href: ./data-platform/functions-supported-power-fx.md
       - name: Use Dataverse low-code plug-ins (preview)
         items:
         - name: Create low-code plug-ins
