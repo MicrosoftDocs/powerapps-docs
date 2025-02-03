@@ -2060,6 +2060,12 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
+      - name: Use functions in Dataverse
+        items:
+        - name: Functions overview
+          href: ./data-platform/functions-overview.md
+        - name: Example functions
+          href: ./data-platform/functions-examples.md
       - name: Use Dataverse low-code plug-ins (preview)
         items:
         - name: Create low-code plug-ins
