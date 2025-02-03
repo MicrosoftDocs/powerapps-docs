@@ -9304,6 +9304,11 @@
       "source_path": "powerapps-docs/maker/canvas-apps/open-and-run-a-sample-app.md",
       "redirect_url": "/power-apps/maker/canvas-apps/get-started-test-drive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/webinars.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
     }
   ]
 }
