@@ -1,9 +1,8 @@
 ---
 title: "Web Resources (model-driven apps)"
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address."
-author: sriharibs-msft
-ms.author: srihas
-
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: overview
@@ -98,7 +97,7 @@ $webresource:<name of Web Resource>
   
 <a name="BKMK_RelativeUrl"></a>   
 ### Relative URL  
- When referencing a web resource from areas that do not support using the `$webresource:` directive, a relative URL can be used. To enable this, we recommend that you use a consistent naming convention for the web resources that reflect a virtual file structure. The solution publisher’s customization prefix will always be included as a prefix to the name of the web resource. This can represent a virtual ”root” folder for all web resources added by that publisher. You can then use the forward slash character (/) to simulate a folder structure that will be honored by the web server.  
+ When referencing a web resource from areas that do not support using the `$webresource:` directive, a relative URL can be used. To enable this, we recommend that you use a consistent naming convention for the web resources that reflect a virtual file structure. The solution publisher's customization prefix will always be included as a prefix to the name of the web resource. This can represent a virtual "root" folder for all web resources added by that publisher. You can then use the forward slash character (/) to simulate a folder structure that will be honored by the web server.  
   
  From another web resource, you should always use relative URLs to reference each other. For example, for the web page web resource `new_/content/contentpage.htm` to reference the CSS web resource `new_/Styles/styles.css`, create the link as follows:  
   
@@ -113,7 +112,7 @@ $webresource:<name of Web Resource>
 ```  
   
 > [!NOTE]
->  Do not use a relative URL using the WebResources folder as the root path for the URL. For example, do not use this: `/WebResources/<name of web resource>`. When a user belongs to more than one organization on a server, this path will always refer to the users default organization. If the user is not using their default organization and the expected web resource is not included in the user’s default organization, a “File Not Found” error occurs even though the web resource does occur in the organization the user is currently working in.  
+>  Do not use a relative URL using the WebResources folder as the root path for the URL. For example, do not use this: `/WebResources/<name of web resource>`. When a user belongs to more than one organization on a server, this path will always refer to the users default organization. If the user is not using their default organization and the expected web resource is not included in the user's default organization, a "File Not Found" error occurs even though the web resource does occur in the organization the user is currently working in.  
   
 <a name="BKMK_FullUrl"></a>   
 ### Full URL  
@@ -129,7 +128,7 @@ $webresource:<name of Web Resource>
 <Dataverse Environment URL>/%7B<version value>%7D/WebResources/<name of web resource>  
 ```  
   
- The version value is updated when you publish customizations and ensures that the browser uses the latest cached version of the web resource. Because of this, use a relative path to a web resource, the Xrm.Navigation.[openWebResource](clientapi/reference/Xrm-Navigation/openWebResource.md) function, or the [$webresource Directive](web-resources.md#BKMK_WebResourceDirective) (when possible) because the version value will automatically be included. For large web resources there can be significant performance implications if you don’t use the cached version of the file.  
+ The version value is updated when you publish customizations and ensures that the browser uses the latest cached version of the web resource. Because of this, use a relative path to a web resource, the Xrm.Navigation.[openWebResource](clientapi/reference/Xrm-Navigation/openWebResource.md) function, or the [$webresource Directive](web-resources.md#BKMK_WebResourceDirective) (when possible) because the version value will automatically be included. For large web resources there can be significant performance implications if you don't use the cached version of the file.  
   
  The following sample shows a URL for Dataverse, where `MyOrganization` is the name of your Dataverse Environment, and `new_/test/test.htm` is the name of the web resource:  
   
@@ -138,7 +137,7 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
 ```  
   
 > [!NOTE]
->  Including the ‘/’ character and a file name extension in the name of the web resource is an optional best practice.  
+>  Including the '/' character and a file name extension in the name of the web resource is an optional best practice.  
  When you write code to reference a web resource that works for Dataverse, you should use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) function.
 
 <a name="BKMK_rendering_differences"></a>
