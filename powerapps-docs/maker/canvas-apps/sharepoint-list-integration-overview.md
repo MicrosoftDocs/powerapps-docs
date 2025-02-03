@@ -94,20 +94,7 @@ The formula contains the following functions:
 
 ## Related information
 
-[Using the SharePoint connector with canvas apps](/power-platform/guidance/architecture/real-world-examples/sharepoint-canvas)
-
-### Security
-
-- [Customize permissions for a SharePoint list or library](https://support.microsoft.com/en-us/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
-- [Control settings for Microsoft Lists](/sharepoint/control-lists)
-
-### Controls for the display
-
-- [Drop down control in Power Apps](controls/control-drop-down.md)
-- [Controls and properties in canvas apps](reference-properties.md)
-
-### List features
-
+- [Using the SharePoint connector with canvas apps](/power-platform/guidance/architecture/real-world-examples/sharepoint-canvas)
 - [How to link lists from Microsoft Lists using a lookup column in Power Apps](sharepoint-lookup-fields.md)
 - [Formula reference - canvas apps](/power-platform/power-fx/formula-reference-canvas-apps)
 
