@@ -201,4 +201,7 @@ To create a distribution certificate, create a new certificate signing request f
 ### See also
 
 - [Wrap overview](overview.md)
-- [Code sign on Android](code-sign-android.md)
+- [Code sign on Android](code-sign-android.md)  
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+

@@ -140,4 +140,7 @@ You can host the package on a distribution service such as [App Center](wrap-how
 
 - [Wrap overview](overview.md)
 - [Manually Signing the APK - Xamarin](/xamarin/android/deploy-test/signing/manually-signing-the-apk)
-- [Code sign on iOS](code-sign-ios.md)
+- [Code sign on iOS](code-sign-ios.md)  
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+
