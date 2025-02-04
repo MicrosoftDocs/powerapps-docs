@@ -154,8 +154,8 @@ Optional more canvas apps that you're wrapping in the same build for mobile app 
 ### See also
 
 - [Use the wrap wizard to build your mobile app](wrap-how-to.md) 
-- [Code sign on iOS](code-sign-ios.md)
-- [Code sign on Android](code-sign-Android.md)
+- [Manual code sign on iOS](code-sign-ios.md)
+- [Manual code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)  

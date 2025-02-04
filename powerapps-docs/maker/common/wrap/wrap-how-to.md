@@ -132,8 +132,8 @@ If you don't have any entries in **Azure Key Vault URI** list, you need to creat
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
-   - [Code sign for iOS](code-sign-ios.md)
-   - [Code sign for Android](code-sign-android.md) 
+   - [Manual code sign for iOS](code-sign-ios.md)
+   - [Manual code sign for Android](code-sign-android.md) 
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 > [!NOTE]
@@ -256,16 +256,16 @@ You have an option to automatically create a new **app center location** to stor
 ## Sign your mobile app package manually (optional)
 You can automatically sign your mobile app package during wrap process in **Step 2**, but you can also do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
-- [Code signing for iOS](code-sign-ios.md)
-- [Code signing for Android](code-sign-android.md)
+- [Manual code sign for iOS](code-sign-ios.md)
+- [Manual code sign for Android](code-sign-android.md)
 - [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 
 ## See also
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
 - [Wrap overview](overview.md)
-- [Code sign for iOS](code-sign-ios.md)
-- [Code sign for Android](code-sign-android.md)
+- [Manual code sign for iOS](code-sign-ios.md)
+- [Manual code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-Key-Vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)  

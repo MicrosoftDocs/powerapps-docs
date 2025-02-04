@@ -14,9 +14,9 @@ contributors:
   - mduelae
 ---
 
-# Code sign for Android 
+# Manual code sign for Android 
 
-In this article, you'll learn about how to code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
+In this article, you'll learn about how to manually code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
 > [!IMPORTANT]
 > If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
@@ -140,7 +140,7 @@ You can host the package on a distribution service such as [App Center](wrap-how
 
 - [Wrap overview](overview.md)
 - [Manually Signing the APK - Xamarin](/xamarin/android/deploy-test/signing/manually-signing-the-apk)
-- [Code sign on iOS](code-sign-ios.md)  
+- [Manual code sign on iOS](code-sign-ios.md)  
 - [Frequently asked questions for wrap](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
 

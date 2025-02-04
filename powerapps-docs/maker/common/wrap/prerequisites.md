@@ -20,8 +20,8 @@ The following list explains what you'll need before you can start using wrap fea
 
 ## Software and device requirements
 
-- Mac device for [code signing with iOS](code-sign-ios.md)
-- Windows PC for [code signing with Android](code-sign-android.md)
+- Mac device for [manual code signing with iOS](code-sign-ios.md)
+- Windows PC for [manual code signing with Android](code-sign-android.md)
 - To run the wrapped mobile app:
   - Android device with version 10 or higher
   - iOS device with version 14 or higher
@@ -79,8 +79,8 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 ### See also
 
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
-- [Code sign on iOS](code-sign-ios.md)
-- [Code sign on Android](code-sign-Android.md)
+- [Manual code sign on iOS](code-sign-ios.md)
+- [Manual code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)
