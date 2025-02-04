@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 01/27/2025
+ms.date: 02/04/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -74,6 +74,8 @@ If you don't see your registered app name in the **Owned registrations** dropdow
    > [!div class="mx-imgBorder"]
    > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
 
+#### Configure admin allowed third-party apps
+
 The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
 When you register the app, Azure admin needs to provide access to continue. Follow these steps to grant access:
@@ -87,6 +89,8 @@ When you register the app, Azure admin needs to provide access to continue. Foll
 Once you complete the preceding steps the registration screen look like the following screenshot.
 
  :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
+
+#### API permissions
 
 When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
 

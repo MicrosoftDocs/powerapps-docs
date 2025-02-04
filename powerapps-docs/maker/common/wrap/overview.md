@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 01/27/2025
+ms.date: 02/04/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -149,13 +149,14 @@ Optional more canvas apps that you're wrapping in the same build for mobile app 
 
 ## Next steps
 
-[Use the wrap wizard to build your mobile app](wrap-how-to.md) <br>
+[System requirements and prerequisites for Wrap](prerequisites.md)  
 
 ### See also
 
-- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
+- [Use the wrap wizard to build your mobile app](wrap-how-to.md) 
 - [Code sign on iOS](code-sign-ios.md)
 - [Code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
 - [Frequently Asked Questions](faq.yml)
