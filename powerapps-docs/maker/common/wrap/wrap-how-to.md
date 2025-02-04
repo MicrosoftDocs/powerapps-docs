@@ -29,33 +29,6 @@ Wrap feature allows you to create mobile apps for iOS, Android or Google Play St
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
-
-## Prerequisites
-
-You need access to:
-- [Azure portal](https://portal.azure.com/) to register your app.
-- [App center](https://appcenter.ms/) to add new organization and apps.
-- This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
-
-If you're creating a mobile app package for Android platform and you plan to code sign it manually, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you start. You need the generated signature hash to configure the **Redirect URI**.
-
-## Add canvas app to solution
-
-Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. From the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)] Select a solution and then select **Edit**.
-
-:::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
-
-Choose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
-
-:::image type="content" source="media/wrap-canvas-app/select-add-existing.png" alt-text="Select Add existing from the menu.":::
-
-Select **Outside Dataverse** tab and choose your app from the list. Press **Add** button to add this app to a solution.
-
-:::image type="content" source="media/wrap-canvas-app/add-app.png" alt-text="Select Add app to a solution.":::
-
-More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
-
-
 ## Create native mobile apps for iOS and Android using the wizard
 
 1. Sign in to [Power Apps](https://make.powerapps.com).

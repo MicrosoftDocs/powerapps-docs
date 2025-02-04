@@ -1,11 +1,11 @@
 ---
-title: Code sign for Android
-description: Learn about how to code sign for Android for Power Apps wrap.
+title: Manual code sign for Android
+description: Learn how to manually code sign for Android for Power Apps wrap.
 author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 06/06/2022
+ms.date: 02/03/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -27,6 +27,12 @@ You need the following information to get started:
 
 - Install [Android Studio](https://developer.android.com/studio)
 - Install [OpenSSL](https://www.openssl.org/)
+- Install [apksigner tool](https://developer.android.com/studio/command-line/apksigner)
+
+## Prerequisites
+
+- Application name for creating the hash key.
+- Latest APK file for signing in process.
 
 ## Generate keys
 

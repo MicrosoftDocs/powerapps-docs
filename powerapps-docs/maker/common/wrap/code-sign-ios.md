@@ -1,6 +1,6 @@
 ---
-title: Code sign for iOS
-description: Learn about how to code sign for iOS for Power Apps wrap.
+title: Manual code sign for iOS
+description: Learn how to manually code sign for iOS for Power Apps wrap.
 author: komala2019
 ms.topic: article
 ms.custom: canvas

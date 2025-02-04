@@ -76,27 +76,6 @@ Wrap supports customization of the mobile app bootstrap experience to match the 
 
 Branding customization options are available when you're building your wrap project. More information: [Configure branding](wrap-how-to.md#step-3-configure-branding)
 
-## System requirements
-
-The following list explains what you'll need before you can start using wrap feature to publish one or more canvas apps as a mobile app package.
-
-### Permissions and access requirements
-
-- Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
-- Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
-- Access to [Microsoft App Center](https://appcenter.ms/)
-
-### Software and device requirements
-
-- Mac device for [code signing with iOS](code-sign-ios.md)
-- Windows PC for [code signing with Android](code-sign-android.md)
-- To run the wrapped mobile app:
-    - Android device with version 10 or higher
-    - iOS device with version 14 or higher
-
-> [!NOTE]
-> Developing apps for the iOS platform requires an [Apple Developer Program](https://developer.apple.com/) account.
-
 ## Understanding wrap terminology
 
 Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
