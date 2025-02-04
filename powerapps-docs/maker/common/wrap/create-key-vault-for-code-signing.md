@@ -106,4 +106,6 @@ For Troubleshooting issues, see [Troubleshoot issues with the wrap feature in Po
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Frequently asked questions for wrap](faq.yml)
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+
