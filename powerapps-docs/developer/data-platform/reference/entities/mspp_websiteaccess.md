@@ -1,7 +1,6 @@
 ---
 title: "Website Access (mspp_websiteaccess) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Website Access (mspp_websiteaccess) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke
