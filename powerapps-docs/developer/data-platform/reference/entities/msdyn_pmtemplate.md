@@ -1,7 +1,6 @@
 ---
 title: "PM Template (msdyn_pmtemplate) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM Template (msdyn_pmtemplate) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke
