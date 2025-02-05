@@ -1286,6 +1286,8 @@
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
+      - name: System requirements and prerequisites for Wrap
+        href: ./common/wrap/prerequisites.md
       - name: Use the wrap wizard to build your mobile app
         href: ./common/wrap/wrap-how-to.md
       - name: Code sign for iOS

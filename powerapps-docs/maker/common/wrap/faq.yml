@@ -130,3 +130,8 @@ sections:
           The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must take additional steps:
           1. Add users from outside the home tenant as guests in Azure.
           2. Include these guests in the Azure Conditional Access process. Additionally, the maker must share the app with these guest IDs within Power Apps.
+      - question: |
+          See also
+        answer: |
+          [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues) 
+

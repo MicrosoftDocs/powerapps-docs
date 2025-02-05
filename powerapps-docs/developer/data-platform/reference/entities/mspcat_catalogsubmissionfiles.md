@@ -1,7 +1,6 @@
 ---
 title: "Catalog Submission Files (mspcat_CatalogSubmissionFiles) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Catalog Submission Files (mspcat_CatalogSubmissionFiles) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke
