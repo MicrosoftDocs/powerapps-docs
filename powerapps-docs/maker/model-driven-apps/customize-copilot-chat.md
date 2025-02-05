@@ -211,6 +211,37 @@ In this action we have set the trigger as "refresh demo" and to update the recor
 
 In this demo the name of the account is set to "Microsoft" and then the page was refreshed.
 
+### Known limitation for refresh page action
+ Refresh page action is currently only supported for entity record page.
+
+ ### Full topic code
+```yml
+ kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - refresh demo
+
+  actions:
+    - kind: InvokeFlowAction
+      id: invokeFlowAction_ZD9uan
+      input: {}
+      output: {}
+      flowId: 04ab2477-4fe3-ef11-be1f-6045bd045f24
+
+    - kind: SendActivity
+      id: sendActivity_5EM6Me
+      activity:
+        kind: EventActivity
+        value: "{\"save\":\"true\"}"
+        name: MS.PA.Data.Refresh
+
+inputType: {}
+outputType: {}
+```
+
 ## Known Limitations
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
