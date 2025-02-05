@@ -16,7 +16,14 @@ summary: |
 
 sections:
   - name: General
-    questions:    
+      - question: | 
+          Why am not able to Sign into my App?
+        answer: |
+          1. Verify if the user has access to the application. For more details, [refer to this link](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app)
+          2. If access is confirmed, check the App's Azure conditional policies. Admin access is required to review these policies. [More information](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies)
+          3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and use the [following link](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies: 
+
+      
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
@@ -96,12 +103,7 @@ sections:
           Can I deep link into a wrapped mobile app?
         answer: |
           Yes. You can use ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>``` schema to deep link into your wrapped mobile apps. Refer to [Using deep links with wrapped mobile apps](wrap-deep-links.md) for more information.
-          
-      - question: |
-          Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message 
-        answer: |
-         Your organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue, see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
-                
+                   
       - question: |
           Can I create B2C mobile apps with Power Apps?
         answer: |
