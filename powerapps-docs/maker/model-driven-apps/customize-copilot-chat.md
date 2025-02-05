@@ -186,6 +186,31 @@ beginDialog:
 > [!NOTE]
 > If your agent supports multiple languages and needs prompt guide translation, all your user facing question strings must be set using a `SetTextVariable`.
 
+## Refresh Record Page
+ A user can modify current record page from Copilot studio and then refresh the page using the action `MS.PA.Data.Refresh`
+
+ The action has following option 
+
+|Option|Type|required| detail|
+|----------|------------|----------|------------|
+|save|boolean| optional|If set to true this will save the form and then it will refresh the form. If set to false and the form is dirty it will not refresh the page and the action will fail, if set to false and the form is not dirty it will refresh the page. If the value is not passed it is considered as false |
+
+## Steps to use the action
+
+### Add new topic to Copilot chat
+In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types. 
+
+   :::image type="content" source="media/mda-copilot-refresh-action-topic.png" alt-text="topic for refresh action" lightbox="media/mda-copilot-refresh-action-topic.png":::
+
+In this action we have set the trigger as "refresh demo" and to update the record using a flow after the flow is finished we send a event Activity with name `MS.PA.Data.Refresh` and value `{"save":"true"}` so any unsaved change are saved.
+
+### Trigger the topic
+ For triggering this topic we need to send string "refresh demo" that was set in previous step to trigger it 
+
+   :::image type="content" source="media/mda-copilot-refresh-demo.gif" alt-text="demo for refresh action" lightbox="media/mda-copilot-refresh-demo.gif":::
+
+In this demo the name of the account is set to "Microsoft" and then the page was refreshed.
+
 ## Known Limitations
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
