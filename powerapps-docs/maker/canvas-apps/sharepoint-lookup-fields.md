@@ -23,7 +23,7 @@ This tutorial shows how to connect two lists with a lookup column in a canvas ap
 
 SharePoint provides two types of lookup columns:
 
-- **Lookup**: Links to another list. For example an **Orders** list may have a lookup column that links to customers in a **Customer** list.
+- **Lookup**: Links to another list. For example, an **Orders** list might have a lookup column that links to customers in a **Customer** list.
 - **Choice**: Selecting a column displays a menu of items you can choose.
 
 ## Prerequisites
@@ -43,11 +43,11 @@ You might also use a lookup column to connect the **Orders** list to a **Product
 
 ## What are choice columns used for?
 
-**Choice** columns are used for very short lists. Instead of  creating a separate list, you include the list values in a small menu. This menu appears when you select a **Choice** column, and then you can select one of the values from the menu.
+**Choice** columns are used for short lists. Instead of  creating a separate list, you include the list values in a small menu. This menu appears when you select a **Choice** column, and then you can select one of the values from the menu.
 
 Examples include data like Customer Status Code, Product Availability, State Codes—any fixed, relatively short list.
 
-The choice data can stay as a separate list, if you use a **Lookup** column to link them. However, a **Choice** column implementation is usually easier and quicker than a **Lookup** column implementation.
+The choice data can stay as a separate list, if you use a **Lookup** column to link them. However, a **Choice** column implementation is easier and quicker than a **Lookup** column implementation.
 
 Learn more in [Integrate SharePoint Online into Power Apps overview](sharepoint-list-integration-overview.md).
 
@@ -64,7 +64,7 @@ The **Assets** list has two lookup columns:
 - *RepairShop*, of type **Lookup**, uses email addresses to point to entries in the **RepairShop** list.
 - *AssetType*, of type **Choice**, lists the asset types for hardware.
 
-You can define additional columns, depending on the information you need to track.
+You can define more columns, depending on the information you need to track.
 
 ### Define the RepairShop list and add data
 
@@ -89,7 +89,7 @@ Create this list first, so when you add data to the **Assets** list, **RepairSho
 1. In the **Create a column** pane, add RepairShop to the **Name** field. Go to **Select a list as a source** and choose **RepairShop**. Go to **Select a column from the list above** and choose **ContactEmail**.
 1. Select **Save**.
 
-   You see the column, *RepairShop* has a two-arrows icon that indicates it's a lookup type column.
+   You see the column *RepairShop* has a two-arrows icon that indicates it's a lookup type column.
 
    :::image type="content" source="./media/sharepoint-lookup-fields/repair-shop-lookup-column.png" alt-text="Screenshot showing the RepairShop column in the Assets list.":::
 
@@ -105,9 +105,9 @@ Let's [preview the app](preview-app.md) and add items to your **Assets** list.
 
 2. Select the **+** symbol in the upper right corner of your app to add an entry.
 
-3. Enter a **Title** for this asset, for example *Mikah's Laptop*.
+3. Enter a **Title** for this asset, for example *Micah's Laptop*.
 
-4. Select the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
+4. Select the **AssetType** dropdown arrow. The values displayed are values you entered when you created this column. Choose one of the entries.
 
    :::image type="content" source="./media/sharepoint-lookup-fields/fill-asset-type-3.png" alt-text="Screenshot that shows the AssetType list when you select the dropdown arrow.":::
 
