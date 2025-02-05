@@ -35,6 +35,8 @@ In this article, you will learn how to use an existing Azure Key Vault or create
     `Connect-AzureAD -TenantId <your tenant ID>`<br>
    `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
+> [!NOTE]
+> On this page, 'Wrap KeyVault Access App' is used as a proxy for the Application Display Name, and for the client, it refers to the their App Display Name.
 
 2. Follow these steps to ensure that the Service Principal representing your app, such as Wrap Key Vault Access App, has the necessary access permissions, add a **Reader** role assignment to it in the **Access Control (IAM)** of your default subscription. This should also be present in the IAM of both the subscription and the Key Vault.
 
