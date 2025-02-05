@@ -26,7 +26,7 @@ The Stream control in Power Apps lets you embed Microsoft [Stream (on SharePoint
 
 ## Prerequisites
 
-To add a Steam video in your canvas app, follow these steps to get the embed URL of the video:
+To add a Stream video in your canvas app, follow these steps to get the embed URL of the video:
 
 1. Open your [Stream (on SharePoint)](/stream/streamnew/new-stream) video.
 1. Select **Share** > **Embed code**.
@@ -36,7 +36,7 @@ To add a Steam video in your canvas app, follow these steps to get the embed URL
 :::image type="content" source="media/sample-embed-code.png" alt-text="embed URL example":::
 
 
-## Add Steam control 
+## Add Stream control 
 
 1. Open your app canvas app for [editing](../../edit-app.md).
 1. On the [command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar), select **Insert** > **Media** > **Stream (preview)**.
