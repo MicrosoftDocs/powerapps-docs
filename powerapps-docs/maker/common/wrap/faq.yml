@@ -19,9 +19,9 @@ sections:
       - question: | 
           Why am I not able to Sign into my wrapped Application?
         answer: |
-          1. Verify if the user has access to the application. For more details, [refer to this link](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app)
+          1. Verify if the user has access to the PowerApps application. For more details, [refer to this link](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app)
           2. If access is confirmed, check the App's Azure conditional policies. Admin access is required to review these policies. [More information](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies)
-          3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and use the [following link](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies: 
+          3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and use the [following link](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
       
       - question: |
           Can single tenant customers use wrap with Power Apps? 
