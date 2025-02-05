@@ -1,7 +1,6 @@
 ---
 title: "PM Calendar Version (msdyn_pmcalendarversion) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM Calendar Version (msdyn_pmcalendarversion) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke

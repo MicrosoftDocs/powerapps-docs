@@ -1,7 +1,6 @@
 ---
 title: "Governance Configuration (GovernanceConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Governance Configuration (GovernanceConfiguration) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke

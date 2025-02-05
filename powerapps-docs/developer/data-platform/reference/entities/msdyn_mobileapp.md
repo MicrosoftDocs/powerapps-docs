@@ -1,7 +1,6 @@
 ---
 title: "Mobile App (msdyn_mobileapp) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mobile App (msdyn_mobileapp) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke
