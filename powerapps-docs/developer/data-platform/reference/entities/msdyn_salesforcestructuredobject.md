@@ -1,7 +1,6 @@
 ---
 title: "Salesforce Structured Object (msdyn_salesforcestructuredobject) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Salesforce Structured Object (msdyn_salesforcestructuredobject) table/entity with Microsoft Dataverse."
-ms.service: powerapps
 ms.topic: reference
 author: phecke
 ms.author: pehecke
