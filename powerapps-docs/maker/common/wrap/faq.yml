@@ -17,7 +17,7 @@ summary: |
 sections:
   - name: General
       - question: | 
-          Why am not able to Sign into my App?
+          Why am I not able to Sign into my wrapped Application?
         answer: |
           1. Verify if the user has access to the application. For more details, [refer to this link](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app)
           2. If access is confirmed, check the App's Azure conditional policies. Admin access is required to review these policies. [More information](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies)
