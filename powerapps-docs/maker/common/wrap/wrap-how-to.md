@@ -69,7 +69,7 @@ If you don't see your registered app name in the **Owned registrations** dropdow
 
     > [!NOTE]
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
-    > The application name should be the same as the one used when creating the Android signature hash key.
+    > If you have generated the hash key before, than the same hash key can be used while creating new app registration but the new apk genererated needs to be signed again using apksigner tool.
 
    > [!div class="mx-imgBorder"]
    > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
