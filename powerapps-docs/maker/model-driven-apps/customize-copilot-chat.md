@@ -208,11 +208,11 @@ In this action we have set the trigger as **refresh demo** and to update the rec
 
 ### Trigger the topic
 
- For triggering this topic we need to send the string **refresh demo** that was set in previous step to trigger the topic.
+ To trigger this topic you need to send the string **refresh demo** that was set in previous step to trigger the topic.
+
+In this example, the name of the account is set to **Microsoft** and then the page is refreshed.
 
 :::image type="content" source="media/mda-copilot-refresh-demo.gif" alt-text="demo for refresh action" lightbox="media/mda-copilot-refresh-demo.gif":::
-
-In this demo, the name of the account is set to **Microsoft** and then the page was refreshed.
 
 ### Known limitation for refresh page action
 
