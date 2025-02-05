@@ -186,14 +186,14 @@ beginDialog:
 > [!NOTE]
 > If your agent supports multiple languages and needs prompt guide translation, all your user facing question strings must be set using a `SetTextVariable`.
 
-## Refresh Record Page
- A user can modify current record page from Copilot studio and then refresh the page using the action `MS.PA.Data.Refresh`
-
+## Refresh Form using Copilot Chat response
+ For scenarios where a Copilot interaction updates the currently open record and you need to refresh the page to view the latest data, you can use the client action MS.PA.Data.Refresh.
+ 
  The action has following option 
 
 |Option|Type|required| detail|
 |----------|------------|----------|------------|
-|save|boolean| optional|If set to true this will save the form and then it will refresh the form. If set to false and the form is dirty it will not refresh the page and the action will fail, if set to false and the form is not dirty it will refresh the page. If the value is not passed it is considered as false |
+|save|boolean| optional|`true` : save the form and then it will refresh the form. <br/><br/>`false` : If the form is dirty, it will not refresh the page and the action will fail. <br/>If the form is not dirty, it will refresh the page.<br/><br>If the value is not provided, it defaults to false. |
 
 ## Steps to use the action
 
