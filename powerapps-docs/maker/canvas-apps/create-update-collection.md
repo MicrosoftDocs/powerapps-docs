@@ -6,7 +6,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/28/2019
+ms.date: 02/5/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
@@ -62,21 +62,19 @@ Watch this video to learn how to create and update a collection:
     )
     ```
 
+
+Collect( ProductList, {Product: ProductName.Text, Color: Colors.Selected.Value})
+
+
 1. Press F5, type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
 
     ![Preview of the app.](./media/create-update-collection/preview-add.png)
 
 1. Repeat the previous step at least two more times, and then press Esc.
 
-1. If you're using the preview version of Power Apps Studio, select the **Variables** pane and then select **Collections** to see the collections that you created.
+1. Select the **Variables** pane and then select **Collections** to see the collections that you created.
 
    ![Show collections.](./media/create-update-collection/collections.png)
-
-   If you're using the classic version of Power Apps Studio, on the **File** menu, select **Collections**.
-   
-   ![Show collection.](./media/create-update-collection/show-collection.png)
-   
-
 
 
 ## Show a collection
@@ -87,11 +85,11 @@ Watch this video to learn how to create and update a collection:
 
 1. Set the gallery's **Items** property to **ProductList**.
 
-1. In the **Data** pane, set the subtitle field to **Color**, and set the title field to **Product**.
+1. Select the gallery and then select **Fields**. Set the subtitle field to **Color**, and set the title field to **Product**.
 
     ![Set the gallery's Items property, and change the fields that it shows.](./media/create-update-collection/configure-gallery.png)
 
-1. Close the **Data** pane, select the gallery, and then set the **Layout** field to **Title and subtitle**.
+1. Select the **Layout** field to **Title and subtitle**.
 
     ![Change layout of the gallery.](./media/create-update-collection/change-layout.png)
 
