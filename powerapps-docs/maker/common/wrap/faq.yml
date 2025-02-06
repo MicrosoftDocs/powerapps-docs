@@ -20,7 +20,7 @@ sections:
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#aegistering your app on Azure portal manually) for directions on how to select a correct account type to prepare your app for wrap.
+          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional) for directions on how to select a correct account type to prepare your app for wrap.
 
       - question: |
           Does the wrap feature in Power Apps support Customer-Managed Keys (CMK) or Lockbox capabilities?
@@ -115,12 +115,12 @@ sections:
       - question: |
           Can I delete wrap projects?
         answer: |
-          No, wrap projects cannot be deleted but you can delete the project APK files from your storage location.
+          No, wrap projects can't be deleted but you can delete the project APK files from your storage location.
 
       - question: |
-          How can we ensure that customers outside the home tenant cannot access the app even if we enable multi-tenant access during registration?
+          How can we ensure that customers outside the home tenant can't access the app even if we enable multitenant access during registration?
         answer: |
-          Users outside the home tenant cannot access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
+          Users outside the home tenant can't access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
           The app ensures proper data separation across organizations by embedding the tenant identifier in the authentication token. 
           This mechanism allows the app to verify the user's tenant and grant access only to data relevant to that tenant.
 
@@ -130,6 +130,14 @@ sections:
           The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must take additional steps:
           1. Add users from outside the home tenant as guests in Azure.
           2. Include these guests in the Azure Conditional Access process. Additionally, the maker must share the app with these guest IDs within Power Apps.
+
+      - question: | 
+          Why am I not able to Sign into my wrapped Application?
+        answer: |
+          1. Verify if the user has access to the PowerApps application. More information: [Share a canvas app with your organization](../canvas-apps/share-app.md)
+          2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
+          3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
+
       - question: |
           See also
         answer: |

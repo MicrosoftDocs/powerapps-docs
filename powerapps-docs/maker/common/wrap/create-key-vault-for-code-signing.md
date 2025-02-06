@@ -13,16 +13,17 @@ search.audienceType:
 contributors:
   - mduelae
 ---
-# Create Azure Key Vault for wrap in Power Apps
+# Create Azure Key Vault for wrap using default subscription
 
 In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-4-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
 
 
-In this article, you will learn how to use an existing Azure Key Vault or create a new [Azure portal](https://portal.azure.com).
+In this article, you'll learn how to use an existing Azure Key Vault or create a new [Azure portal](https://portal.azure.com).
 
 ## Prerequisites
   
 - Microsoft Entra subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Your subscription ID needs to be the default one. More information: [Get subscription information](cli/azure/manage-azure-subscriptions-azure-cli#get-subscription-information)
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
@@ -35,6 +36,8 @@ In this article, you will learn how to use an existing Azure Key Vault or create
     `Connect-AzureAD -TenantId <your tenant ID>`<br>
    `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
+> [!NOTE]
+> On this page, 'Wrap KeyVault Access App' is used as a proxy for the application display name, and for the client, it refers to their app display name.
 
 2. Follow these steps to ensure that the Service Principal representing your app, such as Wrap Key Vault Access App, has the necessary access permissions, add a **Reader** role assignment to it in the **Access Control (IAM)** of your default subscription. This should also be present in the IAM of both the subscription and the Key Vault.
 
@@ -77,7 +80,7 @@ In this article, you will learn how to use an existing Azure Key Vault or create
      - **iOS** 
        1. Select the .cer into Keychain Access app to install it. For more information, see [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate).
        2. Right-click your certificate file to export the file as a .p12 file, select **Export**, and then select the file format .p12.
-       3. The iOS Certificate extension (.p12) should be renamed to **.pfx** as it is the accepted format by Key Vault
+       3. The iOS Certificate extension (.p12) should be renamed to **.pfx** as it's the accepted format by Key Vault
        
          > [!NOTE]
          > When you upload to the Key Vault, you'll need to provide the password that you set in previous step for the .p12 file.
