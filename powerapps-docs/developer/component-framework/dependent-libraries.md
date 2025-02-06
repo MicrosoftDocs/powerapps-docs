@@ -38,7 +38,7 @@ In addition to specifying a dependency in the manifest of your control (where yo
 <!-- TODO Need source VDX for diagram -->
 
 
-[Tutorial: Use dependent libraries in a component](tutorial-use-dependent-libraries.md)
+
 
 ## How it works
 
@@ -71,3 +71,6 @@ Use the [dependency element](manifest-schema-reference/dependency.md) within [re
 </resources>
 
 ```
+
+[Tutorial: Use dependent libraries in a component](tutorial-use-dependent-libraries.md)   
+

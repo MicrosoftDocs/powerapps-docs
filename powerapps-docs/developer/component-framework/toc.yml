@@ -460,6 +460,8 @@ items:
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: dependency
+        href: manifest-schema-reference/dependency.md
       - name: domain
         href: manifest-schema-reference/domain.md
       - name: external-service-usage

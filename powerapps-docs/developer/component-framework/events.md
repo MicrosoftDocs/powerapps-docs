@@ -29,5 +29,5 @@ TODO: There were some concepts demonstrated in the example, such as passing payl
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="TODO Explain this diagram":::
 <!-- See source media/src/passing-payload-in-events.vsdx -->
 
-[Tutorial: Define a custom event in a component](tutorial-define-event.md)
+[Tutorial: Define a custom event in a component](tutorial-define-event.md)   
 [Events](reference/events.md)
