@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 11/26/2024
+ms.date: 02/06/2025
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -66,6 +66,7 @@ Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
 - Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
+- Updating rich text editor content from any external sources like Microsoft Word, Excel, and so forth, isn't supported.
  
 Knowledge management: 
 - A preview tab isn't currently available.
