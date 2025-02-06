@@ -1,5 +1,5 @@
 ---
-title: Resources Element | Microsoft Docs
+title: resources Element | Microsoft Docs
 description: The resources node in the component manifest refers to the resource files that component requires to implement it's visualization.
 author: anuitz
 ms.author: anuitz
