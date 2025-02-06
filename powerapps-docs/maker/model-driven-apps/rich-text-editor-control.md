@@ -65,8 +65,8 @@ When using the modern rich text editor, consider the limitations listed in this 
 Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
-- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
 - Updating rich text editor content from any external sources like Microsoft Word, Excel, and so forth, isn't supported.
+- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
 - A preview tab isn't currently available.
