@@ -23,7 +23,7 @@ In this article, you'll learn how to use an existing Azure Key Vault or create a
 ## Prerequisites
   
 - Microsoft Entra subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
-- Your subscription ID needs to be the default one. More information: [Get subscription information](cli/azure/manage-azure-subscriptions-azure-cli#get-subscription-information)
+- Your subscription ID needs to be the default one. More information: [Get subscription information](cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
