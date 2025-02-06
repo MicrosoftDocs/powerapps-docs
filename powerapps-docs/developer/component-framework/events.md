@@ -14,6 +14,10 @@ contributors:
 
 A common requirement when building custom components with the Power Apps Component Framework is the ability to react to events generated within the control. These events can be invoked either due to user interaction or programmatically via code. For example, an application can have a code component that lets a user build a product bundle and this component can also raise an event which could show product information in another area of the application. In this article we will look at how to build a code component that defines events, raises them and have the hosting application react to them.
 
+## Using events
+
+Can we provide some overview about how to use events? I'm not clear about how methods defined in [Events](reference/events.md) are consumed.
+
 ## Component Data Flow
 
 The common data flow for a code component is data flowing from the hosting application into the control as inputs and updated data flowing out of the control to the hosting form or page.
@@ -30,4 +34,4 @@ TODO: There were some concepts demonstrated in the example, such as passing payl
 <!-- See source media/src/passing-payload-in-events.vsdx -->
 
 [Tutorial: Define a custom event in a component](tutorial-define-event.md)   
-[Events](reference/events.md)
+[Events](reference/events.md)   
