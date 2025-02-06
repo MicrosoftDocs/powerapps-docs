@@ -16,6 +16,10 @@ items:
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
+  - name: Dependent libraries
+    href: dependent-libraries.md
+  - name: Events
+    href: events.md
   - name: Get tooling
     href: get-powerapps-cli.md
   - name: Limitations
@@ -30,6 +34,10 @@ items:
       href: tutorial-create-model-driven-app-dataset-component.md
     - name: Create a canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
+    - name: Define an event in a component
+      href: tutorial-define-event.md
+    - name: Use dependent libraries
+      href: tutorial-use-dependent-libraries.md
   - name: Online learning
     href: /training/paths/use-power-apps-component-framework
   - name: Code components ALM
