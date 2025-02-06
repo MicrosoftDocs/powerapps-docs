@@ -6,7 +6,7 @@ author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/5/2025
+ms.date: 02/6/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
@@ -32,8 +32,6 @@ Watch this video to learn how to create and update a collection:
 
 1. In Power Apps Studio, add a **Text input** control.
 
-    ![Insert a Text input control.](./media/create-update-collection/add-textbox.png)
-
 1. Rename the control by selecting its ellipsis in the left navigation pane, selecting **Rename**, and then typing **ProductName**.
 
     ![Rename a control.](./media/create-update-collection/rename-textbox.png)
@@ -56,17 +54,14 @@ Watch this video to learn how to create and update a collection:
     Collect(
         ProductList,
         {
-            Product: ProductName.Text,
-            Color: Colors.Selected.Value
+            Product: "ProductName.Text",
+            Color: "Colors.Selected.Value"
         }
     )
     ```
 
 
-Collect( ProductList, {Product: ProductName.Text, Color: Colors.Selected.Value})
-
-
-1. Press F5, type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
+1. Press F5 or select the play button to preview the app. Type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
 
     ![Preview of the app.](./media/create-update-collection/preview-add.png)
 
@@ -79,17 +74,15 @@ Collect( ProductList, {Product: ProductName.Text, Color: Colors.Selected.Value})
 
 ## Show a collection
 
-1. Add a vertical **Gallery** control.
-
-    ![Add a vertical gallery.](./media/create-update-collection/add-gallery.png)
+1. Select **Insert** > **Vertical gallery** control.
 
 1. Set the gallery's **Items** property to **ProductList**.
 
-1. Select the gallery and then select **Fields**. Set the subtitle field to **Color**, and set the title field to **Product**.
+1. Select the gallery in the tree view and then select **Fields**. 1. Set the subtitle field to **Color**, and set the title field to **Product**.
 
     ![Set the gallery's Items property, and change the fields that it shows.](./media/create-update-collection/configure-gallery.png)
 
-1. Select the **Layout** field to **Title and subtitle**.
+1. Select **Layout** > **Title and subtitle**.
 
     ![Change layout of the gallery.](./media/create-update-collection/change-layout.png)
 
@@ -99,11 +92,7 @@ Collect( ProductList, {Product: ProductName.Text, Color: Colors.Selected.Value})
 
 ## Remove one or all items
 
-1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the pencil icon near the upper-left corner.
-
-    ![Select gallery template.](./media/create-update-collection/select-template.png)
-
-1. Add a **Trash** icon to the gallery template.
+1. Select the gallery and add a **Trash** icon to the gallery template.
 
     ![Add trash icon.](./media/create-update-collection/trash-icon.png)
 
@@ -129,7 +118,6 @@ Collect( ProductList, {Product: ProductName.Text, Color: Colors.Selected.Value})
 
 1. While holding down the Alt key, select the button.
 
-1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
 
 For information about how to show data from Microsoft Lists or SharePoint (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
 Display form controls](controls/control-form-detail.md).
