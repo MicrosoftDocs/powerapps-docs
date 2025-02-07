@@ -202,7 +202,7 @@ Use the AI Builder business card reader control to detect business cards and ext
 
 ### Power BI report
 
-Use the Power BI report control to add a Power BI report on the form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
+Embed a Power BI report in a model-driven app dashboard. More information: [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
 
 ## More components controls
 
