@@ -1298,6 +1298,8 @@
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
+      - name: Benefits and limitations of Wrap
+        href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
   - name: For developers
