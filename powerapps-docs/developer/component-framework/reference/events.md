@@ -25,6 +25,8 @@ Canvas apps only
 
 [event](../manifest-schema-reference/event.md) nodes in the manifest file are built as callable methods in the `context.events` object.
 
+[Define Events](../events.md)
+
 ## Example
 
 ```JSX
