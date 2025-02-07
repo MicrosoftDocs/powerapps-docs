@@ -1,6 +1,6 @@
 ---
 title: "Functions in Microsoft Dataverse"
-description: "Learn how to reusable functions can be used to execute a specific set of commands within Dataverse"
+description: "Learn how reusable functions can be used to execute a specific set of commands within Dataverse"
 ms.custom: ""
 ms.date: 02/03/2025
 ms.reviewer: "Mattp123"

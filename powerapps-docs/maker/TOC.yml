@@ -2064,6 +2064,10 @@
         items:
         - name: Functions overview
           href: ./data-platform/functions-overview.md
+        - name: Create and use functions
+          href: ./data-platform/functions-create.md
+        - name: Invoke a function
+          href: ./data-platform/functions-invoke.md  
         - name: Example functions
           href: ./data-platform/functions-examples.md
         - name: Supported Power Fx functions
