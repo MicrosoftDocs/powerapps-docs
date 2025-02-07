@@ -16,7 +16,7 @@ search.audienceType:
 
 Wrap offers several benefits, effectively addressing challenges like increasing adoption rates, enhancing branding flexibility, and supporting custom distribution channels.
 
-## Benefits
+## Benefits of Wrap
 
 1. **Improved app adoption**: App makers can distribute their applications more effectively, making it easier for users to find and use the app directly by searching for its name in the App Store or Play Store and opening it. This streamlined process eliminates the need for additional steps, enhancing user experience and adoption rates.
 
@@ -24,17 +24,24 @@ Wrap offers several benefits, effectively addressing challenges like increasing 
 
 1. **Custom distribution channels**: App makers now have the flexibility to distribute their apps through their own preferred channels, providing more control and potentially reaching their target audience more effectively, rather than relying solely on standard platforms like the Play Store or App Store.
 
-## Limitations
+## Limitations of Wrap
 
 1. **Logout button**: The sign out button option for the user is missing.
    > [!NOTE]
    > Users can long press the indented application for which they want to sign out. To make this feature discoverable, we recommend that makers provide a notification to their users.
+
 1. **Push notifications**:  Currently, the app does not support push notifications.
+
 1. **Navigation**: Wrap doesn't support navigating from a specific screen of one app to a specific screen of another app. When users attempt to navigate, only the home screen of the other app is opened. For example, consider a primary app with screens A1, A2, and A3, and a secondary app with screens B1, B2, and B3. Currently, users can only navigate from any screen in App A to the home screen of App B. Direct navigation between individual screens of App A and App B isn't supported.
+
 1. **APK size**: If your distribution method is via the Google Play Store, the APK file size is limited to 100 MB. We recommend creating an AAB file instead of an APK file during the wrap process, as AAB files support sizes up to 150 MB for the Play Store.
+
 1. **Android hardware back button**: The Android hardware back button doesn't sync coherently with the application back button.
+
 1. **Feedback**:  Currently, users can't provide feedback inside wrap.
+
 1. **Surveys**: Users don't receive surveys for the wrap.
+
 1. **Sovereign cloud**: Wrap is currently not supported in the sovereign cloud.
 
 ### See also
