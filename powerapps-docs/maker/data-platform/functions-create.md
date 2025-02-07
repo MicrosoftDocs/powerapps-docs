@@ -16,9 +16,16 @@ ms.author: "paulliew"
 search.audienceType: 
   - maker
 ---
-# Create and use functions in Microsoft Dataverse
+# Create and use functions in Microsoft Dataverse (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Create and use reusable functions in Microsoftr Dataverse. Functions use Power Fx to execute a specific set of commands within Dataverse that run server-side.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 

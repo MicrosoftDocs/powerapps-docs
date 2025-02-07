@@ -16,9 +16,16 @@ ms.author: "paulliew"
 search.audienceType: 
   - maker
 ---
-# Invoke a function from app, flow, code, or another function
+# Invoke a function from app, flow, code, or another function (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can invoke functions in Dataverse from a canvas app, a custom page in a model-driven app, a flow, code, or from another function.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Invoke a function from a canvas app or custom page
 
@@ -44,6 +51,10 @@ You can invoke functions in Dataverse from a canvas app, a custom page in a mode
 1. Select your function. The function has a unique name with a prefix.
 1. Provide values for all the input parameters (if any).
 
+## Invoke functions from the Dataverse Web API
+
+Follow the steps for the unbound action sections in the [Invoking custom APIs from the Web API](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) article (depending on the appropriate scope of the plug-in).
+
 ## Invoke existing functions from within new functions
 
 To invoke an existing function within a new function, use the syntax: `Environment.ExistingFunction({inputParam1: value1, inputParam2: value2, ... inputParamN: valueN})`
@@ -53,7 +64,7 @@ Since the output is always a record, use the dot notation to access the output p
 - `Environment.ExistingFunction({inputParam1: value1, inputParam2: value2, ... inputParamN: valueN}).out1`
 - `Environment.ExistingFunction({inputParam1: value1, inputParam2: value2, ... inputParamN: valueN}).out2`
 
-Limitations with functions in Dataverse
+## Limitations with functions in Dataverse
 
 - The environment language object needs to be re-added to access new functions inside existing canvas apps. For any functions created after you have added the environment table data source to an existing canvas app, you must remove and re-add the Power Fx environment language object. Then you see the updated list of functions as actions.
 - Nested support. functions can only call Microsoft actions published by Microsoft from Power Fx expressions.
