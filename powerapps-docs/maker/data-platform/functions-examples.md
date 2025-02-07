@@ -31,15 +31,19 @@ The article helps you get started with functions in Microsoft Dataverse by integ
 
 This example uses the `Abs()` function to return the non-negative value of its argument. If a number is negative, `Abs` returns the positive equivalent.
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] Open the unmanaged solution where you want to add a function.
-1. Select **New** > **Automation** > **Function**.
-1. On the **New function** pane, enter a **Display name** and **Description** for your function.
-1. Create an Output parameter to validate expected behavior that makes sense, such as a string. Optionally, use input parameters to make testing easier, that makes sense with the formula.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Functions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] Open the unmanaged solution where you want to add a function.
+1. Select **New function**.
+1. On the **New function** pane, enter a **Display name**, such as *Return non-negative value*, and **Description** for your function.
+1. Create a **New output parameter** to validate expected behavior, such as a string. For example, enter the **Name** of your **New Output parameter** *Out*.
+1. Optionally, use input parameters to make testing easier, that makes sense with the formula.
+1. In the **Formula** box, add a Power Fx formula that returns a non-negative value and references the output parameter **Name** you entered in the previous step, such as the *Out* name used in this Power Fx example.  <!-- Validate this with PM -->
 
-   `{Out: "" }`
-1. <!-- This is incomplete so stopping here. Added comment in source doc to expand on this -->
+   `{Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5) }`
+1. Select **Save**.
+1. To test the function, select the function and then select **Test** on the command bar.
+1. In the **Input** box enter a string or number such as *-10*, and then select **Play**. <!-- How should this work?-->
 
-{Out: "Abs(-5) = 5: & Text( Abs(-5) = 5) }
+
 In the formula editor, wrap the Output parameter in curly brackets:
 
 ## Input validation and custom errors
