@@ -90,6 +90,6 @@ If you build a new app or have an existing app, you can connect to SharePoint th
 ## Related information
 
 Learn more about working with lists in Power Apps in
-[Integrate SharePoint Online into Power Apps overview](sharepoint-list-integration-overview.md).
+[Integrate SharePoint Online into Power Apps overview](../sharepoint-list-integration-overview.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
