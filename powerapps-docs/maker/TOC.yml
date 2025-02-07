@@ -1594,8 +1594,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-          - name: Add the Power BI report control (preview)
-            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
