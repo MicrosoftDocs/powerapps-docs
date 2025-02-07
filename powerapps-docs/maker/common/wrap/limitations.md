@@ -12,36 +12,32 @@ search.audienceType:
   - maker
 ---
 
-# Advantages and limitations of Wrap
+# Benefits and limitations of Wrap
 
-Wrap offers several benefits over Power Apps Mobile, addressing key challenges such as low adoption rates, branding limitations, and the preference for custom distribution channels.
+Wrap offers several benefits, effectively addressing challenges like increasing adoption rates, enhancing branding flexibility, and supporting custom distribution channels.
 
-## Advantages of Wrap
+## Benefits
 
-The following are the challenges with Power Apps Mobile Distribution
+1. **Improved app adoption**: App makers can distribute their applications more effectively, making it easier for users to find and use the app directly by searching for its name in the App Store or Play Store and opening it. This streamlined process eliminates the need for additional steps, enhancing user experience and adoption rates.
 
-1. **Low adoption rate of Power Apps mobile**: App makers face difficulties in effectively distributing their applications within the Power Apps framework.
-    * *Expectation*: Users expect to find and use the app directly by searching for the app name in the app store and then opening it.
-    * *Reality*: In reality, users need to first install Power Apps from the app store. After installing Power Apps, they must then select on the app name within Power Apps to start using the app.
-2. **Branding limitations**: Makers look for greater flexibility to customize their app's branding, which would streamline both the distribution process and user engagement.
-    * *Expectation*: Users expect to find and use the app directly by searching for the app name in the App Store or Play Store.
-    * *Reality*: In reality, users need to first install Power Apps from the App Store or Play Store. After installing Power Apps, they must then select on the app name within Power Apps to start using the app.
-3. **Preference for custom channels**: Many makers prefer to distribute their apps through their own channels instead of relying on standard platforms like the Play Store or App Store.
+1. **Enhanced branding flexibility**: App makers have greater freedom to customize their app's branding, which streamlines both the distribution process and user engagement.
+
+1. **Custom distribution channels**: App makers now have the flexibility to distribute their apps through their own preferred channels, providing more control and potentially reaching their target audience more effectively, rather than relying solely on standard platforms like the Play Store or App Store.
 
 ## Limitations
 
-1. **Missing logout button**: The sign out button option for the user is missing.
+1. **Logout button**: The sign out button option for the user is missing.
    > [!NOTE]
    > Users can long press the indented application for which they want to sign out. To make this feature discoverable, we recommend that makers provide a notification to their users.
+1. **Push notifications**:  Currently, the app does not support push notifications.
+1. **Navigation**: Wrap doesn't support navigating from a specific screen of one app to a specific screen of another app. When users attempt to navigate, only the home screen of the other app is opened. For example, consider a primary app with screens A1, A2, and A3, and a secondary app with screens B1, B2, and B3. Currently, users can only navigate from any screen in App A to the home screen of App B. Direct navigation between individual screens of App A and App B isn't supported.
+1. **APK size**: If your distribution method is via the Google Play Store, the APK file size is limited to 100 MB. We recommend creating an AAB file instead of an APK file during the wrap process, as AAB files support sizes up to 150 MB for the Play Store.
+1. **Android hardware back button**: The Android hardware back button doesn't sync coherently with the application back button.
+1. **Feedback**:  Currently, users can't provide feedback inside wrap.
+1. **Surveys**: Users don't receive surveys for the wrap.
+1. **Sovereign cloud**: Wrap is currently not supported in the sovereign cloud.
 
-2. **No push notifications**: The app doesn't support push notifications.
+### See also
 
-3. **Navigation limitations**: Wrap doesn't support navigating from a specific screen of one app to a specific screen of another app. When users attempt to navigate, only the home screen of the other app is opened. For example, consider a primary app with screens A1, A2, and A3, and a secondary app with screens B1, B2, and B3. Currently, users can only navigate from any screen in App A to the home screen of App B. Direct navigation between individual screens of App A and App B isn't supported.
-
-4. **APK size limitation**: If your distribution method is via the Google Play Store, the APK file size is limited to 100 MB. We recommend creating an AAB file instead of an APK file during the wrap process, as AAB files support sizes up to 150 MB for the Play Store.
-
-5. **Android hardware back button**: The Android hardware back button doesn't sync coherently with the application back button.
-
-6. **Feedback**: Users can't provide feedback inside the wrap.
-
-7. **Surveys**: Users don't receive surveys for the wrap.
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
+- [Frequently Asked Questions](faq.yml)
