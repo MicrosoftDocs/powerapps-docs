@@ -25,6 +25,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - Salesforce (preview)
 - Oracle (preview)
 - Snowflake (preview)
+- PostgreSQL
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -36,6 +37,7 @@ To learn more about supported actions and limitations with the connector, go to:
 - [Connector reference for the Salesforce connector](/connectors/salesforce/)
 - [Connector reference for the Oracle connector](/connectors/oracle/)
 - [Connector reference for the Snowflake connector](/connectors/snowflakev2/)
+- [Connection reference for PostgreSQL connector](/connectors/postgresql/)
 
 ## Overview
 
@@ -199,7 +201,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 
 PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username and password.
 
-- Enter **Server** location, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
+- Enter **Server** location and TCP port, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
 - Enter **Database Name**, such as *Adventureworks*.
 - Select **Authentication Type** as **Basic**.
 - Enter **Username** and **Password**.
