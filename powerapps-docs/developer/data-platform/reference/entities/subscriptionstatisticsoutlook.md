@@ -1,7 +1,7 @@
 ---
 title: "Subscription Statistic Outlook (SubscriptionStatisticsOutlook) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Subscription Statistic Outlook (SubscriptionStatisticsOutlook) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
