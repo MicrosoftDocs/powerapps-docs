@@ -27,7 +27,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - Snowflake (preview)
 - PostgreSQL
 
-With the exception of the Excel connector provider, all virtual connector providers use a Power Platform connector. More information: [Connector reference for virtual connector providers used with virtual tables](#connector-reference-for-virtual-connector-providers-used-with-virtual-tables)
+Except for the Excel connector provider, all virtual connector providers use a Power Platform connector. More information: [Connector reference for virtual connector providers used with virtual tables](#connector-reference-for-virtual-connector-providers-used-with-virtual-tables)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
@@ -191,7 +191,7 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 
 # [PostgreSQL](#tab/PostgreSQL)
 
-PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username and password.
+PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username, and password.
 
 - Enter **Server** location and TCP port, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
 - Enter **Database Name**, such as *Adventureworks*.
@@ -223,7 +223,7 @@ However, you might want to create your own connection reference for the virtual 
 > [!NOTE]
 >
 > - The benefit of optionally naming your connection reference is because it can be easier to find later if you need details about it.
-> - If you are using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
+> - If you're using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
 
 To create a connection reference, when you're creating the connection for the virtual table, follow these steps:
 
@@ -380,8 +380,8 @@ With the connection reference and the virtual table data source setup, an **Enti
 :::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
 
 > [!NOTE]
-> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes.
-> - The tables displayed in the entity catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
+> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this might take a few minutes.
+> - The tables displayed in the entity catalog aren't virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
 
 > [!TIP]
 > - If the entity catalog creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
