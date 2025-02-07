@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 12/10/2024
+ms.date: 02/07/2025
 ms.reviewer: matp
 ms.topic: article
 author: mkannapiran
@@ -157,7 +157,7 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Select Add connection:
+Select **Add connection**:
 
 - **Login URI**: Select either **Production** (default) or **Sandbox**.
 - **Salesforce API version**: Select **v41.0** (default) or a later version.
@@ -194,6 +194,16 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 - **Client ID**. Microsoft Entra client ID for the Power Platform tenant.
 - **Client Secret**. Microsoft Entra ID client secret for the Power Platform client.
 - **Resource URL**. Microsoft Entra ID resource application ID. Don't add `api://` for the URL.
+
+# [PostgreSQL](#tab/PostgreSQL)
+
+PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username and password.
+
+- Enter **Server** location, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
+- Enter **Database Name**, such as *Adventureworks*.
+- Select **Authentication Type** as **Basic**.
+- Enter **Username** and **Password**.
+- **Encrypt Connection**. Select if you want to encrypt client and server communications for increased security.
 
 ---
 
