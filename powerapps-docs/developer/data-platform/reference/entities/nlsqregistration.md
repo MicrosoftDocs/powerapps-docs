@@ -1,7 +1,7 @@
 ---
 title: "NL2SQ Registration Information (nlsqregistration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the NL2SQ Registration Information (nlsqregistration) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
