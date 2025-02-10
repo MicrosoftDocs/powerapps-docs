@@ -100,6 +100,10 @@ Create a web resource for the WebAPIBasicOperations.html file.
    The screenshot shown here shows the new records created along with sample data that already existed in the environment.
    :::image type="content" source="media/web-api-basic-operations2.png" alt-text="Contact records created by running the sample from the web resource":::
 
+## View program output
+
+Optionally, you can view the sample code output and error messages, if any, that are sent to the browser’s debugger console. To see this output, open the debug console window first before selecting the Start Sample button in the model-driven app. Press F12 to access the developer tools, including the console window, in Microsoft Edge browser.
+
 ### WebAPIBasicOperations.html
 
 The WebAPIBasicOperations.html web resource provides the context in which the JavaScript code will run.
