@@ -32,8 +32,8 @@ To run this sample, the following is required:
 
 This sample includes two web resources:
 
-- [WebAPIBasicOperations.html](#bkmk_WebAPIBasicOperations)
-- [WebAPIBasicOperations.js](#bkmk_WebAPIBasicOperationsJS)
+- [WebAPIBasicOperations.html](#webapibasicoperationshtml)
+- [WebAPIBasicOperations.js](#webapibasicoperationsjs)
 - es6promise.js. The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. This sample uses the browser native ES6-Promise implementation for modern browsers that support it.
 
 ### What happens when you run the sample
@@ -172,8 +172,6 @@ The WebAPIBasicOperations.html web resource provides the context in which the Ja
   </body>
 </html>
 ```
-
-<a name="bkmk_WebAPIBasicOperationsJS"></a>
 
 ### WebAPIBasicOperations.js
 
