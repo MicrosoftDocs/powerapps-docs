@@ -23,7 +23,7 @@ This sample demonstrates how to perform basic CRUD (create, retrieve, update, an
 
 ## Prerequisites
 
-To run this sample, the following is required:
+To run this sample, you need the following items:
 
 - Access to a  Dataverse environment.
 - A user account with privileges to import solutions and perform CRUD operations in Dataverse, typically a system administrator or system customizer security role.
@@ -38,13 +38,13 @@ This sample includes two web resources:
 
 ### What happens when you run the sample
 
-When running this code, the following records are created:
+When you run this code, the following records are created:
 
-- Contact: Contacts named "Peter Cambel", "Peter_Alt Cambel", and "Susie Curtis" are created.
-- Account: An account named "Contoso, Ltd." is created and associated with the contact "Peter Cambel".
+- Contact: Contacts named "Peter Cambel," "Peter_Alt Cambel," and "Susie Curtis" are created.
+- Account: An account named "Contoso, Ltd." is created and associated with the contact "Peter Cambel."
 - Account: Another account named "Fourth Coffee" is created with a primary contact "Susie Curtis" and three associated tasks.
 - Competitor<sup>1</sup>: A competitor named "Adventure Works" is created.
-- Opportunity<sup>1</sup>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works".
+- Opportunity<sup>1</sup>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works."
 
 <sup>1</sup>These records don't get created unless the environment has the Dynamics 365 apps option enabled.
 
@@ -54,8 +54,8 @@ To run this sample, follow these steps:
 
 1. [Go to the sample in GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/WebAPIBasicOperations/WebAPIBasicOperations_1_0_0_1_managed.zip), and select the **Download raw file** button on the upper right.
 1. Sign in to [Power Apps](https://make.powerapps.com/) and optionally select an environment to work in.
-1. Select **Solutions** on the left navigation pane and then select **Import solution** on the command bar. [!INCLUDE [left-navigation-pane](../../../../includes/left-navigation-pane.md)]
-1. Select Browse, locate and select the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution, select **Open**, and then select **Next**. The details of the solution are displayed.
+1. Select **Solutions** on the left navigation pane, and then select **Import solution** on the command bar. [!INCLUDE [left-navigation-pane](../../../../includes/left-navigation-pane.md)]
+1. Select **Browse**, locate and select the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution, select **Open**, and then select **Next**. The details of the solution are displayed.
 1. Select **Import** to import it into your Dataverse environment.
 
 Importing the solution can take a few minutes to complete.
@@ -64,7 +64,7 @@ Importing the solution can take a few minutes to complete.
 
 Create a web resource for the WebAPIBasicOperations.html file.
 
-1. In the **Solutions** area select **New solution**.
+1. In the Solutions area, select **New solution**.
 1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
 1. On the command bar, select **Add existing** > **More** > **Web resource**.
 1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.js**, and then select **Add**.
@@ -85,7 +85,7 @@ Create a web resource for the WebAPIBasicOperations.html file.
 
 ## Play the app to run the sample
 
-1. In the app designer select **Play** to run the *Web API sample app*.
+1. In the app designer, select **Play** to run the *Web API sample app*.
 1. Select **New Subarea** on the left navigation pane to display the web resource page, and then select the **Start Sample** button.
    > [!NOTE]
    > Each time you select the Start Sample button it creates all the records described here. So selecting the button repeatedly creates multiple records with the same name.
@@ -93,7 +93,7 @@ Create a web resource for the WebAPIBasicOperations.html file.
 
 1. Select **Accounts** on the left navigation pane in the app.
 
-   There's a **Contoso, Ltd** and a **Fourth Coffee** account record created.
+   There's a **Contoso, Ltd, and a **Fourth Coffee** account record created.
 1. Select **Contacts** on the left navigation pane in the app.
 
    There are Peter Cambel, Peter_Alt Cambel, and Susie Curtis contact records created.
@@ -106,7 +106,7 @@ Optionally, you can view the sample code output and error messages, if any, that
 
 ### WebAPIBasicOperations.html
 
-The WebAPIBasicOperations.html web resource provides the context in which the JavaScript code will run.
+The WebAPIBasicOperations.html web resource provides the context in which the JavaScript code runs.
 
 ```html
 <html>
