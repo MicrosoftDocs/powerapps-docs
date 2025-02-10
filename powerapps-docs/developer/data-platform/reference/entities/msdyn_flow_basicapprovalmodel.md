@@ -1,8 +1,7 @@
 ---
 title: "Basic Approval Model Data (msdyn_flow_basicapprovalmodel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Basic Approval Model Data (msdyn_flow_basicapprovalmodel) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

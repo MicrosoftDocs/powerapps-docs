@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app with Power Apps"
 description: "Learn how to build your first model driven app with Power Apps"
-ms.date: 01/21/2025
+ms.date: 01/27/2025
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -57,7 +57,7 @@ Next, you add a new page to the model-driven app in the app designer.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-Your app with the account table is displayed similarly to how it appears to users at run time when published. If your environment has sample data, the sample list of active accounts might appear in the **My Active Accounts** view.
+Your app with the account table is displayed similarly to how it appears to users at run time when published. If your environment has sample data, the sample list of active accounts might appear in the **All Accounts** view.
 
 :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="After adding a table to a new app, the app appears with the default view selected":::
 

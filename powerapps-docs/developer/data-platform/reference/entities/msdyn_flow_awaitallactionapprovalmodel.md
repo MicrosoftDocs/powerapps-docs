@@ -1,8 +1,7 @@
 ---
 title: "Await All Action Approval Model (msdyn_flow_awaitallactionapprovalmodel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Await All Action Approval Model (msdyn_flow_awaitallactionapprovalmodel) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
