@@ -1,7 +1,7 @@
 ---
 title: "Component Version (Internal) (componentversionnrddatasource) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Component Version (Internal) (componentversionnrddatasource) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

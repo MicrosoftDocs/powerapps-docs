@@ -1,7 +1,7 @@
 ---
 title: "PM Recording (msdyn_pmrecording) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the PM Recording (msdyn_pmrecording) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
