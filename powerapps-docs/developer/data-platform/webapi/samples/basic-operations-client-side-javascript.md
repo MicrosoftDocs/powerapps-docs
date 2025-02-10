@@ -43,10 +43,10 @@ When running this code, the following records are created:
 - Contact: Contacts named "Peter Cambel", "Peter_Alt Cambel", and "Susie Curtis" are created.
 - Account: An account named "Contoso, Ltd." is created and associated with the contact "Peter Cambel".
 - Account: Another account named "Fourth Coffee" is created with a primary contact "Susie Curtis" and three associated tasks.
-- Competitor<sup1>: A competitor named "Adventure Works" is created.
-- Opportunity<sup1>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works".
+- Competitor<sup>1</sup>: A competitor named "Adventure Works" is created.
+- Opportunity<sup>1</sup>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works".
 
-<sup1> These records don't get created unless the environment has the Dynamics 365 apps option enabled.
+<sup>1</sup>These records don't get created unless the environment has the Dynamics 365 apps option enabled.
 
 ## Download and import the sample
 
