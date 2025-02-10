@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer | MicrosoftDocs"
 description: Learn how to create a model-driven app.
 ms.custom: ""
-ms.date: 01/21/2025
+ms.date: 01/27/2025
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: get-started
