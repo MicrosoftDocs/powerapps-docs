@@ -1,7 +1,7 @@
 ---
-title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API"
-ms.date: 04/06/2022
+title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)"
+description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on table rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API."
+ms.date: 02/10/2025
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -9,33 +9,24 @@ search.audienceType:
   - developer
 contributors:
   - JimDaly
+  - Mattp123
 ---
 
-# Web API Basic Operations Sample (Client-side JavaScript)
+# Web API Basic Operations Sample (client-side JavaScript)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript.
 
 > [!NOTE]
-> This sample implements the operations detailed in the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
-
-<a name="bkmk_prerequisites"></a>
+> There are more modern methods of using code to perform CRUD operations in Microsoft Dataverse than this sample demonstrates. Consider using the Xrm.WebApi client API instead. More information: [Xrm.WebApi (Client API reference)](../../../model-driven-apps/clientapi/reference/xrm-webapi.md)
 
 ## Prerequisites
 
 To run this sample, the following is required:
 
-- Access to Microsoft Dataverse environment.
-- A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.
-
-<a name="bkmk_runsample"></a>
-
-## Run this sample
-
-To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/WebAPIBasicOperations) and extract the contents. Locate the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution and import it into your Dataverse environment and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).
-
-<a name="bkmk_codesample"></a>
+- Access to a  Dataverse environment.
+- A user account with privileges to import solutions and perform CRUD operations in Dataverse, typically a system administrator or system customizer security role.
 
 ## Code sample
 
@@ -43,8 +34,71 @@ This sample includes two web resources:
 
 - [WebAPIBasicOperations.html](#bkmk_WebAPIBasicOperations)
 - [WebAPIBasicOperations.js](#bkmk_WebAPIBasicOperationsJS)
+- es6promise.js. The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. This sample uses the browser native ES6-Promise implementation for modern browsers that support it.
 
-<a name="bkmk_WebAPIBasicOperations"></a>
+### What happens when you run the sample
+
+When running this code, the following records are created:
+
+- Contact: Contacts named "Peter Cambel", "Peter_Alt Cambel", and "Susie Curtis" are created.
+- Account: An account named "Contoso, Ltd." is created and associated with the contact "Peter Cambel".
+- Account: Another account named "Fourth Coffee" is created with a primary contact "Susie Curtis" and three associated tasks.
+- Competitor<sup1>: A competitor named "Adventure Works" is created.
+- Opportunity<sup1>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works".
+
+<sup1> These records don't get created unless the environment has the Dynamics 365 apps option enabled.
+
+## Download and import the sample
+
+To run this sample, follow these steps:
+
+1. [Go to the sample in GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/WebAPIBasicOperations/WebAPIBasicOperations_1_0_0_1_managed.zip), and select the **Download raw file** button on the upper right.
+1. Sign in to [Power Apps](https://make.powerapps.com/) and optionally select an environment to work in.
+1. Select **Solutions** on the left navigation pane and then select **Import solution** on the command bar. [!INCLUDE [left-navigation-pane](../../../../includes/left-navigation-pane.md)]
+1. Select Browse, locate and select the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution, select **Open**, and then select **Next**. The details of the solution are displayed.
+1. Select **Import** to import it into your Dataverse environment.
+
+Importing the solution can take a few minutes to complete.
+
+## Create the web resource
+
+Create a web resource for the WebAPIBasicOperations.html file.
+
+1. In the **Solutions** area select **New solution**.
+1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
+1. On the command bar, select **Add existing** > **More** > **Web resource**.
+1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.js**, and then select **Add**.
+1. On the command bar, select **Add existing** > **More** > **Web resource**.
+1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.html**, and then select **Add**.
+
+## Create an app to run the sample
+
+1. In the Web API sample solution, select **New** > **App** > **Model-driven app**. The app designer opens.
+1. In the **New model-driven app** dialog, enter a name, such as *Web API sample app* and then select **Create**.
+1. On the **Pages** tab, select **New** > Dataverse table. Select **Account**, select **Contact**, and then select **Add**.
+   > [!NOTE]
+   > If your environment has the Competitor and Opportunity tables, you can select those too.
+
+1. On the **Pages** tab, select **New** > **Web resource**.
+1. Select **sample_/WebAPIBasicOperations.html** and then select **Add**.
+1. **Save and publish** the app.
+
+## Play the app to run the sample
+
+1. In the app designer select **Play** to run the *Web API sample app*.
+1. Select **New Subarea** on the left navigation pane to display the web resource page, and then select the **Start Sample** button.
+   > [!NOTE]
+   > Each time you select the Start Sample button it creates all the records described here. So selecting the button repeatedly creates multiple records with the same name.
+   :::image type="content" source="media/web-api-basic-operations1.png" alt-text="Select start sample button from the web resource page":::
+
+1. Select **Accounts** on the left navigation pane in the app.
+
+   There's a **Contoso, Ltd** and a **Fourth Coffee** account record created.
+1. Select **Contacts** on the left navigation pane in the app.
+
+   There are Peter Cambel, Peter_Alt Cambel, and Susie Curtis contact records created.
+   The screenshot shown here shows the new records created along with sample data that already existed in the environment.
+   :::image type="content" source="media/web-api-basic-operations2.png" alt-text="Contact records created by running the sample from the web resource":::
 
 ### WebAPIBasicOperations.html
 
