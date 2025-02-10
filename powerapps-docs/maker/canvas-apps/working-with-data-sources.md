@@ -43,7 +43,7 @@ A special kind of data source is the [Collection](working-with-data-sources.md#c
 
 ### Kinds of tables
 
-Tables that are internal to a Power Apps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
+Tables that are internal to an app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
 
 External tables are stored in a data source for later retrieval and sharing.  Power Apps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
 

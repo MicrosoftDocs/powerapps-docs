@@ -40,7 +40,7 @@ Each of the principles below links to a page with greater detail on the subject.
 
 1. [Optimize page loads](fast-app-page-load.md): Optimize your apps for app and page load speed. Minimize, delay, or eliminate actions that prevent fast app or page load.
 2. [Small data payloads](small-data-payloads.md): Keep the amount of data that is bulk retrieved small.
-3. [Optimize query data patterns](optimized-query-data-patterns.md): Do data mashups on the server, not in your Power Apps app.  
+3. [Optimize query data patterns](optimized-query-data-patterns.md): Do data mashups on the server, not in your app.  
 4. [Fast calculations](efficient-calculations.md): Work with Power Fx, not against it.
 
 These principles should cover most of what is necessary to make your app fast.  

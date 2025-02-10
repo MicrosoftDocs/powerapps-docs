@@ -22,7 +22,7 @@ ms.collection: get-started
 
 This article guides you through creating a SharePoint list, integrating that list into Power Apps, and customizing the list in your app.
 
-When you add data to a Power Apps app, you can choose a SharePoint list as a source. Alternatively, you can create an app based on a SharePoint list through the integrate feature in Microsoft Lists. Once your list is in your app, you can filter it, set permissions, and customize the list.
+When you add data to an app, you can choose a SharePoint list as a source. Alternatively, you can create an app based on a SharePoint list through the integrate feature in Microsoft Lists. Once your list is in your app, you can filter it, set permissions, and customize the list.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ You can create a new SharePoint list through the Microsoft Lists app in [Create 
 
 ### Connect with a SharePoint list in Power Apps
 
-One way to work with a SharePoint list in your app is to connect to SharePoint through the **Data** menu of a Power Apps app to import a list. The list serves as a data source.
+One way to work with a SharePoint list in your app is to connect to SharePoint through the **Data** menu of an app to import a list. The list serves as a data source.
 
 :::image type="content" source="media/sharepoint-integration/connect-to-sharepoint-through-data.png" alt-text="Screenshot showing where you can connect to a SharePoint list through the Data, Add data, and Connectors menu.":::
 
@@ -51,7 +51,7 @@ Learn more in [Connect to SharePoint from a canvas app](connections/connection-s
 
 When viewing a SharePoint list in SharePoint Online, you automatically go to Microsoft Lists where you can integrate a list with Power Apps:
 
-:::image type="content" source="media/sharepoint-integration/microsoft-lists-integrate-menu.png" alt-text="Screenshot that shows location of the integrate option of the top bar in Microsoft Lists. You can choose this menu to customize the form for a list in a Power Apps app or create a new app based on the list." lightbox="media/sharepoint-integration/microsoft-lists-integrate-menu.png":::
+:::image type="content" source="media/sharepoint-integration/microsoft-lists-integrate-menu.png" alt-text="Screenshot that shows location of the integrate option of the top bar in Microsoft Lists. You can choose this menu to customize the form for a list in an app or create a new app based on the list." lightbox="media/sharepoint-integration/microsoft-lists-integrate-menu.png":::
 
 Learn more in [Create a canvas app with data from Microsoft Lists](app-from-sharepoint.md).
 
