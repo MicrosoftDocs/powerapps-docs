@@ -62,7 +62,7 @@ Importing the solution can take a few minutes to complete.
 
 ## Create the web resource
 
-Create a web resource for the WebAPIBasicOperations.html file.
+Create a web resource for the `WebAPIBasicOperations.html` file. You'll add this web resource as a page in the model-driven app you create later.
 
 1. In the **Solutions** area, select **New solution**.
 1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
