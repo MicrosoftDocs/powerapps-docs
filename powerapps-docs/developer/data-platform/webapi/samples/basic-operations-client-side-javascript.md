@@ -99,6 +99,7 @@ Create a web resource for the WebAPIBasicOperations.html file.
    There are Peter Cambel, Peter_Alt Cambel, and Susie Curtis contact records created.
    The screenshot shown here shows the new records created along with sample data that already existed in the environment.
    :::image type="content" source="media/web-api-basic-operations2.png" alt-text="Contact records created by running the sample from the web resource":::
+1. Scroll down and open the contact named **Susie Curtis**. Select the **Related** tab, and then select **Activities** to view the three tasks created.
 
 ## View program output
 
