@@ -103,7 +103,7 @@ Create a web resource for the `WebAPIBasicOperations.html` file. You add this we
 
 Optionally, you can view the sample code output and error messages (if any) that are sent to the browser’s debugger console. To display this output, open a new table in your browser and press F12 to access the developer tools in Microsoft Edge browser before selecting the Start Sample button in the model-driven app. Select **Console** in the developer tools. Go to the app that's playing, select Start Sample. Then, switch to the developer tools tab.
 
-## Remove the records and solution objects created with this example
+## Remove the records and solution objects created with this sample
 
 When you're done with the sample, you can manually delete all records and solution objects in the environment.
 
