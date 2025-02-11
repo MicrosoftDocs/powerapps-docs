@@ -62,7 +62,7 @@ Importing the solution can take a few minutes to complete.
 
 ## Create the web resource
 
-Create a web resource for the `WebAPIBasicOperations.html` file. You'll add this web resource as a page in the model-driven app you create later.
+Create a web resource for the `WebAPIBasicOperations.html` file. You add this web resource as a page in the model-driven app you create later.
 
 1. In the **Solutions** area, select **New solution**.
 1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
@@ -105,10 +105,10 @@ Optionally, you can view the sample code output and error messages (if any) that
 
 ## Remove the records and solution objects created with this example
 
-When you're done with the sample you can manually delete all records and solution objects in the environment.
+When you're done with the sample, you can manually delete all records and solution objects in the environment.
 
 > [!NOTE]
-> Although the HTML displayed in the web resource indicates that you have the option to remove the data that's created when you run the code, the data isn't deleted and must be deleted manually if you want to remove it from the environment.
+> Although the HTML displayed in the web resource indicates that you have the option to remove the data that's created when you run the code, the data isn't deleted. You must manually delete the records created if you want to remove it from the environment.
 
 ### Remove the records
 
