@@ -64,7 +64,7 @@ Importing the solution can take a few minutes to complete.
 
 Create a web resource for the WebAPIBasicOperations.html file.
 
-1. In the Solutions area, select **New solution**.
+1. In the **Solutions** area, select **New solution**.
 1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
 1. On the command bar, select **Add existing** > **More** > **Web resource**.
 1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.js**, and then select **Add**.
@@ -93,17 +93,44 @@ Create a web resource for the WebAPIBasicOperations.html file.
 
 1. Select **Accounts** on the left navigation pane in the app.
 
-   There's a **Contoso, Ltd, and a **Fourth Coffee** account record created.
+   There's a **Contoso, Ltd**, and a **Fourth Coffee** account record created.
 1. Select **Contacts** on the left navigation pane in the app.
 
    There are Peter Cambel, Peter_Alt Cambel, and Susie Curtis contact records created.
-   The screenshot shown here shows the new records created along with sample data that already existed in the environment.
+   The screenshot shown here shows the new Peter Cambel and Peter_Alt Cambel records created along with sample data that already existed in the environment.
    :::image type="content" source="media/web-api-basic-operations2.png" alt-text="Contact records created by running the sample from the web resource":::
 1. Scroll down and open the contact named **Susie Curtis**. Select the **Related** tab, and then select **Activities** to view the three tasks created.
 
 ## View program output
 
-Optionally, you can view the sample code output and error messages, if any, that are sent to the browser’s debugger console. To see this output, open the debug console window first before selecting the Start Sample button in the model-driven app. Press F12 to access the developer tools, including the console window, in Microsoft Edge browser.
+Optionally, you can view the sample code output and error messages (if any) that are sent to the browser’s debugger console. To display this output, open the debug console window and press F12 to access the developer tools, including the console window, in Microsoft Edge browser before selecting the Start Sample button in the model-driven app. Then, switch to the developer tools tab.
+
+## Remove the records and solution objects created with this example
+
+When you're done with the sample you can delete all records and solution objects in the environment.
+<!-- Selecting Yes on the HTML page to Remove sample data (Choose whether you want to delete sample data created during this execution) doesn't seem to work so adding manual steps.-->
+
+### Remove the records
+
+Play the model-driven app. Delete the task records associated with the Susie Curtis account (select the tasks and then on the command bar select **Delete**.) Repeat similar steps for each contact and account records that were created. For more information about what records are created, go to [What happens when you run the sample](#what-happens-when-you-run-the-sample).
+
+### Remove the unmanaged solution objects
+
+Remove or, if possible, delete each object from the unmanaged solution that includes the model-driven app you created earlier. 
+From the solution, select the object, such as a web resource, and then on the command bar select **Remove** > **Remove from solution** or **Remove** > **Remove from environment**.
+
+> [!IMPORTANT]
+> Don't delete the unmanaged solution until after all objects within the solution are removed and/or deleted. Deleting an unmanaged solution doesn't delete the objects within the solution.
+
+When all objects are deleted from the unmanaged solution, go to the **Solutions** area, select *Web API sample* unmanaged solution, and then select **Delete** on the command bar.
+
+<!-- Web resources have to be removed via legacy solution explorer? -->
+
+### Remove the managed solution sample
+
+Deleting a managed solution uninstalls the solution and deletes all components and any data that was imported or created from components in the solution.
+
+Go to the **Solutions** area, select the **Managed** filter, select the **Web API Basic Operations** solution, and then select **Delete**.
 
 ### WebAPIBasicOperations.html
 
