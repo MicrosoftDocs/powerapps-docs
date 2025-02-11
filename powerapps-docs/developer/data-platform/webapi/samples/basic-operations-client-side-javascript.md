@@ -30,7 +30,7 @@ To run this sample, you need the following items:
 
 ## Code sample
 
-This sample includes two web resources:
+This sample includes these web resources:
 
 - [WebAPIBasicOperations.html](#webapibasicoperationshtml)
 - [WebAPIBasicOperations.js](#webapibasicoperationsjs)
@@ -67,20 +67,18 @@ Create a web resource for the WebAPIBasicOperations.html file.
 1. In the **Solutions** area, select **New solution**.
 1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
 1. On the command bar, select **Add existing** > **More** > **Web resource**.
-1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.js**, and then select **Add**.
-1. On the command bar, select **Add existing** > **More** > **Web resource**.
 1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.html**, and then select **Add**.
 
 ## Create an app to run the sample
 
-1. In the Web API sample solution, select **New** > **App** > **Model-driven app**. The app designer opens.
+1. In the same Web API sample solution, select **New** > **App** > **Model-driven app**. The app designer opens.
 1. In the **New model-driven app** dialog, enter a name, such as *Web API sample app* and then select **Create**.
-1. On the **Pages** tab, select **New** > Dataverse table. Select **Account**, select **Contact**, and then select **Add**.
+1. On the **Pages** tab, select **New** > **Dataverse table**. Select **Account**, select **Contact**, and then select **Add**.
    > [!NOTE]
    > If your environment has the Competitor and Opportunity tables, you can select those too.
 
 1. On the **Pages** tab, select **New** > **Web resource**.
-1. Select **sample_/WebAPIBasicOperations.html** and then select **Add**.
+1. In the **Select a URL** dropdown list locate and select **sample_/WebAPIBasicOperations.html**, and then select **Add**.
 1. **Save and publish** the app.
 
 ## Play the app to run the sample
@@ -88,7 +86,7 @@ Create a web resource for the WebAPIBasicOperations.html file.
 1. In the app designer, select **Play** to run the *Web API sample app*.
 1. Select **New Subarea** on the left navigation pane to display the web resource page, and then select the **Start Sample** button.
    > [!NOTE]
-   > Each time you select the Start Sample button it creates all the records described here. So selecting the button repeatedly creates multiple records with the same name.
+   > Each time you select the Start Sample button it creates the records described here. So selecting the button repeatedly creates multiple records with the same name.
    :::image type="content" source="media/web-api-basic-operations1.png" alt-text="Select start sample button from the web resource page":::
 
 1. Select **Accounts** on the left navigation pane in the app.
@@ -103,12 +101,14 @@ Create a web resource for the WebAPIBasicOperations.html file.
 
 ## View program output
 
-Optionally, you can view the sample code output and error messages (if any) that are sent to the browser’s debugger console. To display this output, open the debug console window and press F12 to access the developer tools, including the console window, in Microsoft Edge browser before selecting the Start Sample button in the model-driven app. Then, switch to the developer tools tab.
+Optionally, you can view the sample code output and error messages (if any) that are sent to the browser’s debugger console. To display this output, open a new table in your browser and press F12 to access the developer tools in Microsoft Edge browser before selecting the Start Sample button in the model-driven app. Select **Console** in the developer tools. Go to the app that's playing, select Start Sample. Then, switch to the developer tools tab.
 
 ## Remove the records and solution objects created with this example
 
-When you're done with the sample you can delete all records and solution objects in the environment.
-<!-- Selecting Yes on the HTML page to Remove sample data (Choose whether you want to delete sample data created during this execution) doesn't seem to work so adding manual steps.-->
+When you're done with the sample you can manually delete all records and solution objects in the environment.
+
+> [!NOTE]
+> Although the HTML displayed in the web resource indicates that you have the option to remove the data that's created when you run the code, the data isn't deleted and must be deleted manually if you want to remove it from the environment.
 
 ### Remove the records
 
@@ -116,15 +116,14 @@ Play the model-driven app. Delete the task records associated with the Susie Cur
 
 ### Remove the unmanaged solution objects
 
-Remove or, if possible, delete each object from the unmanaged solution that includes the model-driven app you created earlier. 
-From the solution, select the object, such as a web resource, and then on the command bar select **Remove** > **Remove from solution** or **Remove** > **Remove from environment**.
+Remove or, if possible, delete each object from the unmanaged solution that includes the model-driven app you created earlier.
+
+From the solution, select the object, such as a web resource, and then on the command bar select **Remove** > **Remove from environment** or if that option isn't available select **Remove** > **Remove from solution**.
 
 > [!IMPORTANT]
 > Don't delete the unmanaged solution until after all objects within the solution are removed and/or deleted. Deleting an unmanaged solution doesn't delete the objects within the solution.
 
 When all objects are deleted from the unmanaged solution, go to the **Solutions** area, select *Web API sample* unmanaged solution, and then select **Delete** on the command bar.
-
-<!-- Web resources have to be removed via legacy solution explorer? -->
 
 ### Remove the managed solution sample
 
