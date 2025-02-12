@@ -77,21 +77,21 @@ Observe the table operations that occur to create tables.
 
 ## Remove the records and solution used with this sample
 
-If the sample doesn't remove the records created, such as because the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete all records and the managed solution from the environment.
+If the sample doesn't remove the records created, such as because of the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete all records.
+
+You can also remove (uninstall) the Web API Basic Operations managed solution.
 
 ### Remove the records
 
 1. In Power Apps, select **Tables** from the left navigation pane.
 1. Select the **Account** table.
-1. Select the **Contoso, Ltd., and **Fourth Coffee** records and then select **Delete n record(s)** on the command bar.
-
-Repeat similar steps for each contact records that were created.
+1. Select the **Contoso, Ltd.**, and **Fourth Coffee** records and then select **Delete n records()** on the command bar.
+1. Select Tables on the left navigation pane, and then select the Contact table.
+1. Select the **Peter Cambel**, **Peter_Alt Cambel**, and **Susie Curtis** records, and then select **Delete n records()** on the command bar.
 
 For more information about what records are created, go to [What happens when you run the sample](#what-happens-when-you-run-the-sample).
 
 ## Remove the managed solution sample
-
-Deleting a managed solution uninstalls the solution and deletes all components and any data that was imported or created from components in the solution.
 
 Go to the **Solutions** area, select the **Managed** filter, select the **Web API Basic Operations** solution, and then select **Delete**.
 
