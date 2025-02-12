@@ -19,21 +19,26 @@ This tutorial shows how to build a code component with two buttons which each ra
 
 ## Goal
 
-When you complete the steps in this tutorial you will understand how to create a code component that defines custom events and also how to use the events in a canvas and model driven app.
+When you complete the steps in this tutorial you will understand how to create a code component that defines custom events and also how to use the events in a canvas and model-driven app.
 
 Canvas App
 
 <video controls src="media/event_canvas_example.mp4" title="Events in a Canvas App"></video>
 
-Model Driven App
+Model-driven App
 
 <video controls src="media/event_mda_example.mp4" title="Events in a Model Driven App"></video>
 
 ## Prerequisites
 
-<!-- Explain what the reader should already have or know before they start this tutorial.  -->
+You should be with familiar with the following:-
 
-## Edit the manifest
+[Create and build a code component](create-custom-controls-using-pcf.md)
+[Package a code component](import-custom-controls.md)
+[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)
+[Add cpmponents to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+
+## Create a new Control
 
 <!-- 
 We don't want long set of numbered instructions. Since this entire article is a tutorial, break the steps down into logical parts and give each part a heading 
@@ -44,7 +49,7 @@ We don't want long set of numbered instructions. Since this entire article is a 
 
   `pac pcf init -n EventSample -ns SampleNamespace -t field -fw react -npm`
 
-1. Edit the manifest..
+1. Edit the manifest to add the new events
 
 #### [Before](#tab/before)
 
@@ -111,25 +116,82 @@ We never have screenshots of code. You need to add the actual code here.
 Consider using the Before & After tabs if the instructions are to modify an existing area.
 
 -->
-
+#### [Before](#tab/before)
 ```typescript
 import * as React from 'react';
-etc...
-```
+import { Label } from '@fluentui/react';
 
+export interface IHelloWorldProps {
+  name?: string;
+}
+
+export class HelloWorld extends React.Component<IHelloWorldProps> {
+  public render(): React.ReactNode {
+    return (
+      <Label>
+        {this.props.name}
+      </Label>
+    )
+  }
+}
+```
+#### [After](#tab/after)
+```typescript
+import * as React from 'react';
+import { Label, DefaultButton } from '@fluentui/react';
+
+// this component renders two buttons each one will trigger an event passed via props
+
+export interface IHelloWorldProps {
+  onCustomEvent1: () => void;
+  onCustomEvent2: () => void;
+}
+
+export const HelloWorld: React.FunctionComponent<IHelloWorldProps> = (props: IHelloWorldProps) => {
+  return (
+    <div>
+      <Label>Control with event</Label>
+      <DefaultButton onClick={props.onCustomEvent1}>Trigger event 1</DefaultButton>
+      <DefaultButton onClick={props.onCustomEvent2}>Trigger event 2</DefaultButton>
+    </div>
+  );
+};
+```
 
 ## Modify updateview method
 
+Now modify the `EventSample\Index.ts`, modify updateView method to add handlers for the two button events. This will add the two events defined in the manifest to the events in the context passed to the control.
+
+#### [Before](#tab/before)
 ```typescript
-YOUR CODE GOES HERE
-etc...
+    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        const props: IHelloWorldProps = { name: 'Hello, World!' };
+        return React.createElement(
+            HelloWorld, props
+        );
+    }
+```
+#### [After](#tab/after)
+```typescript
+    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        const props: IHelloWorldProps = {
+            onCustomEvent1: ()=> {
+                context.events.customEvent1()
+            },
+            onCustomEvent2: () => {
+                context.events.customEvent2()
+            }
+         };
+        return React.createElement(
+            HelloWorld, props
+        );
+    }
 ```
 
 ## Build and package
 
-1. First step
-1. Second step
-1. Third step
+[Create and build a code component](create-custom-controls-using-pcf.md)
+[Package a code component](import-custom-controls.md)
 
 ## Use in a canvas app
 
