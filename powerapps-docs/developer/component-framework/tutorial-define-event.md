@@ -23,11 +23,11 @@ When you complete the steps in this tutorial you will understand how to create a
 
 Canvas App
 
-<video controls src="media/event_canvas_example.mp4" title="Events in a Canvas App"></video>
+<!-- TODO add gif or images for canvas app-->
 
 Model-driven App
 
-<video controls src="media/event_mda_example.mp4" title="Events in a Model Driven App"></video>
+<!-- TODO add gif or images for mda-->
 
 ## Prerequisites
 
