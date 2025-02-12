@@ -158,6 +158,8 @@ export const HelloWorld: React.FunctionComponent<IHelloWorldProps> = (props: IHe
 };
 ```
 
+---
+
 ## Modify updateview method
 
 Now modify the `EventSample\Index.ts`, modify updateView method to add handlers for the two button events. This will add the two events defined in the manifest to the events in the context passed to the control.
