@@ -33,10 +33,10 @@ Model-driven App
 
 You should be with familiar with the following:-
 
-[Create and build a code component](create-custom-controls-using-pcf.md)
-[Package a code component](import-custom-controls.md)
-[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)
-[Add cpmponents to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+[Create and build a code component](create-custom-controls-using-pcf.md)</br>
+[Package a code component](import-custom-controls.md)</br>
+[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
+[Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)</br>
 
 ## Create a new Control
 
@@ -188,14 +188,35 @@ Now modify the `EventSample\Index.ts`, modify updateView method to add handlers 
 
 ## Build and package
 
-[Create and build a code component](create-custom-controls-using-pcf.md)
-[Package a code component](import-custom-controls.md)
+[Create and build the code component](create-custom-controls-using-pcf.md)</br>
+[Package the code component](import-custom-controls.md)</br>
+[Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
 
 ## Use in a canvas app
 
-1. First step
-1. Second step
-1. Third step
+1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
+1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
+
+::image type="content" source="media/media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
+
+1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
+
+::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
+
+and `Visible` of the text control
+
+::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
+
+1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
+
+::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
+
+```typescript
+customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
+customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))
+```
+
 
 ## Use in a model-driven app
 
