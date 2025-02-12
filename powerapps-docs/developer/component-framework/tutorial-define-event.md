@@ -217,6 +217,8 @@ customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
 customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))
 ```
 
+1. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
+---
 
 ## Use in a model-driven app
 
@@ -224,11 +226,41 @@ customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled)
 > [!NOTE]
 > These steps refer to instructions described in [Walkthrough: Write your first client script](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md).
 
-1. [Upload your code as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
-1. [Add the component](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps) to the model-driven form.
-1. [Associate](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form) the Web resource to the Form
-1. [Configure](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) the On load event.
+1. Create a new JavaScript file to run on the onLoad of a form. This will bind two simple event handlers to the new events for the controls on load of the form.
 
+```javascript
+/* eslint-disable */
+"use strict";
+
+var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
+(function () {
+
+  const controlName1 = "cr116_personid";
+
+  this.onLoad = function (executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    const sampleControl1 = formContext.getControl(controlName1);
+    sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+    sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+  };
+
+  this.onSampleControl1CustomEvent1 = function (params) {
+    alert(`SampleControl1 Custom Event 1`);
+  }.bind(this);
+
+  this.onSampleControl1CustomEvent2 = function (params) {
+    alert(`SampleControl1 Custom Event 2`);
+  }.bind(this);
+
+}).call(MyScriptsNameSpace);
+```
+
+1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
+1. [Add the component to a form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps) to the model-driven form.
+1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form) the Web resource to the Form
+1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) the On load event.
+1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
 
 ## Passing payload in events
 
