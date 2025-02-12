@@ -192,13 +192,15 @@ Now modify the `EventSample\Index.ts`, modify updateView method to add handlers 
 [Package the code component](import-custom-controls.md)</br>
 [Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
 
+---
+
 ## Use in a canvas app
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
 1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
 
-:::image type="content" source="media/media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
+:::image type="content" source="/media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
 
 1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
 
@@ -257,9 +259,9 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 ```
 
 1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
-1. [Add the component to a form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps) to the model-driven form.
-1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form) the Web resource to the Form
-1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) the On load event.
+1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
+1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
 
 :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
