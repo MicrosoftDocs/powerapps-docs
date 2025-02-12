@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 6/25/2024
+ms.date: 2/11/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 
