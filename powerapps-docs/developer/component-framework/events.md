@@ -64,6 +64,7 @@ or for Model Driven Apps for event handlers to be added to react to the events
     const sampleControl1 = formContext.getControl(controlName1);
     sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
     sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+  }
 ```
 
 ## Model Driven Applications - Passing payload in events
