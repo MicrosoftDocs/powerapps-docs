@@ -56,7 +56,6 @@ or for Model Driven Apps for event handlers to be added to react to the events
 
 ```js
   const controlName1 = "cr116_personid";
-  const controlName2 = "cr116_haircolor";
 
   this.onLoad = function (executionContext) {
     const formContext = executionContext.getFormContext();
