@@ -84,6 +84,7 @@ For Model Driven Applications there is the additional ability to pass a payload 
     alert(`SampleControl2 Custom Event 2: ${params.message}`);
     // prevent the default action for the event
     params.callBackFunction();
+    }
 ```
 
 [Tutorial: Define a custom event in a component](tutorial-define-event.md)   
