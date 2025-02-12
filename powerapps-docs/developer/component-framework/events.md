@@ -69,7 +69,7 @@ or for Model Driven Apps for event handlers to be added to react to the events
 > [!NOTE]
 > These the events are treated separately for each instance of the control added to the Canvas App Page or Model-driven App Form
 
-## Model Driven Applications - Passing payload in events
+## Passing payload in events
 
 For Model Driven Applications there is the additional ability to pass a payload with the event allowing for more complex scenarios for example in the diagram below the component passes a call back function in the event allowing the script handling to call back to the component.
 
