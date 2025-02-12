@@ -66,6 +66,8 @@ or for Model Driven Apps for event handlers to be added to react to the events
     sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
   }
 ```
+> [!NOTE]
+> These the events are treated separately for each instance of the control added to the Canvas App Page or Model-driven App Form
 
 ## Model Driven Applications - Passing payload in events
 
