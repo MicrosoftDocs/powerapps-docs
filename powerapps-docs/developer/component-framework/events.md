@@ -29,9 +29,24 @@ The event mechanism in PCF is based on the standard event model in JavaScript. T
 To do this the component needs to define the [Events](reference/events.md) in the manifest file which will allow these to be reacted to depending on the hosting application (Canvas or Model-driven app).
 
 ```xml
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-     <event name="customEvent1" display-name-key="customEvent1" description-key="customEvent1"/>
-     <event name="customEvent2" display-name-key="customEvent2" description-key="customEvent2"/>
+<property
+  name="sampleProperty"
+  display-name-key="Property_Display_Key"
+  description-key="Property_Desc_Key"
+  of-type="SingleLine.Text"
+  usage="bound"
+  required="true"
+/>
+<event
+  name="customEvent1"
+  display-name-key="customEvent1"
+  description-key="customEvent1"
+/>
+<event
+  name="customEvent2"
+  display-name-key="customEvent2"
+  description-key="customEvent2"
+/>
 ```
 This will allow the canvas app to react to the custom event by adding pfx
 
