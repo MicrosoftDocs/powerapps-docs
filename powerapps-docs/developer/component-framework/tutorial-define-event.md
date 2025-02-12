@@ -111,11 +111,6 @@ We don't want long set of numbered instructions. Since this entire article is a 
 
 In the control file `EventSample\HelloWorld.tsx`, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as shown below.
 
-<!-- 
-We never have screenshots of code. You need to add the actual code here.
-Consider using the Before & After tabs if the instructions are to modify an existing area.
-
--->
 #### [Before](#tab/before)
 ```typescript
 import * as React from 'react';
@@ -189,6 +184,7 @@ Now modify the `EventSample\Index.ts`, modify updateView method to add handlers 
         );
     }
 ```
+---
 
 ## Build and package
 
