@@ -25,7 +25,7 @@ This sample demonstrates how to perform basic CRUD (create, retrieve, update, an
 
 To run this sample, you need the following items:
 
-- Access to a  Dataverse environment.
+- Access to a  Dataverse environment that has the Dynamics 365 apps option enabled. More information: [Code sample](#code-sample)
 - A user account with privileges to import solutions and perform CRUD operations in Dataverse, typically a system administrator or system customizer security role.
 
 ## Code sample
@@ -35,6 +35,9 @@ This sample includes these web resources:
 - [WebAPIBasicOperations.html](#webapibasicoperationshtml)
 - [WebAPIBasicOperations.js](#webapibasicoperationsjs)
 - es6promise.js. The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. This sample uses the browser native ES6-Promise implementation for modern browsers that support it.
+
+> [!NOTE]
+> Running the sample on an environment that doesn't have Dynamics 365 apps enabled only creates the contact, account, and task records. Additionally, the record deletion option doesn't remove the records created by the sample.  
 
 ### What happens when you run the sample
 
@@ -52,7 +55,7 @@ When you run this code, the following records are created:
 
 To run this sample, follow these steps:
 
-1. [Go to the sample in GitHub](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/WebAPIBasicOperations/WebAPIBasicOperations_1_0_0_1_managed.zip), and select the **Download raw file** button on the upper right.
+1. [Download the sample from GitHub](https://github.com/microsoft/PowerApps-Samples/raw/refs/heads/master/dataverse/webapi/JS/WebAPIBasicOperations/WebAPIBasicOperations_1_0_0_1_managed.zip).
 1. Sign in to [Power Apps](https://make.powerapps.com/) and optionally select an environment to work in.
 1. Select **Solutions** on the left navigation pane, and then select **Import solution** on the command bar. [!INCLUDE [left-navigation-pane](../../../../includes/left-navigation-pane.md)]
 1. Select **Browse**, locate and select the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution, select **Open**, and then select **Next**. The details of the solution are displayed.
@@ -60,72 +63,33 @@ To run this sample, follow these steps:
 
 Importing the solution can take a few minutes to complete.
 
-## Create the web resource
+## Run the sample to observe the script in action
 
-Create a web resource for the `WebAPIBasicOperations.html` file. You add this web resource as a page in the model-driven app you create later.
+1. In Power Apps select **Solutions** on the left navigation pane.
+1. Select the **Managed** filter, and then open the **Web API Basic Operations** managed solution.
+1. Open the **sample_/WebAPIBasicOperations.html** file to display the properties pane.
+1. Scroll down the **URL** and select it to open the HTML page in a new browser tab.
+1. Press F12 to **Open DevTools**, including the console window, in Microsoft Edge browser.
+1. Select **Start Sample**.
 
-1. In the **Solutions** area, select **New solution**.
-1. Enter a name, such as *Web API sample*, select a **Publisher**, and then select **Create**. The solution is created and you're directed to the solution.
-1. On the command bar, select **Add existing** > **More** > **Web resource**.
-1. In the **Search** box, enter '*WebAPI*' and then select **sample_/WebAPIBasicOperations.html**, and then select **Add**.
+Observe the table operations that occur to create tables.
+:::image type="content" source="media/web-api-basic-operations-output.png" alt-text="Sample output displayed in developer tools.":::
 
-## Create an app to run the sample
+## Remove the records and solution used with this sample
 
-1. In the same Web API sample solution, select **New** > **App** > **Model-driven app**. The app designer opens.
-1. In the **New model-driven app** dialog, enter a name, such as *Web API sample app* and then select **Create**.
-1. On the **Pages** tab, select **New** > **Dataverse table**. Select **Account**, select **Contact**, and then select **Add**.
-   > [!NOTE]
-   > If your environment has the Competitor and Opportunity tables, you can select those too.
-
-1. On the **Pages** tab, select **New** > **Web resource**.
-1. In the **Select a URL** dropdown list locate and select **sample_/WebAPIBasicOperations.html**, and then select **Add**.
-1. **Save and publish** the app.
-
-## Play the app to run the sample
-
-1. In the app designer, select **Play** to run the *Web API sample app*.
-1. Select **New Subarea** on the left navigation pane to display the web resource page, and then select the **Start Sample** button.
-   > [!NOTE]
-   > Each time you select the Start Sample button it creates the records described here. So selecting the button repeatedly creates multiple records with the same name.
-   :::image type="content" source="media/web-api-basic-operations1.png" alt-text="Select start sample button from the web resource page":::
-
-1. Select **Accounts** on the left navigation pane in the app.
-
-   There's a **Contoso, Ltd**, and a **Fourth Coffee** account record created.
-1. Select **Contacts** on the left navigation pane in the app.
-
-   There are Peter Cambel, Peter_Alt Cambel, and Susie Curtis contact records created.
-   The screenshot shown here shows the new Peter Cambel and Peter_Alt Cambel records created along with sample data that already existed in the environment.
-   :::image type="content" source="media/web-api-basic-operations2.png" alt-text="Contact records created by running the sample from the web resource":::
-1. Scroll down and open the contact named **Susie Curtis**. Select the **Related** tab, and then select **Activities** to view the three tasks created.
-
-## View program output
-
-Optionally, you can view the sample code output and error messages (if any) that are sent to the browser’s debugger console. To display this output, open a new table in your browser and press F12 to access the developer tools in Microsoft Edge browser before selecting the Start Sample button in the model-driven app. Select **Console** in the developer tools. Go to the app that's playing, select Start Sample. Then, switch to the developer tools tab.
-
-## Remove the records and solution objects created with this sample
-
-When you're done with the sample, you can manually delete all records and solution objects in the environment.
-
-> [!NOTE]
-> Although the HTML displayed in the web resource indicates that you have the option to remove the data that's created when you run the code, the data isn't deleted. You must manually delete the records created if you want to remove it from the environment.
+If the sample doesn't remove the records created, such as because the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete all records and the managed solution from the environment.
 
 ### Remove the records
 
-Play the model-driven app. Delete the task records associated with the Susie Curtis account (select the tasks and then on the command bar select **Delete**.) Repeat similar steps for each contact and account records that were created. For more information about what records are created, go to [What happens when you run the sample](#what-happens-when-you-run-the-sample).
+1. In Power Apps, select **Tables** from the left navigation pane.
+1. Select the **Account** table.
+1. Select the **Contoso, Ltd., and **Fourth Coffee** records and then select **Delete n record(s)** on the command bar.
 
-### Remove the unmanaged solution objects
+Repeat similar steps for each contact records that were created.
 
-Remove or, if possible, delete each object from the unmanaged solution that includes the model-driven app you created earlier.
+For more information about what records are created, go to [What happens when you run the sample](#what-happens-when-you-run-the-sample).
 
-From the solution, select the object, such as a web resource, and then on the command bar select **Remove** > **Remove from environment** or if that option isn't available select **Remove** > **Remove from solution**.
-
-> [!IMPORTANT]
-> Don't delete the unmanaged solution until after all objects within the solution are removed and/or deleted. Deleting an unmanaged solution doesn't delete the objects within the solution.
-
-When all objects are deleted from the unmanaged solution, go to the **Solutions** area, select *Web API sample* unmanaged solution, and then select **Delete** on the command bar.
-
-### Remove the managed solution sample
+## Remove the managed solution sample
 
 Deleting a managed solution uninstalls the solution and deletes all components and any data that was imported or created from components in the solution.
 
