@@ -41,7 +41,7 @@ The following list explains what you'll need before you can start using wrap fea
 
 1. This feature requires the apps to be part of a [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 
-1. [Create Azure Key Vault for Wrap in Power Apps](create-key-vault-for-code-signing.md).
+1. You need an Azure key vault to perform the automatic sign-in process through Wrap wizard. Ensure that your Azure key vault is in your tenant's default subscription. If it isn't, create one using your default subscription. More information: [Create Azure Key Vault for Wrap in Power Apps](create-key-vault-for-code-signing.md).
 
     > [!NOTE]
     > This step will become mandatory from March 31, 2025.

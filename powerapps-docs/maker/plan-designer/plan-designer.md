@@ -4,7 +4,7 @@ description: Learn how to use the Plan designer to create comprehensive business
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 1/8/2025
+ms.date: 2/5/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -28,7 +28,6 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - This feature is currently rolling out and might not yet be available in your region. 
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
