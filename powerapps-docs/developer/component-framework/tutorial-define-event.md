@@ -12,21 +12,22 @@ contributors:
 ---
 # Tutorial: Define a custom event in a component
 
-This tutorial shows how to build a code component with two buttons which raise separate independent events. You can add these to canvas & model-driven apps and show how these events can be utilized to perform actions like updating a field or showing a notification message. [Learn more about custom events](events.md).
+This tutorial shows how to build a code component with two buttons which each raise separate independent events which the hosting application will react to. You can add these to canvas & model-driven apps and show how these events can be utilized to perform actions like updating a field or showing a notification message. [Learn more about custom events](events.md).
 
 :::image type="content" source="media/define-custom-event-tutorial-diagram.png" alt-text="Diagram shows the goal of this sample to define two custom events":::
 <!-- See source in media/src/define-custom-event-tutorial-diagram.vdx -->
 
 ## Goal
 
-When you complete the steps in this tutorial...
+When you complete the steps in this tutorial you will understand how to create a code component that defines custom events and also how to use the events in a canvas and model driven app.
 
-<!-- 
-Explain the end goal. Don't make them scroll to the bottom to figure out what success will look like.
+Canvas App
 
-Do you have a video that you want to publish that shows the final outcome of this tutorial? 
+<video controls src="media/event_canvas_example.mp4" title="Events in a Canvas App"></video>
 
- -->
+Model Driven App
+
+<video controls src="media/event_mda_example.mp4" title="Events in a Model Driven App"></video>
 
 ## Prerequisites
 
