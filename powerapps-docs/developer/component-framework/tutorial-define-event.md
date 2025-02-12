@@ -260,6 +260,10 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 1. [Add the component to a form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps) to the model-driven form.
 1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form) the Web resource to the Form
 1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) the On load event.
+
+::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
+
+
 1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
 
 ## Passing payload in events
