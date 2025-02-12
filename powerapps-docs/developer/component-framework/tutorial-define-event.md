@@ -198,19 +198,19 @@ Now modify the `EventSample\Index.ts`, modify updateView method to add handlers 
 1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
 
-::image type="content" source="media/media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
+:::image type="content" source="media/media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
 
 1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
 
-::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
+:::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
 
 and `Visible` of the text control
 
-::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
+:::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
 
 1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
 
-::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
+:::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
 
 ```typescript
 customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
@@ -261,7 +261,7 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form) the Web resource to the Form
 1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) the On load event.
 
-::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
+:::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
 
 1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
