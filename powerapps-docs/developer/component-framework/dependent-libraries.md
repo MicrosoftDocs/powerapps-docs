@@ -12,6 +12,9 @@ contributors:
 ---
 # Dependent Libraries
 
+> [!NOTE]
+> This capability is only available for controls used in model-driven applications this will not work for canvas apps
+
 A common requirement when building custom components with the Power Apps Component Framework is the ability to use one or more existing libraries in the component.  You can do this in a model-driven app by referencing a library that is contained in another control which is loaded as a dependency to a custom control.
 
 ## Dependency as a library in another component
@@ -22,8 +25,8 @@ If you are using a prebuilt library in multiple controls then it is not desirabl
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
 
-This creates an overhead of maintenance in the build processes if you are updating the library and if the libraries happen to be large in size this would inflate the size of the package for each of your custom controls and increase form load time when the controls are initially loaded into the browser.
-It would be preferable to load the library once on the form and have each of the controls that require to use it simply access it at runtime. This can now be achieved by creating a Library Control (note this can be a real control or simply a stub control) that the framework understands is a dependency to the controls so it will load it at runtime.
+This creates an overhead of maintenance in the build processes if you are updating the library and if the libraries happen to be large in size this would inflate the size of the package for each of your custom controls, which also increases form load time when the controls are initially loaded into the browser.
+It would be preferable to load the library once on the form and have each of the controls that require to use it simply access it at runtime. This can now be achieved by creating a Library Control (note this can be a real control or simply a stub control) that the framework understands is a dependency to the other controls so it will load it at runtime.
 
 :::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
