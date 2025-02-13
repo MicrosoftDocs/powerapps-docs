@@ -62,10 +62,9 @@ This section provides a few example functions.
 1. Add two input parameters, X and Y (both of data type integer), and one output parameter, Z (data type string). <!-- Shouldn't Z be an integer?-->
 1. In the **Formula** box, enter the formula:  
    **{ z:x*y }**
+   :::image type="content" source="media/function-example1.png" alt-text="Function that multiplies two numbers.":::
 
-<!-- Insert screenshot of function with inputs -->
-
-### Add a new Title to Article table
+### Add a new title to article table
 
 1. Create two input parameters title and url (both with string data types) and one output variable, message (data type string).
 1. Select the **Knowledge Federated Articles** table in the **Table references** dropdown.
