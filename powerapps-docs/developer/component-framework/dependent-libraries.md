@@ -12,18 +12,24 @@ contributors:
 ---
 # Dependent Libraries
 
-
 With model-driven apps, you can re-use a prebuilt library contained in another component that is loaded as a dependency to more than one component.
 
-Reusing existing libraries improves performance when the library is large by reducing the load time for all components that use the library.  Library reuse also helps reduce the maintenance overhead in build processes.
+> [!NOTE]
+> Components for canvas apps can't use dependent libraries.
 
-|Without dependent libraries|With dependent libraries|
+Having a copy of a prebuilt library in multiple controls isn't desirable. Reusing existing libraries improves performance when the library is large by reducing the load time for all components that use the library.  Library reuse also helps reduce the maintenance overhead in build processes.
+
+|Before|After|
 |---|---|
-|:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::|:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::|
+|:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::|:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing components calling a shared function from a Library Control":::|
 
-<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
+To use dependent libraries, you need to:
 
-It isn't desirable to have a copy of a prebuilt library in multiple controls.
+- Create a *Library component* that contains the library. This component can provide some functionality or simply be a container for the library.
+- Configure
+
+
+
 
 
 
@@ -32,7 +38,6 @@ It isn't desirable to have a copy of a prebuilt library in multiple controls.
 
 It would be preferable to load the library once on the form and have each of the controls that require to use it simply access it at runtime. This can now be achieved by creating a Library Control (note this can be a real control or simply a stub control) that the framework understands is a dependency to the other controls so it will load it at runtime.
 
-:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::
 
 
 
