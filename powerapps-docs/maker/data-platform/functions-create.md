@@ -123,6 +123,7 @@ Collect('Knowledge Federated Articles',
 1. Select the function in the **Functions** area.
 1. Select **Test** on the command bar.
 1. Provide values for the input parameters that are defined in the function, and then select **Play**.
+   :::image type="content" source="media/function-example1-test.png" alt-text="Test a function":::
 
 > [!TIP]
 > Use output parameters to help validate expected behavior and results. Otherwise, you only observe success or failure when testing.
