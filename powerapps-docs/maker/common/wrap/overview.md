@@ -160,3 +160,4 @@ Optional more canvas apps that you're wrapping in the same build for mobile app 
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+- [Benefits and limitations of Wrap](limitations.md)  
