@@ -324,4 +324,84 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
 ---
 
 2. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package)
-3. Add another field to the form used  
+3. Add another field to the form used [before](tutorial-define-event.md#use-in-a-model-driven-app) and also set that to use the new component
+
+:::image type="content" source="media/event_mda_sample_param.png" alt-text="Diagram shows multiple controls added to the form":::
+
+4. Update the On Load function to react to events from both controls and also to make use of the parameters being passed
+
+#### [Before](#tab/before)
+```javascript
+/* eslint-disable */
+"use strict";
+
+var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
+(function () {
+
+  const controlName1 = "cr116_personid";
+
+  this.onLoad = function (executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    const sampleControl1 = formContext.getControl(controlName1);
+    sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+    sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+  };
+
+  this.onSampleControl1CustomEvent1 = function (params) {
+    alert(`SampleControl1 Custom Event 1`);
+  }.bind(this);
+
+  this.onSampleControl1CustomEvent2 = function (params) {
+    alert(`SampleControl1 Custom Event 2`);
+  }.bind(this);
+
+}).call(MyScriptsNameSpace);
+```
+#### [After](#tab/after)
+```javascript
+/* eslint-disable */
+"use strict";
+
+var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
+(function () {
+
+  const controlName1 = "cr116_personid";
+  const controlName2 = "cr116_haircolor";
+
+  this.onLoad = function (executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    const sampleControl1 = formContext.getControl(controlName1);
+    sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+    sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+
+    const sampleControl2 = formContext.getControl(controlName2);
+    if (sampleControl2) {
+      sampleControl2.addEventHandler("customEvent1", this.onSampleControl2CustomEvent1);
+      sampleControl2.addEventHandler("customEvent2", this.onSampleControl2CustomEvent2);
+    }
+  };
+
+  this.onSampleControl1CustomEvent1 = function (params) {
+    alert(`SampleControl1 Custom Event 1: ${params.message}`);
+  }.bind(this);
+
+  this.onSampleControl1CustomEvent2 = function (params) {
+    alert(`SampleControl1 Custom Event 2: ${params.message}`);
+  }.bind(this);
+
+  this.onSampleControl2CustomEvent1 = function (params) {
+    alert(`SampleControl2 Custom Event 1: ${params}`);
+  }
+
+  this.onSampleControl2CustomEvent2 = function (params) {
+    alert(`SampleControl2 Custom Event 2: ${params.message}`);
+    // prevent the default action for the event
+    params.preventDefault();
+  }*/
+}).call(MyScriptsNameSpace);
+```
+---
+5. Finally test your app. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
+6. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
