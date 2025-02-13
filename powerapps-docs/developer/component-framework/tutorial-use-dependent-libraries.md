@@ -30,7 +30,7 @@ You should be with familiar with the following:-
 [Package a code component](import-custom-controls.md)</br>
 [Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
 
-## Dependency as a library in another component
+## Build the library component
 
 1. Create a new component using this command:
 
@@ -92,7 +92,7 @@ declare module 'myLib' {
   "pcfAllowCustomWebpack": "on" 
 } 
 ```
-6. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are bundled when we build the project
+6. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are not bundled with the control output as they are already packaged separately when we build the project
 
 ```typescript
 /* eslint-disable */ 
@@ -104,7 +104,73 @@ module.exports = {
   }, 
 }  
 ```
-7. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
+7. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
+
+#### [Before](#tab/before)
+```json
+{
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "ComponentFramework": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@microsoft/power-apps",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off"
+    }
+}
+
+```
+
+#### [After](#tab/after)
+
+```json
+{
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "ComponentFramework": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@microsoft/power-apps",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+}
+
+```
+
+---
+
+8. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
 
 #### [Before](#tab/before)
 ```typescript
@@ -185,4 +251,171 @@ The library project should look like this:-
 [Package the code component](import-custom-controls.md)</br>
 [Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
 
+## Build the dependent control
+
+1. Create a new component using this command:
+
+  `pac pcf init -n DependencyControl -ns SampleNamespace -t field -npm`
+
+2. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
+
+```json
+{ 
+  "pcfResourceDependency": "on"
+} 
+```
+
+3. In the control manifest add the dependent resource, ths will be the `schemaName` of the dependent control `[solution prefix]_[namespace].[control name]` which you can find in the `solution.xml` file for the dependent control
+
+:::image type="content" source="media/dependent-library-solutionxml.png" alt-text="View of the schemaName in the RootComponent of the solution xml file":::
+
+#### [Before](#tab/before)
+```xml
+<resources> 
+      <code path="index.ts" order="2"/> 
+</resources> 
+```
+
+#### [After](#tab/after)
+
+```xml
+<resources> 
+      <dependency type="control" name="samples_SampleNamespace.StubLibrary" order="1"/>
+      <code path="index.ts" order="2"/>
+</resources> 
+```
+
+---
+
+4. Update the control (index.ts) so that it will make use of the dependent library which will be loaded onto the `Window` object when the control is loaded at runtime. 
+
+#### [Before](#tab/before)
+```typescript
+    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
+    {
+        // Add control initialization code
+    }
+
+```
+
+#### [After](#tab/after)
+
+```typescript
+    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
+    {
+        const controlDev = document.createElement("div");
+        controlDev.innerText = (window as any).MyLib.sayHello()+" from Dependency" || "Hello World";
+        container.appendChild(controlDev);
+    }
+```
+
+---
+
+5. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
+
+#### [Before](#tab/before)
+```json
+{
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "ComponentFramework": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@microsoft/power-apps",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off"
+    }
+}
+
+```
+
+#### [After](#tab/after)
+
+```json
+{
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "ComponentFramework": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@microsoft/power-apps",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+}
+
+```
+
+---
+
+## Build and package the Dependent component
+
+[Create and build the code component](create-custom-controls-using-pcf.md)</br>
+[Package the code component](import-custom-controls.md)</br>
+[Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
+
+## Add the component to a form
+
+1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+
+2. Navigate to the form and you should see the compenent show the text `Hello from myLib from Dependency`.
+
+:::image type="content" source="media/dependent-library-running.png" alt-text="Image of component running in an enviornment":::
+
 ## Dependency as on demand load of a component
+
+We can expand on this example by changing the Dependent Control to load the library resource on demand rather than have the framework load the library when the control loads. This is useful if the libraries being used by the control are very large and would impact the load time of the form.
+
+1. Modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
+
+#### [Before](#tab/before)
+```xml
+    <resources> 
+        <dependency type="control" name="samples_SampleNamespace.StubLibrary" order="1"/>
+        <code path="index.ts" order="2"/>
+    </resources> 
+```
+
+#### [After](#tab/after)
+
+```xml
+    <platform-action action-type="afterPageLoad" />
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+    </feature-usage>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <dependency type="control" name="samples_SampleNamespace.StubLibrary" load-type="onDemand"/>
+    </resources>
+```
+
+---
