@@ -9314,6 +9314,11 @@
       "source_path": "powerapps-docs/maker/model-driven-apps/powerbi-control.md",
       "redirect_url": "/power-apps/maker/model-driven-apps/create-edit-powerbi-embedded-page",
       "redirect_document_id": false
-    },    
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/maker-matching.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
+      "redirect_document_id": false
+    }
   ]
 }
