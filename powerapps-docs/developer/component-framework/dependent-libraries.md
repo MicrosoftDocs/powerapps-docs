@@ -54,12 +54,17 @@ This is achieved by using a feature control file with two properties and a webpa
 
 ### featureconfig.json
 
-This file has two properties: `pcfAllowLibraryResources` and `pcfAllowCustomWebpack` that you can set to `on` or `off`.
+This file allows the override of the default feature flags for a PCF control without modifying the files generated in the `node_modules` folder. 
+
+To use libraries in a control the following feature flags`pcfAllowLibraryResources` and `pcfAllowCustomWebpack` should be overriden and set to `on` it is `off` byt default. 
+
+To use a dependent component in a control the following feature flag `pcfResourceDependency` should be overridden set to `on` it is `off` byt default.
 
 ### webpack.config.js
 
+<!--Someone please check my description below is accurate -->
+When a PCF control is built ![Webpack](https://webpack.js.org/) is used at build-time to bundle the code and dependencies into a deployable asset. To ensure that the libraries are not bundled as part of the code component, as the folder and library files are included separaetly in the packaged component, an additional configuration file is added to the project root folder `webpack.config.js` that should specify the library alias's as `externals` (see https://webpack.js.org/configuration/externals/ for more information).
 
-Can we link to https://webpack.js.org/configuration/ to explain what this is?
 
 ### Register dependencies
 

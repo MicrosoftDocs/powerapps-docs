@@ -24,8 +24,9 @@ Model-driven apps
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
 |`type`|TODO: What are valid values here?|`String`|Yes|Model-driven apps |
-|`name`|The name of the library|`Positive integer`|Yes|Model-driven  apps |
+|`name`|The schemaName name of the library component|`String`|Yes|Model-driven  apps |
 |`order`|The order in which the dependent library should load|`Positive integer`|Yes|Model-driven  apps |
+|`load-type`|TODO: What are valid valies here?|`String`|Yes|Model-driven  apps |
 
 ## Parent Elements
 
