@@ -59,10 +59,10 @@ This section provides a few example functions.
 
 ### Calculate the product of two integers
 
-1. Add two input parameters, X and Y (both of data type integer), and one output parameter, Z (data type string). <!-- Shouldn't Z be an integer?-->
+1. Add two input parameters, x and y (both of data type integer), and one output parameter, z (data type integer). <!-- Shouldn't Z be an integer? It says string in the other doc, which doesn't work.-->
 1. In the **Formula** box, enter the formula:  
-   **{ z:x*y }**
-   :::image type="content" source="media/function-example1.png" alt-text="Function that multiplies two numbers.":::
+   `{ z:x*y }`
+   :::image type="content" source="media/function-example1.png" alt-text="Function that multiplies two numbers." lightbox="media/function-example1.png":::
 
 ### Add a new title to article table
 
@@ -123,7 +123,7 @@ Collect('Knowledge Federated Articles',
 1. Select the function in the **Functions** area.
 1. Select **Test** on the command bar.
 1. Provide values for the input parameters that are defined in the function, and then select **Play**.
-   :::image type="content" source="media/function-example1-test.png" alt-text="Test a function":::
+   :::image type="content" source="media/function-example1-test.png" alt-text="Test a function" lightbox="media/function-example1-test.png":::
 
 > [!TIP]
 > Use output parameters to help validate expected behavior and results. Otherwise, you only observe success or failure when testing.
