@@ -20,7 +20,7 @@ This tutorial shows how to build a code component that is dependent on libraries
 
 ## Goal
 
-When you complete the steps in this tutorial you will be able to create a code component that will be dependant on a library contained in another control. In this example, for simplicity, the control containing the library wont actually be a functioning control (think of this as a pure library control) however there is no reason dependent control could not be a fully functional control. The example will allow the framework to load the dependent contol immediately and then be expanded to show how the dependent control can be loaded on demand.
+When you complete the steps in this tutorial you will be able to create a code component that will be dependant on a library contained in another control. In this example, for simplicity, the control containing the library wont actually be a functioning control (think of this as a pure library control) however there is no reason the dependent control could not be a fully functional control. The example will allow the framework to load the dependent contol immediately and then be expanded to show how the dependent control can be loaded on demand.
 
 ## Prerequisites
 
@@ -29,7 +29,6 @@ You should be with familiar with the following:-
 [Create and build a code component](create-custom-controls-using-pcf.md)</br>
 [Package a code component](import-custom-controls.md)</br>
 [Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
-[Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)</br>
 
 ## Dependency as a library in another component
 
@@ -37,7 +36,7 @@ You should be with familiar with the following:-
 
   `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
 
-1. In your new project add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+2. In your new control folder add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
 ```javascript
 // UMD module pattern
@@ -55,14 +54,14 @@ var myLib = (function (exports) {
 }({}));
 
 ```
-1. You will also need a new declartion file (d.ts) for the the libray to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
+3. You will also need a new declartion file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
 
 ```typescript
 declare module 'myLib' {
   export function sayHello(): string;
 }
 ```
-1. Add a reference to the library under the resources in the control manifest
+4. Add a reference to the library under the resources in the control manifest
 
 #### [Before](#tab/before)
 ```xml
@@ -85,7 +84,7 @@ declare module 'myLib' {
 ---
 
 
-1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
+5. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
 
 ```json
 { 
@@ -93,7 +92,7 @@ declare module 'myLib' {
   "pcfAllowCustomWebpack": "on" 
 } 
 ```
-1. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are bundled when we build the project
+6. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are bundled when we build the project
 
 ```typescript
 /* eslint-disable */ 
@@ -105,7 +104,7 @@ module.exports = {
   }, 
 }  
 ```
-1. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
+7. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
 
 #### [Before](#tab/before)
 ```typescript

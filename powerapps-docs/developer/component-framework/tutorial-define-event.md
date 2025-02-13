@@ -49,7 +49,7 @@ We don't want long set of numbered instructions. Since this entire article is a 
 
   `pac pcf init -n EventSample -ns SampleNamespace -t field -fw react -npm`
 
-1. Edit the manifest to add the new events
+2. Edit the manifest to add the new events
 
 #### [Before](#tab/before)
 
@@ -197,12 +197,12 @@ Now modify the `EventSample\Index.ts`, modify updateView method to add handlers 
 ## Use in a canvas app
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
-1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
-1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
+2. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+3. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
 
 :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
 
-1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
+4. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
 
 :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
 
@@ -210,7 +210,7 @@ and `Visible` of the text control
 
 :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
 
-1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
+5. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
 
 :::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
 
@@ -219,7 +219,7 @@ customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
 customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))
 ```
 
-1. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
+6. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
 ---
 
 ## Use in a model-driven app
@@ -258,15 +258,15 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 }).call(MyScriptsNameSpace);
 ```
 
-1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
-1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
-1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
-1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
+2. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
+3. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+4. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
+5. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
 
 :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
 
-1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
+6. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
 
 ## Passing payload in events
 
@@ -323,5 +323,5 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
 ```
 ---
 
-1. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package)
-1. Add another field to the form used  
+2. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package)
+3. Add another field to the form used  
