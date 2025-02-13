@@ -12,24 +12,28 @@ contributors:
 ---
 # Dependent Libraries
 
-> [!NOTE]
-> This capability is only available for controls used in model-driven applications this will not work for canvas apps
 
-A common requirement when building custom components with the Power Apps Component Framework is the ability to use one or more existing libraries in the component.  You can do this in a model-driven app by referencing a library that is contained in another control which is loaded as a dependency to a custom control.
+With model-driven apps, you can re-use a prebuilt library contained in another component that is loaded as a dependency to more than one component.
 
-## Dependency as a library in another component
+Reusing existing libraries improves performance when the library is large by reducing the load time for all components that use the library.  Library reuse also helps reduce the maintenance overhead in build processes.
 
-If you are using a prebuilt library in multiple controls then it is not desirable to have a copy of this library in every control. 
+|Without dependent libraries|With dependent libraries|
+|---|---|
+|:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::|:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::|
 
-:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
+It isn't desirable to have a copy of a prebuilt library in multiple controls.
 
-This creates an overhead of maintenance in the build processes if you are updating the library and if the libraries happen to be large in size this would inflate the size of the package for each of your custom controls, which also increases form load time when the controls are initially loaded into the browser.
+
+
+
+
+
 It would be preferable to load the library once on the form and have each of the controls that require to use it simply access it at runtime. This can now be achieved by creating a Library Control (note this can be a real control or simply a stub control) that the framework understands is a dependency to the other controls so it will load it at runtime.
 
 :::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::
-<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
+
 
 
 This way you can independently maintain the library in the Library Control and the dependent controls do not need to have a copy of the library bundled with them.
