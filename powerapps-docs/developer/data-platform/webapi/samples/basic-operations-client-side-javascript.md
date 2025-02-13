@@ -68,16 +68,16 @@ Importing the solution can take a few minutes to complete.
 1. In Power Apps select **Solutions** on the left navigation pane.
 1. Select the **Managed** filter, and then open the **Web API Basic Operations** managed solution.
 1. Open the **sample_/WebAPIBasicOperations.html** file to display the properties pane.
-1. Scroll down the **URL** and select it to open the HTML page in a new browser tab.
+1. Scroll down to the **URL** and select it to open the HTML page in a new browser tab.
 1. Press F12 to **Open DevTools**, including the console window, in Microsoft Edge browser.
 1. Select **Start Sample**.
 
 Observe the table operations that occur to create tables.
-:::image type="content" source="media/web-api-basic-operations-output.png" alt-text="Sample output displayed in developer tools.":::
+:::image type="content" source="media/web-api-basic-operations-output.png" alt-text="Sample output displayed in developer tools." lightbox="media/web-api-basic-operations-output.png":::
 
 ## Remove the records and solution used with this sample
 
-If the sample doesn't remove the records created, such as because of the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete all records.
+If the sample doesn't remove the records created, such as because of the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete the records.
 
 You can also remove (uninstall) the Web API Basic Operations managed solution.
 
