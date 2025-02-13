@@ -19,18 +19,20 @@ contributors:
 
 Model-driven apps
 
+## Parameters
+
+|Element|Description|Type|Required|
+|--|--|---|----|
+|`name`|Name of the feature that is declared in the component|`string`|Yes|
+|`required`|Indicates if the component requires that feature or not|`boolean`|Yes|
+
 ## Parent Element
 
 |Element|Description|
 |--|--|
-|feature-usage|The feature-usage element acts as a wrapper around the uses-feature elements, which themselves allow developers to declare which features their component wants to use. If there are no uses-feature elements defined, the feature-usage element is not required.|
+|[feature-usage](feature-usage.md)|[!INCLUDE [feature-usage-description](includes/feature-usage-description.md)]|
 
-## Child Elements
 
-|Element|Description|Type|Required|
-|--|--|---|----|
-|name|Name of the feature that is declared in the component|`string`|Yes|
-|required|Indicates if the component requires that feature or not|`boolean`|Yes|
 
 ### Example 
 
@@ -50,8 +52,8 @@ The table below shows the relationship of these settings to what happens in the 
 
 ### Related topics
 
-[Power Apps component framework manifest schema reference](index.md)<br/>
-[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](index.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

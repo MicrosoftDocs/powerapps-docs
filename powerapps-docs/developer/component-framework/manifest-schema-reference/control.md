@@ -48,6 +48,7 @@ Model-driven and canvas apps
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|1|
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|
 |[property-dependencies](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|0 or more|
+|[platform-action](platform-action.md)|[!INCLUDE [platform-action-description](includes/platform-action-description.md)]|0 or 1|
 
 ## Example
 
