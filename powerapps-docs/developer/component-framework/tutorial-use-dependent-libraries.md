@@ -12,11 +12,11 @@ contributors:
 ---
 # Tutorial: Use dependent libraries in a component
 
-> [!NOTE]
-> This capability is only available for controls used in model-driven applications this will not work for canvas apps
-
 This tutorial shows how to build a code component that is dependent on libraries that are contained in another component. 
 [Learn more about dependent libraries](dependent-libraries.md)
+
+> [!NOTE]
+> Components for canvas apps can't use dependent libraries.
 
 ## Goal
 
@@ -24,222 +24,228 @@ When you complete the steps in this tutorial you will be able to create a code c
 
 ## Prerequisites
 
-You should be with familiar with the following:-
+You should already know how to:
 
-[Create and build a code component](create-custom-controls-using-pcf.md)</br>
-[Package a code component](import-custom-controls.md)</br>
-[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
+- [Create and build a code component](create-custom-controls-using-pcf.md)
+- [Package a code component](import-custom-controls.md)
+- [Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)
 
 ## Build the library component
 
 1. Create a new component using this command:
 
-  `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
+   `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
 
-2. In your new control folder add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+1. In your new control folder add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
-```javascript
-// UMD module pattern
-var myLib = (function (exports) {
-  'use strict';
+   ```javascript
+   // UMD module pattern
+   var myLib = (function (exports) {
+   'use strict';
 
-  function sayHello() {
-    return "Hello from myLib";
-  }
+   function sayHello() {
+      return "Hello from myLib";
+   }
 
-  exports.sayHello = sayHello;
+   exports.sayHello = sayHello;
 
-  return exports;
+   return exports;
 
-}({}));
+   }({}));
 
-```
-3. You will also need a new declartion file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
+   ```
 
-```typescript
-declare module 'myLib' {
-  export function sayHello(): string;
-}
-```
-4. Add a reference to the library under the resources in the control manifest
+1. You will also need a new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
 
-#### [Before](#tab/before)
-```xml
-<resources> 
-      <code path="index.ts" order="2"/> 
-</resources> 
-```
+   ```typescript
+   declare module 'myLib' {
+   export function sayHello(): string;
+   }
+   ```
 
-#### [After](#tab/after)
+1. Add a reference to the library under the resources in the control manifest
 
-```xml
-<resources> 
-      <library name="myLib" version=">=1" order="1"> 
-        <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
-      </library> 
-      <code path="index.ts" order="2"/> 
-</resources> 
-```
+   #### [Before](#tab/before)
 
----
+   ```xml
+   <resources> 
+         <code path="index.ts" order="2"/> 
+   </resources> 
+   ```
 
+   #### [After](#tab/after)
 
-5. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
+   ```xml
+   <resources> 
+         <library name="myLib" version=">=1" order="1"> 
+           <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
+         </library> 
+         <code path="index.ts" order="2"/> 
+   </resources> 
+   ```
 
-```json
-{ 
-  "pcfAllowLibraryResources": "on", 
-  "pcfAllowCustomWebpack": "on" 
-} 
-```
-6. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are not bundled with the control output as they are already packaged separately when we build the project
+   ---
 
-```typescript
-/* eslint-disable */ 
-"use strict"; 
- 
-module.exports = { 
-  externals: { 
-    "myLib": "myLib" 
-  }, 
-}  
-```
-7. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
+1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
 
-#### [Before](#tab/before)
-```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-    }
-}
+   ```json
+   { 
+     "pcfAllowLibraryResources": "on", 
+     "pcfAllowCustomWebpack": "on" 
+   } 
+   ```
 
-```
+1. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are not bundled with the control output as they are already packaged separately when we build the project
 
-#### [After](#tab/after)
+   ```typescript
+   /* eslint-disable */ 
+   "use strict"; 
+   
+   module.exports = { 
+     externals: { 
+       "myLib": "myLib" 
+     }, 
+   }  
+   ```
 
-```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off"
-    }
-}
+1. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
 
-```
+   #### [Before](#tab/before)
 
----
+   ```json
+   {
+      "env": {
+         "browser": true,
+         "es2020": true
+      },
+      "extends": [
+         "eslint:recommended",
+         "plugin:@typescript-eslint/recommended"
+      ],
+      "globals": {
+         "ComponentFramework": true
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+         "ecmaVersion": 12,
+         "sourceType": "module"
+      },
+      "plugins": [
+         "@microsoft/power-apps",
+         "@typescript-eslint"
+      ],
+      "rules": {
+         "@typescript-eslint/no-unused-vars": "off"
+      }
+   }
 
-8. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
+   ```
 
-#### [Before](#tab/before)
-```typescript
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
+   #### [After](#tab/after)
 
-export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+   ```json
+   {
+      "env": {
+         "browser": true,
+         "es2020": true
+      },
+      "extends": [
+         "eslint:recommended",
+         "plugin:@typescript-eslint/recommended"
+      ],
+      "globals": {
+         "ComponentFramework": true
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+         "ecmaVersion": 12,
+         "sourceType": "module"
+      },
+      "plugins": [
+         "@microsoft/power-apps",
+         "@typescript-eslint"
+      ],
+      "rules": {
+         "@typescript-eslint/no-unused-vars": "off",
+         "@typescript-eslint/no-explicit-any": "off"
+      }
+   }
 
-    constructor()
-    {
+   ```
 
-    }
+   ---
 
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-    }
+1. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
 
-    public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-    }
+   #### [Before](#tab/before)
 
-    public getOutputs(): IOutputs
-    {
-        return {};
-    }
+   ```typescript
+   import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-    public destroy(): void
-    {
-    }
-}
+   export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-```
+      constructor()
+      {
 
-#### [After](#tab/after)
+      }
 
-```typescript
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import * as MyLib from "myLib";
+      public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
+      {
+      }
 
-export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+      public updateView(context: ComponentFramework.Context<IInputs>): void
+      {
+      }
 
-    constructor()
-    {
+      public getOutputs(): IOutputs
+      {
+         return {};
+      }
 
-    }
+      public destroy(): void
+      {
+      }
+   }
 
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-    }
+   ```
 
-    public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-    }
+   #### [After](#tab/after)
 
-    public getOutputs(): IOutputs
-    {
-        return {};
-    }
+   ```typescript
+   import { IInputs, IOutputs } from "./generated/ManifestTypes";
+   import * as MyLib from "myLib";
 
-    public destroy(): void
-    {
-    }
-}
+   export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-(function () {
-    (window as any).MyLib = MyLib;
-})();
-```
+      constructor()
+      {
 
----
+      }
+
+      public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
+      {
+      }
+
+      public updateView(context: ComponentFramework.Context<IInputs>): void
+      {
+      }
+
+      public getOutputs(): IOutputs
+      {
+         return {};
+      }
+
+      public destroy(): void
+      {
+      }
+   }
+
+   (function () {
+      (window as any).MyLib = MyLib;
+   })();
+   ```
+
+   ---
 
 The library project should look like this:-
 
