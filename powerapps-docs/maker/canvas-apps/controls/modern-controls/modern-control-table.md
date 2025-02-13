@@ -46,7 +46,7 @@ Currently, the listed capabilities aren't supported. However, since the **Table*
 * Customize the style of the **Table** other than color palette or modify individual columns.
 * **Select All** checkbox in the header when **Enable multi-select** is turned on.
 * Column filtering. Button is currently disabled.
-* Delegation. The maximum number of rows returned is the [Data row limit](../../delegation-overview#changing-the-limit).
+* Delegation. The maximum number of rows returned is the [Data row limit](../delegation-overview#changing-the-limit).
 
 
 ## General
