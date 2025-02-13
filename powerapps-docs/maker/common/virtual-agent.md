@@ -15,8 +15,8 @@ search.audienceType:
 # Get help building your app from a virtual agent
 
 
-> [!IMPORTANT] 
-> Effective March 11, 2025  the **Ask a virtual agent** feature in Power Apps will be deprecated and no longer supported. We recommend using Copiot in Power Apps for assists when creating a app. For general help in Power Apps, select **Help** (quesion mark icon in the upper right > **Support** > **Problem**.
+> [!IMPORTANT]
+> Effective March 11, 2025, the **Ask a virtual agent** feature in Power Apps is deprecated and no longer supported. We recommend using [Copilot in Power Apps](../canvas-apps/ai-overview.md) for assistance when creating an app. For general help in Power Apps, select **Help** (question mark icon in the upper right) > **Support** > **Problem**.
 
 Get contextual help while building your app using the Power Platform virtual agent. The virtual agent is available to answer questions about common scenarios when you're building an app. The virtual agent helps you by providing access to help content from documentation, the community, and blogs.
 
