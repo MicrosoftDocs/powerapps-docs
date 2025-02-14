@@ -29,7 +29,7 @@ The article helps you get started with functions in Microsoft Dataverse by integ
 
 ## Test a Power Fx expression
 
-You can test a Power Fx expression to verify it is working. This example uses the `Abs()` function to return the non-negative value of its argument. If a number is negative, `Abs` returns the positive equivalent.
+You can test a Power Fx expression to verify it's working. This example uses the `Abs()` function to return the non-negative value of its argument. If a number is negative, `Abs` returns the positive equivalent.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Functions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] Open the unmanaged solution where you want to add a function.
 1. Select **New function**.
@@ -39,6 +39,7 @@ You can test a Power Fx expression to verify it is working. This example uses th
 1. In the **Formula** box, wrap the **Out** parameter in curly brackets:
    `{Out: "" }`
 1. For example, you can test the Abs() function, which uses -5 to return the absolute value 5.
+
    `{Out: "Abs(-5)=5:"& Text(Abs(-5) = 5) }`
    :::image type="content" source="media/function-abs-example.png" alt-text="Abs function that uses the number 5.":::
 1. Select **Save**.
