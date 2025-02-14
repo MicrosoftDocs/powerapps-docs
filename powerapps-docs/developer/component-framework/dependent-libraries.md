@@ -1,6 +1,6 @@
 ---
 title: Dependent Libraries
-description: Explains how to use dependent libraries with PowerApps Component Framework (PCF) controls.
+description: Explains how to use dependent libraries with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
 ms.date: 02/13/2025
@@ -12,12 +12,9 @@ contributors:
 ---
 # Dependent Libraries
 
-With model-driven apps, you can re-use a prebuilt library contained in another component that is loaded as a dependency to more than one component.
+With model-driven apps, you can reuse a prebuilt library contained in another component that is loaded as a dependency to more than one component.
 
-> [!NOTE]
-> Components for canvas apps can't use dependent libraries.
-
-Having copies of a prebuilt library in multiple controls is undesirable. Reusing existing libraries improves performance when the library is large by reducing the load time for all components that use the library.  Library reuse also helps reduce the maintenance overhead in build processes.
+Having copies of a prebuilt library in multiple controls is undesirable. Reusing existing libraries improves performance, especially when the library is large, by reducing the load time for all components that use the library. Library reuse also helps reduce the maintenance overhead in build processes.
 
 |Before|After|
 |---|---|
@@ -25,18 +22,18 @@ Having copies of a prebuilt library in multiple controls is undesirable. Reusing
 
 To use dependent libraries, you need to:
 
-- Create a *Library component* that contains the library. This component can provide some functionality or simply be a container for the library.
+- Create a *Library component* that contains the library. This component can provide some functionality or only be a container for the library.
 - Configure another component to depend on the library loaded by the library component.
-   - By default, the library will load when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
+   - By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
 
-This way you can independently maintain the library in the Library Control and the dependent controls do not need to have a copy of the library bundled with them.
+This way you can independently maintain the library in the Library Control and the dependent controls don't need to have a copy of the library bundled with them.
 
 
 
 ## How it works
 
 <!--TODO: Confirm whether the feature flag file still required -->
-You need to add configuration data to your component project so that the build process deploys your libraries the way you want. You do this by adding or editing the following files:
+You need to add configuration data to your component project so that the build process deploys your libraries the way you want. Set this configuration data by adding or editing the following files:
 
 - [featureconfig.json](#featureconfigjson)
 - [webpack.config.js](#webpackconfigjs)
@@ -46,7 +43,7 @@ You need to add configuration data to your component project so that the build p
 
 Add this file to override the default feature flags for a component without modifying the files generated in the `node_modules` folder.
 
-There following table describes the feature flags you can set in `featureconfig.json`:
+The following table describes the feature flags you can set in `featureconfig.json`:
 
 |Name|Description|
 |---|---|
@@ -109,12 +106,12 @@ Use the [dependency element](manifest-schema-reference/dependency.md) within [re
 
 ### Dependency as on demand load of a component
 
-Rather than loading the dependent library when a component loads, you can load the dependent library on demand. This provides the flexibility for more complex controls to only load dependencies as they are required especially if the dependencies are larger libraries.
+Rather than loading the dependent library when a component loads, you can load the dependent library on demand. Loading on demand provides the flexibility for more complex controls to only load dependencies when they're required, especially if the dependent libraries are large.
 
 :::image type="content" source="media/dependent-library-on-demand-load.png" alt-text="Diagram showing the use of a function from a library where the library is loaded on demand":::
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
-To set enable this, you need to:
+To enable on demand loading, you need to:
 
 1. Add these [platform-action element](manifest-schema-reference/platform-action.md), [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md): 
 

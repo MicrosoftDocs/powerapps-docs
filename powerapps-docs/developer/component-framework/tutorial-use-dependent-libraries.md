@@ -19,9 +19,9 @@ This tutorial shows how to build a code component for model-driven apps that is 
 
 Follow the steps in this tutorial to create a library control and a control that depends on it. This tutorial contains the following steps:
 
-1. In [Build the library component](#build-the-library-component), you will create a simple component that only contains the re-usable library. For simplicity, this control only contains the re-usable library. There is no reason it couldn't also provide functionality.
-1. In [Build the dependent control](#build-the-dependent-control), you will create a component that uses the library defined in the library control and add it to a form to verify that it works.
-1. In [Dependency as on demand load of a component](#dependency-as-on-demand-load-of-a-component), you can expand on the example make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
+1. In [Build the library component](#build-the-library-component), create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
+1. In [Build the dependent control](#build-the-dependent-control), create a component that uses the library defined in the library control and add it to a form to verify that it works.
+1. In [Dependency as on demand load of a component](#dependency-as-on-demand-load-of-a-component), expand on the example make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
 
 
 ## Prerequisites
@@ -34,7 +34,7 @@ You should already know how to:
 
 ## Build the library component
 
-This component doesn't provide any capabilities by itself. It is simply a container for the library.
+This component doesn't provide any capabilities by itself. It's simply a container for the library.
 
 The first step is to create a new component using the [pac pcf init command](/power-platform/developer/cli/reference/pcf#pac-pcf-init):
 
@@ -42,7 +42,7 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ### Define the library
 
-1. In your new control folder add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
    ```javascript
    // UMD module pattern
@@ -95,7 +95,7 @@ The first step is to create a new component using the [pac pcf init command](/po
 ### Add Configuration
 
 1. Add a file named `featureconfig.json` in the root folder of the project.
-1. Add the following to the `featureconfig.json` file
+1. Add the following to the `featureconfig.json` file:
 
    ```json
    { 
@@ -104,11 +104,9 @@ The first step is to create a new component using the [pac pcf init command](/po
    } 
    ```
 
-   **TODO**: Briefly why both of these settings are "on".
-
    [Learn more about the featureconfig.json file](dependent-libraries.md#featureconfigjson)
 
-1. Add a new webpack file named `webpack.config.js` in the root folder of your project. This ensures that the libraries aren't bundled with the control output. This isn't necessary because they are already packaged separately when you build the project.
+1. Add a new `webpack.config.js` file in the root folder of your project. This configuration data ensures that the libraries aren't bundled with the control output. Bundling isn't necessary because they're already packaged separately when you build the project.
 
    ```typescript
    /* eslint-disable */ 
@@ -146,7 +144,7 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ### Add library to window
 
-The last step is edit the `index.ts` of the control to bind the library to the window.
+The last step is to edit the `index.ts` of the control to bind the library to the window.
 
 #### [Before](#tab/before)
 
@@ -229,7 +227,7 @@ Now that you have a library control, you need a control to depend on it.
 
    `pac pcf init -n DependencyControl -ns SampleNamespace -t field -npm`
 
-1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:
+1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following text:
 
    ```json
    { 
@@ -353,11 +351,9 @@ To finish the dependent component, complete the following steps as usual:
 
 ## Dependency as on demand load of a component
 
-We can expand on this example by changing the dependent component to load the library resource on demand rather than have the framework load the library when the component loads.
+You can expand on this example by changing the dependent component to load the library resource on demand rather than have the framework load the library when the component loads. On demand load behavior is useful if the libraries being used by the control are large and would increase the load time of the form.
 
-This is useful if the libraries being used by the control are very large and would impact the load time of the form.
-
-To do this, modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
+To specify on demand load behavior, modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
 
 #### [Before](#tab/before)
 
