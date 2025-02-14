@@ -26,7 +26,7 @@ Model-driven apps
 |`type`|TODO: What are valid values here?|`String`|Yes|Model-driven apps |
 |`name`|The schemaName name of the library component|`String`|Yes|Model-driven  apps |
 |`order`|The order in which the dependent library should load|`Positive integer`|Yes|Model-driven  apps |
-|`load-type`|TODO: What are valid valies here?|`String`|Yes|Model-driven  apps |
+|`load-type`|TODO: What are valid values here? Is `onDemand` the only valid value?|`String`|Yes|Model-driven  apps |
 
 ## Parent Elements
 
@@ -37,13 +37,17 @@ Model-driven apps
 ### Example
 
 ```XML
-<dependency type="control" name="samples_SampleNS.SampleStubLibraryPCF" order="1"/>
+<dependency 
+   type="control" 
+   name="samples_SampleNS.SampleStubLibraryPCF" 
+   order="1"/>
 ```
 
 ### Related topics
 
-[Power Apps component framework manifest schema reference](index.md)<br/>
-[Power Apps component framework API reference](../reference/index.md)<br/>
+[Dependent Libraries](../dependent-libraries.md)   
+[Power Apps component framework manifest schema reference](index.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

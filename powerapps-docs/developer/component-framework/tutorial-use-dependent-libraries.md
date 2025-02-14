@@ -3,7 +3,7 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 02/05/2025
+ms.date: 02/13/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -12,58 +12,67 @@ contributors:
 ---
 # Tutorial: Use dependent libraries in a component
 
-> [!NOTE]
-> This capability is only available for controls used in model-driven applications this will not work for canvas apps
-
-This tutorial shows how to build a code component that is dependent on libraries that are contained in another component. 
+This tutorial shows how to build a code component for model-driven apps that is dependent on libraries that are contained in another component.
 [Learn more about dependent libraries](dependent-libraries.md)
 
 ## Goal
 
-When you complete the steps in this tutorial you will be able to create a code component that will be dependant on a library contained in another control. In this example, for simplicity, the control containing the library wont actually be a functioning control (think of this as a pure library control) however there is no reason the dependent control could not be a fully functional control. The example will allow the framework to load the dependent contol immediately and then be expanded to show how the dependent control can be loaded on demand.
+Follow the steps in this tutorial to create a library control and a control that depends on it. This tutorial contains the following steps:
+
+1. In [Build the library component](#build-the-library-component), create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
+1. In [Build the dependent control](#build-the-dependent-control), create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
+1. In [Dependency as on demand load of a component](#dependency-as-on-demand-load-of-a-component), expand on the example make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
+
 
 ## Prerequisites
 
-You should be with familiar with the following:-
+You should already know how to:
 
-[Create and build a code component](create-custom-controls-using-pcf.md)</br>
-[Package a code component](import-custom-controls.md)</br>
-[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
+- [Create and build a code component](create-custom-controls-using-pcf.md)
+- [Package a code component](import-custom-controls.md)
+- [Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)
 
 ## Build the library component
 
-1. Create a new component using this command:
+This component doesn't provide any capabilities by itself. It's simply a container for the library.
 
-  `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
+The first step is to create a new component using the [pac pcf init command](/power-platform/developer/cli/reference/pcf#pac-pcf-init):
 
-2. In your new control folder add a new folder to contain your libraries `libs` for this example create a new javascript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+   `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
 
-```javascript
-// UMD module pattern
-var myLib = (function (exports) {
-  'use strict';
+### Define the library
 
-  function sayHello() {
-    return "Hello from myLib";
-  }
+1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
-  exports.sayHello = sayHello;
+   ```javascript
+   // UMD module pattern
+   var myLib = (function (exports) {
+   'use strict';
 
-  return exports;
+   function sayHello() {
+      return "Hello from myLib";
+   }
 
-}({}));
+   exports.sayHello = sayHello;
 
-```
-3. You will also need a new declartion file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
+   return exports;
 
-```typescript
-declare module 'myLib' {
-  export function sayHello(): string;
-}
-```
-4. Add a reference to the library under the resources in the control manifest
+   }({}));
+
+   ```
+
+1. You need new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
+
+   ```typescript
+   declare module 'myLib' {
+   export function sayHello(): string;
+   }
+   ```
+
+1. Add a reference to the library under the resources in the control manifest.
 
 #### [Before](#tab/before)
+
 ```xml
 <resources> 
       <code path="index.ts" order="2"/> 
@@ -83,122 +92,86 @@ declare module 'myLib' {
 
 ---
 
+### Add Configuration data
 
-5. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
+1. Add a file named `featureconfig.json` in the root folder of the project.
+1. Add the following text to the `featureconfig.json` file:
 
-```json
-{ 
-  "pcfAllowLibraryResources": "on", 
-  "pcfAllowCustomWebpack": "on" 
-} 
-```
-6. Add a new webpack file `webpack.config.js` in the root folder of your project to ensure the libraries are not bundled with the control output as they are already packaged separately when we build the project
+   ```json
+   { 
+     "pcfAllowLibraryResources": "on", 
+     "pcfAllowCustomWebpack": "on" 
+   } 
+   ```
 
-```typescript
-/* eslint-disable */ 
-"use strict"; 
- 
-module.exports = { 
-  externals: { 
-    "myLib": "myLib" 
-  }, 
-}  
-```
-7. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
+   [Learn more about the featureconfig.json file](dependent-libraries.md#featureconfigjson)
+
+1. Add a new `webpack.config.js` file in the root folder of your project. This configuration data ensures that the libraries aren't bundled with the control output. Bundling isn't necessary because they're already packaged separately when you build the project.
+
+   ```typescript
+   /* eslint-disable */ 
+   "use strict"; 
+   
+   module.exports = { 
+     externals: { 
+       "myLib": "myLib" 
+     }, 
+   }  
+   ```
+
+   [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
+
+1. Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
+
+<!-- TODO Briefly explain why this is necessary.  Is it always necessary, or only because of how MyLib is configured? -->
 
 #### [Before](#tab/before)
-```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-    }
-}
 
+```json
+   "rules": {
+      "@typescript-eslint/no-unused-vars": "off"
+   }
 ```
 
 #### [After](#tab/after)
 
 ```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
+   "rules": {
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-explicit-any": "off"
-    }
-}
-
+   }
 ```
 
 ---
 
-8. Finally in the `index.ts` of the control include the libraries and then bind the library to the Window (comments removed from code below for ease of reading):-
+### Add the library to window
+
+The last step is to edit the `index.ts` of the control to bind the library to the [window](https://developer.mozilla.org/docs/Web/API/Window).
 
 #### [Before](#tab/before)
+
 ```typescript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+export class PreBuiltLibrary
+implements ComponentFramework.StandardControl<IInputs, IOutputs>
+{
+constructor() {}
 
-    constructor()
-    {
+public init(
+   context: ComponentFramework.Context<IInputs>,
+   notifyOutputChanged: () => void,
+   state: ComponentFramework.Dictionary,
+   container: HTMLDivElement
+): void {}
 
-    }
+public updateView(context: ComponentFramework.Context<IInputs>): void {}
 
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-    }
+public getOutputs(): IOutputs {
+   return {};
+}
 
-    public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-    }
-
-    public getOutputs(): IOutputs
-    {
-        return {};
-    }
-
-    public destroy(): void
-    {
-    }
+public destroy(): void {}
 }
 
 ```
@@ -207,35 +180,30 @@ export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInpu
 
 ```typescript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import * as MyLib from "myLib";
 
-export class PreBuiltLibrary implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+export class PreBuiltLibrary
+implements ComponentFramework.StandardControl<IInputs, IOutputs>
+{
+constructor() {}
 
-    constructor()
-    {
+public init(
+   context: ComponentFramework.Context<IInputs>,
+   notifyOutputChanged: () => void,
+   state: ComponentFramework.Dictionary,
+   container: HTMLDivElement
+): void {}
 
-    }
+public updateView(context: ComponentFramework.Context<IInputs>): void {}
 
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-    }
+public getOutputs(): IOutputs {
+   return {};
+}
 
-    public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-    }
-
-    public getOutputs(): IOutputs
-    {
-        return {};
-    }
-
-    public destroy(): void
-    {
-    }
+public destroy(): void {}
 }
 
 (function () {
-    (window as any).MyLib = MyLib;
+   (window as any).MyLib = MyLib;
 })();
 ```
 
@@ -245,177 +213,181 @@ The library project should look like this:-
 
 :::image type="content" source="media/dependent-library-libprojectview.png" alt-text="View of the project folder":::
 
-## Build and package the Library component
+### Build and package the library component
 
-[Create and build the code component](create-custom-controls-using-pcf.md)</br>
-[Package the code component](import-custom-controls.md)</br>
-[Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
+To finish the library component, complete the following steps as usual:
+
+1. [Create and build the code component](create-custom-controls-using-pcf.md)
+1. [Package the code component](import-custom-controls.md)
+1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
 
 ## Build the dependent control
 
+Now that you have a library control, you need a control to depend on it.
+
 1. Create a new component using this command:
 
-  `pac pcf init -n DependencyControl -ns SampleNamespace -t field -npm`
+   `pac pcf init -n DependencyControl -ns SampleNamespace -t field -npm`
 
-2. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following:-
+1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following text:
 
-```json
-{ 
-  "pcfResourceDependency": "on"
-} 
-```
+   ```json
+   { 
+     "pcfResourceDependency": "on"
+   } 
+   ```
 
-3. In the control manifest add the dependent resource, ths will be the `schemaName` of the dependent control `[solution prefix]_[namespace].[control name]` which you can find in the `solution.xml` file for the dependent control
+1. Add the dependent resource in the control manifest. 
 
-:::image type="content" source="media/dependent-library-solutionxml.png" alt-text="View of the schemaName in the RootComponent of the solution xml file":::
+   Use the `schemaName` of the dependent control `[solution prefix]_[namespace].[control name]` which you can find in the `solution.xml` file for the dependent component. The XML in the solution.xml file might look like this:
+
+   ```xml
+   <RootComponents>
+   <RootComponent
+      type="66"
+      schemaName="samples_SampleNamespace.StubLibrary"
+      behavior="0"
+   />
+   </RootComponents>
+   ```
 
 #### [Before](#tab/before)
+
 ```xml
-<resources> 
-      <code path="index.ts" order="2"/> 
+<resources>
+    <code path="index.ts"
+        order="2" />
 </resources> 
 ```
 
 #### [After](#tab/after)
 
 ```xml
-<resources> 
-      <dependency type="control" name="samples_SampleNamespace.StubLibrary" order="1"/>
-      <code path="index.ts" order="2"/>
+<resources>
+    <dependency type="control"
+        name="samples_SampleNamespace.StubLibrary"
+        order="1" />
+    <code path="index.ts"
+        order="2" />
 </resources> 
 ```
 
 ---
 
-4. Update the control (index.ts) so that it will make use of the dependent library which will be loaded onto the `Window` object when the control is loaded at runtime. 
+### Use the library function
+
+Update the component `index.ts` file so that it uses a function from the dependent library. The library is loaded into the `Window` object at runtime.
 
 #### [Before](#tab/before)
-```typescript
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-        // Add control initialization code
-    }
-
-```
-
-#### [After](#tab/after)
 
 ```typescript
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
-    {
-        const controlDev = document.createElement("div");
-        controlDev.innerText = (window as any).MyLib.sayHello()+" from Dependency" || "Hello World";
-        container.appendChild(controlDev);
-    }
-```
-
----
-
-5. Add an rule to turn off the check for `no-explicit-any` in the `.eslintrc.json` file:-
-
-#### [Before](#tab/before)
-```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-    }
+public init(
+   context: ComponentFramework.Context<IInputs>,
+   notifyOutputChanged: () => void,
+   state: ComponentFramework.Dictionary,
+   container: HTMLDivElement
+): void {
+   // Add control initialization code
 }
 
 ```
 
 #### [After](#tab/after)
 
+```typescript
+public init(
+   context: ComponentFramework.Context<IInputs>,
+   notifyOutputChanged: () => void,
+   state: ComponentFramework.Dictionary,
+   container: HTMLDivElement
+): void {
+      const controlDev = document.createElement("div");
+      controlDev.innerText = (window as any).MyLib.sayHello()+" from Dependency" || "Hello World";
+      container.appendChild(controlDev);
+}
+```
+
+---
+
+
+### Disable the check for no-explicit-any
+
+Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
+
+<!-- TODO Briefly explain why this is necessary.  Is it always necessary, or only because of how MyLib is configured? -->
+
+#### [Before](#tab/before)
+
 ```json
-{
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "globals": {
-      "ComponentFramework": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@microsoft/power-apps",
-      "@typescript-eslint"
-    ],
-    "rules": {
+   "rules": {
+      "@typescript-eslint/no-unused-vars": "off"
+   }
+```
+
+#### [After](#tab/after)
+
+```json
+   "rules": {
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-explicit-any": "off"
-    }
-}
-
+   }
 ```
 
 ---
 
-## Build and package the Dependent component
+### Build and package the dependent component
 
-[Create and build the code component](create-custom-controls-using-pcf.md)</br>
-[Package the code component](import-custom-controls.md)</br>
-[Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
+To finish the dependent component, complete the following steps as usual:
 
-## Add the component to a form
+1. [Create and build the code component](create-custom-controls-using-pcf.md)
+1. [Package the code component](import-custom-controls.md)
+1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
+
+### Add the component to a form
 
 1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
 
-2. Navigate to the form and you should see the compenent show the text `Hello from myLib from Dependency`.
+1. Navigate to the form and you should see the component show the text `Hello from myLib from Dependency`.
 
-:::image type="content" source="media/dependent-library-running.png" alt-text="Image of component running in an enviornment":::
+   :::image type="content" source="media/dependent-library-running.png" alt-text="Image of component running in an environment":::
 
 ## Dependency as on demand load of a component
 
-We can expand on this example by changing the Dependent Control to load the library resource on demand rather than have the framework load the library when the control loads. This is useful if the libraries being used by the control are very large and would impact the load time of the form.
+You can expand on this example by changing the dependent component to load the library resource on demand rather than have the framework load the library when the component loads. On demand load behavior is useful if the libraries being used by the control are large and would increase the load time of the form.
 
-1. Modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
+To specify on demand load behavior, modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
 
 #### [Before](#tab/before)
+
 ```xml
-    <resources> 
-        <dependency type="control" name="samples_SampleNamespace.StubLibrary" order="1"/>
-        <code path="index.ts" order="2"/>
-    </resources> 
+<resources>
+    <dependency type="control"
+        name="samples_SampleNamespace.StubLibrary"
+        order="1" />
+    <code path="index.ts"
+        order="2" />
+</resources>
 ```
 
 #### [After](#tab/after)
 
 ```xml
-    <platform-action action-type="afterPageLoad" />
-    <feature-usage>
-      <uses-feature name="Utility" required="true" />
-    </feature-usage>
-    <resources>
-      <code path="index.ts" order="1"/>
-      <dependency type="control" name="samples_SampleNamespace.StubLibrary" load-type="onDemand"/>
-    </resources>
+<platform-action action-type="afterPageLoad" />
+<feature-usage>
+    <uses-feature name="Utility"
+        required="true" />
+</feature-usage>
+<resources>
+    <code path="index.ts"
+        order="1" />
+    <dependency type="control"
+        name="samples_SampleNamespace.StubLibrary"
+        load-type="onDemand" />
+</resources>
 ```
 
 ---
+
+### Related articles
+
+[Dependent Libraries](dependent-libraries.md)

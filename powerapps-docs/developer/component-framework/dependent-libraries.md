@@ -1,9 +1,9 @@
 ---
 title: Dependent Libraries
-description: Explains how to use dependent libraries with PowerApps Component Framework (PCF) controls.
+description: Explains how to use dependent libraries with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/05/2025
+ms.date: 02/13/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -12,58 +12,80 @@ contributors:
 ---
 # Dependent Libraries
 
-> [!NOTE]
-> This capability is only available for controls used in model-driven applications this will not work for canvas apps
+With model-driven apps, you can reuse a prebuilt library contained in another component that is loaded as a dependency to more than one component.
 
-A common requirement when building custom components with the Power Apps Component Framework is the ability to use one or more existing libraries in the component.  You can do this in a model-driven app by referencing a library that is contained in another control which is loaded as a dependency to a custom control.
+Having copies of a prebuilt library in multiple controls is undesirable. Reusing existing libraries improves performance, especially when the library is large, by reducing the load time for all components that use the library. Library reuse also helps reduce the maintenance overhead in build processes.
 
-## Dependency as a library in another component
+|Before|After|
+|---|---|
+|:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::|:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing components calling a shared function from a Library Control":::|
 
-If you are using a prebuilt library in multiple controls then it is not desirable to have a copy of this library in every control. 
+To use dependent libraries, you need to:
 
-:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::
-<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
+- Create a *Library component* that contains the library. This component can provide some functionality or only be a container for the library.
+- Configure another component to depend on the library loaded by the library component.
+   - By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
 
+This way you can independently maintain the library in the Library Control and the dependent controls don't need to have a copy of the library bundled with them.
 
-This creates an overhead of maintenance in the build processes if you are updating the library and if the libraries happen to be large in size this would inflate the size of the package for each of your custom controls, which also increases form load time when the controls are initially loaded into the browser.
-It would be preferable to load the library once on the form and have each of the controls that require to use it simply access it at runtime. This can now be achieved by creating a Library Control (note this can be a real control or simply a stub control) that the framework understands is a dependency to the other controls so it will load it at runtime.
-
-:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing the PCF's calling a shared function from a Library Control":::
-<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
-
-
-This way you can independently maintain the library in the Library Control and the dependent controls do not need to have a copy of the library bundled with them.
-
-
-## Dependency as on demand load of a component
-
-In addition to specifying a dependency in the manifest of your control (where you set the order these are loaded) there is also the ability to specify that the dependency to be loaded on demand. This provides the flexibility for more complex controls to only load dependencies as they are required especially if the dependencies are larger libraries. 
-
-:::image type="content" source="media/dependent-library-on-demand-load.png" alt-text="Diagram showing the use of a function from a library where the library is loaded on demand":::
-<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
 
 ## How it works
 
+<!--TODO: Confirm whether the feature flag file still required -->
+You need to add configuration data to your component project so that the build process deploys your libraries the way you want. Set this configuration data by adding or editing the following files:
 
-<!--Is the feature flag file still required?--> 
-
-For a component to be able to use a library that is contained in another control, the component needs declare that it is using library resources and is also required to have a webpack configuration file that allows it to use custom webpack configuration to bundle the library when the solution is built. 
-
-This is achieved by using a feature control file with two properties and a webpack configuration file outlining the configuration for the webpack bundling process.
+- [featureconfig.json](#featureconfigjson)
+- [webpack.config.js](#webpackconfigjs)
+- Edit the manifest schema to [Register dependencies](#register-dependencies)
 
 ### featureconfig.json
 
-This file allows the override of the default feature flags for a PCF control without modifying the files generated in the `node_modules` folder. 
+Add this file to override the default feature flags for a component without modifying the files generated in the `node_modules` folder.
 
-To use libraries in a control the following feature flags`pcfAllowLibraryResources` and `pcfAllowCustomWebpack` should be overriden and set to `on` it is `off` byt default. 
+The following table describes the feature flags you can set in `featureconfig.json`:
 
-To use a dependent component in a control the following feature flag `pcfResourceDependency` should be overridden set to `on` it is `off` byt default.
+|Name|Description|
+|---|---|
+|`pcfAllowLibraryResources`|Enables the component to be a library resource.|
+|`pcfResourceDependency`|Enables the component to use a library resource.|
+|`pcfAllowCustomWebpack`|Enables the component to use a custom web pack. This feature must be enabled for components that define a library resource.|
+
+By default, these values are `off`. Set them to `on` to override the default. For example:
+
+```json
+{ 
+  "pcfAllowLibraryResources": "on", 
+  "pcfAllowCustomWebpack": "on" 
+} 
+```
+
+```json
+{ 
+   "pcfAllowLibraryResources": "off", 
+   "pcfResourceDependency": "on",
+   "pcfAllowCustomWebpack": "off" 
+} 
+```
 
 ### webpack.config.js
 
-<!--Someone please check my description below is accurate -->
-When a PCF control is built ![Webpack](https://webpack.js.org/) is used at build-time to bundle the code and dependencies into a deployable asset. To ensure that the libraries are not bundled as part of the code component, as the folder and library files are included separaetly in the packaged component, an additional configuration file is added to the project root folder `webpack.config.js` that should specify the library alias's as `externals` (see https://webpack.js.org/configuration/externals/ for more information).
+<!-- TODO: please confirm this is accurate -->
+
+The build process for components uses [Webpack](https://webpack.js.org/) to bundle the code and dependencies into a deployable asset. To exclude your libraries from this bundling, add a `webpack.config.js` file to the project root folder that specifies the alias of the library as `externals`. [Learn more about the Webpack externals configuration option](https://webpack.js.org/configuration/externals/)
+
+This file might look like the following when the library alias is `myLib`.
+
+```typescript
+/* eslint-disable */ 
+"use strict"; 
+
+module.exports = { 
+  externals: { 
+    "myLib": "myLib" 
+  }, 
+}  
+```
 
 
 ### Register dependencies
@@ -82,5 +104,37 @@ Use the [dependency element](manifest-schema-reference/dependency.md) within [re
 
 ```
 
-[Tutorial: Use dependent libraries in a component](tutorial-use-dependent-libraries.md)   
+### Dependency as on demand load of a component
 
+Rather than loading the dependent library when a component loads, you can load the dependent library on demand. Loading on demand provides the flexibility for more complex controls to only load dependencies when they're required, especially if the dependent libraries are large.
+
+:::image type="content" source="media/dependent-library-on-demand-load.png" alt-text="Diagram showing the use of a function from a library where the library is loaded on demand":::
+<!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
+
+To enable on demand loading, you need to:
+
+1. Add these [platform-action element](manifest-schema-reference/platform-action.md), [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md): 
+
+   ```xml
+   <platform-action action-type="afterPageLoad" />
+   <feature-usage>
+      <uses-feature name="Utility"
+         required="true" />
+   </feature-usage>
+   ```
+
+1. Set the `load-type` attribute of the [dependency element](manifest-schema-reference/dependency.md) to `onDemand`.
+
+   ```xml
+   <dependency type="control"
+         name="samples_SampleNamespace.StubLibrary"
+         load-type="onDemand" />
+   ```
+
+
+### Next steps
+
+Try a tutorial that walks you through creating a dependent library.
+
+> [!div class="nextstepaction"]
+> [Tutorial: Use dependent libraries in a component](tutorial-use-dependent-libraries.md)

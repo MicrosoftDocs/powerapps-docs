@@ -88,5 +88,11 @@ For Model Driven Applications there is the additional ability to pass a payload 
     }
 ```
 
-[Tutorial: Define a custom event in a component](tutorial-define-event.md)   
+   
 [Events](reference/events.md)   
+
+
+### Next steps
+
+> [!div class="nextstepaction"]
+> [Tutorial: Define a custom event in a component](tutorial-define-event.md)

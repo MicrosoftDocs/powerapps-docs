@@ -37,7 +37,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 
 3. Enter the following details:
    - **Template name**: Give your email template a detailed name to help you identify it later.
-   - **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
+   - **Permission level**: Select **Organization** to create templates that everyone in the organization can use or **Individual** for personal use.
    - **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
    - **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    - **Create**: Opens one of two editors where you can build your template.
@@ -50,6 +50,11 @@ The editor page you see depends on whether your administrator has turned on the 
 
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the email template editor page. 
+
+> [!NOTE]
+> For **Individual** permission templates, these templates do not show up on the list of email templates unless your are the owner of the templates or the owner has shared the template with you.
+> 
+> For **Organization** permission templates, these templates show up for all users in the organization.
 
 ## Start with existing templates
 
