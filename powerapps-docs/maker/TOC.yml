@@ -241,8 +241,6 @@
     href: ./common/learn-hub.md
   - name: Find it with unified search
     href: search.md
-  - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1298,6 +1296,8 @@
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
+      - name: Benefits and limitations of Wrap
+        href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
   - name: For developers
@@ -1592,8 +1592,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-          - name: Add the Power BI report control (preview)
-            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
