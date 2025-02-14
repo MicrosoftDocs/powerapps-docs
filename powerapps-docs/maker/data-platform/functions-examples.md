@@ -39,7 +39,7 @@ You can test a Power Fx expression to verify it is working. This example uses th
 1. In the **Formula** box, wrap the **Out** parameter in curly brackets:
    `{Out: "" }`
 1. For example, you can test the Abs() function, which uses -5 to return the absolute value 5.
-   `{Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  }`
+   `{Out: "Abs(-5)=5:"& Text(Abs(-5) = 5) }`
    :::image type="content" source="media/function-abs-example.png" alt-text="Abs function that uses the number 5.":::
 1. Select **Save**.
 
