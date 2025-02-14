@@ -467,7 +467,7 @@ export class HelloWorld extends React.Component<{}, { loaded: boolean }> {
 ```
 ---
 
-2. Modify the `index.ts` slight adjustments to how we create the component and also we will need references to the container to update the state. Most importantly we add a method `getActions` to react to the On Load and request the dependent control to be loaded.
+2. Modify the `index.ts` there are slight adjustments to how the component is create and initialised, added variables for references to the context and the container to update the state. Most importantly add a method `getActions` to react to the On Load and request the dependent control to be loaded.
 
 #### [Before](#tab/before)
 
