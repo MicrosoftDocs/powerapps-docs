@@ -39,7 +39,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [Properties pane](#8--properties-pane): Properties list for the selected object in Tree view.
 
-1. [Settings and virtual agent](#9--settings-and-virtual-agent): Configure your app in settings or get help building your app with a virtual agent.
+1. [Settings](#9--settings): Configure your app in settings.
 
 1. [Screen selector](#10--screen-selector): Switch between different screens in your app. Tree view selections display here.
 
@@ -392,13 +392,10 @@ The properties pane shows properties and options available for the currently sel
 
 :::image type="content" source="media/studio/pa-studio-prop-pane.png" alt-text="Screenshot that shows the properties pane that appears when you select an object in your canvas. You see two tabs in this pane: **Display** and **Advanced**.":::
 
-### 9 – Settings and virtual agent
+### 9 – Settings
 
 You can access [Settings](#settings) at the bottom of the app authoring menu or from the command bar as previously described.
 
-You can ask a virtual agent to answer questions in real time about common scenarios. For more information, see [Get help building your app from a virtual agent](../common/virtual-agent.md).
-
-:::image type="content" source="media/studio/settings-virtual-agent.png" alt-text="Screenshot that shows the location of the settings and virtual agent icons from the authoring menu.":::
 
 ### 10 – Screen selector
 
