@@ -72,7 +72,7 @@ Importing the solution can take a few minutes to complete.
 1. Press F12 to **Open DevTools**, including the console window, in Microsoft Edge browser.
 1. Select **Start Sample**.
 
-Observe the table operations that occur to create tables.
+Observe the table operations that occur to create table records.
 :::image type="content" source="media/web-api-basic-operations-output.png" alt-text="Sample output displayed in developer tools." lightbox="media/web-api-basic-operations-output.png":::
 
 ## Remove the records and solution used with this sample
