@@ -1,8 +1,7 @@
 ---
 title: "Time Zone Rule (TimeZoneRule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Time Zone Rule (TimeZoneRule) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
