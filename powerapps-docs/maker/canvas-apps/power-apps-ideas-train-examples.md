@@ -19,7 +19,7 @@ contributors:
 # Transform examples to Power Fx formulas 
 
 > [!IMPORTANT]
-> Effective February 19, 2025, the **Train with examples** feature to transform examples to Power Fx formulas is deprecated and no longer supported. We recommend using [Copilot to create and edit Power Fx formulas](/power-apps/maker/canvas-apps/ai-formulas-formulabar). For more information, see [Deprecation of Train with examples to transform examples to Power Fx formulas](/power-platform/important-changes-coming#deprecation-of-train-with-examples-to-transform-examples-to-power-fx-formulas)
+> Effective February 19, 2025, the **Train with examples** feature to transform examples to Power Fx formulas is deprecated and no longer supported. We recommend using [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md). For more information, see [Deprecation of Train with examples to transform examples to Power Fx formulas](/power-platform/important-changes-coming#deprecation-of-train-with-examples-to-transform-examples-to-power-fx-formulas)
 
 Most of us have struggled at times with manipulation of text when building apps. For help, we search online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just provide one or more desired outputs, and then Power Apps can automatically generate the formula for you.
 
