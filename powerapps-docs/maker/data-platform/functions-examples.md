@@ -36,9 +36,7 @@ You can test a Power Fx expression to verify it's working. This example uses the
 1. On the **New function** pane, enter a **Display name**, such as *Return non-negative value*, and **Description** for your function.
 1. Create a **New output parameter** to validate expected behavior, such as a string. For example, enter the **Name** of your **New Output parameter** *Out*.
 1. Optionally, use input parameters to make testing easier, that makes sense with the formula. In this example, no input parameters are used.
-1. In the **Formula** box, wrap the **Out** parameter in curly brackets:
-   `{Out: "" }`
-1. For example, you can test the Abs() function, which uses -5 to return the absolute value 5.
+1. In the **Formula** box, wrap the **Out** parameter in curly brackets: `{Out: "" }` For example, you can test the Abs() function, which uses -5 to return the absolute value 5.
 
    `{Out: "Abs(-5)=5:"& Text(Abs(-5) = 5) }`
    :::image type="content" source="media/function-abs-example.png" alt-text="Abs function that uses the number 5.":::
