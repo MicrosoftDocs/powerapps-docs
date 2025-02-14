@@ -111,6 +111,10 @@ Collect('Knowledge Federated Articles',
 }
 ```
 
+## More function examples
+
+For more example functions, go to [Example functions (preview)](functions-examples.md).
+
 ## Edit, test, or delete a function
 
 ### Edit a function
