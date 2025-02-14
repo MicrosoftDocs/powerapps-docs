@@ -227,7 +227,7 @@ Now that you have a library control, you need a control to depend on it.
 
 1. Create a new component using this command:
 
-   `pac pcf init -n DependencyControl -ns SampleNamespace -t field -npm`
+   `pac pcf init -n DependencyControl -ns SampleNamespace -t field  -fw react -npmcd `
 
 1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following text:
 
@@ -269,6 +269,10 @@ Now that you have a library control, you need a control to depend on it.
         order="1" />
     <code path="index.ts"
         order="2" />
+    <platform-library name="React"
+        version="16.8.6" />
+    <platform-library name="Fluent" 
+        version="8.29.0" />    
 </resources> 
 ```
 
@@ -276,18 +280,26 @@ Now that you have a library control, you need a control to depend on it.
 
 ### Use the library function
 
-Update the component `index.ts` file so that it uses a function from the dependent library. The library is loaded into the `Window` object at runtime.
+Update the component `HelloWorld.tsx` file so that it uses a function from the dependent library. The library is loaded into the `Window` object at runtime.
 
 #### [Before](#tab/before)
 
 ```typescript
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {
-   // Add control initialization code
+import * as React from 'react';
+import { Label } from '@fluentui/react';
+
+export interface IHelloWorldProps {
+  name?: string;
+}
+
+export class HelloWorld extends React.Component<IHelloWorldProps> {
+  public render(): React.ReactNode {
+    return (
+      <Label>
+        {this.props.name}
+      </Label>
+    )
+  }
 }
 
 ```
@@ -295,15 +307,21 @@ public init(
 #### [After](#tab/after)
 
 ```typescript
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {
-      const controlDev = document.createElement("div");
-      controlDev.innerText = (window as any).MyLib.sayHello()+" from Dependency" || "Hello World";
-      container.appendChild(controlDev);
+import * as React from 'react';
+import { Label } from '@fluentui/react';
+
+export interface IHelloWorldProps {
+  name?: string;
+}
+
+export class HelloWorld extends React.Component<IHelloWorldProps> {
+  public render(): React.ReactNode {
+    return (
+      <Label>
+        {(window as any).MyLib.sayHello()+" from Dependency" || "Hello World"}
+      </Label>
+    )
+  }
 }
 ```
 
@@ -366,6 +384,10 @@ To specify on demand load behavior, modify the control manifest of the [dependen
         order="1" />
     <code path="index.ts"
         order="2" />
+    <platform-library name="React"
+        version="16.8.6" />
+    <platform-library name="Fluent" 
+        version="8.29.0" />  
 </resources>
 ```
 
@@ -383,10 +405,236 @@ To specify on demand load behavior, modify the control manifest of the [dependen
     <dependency type="control"
         name="samples_SampleNamespace.StubLibrary"
         load-type="onDemand" />
+    <platform-library name="React"
+        version="16.8.6" />
+    <platform-library name="Fluent" 
+        version="8.29.0" />  
 </resources>
 ```
 
 ---
+
+1. Modify the `HelloWorld.tsx` to add a state and methods to update it once the dependency has loaded
+
+#### [Before](#tab/before)
+
+```typescript
+import * as React from 'react';
+import { Label } from '@fluentui/react';
+
+export interface IHelloWorldProps {
+  name?: string;
+}
+
+export class HelloWorld extends React.Component<IHelloWorldProps> {
+  public render(): React.ReactNode {
+    return (
+      <Label>
+        {(window as any).MyLib.sayHello()+" from Dependency" || "Hello World"}
+      </Label>
+    )
+  }
+}
+```
+
+#### [After](#tab/after)
+
+```typescript
+import * as React from 'react';
+import { Label } from '@fluentui/react';
+
+
+export class HelloWorld extends React.Component<{}, { loaded: boolean }> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      loaded: false
+    };
+  }
+
+  public afterPageLoad() {
+    this.setState({ loaded: true });
+  }
+
+  public render(): React.ReactNode {
+    return (
+      <Label>
+          {this.state.loaded ? (window as any).MyLib.sayHello()+" Dependency On Demand Load" : 'Loading...'}
+      </Label>
+    )
+  }
+}
+```
+---
+
+2. Modify the `index.ts` slight adjustments to how we create the component and also we will need references to the container to update the state. Most importantly we add a method `getActions` to react to the On Load and request the dependent control to be loaded.
+
+#### [Before](#tab/before)
+
+```typescript
+import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import { HelloWorld, IHelloWorldProps } from "./HelloWorld";
+import * as React from "react";
+
+export class DependencyControl implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+    private theComponent: ComponentFramework.ReactControl<IInputs, IOutputs>;
+    private notifyOutputChanged: () => void;
+
+    /**
+     * Empty constructor.
+     */
+    constructor() { }
+
+    /**
+     * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+     * Data-set values are not initialized here, use updateView.
+     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+     * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+     * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+     */
+    public init(
+        context: ComponentFramework.Context<IInputs>,
+        notifyOutputChanged: () => void,
+        state: ComponentFramework.Dictionary
+    ): void {
+        this.notifyOutputChanged = notifyOutputChanged;
+    }
+
+    /**
+     * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+     * @returns ReactElement root react element for the control
+     */
+    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        const props: IHelloWorldProps = { name: 'Hello, World!' };
+        return React.createElement(
+            HelloWorld, props
+        );
+    }
+
+    /**
+     * It is called by the framework prior to a control receiving new data.
+     * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
+     */
+    public getOutputs(): IOutputs {
+        return { };
+    }
+
+    /**
+     * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+     * i.e. cancelling any pending remote calls, removing listeners, etc.
+     */
+    public destroy(): void {
+        // Add code to cleanup control if necessary
+    }
+}
+```
+
+#### [After](#tab/after)
+
+```typescript
+import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import { HelloWorld} from "./HelloWorld";
+import * as React from "react";
+
+export class DependencyControl implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+    private theComponent: ComponentFramework.ReactControl<IInputs, IOutputs>;
+    private notifyOutputChanged: () => void;
+    private context: ComponentFramework.Context<IInputs>;
+    private mainContainerRef: React.RefObject<HelloWorld> = React.createRef<HelloWorld>();
+
+    /**
+     * Empty constructor.
+     */
+    constructor() { }
+
+    /**
+     * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+     * Data-set values are not initialized here, use updateView.
+     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+     * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+     * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+     */
+    public init(
+        context: ComponentFramework.Context<IInputs>,
+        notifyOutputChanged: () => void,
+        state: ComponentFramework.Dictionary
+    ): void {
+        this.notifyOutputChanged = notifyOutputChanged;
+        this.context = context;
+    }
+
+    /**
+     * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+     * @returns ReactElement root react element for the control
+     */
+    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        return React.createElement(
+            HelloWorld, {ref: this.mainContainerRef }
+        );
+    }
+
+    /**
+     * It is called by the framework prior to a control receiving new data.
+     * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
+     */
+    public getOutputs(): IOutputs {
+        return { };
+    }
+
+    public getActions(): any {
+        return {
+            afterPageLoad: async () => {
+                console.log("afterPageLoad");
+                const loadedControl = await (this.context.utils as any).loadDependency("samples_SampleNamespace.StubLibrary");
+                if (loadedControl) {
+                    this.mainContainerRef.current?.afterPageLoad();
+                  } 
+            },
+        };
+    }
+
+    /**
+     * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+     * i.e. cancelling any pending remote calls, removing listeners, etc.
+     */
+    public destroy(): void {
+        // Add code to cleanup control if necessary
+    }
+}
+```
+---
+
+3. Add another rule to `.eslintrc.json` and update the version number of the control in the `ControlManifest.Input.xml` and the version in the `Solution.xml` and rebuild, package, deploy and publish the solution with the updated control.
+
+#### [Before](#tab/before)
+
+```json
+   "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+   }
+```
+
+#### [After](#tab/after)
+
+```json
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": "off"
+    }
+```
+---
+
+Now when the page loads you will see the control load with `Loading...` displayed 
+
+:::image type="content" source="media/dependent-library-loading.png" alt-text="Image of component while the form loads":::
+
+and once the pages has loaded the control will update to display `Hello from myLib Dependency On Demand Load`.
+
+:::image type="content" source="media/dependent-library-loaded.png" alt-text="Image of component once the form has loaded":::
 
 ### Related articles
 
