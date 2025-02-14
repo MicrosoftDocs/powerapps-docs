@@ -40,8 +40,9 @@ This example uses the `Abs()` function to return the non-negative value of its a
 
    `{Out: "" }`
 1. Select **Save**.
-1. To test the function, select the function and then select **Test** on the command bar.
-1. In the **Input** box enter a formula to test such as the below function, and then select **Play**.
+
+To test the function, select the function and then select **Test** on the command bar.
+Then, in the **Input** box enter a formula to test such as the one below, and then select **Play**.
 
    `{Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5) }`
 
@@ -49,6 +50,9 @@ This example uses the `Abs()` function to return the non-negative value of its a
 
 ### Send in-app notifications based on an instant action
 
+This and more samples coming soon.
+
+<!-- 
 In-app notifications enable makers to configure contextual, actionable notifications for users in model-driven apps.
 
 1. On the **New function** pane, enter this **Display name** and **Description** for your function.
@@ -56,4 +60,5 @@ In-app notifications enable makers to configure contextual, actionable notificat
    - **Display name**:*NotifyTechnican1* 
    - **Description**: *This function notifies the app user.*
 
-Create input parameters with these data types: <!-- Waiting on dev to provide code in reset of samples in text not screenshots-->
+Create input parameters with these data types: -->
+<!-- Waiting on dev to provide code in rest of samples-->
