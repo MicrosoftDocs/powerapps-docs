@@ -62,6 +62,7 @@ This section provides a few example functions.
 1. Add two input parameters, x and y (both of data type integer), and one output parameter, z (data type integer).
 1. In the **Formula** box, enter the formula:  
    `{ z:x*y }`
+
    :::image type="content" source="media/function-example1.png" alt-text="Function that multiplies two numbers." lightbox="media/function-example1.png":::
 1. [Test the function](#test-a-function).
 
