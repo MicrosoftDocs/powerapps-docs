@@ -20,7 +20,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). Functions in Dataverse use [Power Fx](https://learn.microsoft.com/power-platform/power-fx/overview) to create your business logic. Power Fx is a general-purpose, strong-typed, declarative, and functional programming language. Whereas functions in Dataverse are reusable solution objects, which execute a specific set of commands within Dataverse, running server-side.
+Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). Functions in Dataverse use [Power Fx](/power-platform/power-fx/overview) to create your business logic. Power Fx is a general-purpose, strong-typed, declarative, and functional programming language. Whereas functions in Dataverse are reusable solution objects, which execute a specific set of commands within Dataverse, running server-side.
 
 > [!IMPORTANT]
 >
