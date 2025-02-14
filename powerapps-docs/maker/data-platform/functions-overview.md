@@ -20,14 +20,14 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). Functions in Dataverse use Power Fx functions to perform business logic. Power Fx is a general-purpose, strong-typed, declarative, and functional programming language. Whereas functions in Dataverse are reusable solution objects, which execute a specific set of commands within Dataverse, running server-side.
+Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). Functions in Dataverse use [Power Fx](https://learn.microsoft.com/power-platform/power-fx/overview) to create your business logic. Power Fx is a general-purpose, strong-typed, declarative, and functional programming language. Whereas functions in Dataverse are reusable solution objects, which execute a specific set of commands within Dataverse, running server-side.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Traditionally, plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, now with the introduction of functions, users can create them with minimal or no coding required, and without the need for manual registration.
+Traditionally, functions were created using plug-ins. These plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, now with the introduction of functions, users can create them with minimal or no coding required, and without the need for manual registration.
 
 Functions are stored within a Dataverse database and can be seamlessly integrated into Power Apps and Power Automate. The behavior of the workflow is defined using the Power Fx expression language and can directly connect with Dataverse business data and external data sources through Power Platform connectors. With functions, makers can rapidly construct complex logic with minimal coding expertise.
 
