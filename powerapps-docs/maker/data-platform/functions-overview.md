@@ -20,7 +20,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). These reusable functions, which use Power Fx, execute a specific set of commands within Dataverse, running server-side.
+Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through functions (formerly known as instant low-code plug-ins). Functions in Dataverse use Power Fx functions to perform business logic. Power Fx is a general-purpose, strong-typed, declarative, and functional programming language. Whereas functions in Dataverse are reusable solution objects, which execute a specific set of commands within Dataverse, running server-side.
 
 > [!IMPORTANT]
 >
@@ -59,7 +59,7 @@ Functions have these general properties.
 | Name          | The internal name of the function. It's used by the platform to identify the component in code and database operations. Can't be changed once created. |
 | Description   | Used to provide additional context about the function, such as purpose, behavior, and so on. Can't be changed once created. |
 | Solution      | Used to group components and export to other environments. [Learn more about solutions](solutions-overview.md).            |
-| Expression    | This is the custom function that can be used to perform actions or calculations, defined using the Power Fx expression language. See supported functions for more details. <!-- This link (https://learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins-powerfx) points to the deprioritized or soon to be feature, which is not what we want to do. If the list is the same, can we move it to this or another functions article? --> |
+| Expression    | This is the custom function that can be used to perform actions or calculations, defined using the Power Fx expression language. Go to [Power Fx formulas supported](#power-fx-formulas-supported) supported for more details.  |
 
 A function is custom code logic that's manually invoked by a user. Custom input and output parameters can be used with these unique properties.
 
@@ -77,7 +77,7 @@ A function is custom code logic that's manually invoked by a user. Custom input 
 - DateTime
 - Integer
 
-<!-- More information about how to integrate from a canvas app or in a Power Automate cloud flow: Integrate a low-code plug-in  Linking to a deprioritized article-->
+For more information about how to integrate from a canvas app or in a Power Automate cloud flow, go to [Invoke a function from a canvas app or custom page](functions-invoke.md#invoke-a-function-from-a-canvas-app-or-custom-page).
 
 ## Functions permissions
 
@@ -86,6 +86,156 @@ A function is custom code logic that's manually invoked by a user. Custom input 
 |Design time     |   Makers who have system customizer security role membership or higher level role in the Power Platform environment can access all functions in that environment. Custom security roles can be used to restrict access to functions.       |
 |Run time     | When a function is invoked, it accesses the table data involved in the function definition, which includes the tables that are part of the formula in the context of the user who invoked it.     |
 
+## Power Fx formulas supported
+
+Formulas *not currently supported* with functions in Dataverse.
+
+:::row:::
+   :::column span="":::
+      Clear
+   :::column-end:::
+   :::column span="":::
+      ClearCollect
+   :::column-end:::
+   :::column span="":::
+      Update
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      UpdateIf
+   :::column-end:::
+   :::column span="":::
+      SortByColumns
+   :::column-end:::
+   :::column span="":::
+      Concurrent
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      DropColumns
+   :::column-end:::
+   :::column span="":::
+      AddColumns
+   :::column-end:::
+   :::column span="":::
+      IsEmpty
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      SetFocus
+   :::column-end:::
+   :::column span="":::
+      IsType
+   :::column-end:::
+   :::column span="":::
+      JSON
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Download
+   :::column-end:::
+   :::column span="":::
+      PlainText
+   :::column-end:::
+   :::column span="":::
+     RemoveIf
+   :::column-end:::
+:::row-end:::
+:::row:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      GroupBy
+   :::column-end:::
+   :::column span="":::
+      SetProperty
+   :::column-end:::
+   :::column span="":::
+      RenameColumns
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Search
+   :::column-end:::
+   :::column span="":::
+      ShowColumns
+   :::column-end:::
+   :::column span="":::
+      UTCNow
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      UTCToday
+   :::column-end:::
+   :::column span="":::
+      Validate
+   :::column-end:::
+   :::column span="":::
+      Weekday
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      As
+   :::column-end:::
+   :::column span="":::
+      Calendar
+   :::column-end:::
+   :::column span="":::
+      Choices
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Clock
+   :::column-end:::
+   :::column span="":::
+      Select
+   :::column-end:::
+   :::column span="":::
+      Notify
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Errors
+   :::column-end:::
+   :::column span="":::
+      HashTags
+   :::column-end:::
+   :::column span="":::
+      ISOWeekNum 
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      WeekNum
+   :::column-end:::
+   :::column span="":::
+      Refresh
+   :::column-end:::
+   :::column span="":::
+      SaveData, LoadData, and ClearData
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Form-related formulas (EditForm, NewForm, SubmitForm, ResetForm, and ViewForm)
+   :::column-end:::
+   :::column span="":::
+      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
+   :::column-end:::
+   :::column span="":::
+      <!--empty-->
+   :::column-end:::
+:::row-end:::
+
 ## Next steps
 
-<!-- Link to next functions article.-->
+[Create and use functions in Microsoft Dataverse (preview)](functions-create.md)
