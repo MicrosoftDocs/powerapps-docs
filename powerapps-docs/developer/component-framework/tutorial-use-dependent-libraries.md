@@ -20,7 +20,7 @@ This tutorial shows how to build a code component for model-driven apps that is 
 Follow the steps in this tutorial to create a library control and a control that depends on it. This tutorial contains the following steps:
 
 1. In [Build the library component](#build-the-library-component), create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
-1. In [Build the dependent control](#build-the-dependent-control), create a component that uses the library defined in the library control and add it to a form to verify that it works.
+1. In [Build the dependent control](#build-the-dependent-control), create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
 1. In [Dependency as on demand load of a component](#dependency-as-on-demand-load-of-a-component), expand on the example make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
 
 
@@ -92,10 +92,10 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ---
 
-### Add Configuration
+### Add Configuration data
 
 1. Add a file named `featureconfig.json` in the root folder of the project.
-1. Add the following to the `featureconfig.json` file:
+1. Add the following text to the `featureconfig.json` file:
 
    ```json
    { 
@@ -118,6 +118,8 @@ The first step is to create a new component using the [pac pcf init command](/po
      }, 
    }  
    ```
+
+   [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
 
 1. Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
 
@@ -142,9 +144,9 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ---
 
-### Add library to window
+### Add the library to window
 
-The last step is to edit the `index.ts` of the control to bind the library to the window.
+The last step is to edit the `index.ts` of the control to bind the library to the [window](https://developer.mozilla.org/docs/Web/API/Window).
 
 #### [Before](#tab/before)
 
@@ -385,3 +387,7 @@ To specify on demand load behavior, modify the control manifest of the [dependen
 ```
 
 ---
+
+### Related articles
+
+[Dependent Libraries](dependent-libraries.md)

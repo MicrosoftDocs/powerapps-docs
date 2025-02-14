@@ -123,7 +123,7 @@ To enable on demand loading, you need to:
    </feature-usage>
    ```
 
-1. set the `load-type` attribute of the [dependency element](manifest-schema-reference/dependency.md) to `onDemand`.
+1. Set the `load-type` attribute of the [dependency element](manifest-schema-reference/dependency.md) to `onDemand`.
 
    ```xml
    <dependency type="control"
@@ -134,7 +134,7 @@ To enable on demand loading, you need to:
 
 ### Next steps
 
-Try a tutorial that walks you through creating a dependent library
+Try a tutorial that walks you through creating a dependent library.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Use dependent libraries in a component](tutorial-use-dependent-libraries.md)
