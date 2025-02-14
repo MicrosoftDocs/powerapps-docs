@@ -21,7 +21,7 @@ Follow the steps in this tutorial to create a library control and a control that
 
 [1. Build the library component](#1-build-the-library-component): Create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
 [2. Build the dependent control](#2-build-the-dependent-control): Create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
-[3. Load dependent library on demand](#3-load-dependent-library-on-demand): Expand on the example make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
+[3. Load dependent library on demand](#3-load-dependent-library-on-demand): Expand on the example to make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
 
 
 ## Prerequisites
@@ -375,7 +375,7 @@ You can expand on this example by changing the dependent component to load the l
 
 ### 3.1 Specify on demand load behavior
 
-To specify on demand load behavior, modify the control manifest of the [dependent control](tutorial-use-dependent-libraries.md#build-the-dependent-control)
+To specify on demand load behavior, modify the control manifest of the component created in [2. Build the dependent control](#2-build-the-dependent-control).
 
 #### [Before](#tab/before)
 
