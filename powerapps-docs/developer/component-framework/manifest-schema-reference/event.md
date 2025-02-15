@@ -17,13 +17,13 @@ contributors:
 
 ## Available for
 
-Canvas apps
+Canvas and model-driven apps
 
 ## Properties
 
 |Name |Description |Type |Required | Available for|
 |------|------|------|-------|------------|
-|`name` |Name of the event |`string` |Yes |Canvas apps|
+|`name` |Name of the event |`string` |Yes |Canvas and model-driven apps|
 |`display-name-key` |Used in the customization screens as localized strings that describes the name of the event. |`string` |Yes |Canvas apps|
 |`description-key` |Used in the customization screens as localized strings that describes the description of the event. |`string` |Optional |Canvas apps|
 |`pfx-default-value` |The default Power Fx expression value provided to the component. |See [Remarks](#remarks) |Optional |Canvas apps|

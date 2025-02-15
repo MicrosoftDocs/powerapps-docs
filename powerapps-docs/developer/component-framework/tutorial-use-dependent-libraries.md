@@ -19,9 +19,9 @@ This tutorial shows how to build a code component for model-driven apps that is 
 
 Follow the steps in this tutorial to create a library control and a control that depends on it. This tutorial contains the following steps:
 
-[1. Build the library component](#1-build-the-library-component): Create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
-[2. Build the dependent control](#2-build-the-dependent-control): Create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
-[3. Load dependent library on demand](#3-load-dependent-library-on-demand): Expand on the example to make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
+1. [Build the library component](#1-build-the-library-component): Create a component that only contains the reusable library. For simplicity, this control only contains the reusable library. There's no reason it couldn't also provide functionality.
+1. [Build the dependent control](#2-build-the-dependent-control): Create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
+1. [Load dependent library on demand](#3-load-dependent-library-on-demand): Expand on the example to make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
 
 
 ## Prerequisites

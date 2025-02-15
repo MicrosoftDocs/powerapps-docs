@@ -3,7 +3,7 @@ title: "Tutorial: Define a custom event in a component"
 description: "In this tutorial, learn how to define a custom event in a PCF control and use it in canvas and model-driven apps."
 author: anuitz
 ms.author: anuitz
-ms.date: 02/05/2025
+ms.date: 02/14/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -12,31 +12,35 @@ contributors:
 ---
 # Tutorial: Define a custom event in a component
 
-This tutorial shows how to build a code component with two buttons which each raise separate independent events which the hosting application will react to. You can add these to canvas & model-driven apps and show how these events can be utilized to perform actions like updating a field or showing a notification message. [Learn more about custom events](events.md).
+In this tutorial, you will build a code component that uses custom events and test it using both canvas and model-driven apps. [Learn more about custom events](events.md).
+
+## Goal
+
+The steps in this tutorial guide you to create a code component with two buttons which raise different events for the hosting application can react to. You will define two events: `customEvent1` and `customEvent2`. Then, the code component will expose two buttons that will cause these events to occur. 
+
+### Canvas App
+
+The canvas app will use Power Fx expressions on these events to toggle the visible and display mode properties of a control:
 
 :::image type="content" source="media/define-custom-event-tutorial-diagram.png" alt-text="Diagram shows the goal of this sample to define two custom events":::
 <!-- See source in media/src/define-custom-event-tutorial-diagram.vdx -->
 
-## Goal
+**TODO**: add video or images for canvas app showing final result
 
-When you complete the steps in this tutorial you will understand how to create a code component that defines custom events and also how to use the events in a canvas and model-driven app.
+### Model-driven App
 
-Canvas App
+The model-driven app will use client-side JavaScript to show an alert when the respective events occur.
 
-<!-- TODO add gif or images for canvas app-->
-
-Model-driven App
-
-<!-- TODO add gif or images for mda-->
+**TODO**: add video or images for mda showing final result
 
 ## Prerequisites
 
-You should be with familiar with the following:-
+You should already know how to:
 
-[Create and build a code component](create-custom-controls-using-pcf.md)</br>
-[Package a code component](import-custom-controls.md)</br>
-[Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)</br>
-[Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)</br>
+- [Create and build a code component](create-custom-controls-using-pcf.md)
+- [Package a code component](import-custom-controls.md)
+- [Add code components to a model-driven app](add-custom-controls-to-a-field-or-entity.md#add-a-code-component-to-a-column)
+- [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 
 ## Create a new Control
 
@@ -47,7 +51,7 @@ We don't want long set of numbered instructions. Since this entire article is a 
 
 1. Create a new component using this command:
 
-  `pac pcf init -n EventSample -ns SampleNamespace -t field -fw react -npm`
+   `pac pcf init -n EventSample -ns SampleNamespace -t field -fw react -npm`
 
 2. Edit the manifest to add the new events
 
@@ -85,12 +89,6 @@ We don't want long set of numbered instructions. Since this entire article is a 
    of-type="SingleLine.Text"
    usage="bound"
    required="true" />
-<event name="customEvent1"
-   display-name-key="customEvent1"
-   description-key="customEvent1"/>
-<event name="customEvent2"
-   display-name-key="customEvent2"
-   description-key="customEvent2"/>
 <resources>
    <code path="index.ts"
       order="1"/>
@@ -103,15 +101,26 @@ We don't want long set of numbered instructions. Since this entire article is a 
    <resx path="strings/SampleEventPCF.1033.resx" version="1.0.0" />
    -->
 </resources>
+<event name="customEvent1"
+   display-name-key="customEvent1"
+   description-key="customEvent1"/>
+<event name="customEvent2"
+   display-name-key="customEvent2"
+   description-key="customEvent2"/>
 ```
+
+<!-- 
+TODO: Is it OK that I've shown the event elements AFTER/BELOW the resources element? It is easier to see the difference this way 
+-->
 
 ---
 
 ## Define events
 
-In the control file `EventSample\HelloWorld.tsx`, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as shown below.
+In the `EventSample\HelloWorld.tsx` control file, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as shown below.
 
 #### [Before](#tab/before)
+
 ```typescript
 import * as React from 'react';
 import { Label } from '@fluentui/react';
@@ -130,12 +139,14 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
   }
 }
 ```
+
 #### [After](#tab/after)
+
 ```typescript
 import * as React from 'react';
 import { Label, DefaultButton } from '@fluentui/react';
 
-// this component renders two buttons each one will trigger an event passed via props
+// This component renders two buttons each one will trigger an event passed via props
 
 export interface IHelloWorldProps {
   onCustomEvent1: () => void;
@@ -157,52 +168,57 @@ export const HelloWorld: React.FunctionComponent<IHelloWorldProps> = (props: IHe
 
 ## Modify updateview method
 
-Now modify the `EventSample\Index.ts`, modify updateView method to add handlers for the two button events. This will add the two events defined in the manifest to the events in the context passed to the control.
+In `EventSample\Index.ts`, modify [the updateView method ](reference/react-control/updateview.md) to add handlers for the two button events. This will add the two events defined in the manifest to the events in the context passed to the control.
 
 #### [Before](#tab/before)
+
 ```typescript
-    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = { name: 'Hello, World!' };
-        return React.createElement(
-            HelloWorld, props
-        );
-    }
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+   const props: IHelloWorldProps = { name: 'Hello, World!' };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
 ```
+
 #### [After](#tab/after)
+
 ```typescript
-    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = {
-            onCustomEvent1: ()=> {
-                context.events.customEvent1()
-            },
-            onCustomEvent2: () => {
-                context.events.customEvent2()
-            }
-         };
-        return React.createElement(
-            HelloWorld, props
-        );
-    }
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+   const props: IHelloWorldProps = {
+      onCustomEvent1: ()=> {
+            context.events.customEvent1()
+      },
+      onCustomEvent2: () => {
+            context.events.customEvent2()
+      }
+   };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
 ```
 ---
 
 ## Build and package
 
-[Create and build the code component](create-custom-controls-using-pcf.md)</br>
-[Package the code component](import-custom-controls.md)</br>
-[Deploy the code component](import-custom-controls.md#deploying-code-components)</br>
+As usual, you need to complete these steps to use this control:
+
+1. [Create and build the code component](create-custom-controls-using-pcf.md)
+1. [Package the code component](import-custom-controls.md)
+1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
 
 ---
 
 ## Use in a canvas app
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
-2. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
-3. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
+1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
 
 :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
 
-4. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
+1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
 
 :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
 
@@ -210,7 +226,7 @@ and `Visible` of the text control
 
 :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
 
-5. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
+1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
 
 :::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
 
@@ -219,8 +235,7 @@ customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
 customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))
 ```
 
-6. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
----
+1. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
 
 ## Use in a model-driven app
 
@@ -258,15 +273,15 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 }).call(MyScriptsNameSpace);
 ```
 
-2. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
-3. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
-4. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
-5. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
+1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
+1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
+1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
 
 :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
 
-6. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
+1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
 
 ## Passing payload in events
 
@@ -280,57 +295,62 @@ As described in [Passing payload in events](events.md#passing-payload-in-events)
 1. First change the `EventSample\index.ts` so that the events will pass a message payload and in the second event also pass a callback function that changes an internal variable
 
 #### [Before](#tab/before)
-```typescript
-    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = {
-            onCustomEvent1: ()=> {
-                context.events.customEvent1()
-            },
-            onCustomEvent2: () => {
-                context.events.customEvent2()
-            }
-         };
-        return React.createElement(
-            HelloWorld, props
-        );
-    }
-```
-#### [After](#tab/after)
+
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = {
-            onCustomEvent1: () => {
-                // Trigger event with a string as payload 
-                context.events.customEvent1("Hello from event 1")
-            },
-            onCustomEvent2: () => {
-                let defaultPrevented = false;
-                // Trigger event with a payload object and a preventDefault function
-                context.events.customEvent2({ message: "Hello from event 2", preventDefault: () => { defaultPrevented = true } })
-
-                // Check if the event was prevented
-                if (defaultPrevented) {
-                    alert("Event 2 prevented default!");
-                } else {
-                    alert("Event 2 default NOT prevented");
-                }
-            }
-         };
-        return React.createElement(
-            HelloWorld, props
-        );
-    }
+   const props: IHelloWorldProps = {
+      onCustomEvent1: ()=> {
+            context.events.customEvent1()
+      },
+      onCustomEvent2: () => {
+            context.events.customEvent2()
+      }
+   };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
 ```
+
+#### [After](#tab/after)
+
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+   const props: IHelloWorldProps = {
+      onCustomEvent1: () => {
+            // Trigger event with a string as payload 
+            context.events.customEvent1("Hello from event 1")
+      },
+      onCustomEvent2: () => {
+            let defaultPrevented = false;
+            // Trigger event with a payload object and a preventDefault function
+            context.events.customEvent2({ message: "Hello from event 2", preventDefault: () => { defaultPrevented = true } })
+
+            // Check if the event was prevented
+            if (defaultPrevented) {
+               alert("Event 2 prevented default!");
+            } else {
+               alert("Event 2 default NOT prevented");
+            }
+      }
+   };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
+```
+
 ---
 
-2. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package)
-3. Add another field to the form used [before](tutorial-define-event.md#use-in-a-model-driven-app) and also set that to use the new component
+1. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package)
+1. Add another field to the form used [before](tutorial-define-event.md#use-in-a-model-driven-app) and also set that to use the new component
 
 :::image type="content" source="media/event_mda_sample_param.png" alt-text="Diagram shows multiple controls added to the form":::
 
-4. Update the On Load function to react to events from both controls and also to make use of the parameters being passed
+1. Update the On Load function to react to events from both controls and also to make use of the parameters being passed
 
 #### [Before](#tab/before)
+
 ```javascript
 /* eslint-disable */
 "use strict";
@@ -358,7 +378,9 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
 
 }).call(MyScriptsNameSpace);
 ```
+
 #### [After](#tab/after)
+
 ```javascript
 /* eslint-disable */
 "use strict";
@@ -402,6 +424,13 @@ var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
   }*/
 }).call(MyScriptsNameSpace);
 ```
+
 ---
-5. Finally test your app. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
-6. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
+
+1. Finally test your app. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
+1. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
+
+
+### Related articles
+
+[Define Events](events.md)
