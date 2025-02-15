@@ -1,8 +1,8 @@
 ### Connect using the Plug-in Registration tool
 
-1. Open the Plug-in Registration tool by executing the PAC CLI 'pac tool PRT' command.
-1. Click **+Create new connection** to connect to your instance.
-1. Make sure **Office 365** is selected.
+1. Open the Plug-in Registration tool by executing the PAC CLI `pac tool prt` command.
+1. Click **+Create new connection** to connect to your Dataverse environment.
+1. Make sure **Office 365** is checked.
 1. If you are connecting using a Microsoft account other than one you are currently using, click **Show Advanced** and enter your credentials. Otherwise, leave **Sign-in as current user** selected.
     > [!NOTE]
     > If your user account employs multi-factor authentication (MFA), make sure the **Show Advanced** checkbox is not checked.
