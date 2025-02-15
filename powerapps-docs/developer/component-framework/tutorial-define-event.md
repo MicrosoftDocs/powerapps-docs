@@ -214,36 +214,35 @@ As usual, you need to complete these steps to use this control:
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
 1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
-1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control
+1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control.
 
    :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
 
-1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode` 
+1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode`.
 
    :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
 
-   and `Visible` of the text control
+   And the `Visible` property of the text control.
 
    :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
 
-1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked
+1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked.
 
    :::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
 
-   ```typescript
-   customEvent1 - If(isVisible, Set (isVisible, false), Set (isVisible, true))
-   customEvent2 - If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))
-   ```
+   |Event|Power FX expression|
+   |---|---|
+   |customEvent1|`If(isVisible, Set (isVisible, false), Set (isVisible, true))`|
+   |customEvent2|`If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))`|
 
-1. Finally test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
+1. Test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
 
 ## Use in a model-driven app
-
 
 > [!NOTE]
 > These steps refer to instructions described in [Walkthrough: Write your first client script](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md).
 
-1. Create a new JavaScript file to run on the onLoad of a form. This will bind two simple event handlers to the new events for the controls on load of the form.
+1. Create a new JavaScript web resource to run on the `onLoad` event of a form. This will bind two simple event handlers to the new events for the controls on load of the form.
 
    ```javascript
    /* eslint-disable */
@@ -273,161 +272,168 @@ As usual, you need to complete these steps to use this control:
    }).call(MyScriptsNameSpace);
    ```
 
-1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource)
+1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource).
 1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
-1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form)
+1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form).
 1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
 
    :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
-
-1. Finally test your app when you navigate to the form and press `Trigger event 1` a pop up should display `SampleControl1 Custom Event 1` and when you press `Trigger event 2` a pop up should display `SampleControl1 Custom Event 2`
+1. Test your app. When you navigate to the form and press **Trigger event 1**, an alert displays `SampleControl1 Custom Event 1`. When you press **Trigger event 2**, an alert displays `SampleControl1 Custom Event 2`.
 
 ## Passing payload in events
 
-As described in [Passing payload in events](events.md#passing-payload-in-events), you can pass payload in events. You can modify this example in the following way to achieve this.
+As described in [Passing payload in events](events.md#passing-payload-in-events), you can pass payload in events in model-driven apps. You can modify this example in the following way to achieve this.
 
 <!-- TODO: I don't fully understand this diagram. Does it need more explanation? -->
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="Diagram shows multiple controls generating multiple events with a call back being made":::
 <!-- See source media/src/passing-payload-in-events.vsdx -->
 
+### Pass payload with event
 
-1. First change the `EventSample\index.ts` so that the events will pass a message payload and in the second event also pass a callback function that changes an internal variable
 
-   #### [Before](#tab/before)
+Change the `EventSample\index.ts` so that the events will pass a message payload and in the second event also pass a callback function that changes an internal variable
 
-   ```typescript
-   public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-      const props: IHelloWorldProps = {
-         onCustomEvent1: ()=> {
-               context.events.customEvent1()
-         },
-         onCustomEvent2: () => {
-               context.events.customEvent2()
-         }
-      };
-      return React.createElement(
-         HelloWorld, props
-      );
-   }
-   ```
+#### [Before](#tab/before)
 
-   #### [After](#tab/after)
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+   const props: IHelloWorldProps = {
+      onCustomEvent1: ()=> {
+            context.events.customEvent1()
+      },
+      onCustomEvent2: () => {
+            context.events.customEvent2()
+      }
+   };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
+```
 
-   ```typescript
-   public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-      const props: IHelloWorldProps = {
-         onCustomEvent1: () => {
-               // Trigger event with a string as payload 
-               context.events.customEvent1("Hello from event 1")
-         },
-         onCustomEvent2: () => {
-               let defaultPrevented = false;
-               // Trigger event with a payload object and a preventDefault function
-               context.events.customEvent2({ message: "Hello from event 2", preventDefault: () => { defaultPrevented = true } })
+#### [After](#tab/after)
 
-               // Check if the event was prevented
-               if (defaultPrevented) {
-                  alert("Event 2 prevented default!");
-               } else {
-                  alert("Event 2 default NOT prevented");
-               }
-         }
-      };
-      return React.createElement(
-         HelloWorld, props
-      );
-   }
-   ```
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+   const props: IHelloWorldProps = {
+      onCustomEvent1: () => {
+            // Trigger event with a string as payload 
+            context.events.customEvent1("Hello from event 1")
+      },
+      onCustomEvent2: () => {
+            let defaultPrevented = false;
+            // Trigger event with a payload object and a preventDefault function
+            context.events.customEvent2({ message: "Hello from event 2", preventDefault: () => { defaultPrevented = true } })
 
-   ---
+            // Check if the event was prevented
+            if (defaultPrevented) {
+               alert("Event 2 prevented default!");
+            } else {
+               alert("Event 2 default NOT prevented");
+            }
+      }
+   };
+   return React.createElement(
+      HelloWorld, props
+   );
+}
+```
+
+---
+
+Then:
 
 1. [Rebuild and Deploy the component](tutorial-define-event.md#build-and-package).
 1. Add another field to the form used [before](tutorial-define-event.md#use-in-a-model-driven-app) and also set that to use the new component.
 
    :::image type="content" source="media/event_mda_sample_param.png" alt-text="Diagram shows multiple controls added to the form":::
 
-1. Update the `onLoad` function to set the event handlers on the custom controls to react to events from both controls and also to make use of the parameters being passed
+### Use the payload in the event handler
 
-   #### [Before](#tab/before)
+Update the `onLoad` function to set the event handlers on the custom controls to react to events from both controls and also to make use of the parameters being passed
 
-   ```javascript
-   /* eslint-disable */
-   "use strict";
+#### [Before](#tab/before)
 
-   var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
-   (function () {
+```javascript
+/* eslint-disable */
+"use strict";
 
-   const controlName1 = "cr116_personid";
+var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
+(function () {
 
-   this.onLoad = function (executionContext) {
-      const formContext = executionContext.getFormContext();
+const controlName1 = "cr116_personid";
 
-      const sampleControl1 = formContext.getControl(controlName1);
-      sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
-      sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
-   };
+this.onLoad = function (executionContext) {
+   const formContext = executionContext.getFormContext();
 
-   this.onSampleControl1CustomEvent1 = function (params) {
-      alert(`SampleControl1 Custom Event 1`);
-   }.bind(this);
+   const sampleControl1 = formContext.getControl(controlName1);
+   sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+   sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+};
 
-   this.onSampleControl1CustomEvent2 = function (params) {
-      alert(`SampleControl1 Custom Event 2`);
-   }.bind(this);
+this.onSampleControl1CustomEvent1 = function (params) {
+   alert(`SampleControl1 Custom Event 1`);
+}.bind(this);
 
-   }).call(MyScriptsNameSpace);
-   ```
+this.onSampleControl1CustomEvent2 = function (params) {
+   alert(`SampleControl1 Custom Event 2`);
+}.bind(this);
 
-   #### [After](#tab/after)
+}).call(MyScriptsNameSpace);
+```
 
-   ```javascript
-   /* eslint-disable */
-   "use strict";
+#### [After](#tab/after)
 
-   var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
-   (function () {
+```javascript
+/* eslint-disable */
+"use strict";
 
-   const controlName1 = "cr116_personid";
-   const controlName2 = "cr116_haircolor";
+var MyScriptsNameSpace = window.MyScriptsNameSpace || {};
+(function () {
 
-   this.onLoad = function (executionContext) {
-      const formContext = executionContext.getFormContext();
+const controlName1 = "cr116_personid";
+const controlName2 = "cr116_haircolor";
 
-      const sampleControl1 = formContext.getControl(controlName1);
-      sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
-      sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
+this.onLoad = function (executionContext) {
+   const formContext = executionContext.getFormContext();
 
-      const sampleControl2 = formContext.getControl(controlName2);
-      if (sampleControl2) {
-         sampleControl2.addEventHandler("customEvent1", this.onSampleControl2CustomEvent1);
-         sampleControl2.addEventHandler("customEvent2", this.onSampleControl2CustomEvent2);
-      }
-   };
+   const sampleControl1 = formContext.getControl(controlName1);
+   sampleControl1.addEventHandler("customEvent1", this.onSampleControl1CustomEvent1);
+   sampleControl1.addEventHandler("customEvent2", this.onSampleControl1CustomEvent2);
 
-   this.onSampleControl1CustomEvent1 = function (params) {
-      alert(`SampleControl1 Custom Event 1: ${params.message}`);
-   }.bind(this);
-
-   this.onSampleControl1CustomEvent2 = function (params) {
-      alert(`SampleControl1 Custom Event 2: ${params.message}`);
-   }.bind(this);
-
-   this.onSampleControl2CustomEvent1 = function (params) {
-      alert(`SampleControl2 Custom Event 1: ${params}`);
+   const sampleControl2 = formContext.getControl(controlName2);
+   if (sampleControl2) {
+      sampleControl2.addEventHandler("customEvent1", this.onSampleControl2CustomEvent1);
+      sampleControl2.addEventHandler("customEvent2", this.onSampleControl2CustomEvent2);
    }
+};
 
-   this.onSampleControl2CustomEvent2 = function (params) {
-      alert(`SampleControl2 Custom Event 2: ${params.message}`);
-      // prevent the default action for the event
-      params.preventDefault();
-   }*/
-   }).call(MyScriptsNameSpace);
-   ```
+this.onSampleControl1CustomEvent1 = function (params) {
+   alert(`SampleControl1 Custom Event 1: ${params.message}`);
+}.bind(this);
 
-   ---
+this.onSampleControl1CustomEvent2 = function (params) {
+   alert(`SampleControl1 Custom Event 2: ${params.message}`);
+}.bind(this);
 
-1. Finally test your app. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
+this.onSampleControl2CustomEvent1 = function (params) {
+   alert(`SampleControl2 Custom Event 1: ${params}`);
+}
+
+this.onSampleControl2CustomEvent2 = function (params) {
+   alert(`SampleControl2 Custom Event 2: ${params.message}`);
+   // prevent the default action for the event
+   params.preventDefault();
+}*/
+}).call(MyScriptsNameSpace);
+```
+
+---
+
+### Test your app
+
+1. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
 1. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
 
 
