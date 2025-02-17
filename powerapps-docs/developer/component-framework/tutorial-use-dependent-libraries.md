@@ -448,8 +448,8 @@ import * as React from 'react';
 import { Label } from '@fluentui/react';
 
 
-export class HelloWorld extends React.Component<{}, { loaded: boolean }> {
-  constructor(props: {}) {
+export class HelloWorld extends React.Component<any, { loaded: boolean }> {
+  constructor(props: any) {
     super(props);
     this.state = {
       loaded: false
@@ -616,38 +616,13 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
 
 ---
 
-### 3.4 Edit linting rules
-
-Add another rule to `.eslintrc.json` to turn off [ban-types](https://typescript-eslint.io/rules/ban-types/).
-
-#### [Before](#tab/before)
-
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off"
-   }
-```
-
-#### [After](#tab/after)
-
-```json
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/ban-types": "off"
-    }
-```
-
----
-
-### 3.5 Final steps
+### 3.4 Final steps
 
 1. Update the version number of the control in the `ControlManifest.Input.xml` and the version in the `Solution.xml`
 1. Rebuild, package, deploy, and publish the solution with the updated control.
 
 
-### 3.6 Verify results
+### 3.5 Verify results
 
 Now, when the page loads you see the control load with `Loading...` displayed.
 
