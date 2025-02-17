@@ -25,7 +25,7 @@ The canvas app will use Power Fx expressions on these events to toggle the visib
 :::image type="content" source="media/define-custom-event-tutorial-diagram.png" alt-text="Diagram shows the goal of this sample to define two custom events":::
 <!-- See source in media/src/define-custom-event-tutorial-diagram.vdx -->
 
-[!VIDEO 02bf237b-8c58-4513-bd4e-1c66b7163793]
+[!VIDEO [Canvas](https://learn-video.azurefd.net/vod/player?id=9a59542b-cff6-4de5-a347-5da92aae2c9a)]
 
 ### Model-driven App
 
