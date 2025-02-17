@@ -1,7 +1,7 @@
 ---
 title: "Flow Machine Image Version (flowmachineimageversion) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Image Version (flowmachineimageversion) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

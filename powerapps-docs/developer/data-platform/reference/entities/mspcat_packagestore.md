@@ -1,7 +1,7 @@
 ---
 title: "Package Submission Store (mspcat_PackageStore) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Package Submission Store (mspcat_PackageStore) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
