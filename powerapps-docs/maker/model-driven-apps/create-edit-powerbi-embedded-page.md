@@ -36,12 +36,11 @@ This procedure shows you how to set up a Power BI embedded page for a single env
    - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
    - Select the type, either **Power BI report** or **Power BI dashboard**.
    - If you clear **Show reports in this environment only**, you can select a Power BI report or a Power BI dashboard from another workspace.
-   - Select **Use environment variable** if you want to replace a static workspace and report to use an environment variable from configuration. More information: [Environment variables overview](../data-platform/EnvironmentVariables.md)
+   - Select **Use environment variable** if you want to replace a static workspace and report to use an environment variable from configuration. You use this option when you want to move the report to another environment in a solution. More information: [Environment variables overview](../data-platform/EnvironmentVariables.md) and [Create Power BI embedded page with an environment variable](#create-power-bi-embedded-page-with-an-environment-variable) 
    - Select a **Power BI workspace**.
    - Select a Power BI report or dashboard.
    :::image type="content" source="media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png" alt-text="New dashboard Power BI embedded panel"::: 
 
-1. Optionally, you can select **Use environment variable** to use when moving the report to another environment in a solution. More information: [Create Power BI embedded page with an environment variable](#create-power-bi-embedded-page-with-an-environment-variable) 
 1. Select **Save** to save and publish the system dashboard.
 
 ## Add a Power BI embedded page to a model-driven app
