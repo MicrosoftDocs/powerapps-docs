@@ -65,11 +65,11 @@ Your app must be registered in Microsoft Entra so that your app users can sign i
 If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
 - Select **New app registration** to create a new registration for your app automatically.
-- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you selected Android as one of the platforms while creating and building your wrap project.
+- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you have selected Android as one of your platforms while creating and building your wrap project.
 
     > [!NOTE]
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
-    > The application name should be the same as the one used when creating the Android signature hash key.
+    > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
 
    > [!div class="mx-imgBorder"]
    > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 02/05/2025
+ms.date: 02/12/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -185,67 +185,6 @@ beginDialog:
 
 > [!NOTE]
 > If your agent supports multiple languages and needs prompt guide translation, all your user facing question strings must be set using a `SetTextVariable`.
-
-## Refresh a form using Copilot chat response
-
-For scenarios where a Copilot interaction updates the currently open record and you need to refresh the page to view the latest data, use the client action `MS.PA.Data.Refresh`.
-
-The action has this option.
-
-|Option|Type|Required| Detail|
-|----------|------------|----------|------------|
-|save|boolean| optional|`true` : save the form and then the form is refreshed. <br/><br/>`false` : If the form is dirty, it doesn't refresh the page and the action fails. <br/>If the form isn't dirty, the page is refreshed.<br/><br>If the value isn't provided, the save option defaults to false. |
-
-## Steps to use the action
-
-### Add new topic to Copilot chat
-
-In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types.
-
-:::image type="content" source="media/mda-copilot-refresh-action-topic.png" alt-text="topic for refresh action" lightbox="media/mda-copilot-refresh-action-topic.png":::
-
-In this action we have set the trigger as **refresh demo** and to update the record using a flow after the flow is finished we send an event Activity with name `MS.PA.Data.Refresh` and value `{"save":"true"}` so any unsaved changes are saved.
-
-### Trigger the topic
-
- To trigger this topic you need to send the string **refresh demo** that was set in previous step to trigger the topic.
-
-In this example, the name of the account is set to **Microsoft** and then the page is refreshed.
-
-:::image type="content" source="media/mda-copilot-refresh-demo.gif" alt-text="demo for refresh action" lightbox="media/mda-copilot-refresh-demo.gif":::
-
-### Known limitation for refresh page action
-
-The **refresh page** action is currently only supported for a table record page.
-
-### Full topic code
-
-```yml
- kind: AdaptiveDialog
-beginDialog:
-  kind: OnRecognizedIntent
-  id: main
-  intent:
-    triggerQueries:
-      - refresh demo
-
-  actions:
-    - kind: InvokeFlowAction
-      id: invokeFlowAction_ZD9uan
-      input: {}
-      output: {}
-      flowId: 04ab2477-4fe3-ef11-be1f-6045bd045f24
-
-    - kind: SendActivity
-      id: sendActivity_5EM6Me
-      activity:
-        kind: EventActivity
-        value: "{\"save\":\"true\"}"
-        name: MS.PA.Data.Refresh
-
-inputType: {}
-outputType: {}
-```
 
 ## Known limitations
 
