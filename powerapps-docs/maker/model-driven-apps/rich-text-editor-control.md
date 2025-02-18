@@ -45,8 +45,8 @@ The modern text editor is designed to align with the familiar and intuitive inte
 The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
-1. On the command bar, select **Settings**. The settings page is displayed.
-1. In the left pane, in **Settings**, select **Features**. The features page is displayed.
+1. On the command bar, select **Settings**. The settings page displays.
+1. In the left pane, in **Settings**, select **Features**. The features page displays.
 1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
    - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
    - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
@@ -65,7 +65,7 @@ When using the modern rich text editor, consider the limitations listed in this 
 Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
-- Updating rich text editor content from any external sources like Microsoft Word, Excel, and so forth, isn't supported.
+- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
 - Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
@@ -318,7 +318,7 @@ The following sample configurations create specific customizations of the rich t
 
 ### Set the default font to 11-point Calibri
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "font_defaultLabel": "Calibri",
@@ -351,7 +351,7 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 
 ### Paste or create plain text only
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "enterMode": 2,
@@ -371,7 +371,7 @@ Set this [individual property](#individual-properties) in your [configuration fi
 
 ### Allow the editor to use the full screen
 
-Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "showAsTabControl": true,
@@ -384,7 +384,7 @@ Set these [individual properties](#individual-properties) in your [configuration
 
 To allow users to view and edit the HTML of their content directly, show the **HTML** tab.
 
-Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "showAsTabControl": true,
@@ -409,7 +409,7 @@ To remove the toolbar entirely, set the value of `toolbar` to '[]' (two square b
 
 ### Add a new font list and set 20-point Brush Script MT as the default font
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;"
@@ -434,7 +434,7 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 
 ### Start the editor at 30 pixels high and grow to fit content
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "autoGrow_onStartup": false,
@@ -447,7 +447,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Fix the height of the editor at 500 pixels
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma.
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma.
 
 ```json
 "removePlugins": [ "autogrow" ],
@@ -494,8 +494,8 @@ The following table describes the formatting tools that are available in the ric
 | Icon | Name | Shortcut key | Description |
 | --- | --- | --- | --- |
 | ![Format Painter.](media/format-painter.png "Format Painter") | Copy Formatting | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font applied to it is displayed. If your selection contains multiple fonts, the first one applied to the selection is displayed. |
-| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size applied to it is displayed. If your selection contains multiple sizes, the first one applied to the selection is displayed. |
+| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font applied to it displays. If your selection contains multiple fonts, the first one applied to the selection displays. |
+| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size applied to it displays. If your selection contains multiple sizes, the first one applied to the selection displays. |
 | ![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 | ![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 | ![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
@@ -546,13 +546,13 @@ The following formatting tools are available in the rich text editor when it's o
 
 - Rich text fields store HTML tags for formatting along with user-entered data. When you set the maximum size of rich text fields, make sure to allow for both the HTML tags and the user's data.
 
-- For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you may notice slower response times for loading and editing.
+- For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you might notice slower response times for loading and editing.
 
 - In the default configuration, images don't negatively affect performance because they're stored separately from the HTML content. However, images are stored as base64 content in the text column when the user who uploads them doesn't have permissions on the `msdyn_richtextfiles` table. Base64 content is large, so you generally don't want to store images as part of the column content.
 
 - If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
  
-- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the the correct permissions to `msdyn_richtextfiles`.
+- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the correct permissions to `msdyn_richtextfiles`.
 
 ## Frequently asked questions
 
@@ -562,7 +562,7 @@ If you have a lot of content in the editor, the response time can increase. Keep
 
 ### Why can't I upload an image? Why does the image preview fail to load?
 
-If the image file name, including the path, is long, the file may fail to upload or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
+If the image file name, including the path, is long, the file might fail to upload, or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
 
 ### Why am I seeing HTML in my text?
 
