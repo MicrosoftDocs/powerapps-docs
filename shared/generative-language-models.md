@@ -7,7 +7,7 @@ ms.contributors:
   - antode
 ---
 
-Dynamics 365 and Power Platform products use advanced generative language models to enhance their features. Below is a list of the primary models used in these capabilities.
+Dynamics 365 and Power Platform products use advanced generative language models to enhance their features. Below is a list of the primary models used in the features.
 
 |Model|
 |--|
