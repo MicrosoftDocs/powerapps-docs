@@ -298,9 +298,7 @@ Ideas, look in the same feedback card for a [Report it now](https://msrc.microso
 
 :::image type="content" source="media/power-apps-ideas/ideas-feedback-channel.png" alt-text="Give us feedback.":::
 
-## Next steps
 
-[Transform examples to Power Fx formulas](power-apps-ideas-train-examples.md)
 
 ### See also
 
