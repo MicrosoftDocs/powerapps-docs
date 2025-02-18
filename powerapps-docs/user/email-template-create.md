@@ -1,13 +1,13 @@
 ---
 title: "How to create an email template  in model-driven apps | MicrosoftDocs"
 description: Learn how to create an email template.
-author: shwetamurkute
+author: paulliew
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/14/2024
+ms.date: 02/12/2025
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: paulliew
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -37,7 +37,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 
 3. Enter the following details:
    - **Template name**: Give your email template a detailed name to help you identify it later.
-   - **Permission level**: Select **Organization** to share your template with others or **Individual** for personal use.
+   - **Permission level**: Select from **Organization** or **Individual**. More information: [Permission level for email templates](#permission-level-for-email-templates)
    - **Category**: The default value is **User**. Categories determine which dynamic text fields are available for use in your template.
    - **Language**: Display installed language packs. **Language** also helps to categorize your templates.
    - **Create**: Opens one of two editors where you can build your template.
@@ -50,6 +50,15 @@ The editor page you see depends on whether your administrator has turned on the 
 
 - If yes, you'll use the enhanced email template editor page.
 - If not, you'll use the email template editor page. 
+
+### Permission level for email templates
+
+Selecting **Organization** permission level for email templates allows you to create templates that everyone in the organization can use. **Individual** permission level is for personal use.
+
+> [!NOTE]
+> For **Individual** permission templates, these templates do not show up on the list of email templates unless your are the owner of the templates or the owner has shared the template with you.
+> 
+> For **Organization** permission templates, these templates show up for all users in the organization.
 
 ## Start with existing templates
 
