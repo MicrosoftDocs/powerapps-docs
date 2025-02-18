@@ -49,7 +49,7 @@ The modern rich text editor is enabled by default, but if you're using the class
 1. In the left pane, in **Settings**, select **Features**. The features page displays.
 1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
    - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
-   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
+   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
    - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously mad on the rich text editor's classic (default) notes authoring experience.
 1. Select **Save**.
 1. In the App Designer, select **Publish**.
@@ -122,7 +122,7 @@ Up to three levels, or layers, of configuration can be applied to customize the 
 1. At the next level, every instance of the control takes its configuration from the properties in the file `RTEGlobalConfiguration.json`, if any are present. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the read-only file.
 1. Finally, at the highest level, a specific instance of the control takes its configuration from a specific configuration file, if one exists. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the two lower-level files.
 
-We have to add a slight qualification here. Not *all* properties are replaced by those in a higher-level configuration. The `extraPlugins` properties are merged to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. That lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
+We have to add a slight qualification here. The system doesn't replace *all* properties with those in a higher-level configuration. The `extraPlugins` properties are merged to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. That lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
 
 ### Customize a specific instance of the rich text editor
 
@@ -151,7 +151,7 @@ We have to add a slight qualification here. Not *all* properties are replaced by
 1. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
 1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
-      Although you may enter the absolute URL of the web resource, we recommend you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
+      Although you can enter the absolute URL of the web resource, we recommend that you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
       For example, if the URL of the web resource is `https://yourorg.crm.dynamics.com/WebResources/rtecontactform`, the relative URL is */WebResources/rtecontactform*.
 
@@ -168,8 +168,8 @@ If your business needs require you to customize the control everywhere, specify 
 
 > [!IMPORTANT]
 >
->- This is an early access feature. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they haven't opted in for early access.  
+>- This feature is for early-access users. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
+>- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they didn't opt in for early access.  
 >- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
