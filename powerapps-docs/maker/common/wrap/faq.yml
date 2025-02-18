@@ -148,7 +148,7 @@ sections:
       - question: | 
           How to find your Azure admin?
         answer: |
-          - Go to the Microsoft Entra roles and administration portal.
+          - Go to the Microsoft Entra roles and administration portal. More information: [Microsoft Entra admin center](https://entra.microsoft.com/#home)
           - Search for *global administration* in the search bar.
           - Select the **Active assignments** tab.
           - Review the list of owners for the active assignments.
