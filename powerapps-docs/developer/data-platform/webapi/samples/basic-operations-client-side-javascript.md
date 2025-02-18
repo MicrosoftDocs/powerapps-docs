@@ -34,7 +34,6 @@ This sample includes these web resources:
 
 - [WebAPIBasicOperations.html](#webapibasicoperationshtml)
 - [WebAPIBasicOperations.js](#webapibasicoperationsjs)
-- es6promise.js. The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. This sample uses the browser native ES6-Promise implementation for modern browsers that support it.
 
 > [!NOTE]
 > Running the sample on an environment that doesn't have Dynamics 365 apps enabled only creates the contact, account, and task records. Additionally, the record deletion option doesn't remove the records created by the sample.  
