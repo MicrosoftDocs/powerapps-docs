@@ -141,7 +141,15 @@ You can also code sign your mobile app package manually instead of using automat
 
 4.  Select **Next**.
 
-### Step 5: Manage output
+### Step 5: Azure blob storage
+
+1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
+1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
+1. Add the Azure key vault URI by clicking on the drop-down list.
+1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
+1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
+
+### Step 6: Manage output
 
 On the **Manage output** screen, create or select an existing **app center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen, and then select **Android** or **iOS**.
 
@@ -154,7 +162,7 @@ On the **Manage output** screen, create or select an existing **app center locat
 
 You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). More information: [Create an app center location for your mobile app manually](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional).
 
-### Step 6: Wrap up
+### Step 7: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the **app center location** that you have selected in the previous step.
@@ -219,7 +227,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Create an app center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-5-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
+You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-6-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about app center, go to [Visual Studio app center documentation](/appcenter/).
