@@ -96,6 +96,12 @@ To manage system views with security roles:
 1. When you're done selecting the security roles, select **Save and Publish**.
    :::image type="content" source="media/select-security-roles-public-view.png" alt-text="Select security roles for public view access":::
 
+> [!NOTE]
+> When making changes to the 'EnableRoleBasedSystemViews' and View settings:
+> 1. Setting the Orgdbsettings `EnableRoleBasedSystemViews' to **true** is effective immediately, and all table views except the default table view are immediately filtered. 
+> 2. Setting view with security roles is effective immediately upon "Save and publish".
+> 3. Changing a view setting from 'Specify security role' to 'Everyone' can take up to 24 hours to be effective.
+ 
 
 ### See also
 
