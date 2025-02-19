@@ -227,7 +227,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Create an app center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-5-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
+You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-6-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about app center, go to [Visual Studio app center documentation](/appcenter/).
