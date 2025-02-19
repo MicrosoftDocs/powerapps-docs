@@ -144,7 +144,7 @@ You can also code sign your mobile app package manually instead of using automat
 ### Step 5: Azure blob storage
 
 1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
-1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](azure/storage/common/storage-account-create?tabs=azure-portal)
+1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
 1. Add the Azure key vault URI by clicking on the drop-down list.
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
