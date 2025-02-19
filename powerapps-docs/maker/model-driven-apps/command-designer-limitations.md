@@ -34,6 +34,7 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 - Dynamically populated buttons aren't supported. We recommend creating them declaratively.
 - Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
 - A single Power Fx component library is supported. The command designer might display the error message: "Unable to initialize component manager. There are multiple component libraries associated with your app." This error occurs when an app has multiple duplicate component libraries associated with it, which currently isn't supported with model-driven apps. To resolve this limitation, remove the additional `AppElement` entries for the app. Do this by removing the multiple library dependencies with the app, ensuring that only one `AppElement` entry exists.
+- Editing commands from commands page in Solution explorer or Tables page do not have the capability to set `Run formula` as the action or `Show on condition from formula` as the visibility rule. These capabilities are only available when editing commands within the App module scope.
 
 ## Delete a model-driven app element record
 
