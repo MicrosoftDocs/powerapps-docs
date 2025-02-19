@@ -30,12 +30,12 @@ There are two ways to open a Monitor session.
 
 ### From Power Apps
 
-1. Sign in to [Power Apps](https://make.powerapps.com/), select **Apps**.
-1. Select **...** next to the model-driven app or on the global command bar, and then select **Monitor**.
+1. Sign in to [Power Apps](https://make.powerapps.com/), select **Apps**. You can also navigate to the **Apps** from your [solution](../data-platform/solutions-area).
+1. Select **...** next to the model-driven app or on the global command bar, and then select **Live Monitor**.
 
    :::image type="content" source="media/create-monitor-session.png" alt-text="Sample model-driven app":::
 
-1. On the Monitor page, select **Play model-driven** app on the command bar.
+1. On the Live Monitor page, select **Play model-driven app** on the command bar.
 1. When prompted, select **Join**.
 1. The app loads in a new browser tab with a message indicating the monitoring session. Switch back to the Monitor tab to view activity.
    :::image type="content" source="media/monitored-app-session.png" alt-text="Monitored app session with message This app is currently connected to a monitor session." lightbox="media/monitored-app-session.png":::
