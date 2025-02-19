@@ -78,6 +78,9 @@ This configuration can be considered a bootstrap step for average use cases.
 > [!IMPORTANT]
 > Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
 
+> [!NOTE]
+> Users in a Subscription type that limits the number of vCores to 12 (such as Pay-As-You-Go subscriptions) need to increase their vCore allocation, as the recommended configuration listed above requires at least 20 vCores.
+
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
