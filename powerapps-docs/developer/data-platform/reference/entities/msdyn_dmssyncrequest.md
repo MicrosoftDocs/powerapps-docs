@@ -1,7 +1,7 @@
 ---
 title: "DMS Sync Request (msdyn_dmssyncrequest) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DMS Sync Request (msdyn_dmssyncrequest) table/entity with Microsoft Dataverse."
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

@@ -19,13 +19,13 @@ contributors:
 Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
+You can distribute such *wrapped* native mobile apps to the end users through [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
 - iOS (IPA package)
 - Android (APK package)
-- Google Play Store (AAB package)
+- For Google Play Store distribution (AAB package)
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
@@ -65,11 +65,11 @@ Your app must be registered in Microsoft Entra so that your app users can sign i
 If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
 - Select **New app registration** to create a new registration for your app automatically.
-- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you selected Android as one of the platforms while creating and building your wrap project.
+- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you have selected Android as one of your platforms while creating and building your wrap project.
 
     > [!NOTE]
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
-    > The application name should be the same as the one used when creating the Android signature hash key.
+    > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
 
    > [!div class="mx-imgBorder"]
    > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
@@ -141,27 +141,22 @@ You can also code sign your mobile app package manually instead of using automat
 
 4.  Select **Next**.
 
-### Step 5: Manage output
+### Step 5: Azure blob storage
 
-On the **Manage output** screen, create or select an existing **app center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen, and then select **Android** or **iOS**.
-
-> [!div class="mx-imgBorder"] 
-> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new app center location")
-
-- **Android**: Choose an existing location or create a new location.
-
-- **iOS**: Choose an existing location or create a new location.
-
-You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). More information: [Create an app center location for your mobile app manually](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional).
+1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
+1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
+1. Add the Azure key vault URI by clicking on the drop-down list.
+1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
+1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
-After a successful build, you'll see your mobile app in the **app center location** that you have selected in the previous step.
+After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
 
 ## Test and distribute mobile app package
 
-For testing and distribution, see [App center test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
 
   
@@ -219,7 +214,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Create an app center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-5-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
+You can manually create an app center location for your mobile app directly in app center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about app center, go to [Visual Studio app center documentation](/appcenter/).

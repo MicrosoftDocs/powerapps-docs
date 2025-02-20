@@ -17,13 +17,17 @@ contributors:
 # Overview of wrap
 
 
-The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute such wrapped native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute such wrapped native mobile apps to the end users through [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
 You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app startup experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
 
-You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
+You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. 
+
+
+> [!NOTE]
+> All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
 
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
@@ -35,12 +39,12 @@ You can update the wrapped mobile apps by publishing changes to the canvas app(s
 - **Enterprise governance with Microsoft Intune**&mdash;protect your data with app management
   
 > [!NOTE]
-> **Wrap** is intended for distributing mobile apps to existing Power Apps users, not the public
+> **Wrap** is intended for distributing mobile apps to existing Power Apps users, not for public.
 
 
 ## Understand wrap process
 
-The **wrap** feature will *wrap* your canvas apps in a native mobile app shell and produce a mobile package. You can digitally sign and distribute this mobile package as your custom-branded Android and iOS apps to mobile users through the native distribution channels like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+The **wrap** feature will *wrap* your canvas apps in a native mobile app shell and produce a mobile package. You can digitally sign and distribute this mobile package as your custom-branded Android and iOS apps to mobile users through the native distribution channels like [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
 The following section explains steps involved in using the wrap feature to create native mobile apps:
 
@@ -51,9 +55,9 @@ The following section explains steps involved in using the wrap feature to creat
 1. Select the **target platforms** (iOS and Android) for your mobile app. Optionally, select to **automatically code sign** your mobile app package in the wrap wizard.
 1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
 1. Register you app. Use an existing **app registration**, or create a new one in the wrap wizard. 
-1. Select **App Center location** to store your mobile app. Use an existing **App Center location** or create a new one in the wrap wizard. 
+1. Add **Azure blob storage account name and container name**. Use an already created **Azure blob storage** or create a new one.
 1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
-1. Download your mobile app from the **App Center location**.
+1. Download your mobile app from the **App blob storage location**.
 1. If **automatically code sign** isn't chosen in the wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
 1. Test the app package.
 1. Distribute the app package to mobile users.
@@ -99,7 +103,7 @@ Container in Azure Blob Storage helps store built packages for mobile app distri
 Input:
 
 - [Account Name](#account-name) and [Container Name](#container-name)
-- [Access Key](#access-key)
+
 
 #### Account Name
 
@@ -109,9 +113,6 @@ The account name is a unique identifier for your Azure Storage account. It's use
 
 The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. For example, if your container name is `mycontainer`, the URI for accessing blobs within this container would be `https://mystorageaccount.blob.core.windows.net/mycontainer/`
 
-#### Access Key
-
-The access key is a secret key that is used to authenticate and authorize access to your storage account. Azure generates two 512-bit storage account access keys when you create a storage account. These keys can be used to authorize access to data in your storage account via Shared Key authorization or via SAS tokens that are signed with the shared key. It's important to keep your access keys secure and rotate them regularly to maintain security.
 
 ### App platform(s)
 
@@ -119,7 +120,7 @@ Intended platforms for the app that you want to go through the build process for
 
 - **iOS** creates IPA package
 - **Android** creates APK package
-- **Google Play Store** creates AAB package
+- **Google Play Store** create AAB package for distribution
    
 ### Build the wrap project
 
@@ -160,3 +161,4 @@ Optional more canvas apps that you're wrapping in the same build for mobile app 
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+- [Benefits and limitations of Wrap](limitations.md)  
