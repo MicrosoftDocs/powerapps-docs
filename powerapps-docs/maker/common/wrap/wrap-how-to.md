@@ -19,13 +19,13 @@ contributors:
 Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
+You can distribute such *wrapped* native mobile apps to the end users through [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
 - iOS (IPA package)
 - Android (APK package)
-- Google Play Store (AAB package)
+- For Google Play Store distribution (AAB package)
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
@@ -165,11 +165,11 @@ You can also choose to create your **app center location** manually at [App Cent
 ### Step 7: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
-After a successful build, you'll see your mobile app in the **app center location** that you have selected in the previous step.
+After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
 
 ## Test and distribute mobile app package
 
-For testing and distribution, see [App center test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
 
   
