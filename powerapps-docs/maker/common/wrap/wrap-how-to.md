@@ -149,20 +149,7 @@ You can also code sign your mobile app package manually instead of using automat
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
-### Step 6: Manage output
-
-On the **Manage output** screen, create or select an existing **app center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen, and then select **Android** or **iOS**.
-
-> [!div class="mx-imgBorder"] 
-> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new app center location")
-
-- **Android**: Choose an existing location or create a new location.
-
-- **iOS**: Choose an existing location or create a new location.
-
-You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). More information: [Create an app center location for your mobile app manually](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional).
-
-### Step 7: Wrap up
+### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
