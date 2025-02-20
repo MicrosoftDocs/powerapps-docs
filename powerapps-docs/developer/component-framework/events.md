@@ -3,12 +3,13 @@ title: Define Events
 description: Explains how to define new events with PowerApps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/05/2025
+ms.date: 02/20/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - kierantpetrie
 ---
 # Define Events
 
@@ -20,7 +21,7 @@ The common data flow for a code component is data flowing from the hosting appli
 
 :::image type="content" source="media/component-events-onchange-example.png" alt-text="Shows that data update from the code component to the binding field would cause OnChange event to be triggered":::
 
-The diagram above shows the standard pattern of data flow for a typical PCF component, such that that the data update from the code component to the bound field would cause `OnChange` event to be triggered. For most of component scenarios this suffices and makers just add a handler to trigger subsequent actions. However, there are cases when a more complicated control requires events to be raised which are not the field updates. The new event mechanism allows a code components to define events which can have separate event handlers.
+The diagram above shows the standard pattern of data flow for a typical PCF component, such that the data update from the code component to the bound field would cause `OnChange` event to be triggered. For most component scenarios this suffices and makers just add a handler to trigger subsequent actions. However, there are cases when a more complicated control requires events to be raised which are not the field updates. The new event mechanism allows a code components to define events which can have separate event handlers.
 
 ## Using events
 

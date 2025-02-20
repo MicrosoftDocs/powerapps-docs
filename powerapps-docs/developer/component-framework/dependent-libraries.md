@@ -3,12 +3,13 @@ title: Dependent Libraries
 description: Explains how to use dependent libraries with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/13/2025
+ms.date: 02/20/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - kierantpetrie
 ---
 # Dependent Libraries
 
@@ -47,7 +48,6 @@ The following table describes the feature flags you can set in `featureconfig.js
 
 |Name|Description|
 |---|---|
-|`pcfAllowLibraryResources`|Enables the component to be a library resource.|
 |`pcfResourceDependency`|Enables the component to use a library resource.|
 |`pcfAllowCustomWebpack`|Enables the component to use a custom web pack. This feature must be enabled for components that define a library resource.|
 
@@ -55,14 +55,12 @@ By default, these values are `off`. Set them to `on` to override the default. Fo
 
 ```json
 { 
-  "pcfAllowLibraryResources": "on", 
   "pcfAllowCustomWebpack": "on" 
 } 
 ```
 
 ```json
 { 
-   "pcfAllowLibraryResources": "off", 
    "pcfResourceDependency": "on",
    "pcfAllowCustomWebpack": "off" 
 } 

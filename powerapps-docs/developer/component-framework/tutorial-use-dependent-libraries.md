@@ -3,12 +3,13 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 02/13/2025
+ms.date: 02/20/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - kierantpetrie
 ---
 # Tutorial: Use dependent libraries in a component
 
@@ -40,7 +41,7 @@ The first step is to create a new component using the [pac pcf init command](/po
 
    `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
 
-### 1.1 Define the library
+### Define the library
 
 1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
@@ -92,14 +93,13 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ---
 
-### 1.2. Add Configuration data
+### Add Configuration data
 
 1. Add a file named `featureconfig.json` in the root folder of the project.
 1. Add the following text to the `featureconfig.json` file:
 
    ```json
    { 
-     "pcfAllowLibraryResources": "on", 
      "pcfAllowCustomWebpack": "on" 
    } 
    ```
@@ -144,7 +144,7 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ---
 
-### 1.3. Add the library to window
+### Add the library to window
 
 The last step is to edit the `index.ts` of the control to bind the library to the [window](https://developer.mozilla.org/docs/Web/API/Window).
 
@@ -213,7 +213,7 @@ The library project should look like this:-
 
 :::image type="content" source="media/dependent-library-libprojectview.png" alt-text="View of the project folder":::
 
-### 1.4. Build and package the library component
+### Build and package the library component
 
 To finish the library component, complete the following steps as usual:
 
@@ -278,7 +278,7 @@ Now that you have a library control, you need a control to depend on it.
 
 ---
 
-### 2.1 Use the library function
+### Use the library function
 
 Update the component `HelloWorld.tsx` file so that it uses a function from the dependent library. The library is loaded into the `Window` object at runtime.
 
@@ -328,7 +328,7 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
 ---
 
 
-### 2.2 Disable the check for no-explicit-any
+### Disable the check for no-explicit-any
 
 Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
 
@@ -353,7 +353,7 @@ Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off t
 
 ---
 
-### 2.3 Build and package the dependent component
+### Build and package the dependent component
 
 To finish the dependent component, complete the following steps as usual:
 
@@ -361,7 +361,7 @@ To finish the dependent component, complete the following steps as usual:
 1. [Package the code component](import-custom-controls.md)
 1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
 
-### 2.4 Add the component to a form
+### Add the component to a form
 
 1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
 
@@ -373,7 +373,7 @@ To finish the dependent component, complete the following steps as usual:
 
 You can expand on this example by changing the dependent component to load the library resource on demand rather than have the framework load the library when the component loads. On demand load behavior is useful if the libraries being used by the control are large and would increase the load time of the form.
 
-### 3.1 Specify on demand load behavior
+### Specify on demand load behavior
 
 To specify on demand load behavior, modify the control manifest of the component created in [2. Build the dependent control](#2-build-the-dependent-control).
 
@@ -416,7 +416,7 @@ To specify on demand load behavior, modify the control manifest of the component
 
 ---
 
-### 3.2 Modify the dependent component to load library on demand
+### Modify the dependent component to load library on demand
 
 Modify the `HelloWorld.tsx` to add a state and methods to update it once the dependency loads.
 
@@ -471,7 +471,7 @@ export class HelloWorld extends React.Component<any, { loaded: boolean }> {
 ```
 ---
 
-### 3.3 Update index.ts
+### Update index.ts
 
 <!-- TODO: I don't really follow this. Can you simplify? -->
 When the script is loaded on demand in this case, you need to make slight adjustments to how the component is created and initialized, such as new variables for references to the context and the container to update the state.
@@ -616,13 +616,13 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
 
 ---
 
-### 3.4 Final steps
+### Final steps
 
 1. Update the version number of the control in the `ControlManifest.Input.xml` and the version in the `Solution.xml`
 1. Rebuild, package, deploy, and publish the solution with the updated control.
 
 
-### 3.5 Verify results
+### Verify results
 
 Now, when the page loads you see the control load with `Loading...` displayed.
 

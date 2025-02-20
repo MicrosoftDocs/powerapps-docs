@@ -3,12 +3,13 @@ title: platform-action Element | Microsoft Docs
 description: Defines a group of platform actions.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/13/2025
+ms.date: 02/20/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - kierantpetrie
 ---
 
 # platform-action element
@@ -41,7 +42,7 @@ TODO: Model-driven apps?
 
 ### Related topics
 
-[Dependent Libraries](../dependent-libraries.md)
+[Dependent Libraries](../dependent-libraries.md)   
 [Power Apps component framework manifest schema reference](index.md)   
 [Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
