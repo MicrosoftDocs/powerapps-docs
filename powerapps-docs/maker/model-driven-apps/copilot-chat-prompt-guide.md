@@ -92,6 +92,54 @@ The following steps detail how to add specific queries to the prompt guide. A *P
 
    :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Prompt guide using global sparks" lightbox="media/mda-copilot-promptguide-chat-screen.png":::
 
+## Prompt guide customizations topic sample
+
+Here is the full topic code, which can be copied directly into the new topic.
+
+```yml
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnEventActivity
+  id: main
+  priority: 200
+  eventName: Microsoft.PowerApps.Copilot.RequestSparks
+  actions:
+    - kind: ParseValue
+      id: iCepPf
+      variable: Topic.SparkGroupCustom
+      valueType:
+        kind: Table
+        properties:
+          displayName: String
+          displaySubtitle: String
+          iconName: String
+          sparks:
+            type:
+              kind: Table
+              properties:
+                displayName: String
+                eventName: String
+                iconName: String
+                payload: String
+                type: String
+      value: |-
+        =[{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",
+        sparks:[
+        {displayName:"What is Copilot chat?",type:"PromptText"},
+        {displayName:"How can I use the record picker?",type:"PromptText"},
+        {displayName:"What types of questions can I ask Copilot?",type:"PromptText"},
+        {displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}
+        ]}]
+
+    - kind: SetVariable
+      id: setVariable_pDu9cr
+      variable: Global.PA_Copilot_Sparks.sparkGroups
+      value: =ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
+```
+
+> [!NOTE]
+> If your agent supports multiple languages and needs prompt guide translation, all your user facing question strings must be set using a `SetTextVariable`.
+
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 - [Enable copilots and generative AI features in Power Apps](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)

@@ -44,54 +44,6 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
 1. **Publish** the agent after you make customizations to ensure changes are available to users.
 
-## Prompt guide customizations topic sample
-
-Here is the full topic code, which can be copied directly into the new topic.
-
-```yml
-kind: AdaptiveDialog
-beginDialog:
-  kind: OnEventActivity
-  id: main
-  priority: 200
-  eventName: Microsoft.PowerApps.Copilot.RequestSparks
-  actions:
-    - kind: ParseValue
-      id: iCepPf
-      variable: Topic.SparkGroupCustom
-      valueType:
-        kind: Table
-        properties:
-          displayName: String
-          displaySubtitle: String
-          iconName: String
-          sparks:
-            type:
-              kind: Table
-              properties:
-                displayName: String
-                eventName: String
-                iconName: String
-                payload: String
-                type: String
-      value: |-
-        =[{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",
-        sparks:[
-        {displayName:"What is Copilot chat?",type:"PromptText"},
-        {displayName:"How can I use the record picker?",type:"PromptText"},
-        {displayName:"What types of questions can I ask Copilot?",type:"PromptText"},
-        {displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}
-        ]}]
-
-    - kind: SetVariable
-      id: setVariable_pDu9cr
-      variable: Global.PA_Copilot_Sparks.sparkGroups
-      value: =ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
-```
-
-> [!NOTE]
-> If your agent supports multiple languages and needs prompt guide translation, all your user facing question strings must be set using a `SetTextVariable`.
-
 ## Known limitations
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
