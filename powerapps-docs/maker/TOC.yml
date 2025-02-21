@@ -1722,13 +1722,22 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-    - name: Copilot chat for the apps
+    - name: Copilot chat for apps
       href:
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Customize Copilot chat (Preview)
-        href: ./model-driven-apps/customize-copilot-chat.md
+      - name: Customize Copilot chat (preview)
+        href:
+        items:
+        - name: Customize Copilot chat overview
+          href: ./model-driven-apps/customize-copilot-chat.md
+        - name: Add knowledge to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-knowledge.md
+        - name: Add topics to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Prompt guide customizations
+          href: ./model-driven-apps/copilot-chat-prompt-guide.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
