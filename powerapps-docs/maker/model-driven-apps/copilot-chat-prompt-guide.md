@@ -1,6 +1,6 @@
 ---
-title: Add knowledge and topics to Copilot chat in model-driven apps
-description: Learn how to customize Copilot chat in model-driven apps to add knowledge and topics
+title: Prompt guide customizations to Copilot chat in model-driven apps
+description: Learn how to customize Copilot chat using prompts in model-driven apps to add topics
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -17,41 +17,7 @@ contributors:
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
-# Add knowledge and topics to Copilot chat in model-driven apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Extend your app’s Copilot chat intelligence by adding additional knowledge sources and topics in Copilot Studio.
-
-## Add knowledge to Copilot chat
-
-You can add additional knowledge sources in Copilot Studio. For example, you can add a link to an external public-facing website like Power Apps documentation by adding `https://learn.microsoft.com/power-apps/` as knowledge to enable your Copilot chat to respond to questions related to creating apps in Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data.
-
-:::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
-
-More information: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
-
-> [!NOTE]
->
-> - Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website), [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) and [SharePoint](/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive) knowledge source types are supported. [Dataverse knowledge](/microsoft-copilot-studio/knowledge-add-dataverse) isn't part of this preview.
-> - Copilot studio [Generative AI orchestration](/microsoft-copilot-studio/advanced-generative-actions) isn't supported currently. You can use classic orchestration topic whose trigger phrases match most closely with the user's query for a given skill.
-
-Once knowledge is enabled, app users can ask relevant questions to get responses along with the knowledge references.
-
-:::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
-
-## Add new topic to Copilot chat
-
- In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, or generative answers. Additionally, topics can also initiate actions like flows, connectors, and Dataverse plug-ins enabling seamless point in time integration with external systems.
-
-:::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
-
-More information: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
-
-> [!NOTE]
-> Copilot Studio has inline capability to "Test your agent" and can be used to validate topics as they're added. However, topics using out-of-the-box model-driven app custom variables like `Global.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
-
-## Prompt guide customizations
+# Prompt guide customizations
 
 A prompt library is a collection of prewritten, tested, and optimized prompts designed to help shape the interactions and responses of the Copilot chat. They ensure that the Copilot chat provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
 
@@ -121,6 +87,6 @@ The following steps detail how to add specific queries to the prompt guide. A *P
 
    :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Prompt guide using global sparks" lightbox="media/mda-copilot-promptguide-chat-screen.png":::
 
-## Related articles
-
-[Customize Copilot chat using Copilot Studio (preview)](customize-copilot-chat.md)
+- [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
+- [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+- [Enable copilots and generative AI features in Power Apps](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
