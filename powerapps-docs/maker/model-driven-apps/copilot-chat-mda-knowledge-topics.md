@@ -57,7 +57,7 @@ A prompt library is a collection of prewritten, tested, and optimized prompts de
 
 :::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
 
-The following steps detail how to add specific queries to the prompt guide. A *Power Apps Help* section is appended to the existing out-of-the-box Copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from the [prompt guide sample](#prompt-guide-customizations-topic-sample). All the prompts shown to the end user via the prompt guide are stored in the Copilot Studio agent used for the app.
+The following steps detail how to add specific queries to the prompt guide. A *Power Apps Help* section is appended to the existing out-of-the-box Copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from the [Prompt guide customizations topic sample](customize-copilot-chat.md#prompt-guide-customizations-topic-sample). All the prompts shown to the end user via the prompt guide are stored in the Copilot Studio agent used for the app.
 
 1. Open the agent backing the app in Copilot Studio and add a new blank topic.
    :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::

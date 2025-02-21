@@ -1730,7 +1730,7 @@
       - name: Customize Copilot chat (Preview)
         href: ./model-driven-apps/customize-copilot-chat.md
       - name: Add knowledge and topics to Copilot chat
-        href: ./model-driven-apps/copilot-chat-mda-knmowlege-topics.md
+        href: ./model-driven-apps/copilot-chat-mda-knowledge-topics.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
