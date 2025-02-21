@@ -2,7 +2,7 @@
 title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
 ms.custom: ""
-ms.date: 07/10/2024
+ms.date: 01/27/2025
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: get-started
@@ -48,7 +48,7 @@ Create and edit tables directly from the app designer.
 1. Select **Create new tables**. Otherwise, if your table is already created select it from the list.
 1. If you selected **Create a new tables**: 
    - Select the option you want to create a table and follow the instructions on your screen.
-   - More information: [Create new tables (preview)](../data-platform/create-edit-entities-portal.md#create-new-tables-preview)
+   - More information: [Create new tables](../data-platform/create-edit-entities-portal.md#create-new-tables)
 
 ### Edit a table for a page
 
