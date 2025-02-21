@@ -1727,9 +1727,11 @@
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Customize Copilot chat (Preview)
-        href: ./model-driven-apps/customize-copilot-chat.md
+      - name: Customize Copilot chat (preview)
+        href:
         items:
+        - name: Customize Copilot chat overview
+          href: ./model-driven-apps/customize-copilot-chat.md
         - name: Add knowledge to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
