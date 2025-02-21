@@ -46,7 +46,7 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 
 ## Prompt guide customizations topic sample
 
-Here is the full topic code, which can be copied directly into the new topic. <!--Where and instead of what? Where in the above procedure would you use this? -->
+Here is the full topic code, which can be copied directly into the new topic.
 
 ```yml
 kind: AdaptiveDialog
