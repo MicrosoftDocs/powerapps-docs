@@ -1,0 +1,126 @@
+---
+title: Add knowledge and topics to Copilot chat in model-driven apps
+description: Learn how to customize Copilot chat in model-driven apps to add knowledge and topics
+author: Mattp123
+ms.service: powerapps
+ms.subservice: mda-maker
+ms.author: hemantg
+ms.reviewer: matp
+ms.date: 02/21/2025
+ms.topic: how-to
+applies_to: 
+  - "powerapps"
+search.audienceType: 
+  - maker
+contributors:
+  - makolomi
+ms.collection: bap-ai-copilot
+ai-usage: ai-assisted
+---
+# Add knowledge and topics to Copilot chat in model-driven apps (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Extend your app’s Copilot chat intelligence by adding additional knowledge sources and topics in Copilot Studio.
+
+## Add knowledge to Copilot chat
+
+You can add additional knowledge sources in Copilot Studio. For example, you can add a link to an external public-facing website like Power Apps documentation by adding `https://learn.microsoft.com/power-apps/` as knowledge to enable your Copilot chat to respond to questions related to creating apps in Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data.
+
+:::image type="content" source="media/mda-copilot-chat-add-knowledge.png" alt-text="Add Knowledge to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-knowledge.png":::
+
+More information: [Add knowledge to an existing agent – Microsoft Copilot Studio](/microsoft-copilot-studio/knowledge-add-existing-copilot). 
+
+> [!NOTE]
+>
+> - Currently only [Public website](/microsoft-copilot-studio/knowledge-add-public-website), [File upload](/microsoft-copilot-studio/knowledge-add-file-upload) and [SharePoint](/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive) knowledge source types are supported. [Dataverse knowledge](/microsoft-copilot-studio/knowledge-add-dataverse) isn't part of this preview.
+> - Copilot studio [Generative AI orchestration](/microsoft-copilot-studio/advanced-generative-actions) isn't supported currently. You can use classic orchestration topic whose trigger phrases match most closely with the user's query for a given skill.
+
+Once knowledge is enabled, app users can ask relevant questions to get responses along with the knowledge references.
+
+:::image type="content" source="media/mda-copilot-chat-knowledge-reference.png" alt-text="Knowledge reference in the Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-knowledge-reference.png":::
+
+## Add new topic to Copilot chat
+
+ In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, or generative answers. Additionally, topics can also initiate actions like flows, connectors, and Dataverse plug-ins enabling seamless point in time integration with external systems.
+
+:::image type="content" source="media/mda-copilot-chat-add-topic.png" alt-text="Add topic to Model-driven-apps via Copilot Studio" lightbox="media/mda-copilot-chat-add-topic.png":::
+
+More information: [Create and edit topics – Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
+
+> [!NOTE]
+> Copilot Studio has inline capability to "Test your agent" and can be used to validate topics as they're added. However, topics using out-of-the-box model-driven app custom variables like `Global.PA__Copilot_Model_PageContext.pageContext.id` can only be tested in the published Copilot.
+
+## Prompt guide customizations
+
+A prompt library is a collection of prewritten, tested, and optimized prompts designed to help shape the interactions and responses of the Copilot chat. They ensure that the Copilot chat provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
+
+:::image type="content" source="media/mda-copilot-chat-prompt-guide.png" alt-text="Prompt guide for Model-driven apps copilot" lightbox="media/mda-copilot-chat-prompt-guide.png":::
+
+The following steps detail how to add specific queries to the prompt guide. A *Power Apps Help* section is appended to the existing out-of-the-box Copilot prompt guide. Alternatively, you can copy the sample code into a new topic directly from the [prompt guide sample](#prompt-guide-customizations-topic-sample). All the prompts shown to the end user via the prompt guide are stored in the Copilot Studio agent used for the app.
+
+1. Open the agent backing the app in Copilot Studio and add a new blank topic.
+   :::image type="content" source="media/mda-copilot-promptguide-addtopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-promptguide-addtopic.png":::
+1. Rename the topic to reflect the topic intent and change the topic trigger to **Event received**.
+   :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event received for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
+1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
+   :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
+1. Optionally, you can set the conditions to prompt entries in case they're specific to the app name, page context, and so on. For example, this prompt entry checks if the current app's unique name or the page context's table type name matches specified values. If either condition is true, the Copilot chat is activated.
+
+   `condition: =Global.PA_Copilot_Model_SessionContext.appUniqueName = "yourAppName" or Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
+1. Under **Priority**, add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. Although about 200 is recommended as it allows for more options to add higher priority topics later, 10 is used in this example.
+1. Select **+** under **Event received**, and then select **Variable management** > **Parse value** to add a next step for variable management parse value.
+
+   :::image type="content" source="media/mda-copilot-promptguide-variable.png" alt-text="Add variable" lightbox="media/mda-copilot-promptguide-variable.png":::
+1. Paste the following Power Fx formula into the **Parse value** box, and then select **Insert**.
+
+   ```powerappsfl
+   [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"PromptText"},{displayName:"How can I use the record picker?",type:"PromptText"},{displayName:"What types of questions can I ask Copilot?",type:"PromptText"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}]}]
+   ```
+
+   :::image type="content" source="media/mda-copilot-promptguide-parsevalue.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-parsevalue.png":::
+
+1. Set the **Data type** as **Table**. The **Edit schema** link appears.
+1. Select **Edit schema** and paste the following schema, and then select **Confirm**.
+
+   ```yml
+   kind: Table
+   properties:
+     displayName: String
+     displaySubtitle: String
+     iconName: String
+     sparks:
+       type:
+         kind: Table
+         properties:
+           displayName: String
+           eventName: String
+           iconName: String
+           payload: String
+           type: String
+   ```
+
+1. Set **Save as** to save as a new custom variable and name it something meaningful such as *SparkGroupCustom*.
+   :::image type="content" source="media/mda-copilot-promptguide-customSparkGroup.png" alt-text="Custom spark group" lightbox="media/mda-copilot-promptguide-customSparkGroup.png":::
+
+1. Select **+** under the **Parse value** step, and then select **Variable management** > **Set a variable value**.
+1. The sparks definition is saved in a global variable so you need to set the variable **Global** and name it `PA_Copilot_Sparks.sparkGroups` and/or `Global.PA_Copilot_Sparks.sparks`. This populates the flyout with your prompts. Next, add a step to set variable value.
+
+   :::image type="content" source="media/mda-copilot-promptguide-setGlobalSparks.png" alt-text="Set global sparks" lightbox="media/mda-copilot-promptguide-setGlobalSparks.png":::
+
+1. Search for the sparks definition name from the previous step, such as `Global.PA_Copilot_Sparks.sparkGroups`, and set the value to the following Power Fx merge function.
+
+   ```powerappsfl
+   ForAll(Sequence(CountRows(Global.PA_Copilot_Sparks.sparkGroups)+CountRows(Topic.SparkGroupCustom)), If(Value<=CountRows(Global.PA_Copilot_Sparks.sparkGroups),Index (Global.PA_Copilot_Sparks.sparkGroups,Value), Index(Topic.SparkGroupCustom, Value - CountRows(Global.PA_Copilot_Sparks.sparkGroups))))
+   ```
+   :::image type="content" source="media/mda-copilot-promptguide-mergeGlobalSparks.png" alt-text=" Merge global sparks" lightbox="media/mda-copilot-promptguide-mergeGlobalSparks.png":::Merge
+
+   Replace the variable name with the variable name you used for the custom prompts, which in this example is *SparkGroupCustom*.
+
+1. **Publish** the agent and play the app.
+
+   :::image type="content" source="media/mda-copilot-promptguide-chat-screen.png" alt-text="Prompt guide using global sparks" lightbox="media/mda-copilot-promptguide-chat-screen.png":::
+
+## Related articles
+
+[Customize Copilot chat using Copilot Studio (preview)](customize-copilot-chat.md)
