@@ -40,7 +40,7 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
    :::image type="content" source="media/mda-command-copilot-studio.png" alt-text="Open Copilot Studio to customize Copilot chat in model-driven app designer." lightbox="media/mda-command-copilot-studio.png":::
    > [!IMPORTANT]
    > - If **...** doesn't appear in the left navigation pane, the feature isn't available yet in your environment. You can provision a new [early release environments](/power-platform/admin/early-release) to access the feature. This is a preview feature and only available in early release environments.
-1. Customize your agent by adding [knowledge sources](copilot-chat-mda-knowledge-topics.md#add-knowledge-to-copilot-chat) or [topics](copilot-chat-mda-knowledge-topics.md#add-new-topic-to-copilot-chat). Customizing this agent only impacts the Copilot chat of the specific app it's provisioned for.
+1. Customize your agent by adding [knowledge sources](copilot-chat-mda-knowledge.md) or [topics](copilot-chat-mda-topics.md). Customizing this agent only impacts the Copilot chat of the specific app it's provisioned for.
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
 1. **Publish** the agent after you make customizations to ensure changes are available to users.
 

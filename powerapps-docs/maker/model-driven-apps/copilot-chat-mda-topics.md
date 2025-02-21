@@ -23,6 +23,11 @@ ai-usage: ai-assisted
 
 Extend your app’s Copilot chat intelligence by adding topics in Copilot Studio.
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+
 ## Add new topics to Copilot chat
 
  In Copilot Studio, you can add topics to your app’s Copilot agent. These topics can be customized to use various trigger types and can respond with simple messages, adaptive cards, or generative answers. Additionally, topics can also initiate actions like flows, connectors, and Dataverse plug-ins enabling seamless point in time integration with external systems.

@@ -23,6 +23,11 @@ ai-usage: ai-assisted
 
 Extend your app’s Copilot chat intelligence by adding additional knowledge sources in Copilot Studio.
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+
 ## Add knowledge to Copilot chat
 
 You can add additional knowledge sources in Copilot Studio. For example, you can add a link to an external public-facing website like Power Apps documentation by adding `https://learn.microsoft.com/power-apps/` as knowledge to enable your Copilot chat to respond to questions related to creating apps in Power Apps. Another example is to upload your organization’s internal knowledge as a document to enable Copilot chat to respond to relevant queries that aren't a part of the app data.
