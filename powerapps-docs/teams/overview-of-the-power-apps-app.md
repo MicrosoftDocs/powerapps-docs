@@ -4,7 +4,7 @@ description: Learn about the Power Apps app in Microsoft Teams.
 author: chmoncay
 ms.author: chmoncay
 ms.topic: overview
-ms.date: 09/22/2020
+ms.date: 02/11/2025
 ms.subservice: teams
 ms.reviewer: mkaur
 contributors:

@@ -1,8 +1,8 @@
 ---
 title: "htmlDecode (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the htmlDecode method.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

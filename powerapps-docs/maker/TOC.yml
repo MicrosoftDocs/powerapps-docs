@@ -241,8 +241,6 @@
     href: ./common/learn-hub.md
   - name: Find it with unified search
     href: search.md
-  - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1286,6 +1284,8 @@
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
+      - name: System requirements and prerequisites for Wrap
+        href: ./common/wrap/prerequisites.md
       - name: Use the wrap wizard to build your mobile app
         href: ./common/wrap/wrap-how-to.md
       - name: Code sign for iOS
@@ -1296,6 +1296,8 @@
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
+      - name: Benefits and limitations of Wrap
+        href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
   - name: For developers
@@ -1590,8 +1592,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-          - name: Add the Power BI report control (preview)
-            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -2062,6 +2062,18 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
+      - name: Use functions in Dataverse (preview)
+        items:
+        - name: Functions overview
+          href: ./data-platform/functions-overview.md
+        - name: Create and use functions
+          href: ./data-platform/functions-create.md
+        - name: Invoke a function
+          href: ./data-platform/functions-invoke.md  
+        - name: Example functions
+          href: ./data-platform/functions-examples.md
+        - name: Supported Power Fx functions
+          href: ./data-platform/functions-supported-power-fx.md
       - name: Use Dataverse low-code plug-ins (preview)
         items:
         - name: Create low-code plug-ins

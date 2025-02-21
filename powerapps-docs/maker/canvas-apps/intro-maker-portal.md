@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 12/20/2024
+ms.date: 2/13/2025
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -36,7 +36,6 @@ Legend:
 3. [Environment information and settings](#3--environment-information-and-settings)
 4. [Copilot in Power Apps](#4---copilot-in-power-apps)
 5. [Build apps](#5--build-apps)
-6. [Get help from a virtual agent](#6--ask-a-virtual-agent)
 
 
 ## 1 – Left navigation pane
@@ -185,7 +184,3 @@ The table summarizes scenarios and outcome when you create apps that require Mic
 | No|No| No | Contact your admin |
 
 
-
-## 6 – Ask a virtual agent
-
-Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)
