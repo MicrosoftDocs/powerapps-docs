@@ -69,6 +69,7 @@ Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
+- Offline mode isn't currently supported.
 - Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
