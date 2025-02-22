@@ -28,7 +28,7 @@ You can customize the editor's appearance, features, and behavior. The control's
 Currently, the rich text editor is available as two different experiences:
 
 - Modern text editor: New experience, set by default
-- Classic text editor: Original experience, to be deprecated in April 2025
+- Classic text editor: Original experience, to be deprecated April 18, 2025
 
 ## Modern text editor enhancements
 
