@@ -59,7 +59,7 @@ The modern rich text editor is enabled by default, but if you're using the class
 If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
 
 > [!IMPORTANT]
-> After April 18, 2025, the classic rich text editor experience will no longer be available.
+> After April 18, 2025, the classic rich text editor experience will no longer be available. Customers who are using the classic version will be upgraded automatically to the modern rich text editor experience.
 
 ### Modern rich text editor limitations
 
