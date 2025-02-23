@@ -5,7 +5,7 @@ ms.date: 06/19/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: reference
+ms.topic: generated-reference
 search.audienceType: 
   - developer
 contributors:
