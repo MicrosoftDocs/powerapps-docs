@@ -20,7 +20,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Create and use reusable functions in Microsoftr Dataverse. Functions use Power Fx to execute a specific set of commands within Dataverse that run server-side.
+Create and use reusable functions in Microsoft Dataverse. Functions use Power Fx to execute a specific set of commands within Dataverse that run server-side.
 
 > [!IMPORTANT]
 >
