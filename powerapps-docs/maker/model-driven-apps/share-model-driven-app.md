@@ -83,6 +83,9 @@ There are a few key environment and licensing prerequisites required when sharin
 - The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
 - Users must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. Users can [request a license themselves](../../user/request-license.md), or a [maker can request licenses for their app users](../common/request-licenses-for-users.md). Also, the license must be assigned in either the users home tenant or the tenant hosting the app. 
 
+ > [!Note]
+      > Users who have the Environment Maker role assigned will not require licenses to use model-driven apps.
+
 ## About predefined security roles
 
 There are several predefined roles available with Dataverse. To run apps that use only out-of-the-box tables, there's the Basic User security role, where members can play the app within the environment and perform common tasks for the records that they own. More information: [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles)
