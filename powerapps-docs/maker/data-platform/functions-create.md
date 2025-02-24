@@ -59,7 +59,7 @@ This section provides a few example functions.
 
 ### Calculate the sum of two integers
 
-1. Enter a display name, such as **new_calculateSum**.
+1. Enter a **Display name**, such as **new_calculateSum**, and a **Description**.
 1. Add two input parameters, x and y (both of data type integer), and one output parameter, z (data type integer).
 1. In the **Formula** box, enter the formula:  
    `{ z:x+y }`
