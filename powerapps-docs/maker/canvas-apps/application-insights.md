@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/16/2025
+ms.date: 02/24/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -412,6 +412,5 @@ Application Insights doesn't support the following scenarios.
 
 - Offline player events aren't captured.
 - Mobile app (both iOS and Android) events aren't captured when app is suspended.
-- GCC and non-public clouds aren't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
