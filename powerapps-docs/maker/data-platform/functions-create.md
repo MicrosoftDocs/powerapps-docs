@@ -2,7 +2,7 @@
 title: "Create and use functions in Microsoft Dataverse"
 description: "Learn how to create functions that can be used to execute a specific set of commands within Dataverse."
 ms.custom: ""
-ms.date: 02/07/2025
+ms.date: 02/24/2025
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -59,7 +59,7 @@ This section provides a few example functions.
 
 ### Calculate the sum of two integers
 
-1. Enter a display name, example **new_calculateSum**.
+1. Enter a **Display name**, such as **new_calculateSum**, and a **Description**.
 1. Add two input parameters, x and y (both of data type integer), and one output parameter, z (data type integer).
 1. In the **Formula** box, enter the formula:  
    `{ z:x+y }`
