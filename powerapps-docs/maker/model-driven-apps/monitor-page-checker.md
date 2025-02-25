@@ -9,7 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "aorth"
-ms.author: "mspilde"
+ms.author: "aorth"
 tags: 
 search.audienceType: 
   - maker
