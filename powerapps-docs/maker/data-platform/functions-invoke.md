@@ -34,20 +34,23 @@ You can invoke functions in Dataverse from a canvas app, a custom page in a mode
 1. Paste and save the copied formula to a text editor, Notepad, or somewhere you can easily refer to.
 1. In Power Apps Studio:
    1. Create or edit a canvas app or custom page in Power Apps Studio.
-   1. On the left navigation pane, under the **Data Sources** tab, select **New data source**, and search for the **Environment** option from the Dataverse connector.
+   1. On the left navigation pane, under the **Data Sources** tab, select **Add data**, and search for the **Environment** option from the Dataverse connector, and select it. 
    1. Insert the following components onto the canvas:
-      - Add input controls that correspond with each parameter's data type, such as Text input for text or numbers, toggle for boolean.
+      - Add input controls that correspond with each parameter's data type, such as number input.
       - Add a button to call the function.
-1. Paste the function formula you copied into the button's **OnSelect** property.
+      - Add output control that correspond with your parameter's data type, such as number input.
+1. Select the button you created, and in the **OnSelect** property, enter your function, eg Envinronment.new_calculatesum.
 1. Map each input parameter Value to reference the corresponding input controls:
-   - If the formula is `Environment.new_CalculateSum({ X: Value, Y: Value });`, it could be rewritten as: `Environment.new_CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text });`.
-1. If an output parameter is defined for the function: 
-   - Capture the output value using a “.” after the function. If the function is `Func1` and it stored output in “Value” parameter name, use `Environment.Func1().Value` to access the output. Display the variable in a label. Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](/power-apps/maker/canvas-apps/connections/connection-common-data-service#call-dataverse-actions-directly-in-power-fx)
+   - If your function is `Environment.new_CalculateSum({ X: Value, Y: Value });`, it could be rewritten as: `Environment.new_CalculateSum({ X: NumberInput1.value, Y: NumberInput2.value });`.
+   - To set your Function 'result' output, update your formula to 'Set(result, Environment.new_CalculateSum({ X: NumberInput1.value, Y: NumberInput2.value }))'. 
+1. Select the output control and set the 'Value' property with a formula of 'result.z'.
 
+  Preview your app, enter input 1 & 2 values, and select the button. The result should show on the output field.
+  
 ## Invoke functions from a Power Automate cloud flow
 
 1. In a cloud flow, add a new action from the Microsoft Dataverse connector.
-1. Select either the action called **Perform an unbound action** or the action **Perform a bound action**.
+1. Select the action called [**Perform an unbound action**](https://learn.microsoft.com/power-automate/dataverse/bound-unbound#unbound-actions)
 1. Select your function. The function has a unique name with a prefix.
 1. Provide values for all the input parameters (if any).
 
