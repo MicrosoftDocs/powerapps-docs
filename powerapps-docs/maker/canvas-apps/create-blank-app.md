@@ -33,7 +33,7 @@ In Power Apps, create a blank canvas app that you can customize further and add 
 
 1. On the left navigation pane, select **Create** > **Start with a blank canvas**.
 
-1. Select an app size.
+1. Select an app size (format) such as resonsive, tablet, or phone.
 
 Once created, the app opens in [Power Apps Studio](power-apps-studio.md) where you can to start building the app.
 
