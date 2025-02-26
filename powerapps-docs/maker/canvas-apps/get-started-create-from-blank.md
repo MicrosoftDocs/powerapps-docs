@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 03/10/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -45,18 +45,20 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 ## Open a blank app
 
-Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
+Create a [blank canvas app](create-blank-app.md) with a phone size layout.
 
 ## Connect to data
 
 1. In the middle of the screen, select **connect to data**.
 
-1. In the **Data** pane, select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection:
+1. In the **Data** pane, select **Add data**. Select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection such as OneDrive:
 
-    1. Select **New connection**, select the tile for your cloud-storage account, and then select **Create**.
-    2. If prompted, provide your credentials for that account.
+    1. In the seach enter **OneDrive** and select it.
+    1. Select **Add a connection**.
+    1. On the connection pane select **Connect**
+    1. If prompted, provide your credentials for that account.
 
-1. Under **Choose an Excel file**, type or paste the first letters of **eventsignup** to filter the list, and then select the file that you uploaded.
+1. Under **Choose an Excel file**, find and select the **eventsignup.xlsx** that you saved earlier.
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
@@ -64,29 +66,25 @@ Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
 
 ## Create the view screen
 
-1. On the **Home** tab, select the down-arrow next to **New screen** to open a list of screen types, and then select **List**.
+1. On the command bar, select **New screen** > **List**.
 
     A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-1. At the top of the new screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
+1. At the top of the new screen, select the **[Title]** [Label](controls/control-text-box.md) and rename it to **View records**.
 
      ![Change title bar for view records.](./media/get-started-create-from-blank/change-title-bar.png)
 
-1. In the left navigation bar, select **BrowseGallery1**.
-
-    A selection box with handles surrounds the gallery.
+1. In the **Tree view**, select **BrowseGallery1**.
 
     ![Add a list screen.](./media/get-started-create-from-blank/select-gallery.png)
 
-1. On the **Properties** tab of the right-hand pane, select the down arrow for the **Layout** menu.
+1. In the gallery's **Properties** pane, set the **Layout** to **Title, subtitle, and body**..
 
     ![Open the layout menu.](./media/get-started-create-from-blank/select-layout.png)
 
-1. Select **Title, subtitle, and body**.
-
 1. In the formula bar, replace **CustomGallerySample** with **Schedule**, and replace both instances of **SampleText** with **Volunteer**.
 
-1. On the right edge of the formula bar, select the down arrow, and then select **Format text**.
+1. On the right edge of the formula bar, select the **Expand formula bar** down arrow, and then select **Format text**.
 
     The formula matches this example:
 
@@ -106,7 +104,7 @@ Create a [blank canvas app](create-blank-app.md) with **Phone** layout.
     )
     ```
 
-1. On the **Properties** tab of the right-hand pane, select **Edit** next to the **Fields** label.
+1. In the **Properties** pane, select **Edit** next to the **Fields** label.
 
 1. In the **Title2** box, select **Volunteer**, in the **Subtitle2** box, select **StartDay**, and in the **Body1** box, select **StartTime**.
 
@@ -121,11 +119,11 @@ For more information about these and other functions, see the [formula reference
 
 ## Create the change screen
 
-1. On the **Home** tab, select the down arrow next to **New screen**, and then select **Form**.
+1. On the command bar, select **New screen** > **Form**.
 
-1. In the left navigation bar, select **EditForm1**.
+1. In the **Tree view**, select **EditForm1**.
 
-1. On the **Properties** tab of the right-hand pane, select the down arrow next to **Data source**, and then select **Schedule** in the list that appears.
+1. On the **Properties** pane, select the down arrow next to **Data source**, and then select **Schedule** in the list that appears.
 
 1. Under the data source that you just specified, select **Edit fields**.
 
@@ -147,7 +145,7 @@ For more information about these and other functions, see the [formula reference
 
 ## Delete and rename screens
 
-1. In the left navigation bar, select the ellipsis (...) for **Screen1**, and then select **Delete**.
+1. In the **Tree view**, select the ellipsis (...) for **Screen1**, and then select **Delete**.
 
     ![Delete screen.](./media/get-started-create-from-blank/delete-screen.png)
 
@@ -231,7 +229,7 @@ For more information about these and other functions, see the [formula reference
 
 ## Test the app
 
-1. Select the **ViewScreen**, and then open Preview by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
+1. Select the **ViewScreen**, and then preview the app by pressing F5 or select **Preview**.
 
     ![Open Preview mode.](./media/get-started-create-from-blank/open-preview.png)
 
