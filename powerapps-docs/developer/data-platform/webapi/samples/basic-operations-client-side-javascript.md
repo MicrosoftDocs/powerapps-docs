@@ -1,7 +1,7 @@
 ---
-title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API"
-ms.date: 04/06/2022
+title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)"
+description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on table rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API."
+ms.date: 02/10/2025
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -9,46 +9,94 @@ search.audienceType:
   - developer
 contributors:
   - JimDaly
+  - Mattp123
 ---
 
-# Web API Basic Operations Sample (Client-side JavaScript)
+# Web API Basic Operations Sample (client-side JavaScript)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript.
 
 > [!NOTE]
-> This sample implements the operations detailed in the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
-
-<a name="bkmk_prerequisites"></a>
+> There are more modern methods of using code to perform CRUD operations in Microsoft Dataverse than this sample demonstrates. Consider using the Xrm.WebApi client API instead. More information: [Xrm.WebApi (Client API reference)](../../../model-driven-apps/clientapi/reference/xrm-webapi.md)
 
 ## Prerequisites
 
-To run this sample, the following is required:
+To run this sample, you need the following items:
 
-- Access to Microsoft Dataverse environment.
-- A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.
-
-<a name="bkmk_runsample"></a>
-
-## Run this sample
-
-To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/WebAPIBasicOperations) and extract the contents. Locate the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution and import it into your Dataverse environment and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).
-
-<a name="bkmk_codesample"></a>
+- Access to a  Dataverse environment that has the Dynamics 365 apps option enabled. More information: [Code sample](#code-sample)
+- A user account with privileges to import solutions and perform CRUD operations in Dataverse, typically a system administrator or system customizer security role.
 
 ## Code sample
 
-This sample includes two web resources:
+This sample includes these web resources:
 
-- [WebAPIBasicOperations.html](#bkmk_WebAPIBasicOperations)
-- [WebAPIBasicOperations.js](#bkmk_WebAPIBasicOperationsJS)
+- [WebAPIBasicOperations.html](#webapibasicoperationshtml)
+- [WebAPIBasicOperations.js](#webapibasicoperationsjs)
 
-<a name="bkmk_WebAPIBasicOperations"></a>
+> [!NOTE]
+> Running the sample on an environment that doesn't have Dynamics 365 apps enabled only creates the contact, account, and task records. Additionally, the record deletion option doesn't remove the records created by the sample.  
+
+### What happens when you run the sample
+
+When you run this code, the following records are created:
+
+- Contact: Contacts named "Peter Cambel," "Peter_Alt Cambel," and "Susie Curtis" are created.
+- Account: An account named "Contoso, Ltd." is created and associated with the contact "Peter Cambel."
+- Account: Another account named "Fourth Coffee" is created with a primary contact "Susie Curtis" and three associated tasks.
+- Competitor<sup>1</sup>: A competitor named "Adventure Works" is created.
+- Opportunity<sup>1</sup>: An opportunity named "River rafting adventure" is created and associated with the competitor "Adventure Works."
+
+<sup>1</sup>These records don't get created unless the environment has the Dynamics 365 apps option enabled.
+
+## Download and import the sample
+
+To run this sample, follow these steps:
+
+1. [Download the sample from GitHub](https://github.com/microsoft/PowerApps-Samples/raw/refs/heads/master/dataverse/webapi/JS/WebAPIBasicOperations/WebAPIBasicOperations_1_0_0_1_managed.zip).
+1. Sign in to [Power Apps](https://make.powerapps.com/) and optionally select an environment to work in.
+1. Select **Solutions** on the left navigation pane, and then select **Import solution** on the command bar. [!INCLUDE [left-navigation-pane](../../../../includes/left-navigation-pane.md)]
+1. Select **Browse**, locate and select the `WebAPIBasicOperations_1_0_0_1_managed.zip` solution, select **Open**, and then select **Next**. The details of the solution are displayed.
+1. Select **Import** to import it into your Dataverse environment.
+
+Importing the solution can take a few minutes to complete.
+
+## Run the sample to observe the script in action
+
+1. In Power Apps select **Solutions** on the left navigation pane.
+1. Select the **Managed** filter, and then open the **Web API Basic Operations** managed solution.
+1. Open the **sample_/WebAPIBasicOperations.html** file to display the properties pane.
+1. Scroll down to the **URL** and select it to open the HTML page in a new browser tab.
+1. Press F12 to **Open DevTools**, including the console window, in Microsoft Edge browser.
+1. Select **Start Sample**.
+
+Observe the table operations that occur to create table records.
+:::image type="content" source="media/web-api-basic-operations-output.png" alt-text="Sample output displayed in developer tools." lightbox="media/web-api-basic-operations-output.png":::
+
+## Remove the records and solution used with this sample
+
+If the sample doesn't remove the records created, such as because of the error "Resource not found for the segment 'competitors'," which occurs when you don't have the environment enabled for Dynamics 365 apps, you can manually delete the records.
+
+You can also remove (uninstall) the Web API Basic Operations managed solution.
+
+### Remove the records
+
+1. In Power Apps, select **Tables** from the left navigation pane.
+1. Select the **Account** table.
+1. Select the **Contoso, Ltd.**, and **Fourth Coffee** records and then select **Delete n records()** on the command bar.
+1. Select Tables on the left navigation pane, and then select the Contact table.
+1. Select the **Peter Cambel**, **Peter_Alt Cambel**, and **Susie Curtis** records, and then select **Delete n records()** on the command bar.
+
+For more information about what records are created, go to [What happens when you run the sample](#what-happens-when-you-run-the-sample).
+
+## Remove the managed solution sample
+
+Go to the **Solutions** area, select the **Managed** filter, select the **Web API Basic Operations** solution, and then select **Delete**.
 
 ### WebAPIBasicOperations.html
 
-The WebAPIBasicOperations.html web resource provides the context in which the JavaScript code will run.
+The WebAPIBasicOperations.html web resource provides the context in which the JavaScript code runs.
 
 ```html
 <html>
@@ -114,8 +162,6 @@ The WebAPIBasicOperations.html web resource provides the context in which the Ja
   </body>
 </html>
 ```
-
-<a name="bkmk_WebAPIBasicOperationsJS"></a>
 
 ### WebAPIBasicOperations.js
 

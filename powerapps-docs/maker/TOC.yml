@@ -241,8 +241,6 @@
     href: ./common/learn-hub.md
   - name: Find it with unified search
     href: search.md
-  - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1690,13 +1688,22 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-    - name: Copilot chat for the apps
+    - name: Copilot chat for apps
       href:
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Customize Copilot chat (Preview)
-        href: ./model-driven-apps/customize-copilot-chat.md
+      - name: Customize Copilot chat (preview)
+        href:
+        items:
+        - name: Customize Copilot chat overview
+          href: ./model-driven-apps/customize-copilot-chat.md
+        - name: Add knowledge to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-knowledge.md
+        - name: Add topics to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Prompt guide customizations
+          href: ./model-driven-apps/copilot-chat-prompt-guide.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
@@ -2028,6 +2035,18 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
+      - name: Use functions in Dataverse (preview)
+        items:
+        - name: Functions overview
+          href: ./data-platform/functions-overview.md
+        - name: Create and use functions
+          href: ./data-platform/functions-create.md
+        - name: Invoke a function
+          href: ./data-platform/functions-invoke.md  
+        - name: Example functions
+          href: ./data-platform/functions-examples.md
+        - name: Supported Power Fx functions
+          href: ./data-platform/functions-supported-power-fx.md
       - name: Use Dataverse low-code plug-ins (preview)
         items:
         - name: Create low-code plug-ins

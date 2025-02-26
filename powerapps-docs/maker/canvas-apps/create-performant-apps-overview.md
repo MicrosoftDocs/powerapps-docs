@@ -4,7 +4,7 @@ description: Learn about how to create well performing Power Apps.
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 12/01/2023
+ms.date: 02/26/2025
 ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType:
@@ -48,8 +48,8 @@ These principles should cover most of what is necessary to make your app fast.
 
 ## Additional performance guidance
 
-There are other performance considerations to keep in mind. For additional guidance, see these articles:
+There are other performance considerations to keep in mind. For additional guidance, see these articles: 
 
-- [Other performance considerations](app-performance-considerations.md): Discusses  additional factors, which might affect performance.
-- [Build large complex apps](working-with-large-apps.md): Outlines key factors to consider while building a large app.
-- [Canvas apps coding standards and guidelines](https://www.microsoft.com/power-platform/blog/wp-content/uploads/2024/06/PowerApps-canvas-app-coding-standards-and-guidelines.pdf?msockid=142399bb7d966f5511fe8cc47c2c6ec1): Outlines general coding and development guidelines that can help in building an app.  
+ * [Other performance considerations](app-performance-considerations.md): Discusses  additional factors, which might affect performance.
+ * [Build large complex apps](working-with-large-apps.md): Outlines key factors to consider while building a large app.
+ * [Canvas apps coding standards and guidelines](https://www.microsoft.com/en-us/power-platform/blog/wp-content/uploads/2024/06/PowerApps-canvas-app-coding-standards-and-guidelines.pdf): Outlines general coding and development guidelines that can help in building an app.  

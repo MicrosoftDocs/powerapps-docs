@@ -2783,7 +2783,7 @@ In this example, we query for all contacts where `fullname` matches `(sample)`, 
 This is the XML for the query:
   
 ```xml  
-<fetch mapping="logical" output-format="xml-platform" version="1.0" distinct="false">  
+<fetch distinct="false">  
   <entity name="contact">  
     <attribute name="fullname" />  
     <attribute name="jobtitle" />  
@@ -2973,10 +2973,7 @@ The way FetchXML handles paging is different from how a query filter handles it.
 The following operation requests page 2 from the previous FetchXML sample. Based on our sample data, we should have eight contacts in our result. Breaking down each page to four contacts per page, we should have two pages. Page 2 should contain only four contacts. If we then ask for page 3, the system returns zero results.
   
 ```xml  
-<fetch mapping="logical" 
-        output-format="xml-platform" 
-        version="1.0" 
-        distinct="false"
+<fetch  distinct="false"
         page="2"  
         count="4">  
   <entity name="contact">  
