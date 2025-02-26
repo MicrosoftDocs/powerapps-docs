@@ -201,7 +201,7 @@ PostgreSQL is a relational database management system developed by PostgreSQL Gl
 
 ---
 
-3. Determine whether to use a connection reference and/or environment variable.
+3. Optionally, select **Advanced options** to use a connection reference and/or environment variable.
 
    When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
 
