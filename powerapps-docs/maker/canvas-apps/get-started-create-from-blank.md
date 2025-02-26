@@ -17,13 +17,13 @@ contributors:
 ---
 # Create a canvas app from scratch based on Excel data
 
-Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [creating a basic app from Excel](get-started-create-from-data.md) does, but app makers who have more experience can use it to build the best app for their needs.
+Create your own canvas app from scratch based on Excel data formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [creating a basic app from Excel](get-started-create-from-data.md) does, but app makers who have more experience can use it to build the best app for their needs.
 
 ## Prerequisites
 
-To follow the steps in this tutorial exactly, first create an Excel file using this sample data.
+To follow the steps in this tutorial exactly, create an Excel file using this sample data.
 
-1. Copy this data, and then paste it into an Excel file.
+1. Copy this data and paste it into an Excel file.
 
     | StartDay | StartTime | Volunteer | Backup |
     | --- | --- | --- | --- |
@@ -34,11 +34,11 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
     | Sunday | noon-2pm |Singh |Morgan |
     | Sunday | 2pm-4pm |Batye |Nguyen |
 
-2. Format that data as a table, named **Schedule**, so that Power Apps can parse the information.
+1. Format that data as a table named **Schedule** so that Power Apps can parse the information.
 
     For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
-3. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+1. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
 
 > [!IMPORTANT]
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
@@ -53,9 +53,9 @@ Create a [blank canvas app](create-blank-app.md) with a phone size layout.
 
 1. In the **Data** pane, select **Add data**. Select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection such as OneDrive:
 
-    1. In the seach enter **OneDrive** and select it.
+1. In the search, enter **OneDrive** and select it.
     1. Select **Add a connection**.
-    1. On the connection pane select **Connect**
+1. On the connection pane, select **Connect**.
     1. If prompted, provide your credentials for that account.
 
 1. Under **Choose an Excel file**, find and select the **eventsignup.xlsx** that you saved earlier.
@@ -78,7 +78,7 @@ Create a [blank canvas app](create-blank-app.md) with a phone size layout.
 
     ![Add a list screen.](./media/get-started-create-from-blank/select-gallery.png)
 
-1. In the gallery's **Properties** pane, set the **Layout** to **Title, subtitle, and body**..
+1. In the gallery's **Properties** pane, set the **Layout** to **Title, subtitle, and body**.
 
     ![Open the layout menu.](./media/get-started-create-from-blank/select-layout.png)
 
@@ -155,7 +155,7 @@ For more information about these and other functions, see the [formula reference
 
 ## Configure icons on the view screen
 
-1. Near the top of the **ViewScreen**, select the circular-arrow icon.
+1. Near the top of the **ViewScreen**, select the circular arrow icon.
 
     ![Add record for refresh.](./media/get-started-create-from-blank/refresh-icon.png)
 
@@ -163,9 +163,9 @@ For more information about these and other functions, see the [formula reference
 
     `Refresh(Schedule)`
 
-    When the user selects this icon, the data from **Schedule** is refreshed from the Excel file.
+When the user selects this icon, the data from **Schedule** refreshes from the Excel file.
 
-    For more information about this and other functions, see the [formula reference](formula-reference.md).
+For more information about this and other functions, see [formula reference](formula-reference.md).
 
 1. In the upper-right corner of the **ViewScreen**, select the plus icon.
 
@@ -175,7 +175,7 @@ For more information about these and other functions, see the [formula reference
 
     `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
 
-    When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
+When the user selects this icon, **ChangeScreen** appears with each field empty, so the user can create a record more easily.
 
 1. Select the right-pointing arrow for the first record in the gallery.
 
@@ -185,11 +185,11 @@ For more information about these and other functions, see the [formula reference
 
     `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
 
-    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so that the user can edit or delete the record more easily.
+When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so the user can edit or delete the record more easily.
 
 ## Configure icons on the change screen
 
-1. On **ChangeScreen**, select the "X" icon in the upper-left corner.
+1. On **ChangeScreen**, select the "X" icon in the upper left corner.
 
     ![Cancel icon.](./media/get-started-create-from-blank/cancel-icon.png)
 
@@ -197,7 +197,7 @@ For more information about these and other functions, see the [formula reference
 
     `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes that the user made in this screen are discarded, and the view screen opens.
+When the user selects this icon, any changes made in this screen are discarded, and the view screen opens.
 
 1. In the upper-right corner, select the checkmark icon.
 
@@ -207,11 +207,11 @@ For more information about these and other functions, see the [formula reference
 
     `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes that the user made in this screen are saved, and the view screen opens.
+When the user selects this icon, any changes made in this screen are saved, and the view screen opens.
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
-1. Set the new icon's **Color** property to **White**, and move the new icon so it appears next to the checkmark icon.
+1. Set the new icon's **Color** property to **White** and move the new icon so it appears next to the checkmark icon.
 
     ![Trash icon.](./media/get-started-create-from-blank/trash-icon.png)
 
@@ -225,7 +225,7 @@ For more information about these and other functions, see the [formula reference
 
     `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
+When the user selects this icon, the selected record is deleted from the data source and the view screen opens.
 
 ## Test the app
 
@@ -233,9 +233,9 @@ For more information about these and other functions, see the [formula reference
 
     ![Open Preview mode.](./media/get-started-create-from-blank/open-preview.png)
 
-1. Type or paste one or more letters in the search box to filter the list based on the name of the volunteer.
+1. Type or paste one or more letters in the search box to filter the list based on the volunteer's name.
 
-1. Select the sort icon one or more times to show the data ascending or descending order based on the name of the volunteer.
+1. Select the sort icon one or more times to show the data in ascending or descending order based on the volunteer's name.
 
 1. Add a record.
 
@@ -245,13 +245,13 @@ For more information about these and other functions, see the [formula reference
 
 1. Delete the record that you added.
 
-1. Close Preview mode by pressing Esc (or by selecting the close icon in the upper-right corner).
+1. Close Preview mode by pressing Esc or selecting the close icon in the upper-right corner.
 
 ## Next steps
 
-- Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
+- Press Ctrl+S to save your app in the cloud so you can run it from other devices.
 - [Share the app](share-app.md) so that other people can run it.
-- Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
+- Learn more about [functions](working-with-formulas.md) such as **Patch**, which you use to manage data without creating a standard form.
 - [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
 
 
