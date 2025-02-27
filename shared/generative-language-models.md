@@ -1,10 +1,10 @@
 ---
-author: sericks007
-ms.author: sericks
+author: Antoine2F
+ms.author: antode
 ms.date: 02/18/2025
 ms.topic: include
-ms.contributors:
-  - antode
+ms.reviewer: sericks
+
 ---
 
 Dynamics 365 and Power Platform products use advanced generative language models to enhance their features. Below is a list of the primary models used in the features.
