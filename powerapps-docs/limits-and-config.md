@@ -108,7 +108,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | localhost | http | Power Apps Mobile|
 | 127.0.0.1 | http <br><br>You might need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
-| augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
+| augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
