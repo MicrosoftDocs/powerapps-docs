@@ -436,7 +436,7 @@ function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
 
 var count = 3;
 var fetchXml =
-  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+  '<fetch><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
 
 retrieveAllRecords("account", fetchXml, null, count, null).then(
   function success(result) {
