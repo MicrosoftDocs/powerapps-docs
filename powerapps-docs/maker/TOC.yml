@@ -268,7 +268,7 @@
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-blank
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
