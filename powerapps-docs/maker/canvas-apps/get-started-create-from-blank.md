@@ -16,7 +16,9 @@ contributors:
 ---
 # Create a canvas app based on Excel data
 
-There are a few different ways to use Excel data to create a canvas app. Before adding Excel data, ensure that the data you want to use in Power Apps is [formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+There are a few different ways to use Excel data to create a canvas app. 
+
+In Excel, it's important to format your data as a table rather than just a range of cells. This makes it easier for Power Apps to read and interact with the data. To do this, select your data and select on **Insert** > **Table** in Excel. This ensures that Power Apps can recognize and use the data effectively. More information: [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -25,17 +27,20 @@ To create an app using Excel data, select one of the following options in [Power
 |---------|---------|
 |[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |   Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
 | [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |    Select **Start with Data** > **Connect external data** >  **From Excel**.   |
-|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-then-add-excel-data)     |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
+|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)     |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
 
 
 ## Import an external Excel file
 
-When you upload an Excel file, it generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
+When you import your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion allows your data to be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV**.
-1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it. The maximum file size limit is 5 GB.
-When the table is created, select a column name or the table name to edit the properties to suit your needs. If there are values in cells that are incompatible with the selected data type when changing column data types, those values are removed when the table is generated. More information: [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables)
+1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it. 
+
+    The maximum file size limit is 5 GB.
+
+1. When the table is created, select a column name or the table name to edit the properties to suit your needs. If there are values in cells that are incompatible with the selected data type when changing column data types, those values are removed when the table is generated. More information: [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables)
 1. Select **Row ownership** and choose how you want to manage row ownership. 
 1. When you're done, select **Save and open app**. The system will upload the first 20 rows of data so you can start reviewing the data in your app. The remaining data will be uploaded in the background.
 
@@ -45,10 +50,13 @@ When the table is created, select a column name or the table name to edit the pr
 
 ## Connect to an external Excel file from Power Apps
 
-Ensure that the Excel data you want to use in Power Apps is [formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+Store the Excel file in a cloud storage service like Dropbox, Google Drive, OneDrive, or OneDrive for Business. This is necessary because Power Apps can only connect to Excel files that are stored in the cloud.
 
-Store the Excel file in a cloud storage account, such as Dropbox, Google Drive, OneDrive, and OneDrive for Business. There are two versions of the Excel connector. The newer version *[Excel Online (Business)](/connectors/excelonlinebusiness/)* of the connector can access more cloud locations.
+Power Apps has an Excel connector that allows you to access your Excel data. There are two versions available:
 
+- The older version connects to Excel files stored in specific locations, such as OneDrive for Business. 
+
+- We recommand that you use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/)*, which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
@@ -60,22 +68,17 @@ Store the Excel file in a cloud storage account, such as Dropbox, Google Drive, 
 1. Enter the file location and select the table.
 1. When you're done, select **Create app**.
 
-### Use the Excel Online (Business) Connector
-In the past, Power Apps used the OneDrive connector to connect and get data from Excel. The OneDrive connector provided access to files on OneDrive and to Excel. Now authors should use the new recommended *[Excel Online (Business)](/connectors/excelonlinebusiness/)* connector. The Excel Online connector allows multiple users to access it and has improved functionality.
+
+For more information about how to share Excel data: [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables)
 
 
-### Known limitations
+## Create a blank canvas app and add Excel data
 
-For information about how to share Excel data within your organization, [review these limitations](cloud-storage-blob-connections.md#sharing-excel-tables).
+Create a blank canvas app and then use Excel data that's [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) as the source of the app's information.
 
-
-## Create a blank canvas app and then add Excel data
-
-Create a canvas app based on Excel data formatted as a table. By following this article, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record.
+Follow the example below to create an app with two screens where users can view (browse) the data from an Excel file on one screen, and on another screen, they can interact with (add, modify, or remove) that data. The data interaction features, such as creating, updating, and deleting records, are built into the second screen of the app.
 
 ### Prerequisites
-
-Follow the steps in this article to create an Excel file using this sample data.
 
 1. Copy this data and paste it into an Excel file.
 
@@ -88,33 +91,31 @@ Follow the steps in this article to create an Excel file using this sample data.
     | Sunday | noon-2pm |Singh |Morgan |
     | Sunday | 2pm-4pm |Batye |Nguyen |
 
-1. Format that data as a table named **Schedule** so that Power Apps can parse the information.
-
-    For more information, see [Format a table in Excel](how-to-excel-tips.md).
+1. [Format a table in Excel](how-to-excel-tips.md) named **Schedule** so that Power Apps can parse the information.
 
 1. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
 
 > [!IMPORTANT]
-> You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
+> You can use your own Excel file and review this example for general concepts only. However, the data in the Excel file must be [formatted as a table](how-to-excel-tips.md).
 
 ### Create a blank app and connect to data
 
-1. 1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. On the left navigation pane, select **Create** > **Start with a blank canvas**.
 
-Select the **Phone size** layout.
+1. Select the **Phone size** layout.
 
     The app opens in [Power Apps Studio](power-apps-studio.md) where you can add data and start building the app.
 
-In the middle of the screen, select **Connect to data**.
+1. In the middle of the screen, select **Connect to data**.
 
 1. In the **Data** pane, select **Add data**. Select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection such as OneDrive:
 
-In the search box, enter **OneDrive** and select it.
-    1. Select **Add a connection**.
+1. In the search box, enter **OneDrive** and select it.
+1. Select **Add a connection**.
 1. On the connection pane, select **Connect**.
-    1. If prompted, provide your credentials for that account.
+1. If prompted, provide your credentials for that account.
 
 1. Under **Choose an Excel file**, find and select the **eventsignup.xlsx** that you saved earlier.
 
@@ -193,7 +194,7 @@ For more information about these and other functions, see the [formula reference
 
 1. In the upper-right corner of the **Fields** pane, close it by selecting the close icon (X).
 
-Set the **Item** property of the form to this expression in the formula bar:
+1. Set the **Item** property of the form to this expression in the formula bar:
 
     `BrowseGallery1.Selected`
 
@@ -221,9 +222,9 @@ Set the **Item** property of the form to this expression in the formula bar:
 
     `Refresh(Schedule)`
 
-When the user selects this icon, the data from **Schedule** refreshes from the Excel file.
+    When the user selects this icon, the data from **Schedule** refreshes from the Excel file.
 
-For more information about this and other functions, see [formula reference](formula-reference.md).
+    For more information about this and other functions, see [formula reference](formula-reference.md).
 
 1. In the upper-right corner of the **ViewScreen**, select the plus icon.
 
@@ -255,7 +256,7 @@ When the user selects this icon, **ChangeScreen** appears with each field showin
 
     `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
 
-When the user selects this icon, any changes made in this screen are discarded, and the view screen opens.
+    When the user selects this icon, any changes made in this screen are discarded, and the view screen opens.
 
 1. In the upper-right corner, select the checkmark icon.
 
@@ -265,7 +266,7 @@ When the user selects this icon, any changes made in this screen are discarded, 
 
     `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
-When the user selects this icon, any changes made in this screen are saved, and the view screen opens.
+    When the user selects this icon, any changes made in this screen are saved, and the view screen opens.
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
@@ -287,7 +288,7 @@ When the user selects this icon, the selected record is deleted from the data so
 
 ### Test the app
 
-Select the **ViewScreen**, and then preview the app by pressing <kbd>F5</kbd> or select **Preview**.
+1. Select the **ViewScreen**, and then preview the app by pressing <kbd>F5</kbd> or select **Preview**.
 
     ![Open Preview mode.](./media/get-started-create-from-blank/open-preview.png)
 
@@ -309,8 +310,7 @@ Select the **ViewScreen**, and then preview the app by pressing <kbd>F5</kbd> or
 
 - Press Ctrl+S to save your app in the cloud so you can run it from other devices.
 - [Share the app](share-app.md) so other people can run it.
-- Learn more about [functions](working-with-formulas.md) such as **Patch**, which you use to manage data without creating a standard form.
-- [Link this app to a solution](add-app-solution.md) so you can, for example, deploy it to a different environment or publish it on AppSource.
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
