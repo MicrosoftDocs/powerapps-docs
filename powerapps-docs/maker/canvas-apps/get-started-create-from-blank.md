@@ -91,7 +91,7 @@ Follow the example below to create an app with two screens where users can view 
     | Sunday | noon-2pm |Singh |Morgan |
     | Sunday | 2pm-4pm |Batye |Nguyen |
 
-1. [Format the table in Excel]((https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664)) and name it **Schedule** so that Power Apps can parse the information.
+1. [Format the table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664) and name it **Schedule** so that Power Apps can parse the information.
 
 1. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
 
