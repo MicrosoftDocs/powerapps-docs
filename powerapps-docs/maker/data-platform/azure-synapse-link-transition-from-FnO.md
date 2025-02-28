@@ -232,6 +232,11 @@ To help customers who might need more time to complete their transition, we have
 
 If your past due extension request is approved, you will receive a confirmation e-mail and the extended date will be shown within the product. To self-extend, go the **Azure Synapse Link** area in Power Apps (make.powerapps.com). This option is applicable for each environment and is visible for environments linked to finance and operations. 
 
+### I have completed the transition, how can I uninstall "Export to Data lake" feature? 
+
+If you are not using this feature in your environment, please ask your Finance and Operations administrator uninstall this feature. To uninstall, visit the environment page in Life cycle services (LCS), navigate to Environment Add-ins section, select the Uninstall option in the Export to Data lake environment add-in.
+
+
 ## See also
 
 [What is Azure Synapse Link for Dataverse?](export-to-data-lake.md)
