@@ -43,10 +43,8 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 ## Prerequisites
 
-- You must have a finance and operations sandbox (Tier-2) or higher environment.
-- For validation purposes, you can also use a [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC)
-- You can use a Tier-1 environment, also known as a cloud-hosted environment, for proof of concept validations. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later.
-
+- You must have a finance and operations sandbox (Tier-2) or higher environment. You can also use an Online Developer environment.
+  
    > [!NOTE]
    > With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as *unified environments*, Microsoft offers limited support for cloud hosted environments (CHE) as of June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC).
 
@@ -57,9 +55,10 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 | How you plan to consume data  |  Azure Synapse Link feature you use | Prerequisites and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
+| **Access finance and operations tables via Microsoft Fabric** <br><br>  No need to bring your own storage, Synapse workspace, or Spark pool because the system uses Dataverse storage and compute resources| [Link to Fabric](azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 | **Access finance and operations tables via Synapse query** <br><br> Finance and operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. | Go to [Add finance and operations tables in Azure Synapse Link](#add-finance-and-operations-tables-in-azure-synapse-link)  |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
 | **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | Go to [Access incremental data changes from finance and operations](#access-incremental-data-changes-from-finance-and-operations)  <br> Also go to [Azure Synapse Link - incremental update](/power-apps/maker/data-platform/azure-synapse-incremental-updates)) | Azure data lake  |
-| **Access finance and operations tables via Microsoft Fabric** <br><br>  No need to bring your own storage, Synapse workspace, or Spark pool because the system uses Dataverse storage and compute resources| [Link to Fabric](azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
+
 
 ### Link your finance and operations environment with Microsoft Power Platform
 
@@ -82,128 +81,6 @@ To enable this configuration key, you must turn on maintenance mode. More inform
 
 After row version change tracking is enabled, a system event that's triggered in your environment might cause reinitialization of tables in export to data lake. If you have downstream consumption pipelines, you might have to reinitialize the pipelines. More information: [Some tables have been "initialized" without user action](/dynamics365/fin-ops-core/dev-itpro/data-entities/finance-data-azure-data-lake#some-tables-have-been-initialized-without-user-action).
 
-### Additional steps to configure a cloud hosted environment
-
-> [!NOTE]
->
-> With the availability of [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as *unified environments*, Microsoft offers limited support for cloud hosted environments (CHE).
-
-If you're using cloud hosted environments, you must perform the following additional configuration steps:
-
-1. Complete a full database synchronization (DBSync) and use Visual Studio to complete the maintenance mode.
-
-1. You need to enable the flights **DMFEnableSqlRowVersionChangeTrackingIndexing** and **DMFEnableCreateRecIdIndexForDataSynchronization** to create indexes required for data synchronization. When these flights are enabled, SQL indexes are created for the `RecId` and `SysRowVersion` fields if they're missing. You can enable the flights by running these SQL statements in Tier 1 environments. These indexes are created in higher environments when enabling change tracking on a table or an entity.
-
-```sql
-INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableSqlRowVersionChangeTrackingIndexing', 1)
-INSERT INTO SYSFLIGHTING (FLIGHTNAME, ENABLED) VALUES('DMFEnableCreateRecIdIndexForDataSynchronization', 1)
-```
-
-3. You need to run the following script to perform initial indexing operations in your environment. If you don't run the script in the CHE environment, you see error "FnO-812" when adding these tables to Azure Synapse Link. This process is auto enabled with sandbox or other higher environments.
-
-```sql
-SET NOCOUNT ON;
-print 'Put system in Maintainance mode'
-print ''
-UPDATE SQLSYSTEMVARIABLES SET VALUE = 1 WHERE PARM = 'CONFIGURATIONMODE'
-SET NOCOUNT OFF;
-
-DECLARE @SchemaName NVARCHAR(MAX) = 'dbo';
-DECLARE @TableId INT;
-DECLARE @TableName NVARCHAR(250);
-DECLARE @SQLStmt NVARCHAR(MAX);
-DECLARE @SlNo INT = 0;
-
-DECLARE Table_cursor CURSOR LOCAL FOR
-SELECT T.ID, T.Name
-FROM TABLEIDTABLE T
-WHERE T.Name in (
-SELECT PHYSICALTABLENAME AS TableName FROM AIFSQLROWVERSIONCHANGETRACKINGENABLEDTABLES
-UNION SELECT REFTABLENAME AS TableName FROM BUSINESSEVENTSDEFINITION WHERE CHANNEL LIKE 'AthenaFinanceOperationsTableDa%'
-)
-
--- if the concerned tables are not in the above list, then replace the above cursor query with following cursor query
--- and manually enter the tablenames in the where clause
--- DECLARE Table_cursor CURSOR LOCAL FOR
--- SELECT T.ID, T.Name
--- FROM TABLEIDTABLE T
--- WHERE T.Name in ( 'TableName1', 'TableName2', .....)
-
-OPEN Table_cursor;
-FETCH NEXT FROM Table_cursor INTO @TableId, @TableName;
-WHILE @@FETCH_STATUS = 0
-BEGIN
-	BEGIN TRY
-		BEGIN TRAN
-			BEGIN
-				-- Script timeout in milliseconds
-				SET LOCK_TIMEOUT 1000;
-				SET @SlNo = @SlNo + 1;
-
-				-- Add SYSROWVERSION index
-				IF NOT EXISTS (SELECT TOP 1 1
-					FROM sys.indexes i
-					INNER JOIN sys.index_columns ic ON ic.index_id = i.index_id AND ic.object_id = i.object_id
-					INNER JOIN sys.columns c ON c.object_id = ic.object_id AND c.column_id = ic.column_id
-					INNER JOIN sys.tables t ON t.object_id = c.object_id
-					INNER JOIN sys.schemas s ON s.schema_id = t.schema_id
-					WHERE s.name = @SchemaName AND ic.index_column_id = 1 AND ic.is_included_column = 0 AND t.name = @TableName AND c.name = 'SYSROWVERSION'
-					)
-				BEGIN
-					SET @SQLStmt = '
-					CREATE NONCLUSTERED INDEX AIF_I_' + CAST(@TableId as nvarchar) + 'SQLROWVERSIONIDX
-					ON ' + @SchemaName + '.' + @TableName + ' ([SYSROWVERSION] ASC)
-					WITH (ONLINE = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = ON)
-					ON [PRIMARY]
-					';
-					EXEC sp_executesql @SQLStmt;
-				END
-
-				-- Add RECID index
-				IF NOT EXISTS (SELECT TOP 1 1
-					FROM sys.indexes i
-					INNER JOIN sys.index_columns ic ON ic.index_id = i.index_id AND ic.object_id = i.object_id
-					INNER JOIN sys.columns c ON c.object_id = ic.object_id AND c.column_id = ic.column_id
-					INNER JOIN sys.tables t ON t.object_id = c.object_id
-					INNER JOIN sys.schemas s ON s.schema_id = t.schema_id
-					WHERE s.name = @SchemaName AND ic.index_column_id = 1 AND ic.is_included_column = 0 AND t.name = @TableName AND c.name = 'RECID'
-					)
-				BEGIN
-					SET @SQLStmt = '
-					CREATE NONCLUSTERED INDEX AIF_I_' + CAST(@TableId as nvarchar) + 'RECIDDATASYNCIDX
-					ON ' + @SchemaName + '.' + @TableName + ' ([RECID] ASC)
-					WITH (ONLINE = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = ON)
-					ON [PRIMARY]
-					';
-					EXEC sp_executesql @SQLStmt;
-				END
-
-				SET LOCK_TIMEOUT 0;
-			END
-		COMMIT TRAN
-		print cast(@SlNo as nvarchar) + '. ' + @SchemaName + '.' + @TableName + '(' + cast(@TableId as nvarchar) + ') => succeeded'
-	END TRY
-	BEGIN CATCH
-		print cast(@SlNo as nvarchar) + '. ' + @SchemaName + '.' + @TableName + '(' + cast(@TableId as nvarchar) + ') => SQL error[' + cast(ERROR_NUMBER() as nvarchar) + '] : ' + ERROR_MESSAGE()
-		ROLLBACK TRAN
-	END CATCH
-	FETCH NEXT FROM Table_cursor INTO @TableId, @TableName;
-END
-
-CLOSE Table_cursor
-DEALLOCATE Table_cursor
-
-SET NOCOUNT ON;
-print ''
-print 'Put system out of Maintainance mode'
-UPDATE SQLSYSTEMVARIABLES SET VALUE = 0 WHERE PARM = 'CONFIGURATIONMODE'
-SET NOCOUNT OFF;
-
-print ''
-print 'Finished'
-```
-
-4. Perform an IISReset operation from the command line to restart the application server.  
 
 ## Add finance and operations tables in Azure Synapse Link
 
@@ -237,7 +114,7 @@ You can enable both finance and operations tables and finance and operations ent
 Currently, there are limitations with finance and operations tables and Azure Synapse Link. We're working to address these limitations. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/).
 
 - You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
-- Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables can be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+- Don't see all tables? Microsoft continues to enable all actively used finance and operations apps tables in Azure Synapse Link with application updates. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - Don't see your custom tables? You must enable change tracking for them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables). If you're using a cloud hosted environment (CHE), you must perform a database sync operation to reflect the changes.
 - You can select a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Azure Synapse Link profile.
 - If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
