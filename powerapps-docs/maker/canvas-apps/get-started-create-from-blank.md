@@ -22,11 +22,11 @@ In Excel, it's important to format your data as a table rather than just a range
 
 To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-|Options to create an app from Excel  | UI command |
-|---------|---------|
-|[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |   Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
-| [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |    Select **Start with Data** > **Connect external data** >  **From Excel**.   |
-|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)     |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
+|Create options using Excel  |Benefits | Navigation  |
+|---------|---------|---------|
+|[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |  Uploaded Excel data generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps.| Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
+| [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |  Using the Excel connector in Power Apps provides a straightforward, and fast method to create and deploy apps with data stored in Excel. It's especially advantageous for makers that already use Excel and want to enhance its functionality with minimal effort. Makers benefit from cloud access, easy data manipulation, rapid prototyping, and no need for a complex database setup. | Select **Start with Data** > **Connect external data** >  **From Excel**.   |
+|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)   | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by pre-designed templates, providing greater creative freedom and adaptability to suit your unique needs  |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
 
 
 ## Import an external Excel file
