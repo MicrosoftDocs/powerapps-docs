@@ -22,7 +22,6 @@ In Excel, it's important to format your data as a table rather than just a range
 
 To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-
 |Options to create an app from Excel  | UI command |
 |---------|---------|
 |[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |   Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
