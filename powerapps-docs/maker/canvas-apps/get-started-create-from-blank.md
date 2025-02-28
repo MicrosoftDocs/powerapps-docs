@@ -44,6 +44,7 @@ When you import your Excel data to Power Apps, it doesn't just stay as an Excel 
 1. When you're done, select **Save and open app**. The system will upload the first 20 rows of data so you can start reviewing the data in your app. The remaining data will be uploaded in the background.
 
 ### Known issues
+
 - The current data upload process doesn't take into account the environment data format setting.
 
 
@@ -90,12 +91,12 @@ Follow the example below to create an app with two screens where users can view 
     | Sunday | noon-2pm |Singh |Morgan |
     | Sunday | 2pm-4pm |Batye |Nguyen |
 
-1. [Format the table in Excel](how-to-excel-tips.md) and name it **Schedule** so that Power Apps can parse the information.
+1. [Format the table in Excel]((https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664)) and name it **Schedule** so that Power Apps can parse the information.
 
 1. Save the file under the name **eventsignup.xlsx**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md) such as OneDrive.
 
 > [!IMPORTANT]
-> You can use your own Excel file and review this example for general concepts only. However, the data in the Excel file must be [formatted as a table](how-to-excel-tips.md).
+> You can use your own Excel file and review this example for general concepts only. However, the data in the Excel file must be [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 ### Create a blank app and connect to data
 
