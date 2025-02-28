@@ -30,6 +30,8 @@ Customize Copilot chat to make it even more intelligent and relevant for your or
 
 You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling [Microsoft Dataverse tables questions](/power-apps/user/use-copilot-model-driven-apps) and out-of-the-box skills. Before customizing, make sure [Copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.
 
+<!-- [!VIDEO https://learn-video.azurefd.net/vod/player?id=d0439343-f464-4ec7-a92d-b3c528430fb5] -->
+
 > [!NOTE]
 >
 > - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
@@ -52,6 +54,7 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 
 ## Related information
 
+- [Video: Customize Copilot Chat Like a Pro in your model-driven app](https://www.youtube.com/watch?v=A1Hnp8dJUUg)
 - [Add Copilot chat to model-driven apps](../model-driven-apps/add-ai-copilot.md)
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
