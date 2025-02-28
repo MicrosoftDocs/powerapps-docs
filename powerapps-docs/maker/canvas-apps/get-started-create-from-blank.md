@@ -24,8 +24,8 @@ From the Power Apps home screen, select on of the following options:
 |Options to create an app from Excel  | UI command |
 |---------|---------|
 |[Import an external Excel or .CSV file  to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |   Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
-| [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file). Your data stay where it is. |    Select **Start with Data** > **Connect external data** >  **From Excel**.   |
-|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md##create-a-blank-canvas-app-and-then-add-excel-data)     |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
+| [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |    Select **Start with Data** > **Connect external data** >  **From Excel**.   |
+|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-then-add-excel-data)     |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
 
 
 ## Import an external Excel file
