@@ -9319,6 +9319,26 @@
       "source_path": "powerapps-docs/maker/common/maker-matching.md",
       "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/data-platform-create-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/get-started-create-from-data.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/connections/connection-excel.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/how-to-excel-tips.md",
+      "redirect_url": "https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664",
+      "redirect_document_id": false
     }
   ]
 }
