@@ -168,10 +168,10 @@ Follow the example below to create an app with two screens where users can view 
 
 1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (X).
 
-Users can sort and filter the gallery by volunteer name based on the **SortByColumns** and **Search** functions in that formula.
+    Users can sort and filter the gallery by volunteer name based on the **SortByColumns** and **Search** functions in that formula.
 
-- If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
-- If a user selects the sort button (between the refresh button and the plus button in the title bar), the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
+    - If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
+    - If a user selects the sort button (between the refresh button and the plus button in the title bar), the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
 
 For more information about these and other functions, see the [formula reference](formula-reference.md).
 
@@ -233,7 +233,7 @@ For more information about these and other functions, see the [formula reference
 
     `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
 
-When the user selects this icon, **ChangeScreen** appears with each field empty, so the user can create a record more easily.
+    When the user selects this icon, **ChangeScreen** appears with each field empty, so the user can create a record more easily.
 
 1. Select the right-pointing arrow for the first record in the gallery.
 
@@ -243,7 +243,7 @@ When the user selects this icon, **ChangeScreen** appears with each field empty,
 
     `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
 
-When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so the user can edit or delete the record more easily.
+    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so the user can edit or delete the record more easily.
 
 ### Configure icons on the change screen
 
