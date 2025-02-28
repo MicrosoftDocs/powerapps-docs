@@ -1,12 +1,12 @@
 ---
-title: Link Microsoft Lists using a lookup column in Power Apps
-description: Learn about linking Microsoft Lists using lookup columns in Microsoft Power Apps.
+title: Link Microsoft Lists or SharePoint lists using a lookup column in Power Apps
+description: Learn about linking Microsoft Lists or SharePoint lists, using lookup columns in Microsoft Power Apps.
 author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 2/3/2025
+ms.date: 3/1/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -17,14 +17,17 @@ contributors:
   - wimcoor
 ---
 
-# Link Microsoft Lists using a lookup column in Power Apps
+# Link Microsoft Lists or SharePoint lists using a lookup column in Power Apps
 
-This tutorial shows how to connect two lists with a lookup column in a canvas app.
+This tutorial shows you how to connect two lists with a lookup column in a canvas app in Power Apps.
 
 SharePoint provides two types of lookup columns:
 
 - **Lookup**: Links to another list. For example, an **Orders** list might have a lookup column that links to customers in a **Customer** list.
 - **Choice**: Selecting a column displays a menu of items you can choose.
+
+> [!NOTE]
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
 
 ## Prerequisites
 
@@ -125,6 +128,7 @@ Let's [preview the app](preview-app.md) and add items to your **Assets** list.
 
 ## Related information
 
+- Configure [Drop down control in Power Apps](controls/control-drop-down.md) in your list.
 - [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
 - [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
 

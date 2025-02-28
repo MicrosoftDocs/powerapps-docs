@@ -5,7 +5,7 @@ author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 2/7/2025
+ms.date: 3/1/2025
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType:
@@ -24,14 +24,14 @@ There are different ways to connect to SharePoint in a canvas app:
 - Connect to a SharePoint site to generate an app automatically from a list.
 - Create a SharePoint connection before you add data to a new or existing app.
 
+> [!NOTE]
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5).
+
 ## Connect SharePoint to an app by creating an app
 
 If you have a SharePoint site with a SharePoint list, you can create an app in Power Apps through the list menu in Microsoft Lists.
 
 The **Integrate** > **Power Apps** > **Create an app** menu in Microsoft Lists takes you to Power Apps and builds an app using your list as a data source.
-
-> [!TIP]
-> Microsoft Lists is where you view all SharePoint Online lists.
 
 Learn more in [Create a canvas app with data from Microsoft Lists](../app-from-sharepoint.md).
 
