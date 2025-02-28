@@ -249,8 +249,10 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Create your first app
+  - name: Create canvas apps
     items:
+    - name: Create a blank canvas app
+      href: ./canvas-apps/create-blank-app.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
@@ -262,11 +264,11 @@
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
+        href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
+        href: ./canvas-apps/get-started-create-from-blank
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -298,14 +300,6 @@
         href: ./canvas-apps/customize-forms-sharepoint.md
       - name: Cards
         href: ./canvas-apps/customize-card.md
-  - name: Create an app from scratch
-    items:
-    - name: With a blank app
-      href: ./canvas-apps/create-blank-app.md
-    - name: From Dataverse
-      href: ./canvas-apps/data-platform-create-app-scratch.md
-    - name: From Excel
-      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
@@ -333,7 +327,7 @@
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
-              href: canvas-apps/connections/connection-excel.md
+              href: canvas-apps/get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps
             - name: Microsoft Translator
               href: canvas-apps/connections/connection-microsoft-translator.md
             - name: Office 365 Outlook
@@ -364,8 +358,6 @@
           href: ./canvas-apps/add-manage-connections.md
         - name: Rename a data source in an app
           href: ./canvas-apps/rename-data-source.md
-        - name: Prepare Excel data
-          href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
           href: ./canvas-apps/delegation-overview.md
         - name: Manage gateways
