@@ -46,12 +46,12 @@ On the home screen, select **Start with a page design**.
 
 Upload your own image. If you don't have an image ready, select **Start with a sample image** and choose one of the available sample images.
 
-    > [!NOTE]
-    > When using your own image, ensure the image meets the image requirements mentioned in [Image requirements](#image-requirements).
+> [!NOTE]
+> When using your own image, ensure the image meets the image requirements mentioned in [Image requirements](#image-requirements).
 
-    For example, here are two sample images with acceptable and unacceptable qualities:
+For example, here are two sample images with acceptable and unacceptable qualities:
 
-    | Acceptable quality | Unacceptable quality |
+| Acceptable quality | Unacceptable quality |
     | - | - |
     | :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
 
@@ -76,37 +76,37 @@ Set up data. For the best experience, we recommend that you connect your app to 
 
 If you don't want to connect to Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app is created as-is, which means that the components you tagged in the previous step are generated directly. They aren't placed into a form component, and your app isn't connected to data.
 
-    :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to connect to Dataverse, or continue without creating a table now.":::
+:::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to connect to Dataverse, or continue without creating a table now.":::
 
 If you choose to skip connecting to Dataverse, select **Create** and the app is created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
 
-    > [!NOTE]
-    > The option to Connect to a Dataverse table will be disabled if you don't have Dataverse in your environment.
+> [!NOTE]
+> The option to Connect to a Dataverse table will be disabled if you don't have Dataverse in your environment.
 
 If you chose to connect to a Dataverse table and selected either Create new table or an existing table, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields identified in your image.
 
-    Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
+Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
 
-    :::image type="content" source="media/app-from-image/design-table.png" alt-text="Design the table, change columns and their properties.":::
+:::image type="content" source="media/app-from-image/design-table.png" alt-text="Design the table, change columns and their properties.":::
 
-    You can add a data column by drawing a new tag and setting the properties. When tagging columns, most of the time you'll draw a tag around two things: a label, and something the user will enter data into, like a text input.
+You can add a data column by drawing a new tag and setting the properties. When tagging columns, most of the time you'll draw a tag around two things: a label, and something the user will enter data into, like a text input.
 
-    > [!TIP]
-    > Select **Table properties** on the right-side of the screen to view and edit the properties for your new table.
+> [!TIP]
+> Select **Table properties** on the right-side of the screen to view and edit the properties for your new table.
 
-    Upon selecting **Next**, you'll be able to review the table and column structure.
+Upon selecting **Next**, you'll be able to review the table and column structure.
 
-    :::image type="content" source="media/app-from-image/review-table.png" alt-text="Review and confirm the table and column schema structure.":::
+:::image type="content" source="media/app-from-image/review-table.png" alt-text="Review and confirm the table and column schema structure.":::
 
 Once you've completed the review, select **Create** to create the app. App creation might take a minute or two.
 
 Once the app is created, your new app opens in Power Apps Studio so you can continue building and customizing your app.
 
-    :::image type="content" source="media/app-from-image/app-created.png" alt-text="The app has been created and opened in Power Apps Studio for you to customize.":::
+:::image type="content" source="media/app-from-image/app-created.png" alt-text="The app has been created and opened in Power Apps Studio for you to customize.":::
 
     If you chose to create a new table in Dataverse, your form will be automatically connected to your new table.
 
-    :::image type="content" source="media/app-from-image/data-source.png" alt-text="The table has been created and added to the app.":::
+:::image type="content" source="media/app-from-image/data-source.png" alt-text="The table has been created and added to the app.":::
 
 Continue to build and customize your app by adding more components or modifying the style properties.
 
