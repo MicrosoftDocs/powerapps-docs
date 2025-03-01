@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 3/1/2025
 ms.subservice: canvas-maker
-ms.author: niwaggon
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:

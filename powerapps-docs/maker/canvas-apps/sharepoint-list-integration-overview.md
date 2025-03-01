@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.reviewer: mkaur
 ms.date: 3/1/2025
 ms.subservice: canvas-maker
-ms.author: niwaggon
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -107,7 +107,7 @@ Learn more in [How to link lists from Microsoft Lists using a lookup column in P
 
 If you want your lookup column to be a dropdown list with options, use the [Choices](/power-platform/power-fx/reference/function-choices) function. The choices function returns a table of the possible values for a lookup column.
 
-For example, you can add a choices function to a [dropdown control](controls/control-drop-down) in your canvas app by adding this formula to your *Items* property of the control. You include your list name and the name of the lookup column in the formula.
+For example, you can add a choices function to a [dropdown control](controls/control-drop-down.md) in your canvas app by adding this formula to your *Items* property of the control. You include your list name and the name of the lookup column in the formula.
 
 ```powerappsfl
 Choices([@'Your list name'].Lookup_x0020_column)
