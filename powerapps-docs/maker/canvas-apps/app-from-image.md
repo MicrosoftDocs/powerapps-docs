@@ -52,8 +52,8 @@ Upload your own image. If you don't have an image ready, select **Start with a s
 For example, here are two sample images with acceptable and unacceptable qualities:
 
 | Acceptable quality | Unacceptable quality |
-    | - | - |
-    | :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
+| - | - |
+| :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
 
 1. Based on the dimensions of your image, the format (Tablet or Phone) will be automatically selected for you. For the best results, we recommend that you keep the suggested format. Using the suggested format will ensure the closest match between your input image and the final app. Select **Next**.
 
@@ -67,10 +67,10 @@ For example, here are two sample images with acceptable and unacceptable qualiti
 
     :::image type="content" source="media/app-from-image/design-components.png" alt-text="Design components for the app by selecting tags or creating a new tag and then choosing the tag control.":::
 
-    > [!TIP]
-    > Select the **Guidance** tab on the right-side of the screen to learn more about the different types of components and how to accurately tag each one.
+> [!TIP]
+> Select the **Guidance** tab on the right-side of the screen to learn more about the different types of components and how to accurately tag each one.
 
-    After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
+After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
 
 Set up data. For the best experience, we recommend that you connect your app to a data source by selecting **Connect to a Dataverse table**. If you choose this option and select **Next**, you're guided to either select an existing Dataverse table and map the fields in the image to the columns in that table or create a new table in Dataverse and add columns based on the form fields in your image. Your app contains a form component that is connected to your Dataverse table.
 
@@ -104,18 +104,18 @@ Once the app is created, your new app opens in Power Apps Studio so you can cont
 
 :::image type="content" source="media/app-from-image/app-created.png" alt-text="The app has been created and opened in Power Apps Studio for you to customize.":::
 
-    If you chose to create a new table in Dataverse, your form will be automatically connected to your new table.
+If you chose to create a new table in Dataverse, your form will be automatically connected to your new table.
 
 :::image type="content" source="media/app-from-image/data-source.png" alt-text="The table has been created and added to the app.":::
 
 Continue to build and customize your app by adding more components or modifying the style properties.
 
-    Here are some common next steps to take your app to the next level:
+Here are some common next steps to take your app to the next level:
 
-    1. [Add a new screen](add-screen-context-variables.md) named **Screen2** to your app and a gallery to display the records. Set the data source of the gallery to your new Dataverse table.
-    1. On the screen that contains your form, [add a button](add-form.md#edit-form-only-save-changes) (if you don't have one already) to submit the form data. Set the formula for the **OnSelect** property to `SubmitForm(Form1)`.
-    1. Select the form, then select the **Advanced** tab on the right-side of the screen and set the property **OnSuccess** to `Navigate(Screen2)`. This way, after the form data is successfully submitted, the app will navigate to the screen that contains the gallery to display the records.
-    1. Select **Play** on top-right side of the screen to preview your app. Fill in the form, and select **Submit** to submit the form. Your new record will appear in the gallery screen.
+1. [Add a new screen](add-screen-context-variables.md) named **Screen2** to your app and a gallery to display the records. Set the data source of the gallery to your new Dataverse table.
+1. On the screen that contains your form, [add a button](add-form.md#edit-form-only-save-changes) (if you don't have one already) to submit the form data. Set the formula for the **OnSelect** property to `SubmitForm(Form1)`.
+1. Select the form, then select the **Advanced** tab on the right-side of the screen and set the property **OnSuccess** to `Navigate(Screen2)`. This way, after the form data is successfully submitted, the app will navigate to the screen that contains the gallery to display the records.
+1. Select **Play** on top-right side of the screen to preview your app. Fill in the form, and select **Submit** to submit the form. Your new record will appear in the gallery screen.
 
 1. [Save and publish](save-publish-app.md) the app.
 
