@@ -32,15 +32,21 @@ When building an app from Dataverse, there's no need to create a connection from
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse:
 
-    - To create a single-page gallery app with a responsive layout, select one of these options:
-      - **Start with data** > **Select an existing table**.
-      - **Start with a page design** > **Gallery connected to table**.
-    - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**. Then, select a table and select **Create app**.
-    - To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, ensure you choose **Phone** format when creating the blank app.
+- To create a single-page gallery app with a responsive layout, select one of these options:
+
+    - **Start with data** > **Select an existing table** > **Create app**.
+    - **Start with a page design** > **Gallery connected to table**. Then, select a table and select **Create app**.
+      
+- To create a three screen mobile app, select **Start with an app template** > **From Dataverse**. Then, select a table and select **Create app**.
+
+- To create an app from scratch that uses data from Dataverse:
+- On the left navigatoin pane, select **Create** > **Start with blank cnavas** > **Phone size**.
 
 The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you to continue building the app.
 
-## Add a table
+To follow the example in this topic, create an app blank canvas app that uses Dataverse.
+
+### Add a table
 
 1. In the [app authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Data**.
 
@@ -54,7 +60,7 @@ The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you
 
     :::image type="content" source="media/data-platform-create-app-scratch/close-data.png" alt-text="Screenshot of the close data pane.":::
 
-## Add a list screen
+### Add a list screen
 
 1. On the command bar, select **New screen** > **List**.
 
@@ -85,7 +91,7 @@ The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you
 
     ![Rename Browse screen, gallery.](./media/data-platform-create-app-scratch/rename-browse.png)
 
-## Add a form screen
+### Add a form screen
 
 1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
 
@@ -115,7 +121,7 @@ The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you
 
 1. Rename this screen **FormScreen**.
 
-## Configure icons
+### Configure icons
 
 1. On the **BrowseScreen**, set the **OnSelect** property of the circular icon near the top of the screen to this formula:
 
@@ -155,7 +161,7 @@ The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you
 
     ![Trash icon.](./media/data-platform-create-app-scratch/trash-icon.png)
 
-## Test the app
+### Test the app
 
 1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
 
@@ -163,10 +169,6 @@ The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you
 
 1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
 
-## Next steps
-
-- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
-- [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
