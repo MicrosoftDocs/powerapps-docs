@@ -158,7 +158,7 @@ Test and distribute your application. If you face any issue while testing, [chec
 
   
 ## Register your app on Azure portal manually (optional)
-You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+You can automatically create your app registration in the wrap wizard as mentioned in [step 3](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
@@ -176,7 +176,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 ## Configure the API permissions for your app manually (optional)
 
-When you complete [step 4](wrap-how-to.md#step-3-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
+When you complete [step 3](wrap-how-to.md#step-3-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
 
 If you get errors in wrap wizard, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
 
