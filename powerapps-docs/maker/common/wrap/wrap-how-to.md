@@ -53,69 +53,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 
 2.  Select **Next**.
 
-### Step 2: Register app
-
-On the **Register your app** screen, register your application manually in Azure to establish a trust relationship between your app and the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
-
-Your app must be registered in Microsoft Entra so that your app users can sign in. If you have already registered, find your registration in the owned registration field.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
-
-If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
-
-- Select **New app registration** to create a new registration for your app automatically.
-- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you have selected Android as one of your platforms while creating and building your wrap project.
-
-    > [!NOTE]
-    > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
-    > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
-
-   > [!div class="mx-imgBorder"]
-   > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
-
-#### Configure admin allowed third-party apps
-
-The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
-
-When you register the app, Azure admin needs to provide access to continue. Follow these steps to grant access:
-- Open Windows PowerShell and run it as an administrator.
-- Execute the command- `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force`.
-- Set the execution policy with: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`.
-- Import the module using: `Import-Module -Name Microsoft.PowerApps.Administration.PowerShell`.
-- Run `Add-AdminAllowedThirdPartyApps` and provide the App ID for which admin access is needed.
-- Run `Get-AdminAllowedThirdPartyApps` to verify if your app name appears in the list.
-
-Once you complete the preceding steps the registration screen look like the following screenshot.
-
- :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
-
-#### API permissions
-
-When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
-
- :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
-
-> [!NOTE]
-> In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
-
-### Step 3: Configure branding
-
-1. On the **Configure Branding Step**, set the following look and feel options for your app:
-
-     > [!NOTE]
-     > All the images must be in .png format. A default image will be used if no custom images are selected.
-   
-   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger. 
-   - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
-   - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
-   - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
-   - **Button fill color**: Hexadecimal color code used to fill the button color.
-   - **Status bar text theme**: Color for the status bar text at the top of the app.
-   
-3.  Select **Next**.
-
-### Step 4: Target platform 
+### Step 2: Target platform 
 
 1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
@@ -124,8 +62,10 @@ When you register the app, Azure admin also needs to grant access to API permiss
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and select **Next**. 
+3. Select the **Azure Key Vault URI** from the list and select **Next**. 
 If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
+
+4. Set the **Sign my app** toggle to **On** or **Off**.
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms-updated.png "Select target platforms")
@@ -141,11 +81,68 @@ You can also code sign your mobile app package manually instead of using automat
 
 4.  Select **Next**.
 
-### Step 5: Azure blob storage
+### Step 3: Register app
+
+On the **Register your app** screen, register your application manually in Azure to establish a trust relationship between your app and the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
+
+Your app must be registered in Microsoft Entra so that your app users can sign in. If you have already registered, find your registration in the owned registration field.
+
+If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
+
+- Select **New app registration** to create a new registration for your app automatically.
+- You'll need to provide **Application name** and **Android signature hash**, as they're mandatory fields. **Application name** is required because it's the customer-facing name of the application. **Android signature hash** is necessary if you have selected Android as one of your platforms while creating and building your wrap project.
+
+    > [!NOTE]
+    > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
+    > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
+
+    :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
+
+#### Configure admin allowed third-party apps
+
+The wrap wizard configures all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to troubleshoot this step. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+
+When you register the app, Azure admin needs to provide access to continue. Follow these steps to grant access:
+- Open Windows PowerShell and run it as an administrator.
+- Execute the command- `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force`.
+- Set the execution policy with: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`.
+- Import the module using: `Import-Module -Name Microsoft.PowerApps.Administration.PowerShell`.
+- Run `Add-AdminAllowedThirdPartyApps` and provide the App ID for which admin access is needed.
+- Run `Get-AdminAllowedThirdPartyApps` to verify if your app name appears in the list.
+
+Once you complete the preceding steps the registration screen look like the following screenshot.
+
+ :::image type="content" source="media/how-to-v2/new-app-reg-updated.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/new-app-reg-updated.png":::
+
+#### API permissions
+
+When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
+
+ :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
+
+> [!NOTE]
+> In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
+
+### Step 4: Configure branding
+
+1. On the **Configure Branding Step**, set the following look and feel options for your app:
+
+     > [!NOTE]
+     > All the images must be in .png format. A default image will be used if no custom images are selected.
+   
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger.
+   - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
+   - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
+   - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
+   - **Button fill color**: Hexadecimal color code used to fill the button color.
+   - **Status bar text theme**: Color for the status bar text at the top of the app.
+   
+3.  Select **Next**.
+
+### Step 5: Manage Output
 
 1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
 1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
-1. Add the Azure key vault URI by clicking on the drop-down list.
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
@@ -161,7 +158,7 @@ Test and distribute your application. If you face any issue while testing, [chec
 
   
 ## Register your app on Azure portal manually (optional)
-You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-2-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
@@ -179,7 +176,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 ## Configure the API permissions for your app manually (optional)
 
-When you complete [step 4](wrap-how-to.md#step-2-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
+When you complete [step 4](wrap-how-to.md#step-3-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
 
 If you get errors in wrap wizard, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
 
