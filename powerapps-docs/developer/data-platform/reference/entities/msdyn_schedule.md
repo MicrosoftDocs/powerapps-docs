@@ -1,8 +1,7 @@
 ---
 title: "Schedule (msdyn_schedule) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Schedule (msdyn_schedule) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

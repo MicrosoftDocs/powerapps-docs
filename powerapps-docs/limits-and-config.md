@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/04/2024
+ms.date: 1/30/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -98,6 +98,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
+| \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
 | \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
 | \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
@@ -107,7 +108,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | localhost | http | Power Apps Mobile|
 | 127.0.0.1 | http <br><br>You might need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
-| augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
+| augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
