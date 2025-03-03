@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app from scratch using Microsoft Dataverse
+title: Create a canvas app using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: mduelae
 
@@ -15,16 +15,16 @@ contributors:
   - mduelae
   - lancedmicrosoft
 ---
-# Create a canvas app from scratch using Microsoft Dataverse
+# Create a canvas app using Microsoft Dataverse
 
 Create a canvas app to manage data stored in Dataverse, using either built-in standard tables, custom tables created by your organization, or both.
 
-When building an app from Dataverse, there's no need to create a connection from Power Apps, unlike with data sources such as SharePoint, Dynamics 365, or Salesforce. Simply specify the tables you want to display or manage in the app.
+When building an app from Dataverse, you don't need to create a connection from Power Apps, unlike with data sources such as SharePoint, Dynamics 365, or Excel. All you need to do is specify the tables you want to display or manage in the app.
 
 ## Prerequisites
 
 - [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
+- You must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Create an app
 
@@ -40,11 +40,11 @@ When building an app from Dataverse, there's no need to create a connection from
 - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**. Then, select a table and select **Create app**.
 
 - To create an app from scratch that uses data from Dataverse:
-- On the left navigatoin pane, select **Create** > **Start with blank cnavas** > **Phone size**.
+- On the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.
 
-The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you to continue building the app.
+The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
 
-To follow the example in this topic, create an app blank canvas app that uses Dataverse.
+To follow the example in this article, create a blank canvas app that uses Dataverse.
 
 ### Add a table
 
@@ -72,13 +72,13 @@ To follow the example in this topic, create an app blank canvas app that uses Da
 
    - The gallery should show data from the **Accounts** table.
    - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
-   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
+   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list shows only those accounts for which the **name** field contains the characters that the user specified.
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
      ![Set the gallery's Items property.](./media/data-platform-create-app-scratch/gallery-items.png)
 
-1. In the gallery's **Properties** pane, set the **Layout** to **Title** and edit.
+1. In the gallery's **Properties** pane, set the **Layout** to **Title**.
 1. Edit the **Title** text property and rename it to **Browse**. More information: [Customize a gallery](customize-layout-sharepoint.md)
 
     ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
