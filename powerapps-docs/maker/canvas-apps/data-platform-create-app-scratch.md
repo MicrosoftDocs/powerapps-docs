@@ -17,23 +17,36 @@ contributors:
 ---
 # Create a canvas app from scratch using Microsoft Dataverse
 
-Build a canvas app to manage data that's stored in Dataverse, using standard tables (which are built in), custom tables (which your organization creates), or both.
+Create a canvas app to manage data stored in Dataverse, using either built-in standard tables, custom tables created by your organization, or both.
 
-When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You only need to specify the tables that you want to show or manage in the app.
+When building an app from Dataverse, there's no need to create a connection from Power Apps, unlike with data sources such as SharePoint, Dynamics 365, or Salesforce. Simply specify the tables you want to display or manage in the app.
 
 ## Prerequisites
 
-- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
 - To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
 
-## Open a blank app
+## Create an app
 
-To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** format.
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse:
+
+    - To create a single-page gallery app with a responsive layout, select one of these options:
+      - **Start with data** > **Select an existing table**.
+      - **Start with a page design** > **Gallery connected to table**.
+    - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**. Then, select a table and select **Create app**.
+    - To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, ensure you choose **Phone** format when creating the blank app.
+
+The app is create and [Power Apps Studio](power-apps-studio.md) opens, where you to continue building the app.
 
 ## Add a table
 
-1. In the [app authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Data**. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** to create this connection.
+1. In the [app authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Data**.
+
+
+   > [!NOTE]
+   > If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** to create this connection.
 
 1. Select **Add data**, enter **Accounts** in the search, and select it.
 
