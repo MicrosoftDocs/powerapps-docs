@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 06/12/2023
 ms.custom:
   - ""
-ms.topic: troubleshooting
+ms.topic: article
 ms.assetid: caa4e3f2-9700-49b8-87ed-8a68e8878b02
 author: jowells1 # GitHub ID
 ms.subservice: dataverse-maker

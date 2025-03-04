@@ -34,7 +34,7 @@ The following list explains what you'll need before you can start using wrap fea
 1. You need access to:
 
     - One or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project.
-    - [Microsoft App Center](https://appcenter.ms/) to add new organizations and apps, which should be in the same environment as your Azure portal and Power Apps.
+    - Create azure blob storage and add the account name and container name. [More information:](/azure/storage/common/storage-account-create?tabs=azure-portal)
     - [Azure portal](https://portal.azure.com/) to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites) and to register your app, which should be within the same environment as your Power Apps.
 
 1. An Azure admin must grant you access to use the specific wrap app. More information: [API permissions](wrap-how-to.md#api-permissions).

@@ -41,6 +41,7 @@ Row summaries can be configured for table main forms.
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
+   - If **Row summary** is disabled, hover over the words to find out the reason. For example, the table must have at least one row of data for the summary option to be enabled.   
 1. In the **Prompt** box, add the columns that you want included in the summary by selecting **Add** or by typing */*. You can also specify formatting for the summary, such as make it a bulleted list or a paragraph. More information: [Write a good prompt for the row summary](#write-a-good-prompt-for-the-row-summary)
    :::image type="content" source="media/row-summary-main-form-example.png" alt-text="Columns added for main form summary " lightbox="media/row-summary-main-form-example.png":::
 1. Select **Test prompt** to display a preview of the summary.
