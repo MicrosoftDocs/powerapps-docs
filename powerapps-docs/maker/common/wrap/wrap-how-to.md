@@ -44,8 +44,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
    - **Primary app**: Select the app your end users see when the mobile app is launched.
    - **Secondary app(s)**: Optional other apps that you can bundle the same build for mobile app package along with the Primary app.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps-updated.png "Choose the apps to wrap")
+    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/select-apps-updated.png":::
   
      > [!NOTE]
      > - You can use the same Primary app in multiple wrap projects.
@@ -67,8 +66,7 @@ If you don't have any entries in **Azure Key Vault URI** list, you need to creat
 
 4. Set the **Sign my app** toggle to **On** or **Off**.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms-updated.png "Select target platforms")
+    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
@@ -145,6 +143,8 @@ When you register the app, Azure admin also needs to grant access to API permiss
 1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
+
+:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/manage-output.png":::
 
 ### Step 6: Wrap up
 
