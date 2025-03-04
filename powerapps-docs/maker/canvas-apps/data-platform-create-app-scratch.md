@@ -23,14 +23,14 @@ When building an app from Dataverse, you don't need to create a connection from 
 
 ## Prerequisites
 
-- [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
+- [Switch to an environment](intro-maker-portal.md#choose-an-environment) where a database is created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
 - You must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
 
 ## Create an app
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse:
+1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse.
 
 |Create options using Dataverse  |Benefits  |Navigation  |
 |---------|---------|---------|
@@ -43,7 +43,7 @@ When building an app from Dataverse, you don't need to create a connection from 
 
 ## Add a Dataverse table in a blank app
 
-To help you understand how to create an app with data from Dataverse, let's start by creating a blank app and then add data from Dataverse.
+To help you understand how to create an app with data from Dataverse, let's start by creating a blank app and then adding data from Dataverse.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
@@ -54,7 +54,7 @@ To help you understand how to create an app with data from Dataverse, let's star
    > [!NOTE]
    > If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** to create this connection.
 
-1. Select **Add data**, enter **Accounts** in the search, and select it.
+1. Select **Add data**, enter **Accounts** in the search box, and select it.
 
 1. Close the **Data** pane by selecting the close icon in the upper right corner.
 
@@ -99,7 +99,7 @@ To help you understand how to create an app with data from Dataverse, let's star
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
-1. Select **Add field**, and then select the check boxes for these fields:
+1. Select **Add field**, and then select the checkboxes for these fields:
 
     - **Account Name**
     - **Address 1: Street 1**
@@ -163,11 +163,10 @@ To help you understand how to create an app with data from Dataverse, let's star
 
 ### Test the app
 
-1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
+1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [Preview an app](preview-app.md)
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
-
-1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
+1. Add an account, edit the account that you added, start to update the account, but cancel your changes, and then delete the account.
 
 
 
