@@ -42,10 +42,13 @@ When building an app from Dataverse, you don't need to create a connection from 
 The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
 
 
-## Add a table
+## Add a Dataverse table in a blank app
 
-Create a blank canvas app and follow the instructions below.
+To help you better understand how to create an app with data from Dataverse, let's start by creating a blank app and then add data from Dataverse.
 
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+
+1. On the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.
 
 1. When Power App Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
 
