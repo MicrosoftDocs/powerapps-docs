@@ -69,7 +69,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
-- Only **https:** URIs are supported when using the PowerApps Visual in PowerBI.
+- Only **https:** URIs are supported when using the Power Apps Visual in PowerBI.
 - Power Apps visual is only supported for [Embed for your organization](/power-bi/developer/embedded/embed-organization-app). [Embed for your customers](/power-bi/developer/embedded/embed-customer-app) is not supported.
 - The maximum number of records that can be passed from Power BI to Power Apps visual using "PowerBIIntegration" object is limited to 1000.
 - Power Apps visual is only supported for [guest users](share-app-guests.md) when the following conditions are met:
