@@ -24,6 +24,12 @@ Wrap offers several benefits, effectively addressing challenges like increasing 
 
 1. **Custom distribution channels**: App makers now have the flexibility to distribute their apps through their own preferred channels, providing more control and potentially reaching their target audience more effectively, rather than relying solely on standard platforms like the Play Store or App Store.
 
+1. **Power Apps Mobile for Frontline Workers (FLWs)**: Power Apps Mobile is designed primarily for frontline workers (FLWs). To enable FLWs outside of the organization to log in, the wrap APK supports guest account logins. Follow the steps mentioned in [Frequently asked questions for wrap: Why am I not able to sign into my wrapped application?](faq.yml) to log in.
+
+1. **Access without MFA or Intune**: The Power Apps mobile app can be accessed without multifactor authentication (MFA) or installing Microsoft Intune if the organization's conditional policies allow it.
+
+1. **Offline Features**: The wrap app supports offline features.
+
 ## Limitations of Wrap
 
 1. **Logout button**: The sign out button option for the user is missing.
