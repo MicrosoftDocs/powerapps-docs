@@ -137,7 +137,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 ### List from a data source
 The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Microsoft Dataverse database has been created and sample data added.
 
-1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** table](../data-platform-create-app-scratch.md#add-a-table).
+1. [Open a blank app](../data-platform-create-app-scratch.md#add-a-dataverse-table-in-a-blank-app), and add the **Accounts** table from Dataverse. 
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
