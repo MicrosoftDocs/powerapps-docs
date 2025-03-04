@@ -24,7 +24,7 @@ Create a canvas app using a sample template. Create a mobile app with three scre
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen, select the **Start with an app template** tile.
-1. If your data is stored in Dataverse, select **From Dataverse**. Or choose from one of the external data sources:
+1. If your data is stored in [Dataverse](data-platform-create-app-scratch.md), select **From Dataverse**. Or choose from one of the external data sources:
       - **From SharePoint**
       - **From Excel**
       - **From SQL**
