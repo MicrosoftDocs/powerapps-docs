@@ -43,7 +43,7 @@ When building an app from Dataverse, you don't need to create a connection from 
 
 ## Add a Dataverse table in a blank app
 
-To help you better understand how to create an app with data from Dataverse, let's start by creating a blank app and then add data from Dataverse.
+To help you understand how to create an app with data from Dataverse, let's start by creating a blank app and then add data from Dataverse.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
