@@ -2,17 +2,17 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 10/28/2024
+ms.date: 03/04/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "JasonHQX"
+author: "MilindaV2"
 ms.assetid: 
 ms.subservice: dataverse-maker
-ms.author: "jasonhuang"
+ms.author: "milindav"
 search.audienceType: 
   - maker
 ---
@@ -91,7 +91,7 @@ You can also build your own data pipeline to consume incremental data. However, 
 - You can view the **model.json** file located within each time stamped folder to read metadata such as column names for the data contained in table folders. Notice that each model.json file in the folder located within  time stamped folders contain metadata for all the tables, not just the tables contained within the time stamped folder.
 - Avoid using other log files such as the Synapse.log file. This file is used for internal purposes and might not reflect accurate data.
 - Consider deleting obsolete incremental folders from your Azure Data lake after you have finished processing. At present, Synapse Link maintains a lease on these files in Azure Storage to recover from any failures. The system might release the lease after some time.
-- You should modify or delete the "current folder" ie. the folder contained in  **Changelog/changelog.info** file. IF you change this file, system will pause processing data. 
+- You should modify or delete the "current folder" that is the folder contained in the **Changelog/changelog.info** file. If you change this file, system will pause processing data. 
 
 :::image type="content" source="media/Synapse-Link-storage-change-Log-folder.png" alt-text="Incremental folders in Azure Data lake storage created by Synapse Link":::
 
