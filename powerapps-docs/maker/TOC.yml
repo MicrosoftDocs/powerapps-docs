@@ -1142,30 +1142,6 @@
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
-  - name: How-to guides
-    items:
-    - name: Create a canvas app connected to Dataverse from scratch
-      href: ./canvas-apps/how-to/build-connected-dataverse.md
-    - name: Create a canvas app with Power BI visual
-      href: ./canvas-apps/how-to/build-powerbi-visual.md
-    - name: Create a canvas app that can trigger a Power Automate flow
-      href: ./canvas-apps/how-to/trigger-flow.md
-    - name: Create a canvas app to scan barcodes
-      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
-    - name: Create an app that uses mobile sensors
-      href: ./canvas-apps/how-to/mobile-sensors.md
-    - name: Create an app with 3D and mixed reality controls
-      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
-    - name: Create an app to view a shape in mixed reality
-      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
-    - name: Create an app with address input and map controls
-      href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measuring Camera control
-      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
-    - name: Create a canvas app with deep link to a specific screen
-      href: ./canvas-apps/how-to/deep-linking.md
-    - name: Work with the PDF function (experimental)
-      href: ./canvas-apps/how-to/pdf-function.md
   - name: Preview an app
     href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
@@ -1224,6 +1200,30 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
+  - name: How-to guides
+    items:
+    - name: Create a canvas app connected to Dataverse from scratch
+      href: ./canvas-apps/how-to/build-connected-dataverse.md
+    - name: Create a canvas app with Power BI visual
+      href: ./canvas-apps/how-to/build-powerbi-visual.md
+    - name: Create a canvas app that can trigger a Power Automate flow
+      href: ./canvas-apps/how-to/trigger-flow.md
+    - name: Create a canvas app to scan barcodes
+      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app with 3D and mixed reality controls
+      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
+    - name: Create an app with address input and map controls
+      href: ./canvas-apps/how-to/mobile-apps-address-map.md
+    - name: Create an app using the Measuring Camera control
+      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md 
   - name: Customize a SharePoint form
     items:
       - name: Make basic changes
