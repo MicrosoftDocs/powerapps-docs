@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 10/20/2021
+ms.date: 3/10/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -18,9 +18,7 @@ contributors:
 
 # Create a canvas app from a template
 
-Create a canvas app using a sample template. Explore design possibilities and concepts to develop your own canvas app.
-
-Create a mobile app with three screens or use one of the available templates based on real-world scenarios with fictitious data.
+Create a canvas app using a sample template. Create a mobile app with three screens or use one of the available templates based on real-world scenarios with fictitious data.
 
 ## Create a three screen mobile app
 
@@ -33,6 +31,12 @@ Create a mobile app with three screens or use one of the available templates bas
 
 1. Select the data that will appear in your app. When ready, select **Create app**.
 
+1. The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it.
+
+1. Preview the app by pressing F5 or selecting the play button near the upper-right corner.
+
+1. When ready, [save and publish](save-publish-app.md) the app.
+
 ## Use a template to create an app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -40,6 +44,8 @@ Create a mobile app with three screens or use one of the available templates bas
 1. On the home screen, select the **Start from template** tile.
 
 1. Select a template from the list of **other app templates**.
+
+
 
 1. Update the **App name**, then select **Next**.
 
@@ -49,13 +55,12 @@ Create a mobile app with three screens or use one of the available templates bas
 
 1. After you select or connect to storage from the available choices, select **Done**.
 
+1. The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it.
+
 1. Preview the app by pressing F5 or selecting the play button near the upper-right corner.
 
 1. When ready, [save and publish](save-publish-app.md) the app.
 
-## Run the app
-
-The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it. Before making any changes, see how the app works in [preview mode](preview-app.md).
 
 ### See also
 
