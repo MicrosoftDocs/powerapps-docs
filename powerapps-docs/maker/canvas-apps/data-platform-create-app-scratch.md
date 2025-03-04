@@ -38,8 +38,7 @@ When building an app from Dataverse, you don't need to create a connection from 
 |Three screen mobile app     |   Utilize your existing data in Dataverse to create an app using a template with three screens, offering options to browse, view details, create, and edit.     | **Start with an app template** > **From Dataverse**. Then, select a table > **Create app**.    |
 |Blank app that uses data from Dataverse     |      Use your existing business data in Dataverse to customize your app with flexibility, free from the constraints of pre-designed templates.   |        On the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.  |
 
-
-The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
+3. The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
 
 
 ## Add a Dataverse table in a blank app
