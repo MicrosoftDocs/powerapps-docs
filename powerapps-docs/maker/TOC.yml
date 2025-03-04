@@ -1652,7 +1652,7 @@
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
         - name: Accessibility in Power Apps app designer
-          href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+          href: ./model-driven-apps/accessibility-app-designer-site-map-designer-my-apps-page.md
         - name: Add a table as a lookup
           href: ./model-driven-apps/team-entity-lookup.md
         - name: Use the classic form editor

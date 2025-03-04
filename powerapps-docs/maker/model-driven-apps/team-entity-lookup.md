@@ -2,7 +2,7 @@
 title: "Add the team table as a lookup option in your app | MicrosoftDocs"
 description: "Learn how to add the team table as a lookup option in your app"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 03/04/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,6 +21,13 @@ search.audienceType:
 ---
 # Add a table as a lookup option in your app
 
+This article describes a feature that uses the classic app designer.
+
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
+
 With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
 
 > [!div class="mx-imgBorder"] 
@@ -31,7 +38,7 @@ However, if the **User** table is included in the app but the **Team** table is 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with users only.](media/entity-lookup-user-only.png "Entity lookup with users only")
 
-This can be resolved by adding the **Team** table to the app using the [App Designer](model-driven-app-glossary.md#app-designer).
+This can be resolved by adding the **Team** table to the app using the app designer.
 
 ## Add a related table to an app to enable the lookup
 
