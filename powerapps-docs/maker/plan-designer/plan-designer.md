@@ -138,6 +138,19 @@ To save your plan:
   :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
 
 
+### Known limitations
+
+The **Objects** view is currently in preview, and several functions that are native to the solution view don't work in the embedded Plan designer experience. 
+
+Navigation Issues:
+
+- When using the **Back** button after creating a new canvas app, model-driven app, Page, component library, or connection role, users are taken to the **All** section of **Objects** instead of their last location.
+- After saving and exiting from the row summary, users are redirected to the **All** section of **Objects** rather than their previous location.
+- Editing a table and then using the **Back** button also redirects users to the **All** section of **Objects** instead of their last location.
+- Creating a new table using data workspace and then using the **Back** button takes users to the **All** section of **Objects** rather than their last location.
+- When creating a new column security profile in apps, saving, and then using the **Back** button, the **Back** button doesn't work and results in continuous loading.
+- Navigating to **Table** > **Forms**/**Views**/**Command** and then using the **Back** button redirects users to the **All** section of **Objects** instead of their last location.
+
 ## View and edit plans
 
 When the Plan designer is turned on, you'll see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make any necessary edits.
