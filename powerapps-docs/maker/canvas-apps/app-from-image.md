@@ -4,7 +4,7 @@ description: Learn about how to use your own designs saved in image formats and 
 author: norliu
 ms.topic: article
 ms.custom: canvas
-ms.date: 03/10/2025
+ms.date: 03/13/2025
 ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: mkaur
@@ -17,20 +17,21 @@ contributors:
 
 # Create a canvas app from an image 
 
-The app-making journey typically involves a design phase to plan what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
+The app-making journey typically involves a design phase to plan what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or an image of a legacy app, it can take considerable time to build the app from scratch.
 
-Create an app from a visual design and connect it to data through a few simple guided steps.
+Create an app from a visual design and connect it to data through a few simple, guided steps.
 
 
 > [!NOTE]
-> - The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
+> - The styling of the components in the app, such as fonts and colors, is based on the **Office Blue** theme in Power Apps.
 > - If you want the exact design styles to be preserved when you create your app, consider creating a [canvas app from Figma](figma/overview.md).
 > - Power Apps doesn't persist the image that you upload. The uploaded image is only processed in-memory to generate the app.
 
 ## Prerequisites
 
-- A Power Apps license. If you don't have a license for Power Apps, you can [sign-up for free](../signup-for-powerapps.md).
-- If you're using your own image, the image file extension must be .jpg or .png, file size no more than 4MB. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
+- A Power Apps license. If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+- If you're using your own image, the image file extension must be .jpg or .png, and the file size must be no more than 4 MB.
+- The image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
 
 ## Create an app
 
@@ -55,11 +56,11 @@ For example, here are two sample images with acceptable and unacceptable qualiti
 | - | - |
 | :::image type="content" source="media/app-from-image/hand-drawn-good.png" alt-text="Example hand drawn image with acceptable quality."::: | :::image type="content" source="media/app-from-image/hand-drawn-bad.png" alt-text="Example hand drawn image with unacceptable quality."::: |
 
-1. Based on the dimensions of your image, the format (Tablet or Phone) will be automatically selected for you. For the best results, we recommend that you keep the suggested format. Using the suggested format will ensure the closest match between your input image and the final app. Select **Next**.
+Based on the dimensions of your image, the format (tablet or phone) is automatically selected for you. For the best results, we recommend that you keep the suggested format. Using the suggested format ensures the closest match between your input image and the final app. Select **Next**.
 
     :::image type="content" source="media/app-from-image/choose-image.png" alt-text="Provide image name, image type, and layout.":::
 
-1. Your image will be automatically tagged based on the components that were identified. For example, in the following sample image, the box that says “Enter your first name” was identified as a **Text input** control.
+1. Your image is automatically tagged based on the components that were identified. For example, in the following sample image, the box that says “Enter your first name” was identified as a **Text input** control.
 
     You can draw a new tag by selecting and dragging to select the region that encompasses the component. Then, choose the type of component that you want to associate the new tag with.
 
@@ -83,11 +84,11 @@ If you choose to skip connecting to Dataverse, select **Create** and the app is 
 > [!NOTE]
 > The option to Connect to a Dataverse table will be disabled if you don't have Dataverse in your environment.
 
-If you chose to connect to a Dataverse table and selected either Create new table or an existing table, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields identified in your image.
+If you chose to connect to a Dataverse table and selected either create new table or an existing table, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields identified in your image.
 
 Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
 
-:::image type="content" source="media/app-from-image/design-table.png" alt-text="Design the table, change columns and their properties.":::
+:::image type="content" source="media/app-from-image/design-table.png" alt-text="Design the table, change columns, and their properties.":::
 
 You can add a data column by drawing a new tag and setting the properties. When tagging columns, most of the time you'll draw a tag around two things: a label, and something the user will enter data into, like a text input.
 
@@ -121,11 +122,11 @@ Here are some common next steps to take your app to the next level:
 
 ## Image requirements
 
-- The image you want to upload must have the file extension of .jpg or .png. If you have a design image with another file extension, save the image file with a .jpg or .png file extension to use it with this feature.
+- The image you want to upload must have the file extension .jpg or .png. If you have a design image with another file extension, save the image file with a .jpg or .png file extension to use it with this feature.
 - Image size must be less than 4 MB.
-- If you're using screenshots or digital sketches, alter the background to light, pure color if white isn't available.
+- If you're using screenshots or digital sketches, alter the background to a light, pure color if white isn't available.
 - If you're taking a picture, use higher contrast or make it brighter. Ensure the part you want to tag is clear and bright.
-- If you're taking a picture using a camera or phone, use higher contrast to favor light backgrounds. Use any available photo editing apps to edit the picture contrast.
+- If you're taking a picture using a camera or phone, use higher contrast to favor light backgrounds. Use any available photo-editing apps to edit the picture contrast.
 - If you're using hand-drawn images, try to use a **white** sketch pad without any lines on it.
 
 ## Limitations
@@ -133,7 +134,7 @@ Here are some common next steps to take your app to the next level:
 - Supported components: [Button](controls/control-button.md), [Check box](controls/control-check-box.md), [Data cards](working-with-cards.md), [Date picker](controls/control-date-picker.md), [Drop down](controls/control-drop-down.md), [Edit form](controls/control-form-detail.md), [Label](controls/control-text-box.md), [Radio](controls/control-radio.md), [Rating](controls/control-rating.md), [Slider](controls/control-slider.md), [Text input](controls/control-text-input.md), and [Toggle](controls/control-toggle.md)
 - Only canvas apps are supported.
 - You can upload only one image at a time to create an app.
-- Complex forms, forms with colored backgrounds, multi-page forms, and forms with underlined input boxes are not supported.
+- Complex forms, forms with colored backgrounds, multipage forms, and forms with underlined input boxes are not supported.
 - Support for styles is limited. The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
 - Support for responsiveness is limited. More information: [Building responsive canvas apps](build-responsive-apps.md)
 
