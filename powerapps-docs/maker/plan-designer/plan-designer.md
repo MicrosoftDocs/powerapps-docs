@@ -4,7 +4,7 @@ description: Learn how to use the Plan designer to create comprehensive business
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 2/5/2025
+ms.date: 3/13/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -124,7 +124,7 @@ For canvas apps, a preview of the app is displayed with a welcome screen and oth
 
 ## Save plan to a solution
 
-When you save a plan, it is stored within a solution. This action also enables the Objects view in the Plan Designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan Designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
+When you save a plan, it is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
 
 :::image type="content" source="media/pa-objects-view.png" alt-text="Screenshot of the objects view.":::
 
