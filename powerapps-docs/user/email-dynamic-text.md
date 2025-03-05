@@ -23,7 +23,7 @@ Dynamic text replaces a placeholder entity with the value of the entity when you
 You can insert dynamic text in existing email templates or templates that you create.
 
 > [!NOTE]
-> Inserting dynamic text in a hyperlink or an anchor tag isn't supported.
+> Dynamic text in a hyperlink or an anchor tag isn't supported.
 
 1. Select **Email Template** to edit an existing template or create a new email template. 
 
