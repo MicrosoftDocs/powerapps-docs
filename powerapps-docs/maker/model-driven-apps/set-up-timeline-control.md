@@ -546,7 +546,7 @@ If you're using a Dynamics 365 app other than Customer Service Hub or Customer S
 1. On the app designer command bar, select **Add page**, select **Table based view and form**, and then select **Next**.
 1. In the **Table** list, select **Post Rule Configuration**, and then select **Add**.
    > [!NOTE]
-   > If you don't have the Post Rule Configuration table, you're environment doesn't have the required Dynamics 365 app installed.
+   > If you don't have the Post Rule Configuration table, your environment doesn't have the required Dynamics 365 app installed.
 1. Select **Save**, and then select **Publish**.
 
 ## Let users pin and unpin activities to the top of timeline
