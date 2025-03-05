@@ -110,8 +110,7 @@ sections:
       - question: |
           Do we need a premium license to package the app?
         answer: |
-          Yes, you need a premium license to package the app. Specifically, packaging apps using premium connectors, Dataverse entities, on-premises data gateways, or custom APIs requires a premium license. You can check the app's license designation in the Power Apps maker portal to determine if it requires a premium license. More information: [How to check license designation for an app](../../canvas-apps/license-designation.md)
-
+          No, you don't need a premium license for wrap. However, if your APK uses certain connectors, you will need to pay according to the requirements of those connectors.
       - question: |
           Can I delete wrap projects?
         answer: |
@@ -137,6 +136,22 @@ sections:
           1. Verify if the user has access to the PowerApps application. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md)
           2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
           3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
+
+      - question: | 
+          When do you need to re-wrap?
+        answer: |
+          - If you're an existing customer who has already created and successfully distributed a wrapped app, you don't need to go through the wrapping process again. To ensure users receive the latest published changes, follow the steps mentioned in [Power Apps for Makers: Get App Versions](/connectors/powerappsforappmakers/#get-app-versions).
+          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#step-2-register-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+          - To ensure platform changes benefit end users, we recommend re-wrapping monthly and distributing the updated app to users. 
+
+      - question: | 
+          How to find your Azure admin?
+        answer: |
+          - Go to the Microsoft Entra roles and administration portal. More information: [Microsoft Entra admin center](https://entra.microsoft.com/#home)
+          - Search for *global administration* in the search bar.
+          - Select the **Active assignments** tab.
+          - Review the list of owners for the active assignments.
+
 
       - question: |
           See also
