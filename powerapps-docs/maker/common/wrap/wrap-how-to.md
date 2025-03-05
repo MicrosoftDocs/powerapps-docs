@@ -44,7 +44,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
    - **Primary app**: Select the app your end users see when the mobile app is launched.
    - **Secondary app(s)**: Optional other apps that you can bundle the same build for mobile app package along with the Primary app.
 
-    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/select-apps-updated.png":::
+    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/select-apps-updated.png":::
   
      > [!NOTE]
      > - You can use the same Primary app in multiple wrap projects.
@@ -66,7 +66,7 @@ If you don't have any entries in **Azure Key Vault URI** list, you need to creat
 
 4. Set the **Sign my app** toggle to **On** or **Off**.
 
-    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
+    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
@@ -144,7 +144,7 @@ When you register the app, Azure admin also needs to grant access to API permiss
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
-:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/manage-output.png":::
+:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
 
 ### Step 6: Wrap up
 
