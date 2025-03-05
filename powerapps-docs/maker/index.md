@@ -33,7 +33,7 @@ Create app using natural language with Copilot:
 
 You can start to build your app from Microsoft tools where your data lives, such as:
 
-- [From a SharePoint list](canvas-apps/app-from-sharepoint.md#create-a-canvas-app-with-data-from-microsoft-lists-or-sharepoint-online)
+- [From a SharePoint list](canvas-apps/app-from-sharepoint.md#create-a-canvas-app-with-data-from-a-list)
 - [From a Power BI dashboard](/power-bi/visuals/power-bi-visualization-powerapp)
 
 Creating a canvas app is easy. With Power Apps, you can find or create your app in several ways:
