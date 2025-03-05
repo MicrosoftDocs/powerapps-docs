@@ -136,6 +136,7 @@ sections:
           1. Verify if the user has access to the PowerApps application. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md)
           2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
           3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
+          4. [Check the error code here](/entra/identity-platform/reference-error-codes)
 
       - question: | 
           When do you need to re-wrap?
