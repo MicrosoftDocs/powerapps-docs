@@ -117,7 +117,7 @@ Follow the example below to create an app with two screens where users can view 
 1. On the connection pane, select **Connect**.
 1. If prompted, provide your credentials for that account.
 
-1. Under **Choose an Excel file**, find and select the **eventsignup.xlsx** that you saved earlier.
+1. Under **Choose an Excel file**, find and then select the **eventsignup.xlsx** that you saved earlier.
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
@@ -184,7 +184,7 @@ For more information about these and other functions, see the [formula reference
 
 1. On the **Properties** pane, select the down arrow next to **Data source**, and then select **Schedule** in the list that appears.
 
-1. Under the data source that you just specified, select **Edit fields**.
+1. Under the data source that you specified, select **Edit fields**.
 
 1. In the **Fields** pane, select **Add field**, select the check box for each field, and then select **Add**.
 
