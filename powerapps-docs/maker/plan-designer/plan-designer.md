@@ -126,7 +126,7 @@ For canvas apps, a preview of the app is displayed with a welcome screen and oth
 
 When you save a plan, it is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
 
-:::image type="content" source="media/pa-objects-view.png" alt-text="Screenshot of the objects view.":::
+:::image type="content" source="media/pd-objects-view.png" alt-text="Screenshot of the objects view.":::
 
 To save your plan: 
 
@@ -135,7 +135,7 @@ To save your plan:
 3. Choose a publisher or select an existing solution that will contain the items generated from the plan.
 4. Select **Save**.
    
-  :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
+   :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
 
 
 ### Known limitations
