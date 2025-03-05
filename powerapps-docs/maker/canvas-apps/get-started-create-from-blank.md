@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 03/10/2025
+ms.date: 03/13/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -18,7 +18,7 @@ contributors:
 
 There are a few different ways to use Excel data to create a canvas app. 
 
-In Excel, it's important to format your data as a table rather than just a range of cells. This makes it easier for Power Apps to read and interact with the data. To do this, select your data and select on **Insert** > **Table** in Excel. This ensures that Power Apps can recognize and use the data effectively. More information: [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+In Excel, it's important to format your data as a table rather than just a range of cells. This makes it easier for Power Apps to read and interact with the data. To do this, select your data and select **Insert** > **Table** in Excel. This ensures that Power Apps can recognize and use the data effectively. More information: [Formatted as a table in Excel](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 To create an app using Excel data, select one of the following options in [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -26,22 +26,22 @@ To create an app using Excel data, select one of the following options in [Power
 |---------|---------|---------|
 |[Import an external Excel or .CSV file to Power Apps](get-started-create-from-blank.md#import-an-external-excel-file) |  Uploaded Excel data generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps.| Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV** option.      | 
 | [Connect to an external Excel file and use it to create a canvas app](get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps). Your data stay where it is. |  Using the Excel connector in Power Apps provides a straightforward, and fast method to create and deploy apps with data stored in Excel. It's especially advantageous for makers that already use Excel and want to enhance its functionality with minimal effort. Makers benefit from cloud access, easy data manipulation, rapid prototyping, and no need for a complex database setup. | Select **Start with Data** > **Connect external data** >  **From Excel**.   |
-|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)   | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by pre-designed templates, providing greater creative freedom and adaptability to suit your unique needs  |  On the left navigation pane, select **Create** > **Start with a blank canvas**       |
+|[Create a blank canvas app and then add Excel data](get-started-create-from-blank.md#create-a-blank-canvas-app-and-add-excel-data)   | You have complete flexibility, control, and customization. It allows you to design an app that meets your exact specifications without being limited by predesigned templates, providing greater creative freedom and adaptability to suit your unique needs  |  On the left navigation pane, select **Create** > **Start with a blank canvas**.       |
 
 
 ## Import an external Excel file
 
-When you import your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion allows your data to be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
+When you import your Excel data to Power Apps, it doesn't just stay as an Excel file. Instead, it gets converted into a Dataverse table. This conversion lets your data be more easily integrated and managed within Power Apps, offering more powerful features compared to using Excel alone. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Start with Data** > **Create new tables** > **Import an Excel file or .CSV**.
-1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it. 
+1. Select **Select from device** and navigate to the location where your Excel file is saved, and upload it.
 
     The maximum file size limit is 5 GB.
 
 1. When the table is created, select a column name or the table name to edit the properties to suit your needs. If there are values in cells that are incompatible with the selected data type when changing column data types, those values are removed when the table is generated. More information: [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables)
 1. Select **Row ownership** and choose how you want to manage row ownership. 
-1. When you're done, select **Save and open app**. The system will upload the first 20 rows of data so you can start reviewing the data in your app. The remaining data will be uploaded in the background.
+1. When you're done, select **Save and open app**. The system uploads the first 20 rows of data so you can start reviewing the data in your app. The remaining data is uploaded in the background.
 
 ### Known issues
 
@@ -50,13 +50,13 @@ When you import your Excel data to Power Apps, it doesn't just stay as an Excel 
 
 ## Connect to an external Excel file from Power Apps
 
-Store the Excel file in a cloud storage service like Dropbox, Google Drive, OneDrive, or OneDrive for Business. This is necessary because Power Apps can only connect to Excel files that are stored in the cloud.
+Store the Excel file in a cloud storage service like Dropbox, Google Drive, OneDrive, or OneDrive for Business because Power Apps can only connect to Excel files that are stored in the cloud.
 
 Power Apps has an Excel connector that allows you to access your Excel data. There are two versions available:
 
 - The older version connects to Excel files stored in specific locations, such as OneDrive for Business. 
 
-- We recommand that you use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/)*, which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
+- We recommend that you use the newer version, called [Excel Online (Business)](/connectors/excelonlinebusiness/), which offers greater flexibility by accessing a wider variety of cloud-based file storage services.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
@@ -69,7 +69,7 @@ Power Apps has an Excel connector that allows you to access your Excel data. The
 1. When you're done, select **Create app**.
 
 
-For more information about how to share Excel data: [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables)
+For more information about how to share Excel data, see [Sharing Excel tables](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 
 ## Create a blank canvas app and add Excel data
@@ -278,7 +278,7 @@ For more information about these and other functions, see the [formula reference
 
     `EditForm1.Mode = FormMode.Edit`
 
-    This icon will appear only when the form is in **Edit** mode, not in **New** mode.
+    This icon appears only when the form is in **Edit** mode, not in **New** mode.
 
 1. Set the **OnSelect** property for the trash icon to this formula:
 
