@@ -147,7 +147,7 @@ Navigation Issues:
 - When using the **Back** button after creating a new canvas app, model-driven app, Page, component library, or connection role, users are taken to the **All** section of **Objects** instead of their last location.
 - After saving and exiting from the row summary, users are redirected to the **All** section of **Objects** rather than their previous location.
 - Editing a table and then using the **Back** button also redirects users to the **All** section of **Objects** instead of their last location.
-- Creating a new table using data workspace and then using the **Back** button takes users to the **All** section of **Objects** rather than their last location.
+- Creating a new table and using the **Back** button takes users to the **All** section of **Objects** rather than their last location.
 - When creating a new column security profile in apps, saving, and then using the **Back** button, the **Back** button doesn't work and results in continuous loading.
 - Navigating to **Table** > **Forms**/**Views**/**Command** and then using the **Back** button redirects users to the **All** section of **Objects** instead of their last location.
 
