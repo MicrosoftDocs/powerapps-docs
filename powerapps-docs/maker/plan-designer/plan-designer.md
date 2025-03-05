@@ -122,6 +122,22 @@ The proposed apps open in a new tab, fully functioning with the added data table
 
 For canvas apps, a preview of the app is displayed with a welcome screen and other screens connected to tables. When you open a model-driven app, it launches the modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published for use.
 
+## Save plan to a solution
+
+When you save a plan, it is stored within a solution. This action also enables the Objects view in the Plan Designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan Designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
+
+:::image type="content" source="media/pa-objects-view.png" alt-text="Screenshot of the objects view.":::
+
+To save your plan: 
+
+1. Select the **Save** icon on the upper right corner.
+2. Enter the plan name.
+3. Choose a publisher or select an existing solution that will contain the items generated from the plan.
+4. Select **Save**.
+   
+  :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
+
+
 ## View and edit plans
 
 When the Plan designer is turned on, you'll see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make any necessary edits.
