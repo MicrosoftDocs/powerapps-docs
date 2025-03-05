@@ -36,23 +36,23 @@ When you add data to an app, you can choose a SharePoint list or Microsoft Lists
   - [Get started with SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
   - [What is Power Apps?](../../powerapps-overview.md)
 
-## Create a SharePoint list
+## Create a list
 
 You can create a new SharePoint list through the Microsoft Lists app in [Create a list](https://support.microsoft.com/en-us/office/create-a-list-0d397414-d95f-41eb-addd-5e6eff41b083).
 
-## Integrate a SharePoint list
+## Integrate a list
 
 Once you have a list, you can integrate it into Power Apps or create an app based on a Sharepoint list or Microsoft Lists.
 
-### Connect with a SharePoint list in Power Apps
+### Connect with a list in Power Apps
 
-One way to work with a SharePoint list in your app is to connect to SharePoint through the **Data** menu of an app to import a list. The list serves as a data source in Power Apps.
+One way to work with a list in your app is to connect to SharePoint through the **Data** menu of an app to import a list. The list serves as a data source in Power Apps.
 
 :::image type="content" source="media/sharepoint-integration/connect-to-sharepoint-through-data.png" alt-text="Screenshot showing where you can connect to a SharePoint list through the Data, Add data, and Connectors menu.":::
 
 Learn more in [Connect to SharePoint from a canvas app](connections/connection-sharepoint-online.md).
 
-### Create an app based on a SharePoint list or Microsoft Lists
+### Create an app based on a list
 
 When viewing a SharePoint list, you automatically go to Microsoft Lists where you can integrate a list with Power Apps:
 
@@ -60,9 +60,9 @@ When viewing a SharePoint list, you automatically go to Microsoft Lists where yo
 
 Learn more in [Create a canvas app with data from Microsoft Lists](app-from-sharepoint.md).
 
-## Customize a SharePoint list or Microsoft Lists form
+## Customize a list or form
 
-When you import a list into Power Apps as a data source, it might be used to display as a form on a screen. You can customize what your SharePoint list looks like in your app such as the formatting and behavior for the list.
+When you import a list into Power Apps as a data source, it might be used to display as a form on a screen. You can customize what your list looks like in your app such as the formatting and behavior for the list.
 
 Customization includes how the list displays the:
 

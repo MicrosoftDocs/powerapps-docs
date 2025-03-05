@@ -1,6 +1,6 @@
 ---
-title: Link Microsoft Lists or SharePoint lists using a lookup column in Power Apps
-description: Learn about linking Microsoft Lists or SharePoint lists, using lookup columns in Microsoft Power Apps.
+title: Link lists using a lookup column in Power Apps
+description: Learn about linking lists and using lookup columns in Microsoft Power Apps.
 author: emcoope-msft
 
 ms.topic: conceptual
@@ -17,7 +17,7 @@ contributors:
   - wimcoor
 ---
 
-# Link Microsoft Lists or SharePoint lists using a lookup column in Power Apps
+# Link lists using a lookup column in Power Apps
 
 This tutorial shows you how to connect two lists with a lookup column in a canvas app in Power Apps.
 
@@ -54,7 +54,7 @@ The choice data can stay as a separate list, if you use a **Lookup** column to l
 
 Learn more in [Integrate SharePoint Online into Power Apps overview](sharepoint-list-integration-overview.md).
 
-## Create the lists in SharePoint
+## Create the lists
 
 In this tutorial, you link two lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware breaks from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 

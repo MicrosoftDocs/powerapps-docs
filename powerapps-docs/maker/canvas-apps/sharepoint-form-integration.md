@@ -19,7 +19,7 @@ contributors:
 
 # Understand SharePoint forms integration
 
-You can [customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) when you integrate a SharePoint list into Power Apps. In this article, you see how these forms work and how you can customize them.
+You can [customize a form for a SharePoint list](/sharepoint/dev/business-apps/power-apps/get-started/create-your-first-custom-form) when you integrate a list into Power Apps. In this article, you see how these forms work and how you can customize them.
 
 When you customize a form for a list, you see the default generated form works for all operations, like creating, showing, or editing an item. This functionality uses generated formulas and the **SharePointIntegration** control.
 

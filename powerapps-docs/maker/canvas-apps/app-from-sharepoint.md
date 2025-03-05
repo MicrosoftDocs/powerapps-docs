@@ -1,5 +1,5 @@
 ---
-title: Create a canvas app with data from Microsoft Lists or SharePoint
+title: Create a canvas app with data from a list
 description: Create a Power Apps canvas app to manage data in Microsoft Lists or SharePoint Online.
 author: mduelae
 
@@ -19,7 +19,7 @@ contributors:
   - emcoope-msft
 ---
 
-# Create a canvas app with data from Microsoft Lists or SharePoint Online
+# Create a canvas app with data from a list
 
 In this article, you can create a canvas app in Power Apps from Lists or SharePoint. You can create the app from within Power Apps or SharePoint. Alternatively, you can create the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
@@ -59,13 +59,13 @@ Watch this video to learn how to create a canvas app from a list:
 
 1. Save your work by selecting the **Save** icon in the upper-right corner. Give your app a name, and then select **Save**.
 
-## Create an app from SharePoint Online or Microsoft Lists
+## Create an app from a list
 
-If you create an app from a list in SharePoint or Lists, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
+If you create an app from a list in SharePoint or Microsoft Lists, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
 
 1. Sign in to SharePoint: `https://yourorganizationname.sharepoint.com`
 
-1. Open a list. You're taken to Lists to view the list.
+1. Open a list in either SharePoint or Microsoft Lists. If you open the list from SharePoint, you're taken to Lists to view the list.
 1. Select **Integrate** > **Power Apps** > **Create an app**.
 
    :::image type="content" source="./media/app-from-sharepoint/generate-new-app.png" alt-text="Screenshot that shows the Integrate menu in Lists that lets you create an app in Power Apps.":::
