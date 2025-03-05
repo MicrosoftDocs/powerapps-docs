@@ -9399,6 +9399,11 @@
       "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/use-mobile-app.md",
       "redirect_url": "https://learn.microsoft.com",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-data.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
     }
   ]
 }
