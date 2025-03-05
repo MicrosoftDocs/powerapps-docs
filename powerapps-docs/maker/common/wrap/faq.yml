@@ -141,7 +141,7 @@ sections:
           When do you need to re-wrap?
         answer: |
           - If you're an existing customer who has already created and successfully distributed a wrapped app, you don't need to go through the wrapping process again. To ensure users receive the latest published changes, follow the steps mentioned in [Power Apps for Makers: Get App Versions](/connectors/powerappsforappmakers/#get-app-versions).
-          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#step-2-register-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#step-3-register-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
           - To ensure platform changes benefit end users, we recommend re-wrapping monthly and distributing the updated app to users. 
 
       - question: | 
