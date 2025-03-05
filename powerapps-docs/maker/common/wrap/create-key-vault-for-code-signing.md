@@ -29,7 +29,10 @@ In this article, you'll learn how to use an existing Azure Key Vault or create a
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 
    
-## Create Azure Key Vault and configure Key Vault URI
+## Configure Key Vault URI
+
+> [!IMPORTANT]
+> Before configuring the Key Vault URI, you need to create an Azure Key Vault. Follow the steps listed in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault) to proceed further.
 
 1. To create a new Azure service principal for the 1P Microsoft Entra application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
 
