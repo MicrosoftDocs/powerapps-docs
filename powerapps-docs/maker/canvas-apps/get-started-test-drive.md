@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 3/10/2025
+ms.date: 3/13/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -18,9 +18,10 @@ contributors:
 
 # Create a canvas app from a template
 
-Create a canvas app using a sample template. Create a mobile app with three screens or use one of the available templates based on real-world scenarios with fictitious data.
+Creating a canvas app using templates in Power Apps is a streamlined and efficient way to develop applications tailored to your needs. With templates, you can quickly create a mobile app with three screens or choose from various templates designed for real-world scenarios with fictitious data. These templates come with prebuilt layouts, controls, and sample data, allowing you to focus on customizing the app to meet your specific requirements.
 
-## Create a three screen mobile app
+
+## Create a three-screen mobile app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen, select the **Start with an app template** tile.
@@ -37,7 +38,7 @@ Create a canvas app using a sample template. Create a mobile app with three scre
 
 1. When ready, [save and publish](save-publish-app.md) the app.
 
-## Use a template to create an app
+## Use other templates to create an app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -55,11 +56,11 @@ Create a canvas app using a sample template. Create a mobile app with three scre
 
 1. After you select or connect to storage from the available choices, select **Done**.
 
-1. The app opens in [Power Apps Studio](power-apps-studio.md), where you can customize it.
+The app opens in [Power Apps Studio](power-apps-studio.md) where you can customize it.
 
 1. Preview the app by pressing F5 or selecting the play button near the upper-right corner.
 
-1. When ready, [save and publish](save-publish-app.md) the app.
+When you're ready, [save and publish](save-publish-app.md) the app.
 
 
 ### See also
