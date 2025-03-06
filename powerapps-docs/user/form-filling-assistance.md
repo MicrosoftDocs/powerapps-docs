@@ -37,7 +37,7 @@ This feature makes it easier and faster to enter data. The suggestions are entir
 ## Prerequisites
 
 - Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on.
-- Requires the [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance) environment feature setting enabled.
+- Requires at least one of the [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance) environment feature setting enabled.
 - The **Allow form fill assistance** column property is enabled for the column where form fill assistance occurs. More information: [Create and edit columns in Dataverse using Power Apps](../maker/data-platform/create-edit-field-portal.md#view-columns)
 
 ## Limitations
