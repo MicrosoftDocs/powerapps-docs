@@ -1,6 +1,6 @@
 ---
-title: Create Key Vault for code signing
-description:  Learn how to create Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
+title: Key vault for code signing
+description:  Learn how to configure Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
 author: komala2019
 ms.topic: article
 ms.custom: canvas
@@ -13,7 +13,7 @@ search.audienceType:
 contributors:
   - mduelae
 ---
-# Create Azure Key Vault for wrap using default subscription
+# Azure key vault for wrap using default subscription
 
 In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-4-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
 
@@ -22,14 +22,14 @@ In this article, you'll learn how to use an existing Azure Key Vault or create a
 
 ## Prerequisites
   
-- Microsoft Entra subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Microsoft Entra subscription to [create key vault](/azure/key-vault/general/quick-create-portal).
 - Your subscription ID needs to be the default one. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 
    
-## Configure Key Vault URI
+## Configure key vault URI
 
 > [!IMPORTANT]
 > Before configuring the Key Vault URI, you need to create an Azure Key Vault. Follow the steps listed in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault) to proceed further.

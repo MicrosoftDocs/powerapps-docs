@@ -1280,7 +1280,7 @@
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
-  - name: Create native mobile apps
+  - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
@@ -1292,11 +1292,11 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
-      - name: Create Azure key vault for wrap
+      - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
-      - name: Benefits and limitations of Wrap
+      - name: Benefits and limitations of wrap
         href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
