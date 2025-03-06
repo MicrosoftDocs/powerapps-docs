@@ -1321,7 +1321,7 @@
     - name: Build business logic
       href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+      href: ../guidance/coding-guidelines/overview.md
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1498,6 +1498,14 @@
             href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: Edit the related tab on a form
             href: ./model-driven-apps/use-the-form-editor-legacy.md
+          - name: Control access to forms
+            href: ./model-driven-apps/control-access-forms.md
+          - name: Show or hide form elements
+            href: ./model-driven-apps/visibility-options-legacy.md
+          - name: How to use the main form and its components
+            href: ./model-driven-apps/use-main-form-and-components.md
+          - name: How to add iFrames to forms
+            href: ./model-driven-apps/iframe-properties-legacy.md
         - name: Design effective forms
           href:
           items:
@@ -1608,7 +1616,7 @@
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
         - name: Accessibility in Power Apps app designer
-          href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+          href: ./model-driven-apps/accessibility-app-designer-site-map-designer-my-apps-page.md
         - name: Add a table as a lookup
           href: ./model-driven-apps/team-entity-lookup.md
         - name: Use the classic form editor
@@ -1622,19 +1630,8 @@
             href: ./model-driven-apps/tab-properties-legacy.md
           - name: Use controls for data visualizations
             href: ./model-driven-apps/use-custom-controls-data-visualizations.md
-        - name: Control access to forms
-          href: ./model-driven-apps/control-access-forms.md
-        - name: Show or hide form elements
-          href: ./model-driven-apps/visibility-options-legacy.md
-          items:
-          - name: Add form navigation for related tables
-            href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
         - name: "How-to guides: Forms"
           items:
-          - name: How to use the main form and its components
-            href: ./model-driven-apps/use-main-form-and-components.md
-          - name: How to add iFrames to forms
-            href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
           - name: How to configure event handlers in a form
@@ -1643,6 +1640,8 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+          - name: Add form navigation for related tables
+            href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
     - name: Collaboration in model-driven apps
       href:
       items:
