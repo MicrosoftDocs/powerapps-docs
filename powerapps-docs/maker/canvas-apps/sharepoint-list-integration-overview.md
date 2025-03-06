@@ -117,6 +117,7 @@ Choices([@'Your list name'].Lookup_x0020_column)
 
 - [Using the SharePoint connector with canvas apps](/power-platform/guidance/architecture/real-world-examples/sharepoint-canvas)
 - [Customize permissions for a SharePoint list or library](https://support.microsoft.com/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 - [Create a report quickly from a SharePoint list or library](/power-bi/create-reports/service-quick-create-sharepoint-list)
 - [Embed a report web part in SharePoint Online](/power-bi/collaborate-share/service-embed-report-spo)
 

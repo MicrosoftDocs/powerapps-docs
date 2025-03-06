@@ -80,4 +80,8 @@ Once you create an app, you can play it, save, share, and publish it.
 
 Learn more about these [App actions](power-apps-studio.md#2--app-actions) in the Power Apps Studio interface.
 
+## Related information
+
+[Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

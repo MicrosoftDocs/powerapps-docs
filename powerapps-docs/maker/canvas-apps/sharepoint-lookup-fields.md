@@ -131,5 +131,6 @@ Let's [preview the app](preview-app.md) and add items to your **Assets** list.
 - Configure [Drop down control in Power Apps](controls/control-drop-down.md) in your list.
 - [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
 - [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -132,6 +132,7 @@ Consider these tactics when you customize forms:
 
 ### Related information
 
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 - [EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions](/power-platform/power-fx/reference/function-form)
 - [RequestHide function](/power-platform/power-fx/reference/function-requesthide)
 

@@ -89,7 +89,7 @@ If you build a new app or have an existing app, you can connect to SharePoint th
 
 ## Related information
 
-Learn more about working with lists in Power Apps in
-[Integrate SharePoint Online into Power Apps overview](../sharepoint-list-integration-overview.md).
+- Learn more about working with lists in Power Apps in [Integrate SharePoint Online into Power Apps overview](../sharepoint-list-integration-overview.md)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
