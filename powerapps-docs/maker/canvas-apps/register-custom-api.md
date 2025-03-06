@@ -28,7 +28,7 @@ Sometimes though, you might want to call APIs, services, and systems that aren't
 
 * [Create a custom connector from scratch](/connectors/custom-connectors/define-blank)
 
-* [Use a custom connector from a Power Apps app](/connectors/custom-connectors/use-custom-connector-powerapps)
+* [Use a custom connector from Power Apps](/connectors/custom-connectors/use-custom-connector-powerapps)
 
 * [Share custom connectors in your organization](/connectors/custom-connectors/share)
 
