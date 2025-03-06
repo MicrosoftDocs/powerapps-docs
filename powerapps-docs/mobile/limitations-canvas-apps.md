@@ -5,7 +5,7 @@ description: Learn about the limitations for canvas apps that use mobile offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/19/2024
+ms.date: 03/06/2025
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: smurkute
@@ -49,7 +49,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 
 |Area |Description|  
 |-------------|---------|  
-|Relationship defined for each table|A maximum of 15 relationships is allowed. There is a maximum of one many-to-many (M:M) or one-to-many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
+|Relationship defined for each table|A maximum of 15 relationships is allowed. There's a maximum of one many-to-many (M:M) or one-to-many (1:M) relationships within the 15 relationships. If any custom tables demand this scenario, then revisit the data model. No circular references or self-references are supported.|
 |Images and files|Images and files are subject to the same limitations as any other table. Because of implicitly defined relationships, an offline profile can only contain up to 14 image columns, across all entities.|
 |Auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
 
