@@ -1349,7 +1349,7 @@
     - name: Build business logic
       href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+      href: ../guidance/coding-guidelines/overview.md
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
