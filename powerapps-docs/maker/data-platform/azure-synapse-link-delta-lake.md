@@ -66,9 +66,9 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 
 This configuration can be considered a bootstrap step for average use cases.
 
-- Node size: small (4 vCores / 32 GB)
+- Node size: small (4 vCores / 32 GB) or Medium depending on the volume of data (see below)
 - Autoscale: Enabled
-- Number of nodes: 5 to 10
+- Number of nodes: 5 to 10 or 20. (see below)  
 - Automatic pausing: Enabled
 - Number of minutes idle: 5
 - Apache Spark: 3.4
@@ -76,7 +76,13 @@ This configuration can be considered a bootstrap step for average use cases.
 - Default number of executors: 1 to 9
 
 > [!IMPORTANT]
-> Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
+>
+>  1. Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
+>
+>  2. You may need to increase the Node sizes of the Spark pool if you expect a large amount of rows to be processed. If the sie of the spark pool is insufficient, Delta conversion jobs may fail
+>
+>  3. The same spark pool is used by the system to run a daily job that compacts Delta files in the lake. This option reduces the size of deta files. In rare cases, this job may interfere with the incremental conversion job. You can increase the number of nodes in case you notice these failures,
+>      
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
