@@ -57,7 +57,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
     > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](key-vault-for-code-signing#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the Tags section of the Azure portal.
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the Tags section of the Azure portal.
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 

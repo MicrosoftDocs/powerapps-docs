@@ -1255,7 +1255,7 @@
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
       - name: Azure key vault for wrap
-        href: ./common/wrap/create-key-vault-for-code-signing.md
+        href: ./common/wrap/key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Benefits and limitations of wrap
