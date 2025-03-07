@@ -127,10 +127,10 @@ beginDialog:
       value: |-
         =[{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",
         sparks:[
-        {displayName:"What is Copilot chat?",type:"PromptText"},
-        {displayName:"How can I use the record picker?",type:"PromptText"},
-        {displayName:"What types of questions can I ask Copilot?",type:"PromptText"},
-        {displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptText"}
+        {displayName:"What is Copilot chat?",type:"MCSMessageSkill"},
+        {displayName:"How can I use the record picker?",type:"MCSMessageSkill"},
+        {displayName:"What types of questions can I ask Copilot?",type:"PromptTextSkill"},
+        {displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptTextSkill"}
         ]}]
 
     - kind: SetVariable
