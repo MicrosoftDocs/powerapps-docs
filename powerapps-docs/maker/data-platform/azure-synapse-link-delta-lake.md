@@ -82,7 +82,9 @@ This configuration can be considered a bootstrap step for average use cases.
 >  2. You may need to increase the Node sizes of the Spark pool if you expect a large amount of rows to be processed. If the sie of the spark pool is insufficient, Delta conversion jobs may fail
 >
 >  3. The same spark pool is used by the system to run a daily job that compacts Delta files in the lake. This option reduces the size of deta files. In rare cases, this job may interfere with the incremental conversion job. You can increase the number of nodes in case you notice these failures,
->      
+>
+> 4. You will only be charged for the spark pool nodes actually utilized, increasing the size of the pool may not result in higher charges 
+> 
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
