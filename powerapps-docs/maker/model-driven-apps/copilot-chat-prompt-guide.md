@@ -49,8 +49,8 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"MCSMessageSkill"},{displayName:"How can I use the record picker?",type:"PromptTextSkill"},{displayName:"What types of questions can I ask Copilot?",type:"PromptTextSkill"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptTextSkill"}]}]
    ```
 For the sparks type you can either use **MCSMessageSkill** which are directly sent to MCS as user messages or **PromptTextSkill** when you want to populate the Chat Input box. PromptTextSkill is useful when you want additional input from the user, such as specifying a record/table name among other things. For example
-   `How many **[table name]** are **[insert condition]**?`
-   `What are the **[table name]** assigned to **[person]**?`
+   `How many **[table name]** are active?`
+   `What are the **[table name]** assigned to me?`
    :::image type="content" source="media/mda-copilot-promptguide-parsevalue.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-parsevalue.png":::
 
 1. Set the **Data type** as **Table**. The **Edit schema** link appears.
