@@ -18,7 +18,7 @@ ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
 # Zero Prompt Experience
-The Zero Prompt Experience (ZPE) helps makers to enhance user engagement and streamline interactions at the start of a copilot chat session. By presenting an ZPE Adaptive Card at the beginning users receive relevant information and options right away, reducing the need for additional prompts and iterations. ZPE can be context aware and hence can be shown for specific pages.
+The Zero Prompt Experience (ZPE) helps makers to enhance user engagement and streamline interactions at the start of a copilot chat session. By presenting an ZPE Adaptive Card at the beginning users receive relevant information and options right away, reducing the need for additional prompts and iterations. ZPE can be context aware and hence can be selectively shown for targetted pages.
 
 :::image type="content" source="media/mda-copilot-ZPE-sample-topic.png" alt-text="Zero Prompt Experience for Model-driven apps copilot" lightbox="media/mda-copilot-ZPE-sample-topic.png":::
 
@@ -27,25 +27,22 @@ The Zero Prompt Experience (ZPE) helps makers to enhance user engagement and str
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-The following steps detail how to add customize the Zero Prompt Experience.  
+The following steps detail how to customize Zero Prompt Experience.  
 1. Open the agent backing the app in Copilot Studio and add a new blank topic.
    :::image type="content" source="media/mda-copilot-ZPE-addTopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-ZPE-addTopic.png":::
 1. Rename the topic to reflect the topic intent and change the topic trigger to **Event received**.
    :::image type="content" source="media/mda-copilot-ZPE-event-received.png" alt-text="Event received for topic" lightbox="media/mda-copilot-ZPE-event-received.png":::
 1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestZeroPrompt`, which is the reserved name for ZPE. Set priority to higher than 99 but lower than 100000. The priority is important because custom zero prompt need to override the default platform provided ones.
    :::image type="content" source="media/mda-copilot-ZPE-request-zero-prompt-event.png" alt-text="ZPE event" lightbox="mediamda-copilot-ZPE-request-zero-prompt-event.png":::
-1. Optionally, you can set the conditions to ZPE in case they're specific to the page context. For example, follwing entry checks if the page context's table type name matches specified entity. If the condition is true, custom ZPE is shown.
-
-   `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
-
-After this, you build your Zero Prompt Messages, which needs to be an Adaptive card and set the global variable Global.PA_Copilot_ZeroPrompt to your adaptive card definition. For more information regarding building Adaptive Cards you can follow this information: https://adaptivecards.microsoft.com/
-
+1. Optionally, you can also set the conditions to ZPE in case it is specific to the page context. For example, follwing entry checks if the page context's table type name matches account. If the condition is true, custom ZPE will be shown.
+   `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "account"`
+After this step, you can build your Zero Prompt Messages using Adaptive cards. For more information regarding building Adaptive Cards you can follow this information: https://adaptivecards.microsoft.com/.  Once you have ZPE cards you can set the global variable `Global.PA_Copilot_ZeroPrompt` to your adaptive card definition. 
 1.The Zero Prompt includes all the flexibility of Adaptive cards and you can trigger different skills from within it. When an Adaptive Card contains a button or anything that requires an Action.Submit, we have following options they could leverage to handle that event. These are called SkillTypes. Action.Submit types should include the following properties: a data object with skillType and scenario properties. You can use **MCSMessageSkill** which are directly sent to MCS as user messages or **PromptTextSkill** when you want to populate the Chat Input box. PromptTextSkill is useful when you want additional input from the user, such as specifying a record/table name among other things. For example
    `How many [table name] are active?`
    `What are the [table name] assigned to me?`
 1. When triggering zero prompts, your select action structure should look like the below. The scenario value should be “ZeroPromptCard” along with the source value as “ZeroPrompt”. Lastly, the value corresponds to the actual prompt.
-
-   `selectAction: {
+```yml
+   selectAction: {
    type: "Action.Submit",
    data: {
    	scenario: "ZeroPromptCard",
@@ -53,10 +50,10 @@ After this, you build your Zero Prompt Messages, which needs to be an Adaptive c
    	value:  "What are accounts in Redmond?",
    	source: "ZeroPrompt"
    }
-},'
-
-## Prompt guide customizations topic sample
-Here is the full topic code, which can be copied directly into the new topic.
+},
+```
+## Zero prompt experience topic sample
+Here is the full topic code, which can be copied directly into the new topic. You can just edit the ZPE questions in the options below and reuse the predefined cards. 
 
 ```yml
 kind: AdaptiveDialog
