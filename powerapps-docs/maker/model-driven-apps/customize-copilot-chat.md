@@ -54,7 +54,6 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 
 ## Related information
 
-- [Video: Customize Copilot Chat Like a Pro in your model-driven app](https://www.youtube.com/watch?v=A1Hnp8dJUUg)
 - [Add Copilot chat to model-driven apps](../model-driven-apps/add-ai-copilot.md)
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
