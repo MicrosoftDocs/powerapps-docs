@@ -1240,59 +1240,13 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Customize a SharePoint form
-    items:
-      - name: Make basic changes
-        href: ./canvas-apps/customize-list-form.md
-      - name: Understand SharePoint forms integration
-        href: ./canvas-apps/sharepoint-form-integration.md
-  - name: Integrate with other technologies
-    items:
-    - name: SharePoint Online
-      items:
-      - name: Overview
-        href: ./canvas-apps/sharepoint-scenario-intro.md
-      - name: Set up SharePoint Online lists
-        href: ./canvas-apps/sharepoint-scenario-setup.md
-      - name: Generate an app
-        href: ./canvas-apps/sharepoint-scenario-generate-app.md
-      - name: Create a flow for approvals
-        href: ./canvas-apps/sharepoint-scenario-approval-flow.md
-      - name: Create an app from scratch
-        href: ./canvas-apps/sharepoint-scenario-build-app.md
-      - name: Create a Power BI report
-        href: ./canvas-apps/sharepoint-scenario-build-report.md
-      - name: Publish the Power BI report
-        href: ./canvas-apps/sharepoint-scenario-publish-report.md
-      - name: Embed the Power BI report
-        href: ./canvas-apps/sharepoint-scenario-embed-report.md
-      - name: Create a flow for alerts
-        href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
-      - name: Walk through the completed scenario
-        href: ./canvas-apps/sharepoint-scenario-summary.md
-      - name: SharePoint integration scenarios
-        items:
-        - name: SharePoint scenarios overview
-          href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: Filter a search list in an app
-          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: Use drop down list with choices from lookup column in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: Customize an app screen based on column status in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: Work with permissions in a lookup list from SharePoint site
-          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
-          href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
-    - name: Transform your InfoPath forms to Power Apps
-      href: ./canvas-apps/transform-infopath.md
-    - name: Analyze app telemetry using Application Insights
-      href: ./canvas-apps/application-insights.md
+  - name: Transform your InfoPath forms to Power Apps
+    href: ./canvas-apps/transform-infopath.md
   - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
-      - name: System requirements and prerequisites for Wrap
+      - name: System requirements and prerequisites for wrap
         href: ./common/wrap/prerequisites.md
       - name: Use the wrap wizard to build your mobile app
         href: ./common/wrap/wrap-how-to.md
