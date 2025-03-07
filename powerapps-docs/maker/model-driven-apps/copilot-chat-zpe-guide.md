@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The zero prompt experience helps makers enhance user engagement and streamline interactions at the start of a Copilot chat session. By presenting a zero prompt experience adaptive card at the beginning of a chat session, users receive relevant information and options right away, reducing the need for additional prompts and iterations. The zero prompt experience can be context aware and hence, can be selectively shown for targetted pages.
+The zero prompt experience helps makers enhance user engagement and streamline interactions at the start of a Copilot chat session. By presenting a zero prompt experience adaptive card at the beginning of a chat session, users receive relevant information and options right away, reducing the need for additional prompts and iterations. The zero prompt experience can be context aware and hence, can be selectively shown for targeted pages.
 
 :::image type="content" source="media/mda-copilot-zpe-sample-topic.png" alt-text="Zero prompt experience for model-driven apps Copilot chat" lightbox="media/mda-copilot-ZPE-sample-topic.png":::
 
@@ -43,11 +43,11 @@ These steps detail how to customize the zero prompt experience.
 1. Optionally, you can also set the conditions to the zero prompt experience in case it's specific to the page context. For example, this entry checks if the page context's table type name matches account. If the condition is true, the custom zero prompt experience is shown.
    `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "account"`
 After this step, you can build your zero prompt messages using adaptive cards. For more information regarding building adaptive cards go to this information: https://adaptivecards.microsoft.com/. Once you have zero prompt experience cards, you can set the global variable `Global.PA_Copilot_ZeroPrompt` to your adaptive card definition.
-1.The zero prompt includes all the flexibility of adaptive cards and you can trigger different skills from within it. When an adaptive card contains a button or anything that requires an `Action.Submit`, you have the following options you can use to handle that event. These are called `SkillTypes`. `Action.Submit` types should include the following properties: a data object with `SkillType` and scenario properties. You can use `MCSMessageSkill`, which are directly sent to Copilot Studio as user messages, or `PromptTextSkill` when you want to populate the **Chat Input** box. `PromptTextSkill` is useful when you want additional input from the user, such as specifying a record or table name among other things. For example
+1. The zero prompt includes all the flexibility of adaptive cards and you can trigger different skills from within it. When an adaptive card contains a button or anything that requires an `Action.Submit`, you have a few options you can use to handle that event. These event handlers are called `SkillTypes`. `Action.Submit` types should include the following properties: a data object with `SkillType` and scenario properties. You can use `MCSMessageSkill`, which are directly sent to Copilot Studio as user messages, or `PromptTextSkill` when you want to populate the **Chat Input** box. `PromptTextSkill` is useful when you want additional input from the user, such as specifying a record or table name among other things. For example:
    `How many [table name] are active?`
    `What are the [table name] assigned to me?`
 
-1. When you trigger zero prompts, your select an action structure that should look like action structure here. The scenario value should be `ZeroPromptCard` along with the source value as `ZeroPrompt`. Lastly, the value corresponds to the actual prompt.
+1. When you trigger zero prompts, your select an action structure that should look like the action structure here. The scenario value should be `ZeroPromptCard` along with the source value as `ZeroPrompt`. Lastly, the value corresponds to the actual prompt.
 
 ```yml
    selectAction: {
@@ -63,7 +63,7 @@ After this step, you can build your zero prompt messages using adaptive cards. F
 
 ## Zero prompt experience topic sample
 
-Here is the full topic code, which can be copied directly into the new topic. You can edit the zero prompt experience questions in the options below and reuse the predefined cards.
+Here is the full topic code, which can be copied directly into the new topic. You can edit the zero prompt experience questions in the options shown here and reuse the predefined cards.
 
 ```yml
 kind: AdaptiveDialog

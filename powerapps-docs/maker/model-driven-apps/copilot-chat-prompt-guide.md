@@ -17,7 +17,9 @@ contributors:
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
-# Prompt guide customizations
+# Prompt guide customizations (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A prompt library is a collection of prewritten, tested, and optimized prompts designed to help shape the interactions and responses of the Copilot chat. They ensure that the Copilot chat provides relevant, accurate, and contextually appropriate information based on the user’s needs and preferences.
 
