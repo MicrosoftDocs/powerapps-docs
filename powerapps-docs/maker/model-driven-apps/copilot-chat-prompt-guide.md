@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 02/21/2025
+ms.date: 03/07/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -36,7 +36,7 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event received for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
 1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
    :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
-1. Optionally, you can set the conditions to prompt entries in case they're specific to the page context. For example, this prompt entry checks if the page context's table type name matches specified value. If the condition is true, the custom prompts are shown to the user.
+1. Optionally, you can set the conditions to prompt entries in case they're specific to the page context. For example, this prompt entry checks if the page context's table type name matches the specified value. If the condition is true, the custom prompts are shown to the user.
 
    `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
 1. Under **Priority**, add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. Although about 200 is recommended as it allows for more options to add higher priority topics later, 10 is used in this example.
@@ -48,7 +48,7 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    ```powerappsfl
    [{displayName:"Power Apps Help",displaySubtitle:"Power Apps Help",iconName:"List24Regular",sparks:[{displayName:"What is Copilot chat?",type:"MCSMessageSkill"},{displayName:"How can I use the record picker?",type:"PromptTextSkill"},{displayName:"What types of questions can I ask Copilot?",type:"PromptTextSkill"},{displayName:"How do I provide feedback on Copilot’s responses?",type:"PromptTextSkill"}]}]
    ```
-For the sparks type you can either use **MCSMessageSkill** which are directly sent to MCS as user messages or **PromptTextSkill** when you want to populate the Chat Input box. PromptTextSkill is useful when you want additional input from the user, such as specifying a record/table name among other things. For example
+For the sparks type you can either use `MCSMessageSkill`, which are directly sent to Copilot Studio as user messages or `PromptTextSkill` when you want to populate the **Chat Input** box. `PromptTextSkill` is useful when you want additional input from the user, such as specifying a record or table name among other things. For example:
    `How many **[table name]** are active?`
    `What are the **[table name]** assigned to me?`
    :::image type="content" source="media/mda-copilot-promptguide-parsevalue.png" alt-text="Parsing prompt guide entries" lightbox="media/mda-copilot-promptguide-parsevalue.png":::

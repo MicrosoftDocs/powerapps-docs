@@ -1,6 +1,6 @@
 ---
-title: Zero Prompt Experience for Copilot chat in model-driven apps
-description: Learn how to customize Zero Prompt experience for model-driven apps to add topics
+title: Zero prompt experience for Copilot chat in model-driven apps
+description: Learn how to customize Zero Prompt experience for model-driven apps to add topics with Power Apps and Microsoft Copilot Studio
 author: HemantGaur
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -17,30 +17,36 @@ contributors:
 ms.collection: bap-ai-copilot
 ai-usage: ai-assisted
 ---
-# Zero Prompt Experience
-The Zero Prompt Experience (ZPE) helps makers to enhance user engagement and streamline interactions at the start of a copilot chat session. By presenting an ZPE Adaptive Card at the beginning users receive relevant information and options right away, reducing the need for additional prompts and iterations. ZPE can be context aware and hence can be selectively shown for targetted pages.
+# Zero prompt experience (preview)
 
-:::image type="content" source="media/mda-copilot-ZPE-sample-topic.png" alt-text="Zero Prompt Experience for Model-driven apps copilot" lightbox="media/mda-copilot-ZPE-sample-topic.png":::
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+The zero prompt experience helps makers enhance user engagement and streamline interactions at the start of a Copilot chat session. By presenting a zero prompt experience adaptive card at the beginning of a chat session, users receive relevant information and options right away, reducing the need for additional prompts and iterations. The zero prompt experience can be context aware and hence, can be selectively shown for targetted pages.
+
+:::image type="content" source="media/mda-copilot-zpe-sample-topic.png" alt-text="Zero prompt experience for model-driven apps Copilot chat" lightbox="media/mda-copilot-ZPE-sample-topic.png":::
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
-The following steps detail how to customize Zero Prompt Experience.  
+These steps detail how to customize the zero prompt experience.
+
 1. Open the agent backing the app in Copilot Studio and add a new blank topic.
-   :::image type="content" source="media/mda-copilot-ZPE-addTopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-ZPE-addTopic.png":::
+   :::image type="content" source="media/mda-copilot-zpe-addTopic.png" alt-text="Add blank topic" lightbox="media/mda-copilot-zpe-addTopic.png":::
 1. Rename the topic to reflect the topic intent and change the topic trigger to **Event received**.
-   :::image type="content" source="media/mda-copilot-ZPE-event-received.png" alt-text="Event received for topic" lightbox="media/mda-copilot-ZPE-event-received.png":::
-1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestZeroPrompt`, which is the reserved name for ZPE. Set priority to higher than 99 but lower than 100000. The priority is important because custom zero prompt need to override the default platform provided ones.
-   :::image type="content" source="media/mda-copilot-ZPE-request-zero-prompt-event.png" alt-text="ZPE event" lightbox="mediamda-copilot-ZPE-request-zero-prompt-event.png":::
-1. Optionally, you can also set the conditions to ZPE in case it is specific to the page context. For example, follwing entry checks if the page context's table type name matches account. If the condition is true, custom ZPE will be shown.
+   :::image type="content" source="media/mda-copilot-zpe-event-received.png" alt-text="Event received for topic" lightbox="media/mda-copilot-zpe-event-received.png":::
+1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestZeroPrompt`, which is the reserved name for the zero prompt experience. Set priority to higher than 99 but lower than 100000. The priority is important because custom zero prompt experiences need to override the default platform provided ones.
+   :::image type="content" source="media/mda-copilot-zpe-request-zero-prompt-event.png" alt-text="Zero prompt experience event" lightbox="media/mda-copilot-zpe-request-zero-prompt-event.png":::
+1. Optionally, you can also set the conditions to the zero prompt experience in case it's specific to the page context. For example, this entry checks if the page context's table type name matches account. If the condition is true, the custom zero prompt experience is shown.
    `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "account"`
-After this step, you can build your Zero Prompt Messages using Adaptive cards. For more information regarding building Adaptive Cards you can follow this information: https://adaptivecards.microsoft.com/.  Once you have ZPE cards you can set the global variable `Global.PA_Copilot_ZeroPrompt` to your adaptive card definition. 
-1.The Zero Prompt includes all the flexibility of Adaptive cards and you can trigger different skills from within it. When an Adaptive Card contains a button or anything that requires an Action.Submit, we have following options they could leverage to handle that event. These are called SkillTypes. Action.Submit types should include the following properties: a data object with skillType and scenario properties. You can use **MCSMessageSkill** which are directly sent to MCS as user messages or **PromptTextSkill** when you want to populate the Chat Input box. PromptTextSkill is useful when you want additional input from the user, such as specifying a record/table name among other things. For example
+After this step, you can build your zero prompt messages using adaptive cards. For more information regarding building adaptive cards go to this information: https://adaptivecards.microsoft.com/. Once you have zero prompt experience cards, you can set the global variable `Global.PA_Copilot_ZeroPrompt` to your adaptive card definition.
+1.The zero prompt includes all the flexibility of adaptive cards and you can trigger different skills from within it. When an adaptive card contains a button or anything that requires an `Action.Submit`, you have the following options you can use to handle that event. These are called `SkillTypes`. `Action.Submit` types should include the following properties: a data object with `SkillType` and scenario properties. You can use `MCSMessageSkill`, which are directly sent to Copilot Studio as user messages, or `PromptTextSkill` when you want to populate the **Chat Input** box. `PromptTextSkill` is useful when you want additional input from the user, such as specifying a record or table name among other things. For example
    `How many [table name] are active?`
    `What are the [table name] assigned to me?`
-1. When triggering zero prompts, your select action structure should look like the below. The scenario value should be “ZeroPromptCard” along with the source value as “ZeroPrompt”. Lastly, the value corresponds to the actual prompt.
+
+1. When you trigger zero prompts, your select an action structure that should look like action structure here. The scenario value should be `ZeroPromptCard` along with the source value as `ZeroPrompt`. Lastly, the value corresponds to the actual prompt.
+
 ```yml
    selectAction: {
    type: "Action.Submit",
@@ -52,8 +58,10 @@ After this step, you can build your Zero Prompt Messages using Adaptive cards. F
    }
 },
 ```
+
 ## Zero prompt experience topic sample
-Here is the full topic code, which can be copied directly into the new topic. You can just edit the ZPE questions in the options below and reuse the predefined cards. 
+
+Here is the full topic code, which can be copied directly into the new topic. You can edit the zero prompt experience questions in the options below and reuse the predefined cards.
 
 ```yml
 kind: AdaptiveDialog
@@ -309,6 +317,8 @@ beginDialog:
                           version: "1.5"
                       }
 ```
+
+## Related articles
 
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
