@@ -264,7 +264,17 @@
       - name: From Microsoft Dataverse
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
-        href: ./canvas-apps/app-from-sharepoint.md
+        items:
+        - name: Overview
+          href: ./canvas-apps/sharepoint-list-integration-overview.md
+        - name: Create an app from Lists or SharePoint
+          href: ./canvas-apps/app-from-sharepoint.md
+        - name: Connect lists using lookups
+          href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Understand SharePoint forms integration
+          href: ./canvas-apps/sharepoint-form-integration.md
+        - name: Customize a list or form
+          href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
     - name: Create an app from a design or a template
@@ -696,8 +706,6 @@
           href: ./canvas-apps/create-update-collection.md
         - name: Show the current user
           href: ./canvas-apps/show-current-user.md
-        - name: Connect lists using lookups
-          href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane
@@ -1108,7 +1116,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps and cloud flows to a solution by default
+      - name: Add canvas apps and cloud flows to a solution
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
@@ -1339,7 +1347,9 @@
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
     - name: Use Monitor to get insights and recommendations (preview)
-      href: ./canvas-apps/monitor-app-performance.md  
+      href: ./canvas-apps/monitor-app-performance.md
+    - name: Analyze app telemetry using Application Insights
+      href: ./canvas-apps/application-insights.md 
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload

@@ -24,7 +24,7 @@ Modern themes streamline the customization process and enable creators to effort
 
 ## Prerequisites
 
-Enable the modern themes feature in the settings of Power Apps app:
+Enable the modern themes feature in the settings of an app:
 
 1. Open your app or create a new app.
 1. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).

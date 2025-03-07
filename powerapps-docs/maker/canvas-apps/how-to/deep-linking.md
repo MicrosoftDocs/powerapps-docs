@@ -21,7 +21,7 @@ contributors:
 
 A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use this URL syntax: `https://apps.powerapps.com/play/{App ID}?{Query}`.
+To deep link into Power Apps, you'll use this URL syntax: `https://apps.powerapps.com/play/{App ID}?{Query}`.
 
 In this syntax:
 - **App ID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
