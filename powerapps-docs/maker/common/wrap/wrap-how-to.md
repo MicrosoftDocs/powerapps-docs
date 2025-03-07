@@ -57,7 +57,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
     > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
@@ -139,7 +139,7 @@ When you register the app, Azure admin also needs to grant access to API permiss
 
 ### Step 5: Manage Output
 
-1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](key-vault-for-code-signing.md)
+1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
 1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
@@ -259,7 +259,7 @@ You can automatically sign your mobile app package during wrap process in **Step
 - [Manual code sign for iOS](code-sign-ios.md)
 - [Manual code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Create your Azure Key Vault for automated code signing](key-vault-for-code-signing.md)
+- [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
 

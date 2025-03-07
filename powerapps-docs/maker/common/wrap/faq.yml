@@ -40,7 +40,7 @@ sections:
       - question: |
           How do I digitally sign my mobile app?
         answer: |
-          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You'll need to [create and prepare your Azure Key Vault](key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app manually, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
+          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You'll need to [create and prepare your Azure Key Vault](create-key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app manually, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
           
       - question: |
           Can I use Xcode to digitally sign my mobile apps for iOS?

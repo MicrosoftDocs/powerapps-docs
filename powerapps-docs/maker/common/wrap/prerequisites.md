@@ -82,5 +82,5 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 - [Manual code sign on iOS](code-sign-ios.md)
 - [Manual code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Create your Azure Key Vault for automated code signing](key-vault-for-code-signing.md)
+- [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)
