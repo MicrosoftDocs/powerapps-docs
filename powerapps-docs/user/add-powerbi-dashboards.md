@@ -70,7 +70,7 @@ Create rich, interactive reports and real-time visualizations with [!INCLUDE[pn_
 5. Select **Save** to save your dashboard.
 
 > [!NOTE]
-> If a user clicks on the title of an embedded Power BI dashboard, a modal popup will be triggered showing the dashboard along with Refresh and Open in Power BI actions.  
+> If a user clicks on the title of an embedded Power BI dashboard, a modal popup will be triggered, showing the dashboard along with **Refresh** and **Open in Power BI** actions.  
  
 ## Share a personal dashboard that contains Power BI visualizations  
  To share your personal dashboard that contains [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)] visualizations you must configure sharing in both Dataverse and [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], and the user or group must have the same credentials and appropriate level of access  in both services. To share your personal dashboard in your app go to, **Dashboards**. In the list of dashboards, select the personal dashboard you want, and then select **SHARE DASHBOARD**. For more information about sharing a dashboard in [!INCLUDE[pn_power_bi_for_office_365_short](../includes/pn-power-bi-for-office-365-short.md)], see [Power BI: Share a dashboard with colleagues and others](https://powerbi.microsoft.com/documentation/powerbi-service-share-unshare-dashboard/).  
