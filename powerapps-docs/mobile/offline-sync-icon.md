@@ -70,7 +70,7 @@ You can use the **Device Status** page to see the number of files and images to 
 ### Offline sync settings (Preview)
 [This section is prerelease documentation and is subject to change.]
 
-If your admin [activated sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile-preview) for the app, you can control when offline synchronizations are triggered.
+If your admin [activated sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile) for the app, you can control when offline synchronizations are triggered.
 
 - Set the **Wifi only** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Turn on this setting to reduce cellular data and battery usage, especially in low-network areas.
 
