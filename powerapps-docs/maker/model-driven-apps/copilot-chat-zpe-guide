@@ -20,8 +20,7 @@ ai-usage: ai-assisted
 # Zero Prompt Experience
 The Zero Prompt Experience (ZPE) is designed to enhance user engagement and streamline interactions at the start of a copilot chat session. By presenting an ZPE Adaptive Card at the beginning users receive relevant information and options right away, reducing the need for additional prompts and iterations. ZPE can be context aware and hence can be shown for specific pages.
 
-:::image type="content" source="media/mda-copilot-ZPE-aaccount.png" alt-text="Zero Prompt Experience for Model-driven apps copilot" lightbox="media/mda-copilot-ZPE-aaccount.png":::
-
+:::image type="content" source="media/mda-copilot-ZPE-sample-topic.png" alt-text="Zero Prompt Experience for Model-driven apps copilot" lightbox="media/mda-copilot-ZPE-sample-topic.png":::
 
 > [!IMPORTANT]
 >
@@ -312,7 +311,9 @@ beginDialog:
                       }
 ```
 
-
+- [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
+- [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+- [Enable copilots and generative AI features in Power Apps](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
 
 
 
