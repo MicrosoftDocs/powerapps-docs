@@ -55,7 +55,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 5. After you have completed building or making changes to your app, save and publish the app in Power Apps to see your app in the Power BI report.
 
-6. Once you're satisfied with your changes, make sure to share the Power Apps app with users of your report and then save your report.
+6. Once you're satisfied with your changes, make sure to share the app with users of your report and then save your report.
 
 7. You've created a report in which your users can take actions as they gain insights from your data.
 
@@ -80,7 +80,7 @@ The following limitations apply to the Power Apps visual:
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps visual can't filter the data or send any data back to the report.
-- You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
+- You'll need to share the app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
 - Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
