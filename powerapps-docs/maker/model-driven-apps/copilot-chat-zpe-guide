@@ -40,7 +40,9 @@ The following steps detail how to add customize the Zero Prompt Experience.
 
 After this, you build your Zero Prompt Messages, which needs to be an Adaptive card and set the global variable Global.PA_Copilot_ZeroPrompt to your adaptive card definition. For more information regarding building Adaptive Cards you can follow this information: https://adaptivecards.microsoft.com/
 
-1.The Zero Prompt includes all the flexibility of Adaptive cards and you can trigger different skills from within it. When an Adaptive Card contains a button or anything that requires an Action.Submit, we have following options they could leverage to handle that event. These are called SkillTypes. Action.Submit types should include the following properties: a data object with skillType and scenario properties. You use **MCSMessageSkill** which are sent to MCS as user messages in the sidecar or **PromptTextSkill** which can be used when you want to populate the Chat Input box. This is useful when you want additional input from the user, such as specifying a record/table name among other things.
+1.The Zero Prompt includes all the flexibility of Adaptive cards and you can trigger different skills from within it. When an Adaptive Card contains a button or anything that requires an Action.Submit, we have following options they could leverage to handle that event. These are called SkillTypes. Action.Submit types should include the following properties: a data object with skillType and scenario properties. You can use **MCSMessageSkill** which are directly sent to MCS as user messages or **PromptTextSkill** when you want to populate the Chat Input box. PromptTextSkill is useful when you want additional input from the user, such as specifying a record/table name among other things. For example
+   `How many **[table name]** are **[insert condition]**?`
+   `What are the **[table name]** assigned to **[person]**?`
 1. When triggering zero prompts, your select action structure should look like the below. The scenario value should be “ZeroPromptCard” along with the source value as “ZeroPrompt”. Lastly, the value corresponds to the actual prompt.
 
    `selectAction: {
