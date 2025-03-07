@@ -97,7 +97,7 @@ In this article, you'll learn how to use an existing Azure Key Vault or create a
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s).
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s). If you have already created a [bundle ID in the wrap wizard](wrap-how-to.md#step-2-target-platform), use the same one here.
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   

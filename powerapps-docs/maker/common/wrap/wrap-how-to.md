@@ -57,12 +57,12 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
     > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the Tags section of the Azure portal.
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. Select the **Azure Key Vault URI** from the list and select **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](key-vault-for-code-signing.md).
+If you don't have any entries in **Azure Key Vault URI** list, you need to create Azure key vault first. More information: [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
 4. Set the **Sign my app** toggle to **On** or **Off**.
 
@@ -75,7 +75,7 @@ You can also code sign your mobile app package manually instead of using automat
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 > [!NOTE]
-> The Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
 
 4.  Select **Next**.
 
