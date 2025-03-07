@@ -15,7 +15,7 @@ contributors:
 ---
 # Azure key vault for wrap using default subscription
 
-In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
+In order to automatically, sign your Android or iOS mobile app package during access key and [Step 2: Target platform](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
 
 
 In this article, you'll learn how to use an existing Azure Key Vault or create a new [Azure portal](https://portal.azure.com).

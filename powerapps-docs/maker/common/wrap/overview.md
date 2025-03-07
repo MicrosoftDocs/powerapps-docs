@@ -128,7 +128,7 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-The bundle ID is a unique identifier that you can create for your app. You can give any bundle ID name that follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault for wrap](create-key-vault-for-code-signing.md) once iOS or Android certificates are created and uploaded.
+The bundle ID is a unique identifier that you can create for your app. You can give any bundle ID name that follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault for wrap](key-vault-for-code-signing.md) once iOS or Android certificates are created and uploaded.
 
 ### Code signing
 
@@ -158,7 +158,7 @@ Optional more canvas apps that you're wrapping in the same build for mobile app 
 - [Manual code sign on iOS](code-sign-ios.md)
 - [Manual code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
+- [Create your Azure Key Vault for automated code signing](key-vault-for-code-signing.md)
 - [Frequently Asked Questions](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
 - [Benefits and limitations of Wrap](limitations.md)  
