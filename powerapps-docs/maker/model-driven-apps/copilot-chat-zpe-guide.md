@@ -30,6 +30,8 @@ The zero prompt experience helps makers enhance user engagement and streamline i
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 
+## Customize the zero prompt experience
+
 These steps detail how to customize the zero prompt experience.
 
 1. Open the agent backing the app in Copilot Studio and add a new blank topic.
