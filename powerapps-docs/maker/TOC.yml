@@ -1738,6 +1738,8 @@
           href: ./model-driven-apps/copilot-chat-mda-topics.md
         - name: Prompt guide customizations
           href: ./model-driven-apps/copilot-chat-prompt-guide.md
+        - name: Zero prompt experience
+          href: ./model-driven-apps/copilot-chat-zpe-guide.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
