@@ -17,7 +17,7 @@ contributors:
 
 # Connect to SQL Server from Power Apps overview
 
-There are different ways to connect to data in SQL Server in your Power Apps app, using Power Fx formulas. You can access data directly or use a view or stored procedures to create, update, or delete data in your app.
+There are different ways to connect to data in SQL Server in your app, using Power Fx formulas. You can access data directly or use a view or stored procedures to create, update, or delete data in your app.
 
 ## Prerequisites
 
