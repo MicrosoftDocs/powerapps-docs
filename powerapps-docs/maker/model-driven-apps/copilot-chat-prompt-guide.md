@@ -36,7 +36,7 @@ The following steps detail how to add specific queries to the prompt guide. A *P
    :::image type="content" source="media/mda-copilot-promptguide-eventreceived.png" alt-text="Event received for topic" lightbox="media/mda-copilot-promptguide-eventreceived.png":::
 1. Select **Edit** under **Event received**, and then set the event name as `Microsoft.PowerApps.Copilot.RequestSparks`, which is the reserved name for prompt guide.
    :::image type="content" source="media/mda-copilot-promptguide-requestspark.png" alt-text="Spark request for topic" lightbox="media/mda-copilot-promptguide-requestspark.png":::
-1. Optionally, you can set the conditions to prompt entries in case they're specific to the page context. For example, this prompt entry checks if the page context's table type name matches specified values. If either condition is true, the Copilot chat is activated.
+1. Optionally, you can set the conditions to prompt entries in case they're specific to the page context. For example, this prompt entry checks if the page context's table type name matches specified value. If the condition is true, the custom prompts are shown to the user.
 
    `condition:Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName = "Entity name"`
 1. Under **Priority**, add an appropriate priority value so the trigger is fired after the higher priority topics. Priority values can have 0 to 10K range with 0 being highest. Although about 200 is recommended as it allows for more options to add higher priority topics later, 10 is used in this example.
