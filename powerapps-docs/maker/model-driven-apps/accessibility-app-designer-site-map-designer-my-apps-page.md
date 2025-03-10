@@ -17,6 +17,13 @@ search.audienceType:
 ---
 # Shortcuts and accessibility in app designer and site map designer
 
+This article describes shortcuts and accessibility in the classic app and site map designers.
+
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
+
 Microsoft is committed to making its products and services easier for everyone. For more information, see, [Microsoft accessibility](https://www.microsoft.com/enable/default.aspx)  
 
 This article describes the accessibility features for app makers available with model-driven-apps.
