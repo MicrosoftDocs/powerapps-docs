@@ -19,13 +19,13 @@ contributors:
 Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
+You can distribute such *wrapped* native mobile apps to the end users through [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
 - iOS (IPA package)
 - Android (APK package)
-- Google Play Store (AAB package)
+- For Google Play Store distribution (AAB package)
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
@@ -44,8 +44,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
    - **Primary app**: Select the app your end users see when the mobile app is launched.
    - **Secondary app(s)**: Optional other apps that you can bundle the same build for mobile app package along with the Primary app.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps-updated.png "Choose the apps to wrap")
+    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/select-apps-updated.png":::
   
      > [!NOTE]
      > - You can use the same Primary app in multiple wrap projects.
@@ -53,14 +52,38 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 
 2.  Select **Next**.
 
-### Step 2: Register app
+### Step 2: Target platform 
+
+1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
+
+    > [!NOTE]
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
+
+2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
+
+3. Select the **Azure Key Vault URI** from the list and select **Next**. 
+If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
+
+4. Set the **Sign my app** toggle to **On** or **Off**.
+
+    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
+
+You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
+  
+   - [Manual code sign for iOS](code-sign-ios.md)
+   - [Manual code sign for Android](code-sign-android.md) 
+   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+
+> [!NOTE]
+> The Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+
+4.  Select **Next**.
+
+### Step 3: Register app
 
 On the **Register your app** screen, register your application manually in Azure to establish a trust relationship between your app and the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
 
 Your app must be registered in Microsoft Entra so that your app users can sign in. If you have already registered, find your registration in the owned registration field.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
 
 If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
@@ -71,8 +94,7 @@ If you don't see your registered app name in the **Owned registrations** dropdow
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
     > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
 
-   > [!div class="mx-imgBorder"]
-   > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
+    :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
 
 #### Configure admin allowed third-party apps
 
@@ -88,7 +110,7 @@ When you register the app, Azure admin needs to provide access to continue. Foll
 
 Once you complete the preceding steps the registration screen look like the following screenshot.
 
- :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
+ :::image type="content" source="media/how-to-v2/new-app-reg-updated.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/new-app-reg-updated.png":::
 
 #### API permissions
 
@@ -99,14 +121,14 @@ When you register the app, Azure admin also needs to grant access to API permiss
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
 
-### Step 3: Configure branding
+### Step 4: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
 
      > [!NOTE]
      > All the images must be in .png format. A default image will be used if no custom images are selected.
    
-   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger. 
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger.
    - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
@@ -115,66 +137,28 @@ When you register the app, Azure admin also needs to grant access to API permiss
    
 3.  Select **Next**.
 
-### Step 4: Target platform 
-
-1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
-
-    > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
-
-2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
-
-3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and select **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
-
-     > [!div class="mx-imgBorder"] 
-     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms-updated.png "Select target platforms")
-
-You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
-  
-   - [Manual code sign for iOS](code-sign-ios.md)
-   - [Manual code sign for Android](code-sign-android.md) 
-   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-
-> [!NOTE]
-> The Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
-
-4.  Select **Next**.
-
-### Step 5: Azure blob storage
+### Step 5: Manage Output
 
 1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
 1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
-1. Add the Azure key vault URI by clicking on the drop-down list.
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
-### Step 6: Manage output
+:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
 
-On the **Manage output** screen, create or select an existing **app center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen, and then select **Android** or **iOS**.
-
-> [!div class="mx-imgBorder"] 
-> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new app center location")
-
-- **Android**: Choose an existing location or create a new location.
-
-- **iOS**: Choose an existing location or create a new location.
-
-You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). More information: [Create an app center location for your mobile app manually](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional).
-
-### Step 7: Wrap up
+### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
-After a successful build, you'll see your mobile app in the **app center location** that you have selected in the previous step.
+After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
 
 ## Test and distribute mobile app package
 
-For testing and distribution, see [App center test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
 
   
 ## Register your app on Azure portal manually (optional)
-You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-2-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+You can automatically create your app registration in the wrap wizard as mentioned in [step 3](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
@@ -192,7 +176,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 ## Configure the API permissions for your app manually (optional)
 
-When you complete [step 4](wrap-how-to.md#step-2-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
+When you complete [step 3](wrap-how-to.md#step-3-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
 
 If you get errors in wrap wizard, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
 
@@ -227,7 +211,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Create an app center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **app center location** to store your mobile app as mentioned in [step 5](wrap-how-to.md#step-6-manage-output) in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
+You can manually create an app center location for your mobile app directly in app center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about app center, go to [Visual Studio app center documentation](/appcenter/).

@@ -33,7 +33,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 ## Add data source
 
 1. Create a [blank canvas app](create-blank-app.md).
-1. From the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) in Power Apps Stuido, select **Data** > **Add data**.
+1. From the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) in Power Apps Studio, select **Data** > **Add data**.
 1. Expand **Connectors**, and if the list of connections includes the one that you want, select it to add it to the app. Otherwise, skip to the next step. To connect to a table in Microsoft Dataverse instead, choose a table from the list of tables.
 1. To create a new connection, search for or select a connector such as SharePoint.
 1. Select **Add a connection** to both create the connection and add it to your app.

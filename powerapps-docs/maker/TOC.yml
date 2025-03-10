@@ -264,7 +264,17 @@
       - name: From Microsoft Dataverse
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
-        href: ./canvas-apps/app-from-sharepoint.md
+        items:
+        - name: Overview
+          href: ./canvas-apps/sharepoint-list-integration-overview.md
+        - name: Create an app from Lists or SharePoint
+          href: ./canvas-apps/app-from-sharepoint.md
+        - name: Connect lists using lookups
+          href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Understand SharePoint forms integration
+          href: ./canvas-apps/sharepoint-form-integration.md
+        - name: Customize a list or form
+          href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
     - name: Create an app from a design or a template
@@ -696,8 +706,6 @@
           href: ./canvas-apps/create-update-collection.md
         - name: Show the current user
           href: ./canvas-apps/show-current-user.md
-        - name: Connect lists using lookups
-          href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane
@@ -1108,7 +1116,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps and cloud flows to a solution by default
+      - name: Add canvas apps and cloud flows to a solution
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
@@ -1232,54 +1240,8 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Customize a SharePoint form
-    items:
-      - name: Make basic changes
-        href: ./canvas-apps/customize-list-form.md
-      - name: Understand SharePoint forms integration
-        href: ./canvas-apps/sharepoint-form-integration.md
-  - name: Integrate with other technologies
-    items:
-    - name: SharePoint Online
-      items:
-      - name: Overview
-        href: ./canvas-apps/sharepoint-scenario-intro.md
-      - name: Set up SharePoint Online lists
-        href: ./canvas-apps/sharepoint-scenario-setup.md
-      - name: Generate an app
-        href: ./canvas-apps/sharepoint-scenario-generate-app.md
-      - name: Create a flow for approvals
-        href: ./canvas-apps/sharepoint-scenario-approval-flow.md
-      - name: Create an app from scratch
-        href: ./canvas-apps/sharepoint-scenario-build-app.md
-      - name: Create a Power BI report
-        href: ./canvas-apps/sharepoint-scenario-build-report.md
-      - name: Publish the Power BI report
-        href: ./canvas-apps/sharepoint-scenario-publish-report.md
-      - name: Embed the Power BI report
-        href: ./canvas-apps/sharepoint-scenario-embed-report.md
-      - name: Create a flow for alerts
-        href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
-      - name: Walk through the completed scenario
-        href: ./canvas-apps/sharepoint-scenario-summary.md
-      - name: SharePoint integration scenarios
-        items:
-        - name: SharePoint scenarios overview
-          href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: Filter a search list in an app
-          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: Use drop down list with choices from lookup column in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: Customize an app screen based on column status in Microsoft Lists
-          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: Work with permissions in a lookup list from SharePoint site
-          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
-          href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
-    - name: Transform your InfoPath forms to Power Apps
-      href: ./canvas-apps/transform-infopath.md
-    - name: Analyze app telemetry using Application Insights
-      href: ./canvas-apps/application-insights.md
+  - name: Transform your InfoPath forms to Power Apps
+    href: ./canvas-apps/transform-infopath.md
   - name: Create native mobile apps
     items:
       - name: Overview of wrap
@@ -1339,7 +1301,9 @@
     - name: Overview
       href: ./canvas-apps/create-performant-apps-overview.md
     - name: Use Monitor to get insights and recommendations (preview)
-      href: ./canvas-apps/monitor-app-performance.md  
+      href: ./canvas-apps/monitor-app-performance.md
+    - name: Analyze app telemetry using Application Insights
+      href: ./canvas-apps/application-insights.md 
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
@@ -1357,7 +1321,7 @@
     - name: Build business logic
       href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+      href: ../guidance/coding-guidelines/overview.md
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1534,6 +1498,14 @@
             href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: Edit the related tab on a form
             href: ./model-driven-apps/use-the-form-editor-legacy.md
+          - name: Control access to forms
+            href: ./model-driven-apps/control-access-forms.md
+          - name: Show or hide form elements
+            href: ./model-driven-apps/visibility-options-legacy.md
+          - name: How to use the main form and its components
+            href: ./model-driven-apps/use-main-form-and-components.md
+          - name: How to add iFrames to forms
+            href: ./model-driven-apps/iframe-properties-legacy.md
         - name: Design effective forms
           href:
           items:
@@ -1644,7 +1616,7 @@
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
         - name: Accessibility in Power Apps app designer
-          href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+          href: ./model-driven-apps/accessibility-app-designer-site-map-designer-my-apps-page.md
         - name: Add a table as a lookup
           href: ./model-driven-apps/team-entity-lookup.md
         - name: Use the classic form editor
@@ -1658,19 +1630,8 @@
             href: ./model-driven-apps/tab-properties-legacy.md
           - name: Use controls for data visualizations
             href: ./model-driven-apps/use-custom-controls-data-visualizations.md
-        - name: Control access to forms
-          href: ./model-driven-apps/control-access-forms.md
-        - name: Show or hide form elements
-          href: ./model-driven-apps/visibility-options-legacy.md
-          items:
-          - name: Add form navigation for related tables
-            href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
         - name: "How-to guides: Forms"
           items:
-          - name: How to use the main form and its components
-            href: ./model-driven-apps/use-main-form-and-components.md
-          - name: How to add iFrames to forms
-            href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
           - name: How to configure event handlers in a form
@@ -1679,6 +1640,8 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+          - name: Add form navigation for related tables
+            href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
     - name: Collaboration in model-driven apps
       href:
       items:
@@ -1722,13 +1685,22 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
-    - name: Copilot chat for the apps
+    - name: Copilot chat for apps
       href:
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Customize Copilot chat (Preview)
-        href: ./model-driven-apps/customize-copilot-chat.md
+      - name: Customize Copilot chat (preview)
+        href:
+        items:
+        - name: Customize Copilot chat overview
+          href: ./model-driven-apps/customize-copilot-chat.md
+        - name: Add knowledge to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-knowledge.md
+        - name: Add topics to Copilot chat
+          href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Prompt guide customizations
+          href: ./model-driven-apps/copilot-chat-prompt-guide.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
@@ -2562,50 +2534,6 @@
     href: common/build-ai-plugin-for-copilot.md
 - name: AI Builder
   href: ../use-ai-builder.md
-- name: Sample apps and solutions
-  items:
-  - name: Enterprise templates for Power Platform
-    href: /power-platform/solution-templates/overview
-  - name: Crisis Communication
-    href: ./canvas-apps/sample-crisis-communication-app.md
-  - name: Hospital Emergency Response
-    items:
-    - name: Overview
-      href: ../sample-apps/emergency-response/overview.md
-    - name: Deploy the app
-      href: ../sample-apps/emergency-response/deploy-configure.md
-    - name: Use the admin app and dashboards
-      href: ../sample-apps/emergency-response/configure-data-reporting.md
-    - name: Use the mobile app
-      href: ../sample-apps/emergency-response/use.md
-  - name: Regional Government Emergency Response and Monitoring
-    items:
-    - name: Overview
-      href: ../sample-apps/regional-emergency-response/overview.md
-    - name: Deploy the solution
-      href: ../sample-apps/regional-emergency-response/deploy.md
-    - name: Upgrade the solution
-      href: ../sample-apps/regional-emergency-response/upgrade.md
-    - name: App and dashboard for regional admin
-      href: ../sample-apps/regional-emergency-response/configure.md
-    - name: Portal for admin and report viewer
-      href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
-    - name: Portal for healthcare worker
-      href: ../sample-apps/regional-emergency-response/portals-user.md
-  - name: Transfer data from hospital to regional
-    href: ../sample-apps/emergency-response-data-transfer.md
-  - name: Higher Education Crisis Financial Impact Tracker
-    items:
-    - name: Overview
-      href: ../sample-apps/crisis-financial-impact-tracker/overview.md
-    - name: Deploy the solution
-      href: ../sample-apps/crisis-financial-impact-tracker/deploy-solution.md
-    - name: Use the admin app
-      href: ../sample-apps/crisis-financial-impact-tracker/configure-data.md
-    - name: Use the mobile app
-      href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
-    - name: Use dashboards
-      href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
 - name: Responsible AI
   items:
   - name: Overview
