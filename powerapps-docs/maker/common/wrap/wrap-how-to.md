@@ -139,10 +139,10 @@ When you register the app, Azure admin also needs to grant access to API permiss
 
 ### Step 5: Manage Output
 
-1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
-1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
+1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating a Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
 1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
+
 
 :::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
 
