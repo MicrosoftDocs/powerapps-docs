@@ -121,9 +121,4 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 - [Save and publish](save-publish-app.md) your app.
 - [Customize a card](customize-card.md) in your app.
 
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
