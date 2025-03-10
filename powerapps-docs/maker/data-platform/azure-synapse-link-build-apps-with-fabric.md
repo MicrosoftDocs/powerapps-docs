@@ -6,12 +6,10 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 04/30/2024
+ms.date: 03/10/2025
 ms.custom: template-how-to
 ---
 # Build apps and automations, drive action with insights from Microsoft Fabric 
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Link to Microsoft Fabric feature in Microsoft Dataverse enables extending your data and insights in Dynamics 365 and Power Apps in Fabric. Bring your own data into Fabric and combine, reshape, and aggregate data with data from Dataverse. Use Fabric tools such as SQL, Spark, and dataflows to work with your data within Fabric. For example:
 
@@ -65,11 +63,9 @@ A new Dataverse virtual table is created with data from Fabric.
 
 You can build an app with the virtual table sourced with Fabric data in Power Apps (make.powerapps.com). From the Home page, select **Start with data** > **Select an existing table**, select the virtual table created earlier, and then select **Create app**. Provide a name for your app and build the app by following the wizard.
 
-
 > [!NOTE]
 >
-> Virtual tables created with data from Microsoft Fabic OneLake are read-only. You can't modify the data in Fabric OneLake with a Power App at this point in time.
->    
+> Virtual tables created with data from Microsoft Fabric OneLake are read-only. Currently, you can't modify the data in Fabric OneLake with Power Apps.
 
 ## See also
 
