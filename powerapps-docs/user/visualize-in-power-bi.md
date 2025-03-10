@@ -61,3 +61,5 @@ Anyone can use the **Visualize this view** feature to explore the data in a vie
 - This feature isn't supported for the **Activities** table due to a limitation in generating charts.
 
 - This feature isn't supported for guest users in a tenant.
+
+- If you are building your app for Mobile, Power BI dashboards aren't a recommended choice to visualize data. Power BI dashboards are suited for larger screens, and the small screens and form factor of mobile devices can cause usability issues with scroll bars, filters, etc.
