@@ -107,7 +107,7 @@ During the 30 day trial period, you can make and play with as many apps as you l
 
 ### Where can I get a license with Power Apps use rights for my Microsoft Account?
 
-The Dynamics 365 Sales free trial includes Power Apps use rights, along with other Dynamics and Power Platform use rights. You can sign up here: [Dynamics 365 free trial](https://dynamics.microsoft.com/dynamics-365-free-trial/).
+The Dynamics 365 Sales free trial includes Power Apps use rights, along with other Dynamics and Power Platform use rights. You can sign up here: [Dynamics 365 free trial](https://www.microsoft.com/dynamics-365/free-trial).
 
 ![image](https://user-images.githubusercontent.com/11514622/217617662-25109f3c-d85a-404b-a4b3-459c08de04a1.png)
 

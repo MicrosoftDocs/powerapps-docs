@@ -53,7 +53,7 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![Power Apps app with connectors.](./media/offline-apps/online-app.png)
+![Power Apps with connectors.](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
