@@ -51,9 +51,7 @@ Once you are in the app designer, use the command designer to customize your com
 
 #### Open the command designer to edit a command bar
 
-1. Select any table view from the **Pages** area in the app designer.
-
-1. Select **...**, and then select **Edit command bar**.
+1. Next to any table view from the **Pages** area in the app designer, select **...**, and then select **Edit command bar**.
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
