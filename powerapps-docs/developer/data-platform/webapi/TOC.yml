@@ -19,7 +19,7 @@
   - name: (JavaScript)
     items:
     - name: Get started using JavaScript
-      href: quick-start-js.md
+      href: quick-start-js-spa.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
