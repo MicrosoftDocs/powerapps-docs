@@ -18,7 +18,7 @@ search.audienceType:
 ---
 # Create new data columns in Dataverse
 
-Columns in Microsoft Dataverse define the individual data items that can be used to store information in a table. Column data is used in apps to display information on forms, in views, and can be used in searches within an app. For example, the account main form has several columns such as account name, phone, fax, website, and so on.
+Columns in Microsoft Dataverse define the individual data items that can be used to store information in a table. Column data is used in apps to display information on forms, in views, and can be used in searches within an app. By default, the account main form has several columns,  such as account name, phone, fax, website, and so on.
 
 :::image type="content" source="media/account-main-form-columns.png" alt-text="Several columns on the default account main form":::
 
