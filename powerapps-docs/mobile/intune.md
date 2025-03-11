@@ -37,5 +37,4 @@ A configuration can be set up through the [Device Management portal](https://dev
 
 ## Enhanced security support in Intune
 
-Intune Advanced App settings are not applicable for Power Apps Mobile.
-In the case of Power Apps Mobile, organization admins and makers have complete control over authentication. This includes deciding which accounts app users can use for sign-in. They can also manage sensitive data access, configure notifications, set data sync policies across sources, and define access to organizational data and documents.  
+Intune Advanced App settings aren't supported with Power Apps Mobile. However, organization admins and makers have complete control over authentication, user access, managing sensitive data access, configuring notifications, setting data sync policies across sources, and defining access to organizational data and documents.  
