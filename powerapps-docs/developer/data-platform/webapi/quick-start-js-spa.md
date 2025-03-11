@@ -41,7 +41,7 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
    :::column-end:::
 :::row-end:::
 
-This quickstart is focused on using the Dataverse Web API with JavaScript using a SPA client application. For information about how to use Web API in model-driven applications and Power Apps components, see [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi) and [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi). Both of these provide methods to work with Dataverse data from within Power Apps applications. Because both of these run in the context of an application that is already authenticated, it isn't necessary to authenticate.
+This quickstart is focused on using the Dataverse Web API with JavaScript using a SPA client application. For information about how to use Web API in model-driven applications and Power Apps components, see [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi) and [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi). Both of these provide methods to work with Dataverse data from within Power Apps applications. Because both of these run in the context of an application that is already authenticated, it isn't necessary to authenticate. The [Power Pages Portals Web API](/power-pages/configure/web-api-overview)
 
 A SPA application can use client-side JavaScript because Cross-Origin Resource Sharing (CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
 
@@ -119,3 +119,311 @@ These instructions describe how to [Register the application and copy IDs](/entr
    9.5.0
    PS C:\Users\you>
    ```
+
+## Create a project
+
+1. Create a folder somewhere on your computer. The name isn't important, but for these instructions call it `quickspa`.
+1. Open this folder using Visual Studio Code.
+1. Open a terminal window and type  `npm init -y'. This creates a package.json file in your folder.
+1. In the terminal window type `npm install @azure/msal-browser`. This creates a `node_modules` folder and a `package-lock.json` file in the `quickspa` folder.
+1. Go to `node_modules\@azure\msal-browser\lib\` and copy the `msal-browser.min.js` file.
+1. Paste the `msal-browser.min.js` file into the `quickspa` folder.
+1. Delete the `node_modules` folder and the `package-lock.json` and `package.json` files. The `msal-browser.min.js` file should be the only file left in the `quickspa` folder.
+1. Create three new files:
+
+   - index.html
+   - index.js
+   - styles.css
+
+1. Copy and paste this content to the `index.html` page:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>QuickSPA</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <header>
+         <h1>Welcome to QuickSPA</h1>
+         <button id="loginButton">Login</button>
+         <button id="logoutButton" class="hidden">Logout</button>
+      </header>
+      <nav class="disabled"><button id="whoAmIButton">WhoAmI</button></nav>
+      <main id="container"></main>
+      <script type="module" src="index.js"></script>
+   </body>
+   </html>
+   ```
+
+1. Copy and paste this content into the `index.js` page:
+
+   ```javascript
+   // Import the MSAL library in the same folder as this file
+   import "/msal-browser.min.js";
+
+   const config = {
+   baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
+   clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
+   tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
+   redirectUri: "http://localhost:5500/index.html",
+   };
+
+   // Microsoft Authentication Library (MSAL) configuration
+   const msalConfig = {
+   auth: {
+      clientId: config.clientId,
+      authority: "https://login.microsoftonline.com/" + config.tenantId,
+      redirectUri: config.redirectUri,
+      postLogoutRedirectUri: config.redirectUri,
+   },
+   cache: {
+      cacheLocation: "sessionStorage", // This configures where your cache will be stored
+      storeAuthStateInCookie: true,
+   },
+   };
+
+   // Create an instance of MSAL
+   const msalInstance = new msal.PublicClientApplication(msalConfig);
+   await msalInstance.initialize();
+
+   // body/main element where messages are displayed
+   const container = document.getElementById("container");
+
+   /**
+   * Retrieves an access token using MSAL (Microsoft Authentication Library).
+   * Set as the getToken function for the DataverseWebAPI client in the login function.
+   *
+   * @async
+   * @function getToken
+   * @returns {Promise<string>} The access token.
+   * @throws {Error} If token acquisition fails and is not an interaction required error.
+   */
+   async function getToken() {
+   const request = {
+      scopes: [config.baseUrl + "/.default"],
+   };
+
+   try {
+      const response = await msalInstance.acquireTokenSilent(request);
+      return response.accessToken;
+   } catch (error) {
+      if (error instanceof msal.InteractionRequiredAuthError) {
+            const response = await msalInstance.acquireTokenPopup(request);
+            return response.accessToken;
+         } else {
+            console.error(error);
+            throw error;
+         }
+      }
+   }
+
+   // Event handler for login button
+   async function logIn() {
+   // When there is no active account..
+   if (!msalInstance.getActiveAccount()) {
+      const request = {
+         scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
+      };
+      try {
+         const response = await msalInstance.loginPopup(request);
+         msalInstance.setActiveAccount(response.account);
+
+         // Hide the login button and
+         this.style.display = "none";
+
+         // Show the logout button
+         const logoutButton = document.getElementById("logoutButton");
+         logoutButton.innerHTML = "Logout " + response.account.name;
+         logoutButton.style.display = "block";
+         document.getElementsByTagName("nav")[0].classList.remove("disabled");
+      } catch (error) {
+         let p = document.createElement("p");
+         p.textContent = "Error logging in: " + error;
+         p.className = "error";
+         container.append(p);
+      }
+   } else {
+      // Remove the active account and try again
+      msalInstance.setActiveAccount(null);
+      this.click();
+   }
+   }
+
+   // Event handler for logout button
+   async function logOut() {
+   const activeAccount = await msalInstance.getActiveAccount();
+   const logoutRequest = {
+         account: activeAccount,
+         mainWindowRedirectUri: config.redirectUri,
+      };
+
+   try {
+      await msalInstance.logoutPopup(logoutRequest);
+
+      // return the button to the starting state
+      document.getElementById("loginButton").style.display = "block";
+      this.innerHTML = "Logout";
+      this.style.display = "none";
+
+      document.getElementsByTagName("nav")[0].classList.add("disabled");
+      } catch (error) {
+         console.error("Error logging out: ", error);
+      }
+   }
+
+   // Add event listener to the login button
+   document.getElementById("loginButton").onclick = logIn;
+
+   // Add event listener to the logout button
+   document.getElementById("logoutButton").onclick = logOut;
+
+   /// Function to get the current user's information
+   /// using the WhoAmI endpoint of the Dataverse Web API.
+   async function whoAmI() {
+   const token = await getToken();
+   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", {
+      method: "GET",
+      headers: {
+         Authorization: `Bearer ${token}`,
+         "Content-Type": "application/json",
+         Accept: "application/json",
+         "OData-Version": "4.0",
+         "OData-MaxVersion": "4.0",
+      },
+   });
+   // Send the request to the API
+   const response = await fetch(request);
+   // Handle the response
+   if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+   }
+   // Successfully received response
+   return await response.json();
+   }
+
+   // Add event listener to the whoAmI button
+   document.getElementById("whoAmIButton").onclick = async function () {
+   // Clear previous messages
+   container.replaceChildren();
+   try {
+      const response = await whoAmI();
+      let p1 = document.createElement("p");
+      p1.textContent =
+         "Congratulations! You connected to Dataverse using the Web API.";
+      container.append(p1);
+      let p2 = document.createElement("p");
+      p2.textContent = "User ID: " + response.UserId;
+      container.append(p2);
+      } 
+   catch (error) {
+         let p = document.createElement("p");
+         p.textContent = "Error fetching user info: " + error;
+         p.className = "error";
+         container.append(p);
+      }
+   };
+   ```
+
+1. Update the `index.js` file to replace the items below with the values from [Register a SPA application](#register-a-spa-application).
+
+   ```JavaScript
+      baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
+      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
+   ```
+
+1. Copy and paste this into the `styles.css` page:
+
+   ```css
+   .disabled {
+      pointer-events: none;
+      opacity: 0.5;
+      /* Optional: to visually indicate the element is disabled */
+   }
+
+   .hidden {
+      display: none;
+   }
+
+   .error {
+      color: red;
+   }
+
+   body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+   }
+
+   h1,
+   h2,
+   h3 {
+      color: #2c3e50;
+   }
+
+   button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+      margin: 5px;
+      /* Adjust the value as needed */
+   }
+
+   button:hover {
+      background-color: #2980b9;
+   }
+
+   header {
+      padding-bottom: 10px;
+      /* Adjust the value as needed */
+   }
+
+   table {
+      table-layout: auto;
+      /* Allows columns to adjust based on content */
+      width: auto;
+      /* Prevents the table from taking up the full width of the page */
+      border-collapse: collapse;
+      /* Ensures that the borders are not doubled */
+   }
+
+   th,
+   td {
+      border: 1px solid #ddd;
+      /* Adds a solid border to the table headers and cells */
+      padding: 8px;
+      /* Adds padding inside the table cells */
+   }
+
+   th {
+      background-color: #f2f2f2;
+      /* Optional: Adds a background color to the table headers */
+      text-align: left;
+      /* Optional: Aligns the text to the left in the table headers */
+   }
+   ```
+
+## Try it
+
+1. In Visual Studio Code, click the **Go Live** button.
+1. Click the **Login** button.
+
+   This will open the **Sign in to your account** dialog.
+
+1. Select the account that has access to Dataverse.
+1. Click the **WhoAmI** button.
+
+   The app will say **Congratulations! You connected to Dataverse using the Web API.** and display your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
+
+## Trouble shooting
+
