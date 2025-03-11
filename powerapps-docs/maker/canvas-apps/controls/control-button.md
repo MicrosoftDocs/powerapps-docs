@@ -39,6 +39,8 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
+**ContentLanguage** -  The language of the control's content, if different from the control's container.
+
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
