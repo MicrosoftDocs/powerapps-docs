@@ -151,6 +151,15 @@ When you register the app, Azure admin also needs to grant access to API permiss
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
 
+### View your build
+
+1. After completing the wrap-up step in wrap wizard, select the **Build** button to build your project.
+1. Select **View Builds** to view your build.
+1. Alternatively, go to the **Wrap projects** option in your navigation to view the build.
+1. Hover over the required project, and select it.
+1. The View builds option appears. Select it to view the builds.
+
+
 ## Test and distribute mobile app package
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
