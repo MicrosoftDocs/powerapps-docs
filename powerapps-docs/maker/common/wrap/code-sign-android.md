@@ -18,6 +18,9 @@ contributors:
 
 In this article, you'll learn about how to manually code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
+> [!Note]
+> These steps are required if you haven't wrapped the app using automatic sign-in. To avoid repeating this step, we recommend using automatic sign-in.
+
 > [!IMPORTANT]
 > If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
@@ -25,9 +28,9 @@ In this article, you'll learn about how to manually code sign for Android (APK).
 
 You need the following information to get started:
 
-- Install [Android Studio](https://developer.android.com/studio)
-- Install [OpenSSL](https://www.openssl.org/)
-- Install [apksigner tool](https://developer.android.com/studio/command-line/apksigner)
+- Set up [Android Studio](https://developer.android.com/studio)
+- Set up [OpenSSL](https://www.openssl.org/)
+- Set up [apksigner tool](https://developer.android.com/studio/command-line/apksigner)
 
 ## Prerequisites
 
