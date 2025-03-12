@@ -13,6 +13,8 @@ ms.collection:
 
 # Share a card in Teams
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 An easy way to share your cards is to include a link to them in Microsoft Teams. The **Send** button on the **Play** page generates a link that you can copy and then paste into a chat, channel, or meeting. Power Apps must be installed in the Teams chat, channel, or meeting for the card to work and will be installed automatically unless the app is blocked in the organization.
 
    :::image type="content" source="../media/send-a-card/card-in-teams.png" alt-text="Screenshot of a Power Apps card shared in a Teams chat.":::

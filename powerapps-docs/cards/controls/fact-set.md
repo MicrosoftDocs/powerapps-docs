@@ -16,6 +16,8 @@ contributors:
 
 # Fact set control for cards in Power Apps
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Displays a series of facts (i.e. name/value pairs) in a tabular form.
 
 ## Properties

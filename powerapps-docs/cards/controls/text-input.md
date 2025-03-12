@@ -16,6 +16,8 @@ contributors:
 
 # Text input control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A field for users to type text.
 
 ## Properties
