@@ -9489,6 +9489,16 @@
       "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-data.md",
       "redirect_url": "https://learn.microsoft.com",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/transform-infopath.md",
+      "redirect_url": "/power-apps/maker/canvas-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/chatbots.md",
+      "redirect_url": "/microsoft-copilot-studio/authoring-first-bot",
+      "redirect_document_id": false
     }
   ]
 }
