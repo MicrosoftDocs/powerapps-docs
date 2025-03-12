@@ -22,7 +22,16 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
 
 This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps.
 
-For information about how to use Web API in model-driven applications and Power Apps components, see [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi) and [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi). Both of these provide methods to work with Dataverse data from within Power Apps applications. Because both of these run in the context of an application that is already authenticated, it isn't necessary to authenticate. The [Power Pages Portals Web API](/power-pages/configure/web-api-overview)
+> [!NOTE]
+> This sample isn't about the following scenarios:
+>
+> |Scenario|More information|
+> |---|---|
+> |Model-driven application scripts|- [Apply business logic using client scripting in model-driven apps using JavaScript](../../model-driven-apps/client-scripting.md)<br />- [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi)|
+> |Power Apps code component framework|- [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi)<br />- [Implementing Web API component](../../component-framework/sample-controls/webapi-control.md)|
+> |Power Pages Portals|[Power Pages Portals Web API](/power-pages/configure/web-api-overview)|
+>
+> For each of these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in these samples. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
 
 A SPA application can use client-side JavaScript because Cross-Origin Resource Sharing (CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
 
@@ -101,6 +110,11 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
 1. Create a folder somewhere on your computer. The name isn't important, but for these instructions call it `quickspa`.
 1. Open this folder using Visual Studio Code.
+
+### Get the msal-browser.min.js library
+
+We need a copy of the latest version of the `msal-browser.min.js` library, but we don't want to take a dependency on using npm to build and run our code.
+
 1. Open a terminal window and type  `npm init -y`.
 
    This creates a `package.json` file in your folder.
@@ -115,12 +129,9 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
    The `msal-browser.min.js` file should be the only file left in the `quickspa` folder.
 
-1. Create three new files:
+### Create HTML page
 
-   - `index.html`
-   - `index.js`
-   - `styles.css`
-
+1. Create a new file named `index.html`.
 1. Copy and paste this content to the `index.html` page:
 
    ```html
@@ -147,7 +158,10 @@ These instructions describe how to [Register the application and copy IDs](/entr
    </html>
    ```
 
-1. Copy and paste this content into the `index.js` page:
+### Create JavaScript page
+
+1. Create a new file named `index.js`.
+Copy and paste this content into the `index.js` page:
 
    ```javascript
    // Import the MSAL library in the same folder as this file
@@ -326,6 +340,9 @@ These instructions describe how to [Register the application and copy IDs](/entr
       tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
    ```
 
+### Create CSS page
+
+1. Create a new file named `styles.css`.
 1. Copy and paste this into the `styles.css` page:
 
    ```css

@@ -301,11 +301,11 @@ Represents a set of changes used with batch processing. All requests within the 
 Creates an instance of `ChangeSet`.
 
 - **Parameters:**
-  - `requests` (Array<WebAPIRequest>): An array of `WebAPIRequest` objects.
+  - `requests` (Array&lt;WebAPIRequest&gt;): An array of `WebAPIRequest` objects.
 
 ### Properties
 
-- `requests` (Array<WebAPIRequest>): The array of `WebAPIRequest` objects in the change set.
+- `requests` (Array&lt;WebAPIRequest&gt;): The array of `WebAPIRequest` objects in the change set.
 
 ### Methods
 
@@ -1213,7 +1213,6 @@ class Client {
     //#endregion Parameter Validation
 
     try {
-      // TODO: Should all requests be composed using WebAPIRequest?
       const response = await this.Send(
         request.method,
         request.resource,
