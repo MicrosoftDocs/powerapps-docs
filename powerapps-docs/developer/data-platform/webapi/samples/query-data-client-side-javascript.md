@@ -1,763 +1,1444 @@
 ---
 title: "Web API Query Data Sample (Client-side JavaScript) | Microsoft Docs"
 description: "Learn how to perform basic query requests using the Microsoft Dataverse Web API and client-side JavaScript."
-ms.date: 04/06/2022
-author: MicroSri
-ms.author: sriknair
+ms.date: 03/30/2025
+author: JimDaly
+ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType:
   - developer
 contributors:
   - JimDaly
+  - Mattp123
 ---
 
 # Web API Query Data Sample (Client-side JavaScript)
 
-[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
+
 
 This sample demonstrates how to perform basic query requests using the Microsoft Dataverse Web API using client-side JavaScript.
 
 > [!NOTE]
 > This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
 
-<a name="bkmk_prereq"></a>
+[!INCLUDE [cc-web-api-spa-javascript-code-sample-note](../../includes/cc-web-api-spa-javascript-code-sample-note.md)]
 
 ## Prerequisites
 
-To run this sample, the following is required:
+This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that sample to run this sample.
 
-- Access to Dataverse environment.
-- A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.
+TODO: Create an include of steps to register the sample.
+Include it here? Or in [Web API Data operations Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
 
-<a name="bkmk_runsample"></a>
-
-## Run this sample
-
-To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/WebAPIQueryData). Extract the contents of the sample and locate the `WebAPIQueryData_1_0_0_0_managed.zip` managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).
-
-<a name="bkmk_codeSample"></a>
-
-## Code sample
-
-This sample includes two web resources:
-
-- [WebAPIQuery.html](#bkmk_WebAPIQuery)
-- [WebAPIQuery.js](#bkmk_WebAPIQueryJS)
-
-<a name="bkmk_WebAPIQuery"></a>
-
-### WebAPIQuery.html
-
-The WebAPIQuery.html web resource provides the context in which the JavaScript code will run.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Microsoft CRM Web API Query Example</title>
-    <meta charset="utf-8" />
-    <script
-      src="../ClientGlobalContext.js.aspx"
-      type="text/javascript"
-    ></script>
-    <script src="scripts/es6promise.js"></script>
-    <script src="scripts/WebAPIQuery.js"></script>
-
-    <style type="text/css">
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      #preferences {
-        border: inset;
-        padding: 10px 10px;
-      }
-
-      #output_area {
-        border: inset;
-        background-color: gainsboro;
-        padding: 10px 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Microsoft CRM Web API Query Example</h1>
-    <p>
-      This page demonstrates the CRM Web API's Query operations using
-      JavaScript.
-    </p>
-
-    <h2>Instructions</h2>
-    <p>
-      Choose your preferences and run the JavaScript code. Use your browser's
-      developer tools to view the output written to the console (e.g.: in IE 11
-      or Microsoft Edge, press F12 to load the Developer Tools).
-    </p>
-    <form id="preferences">
-      <p>
-        Remove sample data (Choose whether you want to delete sample data
-        created during this execution):
-        <br />
-        <input name="removesampledata" type="radio" value="yes" checked /> Yes
-        <input name="removesampledata" type="radio" value="no" /> No
-      </p>
-      <input
-        type="button"
-        name="start_samples"
-        value="Start Sample"
-        onclick="Sdk.startSample()"
-      />
-    </form>
-  </body>
-</html>
-```
-
-<a name="bkmk_WebAPIQueryJS"></a>
-
-### WebAPIQuery.js
-
-The WebAPIQuery.js web resource is the JavaScript library that defines the operations this sample performs.
+## QueryDataSample.js
 
 ```javascript
-"use strict";
-var Sdk = window.Sdk || {};
-/**
- * @function getClientUrl
- * @description Get the client URL.
- * @returns {string} The client URL.
- */
-Sdk.getClientUrl = function () {
-    var context;
-    // GetGlobalContext defined by including reference to
-    // ClientGlobalContext.js.aspx in the HTML page.
-    if (typeof GetGlobalContext != "undefined")
-    { context = GetGlobalContext(); }
-    else
-    {
-        if (typeof Xrm != "undefined") {
-            // Xrm.Page.context defined within the Xrm.Page object model for form scripts.
-            context = Xrm.Page.context;
-        }
-        else { throw new Error("Context is not available."); }
-    }
-    return context.getClientUrl();
-}
+import { Util } from "../scripts/Util.js";
+import { DataverseWebAPI as dv } from "../scripts/DataverseWebAPI.js";
+export class QueryDataSample {
+  /**
+   * @type {dv.Client}
+   * @private
+   */
+  #client; // The DataverseWebAPIClient instance
+  #container; // The container element to display messages
+  #entityStore = []; // Store for created records to delete at the end of the sample
+  #util; //Common functions for samples
+  #name = "Query data";
+  #contosoAccountId; // Store for the account ID
+  #contactYvonneId; // Store for the primary contact ID
 
-// Global variables.
-var entitiesToDelete = [];              // Entity URIs to be deleted (if user chooses to delete sample data)
-var deleteData = true;                  // Delete data by default unless user chooses not to delete.
-var clientUrl = Sdk.getClientUrl();     // e.g.: https://org.crm.dynamics.com
-var webAPIPath = "/api/data/v8.1";      // Path to the web API.
-var account1Uri;                        // e.g.: Contoso Inc (sample)
-var contact1Uri;                        // e.g.: Yvonne McKey (sample)
-var page2Uri;                           // URI of next page in pagination sample.
+  // Constructor to initialize the client, container, and utility helper functions
+  constructor(client, container) {
+    this.#client = client;
+    this.#container = container;
+    this.#util = new Util(container);
+  }
 
-// Entity properties to select in a request.
-var contactProperties = ["fullname", "jobtitle", "annualincome"];
-var accountProperties = ["name"];
-var taskProperties = ["subject", "description"];
+  // Public functions to set up, run, and clean up data created by the sample
+  async SetUp() {
+    // Clear the container
+    this.#container.replaceChildren();
+    this.#util.appendMessage(this.#name + " sample started...");
 
-/**
- * @function request
- * @description Generic helper function to handle basic XMLHttpRequest calls.
- * @param {string} action - The request action. String is case-sensitive.
- * @param {string} uri - An absolute or relative URI. Relative URI starts with a "/".
- * @param {object} data - An object representing an entity. Required for create and update action.
- * @param {boolean} formattedValue - If "true" then include formatted value; "false" otherwise.
- *    For more info on formatted value, see:
- *    https://msdn.microsoft.com/library/gg334767.aspx#bkmk_includeFormattedValues
- * @param {number} maxPageSize - Indicate the page size. Default is 10 if not defined.
- * @returns {Promise} - A Promise that returns either the request object or an error object.
- */
-Sdk.request = function (action, uri, data, formattedValue, maxPageSize) {
-    if (!RegExp(action, "g").test("POST PATCH PUT GET DELETE")) { // Expected action verbs.
-        throw new Error("Sdk.request: action parameter must be one of the following: " +
-            "POST, PATCH, PUT, GET, or DELETE.");
-    }
-    if (!typeof uri === "string") {
-        throw new Error("Sdk.request: uri parameter must be a string.");
-    }
-    if ((RegExp(action, "g").test("POST PATCH PUT")) && (data === null || data === undefined)) {
-        throw new Error("Sdk.request: data parameter must not be null for operations that create or modify data.");
-    }
-    if (maxPageSize === null || maxPageSize === undefined) {
-        maxPageSize = 10; // Default limit is 10 entities per page.
-    }
-
-    // Construct a fully qualified URI if a relative URI is passed in.
-    if (uri.charAt(0) === "/") {
-        uri = clientUrl + webAPIPath + uri;
-    }
-
-    return new Promise(function (resolve, reject) {
-        var request = new XMLHttpRequest();
-        request.open(action, encodeURI(uri), true);
-        request.setRequestHeader("OData-MaxVersion", "4.0");
-        request.setRequestHeader("OData-Version", "4.0");
-        request.setRequestHeader("Accept", "application/json");
-        request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-        request.setRequestHeader("Prefer", "odata.maxpagesize=" + maxPageSize);
-        if (formattedValue) {
-            request.setRequestHeader("Prefer",
-                "odata.include-annotations=OData.Community.Display.V1.FormattedValue");
-        }
-        request.onreadystatechange = function () {
-            if (this.readyState === 4) {
-                request.onreadystatechange = null;
-                switch (this.status) {
-                    case 200: // Success with content returned in response body.
-                    case 204: // Success with no content returned in response body.
-                        resolve(this);
-                        break;
-                    default: // All other statuses are unexpected so are treated like errors.
-                        var error;
-                        try {
-                            error = JSON.parse(request.response).error;
-                        } catch (e) {
-                            error = new Error("Unexpected Error");
-                        }
-                        reject(error);
-                        break;
-                }
-            }
-        };
-        request.send(JSON.stringify(data));
-    });
-};
-
-/**
- * @funnction output
- * @description Generic helper function to output data to console.
- * @param {array} collection - Array of entities.
- * @param {string} label - Text label for what the collection contains.
- * @param {array} properties - Array of properties appropriate for the collection.
- */
-Sdk.output = function (collection, label, properties) {
-    console.log(label);
-    collection.forEach(function (row, i) {
-        var prop = [];
-        properties.forEach(function (p) {
-            var f = p + "@OData.Community.Display.V1.FormattedValue";
-            prop.push((row[f] ? row[f] : row[p])); // Get formatted value if one exists for this property.
-        })
-        console.log("\t%s) %s", i + 1, prop.join(", "));
-    });
-}
-
-/**
- * @function startSample
- * @description Runs the sample.
- * This sample demonstrates basic query operations.
- * Results are sent to the debugger's console window.
- */
-Sdk.startSample = function () {
-    // Initializing...
-    deleteData = document.getElementsByName("removesampledata")[0].checked;
-    entitiesToDelete = []; //Reset the array.
-    account1Uri = "";
-    contact1Uri = "";
-    page2Uri = "";
-
-    console.log("-- Sample started --");
-    console.log("Create sample data:");
-    // Add some data to the CRM server so we can query against it.
-    // Using Deep Insert, we create all the sample data in one request.
-    // Data structure:
-    //   Accounts
-    //      |--- primarycontactid
-    //          |--- Contact_Tasks (3 tasks)
-    //      |--- Account_Tasks (3 tasks)
-    //      |--- contact_customer_accounts (9 child contacts, each with 3 tasks)
-    //          |--- Contacts
-    //              |--- Contact_Tasks
-    //
-    var sampleData = {
-        "name": "Contoso, Ltd. (sample)",
-        "primarycontactid": {
-            "firstname": "Yvonne", "lastname": "McKay (sample)", "jobtitle": "Coffee Master",
-            "annualincome": 45000, "Contact_Tasks": [
-            { "subject": "Task 1", "description": "Task 1 description" },
-            { "subject": "Task 2", "description": "Task 2 description" },
-            { "subject": "Task 3", "description": "Task 3 description" }
-            ]
-        }, "Account_Tasks": [
-        { "subject": "Task 1", "description": "Task 1 description" },
-        { "subject": "Task 2", "description": "Task 2 description" },
-        { "subject": "Task 3", "description": "Task 3 description" }
+    // Section 0: Create records to query
+    const contosoAccount = {
+      name: "Contoso, Ltd. (sample)",
+      Account_Tasks: [
+        {
+          subject: "Task 1 for Contoso, Ltd.",
+          description: "Task 1 for Contoso, Ltd. description",
+          actualdurationminutes: 10,
+        },
+        {
+          subject: "Task 2 for Contoso, Ltd.",
+          description: "Task 2 for Contoso, Ltd. description",
+          actualdurationminutes: 10,
+        },
+        {
+          subject: "Task 3 for Contoso, Ltd.",
+          description: "Task 3 for Contoso, Ltd. description",
+          actualdurationminutes: 10,
+        },
+      ],
+      primarycontactid: {
+        firstname: "Yvonne",
+        lastname: "McKay (sample)",
+        jobtitle: "Coffee Master",
+        annualincome: 45000,
+        Contact_Tasks: [
+          {
+            subject: "Task 1 for Yvonne McKay",
+            description: "Task 1 for Yvonne McKay description",
+            actualdurationminutes: 5,
+          },
+          {
+            subject: "Task 2 for Yvonne McKay",
+            description: "Task 2 for Yvonne McKay description",
+            actualdurationminutes: 5,
+          },
+          {
+            subject: "Task 3 for Yvonne McKay",
+            description: "Task 3 for Yvonne McKay description",
+            actualdurationminutes: 5,
+          },
         ],
-        "contact_customer_accounts": [
+      },
+      contact_customer_accounts: [
+        {
+          firstname: "Susanna",
+          lastname: "Stubberod (sample)",
+          jobtitle: "Senior Purchaser",
+          annualincome: 52000,
+          Contact_Tasks: [
             {
-                "firstname": "Susanna", "lastname": "Stubberod (sample)", "jobtitle": "Senior Purchaser",
-                "annualincome": 52000, "Contact_Tasks": [
-            { "subject": "Task 1", "description": "Task 1 description" },
-            { "subject": "Task 2", "description": "Task 2 description" },
-            { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 1 for Susanna Stubberod",
+              description: "Task 1 for Susanna Stubberod description",
+              actualdurationminutes: 3,
             },
             {
-                "firstname": "Nancy", "lastname": "Anderson (sample)", "jobtitle": "Activities Manager",
-                "annualincome": 55500, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 2 for Susanna Stubberod",
+              description: "Task 2 for Susanna Stubberod description",
+              actualdurationminutes: 3,
             },
             {
-                "firstname": "Maria", "lastname": "Cambell (sample)", "jobtitle": "Accounts Manager",
-                "annualincome": 31000, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 3 for Susanna Stubberod",
+              description: "Task 3 for Susanna Stubberod description",
+              actualdurationminutes: 3,
+            },
+          ],
+        },
+        {
+          firstname: "Nancy",
+          lastname: "Anderson (sample)",
+          jobtitle: "Activities Manager",
+          annualincome: 55500,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Nancy Anderson",
+              description: "Task 1 for Nancy Anderson description",
+              actualdurationminutes: 4,
             },
             {
-                "firstname": "Nancy", "lastname": "Anderson (sample)", "jobtitle": "Logistics Specialist",
-                "annualincome": 63500, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 2 for Nancy Anderson",
+              description: "Task 2 for Nancy Anderson description",
+              actualdurationminutes: 4,
             },
             {
-                "firstname": "Scott", "lastname": "Konersmann (sample)", "jobtitle": "Accounts Manager",
-                "annualincome": 38000, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 3 for Nancy Anderson",
+              description: "Task 3 for Nancy Anderson description",
+              actualdurationminutes: 4,
+            },
+          ],
+        },
+        {
+          firstname: "Maria",
+          lastname: "Cambell (sample)",
+          jobtitle: "Accounts Manager",
+          annualincome: 31000,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Maria Cambell",
+              description: "Task 1 for Maria Cambell description",
+              actualdurationminutes: 5,
             },
             {
-                "firstname": "Robert", "lastname": "Lyon (sample)", "jobtitle": "Senior Technician",
-                "annualincome": 78000, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 2 for Maria Cambell",
+              description: "Task 2 for Maria Cambell description",
+              actualdurationminutes: 5,
             },
             {
-                "firstname": "Paul", "lastname": "Cannon (sample)", "jobtitle": "Ski Instructor",
-                "annualincome": 68500, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 3 for Maria Cambell",
+              description: "Task 3 for Maria Cambell description",
+              actualdurationminutes: 5,
+            },
+          ],
+        },
+        {
+          firstname: "Scott",
+          lastname: "Konersmann (sample)",
+          jobtitle: "Accounts Manager",
+          annualincome: 38000,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Scott Konersmann",
+              description: "Task 1 for Scott Konersmann description",
+              actualdurationminutes: 6,
             },
             {
-                "firstname": "Rene", "lastname": "Valdes (sample)", "jobtitle": "Data Analyst III",
-                "annualincome": 86000, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
+              subject: "Task 2 for Scott Konersmann",
+              description: "Task 2 for Scott Konersmann description",
+              actualdurationminutes: 6,
             },
             {
-                "firstname": "Jim", "lastname": "Glynn (sample)", "jobtitle": "Senior International Sales Manager",
-                "annualincome": 81400, "Contact_Tasks": [
-                { "subject": "Task 1", "description": "Task 1 description" },
-                { "subject": "Task 2", "description": "Task 2 description" },
-                { "subject": "Task 3", "description": "Task 3 description" }
-                ]
-            }
-        ]
+              subject: "Task 3 for Scott Konersmann",
+              description: "Task 3 for Scott Konersmann description",
+              actualdurationminutes: 6,
+            },
+          ],
+        },
+        {
+          firstname: "Robert",
+          lastname: "Lyon (sample)",
+          jobtitle: "Senior Technician",
+          annualincome: 78000,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Robert Lyon",
+              description: "Task 1 for Robert Lyon description",
+              actualdurationminutes: 7,
+            },
+            {
+              subject: "Task 2 for Robert Lyon",
+              description: "Task 2 for Robert Lyon description",
+              actualdurationminutes: 7,
+            },
+            {
+              subject: "Task 3 for Robert Lyon",
+              description: "Task 3 for Robert Lyon description",
+              actualdurationminutes: 7,
+            },
+          ],
+        },
+        {
+          firstname: "Paul",
+          lastname: "Cannon (sample)",
+          jobtitle: "Ski Instructor",
+          annualincome: 68500,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Paul Cannon",
+              description: "Task 1 for Paul Cannon description",
+              actualdurationminutes: 8,
+            },
+            {
+              subject: "Task 2 for Paul Cannon",
+              description: "Task 2 for Paul Cannon description",
+              actualdurationminutes: 8,
+            },
+            {
+              subject: "Task 3 for Paul Cannon",
+              description: "Task 3 for Paul Cannon description",
+              actualdurationminutes: 8,
+            },
+          ],
+        },
+        {
+          firstname: "Rene",
+          lastname: "Valdes (sample)",
+          jobtitle: "Data Analyst III",
+          annualincome: 86000,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Rene Valdes",
+              description: "Task 1 for Rene Valdes description",
+              actualdurationminutes: 9,
+            },
+            {
+              subject: "Task 2 for Rene Valdes",
+              description: "Task 2 for Rene Valdes description",
+              actualdurationminutes: 9,
+            },
+            {
+              subject: "Task 3 for Rene Valdes",
+              description: "Task 3 for Rene Valdes description",
+              actualdurationminutes: 9,
+            },
+          ],
+        },
+        {
+          firstname: "Jim",
+          lastname: "Glynn (sample)",
+          jobtitle: "Senior International Sales Manager",
+          annualincome: 81400,
+          Contact_Tasks: [
+            {
+              subject: "Task 1 for Jim Glynn",
+              description: "Task 1 for Jim Glynn description",
+              actualdurationminutes: 10,
+            },
+            {
+              subject: "Task 2 for Jim Glynn",
+              description: "Task 2 for Jim Glynn description",
+              actualdurationminutes: 10,
+            },
+            {
+              subject: "Task 3 for Jim Glynn",
+              description: "Task 3 for Jim Glynn description",
+              actualdurationminutes: 10,
+            },
+          ],
+        },
+      ],
+    };
+    // Create the records that are all related to the account
+    this.#contosoAccountId = await this.#createRecords(contosoAccount);
+    // Add the primary contact to the entity store
+    this.#contactYvonneId = await this.#addPrimaryContactToEntityStore(
+      this.#contosoAccountId
+    );
+  }
+  // Run the sample
+  async Run() {
+    try {
+      // Section 1: Select specific properties
+      this.#util.appendMessage("<h2>Section 1: Select specific properties</h2>");
+
+      await this.#selectSpecificProperties();
+
+      // Section 2: Use query functions
+      this.#util.appendMessage("<h2>Section 2: Use query functions</h2>");
+      // standard query functions
+      await this.#retrieveContactsWhereFullNameContainsSample();
+      // Dataverse query functions
+      await this.#retrieveContactsCreatedInLastHour();
+      // Use operators
+      await this.#retrieveHighIncomeContacts();
+      // Set Set precedence
+      await this.#retrieveHighIncomeSeniorOrManagerContacts();
+      // Section 3: Ordering and aliases
+      this.#util.appendMessage("<h2>Section 3: Ordering and aliases</h2>");
+      // Order results
+      await this.#retrieveContosoContactsOrderedByAnnualIncomeAndTitle();
+      // Parameter alias
+      await this.#demonstrateParameterAliases();
+      // Section 4: Limit and count results
+      this.#util.appendMessage("<h2>Section 4: Limit and count results</h2>");
+      // Top results
+      await this.#getTop5Contacts();
+      // Collection count
+      await this.#getContactCount();
+      // Result count
+      await this.#getCountOfFilteredCollection();
+      // Section 5: Pagination
+      this.#util.appendMessage("<h2>Section 5: Pagination</h2>");
+      const results = await this.#retrievePageOfFourContacts();
+      await this.#showNextPageOfContacts(results);
+      // Section 6: Expand results
+      this.#util.appendMessage("<h2>Section 6: Expand results</h2>");
+      // Expand on single-valued navigation property
+      await this.#retrieveAccountWithPrimaryContact();
+      // Expand on partner property
+      await this.#retrieveContactWithAccounts();
+      // Expand on collection-valued navigation property
+      await this.#retrieveAccountContacts();
+      // Expand on multiple navigation properties
+      await this.#retrieveAccountContactsAndTasks();
+      // Multi-level expands
+      await this.#retrieveMultiLevelExpands();
+      // Section 7: Aggregate results
+      this.#util.appendMessage("<h2>Section 7: Aggregate results</h2>");
+      await this.#retrieveAnnualIncomeAggregates();
+      // Section 8: FetchXML queries
+      this.#util.appendMessage("<h2>Section 8: FetchXML queries</h2>");
+      await this.#retrieveContactsWithFetchXml();
+      await this.#retrieveFirstPageOfContactsWithFetchXml();
+      // Section 9: Use predefined queries
+      this.#util.appendMessage("<h2>Section 9: Use predefined queries</h2>");
+      await this.#getSavedQueryResults();
+      const userQueryId = await this.#createUserQuery();
+      await this.#showUserQueryResults(userQueryId);
+    } catch (error) {
+      this.#util.showError(error.message);
+      // Try to clean up even if an error occurs
+      await this.CleanUp();
+    }
+  }
+  // Clean up the created records
+  async CleanUp() {
+    if (this.#entityStore.length === 0) {
+      // No records to delete
+      return;
+    }
+
+   //#region Section 10: Delete sample records
+
+    this.#util.appendMessage("<h2>Section 10: Delete sample records</h2>");
+
+    let deleteMessageList = document.createElement("ul");
+    this.#container.append(deleteMessageList);
+
+    const requests = [];
+    for (const item of this.#entityStore) {
+      const request = new dv.WebAPIRequest(
+        "DELETE",
+        `${item.entitySetName}(${item.id})`
+      );
+      requests.push(request);
+    }
+
+    const changeSet = new dv.ChangeSet(requests);
+    const responses = await this.#client.Batch([changeSet]);
+
+    responses.forEach((response, index) => {
+      const message = document.createElement("li");
+      const entity = this.#entityStore[index];
+
+      if (response.statusCode === 204) {
+        message.textContent = `Deleted ${entity.entityName} ${entity.name}`;
+      } else {
+        message.textContent = `Failed to delete ${entity.entityName} ${entity.name}`;
+        message.className = "error";
+      }
+
+      deleteMessageList.append(message);
+    });
+
+    this.#util.appendMessage(
+      "Related contact records deleted due to cascade delete."
+    );
+     //#endregion Section 10: Delete sample records
+    // Set the entity store to an empty array
+    this.#entityStore = [];
+    this.#util.appendMessage(this.#name + " sample completed.");
+    this.#util.appendMessage("<a href='#'>Go to top</a>");
+  }
+
+  //#region Section 0: Create records to query
+
+  // Create records to query
+  async #createRecords(contosoAccount) {
+    try {
+      const contosoAccountId = await this.#client.Create(
+        "accounts",
+        contosoAccount
+      );
+      this.#util.appendMessage("Created records for this sample");
+      // To delete later
+      this.#entityStore.push({
+        name: `${contosoAccount.name}`,
+        entityName: "account",
+        entitySetName: "accounts",
+        id: contosoAccountId,
+      });
+      return contosoAccountId;
+    } catch (e) {
+      this.#util.showError("Failed to create sample records:" + e.message);
+      throw e;
+    }
+  }
+
+  // Add the primary contact to the entity store
+  async #addPrimaryContactToEntityStore(contosoAccountId) {
+    try {
+      const contoso = await this.#client.Retrieve(
+        "accounts",
+        contosoAccountId,
+        "$select=accountid&$expand=primarycontactid($select=contactid,fullname)"
+      );
+      // To delete later
+      this.#entityStore.push({
+        name: `${contoso.primarycontactid.fullname}`,
+        entityName: "contact",
+        entitySetName: "contacts",
+        id: contoso.primarycontactid.contactid,
+      });
+
+      return contoso.primarycontactid.contactid;
+    } catch (e) {
+      this.#util.showError(
+        "Failed to add primary contact to entity store:" + e.message
+      );
+      throw e;
+    }
+  }
+  //#endregion Section 0: Create records to query
+
+  //#region Section 1: Select specific properties
+
+  async #selectSpecificProperties() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const query = "$select=" + columns.join(",");
+
+    try {
+      const contact = await this.#client.Retrieve(
+        "contacts",
+        this.#contactYvonneId,
+        query
+      );
+      this.#util.appendMessage("<strong>Selected specific properties</strong>");
+      this.#util.appendMessage(
+        "<pre>contacts(" + this.#contactYvonneId + ")?" + query + "</pre>"
+      );
+      const table = this.#util.createTable(contact);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve the data:" + e.message);
+      throw e;
+    }
+  }
+
+  //#endregion Section 1: Select specific properties
+
+  //#region Section 2: Use query functions
+
+  // Standard query functions
+  async #retrieveContactsWhereFullNameContainsSample() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const query =
+      "$select=" + columns.join(",") + "&$filter=" + filters.join(" and ");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts where full name contains (sample):</strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  //Dataverse query functions
+  async #retrieveContactsCreatedInLastHour() {
+    const columns = ["fullname", "jobtitle", "annualincome", "createdon"];
+
+    const filters = [
+      "Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+      "@p1='createdon'",
+      "@p2='1'",
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts created in the last hour:<strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  // Use operators
+  async #retrieveHighIncomeContacts() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "annualincome gt 50000",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts with income greater than $50,000 :<strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  // Set precedence
+
+  async #retrieveHighIncomeSeniorOrManagerContacts() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const OrFilters = [
+      "contains(jobtitle, 'senior')",
+      "contains(jobtitle, 'manager')",
+    ];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "(" + OrFilters.join(" or ") + ")",
+      "annualincome gt 50000",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts with Senior or Manager titles and income greater than $50,000 :</strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  //#endregion Section 2: Use query functions
+
+  //#region Section 3: Ordering and aliases
+
+  // Order results
+  async #retrieveContosoContactsOrderedByAnnualIncomeAndTitle() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const orders = ["annualincome desc", "jobtitle asc"];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+      "$orderby=" + orders.join(","),
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts ordered by annual income and title:</strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  // Parameter alias
+  async #demonstrateParameterAliases() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = ["contains(@p1,'(sample)')", "@p2 eq @p3"];
+
+    const orders = ["@p4 asc", "@p5 desc"];
+
+    const aliases = [
+      "@p1=fullname",
+      "@p2=_parentcustomerid_value",
+      "@p3=" + this.#contosoAccountId,
+      "@p4=jobtitle",
+      "@p5=annualincome",
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+      "$orderby=" + orders.join(","),
+      aliases.join("&"),
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts ordered by annual income and title using parameter aliases:</strong>"
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts.");
+      throw e;
+    }
+  }
+
+  //#endregion Section 3: Ordering and aliases
+
+  //#region Section 4: Limit and count results
+
+  // Top results
+  async #getTop5Contacts() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+      "$top=5",
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage("<strong>Top 5 contacts:</strong>");
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve top 5 contacts.");
+      throw e;
+    }
+  }
+
+  // Collection count
+  async #getContactCount() {
+    try {
+      const number = await this.#client.GetCollectionCount(
+        "accounts(" + this.#contosoAccountId + ")/contact_customer_accounts"
+      );
+      this.#util.appendMessage(
+        `<strong>Contoso contact count: ${number}</strong>`
+      );
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contact count.");
+      throw e;
+    }
+  }
+
+  // Result count
+
+  async #getCountOfFilteredCollection() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const OrFilters = [
+      "contains(jobtitle, 'senior')",
+      "contains(jobtitle, 'manager')",
+    ];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "(" + OrFilters.join(" or ") + ")",
+      "annualincome gt 50000",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+      "$count=true",
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple("contacts", query);
+      this.#util.appendMessage(
+        `<strong>Contact result count: ${contacts["@odata.count"]}</strong>`
+      );
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contact count.");
+      throw e;
+    }
+  }
+
+  //#endregion Section 4: Limit and count results
+
+  //#region Section 5: Pagination
+
+  async #retrievePageOfFourContacts() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const filters = [
+      "contains(fullname,'(sample)')",
+      "_parentcustomerid_value eq " + this.#contosoAccountId,
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$filter=" + filters.join(" and "),
+    ];
+
+    const query = parameters.join("&");
+
+    try {
+      const contacts = await this.#client.RetrieveMultiple(
+        "contacts",
+        query,
+        4
+      );
+      this.#util.appendMessage("<strong>Page of 4 contacts:</strong>");
+      this.#util.appendMessage("<pre>contacts?" + query + "</pre>");
+      const table = this.#util.createListTable(contacts, columns);
+      this.#container.appendChild(table);
+      return contacts;
+    } catch (e) {
+      this.#util.showError("Failed to retrieve first page of 4 contacts.");
+      throw e;
+    }
+  }
+
+  async #showNextPageOfContacts(results) {
+    try {
+      const nextLink = results["@odata.nextLink"];
+      if (!nextLink) {
+        this.#util.appendMessage("<strong>No more pages of contacts.</strong>");
+        return;
+      }
+
+      // The GetNextLink function
+      const nextPageResults = await this.#client.GetNextLink(nextLink, 4);
+
+      this.#util.appendMessage("<strong>Next page of 4 contacts:</strong>");
+      const table = this.#util.createListTable(nextPageResults, [
+        "fullname",
+        "jobtitle",
+        "annualincome",
+      ]);
+      this.#container.appendChild(table);
+    } catch (error) {
+      this.#util.showError("Failed to retrieve next page of contacts.");
+      throw error;
+    }
+  }
+
+  //#endregion Section 5: Pagination
+
+  //#region Section 6: Expand results
+
+  // Expand on single-valued navigation property
+
+  async #retrieveAccountWithPrimaryContact() {
+    const columns = ["name"];
+
+    const expands = [
+      "primarycontactid($select=fullname,jobtitle,annualincome)",
+    ];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$expand=" + expands.join(","),
+    ];
+    const query = parameters.join("&");
+
+    try {
+      const account = await this.#client.Retrieve(
+        "accounts",
+        this.#contosoAccountId,
+        query
+      );
+      this.#util.appendMessage(
+        `<strong>Account ${account.name} has the following primary contact person:</strong>`
+      );
+      this.#util.appendMessage(
+        "<pre>accounts(" + this.#contosoAccountId + ")?" + query + "</pre>"
+      );
+      const table = this.#util.createTable(account.primarycontactid);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve account with primary contact.");
+      throw e;
+    }
+  }
+
+  async #retrieveContactWithAccounts() {
+    const columns = ["fullname", "jobtitle", "annualincome"];
+
+    const expands = ["account_primary_contact($select=name)"];
+
+    const parameters = [
+      "$select=" + columns.join(","),
+      "$expand=" + expands.join(","),
+    ];
+    const query = parameters.join("&");
+
+    try {
+      const contact = await this.#client.Retrieve(
+        "contacts",
+        this.#contactYvonneId,
+        query
+      );
+      this.#util.appendMessage(
+        `<strong>Contact ${contact.fullname} is associated with the following accounts:</strong>`
+      );
+      this.#util.appendMessage(
+        "<pre>contacts(" + this.#contactYvonneId + ")?" + query + "</pre>"
+      );
+      for (const account of contact.account_primary_contact) {
+        const table = this.#util.createTable(account);
+        this.#container.appendChild(table);
+      }
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contact with accounts.");
+      throw e;
+    }
+  }
+
+  // Expand on collection-valued navigation property
+
+  async #retrieveAccountContacts() {
+    const accountColumns = ["name"];
+
+    const contactColumns = ["fullname", "jobtitle", "annualincome"];
+
+    const expands = [
+      "contact_customer_accounts($select=" + contactColumns.join(",") + ")",
+    ];
+
+    const parameters = [
+      "$select=" + accountColumns.join(","),
+      "$expand=" + expands.join(","),
+    ];
+    const query = parameters.join("&");
+
+    try {
+      const account = await this.#client.Retrieve(
+        "accounts",
+        this.#contosoAccountId,
+        query
+      );
+      this.#util.appendMessage(
+        `<strong>Account ${account.name} has the following related contacts:</strong>`
+      );
+      this.#util.appendMessage(
+        "<pre>accounts(" + this.#contosoAccountId + ")?" + query + "</pre>"
+      );
+      // createListTable expects a collection with a value property.
+      let collection = {
+        value: [],
+      };
+      for (const contact of account.contact_customer_accounts) {
+        collection.value.push(contact);
+      }
+
+      const table = this.#util.createListTable(collection, contactColumns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve account contacts.");
+      throw e;
+    }
+  }
+
+  // Expand on multiple navigation properties
+
+  async #retrieveAccountContactsAndTasks() {
+    const accountColumns = ["name"];
+
+    const contactColumns = ["fullname", "jobtitle", "annualincome"];
+
+    const taskColumns = ["subject", "description"];
+
+    const expands = [
+      `primarycontactid($select=${contactColumns.join(",")})`,
+      `contact_customer_accounts($select=${contactColumns.join(",")})`,
+      `Account_Tasks($select=${taskColumns.join(",")})`,
+    ];
+
+    const parameters = [
+      "$select=" + accountColumns.join(","),
+      "$expand=" + expands.join(","),
+    ];
+    const query = parameters.join("&");
+
+    try {
+      const account = await this.#client.Retrieve(
+        "accounts",
+        this.#contosoAccountId,
+        query
+      );
+      this.#util.appendMessage(
+        `<strong>Account ${account.name} has the following related contacts and tasks:</strong>`
+      );
+      this.#util.appendMessage(
+        "<pre>accounts(" + this.#contosoAccountId + ")?" + query + "</pre>"
+      );
+
+      this.#util.appendMessage("<strong>Primary contact:</strong>");
+      const primaryContactTable = this.#util.createTable(
+        account.primarycontactid
+      );
+      this.#container.appendChild(primaryContactTable);
+      this.#util.appendMessage("<strong>Related contacts:</strong>");
+
+      // createListTable expects a collection with a value property.
+      let contactsCollection = {
+        value: [],
+      };
+      for (const contact of account.contact_customer_accounts) {
+        contactsCollection.value.push(contact);
+      }
+
+      const contactsTable = this.#util.createListTable(
+        contactsCollection,
+        contactColumns
+      );
+      this.#container.appendChild(contactsTable);
+
+      this.#util.appendMessage("<strong>Related Tasks:</strong>");
+
+      // createListTable expects a collection with a value property.
+      let taskCollection = {
+        value: [],
+      };
+      for (const task of account.Account_Tasks) {
+        taskCollection.value.push(task);
+      }
+      const taskTable = this.#util.createListTable(taskCollection, taskColumns);
+      this.#container.appendChild(taskTable);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve account contacts and tasks.");
+      throw e;
+    }
+  }
+
+  // Multi-level expands
+  async #retrieveMultiLevelExpands() {
+    const taskColumns = ["subject"];
+    const contactColumns = ["fullname"];
+
+    const accountColumns = ["name"];
+
+    const userColumns = ["fullname"];
+
+    const nextedExpands = [
+      `regardingobjectid_contact_task($select=${contactColumns.join(",")};`,
+      `$expand=parentcustomerid_account($select=${accountColumns.join(",")};`,
+      `$expand=createdby($select=${userColumns.join(",")})))`,
+    ];
+
+    const filters = [
+      `regardingobjectid_contact_task/_accountid_value eq ${
+        this.#contosoAccountId
+      }`,
+    ];
+
+    const parameters = [
+      "$select=" + taskColumns.join(","),
+      "$expand=" + nextedExpands.join(""),
+      "$filter=" + filters.join(" and "),
+    ];
+    const query = parameters.join("&");
+    try {
+      const tasks = await this.#client.RetrieveMultiple("tasks", query);
+
+      this.#util.appendMessage(
+        "<strong>Tasks related to account Contoso, Ltd. (sample):</strong>"
+      );
+      this.#util.appendMessage("<pre>tasks?" + query + "</pre>");
+
+      let collection = {
+        value: [],
+      };
+      for (const task of tasks.value) {
+        let row = {
+          subject: task?.subject,
+          contact: task?.regardingobjectid_contact_task?.fullname,
+          account:
+            task?.regardingobjectid_contact_task?.parentcustomerid_account
+              ?.name,
+          createdby:
+            task?.regardingobjectid_contact_task?.parentcustomerid_account
+              ?.createdby?.fullname,
+        };
+        collection.value.push(row);
+      }
+
+      const table = this.#util.createListTable(collection, [
+        "subject",
+        "contact",
+        "account",
+        "createdby",
+      ]);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve multi-level expands.");
+      throw e;
+    }
+  }
+
+  //#endregion Section 6: Expand results
+
+  //#region Section 7: Aggregate results
+
+  async #retrieveAnnualIncomeAggregates() {
+    const aggregates = [
+      "annualincome with average as average",
+      "annualincome with sum as total",
+      "annualincome with min as minimum",
+      "annualincome with max as maximum",
+    ];
+
+    const columns = ["average", "total", "minimum", "maximum"];
+
+    const parameters = ["$apply=aggregate(" + aggregates.join(",") + ")"];
+
+    // Doesn't need to be an actual entity set name, but the a string that
+    // represents a collection of records.
+    const entitySetName = `accounts(${
+      this.#contosoAccountId
+    })/contact_customer_accounts`;
+    const query = parameters.join("&");
+
+    try {
+      const results = await this.#client.RetrieveMultiple(entitySetName, query);
+      this.#util.appendMessage("<strong>Annual income aggregates:</strong>");
+      this.#util.appendMessage(
+        "<pre>" + entitySetName + "?" + query + "</pre>"
+      );
+      const table = this.#util.createListTable(results, columns);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve aggregate data.");
+      throw e;
+    }
+  }
+
+  //#endregion Section 7: Aggregate results
+
+  //#region Section 8: FetchXML queries
+
+  async #retrieveContactsWithFetchXml() {
+    const fetchXml = `<fetch>
+      <entity name='contact'>  
+        <attribute name='fullname' />  
+        <attribute name='jobtitle' />  
+        <attribute name='annualincome' />  
+        <order descending='true'  
+               attribute='fullname' />  
+        <filter type='and'>  
+          <condition value='%(sample)%'  
+                     attribute='fullname'  
+                     operator='like' />
+          <condition value='${this.#contosoAccountId}'
+                     attribute='parentcustomerid'
+                     operator='eq' /> 
+        </filter>  
+      </entity>  
+    </fetch>`;
+
+    try {
+      const contacts = await this.#client.FetchXml("contacts", fetchXml);
+      this.#util.appendMessage(
+        "<strong>Contoso contacts with FetchXML:</strong>"
+      );
+      this.#util.appendMessage(
+        "<pre><code>" + this.#util.escapeXml(fetchXml) + "</code></pre>"
+      );
+      const table = this.#util.createListTable(contacts, [
+        "fullname",
+        "jobtitle",
+        "annualincome",
+      ]);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError("Failed to retrieve contacts with FetchXML.");
+      throw e;
+    }
+  }
+
+  // FetchXML pagination
+
+  async #retrieveFirstPageOfContactsWithFetchXml() {
+    // Query to retrieve the first page of three contacts
+    const fetchXmlPage1 = `<fetch count='3' page='1'>
+      <entity name='contact'>  
+        <attribute name='fullname' />  
+        <attribute name='jobtitle' />  
+        <attribute name='annualincome' />  
+        <order descending='true'  
+               attribute='fullname' />  
+        <filter type='and'>  
+          <condition value='%(sample)%'  
+                     attribute='fullname'  
+                     operator='like' />
+          <condition value='${this.#contosoAccountId}'
+                     attribute='parentcustomerid'
+                     operator='eq' /> 
+        </filter>  
+      </entity>  
+    </fetch>`;
+
+    let contactsPage1 = null;
+    try {
+      contactsPage1 = await this.#client.FetchXml("contacts", fetchXmlPage1);
+      this.#util.appendMessage(
+        "<strong>First three contacts with FetchXML:</strong>"
+      );
+      this.#util.appendMessage(
+        "<pre><code>" + this.#util.escapeXml(fetchXmlPage1) + "</code></pre>"
+      );
+      const table = this.#util.createListTable(contactsPage1, [
+        "fullname",
+        "jobtitle",
+        "annualincome",
+      ]);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError(
+        "Failed to retrieve first three contacts with FetchXML."
+      );
+      throw e;
+    }
+
+    // Check if there are more pages of results
+    if (contactsPage1["@Microsoft.Dynamics.CRM.morerecords"]) {
+      const pagingCookie =
+        contactsPage1["@Microsoft.Dynamics.CRM.fetchxmlpagingcookie"];
+
+      try {
+        await this.#retrieveSecondPageOfContactsWithFetchXml(
+          fetchXmlPage1,
+          pagingCookie
+        );
+      } catch (e) {
+        this.#util.showError(
+          "Failed to retrieve second three contacts with FetchXML." + e.message
+        );
+        throw e;
+      }
+    }
+  }
+
+  // This example demonstrates simple pagination using the page attribute in FetchXML.
+  // https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/page-results?tabs=webapi#simple-paging
+
+  async #retrieveSecondPageOfContactsWithFetchXml(fetchXmlPage1, pagingCookie) {
+    // To programmatically change the page attribute in the FetchXML
+    // Parse the XML string into a DOM Document
+
+    const xmlDoc = new DOMParser().parseFromString(fetchXmlPage1, "text/xml");
+
+    // Select the root fetch element
+    const fetchElement = xmlDoc.getElementsByTagName("fetch")[0];
+
+    // Change the page attribute value
+    fetchElement.setAttribute("page", "2");
+
+    if (pagingCookie) {
+      const pagingCookieDoc = new DOMParser().parseFromString(
+        pagingCookie,
+        "text/xml"
+      );
+
+      const cookieElement = pagingCookieDoc.getElementsByTagName("cookie")[0];
+      const pagingCookieText = cookieElement
+        .getAttribute("pagingcookie")
+        .toString();
+      const doubleDecodedCookie = decodeURIComponent(
+        decodeURIComponent(pagingCookieText)
+      );
+
+      function xmlEncode(xml) {
+        let encodedXml = xml
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/ /g, "+");
+        return encodedXml;
+      }
+
+      console.log("doubleDecodedCookie xml:", doubleDecodedCookie);
+      const xmlEncodedCookieValue = xmlEncode(doubleDecodedCookie);
+
+      console.log("xmlEncodedCookieValue:", xmlEncodedCookieValue);
+
+      // Uncomment this when we know how to set the paging-cookie attribute
+      // fetchElement.setAttribute("paging-cookie", xmlEncodedCookieValue);
+    }
+
+    // Serialize the updated XML back to a string
+    const serializer = new XMLSerializer();
+
+    const fetchXmlPage2 = serializer.serializeToString(xmlDoc);
+
+    try {
+      const contactsPage2 = await this.#client.FetchXml(
+        "contacts",
+        fetchXmlPage2
+      );
+      this.#util.appendMessage(
+        "<strong>Second three contacts with FetchXML:</strong>"
+      );
+      this.#util.appendMessage(
+        "<pre><code>" + this.#util.escapeXml(fetchXmlPage2) + "</code></pre>"
+      );
+      const table = this.#util.createListTable(contactsPage2, [
+        "fullname",
+        "jobtitle",
+        "annualincome",
+      ]);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError(
+        "Failed to retrieve second three contacts with FetchXML." + e.message
+      );
+      throw e;
+    }
+  }
+
+  //#endregion Section 8: FetchXML queries
+
+  //#region Section 9: Use predefined queries
+
+  async #getSavedQueryResults() {
+    let savedqueries = null;
+    let activeAccountsSavedQueryId = null;
+
+    try {
+      // Get the ID of the Active Accounts query
+      savedqueries = await this.#client.RetrieveMultiple(
+        "savedqueries",
+        "$select=savedqueryid,columnsetxml&$filter=name eq 'Active Accounts'"
+      );
+    } catch (e) {
+      this.#util.showError(
+        "Failed to retrieve Active Accounts saved query ID." + e.message
+      );
+      throw e;
+    }
+
+    if (savedqueries.value.length > 0) {
+      activeAccountsSavedQueryId = savedqueries.value[0].savedqueryid;
+    } else {
+      throw new Error("Active Accounts saved query details not found.");
+    }
+
+    try {
+      // Retrieve first three records using the Active Accounts query
+      const results = await this.#client.RetrieveMultiple(
+        "accounts",
+        `savedQuery=${activeAccountsSavedQueryId}`,
+        3
+      );
+
+      this.#util.appendMessage(
+        "<strong>Active Accounts saved query results:</strong>"
+      );
+
+      this.#util.appendMessage(
+        "<pre>" + JSON.stringify(results, null, 3) + "</pre>"
+      );
+    } catch (e) {
+      this.#util.showError(
+        "Failed to retrieve the results of the Active Accounts saved query." +
+          e.message
+      );
+      throw e;
+    }
+  }
+
+  async #createUserQuery() {
+    const userQuery = {
+      name: "My User Query",
+      description: "User query to display contact info.",
+      querytype: 0,
+      returnedtypecode: "contact",
+      fetchxml: `<fetch>
+          <entity name ='contact'>
+              <attribute name ='fullname' />
+              <attribute name ='contactid' />
+              <attribute name ='jobtitle' />
+              <attribute name ='annualincome' />
+              <order descending ='false' attribute='fullname' />
+              <filter type ='and'>
+                  <condition value ='%(sample)%' attribute='fullname' operator='like' />
+                  <condition value ='%Manager%' attribute='jobtitle' operator='like' />
+                  <condition value ='55000' attribute='annualincome' operator='gt' />
+              </filter>
+          </entity>
+       </fetch>`,
     };
 
-    var uri = "/accounts"; // A relative URI to the account entity.
-    Sdk.request("POST", uri, sampleData) // Adding sample data so we can query against it.
-    .then(function (request) {
-        // Process request.
-        account1Uri = request.getResponseHeader("OData-EntityId");
-        entitiesToDelete.push(account1Uri); // To delete later.
-        console.log("Account 'Contoso, Ltd. (sample)' created with 1 primary contact and 9 associated contacts.");
+    try {
+      const userQueryId = await this.#client.Create("userqueries", userQuery);
+      this.#util.appendMessage(
+        `<strong>User query created with ID: ${userQueryId}</strong>`
+      );
+      // To delete later
+      this.#entityStore.push({
+        name: `${userQuery.name}`,
+        entityName: "userquery",
+        entitySetName: "userqueries",
+        id: userQueryId,
+      });
 
-        // Get primary contact info.
-        // Most queries are done using this contact.
-        var uri = account1Uri + "/primarycontactid/$ref"; // Request for the URI only.
-        return Sdk.request("GET", uri);
-    })
-    .then(function (request) {
-        contact1Uri = JSON.parse(request.response)["@odata.id"];
-        entitiesToDelete.push(contact1Uri); // To delete later.
-        console.log("Has primary contact 'Yvonne McKay (sample)' with URI: %s\n", contact1Uri);
+      return userQueryId;
 
-        // Basic query:
-        // Query using $select option against a contact entity to get the properties you want.
-        // For performance best practice, always use $select otherwise all properties are returned.
-        console.log("-- Basic Query --");
-        var query = "?$select=" + contactProperties.join(); // Array defined in the global scope.
-        return Sdk.request("GET", contact1Uri + query, null, true);
-    })
-    .then(function (request) {
-        var contact1 = JSON.parse(request.response);
-        console.log("Contact basic info:\n\tFullname: '%s'\n\tJobtitle: '%s'\n\tAnnualincome: '%s' (unformatted)",
-            contact1.fullname, contact1.jobtitle, contact1.annualincome);
-        console.log("\tAnnualincome: %s (formatted)\n",
-            contact1["annualincome@OData.Community.Display.V1.FormattedValue"]);
+    } catch (e) {      
+      this.#util.showError(
+        "Failed to create user query." + e.message
+      );
+      throw e;
+    }
 
-        // Filter criteria:
-        // Applying filters to get targeted data.
-        // 1) Using standard query functions (e.g.: contains, endswith, startswith)
-        // 2) Using CRM query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
-        // 3) Using filter operators and logical operators (e.g.: eq, ne, gt, and, or, etc…)
-        // 4) Set precedence using parenthesis (e.g.: ((criteria1) and (criteria2)) or (criteria3)
-        // For more info, see: https://msdn.microsoft.com/library/gg334767.aspx#bkmk_filter
-        console.log("-- Filter Criteria --");
+  }
 
-        // Filter 1: Using standard query functions to filter results.
-        // In this operation, we will query for all contacts with fullname containing the string "(sample)".
-        var filter = "&$filter=contains(fullname,'(sample)')";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts filtered by fullname containing '(sample)':", contactProperties);
+  async #showUserQueryResults(userQueryId) {
+      try {
+         // Retrieve first three records using the user query
+         const results = await this.#client.RetrieveMultiple(
+         "contacts",
+         `userQuery=${userQueryId}`,
+         3);
+   
+         this.#util.appendMessage(
+         "<strong>User query results:</strong>"
+         );
+   
+         this.#util.appendMessage(
+         "<pre>" + JSON.stringify(results, null, 3) + "</pre>"
+         );
+      } catch (e) {
+         this.#util.showError(
+         "Failed to retrieve the results of the user query." + e.message
+         );
+         throw e;
+      }
+  }
 
-        // Filter 2: Using CRM query functions to filter results.
-        // In this operation, we will query for all contacts that was created in the last hour.
-        // For complete list of CRM query functions, see:
-        // https://msdn.microsoft.com/library/mt607843.aspx
-        var filter = "&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName='createdon',PropertyValue='1')";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true); // Remember page size limit is set to 10.
-    })
-    .then(function(request){
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts that were created within the last 1hr:", contactProperties);
-
-        // Filter 3: Using operators
-        // Building on the previous operation, we will further limit the results by the contact's income.
-        // For more info on standard filter operators, see:
-        // https://msdn.microsoft.com/library/gg334767.aspx#bkmk_filter
-        var filter = "&$filter=contains(fullname,'(sample)') and annualincome gt 55000";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts filtered by fullname and annualincome (<$55,000):", contactProperties);
-
-        // Filter 4: Set precedence using parenthesis.
-        // Continue building on the previous operation, we will further limit results by job title.
-        // Parenthesis and the order of filter statements can impact results returned.
-        var filter = "&$filter=contains(fullname,'(sample)') " +
-            "and (contains(jobtitle,'senior') or contains(jobtitle,'specialist')) and annualincome gt 55000";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts filtered by fullname, annualincome and jobtitle (Senior or Specialist):",
-            contactProperties);
-
-        // Order results:
-        // Filtered results can be order in descending or ascending order.
-        console.log("\n-- Order Results --");
-        var filter = "&$filter=contains(fullname,'(sample)') " +
-            "&$orderby=jobtitle asc, annualincome desc";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts ordered by jobtitle (Ascending) and annualincome (descending):",
-            contactProperties);
-
-        // Parameterized Aliases.
-        // Aliases can be used as parameters in a query. These parameters can be used in $filter and $orderby options.
-        // Using the previous operation as basis, parameterizing the query will give us the same results.
-        // For more info, see: https://msdn.microsoft.com/library/gg309638.aspx#bkmk_passParametersToFunctions
-        console.log("\n-- Parameterized Aliases --");
-        var filter = "&$filter=contains(@p1,'(sample)') " +
-            "&$orderby=@p2 asc, @p3 desc&@p1=fullname&@p2=jobtitle&@p3=annualincome";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts list using parameterized aliases:", contactProperties);
-
-        // Limit records returned.
-        // To further limit the records returned, use the $top query option.
-        // Specifying a limit number for $top will return at most that number of results per request.
-        // Extra results are ignored.
-        console.log("\n-- Top Results --");
-        var filter = "&$filter=contains(fullname,'(sample)')&$top=5";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts top 5 results:", contactProperties);
-
-        // Result count.
-        // Count the number of results matching the filter criteria.
-        // 1) Get a count of a collection without the data.
-        // 2) Get a count along with the data.
-        // HINT: Use count together with the "odata.maxpagesize" to calculate the number of pages in the query.
-        // NOTE: CRM has a max record limit of 5000 records per response.
-        console.log("\n-- Result Count --");
-        return Sdk.request("GET", "/contacts/$count"); // Count is returned in response body.
-    })
-    .then(function (request) {
-        console.log("The contacts collection has %s contacts.", request.response); // Count maximum is 5000.
-
-        // 2) Get filtered result with a count
-        var filter = "&$filter=contains(jobtitle,'senior') or contains(jobtitle, 'manager')&$count=true";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true);
-    })
-    .then(function (request) {
-        var count = JSON.parse(request.response)["@odata.count"];
-        console.log("%s contacts have either 'Manager' or 'Senior' designation in their jobtitle.", count);
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Manager or Senior:", contactProperties);
-
-        // Pagination:
-        // For large data sets, you can limit the number of records returned per page.
-        // Then offer a "next page" and "previous page" links for users to browse through all the data.
-        // NOTE: This is why you should not use $top with maxpagesize. $top will limit results returned
-        //       preventing you from accessing all possible results in the query.
-        //       For example: If your query has 10 entities in the result and you limit your result to $top=5
-        //       then, you can't get to the remaining 5 results; but with "maxpagesize" (without $top), you can.
-        // HINT: Save the URI of the current page so users can go "next" and "previous".
-        console.log("\n-- Pagination --");
-        var filter = "&$filter=contains(fullname,'(sample)')&$count=true";
-        var query = "?$select=" + contactProperties.join() + filter;
-        return Sdk.request("GET", "/contacts" + query, null, true, 4); // 4 records per page.
-    })
-    .then(function (request) {
-        var count = JSON.parse(request.response)["@odata.count"];
-        var maxpages = Math.ceil(count / 4);
-        console.log("Contacts total: %s \tContacts per page: %s.\tOutputting first 2 pages.", count, 4);
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Page 1 of " + maxpages + ":", contactProperties);
-
-        // Getting the next page.
-        page2Uri = JSON.parse(request.response)["@odata.nextLink"]; // This URI is already encoded.
-        return Sdk.request("GET", decodeURI(page2Uri), null, true, 4); // URI re-encoded in the request function.
-    })
-    .then(function (request) {
-        var count = JSON.parse(request.response)["@odata.count"];
-        var maxpages = Math.ceil(count / 4);
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Page 2 of " + maxpages + ":", contactProperties);
-
-        // Using expand option to retrieve additional information.
-        // It is common for entities to  have associations with other entities in the system and you might want
-        // to also retrieve this information in the same request. To retrieve information on associated entities,
-        // use the $expand query option on navigation properties.
-        // 1) Expand using single-valued navigation properties (e.g.: via the 'primarycontactid')
-        // 2) Expand using partner property (e.g.: from contact to account via the 'account_primary_contact')
-        // 3) Expand using collection-valued navigation properties (e.g.: via the 'contact_customer_accounts')
-        // 4) Expand using multiple navigation property types in a single request.
-        // NOTE: Expansions can only go 1 level deep.
-        //   For performance best practice, always use $select statement in an expand option.
-        console.log("\n-- Expanding Results --");
-
-        // 1) Expand using single-valued navigation properties (e.g.: via the 'primarycontactid')
-        var expand = "&$expand=primarycontactid($select=" + contactProperties.join() + ")";
-        var query = "?$select=" + accountProperties.join() + expand;
-        return Sdk.request("GET", account1Uri + query, null, true);
-    })
-    .then(function (request) {
-        var account = JSON.parse(request.response);
-        var str = "Account '%s' has the following primary contact person:\n\t" +
-            "Fullname: '%s' \n\tJobtitle: '%s' \n\tAnnualincome: '%s'";
-        console.log(str, account.name,
-            account.primarycontactid.fullname,
-            account.primarycontactid.jobtitle,
-            account.primarycontactid.annualincome);
-
-        // 2) Expand using partner property (e.g.: from contact to account via the 'account_primary_contact')
-        var expand = "&$expand=account_primary_contact($select=" + accountProperties.join() + ")";
-        var query = "?$select=" + contactProperties.join() + expand;
-        return Sdk.request("GET", contact1Uri + query, null, true);
-    })
-    .then(function (request) {
-        var contact = JSON.parse(request.response);
-        var label = "Contact '" + contact.fullname + "' is the primary contact for the following accounts:";
-        Sdk.output(contact.account_primary_contact, label, accountProperties);
-
-        // 3) Expand using collection-valued navigation properties (e.g.: via the 'contact_customer_accounts')
-        var expand = "&$expand=contact_customer_accounts($select=" + contactProperties.join() + ")"
-        var query = "?$select=" + accountProperties.join() + expand;
-        return Sdk.request("GET", account1Uri + query, null, true);
-    })
-    .then(function (request) {
-        var account = JSON.parse(request.response);
-        var label = "Account '" + account.name + "' has the following contact customers:";
-        var collection = account.contact_customer_accounts;
-        Sdk.output(collection, label, contactProperties);
-
-        // 4) Expand using multiple navigation property types in a single request.
-        //    For example: expanding on primiarycontactid, contact_customer_accounts, and Account_Tasks.
-        console.log("\n-- Expanding multiple property types in one request -- ");
-        var expand = "&$expand=primarycontactid($select=" + contactProperties.join() + ")," +
-            "contact_customer_accounts($select=" + contactProperties.join() + ")," +
-            "Account_Tasks($select=" + taskProperties.join() + ")";
-        var query = "?$select=" + accountProperties.join() + expand;
-        return Sdk.request("GET", account1Uri + query, null, true);
-    })
-    .then(function (request) {
-        var account = JSON.parse(request.response);
-        var label = "Account '%s' has the following primary contact person:\n\t" +
-            "Fullname: '%s' \n\tJobtitle: '%s' \n\tAnnualincome: '%s'";
-        console.log(label, account.name,
-            account.primarycontactid.fullname,
-            account.primarycontactid.jobtitle,
-            account.primarycontactid.annualincome);
-
-        // Handling each collection separately.
-        label = "Account '" + account.name + "' has the following related contacts:";
-        var collection = account.contact_customer_accounts;
-        Sdk.output(collection, label, contactProperties);
-
-        label = "Account '" + account.name + "' has the following tasks:";
-        collection = account.Account_Tasks;
-        Sdk.output(collection, label, taskProperties);
-
-        // FetchXML
-        // Using FetchXML to query for all contacts whose fullname contains '(sample)'.
-        // NOTE: XML string must be URI encoded.
-        // For more information, see: https://msdn.microsoft.com/library/gg328117.aspx
-        console.log("\n-- FetchXML -- ");
-        var fetchXML = "<fetch mapping=\"logical\" output-format=\"xml-platform\" version=\"1.0\" distinct=\"false\"> \
-  <entity name=\"contact\"> \
-    <attribute name=\"fullname\" /> \
-    <attribute name=\"jobtitle\" /> \
-    <attribute name=\"annualincome\" /> \
-    <order descending=\"true\" attribute=\"fullname\" /> \
-    <filter type=\"and\"> \
-      <condition value=\"%(sample)%\" attribute=\"fullname\" operator=\"like\" /> \
-    </filter> \
-  </entity> \
-</fetch> ";
-        return Sdk.request("GET", "/contacts?fetchXml=" + encodeURIComponent(fetchXML), null, true);
-    })
-    .then(function(request){
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Contacts Fetched by fullname containing '(sample)':", contactProperties);
-
-        // FetchXML pagination.
-        // Noticed the attribute "page=3" and "count=4" in this XML.
-        // We want to retrieve entities in page 3 but limit results to only 4 entities.
-        // If the result return zero records for the page, that means we have reached the end of the result set.
-        // For more info, see: https://msdn.microsoft.com/library/mt607533.aspx#bkmk_useFetchXML
-        var fetchXML = "<fetch mapping=\"logical\" output-format=\"xml-platform\" version=\"1.0\" \
-distinct=\"false\" page=\"3\" count=\"4\"> \
-  <entity name=\"contact\"> \
-    <attribute name=\"fullname\" /> \
-    <attribute name=\"jobtitle\" /> \
-    <attribute name=\"annualincome\" /> \
-    <order descending=\"true\" attribute=\"fullname\" /> \
-    <filter type=\"and\"> \
-      <condition value=\"%(sample)%\" attribute=\"fullname\" operator=\"like\" /> \
-    </filter> \
-  </entity> \
-</fetch> ";
-        return Sdk.request("GET", "/contacts?fetchXml=" + encodeURIComponent(fetchXML), null, true);
-    })
-    .then(function(request){
-        var collection = JSON.parse(request.response).value;
-        if (collection.length == 0) {
-            console.log("There are no records on this page."); // We have reached the end of our query result set.
-        } else {
-            Sdk.output(collection, "Contacts Fetched by fullname containing '(sample)' - Page 3:", contactProperties);
-        }
-
-        // Using predefined queries.
-        // 1) Saved query
-        // 2) User query
-        // For more info, see:
-        // https://msdn.microsoft.com/library/mt607533.aspx
-
-        // Saved Query
-        // Get the Saved Query "Active Accounts" and display results to output.
-        console.log("\n-- Saved Query -- ");
-        var filter = "&$filter=name eq 'Active Accounts'";
-        var query = "?$select=name,savedqueryid" + filter;
-        return Sdk.request("GET", "/savedqueries" + query, null, true); // Requesting for saved query GUID.
-    })
-    .then(function(request){
-        // Get the savedqueryid GUID and then use it to request for the entities in that query.
-        var activeAccount = JSON.parse(request.response).value[0]; // Get the first matched.
-        var savedqueryid = activeAccount.savedqueryid;
-
-        // Request for the saved query results
-        return Sdk.request("GET", "/accounts?savedQuery=" + savedqueryid, null, true);
-    })
-    .then (function (request){
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Saved Query (Active Accounts):", accountProperties);
-
-        // User Query
-        // Create a user query then get it from the server and execute that query for results.
-        // For more info, see: https://msdn.microsoft.com/library/gg509053.aspx
-        console.log("\n-- User Query -- ");
-        var userquery = {
-            "name": "My User Query",
-            "description": "User query to display contact info.",
-            "querytype": 0,
-            "returnedtypecode": "contact",
-            "fetchxml": "<fetch mapping=\"logical\" output-format=\"xml-platform\" version=\"1.0\" distinct=\"false\"> \
-  <entity name=\"contact\"> \
-    <attribute name=\"fullname\" /> \
-    <attribute name=\"contactid\" /> \
-    <attribute name=\"jobtitle\" /> \
-    <attribute name=\"annualincome\" /> \
-    <order descending=\"false\" attribute=\"fullname\" /> \
-    <filter type=\"and\"> \
-      <condition value=\"%(sample)%\" attribute=\"fullname\" operator=\"like\" /> \
-      <condition value=\"%Manager%\" attribute=\"jobtitle\" operator=\"like\" /> \
-      <condition value=\"55000\" attribute=\"annualincome\" operator=\"gt\" /> \
-    </filter> \
-  </entity> \
-</fetch> "
-        };
-
-        return Sdk.request("POST", "/userqueries", userquery, true); // Create the user query.
-    })
-    .then(function (request){
-        // Look up the user query we just created
-        // then use it to request for the entities in that query.
-        var filter = "&$filter=name eq 'My User Query'";
-        var query = "?$select=name,userqueryid," + filter;
-        return Sdk.request("GET", "/userqueries" + query, null, true);
-    })
-    .then(function (request) {
-        var userQuery = JSON.parse(request.response).value[0]; // Get the first matched.
-        var userqueryid = userQuery.userqueryid;
-        entitiesToDelete.push(clientUrl + webAPIPath + "/userqueries(" + userqueryid + ")");
-
-        // Request for the user query results
-        return Sdk.request("GET", "/contacts?userQuery=" + userqueryid, null, true);
-    })
-    .then(function (request) {
-        var collection = JSON.parse(request.response).value;
-        Sdk.output(collection, "Saved User Query:", contactProperties);
-
-        // House cleaning - deleting sample data
-        // For more info on cascading delete, see:
-        // https://msdn.microsoft.com/library/gg309412.aspx#BKMK_CascadingBehavior
-        console.log("\n-- Deleting Sample Data --");
-        if (deleteData) {
-            for (var i = 0; i < entitiesToDelete.length; i++) {
-                console.log("Deleting entity: " + entitiesToDelete[i]);
-                Sdk.request("DELETE", entitiesToDelete[i], null)
-                .catch(function (err) {
-                    console.log("ERROR: Delete failed --Reason: \n\t" + err.message);
-                });
-            }
-        } else {
-            console.log("Sample data not deleted.");
-        }
-    })
-    .catch(function (error) {
-        console.log(error.message);
-    });
-
+  //#endregion Section 9: Use predefined queries
 }
 ```
+
 
 ### See also
 

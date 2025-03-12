@@ -12,49 +12,31 @@ search.audienceType:
 
 This quickstart demonstrates how you can connect to Dataverse and use the Web API with the following technologies:
 
-:::row:::
-   :::column:::
-   JavaScript
-   :::column-end:::
-   :::column:::
-   Visual Studio Code
-   :::column-end:::
-   :::column:::
-   Single Page Applications
-   :::column-end:::
-   :::column:::
-   Microsoft Authentication Library for JavaScript (MSAL.js)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-   JavaScript is a programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.
-   :::column-end:::
-   :::column:::
-   Visual Studio Code is a lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.
-   :::column-end:::
-   :::column:::
-   Single Page Applications (SPAs) are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.
-   :::column-end:::
-   :::column:::
-   [Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview) is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.
-   :::column-end:::
-:::row-end:::
+|Technology|Description|
+|---|---|
+|JavaScript|JavaScript is a programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.|
+|Visual Studio Code|Visual Studio Code is a lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.|
+|Single Page Applications|Single Page Applications (SPAs) are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.|
+|Microsoft Authentication Library|[Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview) is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.|
 
-This quickstart is focused on using the Dataverse Web API with JavaScript using a SPA client application. For information about how to use Web API in model-driven applications and Power Apps components, see [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi) and [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi). Both of these provide methods to work with Dataverse data from within Power Apps applications. Because both of these run in the context of an application that is already authenticated, it isn't necessary to authenticate. The [Power Pages Portals Web API](/power-pages/configure/web-api-overview)
+
+This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps.
+
+For information about how to use Web API in model-driven applications and Power Apps components, see [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi) and [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi). Both of these provide methods to work with Dataverse data from within Power Apps applications. Because both of these run in the context of an application that is already authenticated, it isn't necessary to authenticate. The [Power Pages Portals Web API](/power-pages/configure/web-api-overview)
 
 A SPA application can use client-side JavaScript because Cross-Origin Resource Sharing (CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
 
 ## Prerequisites
 
 - **A working knowledge of modern JavaScript**. Especially [making network requests with JavaScript](https://developer.mozilla.org/docs/Learn_web_development/Core/Scripting/Network_requests).
-- **Privileges to create an Entra App registration**. By default all users can register applications, but it is common for Entra administrators to limit who in the tenant can register apps. 
+- **Privileges to create an Entra App registration**. By default all users can register applications, but it is common for Entra administrators to limit who in the tenant can register apps.
 
 If you aren't sure if you can, try to [Register a SPA application](#register-an-application) and find out. Learn more about how [app registration permissions are delegated in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)
+
 - **Visual Studio Code**. [Download and install Visual Studio Code](https://code.visualstudio.com/download).
 - **Live Server Visual Studio Code extension**. Modern JavaScript development practices are highly dependent on technologies like [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) makes it easy to serve an HTML page on your local computer with a minimum of complexity. You can install this extension by searching for Live Server in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
-   There are quickstart tutorials that 
+   There are quickstart tutorials that
 
 - **Node.js**. Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side, so we aren't going to use the node runtime. But npm (Node Package Manager) is installed with node, and you need npm to get the latest version of MSAL.js.
 
@@ -88,20 +70,15 @@ There are two ways you can do this:
 
    1. Under Manage, select Authentication.
    1. On the Platform configurations page, select Add a platform, and then select SPA option.
-   1. For the Redirect URIs enter http://localhost:5500.
+   1. For the Redirect URIs enter <http://localhost:5500>.
    1. Select Configure to save your changes.
    :::column-end:::
    :::column:::
-   
+
    :::column-end:::
 :::row-end:::
 
-
-
-
 These instructions describe how to [Register the application and copy IDs](/entra/identity-platform/quickstart-single-page-app-sign-in?pivots=workforce&tabs=javascript-workforce%2Cjavascript-external#register-the-application-and-record-identifiers).
-
-
 
 ## Install Node.js
 
@@ -124,16 +101,25 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
 1. Create a folder somewhere on your computer. The name isn't important, but for these instructions call it `quickspa`.
 1. Open this folder using Visual Studio Code.
-1. Open a terminal window and type  `npm init -y'. This creates a package.json file in your folder.
-1. In the terminal window type `npm install @azure/msal-browser`. This creates a `node_modules` folder and a `package-lock.json` file in the `quickspa` folder.
+1. Open a terminal window and type  `npm init -y`.
+
+   This creates a `package.json` file in your folder.
+
+1. In the terminal window type `npm install @azure/msal-browser`.
+
+   This creates a `node_modules` folder and a `package-lock.json` file in the `quickspa` folder.
+
 1. Go to `node_modules\@azure\msal-browser\lib\` and copy the `msal-browser.min.js` file.
 1. Paste the `msal-browser.min.js` file into the `quickspa` folder.
-1. Delete the `node_modules` folder and the `package-lock.json` and `package.json` files. The `msal-browser.min.js` file should be the only file left in the `quickspa` folder.
+1. Delete the `node_modules` folder and the `package-lock.json` and `package.json` files.
+
+   The `msal-browser.min.js` file should be the only file left in the `quickspa` folder.
+
 1. Create three new files:
 
-   - index.html
-   - index.js
-   - styles.css
+   - `index.html`
+   - `index.js`
+   - `styles.css`
 
 1. Copy and paste this content to the `index.html` page:
 
@@ -152,7 +138,9 @@ These instructions describe how to [Register the application and copy IDs](/entr
          <button id="loginButton">Login</button>
          <button id="logoutButton" class="hidden">Logout</button>
       </header>
-      <nav class="disabled"><button id="whoAmIButton">WhoAmI</button></nav>
+      <nav class="disabled">
+         <button id="whoAmIButton">WhoAmI</button>
+      </nav>
       <main id="container"></main>
       <script type="module" src="index.js"></script>
    </body>
@@ -166,6 +154,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
    import "/msal-browser.min.js";
 
    const config = {
+   // Change these values in the next step:
    baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
    clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
    tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
@@ -179,11 +168,11 @@ These instructions describe how to [Register the application and copy IDs](/entr
       authority: "https://login.microsoftonline.com/" + config.tenantId,
       redirectUri: config.redirectUri,
       postLogoutRedirectUri: config.redirectUri,
-   },
+      },
    cache: {
       cacheLocation: "sessionStorage", // This configures where your cache will be stored
       storeAuthStateInCookie: true,
-   },
+      },
    };
 
    // Create an instance of MSAL
@@ -195,7 +184,6 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
    /**
    * Retrieves an access token using MSAL (Microsoft Authentication Library).
-   * Set as the getToken function for the DataverseWebAPI client in the login function.
    *
    * @async
    * @function getToken
@@ -223,7 +211,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
    // Event handler for login button
    async function logIn() {
-   // When there is no active account..
+   // When there is no active account.
    if (!msalInstance.getActiveAccount()) {
       const request = {
          scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
@@ -232,7 +220,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
          const response = await msalInstance.loginPopup(request);
          msalInstance.setActiveAccount(response.account);
 
-         // Hide the login button and
+         // Hide the login button so no one can click it again.
          this.style.display = "none";
 
          // Show the logout button
@@ -246,11 +234,11 @@ These instructions describe how to [Register the application and copy IDs](/entr
          p.className = "error";
          container.append(p);
       }
-   } else {
+      } else {
       // Remove the active account and try again
       msalInstance.setActiveAccount(null);
       this.click();
-   }
+      }
    }
 
    // Event handler for logout button
@@ -259,7 +247,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
    const logoutRequest = {
          account: activeAccount,
          mainWindowRedirectUri: config.redirectUri,
-      };
+   };
 
    try {
       await msalInstance.logoutPopup(logoutRequest);
@@ -270,7 +258,8 @@ These instructions describe how to [Register the application and copy IDs](/entr
       this.style.display = "none";
 
       document.getElementsByTagName("nav")[0].classList.add("disabled");
-      } catch (error) {
+      } 
+   catch (error) {
          console.error("Error logging out: ", error);
       }
    }
@@ -285,7 +274,8 @@ These instructions describe how to [Register the application and copy IDs](/entr
    /// using the WhoAmI endpoint of the Dataverse Web API.
    async function whoAmI() {
    const token = await getToken();
-   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", {
+   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", 
+   {
       method: "GET",
       headers: {
          Authorization: `Bearer ${token}`,
@@ -307,7 +297,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
 
    // Add event listener to the whoAmI button
    document.getElementById("whoAmIButton").onclick = async function () {
-   // Clear previous messages
+   // Clear any previous messages
    container.replaceChildren();
    try {
       const response = await whoAmI();
@@ -328,7 +318,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
    };
    ```
 
-1. Update the `index.js` file to replace the items below with the values from [Register a SPA application](#register-a-spa-application).
+1. Update the `index.js` file to replace lines 5-7 below with the values from [Register a SPA application](#register-a-spa-application).
 
    ```JavaScript
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
@@ -361,9 +351,7 @@ These instructions describe how to [Register the application and copy IDs](/entr
       background-color: #f9f9f9;
    }
 
-   h1,
-   h2,
-   h3 {
+   h1 {
       color: #2c3e50;
    }
 
@@ -387,30 +375,6 @@ These instructions describe how to [Register the application and copy IDs](/entr
       padding-bottom: 10px;
       /* Adjust the value as needed */
    }
-
-   table {
-      table-layout: auto;
-      /* Allows columns to adjust based on content */
-      width: auto;
-      /* Prevents the table from taking up the full width of the page */
-      border-collapse: collapse;
-      /* Ensures that the borders are not doubled */
-   }
-
-   th,
-   td {
-      border: 1px solid #ddd;
-      /* Adds a solid border to the table headers and cells */
-      padding: 8px;
-      /* Adds padding inside the table cells */
-   }
-
-   th {
-      background-color: #f2f2f2;
-      /* Optional: Adds a background color to the table headers */
-      text-align: left;
-      /* Optional: Aligns the text to the left in the table headers */
-   }
    ```
 
 ## Try it
@@ -418,12 +382,11 @@ These instructions describe how to [Register the application and copy IDs](/entr
 1. In Visual Studio Code, click the **Go Live** button.
 1. Click the **Login** button.
 
-   This will open the **Sign in to your account** dialog.
+   The **Sign in to your account** dialog opens.
 
 1. Select the account that has access to Dataverse.
 1. Click the **WhoAmI** button.
 
-   The app will say **Congratulations! You connected to Dataverse using the Web API.** and display your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
+   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
 
 ## Trouble shooting
-

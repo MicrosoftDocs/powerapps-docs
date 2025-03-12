@@ -1,14 +1,15 @@
 ---
 title: "Web API Functions and Actions Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and client-side JavaScript."
-ms.date: 04/06/2022
-author: MicroSri
-ms.author: sriknair
+ms.date: 03/30/2025
+author: JimDaly
+ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType:
   - developer
 contributors:
   - JimDaly
+  - Mattp123
 ---
 
 # Web API Functions and Actions Sample (Client-side JavaScript)
@@ -20,772 +21,962 @@ This sample demonstrates how to perform bound and unbound functions and actions,
 > [!NOTE]
 > This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
 
-## In this section
 
-- [Prerequisites](#bkmk_prerequisites)
-- [Run this sample](#bkmk_runsample)
-- [Code sample](#bkmk_codeSample)
-
-<a name="bkmk_prerequisites"></a>
+[!INCLUDE [cc-web-api-spa-javascript-code-sample-note](../../includes/cc-web-api-spa-javascript-code-sample-note.md)]
 
 ## Prerequisites
 
-To run this sample, the following is required:
+This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that sample to run this sample.
 
-- Access to Dataverse environment.
-- A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.
+TODO: Create an include of steps to register the sample.
+Include it here? Or in [Web API Data operations Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
 
-<a name="bkmk_runsample"></a>
-
-## Run this sample
-
-To run this sample, download the solution package from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/WebAPIFunctionsAndActions), extract the contents, and locate the `WebAPIFunctionsandActions_1_0_0_0_managed.zip` managed solution file. Import the managed solution into your Dataverse organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).
-
-<a name="bkmk_codeSample"></a>
-
-## Code sample
-
-This sample includes two web resources:
-
-- [WebAPIFunctionsAndActions.html](#bkmk_WebAPIFunctionsAndActions)
-- [WebAPIFunctionsAndActions.js](#bkmk_WebAPIFunctionsAndActionsJS)
-
-<a name="bkmk_WebAPIFunctionsAndActions"></a>
-
-### WebAPIFunctionsAndActions.html
-
-The WebAPIFunctionsAndActions.html web resource provides the context in which the JavaScript code will run.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Microsoft CRM Web API Functions and Actions Example</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <script
-      src="../ClientGlobalContext.js.aspx"
-      type="text/javascript"
-    ></script>
-    <script src="scripts/es6promise.js"></script>
-    <script src="scripts/WebAPIFunctionsAndActions.js"></script>
-
-    <style type="text/css">
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      #preferences {
-        border: inset;
-        padding: 10px 10px;
-      }
-
-      #output_area {
-        border: inset;
-        background-color: gainsboro;
-        padding: 10px 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Microsoft CRM Web API Functions and Actions Example</h1>
-    <p>
-      This page demonstrates the CRM Web API's Functions and Actions using
-      JavaScript.
-    </p>
-
-    <h2>Instructions</h2>
-    <p>
-      Choose your preferences and run the JavaScript code. Use your browser's
-      developer tools to view the output written to the console (e.g.: in IE11
-      or Microsoft Edge, press F12 to load the Developer Tools).
-    </p>
-    <form id="preferences">
-      <p>
-        Remove sample data (Choose whether you want to delete sample data
-        created for this sample):<br />
-        <input name="removesampledata" type="radio" value="yes" checked /> Yes
-        <input name="removesampledata" type="radio" value="no" /> No
-      </p>
-      <input
-        type="button"
-        name="start_samples"
-        value="Start Samples"
-        onclick="Sdk.startSample()"
-      />
-    </form>
-  </body>
-</html>
-```
-
-<a name="bkmk_WebAPIFunctionsAndActionsJS"></a>
-
-### WebAPIFunctionsAndActions.js
-
-The WebAPIFunctionsAndActions.js web resource is the JavaScript library that defines the operations this sample performs.
+## FunctionsAndActions.js
 
 ```javascript
-"use strict";
-var Sdk = window.Sdk || {};
+import { Util } from "../scripts/Util.js";
+import { DataverseWebAPI as dv } from "../scripts/DataverseWebAPI.js";
+export class FunctionsAndActions {
+  /**
+   * @type {dv.Client}
+   * @private
+   */
+  #client; // The DataverseWebAPIClient.Client instance
+  #container; // The container element to display messages
+  #entityStore = []; // Store for created records to delete at the end of the sample
+  #util; // Util instance for utility functions
+  #whoIAm; // The current user's information
+  #isSystemAdminFunctionSolutionId = null; // ID of the SystemAdminFunction solution
+  #name = "Functions and actions"; // Name of the sample
 
-/**
- * @function getClientUrl
- * @description Get the client URL.
- * @return {string} The client URL.
- */
-Sdk.getClientUrl = function () {
-  var context;
-  // GetGlobalContext defined by including reference to
-  // ClientGlobalContext.js.aspx in the HTML page.
-  if (typeof GetGlobalContext != "undefined") {
-    context = GetGlobalContext();
-  } else {
-    if (typeof Xrm != "undefined") {
-      // Xrm.Page.context defined within the Xrm.Page object model for form scripts.
-      context = Xrm.Page.context;
+  // Constructor to initialize the client, container, and utility helper functions
+  constructor(client, container) {
+    this.#client = client;
+    this.#container = container;
+    this.#util = new Util(container);
+  }
+
+  // Public functions to set up, run, and clean up data created by the sample
+  async SetUp() {
+    // Clear the container
+    this.#container.replaceChildren();
+    this.#util.appendMessage(this.#name + " sample started");
+    // Get the current user's information
+    try {
+      this.#whoIAm = await this.#client.WhoAmI();
+
+      const contosoConsulting = {
+        accountcategorycode: 1,
+        address1_addresstypecode: 3,
+        address1_city: "Redmond",
+        address1_country: "USA",
+        address1_line1: "123 Maple St.",
+        address1_name: "Corporate Headquarters",
+        address1_postalcode: "98000",
+        address1_shippingmethodcode: 4,
+        address1_stateorprovince: "WA",
+        address1_telephone1: "555-1234",
+        customertypecode: 3,
+        description: "Contoso is a business consulting company.",
+        emailaddress1: "info@contoso.com",
+        industrycode: 7,
+        name: "Contoso Consulting",
+        numberofemployees: 150,
+        ownershipcode: 2,
+        preferredcontactmethodcode: 2,
+        telephone1: "(425) 555-1234",
+      };
+
+      const contosoConsultingId = await this.#client.Create(
+        "accounts",
+        contosoConsulting
+      );
+      this.#entityStore.push({
+        entitySetName: "accounts",
+        id: contosoConsultingId,
+        entityName: "account",
+        name: contosoConsulting.name,
+      });
+    } catch (error) {
+      this.#util.showError(error.message);
+    }
+
+    this.#isSystemAdminFunctionSolutionId =
+      await this.#getIsSystemAdminFunctionSolutionId();
+    if (!this.#isSystemAdminFunctionSolutionId) {
+      this.#util.appendMessage(
+        "IsSystemAdmin Function solution is not installed. Installing it now... "
+      );
+      // Install the IsSystemAdmin Function solution
+      await this.#installIsSystemAdminFunctionSolution();
+
+      // Try to retrieve the ID after installing the solution
+      this.#isSystemAdminFunctionSolutionId =
+        await this.#getIsSystemAdminFunctionSolutionId();
+      if (this.#isSystemAdminFunctionSolutionId) {
+        this.#entityStore.push({
+          entitySetName: "solutions",
+          id: this.#isSystemAdminFunctionSolutionId,
+          entityName: "solution",
+          name: "IsSystemAdmin Function",
+        });
+        this.#util.appendMessage(
+          "Installed IsSystemAdminFunction solution and added it to the entity store:"
+        );
+      } else {
+        this.#util.showError(
+          "Failed to install retrieve the ID of the  IsSystemAdminFunction solution."
+        );
+      }
     } else {
-      throw new Error("Context is not available.");
+      this.#util.appendMessage(
+        "IsSystemAdmin Function solution is already installed."
+      );
+    }
+
+    // Create account to share
+    const accountToShare = {
+      name: "Account to Share",
+    };
+
+    try {
+      const accountToShareId = await this.#client.Create(
+        "accounts",
+        accountToShare
+      );
+      this.#entityStore.push({
+        entitySetName: "accounts",
+        id: accountToShareId,
+        entityName: "account",
+        name: accountToShare.name,
+      });
+    } catch (error) {
+      this.#util.showError(
+        "Couldn't create the account record for sharing:" + error.message
+      );
     }
   }
-  return context.getClientUrl();
-};
-
-// Global variables
-var entitiesToDelete = []; // Entity URIs to be deleted later
-// (if user chooses to delete sample data).
-var deleteData = true; // Controls whether sample data are deleted at the end of this sample run.
-var clientUrl = Sdk.getClientUrl(); // ie.: https://org.crm.dynamics.com
-var webAPIPath = "/api/data/v8.1"; // Path to the web API.
-var incidentUri; // Incident created with three closed tasks.
-var opportunityUri; // Closed opportunity to re-open before deleting.
-var letterUri; // Letter to add to contact's queue.
-var myQueueUri; // The contact's queue uri.
-var contactUri; // Add a note to this contact.
-var CUSTOMERACCOUNTNAME =
-  "Account Customer Created in WebAPIFunctionsAndActions sample"; // For custom action.
-
-/**
- * @function getWebAPIPath
- * @description Get the full path to the Web API.
- * @return {string} The full URL of the Web API.
- */
-Sdk.getWebAPIPath = function () {
-  return Sdk.getClientUrl() + webAPIPath;
-};
-
-/**
- * @function request
- * @description Generic helper function to handle basic XMLHttpRequest calls.
- * @param {string} action - The request action. String is case-sensitive.
- * @param {string} uri - An absolute or relative URI. Relative URI starts with a "/".
- * @param {object} data - An object representing an entity. Required for create and update actions.
- * @param {object} addHeader - An object with header and value properties to add to the request
- * @returns {Promise} - A Promise that returns either the request object or an error object.
- */
-Sdk.request = function (action, uri, data, addHeader) {
-  if (!RegExp(action, "g").test("POST PATCH PUT GET DELETE")) {
-    // Expected action verbs.
-    throw new Error(
-      "Sdk.request: action parameter must be one of the following: " +
-        "POST, PATCH, PUT, GET, or DELETE."
-    );
+  // Run the sample
+  async Run() {
+    try {
+      this.#util.appendMessage("<h2>1: Unbound Function WhoAmI</h2>");
+      await this.#whoAmIExample();
+      this.#util.appendMessage("<h2>2: Unbound Function FormatAddress</h2>");
+      await this.#formatAddressExample();
+      this.#util.appendMessage("<h2>3: Unbound Function InitializeFrom</h2>");
+      await this.#initializeFromExample();
+      this.#util.appendMessage(
+        "<h2>4: Unbound Function RetrieveCurrentOrganization</h2>"
+      );
+      await this.#retrieveCurrentOrganizationExample();
+      this.#util.appendMessage(
+        "<h2>5: Unbound Function RetrieveTotalRecordCount</h2>"
+      );
+      await this.#retrieveTotalRecordCountExample();
+      this.#util.appendMessage(
+        "<h2>6: Bound Function IsSystemAdmin custom API</h2>"
+      );
+      await this.#isSystemAdminExample();
+      this.#util.appendMessage("<h2>7: Unbound Action GrantAccess</h2>");
+      await this.#grantAccessExample();
+      this.#util.appendMessage("<h2>8: Bound Action AddPrivilegesRole</h2>");
+      await this.#addPrivilegesRoleExample();
+    } catch (error) {
+      this.#util.showError(error.message);
+      // Try to clean up even if an error occurs
+      await this.CleanUp();
+    }
   }
-  if (!typeof uri === "string") {
-    throw new Error("Sdk.request: uri parameter must be a string.");
+  // Clean up the created records
+  async CleanUp() {
+    if (this.#entityStore.length === 0) {
+      this.#util.appendMessage("No records to delete");
+      return;
+    }
+
+    this.#util.appendMessage("<h2>9: Delete sample records</h2>");
+    this.#util.appendMessage("Deleting the records created by this sample:");
+
+    let deleteMessageList = document.createElement("ul");
+    this.#container.append(deleteMessageList);
+
+    for (const item of this.#entityStore) {
+      try {
+        await this.#client.Delete(item.entitySetName, item.id);
+        const message = document.createElement("li");
+        message.textContent = `Deleted ${item.entityName} ${item.name}`;
+        deleteMessageList.append(message);
+      } catch (e) {
+        const message = document.createElement("li");
+        message.textContent = `Failed to delete ${item.entityName} ${item.name}`;
+        message.className = "error";
+        deleteMessageList.append(message);
+      }
+    }
+
+    // Set the entity store to an empty array
+    this.#entityStore = [];
+    this.#util.appendMessage(this.#name + " sample completed.");
+    this.#util.appendMessage("<a href='#'>Go to top</a>");
   }
-  if (RegExp(action, "g").test("POST PATCH PUT") && !data) {
-    throw new Error(
-      "Sdk.request: data parameter must not be null for operations that create or modify data."
-    );
-  }
-  if (addHeader) {
-    if (
-      typeof addHeader.header != "string" ||
-      typeof addHeader.value != "string"
-    ) {
-      throw new Error(
-        "Sdk.request: addHeader parameter must have header and value properties that are strings."
+
+  //#region Section 0: Install Solution in Setup
+
+  async #getIsSystemAdminFunctionSolutionId() {
+    try {
+      const records = await this.#client.RetrieveMultiple(
+        "solutions",
+        "$select=solutionid&$filter=uniquename eq 'IsSystemAdminFunction'"
+      );
+
+      if (records.value.length === 0) {
+        return null;
+      }
+      return records.value[0].solutionid;
+    } catch (error) {
+      this.#util.showError(
+        `Failed to retrieve IsSystemAdminFunction solution ID: ${error.message}`
       );
     }
   }
 
-  // Construct a fully qualified URI if a relative URI is passed in.
-  if (uri.charAt(0) === "/") {
-    uri = clientUrl + webAPIPath + uri;
+  async #installIsSystemAdminFunctionSolution() {
+    const url = new URL(
+      "/solution/IsSystemAdminFunction_1_0_0_0_managed.zip",
+      window.location.href
+    );
+
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    const byteArray = new Uint8Array(arrayBuffer);
+    // Convert byte array to base64 encoded string
+    const base64String = btoa(String.fromCharCode(...byteArray));
+
+    const request = new dv.WebAPIRequest("POST", "ImportSolution", null, {
+      OverwriteUnmanagedCustomizations: false,
+      PublishWorkflows: false,
+      CustomizationFile: base64String,
+      ImportJobId: "00000000-0000-0000-0000-000000000000",
+    });
+
+    try {
+      await this.#client.SendRequest(request);
+    } catch (error) {
+      this.#util.showError(
+        `Failed to install the IsSystemAdminFunction solution: ${error.message}`
+      );
+    }
   }
 
-  return new Promise(function (resolve, reject) {
-    var request = new XMLHttpRequest();
-    request.open(action, encodeURI(uri), true);
-    request.setRequestHeader("OData-MaxVersion", "4.0");
-    request.setRequestHeader("OData-Version", "4.0");
-    request.setRequestHeader("Accept", "application/json");
-    request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-    if (addHeader) {
-      request.setRequestHeader(addHeader.header, addHeader.value);
-    }
-    request.onreadystatechange = function () {
-      if (this.readyState === 4) {
-        request.onreadystatechange = null;
-        switch (this.status) {
-          case 200: // Success with content returned in response body.
-          case 204: // Success with no content returned in response body.
-          case 304: // Success with Not Modified
-            resolve(this);
-            break;
-          default: // All other statuses are error cases.
-            var error;
-            try {
-              error = JSON.parse(request.response).error;
-            } catch (e) {
-              error = new Error("Unexpected Error");
-            }
-            reject(error);
-            break;
-        }
-      }
-    };
-    request.send(JSON.stringify(data));
-  });
-};
+  //#endregion Section 0: Install Solution in Setup
 
-/**
- * @function Sdk.startSample
- * @description Initiates a chain of promises to show use of Functions and Actions with the Web API.
- * Functions and actions represent re-usable operations you can perform using the Web API.
- * For more info, see https://msdn.microsoft.com/library/mt607990.aspx#bkmk_actions
- * The following standard CRM Web API functions and actions are invoked:
- *  - WhoAmI, a basic unbound function
- *  - GetTimeZoneCodeByLocalizedName, an unbound function that requires parameters
- *  - CalculateTotalTimeIncident, a bound function
- *  - WinOpportunity, an unbound action that takes parameters
- *  - AddToQueue, a bound action that takes parameters
- *  - In addition, a custom bound and an unbound action contained within the solution are invoked.
- */
-Sdk.startSample = function () {
-  // Initializing.
-  deleteData = document.getElementsByName("removesampledata")[0].checked;
-  entitiesToDelete = []; // Reset the array.
+  //#region Section 1: Unbound Function WhoAmI
+  // Demonstrates calling the WhoAmI function
+  async #whoAmIExample() {
+    try {
+      // Invoke the WhoAmI function
+      let whoAmIRequest = new dv.WebAPIRequest("GET", "WhoAmI");
 
-  console.log("-- Sample started --");
-
-  // Create the CRM entry intances used by this sample program.
-  Sdk.createRequiredRecords()
-    .then(function () {
-      console.log("-- Working with functions --");
-      // Bound and Unbound functions
-      // See https://msdn.microsoft.com/library/gg309638.aspx#bkmk_boundAndUnboundFunctions
-
-      console.log("Using functions to look up your full name.");
-      // Calling a basic unbound function without parameters.
-      // Retrieves the user's full name using a series of function requests.
-      //  - Call WhoAmI via the Sdk.getUsersFullName function.
-      // For more info on the WhoAmI function, see https://msdn.microsoft.com/library/mt607925.aspx
-      return Sdk.getUsersFullName();
-    })
-    .then(function (fullName) {
-      console.log("\tYour full name is: %s\n", fullName);
-
-      console.log("Unbound function: GetTimeZoneCodeByLocalizedName");
-      // Calling a basic unbound function with no parameters.
-      // Retrieves the time zone code for the specified time zone.
-      //  - Pass parameters to an unbound function by calling  the GetTimeZoneCodeByLocalizedName Function.
-      // For more info, see https://msdn.microsoft.com/library/mt607644.aspx
-      var localizedStandardName = "Pacific Standard Time";
-      var localeId = 1033;
-      // Demonstrates best practice of passing parameters.
-      var uri = [
-        "/GetTimeZoneCodeByLocalizedName",
-        "(LocalizedStandardName=@p1,LocaleId=@p2)",
-        "?@p1='" + localizedStandardName + "'&@p2=" + localeId,
+      const whoAmIResponse = await this.#client.SendRequest(whoAmIRequest);
+      let message = [
+        "<a target='_blank' href='https://learn.",
+        "microsoft.com/power-apps/developer/data-platform/webapi/reference/",
+        "whoami'>WhoAmI function</a> returns the current user's information ",
+        "with the properties of the <a target='_blank' href='https://learn.",
+        "microsoft.com/power-apps/developer/data-platform/webapi/reference/",
+        "whoamiresponse'>WhoAmIResponse complex type</a>:",
       ];
 
-      /* This would also work:  
-    var uri = ["/GetTimeZoneCodeByLocalizedName",  
-    "(LocalizedStandardName='" + localizedStandardName + "',LocaleId=" + localeId + ")"];  
-  */
+      this.#util.appendMessage(message.join(""));
+      const table = this.#util.createTable(whoAmIResponse.body);
+      this.#container.appendChild(table);
+    } catch (e) {
+      this.#util.showError(`Failed to call WhoAmI: ${e.message}`);
+      throw e;
+    }
+  }
+  //#endregion Section 1: Unbound Function WhoAmI
 
-      return Sdk.request("GET", uri.join("")); // Send request.
-    })
-    .then(function (request) {
-      // Returns GetTimeZoneCodeByLocalizedNameResponse ComplexType.
-      // For more info, see https://msdn.microsoft.com/library/mt607889.aspx
-      var localizedStandardName = "Pacific Standard Time";
-      var timeZoneCode = JSON.parse(request.response).TimeZoneCode;
-      console.log(
-        "\tFunction returned time zone %s, with code '%s'.",
-        localizedStandardName,
-        timeZoneCode
-      );
+  //#region Section 2: Unbound Function FormatAddress
 
-      console.log("Bound function: CalculateTotalTimeIncident");
-      // Calling a basic bound function that requires parameters.
-      // Retrieve the total time, in minutes, spent on all tasks associated with this incident.
-      //  - Use CalculateTotalTimeIncident to get the total duration of all closed activities.
-      // For more info, see https://msdn.microsoft.com/library/mt593054.aspx
-      // Note that in a bound function the full function name includes the
-      // namespace Microsoft.Dynamics.CRM. Functions that aren’t bound must not use the full name.
-      return Sdk.request(
-        "GET",
-        incidentUri + "/Microsoft.Dynamics.CRM.CalculateTotalTimeIncident()"
-      );
-    })
-    .then(function (request) {
-      // Returns CalculateTotalTimeIncidentResponse ComplexType.
-      // For more info, see https://msdn.microsoft.com/library/mt607924.aspx
-      var totalTime = JSON.parse(request.response).TotalTime; //returns 90
-      console.log(
-        "\tFunction returned %s minutes - total duration of tasks associated with the incident.\n",
-        totalTime
-      );
+  async #formatAddressExample() {
+    // Function to generate aliases and parameter assignment
+    // for a function where all the parameter types are strings.
+    function generateStringAliasesAndAssignments(object) {
+      const keys = Object.keys(object);
+      const values = Object.values(object);
 
-      console.log("-- Working with Actions --");
-      // For more info about Action, see https://msdn.microsoft.com/library/mt607600.aspx
+      // Generate aliases
+      const aliases = keys
+        .map((key, index) => `${key}=@p${index + 1}`)
+        .join(",");
 
-      console.log("Unbound Action: WinOpportunity");
-      // Calling an unbound action that requires parameters.
-      // Closes an opportunity and markt it as won.
-      //  - Update the WinOpportunity (created by Sdk.createRequiredRecords()) by closing it as won.
-      // Use WinOpportunity Action (https://msdn.microsoft.com/library/mt607971.aspx)
-      // This action does not return a value
-      var parameters = {
-        Status: 3,
-        OpportunityClose: {
-          subject: "Won Opportunity",
-          "opportunityid@odata.bind": opportunityUri,
-        },
-      };
+      // Generate assigned values
+      const assignedValues = keys
+        .map((key, index) => `@p${index + 1}='${values[index]}'`)
+        .join("&");
 
-      return Sdk.request("POST", "/WinOpportunity", parameters);
-    })
-    .then(function () {
-      console.log("\tOpportunity won.");
+      return { aliases, assignedValues };
+    }
 
-      console.log("Bound Action: AddToQueue");
-      // Calling a bound action that requires parameters.
-      // Adds a new letter tracking activity to the current user's queue.
-      // The letter was created as part of the Sdk.createRequiredRecords().
-      //  - Get a reference to the current user.
-      //  - Get a reference to the letter activity.
-      //  - Add letter to current user's queue via the bound action AddToQueue.
-      // For more info on AddToQueue, see https://msdn.microsoft.com/library/mt607880.aspx
-
-      return Sdk.request("GET", "/WhoAmI");
-    })
-    .then(function (request) {
-      var whoAmIResponse = JSON.parse(request.response);
-      var myId = whoAmIResponse.UserId;
-
-      // Get a reference to the current user.
-      return Sdk.request(
-        "GET",
-        Sdk.getWebAPIPath() + "/systemusers(" + myId + ")/queueid/$ref"
-      );
-    })
-    .then(function (request) {
-      myQueueUri = JSON.parse(request.response)["@odata.id"];
-
-      // Get a reference to the letter activity.
-      return Sdk.request("GET", letterUri + "?$select=activityid");
-    })
-    .then(function (request) {
-      var letterActivityId = JSON.parse(request.response).activityid;
-
-      var parameters = {
-        Target: {
-          activityid: letterActivityId,
-          "@odata.type": "Microsoft.Dynamics.CRM.letter",
-        },
-      };
-      //Adding the letter to the user's default queue.
-      return Sdk.request(
-        "POST",
-        myQueueUri + "/Microsoft.Dynamics.CRM.AddToQueue",
-        parameters
-      );
-    })
-    .then(function (request) {
-      var queueItemId = JSON.parse(request.response).QueueItemId;
-      console.log(
-        "\tQueueItemId returned from AddToQueue Action: %s\n",
-        queueItemId
-      );
-
-      console.log("-- Working with custom actions --");
-      console.log("Custom action: sample_AddNoteToContact");
-      // Add a note to an existing contact.
-      // This operation calls a custom action named sample_AddNoteToContact.
-      // This custom action is installed when you install this sample's solution to your CRM server.
-      //  - Add a note to an existing contact (e.g.: contactUri)
-      //  - Get the note info and the contact's full name.
-      // For more info, see https://msdn.microsoft.com/library/mt607600.aspx#bkmk_customActions
-      //sample_AddNoteToContact custom action parameters
-      var parameters = {
-        NoteTitle: "The Title of the Note",
-        NoteText: "The text content of the note.",
-      };
-      return Sdk.request(
-        "POST",
-        contactUri + "/Microsoft.Dynamics.CRM.sample_AddNoteToContact",
-        parameters
-      );
-    })
-    .then(function (request) {
-      var annotationid = JSON.parse(request.response).annotationid;
-      var annotationUri =
-        Sdk.getWebAPIPath() + "/annotations(" + annotationid + ")";
-      // The annotation will be deleted with the contact when it is deleted.
-
-      return Sdk.request(
-        "GET",
-        annotationUri +
-          "?$select=subject,notetext&$expand=objectid_contact($select=fullname)"
-      );
-    })
-    .then(function (request) {
-      var annotation = JSON.parse(request.response);
-      console.log(
-        "\tA note with the title '%s' and the content '%s' was created and associated with the contact %s.\n",
-        annotation.subject,
-        annotation.notetext,
-        annotation.objectid_contact.fullname
-      );
-
-      console.log("Custom action: sample_CreateCustomer");
-      // Create a customer of a specified type using the custom action sample_CreateCustomer.
-      //  - Shows how create a valid customer of type "account".
-      //  - Shows how to handle exception from a custom action.
-
-      var parameters = {
-        CustomerType: "account",
-        AccountName: CUSTOMERACCOUNTNAME,
-      };
-
-      // Create the account. This is a valid request
-      return Sdk.request("POST", "/sample_CreateCustomer", parameters);
-    })
-    .then(function (request) {
-      // Retrieve the account we just created
-      return Sdk.request(
-        "GET",
-        "/accounts?$select=name&$filter=name eq '" + CUSTOMERACCOUNTNAME + "'"
-      );
-    })
-    .then(function (request) {
-      var customerAccount = JSON.parse(request.response).value[0];
-      var customerAccountId = customerAccount.accountid;
-      var customerAccountIdUri =
-        Sdk.getWebAPIPath() + "/accounts(" + customerAccountId + ")";
-      entitiesToDelete.push(customerAccountIdUri);
-      console.log(
-        "\tAccount customer created with the name '%s'",
-        customerAccount.name
-      );
-
-      // Create a contact but uses invalid parameters
-      //  - Throws an error intentionally
-      return new Promise(function (resolve, reject) {
-        var parameters = {
-          CustomerType: "contact",
-          AccountName: CUSTOMERACCOUNTNAME, //not valid for contact
-          // e.g.: ContactFirstName and ContactLastName are required when CustomerType is "contact".
-        };
-        Sdk.request("POST", "/sample_CreateCustomer", parameters) // This request is expected to fail.
-          .then(function () {
-            console.log("Not expected.");
-            reject(
-              new Error(
-                "Call to sample_CreateCustomer not expected to succeed."
-              )
-            );
-          })
-          .catch(function (err) {
-            //Expected error
-            console.log("\tExpected custom error: " + err.message); // Custom action can return custom error messages.
-            resolve(); // Show the error but resolve the thread so sample can continue.
-          });
-      });
-    })
-    .then(function () {
-      // House cleaning.
-      console.log("\n-- Deleting sample data --");
-      if (deleteData) {
-        return Sdk.deleteEntities();
-      } else {
-        console.log("Sample data not deleted.");
-      }
-    })
-    .catch(function (err) {
-      console.log("ERROR: " + err.message);
-    });
-};
-
-/**
- * @function Sdk.deleteEntities
- * @description Deletes the entities created by this sample
- */
-Sdk.deleteEntities = function () {
-  return new Promise(function (resolve, reject) {
-    entitiesToDelete.unshift(opportunityUri); // Adding to the beginning so it will get deleted before the parent account.
-    // Re-open the created opportunity so it can be deleted.
-    Sdk.request("PATCH", opportunityUri, { statecode: 0, statuscode: 2 })
-      .then(function () {
-        // Get the opportunityclose URI so it can be deleted
-        return Sdk.request(
-          "GET",
-          opportunityUri + "/Opportunity_OpportunityClose/$ref"
-        );
-      })
-      .then(function (request) {
-        var opportunityCloseUri = JSON.parse(request.response).value[0][
-          "@odata.id"
-        ];
-
-        // Adding to the opportunityclose URI it will get deleted before the opportunity.
-        entitiesToDelete.unshift(opportunityCloseUri);
-
-        /*  
-  These deletions have to be done consecutively in a specific order to avoid a Generic SQL error  
-  which can occur because of relationship behavior actions for the delete event.  
-  */
-
-        return Sdk.request("DELETE", entitiesToDelete[0]); //opportunityclose
-      })
-      .then(function () {
-        console.log(entitiesToDelete[0] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[1]); //opportunity
-      })
-      .then(function () {
-        console.log(entitiesToDelete[1] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[2]); //account
-      })
-      .then(function () {
-        console.log(entitiesToDelete[2] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[3]); //Fourth Coffee account
-      })
-      .then(function () {
-        console.log(entitiesToDelete[3] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[4]); //Letter
-      })
-      .then(function () {
-        console.log(entitiesToDelete[4] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[5]); //Contact
-      })
-      .then(function () {
-        console.log(entitiesToDelete[5] + " Deleted");
-        return Sdk.request("DELETE", entitiesToDelete[6]); //AccountCustomer
-      })
-      .then(function () {
-        console.log(entitiesToDelete[6] + " Deleted");
-        resolve();
-      })
-      .catch(function (err) {
-        reject(new Error("Error from Sdk.deleteEntities: " + err.message));
-      });
-  });
-};
-
-/**
- * @function Sdk.getUsersFullName
- * @description Retrieves the current user's full name.
- * @returns {Promise} - A Promise that returns the full name of the user
- */
-Sdk.getUsersFullName = function () {
-  return new Promise(function (resolve, reject) {
-    //Use WhoAmI Function (https://msdn.microsoft.com/library/mt607925.aspx)
-    Sdk.request("GET", "/WhoAmI")
-      .then(function (request) {
-        //Returns WhoAmIResponse ComplexType (https://msdn.microsoft.com/library/mt607982.aspx)
-        var myId = JSON.parse(request.response).UserId;
-        //Retrieve the systemuser Entity fullname property (https://msdn.microsoft.com/library/mt608065.aspx)
-        return Sdk.request(
-          "GET",
-          "/systemusers(" + myId + ")?$select=fullname"
-        );
-      })
-      .then(function (request) {
-        //Return the users full name
-        resolve(JSON.parse(request.response).fullname);
-      })
-      .catch(function (err) {
-        reject("Error in Sdk.getUsersFullName function: " + err.message);
-      });
-  });
-};
-
-/**
- * @function Sdk.createRequiredRecords
- * @description Creates data required by this sample program.
- *  - Create an account with three 30 minute tasks.
- *  - Create another account associated with an opportunity.
- *  - Create a letter.
- *  - Create a contact.
- * @returns {Promise} - resolve the promise if all goes well; reject otherwise.
- */
-Sdk.createRequiredRecords = function () {
-  console.log("-- Creating sample data --");
-  // Create a parent account, an associated incident with three
-  // associated tasks(required for CalculateTotalTimeIncident).
-  return new Promise(function (resolve, reject) {
-    Sdk.createAccountWithIncidentAndThree30MinuteClosedTasks()
-      .then(function (iUri) {
-        incidentUri = iUri;
-
-        //Create another account and associated opportunity (required for CloseOpportunityAsWon).
-        return Sdk.createAccountWithOpportunityToWin();
-      })
-      .then(function (oUri) {
-        opportunityUri = oUri;
-
-        // Create a letter to use with AddToQueue action.
-        var letter = {
-          description: "Example letter",
-        };
-        return Sdk.request("POST", "/letters", letter);
-      })
-      .then(function (request) {
-        letterUri = request.getResponseHeader("OData-EntityId");
-        entitiesToDelete.push(letterUri);
-
-        // Create a contact to use with custom action sample_AddNoteToContact
-        var contact = {
-          firstname: "Jon",
-          lastname: "Fogg",
-        };
-        return Sdk.request("POST", "/contacts", contact);
-      })
-      .then(function (request) {
-        contactUri = request.getResponseHeader("OData-EntityId");
-        entitiesToDelete.push(contactUri);
-
-        resolve();
-      })
-      .catch(function (err) {
-        reject("Error in Sdk.createRequiredRecords function: " + err.message);
-      });
-  });
-};
-
-/**
- * @function Sdk.createAccountwithIncidentAndThree30MinuteClosedTasks
- * @description Create an account and associate three 30 minute tasks. Close the tasks.
- * @returns {Promise} - A Promise that returns the uri of an incident created.
- */
-Sdk.createAccountWithIncidentAndThree30MinuteClosedTasks = function () {
-  return new Promise(function (resolve, reject) {
-    var iUri; // incidentUri
-    // Create a parent account for the incident.
-    Sdk.request("POST", "/accounts", { name: "Fourth Coffee" })
-      .then(function (request) {
-        // Capture the URI of the created account so it can be deleted later.
-        var accountUri = request.getResponseHeader("OData-EntityId");
-        entitiesToDelete.push(accountUri);
-        // Define an incident associated with the account with three related tasks.
-        // Each task has a 30 minute duration.
-        var incident = {
-          title: "Sample Case",
-          "customerid_account@odata.bind": accountUri,
-          Incident_Tasks: [
-            {
-              subject: "Task 1",
-              actualdurationminutes: 30,
-            },
-            {
-              subject: "Task 2",
-              actualdurationminutes: 30,
-            },
-            {
-              subject: "Task 3",
-              actualdurationminutes: 30,
-            },
-          ],
-        };
-        // Create the incident and related tasks.
-        return Sdk.request("POST", "/incidents", incident);
-      })
-      .then(function (request) {
-        iUri = request.getResponseHeader("OData-EntityId");
-
-        // Retrieve references to the tasks created.
-        return Sdk.request("GET", iUri + "/Incident_Tasks/$ref");
-      })
-      .then(function (request) {
-        // Capture the URL for the three tasks in this array.
-        var taskReferences = [];
-        JSON.parse(request.response).value.forEach(function (tr) {
-          taskReferences.push(tr["@odata.id"]);
-        });
-        // An array to hold a set of promises.
-        var promises = [];
-        // The data to use to update the tasks so that they are closed.
-        var update = {
-          statecode: 1, //Completed
-          statuscode: 5, //Completed
-        };
-        // Fill the array with promises
-        taskReferences.forEach(function (tr) {
-          promises.push(Sdk.request("PATCH", tr, update));
-        });
-        // When all the promises resolve, return a promise.
-        return Promise.all(promises);
-      })
-      .then(function () {
-        // Return the incident URI to the calling code.
-        resolve(iUri);
-      })
-      .catch(function (err) {
-        // Differentiate the message for any error returned by this function.
-        reject(
-          new Error(
-            "ERROR in Sdk.createAccountwithIncidentAndThree30MinuteClosedTasks function: " +
-              err.message
-          )
-        );
-      });
-  });
-};
-
-/**
- * @function Sdk.createAccountwithOpportunityToWin
- * @description Create an account and an associated opportunity.
- * @returns {Promise} - A Promise that returns the uri of an opportunity.
- */
-Sdk.createAccountWithOpportunityToWin = function () {
-  return new Promise(function (resolve, reject) {
-    var accountUri;
-    var account = {
-      name: "Sample Account for WebAPIFunctionsAndActions sample",
-      opportunity_customer_accounts: [
-        {
-          name: "Opportunity to win",
-        },
-      ],
+    // Define the address object
+    const address1 = {
+      Line1: "123 Maple St.",
+      City: "Seattle",
+      StateOrProvince: "WA",
+      PostalCode: "98007",
+      Country: "USA",
     };
-    Sdk.request("POST", "/accounts", account) // Create the account.
-      .then(function (request) {
-        accountUri = request.getResponseHeader("OData-EntityId");
-        entitiesToDelete.push(accountUri);
 
-        // Retrieve the opportunity's reference.
-        return Sdk.request(
-          "GET",
-          accountUri + "/opportunity_customer_accounts/$ref"
+    // Call the FormatAddress function
+    try {
+      const { aliases, assignedValues } =
+        generateStringAliasesAndAssignments(address1);
+      const formatAddressRequest = new dv.WebAPIRequest(
+        "GET",
+        `FormatAddress(${aliases})`,
+        assignedValues
+      );
+      const response = await this.#client.SendRequest(formatAddressRequest);
+
+      let message = [
+        "<a target='_blank' href='https://learn.",
+        "microsoft.com/power-apps/developer/data-platform/webapi/reference/",
+        "formataddress'>FormatAddress function</a> returns a formatted address ",
+        "with the properties of the <a target='_blank' href='https://learn.",
+        "microsoft.com/power-apps/developer/data-platform/webapi/reference/",
+        "formataddressresponse'>FormatAddressResponse complex type</a>:",
+      ];
+
+      this.#util.appendMessage(message.join(""));
+
+      this.#util.appendMessage(
+        `<strong>Formatted US Address:</strong><div style="white-space: pre-line;">${response.body.Address}</div>`
+      );
+    } catch (error) {
+      this.#util.showError(`Failed to format address1: ${error.message}`);
+    }
+
+    // Define a new  address object
+    const address2 = {
+      Line1: "1-2-3 Sakura",
+      City: "Nagoya",
+      StateOrProvince: "Aichi",
+      PostalCode: "455-2345",
+      Country: "JAPAN",
+    };
+
+    try {
+      const { aliases, assignedValues } =
+        generateStringAliasesAndAssignments(address2);
+      const formatAddressRequest = new dv.WebAPIRequest(
+        "GET",
+        `FormatAddress(${aliases})`,
+        assignedValues
+      );
+      const response = await this.#client.SendRequest(formatAddressRequest);
+
+      this.#util.appendMessage(
+        `<strong>Formatted Japan Address:</strong><div style="white-space: pre-line;">${response.body.Address}</div>`
+      );
+    } catch (error) {
+      this.#util.showError(`Failed to format address2: ${error.message}`);
+    }
+  }
+
+  //#endregion Section 2: Unbound Function FormatAddress
+
+  //#region Section 3: Unbound Function InitializeFrom
+
+  async #initializeFromExample() {
+    // Get the account ID for Contoso Consulting created in SetUp
+    const contosoAccountId = this.#entityStore.find(
+      (item) => item.name === "Contoso Consulting"
+    ).id;
+
+    const aliases = [
+      "EntityMoniker=@p1",
+      "TargetEntityName=@p2",
+      "TargetFieldType=@p3",
+    ].join(",");
+
+    const assignedValues = [
+      `@p1={'@odata.id':'accounts(${contosoAccountId})'}`,
+      "@p2='account'",
+      "@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate'",
+    ].join("&");
+
+    const intializeFromRequest = new dv.WebAPIRequest(
+      "GET",
+      `InitializeFrom(${aliases})`,
+      assignedValues
+    );
+
+    // Will set the data for the new record.
+    let newaccount = null;
+    try {
+      const response = await this.#client.SendRequest(intializeFromRequest);
+
+      let message = [
+        "The <a target='_blank' href='https://learn.",
+        "microsoft.com/power-apps/developer/data-platform/webapi/reference/",
+        "initializefrom'>InitializeFrom function</a> returns a <a target='_blank' href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/crmbaseentity'>crmbaseentity</a>",
+        " object with the following properties that ",
+        "provide default values copied from the source record:",
+      ];
+
+      this.#util.appendMessage(message.join(""));
+
+      newaccount = response.body;
+      const table = this.#util.createTable(newaccount, false);
+      this.#container.appendChild(table);
+    } catch (error) {
+      this.#util.showError(`Failed to initialize from: ${error.message}`);
+    }
+
+    if (newaccount) {
+      // Create a new account using the initialized values
+      newaccount.name = "Contoso Consulting Chicago Branch";
+      newaccount.address1_city = "Chicago";
+      newaccount.address1_line1 = "456 Elm St.";
+      newaccount.address1_name = "Chicago Branch Office";
+      newaccount.address1_postalcode = "60007";
+      newaccount.address1_stateorprovince = "IL";
+      newaccount.address1_telephone1 = "(312) 555-3456";
+      newaccount.numberofemployees = 12;
+
+      // Remove the ownerid@odata.bind property from the new account object
+      // if it exists. This will only occur if this column is mapped.
+      // This column should not be mapped.
+      // The calling user will be set as the owner of the new record.
+      if (newaccount["ownerid@odata.bind"]) {
+        delete newaccount["ownerid@odata.bind"];
+      }
+
+      // Converts object properties to an array of strings
+      // that can be used with $select.
+      function getSelectablePropertyNames(obj) {
+        const result = {};
+        for (const key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            if (!key.startsWith("@")) {
+              if (key.endsWith("@odata.bind")) {
+                const newKey = "_" + key.replace(/@odata\.bind$/, "_value");
+                result[newKey] = obj[key];
+              } else {
+                result[key] = obj[key];
+              }
+            }
+          }
+        }
+        return Object.keys(result);
+      }
+
+      // Transform the object to remove @odata.bind properties
+      const columns = getSelectablePropertyNames(newaccount);
+
+      try {
+        const contosoChicago = await this.#client.CreateRetrieve(
+          "accounts",
+          newaccount,
+          `$select=${columns.join(",")}`
         );
-      })
-      .then(function (request) {
-        var oUri = JSON.parse(request.response).value[0]["@odata.id"];
-        resolve(oUri); // Return the opportunity's uri.
-      })
-      .catch(function (err) {
-        reject(
-          new Error(
-            "Error in Sdk.createAccountwithOpportunityToWin: " + err.message
-          )
+        this.#entityStore.push({
+          entitySetName: "accounts",
+          id: contosoChicago.accountid,
+          entityName: "account",
+          name: newaccount.name,
+        });
+
+        this.#util.appendMessage(
+          `New ${contosoChicago.name} account record created.`
         );
+        const table = this.#util.createTable(contosoChicago, true);
+        this.#container.appendChild(table);
+      } catch (error) {
+        this.#util.showError(
+          `Failed to create new record using payload from initializeFrom message: ${error.message}`
+        );
+      }
+    }
+  }
+
+  //#endregion Section 3: Unbound Function InitializeFrom
+
+  //#region Section 4: Unbound Function RetrieveCurrentOrganization
+
+  async #retrieveCurrentOrganizationExample() {
+    try {
+      const retrieveCurrentOrganizationRequest = new dv.WebAPIRequest(
+        "GET",
+        "RetrieveCurrentOrganization(AccessType=@p1)",
+        "@p1=Microsoft.Dynamics.CRM.EndpointAccessType'Default'"
+      );
+
+      const response = await this.#client.SendRequest(
+        retrieveCurrentOrganizationRequest
+      );
+
+      let message = [
+        "<a target='_blank' ",
+        "href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/retrievecurrentorganization'>",
+        "RetrieveCurrentOrganization function</a> returns the current organization information with the properties of the ",
+        "<a target='_blank' href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/retrievecurrentorganizationresponse'>",
+        "RetrieveCurrentOrganizationResponse complex type</a>. The <strong>Details</strong> property contains the following information:",
+      ];
+
+      this.#util.appendMessage(message.join(""));
+      const table = this.#util.createTable(response.body.Detail);
+      this.#container.appendChild(table);
+    } catch (error) {
+      this.#util.showError(
+        `Failed to retrieve current organization: ${error.message}`
+      );
+    }
+  }
+  //#endregion Section 4: Unbound Function RetrieveCurrentOrganization
+
+  //#region Section 5: Unbound Function RetrieveTotalRecordCount
+
+  async #retrieveTotalRecordCountExample() {
+    let message = [
+      "<a target='_blank' ",
+      "href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/retrievetotalrecordcount'>",
+      "RetrieveTotalRecordCount function</a> returns the current organization information with the properties of the ",
+      "<a target='_blank' href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/retrievetotalrecordcountresponse'>",
+      "RetrieveTotalRecordCountResponse  complex type</a>. The <strong>EntityRecordCountCollection</strong> property contains the following information:",
+    ];
+    this.#util.appendMessage(message.join(""));
+
+    const RetrieveTotalRecordCountRequest = new dv.WebAPIRequest(
+      "GET",
+      "RetrieveTotalRecordCount(EntityNames=@p1)",
+      "@p1=['account','contact']"
+    );
+
+    try {
+      const response = await this.#client.SendRequest(
+        RetrieveTotalRecordCountRequest
+      );
+
+      this.#util.appendMessage(
+        "The number of records for each table according to RetrieveTotalRecordCount:"
+      );
+
+      const keys = response.body.EntityRecordCountCollection.Keys;
+      const values = response.body.EntityRecordCountCollection.Values;
+
+      const data = {};
+      for (let i = 0; i < keys.length; i++) {
+        data[keys[i]] = values[i];
+      }
+
+      const table = this.#util.createTable(data, false);
+      this.#container.appendChild(table);
+    } catch (error) {
+      this.#util.showError(
+        `Failed to retrieve total record count: ${error.message}`
+      );
+    }
+  }
+
+  //#endregion Section 5: Unbound Function RetrieveTotalRecordCount
+
+  //#region Section 6: Bound Function IsSystemAdmin custom API
+
+  async #isSystemAdminExample() {
+    let startMessage = [
+      "The <strong>sample_IsSystemAdmin</strong> function is a ",
+      "custom API that checks if the user has the system administrator role. ",
+      "It is bound to the system user table and returns a boolean value ",
+      "indicating whether the user is a system administrator.",
+      "<br />",
+      "This function is contained within a solution called ",
+      "<strong>IsSystemAdminFunction</strong> that is installed if it isn't found ",
+      "when the samples starts, and is deleted at the end of the sample if it was installed.",
+      "The sample calls the <strong>sample_IsSystemAdmin</strong> function for the ",
+      "first 10 enabled interactive users in the system who do not have a # ",
+      "character in their name and are enabled.",
+      "<a target='_blank' href='https://learn.microsoft.com/power-apps/developer/",
+      "data-platform/org-service/samples/issystemadmin-customapi-sample-plugin'> ",
+      "Learn more about how this custom API was created</a>.",
+    ];
+
+    this.#util.appendMessage(startMessage.join(""));
+
+    // Check if the IsSystemAdminFunction solution is installed
+    if (!this.#isSystemAdminFunctionSolutionId) {
+      this.#util.showError("IsSystemAdminFunction solution is not installed.");
+      return;
+    }
+
+    // Get top 10 user records that don't start with # character
+    const records = await this.#client.RetrieveMultiple(
+      "systemusers",
+      [
+        "$select=systemuserid,fullname",
+        "$filter=not contains(fullname,'%23') and accessmode eq 0",
+        "$top=10",
+      ].join("&")
+    );
+
+    // Check if each user is a system admin
+    const checkPromises = records.value.map((record) =>
+      this.#checkIsSystemAdmin(record)
+    );
+    const results = await Promise.all(checkPromises);
+
+    let message = [];
+
+    results.forEach(({ record, isSystemAdmin }) => {
+      let item = [
+        "<li>",
+        record.fullname,
+        isSystemAdmin ? " <strong>HAS</strong> " : " does not have ",
+        "the system administrator role.",
+        "</li>",
+      ];
+      message.push(item.join(""));
+    });
+
+    this.#util.appendMessage(message.join(""), null, "ul");
+  }
+
+  async #checkIsSystemAdmin(record) {
+    if (!record || !record.systemuserid) {
+      this.#util.showError("Invalid record or systemuserid.");
+      return { record, isSystemAdmin: false };
+    }
+
+    const request = new dv.WebAPIRequest(
+      "GET",
+      `systemusers(${record.systemuserid})/Microsoft.Dynamics.CRM.sample_IsSystemAdmin`
+    );
+
+    try {
+      const response = await this.#client.SendRequest(request);
+      return { record, isSystemAdmin: response.body.HasRole };
+    } catch (error) {
+      this.#util.showError(
+        `Failed to check IsSystemAdmin for user ${record.systemuserid}: ${error.message}`
+      );
+      return { record, isSystemAdmin: false };
+    }
+  }
+  //#endregion Section 6: Bound Function IsSystemAdmin custom API
+
+  //#region Section 7: Unbound Action GrantAccess
+
+  async #grantAccessExample() {
+    const startMessage = [
+      "Use the <a target='_blank' ",
+      "href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/grantaccess'>GrantAccess action</a> ",
+      "to grant access rights to a record for a principal, which means a user or team. ",
+      "This unbound action requires a reference to the record using the <strong>Target</strong> parameter. ",
+      "The <strong>PrincipalAccess</strong> parameter contains data about the principal and the access rights to be granted ",
+      "using a ",
+      "<a target='_blank' ",
+      "href='https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/principalaccess'>PrincipalAccess complex type</a> ",
+      "instance.",
+    ].join("");
+
+    this.#util.appendMessage(startMessage);
+
+    // Get the ID for "Account to Share" account record created in SetUp
+    const accountToShareId = this.#entityStore.find(
+      (item) => item.name === "Account to Share"
+    ).id;
+
+    // Get an enabled, interactive user other than current user
+    let otherUser = null;
+    try {
+      const records = await this.#client.RetrieveMultiple(
+        "systemusers",
+        [
+          "$select=systemuserid,fullname",
+          [
+            "$filter=systemuserid ne ",
+            this.#whoIAm.UserId,
+            " and isdisabled eq false",
+            " and accessmode eq 0",
+            " and not startswith(fullname,'%23')",
+          ].join(""),
+          "$top=1",
+        ].join("&")
+      );
+
+      if (records.value.length > 0) {
+        otherUser = records.value[0];
+      } else {
+        this.#util.showError(
+          "No other enabled interactive users found in the system. Can't demonstrate the GrantAccess action."
+        );
+        return;
+      }
+    } catch (error) {
+      this.#util.showError(`Failed to retrieve other user: ${error.message}`);
+    }
+
+    if (otherUser && accountToShareId) {
+      const accessRights = await this.#retrievePrincipalAccessRequest(
+        otherUser.systemuserid,
+        accountToShareId
+      );
+
+      // Display the access rights
+      this.#util.appendMessage(
+        [
+          otherUser.fullname,
+          " has the following access rights to the account record: ",
+          accessRights,
+        ].join("")
+      );
+
+      // Show if the user has DeleteAccess rights
+      this.#util.appendMessage(
+        [
+          otherUser.fullname,
+          accessRights.includes("DeleteAccess") ? " has " : " does not have ",
+          "DeleteAccess rights to the account record.",
+        ].join("")
+      );
+
+      // Give them DeleteAccess rights if they don't have it
+      if (!accessRights.includes("DeleteAccess")) {
+        // Prepare the body for the GrantAccess request
+        const grantAccessBody = {
+          Target: {
+            accountid: accountToShareId,
+            "@odata.type": "Microsoft.Dynamics.CRM.account",
+          },
+          PrincipalAccess: {
+            Principal: {
+              systemuserid: otherUser.systemuserid,
+              "@odata.type": "Microsoft.Dynamics.CRM.systemuser",
+            },
+            AccessMask: "DeleteAccess",
+          },
+        };
+        // Compose the request
+        const grantAccessRequest = new dv.WebAPIRequest(
+          "POST",
+          "GrantAccess",
+          null,
+          grantAccessBody
+        );
+
+        try {
+          // Send the GrantAccess request
+          await this.#client.SendRequest(grantAccessRequest);
+          this.#util.appendMessage(
+            `Granted DeleteAccess rights to ${otherUser.fullname} for the account record.`
+          );
+        } catch (error) {
+          this.#util.showError(`Failed to grant access: ${error.message}`);
+        }
+
+        // Retrieve the updated access rights
+        const updatedAccessRights = await this.#retrievePrincipalAccessRequest(
+          otherUser.systemuserid,
+          accountToShareId
+        );
+
+        if (updatedAccessRights.includes("DeleteAccess")) {
+          this.#util.appendMessage(
+            `${otherUser.fullname} DeleteAccess rights to the account record is confirmed.`
+          );
+        } else {
+          this.#util.appendMessage(
+            `${otherUser.fullname} still does not have DeleteAccess rights to the account record.`
+          );
+        }
+      } else {
+        this.#util.appendMessage(
+          `${otherUser.fullname} already has DeleteAccess rights to the account record.`
+        );
+      }
+    }
+  }
+
+  /**
+   * Retrieves the principal access rights for a given system user and account.
+   *
+   * @param {string} systemUserId - The ID of the system user.
+   * @param {string} accountid - The ID of the account.
+   * @returns {Promise<string>} A promise that resolves to the access rights of the principal.
+   * @throws Will throw an error if the request fails.
+   * @private
+   */
+  async #retrievePrincipalAccessRequest(systemUserId, accountid) {
+    const request = new dv.WebAPIRequest(
+      "GET",
+      `systemusers(${systemUserId})/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)`,
+      `@p1={ '@odata.id':'accounts(${accountid})'}`
+    );
+
+    try {
+      const response = await this.#client.SendRequest(request);
+      return response.body.AccessRights;
+    } catch (error) {
+      this.#util.showError(
+        `Failed to retrieve principal access for user ${systemUserId} and account ${accountid}: ${error.message}`
+      );
+    }
+  }
+
+  //#endregion Section 7: Unbound Action GrantAccess
+
+  //#region Section 8: Bound Action AddPrivilegesRole
+
+  async #addPrivilegesRoleExample() {
+    const startMessage = [
+      "Use the <a target='_blank' href='https://learn.microsoft.",
+      "com/power-apps/developer/data-platform/webapi/reference/",
+      "addprivilegesrole'>AddPrivilegesRole action</a> to add privileges to a security role. ",
+      "This action is bound to the <a target='_blank' href='htt",
+      "ps://learn.microsoft.com/power-apps/developer/data-platfo",
+      "rm/webapi/reference/role'>role entity type</a>. ",
+      "The <strong>Target</strong> parameter contains a reference to the record.",
+      "The <strong>Privileges</strong> parameter contains data ",
+      "about the privileges to be added.",
+      "Use a collection of <a target='_blank' href='https://lea",
+      "rn.microsoft.com/power-apps/developer/data-platform/webap",
+      "i/reference/roleprivilege'>RolePrivilege complex type</a> ",
+      "instances. to set the privileges.",
+      "RolePrivilege are added to the role in the context of a business unit, in this case the user's business unit. ",
+      "Each RolePrivilege must have a <strong>Depth</strong> assigned using <a targ",
+      "et='_blank' href='https://learn.microsoft.com/power-apps/",
+      "developer/data-platform/webapi/reference/privilegedepth'>",
+      "PrivilegeDepth enum type</a> values.",
+      "The Depth value is set to <strong>Basic</strong> in this ",
+      "sample.",
+    ].join("");
+    this.#util.appendMessage(startMessage);
+
+    // Create a security role to add privileges to
+    const role = {
+      "businessunitid@odata.bind": `businessunits(${
+        this.#whoIAm.BusinessUnitId
+      })`,
+      name: "Test Role",
+    };
+
+    let roleId = null;
+    try {
+      roleId = await this.#client.Create("roles", role);
+      // To delete later
+      this.#entityStore.push({
+        entitySetName: "roles",
+        id: roleId,
+        entityName: "role",
+        name: role.name,
       });
-  });
-};
+
+      this.#util.appendMessage(`Created a security role named ${role.name}.`);
+    } catch (error) {
+      this.#util.showError(`Failed to create security role: ${error.message}`);
+    }
+
+    if (roleId) {
+      try {
+        // Show the current privileges for the role
+        await this.#showRolePrivileges(roleId, role.name);
+      } catch (error) {
+        this.#util.showError(error.message);
+      }
+
+      // Retrieve the prvCreateAccount and prvReadAccount privileges
+
+      try {
+        const privileges = await this.#client.RetrieveMultiple(
+          "privileges",
+          [
+            "$select=name",
+            "$filter=name eq 'prvCreateAccount' or name eq 'prvReadAccount'",
+          ].join("&")
+        );
+
+        let rolePrivileges = [];
+
+        privileges.value.forEach((privilege) => {
+          rolePrivileges.push({
+            BusinessUnitId: this.#whoIAm.BusinessUnitId,
+            Depth: "Basic",
+            PrivilegeId: privilege.privilegeid,
+            PrivilegeName: privilege.name,
+          });
+        });
+
+        // Create the request
+
+        const addPrivilegesRoleRequest = new dv.WebAPIRequest(
+          "POST",
+          `roles(${roleId})/Microsoft.Dynamics.CRM.AddPrivilegesRole`,
+          null,
+          { Privileges: rolePrivileges }
+        );
+
+        // Send the request to add the privileges
+        try {
+          await this.#client.SendRequest(addPrivilegesRoleRequest);
+
+          this.#util.appendMessage(
+            `Added the 'prvCreateAccount' and 'prvReadAccount' privileges to the ${role.name} security role:`
+          );
+
+          try {
+            // Show the updated privileges for the role
+            await this.#showRolePrivileges(roleId, role.name);
+          } catch (error) {
+            this.#util.showError(error.message);
+          }
+        } catch (error) {
+          this.#util.showError(
+            `Failed to add privileges to the security role: ${error.message}`
+          );
+        }
+      } catch (error) {
+        this.#util.showError(
+          `Failed to retrieve 'prvCreateAccount' and 'prvReadAccount' privileges: ${error.message}`
+        );
+      }
+    } else {
+      this.#util.showError(
+        "Failed to create security role. Cannot add privileges."
+      );
+      return;
+    }
+  }
+
+  async #showRolePrivileges(roleId, name) {
+    // Get the roles currently associated with the role
+
+    try {
+      const rolePrivileges = await this.#client.RetrieveMultiple(
+        `roles(${roleId})/roleprivileges_association`,
+        "$select=name"
+      );
+
+      this.#util.appendMessage(
+        `The ${name} security role has the following ${rolePrivileges.value.length} privileges:`
+      );
+      let list = [];
+      rolePrivileges.value.forEach((privilege) => {
+        list.push(`<li>${privilege.name}</li>`);
+      });
+      this.#util.appendMessage(list.join(""), null, "ul");
+    } catch (error) {
+      throw new Error(
+        `Failed to retrieve privileges for role ${roleId}: ${error.message}`
+      );
+    }
+  }
+
+  //#endregion Section 8: Bound Action AddPrivilegesRole
+}
 ```
+
+
 
 ### See also
 
