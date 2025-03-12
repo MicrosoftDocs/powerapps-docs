@@ -18,15 +18,15 @@ This library contains definitions of the following classes:
 
 |Class|Description|
 |---|---|
-|[`Client`](#client)|The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
-|[`WebAPIRequest`](#webapirequest)|Represents a web API request used for batch processing.|
-|[`WebAPIResponse`](#webapiresponse)|Represents a web API response used for batch processing.|
-|[`ChangeSet`](#changeset)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
+|[`Client`](#client-class)|The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
+|[`WebAPIRequest`](#webapirequest-class)|Represents a web API request used for batch processing.|
+|[`WebAPIResponse`](#webapiresponse-class)|Represents a web API response used for batch processing.|
+|[`ChangeSet`](#changeset-class)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
 
 You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code)
 
 
-## Client class
+## `Client` class
 
 The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.
 
@@ -238,7 +238,7 @@ Sends a batch request containing multiple WebAPIRequest or ChangeSet items.
 
 - **Returns:** `Promise<Array<WebAPIResponse>>`: The parsed response from the batch request.
 
-## WebAPIRequest class
+## `WebAPIRequest` class
 
 Represents a web API request used for batch processing.
 
@@ -269,7 +269,7 @@ Creates an instance of `WebAPIRequest`.
 
 - `getBatchBody(Id, inChangeSet = false)`: Generates the batch request body for the OData service.
 
-## WebAPIResponse class
+## `WebAPIResponse` class
 
 Represents a web API response used for batch processing.
 
@@ -290,7 +290,7 @@ Creates an instance of `WebAPIResponse`.
 
 - `async init(response)`: Initializes the `WebAPIResponse` object with the response from the server.
 
-## ChangeSet class
+## `ChangeSet` class
 
 Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.
 
