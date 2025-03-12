@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 12/03/2025
+ms.date: 03/12/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -37,7 +37,7 @@ You need the following information to get started:
 ## Generate keys
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
+> Skip to [sign the APK package](#manual-sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
 
 We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
@@ -73,7 +73,7 @@ Example:
 ## Generate signature hash
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
+> Skip to [sign the APK package](#manual-sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
 
 After generating the key, the **exportcert** command is used in **keytool** to export the keystore certificate.
 

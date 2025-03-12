@@ -167,7 +167,6 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
-
   
 ## Register your app on Azure portal manually (optional)
 You can automatically create your app registration in the wrap wizard as mentioned in [step 3](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
