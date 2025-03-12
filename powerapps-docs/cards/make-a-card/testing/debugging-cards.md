@@ -12,6 +12,8 @@ ms.collection:
 
 # Test and debug cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Use the **Play** page to preview your cards before sending them out to users. The **Play** page has tools to test your card and help you debug any issues. Get to the **Play** page in the [card designer](../designer-overview.md).
 
 Card instances that you preview in the **Play** page expire 48 hours after you create the preview. After 48 hours, select **Play** in the card designer to create a fresh instance of the card.
