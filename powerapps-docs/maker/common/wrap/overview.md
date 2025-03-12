@@ -128,7 +128,7 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded as mentioned in step 6.
+The bundle ID is a unique identifier that you can create for your app. You can give any bundle ID name that follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault for wrap](create-key-vault-for-code-signing.md) once iOS or Android certificates are created and uploaded.
 
 ### Code signing
 

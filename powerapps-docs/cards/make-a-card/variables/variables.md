@@ -13,6 +13,8 @@ ms.collection:
 
 # Add variables to a card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Variables store data for reuse. The data can be of different types, like collection, text, or a number. Variables have unique names, which is how you refer to them in [Power Fx formulas](../../make-a-card/power-fx/intro-to-pfx.md). Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 The value of a variable can be temporary, reset for each card session, or permanent, shared across all sessions of a specific card instance. Temporary variables are different for each card session, even for a single user, meaning if you have the same card instance sent to you in a chat and a channel, a temporary variable could be different across those two sessions.
