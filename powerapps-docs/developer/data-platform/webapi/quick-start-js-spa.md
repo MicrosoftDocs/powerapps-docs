@@ -1,5 +1,5 @@
 ---
-title: Quick Start Web API with client-side JavaScript and Visual Studio Code
+title: Quickstart: Web API with client-side JavaScript and Visual Studio Code
 description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code
 ms.date: 03/20/2025
 author: JimDaly
@@ -8,7 +8,7 @@ ms.reviewer: jdaly
 search.audienceType:
   - developer
 ---
-# Quick Start Web API with client-side JavaScript and Visual Studio Code
+# Quickstart: Web API with client-side JavaScript and Visual Studio Code
 
 This quickstart demonstrates how you can connect to Dataverse and use the Web API with the following technologies:
 
@@ -32,7 +32,7 @@ This quickstart focuses on connecting to the Dataverse Web API with JavaScript u
 Completing this quickstart will enable you to try the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md) which demonstrate more advanced capabilities.
 
 > [!NOTE]
-> This quickstart isn't about the following client-side JavaScript scenarios:
+> This quickstart doesn't apply to the following client-side JavaScript scenarios:
 >
 > |Scenario|Learn more|
 > |---|---|
@@ -40,29 +40,33 @@ Completing this quickstart will enable you to try the [Web API Data operations S
 > |**Power Apps component framework**|- [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi)<br />- [Implementing Web API component](../../component-framework/sample-controls/webapi-control.md)|
 > |**Power Pages Portals**|[Power Pages Portals Web API](/power-pages/configure/web-api-overview)|
 >
-> In these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in this quick start. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
+> In these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in this quickstart. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
 
 ## Prerequisites
 
+The following table describes the prerequisites needed to complete this quickstart and [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md).
+
 |Prerequisite|Description|
 |---|---|
-|**Privileges to create an Entra App registration**|You will not be able to complete this quick start without the ability create an Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
-|**Visual Studio Code**| If you haven't already installed Visual Studio code, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quick start. |
-|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quick start depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extension. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and [installing it](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension).<br /><br />**Why Live Server?**<br />Modern JavaScript development practices are highly dependent on technologies like [Node Package Manager (npm)](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.<br /> For quickstarts and samples that show SPA applications using different frameworks, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications).|
-|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side in a browser rather than the node runtime. But npm is installed with node, and you need npm to complete the instructions to [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library). This is why there is a step to [Install Node.js](#install-nodejs).|
-|**Web Technologies**|Understanding of HTML, JavaScript, and CSS are required to understand how this quick start works.|
+|**Privileges to create an Entra App registration**|You will not be able to complete this quickstart without the ability create an Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
+|**Visual Studio Code**| If you haven't already installed Visual Studio code, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
+|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quickstart depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extension. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and [installing it](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension).<br /><br />**Why Live Server?**<br />Modern JavaScript development practices are highly dependent on technologies like [Node Package Manager (npm)](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you choose. These extensions allow for managing all the libraries that modern web applications depend on. This quickstart will avoid taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.<br /><br />For quickstarts and samples that show SPA applications using different frameworks, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
+|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But npm is installed with Node.js, and you need npm to complete the instructions to [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library). This is why there is a step to [Install Node.js](#install-nodejs).|
+|**Web Technologies**|Understanding of HTML, JavaScript, and CSS are required to understand how this quickstart works.|
 
 ## Register a SPA application
 
 This is the first step because if you can't register an app, there is no point in going further.
 
-Usually your Azure account must have permissions to manage applications. Any of the following [privileged Microsoft Entra roles](/entra/identity/role-based-access-control/privileged-roles-permissions) include the required permissions:
+Any of the following [privileged Microsoft Entra roles](/entra/identity/role-based-access-control/privileged-roles-permissions) include the required permissions:
 
 - [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
 - [Application Developer](/entra/identity/role-based-access-control/permissions-reference#application-developer)
 - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
-To configure the application you need an application ID (also called a Client ID), and the ID of your Entra tenant. You should also choose a descriptive name for the application so will know what is was created for in the future.
+To configure the application you need an application ID (also called a Client ID), and the Id of your Entra tenant. You should also choose a descriptive name for the application so will know what is was created for in the future.
+
+### Register your app
 
 You can do this either of two ways using:
 
@@ -71,72 +75,143 @@ You can do this either of two ways using:
 
 ### [Entra web application](#tab/web)
 
-   These instructions describe how to [Register the application and copy IDs](/entra/identity-platform/quickstart-single-page-app-sign-in?pivots=workforce&tabs=javascript-workforce%2Cjavascript-external#register-the-application-and-record-identifiers).
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant in which you want to register the application from the **Directories + subscriptions** menu.
+1. Browse to **Identity** > **Applications** > **App registrations**, select **New registration**.
+1. Enter a **Name** for the application, such as `Dataverse Web API Quickstart SPA`.
+1. For **Supported account types**, under **Who can use this application or access this API**, select **Accounts in this organizational directory only (&lt;Your tenant name&gt; - Single tenant)**.
+1. For  **Redirect URI (optional)**
 
-   After this, to specify your app type to your app registration, follow these steps:
+   1. For **Select a platform**, choose **Single-page application (SPA)**.
+   1. Enter `http://localhost:5500` as the value.
 
-   1. Under **Manage**, select **Authentication**.
-   1. On the Platform configurations page, select Add a platform, and then select SPA option.
-   1. For the Redirect URIs enter <http://localhost:5500>.
-   1. Select Configure to save your changes.
+1. Select **Register** to save your changes.
+1. In the window for the app registration you just created, in the **Overview** tab, below **Essentials**, you can find these values:
+
+   - Application (client) ID
+   - Directory (tenant) ID
+
+1. Copy these values because you will need them when you [Update index.js](#update-indexjs) below.
+1. In the **Manage** area, select **API permissions**.
+1. Select **Add a permission**.
+1. In the **Request API permissions** flyout, select the **APIs my organization uses** tab.
+1. Type 'Dataverse' to find application (client) ID `00000007-0000-0000-c000-000000000000`
+1. Select the Dataverse application
+1. In Select permissions `user_impersonation` is the only available delegated permission. Select that permission
+1. Click **Add permissions**.
+
 
 ### [PowerShell Script](#tab/ps)
 
-```powershell
-# Values to pass to the New-SPAAppRegistration function
-$tenantId = "<your-tenant-id>" # Replace with your tenant ID
-$appName = "Dataverse Web API SPA Quickstart"
-$redirectUri = "http://localhost:5500"
+Using these instructions for PowerShell with Visual Studio Code has the following requirements:
+
+- Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+- Install the Az PowerShell module. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+
+You will need your tenant id to run this script.
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant in which you want to register the application from the **Directories + subscriptions** menu.
+1. Select **Overview** in the navigation pane.
+1. In the **Overview** tab, in the **Basic information** section you will find **Tenant ID**.
+1. Click the **Copy to Clipboard** icon.
+
+When you have your tenant id, you can create the app registration using the Powershell Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
+
+1. In Visual Studio Code, select **File** > **New Text File**, or <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new file.
+
+   You don't need to save the file.
+
+1. Copy and paste the following script into the new file.
+
+   ```powershell
+   # Values to pass to the New-SPAAppRegistration function
+   $tenantId = "<your-tenant-id>" # Replace with your tenant ID
+   $appName = "Dataverse Web API SPA Quickstart"
+   $redirectUri = "http://localhost:5500"
 
 
-# Connect to Azure
-try {
-   Connect-AzAccount -Tenant $tenantId | Out-Null
-}
-catch {
+   # Connect to Azure
+   try {
+      Connect-AzAccount -Tenant $tenantId -UseDeviceAuthentication | Out-Null
+   }
+   catch {
 
-   Write-Host "An error occurred while connecting: $_" -ForegroundColor Red
-   exit 1
-}
+      Write-Host "An error occurred while connecting: $_" -ForegroundColor Red
+      exit 1
+   }
 
 
-try {
-   $appResponse = New-AzADApplication `
-      -DisplayName $appName `
-      -SPARedirectUri @($redirectUri) `
-      -AvailableToOtherTenants $false `
-      -RequiredResourceAccess @(
-      @{
-         ResourceAppId  = "00000007-0000-0000-c000-000000000000"; # Dynamics CRM API
-         ResourceAccess = @(
-            @{
-               Id   = "a42657d6-7f20-40e3-b6f0-cee03008a62a"; # user_impersonation
-               Type = "Scope" 
-            }
-         ) 
+   try {
+      $appResponse = New-AzADApplication `
+         -DisplayName $appName `
+         -SPARedirectUri @($redirectUri) `
+         -AvailableToOtherTenants $false `
+         -RequiredResourceAccess @(
+         @{
+            ResourceAppId  = "00000007-0000-0000-c000-000000000000"; # Dynamics CRM API
+            ResourceAccess = @(
+               @{
+                  Id   = "a42657d6-7f20-40e3-b6f0-cee03008a62a"; # user_impersonation
+                  Type = "Scope" 
+               }
+            ) 
+         }
+      )
+
+      if ($appResponse -eq $null) {
+         Write-Host "Failed to create the application." -ForegroundColor Red
+         return $null
       }
-   )
+      else {
+         Write-Host "Copy the following and replace the config variable in the index.js file:`n"
 
-   if ($appResponse -eq $null) {
-      Write-Host "Failed to create the application." -ForegroundColor Red
+         Write-Host "const config = {"
+         Write-Host "    baseUrl: `"https://<yourorg>.api.crm.dynamics.com`", //<= Change this"
+         Write-Host "    clientId: `"$($appResponse.appId)`","
+         Write-Host "    tenantId: `"$($tenantId)`","
+         Write-Host "    redirectUri: `"$($redirectUri)`""
+         Write-Host "};`n"
+      }
+   }
+   catch {
+      Write-Host "An error occurred while creating the application: $_" -ForegroundColor Red
       return $null
    }
-   else {
-      Write-Host "Copy the following and replace the contents of the scripts/config.js file:`n"
+   ```
 
-      Write-Host "export const config = {"
-      Write-Host "    baseUrl: `"https://<yourorg>.api.crm.dynamics.com`", //<= Change this"
-      Write-Host "    clientId: `"$($appResponse.appId)`","
-      Write-Host "    tenantId: `"$($tenantId)`","
-      Write-Host "    redirectUri: `"$($redirectUri)`""
-      Write-Host "};`n"
-   }
-}
-catch {
-   Write-Host "An error occurred while creating the application: $_" -ForegroundColor Red
-   return $null
-}
-```
+1. Edit this line to replace `<your-tenant-id>` with your tenant id value:
+
+   `$tenantId = "<your-tenant-id>" # Replace with your tenant ID`
+
+1. Press F5 to execute the script.
+1. When the script runs, the device authorization flow begins. See a message like the following in the terminal window:
+
+   ```
+   [Login to Azure] To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code APZEL9SSV to authenticate.
+   ```
+1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the link. This opens a series of dialogs in your browser:
+
+   1. In the **Enter code to allow access** dialog, enter the code and click **Next**.
+   1. In the **Pick an account** dialog, select the account you want to use.
+   1. In the **Enter password** dialog, enter your password and click the **Sign in** button.
+   1. In the **Are you trying to sign in to Microsoft Azure PowerShell?** dialog, click **Continue**.
+
+1. You can close the browser tab and return to Visual Studio code.
+1. In the terminal window, you should see output like the following:
+
+   ```
+   Copy the following and replace the config variable in the index.js file:
+
+   const config = {
+      baseUrl: "https://<yourorg>.api.crm.dynamics.com", //<= Change this
+      clientId: "e89b6731-88c1-41fa-a910-30a11dc09943",
+      tenantId: "effdd265-a4b3-4bbf-90df-2794e5f57515",
+      redirectUri: "http://localhost:5500"
+   };
+   ```
+
+Copy the `config` variable and you will use it when you [Update index.js](#update-indexjs) below.
 
 ---
 
@@ -407,7 +482,9 @@ This file contains all the logic that makes the `index.html` page dynamic.
    };
    ```
 
-1. Update the `index.js` file to replace lines below with the values from [Register a SPA application](#register-a-spa-application).
+#### Update index.js
+
+Update the `index.js` file to replace lines below with the values from [Register a SPA application](#register-a-spa-application).
 
    ```JavaScript
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
@@ -473,14 +550,28 @@ The Cascading Style Sheet (CSS) file will make this page more attractive and has
 
 ## Try it
 
-1. In Visual Studio Code, click the **Go Live** button.
+1. In Visual Studio Code, click the **Go Live** button in the lower right corner.
 1. Click the **Login** button.
 
    The **Sign in to your account** dialog opens.
 
 1. Select the account that has access to Dataverse.
+
+   The first time you access using a new application (client) ID value, you will see this **Permissions requested** dialog:
+
+   :::image type="content" source="media/dataverse-web-api-quickstart-spa-permissions-requested.png" alt-text="Permissions requested dialog":::
+
+1. Click **Accept** on the **Permissions requested** dialog.
 1. Click the **WhoAmI** button.
 
    The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
 
 ## Trouble shooting
+
+This section contains errors that you might encounter running this quick start.
+
+### Selected user account does not exist in tenant
+
+When the account you select doesn't belong to the same Entra tenant as the registered application, you will get this error in the **Pick an account**dialog:
+
+`Selected user account does not exist in tenant '{Your tenant name}' and cannot access the application '{Your application ID}' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
