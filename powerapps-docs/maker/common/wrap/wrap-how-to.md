@@ -159,6 +159,8 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 1. Hover over the required project, and select it.
 1. The View builds option appears. Select it to view the builds.
 
+:::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
+
 
 ## Test and distribute mobile app package
 
