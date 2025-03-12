@@ -64,7 +64,9 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 3. Select the **Azure Key Vault URI** from the list and select **Next**. 
 If you don't have any entries in **Azure Key Vault URI** list, you need to create Azure key vault first. More information: [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
-4. Set the **Sign my app** toggle to **On** or **Off**.
+4. You need access key to proceed further. This access key is used to access you Azure blob storage location. More information : [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+
+5. Set the **Sign my app** toggle to **On** or **Off**.
 
     :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
@@ -77,7 +79,7 @@ You can also code sign your mobile app package manually instead of using automat
 > [!NOTE]
 > Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
 
-4.  Select **Next**.
+6.  Select **Next**.
 
 ### Step 3: Register app
 
@@ -155,12 +157,11 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 
 1. After completing the wrap-up step in wrap wizard, select the **Build** button to build your project.
 1. Select **View Builds** to view your build.
-1. Alternatively, go to the **Wrap projects** option in your navigation to view the build.
+1. Alternatively, go to the **Wrap projects** option in your side pane to view the build.
 1. Hover over the required project, and select it.
-1. The View builds option appears. Select it to view the builds.
+1. The **View builds** option appears at the top header. Select it to view the build status and other options.
 
 :::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
-
 
 ## Test and distribute mobile app package
 

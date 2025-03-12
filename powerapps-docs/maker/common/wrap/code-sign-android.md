@@ -1,6 +1,6 @@
 ---
-title: Manual code sign for Android
-description: Learn how to manually code sign for Android for Power Apps wrap.
+title: Code sign for Android
+description: Learn how to code sign for Android for Power Apps wrap.
 author: komala2019
 ms.topic: article
 ms.custom: canvas
@@ -14,12 +14,9 @@ contributors:
   - mduelae
 ---
 
-# Manual code sign for Android 
+# Code sign for Android 
 
 In this article, you'll learn about how to manually code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
-
-> [!Note]
-> These steps are required if you haven't wrapped the app using automatic sign-in. To avoid repeating this step, we recommend using automatic sign-in.
 
 > [!IMPORTANT]
 > If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
@@ -106,9 +103,12 @@ When this error appears, try to generate the signature hash using the following 
     <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
 1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-3-register-app).
 
-## Sign the APK package
+## Manual sign the APK package
 
 To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
+
+> [!Note]
+> These steps are required if you haven't wrapped the app using automatic sign-in. To avoid repeating this step, we recommend using automatic sign-in.
 
 ### Find your apksigner
 
