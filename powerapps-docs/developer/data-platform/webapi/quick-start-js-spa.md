@@ -14,40 +14,35 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
 
 |Technology|Description|
 |---|---|
-|JavaScript|JavaScript is a programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.|
-|Visual Studio Code|Visual Studio Code is a lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.|
-|Single Page Applications|Single Page Applications (SPAs) are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.|
-|Microsoft Authentication Library|[Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview) is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.|
-
+|**JavaScript**|JavaScript is a programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.|
+|**Visual Studio Code**|Visual Studio Code is a lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.|
+|**Single Page Applications**|Single Page Applications (SPAs) are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.|
+|**Microsoft Authentication Library**|[Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview) is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.|
 
 This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps.
 
 > [!NOTE]
-> This sample isn't about the following scenarios:
+> This quickstart isn't about the following client-side JavaScript scenarios:
 >
 > |Scenario|More information|
 > |---|---|
-> |Model-driven application scripts|- [Apply business logic using client scripting in model-driven apps using JavaScript](../../model-driven-apps/client-scripting.md)<br />- [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi)|
-> |Power Apps code component framework|- [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi)<br />- [Implementing Web API component](../../component-framework/sample-controls/webapi-control.md)|
-> |Power Pages Portals|[Power Pages Portals Web API](/power-pages/configure/web-api-overview)|
+> |**Model-driven application scripts**|- [Apply business logic using client scripting in model-driven apps using JavaScript](../../model-driven-apps/client-scripting.md)<br />- [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi)|
+> |**Power Apps component framework**|- [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi)<br />- [Implementing Web API component](../../component-framework/sample-controls/webapi-control.md)|
+> |**Power Pages Portals**|[Power Pages Portals Web API](/power-pages/configure/web-api-overview)|
 >
-> For each of these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in these samples. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
+> For each of these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in this quick start. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
 
-A SPA application can use client-side JavaScript because Cross-Origin Resource Sharing (CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
+A SPA application can use client-side JavaScript because [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
 
 ## Prerequisites
 
-- **A working knowledge of modern JavaScript**. Especially [making network requests with JavaScript](https://developer.mozilla.org/docs/Learn_web_development/Core/Scripting/Network_requests).
-- **Privileges to create an Entra App registration**. By default all users can register applications, but it is common for Entra administrators to limit who in the tenant can register apps.
-
-If you aren't sure if you can, try to [Register a SPA application](#register-a-spa-application) and find out. Learn more about how [app registration permissions are delegated in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)
-
-- **Visual Studio Code**. [Download and install Visual Studio Code](https://code.visualstudio.com/download).
-- **Live Server Visual Studio Code extension**. Modern JavaScript development practices are highly dependent on technologies like [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) makes it easy to serve an HTML page on your local computer with a minimum of complexity. You can install this extension by searching for Live Server in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace).
-
-   There are quickstart tutorials that
-
-- **Node.js**. Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side, so we aren't going to use the node runtime. But npm (Node Package Manager) is installed with node, and you need npm to get the latest version of MSAL.js.
+|Prerequisite|Description|
+|---|---|
+|**Privileges to create an Entra App registration**|You will not be able to complete this quick start without the ability create an Entra app registration to enable it.<br />If you aren't sure if you can, try to [Register a SPA application](#register-a-spa-application) and find out. Learn more about how [app registration permissions are delegated in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)|
+|**Visual Studio Code**| You must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quick start. |
+|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quick start depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extensions. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace).<br />Why Live Server?<br />Modern JavaScript development practices are highly dependent on technologies like [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.|
+|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side, so we aren't going to use the node runtime. But npm (Node Package Manager) is installed with node, and you need npm to complete the instructions to [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library). This is why there is a step to [Install Node.js](#install-nodejs).|
+|**Web Technologies**|Understanding of HTML, JavaScript, and CSS are required to understand how this quick start works.|
 
 ## Register a SPA application
 
@@ -61,7 +56,85 @@ Usually your Azure account must have permissions to manage applications. Any of 
 
 To configure the application you need an application ID (also called a Client ID), and the ID of your Entra tenant.
 
-There are two ways you can do this:
+You can do this either of two ways: using the Entra web application UI, or with the Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
+
+### [Entra web application](#tab/web)
+
+   These instructions describe how to [Register the application and copy IDs](/entra/identity-platform/quickstart-single-page-app-sign-in?pivots=workforce&tabs=javascript-workforce%2Cjavascript-external#register-the-application-and-record-identifiers).
+
+   After this, to specify your app type to your app registration, follow these steps:
+
+   1. Under Manage, select Authentication.
+   1. On the Platform configurations page, select Add a platform, and then select SPA option.
+   1. For the Redirect URIs enter <http://localhost:5500>.
+   1. Select Configure to save your changes.
+
+### [PowerShell Script](#tab/ps)
+
+```powershell
+# Values to pass to the New-SPAAppRegistration function
+# $tenantId = "<your-tenant-id>" # Replace with your tenant ID
+# $tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47" # Replace with your tenant ID
+$tenantId = "effdd265-a4b3-4bbf-90df-2794e5f57515" # Replace with your tenant ID
+$appName = "Dataverse SPA App Sample test 07"
+$redirectUri = "http://localhost:5500/index.html"
+
+
+# Connect to Azure
+try {
+   Connect-AzAccount -Tenant $tenantId | Out-Null
+}
+catch {
+
+   Write-Host "An error occurred while connecting: $_" -ForegroundColor Red
+   exit 1
+}
+
+
+try {
+   $appResponse = New-AzADApplication `
+      -DisplayName $appName `
+      -SPARedirectUri @($redirectUri) `
+      -AvailableToOtherTenants $false `
+      -RequiredResourceAccess @(
+      @{
+         ResourceAppId  = "00000007-0000-0000-c000-000000000000"; # Dynamics CRM API
+         ResourceAccess = @(
+            @{
+               Id   = "a42657d6-7f20-40e3-b6f0-cee03008a62a"; # user_impersonation
+               Type = "Scope" 
+            }
+         ) 
+      }
+   )
+
+   if ($appResponse -eq $null) {
+      Write-Host "Failed to create the application." -ForegroundColor Red
+      return $null
+   }
+   else {
+      Write-Host "Copy the following and replace the contents of the scripts/config.js file:`n"
+
+      Write-Host "export const config = {"
+      Write-Host "    baseUrl: `"https://<yourorg>.api.crm.dynamics.com`", //<= Change this"
+      Write-Host "    clientId: `"$($appResponse.appId)`","
+      Write-Host "    tenantId: `"$($tenantId)`","
+      Write-Host "    redirectUri: `"$($redirectUri)`""
+      Write-Host "};`n"
+   }
+
+
+}
+catch {
+   Write-Host "An error occurred while creating the application: $_" -ForegroundColor Red
+   return $null
+}
+```
+
+
+---
+
+
 
 :::row:::
    :::column:::
@@ -149,7 +222,7 @@ We need a copy of the latest version of the `msal-browser.min.js` library, but w
          <button id="loginButton">Login</button>
          <button id="logoutButton" class="hidden">Logout</button>
       </header>
-      <nav class="disabled">
+      <nav id=buttonContainer class="disabled">
          <button id="whoAmIButton">WhoAmI</button>
       </nav>
       <main id="container"></main>
@@ -158,10 +231,23 @@ We need a copy of the latest version of the `msal-browser.min.js` library, but w
    </html>
    ```
 
+This HTML provides the following elements:
+
+|Element ID|Element type|Description|
+|---------|---------|---------|
+|`loginButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the login dialog.|
+|`logoutButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|To open the logout dialog. Hidden by default.|
+|`buttonContainer`|[nav](https://developer.mozilla.org/docs/Web/HTML/Element/nav)|Contains buttons that require user to be logged in to use. Disabled by default.|
+|`whoAmIButton`|[button](https://developer.mozilla.org/docs/Web/HTML/Element/button)|Executes the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to display the user's Id.|
+|`container`|[main](https://developer.mozilla.org/docs/Web/HTML/Element/main)|Area where information can be displayed to the user.|
+||[script](https://developer.mozilla.org/docs/Web/HTML/Element/script)|Loads the `index.js` file after the rests of the elements of the page loads.|
+
 ### Create JavaScript page
 
+This file contains all the logic that makes the page dynamic.
+
 1. Create a new file named `index.js`.
-Copy and paste this content into the `index.js` page:
+1. Copy and paste this content into the `index.js` page:
 
    ```javascript
    // Import the MSAL library in the same folder as this file
@@ -169,10 +255,10 @@ Copy and paste this content into the `index.js` page:
 
    const config = {
    // Change these values in the next step:
-   baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
-   clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
-   tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
-   redirectUri: "http://localhost:5500/index.html",
+      baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
+      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
+      redirectUri: "http://localhost:5500/index.html",
    };
 
    // Microsoft Authentication Library (MSAL) configuration
@@ -231,10 +317,11 @@ Copy and paste this content into the `index.js` page:
          scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
       };
       try {
+         // Open dialog to choose account
          const response = await msalInstance.loginPopup(request);
          msalInstance.setActiveAccount(response.account);
 
-         // Hide the login button so no one can click it again.
+         // Hide the login button user can't click it again.
          this.style.display = "none";
 
          // Show the logout button
@@ -242,6 +329,7 @@ Copy and paste this content into the `index.js` page:
          logoutButton.innerHTML = "Logout " + response.account.name;
          logoutButton.style.display = "block";
          document.getElementsByTagName("nav")[0].classList.remove("disabled");
+
       } catch (error) {
          let p = document.createElement("p");
          p.textContent = "Error logging in: " + error;
@@ -257,13 +345,15 @@ Copy and paste this content into the `index.js` page:
 
    // Event handler for logout button
    async function logOut() {
-   const activeAccount = await msalInstance.getActiveAccount();
-   const logoutRequest = {
+   
+      const activeAccount = await msalInstance.getActiveAccount();
+      const logoutRequest = {
          account: activeAccount,
          mainWindowRedirectUri: config.redirectUri,
-   };
+      };
 
    try {
+      // Opens dialog to choose account
       await msalInstance.logoutPopup(logoutRequest);
 
       // return the button to the starting state
@@ -311,28 +401,28 @@ Copy and paste this content into the `index.js` page:
 
    // Add event listener to the whoAmI button
    document.getElementById("whoAmIButton").onclick = async function () {
-   // Clear any previous messages
-   container.replaceChildren();
-   try {
-      const response = await whoAmI();
-      let p1 = document.createElement("p");
-      p1.textContent =
-         "Congratulations! You connected to Dataverse using the Web API.";
-      container.append(p1);
-      let p2 = document.createElement("p");
-      p2.textContent = "User ID: " + response.UserId;
-      container.append(p2);
+      // Clear any previous messages
+      container.replaceChildren();
+      try {
+         const response = await whoAmI();
+         let p1 = document.createElement("p");
+         p1.textContent =
+            "Congratulations! You connected to Dataverse using the Web API.";
+         container.append(p1);
+         let p2 = document.createElement("p");
+         p2.textContent = "User ID: " + response.UserId;
+         container.append(p2);
       } 
-   catch (error) {
-         let p = document.createElement("p");
-         p.textContent = "Error fetching user info: " + error;
-         p.className = "error";
-         container.append(p);
+      catch (error) {
+            let p = document.createElement("p");
+            p.textContent = "Error fetching user info: " + error;
+            p.className = "error";
+            container.append(p);
       }
    };
    ```
 
-1. Update the `index.js` file to replace lines 5-7 below with the values from [Register a SPA application](#register-a-spa-application).
+1. Update the `index.js` file to replace lines below with the values from [Register a SPA application](#register-a-spa-application).
 
    ```JavaScript
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
@@ -341,6 +431,8 @@ Copy and paste this content into the `index.js` page:
    ```
 
 ### Create CSS page
+
+The Cascading Style Sheet (CSS) file will make this page more attractive and has a role in controlling when controls are disabled or hidden.
 
 1. Create a new file named `styles.css`.
 1. Copy and paste this into the `styles.css` page:
