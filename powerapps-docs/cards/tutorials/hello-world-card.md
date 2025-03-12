@@ -12,6 +12,8 @@ ms.collection:
 
 # Create a simple card (preview)
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 In this article, you create a card that asks the user to enter their name, and then shows the name in the title of the card. You use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
 ## Prerequisites
