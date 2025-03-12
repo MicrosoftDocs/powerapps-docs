@@ -14,33 +14,32 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
 
 |Technology|Description|
 |---|---|
-|**JavaScript**|JavaScript is a programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.|
-|**Visual Studio Code**|Visual Studio Code is a lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.|
-|**Single Page Applications**|Single Page Applications (SPAs) are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.|
-|**Microsoft Authentication Library**|[Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview) is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.|
+|**[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)**| A programming language for web development, enabling interactive content. It runs in browsers for client-side scripting and can be used server-side with Node.js.|
+|**[Visual Studio Code](https://code.visualstudio.com/)**|A lightweight, open-source code editor with debugging, syntax highlighting, and plugin support.|
+|**[Single Page Applications (SPAs)](https://developer.mozilla.org/docs/Glossary/SPA)**| Web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach provides a smoother, faster user experience by reducing page reloads and enhancing performance.|
+|**[Microsoft Authentication Library for JavaScript (MSAL.js)](/javascript/api/overview/msal-overview)**| is a library that enables authentication and authorization for web applications using Microsoft identity platforms. It simplifies integrating secure sign-in and token acquisition for accessing protected resources.|
+|**[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS)**|A SPA application can use client-side JavaScript with the Dataverse Web API because CORS is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.|
 
 This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps.
 
 > [!NOTE]
 > This quickstart isn't about the following client-side JavaScript scenarios:
 >
-> |Scenario|More information|
+> |Scenario|Learn more|
 > |---|---|
 > |**Model-driven application scripts**|- [Apply business logic using client scripting in model-driven apps using JavaScript](../../model-driven-apps/client-scripting.md)<br />- [Xrm.WebApi (Client API reference)](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi)|
 > |**Power Apps component framework**|- [Code components WebAPI](/power-apps/developer/component-framework/reference/webapi)<br />- [Implementing Web API component](../../component-framework/sample-controls/webapi-control.md)|
 > |**Power Pages Portals**|[Power Pages Portals Web API](/power-pages/configure/web-api-overview)|
 >
-> For each of these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in this quick start. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
-
-A SPA application can use client-side JavaScript because [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) is enabled. CORS is a security feature in web browsers that allows controlled access to resources on a web server from a different origin. It enables web applications to bypass the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), facilitating safe and secure data sharing across different domains.
+> In these scenarios, the respective application type provides a capability for you to send requests rather than use the JavaScript native [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) directly as shown in this quick start. Client-side scripts within model-driven apps run in the context of an authenticated application, so each request doesn't require an access token.
 
 ## Prerequisites
 
 |Prerequisite|Description|
 |---|---|
-|**Privileges to create an Entra App registration**|You will not be able to complete this quick start without the ability create an Entra app registration to enable it.<br />If you aren't sure if you can, try to [Register a SPA application](#register-a-spa-application) and find out. Learn more about how [app registration permissions are delegated in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)|
-|**Visual Studio Code**| You must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quick start. |
-|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quick start depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extensions. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace).<br />Why Live Server?<br />Modern JavaScript development practices are highly dependent on technologies like [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.|
+|**Privileges to create an Entra App registration**|You will not be able to complete this quick start without the ability create an Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. Learn more about how [app registration permissions are delegated in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)|
+|**Visual Studio Code**| If you haven't already installed Visual Studio code, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quick start. |
+|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quick start depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extension. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and [installing it](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension).<br /><br />Why Live Server?<br />Modern JavaScript development practices are highly dependent on technologies like [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you have chosen. These extensions allow for managing all the libraries that modern web applications depend on. This quick start will avoid taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.<br /> For quickstarts and samples that show SPA applications using different frameworks, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications).|
 |**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side, so we aren't going to use the node runtime. But npm (Node Package Manager) is installed with node, and you need npm to complete the instructions to [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library). This is why there is a step to [Install Node.js](#install-nodejs).|
 |**Web Technologies**|Understanding of HTML, JavaScript, and CSS are required to understand how this quick start works.|
 
@@ -54,7 +53,7 @@ Usually your Azure account must have permissions to manage applications. Any of 
 - Application Developer
 - Cloud Application Administrator.
 
-To configure the application you need an application ID (also called a Client ID), and the ID of your Entra tenant.
+To configure the application you need an application ID (also called a Client ID), and the ID of your Entra tenant. You should also choose a descriptive name for the application so will know what is was created for in the future.
 
 You can do this either of two ways: using the Entra web application UI, or with the Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
 
@@ -64,7 +63,7 @@ You can do this either of two ways: using the Entra web application UI, or with 
 
    After this, to specify your app type to your app registration, follow these steps:
 
-   1. Under Manage, select Authentication.
+   1. Under **Manage**, select **Authentication**.
    1. On the Platform configurations page, select Add a platform, and then select SPA option.
    1. For the Redirect URIs enter <http://localhost:5500>.
    1. Select Configure to save your changes.
@@ -73,11 +72,9 @@ You can do this either of two ways: using the Entra web application UI, or with 
 
 ```powershell
 # Values to pass to the New-SPAAppRegistration function
-# $tenantId = "<your-tenant-id>" # Replace with your tenant ID
-# $tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47" # Replace with your tenant ID
-$tenantId = "effdd265-a4b3-4bbf-90df-2794e5f57515" # Replace with your tenant ID
-$appName = "Dataverse SPA App Sample test 07"
-$redirectUri = "http://localhost:5500/index.html"
+$tenantId = "<your-tenant-id>" # Replace with your tenant ID
+$tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47" # Replace with your tenant ID
+$redirectUri = "http://localhost:5500"
 
 
 # Connect to Azure
@@ -122,8 +119,6 @@ try {
       Write-Host "    redirectUri: `"$($redirectUri)`""
       Write-Host "};`n"
    }
-
-
 }
 catch {
    Write-Host "An error occurred while creating the application: $_" -ForegroundColor Red
@@ -131,10 +126,7 @@ catch {
 }
 ```
 
-
 ---
-
-
 
 :::row:::
    :::column:::
@@ -165,9 +157,12 @@ These instructions describe how to [Register the application and copy IDs](/entr
 ## Install Node.js
 
 1. Go to [Download Node.js](https://nodejs.org/en/download).
-1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux).
+1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux) and download it.
 1. Run the installer. Make sure you select the option to install NPM along with node.
-1. Verify the installation by opening a terminal or command prompt and typing these commands: `node -v` and `npm -v`
+1. Verify the installation by opening a terminal or command prompt and typing these commands and pressing enter.
+
+   - `node -v`
+   - `npm -v`
 
    You should see something like this:
 
