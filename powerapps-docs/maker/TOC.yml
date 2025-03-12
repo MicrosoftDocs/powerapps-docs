@@ -2292,7 +2292,7 @@
           href: ./data-platform/azure-synapse-link-delta-lake.md
         - name: View Dataverse data in Microsoft Fabric
           href: ./data-platform/azure-synapse-link-view-in-fabric.md
-        - name: Build apps using Fabric data (preview)
+        - name: Build apps using Fabric data
           href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Analyze in Azure Data Lake Storage Gen2
         items:
