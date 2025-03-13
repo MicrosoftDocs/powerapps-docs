@@ -249,8 +249,10 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Create your first app
+  - name: Create canvas apps
     items:
+    - name: Create a blank canvas app
+      href: ./canvas-apps/create-blank-app.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
@@ -262,7 +264,7 @@
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
+        href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From SharePoint
         items:
         - name: Overview
@@ -276,7 +278,7 @@
         - name: Customize a list or form
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -300,22 +302,6 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Make basic customizations
-      items:
-      - name: Galleries
-        href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Forms
-        href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Cards
-        href: ./canvas-apps/customize-card.md
-  - name: Create an app from scratch
-    items:
-    - name: With a blank app
-      href: ./canvas-apps/create-blank-app.md
-    - name: From Dataverse
-      href: ./canvas-apps/data-platform-create-app-scratch.md
-    - name: From Excel
-      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
@@ -343,7 +329,7 @@
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
-              href: canvas-apps/connections/connection-excel.md
+              href: canvas-apps/get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps
             - name: Microsoft Translator
               href: canvas-apps/connections/connection-microsoft-translator.md
             - name: Office 365 Outlook
@@ -374,8 +360,6 @@
           href: ./canvas-apps/add-manage-connections.md
         - name: Rename a data source in an app
           href: ./canvas-apps/rename-data-source.md
-        - name: Prepare Excel data
-          href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
           href: ./canvas-apps/delegation-overview.md
         - name: Manage gateways
@@ -388,6 +372,14 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+      - name: Make basic customizations
+        items:
+          - name: Galleries
+            href: ./canvas-apps/customize-layout-sharepoint.md
+          - name: Forms
+            href: ./canvas-apps/customize-forms-sharepoint.md
+          - name: Cards
+            href: ./canvas-apps/customize-card.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -1158,30 +1150,6 @@
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
-  - name: How-to guides
-    items:
-    - name: Create a canvas app connected to Dataverse from scratch
-      href: ./canvas-apps/how-to/build-connected-dataverse.md
-    - name: Create a canvas app with Power BI visual
-      href: ./canvas-apps/how-to/build-powerbi-visual.md
-    - name: Create a canvas app that can trigger a Power Automate flow
-      href: ./canvas-apps/how-to/trigger-flow.md
-    - name: Create a canvas app to scan barcodes
-      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
-    - name: Create an app that uses mobile sensors
-      href: ./canvas-apps/how-to/mobile-sensors.md
-    - name: Create an app with 3D and mixed reality controls
-      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
-    - name: Create an app to view a shape in mixed reality
-      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
-    - name: Create an app with address input and map controls
-      href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measuring Camera control
-      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
-    - name: Create a canvas app with deep link to a specific screen
-      href: ./canvas-apps/how-to/deep-linking.md
-    - name: Work with the PDF function (experimental)
-      href: ./canvas-apps/how-to/pdf-function.md
   - name: Preview an app
     href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
@@ -1240,6 +1208,30 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
+  - name: How-to guides
+    items:
+    - name: Create a canvas app connected to Dataverse from scratch
+      href: ./canvas-apps/how-to/build-connected-dataverse.md
+    - name: Create a canvas app with Power BI visual
+      href: ./canvas-apps/how-to/build-powerbi-visual.md
+    - name: Create a canvas app that can trigger a Power Automate flow
+      href: ./canvas-apps/how-to/trigger-flow.md
+    - name: Create a canvas app to scan barcodes
+      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app with 3D and mixed reality controls
+      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
+    - name: Create an app with address input and map controls
+      href: ./canvas-apps/how-to/mobile-apps-address-map.md
+    - name: Create an app using the Measuring Camera control
+      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md 
   - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap

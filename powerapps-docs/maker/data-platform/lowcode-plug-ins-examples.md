@@ -71,7 +71,7 @@ Implement server-side input validation, such as duplicate error detection that t
 
 ### Test the plug-in
 
-1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#specify-a-table)
+1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#add-a-dataverse-table-in-a-blank-app).
 1. Create a contact row.
 1. Create another contact with the same name as in the previous step.
 1. A message is displayed indicating duplicate records found. Select **Ignore and save** on the error message prompt.
