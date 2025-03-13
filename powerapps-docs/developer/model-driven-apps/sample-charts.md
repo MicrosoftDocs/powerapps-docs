@@ -1,6 +1,6 @@
 ---
 title: "Sample charts (model-driven apps)"
-description: "The topic contains sample charts along with the respective data description and presentation XML strings."
+description: "The article contains sample charts along with the respective data description and presentation XML strings."
 author: jasongre
 ms.author: jasongre
 ms.date: 03/13/2025
@@ -23,7 +23,7 @@ This article contains sample charts along with the respective data description a
 
 ## Column chart  
 
-The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` table to change it to a column chart.  
+The following image is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` table to change it to a column chart.  
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -32,7 +32,7 @@ The following is a column chart that shows the account by industry. We modified 
   
 ### Column chart data description  
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -61,7 +61,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Column chart presentation description  
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart>
@@ -114,14 +114,14 @@ The following is the contents of the presentation description XML string for thi
 
 ## Bar chart
 
- The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
+ The following image is a bar chart that shows the top 10 customers. Bar chart is one of the default charts available in model-driven apps for the `Opportunity` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample bar chart: Top 10 Customers.](media/charts-top-customers.png "Sample bar chart: Top 10 Customers")  
   
 ### Bar chart data description  
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -153,7 +153,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Bar chart presentation description  
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart>
@@ -205,14 +205,14 @@ The following is the contents of the presentation description XML string for thi
   
 ## Area chart
 
-The following is an area chart that shows the number of records generated between a given date range.  
+The following image is an area chart that shows the number of records generated between a given date range.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample area chart.](media/charts-count-of-records-areachart.gif "Sample area chart")  
   
 ### Area chart data description 
  
- The following is the contents of the data description XML string for this chart.  
+ The following example is the contents of the data description XML string for this chart.  
   
 ```xml
 <datadefinition>
@@ -247,7 +247,7 @@ The following is an area chart that shows the number of records generated betwee
   
 ### Area chart presentation description  
 
-The following is the contents of the presentation description XML for this chart.  
+The following example is the contents of the presentation description XML for this chart.  
   
 ```xml
 <Chart Palette="None"
@@ -296,14 +296,14 @@ The following is the contents of the presentation description XML for this chart
 
 ## Line chart
 
-The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` table. 
+The following image is a line chart that shows the number of leads generated in the last five months. Line chart is one of the default charts available in model-driven apps for the `Lead` table. 
 
 > [!div class="mx-imgBorder"]
 > ![Sample line chart: Lead Generation Rate.](media/lead-generation-rate-chart.png "Sample line chart: Lead Generation Rate")
   
 ### Line chart data description 
  
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -337,7 +337,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Line chart presentation description  
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart>
@@ -384,14 +384,14 @@ The following is the contents of the presentation description XML string for thi
  
 ## Pie chart  
 
-The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` table.  
+The following image is a pie chart that shows the total number of leads and their importance. Pie chart is one of the default charts available in model-driven apps for the `Lead` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample pie chart: Leads by Rating.](media/leads-by-source-chart.png "Sample pie chart: Leads by Rating")  
   
 ### Pie chart data description  
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -420,7 +420,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Pie chart presentation description 
  
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart Palette="None"
@@ -461,14 +461,14 @@ The following is the contents of the presentation description XML string for thi
  
 ## Funnel chart  
 
-The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
+The following image is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. Funnel chart is one of the default charts available in model-driven apps for the `Opportunity` table.  
 
 > [!div class="mx-imgBorder"]
 > ![Sample funnel chart: Sales Pipeline.](media/charts-sales-pipeline-chart.png "Sample funnel chart: Sales Pipeline")  
   
 ### Funnel chart data description  
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -500,7 +500,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Funnel chart presentation description  
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart Palette="None"
@@ -541,7 +541,7 @@ The following is the contents of the presentation description XML string for thi
   
 ## Multi-Series chart  
 
-The following is a multi-series chart that shows the estimated vs. actual revenue closed by month. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
+The following image is a multi-series chart that shows the estimated vs. actual revenue closed by month. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
   
 A multi-series chart has multiple `<measurecollection>` elements in the data description, each mapping to the corresponding `<Series>` element in the presentation description XML string.  
   
@@ -552,7 +552,7 @@ A multi-series chart has multiple `<Series>` elements in the presentation descri
   
 ### Multi-Series chart data description  
 
- The following is the contents of the data description XML string for this chart.  
+ The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -588,7 +588,7 @@ A multi-series chart has multiple `<Series>` elements in the presentation descri
   
 ### Multi-Series chart presentation description  
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart>
@@ -657,7 +657,7 @@ The following is the contents of the presentation description XML string for thi
 
 ## Comparison chart (Stacked Chart)
   
-The following is a comparison chart that shows the number of activities by type and priority. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
+The following image is a comparison chart that shows the number of activities by type and priority. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
   
 A comparison chart has two `groupby` clauses in the data description XML.  
 
@@ -666,7 +666,7 @@ A comparison chart has two `groupby` clauses in the data description XML.
   
 ### Comparison chart data description
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -698,7 +698,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Comparison chart presentation description
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart Palette="None"
@@ -758,7 +758,7 @@ The following is the contents of the presentation description XML string for thi
 
 ## Comparison chart (100% Stacked Chart)
 
- The following is a comparison chart that shows the number of cases opened on any date, grouped by priority. You can use the chart designer in model-driven apps or methods available in the Web Services to create these types of charts.  
+ The following image is a comparison chart that shows the number of cases opened on any date, grouped by priority. You can use the chart designer in model-driven apps or methods available in the Web Services to create these types of charts.  
   
  A comparison chart has two `groupby` clauses in the data description XML.  
 
@@ -767,7 +767,7 @@ The following is the contents of the presentation description XML string for thi
   
 ### Comparison chart (100% Stacked Chart) data description
 
-The following is the contents of the data description XML string for this chart.  
+The following example is the contents of the data description XML string for this chart.  
   
 ```xml  
 <datadefinition>
@@ -802,7 +802,7 @@ The following is the contents of the data description XML string for this chart.
   
 ### Comparison chart (100% Stacked Chart) presentation description
 
-The following is the contents of the presentation description XML string for this chart.  
+The following example is the contents of the presentation description XML string for this chart.  
   
 ```xml  
 <Chart Palette="None"
