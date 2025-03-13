@@ -13,6 +13,8 @@ ms.collection:
 
 # Create a card with data from Dataverse (preview)
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 In this tutorial, you'll create a card that uses the Microsoft Dataverse connector to display and update information about an account. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), [connectors](../make-a-card/connectors/connector-intro.md), and more complex [Power Fx expressions](../make-a-card/power-fx/intro-to-pfx.md).
 
 We'll assume that you've honed your Power Apps card skills in the [Hello World tutorial](hello-world-card.md) and the [shopping list tutorial](simple-shopping-list.md) and are familiar with using the card designer. If you haven't explored those tutorials yet, we recommend that you do that first, and then return to this tutorial.

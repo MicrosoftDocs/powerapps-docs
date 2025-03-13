@@ -16,6 +16,8 @@ contributors:
 
 # Controls and properties in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **OnSelect**, are specific to one type of control.
 
 ## Controls
