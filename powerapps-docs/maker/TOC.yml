@@ -2230,6 +2230,12 @@
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
     - name: Manage access to views (preview)
       href: ./model-driven-apps/manage-view-access.md
+    - name: Microsoft Fabric
+      items: 
+      - name: View Dataverse data in Microsoft Fabric
+        href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name: Build apps using Fabric data
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
@@ -2280,10 +2286,6 @@
           href: ./data-platform/azure-synapse-link-choices-serverless.md
         - name: Export data in Delta Lake format
           href: ./data-platform/azure-synapse-link-delta-lake.md
-        - name: View Dataverse data in Microsoft Fabric
-          href: ./data-platform/azure-synapse-link-view-in-fabric.md
-        - name: Build apps using Fabric data
-          href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Analyze in Azure Data Lake Storage Gen2
         items:
         - name: Ingest exported data with Azure Data Factory
