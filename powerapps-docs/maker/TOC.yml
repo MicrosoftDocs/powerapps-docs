@@ -1240,8 +1240,6 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Transform your InfoPath forms to Power Apps
-    href: ./canvas-apps/transform-infopath.md
   - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
@@ -2292,7 +2290,7 @@
           href: ./data-platform/azure-synapse-link-delta-lake.md
         - name: View Dataverse data in Microsoft Fabric
           href: ./data-platform/azure-synapse-link-view-in-fabric.md
-        - name: Build apps using Fabric data (preview)
+        - name: Build apps using Fabric data
           href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Analyze in Azure Data Lake Storage Gen2
         items:
@@ -2438,8 +2436,6 @@
     href: ./data-platform/migrate-access-datatypes.md
   - name: System columns and tables in Dataverse
     href: ./data-platform/access-migrate-linked-tables.md
-- name: Chatbots
-  href: ../chatbots.md
 - name: Cards
   items:
     - name: What are cards?

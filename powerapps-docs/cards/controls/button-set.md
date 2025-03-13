@@ -16,6 +16,8 @@ contributors:
 
 # Button set control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A container for a set of [button](button.md) elements.
 
 The button set control can be used to add buttons in places other than the bottom of the card as well as to group buttons together.

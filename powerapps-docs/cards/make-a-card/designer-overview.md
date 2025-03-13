@@ -13,6 +13,8 @@ ms.collection:
 
 # Card designer overview
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 The Power Apps card designer is the drag-and-drop interface in which you build cards.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.

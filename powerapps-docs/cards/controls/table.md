@@ -15,6 +15,8 @@ contributors:
 
 # Table control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Use the Table control to present tabular data or any structured information that is best laid out in rows and columns. Tables are made up of three separate card elements:
 - Tables
 - Table Rows
