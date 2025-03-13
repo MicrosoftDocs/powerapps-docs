@@ -68,7 +68,7 @@ If you don't have any entries in **Azure Key Vault URI** list, you need to creat
 
 5. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Secrets** to create Azure blob storage secret name if not done already. More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault). While creating a secret, you'll need your access key. To view and copy your access key refer [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-:::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
+:::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-secret-2.png":::
 
 Enter the Azure blob storage access key in **Secret value** field.
 
