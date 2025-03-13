@@ -113,7 +113,6 @@ When using the Dataverse search API, there's a throttling limit of one request p
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
-
 ### See also
 
 [What is Dataverse search?](relevance-search-benefits.md)<br/>
