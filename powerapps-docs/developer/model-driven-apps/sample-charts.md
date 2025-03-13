@@ -3,9 +3,9 @@ title: "Sample charts (model-driven apps)"
 description: "The topic contains sample charts along with the respective data description and presentation XML strings."
 author: jasongre
 ms.author: jasongre
-ms.date: 04/01/2022
+ms.date: 03/13/2025
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -37,11 +37,16 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" aggregate="true">
-        <entity name="account">
-          <attribute groupby="true" alias="groupby_column" name="industrycode" />
-          <attribute alias="aggregate_column" name="name" aggregate="count" />
-        </entity>
+    <fetch mapping="logical"
+      aggregate="true">
+      <entity name="account">
+        <attribute groupby="true"
+          alias="groupby_column"
+          name="industrycode" />
+        <attribute alias="aggregate_column"
+          name="name"
+          aggregate="count" />
+      </entity>
     </fetch>
   </fetchcollection>
   <categorycollection>
@@ -51,7 +56,7 @@ The following is the contents of the data description XML string for this chart.
       </measurecollection>
     </category>
   </categorycollection>
-  </datadefinition>  
+</datadefinition>  
 ```  
   
 ### Column chart presentation description  
@@ -59,29 +64,50 @@ The following is the contents of the data description XML string for this chart.
 The following is the contents of the presentation description XML string for this chart.  
   
 ```xml  
- <Chart>
-   <Series>
-     <Series ChartType="Column" IsValueShownAsLabel="True" Color="91, 151, 213" BackSecondaryColor="112, 142, 50" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
-        <SmartLabelStyle Enabled="True" />
-      </Series>
+<Chart>
+  <Series>
+    <Series ChartType="Column"
+      IsValueShownAsLabel="True"
+      Color="91, 151, 213"
+      BackSecondaryColor="112, 142, 50"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+      <SmartLabelStyle Enabled="True" />
     </Series>
-    <ChartAreas>
-      <ChartArea BorderColor="White" BorderDashStyle="Solid">
-        <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IsReversed="False">
-          <MajorGrid LineColor="239, 242, 246" />
-          <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-        </AxisY>
-        <AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IsReversed="False">
-          <MajorGrid Enabled="False" />
-          <MajorTickMark Enabled="False" />
-          <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-        </AxisX>
-       </ChartArea>
-     </ChartAreas>
-      <Titles>
-        <Title Name="Chart Title" DockingOffset="-3" Font="{0}, 13px" ForeColor="59, 59, 59" Alignment="TopLeft" />
-      </Titles>
-  </Chart>
+  </Series>
+  <ChartAreas>
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IsReversed="False">
+        <MajorGrid LineColor="239, 242, 246" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisY>
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IsReversed="False">
+        <MajorGrid Enabled="False" />
+        <MajorTickMark Enabled="False" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title Name="Chart Title"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="59, 59, 59"
+      Alignment="TopLeft" />
+  </Titles>
+</Chart>
 ```  
   
 <a name="BarChart"></a>   
@@ -100,21 +126,28 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" count="10" aggregate="true">
+    <fetch mapping="logical"
+      count="10"
+      aggregate="true">
       <entity name="opportunity">
-        <attribute name="estimatedvalue" aggregate="sum" alias="sum_estimatedvalue" />
-        <attribute name="customerid" groupby="true" alias="customerid" />
-        <order alias="sum_estimatedvalue" descending="true" />
+        <attribute name="estimatedvalue"
+          aggregate="sum"
+          alias="sum_estimatedvalue" />
+        <attribute name="customerid"
+          groupby="true"
+          alias="customerid" />
+        <order alias="sum_estimatedvalue"
+          descending="true" />
       </entity>
     </fetch>
-   </fetchcollection>
-<categorycollection>
-  <category>
-    <measurecollection>
-      <measure alias="sum_estimatedvalue" />
-    </measurecollection>
-  </category>
-</categorycollection>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="sum_estimatedvalue" />
+      </measurecollection>
+    </category>
+  </categorycollection>
 </datadefinition> 
 ```  
   
@@ -125,26 +158,46 @@ The following is the contents of the presentation description XML string for thi
 ```xml  
 <Chart>
   <Series>
-    <Series ChartType="Bar" IsValueShownAsLabel="False" Color="91, 151, 213" BackSecondaryColor="112, 142, 50" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+    <Series ChartType="Bar"
+      IsValueShownAsLabel="False"
+      Color="91, 151, 213"
+      BackSecondaryColor="112, 142, 50"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
       <SmartLabelStyle Enabled="True" />
     </Series>
-   </Series>
-<ChartAreas>
-  <ChartArea BorderColor="White" BorderDashStyle="Solid">
-    <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IsReversed="False">
-      <MajorGrid LineColor="239, 242, 246" />
-      <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-    </AxisY>
-<AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IsReversed="False">
-  <MajorGrid Enabled="False" />
-  <MajorTickMark Enabled="False" />
-  <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-</AxisX>
-</ChartArea>
-</ChartAreas>
-<Titles>
-  <Title DockingOffset="-3" Font="{0}, 13px" ForeColor="59, 59, 59" Alignment="TopLeft" />
-</Titles>
+  </Series>
+  <ChartAreas>
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IsReversed="False">
+        <MajorGrid LineColor="239, 242, 246" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisY>
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IsReversed="False">
+        <MajorGrid Enabled="False" />
+        <MajorTickMark Enabled="False" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="59, 59, 59"
+      Alignment="TopLeft" />
+  </Titles>
 </Chart>
 ```  
   
@@ -164,22 +217,32 @@ The following is an area chart that shows the number of records generated betwee
 ```xml
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" aggregate="true">
-      <entity name="incident"><order alias="groupby_column" descending="false" />
-      <attribute alias="aggregate_column" name="incidentid" aggregate="count" />
-      <attribute groupby="true" alias="groupby_column" dategrouping="day" name="createdon" />
-      <attribute groupby="true" alias="groupby_priority" name="prioritycode" />
+    <fetch mapping="logical"
+      aggregate="true">
+      <entity name="incident">
+        <order alias="groupby_column"
+          descending="false" />
+        <attribute alias="aggregate_column"
+          name="incidentid"
+          aggregate="count" />
+        <attribute groupby="true"
+          alias="groupby_column"
+          dategrouping="day"
+          name="createdon" />
+        <attribute groupby="true"
+          alias="groupby_priority"
+          name="prioritycode" />
       </entity>
-     </fetch>
-    </fetchcollection>
-<categorycollection>
-  <category>
-    <measurecollection>
-      <measure alias="aggregate_column" />
-    </measurecollection>
-   </category>
-</categorycollection>
-</datadefinition>  
+    </fetch>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="aggregate_column" />
+      </measurecollection>
+    </category>
+  </categorycollection>
+</datadefinition>
 ```  
   
 ### Area chart presentation description  
@@ -187,25 +250,45 @@ The following is an area chart that shows the number of records generated betwee
 The following is the contents of the presentation description XML for this chart.  
   
 ```xml
-<Chart Palette="None" PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
+<Chart Palette="None"
+  PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
   <Series>
-    <Series ChartType="StackedColumn" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40" />
-</Series>
-<ChartAreas>
-  <ChartArea BorderColor="White" BorderDashStyle="Solid">
-    <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">
-      <MajorGrid LineColor="239, 242, 246" /><MajorTickMark LineColor="165, 172, 181" />
-      <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-    </AxisY>
-<AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">
-  <MajorGrid Enabled="False" /><MajorTickMark Enabled="False" />
-  <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-</AxisX>
-</ChartArea>
-</ChartAreas>
-<Titles>
-  <Title Alignment="TopLeft" DockingOffset="-3" Font="{0}, 13px" ForeColor="0, 0, 0" />
-</Titles>
+    <Series ChartType="StackedColumn"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40" />
+  </Series>
+  <ChartAreas>
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
+        <MajorGrid LineColor="239, 242, 246" />
+        <MajorTickMark LineColor="165, 172, 181" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisY>
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
+        <MajorGrid Enabled="False" />
+        <MajorTickMark Enabled="False" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="0, 0, 0" />
+  </Titles>
 </Chart> 
 ```  
   
@@ -225,21 +308,30 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" count="5" aggregate="true">
+    <fetch mapping="logical"
+      count="5"
+      aggregate="true">
       <entity name="lead">
-        <attribute name="leadid" aggregate="countcolumn" alias="count_leadid" />
-        <attribute name="createdon" groupby="true" dategrouping="month" usertimezone="false" alias="createdon" />
-        <order alias="createdon" descending="false" />
+        <attribute name="leadid"
+          aggregate="countcolumn"
+          alias="count_leadid" />
+        <attribute name="createdon"
+          groupby="true"
+          dategrouping="month"
+          usertimezone="false"
+          alias="createdon" />
+        <order alias="createdon"
+          descending="false" />
       </entity>
     </fetch>
   </fetchcollection>
-<categorycollection>
-  <category>
-    <measurecollection>
-      <measure alias="count_leadid" />
-    </measurecollection>
-  </category>
- </categorycollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="count_leadid" />
+      </measurecollection>
+    </category>
+  </categorycollection>
 </datadefinition> 
 ```  
   
@@ -250,23 +342,41 @@ The following is the contents of the presentation description XML string for thi
 ```xml  
 <Chart>
   <Series>
-    <Series IsValueShownAsLabel="True" BorderWidth="3" ChartType="Line" Color="49, 171, 204" MarkerStyle="Square" MarkerSize="9" MarkerColor="37, 128, 153" />
- </Series>
-<ChartAreas>
-  <ChartArea BorderColor="White">
-    <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181">
-      <MajorGrid LineColor="239, 242, 230" /><MajorTickMark LineColor="165, 172, 181" />
-      <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-   </AxisY>
-<AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181">
-  <MajorGrid Enabled="False" />
-  <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
-</AxisX>
-</ChartArea>
-</ChartAreas>
-<Titles>
-  <Title DockingOffset="-3" Font="{0}, 13px" ForeColor="59, 59, 59" Alignment="TopLeft" />
-</Titles>
+    <Series IsValueShownAsLabel="True"
+      BorderWidth="3"
+      ChartType="Line"
+      Color="49, 171, 204"
+      MarkerStyle="Square"
+      MarkerSize="9"
+      MarkerColor="37, 128, 153" />
+  </Series>
+  <ChartAreas>
+    <ChartArea BorderColor="White">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181">
+        <MajorGrid LineColor="239, 242, 230" />
+        <MajorTickMark LineColor="165, 172, 181" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisY>
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181">
+        <MajorGrid Enabled="False" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="59, 59, 59"
+      Alignment="TopLeft" />
+  </Titles>
 </Chart>
 ```  
   
@@ -286,19 +396,25 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" aggregate="true">
-      <entity name="lead"><attribute groupby="true" alias="groupby_column" name="leadqualitycode" />
-      <attribute alias="aggregate_column" name="fullname" aggregate="count" />
+    <fetch mapping="logical"
+      aggregate="true">
+      <entity name="lead">
+        <attribute groupby="true"
+          alias="groupby_column"
+          name="leadqualitycode" />
+        <attribute alias="aggregate_column"
+          name="fullname"
+          aggregate="count" />
       </entity>
     </fetch>
-   </fetchcollection>
-<categorycollection>
-  <category>
-    <measurecollection>
-      <measure alias="aggregate_column" />
-    </measurecollection>
-  </category>
-</categorycollection>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="aggregate_column" />
+      </measurecollection>
+    </category>
+  </categorycollection>
 </datadefinition>  
 ```  
   
@@ -307,23 +423,37 @@ The following is the contents of the data description XML string for this chart.
 The following is the contents of the presentation description XML string for this chart.  
   
 ```xml  
-<Chart Palette="None" PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
+<Chart Palette="None"
+  PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
   <Series>
-    <Series ShadowOffset="0" IsValueShownAsLabel="true" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PieLabelStyle=Inside, PieDrawingStyle=Default" ChartType="pie">
+    <Series ShadowOffset="0"
+      IsValueShownAsLabel="true"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PieLabelStyle=Inside, PieDrawingStyle=Default"
+      ChartType="pie">
       <SmartLabelStyle Enabled="True" />
     </Series>
   </Series>
-<ChartAreas>
-  <ChartArea>
-    <Area3DStyle Enable3D="false" />
-  </ChartArea>
-</ChartAreas>
-<Legends>
-  <Legend Alignment="Center" LegendStyle="Table" Docking="right" Font="{0}, 11px" ShadowColor="0, 0, 0, 0" ForeColor="59, 59, 59" />
-</Legends>
-<Titles>
-  <Title Alignment="TopLeft" DockingOffset="-3" Font="{0}, 13px" ForeColor="0, 0, 0" />
-</Titles>
+  <ChartAreas>
+    <ChartArea>
+      <Area3DStyle Enable3D="false" />
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend Alignment="Center"
+      LegendStyle="Table"
+      Docking="right"
+      Font="{0}, 11px"
+      ShadowColor="0, 0, 0, 0"
+      ForeColor="59, 59, 59" />
+  </Legends>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="0, 0, 0" />
+  </Titles>
 </Chart>  
 ```  
   
@@ -343,21 +473,28 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" count="10" aggregate="true">
+    <fetch mapping="logical"
+      count="10"
+      aggregate="true">
       <entity name="opportunity">
-        <attribute name="estimatedvalue" aggregate="sum" alias="sum_estimatedvalue" />
-        <attribute name="stepname" groupby="true" alias="stepname" />
-        <order alias="stepname" descending="false" />
+        <attribute name="estimatedvalue"
+          aggregate="sum"
+          alias="sum_estimatedvalue" />
+        <attribute name="stepname"
+          groupby="true"
+          alias="stepname" />
+        <order alias="stepname"
+          descending="false" />
       </entity>
-     </fetch>
-   </fetchcollection>
-   <categorycollection>
-     <category>
-       <measurecollection>
-         <measure alias="sum_estimatedvalue" />
-       </measurecollection>
-     </category>
-   </categorycollection>
+    </fetch>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="sum_estimatedvalue" />
+      </measurecollection>
+    </category>
+  </categorycollection>
 </datadefinition> 
 ```  
   
@@ -366,23 +503,37 @@ The following is the contents of the data description XML string for this chart.
 The following is the contents of the presentation description XML string for this chart.  
   
 ```xml  
-<Chart Palette="None" PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
+<Chart Palette="None"
+  PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
   <Series>
-    <Series ShadowOffset="0" IsValueShownAsLabel="true" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" ChartType="Funnel" CustomProperties="FunnelLabelStyle=Outside, FunnelNeckHeight=0, FunnelPointGap=1, FunnelNeckWidth=5">
+    <Series ShadowOffset="0"
+      IsValueShownAsLabel="true"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      ChartType="Funnel"
+      CustomProperties="FunnelLabelStyle=Outside, FunnelNeckHeight=0, FunnelPointGap=1, FunnelNeckWidth=5">
       <SmartLabelStyle Enabled="True" />
     </Series>
   </Series>
- <ChartAreas>
-   <ChartArea>
-     <Area3DStyle Enable3D="false" />
-   </ChartArea>
- </ChartAreas>
- <Legends>
-   <Legend Alignment="Center" LegendStyle="Table" Docking="right" Font="{0}, 11px" ShadowColor="0, 0, 0, 0" ForeColor="59, 59, 59" />
- </Legends>
- <Titles>
-   <Title Alignment="TopLeft" DockingOffset="-3" Font="Segeo UI, 13px" ForeColor="0, 0, 0" />
- </Titles>
+  <ChartAreas>
+    <ChartArea>
+      <Area3DStyle Enable3D="false" />
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend Alignment="Center"
+      LegendStyle="Table"
+      Docking="right"
+      Font="{0}, 11px"
+      ShadowColor="0, 0, 0, 0"
+      ForeColor="59, 59, 59" />
+  </Legends>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="Segeo UI, 13px"
+      ForeColor="0, 0, 0" />
+  </Titles>
 </Chart>
 ```  
   
@@ -406,25 +557,33 @@ A multi-series chart has multiple `<Series>` elements in the presentation descri
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" aggregate="true">
+    <fetch mapping="logical"
+      aggregate="true">
       <entity name="opportunity">
-        <attribute name="estimatedvalue" aggregate="sum" alias="estvalue" />
-        <attribute name="actualvalue" aggregate="sum" alias="actvalue" />
-        <attribute name="actualclosedate" groupby="true" alias="actclosedate" dategrouping="month" />
-       </entity>
-     </fetch>
-    </fetchcollection>
-    <categorycollection>
-      <category>
-        <measurecollection>
-          <measure alias="estvalue" />
-        </measurecollection>
-        <measurecollection>
-          <measure alias="actvalue" />
-         </measurecollection>
-       </category>
-     </categorycollection>
-</datadefinition>  
+        <attribute name="estimatedvalue"
+          aggregate="sum"
+          alias="estvalue" />
+        <attribute name="actualvalue"
+          aggregate="sum"
+          alias="actvalue" />
+        <attribute name="actualclosedate"
+          groupby="true"
+          alias="actclosedate"
+          dategrouping="month" />
+      </entity>
+    </fetch>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="estvalue" />
+      </measurecollection>
+      <measurecollection>
+        <measure alias="actvalue" />
+      </measurecollection>
+    </category>
+  </categorycollection>
+</datadefinition>
 ```  
   
 ### Multi-Series chart presentation description  
@@ -434,37 +593,64 @@ The following is the contents of the presentation description XML string for thi
 ```xml  
 <Chart>
   <Series>
-    <Series Color="91, 151, 213" BackSecondaryColor="74,107,155" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+    <Series Color="91, 151, 213"
+      BackSecondaryColor="74,107,155"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
       <SmartLabelStyle Enabled="True" />
       <Points />
-     </Series>
-    <Series Color="237, 125, 49" BackSecondaryColor="126,153,79" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+    </Series>
+    <Series Color="237, 125, 49"
+      BackSecondaryColor="126,153,79"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
       <SmartLabelStyle Enabled="True" />
       <Points />
     </Series>
   </Series>
   <ChartAreas>
-    <ChartArea BorderColor="White" BorderDashStyle="Solid">
-      <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181">
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181">
         <MajorGrid LineColor="239, 242, 246" />
         <MajorTickMark LineColor="165, 172, 181" />
-        <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
       </AxisY>
-      <AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181">
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181">
         <MajorGrid Enabled="False" />
         <MajorTickMark Enabled="False" />
-        <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
       </AxisX>
-     </ChartArea>
-    </ChartAreas>
-    <Legends>
-      <Legend Alignment="Center" LegendStyle="Table" Docking="Bottom" Font="{0}, 11px" ShadowColor="0, 0, 0, 0" ForeColor="59,59,59" />
-    </Legends>
-    <Titles>
-      <Title Alignment="TopLeft" DockingOffset="-3" Font="{0}, 13px" ForeColor="59, 59, 59" />
-    </Titles>
-      <BorderSkin PageColor="Control" BackColor="CornflowerBlue" BackSecondaryColor="CornflowerBlue" />
-</Chart>  
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend Alignment="Center"
+      LegendStyle="Table"
+      Docking="Bottom"
+      Font="{0}, 11px"
+      ShadowColor="0, 0, 0, 0"
+      ForeColor="59,59,59" />
+  </Legends>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="59, 59, 59" />
+  </Titles>
+  <BorderSkin PageColor="Control"
+    BackColor="CornflowerBlue"
+    BackSecondaryColor="CornflowerBlue" />
+</Chart>
 ```  
   
 <a name="ComparisonChart"></a>   
@@ -485,23 +671,29 @@ The following is the contents of the data description XML string for this chart.
 ```xml  
 <datadefinition>
   <fetchcollection>
-    <fetch mapping="logical" aggregate="true">
+    <fetch mapping="logical"
+      aggregate="true">
       <entity name="activitypointer">
-        <attribute alias="aggregate_column" name="subject" aggregate="count" />
-        <attribute groupby="true" alias="groupby_column" name="activitytypecode" />
-        <attribute groupby="true" alias="groupby_priority" name="prioritycode" />
-       </entity>
+        <attribute alias="aggregate_column"
+          name="subject"
+          aggregate="count" />
+        <attribute groupby="true"
+          alias="groupby_column"
+          name="activitytypecode" />
+        <attribute groupby="true"
+          alias="groupby_priority"
+          name="prioritycode" />
+      </entity>
     </fetch>
   </fetchcollection>
   <categorycollection>
       category>
-        <measurecollection>
-          <measure alias="aggregate_column" />
-        </measurecollection>
-      </category>
-  </categorycollection>
+    <measurecollection>
+      <measure alias="aggregate_column" />
+    </measurecollection>
+  </category>
+</categorycollection>
 </datadefinition>
-  
 ```  
   
 ### Comparison chart presentation description
@@ -509,34 +701,57 @@ The following is the contents of the data description XML string for this chart.
 The following is the contents of the presentation description XML string for this chart.  
   
 ```xml  
-<Chart Palette="None" PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
+<Chart Palette="None"
+  PaletteCustomColors="91,151,213; 237,125,49; 160,116,166; 255,192,0; 68,114,196; 112,173,71; 37,94,145; 158,72,14; 117,55,125; 153,115,0; 38,68,120; 67,104,43; 124,175,221; 241,151,90; 186,144,192; 255,205,51; 105,142,208; 140,193,104; 50,125,194; 210,96,18; 150,83,159; 204,154,0; 51,90,161; 90,138,57;">
   <Series>
-    <Series ChartType="StackedColumn" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+    <Series ChartType="StackedColumn"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
     </Series>
   </Series>
   <ChartAreas>
-    <ChartArea BorderColor="White" BorderDashStyle="Solid">
-      <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
         <MajorGrid LineColor="239, 242, 246" />
         <MajorTickMark LineColor="165, 172, 181" />
-        <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
       </AxisY>
-      <AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
         <MajorGrid Enabled="False" />
         <MajorTickMark Enabled="False" />
-        <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
       </AxisX>
     </ChartArea>
-   </ChartAreas>
-   <Legends>
-     <Legend Alignment="Center" LegendStyle="Table" Docking="Bottom" Font="{0}, 11px" ShadowColor="0, 0, 0, 0" ForeColor="59,59,59">
-     </Legend>
-   </Legends>
-   <Titles>
-     <Title Alignment="TopLeft" DockingOffset="-3" Font="{0}, 13px" ForeColor="59, 59, 59">
-     </Title>
-   </Titles>
-</Chart>  
+  </ChartAreas>
+  <Legends>
+    <Legend Alignment="Center"
+      LegendStyle="Table"
+      Docking="Bottom"
+      Font="{0}, 11px"
+      ShadowColor="0, 0, 0, 0"
+      ForeColor="59,59,59">
+    </Legend>
+  </Legends>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="59, 59, 59">
+    </Title>
+  </Titles>
+</Chart>
 ```  
   
 <a name="StackedChart"></a>   
@@ -555,26 +770,34 @@ The following is the contents of the presentation description XML string for thi
 The following is the contents of the data description XML string for this chart.  
   
 ```xml  
-<datadefinition>  
-      <fetchcollection>  
-        <fetch mapping="logical" aggregate="true">  
-          <entity name="incident">  
-            <order alias="groupby_column" descending="false" />  
-            <attribute alias="aggregate_column" name="incidentid" aggregate="count" />  
-            <attribute groupby="true" alias="groupby_column" dategrouping="day" name="createdon" />  
-            <attribute groupby="true" alias="groupby_priority" name="prioritycode" />  
-          </entity>  
-        </fetch>  
-      </fetchcollection>  
-      <categorycollection>  
-        <category>  
-          <measurecollection>  
-            <measure alias="aggregate_column" />  
-          </measurecollection>  
-        </category>  
-      </categorycollection>  
-    </datadefinition>  
-  
+<datadefinition>
+  <fetchcollection>
+    <fetch mapping="logical"
+      aggregate="true">
+      <entity name="incident">
+        <order alias="groupby_column"
+          descending="false" />
+        <attribute alias="aggregate_column"
+          name="incidentid"
+          aggregate="count" />
+        <attribute groupby="true"
+          alias="groupby_column"
+          dategrouping="day"
+          name="createdon" />
+        <attribute groupby="true"
+          alias="groupby_priority"
+          name="prioritycode" />
+      </entity>
+    </fetch>
+  </fetchcollection>
+  <categorycollection>
+    <category>
+      <measurecollection>
+        <measure alias="aggregate_column" />
+      </measurecollection>
+    </category>
+  </categorycollection>
+</datadefinition>
 ```  
   
 ### Comparison chart (100% Stacked Chart) presentation description
@@ -582,30 +805,48 @@ The following is the contents of the data description XML string for this chart.
 The following is the contents of the presentation description XML string for this chart.  
   
 ```xml  
-<Chart Palette="None" PaletteCustomColors="149,189,66; 197,56,52; 55,118,193; 117,82,160; 49,171,204; 255,136,35; 168,203,104; 209,98,96; 97,142,206; 142,116,178; 93,186,215; 255,155,83">  
-      <Series>  
-        <Series ChartType="StackedBar100" Font="{0}, 9.5px" LabelForeColor="59, 59, 59" CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">  
-          <SmartLabelStyle Enabled="True" />  
-        </Series>  
-      </Series>  
-      <ChartAreas>  
-        <ChartArea BorderColor="White" BorderDashStyle="Solid">  
-          <AxisY LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">  
-            <MajorGrid LineColor="239, 242, 246" />  
-            <MajorTickMark LineColor="165, 172, 181" />  
-            <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />  
-          </AxisY>  
-          <AxisX LabelAutoFitMinFontSize="8" TitleForeColor="59, 59, 59" TitleFont="{0}, 10.5px" LineColor="165, 172, 181" IntervalAutoMode="VariableCount">  
-            <MajorGrid Enabled="False" />  
-            <MajorTickMark Enabled="False" />  
-            <LabelStyle Font="{0}, 10.5px" ForeColor="59, 59, 59" />  
-          </AxisX>  
-        </ChartArea>  
-      </ChartAreas>  
-      <Titles>  
-        <Title Alignment="TopLeft" DockingOffset="-3" Font="{0}, 13px" ForeColor="0, 0, 0" />  
-      </Titles>  
-    </Chart>  
+<Chart Palette="None"
+  PaletteCustomColors="149,189,66; 197,56,52; 55,118,193; 117,82,160; 49,171,204; 255,136,35; 168,203,104; 209,98,96; 97,142,206; 142,116,178; 93,186,215; 255,155,83">
+  <Series>
+    <Series ChartType="StackedBar100"
+      Font="{0}, 9.5px"
+      LabelForeColor="59, 59, 59"
+      CustomProperties="PointWidth=0.75, MaxPixelPointWidth=40">
+      <SmartLabelStyle Enabled="True" />
+    </Series>
+  </Series>
+  <ChartAreas>
+    <ChartArea BorderColor="White"
+      BorderDashStyle="Solid">
+      <AxisY LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
+        <MajorGrid LineColor="239, 242, 246" />
+        <MajorTickMark LineColor="165, 172, 181" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisY>
+      <AxisX LabelAutoFitMinFontSize="8"
+        TitleForeColor="59, 59, 59"
+        TitleFont="{0}, 10.5px"
+        LineColor="165, 172, 181"
+        IntervalAutoMode="VariableCount">
+        <MajorGrid Enabled="False" />
+        <MajorTickMark Enabled="False" />
+        <LabelStyle Font="{0}, 10.5px"
+          ForeColor="59, 59, 59" />
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Titles>
+    <Title Alignment="TopLeft"
+      DockingOffset="-3"
+      Font="{0}, 13px"
+      ForeColor="0, 0, 0" />
+  </Titles>
+</Chart>
 ```  
   
 ### See also  
