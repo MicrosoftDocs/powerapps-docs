@@ -93,6 +93,11 @@ The presentation description XML string contains information about the appearanc
 
 You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` for the organization-owned or user-owned chart, respectively.
 
+> [!NOTE]
+> With the [modern, refreshed look](../../user/modern-fluent-design.md), charts control on view pages and dashboards have been updated to a new color palette, overriding any custom colors by default. If you would like your charts to continue using custom colors with the modern refreshed look, you need to add `CustomColorOverride` property in the chart .xml file.
+>  ```xml  
+>  <Chart CustomColorOverride="true">
+
 > [!IMPORTANT]
 > In Unified Interface, only a subset of properties are supported. More information: [Supported methods and properties in Unified Interface](#methods-and-properties-supported-in-unified-interface)
 
