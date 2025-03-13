@@ -2230,7 +2230,7 @@
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
     - name: Manage access to views (preview)
       href: ./model-driven-apps/manage-view-access.md
-    - name: Microsoft Fabric
+    - name: Link to Microsoft Fabric
       items: 
       - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
