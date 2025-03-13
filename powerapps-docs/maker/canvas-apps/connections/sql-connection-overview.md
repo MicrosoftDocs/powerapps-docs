@@ -109,7 +109,7 @@ This table shows which operations are delegable to SQL Server by data type. Expr
 
 [6] Supported for `(StartsWith(\<column>, "string value"))`, but not for `(StartsWith("string value", \<column>))`
 
-[7] UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the initial 500/2000 record limit. Records that meet the **If** condition are collected. A maximum of 500/2000 records are collected and changed per execution. 
+[7] UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the initial 500/2000 record limit. Records that meet the **If** condition are collected. Generally, a maximum of 500/2000 records are collected and changed per execution. However, more records may be updated if the existing local data cache is very large.
 
 
 ## Related information
