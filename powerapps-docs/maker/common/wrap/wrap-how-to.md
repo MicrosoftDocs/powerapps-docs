@@ -64,11 +64,21 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 3. Select the **Azure Key Vault URI** from the list and select **Next**. 
 If you don't have any entries in **Azure Key Vault URI** list, you need to create Azure key vault first. More information: [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
-4.Create an Azure blob storage account and container name if you don't have it set up already. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating a Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
+4. Create an Azure blob storage account and container name if you don't have it set up already. More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating an Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
 
-5. You need access key to proceed further. This access key is used to access you Azure blob storage location. More information : [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+5. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Secrets** to create Azure blob storage secret name if not done already. More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault). While creating a secret, you'll need your access key. To view and copy your access key refer [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-6. Set the **Sign my app** toggle to **On** or **Off**.
+:::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
+
+Enter the Azure blob storage access key in **Secret value** field.
+
+:::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
+
+6. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Tags**, create a new tag with the same secret value as created in the preceding step.
+
+:::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-tag.png":::
+
+7. Set the **Sign my app** toggle to **On** or **Off**.
 
     :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
