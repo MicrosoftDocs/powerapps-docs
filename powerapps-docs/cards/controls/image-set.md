@@ -16,6 +16,8 @@ contributors:
 
 # Image set control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A container of images that acts as a photo gallery.
 
 ## Properties
