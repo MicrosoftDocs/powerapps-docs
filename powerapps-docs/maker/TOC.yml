@@ -1240,8 +1240,6 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Transform your InfoPath forms to Power Apps
-    href: ./canvas-apps/transform-infopath.md
   - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
@@ -2438,8 +2436,6 @@
     href: ./data-platform/migrate-access-datatypes.md
   - name: System columns and tables in Dataverse
     href: ./data-platform/access-migrate-linked-tables.md
-- name: Chatbots
-  href: ../chatbots.md
 - name: Cards
   items:
     - name: What are cards?
