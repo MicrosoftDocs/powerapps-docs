@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/13/2024
+ms.date: 03/13/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
