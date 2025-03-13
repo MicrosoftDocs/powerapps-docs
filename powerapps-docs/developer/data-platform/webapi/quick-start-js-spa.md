@@ -1,6 +1,6 @@
 ---
-title: Quickstart: Web API with client-side JavaScript and Visual Studio Code
-description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code
+title: "Quickstart: Web API with client-side JavaScript and Visual Studio Code"
+description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code with a Single Page Application.
 ms.date: 03/20/2025
 author: JimDaly
 ms.author: jdaly
@@ -64,16 +64,18 @@ Any of the following [privileged Microsoft Entra roles](/entra/identity/role-bas
 - [Application Developer](/entra/identity/role-based-access-control/permissions-reference#application-developer)
 - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
-To configure the application you need an application ID (also called a Client ID), and the Id of your Entra tenant. You should also choose a descriptive name for the application so will know what is was created for in the future.
+To configure the application you need an application (client) ID , and the ID of your Entra tenant. You should also choose a descriptive name for the application so people will know what the application was created for.
 
 ### Register your app
 
-You can do this either of two ways using:
+You can register your application using either the:
 
 - Entra web application UI
 - Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
 
 ### [Entra web application](#tab/web)
+
+#### Create the application registration
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
 1. If you have access to multiple tenants, use the **Settings** :::image type="icon" source="media/settings-icon.png" border="false"::: icon in the top menu to switch to the tenant in which you want to register the application from the **Directories + subscriptions** menu.
@@ -92,12 +94,15 @@ You can do this either of two ways using:
    - Directory (tenant) ID
 
 1. Copy these values because you will need them when you [Update index.js](#update-indexjs) below.
+
+#### Add Dataverse user_impersonation privilege
+
 1. In the **Manage** area, select **API permissions**.
 1. Select **Add a permission**.
 1. In the **Request API permissions** flyout, select the **APIs my organization uses** tab.
 1. Type 'Dataverse' to find application (client) ID `00000007-0000-0000-c000-000000000000`
 1. Select the Dataverse application
-1. In Select permissions `user_impersonation` is the only available delegated permission. Select that permission
+1. In **Select permissions**, `user_impersonation` is the only available delegated permission. Select that permission
 1. Click **Add permissions**.
 
 
@@ -105,8 +110,8 @@ You can do this either of two ways using:
 
 Using these instructions for PowerShell with Visual Studio Code has the following requirements:
 
-- Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
-- Install the Az PowerShell module. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+- Install the PowerShell extension for Visual Studio Code. [Learn to install PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+- Install the Az PowerShell module.  [Learn how to install Azure PowerShell](/powershell/azure/install-azure-powershell)
 
 You will need your tenant id to run this script.
 
@@ -118,14 +123,14 @@ You will need your tenant id to run this script.
 
 When you have your tenant id, you can create the app registration using the Powershell Azure PowerShell [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) cmdlet.
 
-1. In Visual Studio Code, select **File** > **New Text File**, or <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new file.
+1. In Visual Studio Code, select **File** > **New Text File**, or <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new text file.
 
    You don't need to save the file.
 
 1. Copy and paste the following script into the new file.
 
    ```powershell
-   # Values to pass to the New-SPAAppRegistration function
+   # Values to pass to the New-AzADApplication command
    $tenantId = "<your-tenant-id>" # Replace with your tenant ID
    $appName = "Dataverse Web API SPA Quickstart"
    $redirectUri = "http://localhost:5500"
@@ -140,7 +145,6 @@ When you have your tenant id, you can create the app registration using the Powe
       Write-Host "An error occurred while connecting: $_" -ForegroundColor Red
       exit 1
    }
-
 
    try {
       $appResponse = New-AzADApplication `
@@ -185,14 +189,14 @@ When you have your tenant id, you can create the app registration using the Powe
    `$tenantId = "<your-tenant-id>" # Replace with your tenant ID`
 
 1. Press F5 to execute the script.
-1. When the script runs, the device authorization flow begins. See a message like the following in the terminal window:
+1. When the script runs, the device authorization flow begins. Find a message like the following in the terminal window:
 
-   ```
-   [Login to Azure] To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code APZEL9SSV to authenticate.
-   ```
-1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the link. This opens a series of dialogs in your browser:
+   
+   [Login to Azure] To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code A1BC2DE3F to authenticate.
+   
+1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link. This opens a series of dialogs in your browser.
 
-   1. In the **Enter code to allow access** dialog, enter the code and click **Next**.
+   1. In the **Enter code to allow access** dialog, enter the code you copied and click **Next**.
    1. In the **Pick an account** dialog, select the account you want to use.
    1. In the **Enter password** dialog, enter your password and click the **Sign in** button.
    1. In the **Are you trying to sign in to Microsoft Azure PowerShell?** dialog, click **Continue**.
@@ -241,6 +245,14 @@ This step is necessary to complete the instructions later in [Get the msal-brows
 
 1. Create a folder somewhere on your computer. The name isn't important, but for these instructions call it `quickspa`.
 1. Open this folder using Visual Studio Code.
+
+   When using Windows 11, the you can open the folder using Windows explorer with these steps.
+
+   1. Right click the folder to open the context menu.
+   1. Select **Show more options** from the context menu.
+   1. Select **Open with Code** from the context menu.
+
+   Otherwise, you can open a terminal or command window and navigate to the folder. Then type `code .`
 
 ### Get the msal-browser.min.js library
 
@@ -318,7 +330,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
       clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
       tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
-      redirectUri: "http://localhost:5500/index.html",
+      redirectUri: "http://localhost:5500",
    };
 
    // Microsoft Authentication Library (MSAL) configuration
@@ -481,6 +493,22 @@ This file contains all the logic that makes the `index.html` page dynamic.
       }
    };
    ```
+
+The `index.js` script contains the following constants and functions:
+
+
+|Item|Description  |
+|---------|---------|
+|`config` |Contains the data used by the Microsoft Authentication Library (MSAL) configuration|
+|`msalConfig` |Microsoft Authentication Library (MSAL) configuration|
+|`msalInstance`|The MSAL [PublicClientApplication](/javascript/api/%40azure/msal-browser/publicclientapplication) instance|
+|`container`|The element where messages are displayed|
+|`getToken`|Retrieves an access token using MSAL.|
+|`logIn`|Event listener function for the login button. Opens a choose account dialog.|
+|`logOut`|Event listener function for the logout button. Opens a choose account dialog.|
+|`whoAmI`|Asynchronous function that calls the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to retrieve data from Dataverse. |
+| whoAmIButton event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
+
 
 #### Update index.js
 
