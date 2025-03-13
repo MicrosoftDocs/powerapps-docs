@@ -64,9 +64,11 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 3. Select the **Azure Key Vault URI** from the list and select **Next**. 
 If you don't have any entries in **Azure Key Vault URI** list, you need to create Azure key vault first. More information: [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
-4. You need access key to proceed further. This access key is used to access you Azure blob storage location. More information : [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+4.Create an Azure blob storage account and container name if you don't have it set up already. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating a Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
 
-5. Set the **Sign my app** toggle to **On** or **Off**.
+5. You need access key to proceed further. This access key is used to access you Azure blob storage location. More information : [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+
+6. Set the **Sign my app** toggle to **On** or **Off**.
 
     :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
@@ -141,8 +143,7 @@ When you register the app, Azure admin also needs to grant access to API permiss
 
 ### Step 5: Manage Output
 
-1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating a Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
-1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
+1. Add the Azure blob storage account name and the container name created during target platform step. 
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
 
 
