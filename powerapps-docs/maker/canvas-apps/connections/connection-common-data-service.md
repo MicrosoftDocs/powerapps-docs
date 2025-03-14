@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/31/2024
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -39,6 +39,7 @@ When you select **Change environment**, you're presented with a list of environm
 
 > [!NOTE]
 > Connections listed in the app details pane outside of the app designer show connections that require user consent. Since native Dataverse connections used in the app don't require that additional consent, a native connection won't be in that list.
+
 
 ## Power Apps data type mappings
 
@@ -75,17 +76,20 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | SortByColumns                                                   | Yes            | Yes          | Yes        | Yes              | \-       |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
 | Sum, Min, Max, Avg [6]                                          | Yes            | \-           | \-         | No               | \-       |
+| UpdateIf/RemoveIf [10]                                          | Yes            | \-           | \-         | No               | \-       |
 
+### Notes
 1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. When a value appears as a number in Power Apps but the back-end data source isn't a simple number such as currency then it isn't delegated.
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().
 4.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
 5.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
-6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions aren't supported on Views.  
+6.  All aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions aren't supported on Views.  
 7.  FirstN isn't supported.
 8.  `In` is subject to the 15 table query limit of Dataverse.
 9.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
+10. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
 
 ## Call Dataverse actions directly in Power Fx
 

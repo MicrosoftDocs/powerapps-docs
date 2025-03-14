@@ -4,7 +4,7 @@ description: Learn how to connect to a SQL server to access and view data from M
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2024
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
@@ -97,19 +97,19 @@ This table shows which operations are delegable to SQL Server by data type. Expr
 
 ### Notes
 
-[1] Supported for `(EndsWith(\<column>, "string value"))` but not for `(EndsWith("string value", \<column>))`. If a char(10) column has a value of "hello", `EndsWith(\<column>, "llo")` returns false, by design. A char(10) column has 10 characters.
+1. Supported for `(EndsWith(\<column>, "string value"))` but not for `(EndsWith("string value", \<column>))`. If a char(10) column has a value of "hello", `EndsWith(\<column>, "llo")` returns false, by design. A char(10) column has 10 characters.
 
-[2] Direct date filters don't work for SQL Server with an on premise Data Gateway. However, you can create a calculated column that works. For example, you can create: <br>`ALTER TABLE myTable ADD DateAsInt AS (YEAR([date]) * 10000 + MONTH([date]) * 100 + DAY([date]))` <br>And then filter on the calculated number column. 
+2. Direct date filters don't work for SQL Server with an on premise Data Gateway. However, you can create a calculated column that works. For example, you can create: <br>`ALTER TABLE myTable ADD DateAsInt AS (YEAR([date]) * 10000 + MONTH([date]) * 100 + DAY([date]))` <br>And then filter on the calculated number column. 
 
-[3] Supported for `("string value" in \<column>)`, but not for `(\<column> in "string value")`.
+3. Supported for `("string value" in \<column>)`, but not for `(\<column> in "string value")`.
 
-[4] An expression such as `Filter('[dbo].[MyOrders]', !IsBlank(CustomerId))` won't delegate to the server. However, you can use an expression such as `Filter('[dbo].[MyOrders]', CustomerId <> Blank())`, which does delegate to the server and is semantically close. The difference is that the second expression won't treat the empty string ("") as empty. Although the expressions aren't equivalent, the latter might work for your purposes. You can't use this method for the Guid data type. 
+4. An expression such as `Filter('[dbo].[MyOrders]', !IsBlank(CustomerId))` won't delegate to the server. However, you can use an expression such as `Filter('[dbo].[MyOrders]', CustomerId <> Blank())`, which does delegate to the server and is semantically close. The difference is that the second expression won't treat the empty string ("") as empty. Although the expressions aren't equivalent, the latter might work for your purposes. You can't use this method for the Guid data type. 
 
-[5] Power Apps delegates the `Len` function, but the behavior might not work as you expect. In SQL Server, a char(10) column with value "hello" always has a length of 10. However, Power Apps treats that string as having a length of 5, which may cause discrepancies and confusion. Don't use `char`/`nchar` on SQL server, but use `varchar`/`nvarchar` instead.
+5. Power Apps delegates the `Len` function, but the behavior might not work as you expect. In SQL Server, a char(10) column with value "hello" always has a length of 10. However, Power Apps treats that string as having a length of 5, which may cause discrepancies and confusion. Don't use `char`/`nchar` on SQL server, but use `varchar`/`nvarchar` instead.
 
-[6] Supported for `(StartsWith(\<column>, "string value"))`, but not for `(StartsWith("string value", \<column>))`
+6. Supported for `(StartsWith(\<column>, "string value"))`, but not for `(StartsWith("string value", \<column>))`
 
-[7] UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the initial 500/2000 record limit. Records that meet the **If** condition are collected. Generally, a maximum of 500/2000 records are collected and changed per execution. However, more records may be updated if the existing local data cache is very large as the function may have access to more records for evaluation.
+7. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
 
 
 ## Related information
