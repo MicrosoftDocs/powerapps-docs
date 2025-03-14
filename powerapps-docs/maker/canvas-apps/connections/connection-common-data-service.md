@@ -5,7 +5,7 @@ author: mduelae
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/31/2024
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -40,7 +40,6 @@ When you select **Change environment**, you're presented with a list of environm
 > [!NOTE]
 > Connections listed in the app details pane outside of the app designer show connections that require user consent. Since native Dataverse connections used in the app don't require that additional consent, a native connection won't be in that list.
 
-## Power Apps data type mappings
 
 ## Power Apps data type mappings
 
