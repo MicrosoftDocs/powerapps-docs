@@ -82,6 +82,9 @@ This configuration can be considered a bootstrap step for average use cases.
 > - 1 The same spark pool is used by the system to run a daily job that compacts Delta files in the lake. This option reduces the size of Delta files. In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures,
 > - You are only charged for the spark pool nodes actually utilized. Increasing the number of nodes might not result in higher charges.
 
+> [!NOTE]
+> Users in a Subscription type that limits the number of vCores to 12 (such as Pay-As-You-Go subscriptions) need to increase their vCore allocation, as the recommended configuration listed above requires at least 20 vCores.
+
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
