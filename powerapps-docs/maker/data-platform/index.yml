@@ -95,7 +95,7 @@ landingContent:
         links:
           - text: Azure Synapse Link for Dataverse
             url: export-to-data-lake.md
-          - text: Fabric link for Dataverse
+          - text: Link to Microsoft Fabric
             url: azure-synapse-link-view-in-fabric.md
           - text: Quick view and Power BI integration
             url: use-powerbi-dataverse.md
