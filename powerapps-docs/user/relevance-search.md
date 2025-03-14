@@ -69,6 +69,8 @@ View the full results for a search by pressing **Enter** on your keyboard or sel
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
+When a search query contains multiple words, it is automatically split into individual search terms. Additionally, our fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" may return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (e.g., "Robert Clark").
+
 To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
 > [!NOTE]
