@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/31/2024
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
