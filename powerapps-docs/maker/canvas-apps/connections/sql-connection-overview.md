@@ -4,7 +4,7 @@ description: Learn how to connect to a SQL server to access and view data from M
 author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2024
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
