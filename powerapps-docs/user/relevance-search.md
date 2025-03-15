@@ -56,7 +56,10 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is either the field that has the search text or the first non-primary field on the table’s quick find view that contains data for the row.
+Suggested rows display a secondary field alongside the primary field to help differentiate rows with the same primary field value. The secondary field is selected based on the table’s quick find view:
+
+- If the search text appears in a field within the quick find view, that field is used as the secondary field.
+- If no match is found, the first non-primary field in the quick find view that contains data for the row is displayed instead.
 
 
 ![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
