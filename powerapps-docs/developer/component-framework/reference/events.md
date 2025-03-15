@@ -1,6 +1,6 @@
 ---
 title: Events (Power Apps component framework API reference) | Microsoft Docs
-description: Provides methods to call maker-defined Power Fx events that are configured in Power Apps Studio.
+description: Provides methods to call events defined in a PCF. For canvas apps, these events will be configured by the maker as Power Fx. For model-driven apps, events are described using JavaScript.
 author: OliverDumrique
 ms.author: olidum
 ms.reviewer: jdaly
@@ -15,7 +15,7 @@ ms.subservice: pcf
 
 ## Available for
 
-Canvas apps only
+Canvas apps and model-driven apps
 
 ## Syntax
 

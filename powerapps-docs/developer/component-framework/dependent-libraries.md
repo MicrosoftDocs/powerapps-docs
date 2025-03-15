@@ -25,15 +25,12 @@ To use dependent libraries, you need to:
 
 - Create a *Library component* that contains the library. This component can provide some functionality or only be a container for the library.
 - Configure another component to depend on the library loaded by the library component.
-   - By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
+- By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
 
 This way you can independently maintain the library in the Library Control and the dependent controls don't need to have a copy of the library bundled with them.
 
-
-
 ## How it works
 
-<!--TODO: Confirm whether the feature flag file still required -->
 You need to add configuration data to your component project so that the build process deploys your libraries the way you want. Set this configuration data by adding or editing the following files:
 
 - [featureconfig.json](#featureconfigjson)
@@ -67,8 +64,6 @@ By default, these values are `off`. Set them to `on` to override the default. Fo
 ```
 
 ### webpack.config.js
-
-<!-- TODO: please confirm this is accurate -->
 
 The build process for components uses [Webpack](https://webpack.js.org/) to bundle the code and dependencies into a deployable asset. To exclude your libraries from this bundling, add a `webpack.config.js` file to the project root folder that specifies the alias of the library as `externals`. [Learn more about the Webpack externals configuration option](https://webpack.js.org/configuration/externals/)
 
@@ -111,7 +106,7 @@ Rather than loading the dependent library when a component loads, you can load t
 
 To enable on demand loading, you need to:
 
-1. Add these [platform-action element](manifest-schema-reference/platform-action.md), [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md): 
+1. Add these a platform-action element, [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md):
 
    ```xml
    <platform-action action-type="afterPageLoad" />
@@ -128,7 +123,6 @@ To enable on demand loading, you need to:
          name="samples_SampleNamespace.StubLibrary"
          load-type="onDemand" />
    ```
-
 
 ### Next steps
 

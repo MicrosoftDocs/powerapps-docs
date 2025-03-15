@@ -1,6 +1,6 @@
 ---
 title: Define Events
-description: Explains how to define new events with PowerApps Component Framework (PCF) controls.
+description: Explains how to define new events with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
 ms.date: 02/20/2025
@@ -71,19 +71,13 @@ Model Driven Apps, use the [addEventHandler method](../model-driven-apps/clienta
 > [!NOTE]
 > These the events occur separately for each instance of the code component in the app.
 
-## Passing payload in events
+## Defining an event for model-driven apps
 
 For model-driven apps you can pass a payload with the event allowing for more complex scenarios for example in the diagram below the component passes a call back function in the event allowing the script handling to call back to the component.
 
-<!-- TODO I don't understand this diagram. -->
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="TODO Explain this diagram":::
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
-
-<!-- 
-TODO I don't understand where this code goes. Is it part of the component, the client-side script or what? 
-What is 'this' here? 
--->
 ```javascript
 this.onSampleControl1CustomEvent1 = function (params) {
    //alert(`SampleControl1 Custom Event 1: ${params}`);
@@ -97,9 +91,13 @@ params.callBackFunction();
 }
 ```
 
-   
-TODO: How is [Events](reference/events.md) involved? 
+## Defining an event for canvas apps
 
+Makers configure an event using Power Fx on the PCF control in the properties pane.
+
+### Calling an event
+
+See how to call an event in [Events](reference/events.md).
 
 ### Next steps
 

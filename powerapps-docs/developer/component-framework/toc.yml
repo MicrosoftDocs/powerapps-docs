@@ -474,8 +474,6 @@ items:
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
-      - name: platform-action
-        href: manifest-schema-reference/platform-action.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
       - name: property-dependencies

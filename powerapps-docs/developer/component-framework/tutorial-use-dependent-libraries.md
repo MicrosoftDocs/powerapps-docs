@@ -24,7 +24,6 @@ Follow the steps in this tutorial to create a library control and a control that
 1. [Build the dependent control](#2-build-the-dependent-control): Create a component that uses the library defined in the library control and add it to a form of a model-driven app to verify that it works.
 1. [Load dependent library on demand](#3-load-dependent-library-on-demand): Expand on the example to make the dependent component load the library resource on demand rather than have the framework load the library when the control loads.
 
-
 ## Prerequisites
 
 You should already know how to:
@@ -122,8 +121,6 @@ The first step is to create a new component using the [pac pcf init command](/po
    [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
 
 1. Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
-
-<!-- TODO Briefly explain why this is necessary.  Is it always necessary, or only because of how MyLib is configured? -->
 
 #### [Before](#tab/before)
 
@@ -332,8 +329,6 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
 
 Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
 
-<!-- TODO Briefly explain why this is necessary.  Is it always necessary, or only because of how MyLib is configured? -->
-
 #### [Before](#tab/before)
 
 ```json
@@ -469,11 +464,11 @@ export class HelloWorld extends React.Component<any, { loaded: boolean }> {
   }
 }
 ```
+
 ---
 
 ### Update index.ts
 
-<!-- TODO: I don't really follow this. Can you simplify? -->
 When the script is loaded on demand in this case, you need to make slight adjustments to how the component is created and initialized, such as new variables for references to the context and the container to update the state.
 
 Most importantly add a  `getActions` method to react to the On Load and request the dependent control to be loaded.
@@ -620,7 +615,6 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
 
 1. Update the version number of the control in the `ControlManifest.Input.xml` and the version in the `Solution.xml`
 1. Rebuild, package, deploy, and publish the solution with the updated control.
-
 
 ### Verify results
 

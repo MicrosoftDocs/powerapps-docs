@@ -17,7 +17,7 @@ In this tutorial, you will build a code component that uses custom events and te
 
 ## Goal
 
-The steps in this tutorial guide you to create a code component with two buttons which raise different events for the hosting application can react to. You will define two events: `customEvent1` and `customEvent2`. Then, the code component will expose two buttons that will cause these events to occur. 
+The steps in this tutorial guide you to create a code component with two buttons which raise different events for the hosting application can react to. You will define two events: `customEvent1` and `customEvent2`. Then, the code component will expose two buttons that will cause these events to occur.
 
 ### Canvas App
 
@@ -32,8 +32,6 @@ The canvas app will use Power Fx expressions on these events to toggle the visib
 
 The model-driven app will use client-side JavaScript to show an alert when the respective events occur.
 
-**TODO**: add video or images for mda showing final result
-
 ## Prerequisites
 
 You should already know how to:
@@ -45,11 +43,6 @@ You should already know how to:
 
 ## Create a new Control
 
-<!-- 
-We don't want long set of numbered instructions. Since this entire article is a tutorial, break the steps down into logical parts and give each part a heading 
-
--->
-
 1. Create a new component using this command:
 
    `pac pcf init -n EventSample -ns SampleNamespace -t field -fw react -npm`
@@ -57,8 +50,6 @@ We don't want long set of numbered instructions. Since this entire article is a 
 2. Edit the manifest to add the new events
 
 #### [Before](#tab/before)
-
-<!-- Formatting the XML this way helps make sure it is readable on learn.microsoft.com without having to scroll -->
 
 ```xml
 <property name="sampleProperty"
@@ -74,10 +65,8 @@ We don't want long set of numbered instructions. Since this entire article is a 
       version="16.8.6" />
    <platform-library name="Fluent"
       version="8.29.0" />
-   <!-- UNCOMMENT TO ADD MORE RESOURCES
    <css path="css/SampleEventPCF.css" order="1" />
    <resx path="strings/SampleEventPCF.1033.resx" version="1.0.0" />
-   -->
 </resources>
 ```
 
@@ -90,6 +79,12 @@ We don't want long set of numbered instructions. Since this entire article is a 
    of-type="SingleLine.Text"
    usage="bound"
    required="true" />
+<event name="customEvent1"
+   display-name-key="customEvent1"
+   description-key="customEvent1"/>
+<event name="customEvent2"
+   display-name-key="customEvent2"
+   description-key="customEvent2"/>
 <resources>
    <code path="index.ts"
       order="1"/>
@@ -97,24 +92,10 @@ We don't want long set of numbered instructions. Since this entire article is a 
       version="16.8.6" />
    <platform-library name="Fluent"
       version="8.29.0" />
-   <!-- UNCOMMENT TO ADD MORE RESOURCES
    <css path="css/SampleEventPCF.css" order="1" />
    <resx path="strings/SampleEventPCF.1033.resx" version="1.0.0" />
-   -->
 </resources>
-<event name="customEvent1"
-   display-name-key="customEvent1"
-   description-key="customEvent1"/>
-<event name="customEvent2"
-   display-name-key="customEvent2"
-   description-key="customEvent2"/>
 ```
-
-<!-- 
-TODO: Is it OK that I've shown the event elements AFTER/BELOW the resources element? It is easier to see the difference this way 
--->
-
----
 
 ## Define events
 
@@ -199,6 +180,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
    );
 }
 ```
+
 ---
 
 ## Build and package
@@ -286,12 +268,10 @@ As usual, you need to complete these steps to use this control:
 
 As described in [Passing payload in events](events.md#passing-payload-in-events), you can pass payload in events in model-driven apps. You can modify this example in the following way to achieve this.
 
-<!-- TODO: I don't fully understand this diagram. Does it need more explanation? -->
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="Diagram shows multiple controls generating multiple events with a call back being made":::
 <!-- See source media/src/passing-payload-in-events.vsdx -->
 
 ### Pass payload with event
-
 
 Change the `EventSample\index.ts` so that the events will pass a message payload and in the second event also pass a callback function that changes an internal variable
 
@@ -436,7 +416,6 @@ this.onSampleControl2CustomEvent2 = function (params) {
 
 1. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
 1. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
-
 
 ### Related articles
 
