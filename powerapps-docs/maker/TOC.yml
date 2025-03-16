@@ -1690,7 +1690,7 @@
         - name: Add knowledge to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
-          href: ./model-driven-apps/copilot-chat-send-messages.mda
+          href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Send a messages to Copilot chat
           href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Prompt guide customizations
