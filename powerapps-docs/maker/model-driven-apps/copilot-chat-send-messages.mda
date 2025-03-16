@@ -19,6 +19,8 @@ ai-usage: ai-assisted
 ---
 # Send a message to Copilot chat (preview)
 
+
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Extend your app's Copilot chat engagement and impact by incorporating rich audio, video and simple cards response type. The Message node, within the flow of a topic, sends a message from the agent to the user. Messages can be simple text messages, but can also include richer components, such as images, videos, quick replies, and cards.
@@ -34,7 +36,7 @@ To add an image, you need one hosted through a URL.
 1. In the node's menu bar, select Add and choose Image.
 1. Under Image, enter the URL of your image.
 1. Optionally, enter a Title for the image.
-
+:::image type="content" source="media/mda-copilot-chat-image-message.png" alt-text="Add an image response to Copilot chat" lightbox="media/mda-copilot-chat-image-message.png":::
 
 
 
@@ -43,6 +45,7 @@ To add an image, you need one hosted through a URL.
 1. In the node's menu bar, select Add, and then select Video.
 1. Under Media URL, enter the URL of your video. The URL can either be a direct link to a publicly accessible MP4 file or a YouTube URL.
 1. Optionally, enter a Title, Subtitle, Image URL (the URL of a publicly accessible image file), or Text to be shown alongside the video on the card. You can also add one or more buttons, which have the same properties as quick replies.
+:::image type="content" source="media/mda-copilot-chat-video-message.png" alt-text="Add an video response to Copilot chat" lightbox="media/mda-copilot-chat-video-message.png":::
 
 
 ## Add a basic card response to Copilot chat
@@ -50,6 +53,8 @@ To add an image, you need one hosted through a URL.
 1. [Add a Message node.](/microsoft-copilot-studio/authoring-send-message#send-a-text-message)
 1. In the node's menu bar, select Add, and then select Basic card.
 1. In the Basic Card properties pane, fill in the properties for the content of your card. You can also add one or more buttons, which have the same effect as [quick replies](/microsoft-copilot-studio/authoring-send-message#use-quick-replies).
+:::image type="content" source="media/mda-copilot-chat-basic-card-message.png" alt-text="Add a basic card response to Copilot chat" lightbox="media/mda-copilot-chat-basic-card-message.png":::
+
 
 For more details see [send a message Copiot studio documentation](/microsoft-copilot-studio/authoring-send-message)
 
@@ -63,5 +68,7 @@ For more details see [send a message Copiot studio documentation](/microsoft-cop
 
 
 
-
 
+
+
+
