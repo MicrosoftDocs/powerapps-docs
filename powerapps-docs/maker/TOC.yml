@@ -1691,6 +1691,8 @@
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Send rich messages to Copilot chat
+          href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Prompt guide customizations
           href: ./model-driven-apps/copilot-chat-prompt-guide.md
         - name: Zero prompt experience
