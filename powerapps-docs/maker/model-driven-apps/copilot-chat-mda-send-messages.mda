@@ -1,0 +1,67 @@
+---
+title: Send a message to Copilot chat in model-driven apps 
+description: Learn how to send a message from Agent to user in model-driven apps Copilot chat
+author: Mattp123
+ms.service: powerapps
+ms.subservice: mda-maker
+ms.author: hemantg
+ms.reviewer: matp
+ms.date: 03/16/2025
+ms.topic: how-to
+applies_to: 
+  - "powerapps"
+search.audienceType: 
+  - maker
+contributors:
+  - makolomi
+ms.collection: bap-ai-copilot
+ai-usage: ai-assisted
+---
+# Send message to Copilot chat in model-driven apps (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Extend your app's Copilot chat engagement and impact by incorporating rich audio, video and simple cards response type. The Message node, within the flow of a topic, sends a message from the agent to the user. Messages can be simple text messages, but can also include richer components, such as images, videos, quick replies, and cards.
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+
+## Add an image response to Copilot chat
+To add an image, you need one hosted through a URL.
+1. [Add a Message node.](/microsoft-copilot-studio/authoring-send-message#send-a-text-message)
+1. In the node's menu bar, select Add and choose Image.
+1. Under Image, enter the URL of your image.
+1. Optionally, enter a Title for the image.
+
+
+
+
+## Add a video response to Copilot chat
+1. [Add a Message node.](/microsoft-copilot-studio/authoring-send-message#send-a-text-message)
+1. In the node's menu bar, select Add, and then select Video.
+1. Under Media URL, enter the URL of your video. The URL can either be a direct link to a publicly accessible MP4 file or a YouTube URL.
+1. Optionally, enter a Title, Subtitle, Image URL (the URL of a publicly accessible image file), or Text to be shown alongside the video on the card. You can also add one or more buttons, which have the same properties as quick replies.
+
+
+## Add a basic card response to Copilot chat
+1. A basic card is a general-purpose card used for adding text, images, and interactive elements to an agent response message.
+1. [Add a Message node.](/microsoft-copilot-studio/authoring-send-message#send-a-text-message)
+1. In the node's menu bar, select Add, and then select Basic card.
+1. In the Basic Card properties pane, fill in the properties for the content of your card. You can also add one or more buttons, which have the same effect as [quick replies](/microsoft-copilot-studio/authoring-send-message#use-quick-replies).
+
+For more details see [send a message Copiot studio documentation](/microsoft-copilot-studio/authoring-send-message)
+
+## Related articles
+
+- [Customize Copilot chat using Copilot Studio (preview)](customize-copilot-chat.md)
+- [Add topics to Copilot chat in model-driven apps (preview)](copilot-chat-mda-topics.md)
+- [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
+- [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+- [Enable copilots and generative AI features in Power Apps](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
+
+
+
+
+
