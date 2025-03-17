@@ -47,4 +47,4 @@ TODO: Model-driven apps?
 [Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

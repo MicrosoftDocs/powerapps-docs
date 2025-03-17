@@ -97,6 +97,8 @@ You should already know how to:
 </resources>
 ```
 
+---
+
 ## Define events
 
 In the `EventSample\HelloWorld.tsx` control file, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as shown below.
@@ -191,27 +193,27 @@ As usual, you need to complete these steps to use this control:
 1. [Package the code component](import-custom-controls.md)
 1. [Deploy the code component](import-custom-controls.md#deploying-code-components)
 
----
-
 ## Use in a canvas app
+
+To use this control in a canvas app, you need to:
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
 1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
 1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control.
 
-   :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added ":::
+   :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added." lightbox="media/event_canvas_sample_app.png":::
 
 1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode`.
 
-   :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control":::
+   :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control" lightbox="media/event_canvas_sample_app_displaymode.png":::
 
    And the `Visible` property of the text control.
 
-   :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control":::
+   :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control" lightbox="media/event_canvas_sample_app_visible.png":::
 
 1. Set custom actions on the new custom control to update the `isVisible` and `canEdit` variables when the buttons are clicked.
 
-   :::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component":::
+   :::image type="content" source="media/event_canvas_sample_app_customevents.png" alt-text="Image of the Custom Event properties of the new component" lightbox="media/event_canvas_sample_app_customevents.png":::
 
    |Event|Power FX expression|
    |---|---|
@@ -255,10 +257,10 @@ As usual, you need to complete these steps to use this control:
    }).call(MyScriptsNameSpace);
    ```
 
-1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource).
-1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
-1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form).
-1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
+1. Write your first client script: [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource).
+1. Write your first client script: [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+1. Write your first client script: [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form).
+1. Write your first client script: [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
 
    :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
 
