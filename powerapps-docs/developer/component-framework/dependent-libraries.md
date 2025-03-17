@@ -17,9 +17,22 @@ With model-driven apps, you can reuse a prebuilt library contained in another co
 
 Having copies of a prebuilt library in multiple controls is undesirable. Reusing existing libraries improves performance, especially when the library is large, by reducing the load time for all components that use the library. Library reuse also helps reduce the maintenance overhead in build processes.
 
-|Before|After|
-|---|---|
-|:::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::|:::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing components calling a shared function from a Library Control":::|
+:::row:::
+   :::column span="":::
+      Before
+   :::column-end:::
+   :::column span="":::
+      After
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="content" source="media/dependent-library-before-example.png" alt-text="Diagram showing custom library files contained in each pcf component":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="media/dependent-library-after-example.png" alt-text="Diagram showing components calling a shared function from a Library Control":::
+   :::column-end:::
+:::row-end:::
 
 To use dependent libraries, you need to:
 
@@ -102,6 +115,7 @@ Use the [dependency element](manifest-schema-reference/dependency.md) within [re
 Rather than loading the dependent library when a component loads, you can load the dependent library on demand. Loading on demand provides the flexibility for more complex controls to only load dependencies when they're required, especially if the dependent libraries are large.
 
 :::image type="content" source="media/dependent-library-on-demand-load.png" alt-text="Diagram showing the use of a function from a library where the library is loaded on demand":::
+
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
 To enable on demand loading, you need to:
