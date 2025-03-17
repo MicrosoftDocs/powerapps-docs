@@ -13,6 +13,8 @@ ms.collection:
 
 # Manage access
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 This article explains how to manage cards using security roles, and also provides guidance on deleting a record.
 
 ## Change who can create cards

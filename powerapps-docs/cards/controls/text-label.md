@@ -16,6 +16,8 @@ contributors:
 
 # Text label control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Displays text, allowing control over font sizes, weight, and color.
 
 ## Properties
