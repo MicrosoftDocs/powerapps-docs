@@ -38,7 +38,8 @@ To use dependent libraries, you need to:
 
 - Create a *Library component* that contains the library. This component can provide some functionality or only be a container for the library.
 - Configure another component to depend on the library loaded by the library component.
-- By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
+
+By default, the library loads when the dependent component loads, but you can [configure it to load on demand](#dependency-as-on-demand-load-of-a-component).
 
 This way you can independently maintain the library in the Library Control and the dependent controls don't need to have a copy of the library bundled with them.
 

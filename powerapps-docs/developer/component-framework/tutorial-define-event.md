@@ -268,9 +268,10 @@ To use this control in a canvas app, you need to:
 
 ## Passing payload in events
 
-As described in [Passing payload in events](events.md#passing-payload-in-events), you can pass payload in events in model-driven apps. You can modify this example in the following way to achieve this.
+As described in [Defining an event for model-driven apps](events.md#defining-an-event-for-model-driven-apps), you can pass payload in events in model-driven apps. You can modify this example in the following way to achieve this.
 
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="Diagram shows multiple controls generating multiple events with a call back being made":::
+
 <!-- See source media/src/passing-payload-in-events.vsdx -->
 
 ### Pass payload with event

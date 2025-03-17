@@ -13,21 +13,21 @@ contributors:
 ---
 # Define Events
 
-A common requirement when building custom components with the Power Apps Component Framework is the ability to react to events generated within the control. These events can be invoked either due to user interaction or programmatically via code. For example, an application can have a code component that lets a user build a product bundle and this component can also raise an event which could show product information in another area of the application.
+A common requirement when building custom components with the Power Apps Component Framework is the ability to react to events generated within the control. These events can be invoked either due to user interaction or programmatically via code. For example, an application can have a code component that lets a user build a product bundle. This component can also raise an event which could show product information in another area of the application.
 
 ## Component Data Flow
 
-The common data flow for a code component is data flowing from the hosting application into the control as inputs and updated data flowing out of the control to the hosting form or page.
+The common data flow for a code component is data flowing from the hosting application into the control as inputs and updated data flowing out of the control to the hosting form or page. This diagram shows the standard pattern of data flow for a typical PCF component:
 
-:::image type="content" source="media/component-events-onchange-example.png" alt-text="Shows that data update from the code component to the binding field would cause OnChange event to be triggered":::
+:::image type="content" source="media/component-events-onchange-example.png" alt-text="Shows that data update from the code component to the binding field triggers the `OnChange` event":::
 
-The diagram above shows the standard pattern of data flow for a typical PCF component, such that the data update from the code component to the bound field would cause `OnChange` event to be triggered. For most component scenarios this suffices and makers just add a handler to trigger subsequent actions. However, there are cases when a more complicated control requires events to be raised which are not the field updates. The new event mechanism allows a code components to define events which can have separate event handlers.
+The data update from the code component to the bound field triggers the `OnChange` event. For most component scenarios, this is enough and makers just add a handler to trigger subsequent actions. However, a more complicated control might require events to be raised that aren't field updates. The event mechanism allows code components to define events that have separate event handlers.
 
 ## Using events
 
-The event mechanism in PCF is based on the standard event model in JavaScript. The component can define events in the manifest file and raise these events in the code. The hosting application can then listen to these events and react to them.
+The event mechanism in PCF is based on the standard event model in JavaScript. The component can define events in the manifest file and raise these events in the code. The hosting application can listen to these events and react to them.
 
-To do this the component needs to define events using the [event element](manifest-schema-reference/event.md) in the manifest file which will allow these to be reacted to depending on the hosting application (Canvas or Model-driven app).
+The component defines events using the [event element](manifest-schema-reference/event.md) in the manifest file. This data allows the respective hosting application to react to events in different ways.
 
 ```xml
 <property
@@ -50,11 +50,11 @@ To do this the component needs to define events using the [event element](manife
 />
 ```
 
-This data allows canvas apps to react to the event using Power Fx expressions:
+Canvas apps react to the event using Power Fx expressions:
 
 :::image type="content" source="media\custom-events-in-canvas-designer.png" alt-text="Shows the custom events in the canvas apps designer":::
 
-Model Driven Apps, use the [addEventHandler method](../model-driven-apps/clientapi/reference/controls/addeventhandler.md) to associate event handlers to custom events for a component.
+Model Driven Apps use the [addEventHandler method](../model-driven-apps/clientapi/reference/controls/addeventhandler.md) to associate event handlers to custom events for a component.
 
 ```javascript
   const controlName1 = "cr116_personid";
@@ -69,13 +69,14 @@ Model Driven Apps, use the [addEventHandler method](../model-driven-apps/clienta
 ```
 
 > [!NOTE]
-> These the events occur separately for each instance of the code component in the app.
+> These events occur separately for each instance of the code component in the app.
 
 ## Defining an event for model-driven apps
 
-For model-driven apps you can pass a payload with the event allowing for more complex scenarios for example in the diagram below the component passes a call back function in the event allowing the script handling to call back to the component.
+For model-driven apps you can pass a payload with the event allowing for more complex scenarios. For example in the diagram below the component passes a callback function in the event allowing the script handling to call back to the component.
 
-:::image type="content" source="media/passing-payload-in-events.png" alt-text="TODO Explain this diagram":::
+:::image type="content" source="media/passing-payload-in-events.png" alt-text="In this example, the component passes a callback function in the event allowing the script handling to call back to the component":::
+
 <!-- See source \media\src\pcf_events_dependencies_diagrams.vsdx -->
 
 ```javascript

@@ -25,9 +25,9 @@ Model-driven apps
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
 |`type`|Should be set to `control`|`String`|Yes|Model-driven apps |
-|`name`|The schemaName name of the library component|`String`|Yes|Model-driven  apps |
+|`name`|The schema name name of the library component|`String`|Yes|Model-driven  apps |
 |`order`|The order in which the dependent library should load|`Positive integer`|No|Model-driven  apps |
-|`load-type`|Should be set to `onDemand`|String`|No|Model-driven  apps |
+|`load-type`|Should be set to `onDemand`|`String`|No|Model-driven  apps |
 
 ## Parent Elements
 
@@ -44,11 +44,11 @@ Model-driven apps
    load-type="onDemand"/>
 ```
 
-### Related topics
+### Related articles
 
-[Dependent Libraries](../dependent-libraries.md)
-[Power Apps component framework manifest schema reference](index.md)
-[Power Apps component framework API reference](../reference/index.md)
+[Dependent Libraries](../dependent-libraries.md)   
+[Power Apps component framework manifest schema reference](index.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

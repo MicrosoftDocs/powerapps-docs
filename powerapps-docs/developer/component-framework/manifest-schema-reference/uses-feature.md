@@ -42,11 +42,11 @@ Model-driven apps
 </feature-usage>
 ```
 
-The table below shows the relationship of these settings to what happens in the code at runtime whether the feature function will be available to call based upon the uses-feature settings defined in the manifest.
+The following table shows the relationship of these settings to what happens in the code at runtime whether the feature function is available to call based upon the `uses-feature` settings defined in the manifest.
 
 |Manifest|If Host supports|If Host doesn't support|
 |----|----|-----|
-|`uses-feature name="device.captureImage" required="true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
+|`uses-feature name="device.captureImage" required="true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load fails at runtime.|
 |`uses-feature name="device.captureImage" required="false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
 |(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
 
