@@ -3,7 +3,7 @@ title: dependency Element | Microsoft Docs
 description: Refers to a library in another component that this component depends on.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/20/2025
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf

@@ -3,7 +3,7 @@ title: Define Events
 description: Explains how to define new events with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/20/2025
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf

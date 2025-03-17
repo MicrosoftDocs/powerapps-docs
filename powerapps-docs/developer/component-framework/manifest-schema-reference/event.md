@@ -4,7 +4,7 @@ description: Defines a Power FX expression that can be configured within Power A
 author: anuitz
 ms.author: anuitz
 ms.reviewer: jdaly
-ms.date: 11/20/2023
+ms.date: 03/17/2025
 ms.topic: reference
 ms.subservice: pcf
 contributors:

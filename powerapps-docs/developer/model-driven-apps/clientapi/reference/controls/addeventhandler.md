@@ -3,7 +3,7 @@ title: "addEventHandler (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addEventHandler method.
 author: MitiJ
 ms.author: mijosh
-ms.date: 02/14/2025
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -40,8 +40,8 @@ Custom code components
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|`TODO`|string|yes|The name of the custom event configured for the custom component.|
-|`TODO` |Function |Yes|The function to add to the named event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`name`|string|yes|The name of the custom event configured for the custom component.|
+|`function` |Function |Yes|The function to add to the named event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 ### Related articles
 

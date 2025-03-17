@@ -3,7 +3,7 @@ title: Control Element | Microsoft Docs
 description: Defines the component's namespace, version and display information.
 ms.author: anuitz
 author: anuitz
-ms.date: 12/04/2023
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -48,7 +48,7 @@ Model-driven and canvas apps
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|1|
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|
 |[property-dependencies](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|0 or more|
-|platform-action|Set to `afterPageLoad` when you want a dependency to load on demand.|0 or 1|
+|[platform-action](platform-action.md)|Set to `afterPageLoad` when you want a dependency to load on demand.|0 or 1|
 
 ## Example
 
@@ -65,8 +65,8 @@ Model-driven and canvas apps
 
 ### Related topics
 
-[Power Apps component framework manifest schema reference](index.md)<br/>
-[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](index.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 

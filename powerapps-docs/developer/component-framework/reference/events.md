@@ -4,7 +4,7 @@ description: Provides methods to call events defined in a PCF. For canvas apps, 
 author: OliverDumrique
 ms.author: olidum
 ms.reviewer: jdaly
-ms.date: 11/20/2023
+ms.date: 03/17/2025
 ms.topic: reference
 ms.subservice: pcf
 ---

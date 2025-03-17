@@ -3,7 +3,7 @@ title: Dependent Libraries
 description: Explains how to use dependent libraries with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 02/20/2025
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -106,7 +106,7 @@ Rather than loading the dependent library when a component loads, you can load t
 
 To enable on demand loading, you need to:
 
-1. Add these a platform-action element, [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md):
+1. Add these [platform-action element](manifest-schema-reference/platform-action.md), [feature-usage element](manifest-schema-reference/feature-usage.md), and [uses-feature element](manifest-schema-reference/uses-feature.md) child elements to the [control element](manifest-schema-reference/control.md):
 
    ```xml
    <platform-action action-type="afterPageLoad" />

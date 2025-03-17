@@ -3,7 +3,7 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 02/20/2025
+ms.date: 03/17/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
