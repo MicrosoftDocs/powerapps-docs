@@ -13,15 +13,15 @@ contributors:
 ---
 # Tutorial: Define a custom event in a component
 
-In this tutorial, you will build a code component that uses custom events and test it using both canvas and model-driven apps. [Learn more about custom events](events.md).
+In this tutorial, you'll build a code component that uses custom events and test it using both canvas and model-driven apps. [Learn more about custom events](events.md).
 
 ## Goal
 
-The steps in this tutorial guide you to create a code component with two buttons which raise different events for the hosting application can react to. You will define two events: `customEvent1` and `customEvent2`. Then, the code component will expose two buttons that will cause these events to occur.
+The steps in this tutorial guide you to create a code component with two buttons which raise different events for the hosting application can react to. You'll define two events: `customEvent1` and `customEvent2`. Then, the code component exposes two buttons that cause these events to occur.
 
 ### Canvas App
 
-The canvas app will use Power Fx expressions on these events to toggle the visible and display mode properties of a control:
+The canvas app uses Power Fx expressions on these events to toggle the visible and display mode properties of a control:
 
 :::image type="content" source="media/define-custom-event-tutorial-diagram.png" alt-text="Diagram shows the goal of this sample to define two custom events":::
 <!-- See source in media/src/define-custom-event-tutorial-diagram.vdx -->
@@ -30,7 +30,7 @@ The canvas app will use Power Fx expressions on these events to toggle the visib
 
 ### Model-driven App
 
-The model-driven app will use client-side JavaScript to show an alert when the respective events occur.
+The model-driven app uses client-side JavaScript to show an alert when the respective events occur.
 
 ## Prerequisites
 
@@ -101,7 +101,7 @@ You should already know how to:
 
 ## Define events
 
-In the `EventSample\HelloWorld.tsx` control file, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as shown below.
+In the `EventSample\HelloWorld.tsx` control file, define two events in the interface and bind the events to two different buttons. Also update the import to include `DefaultButton` as the following changes show.
 
 #### [Before](#tab/before)
 
@@ -150,9 +150,9 @@ export const HelloWorld: React.FunctionComponent<IHelloWorldProps> = (props: IHe
 
 ---
 
-## Modify updateview method
+## Modify `updateview` method
 
-In `EventSample\Index.ts`, modify [the updateView method ](reference/react-control/updateview.md) to add handlers for the two button events. This will add the two events defined in the manifest to the events in the context passed to the control.
+In `EventSample\Index.ts`, modify [the updateView method ](reference/react-control/updateview.md) to add handlers for the two button events. These handlers add the two events defined in the manifest to the events in the context passed to the control.
 
 #### [Before](#tab/before)
 
@@ -199,15 +199,16 @@ To use this control in a canvas app, you need to:
 
 1. [Create a new blank Canvas App](../../maker/canvas-apps/create-blank-app.md)
 1. [Add the new component to the canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
-1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md) in this example use a simple text control.
+1. [Add a new control](../../maker/canvas-apps/add-configure-controls.md). This example uses a text control.
 
    :::image type="content" source="media/event_canvas_sample_app.png" alt-text="Image of the Canvas App with controls added." lightbox="media/event_canvas_sample_app.png":::
 
-1. Add two variables to the app `isVisible` and `canEdit` and set these as the properties `DisplayMode`.
+1. Add two global variables to the app: `isVisible` and `canEdit`.
+1. Set `canEdit` to the `DisplayMode` property of the text control.
 
    :::image type="content" source="media/event_canvas_sample_app_displaymode.png" alt-text="Image of the DisplayMode property of the text control" lightbox="media/event_canvas_sample_app_displaymode.png":::
 
-   And the `Visible` property of the text control.
+1. Set `isVisible` to the `Visible` property of the text control.
 
    :::image type="content" source="media/event_canvas_sample_app_visible.png" alt-text="Image of the Visible property of the text control" lightbox="media/event_canvas_sample_app_visible.png":::
 
@@ -220,14 +221,22 @@ To use this control in a canvas app, you need to:
    |customEvent1|`If(isVisible, Set (isVisible, false), Set (isVisible, true))`|
    |customEvent2|`If(canEdit = DisplayMode.Edit, Set(canEdit, DisplayMode.Disabled), Set (canEdit, DisplayMode.Edit))`|
 
-1. Test the Canvas app. When you press `Trigger event 1` the text control should toggle between visible and hidden and when you press `Trigger event 2` the text control should toggle between editable and read only.
+### Test the canvas app
+
+1. Press **Trigger event 1**.
+
+   **Expected**: The text control toggles between visible and hidden
+
+1. Press **Trigger event 2**.
+
+   **Expected**: The text control toggles between editable and read only.
 
 ## Use in a model-driven app
 
 > [!NOTE]
 > These steps refer to instructions described in [Walkthrough: Write your first client script](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md).
 
-1. Create a new JavaScript web resource to run on the `onLoad` event of a form. This will bind two simple event handlers to the new events for the controls on load of the form.
+1. Create a new JavaScript web resource to run on the `onLoad` event of a form. This script binds two event handlers to the new events for the controls on load of the form.
 
    ```javascript
    /* eslint-disable */
@@ -257,18 +266,23 @@ To use this control in a canvas app, you need to:
    }).call(MyScriptsNameSpace);
    ```
 
-1. Write your first client script: [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource).
-1. Write your first client script: [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
-1. Write your first client script: [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form).
-1. Write your first client script: [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event).
+1. Complete the following steps as you normally do:
 
-   :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form":::
+   1. [Upload your new JavaScript file as a web resource](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-3-upload-your-code-as-a-web-resource).
+   1. [Add the component to the model-driven form](code-components-model-driven-apps.md#add-code-components-to-model-driven-apps).
+   1. [Associate the webresource to the form](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#step-4-associate-your-web-resource-to-a-form).
 
-1. Test your app. When you navigate to the form and press **Trigger event 1**, an alert displays `SampleControl1 Custom Event 1`. When you press **Trigger event 2**, an alert displays `SampleControl1 Custom Event 2`.
+1. [Configure the On Load event](../model-driven-apps/clientapi/walkthrough-write-your-first-client-script.md#configure-form-on-load-event) as shown in the following image:
+
+   :::image type="content" source="media/event_mda_sample_jsbinding.png" alt-text="Image of the JavaScript binding for the Model Driven App Form" lightbox="media/event_mda_sample_jsbinding.png":::
+
+1. Test your app. 
+
+   When you navigate to the form and press **Trigger event 1**, an alert displays `SampleControl1 Custom Event 1`. When you press **Trigger event 2**, an alert displays `SampleControl1 Custom Event 2`.
 
 ## Passing payload in events
 
-As described in [Defining an event for model-driven apps](events.md#defining-an-event-for-model-driven-apps), you can pass payload in events in model-driven apps. You can modify this example in the following way to achieve this.
+As described in [Defining an event for model-driven apps](events.md#defining-an-event-for-model-driven-apps), you can pass payload in events in model-driven apps. You can modify this example in the following way to see how this works.
 
 :::image type="content" source="media/passing-payload-in-events.png" alt-text="Diagram shows multiple controls generating multiple events with a call back being made":::
 
@@ -276,7 +290,7 @@ As described in [Defining an event for model-driven apps](events.md#defining-an-
 
 ### Pass payload with event
 
-Change the `EventSample\index.ts` so that the events will pass a message payload and in the second event also pass a callback function that changes an internal variable
+Change the `EventSample\index.ts` so that the events pass a message payload and in the second event also pass a callback function that changes an internal variable
 
 #### [Before](#tab/before)
 
@@ -415,10 +429,24 @@ this.onSampleControl2CustomEvent2 = function (params) {
 
 ---
 
-### Test your app
+### Test the model-driven app
 
-1. When you navigate to the form and press `Trigger event 1` on the first field a pop up should display `SampleControl1 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the first field a pop up should display `SampleControl1 Custom Event 2: Hello from event 2` followed by another alert from the first control saying `Event 2 default NOT prevented`.
-1. When you navigate to the form and press `Trigger event 1` on the second field a pop up should display `SampleControl2 Custom Event 1: Hello from event 1` and when you press `Trigger event 2` on the second field a pop up should display `SampleControl2 Custom Event 2: Hello from event 2` followed by another alert from the second control saying `Event 2 default prevented`.
+1. Navigate to the form.
+1. Press **Trigger event 1** on the _first_ field.
+
+   **Expected**: A pop-up displays **SampleControl1 Custom Event 1: Hello from event 1** on the first field.
+
+1. Press **Trigger event 2** on the _first_ field.
+
+   **Expected**: A pop-up displays **SampleControl1 Custom Event 2: Hello from event 2** on the first field followed by an alert from the first control that says **Event 2 default NOT prevented**
+   
+1. Press **Trigger event 1** on the _second_ field.
+
+   **Expected**: A pop-up displays **SampleControl2 Custom Event 1: Hello from event 1** on the second field.
+
+1. Press **Trigger event 2** on the _second_ field.
+
+   **Expected**: A pop-up displays **SampleControl2 Custom Event 2: Hello from event 2** on the second field followed by an alert from the second control that says **Event 2 default prevented**
 
 ### Related articles
 
