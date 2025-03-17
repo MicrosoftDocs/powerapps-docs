@@ -50,7 +50,6 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
 - **Configure in Copilot Studio** action can create agents with the same display name for apps that have the same initial characters in the app name. When this occurs, rename the agent while publishing to avoid confusion.
-- The [Image](/microsoft-copilot-studio/authoring-send-message#add-an-image) and [Video](/microsoft-copilot-studio/authoring-send-message#add-an-image) message types from agent to user aren't supported. As a workaround, you can use Adaptive Cards.
 
 ## Related information
 
