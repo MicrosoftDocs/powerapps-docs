@@ -40,7 +40,7 @@ TODO: Model-driven apps?
 <platform-action action-type="afterPageLoad" />
 ```
 
-### Related topics
+### Related articles
 
 [Dependent Libraries](../dependent-libraries.md)   
 [Power Apps component framework manifest schema reference](index.md)   

@@ -44,7 +44,7 @@ The component sample consists of three Office UI Fabric components: a facepile, 
 - The framework host updates the bound attribute value, and the updated value flows to the component, triggering the control's [updateView](../reference/control/updateview.md) method. The control then renders again the React component with the new value.
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

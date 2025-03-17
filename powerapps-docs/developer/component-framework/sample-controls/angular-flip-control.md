@@ -40,7 +40,7 @@ The flip component sample consists of a label and a button. When you click on th
 - ClientAPI updates the bind column value, and the updated value flows to the component label. You can also use `ClientAPI` to update a column value to trigger control's [updateView](../reference/control/updateview.md) method. The component then updates the third-party model and the label gets updated.
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

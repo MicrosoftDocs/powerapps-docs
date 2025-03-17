@@ -108,7 +108,7 @@ You can define additional resource files in the manifest to include:
 
  More information: [resources element](manifest-schema-reference/resources.md)
 
-### Related topics
+### Related articles
 
 [Create and build a code component](create-custom-controls-using-pcf.md)
 

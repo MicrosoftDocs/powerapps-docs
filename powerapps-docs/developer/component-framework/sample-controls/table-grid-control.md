@@ -52,7 +52,7 @@ The `trackContainerResize` method should be called within [init](../reference/co
 
 If the allocatedHeight is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

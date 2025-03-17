@@ -86,7 +86,7 @@ private onLoadData = async () => {
 }
 ```
 
-### Related topics
+### Related articles
 
 [onOutputChange Event](../../model-driven-apps/clientapi/reference/events/onoutputchange.md)  
 [StandardControl.getOutputSchema](../reference/control/getoutputschema.md)  

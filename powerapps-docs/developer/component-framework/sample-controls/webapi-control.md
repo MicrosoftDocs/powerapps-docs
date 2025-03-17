@@ -52,7 +52,7 @@ The OData `retrieveMultiple` method renders a button in the code component. `onC
 
 On successful retrieve of the records, the code component has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an OData status container div on the code component.  The callback method from the web API call injects the result of the web API call (success or failure) into the custom control's result div.  
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

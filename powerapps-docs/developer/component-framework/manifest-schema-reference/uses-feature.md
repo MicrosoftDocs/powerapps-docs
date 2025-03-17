@@ -50,7 +50,7 @@ The following table shows the relationship of these settings to what happens in 
 |`uses-feature name="device.captureImage" required="false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
 |(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)   
 [Power Apps component framework API reference](../reference/index.md)   

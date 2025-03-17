@@ -58,7 +58,7 @@ The initial rendering generates an `IFRAME` element and appends it to the contro
 
 The [updateView](../reference/control/updateview.md) method is invoked whenever one of these columns are updated on the form. This method updates the url of the **Bing Map** IFRAME to use the new latitude and longitude values passed to the component. To view this component in run time, bind the component to a field on the form like any other code component.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

@@ -58,7 +58,7 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 > [!NOTE]
 > This is similar to calling the [Xrm.Navigation.openUrl](../../model-driven-apps/clientapi/reference/Xrm-Navigation/openUrl.md) method in ClientAPI.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

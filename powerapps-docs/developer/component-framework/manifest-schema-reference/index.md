@@ -45,7 +45,7 @@ This section contains reference documentation for manifest schema generated usin
 |[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]|Model-driven apps|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)   
 [Power Apps component framework API reference](../reference/index.md)   
