@@ -69,7 +69,7 @@ The first step is to create a new component using the [pac pcf init command](/po
    }
    ```
 
-1. Add a reference to the library under the resources in the control manifest.
+1. Add a reference to the library under the `resources` in the control manifest.
 
 #### [Before](#tab/before)
 
@@ -469,9 +469,9 @@ export class HelloWorld extends React.Component<any, { loaded: boolean }> {
 
 ### Update index.ts
 
-When the script is loaded on demand in this case, you need to make slight adjustments to how the component is created and initialized, such as new variables for references to the context and the container to update the state.
+When the script is loaded on demand, you need to make slight adjustments to how the component is created and initialized. For example, new variables for references to the context and the container to update the state.
 
-Most importantly add a  `getActions` method to react to the On Load and request the dependent control to be loaded.
+Most importantly add a `getActions` method to react to the On Load and request the dependent control to be loaded.
 
 #### [Before](#tab/before)
 
@@ -620,11 +620,11 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
 
 Now, when the page loads you see the control load with `Loading...` displayed.
 
-:::image type="content" source="media/dependent-library-loading.png" alt-text="Image of component while the form loads":::
+:::image type="content" source="media/dependent-library-loading.png" alt-text="Image of component while the form loads" lightbox="media/dependent-library-loading.png":::
 
 Once the page loads, the control updates to display `Hello from myLib Dependency On Demand Load`.
 
-:::image type="content" source="media/dependent-library-loaded.png" alt-text="Image of component once the form has loaded":::
+:::image type="content" source="media/dependent-library-loaded.png" alt-text="Image of component once the form has loaded" lightbox="media/dependent-library-loaded.png":::
 
 ### Related articles
 
