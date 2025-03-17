@@ -21,12 +21,13 @@ ai-usage: ai-assisted
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Extend your app's Copilot chat engagement and affect by incorporating rich audio, video, and simple cards as a chat response type. The **Message** node, within the flow of a topic, sends a message from the agent to the user. Messages can be simple text messages, but can also include richer components, such as images, videos, quick replies, and cards.
+Extend your app's Copilot chat engagement and affect by incorporating rich audio, video, and simple cards as a chat response type. The **Message** node, within the flow of a topic in Copilot Studio, can be used to send a message from the agent to the user in your model-driven app. Messages can be simple text messages, but can also include richer components, such as images, videos, quick replies, and cards.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
 
 ## Add an image response to Copilot chat
 
