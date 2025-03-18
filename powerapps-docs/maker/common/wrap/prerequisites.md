@@ -34,14 +34,14 @@ The following list explains what you'll need before you can start using wrap fea
 1. You need access to:
 
     - One or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project.
-    - Create azure blob storage and add the account name and container name. [More information:](/azure/storage/common/storage-account-create?tabs=azure-portal)
+    - Create azure blob storage and add the account name and container name. More information:[Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
     - [Azure portal](https://portal.azure.com/) to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites) and to register your app, which should be within the same environment as your Power Apps.
 
 1. An Azure admin must grant you access to use the specific wrap app. More information: [API permissions](wrap-how-to.md#api-permissions).
 
 1. This feature requires the apps to be part of a [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 
-1. You need an Azure key vault to perform the automatic sign-in process through Wrap wizard. Ensure that your Azure key vault is in your tenant's default subscription. If it isn't, create one using your default subscription. More information: [Create Azure Key Vault for Wrap in Power Apps](create-key-vault-for-code-signing.md).
+1. You need an Azure key vault to perform the automatic sign-in process through Wrap wizard. Ensure that your Azure key vault is in your tenant's default subscription. If it isn't, create one using your default subscription. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
     > [!NOTE]
     > This step will become mandatory from March 31, 2025.
@@ -53,7 +53,7 @@ The following list explains what you'll need before you can start using wrap fea
 There are two types of sign-in processes in Wrap:
 
 - **Manual code sign-in for Android and iOS**: This is recommended. If you're creating a mobile app package for the Android platform and plan to code sign it manually, ensure you [generate keys](code-sign-android.md#generate-keys) and then [generate a signature hash](code-sign-android.md#generate-signature-hash) before you start. You need the generated signature hash to configure the [Redirect URI](overview.md#redirect-uri). More information: [Manual code sign-in for Android](code-sign-android.md).
-- **Automatic sign-in using Wrap wizard**: This involves creating an Azure key vault. More information: [Create Azure Key Vault for Wrap in Power Apps](create-key-vault-for-code-signing.md).
+- **Automatic sign-in using Wrap wizard**: This involves creating an Azure key vault. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
 ## Add canvas app to solution
 
