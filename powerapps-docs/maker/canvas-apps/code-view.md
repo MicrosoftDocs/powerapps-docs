@@ -31,7 +31,7 @@ With code view you can:
 
 Code view shows the code for the selected control and all its child controls.
 
-Code view lets you copy and paste code to any screen in your app, or outside of Power Apps, to duplicate the control. This duplication feature is helpful when controls are highly customized and you want to share or duplicate it.
+Code view lets you copy and paste code to any screen in your app or outside of Power Apps to duplicate the control. This feature is helpful when controls are highly customized and you want to share or duplicate them.
 
 ### View code
 
@@ -46,19 +46,19 @@ Code view lets you copy and paste code to any screen in your app, or outside of 
 
 ### Copy and paste code
 
-1. To copy the code of a selected control, you can:
+1. To copy the code of a selected control:
    - Use the menu to copy.
-   - Use the shortcut "ctrl + c"
+   - Use the shortcut <kbd>Ctrl</kbd>+<kbd>C</kbd>.
    - When viewing your code in the code view popup, select **Copy code**.
 1. To add a new control from the code:
 
-   - Use the menu to paste.
-   - Use the shortcut "ctrl + v"
+- Use the menu to paste.
+- Use the shortcut <kbd>Ctrl</kbd>+<kbd>V</kbd>.
 
    :::image type="content" source="media/code-view/paste-code.png" alt-text="Screenshot of the tree view in Power Apps Studio, with the Paste code option highlighted on a control's context menu.":::
 
 > [!IMPORTANT]
-> You must use the YAML format that Power Apps Studio generates. The code is validated before the new control is created.
+> Use the YAML format that Power Apps Studio generates. The code is validated before the new control is created.
 
 ## Known limitations
 
