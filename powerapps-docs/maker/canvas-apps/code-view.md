@@ -3,7 +3,7 @@ title: Use code view for canvas app controls (preview)
 description: Learn how to use the code view in Microsoft Power Apps Studio to understand your canvas app's functionality.
 author: marcelbf
 ms.author: marcelbf
-ms.date: 11/13/2024
+ms.date: 3/18/2025
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
