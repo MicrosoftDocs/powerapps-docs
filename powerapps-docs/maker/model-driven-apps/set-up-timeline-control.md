@@ -506,7 +506,7 @@ To enable @mentions in notes and posts, follow the instructions provided in this
 > [!IMPORTANT]
 > The @mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 > <br><br>
-> Users must have the Read privilege for the **msdyn_postconfig** entity, as well as the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
+> Users must have the Read privilege for the **msdyn_postconfig** entity, and the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
 
 <!-- 
 ## Configure dashboard timelines
