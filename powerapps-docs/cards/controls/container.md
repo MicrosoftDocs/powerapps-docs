@@ -16,6 +16,8 @@ contributors:
 
 # Container control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A standard container, useable with almost any control.
 
 A container takes on the properties of the first control placed inside it. Only controls of the same type can be added to a container.

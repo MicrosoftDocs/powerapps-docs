@@ -1,7 +1,7 @@
 ---
 title: Cards for Power Apps overview
 description: Learn about cards for Microsoft Power Apps.
-ms.date: 2/22/2024
+ms.date: 3/3/2025
 ms.topic: overview
 author: iaanw
 ms.author: iawilt
@@ -11,6 +11,8 @@ ms.collection:
 ---
 
 # Cards for Power Apps overview
+
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
 
 Power Apps cards are micro-apps with enterprise data, workflows, and interactive, lightweight UI elements that other applications can use as content. Because cards are part of the Power Apps ecosystem, they can add business logic through Power Fx and integration with business data through Power Platform connectors. Using cards, you can quickly build and share rich, actionable apps without any coding or IT expertise.
 

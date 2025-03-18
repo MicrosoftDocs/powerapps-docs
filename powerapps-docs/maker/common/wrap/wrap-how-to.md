@@ -44,8 +44,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
    - **Primary app**: Select the app your end users see when the mobile app is launched.
    - **Secondary app(s)**: Optional other apps that you can bundle the same build for mobile app package along with the Primary app.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps-updated.png "Choose the apps to wrap")
+    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/select-apps-updated.png":::
   
      > [!NOTE]
      > - You can use the same Primary app in multiple wrap projects.
@@ -53,14 +52,52 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 
 2.  Select **Next**.
 
-### Step 2: Register app
+### Step 2: Target platform 
+
+1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
+
+    > [!NOTE]
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. Use this same bundle ID in step 6 when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+
+2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
+
+3. Select the **Azure Key Vault URI** from the list and select **Next**. 
+If you don't have any entries in **Azure Key Vault URI** list, you need to create Azure key vault first. More information: [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
+
+4. Create an Azure blob storage account and container name if you don't have it set up already. More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating an Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
+
+5. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Secrets** to create Azure blob storage secret name if not done already. More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault). While creating a secret, you'll need your access key. To view and copy your access key refer [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+
+:::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
+
+Enter the Azure blob storage access key in **Secret value** field.
+
+:::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
+
+6. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Tags**, create a new tag with the same secret value as created in the preceding step.
+
+:::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
+
+7. Set the **Sign my app** toggle to **On** or **Off**.
+
+    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
+
+You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
+  
+   - [Manual code sign for iOS](code-sign-ios.md)
+   - [Manual code sign for Android](code-sign-android.md) 
+   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+
+> [!NOTE]
+> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+
+6.  Select **Next**.
+
+### Step 3: Register app
 
 On the **Register your app** screen, register your application manually in Azure to establish a trust relationship between your app and the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
 
 Your app must be registered in Microsoft Entra so that your app users can sign in. If you have already registered, find your registration in the owned registration field.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Create a new app registration.](media/how-to-v2/new-app-reg-updated.png "New app registration")
 
 If you don't see your registered app name in the **Owned registrations** dropdown, follow these steps.
 
@@ -71,8 +108,7 @@ If you don't see your registered app name in the **Owned registrations** dropdow
     > The format of the Android hash key is 28-digit alphanumeric hash number such as  –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=.
     > If the signature hash key already exists, there's no need to create a new one. You can reuse the previously generated signature hash key when creating a new app registration.
 
-   > [!div class="mx-imgBorder"]
-   > ![Add app registration details.](media/how-to-v2/new-app-reg2-updated.png "Add app registration")
+    :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
 
 #### Configure admin allowed third-party apps
 
@@ -88,7 +124,7 @@ When you register the app, Azure admin needs to provide access to continue. Foll
 
 Once you complete the preceding steps the registration screen look like the following screenshot.
 
- :::image type="content" source="media/how-to-v2/register-screen.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/register-screen.png":::
+ :::image type="content" source="media/how-to-v2/new-app-reg-updated.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/new-app-reg-updated.png":::
 
 #### API permissions
 
@@ -99,14 +135,14 @@ When you register the app, Azure admin also needs to grant access to API permiss
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
 
-### Step 3: Configure branding
+### Step 4: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
 
      > [!NOTE]
      > All the images must be in .png format. A default image will be used if no custom images are selected.
    
-   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger. 
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024 px by 1024 px .png image or larger. Recommended image size for Android: 432 px by 432 px .png image or larger.
    - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
@@ -115,53 +151,36 @@ When you register the app, Azure admin also needs to grant access to API permiss
    
 3.  Select **Next**.
 
-### Step 4: Target platform 
+### Step 5: Manage Output
 
-1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
-
-    > [!NOTE]
-    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
-
-2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
-
-3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and select **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure Key Vault for wrap for Power Apps](create-key-vault-for-code-signing.md).
-
-     > [!div class="mx-imgBorder"] 
-     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms-updated.png "Select target platforms")
-
-You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
-  
-   - [Manual code sign for iOS](code-sign-ios.md)
-   - [Manual code sign for Android](code-sign-android.md) 
-   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-
-> [!NOTE]
-> The Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
-
-4.  Select **Next**.
-
-### Step 5: Azure blob storage
-
-1. Create an Azure key vault if you haven't already. More infomation: [Create Azure Key Vault for wrap using default subscription](create-key-vault-for-code-signing.md)
-1. Create an Azure blob storage account and container name. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
-1. Add the Azure key vault URI by clicking on the drop-down list.
-1. Add the Azure blob storage account name and the container name created during Azure blob storage account creation step.
+1. Add the Azure blob storage account name and the container name created during target platform step. 
 1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
+
+
+:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
 
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the **azure blob storage location** that you have selected in the previous step.
 
+### View your build
+
+1. After completing the wrap-up step in wrap wizard, select the **Build** button to build your project.
+1. Select **View Builds** to view your build.
+1. Alternatively, go to the **Wrap projects** option in your side pane to view the build.
+1. Hover over the required project, and select it.
+1. The **View builds** option appears at the top header. Select it to view the build status and other options.
+
+:::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
+
 ## Test and distribute mobile app package
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
-
   
 ## Register your app on Azure portal manually (optional)
-You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-2-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+You can automatically create your app registration in the wrap wizard as mentioned in [step 3](wrap-how-to.md#step-3-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
@@ -179,7 +198,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 ## Configure the API permissions for your app manually (optional)
 
-When you complete [step 4](wrap-how-to.md#step-2-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
+When you complete [step 3](wrap-how-to.md#step-3-register-app) the wrap wizard will automatically configure all the required API permissions for your app. 
 
 If you get errors in wrap wizard, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
 
@@ -262,7 +281,7 @@ You can automatically sign your mobile app package during wrap process in **Step
 - [Manual code sign for iOS](code-sign-ios.md)
 - [Manual code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-- [Create your Azure Key Vault for automated code signing](create-Key-Vault-for-code-signing.md)
+- [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)  
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
 

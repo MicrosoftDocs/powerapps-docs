@@ -9306,6 +9306,91 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/customize-list-form.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-alerts-flow.md",
+      "redirect_url": "/power-bi/collaborate-share/service-flow-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-approval-flow.md",
+      "redirect_url": "/power-automate/create-approval-response-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-app.md",
+      "redirect_url": "/powerapps-docs/maker/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-build-report.md",
+      "redirect_url": "/power-bi/create-reports/service-quick-create-sharepoint-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-embed-report.md",
+      "redirect_url": "/power-bi/collaborate-share/service-embed-report-spo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-generate-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-publish-report.md",
+      "redirect_url": "/power-bi/paginated-reports/paginated-reports-save-to-power-bi-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-setup.md",
+      "redirect_url": "/powerapps-docs/maker/canvas-apps/app-from-sharepoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint-scenario-summary.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-choice-to-lookup.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-filter-search-list.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-intro.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-lookup-list-permissions.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/sharepoint-list-integration-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/webinars.md",
       "redirect_url": "/power-apps/",
       "redirect_document_id": false
@@ -9319,6 +9404,126 @@
       "source_path": "powerapps-docs/maker/common/maker-matching.md",
       "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/data-platform-create-app.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/get-started-create-from-data.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/connections/connection-excel.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/get-started-create-from-blank",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/how-to-excel-tips.md",
+      "redirect_url": "https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664",
+   },
+  {
+      "source_path": "powerapps-docs/maker/canvas-apps/sample-crisis-communication-app.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/use.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/configure-data-reporting.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response/deploy-configure.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/emergency-response-data-transfer.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/deploy.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/upgrade.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/configure.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/portals-admin-reporting.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/regional-emergency-response/portals-user.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/deploy-solution.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/overview.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-dashboards.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/use-mobile-app.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/crisis-financial-impact-tracker/configure-data.md",
+      "redirect_url": "https://learn.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/transform-infopath.md",
+      "redirect_url": "/power-apps/maker/canvas-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/chatbots.md",
+      "redirect_url": "/microsoft-copilot-studio/authoring-first-bot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/virtual-agent.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/ai-overview",
+      "redirect_document_id": false
     }
+   
   ]
 }

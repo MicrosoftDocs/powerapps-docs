@@ -78,7 +78,7 @@ Wrap supports customization of the mobile app bootstrap experience to match the 
 
 :::image type="content" source="media/wrap-intro/wrap-branding.png" alt-text="Branding in wrap." border="false":::
 
-Branding customization options are available when you're building your wrap project. More information: [Configure branding](wrap-how-to.md#step-3-configure-branding)
+Branding customization options are available when you're building your wrap project. More information: [Configure branding](wrap-how-to.md#step-4-configure-branding)
 
 ## Understanding wrap terminology
 
@@ -128,7 +128,7 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded as mentioned in step 6.
+The bundle ID is a unique identifier you create for your app. Use any bundle ID name that follows a reverse domain name pattern. A bundle ID must contain one period (.) and no spaces. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault for wrap](create-key-vault-for-code-signing.md) once iOS or Android certificates are created and uploaded. If you already created the Azure key vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com). Use this same bundle ID in [Step 2: Target platform](wrap-how-to.md#step-2-target-platform)
 
 ### Code signing
 

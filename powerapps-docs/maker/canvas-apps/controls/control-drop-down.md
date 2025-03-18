@@ -1,11 +1,11 @@
 ---
 title: Drop down control in Power Apps
-description: Learn about the details, properties and examples of the drop down control in Power Apps.
+description: Learn about the details, properties, and examples of the drop-down control in Power Apps.
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/06/2022
+ms.date: 3/13/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
@@ -19,7 +19,7 @@ contributors:
 A list that shows only the first item unless the user opens it.
 
 ## Description
-A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.  The control will show a maximum of 500 items.
+A **Drop down** control conserves screen real estate, especially when the list contains many choices. The control takes up only one line unless the user selects the chevron to reveal more choices. The control shows a maximum of 500 items.
 
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before the user specifies a different value.
@@ -77,7 +77,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](properties-core.md)** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – Actions to perform when the user selects a control.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -87,11 +87,11 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user selects that control.
 
-**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user selects that control.
 
-**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user selects that control.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
@@ -126,28 +126,28 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 ### Simple list
 
-1. Add a **Drop down** control, and then set its **[Items](properties-core.md)** property to this expression:
+1. Add a **Drop down** control and set its **[Items](properties-core.md)** property to this expression:
 
     `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Show the items in the list by selecting the control's down arrow while pressing the Alt key.
+1. Show the items in the list by selecting the control's down arrow while pressing the **Alt** key.
 
 ### List from a data source
 The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Microsoft Dataverse database has been created and sample data added.
 
-1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** table](../data-platform-create-app-scratch.md#specify-a-table).
+1. [Open a blank app](../data-platform-create-app-scratch.md#add-a-dataverse-table-in-a-blank-app) and add the **Accounts** table from Dataverse.
 
-1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
+1. Add a **Drop down** control and set its **[Items](properties-core.md)** property to this formula:
 
     `Distinct(Accounts, 'Address 1: City')`
 
     This formula shows all the cities in the **Accounts** table. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
-1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
+1. (Optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
-    `Filter(Accounts, address1_city = Cities.Selected.Result)`
+    `Filter(Accounts, address1_city == Cities.Selected.Result)`
 
     This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** table for which the city matches the selected value in the **Cities** control.
 
