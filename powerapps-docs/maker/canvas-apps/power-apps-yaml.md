@@ -3,7 +3,7 @@ title: Source code files for canvas apps (pa.yaml)
 description: Learn about how to view source code files for canvas apps.
 author: marcelbf
 ms.author: marcelbf
-ms.date: 11/1/2024
+ms.date: 3/18/2025
 ms.topic: conceptual
 ms.reviewer: 
 ms.subservice: canvas-maker
@@ -92,11 +92,11 @@ This schema represents an experimental format employed by the Power Platform CLI
 
 You can't directly convert ***.fx.yaml** files to the new formats. To convert older apps, you need to package the canvas app as a **.msapp** file and import it into Power Apps Studio.
 
-## Early Preview
+## Preview
 
-This version is used by [Code view](code-view.md) during the Public Preview. Is designed to create apps within Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted (like the experimental format).
+This version is used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, allowing you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted (like the experimental format).
 
-The Early Preview format was temporary and it is no longer in use. You can paste code from the Early preview format
+The format during the preview was temporary and it is no longer in use. You can paste code from the preview format.
 
 Here are the changes made from the experimental format:
 
