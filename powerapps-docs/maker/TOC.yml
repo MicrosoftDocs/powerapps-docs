@@ -1258,9 +1258,9 @@
     items:
     - name: Working with Source Code
       items:
-        - name: Code View (preview)
+        - name: Code View
           href: ./canvas-apps/code-view.md        
-        - name: View source code files for canvas apps (preview)
+        - name: Source code files for canvas apps
           href: ./canvas-apps/power-apps-yaml.md
         - name: Use Git version control to edit canvas apps (experimental)
           href: ./canvas-apps/git-version-control.md
