@@ -577,7 +577,7 @@ Your project should look like this in Visual Studio Code Explorer:
    ```
    PS C:\projects\quickspa> npx parcel src/index.html
    Server running at http://localhost:1234
-✨ Built in 4.20s
+   Built in 4.20s
    ```
 
 1. Press <kbd>Ctrl</kbd> + click the http://localhost:1234 link to open your browser.
