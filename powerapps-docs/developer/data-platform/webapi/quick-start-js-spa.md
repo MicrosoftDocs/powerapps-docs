@@ -50,9 +50,9 @@ The following table describes the prerequisites needed to complete this quicksta
 |---|---|
 |**Privileges to create an Entra App registration**|You can't complete this quickstart without the ability create a Microsoft Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
 |**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
-|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to complete the instructions install Parcel and the MSAL.js library.|
+|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart creates a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to install Parcel and the MSAL.js library.|
 |**Parcel**|Modern web applications typically have a lot of dependencies on open source libraries distributed using npm as well as scripts that need to be managed and optimized during the build process. These tools are usually called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
-|**Web Technologies**|Basic knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works.|
+|**Web Technologies**|Knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works.|
 
 ## Register a SPA application
 
@@ -100,9 +100,9 @@ You can register your application using either the:
 1. In the **Manage** area, select **API permissions**.
 1. Select **Add a permission**.
 1. In the **Request API permissions** flyout, select the **APIs my organization uses** tab.
-1. Type 'Dataverse' to find application (client) ID `00000007-0000-0000-c000-000000000000`
-1. Select the Dataverse application
-1. In **Select permissions**, `user_impersonation` is the only available delegated permission. Select that permission
+1. Type 'Dataverse' to find application (client) ID `00000007-0000-0000-c000-000000000000`.
+1. Select the Dataverse application.
+1. In **Select permissions**, `user_impersonation` is the only available delegated permission. Select it.
 1. Select **Add permissions**.
 
 ### [PowerShell Script](#tab/ps)
@@ -187,10 +187,15 @@ When you have your tenant ID, you can create the app registration using the Azur
 
    `$tenantId = "<your-tenant-id>" # Replace with your tenant ID`
 
-1. Press F5 to execute the script.
+1. Press <kbd>F5</kbd> to execute the script.
 1. When the script runs, the device authorization flow begins. Find a message like the following in the terminal window:
 
+   ```
    [Login to Azure] To sign in, use a web browser to open the page <https://microsoft.com/devicelogin> and enter the code A1BC2DE3F to authenticate.
+   ```
+
+   Where `A1BC2DE3F` is a generated code value.
+
 
 1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link. This link opens a series of dialogs in your browser.
 
@@ -207,8 +212,8 @@ When you have your tenant ID, you can create the app registration using the Azur
 
    const config = {
       baseUrl: "https://<yourorg>.api.crm.dynamics.com", //<= Change this
-      clientId: "e89b6731-88c1-41fa-a910-30a11dc09943",
-      tenantId: "effdd265-a4b3-4bbf-90df-2794e5f57515",
+      clientId: "11112222-bbbb-3333-cccc-4444dddd5555",
+      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee",
       redirectUri: "http://localhost:1234"
    };
    ```
@@ -244,14 +249,12 @@ Copy the `config` variable and you use it when you [Update index.js](#update-ind
 
 The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio code.
 
-
-
 1. Open a terminal window to a place where you want to create a project. For these instructions, we will use `C:\projects`.
 1. Type `mkdir quickspa` and press <kbd>Enter</kbd> to create a new folder named `quickspa`.
 1. Type `cd quickspa` and press <kbd>Enter</kbd> to move into the new folder.
 1. Type `npm install --save-dev parcel` and press <kbd>Enter</kbd> to install Parcel and initialize the project.
 1. Type `npm install @azure/msal-browser` and press <kbd>Enter</kbd> to install the MSAL.js library
-1. Type `mkdir src` and press <kbd>Enter</kbd> to create a `src` folder where you will add HTML, JS, and CSS files for your app.
+1. Type `mkdir src` and press <kbd>Enter</kbd> to create a `src` folder where you will add HTML, JS, and CSS files for your app in the following steps.
 1. Type `code .` and press <kbd>Enter</kbd> to open Visual Studio Code in the context of the `quickspa` folder.
 
 Your project should look like this in Visual Studio Code Explorer:
@@ -313,8 +316,8 @@ This file contains all the logic that makes the `index.html` page dynamic.
 
    const config = {
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
-      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", 
-      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
+      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
       redirectUri: "http://localhost:1234"
    };
 
@@ -479,15 +482,15 @@ The `index.js` script contains the following constants and functions:
 
 |Item|Description  |
 |---------|---------|
-|`config` |Contains the data used by the Microsoft Authentication Library (MSAL) configuration|
-|`msalConfig` |Microsoft Authentication Library (MSAL) configuration|
-|`msalInstance`|The MSAL [PublicClientApplication](/javascript/api/%40azure/msal-browser/publicclientapplication) instance|
-|`container`|The element where messages are displayed|
+|`config` |Contains the data used by the Microsoft Authentication Library (MSAL) configuration.|
+|`msalConfig` |Microsoft Authentication Library (MSAL) configuration.|
+|`msalInstance`|The MSAL [PublicClientApplication](/javascript/api/%40azure/msal-browser/publicclientapplication) instance. |
+|`container`|The element where messages are displayed.|
 |`getToken`|Retrieves an access token using MSAL.|
 |`logIn`|Event listener function for the login button. Opens a choose account dialog.|
 |`logOut`|Event listener function for the logout button. Opens a choose account dialog.|
 |`whoAmI`|Asynchronous function that calls the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to retrieve data from Dataverse. |
-| whoAmIButton event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
+| `whoAmIButton` event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
 
 #### Update index.js
 
@@ -580,7 +583,7 @@ Your project should look like this in Visual Studio Code Explorer:
    Built in 4.20s
    ```
 
-1. Press <kbd>Ctrl</kbd> + click the http://localhost:1234 link to open your browser.
+1. Press <kbd>Ctrl</kbd> + click the [http://localhost:1234](http://localhost:1234) link to open your browser.
 1. In your browser, select the **Login** button.
 
    The **Sign in to your account** dialog opens.
@@ -594,17 +597,22 @@ Your project should look like this in Visual Studio Code Explorer:
 1. Select **Accept** on the **Permissions requested** dialog.
 1. Select the **WhoAmI** button.
 
-   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse). -->
+   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
+
 
 ## Trouble shooting
 
 This section contains errors that you might encounter running this quick start.
+
+<!-- TODO: Ask people to create issues they may have in our samples repo related to this quick start sample -->
 
 ### Selected user account doesn't exist in tenant
 
 When the account you select doesn't belong to the same Microsoft Entra tenant as the registered application, you get this error in the **Pick an account** dialog:
 
 `Selected user account does not exist in tenant '{Your tenant name}' and cannot access the application '{Your application ID}' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
+
+**Resolution**: Make sure you choose the correct user.
 
 ## Next steps
 
