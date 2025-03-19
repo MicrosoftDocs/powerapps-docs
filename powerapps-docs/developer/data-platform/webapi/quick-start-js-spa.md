@@ -24,8 +24,8 @@ This quickstart demonstrates how you can connect to Dataverse and use the Web AP
 
 This quickstart focuses on connecting to the Dataverse Web API with JavaScript using a SPA client application with a minimum of number of steps. When you complete this quickstart, you're able to:
 
- - Sign in and connect to Dataverse
- - Invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) and display your `UserID` value.
+- Sign in and connect to Dataverse
+- Invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) and display your `UserID` value.
 
 :::image type="content" source="media/quickstart-web-api-js-spa.png" alt-text="Completed running quickstart":::
 
@@ -50,8 +50,8 @@ The following table describes the prerequisites needed to complete this quicksta
 |---|---|
 |**Privileges to create an Entra App registration**|You can't complete this quickstart without the ability create a Microsoft Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
 |**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
-|**Live Server Visual Studio Code extension**|To keep things simple, the experience in this quickstart depends on the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Visual Studio Code extension. You can install this extension by searching for 'Live Server' in the [Visual Studio Code marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and [installing it](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension).<br /><br />**Why Live Server?**<br />Modern JavaScript development practices are highly dependent on technologies like [Node Package Manager (npm)](https://www.npmjs.com/), [webpack](https://webpack.js.org/), and whatever frameworks you choose. These extensions allow for managing all the libraries that modern web applications depend on. This quickstart avoids taking dependencies on anything other than the MSAL.js library. The Live Server extension makes it easy to serve an HTML page on your local computer with a minimum of complexity.<br /><br />For quickstarts and samples that show SPA applications using different frameworks, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
-|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But npm is installed with Node.js, and you need npm to complete the instructions to [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library). This dependency is why there's a step to [Install Node.js](#install-nodejs).|
+|**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart uses a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to complete the instructions install Parcel and the MSAL.js library.|
+|**Parcel**|Modern web applications typically have a lot of dependencies on open source libraries distributed using npm as well as scripts that need to be managed and optimized during the build process. These tools are usually called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
 |**Web Technologies**|Basic knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works.|
 
 ## Register a SPA application
@@ -85,7 +85,7 @@ You can register your application using either the:
 1. For  **Redirect URI (optional)**
 
    1. For **Select a platform**, choose **Single-page application (SPA)**.
-   1. Enter `http://localhost:5500` as the value.
+   1. Enter `http://localhost:1234` as the value.
 
 1. Select **Register** to save your changes.
 1. In the window for the app registration you created, in the **Overview** tab, below **Essentials**, you can find these values:
@@ -104,7 +104,6 @@ You can register your application using either the:
 1. Select the Dataverse application
 1. In **Select permissions**, `user_impersonation` is the only available delegated permission. Select that permission
 1. Select **Add permissions**.
-
 
 ### [PowerShell Script](#tab/ps)
 
@@ -133,7 +132,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    # Values to pass to the New-AzADApplication command
    $tenantId = "<your-tenant-id>" # Replace with your tenant ID
    $appName = "Dataverse Web API SPA Quickstart"
-   $redirectUri = "http://localhost:5500"
+   $redirectUri = "http://localhost:1234"
 
 
    # Connect to Azure
@@ -191,9 +190,8 @@ When you have your tenant ID, you can create the app registration using the Azur
 1. Press F5 to execute the script.
 1. When the script runs, the device authorization flow begins. Find a message like the following in the terminal window:
 
-   
-   [Login to Azure] To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code A1BC2DE3F to authenticate.
-   
+   [Login to Azure] To sign in, use a web browser to open the page <https://microsoft.com/devicelogin> and enter the code A1BC2DE3F to authenticate.
+
 1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link. This link opens a series of dialogs in your browser.
 
    1. In the **Enter code to allow access** dialog, enter the code you copied and select **Next**.
@@ -211,7 +209,7 @@ When you have your tenant ID, you can create the app registration using the Azur
       baseUrl: "https://<yourorg>.api.crm.dynamics.com", //<= Change this
       clientId: "e89b6731-88c1-41fa-a910-30a11dc09943",
       tenantId: "effdd265-a4b3-4bbf-90df-2794e5f57515",
-      redirectUri: "http://localhost:5500"
+      redirectUri: "http://localhost:1234"
    };
    ```
 
@@ -219,9 +217,10 @@ Copy the `config` variable and you use it when you [Update index.js](#update-ind
 
 ---
 
-## Install Node.js
+> [!NOTE]
+> If you don't have the privileges to create an app registration for your company, get a tenant of your own through via the [Power Apps Developer Plan](/power-platform/developer/plan).
 
-This step is necessary to complete the instructions later in [Get the msal-browser.min.js library](#get-the-msal-browserminjs-library).
+## Install Node.js
 
 1. Go to [Download Node.js](https://nodejs.org/en/download).
 1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux) and download it.
@@ -243,40 +242,27 @@ This step is necessary to complete the instructions later in [Get the msal-brows
 
 ## Create a project
 
-1. Create a folder somewhere on your computer. The name isn't important, but for these instructions call it `quickspa`.
-1. Open this folder using Visual Studio Code.
+The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio code.
 
-   When you use Windows 11, you can open the folder using Windows explorer with these steps.
 
-   1. Right click the folder to open the context menu.
-   1. Select **Show more options** from the context menu.
-   1. Select **Open with Code** from the context menu.
 
-   Otherwise, you can open a terminal or command window and navigate to the folder. Then type `code .`
+1. Open a terminal window to a place where you want to create a project. For these instructions, we will use `C:\projects`.
+1. Type `mkdir quickspa` and press <kbd>Enter</kbd> to create a new folder named `quickspa`.
+1. Type `cd quickspa` and press <kbd>Enter</kbd> to move into the new folder.
+1. Type `npm install --save-dev parcel` and press <kbd>Enter</kbd> to install Parcel and initialize the project.
+1. Type `npm install @azure/msal-browser` and press <kbd>Enter</kbd> to install the MSAL.js library
+1. Type `mkdir src` and press <kbd>Enter</kbd> to create a `src` folder where you will add HTML, JS, and CSS files for your app.
+1. Type `code .` and press <kbd>Enter</kbd> to open Visual Studio Code in the context of the `quickspa` folder.
 
-### Get the msal-browser.min.js library
+Your project should look like this in Visual Studio Code Explorer:
 
-This quickstart uses the latest version of the [Microsoft Authentication Library for JavaScript (MSAL.js) for Browser-Based Single-Page Applications](https://www.npmjs.com/package/@azure/msal-browser).
+:::image type="content" source="media/quickspa-project.png" alt-text="Shows the newly created quickspa project before any files are added.":::
 
-We need a copy of the latest version of the `msal-browser.min.js` library, but we don't want to take a dependency on using npm to build and run our code.
+### Create an HTML page
 
-1. In Visual Studio Code, [open a terminal window](https://code.visualstudio.com/docs/terminal/basics) and type `npm init -y`.
+The instructions in this section describe how to create the HTML file that provides the user interface for the SPA application.
 
-   This command creates a `package.json` file in your folder.
-
-1. In the terminal window, type `npm install @azure/msal-browser`.
-
-   This command creates a `node_modules` folder and a `package-lock.json` file in the `quickspa` folder.
-
-1. Go to `node_modules\@azure\msal-browser\lib\` and copy the `msal-browser.min.js` file.
-1. Paste the `msal-browser.min.js` file into the root of the `quickspa` folder.
-1. Delete the `node_modules` folder and the `package-lock.json` and`package.json` files.
-
-   The `msal-browser.min.js` file should be the only file left in the `quickspa` folder.
-
-### Create HTML page
-
-1. Create a new file named `index.html`.
+1. Create a new file in the `src` folder named `index.html`.
 1. Copy and paste this content to the `index.html` page:
 
    ```html
@@ -285,20 +271,20 @@ We need a copy of the latest version of the `msal-browser.min.js` library, but w
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>QuickSPA</title>
-      <link rel="stylesheet" href="styles.css" />
+      <title>Dataverse Web API JavaScript Quick Start</title>
+      <link rel="stylesheet" href="styles/styles.css"/>
    </head>
    <body>
       <header>
-         <h1>Welcome to QuickSPA</h1>
+         <h1>Dataverse Web API JavaScript Quick Start</h1>
          <button id="loginButton">Login</button>
          <button id="logoutButton" class="hidden">Logout</button>
       </header>
-      <nav id=buttonContainer class="disabled">
+      <nav id="buttonContainer" class="disabled">
          <button id="whoAmIButton">WhoAmI</button>
       </nav>
       <main id="container"></main>
-      <script type="module" src="index.js"></script>
+      <script type="module" src="scripts/index.js"></script>
    </body>
    </html>
    ```
@@ -314,23 +300,22 @@ This HTML provides the following elements:
 |`container`|[main](https://developer.mozilla.org/docs/Web/HTML/Element/main)|Area where information can be displayed to the user.|
 ||[script](https://developer.mozilla.org/docs/Web/HTML/Element/script)|Loads the `index.js` file after the rests of the elements of the page loads.|
 
-### Create JavaScript script
+### Create a JavaScript script
 
 This file contains all the logic that makes the `index.html` page dynamic.
 
-1. Create a new file named `index.js`.
+1. Create a new folder in the `src` folder named `scripts`.
+1. Create a new file in `scripts` folder named `index.js`.
 1. Copy and paste this content into the `index.js` page:
 
    ```javascript
-   // Import the MSAL library in the same folder as this file
-   import "/msal-browser.min.js";
+   import { PublicClientApplication } from "@azure/msal-browser";
 
    const config = {
-   // Change these values in the next step:
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
-      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
-      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
-      redirectUri: "http://localhost:5500",
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", 
+      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+      redirectUri: "http://localhost:1234"
    };
 
    // Microsoft Authentication Library (MSAL) configuration
@@ -340,7 +325,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       authority: "https://login.microsoftonline.com/" + config.tenantId,
       redirectUri: config.redirectUri,
       postLogoutRedirectUri: config.redirectUri,
-      },
+   },
    cache: {
       cacheLocation: "sessionStorage", // This configures where your cache will be stored
       storeAuthStateInCookie: true,
@@ -348,14 +333,71 @@ This file contains all the logic that makes the `index.html` page dynamic.
    };
 
    // Create an instance of MSAL
-   const msalInstance = new msal.PublicClientApplication(msalConfig);
-   await msalInstance.initialize();
+   const msalInstance = new PublicClientApplication(msalConfig);
 
    // body/main element where messages are displayed
    const container = document.getElementById("container");
 
+   // Event handler for login button
+   async function logIn() {
+
+   await msalInstance.initialize();
+
+   if (!msalInstance.getActiveAccount()) {
+      const request = {
+         scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
+      };
+      try {
+         const response = await msalInstance.loginPopup(request);
+         msalInstance.setActiveAccount(response.account);
+
+
+         // Hide the loginButton so it won't get pressed twice
+         document.getElementById("loginButton").style.display = "none";
+
+         // Show the logoutButton
+         const logoutButton = document.getElementById("logoutButton");
+         logoutButton.innerHTML = "Logout " + response.account.name;
+         logoutButton.style.display = "block";
+         // Enable any buttons in the nav element
+         document.getElementsByTagName("nav")[0].classList.remove("disabled");
+      } catch (error) {
+         let p = document.createElement("p");
+         p.textContent = "Error logging in: " + error;
+         p.className = "error";
+         container.append(p);
+      }
+   } else {
+      // Clear the active account and try again
+      msalInstance.setActiveAccount(null);
+      this.click();
+      }
+   }
+
+   // Event handler for logout button
+   async function logOut() {
+   const activeAccount = await msalInstance.getActiveAccount();
+   const logoutRequest = {
+      account: activeAccount,
+      mainWindowRedirectUri: config.redirectUri,
+   };
+
+   try {
+      await msalInstance.logoutPopup(logoutRequest);
+
+      document.getElementById("loginButton").style.display = "block";
+
+      this.innerHTML = "Logout ";
+      this.style.display = "none";
+      document.getElementsByTagName("nav")[0].classList.remove("disabled");
+   } catch (error) {
+      console.error("Error logging out: ", error);
+      }
+   }
+
    /**
    * Retrieves an access token using MSAL (Microsoft Authentication Library).
+   * Set as the getToken function for the DataverseWebAPI client in the login function.
    *
    * @async
    * @function getToken
@@ -370,73 +412,14 @@ This file contains all the logic that makes the `index.html` page dynamic.
    try {
       const response = await msalInstance.acquireTokenSilent(request);
       return response.accessToken;
-   } catch (error) {
-      if (error instanceof msal.InteractionRequiredAuthError) {
-            const response = await msalInstance.acquireTokenPopup(request);
-            return response.accessToken;
-         } else {
-            console.error(error);
-            throw error;
-         }
-      }
-   }
-
-   // Event handler for login button
-   async function logIn() {
-   // When there is no active account.
-   if (!msalInstance.getActiveAccount()) {
-      const request = {
-         scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
-      };
-      try {
-         // Open dialog to choose account
-         const response = await msalInstance.loginPopup(request);
-         msalInstance.setActiveAccount(response.account);
-
-         // Hide the login button user can't click it again.
-         this.style.display = "none";
-
-         // Show the logout button
-         const logoutButton = document.getElementById("logoutButton");
-         logoutButton.innerHTML = "Logout " + response.account.name;
-         logoutButton.style.display = "block";
-         document.getElementsByTagName("nav")[0].classList.remove("disabled");
-
       } catch (error) {
-         let p = document.createElement("p");
-         p.textContent = "Error logging in: " + error;
-         p.className = "error";
-         container.append(p);
-      }
+      if (error instanceof msal.InteractionRequiredAuthError) {
+         const response = await msalInstance.acquireTokenPopup(request);
+         return response.accessToken;
       } else {
-      // Remove the active account and try again
-      msalInstance.setActiveAccount(null);
-      this.click();
-      }
-   }
-
-   // Event handler for logout button
-   async function logOut() {
-   
-      const activeAccount = await msalInstance.getActiveAccount();
-      const logoutRequest = {
-         account: activeAccount,
-         mainWindowRedirectUri: config.redirectUri,
-      };
-
-   try {
-      // Opens dialog to choose account
-      await msalInstance.logoutPopup(logoutRequest);
-
-      // return the button to the starting state
-      document.getElementById("loginButton").style.display = "block";
-      this.innerHTML = "Logout";
-      this.style.display = "none";
-
-      document.getElementsByTagName("nav")[0].classList.add("disabled");
-      } 
-   catch (error) {
-         console.error("Error logging out: ", error);
+         console.error(error);
+         throw error;
+         }
       }
    }
 
@@ -447,11 +430,10 @@ This file contains all the logic that makes the `index.html` page dynamic.
    document.getElementById("logoutButton").onclick = logOut;
 
    /// Function to get the current user's information
-   /// using the WhoAmI endpoint of the Dataverse Web API.
+   /// using the WhoAmI function of the Dataverse Web API.
    async function whoAmI() {
    const token = await getToken();
-   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", 
-   {
+   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", {
       method: "GET",
       headers: {
          Authorization: `Bearer ${token}`,
@@ -473,29 +455,27 @@ This file contains all the logic that makes the `index.html` page dynamic.
 
    // Add event listener to the whoAmI button
    document.getElementById("whoAmIButton").onclick = async function () {
-      // Clear any previous messages
-      container.replaceChildren();
-      try {
-         const response = await whoAmI();
-         let p1 = document.createElement("p");
-         p1.textContent =
-            "Congratulations! You connected to Dataverse using the Web API.";
-         container.append(p1);
-         let p2 = document.createElement("p");
-         p2.textContent = "User ID: " + response.UserId;
-         container.append(p2);
-      } 
-      catch (error) {
-            let p = document.createElement("p");
-            p.textContent = "Error fetching user info: " + error;
-            p.className = "error";
-            container.append(p);
+   // Clear any previous messages
+   container.replaceChildren();
+   try {
+      const response = await whoAmI();
+      let p1 = document.createElement("p");
+      p1.textContent =
+         "Congratulations! You connected to Dataverse using the Web API.";
+      container.append(p1);
+      let p2 = document.createElement("p");
+      p2.textContent = "User ID: " + response.UserId;
+      container.append(p2);
+   } catch (error) {
+      let p = document.createElement("p");
+      p.textContent = "Error fetching user info: " + error;
+      p.className = "error";
+      container.append(p);
       }
    };
    ```
 
 The `index.js` script contains the following constants and functions:
-
 
 |Item|Description  |
 |---------|---------|
@@ -509,10 +489,9 @@ The `index.js` script contains the following constants and functions:
 |`whoAmI`|Asynchronous function that calls the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to retrieve data from Dataverse. |
 | whoAmIButton event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
 
-
 #### Update index.js
 
-Update the `index.js` file to replace the following lines with the values from [Register a SPA application](#register-a-spa-application).
+Update the `index.js` file to replace the following lines with the `clientId` and `tenantId` values from [Register a SPA application](#register-a-spa-application) and set the `baseUrl` to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
    ```JavaScript
       baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
@@ -520,12 +499,13 @@ Update the `index.js` file to replace the following lines with the values from [
       tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
    ```
 
-### Create CSS page
+### Create a CSS page
 
-The Cascading Style Sheet (CSS) file makes this page more attractive and has a role in controlling when controls are disabled or hidden.
+The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has a role in controlling when controls are disabled or hidden.
 
-1. Create a new file named `styles.css`.
-1. Copy and paste this into the `styles.css` page:
+1. Create a new folder named `styles` in the `src` folder.
+1. Create a new file named `styles.css` in the `styles` folder.
+1. Copy and paste this text into the `styles.css` file:
 
    ```css
    .disabled {
@@ -542,6 +522,10 @@ The Cascading Style Sheet (CSS) file makes this page more attractive and has a r
       color: red;
    }
 
+   .expectedError {
+      color: green;
+   }
+
    body {
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
@@ -550,7 +534,9 @@ The Cascading Style Sheet (CSS) file makes this page more attractive and has a r
       background-color: #f9f9f9;
    }
 
-   h1 {
+   h1,
+   h2,
+   h3 {
       color: #2c3e50;
    }
 
@@ -576,10 +562,26 @@ The Cascading Style Sheet (CSS) file makes this page more attractive and has a r
    }
    ```
 
+Your project should look like this in Visual Studio Code Explorer:
+
+:::image type="content" source="media/quickspa-project-with-files.png" alt-text="Shows the quickspa project after files are added.":::
+
+
 ## Try it
 
-1. In Visual Studio Code, select the **Go Live** button in the lower right corner.
-1. Select the **Login** button.
+1. In Visual Studio code, open a terminal window
+1. Type `npx parcel src/index.html` and press <kbd>Enter</kbd>.
+
+   You should expect output to the terminal that looks like this:
+
+   ```
+   PS C:\projects\quickspa> npx parcel src/index.html
+   Server running at http://localhost:1234
+✨ Built in 4.20s
+   ```
+
+1. Press <kbd>Ctrl</kbd> + click the http://localhost:1234 link to open your browser.
+1. In your browser, select the **Login** button.
 
    The **Sign in to your account** dialog opens.
 
@@ -592,7 +594,7 @@ The Cascading Style Sheet (CSS) file makes this page more attractive and has a r
 1. Select **Accept** on the **Permissions requested** dialog.
 1. Select the **WhoAmI** button.
 
-   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
+   The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse). -->
 
 ## Trouble shooting
 
@@ -603,3 +605,17 @@ This section contains errors that you might encounter running this quick start.
 When the account you select doesn't belong to the same Microsoft Entra tenant as the registered application, you get this error in the **Pick an account** dialog:
 
 `Selected user account does not exist in tenant '{Your tenant name}' and cannot access the application '{Your application ID}' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
+
+## Next steps
+
+Try other samples that use client-side JavaScript.
+
+> [!div class="nextstepaction"]
+> [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)
+
+
+Learn more about Dataverse Web API capabilities by understanding the service documents.
+
+> [!div class="nextstepaction"]
+> [Web API types and operations](web-api-types-operations.md)
+
