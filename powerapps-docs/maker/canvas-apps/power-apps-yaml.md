@@ -95,7 +95,7 @@ You can't directly convert ***.fx.yaml** files to the new formats. To convert ol
 
 This version is used by [Code view](code-view.md) during the [preview](working-with-experimental-preview.md#preview) period. It is designed to create canvas apps in Power Apps Studio, letting you easily copy and paste controls. In this version, the source code is used in Power Apps Studio instead of being converted, like the experimental format.
 
-The format during the preview was temporary and is no longer in use. You can paste code from the preview format.
+The format during preview was temporary and is no longer in use. You can paste code from the preview format.
 
 Here are the changes made from the experimental format:
 
