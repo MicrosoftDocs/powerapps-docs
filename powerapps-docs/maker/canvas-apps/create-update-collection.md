@@ -108,7 +108,7 @@ Watch this video to learn how to create and update a collection:
 
 ## Put a list into a collection
 
-1. [Create a connection to a list created using Microsoft Lists](connections/connection-sharepoint-online.md#create-a-connection).
+1. [Create a connection to a list created using Microsoft Lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection).
 
 1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your list:<br>
 
@@ -119,8 +119,7 @@ Watch this video to learn how to create and update a collection:
 1. While holding down the Alt key, select the button.
 
 
-For information about how to show data from Microsoft Lists or SharePoint (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
-Display form controls](controls/control-form-detail.md).
+For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 

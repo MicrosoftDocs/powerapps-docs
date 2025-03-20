@@ -32,11 +32,13 @@ Your next step after this article is to display and manage data from the data so
 * Connect to Twilio, and send an SMS message from your app.
 
 ## Prerequisites
+
 1. [Sign up](../signup-for-powerapps.md) for Power Apps.
 2. Sign in to [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Background on data connections
-Most Power Apps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connections**.
+
+Most canvas apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connections**.
 
 The most common type of data source is the table, which you can use to retrieve and store information. You can use connections to data sources to read and write data in Microsoft Excel workbooks, Microsoft Lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, and SQL Server.
 
@@ -54,6 +56,7 @@ In addition to creating and managing connections in [powerapps.com](https://make
 > If you want to use Power Apps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) opens so that you can create and manage connections there.
 
 ## Create a new connection
+
 1. If you haven't already done so, log in to [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. In the left navigation, expand **Data** and select **Connections**.
    
@@ -77,6 +80,7 @@ In addition to creating and managing connections in [powerapps.com](https://make
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
 ## Update or delete a connection
+
 In the list of connections, find the connection that you want to update or delete, and then select the ellipsis (...) on the right of the connection.
 
 ![Update connection.](./media/add-manage-connections/auth-or-delete.png)
@@ -93,7 +97,7 @@ The exception to this rule is for actions used in a Power Automate Flow that is 
 
 ## Manage the consent dialog appearance for custom connectors using Microsoft Entra ID OAuth
 
-By default, when end-users launch Power Apps apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using Microsoft Entra ID OAuth.
+By default, when end-users launch canvas apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using Microsoft Entra ID OAuth.
 
 ### Suppress consent dialog for apps that use custom connectors using Microsoft Entra ID OAuth
 
@@ -141,7 +145,7 @@ The owner of the custom connector must choose to edit the connector, go to the *
 
 ![Configure custom connector for single sign on](./media/add-manage-connections/custom_connector_oauth_enable_sso.png)
   
-#### Step 5. Admin configures consent bypass for the Power Apps app
+#### Step 5. Admin configures consent bypass for the app
 
 In addition to the admin consent granted on a custom application in Microsoft Entra ID, which is used by a custom connector, an admin must also configure an app to bypass consent. For each app where consent is expected to be bypassed an admin must run the following command:
 
@@ -155,6 +159,5 @@ To remove consent suppression for a custom connector, an admin must perform at l
 
 1. Remove the tenant-wide admin consent grant to the application in Azure: [Microsoft Entra’s grant tenant-wide admin consent to an application](/azure/active-directory/manage-apps/grant-admin-consent).
 1. Use the following Power Apps admin cmdlet to disable Power Apps’ attempt to suppress the consent dialog. [Clear-AdminPowerAppApisToBypassConsent](/powershell/module/microsoft.powerapps.administration.powershell/clear-adminpowerappapistobypassconsent)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
