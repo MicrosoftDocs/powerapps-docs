@@ -52,7 +52,7 @@ The following table describes the prerequisites needed to complete this quicksta
 |**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
 |**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart creates a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to install Parcel and the MSAL.js library.|
 |**Parcel**|Modern web applications typically have a lot of dependencies on open source libraries distributed using npm as well as scripts that need to be managed and optimized during the build process. These tools are usually called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
-|**Web Technologies**|Knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works.|
+|**Web Technologies**|Knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works. Understanding how to [make network requests with JavaScript](https://developer.mozilla.org/docs/Learn_web_development/Core/Scripting/Network_requests) is essential.|
 
 ## Register a SPA application
 
@@ -95,7 +95,7 @@ You can register your application using either the:
 
 1. Copy these values because you need them when you [create the .env file](#create-the-env-file) to use environment variables.
 
-#### Add Dataverse user_impersonation privilege
+#### Add Dataverse `user_impersonation` privilege
 
 1. In the **Manage** area, select **API permissions**.
 1. Select **Add a permission**.
@@ -169,9 +169,13 @@ When you have your tenant ID, you can create the app registration using the Azur
       else {
 
          Write-Host "Copy the following to paste into an .env file at the root of your project:`n"
+         Write-Host "# The environment this application will connect to."
          Write-Host "BASE_URL=https://<yourorg>.api.crm.dynamics.com"
+         Write-Host "# The registered Entra application id"
          Write-Host "CLIENT_ID=$($appResponse.appId)"
+         Write-Host "# The Entra tenant id"
          Write-Host "TENANT_ID=$($tenantId)"
+         Write-Host "# The SPA redirect URI included in the Entra application registration"
          Write-Host "REDIRECT_URI=$($redirectUri)"
       }
    }
@@ -207,9 +211,13 @@ When you have your tenant ID, you can create the app registration using the Azur
    ```
    Copy the following to paste into an .env file at the root of your project:
 
+   # The environment this application will connect to.
    BASE_URL=https://<yourorg>.api.crm.dynamics.com
+   # The registered Entra application id
    CLIENT_ID=11112222-bbbb-3333-cccc-4444dddd5555
+   # The Entra tenant id
    TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
+   # The SPA redirect URI included in the Entra application registration
    REDIRECT_URI=http://localhost:1234
    ```
 
@@ -225,7 +233,7 @@ Copy this data. You will use it when you [create the .env file](#create-the-env-
 1. Go to [Download Node.js](https://nodejs.org/en/download).
 1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux) and download it.
 1. Run the installer. Make sure you select the option to install npm along with node.
-1. Verify the installation by opening a terminal or command prompt and typing these commands and pressing enter.
+1. Verify the installation by opening a terminal or command prompt, typing these commands and pressing <kbd>Enter</kbd>.
 
    - `node -v`
    - `npm -v`
@@ -245,13 +253,17 @@ Copy this data. You will use it when you [create the .env file](#create-the-env-
 The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio code.
 
 1. Open a terminal window to a place where you want to create a project. For these instructions, we will use `C:\projects`.
-1. Type `mkdir quickspa` and press <kbd>Enter</kbd> to create a new folder named `quickspa`.
-1. Type `cd quickspa` and press <kbd>Enter</kbd> to move into the new folder.
-1. Type `npm install --save-dev parcel` and press <kbd>Enter</kbd> to install Parcel and initialize the project.
-1. Type `npm install @azure/msal-browser` and press <kbd>Enter</kbd> to install the MSAL.js library.
-1. Type `npm install dotenv` and press <kbd>Enter</kbd> to install the [dotenv](https://www.npmjs.com/package/dotenv) to access environment variables that will store potentially sensitive configuration data.
-1. Type `mkdir src` and press <kbd>Enter</kbd> to create a `src` folder where you will add HTML, JS, and CSS files for your app in the following steps.
-1. Type `code .` and press <kbd>Enter</kbd> to open Visual Studio Code in the context of the `quickspa` folder.
+1. Type the following commands and press <kbd>Enter</kbd> to achieve the following:
+
+   |Command  |Action  |
+   |---------|---------|
+   |`mkdir quickspa`|Create a new folder named `quickspa`|
+   |`cd quickspa`|Move into the new `quickspa` folder|
+   |`npm install --save-dev parcel`|Install Parcel and initialize the project|
+   |`npm install @azure/msal-browser`|Install the MSAL.js library|
+   |`npm install dotenv`|Install [dotenv](https://www.npmjs.com/package/dotenv) to access environment variables that will store potentially sensitive configuration data|
+   |`mkdir src`|Create a `src` folder where you will add HTML, JS, and CSS files for your app in the following steps|
+   |`code .`|Open Visual Studio Code in the context of the `quickspa` folder.|
 
 Your project should look like this in Visual Studio Code Explorer:
 
@@ -259,17 +271,26 @@ Your project should look like this in Visual Studio Code Explorer:
 
 ### Create the .env file
 
+Storing configuration data in the environment separate from code is a security best practice.
+
 1. Create a new file named `.env` in the root of your `quickspa` folder.
 1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values below.
 
    ```
+   # The environment this application will connect to.
    BASE_URL=https://<yourorg>.api.crm.dynamics.com
+   # The registered Entra application id
    CLIENT_ID=11112222-bbbb-3333-cccc-4444dddd5555
+   # The Entra tenant id
    TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
+   # The SPA redirect URI included in the Entra application registration
    REDIRECT_URI=http://localhost:1234
    ```
 
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
+
+> [!NOTE]
+> The `.env` file is usually not checked in, but you may want to create a `.env.example` file using the placeholder values so that people know what data it should contain. Add the `.env` file to [your .gitignore file](#create-gitignore-file) to prevent checking it in.
 
 ### Create an HTML page
 
@@ -285,7 +306,7 @@ The instructions in this section describe how to create the HTML file that provi
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Dataverse Web API JavaScript Quick Start</title>
-      <link rel="stylesheet" href="styles/styles.css"/>
+      <link rel="stylesheet" href="styles/style.css"/>
    </head>
    <body>
       <header>
@@ -344,7 +365,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
    cache: {
       cacheLocation: "sessionStorage", // This configures where your cache will be stored
       storeAuthStateInCookie: true,
-   },
+      },
    };
 
    // Create an instance of MSAL
@@ -384,7 +405,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       // Clear the active account and try again
       msalInstance.setActiveAccount(null);
       this.click();
-   }
+      }
    }
 
    // Event handler for logout button
@@ -507,8 +528,8 @@ The `index.js` script contains the following constants and functions:
 The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has a role in controlling when controls are disabled or hidden.
 
 1. Create a new folder named `styles` in the `src` folder.
-1. Create a new file named `styles.css` in the `styles` folder.
-1. Copy and paste this text into the `styles.css` file:
+1. Create a new file named `style.css` in the `styles` folder.
+1. Copy and paste this text into the `style.css` file:
 
    ```css
    .disabled {
@@ -565,6 +586,24 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
    }
    ```
 
+### Create `.gitignore` file
+
+When your app will be checked in with source control, adding a `.gitignore` file will prevent checking in files the specified files and folders.
+
+1. Create a file named `.gitignore`.
+1. Add the following content:
+
+   ```
+   .parcel-cache
+   dist
+   node_modules
+   .env
+   ```
+
+The `.parcel-cache` and `dist` folders will appear when you run the app for the first time.
+
+Not checking in the `.env` file is a security best practice. You may want to check in a placeholder `.env.sample` file with placeholder values.
+
 Your project should look like this in Visual Studio Code Explorer:
 
 :::image type="content" source="media/quickspa-project-with-files.png" alt-text="Shows the quickspa project after files are added.":::
@@ -581,9 +620,6 @@ Your `package.json` file should look something like this:
   "dependencies": {
     "@azure/msal-browser": "^4.7.0",
     "dotenv": "^16.4.7"
-  },
-  "scripts": {
-    "start": "parcel src/index.html"
   }
 }
 ```
