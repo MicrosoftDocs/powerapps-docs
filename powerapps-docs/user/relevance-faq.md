@@ -49,9 +49,9 @@ When you navigate to the results page, the search terms are treated as the compl
 
 ## Why are certain fields not showing in the suggestions?
 
-Retrieve suggestions for a field if it is searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
+Retrieve suggestions for a field if it's searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
 
-Certain fields are not eligible for suggestions, including:
+Certain fields aren't eligible for suggestions, including:
 
 - File fields
 - Fields exceeding 4,000 characters
@@ -131,7 +131,7 @@ Search functionality isn't supported for virtual tables because they don't persi
 
 ## Can I export search results?
 
-Currently, we do not have an export function for global search results. Alternatively, it is possible to programmatically access the results using the search API.
+Currently, we don't have an export function for global search results. Alternatively, you can programmatically access the results using the search API.
 
 ## How can I use the search API?
 

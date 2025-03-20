@@ -33,7 +33,7 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a few rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of the Dataverse search flyout window.](media/legend-for-new-exp.png "Screenshot of the Dataverse search flyout window]") 
@@ -72,7 +72,7 @@ View the full results for a search by pressing **Enter** on your keyboard or sel
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
-When a search query contains multiple words, it is automatically split into individual search terms. Additionally, our fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" may return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (e.g., "Robert Clark").
+When a search query contains multiple words, it's automatically split into individual search terms. Additionally, our fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" might return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (for example, "Robert Clark").
 
 To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
@@ -154,7 +154,7 @@ All **Lookup** and **Choice** data types are text-based facets. For example, the
 
 ![The Priority facet has values of High, Normal, and Low.](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
 
-Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
+Filters in these facets are sorted in descending order by count. By default, the top four-facet values are displayed. When there are more than four-facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
 When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.
 
@@ -168,7 +168,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
 
-Currently there is no option to disable the feedback question prompt.
+Currently there's no option to disable the feedback question prompt.
 
 > [!div class="mx-imgBorder"]
 > ![Feedback link.](media/feedbacklink.png "Feedback link")  
