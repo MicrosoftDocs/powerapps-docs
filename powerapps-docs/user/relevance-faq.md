@@ -49,18 +49,19 @@ When you navigate to the results page, the search terms are treated as the compl
 
 ## Why are certain fields not showing in the suggestions?
 
-You can retrieve suggestions for a field if it is searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
+Retrieve suggestions for a field if it is searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
 
-However, certain fields are not eligible for suggestions, including:
+Certain fields are not eligible for suggestions, including:
 
 - File fields
 - Fields exceeding 4,000 characters
 
-Additionally, the following tables and attributes have custom analyzers set by default, making them ineligible for inline suggestions:
+The following tables and attributes have custom analyzers set by default, making them ineligible for inline suggestions:
 
-- Contact – firstname, lastname
-- Lead – firstname, lastname, companyname
+- Contact: firstname, lastname
+- Lead: firstname, lastname, companyname
 - All fields formatted as phone numbers
+
 
 ## Can I configure the order of tables appearing in search results page?
 
@@ -124,9 +125,9 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - State
 - Status
 
-## Why am I unable to see search results for virtual tables?
+## Why can't I see search results for virtual tables?
 
-Search functionality isn't supported for virtual tables as they don't persist data. More information: [Virtual Table limitations](../developer/data-platform/virtual-entities/get-started-ve.md)
+Search functionality isn't supported for virtual tables because they don't persist data. More information: [Virtual Table limitations](../developer/data-platform/virtual-entities/get-started-ve.md)
 
 ## Can I export search results?
 
