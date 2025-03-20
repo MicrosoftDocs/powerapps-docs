@@ -47,6 +47,22 @@ Suggestions are quick results based on a search performed on the primary column 
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results.
 
+## Why are certain fields not showing in the suggestions?
+
+Retrieve suggestions for a field if it's searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
+
+Certain fields aren't eligible for suggestions, including:
+
+- File fields
+- Fields exceeding 4,000 characters
+
+The following tables and attributes have custom analyzers set by default, making them ineligible for inline suggestions:
+
+- Contact: firstname, lastname
+- Lead: firstname, lastname, companyname
+- All fields formatted as phone numbers
+
+
 ## Can I configure the order of tables appearing in search results page?
 
 The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
@@ -108,6 +124,14 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - MultiSelectPicklist
 - State
 - Status
+
+## Why can't I see search results for virtual tables?
+
+Search functionality isn't supported for virtual tables because they don't persist data. More information: [Virtual Table limitations](../developer/data-platform/virtual-entities/get-started-ve.md)
+
+## Can I export search results?
+
+Currently, we don't have an export function for global search results. Alternatively, you can programmatically access the results using the search API.
 
 ## How can I use the search API?
 

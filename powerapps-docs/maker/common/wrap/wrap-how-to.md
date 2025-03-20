@@ -154,7 +154,7 @@ When you register the app, Azure admin also needs to grant access to API permiss
 ### Step 5: Manage Output
 
 1. Add the Azure blob storage account name and the container name created during target platform step. 
-1. Download the built APK/IPA from the Azure blob storage location created above after the build steps are completed.
+1. Download the built APK or IPA from the Azure blob storage location created above after the build steps are completed. To find your built APK or IPA, go to your Azure blob storage name > **Containers** > select the container name, and check your builds.
 
 
 :::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
