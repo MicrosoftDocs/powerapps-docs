@@ -153,27 +153,27 @@ sections:
           - Select the **Active assignments** tab.
           - Review the list of owners for the active assignments.
 
-        - question: | 
+      - question: | 
           Why is Azure key vault a mandatory step?
         answer: |
           - To access the Azure blob storage location, we need the access key, which is stored in the Azure key vault.
 
-        - question: | 
+      - question: | 
           Do you need to pay for Azure key vault & Azure blob storage?
         answer: |
           - Yes, more information: [Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/#pricing).
 
-        - question: | 
+      - question: | 
           Can you have cross tenant azure blob storage location?
         answer: |
           - No.
 
-        - question: | 
+      - question: | 
           Which subscription ID should I choose when creating a new one, given multiple options?
         answer: |
           - Select the default subscription.
 
-        - question: | 
+      - question: | 
           What should I do if I don't have access to the resource group while creating the key vault?
         answer: |
           - Connect with your azure tenant admin to create a key vault for you or ask to share the permission with you.
