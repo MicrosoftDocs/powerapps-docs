@@ -93,7 +93,7 @@ You can register your application using either the:
    - Application (client) ID
    - Directory (tenant) ID
 
-1. Copy these values because you need them when you [Update index.js](#update-indexjs).
+1. Copy these values because you need them when you [create the .env file](#create-the-env-file) to use environment variables.
 
 #### Add Dataverse user_impersonation privilege
 
@@ -167,14 +167,12 @@ When you have your tenant ID, you can create the app registration using the Azur
          return $null
       }
       else {
-         Write-Host "Copy the following and replace the config variable in the index.js file:`n"
 
-         Write-Host "const config = {"
-         Write-Host "    baseUrl: `"https://<yourorg>.api.crm.dynamics.com`", //<= Change this"
-         Write-Host "    clientId: `"$($appResponse.appId)`","
-         Write-Host "    tenantId: `"$($tenantId)`","
-         Write-Host "    redirectUri: `"$($redirectUri)`""
-         Write-Host "};`n"
+         Write-Host "Copy the following to paste into an .env file at the root of your project:`n"
+         Write-Host "BASE_URL=https://<yourorg>.api.crm.dynamics.com"
+         Write-Host "CLIENT_ID=$($appResponse.appId)"
+         Write-Host "TENANT_ID=$($tenantId)"
+         Write-Host "REDIRECT_URI=$($redirectUri)"
       }
    }
    catch {
@@ -196,7 +194,6 @@ When you have your tenant ID, you can create the app registration using the Azur
 
    Where `A1BC2DE3F` is a generated code value.
 
-
 1. Copy the code and use <kbd>Ctrl</kbd>+Click to open the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link. This link opens a series of dialogs in your browser.
 
    1. In the **Enter code to allow access** dialog, enter the code you copied and select **Next**.
@@ -208,17 +205,15 @@ When you have your tenant ID, you can create the app registration using the Azur
 1. In the terminal window, you should see output like the following:
 
    ```
-   Copy the following and replace the config variable in the index.js file:
+   Copy the following to paste into an .env file at the root of your project:
 
-   const config = {
-      baseUrl: "https://<yourorg>.api.crm.dynamics.com", //<= Change this
-      clientId: "11112222-bbbb-3333-cccc-4444dddd5555",
-      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee",
-      redirectUri: "http://localhost:1234"
-   };
+   BASE_URL=https://<yourorg>.api.crm.dynamics.com
+   CLIENT_ID=11112222-bbbb-3333-cccc-4444dddd5555
+   TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
+   REDIRECT_URI=http://localhost:1234
    ```
 
-Copy the `config` variable and you use it when you [Update index.js](#update-indexjs).
+Copy this data. You will use it when you [create the .env file](#create-the-env-file) to use environment variables.
 
 ---
 
@@ -253,13 +248,28 @@ The instructions in this section guide you to install dependencies from npm, cre
 1. Type `mkdir quickspa` and press <kbd>Enter</kbd> to create a new folder named `quickspa`.
 1. Type `cd quickspa` and press <kbd>Enter</kbd> to move into the new folder.
 1. Type `npm install --save-dev parcel` and press <kbd>Enter</kbd> to install Parcel and initialize the project.
-1. Type `npm install @azure/msal-browser` and press <kbd>Enter</kbd> to install the MSAL.js library
+1. Type `npm install @azure/msal-browser` and press <kbd>Enter</kbd> to install the MSAL.js library.
+1. Type `npm install dotenv` and press <kbd>Enter</kbd> to install the [dotenv](https://www.npmjs.com/package/dotenv) to access environment variables that will store potentially sensitive configuration data.
 1. Type `mkdir src` and press <kbd>Enter</kbd> to create a `src` folder where you will add HTML, JS, and CSS files for your app in the following steps.
 1. Type `code .` and press <kbd>Enter</kbd> to open Visual Studio Code in the context of the `quickspa` folder.
 
 Your project should look like this in Visual Studio Code Explorer:
 
 :::image type="content" source="media/quickspa-project.png" alt-text="Shows the newly created quickspa project before any files are added.":::
+
+### Create the .env file
+
+1. Create a new file named `.env` in the root of your `quickspa` folder.
+1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values below.
+
+   ```
+   BASE_URL=https://<yourorg>.api.crm.dynamics.com
+   CLIENT_ID=11112222-bbbb-3333-cccc-4444dddd5555
+   TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
+   REDIRECT_URI=http://localhost:1234
+   ```
+
+1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
 ### Create an HTML page
 
@@ -313,12 +323,14 @@ This file contains all the logic that makes the `index.html` page dynamic.
 
    ```javascript
    import { PublicClientApplication } from "@azure/msal-browser";
+   import 'dotenv/config'
 
+   // Load the environment variables from the .env file
    const config = {
-      baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
-      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
-      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
-      redirectUri: "http://localhost:1234"
+      baseUrl: process.env.BASE_URL,
+      clientId: process.env.CLIENT_ID,
+      tenantId: process.env.TENANT_ID,
+      redirectUri: process.env.REDIRECT_URI,
    };
 
    // Microsoft Authentication Library (MSAL) configuration
@@ -332,7 +344,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
    cache: {
       cacheLocation: "sessionStorage", // This configures where your cache will be stored
       storeAuthStateInCookie: true,
-      },
+   },
    };
 
    // Create an instance of MSAL
@@ -343,7 +355,6 @@ This file contains all the logic that makes the `index.html` page dynamic.
 
    // Event handler for login button
    async function logIn() {
-
    await msalInstance.initialize();
 
    if (!msalInstance.getActiveAccount()) {
@@ -354,7 +365,6 @@ This file contains all the logic that makes the `index.html` page dynamic.
          const response = await msalInstance.loginPopup(request);
          msalInstance.setActiveAccount(response.account);
 
-
          // Hide the loginButton so it won't get pressed twice
          document.getElementById("loginButton").style.display = "none";
 
@@ -364,17 +374,17 @@ This file contains all the logic that makes the `index.html` page dynamic.
          logoutButton.style.display = "block";
          // Enable any buttons in the nav element
          document.getElementsByTagName("nav")[0].classList.remove("disabled");
-      } catch (error) {
+         } catch (error) {
          let p = document.createElement("p");
          p.textContent = "Error logging in: " + error;
          p.className = "error";
          container.append(p);
-      }
-   } else {
+         }
+      } else {
       // Clear the active account and try again
       msalInstance.setActiveAccount(null);
       this.click();
-      }
+   }
    }
 
    // Event handler for logout button
@@ -393,7 +403,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       this.innerHTML = "Logout ";
       this.style.display = "none";
       document.getElementsByTagName("nav")[0].classList.remove("disabled");
-   } catch (error) {
+      } catch (error) {
       console.error("Error logging out: ", error);
       }
    }
@@ -419,7 +429,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       if (error instanceof msal.InteractionRequiredAuthError) {
          const response = await msalInstance.acquireTokenPopup(request);
          return response.accessToken;
-      } else {
+         } else {
          console.error(error);
          throw error;
          }
@@ -469,7 +479,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       let p2 = document.createElement("p");
       p2.textContent = "User ID: " + response.UserId;
       container.append(p2);
-   } catch (error) {
+      } catch (error) {
       let p = document.createElement("p");
       p.textContent = "Error fetching user info: " + error;
       p.className = "error";
@@ -491,16 +501,6 @@ The `index.js` script contains the following constants and functions:
 |`logOut`|Event listener function for the logout button. Opens a choose account dialog.|
 |`whoAmI`|Asynchronous function that calls the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami) to retrieve data from Dataverse. |
 | `whoAmIButton` event listener|The function that calls the `whoAmI` function and manages the UI changes to show the message.|
-
-#### Update index.js
-
-Update the `index.js` file to replace the following lines with the `clientId` and `tenantId` values from [Register a SPA application](#register-a-spa-application) and set the `baseUrl` to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
-
-   ```JavaScript
-      baseUrl: "https://<your org>.api.crm.dynamics.com", //<= Change this
-      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444", //<= Change this
-      tenantId: "aaaabbbb-0000-cccc-1111-dddd2222eeee", //<= Change this
-   ```
 
 ### Create a CSS page
 
@@ -569,18 +569,57 @@ Your project should look like this in Visual Studio Code Explorer:
 
 :::image type="content" source="media/quickspa-project-with-files.png" alt-text="Shows the quickspa project after files are added.":::
 
+### Configure your package.json file
+
+Your `package.json` file should look something like this:
+
+```json
+{
+  "devDependencies": {
+    "parcel": "^2.14.1",
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.7.0",
+    "dotenv": "^16.4.7"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
+  }
+}
+```
+
+Add this `scripts` item below `dependencies`:
+
+```json
+  "dependencies": {
+    "@azure/msal-browser": "^4.7.0",
+    "dotenv": "^16.4.7"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
+  }
+```
+
+This configuration allows you to start the application using `npm start` in the next step.
+
+
 
 ## Try it
 
 1. In Visual Studio code, open a terminal window
-1. Type `npx parcel src/index.html` and press <kbd>Enter</kbd>.
+1. Type `npm start` and press <kbd>Enter</kbd>.
+
+   > [!NOTE]
+   > You may see some output written to the terminal while the project initializes for the first time.
+   > This is parcel installing some additional node modules to mitigate issues when using [dotenv](https://www.npmjs.com/package/dotenv). 
+   > Look at the `package.json` and you should some new items added to the `devDependencies`.
+
 
    You should expect output to the terminal that looks like this:
 
    ```
-   PS C:\projects\quickspa> npx parcel src/index.html
    Server running at http://localhost:1234
-   Built in 4.20s
+   Built in 1.08s
    ```
 
 1. Press <kbd>Ctrl</kbd> + click the [http://localhost:1234](http://localhost:1234) link to open your browser.
@@ -598,7 +637,6 @@ Your project should look like this in Visual Studio Code Explorer:
 1. Select the **WhoAmI** button.
 
    The message **Congratulations! You connected to Dataverse using the Web API.** is displayed with your `UserId` value from the [WhoAmIResponse complex type](/power-apps/developer/data-platform/webapi/reference/whoamiresponse).
-
 
 ## Trouble shooting
 
@@ -621,9 +659,7 @@ Try other samples that use client-side JavaScript.
 > [!div class="nextstepaction"]
 > [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)
 
-
 Learn more about Dataverse Web API capabilities by understanding the service documents.
 
 > [!div class="nextstepaction"]
 > [Web API types and operations](web-api-types-operations.md)
-
