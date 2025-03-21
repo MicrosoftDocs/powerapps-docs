@@ -40,7 +40,7 @@ The source code for each sample is available on [GitHub](https://github.com/micr
 
 ## How to run the sample to see the script in action
 
-TODO
+:::image type="content" source="../media/dataverse-web-api-javascript-spa-sample-app.png" alt-text="The SPA sample application with buttons to run available samples":::
 
 <a name="bkmk_commonElements"></a>
 
