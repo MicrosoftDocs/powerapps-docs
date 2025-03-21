@@ -19,8 +19,6 @@ This library contains definitions of the following classes:
 |Class|Description|
 |---|---|
 |[`Client`](#client-class)|The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
-|[`WebAPIRequest`](#webapirequest-class)|Represents a web API request used for batch processing.|
-|[`WebAPIResponse`](#webapiresponse-class)|Represents a web API response used for batch processing.|
 |[`ChangeSet`](#changeset-class)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
 
 You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code)
@@ -41,40 +39,36 @@ Creates an instance of the `Client`.
   - `getTokenFunc` (function): A function that returns an access token.
   - `version` (string, optional): A string to override the default version. Default is `"v9.2"`.
 
-### Methods
+### Public Methods
 
-#### `async Send(method, resource, query = null, data = null, extraHeaders = null)`
+#### `async Send(request)`
 
-Sends an HTTP request with the specified method, URL, data, and extra headers if needed.
+Sends an HTTP request using [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) with required standard headers, including the `Authorization` headers. All requests are sent using this method. All other data operation methods use this method to send the request.
 
 - **Parameters:**
-  - `method` (string): The HTTP method to use (e.g., 'GET', 'POST').
-  - `resource` (string): The resource to which the request is sent. The URL before '?'.
-  - `query` (string, optional): The query string parameters to include in the request. The value after '?'.
-  - `data` (Object, optional): The data to be sent as the request body.
-  - `extraHeaders` (Object, optional): Additional headers to include in the request.
+  - `request` ([Request](https://developer.mozilla.org/docs/Web/API/Request)): The request to send.
 
-- **Returns:** `Promise<Response|Error>`: The response from the fetch call or an error if the request fails.
+- **Returns:** `Promise&lt;Response|Error&gt;`: The response from the fetch call or an error if the request fails.
 
 #### `async WhoAmI()`
 
-Retrieves information about the current user by calling the "WhoAmI" message.
+Retrieves information about the current user by calling the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami).
 
-- **Returns:** `Promise<Object|Error>`: A promise that resolves to the user information in JSON format, or an error if the request fails.
+- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to the user information in JSON format, or an error if the request fails.
 
 #### `async Create(entitySetName, data)`
 
-Creates a new record in the specified entity set.
+Creates a new record in the specified entity set as described in [Create a table row using the Web API](create-entity-web-api.md).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set where the new entity will be created.
   - `data` (Object): The data for the new entity.
 
-- **Returns:** `Promise<Object|Error>`: A promise that resolves to an object containing the ID of the created entity, or an error if the request fails.
+- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to an object containing the ID of the created entity, or an error if the request fails.
 
 #### `async Retrieve(entitySetName, id, query = null, includeAnnotations = true)`
 
-Retrieves a record from the specified entity set by ID, with optional query options.
+Retrieves a record from the specified entity set by ID, with optional query options as described in [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set from which to retrieve the entity.
@@ -82,21 +76,21 @@ Retrieves a record from the specified entity set by ID, with optional query opti
   - `query` (string, optional): The OData query options to apply.
   - `includeAnnotations` (boolean, optional): Whether OData annotations are returned in the response. Default value is `true`.
 
-- **Returns:** `Promise<Object|Error>`: A promise that resolves to the retrieved entity in JSON format, or an error if the request fails.
+- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to the retrieved entity in JSON format, or an error if the request fails.
 
 #### `async Refresh(record, primarykeyName)`
 
-Refreshes the given record by fetching the latest data from the server.
+Refreshes the given record by fetching the latest data from the server using [conditional retrieval](perform-conditional-operations-using-web-api#conditional-retrievals).
 
 - **Parameters:**
   - `record` (Object): The record to refresh. Must contain `@odata.etag` and `@odata.context` properties.
   - `primarykeyName` (string): The name of the primary key property in the record.
 
-- **Returns:** `Promise<Object>`: The refreshed record.
+- **Returns:** `Promise&lt;Object&gt;`: The refreshed record.
 
 #### `async CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
 
-Creates and retrieves a record from the specified entity set.
+Creates and retrieves a record from the specified entity set as described in [create with data returned](create-entity-web-api#create-with-data-returned).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -104,11 +98,11 @@ Creates and retrieves a record from the specified entity set.
   - `query` (string, optional): The query string to be appended to the entity set URL.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise<Object>`: The response data as a JSON object.
+- **Returns:** `Promise&lt;Object&gt;`: The response data as a JSON object.
 
 #### `async RetrieveMultiple(collectionResource, query, maxPageSize = 100, includeAnnotations = true)`
 
-Retrieves multiple records from a specified entity set collection with optional query parameters.
+Retrieves multiple records from a specified entity set collection with optional query parameters as described in [use OData to query data](query/overview).
 
 - **Parameters:**
   - `collectionResource` (string): The name of the entity set or a filtered collection expression to retrieve records from.
@@ -116,41 +110,41 @@ Retrieves multiple records from a specified entity set collection with optional 
   - `maxPageSize` (number, optional): The maximum number of records to retrieve per page. Default is `100`.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
+- **Returns:** `Promise&lt;object&gt;`: The response from the server containing the retrieved entities.
 
 #### `async GetNextLink(nextLink, maxPageSize = 100, includeAnnotations = true)`
 
-Retrieves the next page of records from a specified entity set collection using the `@odata.nextLink` value.
+Retrieves the next page of records from a specified entity set collection using the `@odata.nextLink` value as described in [page results](query/page-results).
 
 - **Parameters:**
   - `nextLink` (string): The `@odata.nextLink` value from the previous response.
   - `maxPageSize` (number, optional): The maximum number of records to retrieve per page. Default is `100`.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
+- **Returns:** `Promise&lt;object&gt;`: The response from the server containing the retrieved entities.
 
 #### `async FetchXml(entitySetName, fetchXml)`
 
-Asynchronously fetches data from a specified entity set using FetchXML.
+Asynchronously fetches data from a specified entity set using FetchXML as described in [Use FetchXml to retrieve data](../fetchxml/retrieve-data.md?tabs=webapi)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set to query.
   - `fetchXml` (string): The FetchXML query string.
 
-- **Returns:** `Promise<Object>`: The JSON response from the server.
+- **Returns:** `Promise&lt;Object&gt;`: The JSON response from the server.
 
 #### `async GetCollectionCount(collectionResource)`
 
-Asynchronously retrieves the count of items in a specified collection.
+Asynchronously retrieves the count of items in a specified collection as described in [count rows](query/count-rows).
 
 - **Parameters:**
   - `collectionResource` (string): The resource URL of the collection.
 
-- **Returns:** `Promise<number>`: The count of items in the collection, up to `5000`.
+- **Returns:** `Promise&lt;number&gt;`: The count of items in the collection, up to `5000`.
 
 #### `async Update(entitySetName, id, data, etag = null)`
 
-Updates a record in the specified entity set by ID with the provided data.
+Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-entities-using-web-api#basic-update).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set where the record exists.
@@ -158,22 +152,22 @@ Updates a record in the specified entity set by ID with the provided data.
   - `data` (Object): The data to update the record with.
   - `etag` (string, optional): Specify the etag value to prevent update when a newer record exists.
 
-- **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the update operation, or an error if the request fails.
+- **Returns:** `Promise&lt;Response|Error&gt;`: A promise that resolves to the response of the update operation, or an error if the request fails.
 
 #### `async Delete(entitySetName, id, etag = null)`
 
-Deletes an entity from the specified entity set by ID.
+Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-entities-using-web-api#basic-delete)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set from which to delete the entity.
   - `id` (string): The ID of the entity to delete.
   - `etag` (string, optional): Specify the etag value to prevent delete when a newer record exists.
 
-- **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the delete operation, or an error if the request fails.
+- **Returns:** `Promise&lt;Response|Error&gt;`: A promise that resolves to the response of the delete operation, or an error if the request fails.
 
 #### `async SetValue(entitySetName, id, columnName, value)`
 
-Sets the value of a specified column for a given record.
+Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api#update-a-single-property-value)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -185,7 +179,7 @@ Sets the value of a specified column for a given record.
 
 #### `async GetValue(entitySetName, id, columnName)`
 
-Retrieves the value of a specified column for a given record.
+Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-entity-using-web-api#retrieve-a-single-property-value)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -196,7 +190,7 @@ Retrieves the value of a specified column for a given record.
 
 #### `async Associate(targetSetName, targetId, navigationProperty, relatedSetName, relatedId)`
 
-Associates records by creating data in the relationship to link them.
+Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-entities-using-web-api#add-a-record-to-a-collection).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.
@@ -205,11 +199,11 @@ Associates records by creating data in the relationship to link them.
   - `relatedSetName` (string): The name of the related entity set.
   - `relatedId` (string|number): The ID of the record to associate with the target.
 
-- **Returns:** `Promise<object>`: The response from the server after creating the association.
+- **Returns:** `Promise&lt;object&gt;`: The response from the server after creating the association.
 
 #### `async Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
 
-Disassociates a record from another record by deleting data in the relationship to link them.
+Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-entities-using-web-api#remove-a-record-from-a-collection).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.
@@ -217,78 +211,23 @@ Disassociates a record from another record by deleting data in the relationship 
   - `navigationProperty` (string): The navigation property that defines the relationship.
   - `relatedId` (string|guid): The ID of the related record.
 
-- **Returns:** `Promise<object>`: The response from the server after deleting the association.
+- **Returns:** `Promise&lt;object&gt;`: The response from the server after deleting the association.
 
-#### `async SendRequest(request)`
 
-Sends a web API request and returns the response.
+#### `async getBatchBody(request, id, inChangeSet = false)`
 
-- **Parameters:**
-  - `request` (WebAPIRequest): The request object to be sent.
+For internal use only. This method is public because it is used by the [ChangeSet](#changeset-class). There are no scenarios where you will need to use this method.
 
-- **Returns:** `Promise<WebAPIResponse>`: The response from the web API.
 
 #### `async Batch(requests, continueOnError = false)`
 
-Sends a batch request containing multiple WebAPIRequest or ChangeSet items.
+Sends a batch request containing multiple ([Request](https://developer.mozilla.org/docs/Web/API/Request) or [ChangeSet](#changeset-class) items as described in [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
 - **Parameters:**
-  - `requests` (Array<WebAPIRequest|ChangeSet>): An array of WebAPIRequest or ChangeSet items to be included in the batch request.
+  - `requests` (Array&lt;([Request](https://developer.mozilla.org/docs/Web/API/Request)|[ChangeSet](#changeset-class)&gt;): An array of `Request` or `ChangeSet` items to be included in the batch request.
   - `continueOnError` (boolean, optional): A flag indicating whether to continue processing subsequent requests if an error occurs. Default is `false`.
 
-- **Returns:** `Promise<Array<WebAPIResponse>>`: The parsed response from the batch request.
-
-## `WebAPIRequest` class
-
-Represents a web API request used for batch processing.
-
-### Constructor
-
-#### `constructor(method, resource, query = null, body = null, headers = null, contentID = null)`
-
-Creates an instance of `WebAPIRequest`.
-
-- **Parameters:**
-  - `method` (string): The HTTP method for the request (For example: 'GET', 'POST').
-  - `resource` (string): The resource endpoint for the request.
-  - `query` (string, optional): The query string for the request, if any.
-  - `body` (Object, optional): The body of the request, if any.
-  - `headers` (Object, optional): The headers for the request, if any.
-  - `contentID` (string, optional): The content ID, if any.
-
-### Properties
-
-- `method` (string): The HTTP method for the request.
-- `resource` (string): The resource endpoint for the request.
-- `query` (string, optional): The query string for the request, if any.
-- `headers` (Object, optional): The headers for the request, if any.
-- `body` (Object, optional): The body of the request, if any.
-- `contentID` (string, optional): The content ID, if any.
-
-### Methods
-
-- `getBatchBody(Id, inChangeSet = false)`: Generates the batch request body for the OData service.
-
-## `WebAPIResponse` class
-
-Represents a web API response used for batch processing.
-
-### Constructor
-
-#### `constructor()`
-
-Creates an instance of `WebAPIResponse`.
-
-### Properties
-
-- `statusCode` (number): The status code of the response.
-- `statusText` (string): The status text of the response.
-- `headers` (Object): The headers of the response.
-- `body` (Object): The body of the response.
-
-### Methods
-
-- `async init(response)`: Initializes the `WebAPIResponse` object with the response from the server.
+- **Returns:** `Promise&lt;Array&lt;[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)&gt;&gt;`: The parsed response from the batch request.
 
 ## `ChangeSet` class
 
@@ -301,15 +240,15 @@ Represents a set of changes used with batch processing. All requests within the 
 Creates an instance of `ChangeSet`.
 
 - **Parameters:**
-  - `requests` (Array&lt;WebAPIRequest&gt;): An array of `WebAPIRequest` objects.
+  - `requests` (Array&lt;Request&gt;): An array of [Request](https://developer.mozilla.org/docs/Web/API/Request) objects.
 
 ### Properties
 
-- `requests` (Array&lt;WebAPIRequest&gt;): The array of `WebAPIRequest` objects in the change set.
+- `requests` (Array&lt;Request&gt;): The array of [Request](https://developer.mozilla.org/docs/Web/API/Request) objects in the change set.
 
 ### Methods
 
-- `getChangeSetText(batchId)`: Gets the text for the changeset in the `$batch` operation.
+- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#async-batchrequests-continueonerror--false). There are no scenarios where you will need to use this method.
 
 ## DataverseWebAPI.js sample library code
 
@@ -321,11 +260,11 @@ The following is the code for the DataverseWebAPI.js sample library
  * @classdesc This class represents the Dataverse Web API Client.
  */
 class Client {
-  #baseUrl; // https://your-org.api.crm.dynamics.com
-  #version; // v9.2
-  #path; // /api/data/v9.2/
-  #apiEndpoint; // https://your-org.api.crm.dynamics.com/api/data/v9.2/
-  #getTokenFunc; // Function to get the token, passed in the constructor
+  // The base URL for the Dataverse Web API
+  // Something like: https://your-org.api.crm.dynamics.com/api/data/v9.2/
+  #apiEndpoint;
+  // The function to get an access toke
+  #getTokenFunc;
 
   /**
    * Creates an instance of Client.
@@ -333,13 +272,11 @@ class Client {
    * @constructor
    * @param {string} baseUrl - The base URL for the Dataverse API.
    * @param {function} getTokenFunc - A function that returns an access token.
-   * @param {string} version - A string to override the default version.
+   * @param {string} version - A string to override the default version (9.2)
    */
-  constructor(baseUrl, getTokenFunc, version = "v9.2") {
-    this.#baseUrl = baseUrl;
-    this.#version = version;
-    this.#path = `/api/data/${this.#version}/`;
-    this.#apiEndpoint = baseUrl + this.#path;
+  constructor(baseUrl, getTokenFunc, version = "9.2") {
+    const path = `/api/data/v${version}/`;
+    this.#apiEndpoint = baseUrl + path;
     this.#getTokenFunc = getTokenFunc;
   }
 
@@ -395,79 +332,57 @@ class Client {
   //#endregion Validation Functions
 
   /**
-   * Sends an HTTP request with the specified method, URL, data, and extra headers if needed.
+   * Gets the API endpoint.
+   *
+   * @returns {string} The API endpoint.
+   */
+  get apiEndpoint() {
+    return this.#apiEndpoint;
+  }
+
+  /**
+   * Sends a request to the Dataverse Web API.
    *
    * @async
    * @function Send
-   * @param {string} method - The HTTP method to use (e.g., 'GET', 'POST').
-   * @param {string} resource - The resource to which the request is sent. The URL before '?'.
-   * @param {string} query - The query string parameters to include in the request. The value after '?'. (optional).
-   * @param {Object} [data] - The data to be sent as the request body (optional).
-   * @param {Object} [extraHeaders] - Additional headers to include in the request (optional).
-   * @returns {Promise<Response|Error>} The response from the fetch call or an error if the request fails.
-   * @throws {Error} If the fetch request fails.
+   * @param {Request} request - The request to be sent.
+   * @returns {Promise<Response>} The response from the server.
+   * @throws {Error} Throws an error if the request is not a valid Request instance or if the request fails.
    */
-  async Send(method, resource, query = null, data = null, extraHeaders = null) {
-    //#region Parameter Validation
-    const validMethods = ["POST", "PATCH", "PUT", "GET", "DELETE"];
-    if (!validMethods.includes(method.toUpperCase())) {
-      throw new Error(`Method ${method} is not supported.`);
+  async Send(request) {
+    if (!request instanceof Request) {
+      throw new Error(`request parameter value '${request}' is not a Request.`);
     }
-    if (typeof resource !== "string") {
-      throw new Error("resource parameter value is not a valid string.");
-    }
-    if (query && typeof query !== "string") {
-      throw new Error("query parameter value is not a valid string.");
-    }
-
-    if (!resource.startsWith("$batch")) {
-      if (data && !this.#isValidObjectForJSON(data)) {
-        throw new Error(
-          "data parameter value is not a valid object to convert to JSON."
-        );
-      }
-    }
-
-    if (extraHeaders && typeof extraHeaders !== "object") {
-      throw new Error("extraHeaders parameter value is not a valid object.");
-    }
-    //#endregion Parameter Validation
 
     const token = await this.#getTokenFunc();
-    let baseHeaders = {
+    const baseHeaders = new Headers({
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
       Accept: "application/json",
       "OData-Version": "4.0",
       "OData-MaxVersion": "4.0",
-    };
-    if (extraHeaders) {
-      baseHeaders = { ...baseHeaders, ...extraHeaders };
-    }
-
-    let url = `${this.#apiEndpoint}${resource}`;
-    if (query) {
-      url += query.startsWith("?") ? query : `?${query}`;
-    }
-
-    const resourceURL = new URL(url, this.#baseUrl);
-
-    const request = new Request(resourceURL, {
-      method: method,
-      headers: baseHeaders,
-      // Special case for batch requests
-      body: resource.startsWith("$batch")
-        ? data
-        : data
-        ? JSON.stringify(data)
-        : null,
     });
 
+    const combinedHeaders = new Headers(baseHeaders);
+    request.headers.forEach((value, key) => {
+      combinedHeaders.set(key, value);
+    });
+
+    const requestOptions = {
+      method: request.method,
+      headers: combinedHeaders,
+    };
+
+    if (request.body) {
+      requestOptions.body = await request.text();
+    }
+
+    const requestCopy = new Request(new URL(request.url), requestOptions);
     try {
-      const response = await fetch(request);
+      const response = await fetch(requestCopy);
       if (!response.ok) {
         // Handle 304 Not Modified for GET requests
-        if (response.status === 304 && method === "GET") {
+        if (response.status === 304 && request.method === "GET") {
           return response;
         }
         const error = await response.json();
@@ -480,6 +395,7 @@ class Client {
       throw error;
     }
   }
+
   /**
    * Retrieves information about the current user by calling the "WhoAmI" message.
    *
@@ -490,7 +406,11 @@ class Client {
    */
   async WhoAmI() {
     try {
-      const response = await this.Send("GET", "WhoAmI");
+      const request = new Request(new URL("WhoAmI", this.apiEndpoint), {
+        method: "GET",
+      });
+
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -519,11 +439,19 @@ class Client {
       );
     }
     //#endregion Parameter Validation
+
+    const request = new Request(new URL(entitySetName, this.apiEndpoint), {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    request.headers.set("Content-Type", "application/json");
+
     try {
-      const response = await this.Send("POST", entitySetName, null, data);
-      let url = response.headers.get("OData-EntityId");
+      const response = await this.Send(request);
+      const url = response.headers.get("OData-EntityId");
       // Extract the ID from the OData-EntityId header value
-      let id = url.substring(url.lastIndexOf("(") + 1, url.lastIndexOf(")"));
+      const id = url.substring(url.lastIndexOf("(") + 1, url.lastIndexOf(")"));
       return id;
     } catch (error) {
       throw error;
@@ -555,22 +483,21 @@ class Client {
       throw new Error("includeAnnotations parameter value is not a boolean.");
     }
     //#endregion Parameter Validation
-    let extraHeaders = null;
-    if (includeAnnotations) {
-      extraHeaders = {
-        Prefer: 'odata.include-annotations="*"',
-      };
-    }
+
     let resource = `${entitySetName}(${id})`;
+    if (query) {
+      resource += query.startsWith("?") ? query : `?${query}`;
+    }
+
+    const request = new Request(new URL(resource, this.apiEndpoint), {
+      method: "GET",
+    });
+    if (includeAnnotations) {
+      request.headers.set("Prefer", 'odata.include-annotations="*"');
+    }
 
     try {
-      const response = await this.Send(
-        "GET",
-        resource,
-        query,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -631,9 +558,6 @@ class Client {
 
     // This operation can't use the Prefer: odata.include-annotations="*" header
     // because it will never return 304 Not Modified.
-    let extraHeaders = {
-      "If-None-Match": etag,
-    };
 
     const columns = columnsMatch[1].split(",");
     // This operation can't use any $expand query options
@@ -641,16 +565,17 @@ class Client {
     const query = `$select=${columns}`;
     const entitySetName = entitySetNameMatch[1];
 
-    let resource = `${entitySetName}(${id})`;
+    let resource = `${entitySetName}(${id})?${query}`;
+
+    const request = new Request(new URL(resource, this.apiEndpoint), {
+      method: "GET",
+    });
+    // This operation can't use the Prefer: odata.include-annotations="*" header
+    // because it could never return 304 Not Modified when that header is set.
+    request.headers.set("If-None-Match", etag);
 
     try {
-      const response = await this.Send(
-        "GET",
-        resource,
-        query,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       if (!response.ok) {
         if (response.status === 304) {
           console.log("The record was NOT modified on the server.");
@@ -697,25 +622,27 @@ class Client {
     }
     //#endregion Parameter Validation
 
+    let resource = entitySetName;
+    if (query) {
+      resource += query.startsWith("?") ? query : `?${query}`;
+    }
+
+    const request = new Request(new URL(resource, this.apiEndpoint), {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    request.headers.set("Content-Type", "application/json");
+
     let preferHeaders = ["return=representation"];
 
     if (includeAnnotations) {
       preferHeaders.push('odata.include-annotations="*"');
     }
-    const extraHeaders = {
-      Prefer: preferHeaders.join(","),
-    };
 
-    let resource = entitySetName;
+    request.headers.set("Prefer", preferHeaders.join(","));
 
     try {
-      const response = await this.Send(
-        "POST",
-        resource,
-        query,
-        data,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -755,32 +682,24 @@ class Client {
       );
     }
     //#endregion Parameter Validation
-
-    let resource = `${collectionResource}`;
-    let extraHeaders = null;
-    let preferHeaders = [];
-
-    if (maxPageSize) {
-      preferHeaders.push(`odata.maxpagesize=${maxPageSize}`);
+    if (query) {
+      collectionResource += query.startsWith("?") ? query : `?${query}`;
     }
+
+    const request = new Request(new URL(collectionResource, this.apiEndpoint), {
+      method: "GET",
+    });
+
+    let preferHeaders = [`odata.maxpagesize=${maxPageSize}`];
+
     if (includeAnnotations) {
       preferHeaders.push('odata.include-annotations="*"');
     }
 
-    if (preferHeaders.length > 0) {
-      extraHeaders = {
-        Prefer: preferHeaders.join(","),
-      };
-    }
+    request.headers.set("Prefer", preferHeaders.join(","));
 
     try {
-      const response = await this.Send(
-        "GET",
-        resource,
-        query,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -814,33 +733,19 @@ class Client {
     }
     //#endregion Parameter Validation
 
-    let extraHeaders = null;
-    let preferHeaders = [];
+    const request = new Request(new URL(nextLink), {
+      method: "GET",
+    });
 
-    if (maxPageSize) {
-      preferHeaders.push(`odata.maxpagesize=${maxPageSize}`);
-    }
+    let preferHeaders = [`odata.maxpagesize=${maxPageSize}`];
     if (includeAnnotations) {
       preferHeaders.push('odata.include-annotations="*"');
     }
 
-    if (preferHeaders.length > 0) {
-      extraHeaders = {
-        Prefer: preferHeaders.join(","),
-      };
-    }
-
-    // Make the nextLink a relative URL as expected by Send method
-    const resource = nextLink.replace(this.#apiEndpoint, "");
+    request.headers.set("Prefer", preferHeaders.join(","));
 
     try {
-      const response = await this.Send(
-        "GET",
-        resource,
-        null,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -859,6 +764,7 @@ class Client {
    * https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/retrieve-data?tabs=webapi
    */
   async FetchXml(entitySetName, fetchXml) {
+    //#region Parameter Validation
     if (typeof entitySetName !== "string") {
       throw new Error("entitySetName parameter value is not a string.");
     }
@@ -867,27 +773,20 @@ class Client {
         "fetchXml parameter string value doesn't represent a valid XML document."
       );
     }
-    let resource = `${entitySetName}`;
+    //#endregion Parameter Validation
 
-    // Encode the FetchXML query string
-    const query = `fetchXml=${encodeURIComponent(fetchXml).replace(
-      /%20/g,
-      "+"
-    )}`;
+    const encodedFetchXml = encodeURIComponent(fetchXml).replace(/%20/g, "+");
 
-    // Always including annotations so paging data is available
-    let extraHeaders = {
-      Prefer: 'odata.include-annotations="*"',
-    };
+    const request = new Request(
+      new URL(`${entitySetName}?fetchXml=${encodedFetchXml}`, this.apiEndpoint),
+      {
+        method: "GET",
+      }
+    );
+    request.headers.set("Prefer", 'odata.include-annotations="*"');
 
     try {
-      const response = await this.Send(
-        "GET",
-        resource,
-        query,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -910,8 +809,15 @@ class Client {
         "collectionResource parameter value is not a valid string."
       );
     }
+
+    const request = new Request(
+      new URL(`${collectionResource}/$count`, this.apiEndpoint),
+      {
+        method: "GET",
+      }
+    );
     try {
-      const response = await this.Send("GET", collectionResource + "/$count");
+      const response = await this.Send(request);
       return response.json();
     } catch (error) {
       throw error;
@@ -957,14 +863,19 @@ class Client {
       ifMatchHeaderValue = etag;
     }
 
+    const request = new Request(
+      new URL(`${entitySetName}(${id})`, this.apiEndpoint),
+      {
+        method: "PATCH",
+        body: JSON.stringify(data),
+      }
+    );
+    request.headers.set("Content-Type", "application/json");
+
+    request.headers.set("If-Match", ifMatchHeaderValue);
+
     try {
-      const response = await this.Send(
-        "PATCH",
-        `${entitySetName}(${id})`,
-        null,
-        data,
-        { "If-Match": ifMatchHeaderValue }
-      );
+      const response = await this.Send(request);
       return response;
     } catch (error) {
       throw error;
@@ -999,20 +910,19 @@ class Client {
     }
     //#endregion Parameter Validation
 
-    let extraHeaders = null;
+    const request = new Request(
+      new URL(`${entitySetName}(${id})`, this.apiEndpoint),
+      {
+        method: "DELETE",
+      }
+    );
+
     if (etag) {
-      extraHeaders = {
-        "If-Match": etag,
-      };
+      request.headers.set("If-Match", etag);
     }
+
     try {
-      const response = await this.Send(
-        "DELETE",
-        `${entitySetName}(${id})`,
-        null,
-        null,
-        extraHeaders
-      );
+      const response = await this.Send(request);
       return response;
     } catch (error) {
       throw error;
@@ -1047,14 +957,18 @@ class Client {
     }
     //#endregion Parameter Validation
 
+    const request = new Request(
+      new URL(`${entitySetName}(${id})/${columnName}`, this.apiEndpoint),
+      {
+        method: "PUT",
+        body: JSON.stringify({ value: value }),
+      }
+    );
+    request.headers.set("Content-Type", "application/json");
+    request.headers.set("If-None-Match", null);
+
     try {
-      const response = await this.Send(
-        "PUT",
-        `${entitySetName}(${id})/${columnName}`,
-        null,
-        { value: value },
-        { "If-None-Match": null }
-      );
+      const response = await this.Send(request);
       return response;
     } catch (error) {
       throw error;
@@ -1084,15 +998,16 @@ class Client {
     }
     //#endregion Parameter Validation
 
-    try {
-      const response = await this.Send(
-        "GET",
-        `${entitySetName}(${id})/${columnName}`,
-        null,
-        null,
-        { "If-None-Match": null }
-      );
+    const request = new Request(
+      new URL(`${entitySetName}(${id})/${columnName}`, this.apiEndpoint),
+      {
+        method: "GET",
+      }
+    );
+    request.headers.set("If-None-Match", null);
 
+    try {
+      const response = await this.Send(request);
       const data = await response.json();
       return data.value;
     } catch (error) {
@@ -1139,13 +1054,22 @@ class Client {
     }
     //#endregion Parameter Validation
 
+    const request = new Request(
+      new URL(
+        `${this.apiEndpoint}${targetSetName}(${targetId})/${navigationProperty}/$ref`,
+        this.apiEndpoint
+      ),
+      {
+        method: "POST",
+        body: JSON.stringify({
+          "@odata.id": `${this.apiEndpoint}/${relatedSetName}(${relatedId})`,
+        }),
+      }
+    );
+    request.headers.set("Content-Type", "application/json");
+
     try {
-      const response = await this.Send(
-        "POST",
-        `${targetSetName}(${targetId})/${navigationProperty}/$ref`,
-        null,
-        { "@odata.id": `${this.#apiEndpoint}/${relatedSetName}(${relatedId})` }
-      );
+      const response = await this.Send(request);
       return response;
     } catch (error) {
       throw error;
@@ -1183,50 +1107,25 @@ class Client {
       throw new Error(`The relatedId ${relatedId} is not a valid GUID.`);
     }
     //#endregion Parameter Validation
+    const request = new Request(
+      new URL(
+        `${this.apiEndpoint}${targetSetName}(${targetId})/${navigationProperty}(${relatedId})/$ref`,
+        this.apiEndpoint
+      ),
+      {
+        method: "DELETE",
+      }
+    );
+
     try {
-      const response = await this.Send(
-        "DELETE",
-        `${targetSetName}(${targetId})/${navigationProperty}(${relatedId})/$ref?`
-      );
+      const response = await this.Send(request);
       return response;
     } catch (error) {
       throw error;
     }
   }
 
-  /**
-   * Sends a web API request and returns the response.
-   *
-   * @async
-   * @function SendRequest
-   * @param {WebAPIRequest} request - The request object to be sent.
-   * @throws {Error} Throws an error if the request parameter is not an instance of WebAPIRequest.
-   * @returns {Promise<WebAPIResponse>} The response from the web API.
-   */
-  async SendRequest(request) {
-    //#region Parameter Validation
-    if (!request instanceof WebAPIRequest) {
-      throw new Error(
-        `request parameter value '${request}' is not a WebAPIRequest.`
-      );
-    }
-    //#endregion Parameter Validation
-
-    try {
-      const response = await this.Send(
-        request.method,
-        request.resource,
-        request.query,
-        request.body,
-        request.headers
-      );
-      const webAPIResponse = new WebAPIResponse();
-      await webAPIResponse.init(response);
-      return webAPIResponse;
-    } catch (error) {
-      throw error;
-    }
-  }
+  //#region Private Methods to support Batch
 
   // Parses batch responses for the Batch method
   #parseBatchText(batchResponse) {
@@ -1265,11 +1164,20 @@ class Client {
       const match = httpStatusString.match(regex);
 
       if (match) {
-        const statusCode = match[1];
+        const status = match[1];
         const statusText = match[2];
-        return { statusCode: parseInt(statusCode, 10), statusText: statusText };
+        return { status: parseInt(status, 10), statusText: statusText };
       } else {
         throw new Error("Invalid HTTP status string format");
+      }
+    }
+
+    function isValidJSON(str) {
+      try {
+        JSON.parse(str);
+        return true;
+      } catch (e) {
+        return false;
       }
     }
 
@@ -1278,73 +1186,133 @@ class Client {
     for (const part of parts) {
       const subParts = part.split("\r\n");
 
-      let response = new WebAPIResponse();
+      let body = null;
+      let status = null;
+      let statusText = null;
+      let headers = new Headers();
 
       for (let i = 0; i < subParts.length; i++) {
         if (subParts[i] === "") {
           continue;
         }
-        if (subParts[i].startsWith("{")) {
-          response.body = JSON.parse(subParts[i]);
+        if (isValidJSON(subParts[i])) {
+          body = subParts[i];
           continue;
         }
         if (subParts[i].startsWith("HTTP/1.1")) {
           const parsedStatus = parseHttpStatus(subParts[i]);
-          response.statusCode = parsedStatus.statusCode;
-          response.statusText = parsedStatus.statusText;
+          status = parsedStatus.status;
+          statusText = parsedStatus.statusText;
         }
         if (subParts[i].includes(":")) {
           const [key, value] = subParts[i].split(": ");
-          response.headers[key.trim()] = value.trim();
+          headers.set(key.trim(), value.trim());
         }
       }
+
+      const response = new Response(body, {
+        status: status,
+        statusText: statusText,
+        headers: headers,
+      });
 
       responses.push(response);
     }
     return responses;
   }
 
+  //#endregion Private Methods to support Batch
+
+  //#region Public Methods to support Batch
+
+  // getBatchBody method is publicly accessible because it is used by the ChangeSet class.
+
   /**
-   * Sends a batch request containing multiple WebAPIRequest or ChangeSet items.
+   * Generates the batch request body for the OData service.
+   *
+   * @param {Request} request - The Request object to be used for generating the batch request body.
+   * @param {string} id - The unique identifier for the batch request or change set
+   * @param {bool} inChangeSet - Whether the request is in a change set.
+   * @returns {string} The formatted batch request body.
+   * @throws {Error} Throws an error if the request parameter is not a valid Request object.
+   */
+  async getBatchBody(request, id, inChangeSet = false) {
+    if (!(request instanceof Request)) {
+      throw new Error(
+        `response parameter value '${request}' is not a Request.`
+      );
+    }
+    const batchBody = [
+      inChangeSet ? `--changeset_${id}` : `--batch_${id}`,
+      `Content-Type: application/http`,
+      `Content-Transfer-Encoding: binary`,
+    ];
+
+    batchBody.push("");
+    batchBody.push(
+      `${request.method} ${new URL(request.url).pathname} HTTP/1.1`
+    );
+
+    for (const [key, value] of request.headers.entries()) {
+      if (key === "content-type") {
+        batchBody.push("content-type: application/json;type=entry");
+        continue;
+      }
+
+      batchBody.push(`${key}: ${value}`);
+    }
+
+    if (request.body) {
+      const bodyJson = await request.text();
+      batchBody.push("", bodyJson);
+    } else {
+      batchBody.push("");
+    }
+    return batchBody.join("\r\n");
+  }
+
+  //#endregion Public Methods to support Batch
+
+  /**
+   * Sends a batch request containing multiple Request or ChangeSet items.
    *
    * @async
    * @function Batch
-   * @param {Array<WebAPIRequest|ChangeSet>} requests - An array of WebAPIRequest or ChangeSet items to be included in the batch request.
+   * @param {Array<Request|ChangeSet>} items - An array of Request or ChangeSet items to be included in the batch request.
    * @param {boolean} [continueOnError=false] - A flag indicating whether to continue processing subsequent requests if an error occurs.
    * @throws {Error} Throws an error if the requests parameter is not a valid array or contains invalid items.
-   * @returns {Promise<Array<WebAPIResponse>>} The parsed response from the batch request.
+   * @returns {Promise<Array<Response>>} The parsed response from the batch request.
    */
-  async Batch(requests, continueOnError = false) {
+  async Batch(items, continueOnError = false) {
     //#region Parameter Validation
-    if (!Array.isArray(requests)) {
+    if (!Array.isArray(items)) {
       throw new Error("requests parameter value is not a valid array.");
     }
 
-    for (const request of requests) {
-      if (
-        !(request instanceof WebAPIRequest) &&
-        !(request instanceof ChangeSet)
-      ) {
+    for (const request of items) {
+      if (!(request instanceof Request) && !(request instanceof ChangeSet)) {
         throw new Error(
-          "requests parameter value contains items that are not WebAPIRequest or ChangeSet."
+          "requests parameter value contains items that are not Request or ChangeSet."
         );
       }
     }
     //#endregion Parameter Validation
 
     const batchId = Math.random().toString(16).slice(2);
-    const batchItems = requests.map((request, index) => {
-      if (request instanceof ChangeSet) {
-        return request.getChangeSetText(batchId);
+    const batchItems = items.map((item, index) => {
+      if (item instanceof ChangeSet) {
+        return item.getChangeSetText(batchId);
       }
-      if (request instanceof WebAPIRequest) {
-        return request.getBatchBody(batchId, false);
+      if (item instanceof Request) {
+        return this.getBatchBody(item, batchId, false);
       }
     });
 
-    const batchRequestBody = [...batchItems, `--batch_${batchId}--\r\n`].join(
-      "\r\n"
-    );
+    const resolvedItems = await Promise.all(batchItems);
+    const batchRequestBody = [
+      ...resolvedItems,
+      `--batch_${batchId}--\r\n`,
+    ].join("\r\n");
 
     try {
       const batchRequestHeaders = {
@@ -1355,14 +1323,15 @@ class Client {
         batchRequestHeaders["Prefer"] = "odata.continue-on-error";
       }
 
-      // Send the batch request
-      const response = await this.Send(
-        "POST",
-        "$batch",
-        null,
-        batchRequestBody,
-        batchRequestHeaders
-      );
+      const batchHeaders = new Headers(batchRequestHeaders);
+
+      const request = new Request(new URL("$batch", this.apiEndpoint), {
+        method: "POST",
+        headers: batchHeaders,
+        body: batchRequestBody,
+      });
+
+      const response = await this.Send(request);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -1379,283 +1348,18 @@ class Client {
 }
 
 /**
- * Represents a web API request used for batch processing.
- */
-class WebAPIRequest {
-  #validateMethodValue(method) {
-    const validMethods = ["POST", "PATCH", "PUT", "GET", "DELETE"];
-    if (!validMethods.includes(method.toUpperCase())) {
-      throw new Error(`method parameter value ${method} is not valid.`);
-    }
-  }
-  #validateResourceValue(resource) {
-    if (typeof resource !== "string") {
-      throw new Error("resource parameter value is not a string.");
-    }
-    if (resource.includes("?") || resource.includes("&")) {
-      throw new Error(
-        "resource parameter value should not include query parameters."
-      );
-    }
-  }
-  #validateQueryValue(query) {
-    if (query && typeof query !== "string") {
-      throw new Error("query parameter value is not a string.");
-    }
-  }
-  #validateBodyValue(body) {
-    if (body && typeof body !== "object") {
-      throw new Error("body parameter value is not an object.");
-    }
-  }
-  #validateHeadersValue(headers) {
-    if (headers && typeof headers !== "object") {
-      throw new Error("headers parameter value is not an object.");
-    }
-  }
-  #validateContentIDValue(contentID) {
-    if (contentID && typeof contentID !== "string") {
-      throw new Error("contentID parameter value is not a string.");
-    }
-  }
-
-  /**
-   * Creates an instance of WebAPIRequest.
-   *
-   * @param {string} method - The HTTP method for the request (e.g., 'GET', 'POST').
-   * @param {string} resource - The resource endpoint for the request.
-   * @param {string} [query=null] - The query string for the request, if any.
-   * @param {Object|null} [body=null] - The body of the request, if any.
-   * @param {Object|null} [headers=null] - The headers for the request, if any.
-   * @param {string} [contentID] - The content ID, if any.
-   */
-  constructor(
-    method,
-    resource,
-    query = null,
-    body = null,
-    headers = null,
-    contentID = null
-  ) {
-    this.#validateMethodValue(method);
-    this.#validateResourceValue(resource);
-    this.#validateQueryValue(query);
-    this.#validateBodyValue(body);
-    this.#validateHeadersValue(headers);
-    this.#validateContentIDValue(contentID);
-
-    this._method = method;
-    this._resource = resource;
-    this._query = query;
-    this._body = body;
-    this._headers = headers;
-    this._contentID = contentID;
-  }
-  /**
-   * Gets the HTTP method of the request.
-   *
-   * @returns {string} The HTTP method.
-   */
-  get method() {
-    return this._method;
-  }
-
-  // Sets the HTTP method of the request.
-  set method(value) {
-    this.#validateMethodValue(value);
-    this._method = value;
-  }
-  // Gets the resource relative URL of the request.
-  get resource() {
-    return this._resource;
-  }
-
-  // Sets the resource relative URL of the request.
-  set resource(value) {
-    this.#validateResourceValue(value);
-    this._resource = value;
-  }
-
-  // Gets the query string options of the request.
-  get query() {
-    return this._query;
-  }
-
-  // Sets the query string options of the request.
-  set query(value) {
-    this.#validateQueryValue(value);
-    this._query = value;
-  }
-
-  // Gets the headers of the request.
-  get headers() {
-    return this._headers;
-  }
-  // Sets the headers of the request.
-  set headers(value) {
-    this.#validateHeadersValue(value);
-    this._headers = value;
-  }
-
-  // Sets the body of the request.
-  set body(value) {
-    this.#validateBodyValue(value);
-    this._body = value;
-  }
-
-  // Gets the Content-ID of the request.
-  get contentID() {
-    return this._contentID;
-  }
-  // Sets the Content-ID of the request.
-  set contentID(value) {
-    if (typeof value !== "string") {
-      throw new Error("contentID parameter value is not a string.");
-    }
-    this._contentID = value;
-  }
-
-  /**
-   * Gets the object that needs to be serialized to JSON for the request body.
-   *
-   * @returns {object} The object representing the body of the request.
-   */
-  get body() {
-    return this._body;
-  }
-  /**
-   * Generates the batch request body for the OData service.
-   *
-   * @param {string} Id - The unique identifier for the batch request or change set
-   * @param {bool} inChangeSet - Whether the request is in a change set.
-   * @returns {string} The formatted batch request body.
-   */
-  getBatchBody(Id, inChangeSet = false) {
-    let url = `/api/data/v9.2/${this.resource}`;
-    if (this.query) {
-      if (this.query.startsWith("?")) {
-        url += this.query;
-      } else {
-        url += "?" + this.query;
-      }
-    }
-    const batchBody = [
-      inChangeSet ? `--changeset_${Id}` : `--batch_${Id}`,
-      `Content-Type: application/http`,
-      `Content-Transfer-Encoding: binary`,
-    ];
-
-    if (this._contentID && inChangeSet) {
-      batchBody.push(`Content-ID: ${this.contentID}`);
-    }
-    batchBody.push("");
-    batchBody.push(`${this.method} ${url} HTTP/1.1`);
-
-    if (this._body) {
-      batchBody.push("Content-Type: application/json; type=entry");
-    }
-
-    // Any additional headers for the request.
-    if (this._headers) {
-      for (const [key, value] of Object.entries(this.headers)) {
-        batchBody.push(`${key}: ${value}`);
-      }
-    }
-
-    batchBody.push("", JSON.stringify(this.body));
-
-    return batchBody.join("\r\n");
-  }
-}
-
-/**
- * Represents a web API response used for batch processing.
- */
-class WebAPIResponse {
-  constructor() {
-    this._headers = {};
-    this._body = null;
-  }
-
-  // Initializes the WebAPIResponse object with the response from the server.
-  async init(response) {
-    if (!response instanceof Response) {
-      throw new Error("response parameter value is not a valid Response.");
-    }
-    this._statusCode = response.status;
-    this._statusText = response.statusText;
-    this._headers = response.headers;
-    if (
-      response.status >= 200 &&
-      response.status !== 204 && // No content
-      response.status !== 304 // Not modified
-    ) {
-      this._body = await response.json();
-    }
-  }
-
-  // Gets the status code of the response.
-  get statusCode() {
-    return this._statusCode;
-  }
-  // Sets the status code of the response.
-  set statusCode(value) {
-    if (typeof value !== "number") {
-      throw new Error("statusCode parameter value is not a number.");
-    }
-    this._statusCode = value;
-  }
-  // Gets the status text of the response.
-  get statusText() {
-    return this._statusText;
-  }
-  // Sets the status text of the response.
-  set statusText(value) {
-    if (typeof value !== "string") {
-      throw new Error("statusText parameter value is not a string.");
-    }
-    this._statusText = value;
-  }
-
-  // Gets the headers of the response.
-  get headers() {
-    return this._headers;
-  }
-
-  // Sets the headers of the response.
-  set headers(value) {
-    if (typeof value !== "object") {
-      throw new Error("headers parameter value is not an object.");
-    }
-    this._headers = value;
-  }
-
-  // Gets the body of the response.
-  get body() {
-    return this._body;
-  }
-
-  // Sets the body of the response.
-  set body(value) {
-    if (typeof value !== "object") {
-      throw new Error("body parameter value is not an object.");
-    }
-    this._body = value;
-  }
-}
-
-/**
  * Represents a set of changes used with batch processing.
  */
 class ChangeSet {
+  #client; // Reference to the Client instance
   // Validates the requests in the change set.
   #validateRequests(requests) {
     if (!Array.isArray(requests)) {
       throw new Error("requests value is not a valid array.");
     }
 
-    if (!requests.every((request) => request instanceof WebAPIRequest)) {
-      throw new Error("requests value is not an array of WebAPIRequest.");
+    if (!requests.every((request) => request instanceof Request)) {
+      throw new Error("requests value is not an array of Request.");
     }
 
     if (requests.some((request) => request.method === "GET")) {
@@ -1663,39 +1367,106 @@ class ChangeSet {
     }
   }
 
-  // Constructor for ChangeSet class
-  constructor(requests) {
-    this.#validateRequests(requests);
-    this._requests = [];
-    this._requests = requests;
-    this._id = Math.random().toString(16).slice(2);
+  // Sets default Content-ID headers for requests in the change set.
+  #setDefaultContentIds(requests) {
+    for (let i = 0; i < requests.length; i++) {
+      const request = requests[i];
+
+      if (request.headers.get("Content-ID") === null) {
+        request.headers.set("Content-ID", i.toString());
+      }
+    }
   }
 
-  // Gets the array of WebAPIRequest objects in the change set.
+  /**
+   * Gets the ID of the ChangeSet.
+   *
+   * @returns {string} The ID of the ChangeSet.
+   */
+  get id() {
+    return this._id;
+  }
+
+  /**
+   * Sets the ID of the ChangeSet.
+   *
+   * @param {string} value - The new ID for the ChangeSet.
+   * @throws {Error} Throws an error if the value is not a string.
+   */
+  set id(value) {
+    if (typeof value !== "string") {
+      throw new Error("id parameter value is not a string.");
+    }
+    this._id = value;
+  }
+
+  /**
+   * Creates an instance of ChangeSet.
+   *
+   * @constructor
+   * @param {Client} client - The Client instance to be used for the ChangeSet.
+   * @param {Array<Request>} requests - An array of Request objects to be included in the ChangeSet.
+   * @param {string} [id=null] - An optional ID for the ChangeSet. If not provided, a random ID will be generated.
+   * @throws {Error} Throws an error if the client parameter is not a valid Client instance.
+   */
+  constructor(client, requests, id = null) {
+    if (!(client instanceof Client)) {
+      throw new Error("client parameter value is not a valid Client instance.");
+    }
+    this.#client = client;
+    this.requests = requests;
+    if (!id) {
+      this._id = Math.random().toString(16).slice(2);
+    }
+  }
+
+  /**
+   * Gets the array of Request objects in the change set.
+   *
+   * @returns {Array<Request>} The array of Request objects in the change set.
+   */
   get requests() {
     return this._requests;
   }
-  // Sets the array of WebAPIRequest objects in the change set.
+
+  /**
+   * Sets the array of Request objects in the change set.
+   *
+   * @param {Array<Request>} value - The new array of Request objects to be included in the change set.
+   * @throws {Error} Throws an error if the value is not a valid array of Request objects.
+   */
   set requests(value) {
     this.#validateRequests(value);
+    this.#setDefaultContentIds(value);
     this._requests = value;
   }
 
-  // Gets the text for the changeset in the $batch operation.
-  getChangeSetText(batchId) {
+  /*
+   * Gets the text for the changeset in the $batch operation.
+   *
+   * @async
+   * @function getChangeSetText
+   * @param {string} batchId - The unique identifier for the batch request.
+   * @returns {Promise<string>} The formatted changeset text for the batch operation.
+   */
+  async getChangeSetText(batchId) {
     const batchBody = [
       `--batch_${batchId}\r\n`,
-      `Content-Type: multipart/mixed; boundary=changeset_${this._id}\r\n`,
+      `Content-Type: multipart/mixed; boundary=changeset_${this.id}\r\n`,
     ];
     let count = 1;
     for (const request of this._requests) {
       request.contentID = count.toString();
       // Use the getBatchBody method setting inChangeSet parameter to true
-      const requestBody = request.getBatchBody(this._id, true);
+      const requestBody = await this.#client.getBatchBody(
+        request,
+        this.id,
+        true
+      );
       batchBody.push(`\r\n${requestBody}`);
       count++;
     }
-    batchBody.push(`\r\n--changeset_${this._id}--\r\n`);
+    batchBody.push(`\r\n--changeset_${this.id}--\r\n`);
 
     return batchBody.join("");
   }
@@ -1704,14 +1475,10 @@ class ChangeSet {
 // Group public classes in a namespace object for export
 const DataverseWebAPI = {
   Client,
-  WebAPIRequest,
-  WebAPIResponse,
   ChangeSet,
-  // Add other classes here as needed
 };
 
 export { DataverseWebAPI };
-
 ```
 
 ### See also
