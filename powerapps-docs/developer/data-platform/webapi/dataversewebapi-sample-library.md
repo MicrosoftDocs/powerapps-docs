@@ -190,7 +190,7 @@ Retrieves the value of a specified column for a given record as described in [re
 
 #### `async Associate(targetSetName, targetId, navigationProperty, relatedSetName, relatedId)`
 
-Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-entities-using-web-api#add-a-record-to-a-collection).
+Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-entities-using-web-api.md#add-a-record-to-a-collection).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.
