@@ -28,7 +28,7 @@ You can find the code for this library below in [DataverseWebAPI.js sample libra
 
 The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.
 
-### Constructor
+### Client constructor
 
 #### `constructor(baseUrl, getTokenFunc, version = "v9.2")`
 
@@ -80,7 +80,7 @@ Retrieves a record from the specified entity set by ID, with optional query opti
 
 #### `async Refresh(record, primarykeyName)`
 
-Refreshes the given record by fetching the latest data from the server using [conditional retrieval](perform-conditional-operations-using-web-api#conditional-retrievals).
+Refreshes the given record by fetching the latest data from the server using [conditional retrieval](perform-conditional-operations-using-web-api.md#conditional-retrievals).
 
 - **Parameters:**
   - `record` (Object): The record to refresh. Must contain `@odata.etag` and `@odata.context` properties.
@@ -90,7 +90,7 @@ Refreshes the given record by fetching the latest data from the server using [co
 
 #### `async CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
 
-Creates and retrieves a record from the specified entity set as described in [create with data returned](create-entity-web-api#create-with-data-returned).
+Creates and retrieves a record from the specified entity set as described in [create with data returned](create-entity-web-api.md#create-with-data-returned).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -102,7 +102,7 @@ Creates and retrieves a record from the specified entity set as described in [cr
 
 #### `async RetrieveMultiple(collectionResource, query, maxPageSize = 100, includeAnnotations = true)`
 
-Retrieves multiple records from a specified entity set collection with optional query parameters as described in [use OData to query data](query/overview).
+Retrieves multiple records from a specified entity set collection with optional query parameters as described in [use OData to query data](query/overview.md).
 
 - **Parameters:**
   - `collectionResource` (string): The name of the entity set or a filtered collection expression to retrieve records from.
@@ -114,7 +114,7 @@ Retrieves multiple records from a specified entity set collection with optional 
 
 #### `async GetNextLink(nextLink, maxPageSize = 100, includeAnnotations = true)`
 
-Retrieves the next page of records from a specified entity set collection using the `@odata.nextLink` value as described in [page results](query/page-results).
+Retrieves the next page of records from a specified entity set collection using the `@odata.nextLink` value as described in [page results](query/page-results.md).
 
 - **Parameters:**
   - `nextLink` (string): The `@odata.nextLink` value from the previous response.
@@ -135,7 +135,7 @@ Asynchronously fetches data from a specified entity set using FetchXML as descri
 
 #### `async GetCollectionCount(collectionResource)`
 
-Asynchronously retrieves the count of items in a specified collection as described in [count rows](query/count-rows).
+Asynchronously retrieves the count of items in a specified collection as described in [count rows](query/count-rows.md).
 
 - **Parameters:**
   - `collectionResource` (string): The resource URL of the collection.
@@ -144,7 +144,7 @@ Asynchronously retrieves the count of items in a specified collection as describ
 
 #### `async Update(entitySetName, id, data, etag = null)`
 
-Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-entities-using-web-api#basic-update).
+Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-entities-using-web-api.md#basic-update).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set where the record exists.
@@ -156,7 +156,7 @@ Updates a record in the specified entity set by ID with the provided data as des
 
 #### `async Delete(entitySetName, id, etag = null)`
 
-Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-entities-using-web-api#basic-delete)
+Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-entities-using-web-api.md#basic-delete)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set from which to delete the entity.
@@ -167,7 +167,7 @@ Deletes an entity from the specified entity set by ID as described by [basic upd
 
 #### `async SetValue(entitySetName, id, columnName, value)`
 
-Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api#update-a-single-property-value)
+Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api.md#update-a-single-property-value)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -179,7 +179,7 @@ Sets the value of a specified column for a given record as described in [update 
 
 #### `async GetValue(entitySetName, id, columnName)`
 
-Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-entity-using-web-api#retrieve-a-single-property-value)
+Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-entity-using-web-api.md#retrieve-a-single-property-value)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -203,7 +203,7 @@ Associates records by creating data in the relationship to link them as describe
 
 #### `async Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
 
-Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-entities-using-web-api#remove-a-record-from-a-collection).
+Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-entities-using-web-api.md#remove-a-record-from-a-collection).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.
@@ -233,7 +233,7 @@ Sends a batch request containing multiple ([Request](https://developer.mozilla.o
 
 Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.
 
-### Constructor
+### ChangeSet constructor
 
 #### `constructor(requests)`
 
