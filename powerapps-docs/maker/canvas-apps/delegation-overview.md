@@ -22,11 +22,11 @@ contributors:
 ## Understanding delegation
 Power Apps works best with a back-end data source when a Power Fx query can be fully translated into an equivalent query that can be run on the data source. Power Apps sends a query the data source understands, the query is performed on the data source, and the query results are returned to Power Apps. For instance, the data source might do the work of filtering the data on the data source and only return the rows that meet the filter criteria. When this works correctly, we say that the query is **delegated** to the data source to do the work of the query.
 
-However, Power Fx queries can't always be translated into equivalent queries on all data sources. For example, Dataverse supports more query features than Excel. Dataverse supports the 'in' (membership) query operator and Excel doesn't. We say the query is **non-delegable** if a query uses a feature that the data source doesn't support. In general, if any part of a query expression is non-delegable we don't delegate any part of the query.
+However, Power Fx queries can't always be translated into equivalent queries on all data sources. For example, Dataverse supports more query features than Excel. Dataverse supports the 'in' (membership) query operator and Excel doesn't. We say the query is **non-delegable** if a query uses a feature that the data source doesn't support. In general, if any part of a query expression is nondelegable we don't delegate any part of the query.
 
-When a query is non-delegable, Power Apps only gets the first 500 records from the data source and then perform the actions in the query. This limit can be upped to 2,000 records [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to preserve good performance of Power Apps.** We found through experimentation that result sets greater than these sizes introduce performance issues for your app and Power Apps in general.
+When a query is nondelegable, Power Apps gets the first 500 records from the data source and then performs the actions in the query. This limit can be upped to 2,000 records [Changing the limit](#changing-the-limit) **Power Apps limits the result size to 500 records to preserve good performance of Power Apps.** We found through experimentation that result sets greater than these sizes introduce performance issues for your app and Power Apps in general.
 
-However, this limitation can be a problem as the query may return incorrect results if the data on the data source exceeds 500/2000 records. For instance, consider the example where your data source has 10 Million records and your query needs to operate on the last part of the data. (For example, the family names that start with 'Z') However, your query has a non-delegable operator in it (for example, distinct.) In this case, you only get the first 500/2000 records and you have incorrect results.
+However, this limitation can be a problem as the query may return incorrect results if the data on the data source exceeds 500/2000 records. For instance, consider the example where your data source has 10 Million records and your query needs to operate on the last part of the data. (For example, the family names that start with 'Z') However, your query has a nondelegable operator in it (for example, distinct.) In this case, you only get the first 500/2000 records and you have incorrect results.
 
 **Create your Power Fx queries by using the delegable tables for your data source.** You should only use query functions that can be delegated. It's the only way to keep your app performing well and to ensure users can access all the information they need. 
 
@@ -57,7 +57,7 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
 * **[In](functions/operators.md)** 
     > [!NOTE]
-    > [In](functions/operators.md) is only delegated for columns on the base data source. For instance, if the data source is **Accounts** table then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation. However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` does not delegate since **Fullname** column is on a different table (**PrimaryContact**) than **Accounts**. The expression is evaluated locally.
+    > [In](functions/operators.md) is only delegated for columns on the base data source. For instance, if the data source is **Accounts** table then `Filter(Accounts, Name in ["name1", "name2"])` delegates to the data source for evaluation. However, `Filter(Accounts, PrimaryContact.Fullname in ["name1", "name2"])` doesn't delegate since **Full name** column is on a different table (**PrimaryContact**) than **Accounts**. The expression is evaluated locally.
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
@@ -78,6 +78,9 @@ The previous list doesn't include these notable items:
 * Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
 * Volatiles: **[Rand](functions/function-rand.md)**, ...
 * [Collections](working-with-variables.md)
+
+## Delegation and collections  
+When you use 'With', 'UpdateContext' or 'Set' they internally create collections. Collections are a static in-memory list of records and don't participate in delegation.
 
 ## Query limitations
 
@@ -118,11 +121,11 @@ However, this expression won't:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-Certain aggregate functions can be delegated based on back-end support. Functions like **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions, such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, can also be delegated. However **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** have delegation restrictions. Currently, only a limited number of data sources support delegation for these functions. For more details, refer to the [Delegation list](#delegable-data-sources).
+Certain aggregate functions can be delegated based on back-end support. Functions like **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions, such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, can also be delegated. However **[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** have delegation restrictions. Currently, only a limited number of data sources support delegation for these functions. For more information, see the [Delegation list](#delegable-data-sources).
 
 
 
-## non-delegable functions
+## nondelegable functions
 All other functions don't support delegation, including these notable functions:
 
 * **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
@@ -131,7 +134,7 @@ All other functions don't support delegation, including these notable functions:
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
-## non-delegable limits
+## nondelegable limits
 Formulas that can't be delegated will be processed locally. Local processing allows for the full breadth of the Power Apps formula language to be used. But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network. That can take time, giving the impression that your app is slow or possibly crashed.
 
 To avoid this, Power Apps imposes a limit on the amount of data that can be processed locally: 500 records by default. We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
