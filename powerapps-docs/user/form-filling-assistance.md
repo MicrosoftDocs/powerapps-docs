@@ -47,6 +47,10 @@ This feature makes it easier and faster to enter data. The suggestions are entir
 - Fields that have column security aren't currently supported.
 - Languages supported are Arabic, Chinese (Simplified), Czech, Danish, Dutch, English (US), Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Spanish, Swedish, Thai, and Turkish.
 
+## Known issues
+
+- On model-driven apps the form fill assistance can cause the browser to become unresponsive for some users when working in quick create forms. 
+
 ## Use form fill assistance
 
 Copilot assistance for filling forms generates suggestions for text, numeric, choice, and date fields in main and quick create forms in model-driven apps. Suggestions are generated only for the tab that is open. They're presented inline in the form.
