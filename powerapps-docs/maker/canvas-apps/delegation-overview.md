@@ -80,7 +80,7 @@ The previous list doesn't include these notable items:
 * [Collections](working-with-variables.md)
 
 ## Delegation and collections  
-When you use 'With', 'UpdateContext' or 'Set' they internally create collections. Collections are a static in-memory list of records and don't participate in delegation.
+When you use 'With', 'UpdateContext' or 'Set' they internally create collections. Collections are a static in-memory list of records and don't participate in delegation. No delegation warning is shown. 
 
 ## Query limitations
 
