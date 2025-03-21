@@ -24,7 +24,7 @@ Data is at the core of most apps, including the data you build in Power Apps. Da
 A connector might provide **tables** of data or **actions**. Some connectors provide only tables, some provide only actions, and some provide both. Also your connector might be either a standard or custom connector.
 
 > [!NOTE]
-  > It's recommended to keep the number of connectors in a canvas app to a maximum of 10 and connection references to no more than 20. Going beyond these limits may lead to longer loading times for users when launching the app and could cause issues when saving the app.
+  > It's recommended to keep the number of connectors in a canvas app to a maximum of 10 and connection references to no more than 20. Going beyond these limits might lead to longer loading times for users when launching the app and could cause issues when saving the app.
 
 ## Tables
 
@@ -55,13 +55,13 @@ If your connector provides actions, you must still select your data source as yo
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that bind to the action.  
 
 > [!NOTE]
-> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tabular connectors. For instance, if you bind a tabular data source to a gallery then it will retrieve the first set or page of records (e.g., 100 records.) And, then it will page in more data as the control requests it. For an action based connector however, it will retrieve a "page" of data.  But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. 
+> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tabular connectors. For instance, if you bind a tabular data source to a gallery then it retrieves the first set or page of records (for example, 100 records.) And, then it will page in more data as the control requests it. For an action based connector however, it retrieves a "page" of data. However, if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. 
 
 For more information about how to customize your formula for custom updates, see these articles:
 
 [Patch](functions/function-patch.md)<br />[Collect](functions/function-clear-collect-clearcollect.md)<br />[Update](functions/function-update-updateif.md)
 
-Dynamic schema is a common type of result for action based connectors. Dynamic schema refers to the possibility that the same action might return a table with different columns depending on how it's called. Conditions that might cause the columns in the table to differ include input parameters, the user/role executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures might return different columns if run with different inputs, or an Azure DevOps instance might use custom fields that aren't available by default.
+Dynamic schema is a common type of result for action based connectors. Dynamic schema refers to the possibility that the same action might return a table with different columns depending on how it is called. Conditions that might cause the columns in the table to differ include input parameters, the user/role executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures might return different columns if run with different inputs, or an Azure DevOps instance might use custom fields that aren't available by default.
 
 > [!NOTE]
 > The [connector documentation](/connectors) shows dynamic schema results with this message **"The outputs of this operation are dynamic."** as the return value.
@@ -81,7 +81,7 @@ This table has links to more information about our most popular connectors. For 
 | [**Power BI**](connections/connection-powerbi.md) |[**SharePoint**](connections/connection-sharepoint-online.md) |
 | [**SQL Server**](connections/sql-connection-overview.md) |[**Twitter**](connections/connection-twitter.md) |
 
-** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business
+** Applies to Azure Blob, Box, Dropbox, Google Drive, and OneDrive.
 
 ## Standard and custom connectors
 
@@ -95,12 +95,12 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 
 ## Security and types of authentication
 
-As you author your app and create a connection to a data source, you might see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Microsoft Entra Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it. It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
+As you author your app and create a connection to a data source, you might see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Microsoft Entra Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it. It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server however, the principles apply to all types of connections.
 
 > [!NOTE]
-> - For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
-> - Power Apps doesn't  support **External member** identities. For more information, see [Properties of an Microsoft Entra B2B collaboration user](/azure/active-directory/external-identities/user-properties). 
-
+> - For detailed information about security considerations when using a relational database server, such as Microsoft SQL Server or Oracle, as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).  
+> - Power Apps doesn't support **External member** identities. For more information, see [Properties of a Microsoft Entra B2B collaboration user](/azure/active-directory/external-identities/user-properties).  
+  
 ### Microsoft Entra ID
 
 This authentication is a secure type of connection. For example, SharePoint uses this type of authentication. SQL Server also allows for this type of authentication. When you connect, the Microsoft Entra service identifies you separately to SharePoint on your behalf. You don't have to supply a username or password. As an author, you can create and work with the data source with your credentials. When you publish your application and your application user logs in, they do so with their credentials. If the data is appropriately secured on a back-end, your users can only see what they're authorized to see based on their credentials. This type of security allows you to change rights for specific application users on the back-end data source after the application is published. For instance you can grant access, deny access, or refine what a user or set of users can see all on the back-end data source.
@@ -113,9 +113,13 @@ This type of connection is also secure. For example, Twitter uses this type of a
 
 In a shared connection, the user name and password for the connection is supplied by the Power Apps author at the time the data source is created in the application. The connection authentication to the data source is then **Implicitly Shared** with end users. Once the application is published, the connection is also published and available to your users.  
 
-Before January 2024, your end users could take the connection that is shared with them and create separate new applications. Your users can't see the user name or password, but the connection would be available to them. However, **after January 2024, all newly created shared connections are secured.** Note that old apps must be republished to be secure. The connection is no longer shared with end users. The published Power App talks to a connection proxy. The connection proxy only talks to the specific Power App for which it's linked. The connection proxy limits the actions that are sent to the connections to the ones in the Power App **{Get, Put/Patch, Delete}** for a given data source. If you have an app using the connections published before January 2024, you should republish your application and unshare any connections with end users that shouldn't have them.
+Before January 2024, your end users could take the connection that is shared with them and create separate new applications. Your users can't see the user name or password, but the connection would be available to them. However, **after January 2024, all newly created shared connections are secured.** The old apps must be republished to be secure. The connection is no longer shared with end users. The published Power App talks to a connection proxy. The connection proxy only talks to the specific Power App for which it's linked. The connection proxy limits the actions that are sent to the connections to the ones in the Power App **{Get, Put/Patch, Delete}** for a given data source. If you have an app using the connections published before January 2024, you should republish your application and unshare any connections with end users that shouldn't have them.
 
-In SQL Server, an example this type of connection is **SQL Server Authentication**. Many other database data sources provide a similar capability. When you publish your application, your users don't need to supply a unique user name and password.  
+In SQL Server, an example this type of connection is **SQL Server Authentication**. Many other database data sources provide a similar capability. When you publish your application, your users don't need to supply a unique user name and password. 
+
+
+> [!NOTE]
+> **You do not have correct permissions to use this connection** is an error message your end-users may encounter in the consent dialog. There are two situations that may cause this. First, the application may have a shared implicit connection that **isn't** a secure implicit connection. Sharing the connection with the end user resolves this issue but is **not** recommended because all shared connections should be secure implicit connections. The author should convert all connections in the application to be secure implicit connections to resolve this issue. Second, the connection may already be a secure implicit connection. Republishing may resolve this issue. If it doesn't, then a product bug should be filed.
 
 #### Notification to update your apps (secure implicit connections)
 
@@ -211,7 +215,7 @@ The following image is an example of the connection consent dialog for an app co
 For select connectors, admins can suppress this dialog, and consent on behalf of end users to connect to a data source. The following table explains which types of connectors the consent dialog might be suppressed for an app.
 
 > [!NOTE]
-> If an admin suppresses the consent dialog but the platform can’t perform single-sign-on for an end-user, the dialog will be presented to the user when they launch the app.
+> If an admin suppresses the consent dialog but the platform can’t perform single-sign-on for an end-user, the dialog is presented to the user when they launch the app.
 
 | Connector type                                                                                                                                           | Consent dialog suppressible? | Reference               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|-------------------------|
@@ -225,6 +229,6 @@ Microsoft Power Platform is only able to suppress the consent dialog for connect
 1. The data source preauthorizes Microsoft’s Azure API connections service principal to enable single-sign-on.
 1. An admin configures an app to suppress the consent for the preceding connections.
 
-The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and might be configured by custom applications registered in a Microsoft Entra tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
+The preauthorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and might be configured by custom applications registered in a Microsoft Entra tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
