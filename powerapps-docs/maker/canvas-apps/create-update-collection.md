@@ -61,7 +61,7 @@ Watch this video to learn how to create and update a collection:
     )
     ```
 
-1. Press `F5` or select the play button to preview the app. Type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
+1. To preview the app, press `F5` or select the play button. Type some text into **ProductName**, select an option in **Colors**, and then select **Add**.
 
 1. Repeat the previous step at least two more times, and then press `Esc`.
 
@@ -105,7 +105,7 @@ Watch this video to learn how to create and update a collection:
 
     `Collect(MySPCollection, ListName)`
 
-    This function creates a collection that's named **MySPCollection** and that contains the same data as your list.
+    This function creates a collection named **MySPCollection** and that contains the same data as your list.
 
 1. While holding down the `Alt` key, select the button.
 
@@ -113,7 +113,7 @@ For information about how to show data in a form (with drop-down lists, date pic
 
 ## Next steps
 
-- Review the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
+- Review the [reference article](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
 - Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
