@@ -58,8 +58,11 @@ async function runSample(sample) {
 }
 ```
 
-
 ## FunctionsAndActions.js
+
+This sample is different from others because it installs a managed solution that contains a bound function defined by a Custom API named `sample_IsSystemAdmin` included in a managed solution named `IsSystemAdminFunction`. The `IsSystemAdminFunction_1_0_0_0_managed.js` library provides the base64 encoded string value that represents the `IsSystemAdminFunction_1_0_0_0_managed.zip` solution file. The private `#installIsSystemAdminFunctionSolution` method uses this data with the [ImportSolution Action](/power-apps/developer/data-platform/webapi/reference/importsolution) to create this `sample_IsSystemAdmin` function.
+
+[Learn more about the IsSystemAdmin custom API sample](../../org-service/samples/issystemadmin-customapi-sample-plugin.md)
 
 The following is the `FunctionsAndActions` class that contains the code for this sample.
 
