@@ -279,18 +279,7 @@ Storing configuration data in the environment separate from code is a security b
 1. Create a new file named `.env` in the root of your `quickspa` folder.
 1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values below.
 
-:::code source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/.env.example":::
-
-   <!-- ```
-   # The environment this application will connect to.
-   BASE_URL=https://<yourorg>.api.crm.dynamics.com
-   # The registered Entra application id
-   CLIENT_ID=11112222-bbbb-3333-cccc-4444dddd5555
-   # The Entra tenant id
-   TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
-   # The SPA redirect URI included in the Entra application registration
-   REDIRECT_URI=http://localhost:1234
-   ``` -->
+   :::code language="text" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/.env.example":::
 
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
@@ -306,29 +295,6 @@ The instructions in this section describe how to create the HTML file that provi
 
    :::code language="html" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/index.html":::
 
-   <!-- ```html
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Dataverse Web API JavaScript Quick Start</title>
-      <link rel="stylesheet" href="styles/style.css"/>
-   </head>
-   <body>
-      <header>
-         <h1>Dataverse Web API JavaScript Quick Start</h1>
-         <button id="loginButton">Login</button>
-         <button id="logoutButton" class="hidden">Logout</button>
-      </header>
-      <nav id="buttonContainer" class="disabled">
-         <button id="whoAmIButton">WhoAmI</button>
-      </nav>
-      <main id="container"></main>
-      <script type="module" src="scripts/index.js"></script>
-   </body>
-   </html>
-   ``` -->
 
 This HTML provides the following elements:
 
@@ -351,172 +317,6 @@ This file contains all the logic that makes the `index.html` page dynamic.
 
    :::code language="javascript" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/scripts/index.js":::
 
-   <!-- ```javascript
-   import { PublicClientApplication } from "@azure/msal-browser";
-   import 'dotenv/config'
-
-   // Load the environment variables from the .env file
-   const config = {
-      baseUrl: process.env.BASE_URL,
-      clientId: process.env.CLIENT_ID,
-      tenantId: process.env.TENANT_ID,
-      redirectUri: process.env.REDIRECT_URI,
-   };
-
-   // Microsoft Authentication Library (MSAL) configuration
-   const msalConfig = {
-   auth: {
-      clientId: config.clientId,
-      authority: "https://login.microsoftonline.com/" + config.tenantId,
-      redirectUri: config.redirectUri,
-      postLogoutRedirectUri: config.redirectUri,
-   },
-   cache: {
-      cacheLocation: "sessionStorage", // This configures where your cache will be stored
-      storeAuthStateInCookie: true,
-      },
-   };
-
-   // Create an instance of MSAL
-   const msalInstance = new PublicClientApplication(msalConfig);
-
-   // body/main element where messages are displayed
-   const container = document.getElementById("container");
-
-   // Event handler for login button
-   async function logIn() {
-   await msalInstance.initialize();
-
-   if (!msalInstance.getActiveAccount()) {
-      const request = {
-         scopes: ["User.Read", config.baseUrl + "/user_impersonation"],
-      };
-      try {
-         const response = await msalInstance.loginPopup(request);
-         msalInstance.setActiveAccount(response.account);
-
-         // Hide the loginButton so it won't get pressed twice
-         document.getElementById("loginButton").style.display = "none";
-
-         // Show the logoutButton
-         const logoutButton = document.getElementById("logoutButton");
-         logoutButton.innerHTML = "Logout " + response.account.name;
-         logoutButton.style.display = "block";
-         // Enable any buttons in the nav element
-         document.getElementsByTagName("nav")[0].classList.remove("disabled");
-         } catch (error) {
-         let p = document.createElement("p");
-         p.textContent = "Error logging in: " + error;
-         p.className = "error";
-         container.append(p);
-         }
-      } else {
-      // Clear the active account and try again
-      msalInstance.setActiveAccount(null);
-      this.click();
-      }
-   }
-
-   // Event handler for logout button
-   async function logOut() {
-   const activeAccount = await msalInstance.getActiveAccount();
-   const logoutRequest = {
-      account: activeAccount,
-      mainWindowRedirectUri: config.redirectUri,
-   };
-
-   try {
-      await msalInstance.logoutPopup(logoutRequest);
-
-      document.getElementById("loginButton").style.display = "block";
-
-      this.innerHTML = "Logout ";
-      this.style.display = "none";
-      document.getElementsByTagName("nav")[0].classList.remove("disabled");
-      } catch (error) {
-      console.error("Error logging out: ", error);
-      }
-   }
-
-   /**
-   * Retrieves an access token using MSAL (Microsoft Authentication Library).
-   * Set as the getToken function for the DataverseWebAPI client in the login function.
-   *
-   * @async
-   * @function getToken
-   * @returns {Promise<string>} The access token.
-   * @throws {Error} If token acquisition fails and is not an interaction required error.
-   */
-   async function getToken() {
-   const request = {
-      scopes: [config.baseUrl + "/.default"],
-   };
-
-   try {
-      const response = await msalInstance.acquireTokenSilent(request);
-      return response.accessToken;
-      } catch (error) {
-      if (error instanceof msal.InteractionRequiredAuthError) {
-         const response = await msalInstance.acquireTokenPopup(request);
-         return response.accessToken;
-         } else {
-         console.error(error);
-         throw error;
-         }
-      }
-   }
-
-   // Add event listener to the login button
-   document.getElementById("loginButton").onclick = logIn;
-
-   // Add event listener to the logout button
-   document.getElementById("logoutButton").onclick = logOut;
-
-   /// Function to get the current user's information
-   /// using the WhoAmI function of the Dataverse Web API.
-   async function whoAmI() {
-   const token = await getToken();
-   const request = new Request(config.baseUrl + "/api/data/v9.2/WhoAmI", {
-      method: "GET",
-      headers: {
-         Authorization: `Bearer ${token}`,
-         "Content-Type": "application/json",
-         Accept: "application/json",
-         "OData-Version": "4.0",
-         "OData-MaxVersion": "4.0",
-      },
-   });
-   // Send the request to the API
-   const response = await fetch(request);
-   // Handle the response
-   if (!response.ok) {
-      throw new Error("Network response was not ok: " + response.statusText);
-   }
-   // Successfully received response
-   return await response.json();
-   }
-
-   // Add event listener to the whoAmI button
-   document.getElementById("whoAmIButton").onclick = async function () {
-   // Clear any previous messages
-   container.replaceChildren();
-   try {
-      const response = await whoAmI();
-      let p1 = document.createElement("p");
-      p1.textContent =
-         "Congratulations! You connected to Dataverse using the Web API.";
-      container.append(p1);
-      let p2 = document.createElement("p");
-      p2.textContent = "User ID: " + response.UserId;
-      container.append(p2);
-      } catch (error) {
-      let p = document.createElement("p");
-      p.textContent = "Error fetching user info: " + error;
-      p.className = "error";
-      container.append(p);
-      }
-   };
-   ``` -->
 
 The `index.js` script contains the following constants and functions:
 
@@ -542,60 +342,6 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
 
    :::code language="css" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/styles/style.css":::
 
-   <!-- ```css
-   .disabled {
-      pointer-events: none;
-      opacity: 0.5;
-      /* Optional: to visually indicate the element is disabled */
-   }
-
-   .hidden {
-      display: none;
-   }
-
-   .error {
-      color: red;
-   }
-
-   .expectedError {
-      color: green;
-   }
-
-   body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-   }
-
-   h1,
-   h2,
-   h3 {
-      color: #2c3e50;
-   }
-
-   button {
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-      margin: 5px;
-      /* Adjust the value as needed */
-   }
-
-   button:hover {
-      background-color: #2980b9;
-   }
-
-   header {
-      padding-bottom: 10px;
-      /* Adjust the value as needed */
-   }
-   ``` -->
 
 ### Create `.gitignore` file
 
