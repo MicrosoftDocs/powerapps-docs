@@ -21,8 +21,8 @@ This library demonstrates:
 - Helping keep code [DRY](https://wikipedia.org/wiki/Don%27t_repeat_yourself) and encourage reuse.
 - A pattern of code reuse by:
 
-   - All operations pass through a common [Send method](#async-sendrequest) that accepts a single [Request class](https://developer.mozilla.org/docs/Web/API/Request) instance and adds common headers including `Authorization`.
-   - Providing a [Batch method](#async-batchrequests-continueonerror--false) that accepts [Request](https://developer.mozilla.org/docs/Web/API/Request) classes and returns [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
+   - All operations pass through a common [Send method](#sendrequest) that accepts a single [Request class](https://developer.mozilla.org/docs/Web/API/Request) instance and adds common headers including `Authorization`.
+   - Providing a [Batch method](#batchrequests-continueonerror--false) that accepts [Request](https://developer.mozilla.org/docs/Web/API/Request) classes and returns [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
    - Each method provided represents a sample showing how to construct a `Request` instance that can be used with the `Batch` method.
 
 > [!NOTE]
@@ -271,7 +271,7 @@ Creates an instance of `ChangeSet`.
 
 ### Methods
 
-- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#async-batchrequests-continueonerror--false). There are no scenarios where you will need to use this method.
+- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#batchrequests-continueonerror--false). There are no scenarios where you will need to use this method.
 
 ## DataverseWebAPI.js sample library code
 

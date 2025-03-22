@@ -26,7 +26,7 @@ This sample has the same prerequisites as [Quick Start Web API with client-side 
 
 ## Context
 
-This sample starts when the user select a button that triggers the following event handler:
+This sample starts when the user selects a button that triggers the following event handler:
 
 ```javascript
 // Add event listener to the basic operations button
