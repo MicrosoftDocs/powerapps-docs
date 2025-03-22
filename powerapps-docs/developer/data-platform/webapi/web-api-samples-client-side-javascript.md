@@ -22,7 +22,7 @@ This article provides common understanding about Web API samples using client-si
 
 The following samples use the patterns described here:
 
-|Sample| Sample Group|Description|
+|Sample|Sample Group|Description|
 | --- | --- | --- |
 | [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)| [Web API Basic Operations Sample](web-api-basic-operations-sample.md)| Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse table rows (entity records).|
 | [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)| [Web API Query Data Sample](web-api-query-data-sample.md)| Demonstrates how to use OData v4 query syntax and functions as well as Dataverse query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform queries. |
@@ -31,14 +31,18 @@ The following samples use the patterns described here:
 
 <a name="bkmk_howToDownload"></a>
 
-## How to download the source code for the sample.
+## How to download the source code for the sample
 
-The source code for each sample is available on [GitHub](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS). 
+These samples are implemented as JavaScript classes that run within a SPA application. This application is on [GitHub at PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample). 
+
+The source code for each sample is available in the [/src/samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample/src/samples) folder. You can also view the source code of the samples in the respective article above.
 
 
 <a name="bkmk_howToRunSample"></a>
 
 ## How to run the sample to see the script in action
+
+View the [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample#readme) for information about how you can run the sample. When the sample runs, you can select which sample to run by clicking the buttons.
 
 :::image type="content" source="../media/dataverse-web-api-javascript-spa-sample-app.png" alt-text="The SPA sample application with buttons to run available samples":::
 
@@ -53,14 +57,12 @@ All the samples in this group have the following in common.
 - All the samples use a common [DataverseWebAPI.js sample library](dataversewebapi-sample-library.md) that provides re-usable methods to perform operations with business data in Dataverse.
 
 
-
-
-
-
 ### See also
 
-[Use the Dataverse Web API](overview.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Samples (C#)](web-api-samples-csharp.md)
+[Use the Dataverse Web API](overview.md)    
+[Web API Samples](web-api-samples.md)   
+[Web API Samples (C#)](web-api-samples-csharp.md)   
+[Web API Samples (PowerShell)](web-api-samples-powershell.md)
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

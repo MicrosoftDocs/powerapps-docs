@@ -14,23 +14,54 @@ contributors:
 
 # Web API Query Data Sample (Client-side JavaScript)
 
+This sample contains code that demonstrates how to  basic query requests using client-side JavaScript to perform the set of operations described by the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
 
-
-This sample demonstrates how to perform basic query requests using the Microsoft Dataverse Web API using client-side JavaScript.
-
-> [!NOTE]
-> This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
+This code uses the [DataverseWebAPI.js sample library](../dataversewebapi-sample-library.md) and is designed to run in the context of a [Single Page Application (SPA)](https://developer.mozilla.org/docs/Glossary/SPA) sample available on GitHub. [Learn more about the sample application](../web-api-samples-client-side-javascript.md)
 
 [!INCLUDE [cc-web-api-spa-javascript-code-sample-note](../../includes/cc-web-api-spa-javascript-code-sample-note.md)]
 
 ## Prerequisites
 
-This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that sample to run this sample.
+This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that quick start to run this sample.
 
-TODO: Create an include of steps to register the sample.
-Include it here? Or in [Web API Data operations Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
+## Context
+
+This sample starts when the user select a button that triggers the following event handler:
+
+```javascript
+// Add event listener to the basic operations button
+document.getElementById("queryDataButton").onclick = async function () {
+   runSample(new QueryDataSample(client, container));
+};
+```
+
+The `runSample` function takes an instance of the `QueryDataSample` class where the constructor accepts a [DataverseWebAPI.Client](../dataversewebapi-sample-library.md#client-class) instance and a reference to a container to write messages to.
+
+
+```javascript
+// Runs all samples in a consistent way
+async function runSample(sample) {
+  // Disable the buttons to prevent multiple clicks
+  document.getElementsByTagName("nav")[0].classList.add("disabled");
+
+  // Disable the logout button while the sample is running
+  logoutButton.classList.add("disabled");
+
+  // Run the sample
+  await sample.SetUp();
+  await sample.Run();
+  await sample.CleanUp();
+
+  // Re-enable the buttons
+  document.getElementsByTagName("nav")[0].classList.remove("disabled");
+  logoutButton.classList.remove("disabled");
+}
+```
+
 
 ## QueryDataSample.js
+
+The following is the `QueryDataSample` class that contains the code for this sample.
 
 ```javascript
 import { Util } from "../scripts/Util.js";
@@ -298,11 +329,64 @@ export class QueryDataSample {
       this.#contosoAccountId
     );
   }
+
+  //#region Section 0: Create records to query
+
+  // Create records to query
+  async #createRecords(contosoAccount) {
+    try {
+      const contosoAccountId = await this.#client.Create(
+        "accounts",
+        contosoAccount
+      );
+      this.#util.appendMessage("Created records for this sample");
+      // To delete later
+      this.#entityStore.push({
+        name: `${contosoAccount.name}`,
+        entityName: "account",
+        entitySetName: "accounts",
+        id: contosoAccountId,
+      });
+      return contosoAccountId;
+    } catch (e) {
+      this.#util.showError("Failed to create sample records:" + e.message);
+      throw e;
+    }
+  }
+
+  // Add the primary contact to the entity store
+  async #addPrimaryContactToEntityStore(contosoAccountId) {
+    try {
+      const contoso = await this.#client.Retrieve(
+        "accounts",
+        contosoAccountId,
+        "$select=accountid&$expand=primarycontactid($select=contactid,fullname)"
+      );
+      // To delete later
+      this.#entityStore.push({
+        name: `${contoso.primarycontactid.fullname}`,
+        entityName: "contact",
+        entitySetName: "contacts",
+        id: contoso.primarycontactid.contactid,
+      });
+
+      return contoso.primarycontactid.contactid;
+    } catch (e) {
+      this.#util.showError(
+        "Failed to add primary contact to entity store:" + e.message
+      );
+      throw e;
+    }
+  }
+  //#endregion Section 0: Create records to query
+
   // Run the sample
   async Run() {
     try {
       // Section 1: Select specific properties
-      this.#util.appendMessage("<h2>Section 1: Select specific properties</h2>");
+      this.#util.appendMessage(
+        "<h2>Section 1: Select specific properties</h2>"
+      );
 
       await this.#selectSpecificProperties();
 
@@ -364,105 +448,6 @@ export class QueryDataSample {
       await this.CleanUp();
     }
   }
-  // Clean up the created records
-  async CleanUp() {
-    if (this.#entityStore.length === 0) {
-      // No records to delete
-      return;
-    }
-
-   //#region Section 10: Delete sample records
-
-    this.#util.appendMessage("<h2>Section 10: Delete sample records</h2>");
-
-    let deleteMessageList = document.createElement("ul");
-    this.#container.append(deleteMessageList);
-
-    const requests = [];
-    for (const item of this.#entityStore) {
-      const request = new dv.WebAPIRequest(
-        "DELETE",
-        `${item.entitySetName}(${item.id})`
-      );
-      requests.push(request);
-    }
-
-    const changeSet = new dv.ChangeSet(requests);
-    const responses = await this.#client.Batch([changeSet]);
-
-    responses.forEach((response, index) => {
-      const message = document.createElement("li");
-      const entity = this.#entityStore[index];
-
-      if (response.statusCode === 204) {
-        message.textContent = `Deleted ${entity.entityName} ${entity.name}`;
-      } else {
-        message.textContent = `Failed to delete ${entity.entityName} ${entity.name}`;
-        message.className = "error";
-      }
-
-      deleteMessageList.append(message);
-    });
-
-    this.#util.appendMessage(
-      "Related contact records deleted due to cascade delete."
-    );
-     //#endregion Section 10: Delete sample records
-    // Set the entity store to an empty array
-    this.#entityStore = [];
-    this.#util.appendMessage(this.#name + " sample completed.");
-    this.#util.appendMessage("<a href='#'>Go to top</a>");
-  }
-
-  //#region Section 0: Create records to query
-
-  // Create records to query
-  async #createRecords(contosoAccount) {
-    try {
-      const contosoAccountId = await this.#client.Create(
-        "accounts",
-        contosoAccount
-      );
-      this.#util.appendMessage("Created records for this sample");
-      // To delete later
-      this.#entityStore.push({
-        name: `${contosoAccount.name}`,
-        entityName: "account",
-        entitySetName: "accounts",
-        id: contosoAccountId,
-      });
-      return contosoAccountId;
-    } catch (e) {
-      this.#util.showError("Failed to create sample records:" + e.message);
-      throw e;
-    }
-  }
-
-  // Add the primary contact to the entity store
-  async #addPrimaryContactToEntityStore(contosoAccountId) {
-    try {
-      const contoso = await this.#client.Retrieve(
-        "accounts",
-        contosoAccountId,
-        "$select=accountid&$expand=primarycontactid($select=contactid,fullname)"
-      );
-      // To delete later
-      this.#entityStore.push({
-        name: `${contoso.primarycontactid.fullname}`,
-        entityName: "contact",
-        entitySetName: "contacts",
-        id: contoso.primarycontactid.contactid,
-      });
-
-      return contoso.primarycontactid.contactid;
-    } catch (e) {
-      this.#util.showError(
-        "Failed to add primary contact to entity store:" + e.message
-      );
-      throw e;
-    }
-  }
-  //#endregion Section 0: Create records to query
 
   //#region Section 1: Select specific properties
 
@@ -1253,38 +1238,6 @@ export class QueryDataSample {
     // Change the page attribute value
     fetchElement.setAttribute("page", "2");
 
-    if (pagingCookie) {
-      const pagingCookieDoc = new DOMParser().parseFromString(
-        pagingCookie,
-        "text/xml"
-      );
-
-      const cookieElement = pagingCookieDoc.getElementsByTagName("cookie")[0];
-      const pagingCookieText = cookieElement
-        .getAttribute("pagingcookie")
-        .toString();
-      const doubleDecodedCookie = decodeURIComponent(
-        decodeURIComponent(pagingCookieText)
-      );
-
-      function xmlEncode(xml) {
-        let encodedXml = xml
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/ /g, "+");
-        return encodedXml;
-      }
-
-      console.log("doubleDecodedCookie xml:", doubleDecodedCookie);
-      const xmlEncodedCookieValue = xmlEncode(doubleDecodedCookie);
-
-      console.log("xmlEncodedCookieValue:", xmlEncodedCookieValue);
-
-      // Uncomment this when we know how to set the paging-cookie attribute
-      // fetchElement.setAttribute("paging-cookie", xmlEncodedCookieValue);
-    }
-
     // Serialize the updated XML back to a string
     const serializer = new XMLSerializer();
 
@@ -1402,54 +1355,104 @@ export class QueryDataSample {
       });
 
       return userQueryId;
-
-    } catch (e) {      
-      this.#util.showError(
-        "Failed to create user query." + e.message
-      );
+    } catch (e) {
+      this.#util.showError("Failed to create user query." + e.message);
       throw e;
     }
-
   }
 
   async #showUserQueryResults(userQueryId) {
-      try {
-         // Retrieve first three records using the user query
-         const results = await this.#client.RetrieveMultiple(
-         "contacts",
-         `userQuery=${userQueryId}`,
-         3);
-   
-         this.#util.appendMessage(
-         "<strong>User query results:</strong>"
-         );
-   
-         this.#util.appendMessage(
-         "<pre>" + JSON.stringify(results, null, 3) + "</pre>"
-         );
-      } catch (e) {
-         this.#util.showError(
-         "Failed to retrieve the results of the user query." + e.message
-         );
-         throw e;
-      }
+    try {
+      // Retrieve first three records using the user query
+      const results = await this.#client.RetrieveMultiple(
+        "contacts",
+        `userQuery=${userQueryId}`,
+        3
+      );
+
+      this.#util.appendMessage("<strong>User query results:</strong>");
+
+      this.#util.appendMessage(
+        "<pre>" + JSON.stringify(results, null, 3) + "</pre>"
+      );
+    } catch (e) {
+      this.#util.showError(
+        "Failed to retrieve the results of the user query." + e.message
+      );
+      throw e;
+    }
   }
 
   //#endregion Section 9: Use predefined queries
+
+  //#region Section 10: Delete sample records
+
+  // Clean up the created records
+  async CleanUp() {
+    if (this.#entityStore.length === 0) {
+      // No records to delete
+      return;
+    }
+    // Section 10: Delete sample records
+    this.#util.appendMessage("<h2>Section 10: Delete sample records</h2>");
+
+    let deleteMessageList = document.createElement("ul");
+    this.#container.append(deleteMessageList);
+
+    const requests = [];
+    for (const item of this.#entityStore) {
+      const request = new Request(
+        new URL(`${item.entitySetName}(${item.id})`, this.#client.apiEndpoint),
+        {
+          method: "DELETE",
+        }
+      );
+      requests.push(request);
+    }
+
+    const changeSet = new dv.ChangeSet(this.#client, requests);
+    const responses = await this.#client.Batch([changeSet]);
+
+    responses.forEach((response, index) => {
+      const message = document.createElement("li");
+      const entity = this.#entityStore[index];
+
+      if (response.status === 204) {
+        message.textContent = `Deleted ${entity.entityName} ${entity.name}`;
+      } else {
+        message.textContent = `Failed to delete ${entity.entityName} ${entity.name}`;
+        message.className = "error";
+      }
+
+      deleteMessageList.append(message);
+    });
+
+    this.#util.appendMessage(
+      "Related contact records deleted due to cascade delete."
+    );
+
+    // Set the entity store to an empty array
+    this.#entityStore = [];
+    this.#util.appendMessage(this.#name + " sample completed.");
+    this.#util.appendMessage("<a href='#'>Go to top</a>");
+  }
+
+  //#endregion Section 10: Delete sample records
 }
 ```
 
 
+
 ### See also
 
-[Use the Dataverse Web API](../overview.md)<br />
-[Query Data using the Web API](../query/overview.md)<br />
-[Web API Samples](../web-api-samples.md)<br />
-[Web API Query Data Sample](../web-api-query-data-sample.md)<br />
-[Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />
-[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
+[Use the Dataverse Web API](../overview.md)   
+[Query Data using the Web API](../query/overview.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Query Data Sample](../web-api-query-data-sample.md)   
+[Web API Query Data Sample (C#)](webapiservice-query-data.md)   
+[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)   
+[Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)   
+[Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)   
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -14,18 +14,54 @@ contributors:
 
 # Web API Basic Operations Sample (client-side JavaScript)
 
-This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript.
+This sample contains code that demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript to perform the set of operations described by the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
+
+This code uses the [DataverseWebAPI.js sample library](../dataversewebapi-sample-library.md) and is designed to run in the context of a [Single Page Application (SPA)](https://developer.mozilla.org/docs/Glossary/SPA) sample available on GitHub. [Learn more about the sample application](../web-api-samples-client-side-javascript.md)
 
 [!INCLUDE [cc-web-api-spa-javascript-code-sample-note](../../includes/cc-web-api-spa-javascript-code-sample-note.md)]
 
 ## Prerequisites
 
-This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that sample to run this sample.
+This sample has the same prerequisites as [Quick Start Web API with client-side JavaScript and Visual Studio Code](../quick-start-js-spa.md#prerequisites). To run this sample, you should complete the quick start first. You can use the same application registration information for that quick start to run this sample.
 
-TODO: Create an include of steps to register the sample.
-Include it here? Or in [Web API Data operations Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
+## Context
+
+This sample starts when the user select a button that triggers the following event handler:
+
+```javascript
+// Add event listener to the basic operations button
+document.getElementById("basicOperationsButton").onclick = async function () {
+   runSample(new BasicOperationsSample(client, container));
+};
+```
+
+The `runSample` function takes an instance of the `BasicOperationsSample` class where the constructor accepts a [DataverseWebAPI.Client](../dataversewebapi-sample-library.md#client-class) instance and a reference to a container to write messages to.
+
+
+```javascript
+// Runs all samples in a consistent way
+async function runSample(sample) {
+  // Disable the buttons to prevent multiple clicks
+  document.getElementsByTagName("nav")[0].classList.add("disabled");
+
+  // Disable the logout button while the sample is running
+  logoutButton.classList.add("disabled");
+
+  // Run the sample
+  await sample.SetUp();
+  await sample.Run();
+  await sample.CleanUp();
+
+  // Re-enable the buttons
+  document.getElementsByTagName("nav")[0].classList.remove("disabled");
+  logoutButton.classList.remove("disabled");
+}
+```
+
 
 ## BasicOperationsSample.js
+
+The following is the `BasicOperationsSample` class that contains the code for this sample.
 
 ```javascript
 import { Util } from "../scripts/Util.js";
@@ -53,7 +89,7 @@ export class BasicOperationsSample {
   async SetUp() {
     // Clear the container
     this.#container.replaceChildren();
-    this.#util.appendMessage(this.#name +" sample started");
+    this.#util.appendMessage(this.#name + " sample started");
     // Get the current user's information
     try {
       this.#whoIAm = await this.#client.WhoAmI();
@@ -65,7 +101,9 @@ export class BasicOperationsSample {
   async Run() {
     try {
       // Section 1: Basic create and update operations
-      this.#util.appendMessage("<h2>1: Basic create and update operations</h2>");
+      this.#util.appendMessage(
+        "<h2>1: Basic create and update operations</h2>"
+      );
       const rafelShilloId = await this.#createContact();
       await this.#updateContact(rafelShilloId);
       await this.#retrieveContact(rafelShilloId);
@@ -78,53 +116,29 @@ export class BasicOperationsSample {
       const contosoAccountId = await this.#createWithAssociation(rafelShilloId);
       await this.#retrievePrimaryContactFromAccount(contosoAccountId);
       // Section 3: Create related table rows (deep insert)
-      this.#util.appendMessage("<h2>3: Create related table rows (deep insert)</h2>");
+      this.#util.appendMessage(
+        "<h2>3: Create related table rows (deep insert)</h2>"
+      );
       const fourthCoffeeId = await this.#createRelatedTableRows();
       const susieCurtisId = await this.#retrieveFourthCoffeePrimaryContact(
         fourthCoffeeId
       );
       await this.#retrieveContactRelatedTasks(susieCurtisId);
       // Section 4: Associate and disassociate existing entities
-      this.#util.appendMessage("<h2>4: Associate and disassociate existing entities</h2>");
+      this.#util.appendMessage(
+        "<h2>4: Associate and disassociate existing entities</h2>"
+      );
       await this.#associateContactToAccount(fourthCoffeeId, rafelShilloId);
       await this.#showRelatedContacts(fourthCoffeeId);
       const roleId = await this.#createSecurityRole();
       await this.#associateRoleToUser(roleId);
       await this.#retrieveRelatedRole(roleId);
       await this.#disassociateRoleFromUser(roleId);
-
-      
     } catch (error) {
       this.#util.showError(error.message);
       // Try to clean up even if an error occurs
       await this.CleanUp();
     }
-  }
-  // Clean up the created records
-  async CleanUp() {
-    this.#util.appendMessage("Deleting the records created by this sample");
-
-    let deleteMessageList = document.createElement("ul");
-    this.#container.append(deleteMessageList);
-
-    for (const item of this.#entityStore) {
-      try {
-        await this.#client.Delete(item.entitySetName, item.id);
-        const message = document.createElement("li");
-        message.textContent = `Deleted ${item.entityName} ${item.name}`;
-        deleteMessageList.append(message);
-      } catch (e) {
-        const message = document.createElement("li");
-        message.textContent = `Failed to delete ${item.entityName} ${item.name}`;
-        message.className = "error";
-        deleteMessageList.append(message);
-      }
-    }
-
-    // Set the entity store to an empty array
-    this.#entityStore = [];
-    this.#util.appendMessage(this.#name +" sample completed.");
-    this.#util.appendMessage("<a href='#'>Go to top</a>");
   }
 
   //#region Section 1: Basic create and update operations
@@ -197,7 +211,9 @@ export class BasicOperationsSample {
     };
     try {
       await this.#client.Update("contacts", contactId, contact);
-      this.#util.appendMessage(`Updated contact setting new job title, annual income, and description.`);
+      this.#util.appendMessage(
+        `Updated contact setting new job title, annual income, and description.`
+      );
     } catch (e) {
       this.#util.showError("Failed to update contact.");
       throw e;
@@ -229,7 +245,9 @@ export class BasicOperationsSample {
         contactId,
         "telephone1"
       );
-      this.#util.appendMessage(`Contact's telephone number is: ${phoneNumber}.`);
+      this.#util.appendMessage(
+        `Contact's telephone number is: ${phoneNumber}.`
+      );
     } catch (e) {
       this.#util.showError("Failed to retrieve contact phone number.");
       throw e;
@@ -241,7 +259,7 @@ export class BasicOperationsSample {
 
   // Demonstrates creating a record with an association to another record
   async #createWithAssociation(contactId) {
-   // Use the @odata.bind notation to create an account associated with an existing primary contact
+    // Use the @odata.bind notation to create an account associated with an existing primary contact
     const contosoAccount = {
       name: "Contoso Ltd",
       telephone1: "555-5555",
@@ -529,21 +547,48 @@ export class BasicOperationsSample {
   }
 
   //#endregion Section 4: Associate and disassociate existing entities
+
+  // Clean up the created records
+  async CleanUp() {
+    this.#util.appendMessage("Deleting the records created by this sample");
+
+    let deleteMessageList = document.createElement("ul");
+    this.#container.append(deleteMessageList);
+
+    for (const item of this.#entityStore) {
+      try {
+        await this.#client.Delete(item.entitySetName, item.id);
+        const message = document.createElement("li");
+        message.textContent = `Deleted ${item.entityName} ${item.name}`;
+        deleteMessageList.append(message);
+      } catch (e) {
+        const message = document.createElement("li");
+        message.textContent = `Failed to delete ${item.entityName} ${item.name}`;
+        message.className = "error";
+        deleteMessageList.append(message);
+      }
+    }
+
+    // Set the entity store to an empty array
+    this.#entityStore = [];
+    this.#util.appendMessage(this.#name + " sample completed.");
+    this.#util.appendMessage("<a href='#'>Go to top</a>");
+  }
 }
 ```
 
 ### See also
 
-[Use the Dataverse Web API](../overview.md)<br />
-[Create a table row using the Web API](../create-entity-web-api.md)<br />
-[Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)<br />
-[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
-[Web API Samples](../web-api-samples.md)<br />
-[Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
-[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
-[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
-[Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
+[Use the Dataverse Web API](../overview.md)   
+[Create a table row using the Web API](../create-entity-web-api.md)   
+[Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)   
+[Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)   
+[Web API Samples](../web-api-samples.md)   
+[Web API Basic Operations Sample](../web-api-basic-operations-sample.md)   
+[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)   
+[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)   
+[Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)   
+[Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)   
+[Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)   
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

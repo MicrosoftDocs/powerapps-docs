@@ -12,7 +12,27 @@ contributors:
 ---
 # DataverseWebAPI.js sample library
 
-The `DataverseWebAPI.js` file contains the implementation of the `Client` class and other related classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This library provides a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
+The `DataverseWebAPI.js` file contains the implementation of the `Client` and `ChangeSet` classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This library provides a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
+
+This library demonstrates:
+
+- Using configuration data passed to the library
+- Managing errors returned by the Dataverse Web API
+- Helping keep code [DRY](https://wikipedia.org/wiki/Don%27t_repeat_yourself) and encourage reuse.
+- A pattern of code reuse by:
+
+   - Using JavaScript [Request](https://developer.mozilla.org/docs/Web/API/Request) and [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
+   - Methods that accept those classes as parameters
+   - A modular pattern for adding new capabilities as needed.
+
+> [!NOTE]
+> This sample library is a helper that is used by all the Dataverse JavaScript client-side Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
+
+This library doesn't:
+
+- **Manage authentication**. It depends on a function passed from an application that provides the access token to use.
+- **Provide for any code generation capabilities**. All methods used in the samples are written by hand. All business entity data uses JavaScript objects rather than a class representing the entity type.
+- **Provide an object model for composing OData queries**. All queries show the OData query syntax as query parameters.
 
 This library contains definitions of the following classes:
 
