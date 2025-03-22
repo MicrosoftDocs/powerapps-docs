@@ -14,7 +14,7 @@ contributors:
 
 # Web API Conditional Operations Sample (Client-side JavaScript)
 
-This sample contains code that demonstrates how to perform perform conditional operations using client-side JavaScript to perform the set of operations described by the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md).
+This sample contains code that demonstrates how to perform conditional operations using client-side JavaScript to complete the set of operations described by the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md).
 
 This code uses the [DataverseWebAPI.js sample library](../dataversewebapi-sample-library.md) and is designed to run in the context of a [Single Page Application (SPA)](https://developer.mozilla.org/docs/Glossary/SPA) sample available on GitHub. [Learn more about the sample application](../web-api-samples-client-side-javascript.md)
 

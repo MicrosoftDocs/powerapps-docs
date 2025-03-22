@@ -42,7 +42,7 @@ The source code for each sample is available in the [/src/samples](https://githu
 
 ## How to run the sample to see the script in action
 
-View the [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample#readme) for information about how you can run the sample. When the sample runs, you can select which sample to run by clicking the buttons.
+View the [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/SPASample#readme) for information about how you can run the sample SPA application. When the SPA application runs, you can select which sample to run by clicking the buttons.
 
 :::image type="content" source="../media/dataverse-web-api-javascript-spa-sample-app.png" alt-text="The SPA sample application with buttons to run available samples":::
 
@@ -50,11 +50,11 @@ View the [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dat
 
 ## Common elements found in each sample
 
-All the samples in this group have the following in common.
+All the samples in this group have the following in common:
 
 - They are all included in the same sample SPA application
 - Each sample implements a common interface with `Setup`, `Run`, and `Cleanup` methods.
-- All the samples use a common [DataverseWebAPI.js sample library](dataversewebapi-sample-library.md) that provides re-usable methods to perform operations with business data in Dataverse.
+- All the samples use a common [DataverseWebAPI.js sample library](dataversewebapi-sample-library.md) that demonstrates re-usable methods to perform operations with business data in Dataverse.
 
 
 ### See also

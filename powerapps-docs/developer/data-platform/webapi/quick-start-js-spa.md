@@ -232,7 +232,7 @@ Copy this data. You will use it when you [create the .env file](#create-the-env-
 
 1. Go to [Download Node.js](https://nodejs.org/en/download).
 1. Choose the appropriate installer for your operating system (Windows, macOS, or Linux) and download it.
-1. Run the installer. Make sure you select the option to install npm along with node.
+1. Run the installer. Make sure you accept the default option to: **Install npm, the recommended package manager for Node.js.**
 1. Verify the installation by opening a terminal or command prompt, typing these commands and pressing <kbd>Enter</kbd>.
 
    - `node -v`
@@ -249,6 +249,9 @@ Copy this data. You will use it when you [create the .env file](#create-the-env-
    ```
 
 ## Create a project
+
+> [!NOTE]
+> You can skip these steps by cloning the or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The  completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README.
 
 The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio code.
 
@@ -663,7 +666,7 @@ This configuration allows you to start the application using `npm start` in the 
 
    The **Sign in to your account** dialog opens.
 
-1. Select the account that has access to Dataverse.
+1. In the **Sign in to your account** dialog, select the account that has access to Dataverse.
 
    The first time you access using a new application (client) ID value, you see this **Permissions requested** dialog:
 
@@ -678,7 +681,8 @@ This configuration allows you to start the application using `npm start` in the 
 
 This section contains errors that you might encounter running this quick start.
 
-<!-- TODO: Ask people to create issues they may have in our samples repo related to this quick start sample -->
+> [!NOTE]
+> If you experience issues completing the steps in this quick start, try cloning the or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README. If that doesn't work, create an GitHub issue referencing this `quickspa` sample application.
 
 ### Selected user account doesn't exist in tenant
 

@@ -12,7 +12,7 @@ contributors:
 ---
 # DataverseWebAPI.js sample library
 
-The `DataverseWebAPI.js` sample library contains the implementation of the `[Client](#client-class)` and `[ChangeSet](#changeset-class)` classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This sample library provides a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
+The [`DataverseWebAPI.js` sample library](#dataversewebapijs-sample-library-code) contains the implementation of the [`Client`](#client-class) and [`ChangeSet`](#changeset-class) classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This sample library demonstrates a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
 
 This library demonstrates:
 
@@ -22,7 +22,7 @@ This library demonstrates:
 - A pattern of code reuse by:
 
    - All operations pass through a common [Send method](#async-sendrequest) that accepts a single [Request class](https://developer.mozilla.org/docs/Web/API/Request) instance and adds common headers including `Authorization`.
-   - Providing a [Batch method](#async-batchrequests-continueonerror--false) that uses [Request](https://developer.mozilla.org/docs/Web/API/Request) and [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
+   - Providing a [Batch method](#async-batchrequests-continueonerror--false) that accepts [Request](https://developer.mozilla.org/docs/Web/API/Request) classes and returns [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
    - Each method provided represents a sample showing how to construct a `Request` instance that can be used with the `Batch` method.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ This library contains definitions of the following classes:
 |[`Client`](#client-class)|The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
 |[`ChangeSet`](#changeset-class)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
 
-You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code)
+You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code) and also on GitHub at PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js).
 
 
 ## `Client` class
@@ -50,33 +50,36 @@ The `Client` class represents the Dataverse Web API Client. It provides methods 
 
 ### Client constructor
 
-#### `constructor(baseUrl, getTokenFunc, version = "v9.2")`
+#### `constructor(baseUrl, getTokenFunc, version = "9.2")`
 
 Creates an instance of the `Client`.
 
 - **Parameters:**
   - `baseUrl` (string): The base URL for the Dataverse API.
   - `getTokenFunc` (function): A function that returns an access token.
-  - `version` (string, optional): A string to override the default version. Default is `"v9.2"`.
+  - `version` (string, optional): A string to override the default version. Default is `"9.2"`.
 
 ### Public Methods
 
-#### `async Send(request)`
+> [!NOTE]
+> All public methods are [asynchronous](https://developer.mozilla.org/docs/Learn_web_development/Extensions/Async_JS).
 
-Sends an HTTP request using [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) with required standard headers, including the `Authorization` headers. All requests are sent using this method. All other data operation methods use this method to send the request.
+#### `Send(request)`
+
+Sends an HTTP request using [fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) with required standard headers, including the `Authorization` headers. All other public methods use this method to send the request.
 
 - **Parameters:**
   - `request` ([Request](https://developer.mozilla.org/docs/Web/API/Request)): The request to send.
 
 - **Returns:** `Promise<Response|Error>`: The response from the fetch call or an error if the request fails.
 
-#### `async WhoAmI()`
+#### `WhoAmI()`
 
 Retrieves information about the current user by calling the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami).
 
 - **Returns:** `Promise<Object|Error>`: A promise that resolves to the user information in JSON format, or an error if the request fails.
 
-#### `async Create(entitySetName, data)`
+#### `Create(entitySetName, data)`
 
 Creates a new record in the specified entity set as described in [Create a table row using the Web API](create-entity-web-api.md).
 
@@ -86,7 +89,7 @@ Creates a new record in the specified entity set as described in [Create a table
 
 - **Returns:** `Promise<Object|Error>`: A promise that resolves to an object containing the ID of the created entity, or an error if the request fails.
 
-#### `async Retrieve(entitySetName, id, query = null, includeAnnotations = true)`
+#### `Retrieve(entitySetName, id, query = null, includeAnnotations = true)`
 
 Retrieves a record from the specified entity set by ID, with optional query options as described in [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).
 
@@ -98,7 +101,7 @@ Retrieves a record from the specified entity set by ID, with optional query opti
 
 - **Returns:** `Promise<Object|Error>`: A promise that resolves to the retrieved entity in JSON format, or an error if the request fails.
 
-#### `async Refresh(record, primarykeyName)`
+#### `Refresh(record, primarykeyName)`
 
 Refreshes the given record by fetching the latest data from the server using [conditional retrieval](perform-conditional-operations-using-web-api.md#conditional-retrievals).
 
@@ -108,7 +111,7 @@ Refreshes the given record by fetching the latest data from the server using [co
 
 - **Returns:** `Promise<Object>`: The refreshed record.
 
-#### `async CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
+#### `CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
 
 Creates and retrieves a record from the specified entity set as described in [create with data returned](create-entity-web-api.md#create-with-data-returned).
 
@@ -120,7 +123,7 @@ Creates and retrieves a record from the specified entity set as described in [cr
 
 - **Returns:** `Promise<Object>`: The response data as a JSON object.
 
-#### `async RetrieveMultiple(collectionResource, query, maxPageSize = 100, includeAnnotations = true)`
+#### `RetrieveMultiple(collectionResource, query, maxPageSize = 100, includeAnnotations = true)`
 
 Retrieves multiple records from a specified entity set collection with optional query parameters as described in [use OData to query data](query/overview.md).
 
@@ -132,7 +135,7 @@ Retrieves multiple records from a specified entity set collection with optional 
 
 - **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
 
-#### `async GetNextLink(nextLink, maxPageSize = 100, includeAnnotations = true)`
+#### `GetNextLink(nextLink, maxPageSize = 100, includeAnnotations = true)`
 
 Retrieves the next page of records from a specified entity set collection using the `@odata.nextLink` value as described in [page results](query/page-results.md).
 
@@ -143,7 +146,7 @@ Retrieves the next page of records from a specified entity set collection using 
 
 - **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
 
-#### `async FetchXml(entitySetName, fetchXml)`
+#### `FetchXml(entitySetName, fetchXml)`
 
 Asynchronously fetches data from a specified entity set using FetchXML as described in [Use FetchXml to retrieve data](../fetchxml/retrieve-data.md?tabs=webapi)
 
@@ -153,7 +156,7 @@ Asynchronously fetches data from a specified entity set using FetchXML as descri
 
 - **Returns:** `Promise<Object>`: The JSON response from the server.
 
-#### `async GetCollectionCount(collectionResource)`
+#### `GetCollectionCount(collectionResource)`
 
 Asynchronously retrieves the count of items in a specified collection as described in [count rows](query/count-rows.md).
 
@@ -162,7 +165,7 @@ Asynchronously retrieves the count of items in a specified collection as describ
 
 - **Returns:** `Promise<number>`: The count of items in the collection, up to `5000`.
 
-#### `async Update(entitySetName, id, data, etag = null)`
+#### `Update(entitySetName, id, data, etag = null)`
 
 Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-entities-using-web-api.md#basic-update).
 
@@ -174,7 +177,7 @@ Updates a record in the specified entity set by ID with the provided data as des
 
 - **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the update operation, or an error if the request fails.
 
-#### `async Delete(entitySetName, id, etag = null)`
+#### `Delete(entitySetName, id, etag = null)`
 
 Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-entities-using-web-api.md#basic-delete)
 
@@ -185,7 +188,7 @@ Deletes an entity from the specified entity set by ID as described by [basic upd
 
 - **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the delete operation, or an error if the request fails.
 
-#### `async SetValue(entitySetName, id, columnName, value)`
+#### `SetValue(entitySetName, id, columnName, value)`
 
 Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api.md#update-a-single-property-value)
 
@@ -197,7 +200,7 @@ Sets the value of a specified column for a given record as described in [update 
 
 - **Returns:** `Object`: The response from the server.
 
-#### `async GetValue(entitySetName, id, columnName)`
+#### `GetValue(entitySetName, id, columnName)`
 
 Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-entity-using-web-api.md#retrieve-a-single-property-value)
 
@@ -208,7 +211,7 @@ Retrieves the value of a specified column for a given record as described in [re
 
 - **Returns:** `Object`: The response from the server.
 
-#### `async Associate(targetSetName, targetId, navigationProperty, relatedSetName, relatedId)`
+#### `Associate(targetSetName, targetId, navigationProperty, relatedSetName, relatedId)`
 
 Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-entities-using-web-api.md#add-a-record-to-a-collection).
 
@@ -221,7 +224,7 @@ Associates records by creating data in the relationship to link them as describe
 
 - **Returns:** `Promise<object>`: The response from the server after creating the association.
 
-#### `async Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
+#### `Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
 
 Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-entities-using-web-api.md#remove-a-record-from-a-collection).
 
@@ -234,12 +237,12 @@ Disassociates a record from another record by deleting data in the relationship 
 - **Returns:** `Promise<object>`: The response from the server after deleting the association.
 
 
-#### `async getBatchBody(request, id, inChangeSet = false)`
+#### `getBatchBody(request, id, inChangeSet = false)`
 
 For internal use only. This method is public because it is used by the [ChangeSet](#changeset-class). There are no scenarios where you will need to use this method.
 
 
-#### `async Batch(requests, continueOnError = false)`
+#### `Batch(requests, continueOnError = false)`
 
 Sends a batch request containing multiple ([Request](https://developer.mozilla.org/docs/Web/API/Request) or [ChangeSet](#changeset-class) items as described in [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
@@ -247,7 +250,7 @@ Sends a batch request containing multiple ([Request](https://developer.mozilla.o
   - `requests` (Array&lt;([Request](https://developer.mozilla.org/docs/Web/API/Request)|[ChangeSet](#changeset-class)&gt;): An array of `Request` or `ChangeSet` items to be included in the batch request.
   - `continueOnError` (boolean, optional): A flag indicating whether to continue processing subsequent requests if an error occurs. Default is `false`.
 
-- **Returns:** `Promise<Array<[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)>>`: The parsed response from the batch request.
+- **Returns:** `Promise<Array<Response>>`: The parsed response from the batch request.
 
 ## `ChangeSet` class
 
@@ -283,7 +286,7 @@ class Client {
   // The base URL for the Dataverse Web API
   // Something like: https://your-org.api.crm.dynamics.com/api/data/v9.2/
   #apiEndpoint;
-  // The function to get an access toke
+  // The function to get an access token
   #getTokenFunc;
 
   /**
