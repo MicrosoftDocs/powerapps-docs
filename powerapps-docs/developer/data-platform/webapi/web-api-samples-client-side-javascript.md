@@ -14,7 +14,7 @@ contributors:
 
 # Web API Data operations Samples (Client-side JavaScript)
 
-This article provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this topic.
+This article provides common understanding about Microsoft Dataverse Web API samples using client-side JavaScript. While each sample focuses on a different aspect of the Web API, they are presented within a common sample application.
 
 <a name="bkmk_listOfSamples"></a>
 

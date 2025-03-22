@@ -1,7 +1,7 @@
 ---
 title: "Web API basic operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "Code samples that demonstrate how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. The samples are coded using C# and client-side JavaScript."
-ms.date: 08/29/2022
+ms.date: 03/30/2025
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
@@ -15,9 +15,11 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of sample code snippets demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API.  
+This collection of sample code snippets demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API.  These language specific versions implement the same operations:
   
-- [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md) 
+- [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)
+- [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)
+- [Web API Basic Operations Sample (client-side JavaScript)](samples/basic-operations-client-side-javascript.md)
   
 This topic describes a common set of operations implemented by each sample snippet in this group. This topic describes the HTTP requests and responses and text output that each sample will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   

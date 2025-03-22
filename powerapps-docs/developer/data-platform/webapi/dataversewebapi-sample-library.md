@@ -12,7 +12,7 @@ contributors:
 ---
 # DataverseWebAPI.js sample library
 
-The `DataverseWebAPI.js` file contains the implementation of the `Client` and `ChangeSet` classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This library provides a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
+The `DataverseWebAPI.js` sample library contains the implementation of the `[Client](#client-class)` and `[ChangeSet](#changeset-class)` classes for interacting with the Dataverse Web API in the [Web API Data operations Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md). This sample library provides a set of methods to perform CRUD operations, batch requests, and other interactions with the Dataverse Web API.
 
 This library demonstrates:
 
@@ -21,9 +21,9 @@ This library demonstrates:
 - Helping keep code [DRY](https://wikipedia.org/wiki/Don%27t_repeat_yourself) and encourage reuse.
 - A pattern of code reuse by:
 
-   - Using JavaScript [Request](https://developer.mozilla.org/docs/Web/API/Request) and [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
-   - Methods that accept those classes as parameters
-   - A modular pattern for adding new capabilities as needed.
+   - All operations pass through a common [Send method](#async-sendrequest) that accepts a single [Request class](https://developer.mozilla.org/docs/Web/API/Request) instance and adds common headers including `Authorization`.
+   - Providing a [Batch method](#async-batchrequests-continueonerror--false) that uses [Request](https://developer.mozilla.org/docs/Web/API/Request) and [Response](https://developer.mozilla.org/docs/Web/API/Response) classes.
+   - Each method provided represents a sample showing how to construct a `Request` instance that can be used with the `Batch` method.
 
 > [!NOTE]
 > This sample library is a helper that is used by all the Dataverse JavaScript client-side Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
@@ -68,13 +68,13 @@ Sends an HTTP request using [fetch](https://developer.mozilla.org/docs/Web/API/F
 - **Parameters:**
   - `request` ([Request](https://developer.mozilla.org/docs/Web/API/Request)): The request to send.
 
-- **Returns:** `Promise&lt;Response|Error&gt;`: The response from the fetch call or an error if the request fails.
+- **Returns:** `Promise<Response|Error>`: The response from the fetch call or an error if the request fails.
 
 #### `async WhoAmI()`
 
 Retrieves information about the current user by calling the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami).
 
-- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to the user information in JSON format, or an error if the request fails.
+- **Returns:** `Promise<Object|Error>`: A promise that resolves to the user information in JSON format, or an error if the request fails.
 
 #### `async Create(entitySetName, data)`
 
@@ -84,7 +84,7 @@ Creates a new record in the specified entity set as described in [Create a table
   - `entitySetName` (string): The name of the entity set where the new entity will be created.
   - `data` (Object): The data for the new entity.
 
-- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to an object containing the ID of the created entity, or an error if the request fails.
+- **Returns:** `Promise<Object|Error>`: A promise that resolves to an object containing the ID of the created entity, or an error if the request fails.
 
 #### `async Retrieve(entitySetName, id, query = null, includeAnnotations = true)`
 
@@ -96,7 +96,7 @@ Retrieves a record from the specified entity set by ID, with optional query opti
   - `query` (string, optional): The OData query options to apply.
   - `includeAnnotations` (boolean, optional): Whether OData annotations are returned in the response. Default value is `true`.
 
-- **Returns:** `Promise&lt;Object|Error&gt;`: A promise that resolves to the retrieved entity in JSON format, or an error if the request fails.
+- **Returns:** `Promise<Object|Error>`: A promise that resolves to the retrieved entity in JSON format, or an error if the request fails.
 
 #### `async Refresh(record, primarykeyName)`
 
@@ -106,7 +106,7 @@ Refreshes the given record by fetching the latest data from the server using [co
   - `record` (Object): The record to refresh. Must contain `@odata.etag` and `@odata.context` properties.
   - `primarykeyName` (string): The name of the primary key property in the record.
 
-- **Returns:** `Promise&lt;Object&gt;`: The refreshed record.
+- **Returns:** `Promise<Object>`: The refreshed record.
 
 #### `async CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
 
@@ -118,7 +118,7 @@ Creates and retrieves a record from the specified entity set as described in [cr
   - `query` (string, optional): The query string to be appended to the entity set URL.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise&lt;Object&gt;`: The response data as a JSON object.
+- **Returns:** `Promise<Object>`: The response data as a JSON object.
 
 #### `async RetrieveMultiple(collectionResource, query, maxPageSize = 100, includeAnnotations = true)`
 
@@ -130,7 +130,7 @@ Retrieves multiple records from a specified entity set collection with optional 
   - `maxPageSize` (number, optional): The maximum number of records to retrieve per page. Default is `100`.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise&lt;object&gt;`: The response from the server containing the retrieved entities.
+- **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
 
 #### `async GetNextLink(nextLink, maxPageSize = 100, includeAnnotations = true)`
 
@@ -141,7 +141,7 @@ Retrieves the next page of records from a specified entity set collection using 
   - `maxPageSize` (number, optional): The maximum number of records to retrieve per page. Default is `100`.
   - `includeAnnotations` (boolean, optional): Whether to include OData annotations in the response. Default value is `true`.
 
-- **Returns:** `Promise&lt;object&gt;`: The response from the server containing the retrieved entities.
+- **Returns:** `Promise<object>`: The response from the server containing the retrieved entities.
 
 #### `async FetchXml(entitySetName, fetchXml)`
 
@@ -151,7 +151,7 @@ Asynchronously fetches data from a specified entity set using FetchXML as descri
   - `entitySetName` (string): The name of the entity set to query.
   - `fetchXml` (string): The FetchXML query string.
 
-- **Returns:** `Promise&lt;Object&gt;`: The JSON response from the server.
+- **Returns:** `Promise<Object>`: The JSON response from the server.
 
 #### `async GetCollectionCount(collectionResource)`
 
@@ -160,7 +160,7 @@ Asynchronously retrieves the count of items in a specified collection as describ
 - **Parameters:**
   - `collectionResource` (string): The resource URL of the collection.
 
-- **Returns:** `Promise&lt;number&gt;`: The count of items in the collection, up to `5000`.
+- **Returns:** `Promise<number>`: The count of items in the collection, up to `5000`.
 
 #### `async Update(entitySetName, id, data, etag = null)`
 
@@ -172,7 +172,7 @@ Updates a record in the specified entity set by ID with the provided data as des
   - `data` (Object): The data to update the record with.
   - `etag` (string, optional): Specify the etag value to prevent update when a newer record exists.
 
-- **Returns:** `Promise&lt;Response|Error&gt;`: A promise that resolves to the response of the update operation, or an error if the request fails.
+- **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the update operation, or an error if the request fails.
 
 #### `async Delete(entitySetName, id, etag = null)`
 
@@ -183,7 +183,7 @@ Deletes an entity from the specified entity set by ID as described by [basic upd
   - `id` (string): The ID of the entity to delete.
   - `etag` (string, optional): Specify the etag value to prevent delete when a newer record exists.
 
-- **Returns:** `Promise&lt;Response|Error&gt;`: A promise that resolves to the response of the delete operation, or an error if the request fails.
+- **Returns:** `Promise<Response|Error>`: A promise that resolves to the response of the delete operation, or an error if the request fails.
 
 #### `async SetValue(entitySetName, id, columnName, value)`
 
@@ -219,7 +219,7 @@ Associates records by creating data in the relationship to link them as describe
   - `relatedSetName` (string): The name of the related entity set.
   - `relatedId` (string|number): The ID of the record to associate with the target.
 
-- **Returns:** `Promise&lt;object&gt;`: The response from the server after creating the association.
+- **Returns:** `Promise<object>`: The response from the server after creating the association.
 
 #### `async Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
 
@@ -231,7 +231,7 @@ Disassociates a record from another record by deleting data in the relationship 
   - `navigationProperty` (string): The navigation property that defines the relationship.
   - `relatedId` (string|guid): The ID of the related record.
 
-- **Returns:** `Promise&lt;object&gt;`: The response from the server after deleting the association.
+- **Returns:** `Promise<object>`: The response from the server after deleting the association.
 
 
 #### `async getBatchBody(request, id, inChangeSet = false)`
@@ -247,7 +247,7 @@ Sends a batch request containing multiple ([Request](https://developer.mozilla.o
   - `requests` (Array&lt;([Request](https://developer.mozilla.org/docs/Web/API/Request)|[ChangeSet](#changeset-class)&gt;): An array of `Request` or `ChangeSet` items to be included in the batch request.
   - `continueOnError` (boolean, optional): A flag indicating whether to continue processing subsequent requests if an error occurs. Default is `false`.
 
-- **Returns:** `Promise&lt;Array&lt;[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)&gt;&gt;`: The parsed response from the batch request.
+- **Returns:** `Promise<Array<[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)>>`: The parsed response from the batch request.
 
 ## `ChangeSet` class
 
