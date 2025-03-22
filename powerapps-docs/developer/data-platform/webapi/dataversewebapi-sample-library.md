@@ -38,15 +38,15 @@ This library contains definitions of the following classes:
 
 |Class|Description|
 |---|---|
-|[`Client`](#client-class)|The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
+|[`Client`](#client-class)|Represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
 |[`ChangeSet`](#changeset-class)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
 
-You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code) and also on GitHub at PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js).
+You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code) and also on [GitHub at PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js).
 
 
 ## `Client` class
 
-The `Client` class represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.
+Represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.
 
 ### Client constructor
 
@@ -148,7 +148,7 @@ Retrieves the next page of records from a specified entity set collection using 
 
 #### `FetchXml(entitySetName, fetchXml)`
 
-Asynchronously fetches data from a specified entity set using FetchXML as described in [Use FetchXml to retrieve data](../fetchxml/retrieve-data.md?tabs=webapi)
+Asynchronously fetches data from a specified entity set using FetchXML as described in [use FetchXml to retrieve data](../fetchxml/retrieve-data.md?tabs=webapi).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set to query.
@@ -190,7 +190,7 @@ Deletes an entity from the specified entity set by ID as described by [basic upd
 
 #### `SetValue(entitySetName, id, columnName, value)`
 
-Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api.md#update-a-single-property-value)
+Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api.md#update-a-single-property-value).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -239,7 +239,7 @@ Disassociates a record from another record by deleting data in the relationship 
 
 #### `getBatchBody(request, id, inChangeSet = false)`
 
-For internal use only. This method is public because it is used by the [ChangeSet](#changeset-class). There are no scenarios where you will need to use this method.
+For internal use only. This method is public because it is used by the [ChangeSet class](#changeset-class). There are no scenarios where you will need to use this method while using this library.
 
 
 #### `Batch(requests, continueOnError = false)`
@@ -271,7 +271,7 @@ Creates an instance of `ChangeSet`.
 
 ### Methods
 
-- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#batchrequests-continueonerror--false). There are no scenarios where you will need to use this method.
+- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#batchrequests-continueonerror--false). There are no scenarios where you will need to use this method directly with this library.
 
 ## DataverseWebAPI.js sample library code
 
