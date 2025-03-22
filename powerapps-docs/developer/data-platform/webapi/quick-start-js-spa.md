@@ -279,7 +279,9 @@ Storing configuration data in the environment separate from code is a security b
 1. Create a new file named `.env` in the root of your `quickspa` folder.
 1. Paste in the values from [Register your app](#register-your-app) to replace the `CLIENT_ID` and `TENANT_ID` values below.
 
-   ```
+:::code source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/.env.example":::
+
+   <!-- ```
    # The environment this application will connect to.
    BASE_URL=https://<yourorg>.api.crm.dynamics.com
    # The registered Entra application id
@@ -288,7 +290,7 @@ Storing configuration data in the environment separate from code is a security b
    TENANT_ID=aaaabbbb-0000-cccc-1111-dddd2222eeee
    # The SPA redirect URI included in the Entra application registration
    REDIRECT_URI=http://localhost:1234
-   ```
+   ``` -->
 
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
@@ -302,7 +304,9 @@ The instructions in this section describe how to create the HTML file that provi
 1. Create a new file in the `src` folder named `index.html`.
 1. Copy and paste this content to the `index.html` page:
 
-   ```html
+   :::code language="html" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/index.html":::
+
+   <!-- ```html
    <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -324,7 +328,7 @@ The instructions in this section describe how to create the HTML file that provi
       <script type="module" src="scripts/index.js"></script>
    </body>
    </html>
-   ```
+   ``` -->
 
 This HTML provides the following elements:
 
@@ -345,7 +349,9 @@ This file contains all the logic that makes the `index.html` page dynamic.
 1. Create a new file in `scripts` folder named `index.js`.
 1. Copy and paste this content into the `index.js` page:
 
-   ```javascript
+   :::code language="javascript" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/scripts/index.js":::
+
+   <!-- ```javascript
    import { PublicClientApplication } from "@azure/msal-browser";
    import 'dotenv/config'
 
@@ -510,7 +516,7 @@ This file contains all the logic that makes the `index.html` page dynamic.
       container.append(p);
       }
    };
-   ```
+   ``` -->
 
 The `index.js` script contains the following constants and functions:
 
@@ -534,7 +540,9 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
 1. Create a new file named `style.css` in the `styles` folder.
 1. Copy and paste this text into the `style.css` file:
 
-   ```css
+   :::code language="css" source="~/../PowerApps-Samples/dataverse/webapi/JS/quickspa/src/styles/style.css":::
+
+   <!-- ```css
    .disabled {
       pointer-events: none;
       opacity: 0.5;
@@ -587,7 +595,7 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
       padding-bottom: 10px;
       /* Adjust the value as needed */
    }
-   ```
+   ``` -->
 
 ### Create `.gitignore` file
 
