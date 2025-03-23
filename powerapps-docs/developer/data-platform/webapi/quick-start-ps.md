@@ -1,6 +1,7 @@
 ---
 title: Quick Start Web API with PowerShell and Visual Studio Code
 description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell with Visual Studio Code
+ms.topic: quickstart
 ms.date: 01/20/2024
 author: JimDaly
 ms.author: jdaly

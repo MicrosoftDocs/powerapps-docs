@@ -1,6 +1,7 @@
 ---
 title: "Web API table schema operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform operations that change the Dataverse data structures."
+ms.topic: sample
 ms.date: 09/02/2022
 author: mkannapiran
 ms.author: kamanick

@@ -1,7 +1,8 @@
 ---
 title: "Quickstart: Web API with client-side JavaScript and Visual Studio Code"
 description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code with a Single Page Application.
-ms.date: 03/20/2025
+ms.topic: quickstart
+ms.date: 03/30/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -51,7 +52,7 @@ The following table describes the prerequisites needed to complete this quicksta
 |**Privileges to create an Entra App registration**|You can't complete this quickstart without the ability create a Microsoft Entra app registration to enable it.<br /><br />If you aren't sure if you can, try the first step to [Register a SPA application](#register-a-spa-application) and find out. |
 |**Visual Studio Code**| If Visual Studio Code isn't installed on your computer, you must [Download and install Visual Studio Code](https://code.visualstudio.com/download) to run this quickstart. |
 |**Node.js**|Node.js is a runtime environment that allows you to run JavaScript on the server side. This quickstart creates a SPA application that runs JavaScript on the client side in a browser rather than the Node.js runtime. But [Node Package Manager (npm)](https://www.npmjs.com/) is installed with Node.js, and you need npm to install Parcel and the MSAL.js library.|
-|**Parcel**|Modern web applications typically have a lot of dependencies on open source libraries distributed using npm as well as scripts that need to be managed and optimized during the build process. These tools are usually called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
+|**Parcel**|Modern web applications typically have many dependencies on open source libraries distributed using npm and scripts that need to be managed and optimized during the build process. These tools are called 'bundlers'. The most common one is [webpack](https://webpack.js.org/). This quick start uses [Parcel](https://parceljs.org/) because it offers a simplified experience.<br /><br />For quickstarts and samples that show SPA applications using different frameworks and bundlers, see [Microsoft Entra Single-page applications samples](/entra/identity-platform/sample-v2-code?tabs=apptype#single-page-applications). You can adapt these samples to use Dataverse Web API with the information shown in this quickstart.|
 |**Web Technologies**|Knowledge of HTML, JavaScript, and CSS are required to understand how this quickstart works. Understanding how to [make network requests with JavaScript](https://developer.mozilla.org/docs/Learn_web_development/Core/Scripting/Network_requests) is essential.|
 
 ## Register a SPA application
@@ -206,7 +207,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    1. In the **Are you trying to sign in to Microsoft Azure PowerShell?** dialog, select **Continue**.
 
 1. You can close the browser tab and return to Visual Studio Code.
-1. In the terminal window, you should see output like the following:
+1. In the terminal window, you should see output like the following text:
 
    ```
    Copy the following to paste into an .env file at the root of your project:
@@ -221,7 +222,7 @@ When you have your tenant ID, you can create the app registration using the Azur
    REDIRECT_URI=http://localhost:1234
    ```
 
-Copy this data. You will use it when you [create the .env file](#create-the-env-file) to use environment variables.
+Copy this data. You use it when you [create the .env file](#create-the-env-file) to use environment variables.
 
 ---
 
@@ -251,21 +252,21 @@ Copy this data. You will use it when you [create the .env file](#create-the-env-
 ## Create a project
 
 > [!NOTE]
-> You can skip these steps by cloning the or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The  completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README.
+> You can skip these steps by cloning or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The  completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README.
 
-The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio code.
+The instructions in this section guide you to install dependencies from npm, create the folder structure, open Visual Studio Code.
 
-1. Open a terminal window to a place where you want to create a project. For these instructions, we will use `C:\projects`.
-1. Type the following commands and press <kbd>Enter</kbd> to achieve the following:
+1. Open a terminal window to a place where you want to create a project. For these instructions, we use `C:\projects`.
+1. Type the following commands and press <kbd>Enter</kbd> to achieve the following actions:
 
    |Command  |Action  |
    |---------|---------|
-   |`mkdir quickspa`|Create a new folder named `quickspa`|
-   |`cd quickspa`|Move into the new `quickspa` folder|
-   |`npm install --save-dev parcel`|Install Parcel and initialize the project|
-   |`npm install @azure/msal-browser`|Install the MSAL.js library|
-   |`npm install dotenv`|Install [dotenv](https://www.npmjs.com/package/dotenv) to access environment variables that will store potentially sensitive configuration data|
-   |`mkdir src`|Create a `src` folder where you will add HTML, JS, and CSS files for your app in the following steps|
+   |`mkdir quickspa`|Create a new folder named `quickspa`.|
+   |`cd quickspa`|Move into the new `quickspa` folder.|
+   |`npm install --save-dev parcel`|Install Parcel and initialize the project.|
+   |`npm install @azure/msal-browser`|Install the MSAL.js library.|
+   |`npm install dotenv`|Install [dotenv](https://www.npmjs.com/package/dotenv) to access environment variables that store potentially sensitive configuration data.|
+   |`mkdir src`|Create a `src` folder where you add HTML, JS, and CSS files for your app in the following steps.|
    |`code .`|Open Visual Studio Code in the context of the `quickspa` folder.|
 
 Your project should look like this in Visual Studio Code Explorer:
@@ -284,7 +285,7 @@ Storing configuration data in the environment separate from code is a security b
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
 > [!NOTE]
-> The `.env` file is usually not checked in, but you may want to create a `.env.example` file using the placeholder values so that people know what data it should contain. Add the `.env` file to [your .gitignore file](#create-gitignore-file) to prevent checking it in.
+> The `.env` file is checked in, but you might want to create a `.env.example` file using the placeholder values so that people know what data it should contain. Add the `.env` file to [your .gitignore file](#create-gitignore-file) to prevent checking it in.
 
 ### Create an HTML page
 
@@ -345,7 +346,7 @@ The Cascading Style Sheet (CSS) file makes the HTML page more attractive and has
 
 ### Create `.gitignore` file
 
-When your app will be checked in with source control, adding a `.gitignore` file will prevent checking in files the specified files and folders.
+When your app is checked in with source control, adding a `.gitignore` file prevents checking in files the specified files and folders.
 
 1. Create a file named `.gitignore`.
 1. Add the following content:
@@ -357,9 +358,9 @@ When your app will be checked in with source control, adding a `.gitignore` file
    .env
    ```
 
-The `.parcel-cache` and `dist` folders will appear when you run the app for the first time.
+The `.parcel-cache` and `dist` folders appear when you run the app for the first time.
 
-Not checking in the `.env` file is a security best practice. You may want to check in a placeholder `.env.sample` file with placeholder values.
+Not checking in the `.env` file is a security best practice. You might want to check in a placeholder `.env.sample` file with placeholder values.
 
 Your project should look like this in Visual Studio Code Explorer:
 
@@ -381,7 +382,7 @@ Your `package.json` file should look something like this:
 }
 ```
 
-Add this `scripts` item below `dependencies`:
+Add this `scripts` item underneath `dependencies`:
 
 ```json
   "dependencies": {
@@ -399,12 +400,12 @@ This configuration allows you to start the application using `npm start` in the 
 
 ## Try it
 
-1. In Visual Studio code, open a terminal window
+1. In Visual Studio Code, open a terminal window
 1. Type `npm start` and press <kbd>Enter</kbd>.
 
    > [!NOTE]
-   > You may see some output written to the terminal while the project initializes for the first time.
-   > This is parcel installing some additional node modules to mitigate issues when using [dotenv](https://www.npmjs.com/package/dotenv). 
+   > You might see some output written to the terminal while the project initializes for the first time.
+   > This is parcel installing some more node modules to mitigate issues when using [dotenv](https://www.npmjs.com/package/dotenv). 
    > Look at the `package.json` and you should some new items added to the `devDependencies`.
 
 
@@ -436,7 +437,7 @@ This configuration allows you to start the application using `npm start` in the 
 This section contains errors that you might encounter running this quick start.
 
 > [!NOTE]
-> If you experience issues completing the steps in this quick start, try cloning the or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README. If that doesn't work, create an GitHub issue referencing this `quickspa` sample application.
+> If you experience issues completing the steps in this quick start, try cloning or downloading the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository. The completed application for these steps is available at [/dataverse/webapi/JS/quickspa](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/JS/quickspa). Follow the instructions in the README. If that doesn't work, create an GitHub issue referencing this `quickspa` sample application.
 
 ### Selected user account doesn't exist in tenant
 

@@ -14,7 +14,7 @@ contributors:
 
 # Web API Basic Operations Sample (client-side JavaScript)
 
-This sample contains code that demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript to complete the set of operations described by the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
+This sample contains code that demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on tables rows (entity records) using client-side JavaScript. This sample completes the set of operations described by the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md).
 
 This code uses the [DataverseWebAPI.js sample library](../dataversewebapi-sample-library.md) and is designed to run in the context of a [Single Page Application (SPA)](https://developer.mozilla.org/docs/Glossary/SPA) sample available on GitHub. [Learn more about the sample application](../web-api-samples-client-side-javascript.md)
 

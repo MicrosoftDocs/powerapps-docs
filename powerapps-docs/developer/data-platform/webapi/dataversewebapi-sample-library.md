@@ -26,7 +26,7 @@ This library demonstrates:
    - Each method provided represents a sample showing how to construct a `Request` instance that can be used with the `Batch` method.
 
 > [!NOTE]
-> This sample library is a helper that is used by all the Dataverse JavaScript client-side Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
+> This sample library is a helper that is used by all the Dataverse JavaScript client-side Web API samples, but it isn't an SDK. It's tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
 
 This library doesn't:
 
@@ -41,7 +41,7 @@ This library contains definitions of the following classes:
 |[`Client`](#client-class)|Represents the Dataverse Web API Client. It provides methods to interact with the Dataverse Web API.|
 |[`ChangeSet`](#changeset-class)|Represents a set of changes used with batch processing. All requests within the changeset must succeed or fail as a group.|
 
-You can find the code for this library below in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code) and also on [GitHub at PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js).
+You can find the code for this library in [DataverseWebAPI.js sample library code](#dataversewebapijs-sample-library-code) and also on [GitHub at PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/JS/SPASample/src/scripts/DataverseWebAPI.js).
 
 
 ## `Client` class
@@ -239,7 +239,7 @@ Disassociates a record from another record by deleting data in the relationship 
 
 #### `getBatchBody(request, id, inChangeSet = false)`
 
-For internal use only. This method is public because it is used by the [ChangeSet class](#changeset-class). There are no scenarios where you will need to use this method while using this library.
+For internal use only. This method is public because it's used by the [ChangeSet class](#changeset-class). There are no scenarios where you need to use this method while using this library.
 
 
 #### `Batch(requests, continueOnError = false)`
@@ -271,7 +271,7 @@ Creates an instance of `ChangeSet`.
 
 ### Methods
 
-- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it is used by the [Client class Batch method](#batchrequests-continueonerror--false). There are no scenarios where you will need to use this method directly with this library.
+- `getChangeSetText(batchId)`: For internal use only. Gets the text for the changeset in the `$batch` operation. This method is public because it's used by the [Client class Batch method](#batchrequests-continueonerror--false). There are no scenarios where you need to use this method directly with this library.
 
 ## DataverseWebAPI.js sample library code
 
