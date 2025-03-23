@@ -1,7 +1,7 @@
 ---
 title: "Use OAuth with CORS to connect a SPA"
 description: "Learn how to use OAuth with Cross-Origin Resource Sharing (CORS) to connect a Single-Page Application (SPA) that connects to Microsoft Dataverse using the Web API and JavaScript."
-ms.date: 03/30/2025
+ms.date: 03/22/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: ritesp

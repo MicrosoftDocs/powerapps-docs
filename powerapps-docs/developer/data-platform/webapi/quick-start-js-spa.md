@@ -2,7 +2,7 @@
 title: "Quickstart: Web API with client-side JavaScript and Visual Studio Code"
 description: Describes how to interactively authenticate and use the Dataverse Web API with client-side JavaScript and Visual Studio Code with a Single Page Application.
 ms.topic: quickstart
-ms.date: 03/30/2025
+ms.date: 03/22/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly

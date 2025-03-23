@@ -2,7 +2,7 @@
 title: "Web API Data operations Samples (Client-side JavaScript)"
 description: "This article describes Dataverse Web API samples that are implemented using client-side JavaScript."
 ms.topic: sample
-ms.date: 03/30/2025
+ms.date: 03/22/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly

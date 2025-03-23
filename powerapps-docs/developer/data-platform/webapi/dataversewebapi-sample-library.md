@@ -1,7 +1,7 @@
 ---
 title: "DataverseWebAPI.js sample library"
 description: "This article describes the classes included in the DataverseWebAPI.js sample library used by samples in this group of single page application samples."
-ms.date: 03/30/2025
+ms.date: 03/22/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly

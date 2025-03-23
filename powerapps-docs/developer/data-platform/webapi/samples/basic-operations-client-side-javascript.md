@@ -1,7 +1,7 @@
 ---
 title: "Web API Basic Operations Sample (Client-side JavaScript) (Microsoft Dataverse)"
 description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on table rows (entity records) using client-side JavaScript and the Microsoft Dataverse Web API."
-ms.date: 03/30/2025
+ms.date: 03/22/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
