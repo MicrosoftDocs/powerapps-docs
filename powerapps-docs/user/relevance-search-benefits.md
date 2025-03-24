@@ -107,7 +107,7 @@ Environment admins have 12 hours to turn the feature back on with no implication
 ### After 12 hours:
 -	All Dataverse indexed data is deleted.
 -	No Dataverse search consumption is reported.
--	Dependent experiences, such as published agents and published model-driven applications, are limited for Makers and End-users.
+-	Dependent experiences, such as published agents and published model-driven applications, are limited for Makers and End users.
 
 Dataverse search can be turned back "On" or to the "Default" state anytime after being turned off.
 
