@@ -80,7 +80,7 @@ Storage consumed by Dataverse search was already reported at the Environment lev
 
 ### What entitlements are consumed by Dataverse search?
 
-Dataverse search consumes against the [Dataverse entitlements available within your tenant](whats-new-storage.md).
+Dataverse search consumes against the [Dataverse entitlements available within your tenant](/power-platform/admin/whats-new-storage).
 - Dataverse search-structured index consumption counts towards Dataverse database capacity
 -	Dataverse search unstructured index consumption counts towards Dataverse file capacity
 

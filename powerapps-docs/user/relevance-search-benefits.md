@@ -53,7 +53,7 @@ Dataverse search consists of two separate indexes that power different experienc
 - **Dataverse search structured index**: This is the index powering experiences across structured or tabular data stored in Dataverse. Examples of this index include search indexes over tables Dataverse like Accounts, Contact, custom tables, Dataverse relevance search, and others.
 - **Dataverse search unstructured index**: This is the index powering experiences across unstructured data stored in Dataverse. Examples of this index include search indexes over files uploaded in Microsoft Copilot Studio custom agents, customer service agents, and others.
 
-# Experiences enabled by Dataverse search
+## Experiences enabled by Dataverse search
 Multiple features within the Power Platform are enabled via Dataverse search, namely the Copilot indexes. These experiences include
 
 ### Microsoft Copilot Studio agents
@@ -70,7 +70,7 @@ Multiple features within the Power Platform are enabled via Dataverse search, na
 
 ### Power Apps – model-driven apps
 
-8. [Copilot Chat](../maker/model-driven-apps/add-ai-copilot)
+8. [Copilot Chat](../maker/model-driven-apps/add-ai-copilot.md)
 9. [Dataverse search](/power-platform/admin/configure-relevance-search-organization)
 
 ### Experiences across the Power Platform
