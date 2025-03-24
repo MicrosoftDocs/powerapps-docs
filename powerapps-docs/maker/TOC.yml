@@ -714,8 +714,6 @@
             href: ./canvas-apps/power-apps-ideas.md
           - name: Transform natural language to Power Fx formulas
             href: ./canvas-apps/power-apps-ideas-transform.md
-          - name: Transform examples to Power Fx formulas
-            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1258,9 +1256,9 @@
     items:
     - name: Working with Source Code
       items:
-        - name: Code View (preview)
+        - name: Code View
           href: ./canvas-apps/code-view.md        
-        - name: View source code files for canvas apps (preview)
+        - name: Source code files for canvas apps
           href: ./canvas-apps/power-apps-yaml.md
         - name: Use Git version control to edit canvas apps (experimental)
           href: ./canvas-apps/git-version-control.md
@@ -1691,6 +1689,8 @@
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Send a messages to Copilot chat
+          href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Prompt guide customizations
           href: ./model-driven-apps/copilot-chat-prompt-guide.md
         - name: Zero prompt experience
