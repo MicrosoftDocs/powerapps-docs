@@ -33,27 +33,27 @@ Dataverse search consists of two separate indexes that power different experienc
 Multiple features within the Power Platform are enabled via Dataverse search, namely the Copilot indexes. These experiences include:
 
 ### Microsoft Copilot Studio Agents
-1.	[Add Files as a knowledge source]([url](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload))
-2.	[Add Dataverse as a knowledge source]([url](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-dataverse))
-3.	[Virtual Agents]([url](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-types#virtual-agents))
+1.	[Add Files as a knowledge source](/microsoft-copilot-studio/knowledge-add-file-upload)
+2.	[Add Dataverse as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse)
+3.	[Virtual Agents](/microsoft-copilot-studio/guidance/cux-types#virtual-agents)
 
 ### Dynamics 365 Copilots
 
-4. [Sales Copilot]([url](https://learn.microsoft.com/en-us/dynamics365/sales/copilot-overview))
-5. [Customer Service Copilot]([url](https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/copilot-enable-summary))
-6. [Contact Center Copilot]([url](https://learn.microsoft.com/en-us/dynamics365/contact-center/administer/configure-copilot-features))
-7. [Field Service Copilot]([url](https://learn.microsoft.com/en-us/dynamics365/field-service/copilot-side-pane))
+4. [Sales Copilot](/dynamics365/sales/copilot-overview)
+5. [Customer Service Copilot](/dynamics365/customer-service/administer/copilot-enable-summary)
+6. [Contact Center Copilot](/dynamics365/contact-center/administer/configure-copilot-features)
+7. [Field Service Copilot](/dynamics365/field-service/copilot-side-pane)
 
 ### Power Apps – Model-Driven Apps
 
-8. [Copilot Chat]([url](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot))
-9. [Dataverse search]([url](https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization))
+8. [Copilot Chat](/power-apps/maker/model-driven-apps/add-ai-copilot)
+9. [Dataverse search](/power-platform/admin/configure-relevance-search-organization)
 
 ### Experiences across the Power Platform
 
-10. [AI Prompts in Power Apps / Power Automate]([url](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node))
-11. [AI Prompts in Microsoft Copilot Studio]([url](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-prompt-node))
-12. [Power Apps / Power Automate - Custom AI Prompts]([url](https://learn.microsoft.com/en-us/ai-builder/create-a-custom-prompt))
+10. [AI Prompts in Power Apps / Power Automate](/microsoft-copilot-studio/nlu-prompt-node)
+11. [AI Prompts in Microsoft Copilot Studio](/microsoft-copilot-studio/nlu-prompt-node)
+12. [Power Apps / Power Automate - Custom AI Prompts](/ai-builder/create-a-custom-prompt)
 
 ## How can I find out how much storage is consumed by Dataverse search?
 Storage used by Dataverse search is already reported and charged at the Environment level as a table called “RelevanceSearch” and it's charged by its GB capacity. We're enhancing the capabilities and adjusting the billing of the existing Dataverse search with improved semantic Copilot indexing, where generative AI features like Copilot will become dependent on, to promote consistency across the Dataverse search and its enhanced experiences.
@@ -62,7 +62,7 @@ Storage used by Dataverse search is already reported and charged at the Environm
 > Dataverse search will be turned **On** if you happen to use any of the above features in the existing environment (and for any new production environment) and **Default** by default for any other scenario or new environment.
 It's recommended to have Dataverse search turned on so users can enjoy a superior search experience in model-driven apps and leverage the benefits of generative AI capabilities. Environment admins have the option to opt out of this feature for the purpose of managing their environments by selecting the option **Off**.
 
-To learn more about how Dataverse search is reported and managed, see: [Configure Dataverse Search]([url](https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization))
+To learn more about how Dataverse search is reported and managed, see: [Configure Dataverse Search](/power-platform/admin/configure-relevance-search-organization)
 
 
 ## Where can I see how much storage is consumed by Dataverse search?
@@ -80,7 +80,7 @@ Storage consumed by Dataverse search was already reported at the Environment lev
 
 ### What entitlements are consumed by Dataverse search?
 
-Dataverse search consumes against the [Dataverse entitlements available within your tenant](whats-new-storage.md)).
+Dataverse search consumes against the [Dataverse entitlements available within your tenant](whats-new-storage.md).
 - Dataverse search-structured index consumption counts towards Dataverse database capacity
 -	Dataverse search unstructured index consumption counts towards Dataverse file capacity
 
