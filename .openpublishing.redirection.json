@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/quick-start-register-configure-simplespa-application-msal-js.md",
+      "redirect_url": "webapi/quick-start-js-spa",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/query-data-web-api.md",
       "redirect_url": "query/overview",
       "redirect_document_id": "false"
@@ -9422,9 +9427,10 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/how-to-excel-tips.md",
-      "redirect_url": "https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664"
-    },
-    {
+      "redirect_url": "https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664",
+      "redirect_document_id": false
+   },
+  {
       "source_path": "powerapps-docs/maker/canvas-apps/sample-crisis-communication-app.md",
       "redirect_url": "https://learn.microsoft.com",
       "redirect_document_id": false
