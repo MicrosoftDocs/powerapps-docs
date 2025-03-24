@@ -248,6 +248,8 @@
         href: clientapi/reference/controls/addCustomFilter.md
       - name: addCustomView
         href: clientapi/reference/controls/addCustomView.md
+      - name: addEventHandler
+        href: clientapi/reference/controls/addeventhandler.md
       - name: addNotification
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
