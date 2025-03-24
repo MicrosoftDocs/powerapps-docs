@@ -14,24 +14,17 @@ contributors:
   - mkaur
 ---
 
-# Use the wrap wizard to build your mobile app
+# Wrap wizard : your step-by-step guide to building your native mobile apps package
 
-Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
+Use this step-by-step Wrap wizard guide to convert one or more canvas apps into a single custom-branded app package that can be deployed on Google Play and the iOS App Store.
 
-The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
-
-Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
-
-- iOS (IPA package)
-- Android (APK package)
-- For Google Play Store distribution (AAB package)
+The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps (IPA, APK, AAB packages). You can distribute these *wrapped* native mobile apps to end users through [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458), [Apple Business Manager](https://developer.apple.com/custom-apps/), or other native distribution methods.
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
-## Create native mobile apps for iOS and Android using the wizard
+## Create custom-branded native Power Apps for iOS and Android using the Wrap wizard
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps maker portal](https://make.powerapps.com).
 
 2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
