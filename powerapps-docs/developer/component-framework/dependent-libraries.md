@@ -1,9 +1,9 @@
 ---
-title: Dependent Libraries
+title: Dependent Libraries (preview)
 description: Explains how to use dependent libraries with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -11,7 +11,9 @@ contributors:
  - JimDaly
  - kierantpetrie
 ---
-# Dependent Libraries
+# Dependent Libraries (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 With model-driven apps, you can reuse a prebuilt library contained in another component that is loaded as a dependency to more than one component.
 

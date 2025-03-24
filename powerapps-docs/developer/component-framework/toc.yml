@@ -16,9 +16,9 @@ items:
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
-  - name: Dependent libraries
+  - name: Dependent libraries (preview)
     href: dependent-libraries.md
-  - name: Events
+  - name: Events  (preview)
     href: events.md
   - name: Get tooling
     href: get-powerapps-cli.md

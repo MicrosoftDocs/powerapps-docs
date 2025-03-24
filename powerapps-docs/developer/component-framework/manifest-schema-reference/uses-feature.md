@@ -3,7 +3,7 @@ title: uses-feature | Microsoft Docs
 description: Indicates which feature their components want to use.
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf

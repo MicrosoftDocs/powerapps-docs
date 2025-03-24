@@ -3,7 +3,7 @@ title: Power Apps component framework manifest schema reference | Microsoft Docs
 description: This section contains reference documentation for manifest schema generated using Microsoft Power Platform CLI.
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf

@@ -3,7 +3,7 @@ title: "Tutorial: Define a custom event in a component"
 description: "In this tutorial, learn how to define a custom event in a PCF control and use it in canvas and model-driven apps."
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -13,7 +13,9 @@ contributors:
 ---
 # Tutorial: Define a custom event in a component
 
-In this tutorial, you'll build a code component that uses custom events and test it using both canvas and model-driven apps. [Learn more about custom events](events.md).
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+In this tutorial, you'll build a code component that uses custom events and test it using both canvas and model-driven apps. [Learn more about the custom events preview](events.md).
 
 ## Goal
 

@@ -1,9 +1,9 @@
 ---
 title: platform-action Element | Microsoft Docs
-description: "TODO: align with platform-action-description"
+description: "Used to specify that control dependencies will load on demand instead of when the control is loaded."
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -40,9 +40,9 @@ Model-driven apps
 
 ### Related articles
 
-[Dependent Libraries](../dependent-libraries.md)
-[Power Apps component framework manifest schema reference](index.md)
-[Power Apps component framework API reference](../reference/index.md)
+[Dependent Libraries (preview)](../dependent-libraries.md)   
+[Power Apps component framework manifest schema reference](index.md)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

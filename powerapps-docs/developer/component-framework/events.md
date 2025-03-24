@@ -1,9 +1,9 @@
 ---
-title: Define Events
+title: Define Events (preview)
 description: Explains how to define new events with Power Apps Component Framework (PCF) controls.
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -11,7 +11,9 @@ contributors:
  - JimDaly
  - kierantpetrie
 ---
-# Define Events
+# Define Events (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A common requirement when building custom components with the Power Apps Component Framework is the ability to react to events generated within the control. These events can be invoked either due to user interaction or programmatically via code. For example, an application can have a code component that lets a user build a product bundle. This component can also raise an event which could show product information in another area of the application.
 

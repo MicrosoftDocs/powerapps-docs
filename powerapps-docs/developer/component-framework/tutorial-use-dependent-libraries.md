@@ -3,7 +3,7 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -13,8 +13,10 @@ contributors:
 ---
 # Tutorial: Use dependent libraries in a component
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This tutorial shows how to build a code component for model-driven apps that is dependent on libraries that are contained in another component.
-[Learn more about dependent libraries](dependent-libraries.md)
+[Learn more about the dependent libraries preview](dependent-libraries.md)
 
 ## Goal
 
@@ -628,4 +630,4 @@ Once the page loads, the control updates to display `Hello from myLib Dependency
 
 ### Related articles
 
-[Dependent Libraries](dependent-libraries.md)
+[Dependent Libraries (preview)](dependent-libraries.md)

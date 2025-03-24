@@ -3,7 +3,7 @@ title: dependency Element | Microsoft Docs
 description: Refers to a library in another component that this component depends on.
 author: anuitz
 ms.author: anuitz
-ms.date: 03/17/2025
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -24,10 +24,10 @@ Model-driven apps
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`type`|Should be set to `control`|`String`|Yes|Model-driven apps |
+|`type`|Set to `control`|`String`|Yes|Model-driven apps |
 |`name`|The schema name name of the library component|`String`|Yes|Model-driven  apps |
 |`order`|The order in which the dependent library should load|`Positive integer`|No|Model-driven  apps |
-|`load-type`|Should be set to `onDemand`|`String`|No|Model-driven  apps |
+|`load-type`|Set to `onDemand`|`String`|No|Model-driven  apps |
 
 ## Parent Elements
 
@@ -46,7 +46,7 @@ Model-driven apps
 
 ### Related articles
 
-[Dependent Libraries](../dependent-libraries.md)   
+[Dependent Libraries (preview)](../dependent-libraries.md)   
 [Power Apps component framework manifest schema reference](index.md)   
 [Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
