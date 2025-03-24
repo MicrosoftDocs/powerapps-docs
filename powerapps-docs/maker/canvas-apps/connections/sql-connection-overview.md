@@ -65,7 +65,7 @@ To view the results of your SQL queries, see: [View results in SQL Server](sql-c
 > [!NOTE]
 > If a SQL Server data type doesn't appear in the previous table, that data type isn't supported.
 > Unsupported data types include the following examples: `binary()`, `varbinary()`, `image`, `cursor`,
-> `rowversion`, `hierarchyid`, `sql_variant xml`, Spatial Geometry Types, Spatial Geography Types, and table.
+> `rowversion`, `hierarchyid`, `sql_variant xml`, Spatial Geometry Types, Spatial Geography Types, and table. Also, 'tinyint' and 'smallint' are not supported as primary keys.
 
 ## Power Apps functions and operations delegable to SQL Server
 

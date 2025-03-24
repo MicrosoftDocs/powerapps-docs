@@ -714,8 +714,6 @@
             href: ./canvas-apps/power-apps-ideas.md
           - name: Transform natural language to Power Fx formulas
             href: ./canvas-apps/power-apps-ideas-transform.md
-          - name: Transform examples to Power Fx formulas
-            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
