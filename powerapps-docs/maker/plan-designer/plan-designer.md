@@ -32,7 +32,7 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 
 ## Prerequisite
 
-On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. You should see the **Create a solution for almost any business problem** banner at the top.
+On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. 
 
 :::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." :::
 
@@ -47,9 +47,18 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
    :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." :::
 
-   Copilot opens the Plan designer and begins creating a plan by identifying the user roles needed to address your business scenario based on your description.
 
-   :::image type="content" source="media/pd-5-plan-loading.png" alt-text="Screenshot of the Plan designer generating user roles." lightbox="media/pd-5-plan-loading.png":::
+Copilot opens the Plan designer and begins addressing your business scenario based on your description.
+
+Within the Plan designer, you can view the presence status of plan agents, which are AI assistants that analyze your business problem and generate a plan for it. These plan agents utilize AI to help build your plan.
+
+- The **Requirement Agent** examines the business problem and uses AI to generate user requirements.
+- The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
+- The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
+
+
+:::image type="content" source="media/pd-5-plan-agents.png" alt-text="Plan agents analyze your plan":::
+
 
 ### Generate user roles and user stories
 
