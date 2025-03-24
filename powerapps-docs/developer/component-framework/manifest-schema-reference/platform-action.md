@@ -1,6 +1,6 @@
 ---
 title: platform-action Element | Microsoft Docs
-description: "Used to specify that control dependencies will load on demand instead of when the control is loaded."
+description: "Used to specify that control dependencies load on demand instead of when the control is loaded."
 author: anuitz
 ms.author: anuitz
 ms.date: 03/24/2025
