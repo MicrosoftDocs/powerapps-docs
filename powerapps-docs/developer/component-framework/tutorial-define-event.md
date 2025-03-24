@@ -452,4 +452,4 @@ this.onSampleControl2CustomEvent2 = function (params) {
 
 ### Related articles
 
-[Define Events](events.md)
+[Define Events (preview)](events.md)
