@@ -1,7 +1,8 @@
 ---
 title: "Web API table schema operations sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of code samples demonstrates how to perform operations that change the Dataverse data structures."
-ms.date: 09/02/2022
+ms.topic: sample
+ms.date: 03/22/2025
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: jdaly
@@ -28,8 +29,8 @@ This sample is divided into the following sections, containing Dataverse Web API
 |Code section|Associated conceptual and reference articles|  
 |------------------|----------------------------------|  
 |[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
-|[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-column-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br />[InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue)<br />[OrderOption Action](xref:Microsoft.Dynamics.CRM.OrderOption)<br />[DeleteOptionValue Action](xref:Microsoft.Dynamics.CRM.DeleteOptionValue)<br />[InsertStatusValue Action](xref:Microsoft.Dynamics.CRM.InsertStatusValue)|
+|[Section 1: Create, Retrieve, and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
+|[Section 2: Create, Retrieve, and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-column-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br />[InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue)<br />[OrderOption Action](xref:Microsoft.Dynamics.CRM.OrderOption)<br />[DeleteOptionValue Action](xref:Microsoft.Dynamics.CRM.DeleteOptionValue)<br />[InsertStatusValue Action](xref:Microsoft.Dynamics.CRM.InsertStatusValue)|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
 |[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
@@ -40,7 +41,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 |[Section 10: Import and Delete managed solution](#section-10-import-and-delete-managed-solution)|[Import solutions](../../../maker/data-platform/import-update-export-solutions.md)|
   
 > [!NOTE]
->  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the IDs set by the Dataverse server.  
+>  For brevity, less pertinent HTTP headers are omitted. The URLs of the records vary with the base organization address and the IDs set by the Dataverse server.  
 
 ## Section 0: Create Publisher and Solution
 
@@ -81,7 +82,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 1. Then create the solution related to the publisher. 
 
     > [!NOTE]
-    > Many of the items created or updated in is sample will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. Some actions have a `SolutionUniqueName` parameter that does the same thing. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
+    > Many of the items created or updated in is sample use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. Some actions have a `SolutionUniqueName` parameter that does the same thing. At the end of this sample, this solution is exported and contains the definitions of all the items created and changed in this sample.
 
    **Request:**
 
@@ -115,11 +116,11 @@ This sample is divided into the following sections, containing Dataverse Web API
    Created solution Example Solution
    ```
 
-## Section 1: Create, Retrieve and Update Table
+## Section 1: Create, Retrieve, and Update Table
 
 1. Create the `sample_BankAccount` table.
 
-   These properties are required: `SchemaName`, `DisplayName`, `DisplayCollectionName`, `HasNotes`, `HasActivities` and `PrimaryNameAttribute`, which must include the `LogicalName` value of the primary name column.
+   These properties are required: `SchemaName`, `DisplayName`, `DisplayCollectionName`, `HasNotes`, `HasActivities`, and `PrimaryNameAttribute`, which must include the `LogicalName` value of the primary name column.
 
    The table must also include one <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata> column in the `Attributes` collection to be the primary name column for the table. That column definition must have `SchemaName`, `MaxLength`, and `DisplayName` values, and `IsPrimaryName` must be set to true.
 
@@ -270,7 +271,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    - This query also doesn't include an `$expand` to include related data, such as attributes, because related data must be updated separately.
 
    > [!NOTE]
-   > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [HTTP headers > Other headers](compose-http-requests-handle-errors.md#other-headers).
+   > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item might return a 404 because it hasn't been cached yet. Caching might take 30 seconds. This header forces the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you're retrieving changes you have made. More information: [HTTP headers > Other headers](compose-http-requests-handle-errors.md#other-headers).
 
    **Request:**
 
@@ -1028,13 +1029,13 @@ This sample is divided into the following sections, containing Dataverse Web API
    Updated the Bank Account table
    ```
 
-## Section 2: Create, Retrieve and Update Columns
+## Section 2: Create, Retrieve, and Update Columns
 
-This section creates and retrieves a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
+This section creates and retrieves a selected group of column definitions. Each of these types are derived from the [AttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.AttributeMetadata) so they share most of the same common properties. However, each derived type has a few special properties.
 
 ### Boolean Column
 
-1. Create a Boolean column using <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata?text=BooleanAttributeMetadata EntityType>. Despite the name, boolean columns have an `OptionSet` property just like choice columns. However, they always have only two options: `TrueOption` with value 1 and `FalseOption` with value 0.
+1. Create a Boolean column using [BooleanAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata). Despite the name, boolean columns have an `OptionSet` property just like choice columns. However, they always have only two options: `TrueOption` with value 1 and `FalseOption` with value 0.
 
    **Request:**
 
@@ -1151,7 +1152,7 @@ This section creates and retrieves a selected group of column definitions. Each 
 1. Retrieve the Boolean column including `$expand=OptionSet` so that the options can be retrieved.
 
    > [!NOTE]
-   > The URL for this request includes `/Microsoft.Dynamics.CRM.BooleanAttributeMetadata` which performs a cast operation that is required to return any property that is not defined within the <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType>. Without this, the `OptionSet` expansion is not possible.
+   > The URL for this request includes `/Microsoft.Dynamics.CRM.BooleanAttributeMetadata` which performs a cast operation that is required to return any property that isn't defined within the <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType>. Without this, the `OptionSet` expansion isn't possible.
 
    **Request:**
 
@@ -1420,7 +1421,7 @@ This section creates and retrieves a selected group of column definitions. Each 
 1. Update the Boolean column. The only changes are to the `DisplayName`, `Description`, and `RequiredLevel` properties, but the entire definition is included because `PUT` is used.
 
    > [!NOTE]
-   > Even though the `OptionSet` property is included in this payload, any changes to the options would not be applied because they are not considered part of the column definition. They must be updated separately and this sample will show you how in following steps.
+   > Even though the `OptionSet` property is included in this payload, any changes to the options wouldn't be applied because they aren't considered part of the column definition. They must be updated separately and this sample shows you how in following steps.
 
    **Request:**
 
@@ -1688,10 +1689,10 @@ This section creates and retrieves a selected group of column definitions. Each 
 
 #### Update Option Values
 
-Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>. 
+Update each of the boolean options using [UpdateOptionValue Action](xref:Microsoft.Dynamics.CRM.UpdateOptionValue)
 
 > [!NOTE]
-> Here we are applying changes to options in a boolean attribute, but you will use `UpdateOptionValue` for options in any type of column that uses them except `status` columns, where you must use the <xref:Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action>.
+> Here we're applying changes to options in a boolean attribute, but you use `UpdateOptionValue` for options in any type of column that uses them except `status` columns, where you must use the [UpdateStateValue Action](xref:Microsoft.Dynamics.CRM.UpdateStateValue).
 
 1. Change the `TrueOption` value label to 'Up'.
 
@@ -3150,7 +3151,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 ### Insert Status Value
 
-Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it's valid for.
+Use [InsertStatusValue Action](xref:Microsoft.Dynamics.CRM.InsertStatusValue) to add a new option to a `statuscode` column. You must specify which `StateCode` it's valid for.
 
 > [!NOTE]
 > Notice that the value returned applies the publisher `customizationoptionvalueprefix` value (72700) automatically.
@@ -3983,7 +3984,7 @@ Before you create a relationship using code, you should confirm that the relatio
 
 ### Identify Potential Referencing Entities
 
-In the context of a specific table that can be the parmary table in a one-to-many relationship, use the <xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function> to identify what other tables can be the related to it.
+In the context of a specific table that can be the parmary table in a one-to-many relationship, use the [GetValidReferencingEntities Function](xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities) to identify what other tables can be the related to it.
 
 **Request:**
 
@@ -4238,8 +4239,8 @@ Created one-to-many relationship: RelationshipDefinitions(66aa66aa-bb77-cc88-dd9
 The following request retrieves the relationship created by the previous request.
 
 > [!NOTE]
-> Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
-> Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>.
+> Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following cast expression in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
+> Otherwise, the value returned is the [RelationshipMetadataBase EntityType](xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase) and doesn't include the properties specific to the [OneToManyRelationshipMetadata EntityType](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata).
 
 **Request:**
 
@@ -4627,7 +4628,7 @@ Like one-to-many relationships, there are special functions used by the designer
 
 ### Identify Potential Entities for N:N relationships
 
-Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can participate in many-to-many relationships.
+Use the [GetValidManyToMany Function](xref:Microsoft.Dynamics.CRM.GetValidManyToMany) to get a list of tables that can participate in many-to-many relationships.
 
 **Request:**
 
@@ -4889,8 +4890,8 @@ Created Many-to-Many relationship at: RelationshipDefinitions(11bb11bb-cc22-dd33
 This request retrieves the many-to-many relationship created by the previous request.
 
 > [!NOTE]
-> As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`.
-> Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType>.
+> As mentioned before, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following cast expression in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`.
+> Otherwise, the value returned is the [RelationshipMetadataBase EntityType](xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase) and doesn't include the properties specific to the [ManyToManyRelationshipMetadata EntityType](xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata).
 
 **Request:**
 
@@ -5001,7 +5002,7 @@ Retrieved Many-to-Many relationship:sample_sample_BankAccounts_Contacts
 
 ## Section 8: Export managed solution
 
-Use the <xref:Microsoft.Dynamics.CRM.ExportSolution?text=ExportSolution Action> to export the solution as a managed solution. This action includes many switches you can use to include additional information as part of the solution, but in this case, all those options are turned off. More information: [Work with solutions](/power-platform/alm/solution-api)
+Use the [ExportSolution Action](xref:Microsoft.Dynamics.CRM.ExportSolution) to export the solution as a managed solution. This action includes many switches you can use to include additional information as part of the solution, but in this case, all those options are turned off. More information: [Work with solutions](/power-platform/alm/solution-api)
 
 **Request:**
 
@@ -5050,7 +5051,7 @@ Solution Exported to E:\GitHub\PowerApps-Samples\dataverse\webapi\C#-NETx\Metada
 
 ## Section 9: Delete sample records
 
-References to all of the records created in this sample have been added to a list. In this section, all the records created are deleted using a `$batch` operation.
+References to all of the records created in this sample were added to a list. In this section, all the records created are deleted using a `$batch` operation.
 
 **Request:**
 
