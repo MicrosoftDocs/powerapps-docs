@@ -25,7 +25,7 @@ Table relationships in Microsoft Dataverse define the ways that table rows can b
 
 In a one-to-many table relationship, many referencing (related) table rows can be associated with a single referenced (primary) table row. The referenced table row is sometimes referred to as the ”parent” and rows of the referencing table are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.
 
-For example, in a school scenario multiple courses might be delivered in a single classroom, so the class table would have a one-to-many relationship with the course table.
+For example, in a school scenario multiple courses might be delivered in a single classroom, so the classroom table would have a one-to-many relationship with the course table.
 
 ## Many-to-many relationships
 
