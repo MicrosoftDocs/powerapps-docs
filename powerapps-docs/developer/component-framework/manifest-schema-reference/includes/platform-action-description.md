@@ -1,1 +1,1 @@
-TODO: Add a description for platform-action element
+Used to specify that control dependencies will load on demand instead of when the control is loaded.

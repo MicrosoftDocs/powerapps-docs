@@ -18,21 +18,19 @@ contributors:
 
 ## Available for
 
-TODO: Model-driven apps?
+Model-driven apps
 
 ## Parameters
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|--------|
-|`action-type`|TODO: Add description for this attribute|TODO: Other valid values beyond `afterPageLoad`? |TODO: TODO:Yes?|TODO:Model-driven apps?|
+|`action-type`| Set to `afterPageLoad` | string | No | Model-driven apps|
 
 ## Parent Elements
 
 |Element|Description|
 |--|--|
 |[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
-
-
 
 ### Example
 
@@ -42,9 +40,9 @@ TODO: Model-driven apps?
 
 ### Related articles
 
-[Dependent Libraries](../dependent-libraries.md)   
-[Power Apps component framework manifest schema reference](index.md)   
-[Power Apps component framework API reference](../reference/index.md)   
+[Dependent Libraries](../dependent-libraries.md)
+[Power Apps component framework manifest schema reference](index.md)
+[Power Apps component framework API reference](../reference/index.md)
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
