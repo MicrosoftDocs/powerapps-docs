@@ -181,12 +181,12 @@ When the Plan designer is turned on, you'll see the **Plans** menu in the left n
 
 ## Known limitations
 
-- **Inline editing user roles and user stories**: Direct inline editing of content isn't supported. All changes must be prompted in Copilot first to regenerate iterations.
-- **Edit tables in Data workspace**: Editing Dataverse tables generated from the Plan designer isn't supported.
-- **Add existing tables in Data workspace**: Adding existing tables in the data workspace within the Plan designer isn't currently supported.
+- **Inline editing user roles and user stories**: Direct inline editing of content isn't supported. All changes must be prompted in Copilot to regenerate iterations.
+- **Edit tables in Data workspace**: Editing Dataverse tables created by the Plan designer isn't supported.
+- **Add existing tables in Data workspace**: Adding existing tables in the data workspace in the Plan designer isn't supported.
 - **Supported user experiences**: The Plan designer only generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
-- **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. You can define the publisher using the save icon in the top right corner.
+- **Solution/ ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. Define the publisher using the save icon in the top right corner.
 
 ## Related information
 
