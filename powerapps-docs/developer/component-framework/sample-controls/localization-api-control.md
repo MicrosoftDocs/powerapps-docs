@@ -50,7 +50,7 @@ When this line of code is executed, the Power Apps component framework automatic
 |1033 |Increment |
 |1035 |lisäys | 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
