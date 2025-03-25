@@ -34,7 +34,7 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
-1. [Try the new Power Apps experience](#4--Try-the-new-power-apps-experience)
+1. [Try the new Power Apps experience](#4---try-the-new-power-apps-experience)
 1. [Copilot in Power Apps](#5---copilot-in-power-apps)
 1. [Build apps](#6--build-apps)
 
