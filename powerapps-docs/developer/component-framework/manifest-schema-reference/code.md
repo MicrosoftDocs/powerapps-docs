@@ -40,7 +40,7 @@ Model-driven and canvas apps
       <resx path="strings/TSIncrementControl.1033.resx" version="1.0.0" />
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
