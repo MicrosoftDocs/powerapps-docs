@@ -66,6 +66,9 @@ The default generated form consists of the following controls and their correspo
 
 These defaults ensure that the form works when running within SharePoint. The defaults change the Power Apps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
+> [!NOTE]
+> While you can manually copy a form from one environment to another, there is currently no automated method in Power Apps to copy a form from one environment to another.
+
 ## Understand the SharePointIntegration control
 
 The **SharePointIntegration** control communicates user actions between SharePoint and Power Apps.
