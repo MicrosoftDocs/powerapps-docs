@@ -120,7 +120,7 @@ Environments can be managed using [Power Platform admin center](/power-platform/
 
 ### Notifications
 
-Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
+To see notifications select the bell icon. Notifications are stored in the notification center until you dismiss them or when they expire.
 
 ### Settings
 
@@ -146,7 +146,7 @@ In the header, select the question mark icon to find more information about eith
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
-You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+Find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
 
 ## 4 - Try the new Power Apps experience
 
@@ -158,17 +158,17 @@ If your organization has [Copilot in Power Apps (preview)](ai-overview.md) enabl
 
 ## 6 – Build apps
 
-Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
+Build apps that provide rich business logic and workflow capabilities to transform manual business operations into digital, automated processes.
 
 To create an app, select from the following options:
 
-- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/sql-connection-overview.md) to start building your app.
+- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build a table, select a [Dataverse table](data-platform-create-app.md), or choose from an external data source like [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/sql-connection-overview.md) to start building your app.
   
   > [!NOTE]
   > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
    
-- **Start with a page design**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
-- **Start with an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
+- **Start with a page design**: Select the type of app you want to create. Use the **Filter** option in the top-right to narrow templates by app type or features like offline use, responsive design, or embedding into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md).
+- **Start with an app template**: Choose from app templates, including data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md).
 
   > [!NOTE]
   >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
@@ -179,7 +179,7 @@ To create an app, select from the following options:
 
 ### Permissions for Dataverse
 
-The table summarizes scenarios and outcome when you create apps that require Microsoft Dataverse.
+The table summarizes scenarios and outcomes when creating apps that require Microsoft Dataverse.
 
 
 | **Maker has access to a developer environment** | **Maker has permission to create a developer environment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
