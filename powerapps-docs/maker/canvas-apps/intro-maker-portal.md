@@ -32,10 +32,11 @@ Select the appropriate tab below to know more.
 Legend:
 
 1. [Left navigation pane](#1--left-navigation-pane)
-2. [Search](#2--search)
-3. [Environment information and settings](#3--environment-information-and-settings)
-4. [Copilot in Power Apps](#4---copilot-in-power-apps)
-5. [Build apps](#5--build-apps)
+1. [Search](#2--search)
+1. [Environment information and settings](#3--environment-information-and-settings)
+1. [Try the new Power Apps experience](#4--Try-the-new-power-apps-experience)
+1. [Copilot in Power Apps](#5---copilot-in-power-apps)
+1. [Build apps](#6--build-apps)
 
 
 ## 1 – Left navigation pane
@@ -51,6 +52,7 @@ Legend:
 1. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 1. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
 1. **Plans**: View and edit your plans. More information: [Use the Plan designer (preview)](../plan-designer/plan-designer.md).
+1. **AI hub**: Create and use AI models that optimize your business processes. More information: [Overview of AI Builder](/ai-builder/overview).
 1. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 1. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
 1. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
@@ -146,11 +148,15 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-## 4 - Copilot in Power Apps
+## 4 - Try the new Power Apps experience
+
+Turn on the **Try the new Power Apps experience** toggle to [use the Plan designer (preview)](../plan-designer/plan-designer.md).
+
+## 5 - Copilot in Power Apps
 
 If your organization has [Copilot in Power Apps (preview)](ai-overview.md) enabled then you'll see Copilot assistant on the Power Apps Home screen. For more information, see [Build apps through conversation (preview)](ai-conversations-create-app.md).
 
-## 5 – Build apps
+## 6 – Build apps
 
 Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
@@ -167,8 +173,8 @@ To create an app, select from the following options:
   > [!NOTE]
   >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
-- **Your apps**: On the **Home** page, find your top six apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
-- **My apps**: On the **Apps** page, find the apps that you own. Use the search or the filter and sort options to find the app you're looking for. Select an app and perform various actions such as edit the app, view app details, and access app setting using the commands on the command bar or use the **Commands** button.
+- **Your apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play** or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
+
 
 
 ### Permissions for Dataverse
