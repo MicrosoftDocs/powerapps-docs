@@ -16,6 +16,8 @@ contributors:
 
 # Time picker control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A field for users to select a time.
 
 ## Properties

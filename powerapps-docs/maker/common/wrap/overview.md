@@ -53,8 +53,8 @@ The following section explains steps involved in using the wrap feature to creat
 1. Select your **primary canvas app** and start the wrap wizard. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](prerequisites.md#add-canvas-app-to-solution).
 1. Optionally, add **secondary canvas apps** to your mobile app in the wrap wizard. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together).
 1. Select the **target platforms** (iOS and Android) for your mobile app. Optionally, select to **automatically code sign** your mobile app package in the wrap wizard.
-1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
 1. Register you app. Use an existing **app registration**, or create a new one in the wrap wizard. 
+1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
 1. Add **Azure blob storage account name and container name**. Use an already created **Azure blob storage** or create a new one.
 1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
 1. Download your mobile app from the **App blob storage location**.
@@ -128,7 +128,7 @@ Building a wrap project is a process that creates the build packages for the mob
 
 ### Bundle ID
 
-The bundle ID is a unique identifier that you can create for your app. Follows a reverse domain name pattern. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault](create-key-vault-for-code-signing.md#create-azure-key-vault-and-configure-key-vault-uri) once iOS or Android certificates are created and uploaded as mentioned in step 6.
+The bundle ID is a unique identifier you create for your app. Use any bundle ID name that follows a reverse domain name pattern. A bundle ID must contain one period (.) and no spaces. For example, `com.contoso.myapp`. This bundle ID is used during the process of [creating the Azure key vault for wrap](create-key-vault-for-code-signing.md) once iOS or Android certificates are created and uploaded. If you already created the Azure key vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com). Use this same bundle ID in [Step 2: Target platform](wrap-how-to.md#step-2-target-platform)
 
 ### Code signing
 

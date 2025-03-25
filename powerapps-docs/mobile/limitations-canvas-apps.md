@@ -2,12 +2,12 @@
 
 title: Mobile offline limitations for canvas apps
 description: Learn about the limitations for canvas apps that use mobile offline.
-author: trdehove
+author: vamseedillimsft
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/06/2025
+ms.date: 03/24/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: vamseedilli
 ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
@@ -39,7 +39,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
 | Power Fx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
-|Relationship |Many-to-many relationships aren't supported in offline mode in canvas apps.<br><br>Filtering on column look-ups only supports one level of the relationship when the app is configured for offline use.|
+|Relationship |In offline mode, canvas apps don't support many-to-many relationships. <br><br>Filtering on column lookups is limited to one level of the relationship when the app is configured for offline use. Self-referential lookups are also not supported in offline mode. Consider following examples to understand the relationship with Account and Contact information. <br><br> **Supported Lookups**: <br><br>Lookups are supported for one level of relationship. For example:  <br><br>`Filter(Account, 'ContactID'.'Zipcode' = "11056")` <br><br>This retrieves all accounts with the zipcode 11056. <br><br> **Unsupported Lookups**: <br><br> 1. **Self-referential Lookups**: Self-referential lookups aren't supported. For example: <br><br>`Filter(Account, 'Parent Account'. 'Name' = "John Doe")` <br><br>This doesn't work because the parent account is a self-reference to the account table. <br><br> 2. **Multi-level Relationship Lookups**: Lookups involving more than one level of the relationship aren't supported. For example: <br><br>`Filter(Account, 'ContactID'.'Map'.Latitude = "38'53")` <br><br> This doesn't work because it involves more than one level of relationship (Account > Contact > Map). <br><br>  **Note**: The same limitations apply to the lookup function and the filter function mentioned earlier.|
 |Tables | Notes aren't supported in offline mode in canvas apps. |
 |Column types |Calculated and roll-up fields&mdash;that are part of rows synced to the client&mdash;aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.<br><br>When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.|
 |Sort order|Items in a gallery may appear in a different order in an offline-capable app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to make sure the app behaves consistently in mobile apps and web browsers.|
