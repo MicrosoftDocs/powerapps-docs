@@ -222,13 +222,14 @@ While many customers are excited to adopt Fabric, we also understand some custom
 
 ### Will export to data lake service stop since it's deprecated after November 1, 2024?
 
-Export to data lake service is deprecated as of November 1, 2025 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. You can join the community and provide feedback through weekly office hours at [aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics).
+Export to data lake service is deprecated as of November 1, 2025 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and you will have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
+
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
 
 Export to data lake service is deprecated as of November 1, 2024, but will continue to operate under limited support until March 25, 2025. If you haven't done so already, you should begin the transition process now.
 
-To help customers who might need more time to complete their transition, we have introduced an in-product “past due extend” option. You can apply for a one-time “past due extension” by taking the survey in the **Azure Synapse Link** area in Power Apps (make.powerapps.com). This option is available only to customers who are currently validating in production.
+To help customers who might need more time to complete their transition, we have introduced an in-product “past due extend” option. You can apply for a one-time “past due extension” by taking the survey in the **Azure Synapse Link** area in Power Apps (make.powerapps.com) or via [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue). This option is available only to customers who are currently validating either Synapse Link or Fabric Link services.
 
 If your past due extension request is approved, you receive a confirmation e-mail and the extended date is shown within the product. To self-extend, go the **Azure Synapse Link** area in Power Apps (make.powerapps.com). This option is applicable for each environment and is visible for environments linked to finance and operations.
 
