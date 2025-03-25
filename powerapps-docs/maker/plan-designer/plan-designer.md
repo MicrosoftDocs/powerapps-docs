@@ -144,9 +144,9 @@ Once you add the proposed user experiences, they're created.
    
        :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
 
-    The plan is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
+        The plan is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
 
-    :::image type="content" source="media/pd-objects-view.png" alt-text="Screenshot of the objects view.":::
+        :::image type="content" source="media/pd-objects-view.png" alt-text="Screenshot of the objects view.":::
 
 1. Once the plan is saved, select **Create** again. The proposed app open in a new tab, fully functioning with the added data tables.
 
