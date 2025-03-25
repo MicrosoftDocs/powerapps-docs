@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 3/21/2025
+ms.date: 3/24/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -84,8 +84,10 @@ When you use 'With', 'UpdateContext' or 'Set' they internally create collections
 
 ## Query limitations
 
-### Lookup levels
-Power Apps supports two lookup levels. This means that a Power Fx query expression can have - at most - two lookup functions in it. This limitation is to preserve performance. If a query expression includes a lookup, Power Apps first does a query to get the base table. Then, it does a second query that expands the first table with the lookup information. We support one more level beyond that as a maximum.  For offline, however, we only support one level of lookup expands.
+### Lookup and expand levels
+Power Apps allows for up to two lookup levels. This means a Power Fx query expression can include a maximum of two lookup functions to maintain performance. When a query expression includes a lookup, Power Apps first queries the base table, then performs a second query to expand the first table with the lookup information. We support one additional level beyond this as the maximum. However, for offline scenarios, only one level of lookup expands is supported.
+
+You can expand or join up to 20 entities in a single query. If you need to join more than 20 tables in one query, consider creating a view on the data server, if possible.
 
 ### Expression evaluation - property of entity must be on left side 'LHS' of equality operator
 It's important to place the property of an entity to be compared in an expression on the left hand side 'LHS' of an equation. To illustrate, in the example below the entity property **'Business unit ID'.Name** is a property value and it must be placed on the LHS of the expression to be evaluated. The following expression succeeds:
