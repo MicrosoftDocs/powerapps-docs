@@ -69,6 +69,11 @@ Using [Synapse Link transition tool provided by Dynamics 365 Fast track team](ht
 
 Using [Data integration tools provided by Dynamics 365 Fast track team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration) you can create a pipeline to incrementally copy change data into a Azure SQL database, Synapse dedicated pool or an on-premise database. 
 
+### Why are all Dataverse tables auto selected with Fabric Link, why can’t I select only the Dataverse tables I need?
+By selecting Link to Microsoft Fabric, the system adds all non-System Dataverse tables that have the "Track changes" property enabled. You can’t remove these tables as some of these tables may be used by Dynamics 365 as well as partner applications and removing them may cause the applications to fail.
+
+Enabling Link to Fabric feature (or a Dynamics 365 application that contains insights features) may result in an increase in Dataverse database storage consumption. You can view additional storage consumption as additional files in the environment storage capacity details view in Power Platform admin center. For an example, you notice an additional file "Account-Amalytics" if you selected the "Account" table for Fabric link. Also note that the chart only displays tables consuming hightest storage. You can get a list of tables using the menu on top right of the chart.
+
 
 ### Export to data lake service is working well for us. Why did you retire these services?
 
