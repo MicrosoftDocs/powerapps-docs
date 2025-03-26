@@ -222,7 +222,7 @@ While many customers are excited to adopt Fabric, we also understand some custom
 
 ### Will export to data lake service stop since it's deprecated after November 1, 2024?
 
-Export to data lake service is deprecated as of November 1, 2025 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and you will have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
+Export to data lake service is deprecated as of November 1, 2024 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and you will have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
 
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
