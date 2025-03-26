@@ -80,6 +80,13 @@ Enabling Link to Fabric feature (or a Dynamics 365 application that contains ins
 As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a single service under the brand name Synapse Link for Dataverse. Using our learnings, we addressed many shortcomings of existing services in Synapse Link while maintaining same data formats – so that you can upgrade your investments with minimal disruptions. Fabric link service is a new, no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric.
 
 
+### Why can't I find some Tables and Entities from Finance and Operations in tables in Link to Fabric or Link to Azure Synapse  
+
+Azure Synapse Link or Fabric link enables tables where the "change tracking" property is enabled. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** option is unavailable for entities created in finance and operations in the past for data migration. In some entities, enabling change tracking might fail with the error message **chosen entity doesn't pass the validation rules** or the **Track changes** checkbox is disabled for some entities. 
+
+For more information about entity validation rules and how you can fix them, go to [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might need developer assistance to complete the steps. If the chosen entity is unavailable because of the change tracking limitation, choose the tables that comprise the data from that entity. <br> You can use [EntityUtil](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration/EntityUtil) solution provided by the FastTrack team to create entity shapes using tables.
+
+
 ### Is BYOD service retired? Is there a retirement date? 
 
 As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications. [BYOD](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database) is a service that exports entity data into customers own Azure SQL database. While we haven't yet announced a retirement date for BYOD service, our guidance is to transition to Synapse Link or Fabric link services. Fabric link service is a new, no-copy, no-ETL solution, which enables you to query your data with SQL similar to a “read-replica” of your data in Fabric.
