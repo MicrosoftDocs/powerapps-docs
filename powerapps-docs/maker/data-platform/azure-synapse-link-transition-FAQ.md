@@ -61,7 +61,7 @@ Fabric Link and Synapse Link represent a unification of legacy services built in
 -	Fields that contain Binary data are removed 
 -	nVarChar(max) fields are included but data is truncated at 2000 characters.
 
-For more information, see [working data and metadata](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#working-with-data-and-metadata) 
+For more information, see [working with Finance and Operations data and metadata](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#working-with-data-and-metadata) 
 
 Using [Fabric Link transition tool provided by Dynamics 365 Fast track team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/FabricLink_SQLAnalyticsEndpoint), you can create a Fabric Data warehouse with the same data shapes as Export to Data lake feature and minimize the effort to transition your existing reports and data pipelines. 
 
