@@ -65,7 +65,7 @@ Example:
 
 - If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
 
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.pfx -keysize 2048 -validity 10000`
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.jks -keysize 2048 -validity 10000`
 
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the above example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
