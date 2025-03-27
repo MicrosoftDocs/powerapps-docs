@@ -106,11 +106,11 @@ Input:
 
 #### Account Name
 
-The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account. For example, if your account name is `mystorageaccount`, the base URI would be `https://mystorageaccount.blob.core.windows.net/`
+The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account. 
 
 #### Container Name
 
-The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. For example, if your container name is `mycontainer`, the URI for accessing blobs within this container would be `https://mystorageaccount.blob.core.windows.net/mycontainer/`
+The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. 
 
 
 ### App platform(s)
