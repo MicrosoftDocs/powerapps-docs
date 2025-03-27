@@ -67,8 +67,7 @@ Example:
 
   `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
 
-
-:::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
+:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the above example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
 ## Generate signature hash
 
@@ -118,6 +117,8 @@ To sign the APK package, we'll use the [apksigner tool](https://developer.androi
     If using iOS, check the apksigner file from the **buildTools Version** directory:
 
     Go to **SDK** directory > **build-tools** > **buildToolsVersion** > **lib**, and check the **apksigner.jar** file 
+
+:::image type="content" source="media/code-sign-android/codeSignIn2.png" alt-text="A screenshot with apksigner location information." lightbox="media/code-sign-android/codeSignIn2.png":::
 
 ### Use the apksigner file
 
