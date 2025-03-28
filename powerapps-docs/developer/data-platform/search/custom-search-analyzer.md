@@ -1,11 +1,11 @@
 ---
-title: "Custom column analyzers for Dataverse Search"
-description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use default Azure Search analyzers or create your own custom analyzer." 
-ms.date: 08/16/2024
+title: "Configure Azure AI built-in analyzers for Dataverse Search"
+description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use Azure AI built-in analyzers to modify the search results you get." 
+ms.date: 03/28/2025
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: seanwat-msft
+ms.author: seanwat
 search.audienceType: 
   - developer
 search.app: 
@@ -13,7 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
- - wobushixinxin67
+ - jeromeblouinms
 ---
 # Configure Azure AI built-in analyzers for Dataverse Search
 
@@ -58,7 +58,7 @@ To apply a different analyzer for a Dataverse table column, there needs to be a 
 Setting this property doesn't require writing code. Anyone with access to [Power Apps](https://make.powerapps.com) and write access to the `SearchAttributeSettings` table can apply this change, but they need to take extra care not to create a duplicate row. If you want to use code to create this row, see [Edit SearchAttributeSettings table columns with code](#edit-searchattributesettings-table-columns-with-code).
 
 > [!NOTE]
-> Don't set an analyzer for the [primary name column of a table](../entity-metadata.md#primary-name). You can do this, but the results will not be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
+> Don't set an analyzer for the [primary name column of a table](../entity-metadata.md#primary-name). You can do this, but the results won't be reliable. Primary name columns are treated differently because most tables have them and they play a special role by providing the string value used to link to records within apps.
 > 
 > If you need to configure an analyzer that uses the data in the primary name column of a table, create a separate string column and copy the content of the primary name column into it. Set an analyzer on that column instead.
 
@@ -73,7 +73,7 @@ Follow these steps to open the [SearchAttributeSettings table](../reference/enti
 1. Select **All** tables.
 1. In the top right corner, search for `searchattributesettings`.
 1. Open the **SearchAttributeSettings** table.
-1. Make sure when the table opens the **Name**, **attributename**, **entityname** and **settings** columns are visible. You can add them by selecting "**+18 more**" next to the **Name** column.
+1. Make sure when the table opens the **Name**, **attributename**, **entityname**, and **settings** columns are visible. You can add them by selecting "**+18 more**" next to the **Name** column.
 1. After selecting the columns, select **Save**.
 
 This closes the dialog and the columns are visible on the page. After you save, the columns should be visible.
@@ -85,7 +85,7 @@ For more information, see [Table columns and data](../../../maker/data-platform/
 The following table describes what to add to each column:
 
 > [!IMPORTANT]
-> The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these two columns. When a duplicate row exists Dataverse search will return an error when people perform a search.
+> The combination of **entityname** and **attributename** values must be unique in the **SearchAttributeSettings** table. You must make sure that you don't enter duplicate rows for with the same values for these two columns. When a duplicate row exists, Dataverse search returns an error when people perform a search.
 >
 > To avoid anyone unintentionally creating a duplicate row, you can add an alternate key to the `SearchAttributeSettings` table specifying the `entityname` and `attributename` columns in the key. [Learn to define alternate keys using Power Apps](../../../maker/data-platform/define-alternate-keys-portal.md)
 
@@ -381,6 +381,3 @@ $createdRecordMessage = @()
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
-
-
-
