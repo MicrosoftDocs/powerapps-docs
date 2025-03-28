@@ -2520,12 +2520,6 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: AI plugins (preview)
-  items:
-  - name: AI plugins in Power Platform
-    href: common/ai-plugin.md
-  - name: Building AI plugins for discovery by Copilot
-    href: common/build-ai-plugin-for-copilot.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Responsible AI
