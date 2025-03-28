@@ -262,6 +262,9 @@ The session summary event is logged once per session and contains
 information on app open success, app open optimal vs non-optimal sessions, and app 
 open performance metrics.
 
+### Limits
+The following events are accurate for canvas apps that run in a web browser. These events are not available for apps running in Power Apps mobile and the values in these events are not always available or accurate for custom pages.  
+
 Here is an example query showing how to access the session summary event and all 
 available fields: 
 
