@@ -32,7 +32,7 @@ Once the agent is created, makers can add triggers, make edits, conduct testing,
 ## Prerequisites
 
 - Copliot Features Admin Toggle must be enabled for environment and tenant. Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
-- Tenant setting for "Publish Copilots with AI features" is enabled.
+- Tenant setting for "Publish Copilots with AI features" must be enabled.
 - Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 - Current environment has PowerVirtualAgents solution 2.0.0.649.1 or newer.
 - Depending on where your environment is hosted, you might need to allow data movement across regions. Learn more in [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
