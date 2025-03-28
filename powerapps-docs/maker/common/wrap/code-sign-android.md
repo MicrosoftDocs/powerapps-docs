@@ -47,9 +47,7 @@ If you don't have environment variables, open a command prompt and run the follo
 2. Add keytool and openssl as environment variable. Add C:\Program Files\Android\Android Studio\jbr\bin as env variable. Add path of openssl.exe in environment variable (C:\Program Files\OpenSSL-Win64\bin)
 3. Run this command---keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
 Generate Keys
-4. Download openssl exe 
-5. Add path of openssl.exe in environment variable (C:\Program Files\OpenSSL-Win64\bin)
-6. Run this command in cmd - keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
+4. Run this command in cmd - keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
 Generate Signature Hash
 
 :::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown above." lightbox="media/code-sign-android/codeSignIn3.png":::
@@ -70,9 +68,6 @@ Parameters:
 - **validity** - validity of the key in number of days.
 
 Example:
-
-
-
 - If preparing Key Vault, PATH_TO_KEYSTORE should have .pfx extension.
 
   `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
@@ -116,7 +111,7 @@ When this error appears, try to generate the signature hash using the following 
     <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
 1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-3-register-app).
 
-## Manual sign the APK package
+## Manual sign the APK package (if not used automatic sign in OR trying to upload an aab file for play store)
 
 To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
 
