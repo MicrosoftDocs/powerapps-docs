@@ -54,7 +54,12 @@ Follow these procedures to make the most out of the feature:
 
   - “Generate reports for claims filed within a specific date range” 
 
-- Review all suggestions for accuracy and appropriateness before proceeding to the next step.  
+- Review all suggestions for accuracy and appropriateness before proceeding to the next step.
+
+## Authenticating actions after publishing
+If your agent is missing authentication to perform an action or is configured to request user authentication, it sends a message to the user asking for credentials. If an agent's flow is interrupted because it can't receive information or an action failed, it can't continue the session. If you want your agent to run autonomously, each action must be configured with working maker authentication that doesn't require user input. You can also instruct your agent to not request credentials from users.
+
+Because triggers use maker authentication, be aware of what data potential users can access through a published agent that has triggers. See the [Data protection with triggers](../microsoft-copilot-studio/authoring-triggers-about#data-protection-for-agents-with-triggers) section for more information. 
 
 ## Related information
 
