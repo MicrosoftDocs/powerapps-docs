@@ -208,7 +208,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
     ![Play published app.](./media/application-insights/play-published-app.png "Play published app")
 
-## Analyze data in Application Insights
+## Analyze custom data in Application Insights
 
 You can now begin to analyze the data you sent using the [Trace](#create-custom-trace-events) function from your app in Application Insights.
 
@@ -256,6 +256,186 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 
     > [!TIP]
     > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. [Learn more about log queries](/azure/azure-monitor/log-query/log-query-overview).
+
+## Analyze app lifecycle data in Application Insights
+The session summary event is logged once per session and contains 
+information on app open success, app open optimal vs non-optimal sessions, and app 
+open performance metrics.
+
+Here is an example query showing how to access the session summary event and all 
+available fields: 
+
+```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+// 
+| extend cd = parse_json(customDimensions) 
+// 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| extend unsuccessfulReason = tostring(sessionSummary["unsuccessfulReason"]) 
+| extend appLoadResult = tostring(sessionSummary["appLoadResult"]) 
+| extend appLoadNonOptimalReason = 
+tostring(sessionSummary["appLoadNonOptimalReason"]) 
+// 
+| extend timeToAppInteractive = todouble(sessionSummary["timeToAppInteractive"]) 
+| extend timeToAppFullLoad = todouble(sessionSummary["timeToAppFullLoad"]) 
+// 
+| project 
+    timestamp, 
+    session_Id, 
+    successfulAppLaunch, 
+    unsuccessfulReason, 
+    appLoadResult, 
+    appLoadNonOptimalReason, 
+    timeToAppInteractive, 
+    timeToAppFullLoad 
+| limit 5 
+```
+The following fields make it possible to measure app open success and latency of performance markers tied to end-user expeirences. 
+
+| Field                   | Description                                                                                                                                                                         |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| successfulAppLaunch     | Boolean value indicating whether   the session successfully launched the app                                                                                                        |
+| unsuccessfulReason      | If the session failed to launch   the app, this indicates the reason / error. This field will be an empty   string if the session was successful.                                   |
+| appLoadResult           | Indicates if the session was   optimal or not.       Possible values: optimal, other                                                                                                |
+| appLoadNonOptimalReason | If the session was not optimal,   this indicates the reason.       Possible values: interaction-required, throttled, screen-navigated-away,   other                                 |
+| timeToAppInteractive    | Duration in milliseconds for the   app session to reach an interactive state. In this state, users can start to   interact with the first screen, but data may not be fully loaded. |
+| timeToAppFullLoad       | Duration in milliseconds for the   app session to reach a fully loaded state, where all data requests for the   first screen have finished loading.                                 |
+
+### Sample queries
+
+#### App Open Success rates
+
+This query will show the app open success rate by day. This can be used to evaluate spikes 
+or trends in issues that users may be experiencing 
+ ```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| summarize 
+sessions_total = dcount(session_Id), 
+sessions_success = dcountif(session_Id, successfulAppLaunch == true) 
+by bin(timestamp, 1d) 
+| extend successRate =  
+100.0 * (todouble(sessions_success) / todouble(sessions_total)) 
+| project timestamp, successRate 
+| render timechart
+```
+#### Count of Unsuccessful Sessions by Reason 
+This query will show counts of unsuccessful sessions by reason / error. This can be used to 
+debug app open failures or evaluate trends in issues that users may be experiencing. 
+
+ ```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| extend unsuccessfulReason = tostring(sessionSummary["unsuccessfulReason"]) 
+| where successfulAppLaunch == false 
+| summarize 
+count() 
+by unsuccessfulReason, bin(timestamp, 1d) 
+| render timechart
+```
+
+#### App Open Performance 
+This query will show app open performance metrics by day. This can be used to evaluate 
+performance trends over time or after making changes. 
+Note that we recommend: 
+1. Using the 75th percentile of the timeToAppInteractive and timeToAppFullLoad fields 
+to avoid noise caused by outliers 
+1. Filtering to only optimal sessions to avoid noise in the data caused by expected 
+cases (e.g. sessions with user interaction, sessions where the app was loaded in a 
+background tab, etc) 
+
+```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend appLoadResult = tostring(sessionSummary["appLoadResult"]) 
+| extend timeToAppInteractive = todouble(sessionSummary["timeToAppInteractive"]) 
+| extend timeToAppFullLoad = todouble(sessionSummary["timeToAppFullLoad"]) 
+| where appLoadResult == "optimal" 
+| summarize 
+percentile(timeToAppInteractive, 75), 
+percentile(timeToAppFullLoad, 75) 
+by bin(timestamp, 1d) 
+| render timechart
+```
+
+#### App Load State on HTTP Calls 
+There is a new request header x-ms-app-load-state that indicates if an HTTP call 
+contributed to app startup. Specifically, this can be used to determine which HTTP calls 
+impacted the timeToAppFullLoad above. 
+
+The header can be one of two values: 
+| Value    | Description                                                        |
+|----------|--------------------------------------------------------------------|
+| TTFL     | indicates that the request contributed to timeToAppFullLoad        |
+| PostTTFL | indicates that the request did not contribute to timeToAppFullLoad |
+
+Here is an example query showing how to access the header value and projecting it in the 
+appLoadState column: 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| project timestamp, session_Id, appLoadState, name, duration 
+| limit 5
+```
+
+#### Count of HTTP calls contributing to Full Load 
+This query will show the average count of HTTP calls that are contributing to 
+timeToAppFullLoad by day. This can be used to evaluate the number of calls the app is 
+making at startup that may be contributing to poor performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize httpCalls = count() by session_Id, bin(timestamp, 1d) 
+| summarize avg(httpCalls) by timestamp 
+| render timechart
+```
+
+#### Duration of HTTP calls contributing to Full Load 
+This query will show the total duration of HTTP calls that are contributing to 
+timeToAppFullLoad by day. This can be used to evaluate the overall impact of HTTP calls to 
+app startup performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize httpCallDuration = sum(duration) by session_Id, bin(timestamp, 1d) 
+| summarize percentile(httpCallDuration, 80) by timestamp 
+| render timechart
+```
+#### Duration of HTTP calls contributing to Full Load by URL
+Similar to above, this query will show the count and duration of HTTP calls contributing to 
+timeToAppFulLoad by URL. This can be used to identify specific slow HTTP calls that are 
+impacting app startup performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize 
+count(), percentile(duration, 80) by name
+```
 
 ## Monitor unhandled errors (experimental)
 
