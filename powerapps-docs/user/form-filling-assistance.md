@@ -97,7 +97,6 @@ The form fill assist toolbar
 2. To provide feedback, select the more actions button (...) and give a compliment, report a problem, or make a suggestion.
 3. The smart paste button is now located to the left of the toolbar.
 
-<<<<<<<<<<<<<<<<<<<<add image>>>>>>>>>>>>>>>>>>>>>>
 :::image type="content" source="media/formfill_toolbar.png" alt-text="Screenshot that shows the form fill assist toolbar.":::
 
 To use files (Preview):
@@ -106,7 +105,6 @@ To use files (Preview):
 3. To accept all suggestions from the sources listed in the toolbar, you can select the accept all button located to the right of the toolbar. This button identifies the number of open suggestions in the form that will be accepted.
 4. To clear suggestions from the file, you can select the clear button in the tag. If there are multiple sources listed in the toolbar, you can clear all suggestions by using the clear all button in the toolbar.
 
-<<<<<<<<<<<<<<<<<<<<add image>>>>>>>>>>>>>>>>>>>>>>
 :::image type="content" source="media/formfill_files.png" alt-text="Screenshot that shows the files capability in the form fill assist toolbar.":::
 
 ### Related information
