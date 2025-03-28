@@ -173,6 +173,19 @@ Alternatively, you can allow all copilots in an environment access to the secret
 
 Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows, Copilot Studio agents, and custom connectors.
 
+## Integrate Azure Key Vault private link with Environment Variables
+Using Azure Key Vault secrets with environment variables requires configuring Azure Key Vault so that Power Platform can read the specific secrets you want to reference. This capability enables support for environment variables with Azure Key Vault secrets connecting via a private link, enhancing security and providing a more robust integration.
+
+1. Set up Azure Virtual Network support for Power Platform to integrate environment variables with Azure Key Vault secrets without exposing them to the public internet. For detailed instructions learn more about [set up virtual network].(https://learn.microsoft.com/power-platform/admin/vnet-support-setup-configure)
+2. Ensure that the Azure subscription for Key Vault and Power Platform Virtual Network (vNet) are in the same tenant, as cross-tenant integration is not supported.
+3. Ensure that the user who creates the environment variables has appropriate permissions to the Azure Key Vault resource. For more details learn [Configure the azure key Vault](https://learn.microsoft.com/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets#configure-azure-key-vault)
+4. Create a Key Vault and establish a private link connection. Follow these steps [Learn more](https://learn.microsoft.com/power-platform/admin/vnet-support-setup-configure)
+  -  Disable public access. 
+  -  Create a private endpoint.
+  -  Select the virtual network and subnet where you want this private endpoint to be created. Ensure to connect the Virtual Network (vNet) delegated to Power Platform. 
+  -  Follow the steps to validate the private link connectivity.
+5. Create [environment variables](https://learn.microsoft.com/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets#create-a-new-environment-variable-for-the-key-vault-secret) secrets by linking to the azure key Vault
+
 ### See also
 
 [Use data source environment variables in canvas apps](environmentvariables-data-source-canvas-apps.md) <br>
