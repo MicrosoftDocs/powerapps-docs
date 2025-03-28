@@ -13,7 +13,7 @@ contributors:
   - noazarur-microsoft
 ---
 
-# Build an agent to automate your business process (preview) 
+# Build an AI agent to automate your business process (preview) 
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
