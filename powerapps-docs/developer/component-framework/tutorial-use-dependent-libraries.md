@@ -44,65 +44,85 @@ The first step is to create a new component using the [pac pcf init command](/po
 
 ### Define the library
 
-1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
-
-   ```javascript
-   // UMD module pattern
-   var myLib = (function (exports) {
-   'use strict';
-
-   function sayHello() {
-      return "Hello from myLib";
-   }
-
-   exports.sayHello = sayHello;
-
-   return exports;
-
-   }({}));
-
-   ```
-
-1. You need new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
-
+1. You need a new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project named `myLib.d.ts`:
    ```typescript
    declare module 'myLib' {
-   export function sayHello(): string;
+     export function sayHello(): string;
    }
+
+   ```
+   
+1. We are going to expose our library as an UMD module, and we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
+   ```typescript
+   /* eslint-disable no-var */
+   declare global {
+     var myLib: typeof import('myLib');
+   }
+
+   export { };
+   
    ```
 
-1. Add a reference to the library under the `resources` in the control manifest.
-
+1. Update tsconfig.json to allow UMD modules and javascript code as follows:
 #### [Before](#tab/before)
 
-```xml
-<resources> 
-      <code path="index.ts" order="2"/> 
-</resources> 
+```json
+{
+    "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+    "compilerOptions": {
+        "typeRoots": ["node_modules/@types"]
+    }
+}
+
 ```
 
 #### [After](#tab/after)
 
-```xml
-<resources> 
-      <library name="myLib" version=">=1" order="1"> 
-        <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
-      </library> 
-      <code path="index.ts" order="2"/> 
-</resources> 
+```json
+{
+    "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+    "compilerOptions": {
+        "typeRoots": ["node_modules/@types"],
+        "allowJs": true,
+        "allowUmdGlobalAccess": true,
+        "outDir": "dist"
+    },
+}
+
 ```
 
 ---
 
-### Add Configuration data
 
+1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+
+   ```javascript
+   // UMD module pattern
+
+   var myLib = (function (exports) {
+      'use strict';
+   
+      function sayHello() {
+         return "Hello from myLib";
+      }
+   
+      exports.sayHello = sayHello;
+   
+      return exports;
+   
+   }(/** @type {import('myLib')}  */({})));
+
+   ```
+   
 1. Add a file named `featureconfig.json` in the root folder of the project.
 1. Add the following text to the `featureconfig.json` file:
 
    ```json
-   { 
-     "pcfAllowCustomWebpack": "on" 
-   } 
+   {
+     "pcfAllowCustomWebpack": "on",
+     "pcfAllowLibraryResources": "on"
+   }
+   
    ```
 
    [Learn more about the featureconfig.json file](dependent-libraries.md#featureconfigjson)
@@ -110,35 +130,38 @@ The first step is to create a new component using the [pac pcf init command](/po
 1. Add a new `webpack.config.js` file in the root folder of your project. This configuration data ensures that the libraries aren't bundled with the control output. Bundling isn't necessary because they're already packaged separately when you build the project.
 
    ```typescript
-   /* eslint-disable */ 
-   "use strict"; 
-   
-   module.exports = { 
-     externals: { 
-       "myLib": "myLib" 
-     }, 
-   }  
+   /* eslint-disable */
+   "use strict";
+
+   module.exports = {
+     externals: {
+       "myLib": "myLib"
+     },
+   }
+     
    ```
 
    [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
 
-1. Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
+1. Add a reference to the library under the `resources` in the control manifest.
 
 #### [Before](#tab/before)
 
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-   }
+```xml
+<resources> 
+  <code path="index.ts" order="1"/> 
+</resources> 
 ```
 
 #### [After](#tab/after)
 
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off"
-   }
+```xml
+<resources> 
+  <library name="myLib" version=">=1" order="1"> 
+    <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
+  </library> 
+  <code path="index.ts" order="2"/> 
+</resources> 
 ```
 
 ---
@@ -152,25 +175,33 @@ The last step is to edit the `index.ts` of the control to bind the library to th
 ```typescript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class PreBuiltLibrary
+export class StubLibrary
 implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
-constructor() {}
+ constructor() {
+   // Empty
+ }
 
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {}
+ public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+ ): void {
+   // Add control initialization code
+ }
 
-public updateView(context: ComponentFramework.Context<IInputs>): void {}
+ public updateView(context: ComponentFramework.Context<IInputs>): void {
+   // Add code to update control view
+ }
 
-public getOutputs(): IOutputs {
-   return {};
-}
+ public getOutputs(): IOutputs {
+    return {};
+ }
 
-public destroy(): void {}
+  public destroy(): void {
+    // Add code to cleanup control if necessary
+  }
 }
 
 ```
@@ -178,31 +209,40 @@ public destroy(): void {}
 #### [After](#tab/after)
 
 ```typescript
+import * as myLib from 'myLib';
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class PreBuiltLibrary
+export class StubLibrary
 implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
-constructor() {}
+ constructor() {
+   // Empty
+ }
 
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {}
+ public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+ ): void {
+   // Add control initialization code
+ }
 
-public updateView(context: ComponentFramework.Context<IInputs>): void {}
+ public updateView(context: ComponentFramework.Context<IInputs>): void {
+   // Add code to update control view
+ }
 
-public getOutputs(): IOutputs {
-   return {};
-}
+ public getOutputs(): IOutputs {
+    return {};
+ }
 
-public destroy(): void {}
+  public destroy(): void {
+    // Add code to cleanup control if necessary
+  }
 }
 
 (function () {
-   (window as any).MyLib = MyLib;
+   window.myLib = myLib;
 })();
 ```
 
