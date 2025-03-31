@@ -4,7 +4,7 @@ description: Learn how to use the Plan designer to create comprehensive business
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 1/8/2025
+ms.date: 3/13/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -28,7 +28,6 @@ Access the Plan designer from the Power Apps home page. It guides you through a 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - This feature is currently rolling out and might not yet be available in your region. 
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
@@ -122,6 +121,35 @@ Once you accept the proposed user experiences, they're created. To open a canvas
 The proposed apps open in a new tab, fully functioning with the added data tables.
 
 For canvas apps, a preview of the app is displayed with a welcome screen and other screens connected to tables. When you open a model-driven app, it launches the modern app designer with the tables already added. Both canvas and model-driven apps can then be saved and published for use.
+
+## Save plan to a solution
+
+When you save a plan, it is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
+
+:::image type="content" source="media/pd-objects-view.png" alt-text="Screenshot of the objects view.":::
+
+To save your plan: 
+
+1. Select the **Save** icon on the upper right corner.
+2. Enter the plan name.
+3. Choose a publisher or select an existing solution that will contain the items generated from the plan.
+4. Select **Save**.
+   
+   :::image type="content" source="media/pd-save-plan.png" alt-text="Screenshot of the save dialog box for a plan.":::
+
+
+### Known limitations
+
+The **Objects** view is currently in preview, and several functions that are native to the solution view don't work in the embedded Plan designer experience. 
+
+Navigation Issues:
+
+- When using the **Back** button after creating a new canvas app, model-driven app, Page, component library, or connection role, users are taken to the **All** section of **Objects** instead of their last location.
+- After saving and exiting from the row summary, users are redirected to the **All** section of **Objects** rather than their previous location.
+- Editing a table and then using the **Back** button also redirects users to the **All** section of **Objects** instead of their last location.
+- Creating a new table and using the **Back** button takes users to the **All** section of **Objects** rather than their last location.
+- When creating a new column security profile in apps, saving, and then using the **Back** button, the **Back** button doesn't work and results in continuous loading.
+- Navigating to **Table** > **Forms**/**Views**/**Command** and then using the **Back** button redirects users to the **All** section of **Objects** instead of their last location.
 
 ## View and edit plans
 

@@ -1,8 +1,7 @@
 ---
 title: "Email Server Profile (EmailServerProfile) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email Server Profile (EmailServerProfile) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 

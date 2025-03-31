@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 11/13/2024
+ms.date: 03/03/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -27,15 +27,18 @@ Copilot provides form fill assistance for model-driven apps. This means that use
 This feature makes it easier and faster to enter data. The suggestions are entirely optional, and don't get saved until the user accepts them.
 
 > [!IMPORTANT]
+>
 > - This feature is generally available in Dynamics 365 apps.
 > - This feature is in preview in Power Apps.
 >   - Preview features aren’t meant for production use and may have restricted functionality.
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
-> - Due to high demand, this feature may be unavailable intermittently. If the feature is unavailable, please try again later.
+> - Due to high demand, this feature might be unavailable intermittently. If the feature is unavailable, try again later.
 
-## Prerequisite
+## Prerequisites
 
-Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on. 
+- Copilot assistance is available for all model-driven apps on the web where the [modern, refreshed look](modern-fluent-design.md) is turned on.
+- Requires at least one of the [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance) environment feature settings enabled.
+- The **Allow form fill assistance** column property is enabled for the column where form fill assistance occurs. More information: [Create and edit columns in Dataverse using Power Apps](../maker/data-platform/create-edit-field-portal.md#view-columns)
 
 ## Limitations
 
@@ -46,7 +49,7 @@ Copilot assistance is available for all model-driven apps on the web where the [
 
 ## Use form fill assistance
 
-Copilot assistance for filling forms generates suggestions for text, numeric, choice, and date fields in main and quick create forms in model-driven apps. Suggestions are generated only for the tab that is open. They are presented inline in the form.
+Copilot assistance for filling forms generates suggestions for text, numeric, choice, and date fields in main and quick create forms in model-driven apps. Suggestions are generated only for the tab that is open. They're presented inline in the form.
 
 :::image type="content" source="media/formfill_suggestions.png" alt-text="Screenshot that shows form fill suggestions being presented in a form.":::
 
@@ -63,7 +66,7 @@ Note that you can continue to paste directly, without smart paste (Preview), int
 
 :::image type="content" source="media/formfill_smartpaste.png" alt-text="Screenshot that shows the smart paste icon in the form's command bar.":::
 
-To learn more about a suggestion, hover over the field, and specifically hover over the information icon. This is a citation, and identifies the source of a specific suggestion, for example "Records you have updated recently" or "Clipboard".
+To learn more about a suggestion, hover over the field, and specifically hover over the information icon. This is a citation, and identifies the source of a specific suggestion, for example "Records you have updated recently" or "Clipboard."
 
 :::image type="content" source="media/formfill_citation.png" alt-text="Screenshot that shows a citation for a form fill suggestion.":::
 

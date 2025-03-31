@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 11/26/2024
+ms.date: 03/24/2025
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -28,7 +28,7 @@ You can customize the editor's appearance, features, and behavior. The control's
 Currently, the rich text editor is available as two different experiences:
 
 - Modern text editor: New experience, set by default
-- Classic text editor: Original experience, to be deprecated in April 2025
+- Classic text editor: Original experience, to be deprecated April 18, 2025
 
 ## Modern text editor enhancements
 
@@ -45,18 +45,21 @@ The modern text editor is designed to align with the familiar and intuitive inte
 The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
 1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
-1. On the command bar, select **Settings**. The settings page is displayed.
-1. In the left pane, in **Settings**, select **Features**. The features page is displayed.
+1. On the command bar, select **Settings**. The settings page displays.
+1. In the left pane, in **Settings**, select **Features**. The features page displays.
 1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
    - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
-   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, non-configured instances.
-   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously mad on the rich text editor's classic (default) notes authoring experience.
+   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
+   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
 1. Select **Save**.
 1. In the App Designer, select **Publish**.
 
 ### Revert from the modern rich text editor experience to the classic experience
 
 If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
+
+> [!IMPORTANT]
+> After April 18, 2025, the classic rich text editor experience will no longer be available. Customers who are using the classic version will be upgraded automatically to the modern rich text editor experience.
 
 ### Modern rich text editor limitations
 
@@ -65,6 +68,8 @@ When using the modern rich text editor, consider the limitations listed in this 
 Notes:
 - Localization isn't currently supported.
 - In-app notifications aren't currently supported.
+- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
+- Offline mode isn't currently supported.
 - Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
@@ -121,7 +126,7 @@ Up to three levels, or layers, of configuration can be applied to customize the 
 1. At the next level, every instance of the control takes its configuration from the properties in the file `RTEGlobalConfiguration.json`, if any are present. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the read-only file.
 1. Finally, at the highest level, a specific instance of the control takes its configuration from a specific configuration file, if one exists. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the two lower-level files.
 
-We have to add a slight qualification here. Not *all* properties are replaced by those in a higher-level configuration. The `extraPlugins` properties are merged to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. That lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
+We have to add a slight qualification here. The system doesn't replace *all* properties with those in a higher-level configuration. The `extraPlugins` properties are merged to allow the use of a wide range of external and out-of-the-box plug-ins in the default configuration. That lets you activate and deactivate plug-ins as needed in the configuration file for specific instances of the control.
 
 ### Customize a specific instance of the rich text editor
 
@@ -150,7 +155,7 @@ We have to add a slight qualification here. Not *all* properties are replaced by
 1. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
 1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
-      Although you may enter the absolute URL of the web resource, we recommend you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
+      Although you can enter the absolute URL of the web resource, we recommend that you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
       For example, if the URL of the web resource is `https://yourorg.crm.dynamics.com/WebResources/rtecontactform`, the relative URL is */WebResources/rtecontactform*.
 
@@ -167,8 +172,8 @@ If your business needs require you to customize the control everywhere, specify 
 
 > [!IMPORTANT]
 >
->- This is an early access feature. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they haven't opted in for early access.  
+>- This feature is for early-access users. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
+>- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they didn't opt in for early access.  
 >- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
@@ -185,87 +190,75 @@ The JSON file that determines the "look and feel" of an instance of the rich tex
 The following code is an example of a JSON file that contains both [`defaultSupportedProps`](#defaultsupportedprops) properties and [individual configuration properties](#individual-properties). If a property has a default value, the default value is shown. If a property doesn't have a default value, a sample value is shown to illustrate the syntax. The properties are described in the two tables that follow.
 
 ```json
-"defaultSupportedProps": {
-  "height": 185,
-  "stickyStyle": {
-    "font-size": "9pt",
-    "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
-  },
-  "stickyStyles_defaultTag": "div",
-  "font_defaultLabel": "Segoe UI",
-  "fontSize_defaultLabel": "9",
-  "toolbarLocation": "bottom",
-  "toolbar": [
-  [ "CopyFormatting" ],
-  [ "Font" ],
-  [ "FontSize" ],
-  [ "Bold" ],
-  [ "Italic" ],
-  [ "Underline" ],
-  [ "BGColor" ],
-  [ "TextColor" ],
-  [ "BulletedList" ],
-  [ "NumberedList" ],
-  [ "Outdent" ],
-  [ "Indent" ],
-  [ "Blockquote" ],
-  [ "JustifyLeft" ],
-  [ "JustifyCenter" ],
-  [ "JustifyRight" ],
-  [ "Link" ],
-  [ "Unlink" ],
-  [ "Subscript" ],
-  [ "Superscript" ],
-  [ "Strike" ],
-  [ "Image" ],
-  [ "BidiLtr" ],
-  [ "BidiRtl" ],
-  [ "Undo" ],
-  [ "Redo" ],
-  [ "RemoveFormat" ],
-  [ "Table" ]
- ],
-  "plugins": [["button,toolbar,dialogui,dialog,autogrow,notification,clipboard,textmatch,fakeobjects,link,autolink,basicstyles,bidi,blockquote,panelbutton,panel,floatpanel,colorbutton,colordialog,listblock,richcombo,menu,contextmenu,copyformatting,enterkey,entities,popup,find,floatingspace,font,format,htmlwriter,horizontalrule,indent,indentblock,indentlist,justify,lineutils,openlink,list,liststyle,maximize,undo,menubutton,notificationaggregator,xml,ajax,pastetools,pastefromword,pastetext,preview,table,quicktable,removeformat,resize,selectall,showborders,sourcearea,specialchar,stylescombo,tab,tabletools,tableresize,tableselection,widgetselection,widget,wysiwygarea,textwatcher"]],
-  "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filebrowser,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,notification,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools,uploadfile,uploadimage,uploadwidget",
-  "removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders",
-  "superimageImageMaxSize": 5,
-  "disallowedContent": "form[action]; *[formaction]; script; *[on*]",
-  "linkTargets": ["notSet", "_blank"],
-},
-"attachmentEntity": {
-  "name": "msdyn_richtextfiles",
-  "fileAttributeName": "msdyn_fileblob"
-},
-"disableContentSanitization": true,
-"disableDefaultImageProcessing": false,
-"disableImages": false,
-"externalPlugins": [
-  {
-    "name": "EmbedMedia",
-    "path": "/WebResources/msdyncrm_/myplugins/embedmedia/"
-  }
-],
-"imageEntity": {
-  "imageEntityName": "msdyn_richtextfiles",
-  "imageFileAttributeName": "msdyn_imageblob"
-},
-"readOnlySettings": {
-  "height": 500,
-  "showFullScreenExpander": true
-},
-"sanitizerAllowlist": {
-  "attributes": [],
-  "cssProperties": [],
-  "domains": [],
-  "protocols": [],
-  "tags": []
-},
-"showAsTabControl": false,
-"showFullScreenExpander": false,
-"showHtml": false,
-"showPreview": false,
-"showPreviewHeaderWarning": false,
-"allowSameOriginSandbox": false
+{
+    "defaultSupportedProps": {
+        "height": 185,
+        "stickyStyle": {
+            "font-size": "12pt",
+            "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
+        },
+        "enterMode": 1,
+        "stickyStyles_defaultTag": "div",
+        "font_defaultLabel": "Segoe UI",
+        "fontSize_defaultLabel":"12",
+        "toolbarLocation": "top",
+        "toolbar": [
+        [ "CopyFormatting" ],
+        [ "Font" ],
+        [ "FontSize" ],
+        [ "Bold" ],
+        [ "Italic" ],
+        [ "Underline" ],
+        [ "BGColor" ],
+        [ "TextColor" ],
+        [ "BulletedList" ],
+        [ "NumberedList" ],
+        [ "Outdent" ],
+        [ "Indent" ],
+        [ "Blockquote" ],
+        [ "JustifyLeft" ],
+        [ "JustifyCenter" ],
+        [ "JustifyRight" ],
+        [ "Link" ],
+        [ "Unlink" ],
+        [ "Subscript" ],
+        [ "Superscript" ],
+        [ "Strike" ],
+        [ "Image" ],
+        [ "BidiLtr" ],
+        [ "BidiRtl" ],
+        [ "Undo" ],
+        [ "Redo" ],
+        [ "RemoveFormat" ],
+        [ "Table" ]
+        ],
+        "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filebrowser,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,notification,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools,uploadfile,uploadimage,uploadwidget",
+        "toolbarcollapser_enableResizer": false,
+        "placeholder":"",
+        "linkTargets": ["notSet", "_blank"],
+        "stylesSet": "default",
+        "fontSize_sizes": "8/8px;9/9px;10/10px;11/11px;12/12px;14/14px;16/16px;18/18px;20/20px;22/22px;24/24px;26/26px;28/28px;36/36px;48/48px;72/72px",
+        "font_names": "Angsana New/'Angsana New', 'Leelawadee UI', Sathu, serif;Arial/Arial, Helvetica, sans-serif;Arial Black/'Arial Black', Arial, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;Calibri/Calibri, Helvetica, sans-serif;Cambria/Cambria, Georgia, serif;Candara/Candara, Optima, sans-serif;Century Gothic/'Century Gothic', sans-serif;Comic Sans MS/'Comic Sans MS';Consolas/Consolas, Courier, monospace;Constantia/Constantia, 'Hoefler Text', serif;Corbel/Corbel, Skia, sans-serif;Cordia New/'Cordia New', 'Leelawadee UI', Silom, sans-serif;Courier New/'Courier New';DaunPenh/DaunPenh, 'Leelawadee UI', 'Khmer MN', sans-serif;Franklin Gothic Book/'Franklin Gothic Book', 'Avenir Next Condensed', sans-serif;Franklin Gothic Demi/'Franklin Gothic Demi', 'Avenir Next Condensed Demi Bold', sans-serif;Franklin Gothic Medium/'Franklin Gothic Medium', 'Avenir Next Condensed Medium', sans-serif;Garamond/Garamond, Georgia, serif;Gautami/Gautami, 'Nirmala UI', 'Telugu MN', sans-serif;Georgia/Georgia, serif;Impact/Impact, Charcoal, sans-serif;Iskoola Pota/'Iskoola Pota', 'Nirmala UI', 'Sinhala MN', sans-serif;Kalinga/Kalinga, 'Nirmala UI', 'Oriya MN', sans-serif;Kartika/Kartika, 'Nirmala UI', 'Malayalam MN', sans-serif;Latha/Latha, 'Nirmala UI', 'Tamil MN', sans-serif;Leelawadee UI/'Leelawadee UI', Thonburi, sans-serif;Lucida Console/'Lucida Console', Monaco, monospace;Lucida Handwriting/'Lucida Handwriting', 'Apple Chancery', cursive;Lucida Sans Unicode/'Lucida Sans Unicode';Mangal/Mangal, 'Nirmala UI', 'Devanagari Sangam MN', sans-serif;Nirmala UI/'Nirmala UI', sans-serif;Nyala/Nyala, Kefa, sans-serif;Palatino Linotype/'Palatino Linotype', 'Book Antiqua', Palatino, serif;Raavi/Raavi, 'Nirmala UI', 'Gurmukhi MN', sans-serif;Segoe UI/'Segoe UI', 'Helvetica Neue', sans-serif;Shruti/Shruti, 'Nirmala UI', 'Gujarati Sangam MN', sans-serif;Sitka Heading/'Sitka Heading', Cochin, serif;Sitka Text/'Sitka Text', Cochin, serif;Sylfaen/Sylfaen, Mshtakan, Menlo, serif;TW Cen MT/'TW Cen MT', 'Century Gothic', sans-serif;Tahoma/Tahoma, Geneva, sans-serif;Times New Roman/'Times New Roman', Times, serif;Times/Times, 'Times New Roman', serif;Trebuchet MS/'Trebuchet MS';Tunga/Tunga, 'Nirmala UI', 'Kannada MN', sans-serif;Verdana/Verdana, Geneva, sans-serif;Vrinda/Vrinda, 'Nirmala UI', 'Bangla MN', sans-serif;メイリオ/Meiryo, メイリオ, 'Hiragino Sans', sans-serif;仿宋/FangSong, 仿宋, STFangsong, serif;微軟正黑體/'Microsoft JhengHei', 微軟正黑體, 'Apple LiGothic', sans-serif;微软雅黑/'Microsoft YaHei', 微软雅黑, STHeiti, sans-serif;新宋体/NSimSun, 新宋体, SimSun, 宋体, SimSun-ExtB, 宋体-ExtB, STSong, serif;新細明體/PMingLiU, 新細明體, PMingLiU-ExtB, 新細明體-ExtB, 'Apple LiSung', serif;楷体/KaiTi, 楷体, STKaiti, serif;標楷體/DFKai-SB, 標楷體, BiauKai, serif;游ゴシック/'Yu Gothic', 游ゴシック, YuGothic, sans-serif;游明朝/'Yu Mincho', 游明朝, YuMincho, serif;隶书/SimLi, 隶书, 'Baoli SC', serif;黑体/SimHei, 黑体, STHeiti, sans-serif;굴림/Gulim, 굴림, 'Nanum Gothic', sans-serif;궁서/Gungsuh, 궁서, GungSeo, serif;돋움/Dotum, 돋움, AppleGothic, sans-serif;맑은 고딕/'Malgun Gothic', '맑은 고딕', AppleGothic, sans-serif;바탕/Batang, 바탕, AppleMyungjo, serif;바탕체/BatangChe, 바탕체, AppleMyungjo, serif;ＭＳ Ｐゴシック/'MS PGothic', 'ＭＳ Ｐゴシック', 'MS Gothic','ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', sans-serif;ＭＳ Ｐ明朝/'MS PMincho', 'ＭＳ Ｐ明朝', 'MS Mincho', 'ＭＳ 明朝', 'Hiragino Mincho ProN', serif",
+        "copyFormatting_allowRules": "b s u i em strong span p div td th ol ul li(*)[*]{*}"
+    },
+    "readOnlySettings": {
+    "height": 500,
+    "showFullScreenExpander": true
+    },
+    "sanitizerAllowlist": {
+    "attributes": [],
+    "cssProperties": [],
+    "domains": [],
+    "protocols": [],
+    "tags": []
+    },
+    "disableContentSanitization": true,
+    "disableOnLoadEditModeSanitization": true,
+    "disableDefaultImageProcessing": true,
+    "showFullScreenExpander": false,
+    "showAsTabControl": false,
+    "showHtml": false
+}
 ```
 
 ### defaultSupportedProps
@@ -317,7 +310,7 @@ The following sample configurations create specific customizations of the rich t
 
 ### Set the default font to 11-point Calibri
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "font_defaultLabel": "Calibri",
@@ -350,7 +343,7 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 
 ### Paste or create plain text only
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "enterMode": 2,
@@ -370,7 +363,7 @@ Set this [individual property](#individual-properties) in your [configuration fi
 
 ### Allow the editor to use the full screen
 
-Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "showAsTabControl": true,
@@ -383,7 +376,7 @@ Set these [individual properties](#individual-properties) in your [configuration
 
 To allow users to view and edit the HTML of their content directly, show the **HTML** tab.
 
-Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "showAsTabControl": true,
@@ -408,7 +401,7 @@ To remove the toolbar entirely, set the value of `toolbar` to '[]' (two square b
 
 ### Add a new font list and set 20-point Brush Script MT as the default font
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "font_names": "Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;"
@@ -433,7 +426,7 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 
 ### Start the editor at 30 pixels high and grow to fit content
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma (`,`).
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
 "autoGrow_onStartup": false,
@@ -446,7 +439,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ### Fix the height of the editor at 500 pixels
 
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one should be followed by a comma.
+Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma.
 
 ```json
 "removePlugins": [ "autogrow" ],
@@ -493,8 +486,8 @@ The following table describes the formatting tools that are available in the ric
 | Icon | Name | Shortcut key | Description |
 | --- | --- | --- | --- |
 | ![Format Painter.](media/format-painter.png "Format Painter") | Copy Formatting | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font applied to it is displayed. If your selection contains multiple fonts, the first one applied to the selection is displayed. |
-| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size applied to it is displayed. If your selection contains multiple sizes, the first one applied to the selection is displayed. |
+| ![Font.](media/format-font.png "Font") | Font Name | Ctrl+Shift+F | Select a font. The application considers the font that you select the default font. Segoe UI is the default font if you don't select one.<br/><br/>When you select formatted content, the name of the font applied to it displays. If your selection contains multiple fonts, the first one applied to the selection displays. |
+| ![Font Size.](media/font-size.png "Font Size") | Font Size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select the default size. 12 is the default size if you don't select one.<br/><br/>When you select formatted content, the font size applied to it displays. If your selection contains multiple sizes, the first one applied to the selection displays. |
 | ![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 | ![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 | ![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
@@ -545,13 +538,13 @@ The following formatting tools are available in the rich text editor when it's o
 
 - Rich text fields store HTML tags for formatting along with user-entered data. When you set the maximum size of rich text fields, make sure to allow for both the HTML tags and the user's data.
 
-- For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you may notice slower response times for loading and editing.
+- For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you might notice slower response times for loading and editing.
 
 - In the default configuration, images don't negatively affect performance because they're stored separately from the HTML content. However, images are stored as base64 content in the text column when the user who uploads them doesn't have permissions on the `msdyn_richtextfiles` table. Base64 content is large, so you generally don't want to store images as part of the column content.
 
 - If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
  
-- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the the correct permissions to `msdyn_richtextfiles`.
+- In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the correct permissions to `msdyn_richtextfiles`.
 
 ## Frequently asked questions
 
@@ -561,7 +554,7 @@ If you have a lot of content in the editor, the response time can increase. Keep
 
 ### Why can't I upload an image? Why does the image preview fail to load?
 
-If the image file name, including the path, is long, the file may fail to upload or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
+If the image file name, including the path, is long, the file might fail to upload, or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
 
 ### Why am I seeing HTML in my text?
 

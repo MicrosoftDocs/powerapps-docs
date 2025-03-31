@@ -46,7 +46,7 @@
           href: ./search/statistics-status.md
         - name: Legacy search
           href: ./search/legacy.md
-        - name: Custom Analyzers
+        - name: Configure Azure AI built-in analyzers
           href: ./search/custom-search-analyzer.md
     - name: Query data using FetchXml
       items:
@@ -537,8 +537,8 @@
           href: walkthrough-register-app-azure-active-directory.md
         - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
           href: walkthrough-blazor-webassembly-single-tenant.md
-        - name: "Quick Start: Register and configure a SPA application with msal.js"
-          href: quick-start-register-configure-simplespa-application-msal-js.md
+        - name: "Quick Start: Register and configure a SPA application with MSAL.js"
+          href: webapi/quick-start-js-spa.md
 - name: Transition apps to Dataverse ServiceClient
   href: sdk-client-transition.md
 - name: Best practices

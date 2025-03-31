@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 01/14/2025
+ms.date: 03/10/2025
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -26,8 +26,8 @@ provides the following information and shows you how to perform the following ta
 > - If you're upgrading from CSV to Delta Lake with existing custom views, we recommend updating the script to replace all **partitioned** tables to **non_partitioned.** Do this by looking for instances of `_partitioned` and replace them with an empty string.
 > - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. But the Delta Lake table will have an in-place update structure because the Delta Lake conversion comes with a periodic merge process.
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
-> - It's important to take these additional costs into consideration when deciding to use this feature as they are not optional and must be paid in order to continue using this feature.
-> - End of life announced (EOLA) for Azure Synapse Runtime for Apache Spark 3.3 has been announced July 12, 2024. In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.3 will be retired and disabled as of March 31, 2025. After the EOL date, the retired runtimes are unavailable for new Spark pools and existing workflows can't execute. Metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.3 (EOSA)](/azure/synapse-analytics/spark/apache-spark-33-runtime). To have your Synapse Link for Dataverse with export to Delta Lake format upgrade to Spark 3.4, do an in-place upgrade for your existing profiles. More information: [In-place upgrade to Apache Spark 3.4 with Delta Lake 2.4](/power-apps/maker/data-platform/azure-synapse-link-delta-lake#in-place-upgrade-to-apache-spark-3.4-with-delta-lake-2.4)
+> - It's important to take these additional costs into consideration when deciding to use this feature as they aren't optional and must be paid in order to continue using this feature.
+> - End of life announced (EOLA) for Azure Synapse Runtime for Apache Spark 3.3 has been announced July 12, 2024. In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.3 will be retired and disabled as of March 31, 2025. After the end of support date, the retired runtimes are unavailable for new Spark pools and existing workflows can't execute. Metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.3 (EOSA)](/azure/synapse-analytics/spark/apache-spark-33-runtime). To have your Synapse Link for Dataverse with export to Delta Lake format upgrade to Spark 3.4, do an in-place upgrade for your existing profiles. More information: [In-place upgrade to Apache Spark 3.4 with Delta Lake 2.4](/power-apps/maker/data-platform/azure-synapse-link-delta-lake#in-place-upgrade-to-apache-spark-3.4-with-delta-lake-2.4)
 > - Beginning December 25, 2024, only Spark Pool version 3.4 will be supported when initially creating the link.
 
 > [!NOTE]
@@ -59,7 +59,7 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Azure Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 - Synapse workspace: You must have a Synapse workspace and **Owner** role in access control(IAM) and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
-- An Apache Spark pool in the connected Azure Synapse workspace with **Apache Spark Version 3.3** using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
+- An Apache Spark pool in the connected Azure Synapse workspace with **Apache Spark Version 3.4** using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
 - The Microsoft Dynamics 365 minimum version requirement to use this feature is 9.2.22082. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates#how-to-enableearly-access-updates)
 
 ### Recommended Spark Pool configuration
@@ -68,7 +68,7 @@ This configuration can be considered a bootstrap step for average use cases.
 
 - Node size: small (4 vCores / 32 GB)
 - Autoscale: Enabled
-- Number of nodes: 5 to 10
+- Number of nodes: 3 to 10 (or 20 if needed. <sup>1</sup>More information below.)  
 - Automatic pausing: Enabled
 - Number of minutes idle: 5
 - Apache Spark: 3.4
@@ -76,7 +76,11 @@ This configuration can be considered a bootstrap step for average use cases.
 - Default number of executors: 1 to 9
 
 > [!IMPORTANT]
-> Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
+>
+> - Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
+> - You might need to increase the number of nodes of the Spark pool if you expect a large amount of rows to be processed. If the size of the spark pool is insufficient, Delta conversion jobs might fail
+> - 1 The same spark pool is used by the system to run a daily job that compacts Delta files in the lake. This option reduces the size of Delta files. In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures,
+> - You are only charged for the spark pool nodes actually utilized. Increasing the number of nodes might not result in higher charges.
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 

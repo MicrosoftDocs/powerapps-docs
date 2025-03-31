@@ -16,6 +16,8 @@ contributors:
 
 # Button control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A button control that executes Power Fx, opens a URL, shows a screen, or toggles visibility on select. Learn more about [how to use the button control](../make-a-card/ui-elements/use-buttons.md).
 
 Buttons are added under the **actions** section of the tree view at the bottom of the card by default. This button can be placed elsewhere in the card and grouped with other buttons using a [button set control](button-set.md).

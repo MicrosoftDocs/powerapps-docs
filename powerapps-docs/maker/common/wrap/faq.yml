@@ -20,7 +20,7 @@ sections:
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#aegistering your app on Azure portal manually) for directions on how to select a correct account type to prepare your app for wrap.
+          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional) for directions on how to select a correct account type to prepare your app for wrap.
 
       - question: |
           Does the wrap feature in Power Apps support Customer-Managed Keys (CMK) or Lockbox capabilities?
@@ -40,7 +40,7 @@ sections:
       - question: |
           How do I digitally sign my mobile app?
         answer: |
-          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You'll need to [create and prepare your Azure Key Vault](create-key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app manually, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
+          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You'll need to [create and prepare your Azure Key Vault](create-key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
           
       - question: |
           Can I use Xcode to digitally sign my mobile apps for iOS?
@@ -108,19 +108,18 @@ sections:
           No. Power Apps is a platform for creating business applications and uses Microsoft Entra authentication. The wrap feature wraps existing canvas apps for the same set of end users.
 
       - question: |
-          Do we need a premium license to package the app?
+          Do I need a premium license to package the app?
         answer: |
-          Yes, you need a premium license to package the app. Specifically, packaging apps using premium connectors, Dataverse entities, on-premises data gateways, or custom APIs requires a premium license. You can check the app's license designation in the Power Apps maker portal to determine if it requires a premium license. More information: [How to check license designation for an app](../../canvas-apps/license-designation.md)
-
+          No, you don't need a premium license for wrap. However, if your APK uses certain connectors, you will need to pay according to the requirements of those connectors.
       - question: |
           Can I delete wrap projects?
         answer: |
-          No, wrap projects cannot be deleted but you can delete the project APK files from your storage location.
+          No, wrap projects can't be deleted but you can delete the project APK files from your storage location.
 
       - question: |
-          How can we ensure that customers outside the home tenant cannot access the app even if we enable multi-tenant access during registration?
+          How can I ensure that customers outside the home tenant can't access the app even if I enable multitenant access during registration?
         answer: |
-          Users outside the home tenant cannot access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
+          Users outside the home tenant can't access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
           The app ensures proper data separation across organizations by embedding the tenant identifier in the authentication token. 
           This mechanism allows the app to verify the user's tenant and grant access only to data relevant to that tenant.
 
@@ -130,3 +129,58 @@ sections:
           The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must take additional steps:
           1. Add users from outside the home tenant as guests in Azure.
           2. Include these guests in the Azure Conditional Access process. Additionally, the maker must share the app with these guest IDs within Power Apps.
+
+      - question: | 
+          Why am I not able to Sign into my wrapped Application?
+        answer: |
+          1. Verify if the user has access to the PowerApps application. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md)
+          2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
+          3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
+          4. Check [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes).
+
+      - question: | 
+          When do you need to re-wrap?
+        answer: |
+          - If you're an existing customer who has already created and successfully distributed a wrapped app, you don't need to go through the wrapping process again. To ensure users receive the latest published changes, follow the steps mentioned in [Power Apps for Makers: Get App Versions](/connectors/powerappsforappmakers/#get-app-versions).
+          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#step-3-register-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+          - To ensure platform changes benefit end users, we recommend re-wrapping monthly and distributing the updated app to users. 
+
+      - question: | 
+          How to find your Azure admin?
+        answer: |
+          - Go to the Microsoft Entra roles and administration portal. More information: [Microsoft Entra admin center](https://entra.microsoft.com/#home)
+          - Search for *global administration* in the search bar.
+          - Select the **Active assignments** tab.
+          - Review the list of owners for the active assignments.
+
+      - question: | 
+          Why is Azure key vault a mandatory step?
+        answer: |
+          - To access the Azure blob storage location, we need the access key, which is stored in the Azure key vault.
+
+      - question: | 
+          Do you need to pay for Azure key vault & Azure blob storage?
+        answer: |
+          - Yes, more information: [Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/#pricing).
+
+      - question: | 
+          Can you have cross tenant azure blob storage location?
+        answer: |
+          - No.
+
+      - question: | 
+          Which subscription ID should I choose when creating a new one, given multiple options?
+        answer: |
+          - Select the default subscription.
+
+      - question: | 
+          What should I do if I don't have access to the resource group while creating the key vault?
+        answer: |
+          - Connect with your azure tenant admin to create a key vault for you or ask to share the permission with you.
+
+
+      - question: |
+          See also
+        answer: |
+          [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues) 
+
