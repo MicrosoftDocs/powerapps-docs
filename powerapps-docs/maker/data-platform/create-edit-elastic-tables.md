@@ -4,7 +4,7 @@ description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
 ms.date: 03/31/2025
 author: pnghub
-ms.author: gned
+ms.author: olegov
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: dataverse-maker
