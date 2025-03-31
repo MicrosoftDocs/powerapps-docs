@@ -48,7 +48,6 @@ The **wrap** feature will *wrap* your canvas apps in a native mobile app shell a
 
 The following section explains steps involved in using the wrap feature to create native mobile apps:
 
-:::image type="content" source="media/wrap-intro/wrap-steps.png" alt-text="Steps involved in using wrap feature to create mobile apps." border="false":::
 
 1. Select your **primary canvas app** and start the wrap wizard. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](prerequisites.md#add-canvas-app-to-solution).
 1. Optionally, add **secondary canvas apps** to your mobile app in the wrap wizard. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together).
@@ -107,11 +106,11 @@ Input:
 
 #### Account Name
 
-The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account. For example, if your account name is `mystorageaccount`, the base URI would be `https://mystorageaccount.blob.core.windows.net/`
+The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account. 
 
 #### Container Name
 
-The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. For example, if your container name is `mycontainer`, the URI for accessing blobs within this container would be `https://mystorageaccount.blob.core.windows.net/mycontainer/`
+The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account. 
 
 
 ### App platform(s)
