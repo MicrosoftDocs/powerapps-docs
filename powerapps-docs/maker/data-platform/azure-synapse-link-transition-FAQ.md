@@ -13,8 +13,7 @@ search.audienceType:
   - maker
 ms.custom: bap-template
 ---
-
-## Frequently asked questions
+# Frequently asked questions when transitioning from legacy data integration services
 
 This article discusses the frequently asked questions with transition from legacy data integration services to Fabric link or Azure Synapse Link for Dataverse.
 
@@ -47,7 +46,7 @@ Using the [Fabric Link transition tool provided by Dynamics 365 FastTrack team](
 
 ## What option should I consider if I want to keep the data export solution?
 
-Upgrading from export to data lake to Azure Synapse Link enables you to preserve your investments with minimal changes. While Azure Synapse Link simplifies data integration by continuously exporting data in a more efficient Delta Parquet format, it provides similar outputs as export to data lake service therefore reducing the effort to switch. You can use Power BI, Microsoft Fabric as well as many non-Microsoft tools that support Delta Parquet format to work with your Dynamics 365 data. You can also secure your storage account with firewalls and enable restricted access via managed identities, ensuring secure data access and compliance. [Go to this article](/powerapps-docs/maker/data-platform/azure-synapse-link-transition-from-FnO.md#Upgrading-to-Azure-Synapse-Link) for a comparison of total cost of ownership (TCO) between link to Fabric and link to Azure Synapse.
+Upgrading from export to data lake to Azure Synapse Link enables you to preserve your investments with minimal changes. While Azure Synapse Link simplifies data integration by continuously exporting data in a more efficient Delta Parquet format, it provides similar outputs as export to data lake service therefore reducing the effort to switch. You can use Power BI, Microsoft Fabric as well as many non-Microsoft tools that support Delta Parquet format to work with your Dynamics 365 data. You can also secure your storage account with firewalls and enable restricted access via managed identities, ensuring secure data access and compliance. [Go to this article](/power-apps/maker/data-platform/azure-synapse-link-transition-from-fno#example-2-upgrade-to-azure-synapse-link) for a comparison of total cost of ownership (TCO) between link to Fabric and link to Azure Synapse.
 
 Using the [Synapse Link transition tool provided by Dynamics 365 FastTrack team](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/VirtualDatawarehouse) you can create a Synapse workspace with similar data shapes as export to data lake feature and reduce the effort to transition your existing reports and data pipelines.
 
