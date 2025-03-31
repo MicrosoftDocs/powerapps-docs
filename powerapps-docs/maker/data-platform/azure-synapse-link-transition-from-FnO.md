@@ -1,7 +1,7 @@
 ---
 title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 11/05/2024
+ms.date: 03/31/2025
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -222,8 +222,7 @@ While many customers are excited to adopt Fabric, we also understand some custom
 
 ### Will export to data lake service stop since it's deprecated after November 1, 2024?
 
-Export to data lake service is deprecated as of November 1, 2024 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and you will have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
-
+Export to data lake service is deprecated as of November 1, 2024 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
 
 ### My transition might run beyond deprecation date, is there a process to get an extension?
 
