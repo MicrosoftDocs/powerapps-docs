@@ -121,7 +121,8 @@ Once you complete the preceding steps the registration screen look like the foll
 
 #### API permissions
 
-When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
+When you register the app, Azure admin also needs to grant access to API permissions for the app. 
+[Refer to the following documentation](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane) for granting access and the reasons why API permissions are required.
 
  :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
