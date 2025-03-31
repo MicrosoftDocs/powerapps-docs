@@ -111,12 +111,12 @@ When this error appears, try to generate the signature hash using the following 
     <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
 1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-3-register-app).
 
-## Manual sign the APK package (if not used automatic sign in OR trying to upload an aab file for play store)
-
-To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
+## Manual sign the APK package
 
 > [!Note]
-> These steps are required if you haven't wrapped the app using automatic sign-in. To avoid repeating this step, we recommend using automatic sign-in.
+> These steps are required if you haven't wrapped the app using automatic sign-in or are trying to upload an AAB file for Play Store. To avoid repeating this step, we recommend using automatic sign-in.
+
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
