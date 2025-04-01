@@ -1,7 +1,7 @@
 ---
 title: FAQ about form fill assistance
 description: This FAQ provides information about the AI technology used in the form fill assistance feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 09/04/2024
+ms.date: 03/28/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -18,15 +18,15 @@ These frequently asked questions (FAQ) describe the AI impact of form fill assis
 
 ## What is form fill assistance?  
 
-Form fill assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use, or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form. These suggestions are entirely optional, and don't get saved until the user explicitly accepts them.
+Form fill assistance provides users AI-generated optional suggestions for fields in a form based on the data they frequently use, or based on text or image they have copied and used smart paste (via button or keyboard shortcut) to paste into the form, or based on the file contents the user provides through the files capability. These suggestions are entirely optional, and don't get saved until the user explicitly accepts them.
 
 ## What can form fill assistance do?
 
-Based on user’s recent usage of the app or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form, optional suggestions for empty form fields are shown. The user can choose to accept, reject, or ignore these suggestions.
+Based on user’s recent usage of the app, or based on text or image they have copied and used smart paste (via button or keyboard shortcut) to paste into the form, or based on the file contents the user provides through the files capability, optional suggestions for empty form fields are shown. The user can choose to accept, reject, or ignore these suggestions. Ignoring these optional suggestions is equivalent to rejecting the suggestions. Suggestions also include citations for reference by users.
 
 ## What is the intended use of form fill assistance?
 
-Help users fill forms more efficiently by providing optional suggestions based on the user’s recent app usage or based on text they have copied and used smart paste (via button or keyboard shortcut) to paste into the form. Users always need to choose to accept these suggestions in order to save them, otherwise these suggestions automatically get discarded.
+Help users fill forms more efficiently by providing optional suggestions based on the user’s recent app usage or based on text or image they have copied and used smart paste (via button or keyboard shortcut) to paste into the form, or based on the file contents the user provides through the files capability. Users always need to choose to accept these suggestions in order to save them, otherwise these suggestions automatically get discarded.
 
 ## How was form fill assistance evaluated? What metrics are used to measure performance?  
 
@@ -42,7 +42,7 @@ Users are always required to review suggestions and explicitly accept the sugges
 
 ## How do I provide feedback?
 
-To provide feedback about this feature, users can select the thumbs up or thumbs down button and (optional) type in comments to describe their feedback and submit.
+To provide feedback about this feature, users can provide feedback by providing a compliment, reporting a problem, or making a suggestion.
 
 ## Related information
 
