@@ -27,8 +27,6 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
   
 Part of the name of any custom column you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you're working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
-
 ## View columns
 
 1. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** on the left navigation pane, and then on the toolbar select **...** > **Switch to classic**.
