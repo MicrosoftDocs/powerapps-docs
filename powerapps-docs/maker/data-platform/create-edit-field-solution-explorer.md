@@ -31,7 +31,7 @@ Part of the name of any custom column you create is the customization prefix. Th
 
 1. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** on the left navigation pane, and then on the toolbar select **...** > **Switch to classic**.
 1. Open the unmanaged solution where you want to view a column. The classic solution explorer opens in a new browser window.
-1. In the classic solution explorer open, under **Components** expand **Entities**, expand the table where you want to view columns, and then select **Fields**.
+1. In the classic solution explorer, under **Components** expand **Entities**, expand the table where you want to view columns, and then select **Fields**.
 
    ![Solution explorer columns view.](media/solution-explorer-fields-view.png)
 
