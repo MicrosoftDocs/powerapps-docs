@@ -19,7 +19,7 @@ Learn how to associate a system user with a security role by using the `Associat
 
 Related article(s):
 
-- [Query data using QueryExpression](../queryexpression/overview)
+- [Query data using QueryExpression](../queryexpression/overview.md)
 - [Role-based security roles](/power-platform/admin/database-security)
 - [IOrganizationService.Associate Method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.associate?view=dataverse-sdk-latest)
 
@@ -27,14 +27,14 @@ Related article(s):
 
 |Sample|Description|Build target|
 |---|---|---|
-|AssociateSecurityRole|Demonstrates associating a user with a role.|.NET 9|
+|AssociateSecurityRoleToUser|Demonstrates associating a user with a role.|.NET 9|
 
 > [!div class="nextstepaction"]
 > [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Security/AssociateSecurityRoleToUser)
 
 The code samples demonstrates how to associate a system user with a security role. Specifically, the samples demonstrates how to:
 
-1. Connect to Dataverse using a [connection string](../../xrm-tooling/use-connection-strings-xrm-tooling-connect) that defines required connection information
+1. Connect to Dataverse using a [connection string](../../xrm-tooling/use-connection-strings-xrm-tooling-connect.md) that defines required connection information
 1. Query for a security role using its name attribute.
 1. Associate the logged on user with that security role.
 
