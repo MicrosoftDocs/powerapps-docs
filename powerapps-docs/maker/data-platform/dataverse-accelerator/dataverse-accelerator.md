@@ -82,7 +82,7 @@ If the Dataverse accelerator isn't already installed or if you want to install t
 1. Find **Dataverse Accelerator** in the list. 
    - If **Update available** appears next to the **Dataverse Accelerator**, select the app and then select **Update**.
    - Otherwise, select **Install app**, select **Dataverse Accelerator** in the list, and then select **Next**.
-1. Follow the instructions on your screen to apply the update.
+1. Follow the instructions on your screen to install the app or apply the update.
 
 ### Uninstall the Dataverse accelerator
 
