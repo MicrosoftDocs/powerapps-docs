@@ -172,7 +172,7 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 
-> [!VIDEO <4b04af25-b332-4286-a615-e3f36de574e0>]
+> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
 
   
 ## Register your app on Azure portal manually (optional)
