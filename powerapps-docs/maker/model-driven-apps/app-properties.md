@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 01/27/2025
+ms.date: 03/31/2025
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -59,6 +59,7 @@ Here are a few of the features available to app makers:
 - **Offline setup from the app designer**. [Enable your app for offline use](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use)
 - **Tablet optimization for command bar**. When enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
 - **Try the new look**. Enabled by default, this feature shows end users a "Try the new look" switch to enable the new experience. End users can switch back at any time. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
+- **Form fill assist toolbar**. When enabled, the form fill assist toolbar is visible at the top of a form, providing easy access to Copilot form fill assistance capabilities like smart paste and files. More information: [Use Copilot's form fill assistance feature in model-driven apps](../../user/form-filling-assistance.md)
 
 ## Upcoming
 
