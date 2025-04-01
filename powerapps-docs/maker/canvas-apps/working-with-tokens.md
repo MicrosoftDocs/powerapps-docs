@@ -18,7 +18,7 @@ contributors:
 
 # Working with tokens in connections
 
-API Hub handles connections invoked by Power Apps and Logic Apps / Power Automate differently. This issue is evident When credentials change.
+API Hub handles connections invoked by Power Apps and Logic Apps / Power Automate differently. This issue is evident when credentials change.
 
 ## Token Handling in Power Apps
 
