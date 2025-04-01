@@ -2,9 +2,9 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 12/03/2024
+ms.date: 03/31/2025
 author: pnghub
-ms.author: gned
+ms.author: olegov
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: dataverse-maker
@@ -13,7 +13,7 @@ ms.subservice: dataverse-maker
 
 An elastic table is a table managed by Microsoft Dataverse. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
 
-As with standard tables, elastic tables are included with your Dataverse database capacity use.
+Elastic tables are included with your Dataverse log capacity use.
 
 Watch this video that to learn about elastic tables.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=6f859c28-12b1-4042-9502-b8a441020768 ]
@@ -32,7 +32,7 @@ The requirement for Contoso's marketing application is that it must be able to i
 
 Elastic tables will automatically scale for this high throughput scenario.  
 
-For example, in the above scenario, an elastic table named *Coupon* with millions of records can be associated with Dataverse standard tables like *Contact* (customer info) and *Offer* (a custom standard table). Since the elastic tables are isolated from the standard tables, performance for the overall marketing application won't be negatively impacted. In addition, time-to-live capability with elastic table (*Coupon* in this scenario) allows removal of data automatically after fixed periods and ensure optimization of storage capacity.
+For example, in the above scenario, an elastic table named *Coupon* with millions of records can be associated with Dataverse standard tables like *Contact* (customer info) and *Offer* (a custom standard table). Since the elastic tables are isolated from the standard tables, performance for the overall marketing application won't be negatively impacted. In addition, time-to-live capability with elastic table (*Coupon* in this scenario) allows removal of data automatically after fixed periods and ensure optimization of log capacity.
 
 Use elastic tables when:
 
@@ -50,7 +50,7 @@ The choice of table should be based on the specific needs of your application. A
 
 ## Horizontal scaling and performance  
 
-As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
+As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
 If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request APIs, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages](../../developer/data-platform/bulk-operations.md) and [Optimize performance for bulk operations](/power-apps/developer/data-platform/optimize-performance-create-update)
 
