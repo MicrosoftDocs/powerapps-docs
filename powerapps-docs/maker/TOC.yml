@@ -310,6 +310,8 @@
           href: ./canvas-apps/connections-list.md
         - name: Working with untyped and dynamic objects
           href: ./canvas-apps/untyped-and-dynamic-objects.md
+        - name: Manage expired tokens
+          href: ./canvas-apps/working-with-tokens.md  
         - name: Popular connectors
           items:
             - name: Dataverse
@@ -2195,43 +2197,19 @@
       href: ./data-platform/data-get-insights-overview.md
     - name: Power BI with Dataverse
       href: ./data-platform/use-powerbi-dataverse.md
-    - name: Create a Power BI report
-      href: ./data-platform/data-platform-powerbi-connector.md
-    - name: View table data in Power BI Desktop
-      href: ./data-platform/view-entity-data-power-bi.md
-  - name: License requirements for tables
-    href: ./data-platform/data-platform-entity-licenses.md
-    items:
-    - name: Complex tables and licensing
-      href: ./data-platform/data-platform-complex-entities.md
-    - name: Restricted tables requiring Dynamics 365 licenses
-      href: ./data-platform/data-platform-restricted-entities.md
-  - name: SharePoint, OneNote, and OneDrive integration
-    href: ./data-platform/sharepoint-onedrive-onenote-intro.md
-  - name: Translate customized table and column text
-    href: ./data-platform/export-customized-entity-field-text-translation.md
-  - name: Import translated table and column text
-    href: ./data-platform/import-translated-entity-field-text.md
-  - name: Privileges for customization
-    href: ./model-driven-apps/privileges-required-customization.md
-  - name: API limits overview
-    href: ./data-platform/api-limits-overview.md
-  - name: Get preview features early (preview)
-    items:
-    - name: Use the Dataverse accelerator
-      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
-    - name: Monitor plug-ins
-      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
-    - name: Explore the Dataverse Web API
-      href: ./data-platform/dataverse-accelerator/api-playground.md
-  - name: For admins
-    items:
-    - name: Security in Dataverse
-      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
-    - name: Manage access to views (preview)
-      href: ./model-driven-apps/manage-view-access.md
+      items:
+      - name: Create a Power BI report
+        href: ./data-platform/data-platform-powerbi-connector.md
+      - name: View table data in Power BI Desktop
+        href: ./data-platform/view-entity-data-power-bi.md
+    - name: Transition from legacy data integration services
+      items:
+      - name: Transition from legacy data integration services overview
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
+      - name: Transition from legacy data integration services FAQ
+        href: ./data-platform/azure-synapse-link-transition-faq.md
     - name: Link to Microsoft Fabric
-      items: 
+      items:
       - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name: Build apps using Fabric data
@@ -2254,8 +2232,6 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
-      - name: Transtion from legacy data integration services
-        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2301,7 +2277,38 @@
         - name: Access choice labels from Azure Synapse Link for Dataverse
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
-          href: ./data-platform/azure-synapse-link-choices-powerbi.md
+          href: ./data-platform/azure-synapse-link-choices-powerbi.md      
+  - name: License requirements for tables
+    href: ./data-platform/data-platform-entity-licenses.md
+    items:
+    - name: Complex tables and licensing
+      href: ./data-platform/data-platform-complex-entities.md
+    - name: Restricted tables requiring Dynamics 365 licenses
+      href: ./data-platform/data-platform-restricted-entities.md
+  - name: SharePoint, OneNote, and OneDrive integration
+    href: ./data-platform/sharepoint-onedrive-onenote-intro.md
+  - name: Translate customized table and column text
+    href: ./data-platform/export-customized-entity-field-text-translation.md
+  - name: Import translated table and column text
+    href: ./data-platform/import-translated-entity-field-text.md
+  - name: Privileges for customization
+    href: ./model-driven-apps/privileges-required-customization.md
+  - name: API limits overview
+    href: ./data-platform/api-limits-overview.md
+  - name: Get preview features early (preview)
+    items:
+    - name: Use the Dataverse accelerator
+      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
+    - name: Monitor plug-ins
+      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md
+  - name: For admins
+    items:
+    - name: Security in Dataverse
+      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Manage access to views (preview)
+      href: ./model-driven-apps/manage-view-access.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
