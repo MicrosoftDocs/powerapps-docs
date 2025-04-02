@@ -79,4 +79,4 @@ You can connect existing Azure Synapse Links with Microsoft Fabric and benefit f
 
 ## Next steps
 
-[Configure your environment and link to Microsoft Fabric](fabric-configure-and-link.md)
+[Link to Microsoft Fabric](fabric-link-to-data-platform.md)

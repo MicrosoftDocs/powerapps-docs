@@ -2217,7 +2217,7 @@
       - name: Build apps using Fabric data
         href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Troubleshoot link to Fabric
-        href: ./data-platform/fabrictroubleshoot.md 
+        href: ./data-platform/fabric-troubleshoot.md 
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview

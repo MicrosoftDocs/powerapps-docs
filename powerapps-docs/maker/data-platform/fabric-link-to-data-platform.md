@@ -50,16 +50,16 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
 5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
 6. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
-7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](#troubleshooting-common-issues) if you don't see the desired workspace.  
+7. If you don't see workspaces, ask the system to create a workspace. Go to [Troubleshooting common issues](fabric-troubleshoot.md) if you don't see the desired workspace.  
 8. All Dataverse tables where the "Change tracking" property is enabled are linked to Fabric. If this environment is linked to finance and operations apps, you can add finance and operations tables later using the **Manage tables** option. More information: [Manage link to Fabric](#manage-link-to-fabric).
 9. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
 10. When complete, Fabric lakehouse opens in a separate browser tab. 
 
 > [!NOTE]
 >
-> It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+> It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](fabric-troubleshoot.md)
 >
-> Go to [Troubleshooting common issues](#troubleshooting-common-issues) for help resolving issues.
+> Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
 
 ## Manage link to Fabric
 
