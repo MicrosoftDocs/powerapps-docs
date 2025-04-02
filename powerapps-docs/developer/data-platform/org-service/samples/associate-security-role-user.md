@@ -17,7 +17,7 @@ contributors:
 
 Learn how to associate a system user with a security role by using the `Associate` message or method.
 
-Related article(s):
+Related articles:
 
 - [Query data using QueryExpression](../queryexpression/overview.md)
 - [Role-based security roles](/power-platform/admin/database-security)
@@ -32,7 +32,7 @@ Related article(s):
 > [!div class="nextstepaction"]
 > [SDK for .NET: Associate security role to a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Security/AssociateSecurityRoleToUser)
 
-The code samples demonstrates how to associate a system user with a security role. Specifically, the samples demonstrates how to:
+The code sample demonstrates how to associate a system user with a security role. Specifically, the samples demonstrate how to:
 
 1. Connect to Dataverse using a [connection string](../../xrm-tooling/use-connection-strings-xrm-tooling-connect.md) that defines required connection information
 1. Query for a security role using its name attribute.
@@ -40,19 +40,19 @@ The code samples demonstrates how to associate a system user with a security rol
 
 Additional information can be found in [README-code-design](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/README-code-design.md) file.
 
-## How to build and run the code sample(s)
+## How to build and run the code sample
 
 1. Clone the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
 1. Locate the sample folder.
 1. Open the solution file (*.sln) in Visual Studio.
 1. Edit the project's appsettings.json file and set the `Url`value as appropriate for your Dataverse test environment.
 1. Build and run the project [F5].
-1. You will be prompted in a browser window for account logon credentials to the target environment.
+1. You'll be prompted in a browser window for account sign-in credentials to the target environment.
 
 ## Expected program output
 
 For a successful run, the program's console output should look similar to the following example.
-Otherwise, any errors or exceptions will be displayed.
+Otherwise, any errors or exceptions are displayed.
 
 ```console
 Discovering who you are...done.
