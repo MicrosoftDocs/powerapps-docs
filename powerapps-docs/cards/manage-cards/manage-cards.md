@@ -13,6 +13,8 @@ ms.collection:
 
 # Manage cards in solutions
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Create a card from within a solution if, for example, you want to deploy the card to a different environment. Solutions can contain not only cards but also customized tables, choices, and other components. You can quickly customize an environment in various ways by creating cards and other components from within a solution, exporting the solution, and then importing it into another environment. For more information, see [Solutions overview](../../maker/data-platform/solutions-overview.md).
 
 

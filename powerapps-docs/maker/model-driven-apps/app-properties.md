@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 08/24/2024
+ms.date: 03/31/2025
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -28,11 +28,8 @@ App settings define important details about the app, like its title. You define 
 
 You must select **Publish** to activate an app settings change.
 
-1. In the app designer, on the left pane, select **App** under the **Pages** section. Or select **Settings** on the command bar.
+1. In the app designer select **Settings** on the command bar.
 
-    > [!div class="mx-imgBorder"]
-    > ![App designer Properties pane](media/model-driven-app-properties.png "App designer Properties pane")  
-  
 2. View and change the information, as required:
 
     |Area|Setting|Description|  
@@ -62,6 +59,7 @@ Here are a few of the features available to app makers:
 - **Offline setup from the app designer**. [Enable your app for offline use](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use)
 - **Tablet optimization for command bar**. When enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
 - **Try the new look**. Enabled by default, this feature shows end users a "Try the new look" switch to enable the new experience. End users can switch back at any time. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
+- **Form fill assist toolbar**. When enabled, the form fill assist toolbar is visible at the top of a form, providing easy access to Copilot form fill assistance capabilities like smart paste and files. More information: [Use Copilot's form fill assistance feature in model-driven apps](../../user/form-filling-assistance.md)
 
 ## Upcoming
 
@@ -80,8 +78,6 @@ The following app properties can't be edited in the app designer:
 
 - App Url Suffix
 - Manage App
-- Enable Mobile Offline
-- Mobile Offline Profiles
 
 ## See also
 

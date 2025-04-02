@@ -1,8 +1,7 @@
 ---
 title: "Ribbon Metadata To Process (RibbonMetadataToProcess) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Ribbon Metadata To Process (RibbonMetadataToProcess) table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -20,7 +19,7 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| ``<br />Event: False | |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RetrieveMultiple`<br />Event: False |`GET` /RibbonMetadataSetToProcess<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 

@@ -16,6 +16,8 @@ contributors:
 
 # Drop down control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 A menu that lets users choose one item from an expandable list of items. The default is two choices, but more can be added.
 
 ## Properties

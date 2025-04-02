@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/04/2024
+ms.date: 1/30/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -98,6 +98,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
+| \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
 | \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
 | \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
@@ -107,9 +108,9 @@ This list identifies all services to which Power Apps communicates and their usa
 | localhost | http | Power Apps Mobile|
 | 127.0.0.1 | http <br><br>You might need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
-| augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
+| augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com <br> *.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
@@ -151,6 +152,7 @@ The following table shows some of the examples where embedding a canvas app is a
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, for example, Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
 | A canvas app is embedded in a third party client.                                                 | Third party websites in a browser         | Third party native applications            |
 |A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
+| A canvas app embedded in Power BI | Web, for example, app.powerbi.com | Power BI Desktop Client |
 
 ### Model-driven app embedding
 

@@ -1,8 +1,7 @@
 ---
 title: "credential table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the credential table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -72,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [cyberarkobject](#BKMK_cyberarkobject)
 - [cyberarksafe](#BKMK_cyberarksafe)
 - [cyberarkusername](#BKMK_cyberarkusername)
+- [defaultcredential](#BKMK_defaultcredential)
 - [description](#BKMK_description)
 - [groupmapping](#BKMK_groupmapping)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -124,6 +124,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|**UsernamePasswordListWithGroupMapping**|
 |4|**CyberArkIdentity**|
 |5|**CertificateBasedAuthentication**|
+|6|**MachineMapping**|
 
 ### <a name="BKMK_credentialId"></a> credentialId
 
@@ -230,6 +231,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|environmentvariabledefinition|
+
+### <a name="BKMK_defaultcredential"></a> defaultcredential
+
+|Property|Value|
+|---|---|
+|Description|**This credential will be used if there is no matching mapping.**|
+|DisplayName|**Default credential for mappings**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`defaultcredential`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|credential|
 
 ### <a name="BKMK_description"></a> description
 
@@ -439,6 +453,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |280920000|**Connection**|
 |280920001|**DesktopScript**|
+|280920002|**Network**|
 
 ### <a name="BKMK_username"></a> username
 
@@ -761,6 +776,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_credential](#BKMK_business_unit_credential)
+- [credential_credential_defaultcredential](#BKMK_credential_credential_defaultcredential-many-to-one)
 - [environmentvariabledefinition_credential_certificate](#BKMK_environmentvariabledefinition_credential_certificate)
 - [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
 - [environmentvariabledefinition_credential_cyberarksafe](#BKMK_environmentvariabledefinition_credential_cyberarksafe)
@@ -787,6 +803,19 @@ One-To-Many Relationship: [businessunit business_unit_credential](businessunit.m
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_credential_credential_defaultcredential-many-to-one"></a> credential_credential_defaultcredential
+
+One-To-Many Relationship: [credential credential_credential_defaultcredential](#BKMK_credential_credential_defaultcredential-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`credential`|
+|ReferencedAttribute|`credentialid`|
+|ReferencingAttribute|`defaultcredential`|
+|ReferencingEntityNavigationPropertyName|`defaultcredential`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_environmentvariabledefinition_credential_certificate"></a> environmentvariabledefinition_credential_certificate
 
@@ -965,6 +994,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [connectioninstance_CredentialId_credential](#BKMK_connectioninstance_CredentialId_credential)
 - [credential_AsyncOperations](#BKMK_credential_AsyncOperations)
 - [credential_BulkDeleteFailures](#BKMK_credential_BulkDeleteFailures)
+- [credential_credential_defaultcredential](#BKMK_credential_credential_defaultcredential-one-to-many)
 - [credential_DuplicateBaseRecord](#BKMK_credential_DuplicateBaseRecord)
 - [credential_DuplicateMatchingRecord](#BKMK_credential_DuplicateMatchingRecord)
 - [credential_flowmachinenetwork](#BKMK_credential_flowmachinenetwork)
@@ -1008,6 +1038,18 @@ Many-To-One Relationship: [bulkdeletefailure credential_BulkDeleteFailures](bulk
 |ReferencedEntityNavigationPropertyName|`credential_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_credential_credential_defaultcredential-one-to-many"></a> credential_credential_defaultcredential
+
+Many-To-One Relationship: [credential credential_credential_defaultcredential](#BKMK_credential_credential_defaultcredential-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`defaultcredential`|
+|ReferencedEntityNavigationPropertyName|`credential_credential_defaultcredential`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: Default credential for a mapping<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_credential_DuplicateBaseRecord"></a> credential_DuplicateBaseRecord
 

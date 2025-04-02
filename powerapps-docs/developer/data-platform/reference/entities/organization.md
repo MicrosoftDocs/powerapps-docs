@@ -1,8 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
@@ -2441,7 +2440,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`enableenvironmentsettingsapp`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|

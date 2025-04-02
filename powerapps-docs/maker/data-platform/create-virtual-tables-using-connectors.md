@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 12/10/2024
+ms.date: 02/07/2025
 ms.reviewer: matp
 ms.topic: article
 author: mkannapiran
@@ -25,17 +25,11 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 - Salesforce (preview)
 - Oracle (preview)
 - Snowflake (preview)
+- PostgreSQL
+
+Except for the Excel connector provider, all virtual connector providers use a Power Platform connector. More information: [Connector reference for virtual connector providers used with virtual tables](#connector-reference-for-virtual-connector-providers-used-with-virtual-tables)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
-
-To learn more about supported actions and limitations with the connector, go to:
-
-- [Connector reference for the SQL Server connector](/connectors/sql/)
-- [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
-- [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
-- [Connector reference for the Salesforce connector](/connectors/salesforce/)
-- [Connector reference for the Oracle connector](/connectors/oracle/)
-- [Connector reference for the Snowflake connector](/connectors/snowflakev2/)
 
 ## Overview
 
@@ -76,7 +70,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Create a virtual table in Power Apps for SQL, SharePoint, Fabric, Salesforce, or Snowflake
+## Create a virtual table in Power Apps
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -94,7 +88,7 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
-1. On the command bar, select **New** > **Table** > **Table from external data**.
+1. On the command bar, select **New** > **Table** > **Virtual table**.
 
 ### Create the virtual table
 
@@ -102,16 +96,16 @@ Watch a short video showing how to create a virtual table with the virtual conne
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=130f38be-01d0-4321-8681-a7780231b94e]
 
-1. In the **New table from external data** wizard you can either select an existing connection if you have one or choose to create a new connection.  
+1. In the **New table from external data** wizard you can either select an existing connection if you have one or choose to **Add connection**.  
 
    - If you want to use an existing connection, select the connection you want, and then select **Next**.
    - If you have an existing connection but wish to create a new one, select **New connection** on the command bar.
-   - If you have no connections and wish to create a new connection, select **+Add Connection**.
+   - If you have no connections and wish to create a new connection, select **+Add Connection** next to the connection type you want.
 
    > [!IMPORTANT]
    > Connections that are shared with you aren't available for use with this feature. Only connections created by the current user appear in the virtual table wizard.
 
-2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you're asked to provide credential information required to create the connection.
+2. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you might be asked to provide credential information required to create the connection.
 
 <a name="SQL-or-SharePoint"></a>
 
@@ -157,7 +151,7 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Select Add connection:
+Select **Add connection**:
 
 - **Login URI**: Select either **Production** (default) or **Sandbox**.
 - **Salesforce API version**: Select **v41.0** (default) or a later version.
@@ -195,9 +189,19 @@ Server should be provided in **Server:Port/SID**-format. Notice that the server 
 - **Client Secret**. Microsoft Entra ID client secret for the Power Platform client.
 - **Resource URL**. Microsoft Entra ID resource application ID. Don't add `api://` for the URL.
 
+# [PostgreSQL](#tab/PostgreSQL)
+
+PostgreSQL is a relational database management system developed by PostgreSQL Global Development Group. For PostgreSQL connections, you must provide a server, database name, authentication type, username, and password.
+
+- Enter **Server** location and TCP port, such as *postgres-vcp-test.postgres.database.azure.com:5432*.
+- Enter **Database Name**, such as *Adventureworks*.
+- Select **Authentication Type** as **Basic**.
+- Enter **Username** and **Password**.
+- **Encrypt Connection**. Select if you want to encrypt client and server communications for increased security.
+
 ---
 
-3. Determine whether to use a connection reference and/or environment variable.
+3. Optionally, select **Advanced options** to use a connection reference and/or environment variable.
 
    When you create a virtual table, a connection reference is automatically created for you with the virtual table. A connection reference is a solution component that contains information about the connector. However, you might want to create you own. To do this, select **Manually configure connection reference.** More information: [Create and select a connection reference (optional)](#create-and-select-a-connection-reference-optional)
 
@@ -219,7 +223,7 @@ However, you might want to create your own connection reference for the virtual 
 > [!NOTE]
 >
 > - The benefit of optionally naming your connection reference is because it can be easier to find later if you need details about it.
-> - If you are using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
+> - If you're using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
 
 To create a connection reference, when you're creating the connection for the virtual table, follow these steps:
 
@@ -286,6 +290,18 @@ Once the table is created, you're taken directly to your new virtual table where
 
 > [!NOTE]
 > When you attempt to create a virtual table that already exists, you receive a message that the table already exists and that you will be re-creating it. You will not be able to change the primary field or schema name if this is the case. Re-creating the table will update any column changes that were made in the data source on the table.
+
+## Connector reference for virtual connector providers used with virtual tables
+
+To learn more about supported actions and limitations with each connector, go to:
+
+- [Connector reference for the SQL Server connector](/connectors/sql/)
+- [Connector reference for the Microsoft Excel Online Business connector](/connectors/excelonlinebusiness/)
+- [Connector reference for the SharePoint Online connector](/connectors/sharepointonline/)
+- [Connector reference for the Salesforce connector](/connectors/salesforce/)
+- [Connector reference for the Oracle connector](/connectors/oracle/)
+- [Connector reference for the Snowflake connector](/connectors/snowflakev2/)
+- [Connection reference for PostgreSQL connector](/connectors/postgresql/)
 
 ## Create the virtual table for Microsoft Excel
 
@@ -364,8 +380,8 @@ With the connection reference and the virtual table data source setup, an **Enti
 :::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
 
 > [!NOTE]
-> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes.
-> - The tables displayed in the entity catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
+> - The creation of the entity catalog is an asynchronous process. Depending on your environment, this might take a few minutes.
+> - The tables displayed in the entity catalog aren't virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
 
 > [!TIP]
 > - If the entity catalog creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
