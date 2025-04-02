@@ -310,6 +310,8 @@
           href: ./canvas-apps/connections-list.md
         - name: Working with untyped and dynamic objects
           href: ./canvas-apps/untyped-and-dynamic-objects.md
+        - name: Manage expired tokens
+          href: ./canvas-apps/working-with-tokens.md  
         - name: Popular connectors
           items:
             - name: Dataverse
