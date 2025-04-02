@@ -18,9 +18,9 @@ contributors:
 
 # Manage expired tokens
 
-This article explains how tokens are managed to keep apps working smoothly after you change your credentials.
+This article explains how tokens are managed to ensure apps continue to function smoothly when credentials change.
 
-API Hub handles connections differently for Power Apps, Logic App, and Power Automate. When you change your credentials, Power Apps automatically reauthenticates using a new token, while Logic Apps and Power Automate might run into issues because they use stored tokens that can become stale
+API Hub handles connections differently for Power Apps, Logic App, and Power Automate. When you change your credentials, Power Apps automatically reauthenticates using a new token, while Logic Apps and Power Automate might run into issues because they use stored tokens that can become stale.
 
 
 ## Manage tokens in Power Apps
