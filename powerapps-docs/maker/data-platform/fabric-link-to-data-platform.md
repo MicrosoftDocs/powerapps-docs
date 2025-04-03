@@ -23,7 +23,9 @@ You can use an existing Dataverse environment or create a new developer environm
 
 The system creates a data connection between the Power Apps environment and Fabric workspace using the credentials of the user at the time of link creation. If you use the **Fabric link** option from the Power Apps **Tables** area, the system creates the connection and asks you to save. If you use the **Synapse Link** option, you must create a data connection yourself before enabling the link.
 
-The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. To share the data connection with other users:
+The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. 
+
+### Share the data connection with other users
 
 1. Go to [Fabric.Microsoft.com](https://fabric.microsoft.com) and select the gear icon on top left (next to user icon).
 2. On the **Settings** menu, select **Data connections and Gateways**. The available data connections are displayed.
