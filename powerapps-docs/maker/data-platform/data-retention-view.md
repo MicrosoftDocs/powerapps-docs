@@ -2,7 +2,7 @@
 title: View long term retained data in Microsoft Dataverse
 description: Learn how to access ready only data that is in long term storage. 
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 contributors: manasdalai
 ms.service: powerapps
