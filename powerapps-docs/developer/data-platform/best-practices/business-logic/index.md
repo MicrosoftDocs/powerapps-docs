@@ -6,7 +6,7 @@ author: jowells
 ms.author: jowells
 ms.reviewer: jdaly
 ms.topic: article
-ms.date: 10/25/2021
+ms.date: 04/03/2025
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -33,7 +33,7 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Use InvalidPluginExecutionException in plug-ins and workflow activities](use-invalidpluginexecutionexception-plugin-workflow-activities.md)     |Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity.         |
 |[Use ITracingService in Plug-ins](use-itracingservice-plugins.md)| Use the ITracingService within your plug-ins to gain insight into what happens when your code runs.|
 |[Verify certification dependencies for plug-ins making outbound calls](verify-certification-dependencies.md)|Ensure that any certificates that your code depends on for outbound calls have a valid chain of certificates.|
-|[Write memory efficient code](../../../../../../../../SupportArticles-docs-pr/blob/main/support/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors.md#worker-process-reaches-the-memory-limit)|Retrieve only data within your plugin that is needed.|
+|[Write memory efficient code](/troubleshoot/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors#worker-process-reaches-the-memory-limit)|Retrieve only data within your plugin that is needed.|
 
 
 ### See Also
