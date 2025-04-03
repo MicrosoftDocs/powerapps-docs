@@ -16,6 +16,10 @@ items:
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
+  - name: Dependent libraries (preview)
+    href: dependent-libraries.md
+  - name: Events  (preview)
+    href: events.md
   - name: Get tooling
     href: get-powerapps-cli.md
   - name: Limitations
@@ -30,6 +34,10 @@ items:
       href: tutorial-create-model-driven-app-dataset-component.md
     - name: Create a canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
+    - name: Define an event in a component
+      href: tutorial-define-event.md
+    - name: Use dependent libraries
+      href: tutorial-use-dependent-libraries.md
   - name: Online learning
     href: /training/paths/use-power-apps-component-framework
   - name: Code components ALM
@@ -452,6 +460,8 @@ items:
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: dependency
+        href: manifest-schema-reference/dependency.md
       - name: domain
         href: manifest-schema-reference/domain.md
       - name: external-service-usage
@@ -464,6 +474,8 @@ items:
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
+      - name: platform-action
+        href: manifest-schema-reference/platform-action.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
       - name: property-dependencies

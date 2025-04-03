@@ -14,24 +14,17 @@ contributors:
   - mkaur
 ---
 
-# Use the wrap wizard to build your mobile app
+# Wrap wizard: your step-by-step guide to building your native mobile apps package
 
-Use the wrap feature to package one or more canvas apps as a single native mobile app package using the step-by-step wizard.
+Use this step-by-step Wrap wizard guide to convert one or more canvas apps into a single custom-branded app package that can be deployed on Google Play and the iOS App Store.
 
-The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
-
-Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
-
-- iOS (IPA package)
-- Android (APK package)
-- For Google Play Store distribution (AAB package)
+The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps (IPA, APK, AAB packages). You can distribute these *wrapped* native mobile apps to end users through [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458), [Apple Business Manager](https://developer.apple.com/custom-apps/), or other native distribution methods.
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
-## Create native mobile apps for iOS and Android using the wizard
+## Create custom-branded native Power Apps for iOS and Android using the Wrap wizard
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps maker portal](https://make.powerapps.com).
 
 2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
@@ -84,8 +77,8 @@ Enter the Azure blob storage access key in **Secret value** field.
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
-   - [Manual code sign for iOS](code-sign-ios.md)
-   - [Manual code sign for Android](code-sign-android.md) 
+   - [Code sign for iOS](code-sign-ios.md)
+   - [Code sign for Android](code-sign-android.md) 
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 > [!NOTE]
@@ -128,7 +121,8 @@ Once you complete the preceding steps the registration screen look like the foll
 
 #### API permissions
 
-When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
+When you register the app, the Azure admin grants API permissions for the app. 
+More information about granting access and the reasons why API permissions are required: [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
 
  :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
@@ -177,6 +171,8 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 ## Test and distribute mobile app package
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
+
+> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
 
   
 ## Register your app on Azure portal manually (optional)

@@ -56,7 +56,7 @@ You can create:
 [Install the Power Apps personal app](install-personal-app.md)<br/>
 [Create your first app in Teams](create-first-app.md)
 
-### Related topics
+### Related articles
 [Administer Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
 

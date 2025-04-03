@@ -285,7 +285,7 @@ Storing configuration data in the environment separate from code is a security b
 1. Set the `BASE_URL` value to the URL of the [Web API URL](compose-http-requests-handle-errors.md#web-api-url-and-versions) for the environment you want to connect to.
 
 > [!NOTE]
-> The `.env` file is checked in, but you might want to create a `.env.example` file using the placeholder values so that people know what data it should contain. Add the `.env` file to [your .gitignore file](#create-gitignore-file) to prevent checking it in.
+> You won't check-in the `.env` file. In [Create `.gitignore` file](#create-gitignore-file), you will exclude it. But you might want to create a `.env.example` file using the placeholder values so that people know what data it should contain.
 
 ### Create an HTML page
 
@@ -395,8 +395,6 @@ Add this `scripts` item underneath `dependencies`:
 ```
 
 This configuration allows you to start the application using `npm start` in the next step.
-
-
 
 ## Try it
 
