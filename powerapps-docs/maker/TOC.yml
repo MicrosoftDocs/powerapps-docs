@@ -2210,10 +2210,16 @@
         href: ./data-platform/azure-synapse-link-transition-faq.md
     - name: Link to Microsoft Fabric
       items:
-      - name: View Dataverse data in Microsoft Fabric
+      - name: Link Dataverse to Microsoft Fabric overview
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name:  Create a link to Fabric
+        href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Work with Fabric data and Power BI
+        href: ./data-platform/fabric-work-data-and-power-bi.md      
       - name: Build apps using Fabric data
         href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Troubleshoot link to Fabric
+        href: ./data-platform/fabric-troubleshoot.md 
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
