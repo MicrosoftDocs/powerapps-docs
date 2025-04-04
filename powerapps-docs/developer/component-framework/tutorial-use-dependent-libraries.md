@@ -3,7 +3,7 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 03/24/2025
+ms.date: 04/04/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -40,16 +40,67 @@ This component doesn't provide any capabilities by itself. It's simply a contain
 
 The first step is to create a new component using the [pac pcf init command](/power-platform/developer/cli/reference/pcf#pac-pcf-init):
 
-   `pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm`
+   ```cmd
+   pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm
+   ```
 
 ### Define the library
 
-1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+1. You need a new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project named `myLib.d.ts`:
+
+   ```typescript
+   declare module 'myLib' {
+     export function sayHello(): string;
+   }
+   ```
+   
+1. We are going to expose our library as an UMD module, and we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
+
+   ```typescript
+   /* eslint-disable no-var */
+   declare global {
+     var myLib: typeof import('myLib');
+   }
+
+   export { };
+   ```
+
+1. Update tsconfig.json to allow UMD modules and javascript code as follows:
+
+   #### [Before](#tab/before)
+   
+   ```json
+   {
+       "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+       "compilerOptions": {
+           "typeRoots": ["node_modules/@types"]
+       }
+   }
+   ```
+   
+   #### [After](#tab/after)
+   
+   ```json
+   {
+       "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+       "compilerOptions": {
+           "typeRoots": ["node_modules/@types"],
+           "allowJs": true,
+           "allowUmdGlobalAccess": true,
+           "outDir": "dist"
+       },
+   }
+   ```
+   ---
+
+### Add the library
+
+In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
    ```javascript
    // UMD module pattern
    var myLib = (function (exports) {
-   'use strict';
+   "use strict";
 
    function sayHello() {
       return "Hello from myLib";
@@ -58,41 +109,8 @@ The first step is to create a new component using the [pac pcf init command](/po
    exports.sayHello = sayHello;
 
    return exports;
-
-   }({}));
-
+   })(/** @type {import('myLib')}  */ ({}));
    ```
-
-1. You need new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project for `myLib-v_0_0_1.js` it looks like this `myLib.d.ts` file:
-
-   ```typescript
-   declare module 'myLib' {
-   export function sayHello(): string;
-   }
-   ```
-
-1. Add a reference to the library under the `resources` in the control manifest.
-
-#### [Before](#tab/before)
-
-```xml
-<resources> 
-      <code path="index.ts" order="2"/> 
-</resources> 
-```
-
-#### [After](#tab/after)
-
-```xml
-<resources> 
-      <library name="myLib" version=">=1" order="1"> 
-        <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
-      </library> 
-      <code path="index.ts" order="2"/> 
-</resources> 
-```
-
----
 
 ### Add Configuration data
 
@@ -100,9 +118,10 @@ The first step is to create a new component using the [pac pcf init command](/po
 1. Add the following text to the `featureconfig.json` file:
 
    ```json
-   { 
-     "pcfAllowCustomWebpack": "on" 
-   } 
+   {
+     "pcfAllowCustomWebpack": "on",
+     "pcfAllowLibraryResources": "on"
+   }
    ```
 
    [Learn more about the featureconfig.json file](dependent-libraries.md#featureconfigjson)
@@ -110,35 +129,37 @@ The first step is to create a new component using the [pac pcf init command](/po
 1. Add a new `webpack.config.js` file in the root folder of your project. This configuration data ensures that the libraries aren't bundled with the control output. Bundling isn't necessary because they're already packaged separately when you build the project.
 
    ```typescript
-   /* eslint-disable */ 
-   "use strict"; 
-   
-   module.exports = { 
-     externals: { 
-       "myLib": "myLib" 
-     }, 
-   }  
+   /* eslint-disable */
+   "use strict";
+
+   module.exports = {
+     externals: {
+       "myLib": "myLib"
+     },
+   }
    ```
 
    [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
 
-1. Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
+1. Add a reference to the library under the `resources` in the control manifest.
 
 #### [Before](#tab/before)
 
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-   }
+```xml
+<resources> 
+  <code path="index.ts" order="1"/> 
+</resources> 
 ```
 
 #### [After](#tab/after)
 
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off"
-   }
+```xml
+<resources> 
+  <library name="myLib" version=">=1" order="1"> 
+    <packaged_library path="libs/myLib-v_0_0_1.js" version="0.0.1" /> 
+  </library> 
+  <code path="index.ts" order="2"/> 
+</resources> 
 ```
 
 ---
@@ -152,57 +173,73 @@ The last step is to edit the `index.ts` of the control to bind the library to th
 ```typescript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class PreBuiltLibrary
+export class StubLibrary
 implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
-constructor() {}
+ constructor() {
+   // Empty
+ }
 
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {}
+ public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+ ): void {
+   // Add control initialization code
+ }
 
-public updateView(context: ComponentFramework.Context<IInputs>): void {}
+ public updateView(context: ComponentFramework.Context<IInputs>): void {
+   // Add code to update control view
+ }
 
-public getOutputs(): IOutputs {
-   return {};
+ public getOutputs(): IOutputs {
+    return {};
+ }
+
+  public destroy(): void {
+    // Add code to cleanup control if necessary
+  }
 }
-
-public destroy(): void {}
-}
-
 ```
 
 #### [After](#tab/after)
 
 ```typescript
+import * as myLib from 'myLib';
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-export class PreBuiltLibrary
+export class StubLibrary
 implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
-constructor() {}
+ constructor() {
+   // Empty
+ }
 
-public init(
-   context: ComponentFramework.Context<IInputs>,
-   notifyOutputChanged: () => void,
-   state: ComponentFramework.Dictionary,
-   container: HTMLDivElement
-): void {}
+ public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement
+ ): void {
+   // Add control initialization code
+ }
 
-public updateView(context: ComponentFramework.Context<IInputs>): void {}
+ public updateView(context: ComponentFramework.Context<IInputs>): void {
+   // Add code to update control view
+ }
 
-public getOutputs(): IOutputs {
-   return {};
-}
+ public getOutputs(): IOutputs {
+    return {};
+ }
 
-public destroy(): void {}
+  public destroy(): void {
+    // Add code to cleanup control if necessary
+  }
 }
 
 (function () {
-   (window as any).MyLib = MyLib;
+   window.myLib = myLib;
 })();
 ```
 
@@ -226,13 +263,15 @@ Now that you have a library control, you need a control to depend on it.
 
 1. Create a new component using this command:
 
-   `pac pcf init -n DependencyControl -ns SampleNamespace -t field  -fw react -npmcd `
+   ```cmd
+   pac pcf init -n DependencyControl -ns SampleNamespace -t field -fw react -npm
+   ```
 
 1. Add a new feature control file in the root folder of your project called `featureconfig.json` containing the following text:
 
    ```json
-   { 
-     "pcfResourceDependency": "on"
+   {
+     "pcfResourceDependency": "on"
    } 
    ```
 
@@ -242,11 +281,11 @@ Now that you have a library control, you need a control to depend on it.
 
    ```xml
    <RootComponents>
-   <RootComponent
+     <RootComponent
       type="66"
       schemaName="samples_SampleNamespace.StubLibrary"
       behavior="0"
-   />
+     />
    </RootComponents>
    ```
 
@@ -254,8 +293,12 @@ Now that you have a library control, you need a control to depend on it.
 
 ```xml
 <resources>
-    <code path="index.ts"
-        order="2" />
+      <code path="index.ts"
+         order="1" />
+      <platform-library name="React"
+         version="16.14.0" />
+      <platform-library name="Fluent"
+         version="9.46.2" />
 </resources> 
 ```
 
@@ -263,19 +306,38 @@ Now that you have a library control, you need a control to depend on it.
 
 ```xml
 <resources>
-    <dependency type="control"
-        name="samples_SampleNamespace.StubLibrary"
-        order="1" />
-    <code path="index.ts"
-        order="2" />
-    <platform-library name="React"
-        version="16.8.6" />
-    <platform-library name="Fluent" 
-        version="8.29.0" />    
+      <dependency type="control"
+         name="samples_SampleNamespace.StubLibrary"
+         order="1" />
+      <code path="index.ts"
+         order="2" />
+      <platform-library name="React"
+         version="16.14.0" />
+      <platform-library name="Fluent"
+         version="9.46.2" />    
 </resources> 
 ```
 
 ---
+
+### Add Global.d.ts
+
+Since the StubLibrary is exposed as an UMD module, we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
+
+```typescript
+/* eslint-disable no-var */
+
+interface MyLib {
+      sayHello(): string;
+}
+
+declare global {
+      var myLib: MyLib;
+}
+
+export { };
+
+```
 
 ### Use the library function
 
@@ -285,7 +347,7 @@ Update the component `HelloWorld.tsx` file so that it uses a function from the d
 
 ```typescript
 import * as React from 'react';
-import { Label } from '@fluentui/react';
+import { Label } from '@fluentui/react-components';
 
 export interface IHelloWorldProps {
   name?: string;
@@ -307,7 +369,7 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
 
 ```typescript
 import * as React from 'react';
-import { Label } from '@fluentui/react';
+import { Label } from '@fluentui/react-components';
 
 export interface IHelloWorldProps {
   name?: string;
@@ -317,35 +379,11 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
   public render(): React.ReactNode {
     return (
       <Label>
-        {(window as any).MyLib.sayHello()+" from Dependency" || "Hello World"}
+        { window.myLib.sayHello() + " from Dependency" || "Hello World"}
       </Label>
     )
   }
 }
-```
-
----
-
-
-### Disable the check for no-explicit-any
-
-Edit the `.eslintrc.json` file to modify the `rules` to add a rule to turn off the check for [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/).
-
-#### [Before](#tab/before)
-
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off"
-   }
-```
-
-#### [After](#tab/after)
-
-```json
-   "rules": {
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off"
-   }
 ```
 
 ---
@@ -383,10 +421,8 @@ To specify on demand load behavior, modify the control manifest of the component
         order="1" />
     <code path="index.ts"
         order="2" />
-    <platform-library name="React"
-        version="16.8.6" />
-    <platform-library name="Fluent" 
-        version="8.29.0" />  
+    <platform-library name="React" version="16.14.0" />
+    <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
 
@@ -404,10 +440,8 @@ To specify on demand load behavior, modify the control manifest of the component
     <dependency type="control"
         name="samples_SampleNamespace.StubLibrary"
         load-type="onDemand" />
-    <platform-library name="React"
-        version="16.8.6" />
-    <platform-library name="Fluent" 
-        version="8.29.0" />  
+    <platform-library name="React" version="16.14.0" />
+    <platform-library name="Fluent" version="9.46.2" />  
 </resources>
 ```
 
@@ -421,7 +455,7 @@ Modify the `HelloWorld.tsx` to add a state and methods to update it once the dep
 
 ```typescript
 import * as React from 'react';
-import { Label } from '@fluentui/react';
+import { Label } from '@fluentui/react-components';
 
 export interface IHelloWorldProps {
   name?: string;
@@ -431,7 +465,7 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
   public render(): React.ReactNode {
     return (
       <Label>
-        {(window as any).MyLib.sayHello()+" from Dependency" || "Hello World"}
+        { window.myLib.sayHello() + " from Dependency" || "Hello World"}
       </Label>
     )
   }
@@ -442,11 +476,14 @@ export class HelloWorld extends React.Component<IHelloWorldProps> {
 
 ```typescript
 import * as React from 'react';
-import { Label } from '@fluentui/react';
+import { Label } from '@fluentui/react-components';
 
+export interface IHelloWorldProps {
+  name?: string;
+}
 
-export class HelloWorld extends React.Component<any, { loaded: boolean }> {
-  constructor(props: any) {
+export class HelloWorld extends React.Component<IHelloWorldProps, { loaded: boolean }> {
+  constructor(props: IHelloWorldProps) {
     super(props);
     this.state = {
       loaded: false
@@ -460,7 +497,7 @@ export class HelloWorld extends React.Component<any, { loaded: boolean }> {
   public render(): React.ReactNode {
     return (
       <Label>
-          {this.state.loaded ? (window as any).MyLib.sayHello()+" Dependency On Demand Load" : 'Loading...'}
+          {this.state.loaded ? window.myLib.sayHello() + " Dependency On Demand Load" : 'Loading...'}
       </Label>
     )
   }
@@ -483,21 +520,12 @@ import { HelloWorld, IHelloWorldProps } from "./HelloWorld";
 import * as React from "react";
 
 export class DependencyControl implements ComponentFramework.ReactControl<IInputs, IOutputs> {
-    private theComponent: ComponentFramework.ReactControl<IInputs, IOutputs>;
     private notifyOutputChanged: () => void;
 
-    /**
-     * Empty constructor.
-     */
-    constructor() { }
+    constructor() {
+        // Empty
+    }
 
-    /**
-     * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-     * Data-set values are not initialized here, use updateView.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-     * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-     * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-     */
     public init(
         context: ComponentFramework.Context<IInputs>,
         notifyOutputChanged: () => void,
@@ -506,34 +534,22 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
         this.notifyOutputChanged = notifyOutputChanged;
     }
 
-    /**
-     * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-     * @returns ReactElement root react element for the control
-     */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = { name: 'Hello, World!' };
+        const props: IHelloWorldProps = { name: 'Power Apps' };
         return React.createElement(
             HelloWorld, props
         );
     }
 
-    /**
-     * It is called by the framework prior to a control receiving new data.
-     * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
-     */
     public getOutputs(): IOutputs {
         return { };
     }
 
-    /**
-     * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-     * i.e. cancelling any pending remote calls, removing listeners, etc.
-     */
     public destroy(): void {
         // Add code to cleanup control if necessary
     }
 }
+
 ```
 
 #### [After](#tab/after)
@@ -549,18 +565,10 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
     private context: ComponentFramework.Context<IInputs>;
     private mainContainerRef: React.RefObject<HelloWorld> = React.createRef<HelloWorld>();
 
-    /**
-     * Empty constructor.
-     */
-    constructor() { }
+    constructor() { 
+        // Empty
+    }
 
-    /**
-     * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-     * Data-set values are not initialized here, use updateView.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-     * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-     * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-     */
     public init(
         context: ComponentFramework.Context<IInputs>,
         notifyOutputChanged: () => void,
@@ -570,30 +578,21 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
         this.context = context;
     }
 
-    /**
-     * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-     * @returns ReactElement root react element for the control
-     */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         return React.createElement(
             HelloWorld, {ref: this.mainContainerRef }
         );
     }
 
-    /**
-     * It is called by the framework prior to a control receiving new data.
-     * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
-     */
     public getOutputs(): IOutputs {
         return { };
     }
 
-    public getActions(): any {
+    public getActions(): {afterPageLoad: ()=>Promise<void>} {
         return {
             afterPageLoad: async () => {
                 console.log("afterPageLoad");
-                const loadedControl = await (this.context.utils as any).loadDependency("samples_SampleNamespace.StubLibrary");
+                const loadedControl = await this.context.utils.loadDependency?.("samples_SampleNamespace.StubLibrary");
                 if (loadedControl) {
                     this.mainContainerRef.current?.afterPageLoad();
                   } 
@@ -601,10 +600,6 @@ export class DependencyControl implements ComponentFramework.ReactControl<IInput
         };
     }
 
-    /**
-     * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-     * i.e. cancelling any pending remote calls, removing listeners, etc.
-     */
     public destroy(): void {
         // Add code to cleanup control if necessary
     }
