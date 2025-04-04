@@ -42,7 +42,6 @@ The first step is to create a new component using the [pac pcf init command](/po
 
    ```cmd
    pac pcf init -n StubLibrary -ns SampleNamespace -t field -npm
-
    ```
 
 ### Define the library
@@ -100,20 +99,17 @@ In your new control folder, add a new folder to contain your libraries `libs` fo
 
    ```javascript
    // UMD module pattern
-
    var myLib = (function (exports) {
-      'use strict';
-   
-      function sayHello() {
-         return "Hello from myLib";
-      }
-   
-      exports.sayHello = sayHello;
-   
-      return exports;
-   
-   }(/** @type {import('myLib')}  */({})));
+   "use strict";
 
+   function sayHello() {
+      return "Hello from myLib";
+   }
+
+   exports.sayHello = sayHello;
+
+   return exports;
+   })(/** @type {import('myLib')}  */ ({}));
    ```
 
 ### Add Configuration data
@@ -126,7 +122,6 @@ In your new control folder, add a new folder to contain your libraries `libs` fo
      "pcfAllowCustomWebpack": "on",
      "pcfAllowLibraryResources": "on"
    }
-   
    ```
 
    [Learn more about the featureconfig.json file](dependent-libraries.md#featureconfigjson)
@@ -142,7 +137,6 @@ In your new control folder, add a new folder to contain your libraries `libs` fo
        "myLib": "myLib"
      },
    }
-     
    ```
 
    [Learn more about the webpack.config.js file](dependent-libraries.md#webpackconfigjs)
@@ -207,7 +201,6 @@ implements ComponentFramework.StandardControl<IInputs, IOutputs>
     // Add code to cleanup control if necessary
   }
 }
-
 ```
 
 #### [After](#tab/after)
@@ -296,36 +289,36 @@ Now that you have a library control, you need a control to depend on it.
    </RootComponents>
    ```
 
-   #### [Before](#tab/before)
-   
-   ```xml
-   <resources>
-       <code path="index.ts"
-           order="1" />
-       <platform-library name="React"
-           version="16.14.0" />
-       <platform-library name="Fluent"
-           version="9.46.2" />
-   </resources> 
-   ```
-   
-   #### [After](#tab/after)
-   
-   ```xml
-   <resources>
-       <dependency type="control"
-           name="samples_SampleNamespace.StubLibrary"
-           order="1" />
-       <code path="index.ts"
-           order="2" />
-       <platform-library name="React"
-           version="16.14.0" />
-       <platform-library name="Fluent"
-           version="9.46.2" />    
-   </resources> 
-   ```
-   
-   ---
+#### [Before](#tab/before)
+
+```xml
+<resources>
+      <code path="index.ts"
+         order="1" />
+      <platform-library name="React"
+         version="16.14.0" />
+      <platform-library name="Fluent"
+         version="9.46.2" />
+</resources> 
+```
+
+#### [After](#tab/after)
+
+```xml
+<resources>
+      <dependency type="control"
+         name="samples_SampleNamespace.StubLibrary"
+         order="1" />
+      <code path="index.ts"
+         order="2" />
+      <platform-library name="React"
+         version="16.14.0" />
+      <platform-library name="Fluent"
+         version="9.46.2" />    
+</resources> 
+```
+
+---
 
 ### Add Global.d.ts
 
