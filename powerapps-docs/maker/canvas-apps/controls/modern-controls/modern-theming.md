@@ -62,9 +62,9 @@ There are several out-of-the-box themes available to style your app. You can als
    | Vibrancy | Impacts the muteness or brightness of the palette. Vibrancy isn't applicable if you choose **Lock primary color**. |
    | Palette overrides | Override the color used for one or more slots in the palette by selecting a slot and choosing a new color. You can select **Reset** to return to the generated value for that slot.  |
    
-  You can also look at a static preview of your new theme. Interact with the sample controls to see how your theme is applied to the rest state and various interaction states.
+   You can also look at a static preview of your new theme. Interact with the sample controls to see how your theme is applied to the rest state and various interaction states.
   
-  :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. "::: 
+   :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. "::: 
 
 1. Select **Create**. Your new theme is created and applied to your app.
 
