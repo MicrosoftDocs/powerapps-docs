@@ -119,6 +119,8 @@ As an example, this XML extends the green custom theme with a black app header. 
 </CustomTheme>
 ```
 
+:::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extened with great vibes font."::: <!-- Added image to display what this theme looks like. -->
+
 > [!NOTE]
 > These settings cause any colors specified in the **Override app header color** setting to be ignored.
 
