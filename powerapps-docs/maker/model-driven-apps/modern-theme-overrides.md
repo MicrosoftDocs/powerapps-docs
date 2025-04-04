@@ -28,6 +28,9 @@ Users of model-driven apps with the [modern, refreshed look for model-driven app
 
 With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can create a custom theme that helps align to their organizational branding. To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
 
+> [!WARNING]
+> The majority of the UI will reflect the custom theme; however, there are still pockets in the product that have no uptaken modern theming.  
+
 ### Overview of the custom theme XML resource 
 
 The first step to creating a custom modern theme is to create an XML file with your desired theme parameters, with one or more of the following attributes defined inside a `CustomTheme` tag.
