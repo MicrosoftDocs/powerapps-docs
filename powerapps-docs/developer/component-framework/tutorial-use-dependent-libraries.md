@@ -3,7 +3,7 @@ title: "Tutorial: Use dependent libraries in a component"
 description: "In this tutorial, learn how to use dependent libraries with a model-driven app."
 author: anuitz
 ms.author: anuitz
-ms.date: 03/24/2025
+ms.date: 04/04/2025
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -48,14 +48,15 @@ The first step is to create a new component using the [pac pcf init command](/po
 ### Define the library
 
 1. You need a new declaration file (d.ts) to describe the objects and functions contained in your library. Create a new file in the root folder of your project named `myLib.d.ts`:
+
    ```typescript
    declare module 'myLib' {
      export function sayHello(): string;
    }
-
    ```
    
 1. We are going to expose our library as an UMD module, and we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
+
    ```typescript
    /* eslint-disable no-var */
    declare global {
@@ -63,10 +64,10 @@ The first step is to create a new component using the [pac pcf init command](/po
    }
 
    export { };
-   
    ```
 
 1. Update tsconfig.json to allow UMD modules and javascript code as follows:
+
    #### [Before](#tab/before)
    
    ```json
@@ -76,7 +77,6 @@ The first step is to create a new component using the [pac pcf init command](/po
            "typeRoots": ["node_modules/@types"]
        }
    }
-   
    ```
    
    #### [After](#tab/after)
@@ -91,13 +91,12 @@ The first step is to create a new component using the [pac pcf init command](/po
            "outDir": "dist"
        },
    }
-   
    ```
-   
    ---
-   
 
-1. In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
+### Add the library
+
+In your new control folder, add a new folder to contain your libraries `libs` for this example create a new JavaScript file. This example uses a library named `myLib-v_0_0_1.js` that has a single `sayHello` function.
 
    ```javascript
    // UMD module pattern
@@ -116,7 +115,9 @@ The first step is to create a new component using the [pac pcf init command](/po
    }(/** @type {import('myLib')}  */({})));
 
    ```
-   
+
+### Add Configuration data
+
 1. Add a file named `featureconfig.json` in the root folder of the project.
 1. Add the following text to the `featureconfig.json` file:
 
@@ -326,21 +327,24 @@ Now that you have a library control, you need a control to depend on it.
    
    ---
 
-1. Since the StubLibrary is exposed as an UMD module, we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
-   ```typescript
-   /* eslint-disable no-var */
+### Add Global.d.ts
 
-   interface MyLib {
-       sayHello(): string;
-   }
-   
-   declare global {
-       var myLib: MyLib;
-   }
-   
-   export { };
-   
-   ```
+Since the StubLibrary is exposed as an UMD module, we need to put the variable in the global scope. For this we need a new declaration file (d.ts). Create a new file in the root folder of your project named `global.d.ts`:
+
+```typescript
+/* eslint-disable no-var */
+
+interface MyLib {
+      sayHello(): string;
+}
+
+declare global {
+      var myLib: MyLib;
+}
+
+export { };
+
+```
 
 ### Use the library function
 
