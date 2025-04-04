@@ -5027,7 +5027,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/samples/assign-record-to-new-owner.md",
-      "redirect_url": "../../../data-platform/org-service/samples/assign-record-to-new-owner",
+      "redirect_url": "./assign-record-to-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-record-to-new-owner.md",
+      "redirect_url": "assign-record-to-team",
       "redirect_document_id": false
     },
     {
