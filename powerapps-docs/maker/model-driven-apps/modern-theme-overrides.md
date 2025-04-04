@@ -17,7 +17,7 @@ contributors:
 ---
 
 # Use modern themes in model-driven apps
-
+<!-- Hasn't this entire feature been updated so that the whole article should be marked as preview? (Not just the following section.) -->
 Users of model-driven apps with the modern, refreshed look for model-driven apps enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](#see-also) isn't honored; however, makers can modify the colors used by the app to help align with their organizational branding for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
@@ -128,11 +128,12 @@ As an example, this XML extends the green custom theme with a black app header. 
 1. Sign into [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** on the left navigation pane, and then create a **New solution**.
 1. Select **New** > **More** > **Web resource**.
-1. In the New web resource property pane, enter the following values:
+1. Select **Choose file**, browse to and select the XML text file you created earlier.
+1. In the **New web resource** property pane, enter the following values:
    - **Display name**: Enter a display name, such as *Green custom theme*.
-   - **Name**. Enter the unique name for the web resource. 
+   - **Name**. Accept the automatically generated or enter a unique name for the web resource. 
    - Type: **Data (XML)**
-1. Select **Choose file**, browse to, and then select the XML file you created earlier with the theme.
+
 1. Select **Save**. You publish this customization with the steps in the next section.
 
 ### Apply the custom theme to apps in your environment
@@ -140,12 +141,12 @@ As an example, this XML extends the green custom theme with a black app header. 
 After you select your colors and create the web resource, follow these steps to enable this app header styling for all the apps in your environment that have the **New look** enabled.
 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
-1. Type *Override* in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
+1. Type *custom theme* <!-- I believe we need to change override to custom theme--> in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
 1. In the solution, select **Custom theme definition**, and then select **Edit** on the command bar.
-1. On the right **Edit Custom theme definition** properties pane, select **Setting environment value** and enter the unique name of your web resource you created earlier. Make sure to add the publisher prefix for the web resource and don't include quotes. For example, the name might appear as *contoso_green-custom-theme* as in this example.
+1. On the right **Edit Custom theme definition** properties pane, select **New environment value** under **Setting environment value** and enter the unique name of your web resource you created earlier (observe the **Name** column in the solution for the unique name). Remove the double quotes and make sure to add the publisher prefix for the web resource. For example, the name might appear as *contoso_green-custom-theme* as in this example.
    :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_green-custom-theme." lightbox="media/environment-setting-theme.png":::
 1. Select **Save**.
-1. Select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
+1. Select **Settings** on the left **Objects** pane, and then select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
 With the [example colors](#example-xml-for-a-modern-theme), the app header should look like this when you play the app (you might need to refresh the browser tab).  
 :::image type="content" source="media/greenappheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
