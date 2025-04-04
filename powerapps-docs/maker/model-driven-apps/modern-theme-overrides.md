@@ -35,7 +35,7 @@ With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The majority of the UI reflects the custom theme; however, there are still areas in the app that don't use modern theming. <!--I've revised this sentence as it was nebulous to me the way it was originally written. Also, can you provide 2-3 examples where modern theming isn't applied in an app? -->
+> - The majority of the UI reflects the custom theme; however, there are still areas in the app that don't use modern theming, such as the Timeline control, lookup dropdowns, legacy grids, and audit history.
 
 ### Overview of the custom theme XML resource
 
@@ -53,9 +53,9 @@ The first step to creating a custom modern theme is to create an XML file with y
 
 Overriding individual slots in the theme palette provides the creator with full control over the slot colors, which is particularly useful when additional modifications are required beyond the standard theme parameters mentioned above. To override a specific slot, assign a value to the desired slot by its name. For instance, you can specify the HEX code for `darker70`, `primary`, or `lighter10` to tailor the appearance precisely to your preference. Setting values for all 16 slots completely overrides all the palette options described in the previous section, allowing for a highly customized and unique color scheme.
 
-The slot names for the palette from darkest to lightest are: `darker70`, `darker60`, `…` `<>`, `darker10`, `primary`, `lighter10`, `lighter20`, `…`, `lighter80`. Refer to the Fluent theme designer to <!-- Need to complete this sentence.-->
+The slot names for the palette from darkest to lightest are: `darker70`, `darker60`, `…` `<>`, `darker10`, `primary`, `lighter10`, `lighter20`, `…`, `lighter80`. Refer to the [Fluent theme](https://react.fluentui.dev/?path=/docs/theme-theme-designer--docs) designer to find out how these slots are generally used in Fluent controls.
 
-<image of names with color slots> <!--What's this for? Can we remove it or add an image to further explain? -->
+:::image type="content" source="../canvas-apps/controls/modern-controls/media/modern-themes-color-ramp.png" alt-text="Modern theme color slots.":::
 
 #### Example XML for a custom theme
 
@@ -120,7 +120,7 @@ As an example, this XML extends the green custom theme with a black app header. 
 ```
 
 Custom model-driven app using the extended green theme.
-:::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extened with great vibes font."::: <!-- Added image to display what this theme looks like. -->
+:::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extened with great vibes font.":::
 
 > [!NOTE]
 > These settings cause any colors specified in the **Override app header color** setting to be ignored.
@@ -144,7 +144,7 @@ Custom model-driven app using the extended green theme.
 After you select your colors and create the web resource, follow these steps to enable this app header styling for all the apps in your environment that have the **New look** enabled.
 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
-1. Type *custom theme* <!-- I believe we need to change override to custom theme. Please confirm.--> in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
+1. Type *custom theme* in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
 1. In the solution, select **Custom theme definition**, and then select **Edit** on the command bar.
 1. On the right **Edit Custom theme definition** properties pane, select **New environment value** under **Setting environment value** and enter the unique name of your web resource you created earlier (observe the **Name** column in the solution for the unique name). Remove the double quotes and make sure to add the publisher prefix for the web resource. For example, the name might appear as *contoso_green-custom-theme* as in this example.
    :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_green-custom-theme." lightbox="media/environment-setting-theme.png":::
