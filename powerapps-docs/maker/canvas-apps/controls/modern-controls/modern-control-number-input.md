@@ -5,32 +5,30 @@ author: noazarur-microsoft
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/15/2024
+ms.date: 1/15/2025
 ms.subservice: canvas-maker
 ms.author: noazarur
-
 
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - noazarur-microsoft
   
 ---
-# Number Input modern control in Power Apps (preview)
+# Number Input modern control in Power Apps
 
-[This article is pre-release document and is subject to change.]
-
-A number input control the user can modify. 
+A number input control that users can modify. 
 
 ## Description
 
-Makers can add a number input control that can be used to type in or use the arrows to select a number value. They can also configure decimal precision and step values for this control. This control also provides number type as a default output to build numeric scenarios in Power Apps. A key property for this control is Value.
+Makers can add a number input control to type in or use the arrows to select a number value. They can configure decimal precision and step values for this control. This control provides number type as a default output to build numeric scenarios in Power Apps. A key property for this control is Value.
  
 ## General
 
-**Value** – The initial value of a control before it's changed by the user. 
+**Value** – The initial value of a control before users change it. 
 
 **Min** - The minimum number the user can input. 
 
@@ -40,13 +38,13 @@ Makers can add a number input control that can be used to type in or use the arr
 
 **Step** – What value is added or subtracted from the prior number when the up or down arrows are selected. 
 
-**AccessibleLabel** – Label for screen readers. 
+**AccessibleLabel** – A label for screen readers. 
 
-**Visible** - Whether a control appears or is hidden. 
+**Visible** - Indicates whether a control appears or is hidden. 
 
 ## Behavior
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
+**DisplayMode** – Indicates whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
 
 ## Size and position 
 
@@ -64,13 +62,12 @@ Makers can add a number input control that can be used to type in or use the arr
 
 **FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
 
-**Align** - The location of text in relation to the horizontal center of its control. The options are updated to **Start**, **End**, **Center, and **Justify** to better accommodate left to right languages. 
+**Align** - The location of text in relation to the horizontal center of its control. The options are **Start**, **End**, **Center**, and **Justify** to better accommodate left-to-right languages. 
 
 ## Additional properties
 
-**DelayOutput** - When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text such as when filtering when input is used in other formulas. 
+**DelayOutput** - When set to true, user input is registered after a half-second delay. This is useful for delaying expensive operations until the user completes inputting text, such as when filtering input used in other formulas. 
 
-**OnChange** – Actions to perform when the user changes the value of a control. 
+**OnChange** – Actions performed when the user changes the value of a control. 
 
-**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the date picker border is highlighted in red.  
-
+**ValidationState** - The control has two states: **Error** and **None**. When the error state is selected, the date picker border is highlighted in red.  

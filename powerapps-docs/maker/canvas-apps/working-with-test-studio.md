@@ -21,7 +21,7 @@ contributors:
 In this quickstart, you'll create tests for a canvas app called Kudos. You can also explore and discover testing concepts and apply them to writing tests for your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available to download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/en-us/blog/powerapps-employee-experience-starter-kit).
 
 Watch this video to learn how to work with Test Studio:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvMa]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=3fe85f46-745a-411c-aba8-6044cb184e78]
 
 ## Open Test Studio
 

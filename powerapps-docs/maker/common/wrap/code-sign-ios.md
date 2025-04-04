@@ -1,6 +1,6 @@
 ---
-title: Code sign for iOS
-description: Learn about how to code sign for iOS for Power Apps wrap.
+title: Manual code sign for iOS
+description: Learn how to manually code sign for iOS for Power Apps wrap.
 author: komala2019
 ms.topic: article
 ms.custom: canvas
@@ -14,9 +14,9 @@ contributors:
   - mduelae
 ---
 
-# Code sign for iOS
+# Manual code sign for iOS
 
-In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
+In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-custom-branded-native-power-apps-for-ios-and-android-using-the-wrap-wizard).
 
  > [!Important]
  > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
@@ -201,4 +201,7 @@ To create a distribution certificate, create a new certificate signing request f
 ### See also
 
 - [Wrap overview](overview.md)
-- [Code sign on Android](code-sign-android.md)
+- [Manual code sign on Android](code-sign-android.md)  
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+

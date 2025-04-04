@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/13/2024
+ms.date: 03/13/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -46,6 +46,22 @@ For more information on how to configure quick actions, see [Configure Dataverse
 Suggestions are quick results based on a search performed on the primary column of a table. This is enabled for Dataverse search in model-driven apps. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results.
+
+## Why are certain fields not showing in the suggestions?
+
+Retrieve suggestions for a field if it's searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
+
+Certain fields aren't eligible for suggestions, including:
+
+- File fields
+- Fields exceeding 4,000 characters
+
+The following tables and attributes have custom analyzers set by default, making them ineligible for inline suggestions:
+
+- Contact: firstname, lastname
+- Lead: firstname, lastname, companyname
+- All fields formatted as phone numbers
+
 
 ## Can I configure the order of tables appearing in search results page?
 
@@ -109,12 +125,17 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - State
 - Status
 
+## Why can't I see search results for virtual tables?
+
+Search functionality isn't supported for virtual tables because they don't persist data. More information: [Virtual Table limitations](../developer/data-platform/virtual-entities/get-started-ve.md)
+
+## Can I export search results?
+
+Currently, we don't have an export function for global search results. Alternatively, you can programmatically access the results using the search API.
+
 ## How can I use the search API?
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
-
-## Does Dataverse search support US Government clouds?
-Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It's available in US Government Community Cloud (GCC) and US GCC High. It's not available in US Department of Defense (DoD).
 
 ### See also
 

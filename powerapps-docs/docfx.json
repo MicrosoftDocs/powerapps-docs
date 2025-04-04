@@ -81,7 +81,8 @@
         ]
       },
       "ms.topic": {
-        "developer/**/*.md": "overview"
+        "developer/**/*.md": "overview",
+        "developer/data-platform/webapi/samples/*.md": "sample"
       },
       "ms.service": {
         "**.*": "powerapps"
@@ -125,6 +126,9 @@
           "PowerApps",
           "powerpages-docs"
         ]
+      },
+      "ms.date": {
+        "developer/data-platform/reference/entities/*.md": "01/21/2025"
       }
     },
     "template": [],
