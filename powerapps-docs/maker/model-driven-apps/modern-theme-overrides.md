@@ -141,7 +141,7 @@ As an example, this XML extends the green custom theme with a black app header. 
 After you select your colors and create the web resource, follow these steps to enable this app header styling for all the apps in your environment that have the **New look** enabled.
 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
-1. Type *custom theme* <!-- I believe we need to change override to custom theme--> in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
+1. Type *custom theme* <!-- I believe we need to change override to custom theme. Please confirm.--> in the **Search** box, select **Custom theme definition**, select **Next**, and then select **Add**.
 1. In the solution, select **Custom theme definition**, and then select **Edit** on the command bar.
 1. On the right **Edit Custom theme definition** properties pane, select **New environment value** under **Setting environment value** and enter the unique name of your web resource you created earlier (observe the **Name** column in the solution for the unique name). Remove the double quotes and make sure to add the publisher prefix for the web resource. For example, the name might appear as *contoso_green-custom-theme* as in this example.
    :::image type="content" source="media/environment-setting-theme.png" alt-text="Environment setting for a theme with web resource unique name contoso_green-custom-theme." lightbox="media/environment-setting-theme.png":::
