@@ -119,6 +119,7 @@ As an example, this XML extends the green custom theme with a black app header. 
 </CustomTheme>
 ```
 
+Custom model-driven app using the extended green theme.
 :::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extened with great vibes font."::: <!-- Added image to display what this theme looks like. -->
 
 > [!NOTE]
