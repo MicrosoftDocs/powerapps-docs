@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 12/16/2024
+ms.date: 02/24/2025
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -141,7 +141,37 @@ Follow these steps to create an app user and bind it to your app registration.
 
 To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart) Web API sample.
 
-The sample code contains example public and confidential client connection strings for use with the `ServiceClient` class.
+Here is the confidential client code from the SDK samples. The client ID and secret are obtained from the Entra ID app registration once completed.
+
+```csharp
+class Program
+{
+    // TODO Enter your Dataverse environment's URL, ClientId, and Secret.
+    static string url = "https://<myorg>.crm.dynamics.com";
+
+    static string connectionString = $@"
+    AuthType = ClientSecret;
+    Url = {url};
+    ClientId = 66667777-aaaa-8888-bbbb-9999cccc0000;
+    Secret = aaaaaaaa-6b6b-7c7c-8d8d-999999999999";
+
+    static void Main()
+    {
+        // ServiceClient class implements IOrganizationService interface
+        IOrganizationService service = new ServiceClient(connectionString);
+
+        var response = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
+
+        Console.WriteLine($"Application ID is {response.UserId}.");
+
+        // Pause the console so it does not close.
+        Console.WriteLine("Press the <Enter> key to exit.");
+        Console.ReadLine();
+    }
+}
+```
+
+For the complete code sample, refer to the links mentioned previously.
 
 ### See also
 

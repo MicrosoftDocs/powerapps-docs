@@ -7,7 +7,7 @@ metadata:
   title: Dataverse documentation
   description: Provides access to highlighted areas within the Dataverse documentation
   services: service
-  ms.subservice: subservice
+  ms.subservice: dataverse-maker
   ms.topic: landing-page 
   ms.collection: collection
   author: Mattp123
@@ -95,7 +95,7 @@ landingContent:
         links:
           - text: Azure Synapse Link for Dataverse
             url: export-to-data-lake.md
-          - text: Fabric link for Dataverse
+          - text: Link to Microsoft Fabric
             url: azure-synapse-link-view-in-fabric.md
           - text: Quick view and Power BI integration
             url: use-powerbi-dataverse.md

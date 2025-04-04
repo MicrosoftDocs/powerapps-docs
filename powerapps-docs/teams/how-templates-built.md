@@ -29,7 +29,7 @@ In this article, we'll review the process that we used to build these apps, and 
 > This article highlights some of the approaches taken when designing the Teams template apps. For additional resources on bet practices for building Power Apps, please refer to [Power Apps guidance documentation](/powerapps/guidance/planning/introduction) section of the Power Apps docs.
 
 Watch this video to learn how the Power Apps templates for Microsoft Teams were made:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DQ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a16dd643-8d23-4c54-a619-a4fe0d38c07d]
 
 ## Define
 

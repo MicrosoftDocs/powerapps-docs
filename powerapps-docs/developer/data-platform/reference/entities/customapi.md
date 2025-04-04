@@ -1,16 +1,14 @@
 ---
 title: "Custom API (CustomAPI) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Custom API (CustomAPI) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Custom API (CustomAPI) table/entity reference
+# Custom API (CustomAPI) table/entity reference (Microsoft Dataverse)
 
 Entity that defines a custom API
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /customapis(*customapiid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /customapis<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /customapis(*customapiid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -957,13 +957,13 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [customapi_MailboxTrackingFolders](#BKMK_customapi_MailboxTrackingFolders)
+- [customapi_msdyn_function_customapi](#BKMK_customapi_msdyn_function_customapi)
 - [customapi_plugin_CustomAPI](#BKMK_customapi_plugin_CustomAPI)
 - [customapi_PrincipalObjectAttributeAccesses](#BKMK_customapi_PrincipalObjectAttributeAccesses)
 - [customapi_ProcessSession](#BKMK_customapi_ProcessSession)
 - [customapi_serviceplanmapping](#BKMK_customapi_serviceplanmapping)
 - [customapi_SyncErrors](#BKMK_customapi_SyncErrors)
 - [fabricaiskill_customapiid](#BKMK_fabricaiskill_customapiid)
-- [msdyn_apirequestcache_CustomAPI_customapi](#BKMK_msdyn_apirequestcache_CustomAPI_customapi)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 - [msdyn_formmapping_customapiid](#BKMK_msdyn_formmapping_customapiid)
 - [msdyn_knowledgeassetconfiguration_customapiid](#BKMK_msdyn_knowledgeassetconfiguration_customapiid)
@@ -1052,6 +1052,18 @@ Many-To-One Relationship: [mailboxtrackingfolder customapi_MailboxTrackingFolder
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_customapi_msdyn_function_customapi"></a> customapi_msdyn_function_customapi
+
+Many-To-One Relationship: [msdyn_function customapi_msdyn_function_customapi](msdyn_function.md#BKMK_customapi_msdyn_function_customapi)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_function`|
+|ReferencingAttribute|`customapi`|
+|ReferencedEntityNavigationPropertyName|`customapi_msdyn_function_customapi`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_customapi_plugin_CustomAPI"></a> customapi_plugin_CustomAPI
 
 Many-To-One Relationship: [plugin customapi_plugin_CustomAPI](plugin.md#BKMK_customapi_plugin_CustomAPI)
@@ -1124,18 +1136,6 @@ Many-To-One Relationship: [fabricaiskill fabricaiskill_customapiid](fabricaiskil
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_msdyn_apirequestcache_CustomAPI_customapi"></a> msdyn_apirequestcache_CustomAPI_customapi
-
-Many-To-One Relationship: [msdyn_apirequestcache msdyn_apirequestcache_CustomAPI_customapi](msdyn_apirequestcache.md#BKMK_msdyn_apirequestcache_CustomAPI_customapi)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_apirequestcache`|
-|ReferencingAttribute|`msdyn_customapi`|
-|ReferencedEntityNavigationPropertyName|`msdyn_apirequestcache_CustomAPI_customapi`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
 ### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId
 
 Many-To-One Relationship: [msdyn_pmbusinessruleautomationconfig msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
@@ -1176,6 +1176,6 @@ Many-To-One Relationship: [msdyn_knowledgeassetconfiguration msdyn_knowledgeasse
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.customapi?displayProperty=fullName>
