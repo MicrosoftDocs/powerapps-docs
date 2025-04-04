@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 12/19/2024
+ms.date: 01/21/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -20,8 +20,8 @@ To create and edit tables in Dataverse, you need the following:
 
 - A Power Platform environment with Dataverse.
 - Appropriate permission with either of the following privileges: 
-  - The system customizer security role or equivalent privileges in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database).
-  - The environment maker security role with a custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the environment maker to create and edit tables in Dataverse, however a Power Platform admin must grant them data access to these tables. 
+  - The system customizer security role in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database).
+  - The environment maker security role with a custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the environment maker to create and edit tables in Dataverse, however a Power Platform admin must grant them data access to these tables.
 
 ## View tables
 
@@ -53,9 +53,6 @@ There are several ways to create a new table:
 Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
-
-> [!NOTE]
-> The table visual designer currently only supports creating and editing tables. You can add existing tables to the designer, but existing tables will be in read-only mode and can only be edited in a new tab.
 
 1. Command bar:
 
@@ -114,8 +111,6 @@ The following data types aren't currently supported when you create a column in 
 - Customer
 - Autonumber
 - Formula
-
-Editing existing tables isn’t currently supported in the table visual designer. To edit an existing table, select it, and then select **View data** > **Edit** on the new tab. This opens the selected table in the traditional table designer, allowing you to edit the table.
 
 Some relationship configurations are currently not supported.
 

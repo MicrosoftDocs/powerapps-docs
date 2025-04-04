@@ -1,12 +1,12 @@
 ---
 title: Sharing a model-driven app - assigning security roles and privileges
-description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data.
+description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data with Power Apps.
 author: Mattp123
 editor: ''
 tags: ''
 ms.topic: how-to
 ms.component: model
-ms.date: 06/28/2024
+ms.date: 02/25/2025
 ms.subservice: mda-maker
 ms.author: matp
 search.audienceType:
@@ -69,15 +69,10 @@ Unlike sharing canvas apps, sharing model-driven apps doesn't currently send an 
 
 To get the direct link to an app:
 
-1. Go to [Power Apps](https://make.powerapps.com).
-1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Open the solution that contains the model-driven app.
-1. Select the model-driven app, and then select **Edit** on the command bar.
-1. In the classic designer, select the **Properties** tab, and then copy the **Unified Interface URL.**
-
-    !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
-
-1. Paste the app URL in a location so that your users can access it, such as by posting it on a Teams channel, SharePoint site, or sending via email.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** on the left navigation pane.
+1. Select the model-driven app you want, and then select **Details** on the command bar.
+1. Copy the **Web link**. Alternatively, you can make a copy of the **Mobile QR code** for mobile users.
+1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
 ## App sharing privilege and licensing requirements
 
@@ -87,6 +82,9 @@ There are a few key environment and licensing prerequisites required when sharin
 - The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
 - The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
 - Users must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. Users can [request a license themselves](../../user/request-license.md), or a [maker can request licenses for their app users](../common/request-licenses-for-users.md). Also, the license must be assigned in either the users home tenant or the tenant hosting the app. 
+
+ > [!NOTE]
+ > Users who have the Environment Maker security role assigned don't require licenses to use model-driven apps.
 
 ## About predefined security roles
 

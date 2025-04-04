@@ -5,28 +5,26 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 1/15/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
-
 
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Text modern control in Power Apps (preview)
+# Text modern control in Power Apps
 
-[This article is pre-release document and is subject to change.]
-
-Display text on the app. This can also be used as a label for fields.
+Display text on the app. This control can also be used as a label for fields.
 
 ## Description
-Use this versatile **Text** control to display text, messages, information on the app. The key properties for this control are **Text**, **Size**, and **FontColor**.
+Use this versatile **Text** control to display text, messages, and information on the app. The key properties for this control are **Text**, **Size**, and **FontColor**.
 
 ## General
 
@@ -36,7 +34,7 @@ Use this versatile **Text** control to display text, messages, information on th
 
 ## Behavior
 
-**Wrap** - wraps the text in the object.
+**Wrap** - Wraps the text in the object.
 
 ## Size and position
 
@@ -44,7 +42,7 @@ Use this versatile **Text** control to display text, messages, information on th
 
 **VerticalAlign** - The location of text on a control in relation to the vertical center of that control. 
 
-**AutoHeight** - Whether a label automatically increases its Height property if its Text property contains more characters than the control can show at one time. 
+**AutoHeight** - Whether a label automatically increases its height if its text contains more characters than the control can show at one time. 
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
@@ -60,7 +58,7 @@ Use this versatile **Text** control to display text, messages, information on th
 
 **Size** – The font size of the text that appears on a control. 
 
-**FontColor** - The color of text in a control. 
+**FontColor** - The color of the text in a control. 
 
 **Weight** - The weight of the text in a control: **Bold**, **Semibold**, **Regular**, or **Medium**. 
 
@@ -68,10 +66,9 @@ Use this versatile **Text** control to display text, messages, information on th
 
 **FontUnderline** - Whether a line appears under the text that appears on a control. 
 
-**FontStrikethrough** - Whether a line appears through the text that appears on a control. 
+**FontStrikethrough** - Whether a line appears through the text on a control. 
 
 ## Additional properties
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
-
+**DisplayMode** – Whether the control allows user input (Edit), displays data (View), or is disabled (Disabled).
 

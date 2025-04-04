@@ -5,40 +5,40 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 4/4/2023
+ms.date: 1/16/2024
 ms.subservice: canvas-maker
 ms.author: yogupt
-
 
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Date picker control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
-
+# Date picker control in Power Apps
 A control that the user can select to specify a date.
 
 ## Description
-If you add a Date Picker control instead of a Text input control, you help ensure that the user specifies a date in the correct format. The key properties for this control are **Format**, **ValidationState**, and **OnChange**.
+Adding a Date Picker control instead of a Text input control ensures the user specifies a date in the correct format. The key properties for this control are **Format**, **ValidationState**, and **OnChange**.
 
 ## General
 
 **PlaceHolder** - Instructional text that appears if no dates are entered. 
 
-**Format** – The text format in which the control shows the date the user specified. The format of the date can be short, LongAbbreviated, or YearMonth. For example: 
+**Format** – The text format in which the control shows the date the user specified. The date format can be short, LongAbbreviated, YearMonth, or Custom. For example: 
 
--  Short - 2/1/2024 
+- Short - 2/1/2024 
 
--  LongAbbreviated - Thurs, Feb 1, 2024 
+- LongAbbreviated - Thurs, Feb 1, 2024 
 
--  YearMonth - February 2024 
+- YearMonth - February 2024
+
+- Custom - Users are able to specify a valid date format using a string such as: "MM/YY", "dd/mm/yyyy"
+
 
 **AccessibleLabel** – Label for screen readers.
 
@@ -46,25 +46,25 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 ## Behavior 
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), displays data (View), or is disabled (Disabled).
 
 ## Size and position
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of its parent container (screen if no parent container).
 
-**Width** - The distance between a control's left and right edges. 
+**Width** - The distance between the control's left and right edges. 
 
-**Height** - The distance between a control's top and bottom edges. 
+**Height** - The distance between the control's top and bottom edges. 
 
 ## Style and theme
 
-**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+**BasePaletteColor** - The color palette applied to a control impacts all surfaces of the control that render a theme color.  
 
-**Font** - The name of the family of fonts in which text appears. 
+**Font** - The name of the font family in which text appears. 
 
-**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme. 
+**FontSize** - The font size of the text that appears on a control. If the value is null or zero, the font size is driven by the selected Fluent theme. 
 
 **FontColor** - The color of text in a control. 
 
@@ -93,6 +93,4 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 **StartOfWeek** - The day of the week to display in the first day column of the date-picker control. 
 
 **ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the date picker border is highlighted in red. 
-
-
 

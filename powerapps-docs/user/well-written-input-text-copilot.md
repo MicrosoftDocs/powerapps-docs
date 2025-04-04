@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preview)
 description: Learn how to use Copilot to quickly generate well-written text that can be used in text boxes in apps made with Power Apps.
-ms.date: 11/26/2024
+ms.date: 01/15/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -25,12 +25,10 @@ You can use Copilot to quickly generate well-written text to use as input text i
 When trying to quickly input text into multiline text boxes or rich text editors in a canvas app, you might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, you can quickly write a prompt to generate content or jot down some ideas and have Copilot refine the grammar and flow. You can also change the tone and length of the output to fit the scenario.
 
 > [!IMPORTANT]
-
 > - To use this feature, your environment must be in a region with GPU (graphics processing unit) capacity, or your tenant must have the **Move data across regions** checkbox selected. Learn more: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
-> - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
@@ -64,14 +62,17 @@ When trying to quickly input text into multiline text boxes or rich text editors
 You can turn off text assistance for an app or an environment using a PowerShell cmdlet.
 
 > [!NOTE]
-
 > - When using PowerShell cmdlets, you must use Power Apps admin PowerShell module version 2.0.179 or later. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 > - If an admin has turned off this feature at the environment-level, this feature isn't available for any apps in that environment.
 > - The PowerShell cmdlets might take up to two hours to take effect.
 
 ### Turn off text assistance for an app
+You can turn off this setting for an app through the maker portal.
+1. In the app list, select the three dots to the right of the app that you want to change the setting for.
+2. Select **Settings**.
+3. Turn off the switch titled **Text assistance in the web player (preview)**.
 
-You can use a PowerShell cmdlet to turn off this setting for an app.
+You can also use a PowerShell cmdlet to turn off this setting for an app.
 
 To turn off for an app using PowerShell:
 

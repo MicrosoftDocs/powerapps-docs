@@ -1,7 +1,7 @@
 ---
 title: Filter, sort, and search galleries with Copilot (preview)
 description: Learn how to use Copilot to quickly filter, sort, and search canvas app galleries by using natural language.
-ms.date: 11/22/2024
+ms.date: 01/15/2025
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -39,7 +39,7 @@ This feature provides five main benefits:
 - **Copilot keeps private data private.** Copilot works only with the data that is normally returned to the application. It doesn't access fields that aren't returned to the app in a gallery/grid or form.
 
 > [!IMPORTANT]
-> - This feature isn't yet available, but rollout is expected to begin in late June. When the feature is released, it will be turned on by default. However, you can turn the feature off before the release. In this case, it should remain turned off when it's rolled out to you.
+> - This feature isn't yet available, but rollout is expected to begin in late June. When the feature is released, it will be turned on by default. However, you can turn off the feature before the release. In this case, it should remain turned off when it's rolled out to you.
 > - To use this feature, your environment must be in a region that has graphics processing unit (GPU) capacity, or the **Move data across regions** checkbox must be selected for your tenant. To learn more, go to [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -68,15 +68,20 @@ This feature provides five main benefits:
 
 ## Turn off gallery filtering in the web player
 
-You can turn off gallery filtering for an app or environment by using a PowerShell cmdlet.
+You can turn off gallery filtering for an app or an environment.
 
 > [!NOTE]
 > - When you use PowerShell cmdlets, you must use the latest Power Apps admin PowerShell module version. To learn more, go to [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
-> - If an admin turns this feature off at the environment level, it isn't available for any apps in that environment.
+> - If an admin turns off this feature at the environment level, it isn't available for any apps in that environment.
 > - The PowerShell cmdlets might take up to two hours to take effect.
-> - This feature isn't yet available, but rollout is expected to begin in late June. When the feature is released, it will be turned on by default. However, you can turn the feature off before the release. In this case, it should remain turned off when it's rolled out to you.
+> - This feature isn't yet available, but rollout is expected to begin in late June. When the feature is released, it will be turned on by default. However, you can turn off the feature before the release. In this case, it should remain turned off when it's rolled out to you.
 
 ### Turn off gallery filtering for an app
+
+You can turn off this setting for an app through the maker portal.
+1. In the app list, select the three dots to the right of the app that you want to change the setting for.
+2. Select **Settings**.
+3. Turn off the switch titled **Filter assistance in the web player (preview)**.
 
 To turn off gallery filtering for an app, run the following PowerShell cmdlet.
 

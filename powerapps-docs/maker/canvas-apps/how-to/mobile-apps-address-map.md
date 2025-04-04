@@ -27,11 +27,11 @@ The control returns the address as structured data, allowing the application to 
 To use the control, you need to enable the [Geospatial Services](../geospatial-overview.md#enable-geospatial-features-for-the-environment) for the environment.
 
 - Watch this video to learn how to use the address input control:
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQg]
+    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=ff56e551-756f-4796-8af9-419b40b1dbfd]
 
 
 - Watch this video to learn how to use the map control:
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAkd]
+    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=c62bc98b-cf1f-4289-af11-82618c5e6d02]
 
 In this article, we'll learn how to use the address input control in canvas apps.
 

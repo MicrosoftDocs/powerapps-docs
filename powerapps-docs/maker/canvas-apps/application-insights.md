@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/12/2023
+ms.date: 02/24/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -20,8 +20,6 @@ contributors:
 
 You can connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and understand what users actually do with your apps. You can collect information to help you drive better business decisions and improve the quality of your apps.
 
-In this quickstart, we use a canvas app called Kudos to explore concepts of system-generated logs in canvas apps and apply them to your apps. The sample Kudos app is part of a suite of employee engagement apps available for download from the [Employee Experience Starter Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
-
 ## Prerequisites
 
 - You must have access to the [Azure portal](https://portal.azure.com).
@@ -31,56 +29,30 @@ In this quickstart, we use a canvas app called Kudos to explore concepts of syst
 > To view telemetry information, your tenant admin must enable **Canvas app insights**. Sign in as an admin in [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Go to **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, set the toggle to **On** and save your changes.
 > Fore more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 
-### Optional
-
-- Download and install the Kudos app from the [Employee Experience Starter Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit). You can also use an existing app instead.
-
 ## Create an Application Insights resource
 
 Before you can send system-generated logs from an app, you need to create an Application Insights resource to store the events.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Search for Application Insights:
-
-    ![Application Insights.](./media/application-insights/azureappinsights.png "Application Insights")
-
-1. Create an Application Insights resource:
-
-    ![Add an Application Insights resource.](./media/application-insights/azureappinsights-add.png "Add an Application Insights resource")
-
-1. Enter the appropriate values and select **Review + create**.
-
-    For more details, read [Create an Application Insights resource](/azure/azure-monitor/app/create-new-resource). 
-
-    ![Create a resource.](./media/application-insights/createresource.png "Create a resource")
-
-1. After the Application Insights instance is created, copy the **Instrumentation Key** in the instance overview for use in an upcoming step.
-
-    ![Copy Instrumentation Key.](./media/application-insights/instrumentation-key.png "Copy Instrumentation Key")
+[Create a workspace-based resource](/azure/azure-monitor/app/create-workspace-resource?tabs=bicep#create-a-workspace-based-resource) for Application Insights in the Azure portal.
 
 ## Connect your app to Application Insights
 
 > [!NOTE]
-> - When specifying an instrumentation key, be aware that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the instrumentation key you set for your app, even if the target App Insights instance is in a different tenant than the app.
-> - Use caution when importing existing .msapp files since instrumentation keys for App Insights may be present. Manually open the app after import to verify that the correct App Insights instrumentation key is being used.
+>
+> - When specifying a connection string, be aware that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the connection string you set for your app, even if the target App Insights instance is in a different tenant than the app.
+> - Use caution when importing existing .msapp files since connection strings for App Insights may be present. Manually open the app after import to verify that the correct App Insights connection string is being used.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation pane. From the list of apps, select the **Kudos** app, and then select **Edit**:
+1. Open an app for [editing](edit-app.md).
 
-    ![Edit Kudos app.](./media/application-insights/edit-kudos-app.png "Edit Kudos app")
+1. Select the **App** object in the left navigation tree view and paste the **Connection string** from your Application Insights resource:
 
-    > [!NOTE]
-    > You can also [create](open-and-run-a-sample-app.md) a new app or [edit](edit-app.md) any existing app instead.
-
-1. Select the **App** object in the left navigation tree view and paste the **Instrumentation Key**:
-
-    ![Add Instrumentation Key.](./media/application-insights/add-instrumentation-key.png "Add Instrumentation Key")
+    ![Add connection string.](./media/application-insights/add-connection-string.png "Add connection string")
 
 1. **Save** and **Publish** your app.
 
-1. **Play** the published app and browse the different screens. 
+1. **Play** the published app and browse the different screens.
 
 As you browse the app screens, events are automatically logged to Application Insights, including usage details such as:
 
@@ -93,18 +65,19 @@ As you browse the app screens, events are automatically logged to Application In
 
 ## View events in Application Insights
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource).
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you [created previously](#create-an-application-insights-resource).
 
-1. Scroll down in the left navigation pane and select **Users** under the **Usage** section. 
+1. Scroll down in the left navigation pane and select **Users** under the **Usage** section.
 
     > [!NOTE]
+    >
     > The **Users** view shows the app's usage details, such as:
     > - Number of users who viewed the app
     > - Number of user sessions
     > - Number of events logged
     > - Users' operating systems and browser version details
     > - Users' region and location
-    > 
+    >
     > [Learn more about users, sessions, and events analysis in Application Insights](/azure/azure-monitor/app/usage-segmentation).
 
 1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
@@ -116,7 +89,8 @@ As you browse the app screens, events are automatically logged to Application In
     ![Event details for the app.](./media/application-insights/appInsights-events.gif "Event details for the app")
 
 > [!TIP]
-> More Application Insights features are available, such as:  
+> More Application Insights features are available, such as:
+>
 > - [Funnels](/azure/azure-monitor/app/usage-funnels)
 > - [Cohorts](/azure/azure-monitor/app/usage-cohorts)
 > - [Impact analysis](/azure/azure-monitor/app/usage-impact)
@@ -438,6 +412,5 @@ Application Insights doesn't support the following scenarios.
 
 - Offline player events aren't captured.
 - Mobile app (both iOS and Android) events aren't captured when app is suspended.
-- GCC and non-public clouds aren't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
