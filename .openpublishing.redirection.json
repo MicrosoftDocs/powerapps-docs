@@ -1,6 +1,11 @@
 {
   "redirections": [
-    {
+   {
+      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   }, 
+   {
       "source_path": "powerapps-docs/developer/data-platform/quick-start-register-configure-simplespa-application-msal-js.md",
       "redirect_url": "webapi/quick-start-js-spa",
       "redirect_document_id": "false"
@@ -4107,7 +4112,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/field-security-entities.md",
-      "redirect_url": "../data-platform/field-security-entities",
+      "redirect_url": "../data-platform/column-level-security",
       "redirect_document_id": false
     },
     {
