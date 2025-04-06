@@ -423,14 +423,11 @@ This is the most common approach when you have different groups of users who req
 
 To do this using code, create [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) records that associate principals (users and teams) with [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records that controls which data operations can be performed on any that column for any record.  
 
-You can associate system users and teams and to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
-
-The field permissions are associated to the field security profiles via using the [`lk_fieldpermission_fieldsecurityprofileid` one to many relationship](/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
-
 <!-- 
 Mermaid markdown used to generate ERD after installing:
-https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
-```mermaid
+https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
+
+<!-- ```mermaid
  erDiagram
     FieldSecurityProfile {
         Guid FieldSecurityProfileId
@@ -444,6 +441,7 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
         Choice CanCreate
         Choice CanRead
         Choice CanUpdate
+        Choice CanReadUnmasked
     }
     SystemUser {
         Guid SystemUserId
@@ -455,28 +453,32 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
     FieldSecurityProfile ||--o{ FieldPermission : "lk_fieldpermission_fieldsecurityprofileid"
     FieldSecurityProfile }o--o{ SystemUser : "systemuserprofiles_association"
     FieldSecurityProfile }o--o{ Team : "teamprofiles_association" 
-``` 
--->
+```  -->
 
 :::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="entity relationship diagram for the fieldsecurityprofile table and related tables":::
 
+You can associate system users and teams and to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
 
-|Column |Type |Description  |
-|---------|---------|---------|
-|`FieldSecurityProfileId`|Lookup|Refers to the field security profile this field permission applies to.|
-|`EntityName`|String|The table that contains the secured column.|
-|`AttributeLogicalName`|String|The logical name of the secured column.|
-|`CanCreate`|Choice|Whether Create access is allowed.|
-|`CanRead`|Choice|Whether Read access is allowed.|
-|`CanUpdate`|Choice|Whether Update access is allowed.|
+Associate field permissions to the field security profiles using the[`lk_fieldpermission_fieldsecurityprofileid` one to many relationship](reference/entities/fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
 
-Each of the choice columns use these values defined by the `field_security_permission_type` global choice: 
+
+|Column |Description  |
+|---------|---------|
+|`FieldSecurityProfileId`|Refers to the field security profile this field permission applies to.|
+|`EntityName`|The table that contains the secured column.|
+|`AttributeLogicalName`|The logical name of the secured column.|
+|`CanCreate`|Whether Create access is allowed.|
+|`CanRead`|Whether Read access is allowed.|
+|`CanUpdate`|Whether Update access is allowed.|
+|`CanReadUnmasked`|Whether an unmasked value can be retrieved when `CanRead` is **Allowed**.|
+
+The `CanCreate`, `CanRead`, and `CanUpdate`  choice columns use these values defined by the `field_security_permission_type` global choice: 
 
 - `0` **Not Allowed**
 - `4` **Allowed**
 
-When `CanRead` is **Allowed**, you can also set a `CanReadUnmasked` column, but not unless the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.  If you don't set this, the default value is `0` **Not Allowed**.  [Learn more about using this column in Display Masked data](#display-masked-data).
-
+> [!NOTE]
+> Don't set `CanReadUnmasked` column unless you are using the [display masked data](#display-masked-data) feature and you want to enable an app to return the unmasked value.
 
 ## Share data in secured fields
 
@@ -489,20 +491,412 @@ Create records using the [Field Sharing (PrincipalObjectAttributeAccess)](refere
 
 The `PrincipalObjectAttributeAccess` table has these columns:
 
-
 |Column  |Type  |Description  |
 |---------|---------|---------|
-|`AttributeId`|Guid|The [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) of the secured column. You will need to retrieve this from the metadata.|
+|`AttributeId`|Guid|The [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) of the secured column. |
 |`ObjectId`|Guid|A reference to the record that contains the secured column.|
 |`PrincipalId`|Guid|A reference to the principal (user or team) you are granting access to.|
 |`ReadAccess`|Bool|Whether to grant read access to the field data|
 |`UpdateAccess`|Bool|Whether to grant update access to the field data|
 
 
+### Getting column AttributeId
+
+The `AttributeId` column uses the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) rather than the column logical name. You need to retrieve this from the metadata. If your application has a metadata cache, you can include this data and access it as needed.
+
+### Retrieve column AttributeId example
+
+This shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) when you need to.
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+This `RetrieveColumnId` method is used by the [ModifyColumnAccess](#modifycolumnaccess-example) and [RevokeColumnAccess](#revokecolumnaccess-example) SDK for .NET examples to retrieve the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value.
+
+```csharp
+/// <summary>
+/// Retrieves the object type code and column id for a table and column name.
+/// </summary>
+/// <param name="service">Authenticated connection to the organization service.</param>
+/// <param name="tableLogicalName">The logical name of the table.</param>
+/// <param name="columnLogicalName">The logical name of the column.</param>
+/// <returns>The AttributeId for the column</returns>
+/// <exception cref="Exception"></exception>
+private static Guid RetrieveColumnId(
+   IOrganizationService service,
+   string tableLogicalName,
+   string columnLogicalName)
+{
+   EntityQueryExpression query = new()
+   {
+         Properties = new MetadataPropertiesExpression("Attributes"),
+         Criteria = new MetadataFilterExpression(filterOperator: LogicalOperator.Or)
+         {
+            Conditions = {
+               {
+                     new MetadataConditionExpression(
+                        propertyName:"LogicalName",
+                        conditionOperator: MetadataConditionOperator.Equals,
+                        value:tableLogicalName)
+               }
+            },
+         },
+         AttributeQuery = new AttributeQueryExpression
+         {
+            Properties = new MetadataPropertiesExpression("MetadataId"),
+            Criteria = new MetadataFilterExpression(filterOperator: LogicalOperator.And)
+            {
+               Conditions = {
+                     {
+                        new MetadataConditionExpression(
+                        propertyName:"LogicalName",
+                        conditionOperator: MetadataConditionOperator.Equals,
+                        value:columnLogicalName)
+                     }
+               }
+            }
+         }
+   };
+
+   RetrieveMetadataChangesRequest request = new()
+   {
+         Query = query
+   };
+
+   var response = (RetrieveMetadataChangesResponse)service.Execute(request);
+
+   if (response.EntityMetadata.Count == 1)
+   {
+         if (response.EntityMetadata[0].Attributes.Length == 1)
+         {
+            // Nullable property will not be null when retrieved. It is set by the system.
+#pragma warning disable CS8629 // Nullable value type may be null.
+            return response.EntityMetadata[0].Attributes[0].MetadataId.Value;
+#pragma warning restore CS8629 // Nullable value type may be null.
+         }
+         else
+         {
+            throw new Exception($"Column {columnLogicalName} not found in {tableLogicalName}.");
+         }
+   }
+   else
+   {
+         throw new Exception($"Table {tableLogicalName} not found");
+   }
+}
+```
+
+[Learn how to query schema definitions](query-schema-definitions.md)
+
+
+### [Web API](#tab/webapi)
+
+This example returns the column `MetadataId` when the table `LogicalName` is `account` and the column `LogicalName` is `name`.
+
+**Request**:
+
+```http
+GET [Organization URL]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='name')/MetadataId HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+**Response**:
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+
+{
+   "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes('name')/MetadataId",
+   "value": "a1965545-44bc-4b7b-b1ae-93074d0e3f2a"
+}
+```
+
+---
+
+
+### GrantColumnAccess example
+
+### [SDK for .NET](#tab/sdk)
+
+```csharp
+/// <summary>
+/// Grants access to a secure column for a user or team
+/// </summary>
+/// <param name="service">Authenticated connection to the organization service.</param>
+/// <param name="record">Reference to the record that contains the secured column.</param>
+/// <param name="columnLogicalName">The Logical name of the secured column.</param>
+/// <param name="principal">Reference to the user or team to grant access to.</param>
+/// <param name="readAccess">Whether access includes read access.</param>
+/// <param name="updateAccess">Whether access includes update access.</param>
+/// <exception cref="Exception"></exception>
+static internal void GrantColumnAccess(
+    IOrganizationService service,
+    EntityReference record,
+    string columnLogicalName,
+    EntityReference principal,
+    bool readAccess,
+    bool updateAccess)
+{
+    // This information should come from cached metadata,
+    // but for this sample it is retrieved each time.
+    Guid columnId = RetrieveColumnId(
+        service: service,
+        tableLogicalName: record.LogicalName,
+        columnLogicalName: columnLogicalName);
+
+    // https://learn.microsoft.com/power-apps/developer/data-platform/reference/entities/principalobjectattributeaccess
+    Entity poaa = new("principalobjectattributeaccess")
+    {
+        //Unique identifier of the shared secured field
+        ["attributeid"] = columnId,
+        //Unique identifier of the entity instance with shared secured field
+        ["objectid"] = record,
+        //Unique identifier of the principal to which secured field is shared
+        ["principalid"] = principal,
+        // Read permission for secured field instance
+        ["readaccess"] = readAccess,
+        //Update permission for secured field instance
+        ["updateaccess"] = updateAccess
+    };
+
+    try
+    {
+        service.Create(poaa);
+    }
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
+        if (ex.Detail.ErrorCode.Equals(-2147158773))
+        {
+            throw new Exception("The column has already been shared");
+        }
+
+        throw new Exception($"Dataverse error in GrantColumnAccess: {ex.Message}");
+
+    }
+    catch (Exception ex)
+    {
+        throw new Exception($"Error in GrantColumnAccess: {ex.Message}");
+    }
+}
+```
+
+
+### [Web API](#tab/webapi)
+
+Content for Web API...
+
+---
+
+### ModifyColumnAccess example
+
+### [SDK for .NET](#tab/sdk)
+
+This example depends on the `RetrieveColumnId` example function found in [Retrieve column AttributeId example](#retrieve-column-attributeid-example).
+
+```csharp
+/// <summary>
+/// Modifies access to a secure column for a user or team
+/// </summary>
+/// <param name="service">Authenticated connection to the organization service.</param>
+/// <param name="record">Reference to the record that contains the secured column.</param>
+/// <param name="columnLogicalName">The Logical name of the secured column.</param>
+/// <param name="principal">Reference to the user or team to grant access to.</param>
+/// <param name="readAccess">Whether access includes read access.</param>
+/// <param name="updateAccess">Whether access includes update access.</param>
+/// <exception cref="Exception"></exception>
+static internal void ModifyColumnAccess(
+    IOrganizationService service,
+    EntityReference record,
+    string columnLogicalName,
+    EntityReference principal,
+    bool readAccess,
+    bool updateAccess)
+{
+
+    // This information should come from cached metadata,
+    // but for this sample it is retrieved each time.
+    Guid columnId = RetrieveColumnId(
+        service: service,
+        tableLogicalName: record.LogicalName,
+        columnLogicalName: columnLogicalName);
+
+    // Retrieve the record
+    QueryExpression query = new("principalobjectattributeaccess")
+    {
+        ColumnSet = new ColumnSet(
+            "principalobjectattributeaccessid",
+            "readaccess",
+            "updateaccess"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            // There can only be one record or zero records matching these criteria.
+            Conditions = {
+                {
+                    new ConditionExpression(
+                        attributeName:"attributeid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:columnId)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"objectid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:record.Id)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"objecttypecode",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:record.LogicalName)
+                },
+
+                {
+                    new ConditionExpression(
+                        attributeName:"principalid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:principal.Id)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"principalidtype",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:principal.LogicalName)
+                }
+            }
+        }
+    };
+
+    EntityCollection queryResults = service.RetrieveMultiple(query);
+
+    if (queryResults.Entities.Count == 1)
+    {
+        // Update the record that granted access to the secure column
+        Entity retrievedPOAARecord = queryResults.Entities[0];
+        // Get the current values and only update if different
+        bool currentRead = retrievedPOAARecord.GetAttributeValue<bool>("readaccess");
+        bool currentUpdate = retrievedPOAARecord.GetAttributeValue<bool>("updateaccess");
+
+        Entity POAAForUpdate = new("principalobjectattributeaccess", retrievedPOAARecord.Id);
+
+        if (currentRead != readAccess)
+        {
+            POAAForUpdate.Attributes.Add("readaccess", readAccess);
+        }
+        if (currentUpdate != updateAccess)
+        {
+            POAAForUpdate.Attributes.Add("updateaccess", updateAccess);
+        }
+
+        // Don't update if nothing there is nothing to change
+        if (POAAForUpdate.Attributes.Count > 0)
+        {
+            // Update the principalobjectattributeaccess record
+            service.Update(POAAForUpdate);
+        }
+    }
+    else
+    {
+        throw new Exception("No matching PrincipalObjectAttributeAccess record found.");
+    }
+}
+```
+
+
+### [Web API](#tab/webapi)
+
+Content for Web API...
+
+---
+
+### RevokeColumnAccess example
+
+These examples show how to revoke access to a secure column.
+
+### [SDK for .NET](#tab/sdk)
+
+This example depends on the `RetrieveColumnId` example function found in [Retrieve column AttributeId example](#retrieve-column-attributeid-example).
+
+```csharp
+/// <summary>
+/// Removes access to a secure column    
+/// </summary>
+/// <param name="service">Authenticated connection to the organization service.</param>
+/// <param name="record">The record containing the secure column.</param>
+/// <param name="columnLogicalName">The name of the secure column.</param>
+/// <param name="principal">The user to remove access from</param>
+/// <exception cref="Exception"></exception>
+internal static void RevokeColumnAccess(IOrganizationService service,
+    EntityReference record,
+    string columnLogicalName,
+    EntityReference principal)
+{
+
+    // This information should come from cached metadata,
+    // but for this sample it is retrieved each time.
+    Guid columnId = RetrieveColumnId(
+        service: service,
+        tableLogicalName: record.LogicalName,
+        columnLogicalName: columnLogicalName);
+
+    QueryExpression query = new("principalobjectattributeaccess")
+    {
+        ColumnSet = new ColumnSet("principalobjectattributeaccessid"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            // These conditions return one or zero records
+            Conditions = {
+                {
+                    new ConditionExpression(
+                        attributeName:"attributeid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:columnId)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"objectid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:record.Id)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"objecttypecode",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:record.LogicalName)
+                },
+
+                {
+                    new ConditionExpression(
+                        attributeName:"principalid",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:principal.Id)
+                },
+                {
+                    new ConditionExpression(
+                        attributeName:"principalidtype",
+                        conditionOperator: ConditionOperator.Equal,
+                        value:principal.LogicalName)
+                }
+            }
+        }
+    };
+
+    EntityCollection queryResults = service.RetrieveMultiple(query);
+
+    if (queryResults.Entities.Count == 1)
+    {
+        // Delete the record that granted access to the secure column
+        service.Delete("principalobjectattributeaccess", queryResults.Entities[0].Id);
+    }
+    else
+    {
+        throw new Exception("No matching PrincipalObjectAttributeAccess record found.");
+    }
+}
+```
+
 
 ### [Web API](#tab/webapi)
 
@@ -511,6 +905,8 @@ Content for Web API...
 ---
 
 ## Display Masked data
+
+When `CanRead` is **Allowed**, you can also set a `CanReadUnmasked` column, but not unless the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.  
 
 ### [SDK for .NET](#tab/sdk)
 
