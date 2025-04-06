@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Column-level security with code
 
-You can configure Dataverse to manage access to data in specific columns without writing code. [Learn how to configure column-level security to control access](/power-platform/admin/field-level-security). This article provides information for developers to work with column-level security capabilities using code and the Dataverse SDK for .NET or Web API. 
+You can manage access to data in specific Dataverse columns without writing code. [Learn how to configure column-level security to control access](/power-platform/admin/field-level-security). This article provides information for developers to work with column-level security capabilities using code and the Dataverse SDK for .NET or Web API.
 
 Column-level security is applied for columns that contain particularly sensitive information. Passwords, bank account numbers, government ID, telephone numbers or email addresses can be secured at the column level.
 
@@ -95,7 +95,7 @@ static internal void GetSecuredColumns(IOrganizationService service,
 }
 ```
 
-This option depends on a special system [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record that manages access to secured columns for system administrators. When a user has the access to view the this data they can return a list of columns that are secured. Typically only system administrators have the `prvReadFieldSecurityProfile` and `prvReadFieldPermission` privileges to retrieve this data.
+This option depends on a special system [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record that manages access to secured columns for system administrators. When a user has the access to view the this data they can return a list of columns that are secured. Typically only system administrators have the `prvReadFieldPermission` privilege to retrieve this data.
 
 ```csharp
 /// <summary>
@@ -105,55 +105,58 @@ This option depends on a special system [Field Security Profile (FieldSecurityPr
 /// <returns>List of secured column names</returns>
 static internal List<string> GetSecuredColumnList(IOrganizationService service)
 {
-
-    var relationshipQueryCollection = new RelationshipQueryCollection();
-
-    var relatedFieldPermissionsQuery = new QueryExpression("fieldpermission")
+    QueryExpression query = new("fieldpermission")
     {
-        ColumnSet = new ColumnSet("entityname", "attributelogicalname")
-    };
-    var fieldPermissionRelationship = new Relationship("lk_fieldpermission_fieldsecurityprofileid");
+        ColumnSet = new ColumnSet("entityname", "attributelogicalname"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions =
+            {
+              // Field security profile with ID '572329c1-a042-4e22-be47-367c6374ea45' 
+              // manages access for system administrators. It always contains
+              // references to each secured column
 
-    relationshipQueryCollection.Add(
-        fieldPermissionRelationship,
-        relatedFieldPermissionsQuery);
-
-    var request = new RetrieveRequest()
-    {
-        ColumnSet = new ColumnSet("fieldsecurityprofileid"),
-        RelatedEntitiesQuery = relationshipQueryCollection,
-        // Field security profile with ID '572329c1-a042-4e22-be47-367c6374ea45' 
-        // manages access for system administrators. It always contains
-        // references to each secured column
-        Target = new EntityReference("fieldsecurityprofile",
-            new Guid("572329c1-a042-4e22-be47-367c6374ea45"))
+                new ConditionExpression("fieldsecurityprofileid", ConditionOperator.Equal,
+                    new Guid("572329c1-a042-4e22-be47-367c6374ea45"))
+            }
+        }
     };
+
+    EntityCollection fieldPermissions;
 
     try
     {
-        var response = (RetrieveResponse)service.Execute(request);
+        fieldPermissions = service.RetrieveMultiple(query);
+    }
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
 
-        Entity fieldsecurityprofile = response.Entity;
-
-        var fieldpermissions = fieldsecurityprofile.RelatedEntities[fieldPermissionRelationship];
-
-        List<string> values = new();
-
-        foreach (var fieldpermission in fieldpermissions.Entities)
+        if (ex.Detail.ErrorCode.Equals(-2147220960))
         {
-            string tableName = fieldpermission.GetAttributeValue<string>("entityname");
-            string columnName = fieldpermission.GetAttributeValue<string>("attributelogicalname");
+            string message = "The calling user doesn't have read access to the fieldpermission table";
 
-            values.Add($"{tableName}.{columnName}");
+            throw new Exception(message);
         }
 
-        values.Sort();
-        return values;
+        else
+        {
+            throw new Exception($"Dataverse error retrieving field permissions: {ex.Message}");
+        }
     }
     catch (Exception ex)
     {
-        throw new Exception($"Error retrieving secured column data: {ex.Message}", ex);
+        throw new Exception($"Error retrieving field permissions: {ex.Message}", ex);
     }
+
+    List<string> values = [];
+    foreach (var fieldpermission in fieldPermissions.Entities)
+    {
+        string tableName = fieldpermission.GetAttributeValue<string>("entityname");
+        string columnName = fieldpermission.GetAttributeValue<string>("attributelogicalname");
+        values.Add($"{tableName}.{columnName}");
+    }
+    values.Sort();
+    return values;
 }
 ```
 
@@ -183,17 +186,21 @@ TODO
 
 ## Discover which columns can be secured
 
-Not every column can be secured. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. This is controlled by three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) properties:
+You can't secure all columns. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. The good news is that you don't need to manually check each column to find out if you can secure it.
+
+Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) properties control whether you can secure any column:
 
 - [CanBeSecuredForCreate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforcreate)
 - [CanBeSecuredForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforread)
 - [CanBeSecuredForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforupdate)
 
-When all of these properties are false, the column can't be secured. Some columns may only be secured for one or two of the three operations.
+When all of these properties are false, the column can't be secured. Some columns may only be secured for one or two of the three operations: Create, Read, and Update.
 
-The following queries return this data for columns in the environment so you can discover which columns in your environment can be secured:
+The following queries return this data so you can discover which columns in your environment can be secured:
 
 ### [SDK for .NET](#tab/sdk)
+
+This static `DumpColumnSecurityInfo` method creates a CSV file that contains data about columns that can be secured.
 
 ```csharp
 /// <summary>
@@ -317,7 +324,7 @@ TODO
 
 ### Making a column secured with code
 
-[Securing a column](/power-platform/admin/field-level-security#enable-column-securit) is usually easiest to do using [Power Apps](https://make.powerapps.com/), but you can update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property with code. As shown in the following examples:
+[Securing a column](/power-platform/admin/field-level-security#enable-column-securit) is usually easiest to do using [Power Apps](https://make.powerapps.com/), but you can use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
 
 
 ### [SDK for .NET](#tab/sdk)
@@ -405,12 +412,12 @@ TODO
 
 ## Provide access to secured columns
 
-When a column is secured, only people who have the system administrator security role can read or set the value. A system administrator can provide access to secured columns in two ways:
+When a column is secured, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
 
-- Give access to column data for all records to groups
-- Give a specific principal or team access to data in a secure column for a specific record
+- [Manage access using field security profiles](#manage-access-using-field-security-profiles): Use field security profiles to give access to column data for all records to groups.
+- [Share data in secured fields](#share-data-in-secured-fields): Use field sharing to give a specific principal or team access to data in a secure column for a specific record.
 
-### Give access to column data for all records to groups
+## Manage access using field security profiles
 
 This is the most common approach when you have different groups of users who require different levels of access.  See the [Column-level security example](/power-platform/admin/column-level-security-example) that describes how to secure fields for different users using the Power Platform admin center.
 
@@ -435,10 +442,10 @@ Each of the choice columns use these values defined by the `field_security_permi
 - `0` **Not Allowed**
 - `4` **Allowed**
 
-You can also set a `CanReadUnmasked` column, but not unless the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.  If you don't set this, the default value is `0` **Not Allowed**.  Learn more about using this column in [Display Masked data](#display-masked-data).
+When `CanRead` is **Allowed**, you can also set a `CanReadUnmasked` column, but not unless the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.  If you don't set this, the default value is `0` **Not Allowed**.  [Learn more about using this column in Display Masked data](#display-masked-data).
 
 
-### Give a specific principal or team access to data in a secure column for a specific record
+## Share data in secured fields
 
 Create records using the [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) table to share access a secured field for a specific record to someone else.
 
