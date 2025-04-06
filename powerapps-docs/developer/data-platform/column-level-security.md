@@ -427,6 +427,39 @@ You can associate system users and teams and to your field security profile usin
 
 The field permissions are associated to the field security profiles via using the [`lk_fieldpermission_fieldsecurityprofileid` one to many relationship](/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
 
+<!-- 
+Mermaid markdown used to generate ERD after installing:
+https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid
+```mermaid
+ erDiagram
+    FieldSecurityProfile {
+        Guid FieldSecurityProfileId
+        String Name
+        String Description
+    }
+    FieldPermission {
+        Lookup FieldSecurityProfileId
+        String EntityName
+        String AttributeLogicalName
+        Choice CanCreate
+        Choice CanRead
+        Choice CanUpdate
+    }
+    SystemUser {
+        Guid SystemUserId
+    }
+    Team {
+        Guid TeamID
+    }
+
+    FieldSecurityProfile ||--o{ FieldPermission : "lk_fieldpermission_fieldsecurityprofileid"
+    FieldSecurityProfile }o--o{ SystemUser : "systemuserprofiles_association"
+    FieldSecurityProfile }o--o{ Team : "teamprofiles_association" 
+``` 
+-->
+
+:::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="entity relationship diagram for the fieldsecurityprofile table and related tables":::
+
 
 |Column |Type |Description  |
 |---------|---------|---------|
@@ -447,17 +480,19 @@ When `CanRead` is **Allowed**, you can also set a `CanReadUnmasked` column, but 
 
 ## Share data in secured fields
 
-Create records using the [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) table to share access a secured field for a specific record to someone else.
+Create records using the [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) table to share access to a secured field for a specific record with someone else.
 
 > [!NOTE]
-> Conceptually, this is similar to the [PrincipalObjectAccess](reference/entities/principalobjectaccess.md) table that manages sharing of records. The difference is that with record sharing the you use the `GrantAccess`, `ModifyAccess`, and `RevokeAccess` messages to add, modify, and remove records from the `PrincipalObjectAccess` table. 
+> Conceptually, this is similar to the [PrincipalObjectAccess](reference/entities/principalobjectaccess.md) table that manages sharing of records. The difference is that with record sharing the you use the `GrantAccess`, `ModifyAccess`, and `RevokeAccess` messages to add, modify, and remove records from the `PrincipalObjectAccess` table. [Learn more about sharing records](security-sharing-assigning.md#sharing-records)
 >
-> With the `PrincipalObjectAttributeAccess` table, you grant, modify, and revoke field access by create, update, and delete operations on the table.  Each row in the table has these columns:
+> With the `PrincipalObjectAttributeAccess` table, grant, modify, and revoke field access using create, update, and delete operations on the table.  
+
+The `PrincipalObjectAttributeAccess` table has these columns:
 
 
 |Column  |Type  |Description  |
 |---------|---------|---------|
-|`AttributeId`|Guid|The metadataid of the secured column. You will need to retrieve this from the metadata.|
+|`AttributeId`|Guid|The [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) of the secured column. You will need to retrieve this from the metadata.|
 |`ObjectId`|Guid|A reference to the record that contains the secured column.|
 |`PrincipalId`|Guid|A reference to the principal (user or team) you are granting access to.|
 |`ReadAccess`|Bool|Whether to grant read access to the field data|
