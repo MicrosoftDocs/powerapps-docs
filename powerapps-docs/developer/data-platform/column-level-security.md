@@ -186,7 +186,7 @@ TODO
 
 ## Discover which columns can be secured
 
-You can't secure all columns. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. The good news is that you don't need to manually check each column to find out if you can secure it.
+You can't secure every column. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. The good news is that you don't need to manually check each column to find out if you can secure it.
 
 Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) properties control whether you can secure any column:
 
@@ -194,7 +194,7 @@ Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attribu
 - [CanBeSecuredForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforread)
 - [CanBeSecuredForUpdate](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.canbesecuredforupdate)
 
-When all of these properties are false, the column can't be secured. Some columns may only be secured for one or two of the three operations: Create, Read, and Update.
+When all of these properties are false, the column can't be secured. Some columns may only be secured for one or two of the three operations: `Create`, `Read`, and `Update`.
 
 The following queries return this data so you can discover which columns in your environment can be secured:
 
@@ -421,7 +421,7 @@ When a column is secured, only people who have the system administrator security
 
 This is the most common approach when you have different groups of users who require different levels of access.  See the [Column-level security example](/power-platform/admin/column-level-security-example) that describes how to secure fields for different users using the Power Platform admin center.
 
-To do this using code, create [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) records that associate principals (users and teams) with [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records that controls which data operations can be performed on any that column for any record.  
+To do this using code, create [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) records that associate principals (users and teams) with [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records that control which data operations can be performed on that column for any record.
 
 <!-- 
 Mermaid markdown used to generate ERD after installing:
@@ -457,9 +457,9 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
 
 :::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="entity relationship diagram for the fieldsecurityprofile table and related tables":::
 
-You can associate system users and teams and to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
+You can associate system users and teams to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
 
-Associate field permissions to the field security profiles using the[`lk_fieldpermission_fieldsecurityprofileid` one to many relationship](reference/entities/fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
+Associate field permissions to the field security profiles using the [`lk_fieldpermission_fieldsecurityprofileid` one-to-many relationship](reference/entities/fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
 
 
 |Column |Description  |
@@ -494,8 +494,8 @@ The `PrincipalObjectAttributeAccess` table has these columns:
 |Column  |Type  |Description  |
 |---------|---------|---------|
 |`AttributeId`|Guid|The [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) of the secured column. |
-|`ObjectId`|Guid|A reference to the record that contains the secured column.|
-|`PrincipalId`|Guid|A reference to the principal (user or team) you are granting access to.|
+|`ObjectId`|EntityReference|A reference to the record that contains the secured column.|
+|`PrincipalId`|EntityReference|A reference to the principal (user or team) you are granting access to.|
 |`ReadAccess`|Bool|Whether to grant read access to the field data|
 |`UpdateAccess`|Bool|Whether to grant update access to the field data|
 
@@ -609,7 +609,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {
-   "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes('name')/MetadataId",
+   "@odata.context": "[Organization URL]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes('name')/MetadataId",
    "value": "a1965545-44bc-4b7b-b1ae-93074d0e3f2a"
 }
 ```
@@ -617,7 +617,9 @@ OData-Version: 4.0
 ---
 
 
-### GrantColumnAccess example
+### Grant column access example
+
+These examples create a new [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) record to share access to the specified field.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -647,7 +649,6 @@ static internal void GrantColumnAccess(
         tableLogicalName: record.LogicalName,
         columnLogicalName: columnLogicalName);
 
-    // https://learn.microsoft.com/power-apps/developer/data-platform/reference/entities/principalobjectattributeaccess
     Entity poaa = new("principalobjectattributeaccess")
     {
         //Unique identifier of the shared secured field
@@ -686,11 +687,27 @@ static internal void GrantColumnAccess(
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+```json
+TODO
+```
+
+**Request**:
+
+```http
+TODO
+```
+
+**Response**:
+
+```http
+TODO
+```
 
 ---
 
-### ModifyColumnAccess example
+### Modify column access example
+
+These examples retrieve and update an existing [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) record to modify access to the specified field.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -807,13 +824,27 @@ static internal void ModifyColumnAccess(
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+```json
+TODO
+```
+
+**Request**:
+
+```http
+TODO
+```
+
+**Response**:
+
+```http
+TODO
+```
 
 ---
 
-### RevokeColumnAccess example
+### Revoke column access example
 
-These examples show how to revoke access to a secure column.
+These examples retrieve and delete an existing [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) record to revoke access to the specified field.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -900,7 +931,21 @@ internal static void RevokeColumnAccess(IOrganizationService service,
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+```json
+TODO
+```
+
+**Request**:
+
+```http
+TODO
+```
+
+**Response**:
+
+```http
+TODO
+```
 
 ---
 
@@ -914,10 +959,25 @@ Content for SDK...
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+```json
+TODO
+```
+
+**Request**:
+
+```http
+TODO
+```
+
+**Response**:
+
+```http
+TODO
+```
 
 ---
 
 ### Related articles
 
-[Security and data access](security-model.md)
+[Security and data access](security-model.md)   
+[Sharing and assigning](security-sharing-assigning.md)
