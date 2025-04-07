@@ -72,7 +72,7 @@ sections:
    
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
-       The feature is currently available in all public cloud regions and GCC. GCC High and DOD aren't currently supported.  
+       The feature is currently available in all public cloud regions. GCC, GCC High, and DOD are not currently supported.  
 
    - question: Can data be moved from Dataverse long term store to my own data lake?
      answer: |
