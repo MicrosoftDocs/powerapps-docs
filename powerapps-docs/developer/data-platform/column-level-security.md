@@ -430,12 +430,13 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
 <!-- ```mermaid
  erDiagram
     FieldSecurityProfile {
-        Guid FieldSecurityProfileId
+        Guid FieldSecurityProfileId PK
         String Name
         String Description
     }
     FieldPermission {
-        Lookup FieldSecurityProfileId
+        Guid FieldPermissionId PK
+        Lookup FieldSecurityProfileId FK
         String EntityName
         String AttributeLogicalName
         Choice CanCreate
@@ -444,16 +445,16 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
         Choice CanReadUnmasked
     }
     SystemUser {
-        Guid SystemUserId
+        Guid SystemUserId PK
     }
     Team {
-        Guid TeamID
+        Guid TeamID PK
     }
 
     FieldSecurityProfile ||--o{ FieldPermission : "lk_fieldpermission_fieldsecurityprofileid"
     FieldSecurityProfile }o--o{ SystemUser : "systemuserprofiles_association"
     FieldSecurityProfile }o--o{ Team : "teamprofiles_association" 
-```  -->
+```   -->
 
 :::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="entity relationship diagram for the fieldsecurityprofile table and related tables":::
 
@@ -510,11 +511,11 @@ This shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.x
 
 ### [SDK for .NET](#tab/sdk)
 
-This `RetrieveColumnId` method is used by the [ModifyColumnAccess](#modifycolumnaccess-example) and [RevokeColumnAccess](#revokecolumnaccess-example) SDK for .NET examples to retrieve the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value.
+This `RetrieveColumnId` method is used by the [ModifyColumnAccess](#modify-column-access-example) and [RevokeColumnAccess](#revoke-column-access-example) SDK for .NET examples to retrieve the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value.
 
 ```csharp
 /// <summary>
-/// Retrieves the object type code and column id for a table and column name.
+/// Retrieves column id for a column.
 /// </summary>
 /// <param name="service">Authenticated connection to the organization service.</param>
 /// <param name="tableLogicalName">The logical name of the table.</param>
@@ -951,28 +952,146 @@ TODO
 
 ## Display Masked data
 
-When `CanRead` is **Allowed**, you can also set a `CanReadUnmasked` column, but not unless the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.  
+The default API behavior when returning a value for a secured column is to return no data. The calling application can't distinguish between a value that is secured and a value that is null.
+
+[There is now a feature in preview](/power-platform/admin/create-manage-masking-rules) that provides the ability to specify that a string value is returned when data exists. This string may totally obfuscate the value or show portions of the data depending on masking rules you define. In this way the application can better manage sensitive data.
+
+With this feature you can configure [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records to create field security profiles that enable applications to send requests to retrieve records with the masking removed so that the data can be shown under controlled circumstances. [Learn more about retrieving unmasked data](#retrieve-unmasked-data)
+
+### Create a secure masking rule
+
+Every column that displays masked data needs to refer to a [Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) table. You can create these in Power Apps and add them to your solution, or you can use any of the existing rules.
+
+Create [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) table records to specify which masking rule a secure column should use.
+
+The following diagram describes these tables:
+
+:::image type="content" source="media/maskingrule-attributemaskingrule-erd.png" alt-text="Diagram showing columns and relationships between the MaskingRule and AttributeMaskingRule tables":::
+
+<!-- 
+Mermaid markdown used to generate ERD after installing:
+https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
+<!-- ```mermaid
+ erDiagram
+    MaskingRule {
+        Guid MaskingRuleId PK
+        String Name
+        String Description
+        String DisplayName
+        BooleanManagedProperty IsCustomizable
+        String MaskedCharacter
+        String RegularExpression
+        String RichTestData
+        String MaskedRichTestData
+        String TestData
+        String MaskedTestData
+    }
+    AttributeMaskingRule {
+        Guid AttributeMaskingRuleId PK
+        String AttributeLogicalName
+        String EntityName
+        BooleanManagedProperty IsCustomizable
+        Lookup MaskingRuleId FK
+        String UniqueName
+    } 
+
+    MaskingRule ||--o{ AttributeMaskingRule : "maskingrule_attributemaskingrule"
+```   -->
+
+#### Secured Masking Rule columns
+
+[Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) table has these write-able columns:
+
+|Column|Type|Description|
+|---|---|---|
+|`Name`|String|The unique name of the secured masking rule.|
+|`Description`|String|Description of the secured masking rule.|
+|`DisplayName`|String|The display name of the secured masking rule.|
+|`MaskedCharacter`|String|Character used to mask.|
+|`RegularExpression`|String|Regular Expression in C#.|
+|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized.|
+|`RichTestData`|String|Set rich text test data to test this secured masking rule.|
+|`MaskedRichTestData`|String|`RichTestData` column data evaluated by this secured masking rule.|
+|`TestData`|String|Set test data to test this secured masking rule.|
+|`MaskedTestData`|String|`TestData` column data evaluated by a secured masking rule.|
+
+#### Secured Masking Column columns
+
+[Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) table has these write-able columns:
+
+|Column|Type|Description|
+|---|---|---|
+|`AttributeLogicalName`|String|Logical name of the column for which the secured masking rule is used.|
+|`EntityName`|String|Logical name of the table that contains the column.|
+|`MaskingRuleId`|Lookup|The Masking Rule that the column will use|
+|`UniqueName`|String|The unique name of the secured masking column.|
+|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized.|
+
+
+### Retrieve unmasked data
+
+When a [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) record `CanRead` column is **Allowed**, you can set the `CanReadUnmasked` choice column when the column has an [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record associated with it.
+
+The `CanReadUnmasked` column supports the following options defined by the `field_security_permission_readunmasked` global choice.
+
+|Value|Label|Description|
+|---|---|---|
+|0|**Not Allowed**|This is the default value. If there is not an `AttributeMaskingRule` for the column, you can't set any other value.|
+|1|**One Record**|Unmasked data can be returned using the a `Retrieve` operation only.|
+|3|**All Records**|Unmasked data can be returned using the a `Retrieve` and `RetrieveMultiple` operations.|
+
+
+#### Retrieve unmasked data example
+
+The following examples show how to use the [`UnMaskedData` optional parameter](optional-parameters.md#return-unmasked-data) to request that the unmasked value is returned when the configuration of the field permission allows it.
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+The `GetUnmaskedExampleRows` example returns unmasked values for any of the requested columns where the field permission `CanReadUnmasked` column value is set to **All Records** because the optional `UnMaskedData` parameter is added to the `RetrieveMultiple` request.
+
+```csharp
+/// <summary>
+/// Demonstrates how to retrieve unmasked data
+/// </summary>
+/// <param name="service">Authenticated connection to the organization service.</param>
+internal static EntityCollection GetUnmaskedExampleRows(IOrganizationService service)
+{
+    QueryExpression query = new("sample_example")
+    {
+        ColumnSet = new ColumnSet(
+            "sample_name",
+            "sample_email",
+            "sample_governmentid",
+            "sample_telephonenumber",
+            "sample_dateofbirth"),
+        Criteria = new FilterExpression(),
+        Orders = {
+            {
+                new OrderExpression(
+                    "sample_name",
+                    OrderType.Descending)
+            }
+        }
+    };
+
+    RetrieveMultipleRequest request = new()
+    {
+        Query = query,
+        ["UnMaskedData"] = true
+    };
+
+    var response = (RetrieveMultipleResponse)service.Execute(request);
+
+    return response.EntityCollection;
+}
+```
 
 ### [Web API](#tab/webapi)
 
-```json
-TODO
-```
-
-**Request**:
+**Request:**
 
 ```http
-TODO
-```
 
-**Response**:
-
-```http
-TODO
 ```
 
 ---

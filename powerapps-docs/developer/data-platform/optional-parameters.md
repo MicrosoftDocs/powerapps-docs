@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 07/01/2024
+ms.date: 04/07/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: MicroSri
@@ -422,10 +422,33 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
+## Return unmasked data
+
+When you have a column configured to use the [masking rules](/power-platform/admin/create-manage-masking-rules) preview feature you can use the `UnMaskedData` optional parameter to request that the unmasked value is returned.  
+
+### [SDK for .NET](#tab/sdk)
+
+```csharp
+
+```
+
+### [Web API](#tab/webapi)
+
+**Request:**
+
+```http
+
+```
+
+---
+
+Learn more about this in [Retrieve unmasked data](column-level-security.md#retrieve-unmasked-data).
+
+
 ### See also
 
-[Use messages with the SDK for .NET](org-service/use-messages.md)<br />
-[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
+[Use messages with the SDK for .NET](org-service/use-messages.md)   
+[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)   
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
 
