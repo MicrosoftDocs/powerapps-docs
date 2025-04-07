@@ -322,7 +322,7 @@ TODO
 
 ---
 
-### Making a column secured with code
+## Secure a column with code
 
 [Securing a column](/power-platform/admin/field-level-security#enable-column-securit) is usually easiest to do using [Power Apps](https://make.powerapps.com/), but you can use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
 
