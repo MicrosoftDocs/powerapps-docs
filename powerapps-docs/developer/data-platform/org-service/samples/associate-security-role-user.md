@@ -1,6 +1,6 @@
 ---
-title: " Associate security role to a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to assign a security role to a user " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Associate security role to a user"
+description: "This sample showcases how to assign a security role to a user "
 ms.date: 04/01/2025
 author: paulliew
 ms.author: paulliew
@@ -21,7 +21,7 @@ Related articles:
 
 - [Query data using QueryExpression](../queryexpression/overview.md)
 - [Role-based security roles](/power-platform/admin/database-security)
-- [IOrganizationService.Associate Method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.associate?view=dataverse-sdk-latest)
+- [IOrganizationService.Associate Method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.associate)
 
 ## About the sample code
 
