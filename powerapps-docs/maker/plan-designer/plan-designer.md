@@ -19,7 +19,7 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Learn how to use the Plan designer, a copilot-first development tool, to create comprehensive business solutions quickly. Describe your business problem in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
+Learn how to use the Plan designer, a copilot-first development tool, to create comprehensive business solutions quickly. Describe your business problem in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
 
 Go to the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -125,7 +125,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 ### Edit tables
 
-1. To modify the proposed tables, navigate back to the Plan designer and select **Edit**.
+1. To modify the proposed tables, go back to the Plan designer and select **Edit**.
 
 1. When you're ready to generate user experiences, select **Add these tables** to proceed.  
 
@@ -153,9 +153,9 @@ When you add the proposed user experiences, they're created.
 
     :::image type="content" source="media/pd-14-open-app.png" alt-text="Screenshot of the Plan designer with the option to open created apps.":::
 
-1. Before creating your apps, you're prompted to save your plan to a solution.
+1. Before creating your apps, save your plan to a solution.
 
-    1. Enter the plan name.
+    1. Type the plan name.
     1. Choose a publisher or select an existing solution that will contain the items generated from the plan.
     1. Select **Save**.
    
@@ -175,7 +175,7 @@ When you add the proposed user experiences, they're created.
 
 The **Objects** view is in preview, and several functions native to the solution view don't work in the embedded Plan designer experience. 
 
-Navigation Issues:
+Navigation issues:
 
 - When using the **Back** button after creating a new canvas app, model-driven app, Page, component library, or connection role, users are taken to the **All** section of **Objects** instead of their last location.
 - After saving and exiting the row summary, you're redirected to the **All** section of **Objects** instead of their previous location.  
@@ -186,24 +186,23 @@ Navigation Issues:
 
 ## View and edit plans
 
-When the Plan designer is turned on, you'll see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make any necessary edits.
+When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make edits as needed.
 
-:::image type="content" source="media/pd-your-plans.png" alt-text="View or edit your plans." lightbox="media/pd-your-plans.png" :::
+:::image type="content" source="media/pd-your-plans.png" alt-text="Screenshot of the Plans menu showing options to view or edit plans." lightbox="media/pd-your-plans.png" :::
 
-1. **Plans**: Access your plans.
-1. **Create a plan**: Create a new plan.
-1. **Your plans**: View your plans.
-1. **Edit**: Edit the selected plan.
-1. **Edit or Delete**: Edit or delete the selected plan.
+1. **Plans**: Use to access your plans.
+1. **Create a plan**: Use to create a new plan.
+1. **Your plans**: Use to view your plans.
+1. **Edit**: Use to edit the selected plan.
+1. **Edit or Delete**: Use to edit or delete the selected plan.
 
 ## Known limitations
 
-- **Inline editing user roles and user stories**: Inline editing of content isn't supported. Use Copilot to regenerate updates.
-- **Edit tables in Data workspace**: Editing Dataverse tables created by the Plan designer isn't supported.
-- **Add existing tables in Data workspace**: Adding existing tables in the data workspace in the Plan designer isn't supported.
+- **Edit tables in Data workspace**: Editing Dataverse tables in the Plan designer isn't supported.
+- **Add existing tables in Data workspace**: Adding existing tables to the data workspace in the Plan designer isn't supported.
 - **Supported user experiences**: The Plan designer generates canvas apps, model-driven apps, and suggested Power Automate flows.
-- **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't automatically generated.
-- **Solution/ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. Select the **Save** icon in the top-right corner to define the publisher.
+- **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't generated automatically.
+- **Solution/ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. Select the **Saved** icon in the top right corner to define the publisher.
 
 ## Related information
 
