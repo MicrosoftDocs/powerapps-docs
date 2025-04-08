@@ -42,28 +42,32 @@ Once the agent is created, makers can add triggers, make edits, conduct testing,
 To streamline your manual process, generate an agent that replicates the steps you typically follow to complete tasks.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** in the left navigation pane.
-1. Select your app and then select **Create agent from app (Preview)** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app (Preview)**.
+1. Select **Agents** in the left navigation pane.
+1. Select **Create an agent from an app** **CreateAgentEntry Screenshot**
+2. Select your app and then select **Next** on the command bar. **SelectApp Screenshot**
+1. Alternatively, select **Apps** in the left navigation pane. Select your app and then select **Create agent from app (Preview)** on the command bar. You can also select **Commands** (![Commands button.](media/power-apps-page-icons/apps-commands-menu-to-edit.png)) for the app and then select **Create agent from app (Preview)**.
 
     :::image type="content" source="media/agent-builder/ab-create-agent-from-app.png" alt-text="Create agent from app":::
 
 1. Select a suggestion or in the text box describe the process you want to automate and then select **Next**.
 
-    :::image type="content" source="media/agent-builder/ab-select-next-to-regenerate-instructions.png" alt-text="Select next to generate instructions":::
+**Suggestion screenshot**
 
     When you choose a suggestion, the text box is automatically filled in. You can edit and add more details about what you want the agent to do. To improve the agent's accuracy, use simple, everyday language and be specific, such as:
      - Submit completed claim forms to the database for processing.
      - Generate reports for claims filed within a specific date range.
 
-1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process. Review the instructions for accuracy and make any necessary edits.
+1. Based on the suggestion or the information that you provide for the agent's goal and the app's metadata, agent builder generates step-by-step instructions to replace your manual process and extracts triggers and knowledge. Review the instructions for accuracy and make any necessary edits. Review the extracted knowledge and triggers for accuracy and make any necessary edits.
 
-    :::image type="content" source="media/agent-builder/ab-regenerate-instructions-1.png" alt-text="regen-agent":::
+   **ProcessSummary Screenshot**
+
+
 
 ### Regenerate instructions to improve response
 
 You can also revise the description to better represent the process you want to automate. When you're done, select the **Regenerate instructions** to receive updated instructions that match the new goal of the agent.
 
-:::image type="content" source="media/agent-builder/ab-regenerate-instructions.png" alt-text="regenerate instructions":::
+**RegenerateInstructions Screenshot**
 
 ### Best practices
 
