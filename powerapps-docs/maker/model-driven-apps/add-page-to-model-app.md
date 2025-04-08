@@ -41,12 +41,12 @@ Custom pages can be created from two places. The first is while authoring a mode
 
    :::image type="content" source="media/add-page-to-model-app/app-designer-create-new-custom-page.png" alt-text="New page select custom page":::
 
-1. The canvas app designer opens for page authoring.
+1. Power Apps Studio opens for page authoring.
 
     > [!div class="mx-imgBorder"]
-    > ![Canvas designer new page](media/add-page-to-model-app/canvas-designer-new-page.png "Canvas designer new page")
+    > ![Power Apps Studio new page](media/add-page-to-model-app/canvas-designer-new-page.png "Power Apps Studio new page")
 
-1. When you're finished creating your canvas app custom page, **Save**, **Publish**, and then close the canvas app designer browser tab to return to the model-driven app designer.
+1. When you're finished creating your canvas app custom page, **Save**, **Publish**, and then close the Power Apps Studio browser tab to return to the model-driven app designer.
 
 ### Create new custom page from the solutions area
 
@@ -78,7 +78,7 @@ Custom pages can be created from two places. The first is while authoring a mode
 
 1. Save and publish the custom page.
 
-1. Close canvas app designer.
+1. Close Power Apps Studio.
 
 1. Return to the app designer browser tab and refresh the app designer by selecting **Dismiss**.
 
@@ -112,9 +112,9 @@ Custom pages can be created from two places. The first is while authoring a mode
 > [!IMPORTANT]
 > Currently, model-driven apps must be re-published after a custom page is published.  Otherwise the model-driven app continues to use the previous published custom page.
 
-After saving changes to a custom page in the canvas designer, the custom page must be first published by the canvas designer. Then all model-driven apps referencing that custom page need to be published. 
+After saving changes to a custom page in Power Apps Studio, the custom page must be first published by Power Apps Studio. Then all model-driven apps referencing that custom page need to be published. 
 
-1. From canvas designer, select **Publish**
+1. From Power Apps Studio, select **Publish**
 
 1. From app designer or solution explorer, select **Publish** on each model-driven app referencing the custom page
 
