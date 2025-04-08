@@ -90,17 +90,6 @@ In this scenario, two roles were generated: employee and manager. Each role come
  1. Add a new user need either above or below the selected user need. Or, delete the selected user need.
  1. Add a new user need.
  1. Add a new user role.
-
-
-    :::image type="content" source="media/pd-inline-editing.png" alt-text="Edit user needs inline." lightbox="media/pd-inline-editing.png":::
-
-    Legend:
-
-     1. Select a user role to edit it.
-     1. Add a new user role or delete the selected role.
-     1. Add a new user need either above or below the selected user need. Or, delete the selected user need.
-     1. Add a new user need.
-     1. Add a new user role.
     
 - You can also use Copilot to provide feedback for the generated user roles or stories. You can select a specific user role and enter your feedback.
 
