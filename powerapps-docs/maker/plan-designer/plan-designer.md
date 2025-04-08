@@ -91,7 +91,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     1. Add a new user need.
     1. Add a new user role.
     
-1. You can also use **Copilot** to provide feedback for the generated user roles or stories. Select a specific user role and enter your feedback.
+1. You can also use **Copilot** to provide feedback for the generated user roles needs. Select a user role and enter your feedback.
 
     :::image type="content" source="media/pd-edit-copilot.png" alt-text="Edit using Copilot":::
 
