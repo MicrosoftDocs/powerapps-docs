@@ -31,7 +31,7 @@ Model-driven and canvas apps
 
 You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/DeviceApiControl).
 
-### Related topics
+### Related articles
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
 [Image upload component](./image-upload-control.md)<br/>

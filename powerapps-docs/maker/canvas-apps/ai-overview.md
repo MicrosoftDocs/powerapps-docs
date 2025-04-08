@@ -9,10 +9,10 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 10/10/2024
+  - ai-seo-date: 01/24/2025
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 12/16/2024
+ms.date: 12/20/2024
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -59,6 +59,8 @@ If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-cop
 
 The following articles can help you build various apps in different scenarios using Copilot.
 
+- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+
 ### Copilot in canvas apps
 
 - [Build apps through conversation](ai-conversations-create-app.md)
@@ -68,6 +70,8 @@ The following articles can help you build various apps in different scenarios us
 - [Use field suggestions by Copilot](ai-field-suggestions.md)
 - [Add a custom Copilot to a canvas app (preview)](add-custom-copilot.md)
 - [Build an agent to automate your business process (preview)](agent-builder.md)
+- [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
+
 
 ### Copilot in model-driven apps
 
@@ -79,6 +83,7 @@ The following articles can help you build various apps in different scenarios us
 
 - [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
 - [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
+- [Visualize data in a view with Copilot (preview)](../../user/visualize-data-in-copilot.md)
 
 ### Microsoft Dataverse
 

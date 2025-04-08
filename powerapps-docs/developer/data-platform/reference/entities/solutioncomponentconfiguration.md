@@ -1,16 +1,14 @@
 ---
 title: "Solution Component Configuration (solutioncomponentconfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution Component Configuration (solutioncomponentconfiguration) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Solution Component Configuration (solutioncomponentconfiguration) table/entity reference
+# Solution Component Configuration (solutioncomponentconfiguration) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,14 +19,19 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /solutioncomponentconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: False |`GET` /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /solutioncomponentconfigurations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `SetState`<br />Event: False |`PATCH` /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: False |`PATCH` /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /solutioncomponentconfigurations(*solutioncomponentconfigurationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -58,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FileFormat](#BKMK_FileFormat)
 - [FileScope](#BKMK_FileScope)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InvokeSubstitution](#BKMK_InvokeSubstitution)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [isdisplayable](#BKMK_isdisplayable)
 - [IsOneToOneChildComponent](#BKMK_IsOneToOneChildComponent)
@@ -174,6 +178,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_InvokeSubstitution"></a> InvokeSubstitution
+
+|Property|Value|
+|---|---|
+|Description|**Boolean that indicates if invoke substitution API will be used on component on template mode import**|
+|DisplayName|**Invoke substitution API on component**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`invokesubstitution`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`_solutioncomponentconfiguration_invokesubstitution`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
@@ -824,6 +844,6 @@ Many-To-One Relationship: [syncerror solutioncomponentconfiguration_SyncErrors](
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.solutioncomponentconfiguration?displayProperty=fullName>

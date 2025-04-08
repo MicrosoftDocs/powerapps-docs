@@ -4,8 +4,8 @@ description: "Use Dataverse search to return search results across multiple tabl
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: seanwat-msft
+ms.author: seanwat
 search.audienceType: 
   - developer
 search.app: 
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - jeromeblouinms
 ---
 # Search for Dataverse records
 

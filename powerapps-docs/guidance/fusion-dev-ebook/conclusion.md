@@ -22,7 +22,7 @@ In this ebook, you've seen how the staff at VanArsdel followed a fusion developm
 
 The VanArsdel team has now experienced how fusion development teams work and is excited to keep collaborating on future projects.
 
-### Related topics
+### Related articles
 
 [Power Apps docs](/powerapps/)<br/>
 [Power Apps best practices guidance](/powerapps/guidance/)
