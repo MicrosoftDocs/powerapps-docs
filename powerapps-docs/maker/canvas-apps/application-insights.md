@@ -503,7 +503,9 @@ Canvas app correlation tracing implements context tracing and follows the [W3C s
 > [!WARNING]
 > Enabling this setting might incur additional costs related to storing Application Insights logs.
 
-To enable correlation tracing, select **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing. Save and publish the app.
+1. To enable correlation tracing, open your cavas app for editing.
+1. Select **Settings** > **Udates** > **Experimental** >  and turn on **Enable Azure Application Insights correlation tracing**.
+1. Save and publish the app.
 
 :::image type="content" source="media/application-insights/correlation-tracing.png" alt-text="Screenshot of the setting to enable Azure Application Insights correlation tracing.":::
 
