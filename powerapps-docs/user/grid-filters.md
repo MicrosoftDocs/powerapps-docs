@@ -192,7 +192,7 @@ When configured, the dropdown column headers surface a **Group by** option. This
 
 > [!NOTE]
 > Grouping criteria isn't saved to a view.
-> Grouping is not supported when paging on the grid is allowed.
+> Grouping is not supported on nested grids or when paging on the grid is allowed.
 
 ### Aggregation
 
