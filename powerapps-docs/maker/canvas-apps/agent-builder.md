@@ -21,9 +21,9 @@ Agent builder in Power Apps enables organizations to transition into the AI-firs
 
 > [!VIDEO 284820d9-7fbc-4c8f-bf20-e8678614ed3d]
 
- Makers can easily create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process. This process is then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions and actions.
+ Makers can easily create agents that automate processes within their existing canvas apps. Agent builder uses the app's metadata and the desired agent goal to generate a comprehensive step-by-step process, extract knowledge, and extract triggers. This process, knowledge, and triggers are then combined with extracted skills from the app, resulting in a fully equipped copilot that offers detailed instructions, knowledge, triggers, and actions.
 
-Once the agent is created, makers can add triggers, make edits, conduct testing, and publish the agent in Microsoft Copilot Studio.
+Once the agent is created, makers can make edits, conduct testing, and publish the agent in Microsoft Copilot Studio.
 
 > [!IMPORTANT]
 > - This is a preview feature.
