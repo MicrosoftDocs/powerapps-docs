@@ -4,8 +4,8 @@ description: Learn how to view copilot case summary in model-driven apps.
 author: gandhamm
 ms.author: mgandham
 ms.reviewer: gandhamm
-ms.topic: conceptual e.
-ms.collection: .
+ms.topic: conceptual 
+ms.collection: 
 ms.date: 04/08/2025
 ms.custom: bap-template 
 ---
