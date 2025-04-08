@@ -18,35 +18,35 @@ contributors:
 
 # Analyze system-generated logs using Application Insights
 
-Connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and understand what users actually do with your apps. You can collect information to help you drive better business decisions and improve the quality of your apps.
+Connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), which is a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools that help you diagnose issues and understand what users do with your apps. Collect information to drive better business decisions and improve the quality of your apps.
 
 ## Prerequisites
 
 - You must have access to the [Azure portal](https://portal.azure.com).
-- You must have the permissions to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
+- You must have permissions to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
 > [!NOTE]
-> To view telemetry information, your tenant admin must enable **Canvas app insights**. Sign in as an admin in [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Go to **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, set the toggle to **On** and save your changes.
-> Fore more information, see [Tenant settings](/power-platform/admin/tenant-settings).
+> To view telemetry information, your tenant admin must enable **Canvas app insights**. Sign in as an admin at the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Go to **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, set the toggle to **On** and save your changes.
+> For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 
 ## Create an Application Insights resource
 
-Before you can send system-generated logs from an app, you need to create an Application Insights resource to store the events.
+To send system-generated logs from an app, create an Application Insights resource to store the events.
 
-[Create a workspace-based resource](/azure/azure-monitor/app/create-workspace-resource?tabs=bicep#create-a-workspace-based-resource) for Application Insights in the Azure portal.
+Learn how to [create a workspace-based resource](/azure/azure-monitor/app/create-workspace-resource?tabs=bicep#create-a-workspace-based-resource) for Application Insights in the Azure portal.
 
 ## Connect your app to Application Insights
 
 > [!NOTE]
 >
-> - When specifying a connection string, be aware that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the connection string you set for your app, even if the target App Insights instance is in a different tenant than the app.
-> - Use caution when importing existing .msapp files since connection strings for App Insights may be present. Manually open the app after import to verify that the correct App Insights connection string is being used.
+> - When you specify a connection string, be aware that data might be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the connection string you set for your app, even if the target App Insights instance is in a different tenant than the app.
+> - Use caution when importing existing .msapp files since connection strings for App Insights may be present. Manually open the app after import to verify that the correct App Insights connection string is used.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Open an app for [editing](edit-app.md).
 
-1. Select the **App** object in the left navigation tree view and paste the **Connection string** from your Application Insights resource:
+1. Select the **App** object in the left navigation tree view, and paste the **Connection string** from your Application Insights resource:
 
     ![Add connection string.](./media/application-insights/add-connection-string.png "Add connection string")
 
@@ -54,24 +54,24 @@ Before you can send system-generated logs from an app, you need to create an App
 
 1. **Play** the published app and browse the different screens.
 
-As you browse the app screens, events are automatically logged to Application Insights, including usage details such as:
+When you browse the app screens, events are automatically logged to Application Insights, including usage details such as:
 
 - Where the app is accessed from
 - Which devices are used
 - The browser types used
 
 > [!IMPORTANT]
-> You must play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
+> Play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
 
 ## View events in Application Insights
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you [created previously](#create-an-application-insights-resource).
 
-1. Scroll down in the left navigation pane and select **Users** under the **Usage** section.
+1. In the left navigation pane, select **Users** under the **Usage** section.
 
     > [!NOTE]
     >
-    > The **Users** view shows the app's usage details, such as:
+    > The **Users** view shows app usage details, such as:
     > - Number of users who viewed the app
     > - Number of user sessions
     > - Number of events logged
@@ -80,16 +80,16 @@ As you browse the app screens, events are automatically logged to Application In
     >
     > [Learn more about users, sessions, and events analysis in Application Insights](/azure/azure-monitor/app/usage-segmentation).
 
-1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
+1. Select one of the user sessions to drill into specific details. View details such as session length and screens visited:
 
     ![Usage details for users.](./media/application-insights/appinsights-users.gif "Usage details for users")
 
-1. Select the **Events** view in the left navigation pane under the **Usage** section. You can see a summary of all the screens viewed across all app sessions:
+1. In the left navigation pane, select **Events** under the **Usage** section. You can see a summary of all the screens viewed across all app sessions:
 
     ![Event details for the app.](./media/application-insights/appInsights-events.gif "Event details for the app")
 
 > [!TIP]
-> More Application Insights features are available, such as:
+> Explore more Application Insights features, such as:
 >
 > - [Funnels](/azure/azure-monitor/app/usage-funnels)
 > - [Cohorts](/azure/azure-monitor/app/usage-cohorts)
@@ -99,9 +99,9 @@ As you browse the app screens, events are automatically logged to Application In
 
 ## Create custom trace events
 
-You can write custom traces directly to Application Insights and start to analyze information specific to your scenario. The [Trace](./functions/function-trace.md) function allows you to collect:
+Write custom traces directly to Application Insights to analyze information specific to your scenario. The [Trace](./functions/function-trace.md) function allows you to collect:
 
-- Granular usage information for controls on the screens
+- Detailed usage information for controls on the screens
 - Which specific users are accessing your app
 - What errors occur
 
@@ -111,12 +111,12 @@ Tracing can also help diagnose issues because you can send a trail of informatio
 - Warning
 - Error
 
-Depending on your scenario, you can choose to send a trace message with the appropriate severity. You can query the data and take specific actions based on the severity.
+Depending on the scenario, send a trace message with the appropriate severity. You can query the data and take specific actions based on the severity.
 
 > [!NOTE]
 > If you are logging any personal data, be aware of your obligations with respect to various privacy laws and regulations. Refer to the [Microsoft Trust Center](https://www.microsoft.com/trust-center) and the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/HomePageVNext) for more information.
 
-Now create a new component in your app to collect feedback on each screen, and write the events to Application Insights.
+Create a new component in the app to collect feedback on each screen and write the events to Application Insights.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -129,7 +129,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
     ![Components.](./media/application-insights/new-component.png "Components")
 
-1. Select **New component**, and then resize the width to 200 and height to 75:
+1. Select **New component**, then resize the width to 200 and the height to 75:
 
     ![Height and width.](./media/application-insights/resize-component.png "Height and width")
 
@@ -141,7 +141,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
     ![Create custom property.](./media/application-insights/create-custom-property.png "Create custom property")
 
-1. Enter property *Name* and *Display name* such as *FeedbackSceen*.
+1. Enter property *Name* and *Display name*, such as *FeedbackScreen*.
 
 1. Enter property *Description*.
 
@@ -201,7 +201,7 @@ Now create a new component in your app to collect feedback on each screen, and w
 
 1. Select **Save** and then select **Publish** to save and publish your app.
 
-1. Play the published app, and send a smile and a frown feedback from your screens.
+1. Play the published app and send smile and frown feedback from the screens.
 
     > [!IMPORTANT]
     > You must play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
@@ -212,11 +212,11 @@ Now create a new component in your app to collect feedback on each screen, and w
 
 You can now begin to analyze the data you sent using the [Trace](#create-custom-trace-events) function from your app in Application Insights.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource).
 
     ![Select Application Insights.](./media/application-insights/select-app-insights.png "Select Application Insights")
 
-1. Select **Logs** under **Monitoring** in the left navigation pane:
+1. Select **Logs** under **Monitoring** in the left navigation pane.
 
     ![Select Logs.](./media/application-insights/select-logs.png "Select Logs")
 
