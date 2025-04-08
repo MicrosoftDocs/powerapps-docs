@@ -4,7 +4,7 @@ description: Use the Plan designer to create business solutions with AI-powered 
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 4/3/2025
+ms.date: 4/10/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -19,22 +19,22 @@ ms.custom:
 
 [!INCLUDE [preview-banner](../../../shared/preview-includes/preview-banner.md)]
 
-Learn how to use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and provide relevant images such as business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise and customized outputs.
+Learn how to use the Plan designer, a copilot-first development tool, to create comprehensive business solutions quickly. Describe your business problem in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and suggested Power Automate flows. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
 
-Access the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
+Go to the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer." :::
+:::image type="content" source="media/pd-1-enter-problem.png" alt-text="Screenshot of entering a business problem in the Plan designer.":::
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
-## Prerequisite
+## Prerequisites
 
-On the Power Apps home page, turn on the **Try the new Power Apps experience** toggle. 
+Turn on the **Try the new Power Apps experience** toggle on the Power Apps home page. 
 
-:::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page with the new Copilot experience banner." :::
+:::image type="content" source="media/pd-3-enable-settings.png" alt-text="Screenshot of the Power Apps home page showing the new Copilot experience banner." :::
 
 
 ## Create a plan
@@ -48,7 +48,7 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
    :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." :::
 
 
-Copilot opens the Plan designer and begins addressing your business scenario based on your description.
+Copilot opens the Plan designer and addresses your business scenario based on your description.
 
 
 ### Plan agents
@@ -79,7 +79,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     
         :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer." lightbox="media/pd-6-generate-roles-stories.png":::
 
-1. Inline editing inclulde the following options:
+1. Inline editing includes the following options:
 
     :::image type="content" source="media/pd-inline-editing.png" alt-text="Edit user needs inline." lightbox="media/pd-inline-editing.png":::
 
@@ -87,7 +87,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
  
     1. Select a user role to edit it.
     1. Add a new user role or delete the selected role.
-    1. Add a new user need either above or below the selected user need. Or, delete the selected user need.
+    1. Add a new user need above or below the selected user need, or delete the selected user need.
     1. Add a new user need.
     1. Add a new user role.
     
