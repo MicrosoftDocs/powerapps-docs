@@ -18,7 +18,7 @@ contributors:
 
 # Analyze system-generated logs using Application Insights
 
-You can connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and understand what users actually do with your apps. You can collect information to help you drive better business decisions and improve the quality of your apps.
+Connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and understand what users actually do with your apps. You can collect information to help you drive better business decisions and improve the quality of your apps.
 
 ## Prerequisites
 
@@ -350,10 +350,10 @@ This query will show app open performance metrics by day. This can be used to ev
 performance trends over time or after making changes. 
 Note that we recommend: 
 1. Using the 75th percentile of the timeToAppInteractive and timeToAppFullLoad fields 
-to avoid noise caused by outliers 
+to avoid noise caused by outliers.
 1. Filtering to only optimal sessions to avoid noise in the data caused by expected 
-cases (e.g. sessions with user interaction, sessions where the app was loaded in a 
-background tab, etc) 
+cases like sessions with user interaction, sessions where the app was loaded in a 
+background tab, etc.
 
 ```kusto
 customEvents 
@@ -374,9 +374,10 @@ by bin(timestamp, 1d)
 #### App Load State on HTTP Calls 
 There is a new request header x-ms-app-load-state that indicates if an HTTP call 
 contributed to app startup. Specifically, this can be used to determine which HTTP calls 
-impacted the timeToAppFullLoad above. 
+impacted the timeToAppFullLoad above.
 
 The header can be one of two values: 
+
 | Value    | Description                                                        |
 |----------|--------------------------------------------------------------------|
 | TTFL     | indicates that the request contributed to timeToAppFullLoad        |
@@ -455,11 +456,11 @@ You can't always anticipate and plan for all errors that might occur while your 
 You need to enable the setting that allows Power Apps to pass unhandled runtime errors to Azure Application Insights.
 
 > [!WARNING]
-> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+> When you the **Pass errors to Azure Application Insights** setting, you might incur additional costs related to the storage of Application Insights logs.
 
-To enable error passing, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing. Save and publish your app.
-
-:::image type="content" source="media/application-insights/pass-error-feature.png" alt-text="Enable Pass errors to Azure Application Insights setting.":::
+1. Open your canvas app for editing. 
+1. To enable error passing, go to **Settings** > **Updates** > **Experimental**. Turn on **Pass errors to Azure Application Insights**.
+1. Save and publish your app.
 
 ### Error events in Application Insights
 
