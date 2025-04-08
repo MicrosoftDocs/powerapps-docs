@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/24/2025
+ms.date: 04/8/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
