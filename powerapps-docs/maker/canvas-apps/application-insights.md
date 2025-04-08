@@ -5,7 +5,7 @@ author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/24/2025
+ms.date: 04/8/2025
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -18,60 +18,60 @@ contributors:
 
 # Analyze system-generated logs using Application Insights
 
-You can connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and understand what users actually do with your apps. You can collect information to help you drive better business decisions and improve the quality of your apps.
+Connect your canvas apps to [Application Insights](/azure/azure-monitor/app/app-insights-overview), which is a feature of [Azure Monitor](/azure/azure-monitor/overview). Application Insights includes analytics tools that help diagnose issues and understand user behavior in apps. Use the collected information to make better business decisions and improve app quality.
 
 ## Prerequisites
 
-- You must have access to the [Azure portal](https://portal.azure.com).
-- You must have the permissions to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
+- You need access to the [Azure portal](https://portal.azure.com).
+- You need permission to [create Azure resources](/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
 > [!NOTE]
-> To view telemetry information, your tenant admin must enable **Canvas app insights**. Sign in as an admin in [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Go to **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, set the toggle to **On** and save your changes.
-> Fore more information, see [Tenant settings](/power-platform/admin/tenant-settings).
+> To view telemetry information, your tenant admin needs to enable **Canvas app insights**. Sign in as an admin at the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Settings** > **Tenant settings** > **Canvas app insights**. In the **Canvas app insights** pane, turn the toggle **On** and save your changes.
+> Learn more in [Tenant settings](/power-platform/admin/tenant-settings).
 
 ## Create an Application Insights resource
 
-Before you can send system-generated logs from an app, you need to create an Application Insights resource to store the events.
+Send system-generated logs from an app by creating an Application Insights resource to store events.
 
-[Create a workspace-based resource](/azure/azure-monitor/app/create-workspace-resource?tabs=bicep#create-a-workspace-based-resource) for Application Insights in the Azure portal.
+Learn how to [create a workspace-based resource](/azure/azure-monitor/app/create-workspace-resource?tabs=bicep#create-a-workspace-based-resource) for Application Insights in the Azure portal.
 
 ## Connect your app to Application Insights
 
 > [!NOTE]
 >
-> - When specifying a connection string, be aware that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the connection string you set for your app, even if the target App Insights instance is in a different tenant than the app.
-> - Use caution when importing existing .msapp files since connection strings for App Insights may be present. Manually open the app after import to verify that the correct App Insights connection string is being used.
+> - When you specify a connection string, remember that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the connection string you set for your app, even if the target App Insights instance is in a different tenant than the app.
+> - Be cautious when importing existing .msapp files because connection strings for App Insights might be present. Manually open the app after import to check that the correct App Insights connection string is used.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Open an app for [editing](edit-app.md).
+1. Open an app to [edit it](edit-app.md).
 
-1. Select the **App** object in the left navigation tree view and paste the **Connection string** from your Application Insights resource:
+1. Select the **App** object in the left navigation tree view, and paste the **Connection string** from your Application Insights resource.
 
-    ![Add connection string.](./media/application-insights/add-connection-string.png "Add connection string")
+    ![Screenshot of adding a connection string.](./media/application-insights/add-connection-string.png "Add connection string")
 
 1. **Save** and **Publish** your app.
 
 1. **Play** the published app and browse the different screens.
 
-As you browse the app screens, events are automatically logged to Application Insights, including usage details such as:
+When you browse the app screens, events are automatically logged to Application Insights. These include usage details like:
 
-- Where the app is accessed from
-- Which devices are used
-- The browser types used
+- Where users access the app from
+- Which devices users use
+- The types of browsers users use
 
 > [!IMPORTANT]
-> You must play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
+> Play the published app to send events to Application Insights. Events don't send to Application Insights when you preview the app in Power Apps Studio.
 
 ## View events in Application Insights
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you [created previously](#create-an-application-insights-resource).
 
-1. Scroll down in the left navigation pane and select **Users** under the **Usage** section.
+1. In the left navigation pane, select **Users** under the **Usage** section.
 
     > [!NOTE]
     >
-    > The **Users** view shows the app's usage details, such as:
+    > The **Users** view shows app usage details, such as:
     > - Number of users who viewed the app
     > - Number of user sessions
     > - Number of events logged
@@ -80,16 +80,16 @@ As you browse the app screens, events are automatically logged to Application In
     >
     > [Learn more about users, sessions, and events analysis in Application Insights](/azure/azure-monitor/app/usage-segmentation).
 
-1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
+1. Select a user session to view specific details, such as session length and screens visited.
 
-    ![Usage details for users.](./media/application-insights/appinsights-users.gif "Usage details for users")
+    ![Screenshot of usage details for users.](./media/application-insights/appinsights-users.gif "Usage details for users")
 
-1. Select the **Events** view in the left navigation pane under the **Usage** section. You can see a summary of all the screens viewed across all app sessions:
+1. In the left navigation pane, select **Events** under the **Usage** section. You can view a summary of all the screens viewed across all app sessions.
 
-    ![Event details for the app.](./media/application-insights/appInsights-events.gif "Event details for the app")
+    ![Screenshot of event details for the app.](./media/application-insights/appInsights-events.gif "Event details for the app")
 
 > [!TIP]
-> More Application Insights features are available, such as:
+> Explore more Application Insights features, such as:
 >
 > - [Funnels](/azure/azure-monitor/app/usage-funnels)
 > - [Cohorts](/azure/azure-monitor/app/usage-cohorts)
@@ -99,24 +99,24 @@ As you browse the app screens, events are automatically logged to Application In
 
 ## Create custom trace events
 
-You can write custom traces directly to Application Insights and start to analyze information specific to your scenario. The [Trace](./functions/function-trace.md) function allows you to collect:
+Write custom traces to Application Insights to analyze information specific to your app. The [Trace](./functions/function-trace.md) function allows you to collect:
 
-- Granular usage information for controls on the screens
+- Detailed usage information for controls on the screens
 - Which specific users are accessing your app
 - What errors occur
 
-Tracing can also help diagnose issues because you can send a trail of information as your users browse through your app and perform different actions. Trace messages sent to Application Insights have one of three severities:
+Tracing helps you diagnose issues by sending a trail of information as users browse your app and take actions. Trace messages sent to Application Insights have one of three severities:
 
 - Information
 - Warning
 - Error
 
-Depending on your scenario, you can choose to send a trace message with the appropriate severity. You can query the data and take specific actions based on the severity.
+Send a trace message with the appropriate severity based on the situation. You can query the data and take specific actions based on the severity.
 
 > [!NOTE]
 > If you are logging any personal data, be aware of your obligations with respect to various privacy laws and regulations. Refer to the [Microsoft Trust Center](https://www.microsoft.com/trust-center) and the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/HomePageVNext) for more information.
 
-Now create a new component in your app to collect feedback on each screen, and write the events to Application Insights.
+Create a component in your app to collect feedback on each screen and log events to Application Insights.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -125,11 +125,11 @@ Now create a new component in your app to collect feedback on each screen, and w
     > [!NOTE]
     > You can also [create](open-and-run-a-sample-app.md) a new app or [edit](edit-app.md) an existing app instead.
 
-1. Select the **Components** option on the **Tree view**:
+1. Select **Components** in the **Tree view**:
 
     ![Components.](./media/application-insights/new-component.png "Components")
 
-1. Select **New component**, and then resize the width to 200 and height to 75:
+1. Select **New component**, then resize the width to 200 and the height to 75:
 
     ![Height and width.](./media/application-insights/resize-component.png "Height and width")
 
@@ -141,24 +141,24 @@ Now create a new component in your app to collect feedback on each screen, and w
 
     ![Create custom property.](./media/application-insights/create-custom-property.png "Create custom property")
 
-1. Enter property *Name* and *Display name* such as *FeedbackSceen*.
+1. Enter the property *Name* and *Display name* (for example, *FeedbackScreen*).
 
-1. Enter property *Description*.
+1. Enter a property *Description*.
 
 1. Select **Property type** as **Input** and **Data type** as **Screen**:
 
     ![Custom property.](./media/application-insights/custom-input-property.png "Custom property")
 
     > [!NOTE]
-    > Input property allows you to capture the screen name and its component so that you can log this information to Application Insights.
+    > An input property lets you capture the screen name and its component to log this information to Application Insights.
 
-1. Select the component on the **Tree View**, select **More actions** (**&hellip;**), and then select **Rename** to rename the component with a meaningful name such as *FeedbackComponent*.
+1. Select the component in the **Tree view**, select **More actions** (**&hellip;**), and select **Rename** to give the component a meaningful name, such as *FeedbackComponent*.
 
     ![Rename component and icons.](./media/application-insights/rename-component-icons.png "Rename component and icons")
 
 1. Select the icons, select **More actions** (**&hellip;**), and then select **Rename** to rename the icons with meaningful names, such as *FrownIcon* and *SmileIcon*.
 
-1. Select **FrownIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
+1. Select **FrownIcon**, select the **OnSelect** property, and enter the following expression in the formula bar:
 
     ```power-fx
     Trace(
@@ -177,7 +177,7 @@ Now create a new component in your app to collect feedback on each screen, and w
     ![Frown icon formula.](./media/application-insights/frownicon-formula.png "Frown icon formula")
 
     > [!NOTE]
-    > The formula expression sends *UserName*, *UserEmail*, *Screen*, and the *Feedback* (with the value *-1*) to Application Insights.
+    > The formula sends *UserName*, *UserEmail*, *Screen*, and *Feedback* (with the value *-1*) to Application Insights.
 
 1. Select **SmileIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
     
@@ -201,26 +201,26 @@ Now create a new component in your app to collect feedback on each screen, and w
 
 1. Select **Save** and then select **Publish** to save and publish your app.
 
-1. Play the published app, and send a smile and a frown feedback from your screens.
+1. Play the published app and send smile or frown feedback from its screens.
 
     > [!IMPORTANT]
     > You must play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
 
     ![Play published app.](./media/application-insights/play-published-app.png "Play published app")
 
-## Analyze data in Application Insights
+## Analyze custom data in Application Insights
 
 You can now begin to analyze the data you sent using the [Trace](#create-custom-trace-events) function from your app in Application Insights.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the application insights resource you created [earlier](#create-an-application-insights-resource).
 
     ![Select Application Insights.](./media/application-insights/select-app-insights.png "Select Application Insights")
 
-1. Select **Logs** under **Monitoring** in the left navigation pane:
+1. Select **Logs** under **Monitoring** in the left navigation pane.
 
     ![Select Logs.](./media/application-insights/select-logs.png "Select Logs")
 
-1. Enter the following query and select **Run** to view the feedback received from your app:
+1. Enter the following query and select **Run** to view the feedback from your app:
 
     ```kusto
     traces
@@ -232,11 +232,11 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 
 1. Select a row in the results and expand the *customDimensions* field. 
 
-    The values for **Screen**, **UserName**, **UserEmail**, and **FeedbackValue** for the **OnSelect** event of the smile or frown icon in your component have been recorded. Values are also recorded for each event sent to Application Insights, such as the **appId**, **appName**, and **appSessionId**.
+    The values for **Screen**, **UserName**, **UserEmail**, and **FeedbackValue** for the **OnSelect** event of the smile or frown icon in your component are recorded. Values are also recorded for each event sent to Application Insights, such as the **appId**, **appName**, and **appSessionId**.
 
     ![Expand custom dimensions.](./media/application-insights/expand-custom-dimensions.png "Expand custom dimensions")
 
-1. With the following example query, you can extend the properties of the JSON custom dimensions and project the columns in the results view.
+1. Use the following example query to extend the properties of the JSON custom dimensions and project the columns in the results view.
 
     ```kusto
     traces
@@ -255,7 +255,191 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
     ![Extend customDimensions query.](./media/application-insights/custom-dimensions-extend-query.png "Extend customDimensions query")
 
     > [!TIP]
-    > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. [Learn more about log queries](/azure/azure-monitor/log-query/log-query-overview).
+    > *Log queries* are powerful. Use them to join multiple tables, aggregate large amounts of data, and run complex operations. [Learn more about log queries](/azure/azure-monitor/log-query/log-query-overview).
+
+## Analyze app lifecycle data in Application Insights
+The session summary event is logged once per session and contains 
+information on app open success, app open optimal vs non-optimal sessions, and app 
+open performance metrics.
+
+### Limits
+These events are accurate for canvas apps running in a web browser. They aren't available for apps running in Power Apps mobile, and their values might not always be available or accurate for custom pages.  
+
+Here is an example query showing how to access the session summary event and all 
+available fields: 
+
+```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+// 
+| extend cd = parse_json(customDimensions) 
+// 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| extend unsuccessfulReason = tostring(sessionSummary["unsuccessfulReason"]) 
+| extend appLoadResult = tostring(sessionSummary["appLoadResult"]) 
+| extend appLoadNonOptimalReason = 
+tostring(sessionSummary["appLoadNonOptimalReason"]) 
+// 
+| extend timeToAppInteractive = todouble(sessionSummary["timeToAppInteractive"]) 
+| extend timeToAppFullLoad = todouble(sessionSummary["timeToAppFullLoad"]) 
+// 
+| project 
+    timestamp, 
+    session_Id, 
+    successfulAppLaunch, 
+    unsuccessfulReason, 
+    appLoadResult, 
+    appLoadNonOptimalReason, 
+    timeToAppInteractive, 
+    timeToAppFullLoad 
+| limit 5 
+```
+The following fields help measure app open success and latency of performance markers tied to end-user experiences. 
+
+| Field                   | Description                                                                                                                                                                         |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| successfulAppLaunch     | Boolean value indicating whether   the session successfully launched the app                                                                                                        |
+| unsuccessfulReason      | If the session failed to launch   the app, this indicates the reason / error. This field will be an empty   string if the session was successful.                                   |
+| appLoadResult           | Indicates if the session was   optimal or not.       Possible values: optimal, other                                                                                                |
+| appLoadNonOptimalReason | If the session was not optimal,   this indicates the reason.       Possible values: interaction-required, throttled, screen-navigated-away,   other                                 |
+| timeToAppInteractive    | Duration in milliseconds for the   app session to reach an interactive state. In this state, users can start to   interact with the first screen, but data may not be fully loaded. |
+| timeToAppFullLoad       | Duration in milliseconds for the   app session to reach a fully loaded state, where all data requests for the   first screen have finished loading.                                 |
+
+### Sample queries
+
+#### App Open Success rates
+
+This query will show the app open success rate by day. This can be used to evaluate spikes 
+or trends in issues that users may be experiencing 
+ ```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| summarize 
+sessions_total = dcount(session_Id), 
+sessions_success = dcountif(session_Id, successfulAppLaunch == true) 
+by bin(timestamp, 1d) 
+| extend successRate =  
+100.0 * (todouble(sessions_success) / todouble(sessions_total)) 
+| project timestamp, successRate 
+| render timechart
+```
+#### Count of Unsuccessful Sessions by Reason 
+This query will show counts of unsuccessful sessions by reason / error. This can be used to 
+debug app open failures or evaluate trends in issues that users may be experiencing. 
+
+ ```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend successfulAppLaunch = tobool(sessionSummary["successfulAppLaunch"]) 
+| extend unsuccessfulReason = tostring(sessionSummary["unsuccessfulReason"]) 
+| where successfulAppLaunch == false 
+| summarize 
+count() 
+by unsuccessfulReason, bin(timestamp, 1d) 
+| render timechart
+```
+
+#### App Open Performance 
+This query will show app open performance metrics by day. This can be used to evaluate 
+performance trends over time or after making changes. 
+We recommend: 
+1. Using the 75th percentile of the timeToAppInteractive and timeToAppFullLoad fields 
+to avoid noise caused by outliers.
+1. Filtering to only optimal sessions to avoid noise in the data caused by expected 
+cases like sessions with user interaction, sessions where the app was loaded in a 
+background tab, etc.
+
+```kusto
+customEvents 
+| where name == "PowerAppsClient.PublishedApp.SessionLoadSummary" 
+| extend cd = parse_json(customDimensions) 
+| extend sessionSummary = parse_json(tostring(cd["ms-sessionSummary"])) 
+| extend appLoadResult = tostring(sessionSummary["appLoadResult"]) 
+| extend timeToAppInteractive = todouble(sessionSummary["timeToAppInteractive"]) 
+| extend timeToAppFullLoad = todouble(sessionSummary["timeToAppFullLoad"]) 
+| where appLoadResult == "optimal" 
+| summarize 
+percentile(timeToAppInteractive, 75), 
+percentile(timeToAppFullLoad, 75) 
+by bin(timestamp, 1d) 
+| render timechart
+```
+
+#### App Load State on HTTP Calls 
+There is a new request header x-ms-app-load-state that indicates if an HTTP call 
+contributed to app startup. Specifically, this can be used to determine which HTTP calls 
+impacted the timeToAppFullLoad above.
+
+The header can be one of two values: 
+
+| Value    | Description                                                        |
+|----------|--------------------------------------------------------------------|
+| TTFL     | indicates that the request contributed to timeToAppFullLoad        |
+| PostTTFL | indicates that the request did not contribute to timeToAppFullLoad |
+
+Here is an example query showing how to access the header value and projecting it in the 
+appLoadState column: 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| project timestamp, session_Id, appLoadState, name, duration 
+| limit 5
+```
+
+#### Count of HTTP calls contributing to Full Load 
+This query will show the average count of HTTP calls that are contributing to 
+timeToAppFullLoad by day. This can be used to evaluate the number of calls the app is 
+making at startup that may be contributing to poor performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize httpCalls = count() by session_Id, bin(timestamp, 1d) 
+| summarize avg(httpCalls) by timestamp 
+| render timechart
+```
+
+#### Duration of HTTP calls contributing to Full Load 
+This query will show the total duration of HTTP calls that are contributing to 
+timeToAppFullLoad by day. This can be used to evaluate the overall impact of HTTP calls to 
+app startup performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize httpCallDuration = sum(duration) by session_Id, bin(timestamp, 1d) 
+| summarize percentile(httpCallDuration, 80) by timestamp 
+| render timechart
+```
+#### Duration of HTTP calls contributing to Full Load by URL
+Similar to above, this query will show the count and duration of HTTP calls contributing to 
+timeToAppFulLoad by URL. This can be used to identify specific slow HTTP calls that are 
+impacting app startup performance. 
+
+```kusto
+dependencies 
+| extend cd = parse_json(customDimensions) 
+| extend requestHeaders = parse_json(tostring(cd["requestHeaders"])) 
+| extend appLoadState = tostring(requestHeaders["x-ms-app-load-state"]) 
+| where appLoadState == "TTFL" 
+| summarize 
+count(), percentile(duration, 80) by name
+```
 
 ## Monitor unhandled errors (experimental)
 
@@ -265,26 +449,26 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can't always anticipate and plan for all errors that might occur while your app is running. Unhandled Power Fx formula errors are reported to users as banner messages. They can also be reported to Application Insights to help you understand their frequency and severity without relying on your app's users to report issues. You can also [set up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur to take a more proactive approach.
+You can't always anticipate or plan for every error that might occur while your app runs. Unhandled Power Fx formula errors are reported to users as banner messages. They can also be reported to Application Insights to show their frequency and severity without relying on your app's users to report issues. You can also [set up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur to take a more proactive approach.
 
 ### Enable error passing to Application Insights
 
-You need to enable the setting that allows Power Apps to pass unhandled runtime errors to Azure Application Insights.
+Enable the setting that lets Power Apps pass unhandled runtime errors to Azure Application Insights.
 
 > [!WARNING]
-> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+> Enabling the **Pass errors to Azure Application Insights** setting might incur additional costs for storing Application Insights logs.
 
-To enable error passing, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing. Save and publish your app.
-
-:::image type="content" source="media/application-insights/pass-error-feature.png" alt-text="Enable Pass errors to Azure Application Insights setting.":::
+1. Open the canvas app for editing. 
+1. Select **Settings** > **Updates** > **Experimental**, and turn on **Pass errors to Azure Application Insights**.
+1. Save and then publish your app.
 
 ### Error events in Application Insights
 
-Unhandled Power Fx errors experienced by users at app runtime are reported to the **traces** table. Unhandled errors can be identified and distinguished from other error events by the event message "Unhandled error." The "severityLevel" dimension of these events is 3 (TraceSeverity.Error).
+Unhandled Power Fx errors that users encounter at app runtime are reported to the **traces** table. Unhandled errors can be identified and distinguished from other error events by the event message "Unhandled error." The "severityLevel" dimension of these events is 3 (TraceSeverity.Error).
 
-Detailed error messages are provided in the "errors" dimension of the *customDimension* property. In situations where multiple errors occurred during the same operation, the errors are consolidated in the "errors" dimension of a single trace event. The error messages are the same as reported in [Monitor](/power-apps/maker/monitor-canvasapps) during a live debug session.
+Detailed error messages are provided in the "errors" dimension of the *customDimension* property. In situations where multiple errors occurred during the same operation, the errors are consolidated in the "errors" dimension of a single trace event. The error messages match those reported in [Monitor](/power-apps/maker/monitor-canvasapps) during a live debug session.
 
-The following example query identifies unhandled errors and expands all error messages included in the trace event:
+This example query identifies unhandled errors and expands all error messages in the trace event:
 
 ```kusto
 traces
@@ -300,7 +484,7 @@ traces
     | order by timestamp desc
 ```
 
-:::image type="content" source="media/application-insights/kusto.png" alt-text="Sample output for example query.":::
+:::image type="content" source="media/application-insights/kusto.png" alt-text="Screenshot of the sample output for the example query.":::
 
 ## Correlation tracing (experimental)
 
@@ -310,22 +494,24 @@ traces
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Connections to external data and services are fundamental to most apps. Correlation tracing generates and propagates context information to join system-generated logs across a canvas app and its connections, subject to certain [limitations](#limitations). As an example, your app may call into a custom connector that in turn calls an Azure Function or other REST API. Correlation tracing allows you to correlate actions taken in the app with the underlying API calls across tiers. This can be useful in troubleshooting.
+Connecting to external data and services is essential for most apps. Correlation tracing generates and propagates context information to link system-generated logs across a canvas app and its connections, subject to certain [limitations](#limitations). For example, your app might call a custom connector that then calls an Azure Function or another REST API. Correlation tracing allows you to correlate actions taken in the app with the underlying API calls across tiers. This is useful for troubleshooting.
 
-Canvas app correlation tracing is an implementation of context tracing and follows the [W3C specification](https://www.w3.org/TR/trace-context/).
+Canvas app correlation tracing implements context tracing and follows the [W3C specification](https://www.w3.org/TR/trace-context/).
 
 ### Enable correlation tracing
 
 > [!WARNING]
-> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+> Enabling this setting might incur additional costs related to storing Application Insights logs.
 
-To enable the correlation tracing feature, go to **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing. Save and publish your app.
+1. To enable correlation tracing, open your cavas app for editing.
+1. Select **Settings** > **Udates** > **Experimental** >  and turn on **Enable Azure Application Insights correlation tracing**.
+1. Save and publish the app.
 
-:::image type="content" source="media/application-insights/correlation-tracing.png" alt-text="Enable Azure Application Insights correlation tracing.":::
+:::image type="content" source="media/application-insights/correlation-tracing.png" alt-text="Screenshot of the setting to enable Azure Application Insights correlation tracing.":::
 
 ### Limitations
 
-- Correlation tracing is available only for custom connectors. Other connector types aren't supported.
+- Correlation tracing works only with custom connectors. Other connector types aren't supported.
 - HTTP requests are captured in Application Insights only if the connected service [is also connected to Application Insights](/azure/azure-monitor/app/app-insights-overview).
 
 ### Using correlation tracing
@@ -338,7 +524,7 @@ If the connected service is also connected to Application Insights, an additiona
 
 :::image type="content" source="media/application-insights/correlation-requests.png" alt-text="Sample event logged in the requests table.":::
 
-Network calls for supported connectors can be joined with other system-generated logs on the "operation_Id" dimension. The following example query shows a network call being made alongside trace events emitted during an app session.
+Join network calls for supported connectors with other system-generated logs on the "operation_Id" dimension. The following query shows a network call alongside trace events emitted during an app session.
 
 ```kusto
 traces | union dependencies | union requests | union pageViews | union customEvents
@@ -355,62 +541,62 @@ traces | union dependencies | union requests | union pageViews | union customEve
 | order by timestamp asc
 ```
 
-:::image type="content" source="media/application-insights/correlation-output.png" alt-text="Sample output for the earlier example query.":::
+:::image type="content" source="media/application-insights/correlation-output.png" alt-text="Screenshot of sample output for the earlier example query.":::
   
 ## Export data to Power BI
 
 You can export your Application Insights data and query results to Power BI for analysis and data presentation.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you created [earlier](#create-an-application-insights-resource):
+1. Sign in to the [Azure portal](https://portal.azure.com/) and open the Application Insights resource you set up [earlier](#create-an-application-insights-resource).
 
-1. Select **Logs** under **Monitoring** in the left navigation pane:
+1. Select **Logs** under **Monitoring** in the left navigation pane.
 
-1. From the log analytics query window, select the **Export** menu.
+1. In the log analytics query window, select the **Export** menu.
 
-1. Select the **Export to Power BI (M query)** option to download a Power BI query file:
+1. Select **Export to Power BI (M query)** to download a Power BI query file.
 
-    ![Export Power BI query.](./media/application-insights/export-powerbi-query.png "Export Power BI query")
+    ![Screenshot of the Export Power BI query option in the log analytics query window.](./media/application-insights/export-powerbi-query.png "Export Power BI query")
 
-1. Open the downloaded file in a text editor and copy the query to the clipboard.
+1. Open the downloaded file in a text editor, and copy the query to the clipboard.
 
 1. Open Power BI.
 
-1. Select the **Get Data** menu in the **Home** ribbon, and then select  **Blank query**:
+1. Select **Get Data** in the **Home** ribbon, and then select **Blank query**.
 
-    ![Power BI blank query.](./media/application-insights/powerbi-blank-query.png "Power BI blank query")
+    ![Screenshot of the Blank query option in Power BI's Get Data menu.](./media/application-insights/powerbi-blank-query.png "Power BI blank query")
 
-1. In the query window, select **Advanced Editor**. Paste the query into the window, select **Done**, and then select **Close & Apply**:
+1. In the query window, select **Advanced Editor**, paste the query into the window, select **Done**, and then select **Close & Apply**.
 
-    ![Power BI advance query.](./media/application-insights/powerbi-advance-query.png "Power BI advance query")
+    ![Screenshot of the Advanced Editor in Power BI with a query pasted into the window.](./media/application-insights/powerbi-advance-query.png "Power BI advance query")
 
-You can also create charts and visualizations in Power BI to represent feedback received in your app, as well as make data-based decisions and actions.
+Create charts and visualizations in Power BI to represent feedback from your app and make data-driven decisions.
 
-![Charts and visualizations.](./media/application-insights/powerbi-feedback.png "Charts and visualizations")
+![Screenshot of charts and visualizations in Power BI representing app feedback.](./media/application-insights/powerbi-feedback.png "Charts and visualizations")
 
 ## Default Trace event context and dimensions
 
-A set of default dimensions is also added to the *customDimensions* property on each Trace event. These dimensions can be used to identify the application and application sessions the events occurred in. If you log additional custom data using the Trace function, they'll also appear in the custom dimensions.
+Default dimensions are added to the *customDimensions* property on each Trace event. These dimensions identify the application and application sessions where the events occur. If you log additional custom data using the Trace function, it also appears in the custom dimensions.
 
 | Dimension Name  | Represents                                            |
 |-----------------|-------------------------------------------------------|
 | ms-appId | The Application ID of the app that sent the event. |
 | ms-appname | The Application name of the app that sent the event. |
-| ms-appSessionId | The application session ID. This value may not be populated is some scenarios. When available, this value overrides the standard Application Insights sessionID dimension. |
+| ms-appSessionId | The application session ID. This value might not be populated in some scenarios. When available, this value overrides the standard Application Insights sessionID dimension. |
 | ms-tenantID | The unique identifier of the tenant where the application is published. |
 | ms-environmentId | The name of the environment where the application is published. |
 | userId | A unique identifier for the user associated with the session. |
 | ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard Application Insights PageView duration dimension. |
-| sessionId | A session ID that can be used to correlate all events associated with a single application session. This value is always present and is recommended for understanding unique session count. This value is taken from the player's session ID and is shown when viewing the session details while playing the app. Session ID might sometimes get a default, random, and unique Application Insights generated value. This default value isn't reliable and doesn't correlate with any app-specific parameters. |
-| Duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value is the same as the duration reported by the ms-duration dimension. |
+| sessionId | A session ID that can be used to correlate all events associated with a single application session. This value is always present and is recommended for understanding unique session count. This value is taken from the player's session ID and is shown when viewing the session details while playing the app. Session ID might sometimes get a default, random, unique Application Insights-generated value. This default value isn't reliable and doesn't correlate with any app-specific parameters. |
+| Duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value matches the duration reported by the ms-duration dimension. |
 | ms-isTest | Indicates whether the session is associated with the Test Studio test runner. |
-| ms-currentScreenName | The name of the page a user is navigating from (present for page navigation events). |
+| ms-currentScreenName | The name of the page the user navigates from (available for page navigation events). |
 | ms-targetScreenName | The name of the page a user is navigating to (present for page navigation events). |
 
 ## Unsupported scenarios
 
-Application Insights doesn't support the following scenarios.
+Application Insights doesn't support these scenarios.
 
-- Offline player events aren't captured.
-- Mobile app (both iOS and Android) events aren't captured when app is suspended.
+- Offline player events aren't recorded.
+- Events from mobile apps (iOS and Android) aren't recorded when the app is suspended.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
