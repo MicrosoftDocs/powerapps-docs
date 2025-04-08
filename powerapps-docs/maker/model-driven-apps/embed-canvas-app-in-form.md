@@ -22,7 +22,7 @@ search.audienceType:
 ---
 # Embed a canvas app on a model-driven form
 
-Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 400 data sources.
+Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG Power Apps Studio. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
 ## Embedded canvas apps can help you build better solutions
 
