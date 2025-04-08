@@ -22,7 +22,7 @@ Copilot case summaries help you quickly understand the context of a case and res
    - Enhanced full case form
    - Case
    - Case for Multisession experience
-- If case summary is already enabled for the forms in your model-driven app, we recommend that the administrator disable the case summary card on the form to avoid duplication.
+- If case summary is already [enabled for the custom forms in your model-driven app](/dynamics365/customer-service/administer/copilot-powerapps-settings), we recommend that the administrator disable the case summary card on the form to avoid duplication. 
 
 ## View case summary
 
