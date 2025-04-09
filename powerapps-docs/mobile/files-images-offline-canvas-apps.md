@@ -5,9 +5,9 @@ description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: article
-ms.date: 03/13/2024
+ms.date: 04/09/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: ritwikganni
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -46,6 +46,9 @@ In an offline-enabled canvas app, there are two ways to download files and image
 
 - **On view**: Downloaded when you view them—the default option.
 - **On sync**: Downloaded during offline sync when device is connected.
+
+> [!NOTE]
+> Mobile offline for canvas apps support viewing images in full view.
 
 ### Download files and images on view
 
