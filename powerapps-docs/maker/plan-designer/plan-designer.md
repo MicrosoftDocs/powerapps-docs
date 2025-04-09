@@ -75,7 +75,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 1. Review the user roles and stories. Then, choose one of the following options:
 
     - Select **Add these roles** to generate a data model.
-    - Select **Edit** to make edits inline or add new user roles or new requirements.
+    - Select **Edit** to make edits inline or add new user roles or needs.
     
         :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer." lightbox="media/pd-6-generate-roles-stories.png":::
 
@@ -91,7 +91,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
     1. Add a new user need.
     1. Add a new user role.
     
-1. You can also use **Copilot** to provide feedback for the generated user roles needs. Select a user role and enter your feedback.
+1. You can also use **Copilot** to provide feedback for the generated user needs. 
 
     :::image type="content" source="media/pd-edit-copilot.png" alt-text="Edit using Copilot":::
 
@@ -101,9 +101,9 @@ In this scenario, two roles were generated: employee and manager. Each role come
     - Add a user story for employees to view PTO blackout dates.
     - Remove the user story for managers for viewing vacation history of team members.
 
-1. Review the changes and select **Keep** or **Undo**. When you're done, select **Accept** to move on to the next step and generate data tables.
+1. Review the changes and select **Keep** or **Undo**.
 
-    :::image type="content" source="media/pd-7-keep-or-undo.png" alt-text="Screenshot of the Plan designer showing updated user roles and stories." ::: 
+1. When you're done, select **Add these roles** to move on to the next step and generate data tables.
 
 ### Generate data tables
 
