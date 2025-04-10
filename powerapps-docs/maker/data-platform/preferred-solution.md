@@ -29,9 +29,7 @@ There are a few reasons you *shouldn't* create your solution objects in either t
 Using preferred solutions is a way to determine which solutions contain each maker's edits that occur in Power Apps. Setting the preferred solution enables makers to view and update which solution they're using. After you set your preferred solution, you can create objects in the solution you specify and those objects will automatically be in that solution so that you control the objects within the solution. Then, you can export your preferred solution and import the solution to other Microsoft Dataverse environments.
 
 > [!NOTE]
->
-> - When your preferred solution isn't set, by default, the **Common Data Services Default Solution** is your preferred solution. If **Common Data Services Default Solution** isn't available, the solution named **Default Solution** is used as your preferred solution. You can change this to your desired solution by following the steps in this article. For more information about the **Common Data Services Default Solution** and **Default Solution**, go to [Default solutions](solutions-overview.md#default-solutions).
-> - The environment setting to enable or disable this feature is no longer available now that preferred solution is generally available.
+> When your preferred solution isn't set, by default, the **Common Data Services Default Solution** is your preferred solution. If **Common Data Services Default Solution** isn't available, the solution named **Default Solution** is used as your preferred solution. You can change this to your desired solution by following the steps in this article. For more information about the **Common Data Services Default Solution** and **Default Solution**, go to [Default solutions](solutions-overview.md#default-solutions).
 
 ## Prerequisites
 
