@@ -20,7 +20,7 @@ contributors:
 You can integrate a custom Copilot created in Microsoft Copilot Studio and enable it for your canvas app. This lets users interact with Copilot to ask questions about the data in your app. With just a few simple steps, you can embed a custom Copilot across all your canvas app screens without changing the app's design.
 
 > [!IMPORTANT]
-> - You can only use this feature on mobile devices. For web scenarios, use [Copilot control for canvas apps](../../maker/canvas-apps/add-ai-copilot.md). 
+> - You can only use this feature on mobile devices. For web scenarios, this feature is set to be deprecated by September 2025. Use [Copilot control for canvas apps](../../maker/canvas-apps/add-ai-copilot.md) instead. 
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
