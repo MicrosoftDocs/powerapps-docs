@@ -110,7 +110,7 @@ The enhanced email template editor is displayed if the enhanced email template e
 
 You can add Copilot prompts to your email template for a consistent experience. Copilot prompts are available in the enhanced email template editor.
 
-Learn more in: [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
+Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
 
 ### Email template editor
 
