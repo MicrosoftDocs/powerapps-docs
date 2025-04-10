@@ -23,8 +23,8 @@ By default, unless you're already in the context of an unmanaged solution when y
 There are a few reasons you *shouldn't* create your solution objects in either the Common Data Services Solution and the Default Solution:
 
 - There's no control over the separation of solution objects between makers. All objects can be viewed from the Default Solution and the Common Data Services Solution is the default solution so other makers can and likely are using it.
-- The Common Data Services Default Solution and Default Solution can't be exported for import to other environments.
-- You can't change the solution publisher with either the Common Data Services Default Solution and Default Solution. More information: [Solution publisher](create-solution.md#solution-publisher)
+- The Default Solution can't be exported for import to other environments.
+- You can't change the solution publisher for the Default Solution. Additionally, since the solutions already exist, you can't change the solution publisher prefix for either system solutions. More information: [Solution publisher](create-solution.md#solution-publisher)
 
 Using preferred solutions is a way to determine which solutions contain each maker's edits that occur in Power Apps. Setting the preferred solution enables makers to view and update which solution they're using. After you set your preferred solution, you can create objects in the solution you specify and those objects will automatically be in that solution so that you control the objects within the solution. Then, you can export your preferred solution and import the solution to other Microsoft Dataverse environments.
 
