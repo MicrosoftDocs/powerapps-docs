@@ -37,6 +37,10 @@ To return an aggregate value, you must:
    |[HasGroupBy](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression.HasGroupBy)|Set to `true`.|
    |[DateTimeGrouping](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression.DateTimeGrouping)|When the grouping involves datetime values, specify the type of datetime grouping to apply using the [XrmDateTimeGrouping enum](xref:Microsoft.Dynamics.CRM.XrmDateTimeGrouping) members. [Learn about grouping by parts of a date](#grouping-by-parts-of-a-date)|
 
+Data result details:
+- Aggregate data is always returned as an [AliasedValue](xref:Microsoft.Xrm.Sdk.AliasedValue).
+- If a grouped by value is null, it will not appear in the returned Attributes collection of the entity.
+
 ## Types of aggregation
 
 The types of aggregation you can do are members of the [XrmAggregateType enum](xref:Microsoft.Xrm.Sdk.Query.XrmAggregateType).
@@ -65,7 +69,7 @@ Let's say you have 10 account records with the following data:
 
 |Number of Employees|Name|Address 1 City|Created On|
 |---------|---------|---------|---------|
-|NULL|Example Account|NULL|8/25/2023|
+|NULL|Example Account|NULL|8/27/2023|
 |1,500|Contoso Pharmaceuticals (sample)|Redmond|3/25/2023|
 |2,700|Fabrikam, Inc. (sample)|Lynnwood|3/25/2023|
 |2,900|Blue Yonder Airlines (sample)|Los Angeles|3/25/2023|
