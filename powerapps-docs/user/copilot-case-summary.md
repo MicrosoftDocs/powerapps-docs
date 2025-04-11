@@ -27,7 +27,7 @@ Based on the case form configured, users see the enhanced case summary card or t
 
  The enhanced Copilot case summary card is enabled by default on all case forms except **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience** forms.
 
- - If case summary isn't enabled for case forms in your model-driven app, users see the enhanced case summary card on the form. 
+ - If case summary isn't enabled for case forms in your model-driven app, users see the case summary on the enhanced case summary card on the form by default. 
 -  If the case summary is already [enabled for case forms in your model-driven app](/dynamics365/customer-service/administer/copilot-powerapps-settings), users see both the enhanced and current case summary cards on the form. To avoid duplication, we recommend that your app administrator do one of the following actions:
    - To retain the enhanced case summary card, navigate to the required case form in Power Apps and then remove the custom summarization control.
    -  To retain the current case summary card, add the case form to the exception list. Run the following script in the Copilot Service admin center console to add the form to the exception list.
