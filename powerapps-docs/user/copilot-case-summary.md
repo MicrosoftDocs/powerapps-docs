@@ -6,7 +6,7 @@ ms.author: mgandham
 ms.reviewer: gandhamm
 ms.topic: how-to
 ms.collection: 
-ms.date: 04/08/2025
+ms.date: 04/11/2025
 ms.custom: bap-template 
 ---
 
@@ -16,19 +16,19 @@ Copilot case summaries help users quickly understand the context of a case and r
 
 ## View case summary card
 
-Copilot case summary is enabled by default for all model-driven apps that use the **incident** table. 
-When you open a case record, the case summary card appears. The card collapsed by default so that your screen isn't cluttered with information. When you expand the card, Copilot generates and displays the case summary.
+Copilot case summary is enabled by default for all model-driven apps that use the **incident** table. When you open a case record, the case summary card appears. The card is collapsed by default. When you expand the card, Copilot generates and displays the case summary.
 
 Based on the case form configured, users see the enhanced case summary card or the current version of the case summary card.
 
 > [!NOTE]
-> Users won't see case summary cards on case forms by default, if their organization has opted out of automatic Copilot feature enablement.
+> Users won't see case summary cards on case forms by default if their organization has opted out of the automatic enablement of Copilot feature.
 
  ### [Enhanced case summary card](#tab/enhancedcasesummarycard)
 
  The enhanced Copilot case summary card is enabled by default on all case forms except **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience** forms.
 
- If the case summary is already [enabled for case forms in your model-driven app](/dynamics365/customer-service/administer/copilot-powerapps-settings), users see both the enhanced and current case summary cards on the form. We recommend that your app administrator do one of the following actions to avoid duplication:
+
+ If the case summary is already [enabled for case forms in your model-driven app](/dynamics365/customer-service/administer/copilot-powerapps-settings), users see both the enhanced and current case summary cards on the form. To avoid duplication, we recommend that your app administrator do one of the following actions:
    - To retain the enhanced case summary card, navigate to the required case form in Power Apps and then remove the current Copilot case summary card.
    -  To retain the current case summary card, add the case form to the exception list. Run the following script in the Copilot Service admin center console to add the form to the exception list.
 
@@ -56,7 +56,7 @@ Based on the case form configured, users see the enhanced case summary card or t
    - Case
    - Case for Multisession experience
  
-   Users see the current case summary card on these forms irrespective of their administrator's configuration.
+   Users see the current case summary card on these forms, irrespective of the configuration.
  
   Users can copy the summary, translate the summary into multiple languages, refresh it, regenerate the summary, and provide feedback on the current case summary card.
 
@@ -64,5 +64,5 @@ Based on the case form configured, users see the enhanced case summary card or t
 
 ---
 
-If Custom Record Summary is enabled, users will see the custom record summary in the enhanced summary card by default. We recommend that you remove the current summary card from the form to avoid duplication. Learn more in [Configure custom record summaries for service representatives](/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries).
+If Custom Record Summary is enabled, users see the custom record summary in the enhanced summary card by default. We recommend that you remove the current summary card from the form to avoid duplication. Learn more in [Configure custom record summaries for service representatives](/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries).
 
