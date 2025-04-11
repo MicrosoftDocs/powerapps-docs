@@ -21,7 +21,7 @@ Copilot case summary is enabled by default for all model-driven apps that use th
 Based on the case form configured, users see the enhanced case summary card or the current version of the case summary card.
 
 > [!NOTE]
-> Users won't see case summary cards on case forms by default if their organization has opted out of automatic Copilot feature enablement.
+> Users won't see case summary cards on case forms by default if their organization has opted out of the automatic enablement of Copilot feature.
 
  ### [Enhanced case summary card](#tab/enhancedcasesummarycard)
 
