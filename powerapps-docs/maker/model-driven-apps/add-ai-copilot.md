@@ -92,7 +92,11 @@ To provide feedback to help us improve Copilot's responses, app users can select
 
 ## Region availability and languages supported
 
-Copilot chat for model-driven apps in Power Apps is available in regions and languages listed in the [Copilot international availability report](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Copilot chat for model-driven apps in Power Apps is available in regions and languages listed below.
+
+| Regions       | Language |
+|---------------|----------|
+| Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Qatar, Singapore, South Africa, Sweden, Switzerland, United Arab Emirates, United Kingdom, United States | Czech, Danish, German, Greek, Finnish, French, Italian, Japanese, Korean, Dutch, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Swedish, Thai, Turkish, Chinese (Simplified), Spanish (Spain)  |
 
 Copilot takes into account the user's preferred UI language and localizes responses based on that. Depending on the user's preferred UI language, org language, and languages supported for a specific Copilot feature, the responses are localized accordingly. The following table summarizes the expected behavior in different scenarios:
 
@@ -101,8 +105,6 @@ Copilot takes into account the user's preferred UI language and localizes respon
 | English                  | English                           | Output in English                                                                 |
 | English or non-English   | One of the supported non-English languages | Output in the preferred UI language of the user.                                                |
 | English or non-English   | An unsupported language     | Output is unpredictable as the language is unsupported. The responses are mixed with English and the user language. We recommend using one of the supported Copilot languages in such cases. |
-
-We're continuously working to expand the availability of Copilot features in more regions and languages. If you don't see your region or language listed in the report, check back later for updates.
 
 ### Known limitations
 
