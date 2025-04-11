@@ -4,7 +4,7 @@ description: Learn how to view copilot case summary in model-driven apps.
 author: gandhamm
 ms.author: mgandham
 ms.reviewer: gandhamm
-ms.topic: conceptual 
+ms.topic: how-to
 ms.collection: 
 ms.date: 04/08/2025
 ms.custom: bap-template 
@@ -29,8 +29,8 @@ Based on the case form configured, users see the enhanced case summary card or t
  The enhanced Copilot case summary card is enabled by default on all case forms except **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience** forms.
 
  If the case summary is already [enabled for case forms in your model-driven app](/dynamics365/customer-service/administer/copilot-powerapps-settings), users see both the enhanced and current case summary cards on the form. We recommend that your app administrator do one of the following actions to avoid duplication:
-   - Navigate to the required case form in Power Apps and then remove the Copilot case summary card on the form to remove the current case summary card.
-   -  Add the case form to the exception list, to use the current experience. Run the following script in the Copilot Service admin center console to add the form to the exception list.
+   - To retain the enhanced case summary card, navigate to the required case form in Power Apps and then remove the current Copilot case summary card.
+   -  To retain the current case summary card, add the case form to the exception list. Run the following script in the Copilot Service admin center console to add the form to the exception list.
 
         ```
           Xrm.WebApi.updateRecord("msdyn_copilotsummarizationsetting", "7fa56176-c226-45e5-b8fa-25d56e0dcc21", {"msdyn_excludeformslist": "4a63c8d1-6c1e-48ec-9db4-3e6c7155334c,915f6055-2e07-4276-ae08-2b96c8d02c57,b05c1e9c-94d0-46c1-8968-df49b8f33ec7,cd0d48a0-10c6-ec11-a7b5-000d3a58b83a"}).then(
@@ -49,7 +49,7 @@ Based on the case form configured, users see the enhanced case summary card or t
     
   ### [Current case summary card](#tab/casesummarycard)
 
-   This card is available only on the following out-of-the-box case forms:
+   This card is available on the following out-of-the-box case forms only:
 
    - Case for Interactive experience
    - Enhanced full case form
