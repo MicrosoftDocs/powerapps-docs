@@ -36,6 +36,7 @@ After creating the agent, makers can edit, test, and publish it in Microsoft Cop
 - Include a Dataverse database in your environment. More information: [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 - The environment must be in the United States region. Depending on where the environment is hosted, you might need to allow data movement across regions. More information: [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 - Ensure that block unmanaged customizations is disabled. Learn more in [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations).
+- Current environment has PowerVirtualAgents solution 2.0.0.649.1 or newer.
 
 ## Create an agent
 
