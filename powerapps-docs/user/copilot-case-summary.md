@@ -67,5 +67,5 @@ Based on the case summary configuration, users see the following:
 
 ---
 
-If [custom record summary](/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries) is enabled, users see both the enhanced and current summary card by default. We recommend that you perform the steps in the [enhanced case summary card](#enhanced-case-summary-card) section to avoid duplication.
+If [custom record summary](/dynamics365/customer-service/administer/copilot-enable-custom-record-summaries) is enabled, users see both the enhanced and current summary card by default. We recommend that you perform the steps in the enhanced case summary card section to avoid duplication.
 
