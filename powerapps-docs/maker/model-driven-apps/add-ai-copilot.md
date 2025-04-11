@@ -96,7 +96,7 @@ Copilot chat for model-driven apps in Power Apps is available in regions and lan
 
 | Regions       | Language |
 |---------------|----------|
-| Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Qatar, Singapore, South Africa, Sweden, Switzerland, United Arab Emirates, United Kingdom, United States | Czech, Danish, German, Greek, Finnish, French, Italian, Japanese, Korean, Dutch, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Swedish, Thai, Turkish, Chinese (Simplified), Spanish (Spain)  |
+| Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Qatar, Singapore, South Africa, Sweden, Switzerland, United Arab Emirates, United Kingdom, United States | Czech, Danish, German, Greek, Finnish, French, Italian, Japanese, Korean, Dutch, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Swedish, Thai, Turkish, Chinese (Simplified), Spanish (Spain), Arabic, Hebrew  |
 
 Copilot takes into account the user's preferred UI language and localizes responses based on that. Depending on the user's preferred UI language, org language, and languages supported for a specific Copilot feature, the responses are localized accordingly. The following table summarizes the expected behavior in different scenarios:
 
