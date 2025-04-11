@@ -50,6 +50,8 @@ Wrap offers several benefits, effectively addressing challenges like increasing 
 
 1. **Sovereign cloud**: Wrap is currently not supported in the sovereign cloud.
 
+1. **Full Image View**: Offline-enabled Wrap apps support viewing images as thumbnails but don't currently support viewing images in full view. 
+
 ### See also
 
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
