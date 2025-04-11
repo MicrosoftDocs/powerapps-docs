@@ -56,7 +56,8 @@ Based on the case form configured, users see the enhanced case summary card or t
    - Case
    - Case for Multisession experience
  
-   - If case summary is enabled or disabled, users will seer the current case summary card on these forms.
+   - If case summary is enabled, users see the current case summary card on these forms, as-is.
+   - If case summary is disabled, users see the case summary displayed in the current case summary card, by default.
 
   Users can copy the summary, translate the summary into multiple languages, refresh it, regenerate the summary, and provide feedback on the current case summary card.
 
