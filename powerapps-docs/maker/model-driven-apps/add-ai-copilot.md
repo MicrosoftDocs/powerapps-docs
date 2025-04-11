@@ -25,7 +25,6 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
 >
-> - To use this capability, your environment must have its language set to English.
 > - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
@@ -90,6 +89,20 @@ To provide feedback to help us improve Copilot's responses, app users can select
 
 1. Set the column to **No**, and then **Save** the table.
    :::image type="content" source="media/disable-mda-copilot-feedback2.png" alt-text="Screenshot that shows where to set the Allow users to provide feedback for App Copilot column to No.":::
+
+## Region availability and languages supported
+
+Copilot chat for model-driven apps in Power Apps is available in regions and languages listed in the [Copilot international availability report](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+
+Copilot takes into account the user's preferred UI language and localizes responses based on that. Depending on the user's preferred UI language, org language, and languages supported for a specific Copilot feature, the responses are localized accordingly. The following table summarizes the expected behavior in different scenarios:
+
+| Base language of the org | Preferred UI language of the user | Expected behavior                                                                 |
+|--------------------------|-----------------------------------|-----------------------------------------------------------------------------------|
+| English                  | English                           | Output in English                                                                 |
+| English or non-English   | One of the supported non-English languages | Output in the preferred UI language of the user.                                                |
+| English or non-English   | An unsupported language     | Output is unpredictable as the language is unsupported. The responses are mixed with English and the user language. We recommend using one of the supported Copilot languages in such cases. |
+
+We're continuously working to expand the availability of Copilot features in more regions and languages. If you don't see your region or language listed in the report, check back later for updates.
 
 ### Known limitations
 
