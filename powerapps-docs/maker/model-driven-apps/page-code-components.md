@@ -86,4 +86,4 @@ Or try some from the [Power Apps community gallery](/powerapps/developer/compone
 
 [Overview of Power Apps connectors](../canvas-apps/connections-list.md)
 
-[Add data connection in canvas designer](../canvas-apps/add-data-connection.md)
+[Add data connection in Power Apps Studio](../canvas-apps/add-data-connection.md)

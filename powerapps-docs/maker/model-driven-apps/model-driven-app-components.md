@@ -43,7 +43,7 @@ These components determine how users interact with the app.
 |[Site map](model-driven-app-glossary.md#site-map)     | Specifies the navigation for your app.        | App designer        |
 |[Form](model-driven-app-glossary.md#form)     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns where users input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
 |[View](model-driven-app-glossary.md#view)     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer or app designer      |
-|Custom page (preview) | A canvas based page which allows flexible layout, low-code Power Fx functions, and Power Apps connector data. For more information, go to [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Canvas designer |
+|Custom page (preview) | A canvas based page which allows flexible layout, low-code Power Fx functions, and Power Apps connector data. For more information, go to [Model-driven app custom page overview (preview)](model-app-page-overview.md) | Power Apps Studio |
 
 ## Logic components
 
