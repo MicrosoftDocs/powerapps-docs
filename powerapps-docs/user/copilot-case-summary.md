@@ -55,7 +55,7 @@ Based on the case form configured, users see the enhanced case summary card or t
    - Case
    - Case for Multisession experience
  
-   Users see the current case summary card on these forms, irrespective of their administrator's configuration.
+   Users see the current case summary card on these forms, irrespective of the configuration.
  
   Users can copy the summary, translate the summary into multiple languages, refresh it, regenerate the summary, and provide feedback on the current case summary card.
 
