@@ -63,6 +63,8 @@
         href: ../user/use-copilot-model-driven-apps.md
       - name: Use Copilot to visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
+      - name: Use Copilot case summary in model-driven apps
+        href: ../user/copilot-case-summary.md       
     - name: Navigation and basics
       items:
       - name: Basic navigation
