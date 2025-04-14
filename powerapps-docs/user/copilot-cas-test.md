@@ -19,6 +19,10 @@ Copilot case summaries help users quickly understand the context of a case and r
 Copilot case summary is enabled by default for all model-driven apps that use the **incident** table. When you open a case record, the case summary card appears. The card is collapsed by default. When you expand the card, Copilot generates and displays the case summary.
 
 Based on the case form configured, users see the case summary displayed on top of the case form or within the form. 
+
+
+
+
 > [!NOTE]
 > Users won't see case summary cards on case forms by default if their organization has opted out of the automatic enablement of Copilot feature.
 
@@ -27,6 +31,7 @@ Based on the case form configured, users see the case summary displayed on top o
 - **Case Summary** is enabled in Copilot Service admin center > **Agent Experience** > **Productivity** > **Summaries** and in the experience profile, users see the following: 
 
   - For all custom case forms and out-of-the-box case forms except **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience**, users see the case summary card on the top of the form. 
+       :::image type="content" source="media/copilot-case-summary.png" alt-text="Screenshot that shows the Copilot case summary on a model driven app.":::
   - For custom case forms, users might see the case summary card appear twice on their form. To avoid duplication, we recommend that your app administrator do one of the following actions:
       - To retain the enhanced case summary card, navigate to the required case form in Power Apps and then remove  the custom summarization control.
       -  To retain the current case summary card, add the case form to the exception list. Run the following script in the Copilot Service admin center console to add the form to the exception list.
@@ -43,7 +48,7 @@ Based on the case form configured, users see the case summary displayed on top o
          ```  
 
   - On **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience** the case summary card is displayed within the form.
-
+       :::image type="content" source="media/copilot-case-summary-test.png" alt-text="Screenshot that shows the Copilot case summary on a model driven app.":::
 - **Case Summary** is disabled in Copilot Service admin center > **Agent Experience** > **Productivity** > **Summaries** and in experience profiles, users see the following: 
   - For all custom case forms and out-of-the-box case forms except **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience**, users see the case summary card on the top of the form, available by default.
   - On **Case for Interactive experience**, **Enhanced full case form**, **Case**, and **Case for Multisession experience** the case summary card is displayed within the form.
