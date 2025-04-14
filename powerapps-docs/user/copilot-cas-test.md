@@ -55,7 +55,7 @@ Based on the case form configured, users see the case summary displayed on top o
 
 - **Case Summary** is enabled in Copilot Service admin center > **Agent Experience** > **Productivity** > **Summaries**, but is disabled in the experience profile, the case summary card isn't displayed on any out-of-the-box or custom case form.
 
-- **Case Summary** is disabled in Copilot Service admin center > **Agent Experience** > **Productivity** > **Summaries**, but is disabled in the experience profile, the case summary card isn't displayed on any out-of-the-box or custom case form.
+- **Case Summary** is disabled in Copilot Service admin center > **Agent Experience** > **Productivity** > **Summaries**, and is disabled in the experience profile, the case summary card isn't displayed on any out-of-the-box or custom case form.
 
 ## Custom record summary
 
