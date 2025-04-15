@@ -106,6 +106,12 @@ The enhanced email template editor is displayed if the enhanced email template e
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 
+### Add Copilot prompts to an email template
+
+You can add Copilot prompts to your email template for a consistent experience. Copilot prompts are available in the enhanced email template editor.
+
+Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
+
 ### Email template editor
 
 The email template editor is displayed if the enhanced email template editor option is disabled. 
@@ -115,6 +121,7 @@ The email template editor is displayed if the enhanced email template editor opt
    1. **Insert dynamic text**: Use dynamic text in the subject and body of the email.
    2. **Subject**: Enter or change the email subject.
    3. **New Attachment**: Add one or more attachments to your template, if needed.
+
 
 ### See also
 
