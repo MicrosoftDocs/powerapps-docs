@@ -236,7 +236,8 @@ Please see InnerException for more details.
 
 ## Community tools
 
-The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface and many other configurations to generating early-bound types.
+The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface that generates the correct  `builderSettings.json` file, and calls `pac modelbuilder build` command for the user.  Since the UI is just used to generate the `builderSettings.json` and call the `pac modelbuilder bulid` command, it can still be ran via the command line in a pipeline without a dependency on the XrmToolBox. It also provides additional configuration options that the `pac modelbuilder` doesn't (like explictly control class/properties casing and language specific transliteration of characters), by taking advantage of the extensiblity features of the `pac modelbuilder`.  
+
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools.
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
