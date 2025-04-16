@@ -7,17 +7,11 @@ ms.topic: how-to
 ms.date: 1/14/2025
 ms.custom: template-how-to
 ---
-# View solution deployments on the deployment page (preview)
-
-[!INCLUDE [production-ready-preview-powerplatform](~/../shared-content/shared/preview-includes/production-ready-preview-powerplatform.md)]
+# View solution deployments on the deployment page
 
 From the **Solutions** page, makers can navigate to **Deployments** to view all of their solution deployments, across all solutions and pipelines, in one place. If their deployment began from (or was deployed to) the current environment, they are able to view its status and other details.
 
 :::image type="content" source="media/maker-deployment-hub.png" alt-text="Screenshot of the deployment page for makers." lightbox="media/maker-deployment-hub.png":::
-
-> [!IMPORTANT]
-> This is a preview feature.
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Get started
 
@@ -34,6 +28,14 @@ On the right of the overview, makers view their ongoing deployments. When makers
 ## Deployment history
 
 At the bottom of the overview, makers view their deployment history. This section provides a comprehensive list of all deployments, including the deployment status, the solution, the pipeline, and the environment. Makers can filter this list by solution, pipeline, and environment to quickly find the deployment they're looking for. This run history view is unique. First it's filtered to only show the current user's deployments specifically to and from this environment, and second it's upleveled to show all the current user's deployments, not just involving one solution or pipeline. Selecting a deployment in this grid shows a details panel, summarizing all the deployment information and displaying the deployment notes as well.
+
+### Retry failed deployments
+
+Deployments shown as **Failed** in the run history view can now be deployed by selecting **Retry** in the details panel if the operation was "Deploy". A confirmation dialogue will appear when clicked to confirm the retry.
+
+## Take action with Advisor-powered recommendations
+
+Actionable recommendations for improving ALM health within your environment will now be shown in the **Take action** section at the bottom of the Deployment page. These recommendations help ensure that makers are following the best practices to enable healthy ALM within the organization.
 
 ## Why can't I see solution deployments other than those that I initiated?
 
