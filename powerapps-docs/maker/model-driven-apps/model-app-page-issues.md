@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page." 
 ms.custom: ""
-ms.date: 02/03/2025
+ms.date: 04/16/2025
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: "article"
@@ -25,6 +25,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 * When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app continues to use the last version of the custom page when the model-driven app was published. A model-driven app published through app designer, solution explorer, or **Publish all** updates all custom pages in the model-driven app.
 
 * Images, icons, and shapes aren't currently supported with Right-To-Left (RTL) languages.
+  
+* The [App.ConfirmExit](/power-platform/power-fx/reference/object-app#confirmexit) property isn't supported in custom pages. 
 
 * The ability to get the current data formats from users settings including date, time, numbers, and currency isn't supported.
 
