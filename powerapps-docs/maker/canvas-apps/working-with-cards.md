@@ -77,7 +77,7 @@ Modify the **[DisplayName](controls/control-card.md)** to put a space between **
 You've now taken control over this card and can modify it further to fit your need. But you've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as you did before. You've transformed the predefined card into a "custom card" that you now control.  
 
 > [!IMPORTANT]
-> You cannot relock a card if you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
+> You can't relock a card if you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
 
 You can change the appearance and behavior of an unlocked card in a variety of ways, such as adding and deleting controls within it. For example, you can add a star shape from the **Icons** menu on the **Insert** tab.
 
@@ -119,7 +119,7 @@ By default, **DefaultValue** and **[Required](controls/control-card.md)** proper
 ### Information flowing out
 After the user modifies a record by using controls in the cards, the **[SubmitForm](functions/function-form.md)** function saves those changes to the data source. When that function runs, the form control reads the values of each card's **[DataField](controls/control-card.md)** property to know what field to change.  
 
-The form control also reads the value of each card's **[Update](controls/control-card.md)** property. This value will be stored in the data source for this field. This is the place to apply another transform, perhaps to reverse the transform that was applied in the card's **[Default](controls/properties-core.md)** formula.
+The form control also reads the value of each card's **[Update](controls/control-card.md)** property. This value is stored in the data source for this field. This is the place to apply another transform, perhaps to reverse the transform that was applied in the card's **[Default](controls/properties-core.md)** formula.
 
 The **Valid** property is driven from the metadata of the data source, based on the **[DataField](controls/control-card.md)** property. It's also based on the **[Required](controls/control-card.md)** property and whether the **[Update](controls/control-card.md)** property contains a value. If the value on the **[Update](controls/control-card.md)** property isn't valid, the **Error** property provides a user-friendly error message.
 
@@ -143,7 +143,7 @@ Four controls make the card work:
 | **InputText** |**Input text** control |Shows the initial value of the field and lets the user change that value. |
 | **TextErrorMessage** |**[Label](controls/control-text-box.md)** control |Shows a user-friendly error message to the user if a problem occurs with validation. It also ensures that the field has a value if one is required. |
 
-To populate these controls with data, their properties are driven from the properties of the card through these key formulas. Note that formulas refer to a specific field. Instead, all information comes from the card.
+To populate these controls with data, their properties are driven from the properties of the card through these key formulas. Formulas refer to a specific field. Instead, all information comes from the card.
 
 | Control property | Formula | Description |
 | --- | --- | --- |
