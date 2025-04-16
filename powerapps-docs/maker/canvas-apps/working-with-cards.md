@@ -27,7 +27,7 @@ Get started with cards by reading [add a form](add-form.md) and [understand data
 
 ## Predefined cards
 
-Power Apps offers a predefined set of cards for strings, numbers, and other data types. In the right pane, you see the available variations and can change the card used for a field:
+Power Apps offers a predefined set of cards for strings, numbers, and other data types, making it easy to tailor your app to specific data requirements. In the right pane, you see the available variations and can change the card used for a field:  
 
 ![Selected card.](./media/working-with-cards/selected-card.png "Selected card")
 
@@ -56,7 +56,7 @@ This article walks through an example of how to change a card's appearance by ma
 Resize, move, and make other modifications to controls within a card, but you can't delete it without unlocking it first.
 
 ## Unlock a card
-In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** tab of the right-hand pane:
+In addition to containing controls, cards themselves are controls with properties and formulas, allowing for advanced customization. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas, saving you time and effort. We can see these formulas in the **Advanced** tab of the right-hand pane:
 
 ![Advanced locked.](./media/working-with-cards/advanced-locked.png "Advanced locked")
 
@@ -102,7 +102,7 @@ We can do the same thing on the second screen of this app, where we use a **Disp
 ## Interact with a form
 After you unlock a card, you can change how it interacts with the form that contains it.
 
-Here are guidelines for how controls work with their card and how cards work with the form. These are just guidelines. Like any control in Power Apps, you can create formulas that reference other controls, including cards and controls within cards. Be creative—you can build an app in many ways.  
+Here are guidelines for how controls work with their card and how cards work with the form. These guidelines help you understand how to create formulas that reference other controls, including cards and controls within cards. Be creative—you can build an app in many ways to suit your specific needs. 
 
 ### DataField property
 The most important property on the card is the **[DataField](controls/control-card.md)** property. This property controls validation, determines which field is updated, and manages other aspects of the card.
@@ -126,7 +126,7 @@ The **Valid** property is driven from the metadata of the data source, based on 
 If the **[DataField](controls/control-card.md)** property of a card is *blank*, the card acts as a container for controls. Its **Valid** and **[Update](controls/control-card.md)** properties don't participate when the form is submitted.
 
 ## Dissecting an example
-Let's look at the controls that make up a basic data-entry card. The space between controls is increased to show each more clearly:
+Let’s explore the controls that make up a basic data-entry card. The space between controls is increased to show each more clearly, helping you understand how each component contributes to the card’s functionality:  
 
 ![Dissect card.](./media/working-with-cards/dissect-card1.png "Dissect card")
 
