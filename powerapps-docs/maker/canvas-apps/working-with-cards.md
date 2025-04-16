@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/13/2020
+ms.date: 4/16/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
