@@ -63,6 +63,8 @@
         href: ../user/use-copilot-model-driven-apps.md
       - name: Use Copilot to visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
+      - name: Use Copilot case summary in model-driven apps
+        href: ../user/copilot-case-summary.md       
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -249,8 +251,10 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Create your first app
+  - name: Create canvas apps
     items:
+    - name: Create a blank canvas app
+      href: ./canvas-apps/create-blank-app.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
@@ -262,7 +266,7 @@
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
+        href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From SharePoint
         items:
         - name: Overview
@@ -276,7 +280,7 @@
         - name: Customize a list or form
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -300,22 +304,6 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Make basic customizations
-      items:
-      - name: Galleries
-        href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Forms
-        href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Cards
-        href: ./canvas-apps/customize-card.md
-  - name: Create an app from scratch
-    items:
-    - name: With a blank app
-      href: ./canvas-apps/create-blank-app.md
-    - name: From Dataverse
-      href: ./canvas-apps/data-platform-create-app-scratch.md
-    - name: From Excel
-      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
@@ -324,6 +312,8 @@
           href: ./canvas-apps/connections-list.md
         - name: Working with untyped and dynamic objects
           href: ./canvas-apps/untyped-and-dynamic-objects.md
+        - name: Manage expired tokens
+          href: ./canvas-apps/working-with-tokens.md  
         - name: Popular connectors
           items:
             - name: Dataverse
@@ -343,7 +333,7 @@
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
-              href: canvas-apps/connections/connection-excel.md
+              href: canvas-apps/get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps
             - name: Microsoft Translator
               href: canvas-apps/connections/connection-microsoft-translator.md
             - name: Office 365 Outlook
@@ -374,8 +364,6 @@
           href: ./canvas-apps/add-manage-connections.md
         - name: Rename a data source in an app
           href: ./canvas-apps/rename-data-source.md
-        - name: Prepare Excel data
-          href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
           href: ./canvas-apps/delegation-overview.md
         - name: Manage gateways
@@ -388,6 +376,14 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+      - name: Make basic customizations
+        items:
+          - name: Galleries
+            href: ./canvas-apps/customize-layout-sharepoint.md
+          - name: Forms
+            href: ./canvas-apps/customize-forms-sharepoint.md
+          - name: Cards
+            href: ./canvas-apps/customize-card.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -722,8 +718,6 @@
             href: ./canvas-apps/power-apps-ideas.md
           - name: Transform natural language to Power Fx formulas
             href: ./canvas-apps/power-apps-ideas-transform.md
-          - name: Transform examples to Power Fx formulas
-            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1158,30 +1152,6 @@
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
-  - name: How-to guides
-    items:
-    - name: Create a canvas app connected to Dataverse from scratch
-      href: ./canvas-apps/how-to/build-connected-dataverse.md
-    - name: Create a canvas app with Power BI visual
-      href: ./canvas-apps/how-to/build-powerbi-visual.md
-    - name: Create a canvas app that can trigger a Power Automate flow
-      href: ./canvas-apps/how-to/trigger-flow.md
-    - name: Create a canvas app to scan barcodes
-      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
-    - name: Create an app that uses mobile sensors
-      href: ./canvas-apps/how-to/mobile-sensors.md
-    - name: Create an app with 3D and mixed reality controls
-      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
-    - name: Create an app to view a shape in mixed reality
-      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
-    - name: Create an app with address input and map controls
-      href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measuring Camera control
-      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
-    - name: Create a canvas app with deep link to a specific screen
-      href: ./canvas-apps/how-to/deep-linking.md
-    - name: Work with the PDF function (experimental)
-      href: ./canvas-apps/how-to/pdf-function.md
   - name: Preview an app
     href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
@@ -1240,13 +1210,35 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Transform your InfoPath forms to Power Apps
-    href: ./canvas-apps/transform-infopath.md
-  - name: Create native mobile apps
+  - name: How-to guides
+    items:
+    - name: Create a canvas app connected to Dataverse from scratch
+      href: ./canvas-apps/how-to/build-connected-dataverse.md
+    - name: Create a canvas app with Power BI visual
+      href: ./canvas-apps/how-to/build-powerbi-visual.md
+    - name: Create a canvas app that can trigger a Power Automate flow
+      href: ./canvas-apps/how-to/trigger-flow.md
+    - name: Create a canvas app to scan barcodes
+      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app with 3D and mixed reality controls
+      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
+    - name: Create an app with address input and map controls
+      href: ./canvas-apps/how-to/mobile-apps-address-map.md
+    - name: Create an app using the Measuring Camera control
+      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md 
+  - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
-      - name: System requirements and prerequisites for Wrap
+      - name: System requirements and prerequisites for wrap
         href: ./common/wrap/prerequisites.md
       - name: Use the wrap wizard to build your mobile app
         href: ./common/wrap/wrap-how-to.md
@@ -1254,21 +1246,23 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
-      - name: Create Azure key vault for wrap
+      - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
-      - name: Benefits and limitations of Wrap
+      - name: Benefits and limitations of wrap
         href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
+      - name: Troubleshoot wrap issues
+        href: /troubleshoot/power-platform/power-apps/manage-apps/wrap-issues
   - name: For developers
     items:
     - name: Working with Source Code
       items:
-        - name: Code View (preview)
+        - name: Code View
           href: ./canvas-apps/code-view.md        
-        - name: View source code files for canvas apps (preview)
+        - name: Source code files for canvas apps
           href: ./canvas-apps/power-apps-yaml.md
         - name: Use Git version control to edit canvas apps (experimental)
           href: ./canvas-apps/git-version-control.md
@@ -1699,6 +1693,8 @@
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Send a messages to Copilot chat
+          href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Prompt guide customizations
           href: ./model-driven-apps/copilot-chat-prompt-guide.md
         - name: Zero prompt experience
@@ -2203,10 +2199,93 @@
       href: ./data-platform/data-get-insights-overview.md
     - name: Power BI with Dataverse
       href: ./data-platform/use-powerbi-dataverse.md
-    - name: Create a Power BI report
-      href: ./data-platform/data-platform-powerbi-connector.md
-    - name: View table data in Power BI Desktop
-      href: ./data-platform/view-entity-data-power-bi.md
+      items:
+      - name: Create a Power BI report
+        href: ./data-platform/data-platform-powerbi-connector.md
+      - name: View table data in Power BI Desktop
+        href: ./data-platform/view-entity-data-power-bi.md
+    - name: Transition from legacy data integration services
+      items:
+      - name: Transition from legacy data integration services overview
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
+      - name: Transition from legacy data integration services FAQ
+        href: ./data-platform/azure-synapse-link-transition-faq.md
+    - name: Link to Microsoft Fabric
+      items:
+      - name: Link Dataverse to Microsoft Fabric overview
+        href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name:  Create a link to Fabric
+        href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Work with Fabric data and Power BI
+        href: ./data-platform/fabric-work-data-and-power-bi.md      
+      - name: Build apps using Fabric data
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Troubleshoot link to Fabric
+        href: ./data-platform/fabric-troubleshoot.md 
+    - name: Azure Synapse Link
+      items:
+      - name: Azure Synapse Link Overview
+        href: ./data-platform/export-to-data-lake.md
+      - name: Create an Azure Synapse Link with a Synapse Workspace
+        href: ./data-platform/azure-synapse-link-synapse.md
+      - name: Create an Azure Synapse Link with Data Lake
+        href: ./data-platform/azure-synapse-link-data-lake.md
+      - name: Advanced Configuration Settings
+        href: ./data-platform/azure-synapse-link-advanced-configuration.md
+      - name: Use managed identities for Azure
+        href: ./data-platform/azure-synapse-link-msi.md
+      - name: Choose finance and operations data in Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-select-FnO-data.md
+      - name: Azure Synapse Link for Dataverse troubleshooting guide
+        href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
+      - name: Receive Azure Synapse Link for Dataverse notifications
+        href: ./data-platform/azure-synapse-link-notifications.md
+      - name: FAQ about Azure Synapse Link
+        href: ./data-platform/export-data-lake-faq.yml
+      - name: Application Lifecycle Management
+        items:
+        - name: Transport a configuration across environments
+          href: ./data-platform/azure-synapse-link-solution.md
+        - name: Environment Lifecycle Events
+          href: ./data-platform/azure-synapse-link-olc.md
+      - name: Analyze with Azure Synapse Analytics
+        items:
+        - name: Query data with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-serverless.md
+        - name: Query and analyze incremental updates
+          href: ./data-platform/azure-synapse-incremental-updates.md
+        - name: Create a view on your Dataverse data
+          href: ./data-platform/azure-synapse-link-create-view.md
+        - name: Transform data with Apache Spark
+          href: ./data-platform/azure-synapse-link-spark.md
+        - name: Copy Dataverse into Azure SQL
+          href: ./data-platform/azure-synapse-link-pipelines.md
+        - name: Visualize data with Power BI
+          href: ./data-platform/azure-synapse-link-powerbi.md
+        - name: Copy data to Dedicated SQL
+          href: ./data-platform/azure-synapse-link-dedicated.md
+        - name: Read Incremental Updates
+          href: ./data-platform/azure-synapse-link-incremental.md
+        - name: Access Dataverse choices with serverless SQL pool
+          href: ./data-platform/azure-synapse-link-choices-serverless.md
+        - name: Export data in Delta Lake format
+          href: ./data-platform/azure-synapse-link-delta-lake.md
+      - name: Analyze in Azure Data Lake Storage Gen2
+        items:
+        - name: Ingest exported data with Azure Data Factory
+          href: ./data-platform/export-to-data-lake-data-adf.md
+        - name: Copy data from multiple data lakes to single data lake
+          href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
+        - name: Transform data from CSV to Parquet
+          href: ./data-platform/azure-synapse-link-parquet.md
+        - name: Analyze exported data with Power BI
+          href: ./data-platform/export-to-data-lake-data-powerbi.md
+        - name: Access Dataverse choices with Azure Data Factory
+          href: ./data-platform/azure-synapse-link-choices-adf.md
+        - name: Access choice labels from Azure Synapse Link for Dataverse
+          href: ./data-platform/azure-synapse-link-choice-labels.md
+        - name: Access Dataverse choices with Power BI
+          href: ./data-platform/azure-synapse-link-choices-powerbi.md      
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2238,76 +2317,6 @@
       href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
     - name: Manage access to views (preview)
       href: ./model-driven-apps/manage-view-access.md
-    - name: Azure Synapse Link
-      items:
-      - name: Azure Synapse Link Overview
-        href: ./data-platform/export-to-data-lake.md
-      - name: Create an Azure Synapse Link with a Synapse Workspace
-        href: ./data-platform/azure-synapse-link-synapse.md
-      - name: Create an Azure Synapse Link with Data Lake
-        href: ./data-platform/azure-synapse-link-data-lake.md
-      - name: Advanced Configuration Settings
-        href: ./data-platform/azure-synapse-link-advanced-configuration.md
-      - name: Use managed identities for Azure
-        href: ./data-platform/azure-synapse-link-msi.md
-      - name: Choose finance and operations data in Azure Synapse Link for Dataverse
-        href: ./data-platform/azure-synapse-link-select-FnO-data.md
-      - name: Azure Synapse Link for Dataverse troubleshooting guide
-        href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
-      - name: Receive Azure Synapse Link for Dataverse notifications
-        href: ./data-platform/azure-synapse-link-notifications.md
-      - name: Transtion from legacy data integration services
-        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
-      - name: FAQ about Azure Synapse Link
-        href: ./data-platform/export-data-lake-faq.yml
-      - name: Application Lifecycle Management
-        items:
-        - name: Transport a configuration across environments
-          href: ./data-platform/azure-synapse-link-solution.md
-        - name: Environment Lifecycle Events
-          href: ./data-platform/azure-synapse-link-olc.md
-      - name: Analyze with Azure Synapse Analytics
-        items:
-        - name: Query data with serverless SQL pool
-          href: ./data-platform/azure-synapse-link-serverless.md
-        - name: Query and analyze incremental updates
-          href: ./data-platform/azure-synapse-incremental-updates.md
-        - name: Create a view on your Dataverse data
-          href: ./data-platform/azure-synapse-link-create-view.md
-        - name: Transform data with Apache Spark
-          href: ./data-platform/azure-synapse-link-spark.md
-        - name: Copy Dataverse into Azure SQL
-          href: ./data-platform/azure-synapse-link-pipelines.md
-        - name: Visualize data with Power BI
-          href: ./data-platform/azure-synapse-link-powerbi.md
-        - name: Copy data to Dedicated SQL
-          href: ./data-platform/azure-synapse-link-dedicated.md
-        - name: Read Incremental Updates
-          href: ./data-platform/azure-synapse-link-incremental.md
-        - name: Access Dataverse choices with serverless SQL pool
-          href: ./data-platform/azure-synapse-link-choices-serverless.md
-        - name: Export data in Delta Lake format
-          href: ./data-platform/azure-synapse-link-delta-lake.md
-        - name: View Dataverse data in Microsoft Fabric
-          href: ./data-platform/azure-synapse-link-view-in-fabric.md
-        - name: Build apps using Fabric data (preview)
-          href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
-      - name: Analyze in Azure Data Lake Storage Gen2
-        items:
-        - name: Ingest exported data with Azure Data Factory
-          href: ./data-platform/export-to-data-lake-data-adf.md
-        - name: Copy data from multiple data lakes to single data lake
-          href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
-        - name: Transform data from CSV to Parquet
-          href: ./data-platform/azure-synapse-link-parquet.md
-        - name: Analyze exported data with Power BI
-          href: ./data-platform/export-to-data-lake-data-powerbi.md
-        - name: Access Dataverse choices with Azure Data Factory
-          href: ./data-platform/azure-synapse-link-choices-adf.md
-        - name: Access choice labels from Azure Synapse Link for Dataverse
-          href: ./data-platform/azure-synapse-link-choice-labels.md
-        - name: Access Dataverse choices with Power BI
-          href: ./data-platform/azure-synapse-link-choices-powerbi.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
@@ -2436,8 +2445,6 @@
     href: ./data-platform/migrate-access-datatypes.md
   - name: System columns and tables in Dataverse
     href: ./data-platform/access-migrate-linked-tables.md
-- name: Chatbots
-  href: ../chatbots.md
 - name: Cards
   items:
     - name: What are cards?
@@ -2528,12 +2535,6 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: AI plugins (preview)
-  items:
-  - name: AI plugins in Power Platform
-    href: common/ai-plugin.md
-  - name: Building AI plugins for discovery by Copilot
-    href: common/build-ai-plugin-for-copilot.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Responsible AI

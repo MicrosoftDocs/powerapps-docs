@@ -61,7 +61,7 @@ More information:
 
 ## Enable responsive layout with container control
 
-Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls. These controls are found in the canvas app designer under **Layout** on the **Insert** tab.
+Responsive custom page layouts are defined by building a hierarchy of **Horizontal layout container** and **Vertical layout container** controls. These controls are found in Power Apps Studio under **Layout** on the **Insert** tab.
 
 Set the minimum screen height and width on the **App** object to prevent page level scroll bars and use a vertical body scroll bar.
 

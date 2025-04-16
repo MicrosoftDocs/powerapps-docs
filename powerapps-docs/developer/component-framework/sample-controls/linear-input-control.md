@@ -61,7 +61,7 @@ public updateView(context: ComponentFramework.IPropBag<InputsOutputs.IInputBag>)
    } 
  ```
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
