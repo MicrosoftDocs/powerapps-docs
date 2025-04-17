@@ -77,6 +77,7 @@ When you configure the Power Apps grid control for a table, all views for that t
         - The **Child items parent ID** property is also needed to configure a nested grid and specifies the field (and relationship) to use to link the parent and child entities together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
     -  The **Customizer control** property allows the maker to link to a single customizer Power Apps component framework control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
+    -  The **Use first column for lookup edits** property allows makers to select the field used for editing lookup cells. When set to **Yes** the cell will show and filter the first column of the target entity's Lookup View; when set to **No** the cell will use the primary field. The default value is **No**.
 
 3. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
