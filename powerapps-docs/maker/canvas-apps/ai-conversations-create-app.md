@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer:
-ms.date: 11/13/2024
+ms.date: 4/16/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
@@ -20,6 +20,7 @@ ms.custom:
   - ai-gen-title
   - ai-gen-desc
   - ai-seo-date:08/28/2024
+  - copilot-scenario-highlight
 ai-usage: ai-assisted
 ---
 
@@ -43,8 +44,11 @@ To show you how Copilot works, let's create an app to track housekeeping tasks f
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the text box, type *hotel housekeeping* and press Enter.
+1. Type your prompt in the text box such as the example prompt shown below.
 
+    ```copilot-prompt
+    Hotel housekeeping
+    ```
    :::image type="content" source="media/artificial-intelligence/create-app-using-ai-1.png" alt-text="Screenshot of the Power Apps home page, with the Copilot input text box highlighted." lightbox="media/artificial-intelligence/create-app-using-ai-1.png":::
 
 Copilot creates one or more Dataverse tables with data that includes typical hotel housekeeping tasks.
