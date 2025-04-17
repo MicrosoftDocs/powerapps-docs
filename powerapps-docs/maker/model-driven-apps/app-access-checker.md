@@ -40,7 +40,7 @@ Open the diagnostics page in your browser by typing https://*environmentURL*/Web
 
 ## Licensing terminology and how model-driven apps are accessed
 
-In order for an app to be visible to a user, both the results for **License** and **Security** must be **Yes**. If a user doesn't have an appropriate license, the error message might give information about what **service plans** could be used to give access to the app. Note that **Licenses** aren't the same as service plans. A **License** is what is assigned to users in Microsoft Entra and usually has multiple service plans. For a list of all licenses and what service plans are included, got to the [licensing service plan reference](https://learn.microsoft.com/entra/identity/users/licensing-service-plan-reference). Referencing the Microsoft Dataverse licensing error message and the service plan reference list can help diagnose user licensing issues.
+In order for an app to be visible to a user, both the results for **License** and **Security** must be **Yes**. If a user doesn't have an appropriate license, the error message might give information about what **service plans** could be used to give access to the app. Note that **Licenses** aren't the same as service plans. A **License** is what is assigned to users in Microsoft Entra and usually has multiple service plans. For a list of all licenses and what service plans are included, got to the [licensing service plan reference](/entra/identity/users/licensing-service-plan-reference). Referencing the Microsoft Dataverse licensing error message and the service plan reference list can help diagnose user licensing issues.
 
 ### Example results
 
