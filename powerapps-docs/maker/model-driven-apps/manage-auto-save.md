@@ -43,7 +43,7 @@ If you have auditing configured for a table, each save is treated like a separat
 
 If you determine that AutoSave causes problems with extensions you're using, Power Platform admins can disable it for the environment. There's no setting to disable AutoSave for individual tables or forms.  
 
-1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com), go to **Environments**, and then open the environment you want.
+1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com), go to **Manage** > **Environments**, and then open the environment you want.
 1. Select **Settings** on the command bar. 
 1. Expand **Product**, and then select **Behavior**.  
 1. Under **Basic behavior**, for the **Auto save**, select **Off**.  

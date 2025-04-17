@@ -48,18 +48,16 @@ Power Platform administrators enable the Copilot chat feature in model-driven ap
 
 1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
 
-1. In the navigation pane, go to **Environments** and select the environment where you want to enable Copilot chat for app users in model-driven apps. Select **Settings** for this environment on the command bar.
+1. In the navigation pane, go to **Manage** > **Environments** and select the environment where you want to enable Copilot chat for app users in model-driven apps. On the command bar, select **Settings**.
 
 1. In **Settings** for the selected environment, select **Product** > **Features**.
-
-   :::image type="content" source="media/Environment_features.png" alt-text="Screenshot that shows where to set environment features.":::
 
 1. In the **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to the setting that's appropriate for your environment.
 
    - **Default**. Copilot chat is *disabled for a Power Apps licensed environment and enabled for a Dynamics 365 licensed environment*.
    - **On**. Copilot chat is enabled for the environment regardless of the environment licensing type.
    - **Off**. Copilot chat is disabled for the environment regardless of environment licensing type.
-   :::image type="content" source="media/copilot_for_apps_users_on.png" alt-text="Screenshot that shows how to turn on Copilot in an environment.":::
+   :::image type="content" source="media/copilot-for-apps-users-on.png" alt-text="Screenshot that shows how to turn on Copilot in an environment.":::
 
 1. **Save** your changes.
 
