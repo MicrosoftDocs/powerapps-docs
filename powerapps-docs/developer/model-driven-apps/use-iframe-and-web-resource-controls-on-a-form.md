@@ -128,10 +128,10 @@ var newTarget = "";
 //Set the target based on the value of the option set  
 switch (value) {  
     case 100000001:  
-        newTarget = https://myServer/test/pageOne.aspx;  
+        newTarget = "https://myServer/test/pageOne.aspx";  
         break;  
     default:  
-        newTarget = https://myServer/test/pageTwo.aspx;  
+        newTarget = "https://myServer/test/pageTwo.aspx";  
         break;  
 }  
 //Get the default URL for the IFRAME, which includes the   
