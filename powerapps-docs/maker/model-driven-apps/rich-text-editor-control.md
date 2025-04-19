@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/18/2025
+ms.date: 04/21/2025
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -47,13 +47,6 @@ The modern rich text editor is enabled by default, but if you're using the class
    - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
 1. Select **Save**.
 1. In the App Designer, select **Publish**.
-
-### Revert from the modern rich text editor experience to the classic experience
-
-If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
-
-> [!IMPORTANT]
-> After April 18, 2025, the classic rich text editor experience will no longer be available. Customers who are using the classic version will be upgraded automatically to the modern rich text editor experience.
 
 ### Modern rich text editor limitations
 
