@@ -61,7 +61,7 @@ The application displays the enhanced email template selection window only if yo
 2. **All templates**. Choose and browse from the templates displayed based on TO or Regarding, the filters applied, or a combination of both. You can change the view to display the templates in a grid, list, or tile view. Hover over the template tile to see the zoom option. Select the tile to open the template on a full screen.
 3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the email editor.
 4. **Filter**. You can filter templates based on standard or custom attributes.
-5. **View**. Use the view to switch between email template views. 
+5. **View**. Use the view to switch between email template views. Copilot can recommend the relevant email template for your email. The **Copilot recommended templates** view displays five relevant email templates with prompts that Copilot recommends.
 1. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
 1. **Record**. Specify the **Field Name** and **Record**. The template types shown to a user is based on what you've selected for these fields.
      - Recipient (TO): user (global) and contact templates are displayed.
