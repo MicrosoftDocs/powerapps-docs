@@ -207,7 +207,7 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 
 If a solution contains a business process flow component in draft state that has never been previously activated, then solution checker will fail to export the solution for analysis. This error isn't unique to solution checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within solution explorer.
 
-Reference [KB Article #4337537: Invalid Export - Business Process table Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-table-missing) for details about the issue and steps to resolve.
+Reference [KB Article #4337537: Invalid Export - Business Process table Missing](/previous-versions/troubleshoot/dynamics/crm/failed-export-business-process) for details about the issue and steps to resolve.
 
 ## Solution checker fails to export solutions with model-driven app components
 
