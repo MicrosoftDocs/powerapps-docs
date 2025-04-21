@@ -83,13 +83,12 @@ In order to use solution checker in this organization, Administration Mode must 
 To disable administration mode for an organization instance:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/).
-2. Open the environment that has issues running solution checker, and then select **Edit**. 
-
-3. Set **Administration mode** to disabled, and then select **Save**.
+1. Open the environment that has issues running solution checker, and then select **Edit**. 
+1. Set **Administration mode** to **Disabled**, and then select **Save**.
 
     ![Disable Admin mode.](media/solution-checker-instance-disable-admin-mode.png)
 
-4. Run solution checker again.
+1. Run solution checker again.
 
 ## Solution checker fails due to missing security roles
 
@@ -103,31 +102,30 @@ The application user for solution checker requires the following security roles 
 
 To assign missing security roles to the Power Apps Checker Application user:
 
-1. In the Power Platform admin center, navigate to your environment, then to **Users** > **app users list**.
-2. Select the **'Power Apps Checker Application'** user from the list of users.
+1. In the Power Platform admin center, open your environment, then select **Users** > **app users list**.
+2. Select the **Power Apps Checker Application** user from the list of users.
 3. Select **Edit security roles** on the command bar.
 4. Select checkboxes for the roles listed above, and then select **Save**.
 5. Run solution checker again.
 
 ## Solution checker fails due to restricted access mode
 
-The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Dataverse organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
+The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Dataverse organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancellation will fail.
 
-To resolve this issue, you must update the **'Power Apps Checker'** application user with 'Non-interactive' access mode.
+To resolve this issue, you must update the **Power Apps Checker Application** user with 'Non-interactive' access mode.
 
 ### How to update user access mode
 
 To update the access mode for the Power Apps Checker user:
 
-1. Open your Dataverse organization and navigate to **Settings** > **Security** > **Users**.
-2. Select the **'Power Apps Checker'** user from the list of users and double-click to open the user form.
-3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
-4. Select **'Non-interactive'** in the **Access Mode** drop-down control.
+1. In Power Apps (make.powerapps.com) select you environment and then select **Settings** > **Advanced settings** > **Administration** > **Users** to open the legacy user settings.
+1. Open the **Power Apps Checker Application** user from the list of users.
+1. Scroll to the **Administration** > **Client Access License (CAL) Information** section of the form and select **'Non-interactive'** in the **Access Mode** drop-down control.
 
-![Access Mode.](media/solution-checker-access-mode.png)
+   ![Access Mode.](media/solution-checker-access-mode.png)
 
-5. Save and close the user form.
-6. Run solution checker again.
+1. Save and close the user form.
+1. Run solution checker again.
 
 ## Solution Checker fails due to disabled application user
 
@@ -135,18 +133,12 @@ The Power Apps Checker application user in the Dataverse organization containing
 
 ![Disabled user status.](media/solution-checker-disabled-application-user.png)
 
-### How to enable the Power Apps Checker application user
+### How to activate the Power Apps Checker application user
 
-1. In the Power Platform Admin center, select the environment and go to **Settings** > **User's + Permissions**  > **Users**.
-2. In the **Application Users** view, select the checkmark next to the Power Apps Checker Application user.
-3. On the Actions toolbar, select **Enable**
-
-![Enable user from view.](media/solution-checker-enable-application-user-view.png)
-
+1. In the Power Platform Admin center, open the environment and go to **Settings** > **User's + Permissions**  > **Users**.
+2. In the **Application Users** view, select the **Power Apps Checker Application** user.
+3. On the command bar, select **Activate**
 4. In the **Confirm User Activation** message, select **Activate**.
-5. An alternative approach is to open the application user form and select **Enabled** status in the form footer. **Save** the change.
-
-![Enable user from form.](media/solution-checker-enable-application-user-form.png)
 
 ## Solution checker remains in a Running state for more than 30 minutes
 
@@ -215,7 +207,7 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 
 If a solution contains a business process flow component in draft state that has never been previously activated, then solution checker will fail to export the solution for analysis. This error isn't unique to solution checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within solution explorer.
 
-Reference [KB Article #4337537: Invalid Export - Business Process table Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-table-missing) for details about the issue and steps to resolve.
+Reference [KB Article #4337537: Invalid Export - Business Process table Missing](/previous-versions/troubleshoot/dynamics/crm/failed-export-business-process) for details about the issue and steps to resolve.
 
 ## Solution checker fails to export solutions with model-driven app components
 

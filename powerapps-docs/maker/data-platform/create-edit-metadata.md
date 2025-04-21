@@ -44,7 +44,7 @@ You can't delete standard tables, columns, or table relationships. They're consi
 
 ## Limitations on creating metadata items  
 
-There's a limit to the number of tables you can create. Admins can view information about the number of tables and percent used towards the maximum in the legacy **Resources In Use** page. Go to Power Platform admin center (admin.powerplatform.com) select **Environments**, and open the environment you want. Select **Settings**, expand **Resources** select  **All legacy settings**. In the legacy settings, select **Administration** > **Resources In Use**.
+There's a limit to the number of tables you can create. Admins can view information about the number of tables and percent used towards the maximum in the legacy **Resources In Use** page. Go to Power Platform admin center (admin.powerplatform.com) select **Manage** > **Environments**, and open the environment you want. Select **Settings**, expand **Resources** select  **All legacy settings**. In the legacy settings, select **Administration** > **Resources In Use**.
   
 Within each table there's also an upper limit on the number of columns you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a Dataverse table and isn't viewable. It's difficult to provide a specific number because each type of column can use a different amount of space. The upper limit depends on the total space used by all the columns for the table.  
   
