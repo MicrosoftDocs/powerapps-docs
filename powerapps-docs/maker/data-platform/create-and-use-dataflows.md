@@ -125,7 +125,7 @@ Once your tables have been defined, you should schedule the refresh frequency fo
 1. Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled interval of your choice. To schedule a refresh automatically, select **Refresh automatically**.
 
 2. Enter the dataflow frequency: 
-   - **Frequency-based refresh**. Set how often, start date and time in 30 minute increments in UTC.
+   - **Frequency-based refresh**. Set how often in 30 minute increments, start date and time in UTC.
    - **Refresh on specific days and times**. Choose time zone, frequency (daily or weekly) and time of day in 30 minute increments.
 
      ![Refresh automatically option.](media/refresh-automatically.png)
