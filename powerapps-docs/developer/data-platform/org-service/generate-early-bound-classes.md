@@ -247,10 +247,10 @@ The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-p
 
 ### Related articles
 
-[Late-bound and early-bound programming](early-bound-programming.md)
-[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
-[Developer tools and resources](../developer-tools.md)
-[Dataverse development tools](../download-tools-NuGet.md)
+[Late-bound and early-bound programming](early-bound-programming.md)  
+[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)  
+[Developer tools and resources](../developer-tools.md)  
+[Dataverse development tools](../download-tools-NuGet.md)  
 [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
