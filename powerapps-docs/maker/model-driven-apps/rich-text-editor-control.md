@@ -134,7 +134,7 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 }
     ```
 
-    The last *propertyName:value* pair doesn't end with a comma.
+The last *propertyName:value* pair doesn't end with a comma.
 
 1. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
 
