@@ -92,35 +92,16 @@ When you create a template from an existing template, irrespective of the enhanc
 
 ## Email template editor
 
-You can use either the enhanced email template editor or the legacy email template editor to create email templates.
-
-### Enhanced email template editor
- 
-The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
+You can use either the email template to create email templates.
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
-- **Editor** tab: Use this tab to design and customize your email template. See: [Design and customize the email template](cs-template-options.md).
+- **Designer** tab: Use this tab to draft and apply standard formatting to your email template. You can also add [dynamic text](email-dynamic-text.MD), images, and attachments. You can add Copilot prompts to your email template for a consistent experience. Copilot prompts are available in the enhanced email template editor. Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
   > [!NOTE]
   > Across all the model-driven apps, the email template editor supports upto 1048576 characters.
+- **HTML** tab: Use this tab to view and edit the HTML code of your email template. You can add HTML code to customize your templates with elements such as layouts, images, and buttons.
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
-
-### Add Copilot prompts to an email template
-
-You can add Copilot prompts to your email template for a consistent experience. Copilot prompts are available in the enhanced email template editor.
-
-Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
-
-### Email template editor
-
-The email template editor is displayed if the enhanced email template editor option is disabled. 
-
-:::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
-
-   1. **Insert dynamic text**: Use dynamic text in the subject and body of the email.
-   2. **Subject**: Enter or change the email subject.
-   3. **New Attachment**: Add one or more attachments to your template, if needed.
 
 
 ### See also
