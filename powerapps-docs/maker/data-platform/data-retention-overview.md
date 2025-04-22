@@ -4,7 +4,7 @@ description: Overview of long term retention for data in Microsoft Dataverse
 ms.service: powerapps
 ms.subservice: dataverse-maker
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 contributors: neerajatmsft
 ms.topic: overview
