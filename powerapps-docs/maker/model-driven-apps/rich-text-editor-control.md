@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/21/2025
+ms.date: 04/25/2025
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -25,14 +25,9 @@ You can customize the editor's appearance, features, and behavior. The control's
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
 
-Currently, the rich text editor is available as two different experiences:
-
-- Modern text editor: New experience, set by default
-- Classic text editor: Original experience, to be deprecated April 18, 2025
-
 ## Modern text editor enhancements
 
-The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new Copilot feature to enhance your text editing capabilities.
 
 ### Enable the modern rich text editor experience from the classic experience
 
@@ -52,15 +47,18 @@ The modern rich text editor is enabled by default, but if you're using the class
 
 When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
 
+> [!Important]
+> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version if you have installed. Otherwise, your templates might not display correctly.
+
 Notes:
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
+- The following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
 - A preview tab isn't currently available.
 
 Email templates and signatures: 
-- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
+- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
 
 ## Add the rich text editor control to a text column
 
@@ -107,6 +105,10 @@ Power Apps allows you to change the properties of the rich text editor control t
 Up to three levels, or layers, of configuration can be applied to customize the rich text editor:
 
 1. At the most fundamental level, every instance of the control takes its configuration from the file `RTEGlobalConfiguration_Readonly.json`. The file is read-only, so you can't change these properties directly.
+   
+    > [!Note]
+    > RTEGlobalConfiguration.json doesn't apply to email, knowledge articles, email templates, and signatures.
+    
 1. At the next level, every instance of the control takes its configuration from the properties in the file `RTEGlobalConfiguration.json`, if any are present. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the read-only file.
 1. Finally, at the highest level, a specific instance of the control takes its configuration from a specific configuration file, if one exists. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the two lower-level files.
 
@@ -120,14 +122,16 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 
 1. Copy and paste the following code snippet in the file:
 
-    ```json
-    {
-    "defaultSupportedProps": {
-      "propertyName": "value",
-      "propertyName": "value",
-      "propertyName": "value"
-    },
-    }
+    ```JSONCopy
+{
+"defaultSupportedProps": {
+  "propertyName": "value",
+  "propertyName": "value",
+  "propertyName": "value"
+},
+"propertyName": "value",
+"propertyName": "value",
+}
     ```
 
     The last *propertyName:value* pair doesn't end with a comma.
@@ -262,7 +266,6 @@ The following table describes the most commonly used properties, but you can con
 | extraPlugins | Appends plug-ins to the `plugins` list to load more plug-ins.<br/>Many plug-ins require other plug-ins to work. The rich text editor automatically adds them, and you can't use this property to override them. Use `removePlugins` instead. | See [defaultSupportedProps](#defaultsupportedprops) |
 | removePlugins | Lists plug-ins not to load. Use it to change which plug-ins are loaded without changing the `plugins` and `extraPlugins` lists. | See [defaultSupportedProps](#defaultsupportedprops) |
 | superimageImageMaxSize | Sets the maximum size in megabytes (MB) allowed for embedded images when using the superimage plug-in. | "5" |
-| [disallowedContent](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules) | Lets you prevent users from inserting elements that you don't want to have in your content. You can disallow entire elements or by attributes, classes, and styles. | See [defaultSupportedProps](#defaultsupportedprops) |
 | linkTargets | Allows you to configure which link target options are available for users when they create links:<br/>- "notSet": No target set<br/>- "frame": Opens the document in the specified frame<br/>- popupWindow": Opens the document in a popup window<br/>- "_blank": Opens the document in a new window or tab<br/>- "_top": Opens the document in the full body of the window<br/>- "_self": Opens the document in the same window or tab where the link is activated<br/>- "_parent": Opens the document in the parent frame | "notSet", "_blank" |
 | | |
 
@@ -315,16 +318,6 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 "enterMode": 2,
 ```
 
-### Paste or create HTML 5 content only
-
-Although the rich text editor control works best with HTML 5 content, you can use HTML 4 tags. In some cases, however, mixing HTML 4 and HTML 5 tags can create usability challenges. To make sure all content is HTML 5, provide all the supported HTML 5 tags in the `allowedContent` property. The editor control converts any noncompliant tags to their HTML 5 equivalent.
-
-Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
-
-```json
-"allowedContent": "a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};",
-```
-
 ### Paste or create plain text only
 
 Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
@@ -332,8 +325,6 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 ```json
 "enterMode": 2,
 "shiftEnterMode": 2,
-"allowedContent": "*",
-"disallowedContent": "*",
 "forcePasteAsPlainText": true,
 "toolbar": [],
 "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools",
@@ -540,13 +531,17 @@ If you have a lot of content in the editor, the response time can increase. Keep
 
 If the image file name, including the path, is long, the file might fail to upload, or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
 
-### Why am I seeing HTML in my text?
+### Why do I see HTML in my text?
 
 If the rich text editor control is used in a column that isn't formatted for rich text, the content appears in the underlying HTML instead of as formatted text.
 
 :::image type="content" source="./media/html-markup-issue.png" alt-text="Screenshot of HTML appearing in the editor content area.":::
 
 To resolve this issue, see make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
+
+### I’ve exceeded the character limit but there are fewer characters than the limit. Why?
+
+The database stores the entire HTML formatting, not just the characters, which takes up additional space.
 
 ### See also
 
