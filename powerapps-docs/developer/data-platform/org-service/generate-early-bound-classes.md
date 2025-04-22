@@ -223,7 +223,7 @@ This example doesn't include all the settings because it uses the default option
 
 ## Include `serviceContextName` when generating message classes
 
-If you're generating message classes, should always include a name for the `serviceContextName` parameter so that an [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is generated with your code.
+If you're generating message classes, you should always include a name for the `serviceContextName` parameter so that an [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is generated with your code.
 This class includes an important property to enable use of generated message classes. If you don't include an `OrganizationServiceContext`, you'll get the following error when you try to use the generated message classes.
 
 ```
