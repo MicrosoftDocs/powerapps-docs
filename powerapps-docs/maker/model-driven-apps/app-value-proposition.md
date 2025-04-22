@@ -4,7 +4,6 @@ description: "App Value Proposition"
 ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -13,7 +12,7 @@ applies_to:
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 1
-ms.subservice: 
+ms.subservice: mda-maker
 ms.author: matp
 tags: 
 search.audienceType: 

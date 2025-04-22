@@ -5,6 +5,7 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to 
 ms.date: 02/29/2024
 ms.custom: template-how-to 

@@ -1,13 +1,12 @@
 ---
 title: "Add code components to a custom page for your model-driven app" 
 description: "This article outlines the use of code components built by professional developers using the Power Apps component framework within a custom page."
-ms.custom: ""
 ms.date: 05/26/2022
 ms.reviewer: ""
-
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
