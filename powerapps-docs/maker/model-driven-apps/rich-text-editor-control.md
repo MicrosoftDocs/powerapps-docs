@@ -120,9 +120,9 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 
     The file `RTEGlobalConfiguration.json` contains the rich text editor's default, or global, configuration. If you're customizing the control in, say, a contact form, you might name the file something like `RTEContactFormConfiguration.json`.
 
-1. Copy and paste the following code snippet in the file:
+2. Copy and paste the following code snippet in the file:
 
-    ```JSONCopy
+```JSONCopy
 {
 "defaultSupportedProps": {
   "propertyName": "value",
@@ -132,23 +132,22 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 "propertyName": "value",
 "propertyName": "value",
 }
-    ```
-
+```
 The last *propertyName:value* pair doesn't end with a comma.
 
-1. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
+3. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
 
       We provided a few [example configurations](#example-configurations) for you, but you can define others to suit your needs.
 
-1. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
-1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
+4. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
+5. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
       Although you can enter the absolute URL of the web resource, we recommend that you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
       For example, if the URL of the web resource is `https://yourorg.crm.dynamics.com/WebResources/rtecontactform`, the relative URL is */WebResources/rtecontactform*.
 
-1. Select **Done**.
-1. Select **Save and publish** to apply your changes to the form.
+6. Select **Done**.
+7. Select **Save and publish** to apply your changes to the form.
 
 ### Customize the rich text editor globally
 
