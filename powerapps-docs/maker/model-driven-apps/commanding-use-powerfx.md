@@ -21,7 +21,7 @@ This article covers aspects of Power Fx that are specific to commanding. Many ot
 - For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
 
 > [!NOTE]
-> Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
+> Publishing Power Fx commands might take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to complete. You might need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This operation typically takes longer the first time a Power Fx based command is published for an app.
 
 ## OnSelect
 
@@ -46,7 +46,7 @@ To define visibility logic, select the command. Then select **Visibility** on th
 - **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
 - If there's no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
 - Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
-- **Item** is always blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
+- **Item** is always blank if **SelectionMax** <> 1. This prevents writing formulas to just one item and not scaling to more than one.  
 
 ## AutoSave
 
@@ -66,7 +66,7 @@ Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 ### Create a related record
 
 > [!NOTE]
-> If the related table is not already in the command component library you'll need to open it in canvas studio and add the data source there.
+> If the related table is not already in the command component library, you need to open it in canvas studio and add the data source there.
 
 ```power-fx
 Patch(Tasks,Defaults(Tasks),{Regarding:Self.Selected.Item},{Subject:"Subject of the Task"})
@@ -173,7 +173,7 @@ Displays a notification **true** if the **Yes** button is pressed, and a notific
 A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
 
 > [!NOTE]
-> `NotificationType.Success` is not currently supported and will result in an informational notification type.
+> `NotificationType.Success` isn't currently supported and results in an informational notification type.
 
 ```power-fx
 Notify( "Model-driven app notification message" )
