@@ -74,7 +74,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 
 While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to this grid by following the steps here. 
 
-1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) > Environments > Features.
+1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) **Manage** > **Environments**. Select **Settings** on the command bar, and then select **Product** > **Features**.
 2. Turn off the **Enable the modern read-only grid experience** option in the **Grids and views** section.
 
 > [!NOTE]

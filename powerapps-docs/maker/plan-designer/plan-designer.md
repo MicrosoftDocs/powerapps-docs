@@ -4,7 +4,7 @@ description: Use the Plan designer to create business solutions with AI-powered 
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 4/10/2025
+ms.date: 4/16/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -13,6 +13,7 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
+  - copilot-scenario-highlight
 ---
 
 # Use the Plan designer (preview)
@@ -43,9 +44,13 @@ To show you how the Plan designer works, let's use a sample scenario to build a 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
+1. Type your prompt in the text box such as the example prompt shown below. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-   :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." :::
+    ```copilot-prompt
+    Employees need to log vacation days, and managers need to approve them.
+    ```
+
+    :::image type="content" source="media/pd-4-enter-sample-problem.png" alt-text="Screenshot of the Plan designer with a sample scenario input." :::
 
 
 Copilot opens the Plan designer and addresses your business scenario based on your description.
