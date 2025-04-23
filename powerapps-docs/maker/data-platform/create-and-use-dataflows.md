@@ -2,7 +2,7 @@
 title: "Create and use dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
-ms.date: 08/06/2024
+ms.date: 04/21/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -122,13 +122,19 @@ Once you’ve completed your selections and your table and its data settings are
 
 Once your tables have been defined, you should schedule the refresh frequency for each of your connected data sources.
 
-1. Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled interval of your choice. To schedule a refresh automatically, select **Refresh automatically**.
+Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled interval of your choice.
 
-   ![Refresh automatically.](media/refresh-automatically.png)
+### Schedule a refresh automatically
 
-2. Enter the dataflow refresh frequency, start date, and time, in UTC.
+1. Select **Refresh automatically**.
 
-3. Select **Create.**
+2. Enter the dataflow frequency: 
+   - **Frequency-based refresh**. Set how often in 30 minute increments, start date and time in UTC.
+   - **Refresh on specific days and times**. Choose time zone, frequency (daily or weekly) and time of day in 30 minute increments.
+
+     ![Refresh automatically option.](media/refresh-automatically.png)
+
+3. Select **Publish.**
 
 Some organizations might want to use their own storage for creation and management of dataflows. You can integrate dataflows with Azure Data Lake Storage Gen2 if you follow the requirements to set up the storage account properly. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-query/dataflows/connect-azure-data-lake-storage-for-dataflow) 
 
