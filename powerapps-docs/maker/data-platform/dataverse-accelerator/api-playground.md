@@ -5,6 +5,7 @@ author: denise-msft
 ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 06/06/2024
 ms.custom: template-how-to
