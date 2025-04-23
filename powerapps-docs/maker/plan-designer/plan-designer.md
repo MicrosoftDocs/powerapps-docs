@@ -4,7 +4,7 @@ description: Use the Plan designer to create business solutions with AI-powered 
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 4/16/2025
+ms.date: 4/25/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
