@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 04/01/2025
 ms.custom: template-how-to
+ms.subservice: dataverse-maker
 contributors:
 - sriknair
 ---
@@ -71,7 +72,7 @@ You must have the following security role assignment and your Dataverse environm
 - Security role: You must have the system administrator security role in the environment.
 
 - A Dataverse environment with minimum database (DB) version of `9.2.22122.00148`. Check the database version:  
-  - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments**, and then select the environment you want. Select **Detailed view**, and under **Version** the version is displayed.
+  - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) select **Manage** > **Environments**, and then select the environment you want. Select **Detailed view**, and under **Version** the version is displayed.
   - By using the [RetrieveVersion function](/power-apps/developer/data-platform/webapi/reference/retrieveversion) with your browser. Type `https://<your org>.<your region code>.dynamics.com/api/data/v9.2/RetrieveVersion` in your browser address bar and view the JSON returned.
 
 ## Install or update the Dataverse accelerator
