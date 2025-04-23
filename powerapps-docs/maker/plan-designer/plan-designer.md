@@ -112,25 +112,17 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 ### Generate data tables
 
-1. The proposed data tables appear in the **Data** section of the plan. Select **Show details** to view the data in a diagram.
+1. The proposed data tables appear in the **Data** section of the plan.
+    - Select **Edit** and describe what you'd like to change or add using Copilot.
+    - Select **Show details** to view the data in a diagram and make edits.
 
       :::image type="content" source="media/pd-8-show-detailed-data.png" alt-text="Screenshot of the proposed data tables in the Plan designer." lightbox="media/pd-8-show-detailed-data.png":::
 
-1. **Show details** opens the data workspace, where you can view the complete Entity Relationship Diagram (ERD) containing all the generated tables. These Dataverse tables come with predefined columns and sample data. To see the specific details of a table, select **View data**.
+1. **Show details** opens the data workspace. Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data. For more information, see [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables).
 
       :::image type="content" source="media/pd-9-view-data.png" alt-text="Screenshot of the data workspace showing the ERD." lightbox="media/pd-9-view-data.png":::
 
-      :::image type="content" source="media/pd-10-view-data-2.png" alt-text="Screenshot of the data workspace with table details." lightbox="media/pd-10-view-data-2.png":::
-
-> [!IMPORTANT]
-> During preview, the data workspace experience is read-only. The following items aren't supported:
-> - Editing tables or columns
-> - Editing relationships between tables
-> - Adding existing tables
-
-### Edit tables
-
-1. To modify the proposed tables, go back to the Plan designer and select **Edit**.
+1. When you're done, select **Back**
 
 1. When you're ready to generate user experiences, select **Add these tables** to proceed.  
 
@@ -203,8 +195,6 @@ When the Plan designer is turned on, you see the **Plans** menu in the left navi
 
 ## Known limitations
 
-- **Edit tables in Data workspace**: Editing Dataverse tables in the Plan designer isn't supported.
-- **Add existing tables in Data workspace**: Adding existing tables to the data workspace in the Plan designer isn't supported.
 - **Supported user experiences**: The Plan designer generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't generated automatically.
 - **Solution/ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. Select the **Saved** icon in the top right corner to define the publisher.
