@@ -2,9 +2,10 @@
 title: Manage data retention policies in Microsoft Dataverse
 description: This article explains how you can view and managed existing data retention policies in Microsoft Dataverse. 
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to 
 ms.date: 02/29/2024
 ms.custom: template-how-to 

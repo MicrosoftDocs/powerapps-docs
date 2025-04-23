@@ -4,6 +4,7 @@ description: Explains address validation for email columns with Microsoft Datave
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 08/22/2024
 ms.custom: template-how-to

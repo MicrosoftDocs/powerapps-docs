@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 09/24/2024
 ms.custom: template-how-to 
+ms.subservice: dataverse-maker
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
