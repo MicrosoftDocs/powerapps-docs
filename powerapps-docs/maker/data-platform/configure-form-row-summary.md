@@ -2,7 +2,7 @@
 title: "Configure a row summary for a model-driven app main form"
 description: "Learn how to configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
 ms.date: 11/25/2024
-ms.subservice: mda-maker
+ms.subservice: dataverse-maker
 ms.topic: how-to
 author: Mattp123
 ms.author: damialajogun

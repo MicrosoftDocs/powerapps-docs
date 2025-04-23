@@ -4,11 +4,11 @@ description: Provides an overview of solutions in Power Apps
 ms.date: 06/05/2024
 ms.reviewer: matp
 ms.topic: overview
-author: "shmcarth"
+author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
 ms.subservice: dataverse-maker
-ms.author: "matp"
+ms.author: "caburk"
 search.audienceType: 
   - maker
 contributors: v-aangie
