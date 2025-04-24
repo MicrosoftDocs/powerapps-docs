@@ -240,7 +240,7 @@
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
 - name: Use the Plan designer (preview)
-  items: /plan-designer/plan-designer.md  
+  href: /plan-designer/plan-designer.md  
 - name: Canvas apps
   items:
   - name: Canvas apps
