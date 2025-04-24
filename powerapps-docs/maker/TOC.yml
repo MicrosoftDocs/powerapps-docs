@@ -1315,29 +1315,29 @@
     - name: Canvas apps coding standards and guidelines
       href: ../guidance/coding-guidelines/overview.md
   - name: Teams integration
-  items:
-  - name: Overview
-    href: ../teams/overview.md
-  - name: Embed apps in Teams
     items:
-    - name: Embed a canvas app as tab app
-      href: ../teams/embed-teams-tab.md
-    - name: Embed a canvas app as personal app
-      href: ../teams/embed-teams-app.md
-    - name: Embed a model-driven app as tab app
-      href: ../teams/embed-model-driven-teams-tab.md
-    - name: Embed a model-driven app as personal app
-      href: ../teams/embed-model-driven-teams-personal.md
-  - name: Create apps in Teams
-    items:
-    - name: Create apps in Teams
-      href: ../teams/create-apps-overview.md
-    - name: Get started
+    - name: Overview
+      href: ../teams/overview.md
+    - name: Embed apps in Teams
       items:
-        - name: Install the Power Apps personal app
-          href: ../teams/install-personal-app.md
-        - name: Create your first app
-          href: ../teams/create-first-app.md
+      - name: Embed a canvas app as tab app
+        href: ../teams/embed-teams-tab.md
+      - name: Embed a canvas app as personal app
+        href: ../teams/embed-teams-app.md
+      - name: Embed a model-driven app as tab app
+        href: ../teams/embed-model-driven-teams-tab.md
+      - name: Embed a model-driven app as personal app
+        href: ../teams/embed-model-driven-teams-personal.md
+    - name: Create apps in Teams
+      items:
+      - name: Create apps in Teams
+        href: ../teams/create-apps-overview.md
+      - name: Get started
+        items:
+          - name: Install the Power Apps personal app
+            href: ../teams/install-personal-app.md
+          - name: Create your first app
+            href: ../teams/create-first-app.md
     - name: Understand the Power Apps interface
       items:
         - name: Overview of the Power Apps app
