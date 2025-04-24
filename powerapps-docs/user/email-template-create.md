@@ -17,11 +17,11 @@ search.audienceType:
 
 # Create email templates
 
-Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
+Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. 
 
 You can create email templates by using one of the following options:  
-- **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
-- **Start with an existing template** : Create a template by choosing an existing template. The editor that's displayed depends on the editor in which the existing template was created.
+- **Start with a blank template**: Create a template from scratch. 
+- **Start with an existing template** : Create a template by choosing an existing template. 
 
 :::image type="content" source="media/email-how-to-create-an-email-template-1a.png" alt-text="Screenshot that shows options to create a template from blank or from an existing template.":::
 
@@ -46,10 +46,6 @@ When you start with a blank template, nothing is provided for you. You must add 
  
 3. Select **Create**. The template editor is displayed.
 
-The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
-
-- If yes, you'll use the enhanced email template editor page.
-- If not, you'll use the email template editor page. 
 
 ### Permission level for email templates
 
@@ -74,9 +70,6 @@ Start with an existing template to create an email template faster and with less
   
 3. The template editor page is displayed.
 
-When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the following template editors:
-  - Enhanced email template: If the selected email template was created with the enhanced email template.
-  - Email template: If the selected template was created with the legacy email template.
 
 > [!Important]
 > If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
@@ -107,5 +100,4 @@ You can use either the email template to create email templates.
 ### See also
 
 [Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
-[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   
