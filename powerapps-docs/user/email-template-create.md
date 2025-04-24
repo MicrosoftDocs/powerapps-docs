@@ -74,22 +74,14 @@ Start with an existing template to create an email template faster and with less
 > [!Important]
 > If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
 
-### Work with existing templates
-
-:::image type="content" source="media/email-template-copy-1a.png" alt-text="Screenshot of the email template editor with an existing template open for editing.":::
-
-- **Template** tab: Specify or change the template details and the email subject. The name includes **– Copy** at the end to identify this template is a copy of another one.
-- **Template editor** section: [Design and customize the email template](cs-template-options.md).
-- Select **New Attachment** to add attachments to your template if needed.
-
 
 ## Email template editor
 
-You can use either the email template to create email templates.
+You can use the email template editor to to create a new email template or edit an existing template.
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
-- **Designer** tab: Use this tab to draft and apply standard formatting to your email template. You can also add [dynamic text](email-dynamic-text.MD), images, and attachments. You can add Copilot prompts to your email template for a consistent experience. Copilot prompts are available in the enhanced email template editor. Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
+- **Designer** tab: Use this tab to draft and apply standard formatting to your email template. You can also add [dynamic text](email-dynamic-text.md), images, and attachments. You can add Copilot prompts to your email template for a consistent experience. Learn more in [Add Copilot prompts to email template](/dynamics365/customer-service/administer/add-prompt-email-template).
   > [!NOTE]
   > Across all the model-driven apps, the email template editor supports upto 1048576 characters.
 - **HTML** tab: Use this tab to view and edit the HTML code of your email template. You can add HTML code to customize your templates with elements such as layouts, images, and buttons.
