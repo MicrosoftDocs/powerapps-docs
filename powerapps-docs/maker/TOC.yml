@@ -1324,10 +1324,6 @@
         href: ../teams/embed-teams-tab.md
       - name: Embed a canvas app as personal app
         href: ../teams/embed-teams-app.md
-      - name: Embed a model-driven app as tab app
-        href: ../teams/embed-model-driven-teams-tab.md
-      - name: Embed a model-driven app as personal app
-        href: ../teams/embed-model-driven-teams-personal.md
     - name: Create apps in Teams
       items:
       - name: Create apps in Teams
@@ -2408,6 +2404,12 @@
       href: ./data-platform/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./data-platform/data-platform-restricted-entities.md
+  - name: Teams integration
+    items:
+    - name: Embed a model-driven app as tab app
+      href: ../teams/embed-model-driven-teams-tab.md
+    - name: Embed a model-driven app as personal app
+      href: ../teams/embed-model-driven-teams-personal.md 
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
   - name: Translate customized table and column text
@@ -2418,6 +2420,13 @@
     href: ./model-driven-apps/privileges-required-customization.md
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
+  - name: Access migration
+    href: ./data-platform/migrate-access-to-dataverse.md
+    items:
+    - name: Data types and sizes for Access migration
+      href: ./data-platform/migrate-access-datatypes.md
+    - name: System columns and tables in Dataverse
+      href: ./data-platform/access-migrate-linked-tables.md  
   - name: Get preview features early (preview)
     items:
     - name: Use the Dataverse accelerator
@@ -2436,13 +2445,6 @@
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
     href: ./model-driven-apps/model-driven-app-community.md
-- name: Access migration
-  href: ./data-platform/migrate-access-to-dataverse.md
-  items:
-  - name: Data types and sizes for Access migration
-    href: ./data-platform/migrate-access-datatypes.md
-  - name: System columns and tables in Dataverse
-    href: ./data-platform/access-migrate-linked-tables.md
 - name: Cards
   items:
     - name: What are cards?
