@@ -1836,6 +1836,12 @@
       href: ./model-driven-apps/delete-model-driven-app.md
     - name: Run an app
       href: ./model-driven-apps/run-model-driven-app.md
+  - name: Teams integration
+    items:
+    - name: Embed a model-driven app as tab app
+      href: ../teams/embed-model-driven-teams-tab.md
+    - name: Embed a model-driven app as personal app
+      href: ../teams/embed-model-driven-teams-personal.md 
   - name: Advanced app making and customization
     href:
     items:
@@ -2404,12 +2410,6 @@
       href: ./data-platform/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./data-platform/data-platform-restricted-entities.md
-  - name: Teams integration
-    items:
-    - name: Embed a model-driven app as tab app
-      href: ../teams/embed-model-driven-teams-tab.md
-    - name: Embed a model-driven app as personal app
-      href: ../teams/embed-model-driven-teams-personal.md 
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./data-platform/sharepoint-onedrive-onenote-intro.md
   - name: Translate customized table and column text
