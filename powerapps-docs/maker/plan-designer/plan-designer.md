@@ -4,7 +4,7 @@ description: Use the Plan designer to create business solutions with AI-powered 
 author: mduelae
 contributors:
 ms.topic: conceptual
-ms.date: 4/25/2025
+ms.date: 4/28/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -70,7 +70,7 @@ Review and correct the outputs created by the agent.
 :::image type="content" source="media/pd-5-plan-agents.png" alt-text="Plan agents analyze your plan":::
 
 
-### Generate user needs
+### Generate user requirments
 
 The Requirements Agent identifies user needs based on your description.
 
@@ -79,7 +79,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 1. Review the user roles and stories. Then, choose one of the following options:
 
-    - Select **Add these roles** to generate a data model.
+    - Select **Looks good** to generate a data model.
     - Select **Edit** to make edits inline or add new user roles or needs.
     
         :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer." lightbox="media/pd-6-generate-roles-stories.png":::
@@ -124,7 +124,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 1. When you're done, select **Back**
 
-1. When you're ready to generate user experiences, select **Add these tables** to proceed.  
+1. When you're ready to generate user experiences, select **Looks good** to proceed.  
 
       :::image type="content" source="media/pd-11-save-tables.png" alt-text="Screenshot of the Plan designer with the option to save tables." lightbox="media/pd-11-save-tables.png":::
 
