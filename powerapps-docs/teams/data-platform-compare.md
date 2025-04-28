@@ -4,7 +4,7 @@ description: Explains the differences between Dataverse for Teams and Dataverse.
 author: Mattp123
 ms.topic: conceptual
 ms.collection: get-started
-ms.date: 09/27/2022
+ms.date: 05/28/2025
 ms.subservice: teams
 ms.author: olegov
 ms.reviewer: matp
@@ -35,7 +35,7 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 
 Most of the standard tables that are provided with a Power Platform environment won't be present as part of Dataverse for Teams.
 
-## Business intelligence and professional developer features
+## Business intelligence, professional developer, and maker features
 
 This table describes the differences between Dataverse for Teams and Dataverse business intelligence and professional developer features.
 
@@ -47,6 +47,8 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
 |      |  Power Apps component framework       |   No      |  Yes       |
+| Maker     |  Create canvas apps      |   Yes     |  Yes       |
+|        |  Create model-driven apps      |   No     |  Yes       |
 
 ## Environments
 
