@@ -2535,46 +2535,6 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: Responsible AI
-  items:
-  - name: Overview
-    href: ./common/responsible-ai-overview.md
-  - name: FAQ about building apps through conversation
-    href: ./common/faqs-build-apps-conversation.md
-  - name: FAQ about generating app descriptions with Copilot
-    href: ./common/ai-app-descriptions-faq.md
-  - name: FAQ about editing your app with Copilot
-    href: ./common/faqs-copilot-panel.md
-  - name: FAQ about using Copilot in model-driven apps
-    href: ./common/faqs-copilot-model-driven-app.md
-  - name: FAQ about using the Copilot control in canvas apps
-    href: ./common/faq-copilot-control.md
-  - name: FAQ about using Copilot in the rich text editor
-    href: ./common/faqs-email-assist-rte.md
-  - name: FAQ for Excel to table and app
-    href: ./common/faqs-excel-to-table-app.md
-  - name: FAQ for SharePoint list to table and app
-    href: ./common/faqs-sharepoint-list-to-table-app.md
-  - name: FAQ for drafting well-written, input text with Copilot
-    href: ./common/faq-draft-with-copilot.md
-  - name: FAQ about form fill assistance
-    href: ./common/faq-from-filling-assistance.md
-  - name: FAQ about using Copilot in timeline highlights
-    href: ./common/faq-timeline-highlights-with-copilot.md
-  - name: FAQ about using Copilot with Power Fx
-    href: ./common/faqs-copilot-powerfx.md
-  - name: FAQ about field suggestions by Copilot
-    href: ./common/faq-field-suggestions.md
-  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
-    href: ./common/faq-filter-with-copilot.md
-  - name:  FAQ about agent builder in canvas apps 
-    href: ./common/faq-agent-builder.md  
-  - name: FAQ about the Plan designer
-    href: ./common/faq-plan-designer.md
-  - name: FAQ about renaming controls with Copilot
-    href: ./common/faq-rename-control.md
-  - name: FAQ about Copilot visualizations on a view
-    href: ./common/faq-visualize-view.md
 - name: Resources
   items:
   - name: Microsoft Credentials for Power Platform
@@ -2619,3 +2579,43 @@
     href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/
+- name: Responsible AI
+  items:
+  - name: Overview
+    href: ./common/responsible-ai-overview.md
+  - name: FAQ about building apps through conversation
+    href: ./common/faqs-build-apps-conversation.md
+  - name: FAQ about generating app descriptions with Copilot
+    href: ./common/ai-app-descriptions-faq.md
+  - name: FAQ about editing your app with Copilot
+    href: ./common/faqs-copilot-panel.md
+  - name: FAQ about using Copilot in model-driven apps
+    href: ./common/faqs-copilot-model-driven-app.md
+  - name: FAQ about using the Copilot control in canvas apps
+    href: ./common/faq-copilot-control.md
+  - name: FAQ about using Copilot in the rich text editor
+    href: ./common/faqs-email-assist-rte.md
+  - name: FAQ for Excel to table and app
+    href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for SharePoint list to table and app
+    href: ./common/faqs-sharepoint-list-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
+  - name: FAQ about form fill assistance
+    href: ./common/faq-from-filling-assistance.md
+  - name: FAQ about using Copilot in timeline highlights
+    href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about field suggestions by Copilot
+    href: ./common/faq-field-suggestions.md
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
+  - name:  FAQ about agent builder in canvas apps 
+    href: ./common/faq-agent-builder.md  
+  - name: FAQ about the Plan designer
+    href: ./common/faq-plan-designer.md
+  - name: FAQ about renaming controls with Copilot
+    href: ./common/faq-rename-control.md
+  - name: FAQ about Copilot visualizations on a view
+    href: ./common/faq-visualize-view.md
