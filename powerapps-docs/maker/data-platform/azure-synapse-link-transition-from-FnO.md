@@ -190,36 +190,7 @@ Also verify that you have the [latest updates which addresses some of the known 
 
 
 ## Frequently asked questions
-
-### Export to data lake service is working well for us. Why did you retire these services?
-
-As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a single service under the brand name Synapse Link for Dataverse. Using our learnings, we addressed many shortcomings of existing services in Synapse Link while maintaining same data formats – so that you can upgrade your investments with minimal disruptions. Fabric link service is a new, no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric.
-
-### Is BYOD service retired? Is there a retirement date? 
-
-As part of the Dynamics 365 platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications. [BYOD](/dynamics365/fin-ops-core/dev-itpro/analytics/export-entities-to-your-own-database) is a service that exports entity data into customers own Azure SQL database. While we haven't yet announced a retirement date for BYOD service, our guidance is to transition to Synapse Link or Fabric link services. Fabric link service is a new, no-copy, no-ETL solution, which enables you to query your data with SQL similar to a “read-replica” of your data in Fabric.
-
-### Will you retire Synapse Link in the future?
-
-As part of the platform unification project, we have consolidated several services that “exported data” in Dynamics 365 applications to a service under the brand name Synapse Link for Dataverse. We have also introduced Fabric link, a no-copy, no-ETL solution, which enables you to leverage innovations in Fabric without having to invest in data pipelines. It’s a “read-replica” of your data for authorized users in Fabric. 
-
-While many customers are excited to adopt Fabric, we also understand some customers want to continue to export data and build their own integration pipelines. We do want to enable them to export data well into the future.
-
-### Will export to data lake service stop since it's deprecated after November 1, 2024?
-
-Export to data lake service is deprecated as of November 1, 2024 and our support will be limited. You can reduce the risk by beginning the transition process now. We plan to decommission export to data lake service beginning March 25, 2025 as customers transition to Synapse Link and Fabric link services. We plan to start the decommissioning process with customers who have completed the transition as well as customers who are not actively using the service. You will be notified before the decommission process begins and have the option to ask for a past due extension via the link [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue).
-
-### My transition might run beyond deprecation date, is there a process to get an extension?
-
-Export to data lake service is deprecated as of November 1, 2024, but will continue to operate under limited support until March 25, 2025. If you haven't done so already, you should begin the transition process now.
-
-To help customers who might need more time to complete their transition, we have introduced an in-product “past due extend” option. You can apply for a one-time “past due extension” by taking the survey in the **Azure Synapse Link** area in Power Apps (make.powerapps.com) or via [aka.ms/SynapseLinkPastDue](https://aka.ms/SynapseLinkPastDue). This option is available only to customers who are currently validating either Synapse Link or Fabric Link services.
-
-If your past due extension request is approved, you receive a confirmation e-mail and the extended date is shown within the product. To self-extend, go the **Azure Synapse Link** area in Power Apps (make.powerapps.com). This option is applicable for each environment and is visible for environments linked to finance and operations.
-
-### I have completed the transition, how can I uninstall "export to data lake" feature? 
-
-If you aren't using this feature in your environment, ask your finance and operations apps administrator to uninstall this feature. To uninstall, visit the environment page in life cycle services (LCS), navigate to the **Environment Add-ins** section, and then select the **Uninstall** option in the **Export to Data lake** environment add-in.
+Questions? you can refer to the [FAQ document published here](./azure-synapse-link-transition-FAQ.md#frequently-asked-questions-when-transitioning-from-legacy-data-integration-services). You can also join weekly office hrs, stay in touch with the product team and the customer forum by joining [Viva Engage group](https://aka.ms/synapselinkfordynamics).
 
 ## See also
 
