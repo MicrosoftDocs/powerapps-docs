@@ -184,10 +184,9 @@ The Fabric link service updates data in Dataverse OneLake within the hour as of 
 If you're consuming incremental data feeds from Dynamics 365 with Export to Data Lake service for near-real time data integration scenarios (example 3). Upgrade to Azure Synapse Link enables you to run the same data pipelines.
 
 ## Limitations and changes to behavior 
-You may find a few changes in table formats introduced to avoid conflicts described in the document here: 
+You may find a few changes in table formats introduced to avoid conflicts described in the [document here](./azure-synapse-link-select-FnO-data.md#known-limitations-and-changes-to-behavior)
 
-Also
-Currently, there are several limitations that are being addressed by the product team. Until we fix these limitations, use the suggested workaround. To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://aka.ms/synapselinkfordynamics).
+Also verify that you have the [latest updates which addresses some of the known issues](./azure-synapse-link-select-FnO-data.md#recent-fixes-applicable-to-finance-and-operations-tables) To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://aka.ms/synapselinkfordynamics).
 
 
 ## Frequently asked questions
