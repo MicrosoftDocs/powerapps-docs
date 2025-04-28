@@ -59,7 +59,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 >
 > If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and relink existing environments), all tables are added.  
 >
-> Enabling this feature results in an increase in *Dataverse database* storage consumption. You can view additional storage consumption as additional files in the [environment storage capacity details view](/power-platform/admin/capacity-storage#environment-storage-capacity-details) in Power Platform admin center. For an example, you notice an additional file `Account-Amalytics` if you selected the `Account` table for Fabric link. Also note that the chart only displays tables consuming hightest storage. You can get a list of tables using the menu on top right of the chart.
+> Enabling this feature results in an increase in **Dataverse database** storage consumption. You can view additional storage consumption in the [environment storage capacity details view](/power-platform/admin/capacity-storage#environment-storage-capacity-details) in Power Platform admin center. For an example, you notice an additional file `Account-Analytics` if you selected the `Account` table for Fabric link. Also note that the chart only displays tables consuming hightest storage. You can get a list of tables using the menu on top right of the chart.
 
 ## Comparing Link to Fabric with Azure Synapse Link for Dataverse
 
