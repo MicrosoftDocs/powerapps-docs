@@ -6,6 +6,7 @@ ms.topic: tutorial
 author: Mattp123
 ms.author: matp
 ms.reviewer: matp
+ms.subservice: mda-maker
 ---
 # Add a Power BI visual to a model-driven app
 

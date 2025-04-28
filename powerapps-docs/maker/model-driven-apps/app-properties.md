@@ -13,10 +13,8 @@ author: "Mattp123"
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
 ms.author: matp
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 caps.latest.revision: 14
-topic-status: Drafting
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 contributors:

@@ -6,6 +6,7 @@ ms.author: matp
 ms.reviewer: matp
 contributors: manasdalai
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 06/27/2024
 ms.custom: template-how-to
