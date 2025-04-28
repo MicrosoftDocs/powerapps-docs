@@ -35,7 +35,7 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 > [!NOTE]
 >
 > - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
-> - This feature is only available in standalone model-driven apps which do not include both lead and opportunity tables. This feature isn't yet supported for Dynamics 365 apps.
+> - This feature is only available in standalone model-driven apps, which don't include both lead and opportunity tables. This feature isn't yet supported for Dynamics 365 apps.
 
 1. Go to https://make.preview.powerapps.com. 
 1. Open your model-driven app in edit mode, and then on the left navigation bar select **...** > **Configure in Copilot Studio**. You're taken to Microsoft Copilot Studio where your app’s agent is set up. Every standalone model-driven app Copilot has its own dedicated agent available for customizations. Setting up the agent for the first time takes a few seconds.
