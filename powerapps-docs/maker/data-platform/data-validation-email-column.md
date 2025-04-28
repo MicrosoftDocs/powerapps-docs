@@ -59,7 +59,7 @@ Notice that the notification message **The domain is unknown** appears under the
 - The **Enable Smart Email Address Validation Control** app setting can be enabled even though the **Data Validation** Power Platform admin center environment setting is off. In this situation, email address validation won't work.
 - When the form containing the control is set to read-only mode, the email column still allows editing of the value.
 - The email column doesn't import values when using a quick create form. For example, when you create a new parent contact record from a lead record.
-
+- While using setValue() method the value being defined for the control is not rendered on the User Interface
 ## Next steps
 
 [Create and edit columns in Dataverse using Power Apps](create-edit-field-portal.md)
