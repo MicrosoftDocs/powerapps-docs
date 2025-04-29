@@ -2078,7 +2078,7 @@
         href: ./data-platform/import-update-export-solutions.md
       - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
-      - name: View solution deployments (preview)
+      - name: View solution deployments
         href: ./data-platform/maker-deployment-area.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md

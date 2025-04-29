@@ -1,15 +1,15 @@
 ---
-title: View solution deployments on the deployment page (preview)
+title: View solution deployments on the deployment page
 description: Learn how to view pipeline deployments on the deployment page.
 author: asheehi1
 ms.author: matp
 ms.topic: how-to
-ms.date: 1/14/2025
+ms.date: 4/29/2025
 ms.custom: template-how-to
 ---
 # View solution deployments on the deployment page
 
-From the **Solutions** page, makers can navigate to **Deployments** to view all of their solution deployments, across all solutions and pipelines, in one place. If their deployment began from (or was deployed to) the current environment, they are able to view its status and other details.
+From the **Solutions** page, makers can navigate to **Deployments** to view all of their solution deployments, across all solutions and pipelines, in one place. If their deployment began from (or was deployed to) the current environment, they're able to view its status and other details.
 
 :::image type="content" source="media/maker-deployment-hub.png" alt-text="Screenshot of the deployment page for makers." lightbox="media/maker-deployment-hub.png":::
 
@@ -31,11 +31,11 @@ At the bottom of the overview, makers view their deployment history. This sectio
 
 ### Retry failed deployments
 
-Deployments shown as **Failed** in the run history view can now be deployed by selecting **Retry** in the details panel if the operation was "Deploy". A confirmation dialogue will appear when clicked to confirm the retry.
+Deployments shown as **Failed** in the run history view can be deployed by selecting **Retry** in the details panel if the operation was **Deploy**. A confirmation message appears when you confirm the retry.
 
-## Take action with Advisor-powered recommendations
+## Take action with advisor-powered recommendations
 
-Actionable recommendations for improving ALM health within your environment will now be shown in the **Take action** section at the bottom of the Deployment page. These recommendations help ensure that makers are following the best practices to enable healthy ALM within the organization.
+Actionable recommendations for improving ALM health within your environment is shown in the **Take action** section at the bottom of the Deployment page. These recommendations help ensure that makers are following the best practices to enable healthy ALM within the organization.
 
 ## Why can't I see solution deployments other than those that I initiated?
 
