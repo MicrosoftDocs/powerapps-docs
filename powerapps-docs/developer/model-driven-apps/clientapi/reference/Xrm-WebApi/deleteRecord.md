@@ -27,7 +27,7 @@ contributors:
 |`entityLogicalName`|String|Yes|The table logical name of the record you want to delete. For example: `account`.|
 |`id`|String|Yes|GUID of the table record you want to delete.|
 |`successCallback`|Function|No|A function to call when a record is deleted. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code as a positive decimal number.  For example, the error code documented as `0x80040333` will be returned as `2147746611`.<br /> - `message`: String. An error message describing the issue.|
 
 ## Return Value
 
