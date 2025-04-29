@@ -4,6 +4,7 @@ description: Supported Power Fx expressions for use with Microsoft Dataverse low
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 08/02/2024
 ms.custom: template-how-to

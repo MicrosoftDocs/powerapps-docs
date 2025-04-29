@@ -5,6 +5,7 @@ author: mikefactorial
 ms.author: sriknair
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 04/26/2024
 ms.custom: template-how-to

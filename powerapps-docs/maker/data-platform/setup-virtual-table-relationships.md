@@ -4,6 +4,7 @@ description: Learn how to define relationships when using virtual tables.
 author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: conceptual
 ms.date: 01/04/2023
 ms.custom: template-concept

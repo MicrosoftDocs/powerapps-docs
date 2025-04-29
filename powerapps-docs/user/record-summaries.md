@@ -59,4 +59,4 @@ Summaries are only currently supported in the English language.
 ### Related information
 
 [Manage feature settings](/power-platform/admin/settings-features)  
-[Configuring summaries for tables](/power-apps/maker/common/faq-from-filling-assistance)  
+[Configuring summaries for tables](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary)  
