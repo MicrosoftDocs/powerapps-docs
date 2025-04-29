@@ -1,8 +1,8 @@
 ---
-title: "Query and analyze the incremental updates | MicrosoftDocs"
+title: Query and analyze the incremental updates with Azure Synapse Link for Dataverse
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 03/04/2025
+ms.date: 04/29/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,7 +16,7 @@ ms.author: "milindav"
 search.audienceType: 
   - maker
 ---
-# Query and analyze the incremental updates
+# Query and analyze the incremental updates with Azure Synapse Link for Dataverse
 
 Microsoft Dataverse data (including data from Dynamics 365 apps and finance and operations) can continuously change through create, update, and delete transactions. With the incremental update option, you can build incremental data pipelines that apply these changes to downstream systems and databases. Synapse Link for Dataverse exports incremental data in time stamped folders that contain data changes within user-specified time intervals.
 
