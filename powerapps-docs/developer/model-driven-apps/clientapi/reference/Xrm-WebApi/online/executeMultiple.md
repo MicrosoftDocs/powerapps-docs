@@ -60,7 +60,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 |---|---|---|---|
 |`requests`|Array of objects|Yes|An array of one of the following types:<br /><br />**Objects** where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a [getMetadata method](execute.md#requestgetmetadata-method) that lets you define the metadata for the action, function, or CRUD request you want to execute. The [execute method](execute.md) accepts this type of parameter.<br /><br />**Change set** (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set are executed in a transaction.<br /><br />See request examples in the [Syntax section](#syntax) for more information.|
 |`successCallback`|Function|No|A function to call when operation is executed successfully. An array of response objects is passed to the function. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code as a positive decimal number.  For example, the error code documented as `0x80040333` will be returned as `2147746611`.<br /> - `message`: String. An error message describing the issue.|
 
 ## Return Value
 
