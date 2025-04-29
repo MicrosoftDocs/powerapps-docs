@@ -25,15 +25,11 @@ Data can only be synced regularly when Power Apps or Field Service are running i
 
 ## iOS devices
 
-On devices running iOS 13.0 or later, an ongoing sync is suspended as soon as Power Apps or Field Service is moved to the background or when the device is locked. The ongoing sync may be resumed and completed while the app is in the background using native iOS functionality. 
-
-The operating system prioritizes background activities, such as the ongoing sync, based on app usage, connectivity, and power state. Ongoing syncs are more likely to be completed in the background if Power Apps or Field Service have been used frequently on the device and when the device is plugged in. 
-
-If a user has a large amount of data to sync, we recommend opening the app while the device is charging to increase priority of the sync. 
+Sync happens when Power Apps (Player) is active and in the foreground. If Power Apps moves to the background, any ongoing sync pauses. Scheduled synchronizations don't start while the app is in the background.  
 
 ## Android devices
 
-An ongoing sync can continue when Power Apps or Field Service runs in the background or when the device is locked. The user will see a notification in the Android notification center saying, “The app is downloading records so that they are accessible offline.” 
+An ongoing sync starts only when Power Apps (Player) is in the foreground and active. Once synchronization starts, it continues even if Power Apps moves to the background, as long as the app stays open and active. However, scheduled synchronizations don't start while the app is in the background.  
 
 ## Windows devices
 
