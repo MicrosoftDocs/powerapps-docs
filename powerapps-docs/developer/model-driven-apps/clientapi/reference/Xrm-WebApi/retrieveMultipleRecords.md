@@ -29,7 +29,7 @@ contributors:
 |`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
 |`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
 |`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code as a positive decimal number.  For example, the error code documented as `0x80040333` will be returned as `2147746611`.<br /> - `message`: String. An error message describing the issue.|
 
 ### Options
 
