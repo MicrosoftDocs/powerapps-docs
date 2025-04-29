@@ -29,7 +29,7 @@ contributors:
 |---|---|---|---|
 |`request`|Object|Yes|Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that lets you define the metadata for the action, function or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
 |`successCallback`|Function|No|A function to call when operation is executed successfully. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code as a positive decimal number.  For example, the error code documented as `0x80040333` will be returned as `2147746611`.<br /> - `message`: String. An error message describing the issue.|
 
 ### request.getMetadata method
 
