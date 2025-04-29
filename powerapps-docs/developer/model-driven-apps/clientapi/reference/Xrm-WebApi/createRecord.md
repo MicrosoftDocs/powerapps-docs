@@ -28,7 +28,7 @@ contributors:
 |`entityLogicalName`|String|Yes|Logical name of the table you want to create. For example: `account`.|
 |`data`|Object|Yes|A JSON object defining the columns and values for the new table record. See [Examples](#examples)|
 |`successCallback`|Function|No|A function to call when a record is created. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code.<br /> - `message`: String. An error message describing the issue.|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code as a positive decimal number.  For example, the error code documented as `0x80040333` will be returned as `2147746611`.<br /> - `message`: String. An error message describing the issue.|
 
 
 ## Return Value
