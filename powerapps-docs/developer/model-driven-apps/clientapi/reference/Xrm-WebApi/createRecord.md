@@ -3,7 +3,7 @@ title: "createRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the createRecord method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/29/2024
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -28,7 +28,7 @@ contributors:
 |`entityLogicalName`|String|Yes|Logical name of the table you want to create. For example: `account`.|
 |`data`|Object|Yes|A JSON object defining the columns and values for the new table record. See [Examples](#examples)|
 |`successCallback`|Function|No|A function to call when a record is created. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties is passed:<br /> - `errorCode`: Number. The error code.<br /> - `message`: String. An error message describing the issue.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 
 ## Return Value
