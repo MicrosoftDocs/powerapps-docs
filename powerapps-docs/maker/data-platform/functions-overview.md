@@ -87,5 +87,8 @@ For more information about how to integrate from a canvas app or in a Power Auto
 |Run time     | When a function is invoked, it accesses the table data involved in the function definition, which includes the tables that are part of the formula in the context of the user who invoked it.     |
 
 ## Next steps
+Learn more:
+
+[Learning Path Power Fx functions training](https://aka.ms/power-fx-functions/learn)
 
 [Create and use functions in Microsoft Dataverse (preview)](functions-create.md)
