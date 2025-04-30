@@ -71,8 +71,6 @@ Start with an existing template to create an email template faster and with less
 3. The template editor page is displayed.
 
 
-> [!Important]
-> If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
 
 
 ## Email template editor
