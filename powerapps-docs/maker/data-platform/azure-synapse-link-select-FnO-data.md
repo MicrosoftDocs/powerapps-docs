@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 03/10/2025
+ms.date: 04/29/2025
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -59,7 +59,6 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 | **Access finance and operations tables via Synapse query** <br><br> Finance and operations tables are saved in delta parquet format enabling better read performance. You can't choose finance and operations tables to be saved in CSV format. | Go to [Add finance and operations tables in Azure Synapse Link](#add-finance-and-operations-tables-in-azure-synapse-link)  |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool  | 
 | **Load incremental data changes into your own downstream data warehouse** <br><br> The system saves incremental changes into files in CSV format. No need to bring Synapse workspace or Spark pool because your data is saved in CSV format.  | Go to [Access incremental data changes from finance and operations](#access-incremental-data-changes-from-finance-and-operations)  <br> Also go to [Azure Synapse Link - incremental update](/power-apps/maker/data-platform/azure-synapse-incremental-updates)) | Azure data lake  |
 
-
 ## Add finance and operations tables in Azure Synapse Link
 
 You can enable both finance and operations tables and finance and operations entities in Azure Synapse Link for Dataverse. This section is focused on finance and operations tables.
@@ -81,35 +80,36 @@ You can enable both finance and operations tables and finance and operations ent
 > - Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't see them in the **Tables** area in Power Apps (make.powerapps.com).
 > - You don't have to define finance and operations apps tables as virtual tables, and you don't have to enable change tracking for each table.
 >
-> - You can't add Finance and Operations tables into an existing Synapse Link profile which contained Dataverse tables. You need to create a new profile. Once you create a new profile, you can add tables from both Finance and Operations as well as Dataverse.
+> - You can't add finance and operations tables into an existing Synapse Link profile that contained Dataverse tables. You need to create a new profile. Once you create a new profile, you can add tables from both finance and operations as well as Dataverse.
 > 
 > - To include finance and operations tables in Synapse Link, you must enable the [Delta lake feature](/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and operations table selection isn't visible if your Synapse Link profile isn't configured for Delta lake.
 >
 > - Delta lake conversion time interval determines how often table data is updated in delta format. For near real time updates, enter 5, 15 or 60 minutes as the desired updated time interval. Choose 1440 for daily time interval if near real-time updates aren't required. Delta conversion consumes compute resources from the Spark pool you have provided in the configuration of the Synapse Link profile. The lower the time interval, the more compute resources are consumed and you can incur more cost. You can monitor the Spark pool cost in Azure portal to see the compute cost.
 >
-> - The time interval chosen for Spark conversion may not reflect the actual data freshness you observe in the Lake. By entering 15 minutes as the time interval, you are requesting Delta conversion jobs to be triggered every 15 mins in case there are data changes. Depending on the size of the spark compute pool and the amount of incremental data available for processing, the actual data referesh observed in the lake would be more than 15 minutes. You can increase the size of the spark pool to achieve better data refresh times. See [recommended spark pool configuration](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-delta-lake#recommended-spark-pool-configuration)
-> 
-> - In the event that the system ran into an error during initial sync or updates, you'll see an error icon and a pointer to trouble-shooting documents that can be used to diagnose and resolve the error.
+> - The time interval chosen for Spark conversion might not reflect the actual data freshness you observe in the lake. By entering 15 minutes as the time interval, you request Delta conversion jobs to be triggered every 15 minutes in case there are data changes. Depending on the size of the Spark compute pool and the amount of incremental data available for processing, the actual data refresh observed in the lake could be more than 15 minutes. You can increase the size of the Spark pool to achieve better data refresh times. More information: [Recommended spark pool configuration](/power-apps/maker/data-platform/azure-synapse-link-delta-lake#recommended-spark-pool-configuration)
+>
+> - In the event that the system ran into an error during initial sync or updates, you receive an error and a link to trouble-shooting documents that can be used to diagnose and resolve the error.
 
 ### Known limitations and changes to behavior
-If you are transitioning from Export to Data lake feature in Finance and Operations, you may find a few changes to the behavior as described below. We may address some of these limitations and changes in the future. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/). 
 
-- **Don't see all tables?** Microsoft continues to enable all actively used finance and operations apps tables in Azure Synapse Link with application updates. If you have a previous version of finance and operations apps, not all required tables might be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+If you are transitioning from export to data lake feature in finance and operations, you might find a few changes to the behavior as described here. To learn more about the upcoming roadmap and stay in touch with the product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics/). 
+
+- **Don't see all tables?** Microsoft continues to enable all actively used finance and operations apps tables in Azure Synapse Link with application updates. If you have a previous version of finance and operations apps, not all required tables are enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, go to [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - **Don't see your custom tables?** You must enable change tracking for them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables). If you're using a cloud hosted environment (CHE), you must perform a database sync operation to reflect the changes.
 - **Special fields** such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
-- **Synapse Link retains deleted rows** from Finance and Operations tables. You can identify and filter out deleted rows using the `isDelete` field. See [Metadata fields](##Working with data and metadata) for more information. 
-- **Staging tables, temporary tables and deprecated tables**, where names begin with `del_` in finance and operations apps, aren't allowed in Azure Synapse Link.
+- **Synapse Link retains deleted rows** from finance and operations tables. You can identify and filter out deleted rows using the `isDelete` field. Go to [Working with data and metadata](#working-with-data-and-metadata.md) for more information.
+- **Staging tables, temporary tables, and deprecated tables**, where names begin with `del_` in finance and operations apps, aren't allowed in Azure Synapse Link.
 - The following tables, known as *kernel* tables in finance and operations apps, are supported by Fabric and Synapse Link. These tables are special, and you don't need to enable change tracking. Also, they're updated every 24 hours and not updated near-real time as the data doesn't change frequently: `DATAAREA`, `USERINFO`, `SECURITYROLE`, `SECURITYUSERROLE`, `SQLDICTIONARY`, `PARTITIONS`, `SECURITYPRIVILEGE`, `TIMEZONESLIST`, `SECURITYDUTY`, `SECURITYSUBROLE`, `SECURITYUSERROLECONDITION`, `DATABASELOG`, `SECURITYROLERUNTIME`, `SECURITYROLEPRIVILEGEEXPLODEDGRAPH`, `SECURITYROLEDUTYEXPLODEDGRAPH`, `TIMEZONESRULESDATA`, `SECURITYROLEEXPLODEDGRAPH`, `USERDATAAREAFILTER`, `SYSINHERITANCERELATIONS`. 
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
-- [**Master company data sharing**](/dynamics365/fin-ops-core/dev-itpro/sysadmin/srs-overview#when-to-consider-duplicate-record-versus-master-company-sharing-preview) is a preview feature in finance and operations apps. Tables that participate in the master company data sharing feature are supported with Synapse Link or Fabric link features. Data exported from these tables are keyed by all company records, not only the master company. This is done to enable simpler reporting (ie. you do not need to use Master company data sharing logic to expand data). However, if you are transitioning from previous data export solutions, you may need to filter out data from non-master companies.
-- [**Table inheritance and derived tables**](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For example, if you choose `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, exported data contains fields from the base table `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
-- **Memo fields and long descriptions of type nVarchar(Max)** are included in Synapse Link. However, the field size is truncated to 2000 characters.
-- **ID fields from Finance and Operations tables are renamed to FnO_Id** to avoid field name conflicts with Dataverse tables.
-- **Fields with SQL reserved words** are renamed by attaching a trailing character. Ex. `Level` becomes `Level_` and `Resource` becomes `Resource_` 
-
+- [**Master company data sharing**](/dynamics365/fin-ops-core/dev-itpro/sysadmin/srs-overview#when-to-consider-duplicate-record-versus-master-company-sharing-preview) is a preview feature in finance and operations apps. Tables that participate in the master company data sharing feature are supported with Synapse Link or Fabric link features. Data exported from these tables are keyed by all company records, not only the master company. This is done to enable simpler reporting so you don't need to use master company data sharing logic to expand data. However, if you're transitioning from previous data export solutions, you might need to filter out data from non-master companies.
+- [**Table inheritance and derived tables**](/dynamicsax-2012/developer/table-inheritance-overview) are concepts in finance and operations apps. When choosing a derived table from finance and operations apps, fields from the corresponding base table currently aren't included. For example, if you choose the `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, exported data contains fields from the base table `DirPartyTable` You need to select the base table in addition to the derived table if you need access to these fields. You can use [this FastTrack solution](https://github.com/microsoft/Dynamics-365-FastTrack-Implementation-Assets/tree/master/Analytics/DataverseLink/DataIntegration#derived-tables) provided on GitHub. This solution creates views, which include columns from base tables.
+- **Memo fields and long descriptions of type `nVarchar(Max)`** are included in Synapse Link. However, the field size is truncated to 2,000 characters.
+- **ID fields from finance and operations tables are renamed to FnO_Id** to avoid field name conflicts with Dataverse tables.
+- **Fields with SQL reserved words** are renamed by attaching a trailing character. Ex. `Level` becomes `Level_` and `Resource` becomes `Resource_`. 
 
 ### Recent fixes applicable to finance and operations tables
-If you are on a previous verision of Finance and operations, you need to update to the latest version to apply fixes to several issues. These issues and fixes are mentioned here for reference purposes only. when you update to the latest version, all fixes are applied.
+
+If you are on a previous version of finance and operations, you need to update to the latest version to apply fixes to several issues. These issues and fixes are mentioned here for reference purposes only. When you update to the latest version, all fixes are applied.
 
 - **AOS Authorized fields**: If the table selected contains data columns that are secured via **AOS Authorization**, those columns are ignored and the exported data doesn't contain the column. For example in a custom table named *CustTable*, the column *TaxLicenseNum* has the metadata property **AOS Authorization** set to **Yes**. This column is ignored when *CustTable* data is exported with Azure Synapse Link.
    > [!NOTE]
@@ -118,11 +118,10 @@ If you are on a previous verision of Finance and operations, you need to update 
    > - PU 62:7.0.7120.159
    > 
    > With this update, AOS authorization fields are added to tables:
-   >   - Incremental updates include this column.
-   >   - Modified records show these columns and value.
-   >   - Full refresh includes these fields and all values.
-   >
-   
+   > - Incremental updates include this column.
+   > - Modified records show these columns and value.
+   > - Full refresh includes these fields and all values.
+
 - **Extensible Data security**: When a finance and operations table added to Azure Synapse Link is secured via [extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies), the system might not export data. This issue is fixed in the latest application update.
   > [!NOTE]
   > Available updates to finance and operations tables with Azure Synapse Link for Dataverse:
@@ -151,27 +150,26 @@ If you are on a previous verision of Finance and operations, you need to update 
   > With this update, Array type fields are added to tables. You need to perform a full refresh to include previous rows.
   > Above updates also contain the fix for Array fields of Enumerated data types.
 
-- [**Extended invoice length**](https://learn.microsoft.com/dynamics365/finance/accounts-payable/vendor-invoices-overview#extend-invoice-number-length) is a feature enabled with finance and Operations version 10.0.40 and later. 
-   > [!NOTE]
+- [**Extended invoice length**](/dynamics365/finance/accounts-payable/vendor-invoices-overview#extend-invoice-number-length) is a feature enabled with finance and operations version 10.0.40 and later.
+  > [!NOTE]
   > Extended vendor invoice number feature is enabled with updates to finance and operations tables with Azure Synapse Link for Dataverse:
   > - Version 10.0.41 (PU65) platform update 7.0.7367.134 or later
   > - Version 10.0.42 (PU66) platform update 7.0.7452.72 or later
   > - Version 10.0.43 (PU67) platform update 7.0.7521.0 or later
 
-- **Deleted rows missing from derived tables** issue is addressed in updates mentioned below. When choosing a derived table from finance and operations apps, for example, if you choose `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, deleted markers from derived and base tables are missing in exported data.
-     > [!NOTE]
+- **Deleted rows missing from derived tables** issue is addressed in updates mentioned below. When choosing a derived table from finance and operations apps. For example, if you choose the `DirPerson` table, a table derived from `DirPartyTable` also known as the base table, deleted markers from derived and base tables are missing in exported data.
+  > [!NOTE]
   > Deleted rows missing from derived tables is enabled with updates to finance and operations tables with Azure Synapse Link for Dataverse:
   > - Version 10.0.40 (PU64) platform update 7.0.7279.199 or later
   > - Version 10.0.41 (PU65) platform update 7.0.7367.136 or later
   > - Version 10.0.42 (PU66) platform update 7.0.7452.75 or later
 
-- **NULL values in Finance and Operations fields** are not reflected as empty strings in exported data and may cause export failures. While NULL values are not expected to be present in Finance and Operations data, there may be NULL values inserted via data integration. 
+- **NULL values in finance and operations fields** aren't reflected as empty strings in exported data and might cause export failures. While NULL values are not expected to be present in finance and operations data, there might be NULL values inserted via data integration. 
      > [!NOTE]
   > Null value handling support for exported data for finance and operations tables is enabled with:
   > - Version 10.0.41 (PU65) platform update 7.0.7367.149 or later
   > - Version 10.0.42 (PU66) platform update 7.0.7452.88 or later
   > - Version 10.0.43 (PU67) platform update 7.0.7497.0 or later
-     >
 
 - Finance and operations apps tables added to an Azure Synapse Link profile might be removed when a back-up is restored in Dataverse. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
 - When a finance and operations apps database is restored, tables added to an Azure Synapse Link profile need to be reinitialized. Before reinitializing finance and operations tables, you must also restore the Dataverse database. After restoring the database, you must add finance and operations tables into the profile. You can copy and paste a comma separated list of tables into the search box within the manage tables option to select a list of tables at once.
@@ -207,7 +205,7 @@ To create an Azure Synapse Link profile with incremental data:
 > 
 > The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
 
-##Working with data and metadata  
+## Working with data and metadata  
 
 Enumerated fields are coded data fields in finance and operations apps. For example, the **AssetTrans** table contains a field called **TransType**, which is an **Enumerated** field. Table fields contain numeric codes like 110, 120, or 131, which represent detailed descriptions like "Depreciation," "Lease" or "Major repairs." You can access these detailed descriptions by using the **GlobalOptionsMetadata** table that's automatically exported when you choose a table that contains enumerated fields. Enumerated fields are also called choice labels or, formerly, option sets. More information: [Choice labels](/power-apps/maker/data-platform/azure-synapse-link-choice-labels)
 

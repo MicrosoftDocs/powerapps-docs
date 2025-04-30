@@ -1,12 +1,12 @@
 ---
 title: Transition from legacy data integration services to Fabric link and Azure Synapse Link for Dataverse
 description: Learn how to transition from Export to Data Lake, BYOD, and data export service to link to Microsoft Fabric and Azure Synapse Link for Microsoft Dataverse.
-ms.date: 03/31/2025
+ms.date: 04/30/2025
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: Milindav
+author: Milindav2
 ms.subservice: dataverse-maker
 ms.author: Milindav
 search.audienceType: 
@@ -183,13 +183,14 @@ The Fabric link service updates data in Dataverse OneLake within the hour as of 
 
 If you're consuming incremental data feeds from Dynamics 365 with Export to Data Lake service for near-real time data integration scenarios (example 3). Upgrade to Azure Synapse Link enables you to run the same data pipelines.
 
-## Limitations and changes to behavior 
-You may find a few changes in table formats introduced to avoid conflicts described in the [document here](./azure-synapse-link-select-FnO-data.md#known-limitations-and-changes-to-behavior)
+## Limitations and changes to behavior
 
-Also verify that you have the [latest updates which addresses some of the known issues](./azure-synapse-link-select-FnO-data.md#recent-fixes-applicable-to-finance-and-operations-tables) To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://aka.ms/synapselinkfordynamics).
+You might find a few changes in table formats introduced that help avoid conflicts. More information: [Known limitations](./azure-synapse-link-select-FnO-data.md#known-limitations-and-changes-to-behavior).
 
+Also verify that you have the [latest updates, which address some of the known issues](./azure-synapse-link-select-FnO-data.md#recent-fixes-applicable-to-finance-and-operations-tables). To learn more about the upcoming roadmap and stay in touch with the product team, join the preview [Viva Engage group](https://aka.ms/synapselinkfordynamics).
 
 ## Frequently asked questions
+
 Questions? you can refer to the [FAQ document published here](./azure-synapse-link-transition-FAQ.md#frequently-asked-questions-when-transitioning-from-legacy-data-integration-services). You can also join weekly office hrs, stay in touch with the product team and the customer forum by joining [Viva Engage group](https://aka.ms/synapselinkfordynamics).
 
 ## See also

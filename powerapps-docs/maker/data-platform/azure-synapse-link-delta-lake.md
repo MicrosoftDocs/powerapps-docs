@@ -7,20 +7,19 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 03/10/2025
+ms.date: 04/29/2025
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
 
-Use Azure Synapse Link for Dataverse to export your Microsoft Dataverse data in Delta Lake format. Delta lake is the native format for Microsoft Fabric as well as many other tools like Azure Databricks. Exporting data in Delta lake format directly from Dataverse eliminates the need to have a separate Delta lake conversion process on your own and accelerates time to insight. This article provides the following information and shows you how to perform the following tasks:
+Use Azure Synapse Link for Dataverse to export your Microsoft Dataverse data in Delta Lake format. Delta Lake is the native format for Microsoft Fabric as well as many other tools like Azure Databricks. Exporting data in Delta lake format directly from Dataverse eliminates the need to have a separate Delta Lake conversion processes on your own and accelerates time to insight. This article provides information about this feature and shows you how to perform the following tasks:
 
 - Explains Delta Lake and Parquet and why you should export data in this format.
 - Export your Dataverse data to your Azure Synapse Analytics workspace in Delta Lake format with the Azure Synapse Link.
 - Monitor your Azure Synapse Link and data conversion.
 - View your data from Azure Data Lake Storage Gen2.
 - View your data from Synapse Workspace.
-- View your data in Microsoft Fabric
-
+- View your data in Microsoft Fabric.
 
 ## What is Delta Lake?
 
@@ -43,16 +42,16 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 > [!IMPORTANT]
 >
 > - If you're upgrading from CSV to Delta Lake with existing custom views, we recommend updating the script to replace all **partitioned** tables to **non_partitioned.** Do this by looking for instances of `_partitioned` and replace them with an empty string.
-> - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. But the Delta Lake table will have an in-place update structure because the Delta Lake conversion comes with a periodic merge process.
-> - You need to provision a Spark pool (compute resources) in your own Azure subscription for Delta conversion. This spark pool will be used to perform periodic Delta conversion based on the time interval chosen by you. 
+> - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. The Delta Lake table will have an in-place update structure because the Delta Lake conversion comes with a periodic merge process.
+> - You need to provision a Spark pool (compute resources) in your own Azure subscription for Delta conversion. This Spark pool is used to perform periodic Delta conversions based on the time interval chosen by you. 
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
-> - You need to create a Spark pool with version 3.4. If you are already using this feature with Spark version 3.3, you need to perform an in-place upgrade for your existing profiles. More information: [In-place upgrade to Apache Spark 3.4 with Delta Lake 2.4](/power-apps/maker/data-platform/azure-synapse-link-delta-lake#in-place-upgrade-to-apache-spark-3.4-with-delta-lake-2.4)
+> - You need to create a Spark pool with version 3.4. If you're already using this feature with Spark version 3.3, you need to perform an in-place upgrade for your existing profiles. More information: [In-place upgrade to Apache Spark 3.4 with Delta Lake 2.4](/power-apps/maker/data-platform/azure-synapse-link-delta-lake#in-place-upgrade-to-apache-spark-3.4-with-delta-lake-2.4)
 
 > [!NOTE]
 > The Azure Synapse Link status in Power Apps (make.powerapps.com) reflects the Delta Lake conversion state:
 > - `Count` shows the number of records in the Delta Lake table.
 > - `Last synchronized on` Datetime represents the last successful conversion timestamp.
-> - `Sync status` is shown as **active** once the data sync and Delta Lake conversion complete, indicating that the data is ready for consumption.
+> - `Sync status` is shown as **active** once the data sync and Delta Lake conversion completes, indicating that the data is ready for consumption.
 
 ## Prerequisites
 
@@ -78,9 +77,9 @@ This configuration can be considered a bootstrap step for average use cases.
 > [!IMPORTANT]
 >
 > - Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
-> - You might need to increase the number of nodes of the Spark pool if you expect a large amount of rows to be processed. If the size of the spark pool is insufficient, Delta conversion jobs might fail
-> - The same spark pool is used by the system to run a nightly job that compacts Delta files in the lake. System determines the night time to run this job based on the location of your dataverse environment. You can't provide a specific time window. This option reduces the size of Delta files by merging files known as "compaction". In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures.
-> - You are only charged for the spark pool nodes actually utilized. Increasing the number of nodes might not result in higher charges.
+> - You might need to increase the number of nodes of the Spark pool if you expect a large number of rows to be processed. If the size of the Spark pool is insufficient, Delta conversion jobs might fail
+> - The same Spark pool is used by the system to run a nightly job that compacts Delta files in the lake. The system determines the night time to run this job based on the location of your Dataverse environment. You can't provide a specific time window. This option reduces the size of Delta files by merging files known as "compaction." In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures.
+> - You're only charged for the spark pool nodes actually utilized. Increasing the number of nodes might not result in higher charges.
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format
 
@@ -122,16 +121,16 @@ bar.
 
 ## In place upgrade to Apache Spark 3.4 with Delta Lake 2.4
 
-In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.3 will be retired and disabled as of March 31, 2025. After the end of support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.3 pools will not be executed while metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.3 (EOSA)](/azure/synapse-analytics/spark/apache-spark-33-runtime).
+In accordance with the Synapse runtime for Apache Spark lifecycle policy, Azure Synapse runtime for Apache Spark 3.3 is retired and disabled as of March 31, 2025. After the end of support date, the retired runtimes are unavailable for new Spark pools and existing workflows with Spark 3.3 pools won't be executed while metadata will temporarily remain in the Synapse workspace. More information: [Azure Synapse Runtime for Apache Spark 3.3 (EOSA)](/azure/synapse-analytics/spark/apache-spark-33-runtime).
 
-In order to ensure that your existing Synapse Link profiles continue to process data, you will need to upgrade Synapse Link profiles to use Spark 3.4 pools using the "in-place upgrade process".
+In order to ensure that your existing Synapse Link profiles continue to process data, you need to upgrade Synapse Link profiles to use Spark 3.4 pools using the "in-place upgrade process."
 
-### Prerequisites
+### In-place upgrade prerequisites
 
-- You must have an existing Azure Synapse Link for Dataverse Delta Lake profile running with a Synapse Spark version 3.3.
-- You must create a new Synapse Spark pool with Spark version 3.4, **using the same or higher nodes hardware configuration within the same Synapse workspace**. For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.3 pool - **do not delete your Spark 3.3 pool or create a Spark 34 pool with the same name**
+- You must have an existing Azure Synapse Link for Dataverse Delta lake profile running with a Synapse Spark version 3.3.
+- You must create a new Synapse Spark pool with Spark version 3.4, **using the same or higher nodes hardware configuration within the same Synapse workspace**. For information about how to create a Spark pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.3 pool - **do not delete your Spark 3.3 pool or create a Spark 34 pool with the same name**
 
-### In-place upgrade to Spark 3.4:
+### In-place upgrade to Spark 3.4
 
 1. Sign in to Power Apps and select your preferred environment.
 2. On the left navigation pane, select **Azure Synapse Link**. If the item isn’t in the left navigation pane, select **…More** and then select the item you want.
@@ -139,8 +138,10 @@ In order to ensure that your existing Synapse Link profiles continue to process 
 4. Select the available Spark pool from the list, and select then **Update**.
 
 > [!NOTE]
-> The Spark pool upgrade occurs only when a new Delta Lake conversion Spark job is triggered. Ensure you have at least one data change after selecting **Update**.
-> you may delete the older Spark 3.3 pool after verifying that Delta conversion jobs use the new pool 
+>
+> - The Spark pool upgrade occurs only when a new Delta lake conversion Spark job is triggered. Ensure you have at least one data change after selecting **Update**.
+> - You can delete the older Spark 3.3 pool after verifying that Delta conversion jobs use the new pool.
 
-## See also
+## Related articles
+
 [What is Azure Synapse Link for Dataverse?](export-to-data-lake.md)
