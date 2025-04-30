@@ -86,9 +86,8 @@ For more information about how to integrate from a canvas app or in a Power Auto
 |Design time     |   Makers who have system customizer security role membership or higher level role in the Power Platform environment can access all functions in that environment. Custom security roles can be used to restrict access to functions.       |
 |Run time     | When a function is invoked, it accesses the table data involved in the function definition, which includes the tables that are part of the formula in the context of the user who invoked it.     |
 
-## Next steps
-Learn more:
+## Related content
 
-[Learning Path Power Fx functions training](https://aka.ms/power-fx-functions/learn)
+[Learning path: Work with Power Fx functions](/training/paths/work-powerfx-functions/?WT.mc_id=power-169350)
 
 [Create and use functions in Microsoft Dataverse (preview)](functions-create.md)
