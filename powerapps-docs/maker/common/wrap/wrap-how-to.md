@@ -168,6 +168,9 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 
 :::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
 
+> [!NOTE]
+> To manually code sign an iOS app, unzip the IPA file created using a Mac device only.
+
 ## Test and distribute mobile app package
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)

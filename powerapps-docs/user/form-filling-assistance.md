@@ -78,7 +78,7 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 :::image type="content" source="media/formfill_feedback.png" alt-text="Screenshot that shows the feedback survey for the form fill feature.":::
 
-### Use smart paste (Preview)
+## Use smart paste (Preview)
 
 Smart paste (Preview) is a capability can that reason over the form and the text or image copied to your clipboard to suggest what text could be used to fill specific fields, and provides suggestions inline in the form. To use smart paste (Preview):
 
@@ -91,7 +91,7 @@ You can continue to paste directly, without smart paste (Preview), into a specif
 
 :::image type="content" source="media/formfill_smartpaste.png" alt-text="Screenshot that shows the smart paste icon in the form's command bar.":::
 
-### Use files and toolbar (Preview)
+## Use files and toolbar (Preview)
 
 Files (Preview) is a capability that can reason over the form and the file you provide to suggest what text could be used to fill specific fields, and provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
 
