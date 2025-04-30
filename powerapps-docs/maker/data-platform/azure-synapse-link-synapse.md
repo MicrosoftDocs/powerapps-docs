@@ -62,7 +62,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     > [!NOTE]
     > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
-1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the Track changes property enabled can be exported. More information: [Advanced options](/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
+1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the Track changes property enabled can be exported. More information: [Advanced options](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
 
     ![Add tables.](media/add-tables.png "Add tables")
 

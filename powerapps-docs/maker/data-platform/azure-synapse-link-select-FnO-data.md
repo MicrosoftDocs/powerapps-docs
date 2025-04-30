@@ -48,8 +48,6 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
    > [!NOTE]
    > With the availability of [Power Platform environment provisioned with ERP-based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC), also known as *unified environments*, Microsoft offers limited support for cloud hosted environments (CHE) as of June 1, 2024. If you're using cloud hosted environments, consider moving to [Power Platform environment provisioned with ERP based templates](/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PPAC).
 
-- The finance and operations apps environment must be linked with Microsoft Power Platform. More information: [Link your finance and operations environment with Microsoft Power Platform](#link-your-finance-and-operations-environment-with-microsoft-power-platform)
-- Enable **Sql row version change tracking** configuration key. More information: [Add configurations in a finance and operations apps environment](#add-configurations-in-a-finance-and-operations-apps-environment). This configuration key is auto enabled in later versions.
 - You can't add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new Synapse Link profile. 
 - Depending on how you plan to consume finance and operations data, there are additional prerequisites as shown here.
 
@@ -97,7 +95,7 @@ If you are transitioning from export to data lake feature in finance and operati
 - **Don't see all tables?** Microsoft continues to enable all actively used finance and operations apps tables in Azure Synapse Link with application updates. If you have a previous version of finance and operations apps, not all required tables are enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, go to [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - **Don't see your custom tables?** You must enable change tracking for them. More information: [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables). If you're using a cloud hosted environment (CHE), you must perform a database sync operation to reflect the changes.
 - **Special fields** such as `TimeZoneID` (TZID), binary fields in finance and operations tables aren't enabled in Azure SynapseL Link.
-- **Synapse Link retains deleted rows** from finance and operations tables. You can identify and filter out deleted rows using the `isDelete` field. Go to [Working with data and metadata](#working-with-data-and-metadata.md) for more information.
+- **Synapse Link retains deleted rows** from finance and operations tables. You can identify and filter out deleted rows using the `isDelete` field. Go to [Working with data and metadata](#working-with-data-and-metadata) for more information.
 - **Staging tables, temporary tables, and deprecated tables**, where names begin with `del_` in finance and operations apps, aren't allowed in Azure Synapse Link.
 - The following tables, known as *kernel* tables in finance and operations apps, are supported by Fabric and Synapse Link. These tables are special, and you don't need to enable change tracking. Also, they're updated every 24 hours and not updated near-real time as the data doesn't change frequently: `DATAAREA`, `USERINFO`, `SECURITYROLE`, `SECURITYUSERROLE`, `SQLDICTIONARY`, `PARTITIONS`, `SECURITYPRIVILEGE`, `TIMEZONESLIST`, `SECURITYDUTY`, `SECURITYSUBROLE`, `SECURITYUSERROLECONDITION`, `DATABASELOG`, `SECURITYROLERUNTIME`, `SECURITYROLEPRIVILEGEEXPLODEDGRAPH`, `SECURITYROLEDUTYEXPLODEDGRAPH`, `TIMEZONESRULESDATA`, `SECURITYROLEEXPLODEDGRAPH`, `USERDATAAREAFILTER`, `SYSINHERITANCERELATIONS`. 
 - **Access finance and operations tables via Synapse query** and  **Access finance and operations tables via Microsoft Fabric** features aren't available in the China region.
@@ -203,7 +201,7 @@ To create an Azure Synapse Link profile with incremental data:
 >
 > Data rows that contain deleted records from Finance and Operations tables contain the `uniqueidentifier` (ID) field. They don't contain the body of the record. Your downstream data pipeline might need to look up the corresponding fields using the ID field.
 > 
-> The finance and operations table limitations are also applicable to incremental data from tables. More information: [Known limitations with finance and operations tables](#known-limitations-with-finance-and-operations-tables)
+> The finance and operations table limitations are also applicable to incremental data from tables. More information:[Known limitations with finance and operations entities](#known-limitations-with-finance-and-operations-entities)
 
 ## Working with data and metadata  
 
