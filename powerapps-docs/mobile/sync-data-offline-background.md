@@ -19,17 +19,17 @@ search.audienceType:
 
 # Sync data offline in the background
 
-For an app to be available in offline mode, the app and data must be downloaded, or synced to your device. 
+To use an app in offline mode, download the app and sync data to your device.
 
-Data can only be synced regularly when Power Apps or Field Service are running in the foreground of your device, with the screen unlocked. However, an ongoing sync can continue when the app is in the background or the screen is locked. Syncing data in this way depends on operating system capabilities which are different for iOS, Android, and Windows. 
-
-## iOS devices
-
-Sync happens when Power Apps (Player) is active and in the foreground. If Power Apps moves to the background, any ongoing sync pauses. Scheduled synchronizations don't start while the app is in the background.  
+Data can only be synced reliably when the Power Apps mobile app or Field Service app is running in the foreground of your device, with the screen unlocked. However, an ongoing sync can continue when the app is in the background or when the screen is locked depending on the operating system’s capabilities.
 
 ## Android devices
 
-An ongoing sync starts only when Power Apps (Player) is in the foreground and active. Once synchronization starts, it continues even if Power Apps moves to the background, as long as the app stays open and active. However, scheduled synchronizations don't start while the app is in the background.  
+An ongoing sync starts only when the Power Apps mobile app is in the foreground and open. Once sync starts, it continues even if the Power Apps mobile app is moved to the background, provided the app remains open. However, scheduled syncs don't start while the Power Apps mobile app is in the background.
+
+## iOS devices
+
+An ongoing sync starts only when the Power Apps mobile app is in the foreground and open. If the Power Apps mobile app is moved to the background, the ongoing sync is paused, and scheduled syncs don't start. 
 
 ## Windows devices
 
