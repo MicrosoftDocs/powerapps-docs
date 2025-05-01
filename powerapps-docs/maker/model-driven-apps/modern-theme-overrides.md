@@ -1,6 +1,6 @@
 ---
 title: "Use modern themes in Power Apps"
-description: Learn how to change the colors of apps including the app header in model-driven apps with the modern look in Power Apps.
+description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
 ms.date: 04/04/2025
 ms.reviewer: "matp"
