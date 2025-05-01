@@ -237,8 +237,18 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Use the Plan designer (preview)
-  href: ./plan-designer/plan-designer.md  
+- name: Plan designer 
+  items:
+  - name: Overview
+    href: ./plan-designer/plan-designer.md  
+  - name: Create a plan
+    href: ./plan-designer/create-plan.md 
+  - name: Build a solution
+    href: ./plan-designer/build-solution.md
+  - name: Manage a solution
+    href: ./plan-designer/manage-solution.md  
+  - name: Create a plan from a solution  
+    href: ./pland-designer-create-plan-from-solution.md
 - name: Canvas apps
   items:
   - name: Canvas apps
