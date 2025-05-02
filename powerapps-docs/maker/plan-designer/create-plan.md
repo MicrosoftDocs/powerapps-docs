@@ -16,358 +16,227 @@ ms.custom:
   - copilot-scenario-highlight
 ---
 
-# Use the Plan designer 
+# Use the Plan designer
 
-Learn how to use the Plan designer, a copilot-first development tool, to
-create comprehensive business solutions quickly. Describe your business
-problem in natural language and provide relevant images, like business
-process flows or screenshots of legacy apps. The Plan designer generates
-a complete Power Platform solution tailored to your needs, including
-Dataverse tables, canvas apps, model-driven apps, Power Automate flows,
-and Copilot Studio Agents. Follow the steps in this article to create a
-business solution and refine your requirements for precise, customized
-outputs.
+Learn how to use the Plan designer, a copilot-first development tool, to create comprehensive business solutions quickly. Describe your business problem in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, Power Automate flows, and Copilot Studio Agents. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
 
-Go to the Plan designer from the Power Apps home page. It guides you
-through a multi-step process to generate user roles, user stories, data
-tables, and user experiences.
+Go to the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-To show you how the Plan designer works, let's use a sample scenario to
-build a solution for managing paid time off (PTO) requests for employees
-and managers.
+To show you how the Plan designer works, let's use a sample scenario to build a solution for managing paid time off (PTO) requests for employees and managers.
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/).
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-2.  In the textbox, type **Employees need to log vacation days, and
-    managers need to approve them**. You can also provide more context
-    like process diagrams, data models, or screenshots of legacy apps.
-    When you're done, press **Enter**.
+2. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-<img src="media/create-a-plan/image1.png" style="width:6.5in;height:3.66667in" />
+:::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface showing a textbox for entering business scenarios.":::
 
-Copilot opens the Plan designer and addresses your business scenario
-based on your description.
+Copilot opens the Plan designer and addresses your business scenario based on your description.
 
-Within the Plan designer, you can view the presence status of plan
-agents, which are AI assistants that analyze your business problem and
-generate a plan for it. These plan agents utilize AI to help build your
-plan.
+Within the Plan designer, you can view the presence status of plan agents, which are AI assistants that analyze your business problem and generate a plan for it. These plan agents utilize AI to help build your plan.
 
-- The **Requirement Agent** examines the business problem and uses AI to
-  generate user requirements.
-
-- The **Data Agent** suggests a set of tables for storing business
-  information, complete with recommended columns, data types, and
-  relationships.
-
-- The **Solution Agent** evaluates the needs, processes, and data to
-  create a solution that addresses your business problem.
-
-- The **Process Agent** (preview) generates a process diagram depicting
-  the different steps in the business problem, along with the personas
-  and artifacts in context.
+- The **Requirement Agent** examines the business problem and uses AI to generate user requirements.
+- The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
+- The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
+- The **Process Agent** (preview) generates a process diagram depicting the different steps in the business problem, along with the personas and artifacts in context.
 
 Review and correct the outputs created by the agents.
 
-<img src="media/create-a-plan/image2.png" style="width:2.8021in;height:2.3646in" />
+:::image type="content" source="media/create-a-plan/image2.png" alt-text="Screenshot of the Plan designer showing the presence status of plan agents.":::
 
 # Generate user requirements
 
-The **Requirements Agent** identifies user needs based on your
-description.
+The **Requirements Agent** identifies user needs based on your description.
 
-In this scenario, two roles were generated: employee and manager. Each
-role comes with its own descriptions and user stories. On the left side,
-the user roles and stories are presented in a bullet list, while a
-visual diagram is shown on the right side.
+In this scenario, two roles were generated: employee and manager. Each role comes with its own descriptions and user stories. On the left side, the user roles and stories are presented in a bullet list, while a visual diagram is shown on the right side.
 
-1.  Review the user roles and stories. Then, choose one of the following
-    options:
+1. Review the user roles and stories. Then, choose one of the following options:
 
-    - Select **Add these roles** to generate a data model.
+   - Select **Add these roles** to generate a data model.
+   - Select **Edit** to make edits inline or add new user roles or needs.
 
-    <!-- -->
+:::image type="content" source="media/create-a-plan/image3.png" alt-text="Screenshot of the Plan designer showing user roles and stories with options to edit or add roles.":::
 
-    - Select **Edit** to make edits inline or add new user roles or
-      needs.
+2. Inline editing includes the following options:
 
-<img src="media/create-a-plan/image3.png"
-style="width:5.85417in;height:3.43369in" />
-
-2.  Inline editing includes the following options:
-
-<img src="media/create-a-plan/image4.png"
-style="width:4.30208in;height:4.68499in" />
+:::image type="content" source="media/create-a-plan/image4.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
 
 Legend:
 
-1.  Select a user role to edit it.
+1. Select a user role to edit it.  
+2. Add a new user role or delete the selected role.  
+3. Add a new user need.  
+4. Add a new user need above or below the selected user need, or delete the selected user need.  
+5. Add a new user role.
 
-2.  Add a new user role or delete the selected role.
+3. You can also use **Copilot** to provide feedback for the generated user needs.
 
-3.  Add a new user need.
+:::image type="content" source="media/create-a-plan/image5.png" alt-text="Screenshot of Copilot providing feedback for user needs in the Plan designer.":::
 
-4.  Add a new user need above or below the selected user need, or delete
-    the selected user need.
+If you need to make any changes, provide a brief description of what you want to modify. Here are examples of what you can ask Copilot to do:
 
-5.  Add a new user role.
-
-<!-- -->
-
-3.  You can also use **Copilot** to provide feedback for the generated
-    user needs.
-
-<img src="media/create-a-plan/image5.png"
-style="width:5.09379in;height:4.21878in" />
-
-If you need to make any changes, provide a brief description of what you
-want to modify. Here are examples of what you can ask Copilot to do:
-
-- Add a user role for HR admin to monitor PTO across teams to manage
-  payroll.
-
-<!-- -->
-
+- Add a user role for HR admin to monitor PTO across teams to manage payroll.
 - Add a user story for employees to view PTO blackout dates.
+- Remove the user story for managers for viewing vacation history of team members.
 
-<!-- -->
+4. Review the changes and select **Keep** or **Undo**.
 
-- Remove the user story for managers for viewing vacation history of
-  team members.
+5. When you're done, select **Looks good** to move on to the next step and generate data tables.
 
-4.  Review the changes and select **Keep** or **Undo**.
-
-5.  When you're done, select **Looks good **to move on to the next step
-    and generate data tables.
-
-<img src="media/create-a-plan/image6.png" style="width:4.7292in;height:0.98959in" />
+:::image type="content" source="media/create-a-plan/image6.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to the next step.":::
 
 # Generate data model
 
-1.  The proposed data tables appear in the **Data** section of the plan.
+1. The proposed data tables appear in the **Data** section of the plan.
 
-    1.  Select **Edit** and describe what you'd like to change or add
-        using Copilot.
+   1. Select **Edit** and describe what you'd like to change or add using Copilot.
+   2. Select **Show details** to view the data in a diagram and make edits.
 
-    2.  Select **Show details** to view the data in a diagram and make
-        edits.
+   > :::image type="content" source="media/create-a-plan/image7.png" alt-text="Screenshot of the Plan designer showing proposed data tables.":::
 
-> <img src="media/create-a-plan/image7.png" style="width:6.5in;height:3.5in" />
+2. **Show details** opens the data workspace. Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
-2.  **Show details** opens the data workspace. Use the table visual
-    designer experience where you create tables, configure table
-    relationships, and can view a diagram of your data. For more
-    information, see [Create and edit tables using Power
-    Apps](https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).  
-    <img src="media/create-a-plan/image8.png" style="width:6.35417in;height:4.125in" />
+   :::image type="content" source="media/create-a-plan/image8.png" alt-text="Screenshot of the data workspace in the Plan designer showing table relationships.":::
 
-3.  When you're done, select **Back**
+3. When you're done, select **Back**.
 
-4.  When you're ready to generate user experiences, select **Looks
-    good** to proceed.  
-    <img src="media/create-a-plan/image9.png"
-    style="width:4.67708in;height:6.35417in" />
+4. When you're ready to generate user experiences, select **Looks good** to proceed.
+
+   :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to user experiences.":::
 
 # Generate technology proposal
 
-The Solution Agent proposes a set of technologies tailored to solve your
-business problem. In this scenario, two canvas apps, a model-driven app,
-and a Power Automate flow are created. These user experiences are
-designed for specified user roles and with data tables generated from
-the previous steps.
+The Solution Agent proposes a set of technologies tailored to solve your business problem. In this scenario, two canvas apps, a model-driven app, and a Power Automate flow are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
-<img src="media/create-a-plan/image10.png" style="width:6.5in;height:3.125in" />
+:::image type="content" source="media/create-a-plan/image10.png" alt-text="Screenshot of the Plan designer showing proposed technologies for the solution.":::
 
-To view details of the proposed user experiences, hover over
-the **information icon**. The pop-up info card displays the name,
-description, targeted user role, and the included data tables.
+To view details of the proposed user experiences, hover over the **information icon**. The pop-up info card displays the name, description, targeted user role, and the included data tables.
 
-<img src="media/create-a-plan/image11.png" style="width:6.5in;height:4.0625in" />
+:::image type="content" source="media/create-a-plan/image11.png" alt-text="Screenshot of the Plan designer showing details of proposed user experiences.":::
 
-To make changes, select **Edit** and follow the steps above.
+To make changes, select **Edit** and follow the steps above.
 
-Or select **Looks good** to accept the proposed
-technologies.<img src="media/create-a-plan/image12.png"
-style="width:4.26045in;height:0.76042in" />
+Or select **Looks good** to accept the proposed technologies.
+
+:::image type="content" source="media/create-a-plan/image12.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to finalize the proposal.":::
 
 ## Proposed technologies
 
-The Plan designer proposes artifacts from the following list of
-technologies:
+The Plan designer proposes artifacts from the following list of technologies:
 
-1.  Applications – Canvas Apps, Model-driven Apps
-
-2.  Power Pages Site
-
-3.  Power Automate Flow
-
-4.  Power BI Report
-
-5.  Copilot Studio Agents
+1.  Applications – Canvas Apps, Model-driven Apps  
+1.  Power Pages Site  
+1.  Power Automate Flow  
+1.  Power BI Report  
+1.  Copilot Studio Agents  
 
 # Generate process diagrams (preview)
 
-Creating process diagrams are a default part of the Plan Designer
-experience when Preview features have been enabled. To Enable preview
-features, check the “” when initially creating your plan
+Creating process diagrams are a default part of the Plan Designer experience when Preview features have been enabled. To enable preview features, check the “” when initially creating your plan.
 
-<img src="media/create-a-plan/image13.png" style="width:6.5in;height:2.04028in"
-alt="A white rectangular object with a black border AI-generated content may be incorrect." />
+:::image type="content" source="media/create-a-plan/image13.png" alt-text="Screenshot of the Plan Designer interface showing a white rectangular object with a black border.":::
 
-Tip: Pictures of process diagrams can be added as an additional source
-during the creation experience that will impact the process. However, it
-is worth noting that including a predefined process can bias the Copilot
-and limit the creativity for creating the optimal process experience or
-possibly cause it to hallucinate and duplicate process steps if it sees
-the diagram differently than the user stories.
+Tip: Pictures of process diagrams can be added as an additional source during the creation experience that will impact the process. However, it is worth noting that including a predefined process can bias the Copilot and limit the creativity for creating the optimal process experience or possibly cause it to hallucinate and duplicate process steps if it sees the diagram differently than the user stories.
 
-Once enabled, the diagram on the right hand side of the Plan Designer
-experience is replaced with the process diagram.
+Once enabled, the diagram on the right-hand side of the Plan Designer experience is replaced with the process diagram.
 
-1.  Process generate immediately after User Stories have completed, and
-    have a two level hierarchy
+1.  Process generate immediately after User Stories have completed, and have a two-level hierarchy:  
 
-    1.  Process Stages – Overview of the processes required to resolve
-        the business problem and user stories
+    1.  Process Stages – Overview of the processes required to resolve the business problem and user stories  
 
-<img src="media/create-a-plan/image14.png" style="width:6.5in;height:1.93125in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+    :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
 
-2.  Process Maps – Detailed steps, events, and decision points for
-    developing a process. Process maps are accessed by clicking View
-    Process on a process stage. Each activity shows the User Role that
-    is expected to complete the defined action
+    1.  Process Maps – Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.  
 
-<img src="media/create-a-plan/image15.png" style="width:5.59453in;height:7.98028in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+    :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::  
 
 ## Understanding a Process
 
-Processes currently support a select number of process nodes
+Processes currently support a select number of process nodes.
 
-1.  Events
+1. Events  
+   1. Start – Event that triggers the start of the process  
+   1. Intermediate – Events that happen in the middle of a process that happen in-line before the process continues  
+   1. End – Event that signals the process has been completed  
 
-    1.  Start – Event that triggers the start of the process
+1. Gateways  
+   1. Exclusive – From a decision point, only one path from the gateway is taken  
 
-    2.  Intermediate – Events that happen in the middle of a process
-        that happen in-line before the process continues
-
-    3.  End – Event that signals the process has been completed
-
-2.  Gateways
-
-    1.  Exclusive – From a decision point, only one path from the
-        gateway is taken
-
-3.  Activities
-
-    1.  Task – The core actions that are taken by a user to complete the
-        user stories
+1. Activities  
+   1. Task – The core actions that are taken by a user to complete the user stories  
 
 ## Editing a process
 
-1.  Process is an AI first experience, and may not align with the
-    expected process. To resolve any discrepancies, processes can be
-    edited via natural language or manual edits.
+1. Process is an AI-first experience and may not align with the expected process. To resolve any discrepancies, processes can be edited via natural language or manual edits.
 
-    1.  Editing process with natural language is done by clicking the
-        Process Agent icon, and describing the changes you want made to
-        the process.  
-        Example: Add an approval gateway for HR to approve or reject the
-        vacation request based on company HR policies
+   1. Editing a process with natural language is done by clicking the Process Agent icon and describing the changes you want made to the process.  
+      Example: Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
 
-    2.  Connecting edges can be added between nodes by clicking on one
-        of the node anchors and dragging to another node
+   2. Connecting edges can be added between nodes by clicking on one of the node anchors and dragging to another node.
 
-    3.  Additive edits can be added manually by clicking the icon to add
-        the appropriate node. Additionally, if you drag a connecting
-        line from a node, it will automatically add an activity node.
+   3. Additive edits can be added manually by clicking the icon to add the appropriate node. Additionally, if you drag a connecting line from a node, it will automatically add an activity node.
 
-    4.  To delete nodes, click the trash can on the node. Connecting
-        lines can be deleted by clicking backspace
+   4. To delete nodes, click the trash can on the node. Connecting lines can be deleted by clicking backspace.
 
-    5.  Important notes:
+   5. Important notes:
 
-        1.  All changes are batched and not saved until the “Validate
-            changes” button is clicked, either on the top left of the
-            canvas, or from a newly added node.
+      1. All changes are batched and not saved until the “Validate changes” button is clicked, either on the top left of the canvas or from a newly added node.
 
-        2.  The process experience in plan is an AI first experience,
-            even when performing manual edits. When the validate changes
-            button is clicked, the AI reasons over the changes that were
-            made, and merges those changes with the existing process
-            that was generated.
+      2. The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is clicked, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
 
-        3.  Pro Tip: batch up 3-5 manual changes at a time, and then
-            validate changes. If wanting to make more than 5 changes,
-            try the natural language update first
+      3. Pro Tip: Batch up 3-5 manual changes at a time, and then validate changes. If wanting to make more than 5 changes, try the natural language update first.
 
-<img src="media/create-a-plan/image16.png" style="width:4.51105in;height:1.85443in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+:::image type="content" source="media/create-a-plan/image16.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
 
-<img src="media/create-a-plan/image17.png" style="width:2.57328in;height:2.20864in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />  
+:::image type="content" source="media/create-a-plan/image17.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
+
 Add step
 
-<img src="media/create-a-plan/image18.png" style="width:2.6462in;height:2.34408in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />  
+:::image type="content" source="media/create-a-plan/image18.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
+
 Add decision
 
-<img src="media/create-a-plan/image19.png" style="width:6.38631in;height:1.77108in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />  
-Validate changes
+:::image type="content" source="media/create-a-plan/image19.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
+
+Validate changes  
 
 ## Known Limitations in Process Agent (preview)
 
-- Only exclusive gateways are currently supported
+- Only exclusive gateways are currently supported.
 
-- Events cannot be manually added
+- Events cannot be manually added.
 
-- Technology proposals are not directly impacted by process
+- Technology proposals are not directly impacted by process.
 
-- User Stories are not updated to reflect changes in process
+- User Stories are not updated to reflect changes in process.
 
-- Only one set of changes can be validated at a time, making additional
-  changes while the AI is validating can cause the validation to lock up
+- Only one set of changes can be validated at a time, making additional changes while the AI is validating can cause the validation to lock up.
 
-- Once validated, changes to the process cannot be undone, just further
-  changed
+- Once validated, changes to the process cannot be undone, just further changed.
 
-- Process stages cannot be directly edited. To edit process stages,
-  refine User Stories and regenerate the process
+- Process stages cannot be directly edited. To edit process stages, refine User Stories and regenerate the process.
 
-- Node types cannot be changed, only deleted and readded
+- Node types cannot be changed, only deleted and readded.
 
-# Save your plan
+## Save your plan
 
 Before creating your apps, save your plan to a solution.
 
-1.  Type the Solution name.
+1. Type the Solution name.  
+2. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
+3. Select **Save**.
 
-2.  Choose a publisher or select an existing solution that will contain
-    the items generated from the plan.
+:::image type="content" source="media/create-a-plan/image20.png" alt-text="Screenshot of the Save your plan screen showing the solution name and publisher options.":::
 
-3.  Select **Save**.
+The plan is stored within a solution. Learn more here – \<link to Manage solution docs\>.
 
-<img src="media/create-a-plan/image20.png" style="width:6.5in;height:3.60417in" />
+## View and edit plans
 
-The plan is stored within a solution. Learn more here – \<link to Manage
-solution docs\>.
+When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make edits as needed.
 
-# View and edit plans
+:::image type="content" source="media/create-a-plan/image21.png" alt-text="Screenshot of the Plans menu in the left navigation pane showing options to create, view, and edit plans.":::
 
-When the Plan designer is turned on, you see the **Plans** menu in the
-left navigation pane. Use this menu to access your plans and make edits
-as needed.
-
-<img src="media/create-a-plan/image21.png" style="width:6.0625in;height:2.5649in" />
-
-1.  **Plans**: Use to access your plans.
-
-2.  **Create a plan**: Use to create a new plan.
-
-3.  **Your plans**: Use to view your plans.
-
-4.  **Edit**: Use to edit the selected plan.
-
-5.  **Edit or Delete**: Use to edit or delete the selected plan.
+1. **Plans**: Use to access your plans.  
+2. **Create a plan**: Use to create a new plan.  
+3. **Your plans**: Use to view your plans.  
+4. **Edit**: Use to edit the selected plan.  
+5. **Edit or Delete**: Use to edit or delete the selected plan.  
