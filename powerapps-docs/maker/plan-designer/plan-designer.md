@@ -1,6 +1,6 @@
 ---
 title: Use Plan Designer to Create AI-Powered Business Solutions with Copilot
-description: Learn how to use the Plan Designer, an AI-powered tool in Power Platform, to create comprehensive business solutions with Dataverse, canvas apps, and Power Automate flows.
+description: Learn how to use the Plan Designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
 author: szlo
 contributors:
 ms.topic: conceptual
