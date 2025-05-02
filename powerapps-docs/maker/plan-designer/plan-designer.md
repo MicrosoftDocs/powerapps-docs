@@ -16,18 +16,15 @@ ms.custom:
   - copilot-scenario-highlight
 ---
 
-
 # Overview of Plan designer
 
 Plan designer is a copilot-first development tool, to create comprehensive business solutions quickly. It lets you describe your business use case in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
 
-:::image type="content" source="" alt-text="Screenshot of Plan Designer from Power Apps Landing Page.":::
+Add Screenshot of Plan Designer from Power Apps Landing Page.
 
 ## Prerequisites
 
-To access the Plan designer, you will need to be in an environment with Dataverse-enabled environment with permissions to create new Dataverse tables. If the current environment you’re in does not meet the pre-requisites, we’ll route you to your own Developer environment where you have sufficient permissions to create Dataverse tables. 
-
-Learn more about Power Apps Developer environments [here](https://learn.microsoft.com/en-us/powerapps/maker/developer-environments).
+To access the Plan designer, you will need to be in an environment with Dataverse enabled environment with permissions to create new Dataverse tables. If the current environment you’re in does not meet the pre-requisites, we’ll route you to your own Developer environment where you have sufficient permissions to create Dataverse tables. For more information, see [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 ## Availability
 
