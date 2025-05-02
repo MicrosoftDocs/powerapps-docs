@@ -30,7 +30,7 @@ Include a Dataverse database in your environment. Learn more in [Add a Microsoft
 
 ## Availability
 
-- Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
 ### Preview feature within plan designer
 
