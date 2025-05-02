@@ -1,4 +1,22 @@
-# Overview
+---
+title: Use the Plan designer to create a business solution with Copilot (preview)
+description: Use the Plan designer to create business solutions with AI-powered experiences.
+author: mduelae
+contributors:
+ms.topic: conceptual
+ms.date: 5/19/2025
+ms.author: szlo
+ms.reviewer: mkaur
+ms.collection:
+  - bap-ai-copilot
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-title
+  - ai-gen-desc
+  - copilot-scenario-highlight
+---
+
+# Use the Plan designer 
 
 Learn how to use the Plan designer, a copilot-first development tool, to
 create comprehensive business solutions quickly. Describe your business

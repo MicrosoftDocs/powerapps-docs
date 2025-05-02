@@ -4,7 +4,7 @@ description: Learn how to use the Plan Designer, an AI-powered tool in Power Pla
 author: szlo
 contributors:
 ms.topic: conceptual
-ms.date: 05/01/2025
+ms.date: 05/19/2025
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
