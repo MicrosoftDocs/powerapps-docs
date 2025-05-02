@@ -18,7 +18,7 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the Plan designer, a copilot-first development tool, to quickly create comprehensive business solutions. Describe your business problem in natural language and add relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, Power Automate flows, and Copilot Studio Agents. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
+Use the [Plan designer](plan-designer.md) to quickly create comprehensive business solutions. 
 
 Open the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
@@ -26,11 +26,17 @@ To show how the Plan designer works, this article uses a sample scenario to buil
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-2. In the textbox, type **Employees need to log vacation days, and managers need to approve them**. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
+1. Type your prompt in the text box such as the example prompt shown below. You can also provide more context like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
 
-:::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a textbox for entering business scenarios.":::
+    ```copilot-prompt
+    Employees need to log vacation days, and managers need to approve them.
+    ```
+
+   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a textbox for entering business scenarios.":::
 
 Copilot opens the Plan designer and analyzes your business scenario based on your description.
+
+**Plan agents**
 
 Within the Plan designer, you can view the presence status of plan agents, which are AI assistants that analyze your business problem and generate a plan for it. These plan agents utilize AI to help build your plan.
 
@@ -43,8 +49,6 @@ Review and refine the outputs created by the agents.
 
 :::image type="content" source="media/create-a-plan/image2.png" alt-text="Screenshot of the Plan designer displaying the presence status of plan agents."::: 
 
-
-
 ## Generate user requirements
 
 The **Requirements Agent** identifies user needs based on your description.
@@ -56,35 +60,35 @@ In this scenario, two roles are generated: employee and manager. Each role has i
    - Select **Add these roles** to generate a data model.
    - Select **Edit** to make edits inline or add new user roles or needs.
 
-:::image type="content" source="media/create-a-plan/image3.png" alt-text="Screenshot of the Plan designer showing user roles and stories with options to edit or add roles.":::
+    :::image type="content" source="media/create-a-plan/image3.png" alt-text="Screenshot of the Plan designer showing user roles and stories with options to edit or add roles.":::
 
 1. Inline editing has the following options:
 
-:::image type="content" source="media/create-a-plan/image4.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
+    :::image type="content" source="media/create-a-plan/image4.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
 
-Legend:
+    Legend:
 
-1. Select a user role to edit it.  
-2. Add a new user role or delete the selected role.  
-3. Add a new user need.  
-4. Add a new user need above or below the selected user need, or delete the selected user need.  
-5. Add a new user role.
+    1. Select a user role to edit it.  
+    1. Add a new user role or delete the selected role.  
+    1. Add a new user need.  
+    1. Add a new user need above or below the selected user need, or delete the selected user need.  
+    1. Add a new user role.
 
-1. Use **Copilot** to provide feedback for the generated user needs.
+1. You can also use **Copilot** to provide feedback for the generated user needs.
 
-:::image type="content" source="media/create-a-plan/image5.png" alt-text="Screenshot of Copilot providing feedback for user needs in the Plan designer.":::
+    :::image type="content" source="media/create-a-plan/image5.png" alt-text="Screenshot of Copilot providing feedback for user needs in the Plan designer.":::
 
-To make changes, provide a brief description of what you want to modify. Here are examples of what you can ask Copilot to do:
+    To make changes, provide a brief description of what you want to modify. Here are examples of what you can ask Copilot to do:
 
-- Add a user role for HR admin to monitor PTO across teams to manage payroll.
-- Add a user story for employees to view PTO blackout dates.
-- Remove the user story for managers for viewing vacation history of team members.
+    - Add a user role for HR admin to monitor PTO across teams to manage payroll.
+    - Add a user story for employees to view PTO blackout dates.
+    - Remove the user story for managers for viewing vacation history of team members.
 
 1. Review the changes and select **Keep** or **Undo**.
 
 1. When you're done, select **Looks good** to proceed to the next step and generate data tables.
 
-:::image type="content" source="media/create-a-plan/image6.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to the next step.":::
+    :::image type="content" source="media/create-a-plan/image6.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to the next step.":::
 
 ## Generate data model
 
@@ -107,11 +111,11 @@ To make changes, provide a brief description of what you want to modify. Here ar
 
 ## Generate technology proposal
 
-The Solution Agent proposes technologies tailored to solve your business problem. In this scenario, two canvas apps, a model-driven app, and a Power Automate flow are created. These user experiences are designed for specific user roles and use data tables generated from earlier steps.
+The **Solution Agent** proposes technologies tailored to solve your business problem. In this scenario, two canvas apps, a model-driven app, and a Power Automate flow are created. These user experiences are designed for specific user roles and use data tables generated from earlier steps.
 
 :::image type="content" source="media/create-a-plan/image10.png" alt-text="Screenshot of the Plan designer that shows proposed technologies for the solution.":::
 
-To view details of the proposed user experiences, hover over the **information icon**. The pop-up info card shows the name, description, targeted user role, and included data tables.
+To view details of the proposed technologies, hover over the **information icon**. The pop-up info card shows the name, description, targeted user role, and included data tables.
 
 :::image type="content" source="media/create-a-plan/image11.png" alt-text="Screenshot of the Plan designer that shows details of proposed user experiences.":::
 
@@ -122,20 +126,21 @@ Alternatively, select **Looks good** to accept the proposed technologies.
 :::image type="content" source="media/create-a-plan/image12.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button that finalizes the proposal."::: 
 
 
-
-## Proposed technologies
+### Proposed technologies
 
 The Plan designer proposes artifacts from the following list of technologies:
 
-1. Applications – Canvas Apps, Model-driven Apps  
-1. Power Pages Site  
-1. Power Automate Flow  
-1. Power BI Report  
-1. Copilot Studio Agents  
+1. Apps such as [canvas apps](../canvas-apps/getting-started.md) or [model-driven apps](../model-driven-apps/model-driven-app-overview.md)  
+1. [Power Pages](/power-pages/introduction) websites
+1. [Power Automate](/power-automate/flow-types) flows  
+1. [Power BI Report](/power-bi/report-server/get-started)  
+1. [Copilot Studio Agents](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder)
 
 ## Generate process diagrams (preview)
 
-Creating process diagrams are a default part of the Plan Designer experience when Preview features have been enabled. To enable preview features, check the “” when initially creating your plan.
+[This article is prerelease documentation and is subject to change.]
+
+Creating process diagrams are a default part of the Plan designer experience when Preview features have been enabled. To enable preview features, check the “” when initially creating your plan.
 
 :::image type="content" source="media/create-a-plan/image13.png" alt-text="Screenshot of the Plan Designer interface showing a white rectangular object with a black border.":::
 
