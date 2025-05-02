@@ -1,21 +1,21 @@
----  
+---
 title: Plan Designer Solutions and ALM Practices  
 description: Learn how Plan Designer promotes healthy Application Lifecycle Management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
-author: szlo
-contributors:
-ms.topic: conceptual
-ms.date: 05/19/2025
-ms.author: mkaur
-ms.reviewer: mkaur
-ms.collection:
-  - bap-ai-copilot
-ms.custom:
-  - ai-gen-docs-bap
-  - ai-gen-title
-  - ai-gen-desc
-  - copilot-scenario-highlight
---- 
-# Overview
+author: szlo  
+contributors:  
+ms.topic: conceptual  
+ms.date: 05/19/2025  
+ms.author: mkaur  
+ms.reviewer: mkaur  
+ms.collection:  
+  - bap-ai-copilot  
+ms.custom:  
+  - ai-gen-docs-bap  
+  - ai-gen-title  
+  - ai-gen-desc  
+  - copilot-scenario-highlight  
+
+# Manage your solution
 
 Solutions built with Plan Designer promote healthy Application Lifecycle Management (ALM) practices from the start, using Microsoft Power Platform solutions. By packaging all Plan components into a single solution artifact, makers can leverage advanced ALM capabilities to deploy their artifacts to target environments through managed solutions.
 
@@ -30,4 +30,4 @@ Across the top of the Objects view screen, the solutions associated with the pla
 
 For more information about solutions, see [Solution view](/power-apps/maker/data-platform/solutions-area).
 
-:::image type="content" source="media/manage-your-solution/image1.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::  
+:::image type="content" source="media/manage-your-solution/image1.png" alt-text="Screenshot of the objects view in Plan designer showing associated solutions.":::  
