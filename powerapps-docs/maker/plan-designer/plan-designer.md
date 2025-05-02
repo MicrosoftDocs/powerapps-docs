@@ -34,6 +34,6 @@ Include a Dataverse database in your environment. Learn more in [Add a Microsoft
 
 ### Preview feature within plan designer
 
-Some features within Plan designer are still in preview. To identify a preview feature, look for a **Preview** label user interface.
+Some features within Plan designer are still in preview. To identify a preview feature, look for a **Preview** label in the user interface.
 
 Preview Copilot features are enabled by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
