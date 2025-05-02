@@ -87,6 +87,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Undo**: Undo the last action.
 - **Redo**: Repeat the last action.
 
+ > [!NOTE]
+ > You cannot undo or redo data operations, such as insert or delete a datasource.
+
 #### Cut, copy, and paste
 
 :::image type="content" source="media/studio/pa-studio-cut-copy-paste.png" alt-text="Screenshot that shows where the cut, copy, and paste controls are located in the command bar.":::
