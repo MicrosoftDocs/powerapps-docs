@@ -18,22 +18,22 @@ ms.custom:
 
 # Overview of Plan designer
 
-Plan designer is a copilot-first development tool, to create comprehensive business solutions quickly. It lets you describe your business use case in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
+Plan designer is a copilot-first development tool that lets you create comprehensive business solutions quickly. It lets you describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. The Plan Designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
 
-:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Plan desigher landing page in Power Apps":::
+:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan Designer landing page in Power Apps.":::
 
 ## Prerequisites
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-- If your environment does not meet the pre-requisites, you' be route you to your own developer environment where you have sufficient permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+- If your environment doesn't meet the prerequisites, you're routed to your own developer environment where you have sufficient permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 ## Availability
 
 - Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
-### Preview feature with in Plan desigher
+### Preview feature within plan designer
 
 Some features within Plan designer are still in preview. To identify a preview feature, look for a **Preview** label user interface.
 
-Preview Copilot features are enabled by default, but your admin can turn them off for an environment or tenant. Learn more, in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps)
+Preview Copilot features are enabled by default, but admins can turn them off for an environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
