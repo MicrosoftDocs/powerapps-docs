@@ -16,7 +16,7 @@ ms.custom:
   - copilot-scenario-highlight
 ---
 
-# Use the Plan designer
+# Create a plan using Plan designer
 
 Learn how to use the Plan designer, a copilot-first development tool, to create comprehensive business solutions quickly. Describe your business problem in natural language and provide relevant images, like business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs, including Dataverse tables, canvas apps, model-driven apps, Power Automate flows, and Copilot Studio Agents. Follow the steps in this article to create a business solution and refine your requirements for precise, customized outputs.
 
