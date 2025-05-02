@@ -31,4 +31,6 @@ Across the top of the Objects view screen, the solutions associated with the pla
 
 For more information about solutions, see [Solution view](/power-apps/maker/data-platform/solutions-area).
 
-:::image type="content" source="media/manage-your-solution/image1.png" alt-text="Screenshot of the objects view in Plan designer showing associated solutions.":::  
+
+
+:::image type="content" source="media/manage-solution/image-1.png" alt-text="Screenshot of the objects view in Plan designer showing associated solutions.":::
