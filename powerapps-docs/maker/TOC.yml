@@ -248,7 +248,7 @@
   - name: Manage a solution
     href: ./plan-designer/manage-solution.md  
   - name: Create a plan from a solution  
-    href: ./pland-designer/create-plan-from-solution.md
+    href: ./plan-designer/create-plan-from-solution.md
 - name: Canvas apps
   items:
   - name: Canvas apps
