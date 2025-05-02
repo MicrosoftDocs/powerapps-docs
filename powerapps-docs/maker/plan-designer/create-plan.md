@@ -18,9 +18,8 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the [Plan designer](plan-designer.md) to quickly create comprehensive business solutions. 
+Use the [Plan designer](plan-designer.md) to quickly create comprehensive business solutions. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
-Open the Plan designer from the Power Apps home page. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
 
 To show how the Plan designer works, this article uses a sample scenario to build a solution for managing paid time off (PTO) requests for employees and managers.
 
