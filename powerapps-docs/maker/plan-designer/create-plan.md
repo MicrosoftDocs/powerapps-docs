@@ -43,7 +43,7 @@ Review and correct the outputs created by the agents.
 
 :::image type="content" source="media/create-a-plan/image2.png" alt-text="Screenshot of the Plan designer showing the presence status of plan agents.":::
 
-# Generate user requirements
+## Generate user requirements
 
 The **Requirements Agent** identifies user needs based on your description.
 
@@ -84,7 +84,7 @@ If you need to make any changes, provide a brief description of what you want to
 
 :::image type="content" source="media/create-a-plan/image6.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to the next step.":::
 
-# Generate data model
+## Generate data model
 
 1. The proposed data tables appear in the **Data** section of the plan.
 
@@ -103,7 +103,7 @@ If you need to make any changes, provide a brief description of what you want to
 
    :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to user experiences.":::
 
-# Generate technology proposal
+## Generate technology proposal
 
 The Solution Agent proposes a set of technologies tailored to solve your business problem. In this scenario, two canvas apps, a model-driven app, and a Power Automate flow are created. These user experiences are designed for specified user roles and with data tables generated from the previous steps.
 
@@ -129,7 +129,7 @@ The Plan designer proposes artifacts from the following list of technologies:
 1.  Power BI Report  
 1.  Copilot Studio Agents  
 
-# Generate process diagrams (preview)
+## Generate process diagrams (preview)
 
 Creating process diagrams are a default part of the Plan Designer experience when Preview features have been enabled. To enable preview features, check the “” when initially creating your plan.
 
@@ -139,15 +139,15 @@ Tip: Pictures of process diagrams can be added as an additional source during th
 
 Once enabled, the diagram on the right-hand side of the Plan Designer experience is replaced with the process diagram.
 
-1.  Process generate immediately after User Stories have completed, and have a two-level hierarchy:  
+Process generate immediately after User Stories have completed, and have a two-level hierarchy:  
 
-    1.  Process Stages – Overview of the processes required to resolve the business problem and user stories  
+1. Process Stages – Overview of the processes required to resolve the business problem and user stories  
 
-    :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
+   :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
 
-    1.  Process Maps – Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.  
+1. Process Maps – Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.  
 
-    :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::  
+   :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::  
 
 ## Understanding a Process
 
@@ -166,7 +166,7 @@ Processes currently support a select number of process nodes.
 
 ## Editing a process
 
-1. Process is an AI-first experience and may not align with the expected process. To resolve any discrepancies, processes can be edited via natural language or manual edits.
+Process is an AI-first experience and may not align with the expected process. To resolve any discrepancies, processes can be edited via natural language or manual edits.
 
    1. Editing a process with natural language is done by clicking the Process Agent icon and describing the changes you want made to the process.  
       Example: Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
@@ -176,18 +176,11 @@ Processes currently support a select number of process nodes.
    3. Additive edits can be added manually by clicking the icon to add the appropriate node. Additionally, if you drag a connecting line from a node, it will automatically add an activity node.
 
    4. To delete nodes, click the trash can on the node. Connecting lines can be deleted by clicking backspace.
-
-   5. Important notes:
-
-      1. All changes are batched and not saved until the “Validate changes” button is clicked, either on the top left of the canvas or from a newly added node.
-
-      2. The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is clicked, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
-
-      3. Pro Tip: Batch up 3-5 manual changes at a time, and then validate changes. If wanting to make more than 5 changes, try the natural language update first.
-
-:::image type="content" source="media/create-a-plan/image16.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
-
-:::image type="content" source="media/create-a-plan/image17.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
+   
+   > [!NOTE]
+   > - All changes are batched and not saved until the “Validate changes” button is clicked, either on the top left of the canvas or from a newly added node.
+   > - The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is clicked, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
+   > - Batch up 3-5 manual changes at a time, and then validate changes. If wanting to make more than 5 changes, try the natural language update first. :::image type="content" source="media/create-a-plan/image16.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::    :::image type="content" source="media/create-a-plan/image17.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
 
 Add step
 
