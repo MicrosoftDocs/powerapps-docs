@@ -34,6 +34,7 @@ Multiple features within the Power Platform are enabled via Dataverse search, na
 
 ### Microsoft Copilot Studio Agents
 1.	[Add Files as a knowledge source](/microsoft-copilot-studio/knowledge-add-file-upload)
+
 2.	[Add Dataverse as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse)
 3.	[Virtual Agents](/microsoft-copilot-studio/guidance/cux-types#virtual-agents)
 
@@ -192,6 +193,10 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 ## Why does searching on the OwnerID attribute not work when search is enabled on it?
 
 Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
+
+## Why does searching on the RegardingObjectId attribute not work when search is enabled on it?
+
+Search is not supported on polymorphic lookup attributes. RegardingObjectId attribute in activity table like email, task etc. is a polymorphic lookup attribute.
 
 ## How is the Dataverse search API throttled?
 
