@@ -1,6 +1,6 @@
 ---
 title: "Bring intelligence into your app using Agent Xrm APIs"
-description: "Learn about the model-driven application client API execution context"
+description: "Learn about how you can integrate Copilot studio topics into your model-driven apps using Xrm.Apis"
 author: adrianorth
 ms.author: aorth
 ms.date: 05/05/2025
