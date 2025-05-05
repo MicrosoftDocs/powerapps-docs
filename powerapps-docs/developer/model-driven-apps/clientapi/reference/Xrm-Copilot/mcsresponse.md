@@ -20,7 +20,7 @@ Try to re-use this content with an include if possible -->
 
 ## Properties
 
-The following table describes the `MCSResponse` properties.
+The following table describes the `MCSResponse` properties. Only the `type` property will always be present.
 
 
 | Name| Type| Description|
@@ -32,12 +32,12 @@ The following table describes the `MCSResponse` properties.
 | `timestamp`| `string`|  Timestamp of the response.|
 | `speak`| `string`|  Text to be spoken by a speech synthesizer.|
 | `text`| `string`|  Text content of the response.|
-| `textFormat`| `"plain" | "markdown" | "xml"`  |  Format of the text content.|
+| `textFormat`| `plain` \| `markdown` \| `xml`  |  Format of the text content.|
 | `suggestedActions` | `{ actions: any[]; to?: string[] }`  |  Suggested actions for the user to take.|
 | `value`| `unknown`|  Custom payload or data.|
 | `valueType`| `string`|  Type of the value payload.|
 | `name`| `string`|  Name of the response or action.|
-| `attachmentLayout` | `"list" | "carousel"`|  Layout style for displaying attachments.|
+| `attachmentLayout` | `list` \| `carousel`|  Layout style for displaying attachments.|
 | `attachments`| [Attachment](#attachment-interface)[]|  Array of attachments included in the response.|
 
 ### Attachment Interface
