@@ -30,7 +30,7 @@ Here's the information about each of the namespaces in the Xrm object:
 
 | Namespace| Description|
 | ---| ---|
-| [Xrm.Copilot](reference/xrm-copilot.md)| [!INCLUDE [xrm-copilot-description](Xrm-Copilot/includes/xrm-copilot-description.md)]|
+| [Xrm.Copilot](reference/xrm-copilot.md)| [!INCLUDE [xrm-copilot-description](reference/Xrm-Copilot/includes/xrm-copilot-description.md)]|
 | [Xrm.Device](reference/xrm-device.md)| Provides methods to use native device capabilities. |
 | [Xrm.Encoding](reference/xrm-encoding.md)     | Provides methods to encode strings.|
 | [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.|
