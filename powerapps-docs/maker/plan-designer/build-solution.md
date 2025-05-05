@@ -41,19 +41,19 @@ The modern app designer opens with the tables already added. Save and publish th
 
 After saving your tables, select **Create** on the Power Automate flow card.
 
-Selecting **Create** for the flow launches Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. Save and publish the flow for use.
+Selecting **Create** for the flow launches Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. Save and publish the flow to use it.
 
 :::image type="content" source="media/build-your-solution/image4.png" alt-text="Screenshot of the Power Automate flow creation interface.":::
 
 ## Create Copilot Studio agents
 
-A Copilot Studio agent is an AI-powered assistant that simplifies workflows, enhances productivity, and automates repetitive tasks. Plan designer now includes agents as part of its technology stack.
+A Copilot Studio agent is an AI-powered assistant that simplifies workflows, enhances productivity, and automates repetitive tasks. The plan designer includes agents as part of its technology stack.
 
-After saving your tables, select **Create** on the Copilot Studio Agent card.
+Save your tables, then select **Create** on the Copilot Studio Agent card.
 
 :::image type="content" source="media/build-your-solution/image5.png" alt-text="Screenshot of the Copilot Studio Agent card with the Create button highlighted.":::
 
-Microsoft Copilot Studio (MCS) opens so you can finish creating your agent and publish it. The agent created by the plan is autofitted with the following:
+Microsoft Copilot Studio (MCS) opens, letting you finish creating your agent and publish it. The agent created by the plan is autofitted with the following:
 
 1. Name – Name of the Agent  
    :::image type="content" source="media/build-your-solution/image6.png" alt-text="Screenshot of the Agent name field in Microsoft Copilot Studio.":::
