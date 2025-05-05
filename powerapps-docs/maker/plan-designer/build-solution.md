@@ -11,49 +11,49 @@ ms.reviewer: mkaur
 
 # Build your solution
 
-Create apps, including canvas apps and model-driven apps, Power Automate flows, and Copilot Studio agents, based on the solution proposal from Plan designer.
+Create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
 
-Before you create object, you need to create a plan and save the tables.
+Before creating an object, create a plan and save the tables.
 
-:::image type="content" source="media/build-your-solution/image1.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
+:::image type="content" source="media/build-your-solution/image1.png" alt-text="Screenshot of the Plan designer interface showing the Save tables option.":::  
 
 
 
 ## Create canvas apps
 
-After you save your tables, select **Create** on a canvas app.
+After you save your tables, select **Create** for a canvas app.
 
 :::image type="content" source="media/build-your-solution/image2.png" alt-text="Screenshot of the Create button on a canvas app in Power Apps.":::
 
-Selecting **Create** for a canvas app opens Power Apps Studio with a data-connected app already started for you. The app includes responsive screens to view and edit data for each recommended table, and a welcome screen to navigate the app. Learn more about customizing these screens in the [modern templates documentation](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen).
+Selecting **Create** for a canvas app opens Power Apps Studio with a data-connected app that's already started for you. The app includes responsive screens to view and edit data for each recommended table, and a welcome screen for navigating the app. Learn more about customizing these screens in the [modern templates documentation](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen).
 
-You can save and publish the canvas app for use.
+Save and publish the canvas app for use.
 
 ## Create model-driven apps
 
-After you save your tables, select **Create** on the model-driven app.
+After you save your tables, select **Create** in the model-driven app.
 
-The modern app designer opens with the tables already added. Save and publish the model-driven app for use.
+The modern app designer opens with the tables already added. Save and publish the model-driven app to use it.
 
-:::image type="content" source="media/build-your-solution/image3.png" alt-text="Screenshot of the modern app designer with tables already added.":::
+:::image type="content" source="media/build-your-solution/image3.png" alt-text="Screenshot of the modern app designer showing tables already added.":::
 
 ## Create Power Automate flows
 
 After saving your tables, select **Create** on the Power Automate flow card.
 
-Selecting **Create** for the flow launches Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. The flow can then be saved and published for use.
+Selecting **Create** for the flow launches Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. Save and publish the flow for use.
 
 :::image type="content" source="media/build-your-solution/image4.png" alt-text="Screenshot of the Power Automate flow creation interface.":::
 
 ## Create Copilot Studio agents
 
-A Copilot Studio Agent is an AI-powered assistant designed to simplify workflows, enhance productivity, and automate repetitive tasks. Plan designer now proposes Agents as part of its technology stack.
+A Copilot Studio agent is an AI-powered assistant that simplifies workflows, enhances productivity, and automates repetitive tasks. Plan designer now includes agents as part of its technology stack.
 
 After saving your tables, select **Create** on the Copilot Studio Agent card.
 
 :::image type="content" source="media/build-your-solution/image5.png" alt-text="Screenshot of the Copilot Studio Agent card with the Create button highlighted.":::
 
-You are navigated to Microsoft Copilot Studio (MCS) to finish creating your agent and then publish it. The agent created by the plan is autofitted with the following:
+Microsoft Copilot Studio (MCS) opens so you can finish creating your agent and publish it. The agent created by the plan is autofitted with the following:
 
 1. Name – Name of the Agent  
    :::image type="content" source="media/build-your-solution/image6.png" alt-text="Screenshot of the Agent name field in Microsoft Copilot Studio.":::
@@ -87,7 +87,7 @@ Once the Solution Agent proposes new apps, you can include your existing apps to
 
 1. Replace proposed apps with existing apps.
 
-   If you have an existing app that solves the same business problem as the proposed, you can replace it by the existing. In the app tile, select choose existing.
+   If you have an existing app that solves the same business problem as the proposed app, replace it with the existing app. In the app tile, select **choose existing**.
 
    :::image type="content" source="media/build-your-solution/image9.png" alt-text="Screenshot of a computer showing the option to choose an existing app.":::
 
