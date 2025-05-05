@@ -49,6 +49,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **SelectedItems** – List of selected items resulting from user interaction.
 
+**Selected** – The last selected item resulting from user interaction.
+
 **SelectMultiple** – Whether the user can select a single item or multiple items.
 
 **IsSearchable** – Whether the user can search for items before selecting.
