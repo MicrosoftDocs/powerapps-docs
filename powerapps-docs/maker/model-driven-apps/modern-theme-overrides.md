@@ -119,9 +119,6 @@ As an example, this XML extends the green custom theme with a black app header. 
 </CustomTheme>
 ```
 
-Custom model-driven app using the extended green theme sample.
-:::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extened with great vibes font.":::
-
 > [!NOTE]
 > These settings cause any colors specified in the **Override app header color** setting to be ignored.
 
@@ -151,8 +148,8 @@ After you select your colors and create the web resource, follow these steps to 
 1. Select **Save**.
 1. Select **Settings** on the left **Objects** pane, and then select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
-With the [example colors](#example-xml-for-a-modern-theme), the app header should look like this when you play the app (you might need to refresh the browser tab).  
-:::image type="content" source="media/greenappheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
+Custom model-driven app using the extended green theme sample.
+:::image type="content" source="media/custom-green-theme-extended.png" alt-text="Custom model-driven app using custom green theme extended with great vibes font.":::
 
 ### Verifying new app header colors
 
