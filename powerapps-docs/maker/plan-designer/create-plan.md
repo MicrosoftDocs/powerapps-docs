@@ -181,7 +181,12 @@ Processes include the following process nodes.
 The process is an AI-first experience and might not align with the expected process. To resolve any discrepancies, processes can be edited using natural language or manual edits.
 
 1. Edit a process with natural language by selecting the Process Agent icon and describing the changes you want to make to the process.
-   Example: Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
+
+ Type your prompt in the text box such as the example prompt shown below.
+
+    ```copilot-prompt
+    Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
+    ```
 
 1. Add connecting edges between nodes by selecting one of the node anchors and dragging it to another node.
 
