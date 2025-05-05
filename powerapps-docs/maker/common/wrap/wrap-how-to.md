@@ -219,12 +219,12 @@ The following API permissions are required when manually configure API permissio
 >     ```
 > - Missing *Azure API Connections* permission: 
 >     ```powershell
->     Connect-MgGraph -TenantId <your tenant ID>
+>     Connect-MgGraph -TenantId <your tenant ID> -Scopes "Application.ReadWrite.All"
 >     New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
 >     ```
 > - Missing *PowerApps Service* permission:
 >     ```powershell
->     Connect-MgGraph -TenantId <your tenant ID>
+>     Connect-MgGraph -TenantId <your tenant ID> -Scopes "Application.ReadWrite.All"
 >     New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
 >     ```
 
