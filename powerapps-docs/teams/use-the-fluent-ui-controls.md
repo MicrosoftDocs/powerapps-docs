@@ -79,6 +79,12 @@ Single-select or multiple-select mode is configured via the *SelectMultiple* pro
 
 *IsSearchable* – Whether the user can search for items before selecting.
 
+### Limitations
+
+1. The list of Options doesn't support Data Paging. It's limited to show the first 500 records.
+
+1. Filtering the list of Options by typing in the Text Box area of the Control works inside the browser, not on the Server. This, coupled with the previous limitation, means that Filtering will not match any Option(s) beyond the first 500 entries, even when the Text matches.
+
 ## Date picker
 
 A control that the user can select to specify a date.
