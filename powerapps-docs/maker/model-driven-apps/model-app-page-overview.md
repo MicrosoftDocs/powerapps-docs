@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Overview of custom pages for model-driven apps
 
-The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of the canvas designer. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
+The custom page is a new page type within a model-driven app, which brings the power of canvas apps into model-driven apps. Custom pages increase the convergence of model-driven and canvas apps and can be used to add full pages, dialogs, or panes with the flexibility of Power Apps Studio. It also includes a low-code page authoring experience with expressions and custom Power Apps component framework controls.  
 
 This new page can be more flexible than a model-driven app form, view, or dashboard page. It lets you include one or more tables. Then, the maker can define the data and component interactions. The custom page is a separate solution element, which allows one maker to edit one custom page at a time. Like other model-driven app pages, the page state is either from the parameters passed or retrieved from persisted tables.
 
@@ -27,7 +27,7 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | Modern controls in custom pages | General Availability | [List of supported controls](design-page-for-model-app.md#supported-controls-in-a-custom-page)
 | Code components in custom pages | General Availability |
 | Monitor support for custom pages | General Availability |
-| Authoring custom pages | General Availability | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
+| Authoring custom pages | General Availability | Modern app designer and Power Apps Studio are expected to be used to author custom page that are supported at runtime |
 | Canvas components in custom pages | General Availability |
 | Custom page in Teams model-driven app | Public preview |
 | Custom page in mobile online | Public preview | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
@@ -62,7 +62,7 @@ Custom pages must be created from a solution either from the modern app designer
 
 ## Custom pages are different than embedded canvas apps
 
-A custom page enables makers to create a new page experience using the canvas app capabilities. This provides a low-code authoring experience with more flexible layouts, more control with styling options, the ability to add connector data, use expressions, and so on. Custom page authoring happens in the canvas app designer with increasing context of the model-driven app that the page runs in.
+A custom page enables makers to create a new page experience using the canvas app capabilities. This provides a low-code authoring experience with more flexible layouts, more control with styling options, the ability to add connector data, use expressions, and so on. Custom page authoring happens in Power Apps Studio with increasing context of the model-driven app that the page runs in.
 
 Embedded canvas apps also use the canvas capabilities with a hosting approach that isn't as integrated as a custom page. The simpler integration of an embedded canvas app means the current limitation on number of embedded canvas apps hasn't changed. The advanced integration of the custom page addresses those limits. The embedded canvas app can only be placed on a model-driven form acting like a low-code component. More information: [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md).
 
@@ -79,8 +79,8 @@ To migrate an existing standalone canvas app, first start by identifying a mappi
 
 1. Create a blank custom page from the model-driven app designer. More information: [Add a custom page to your model-driven app](add-page-to-model-app.md)
 1. Add a canvas app data source for data used by the screen.
-1. Copy the screen from the original canvas app in the canvas designer.
-1. Paste the screen into the blank custom page in the canvas designer.
+1. Copy the screen from the original canvas app in Power Apps Studio.
+1. Paste the screen into the blank custom page in Power Apps Studio.
 1. Change the navigate calls to use the custom page name instead of the screen name.
 1. Add the custom page into the model-driven app designer site map.
 

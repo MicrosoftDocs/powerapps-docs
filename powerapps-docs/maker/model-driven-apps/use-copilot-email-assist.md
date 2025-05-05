@@ -5,7 +5,7 @@ author: udaykirang
 ms.author: udag
 ms.reviewer: udag
 ms.topic: how-to
-ms.date: 08/26/2024
+ms.date: 04/30/2025
 ms.subservice: mda-maker
 ms.collection: bap-ai-copilot
 tags:
@@ -23,11 +23,7 @@ ms.custom:
 When you draft customer emails in the rich text editor in a model-driven app, Copilot can offer suggestions to make them clearer, more concise, and more compelling.
 
 > [!IMPORTANT]
->
->- This is an early access feature. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they haven't opted in for early access.  
->- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
->- By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
+> By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
 

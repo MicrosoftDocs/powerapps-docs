@@ -35,7 +35,7 @@ Connection references can be added to a solution in different ways:
 > [!NOTE]
 >
 > - Canvas apps and flows handle connections differently. Flows use connection references for all connectors, whereas canvas apps only use them for implicitly shared (non-OAuth) connections, such as SQL Server Authentication. More information: [Security and types of authentication](../canvas-apps/connections-list.md#security-and-types-of-authentication)
-> - A connection reference is automatically created when you create new connections from the flow and canvas app designers.
+> - A connection reference is automatically created when you create new connections from the flow designer or Power Apps Studio.
 > - Canvas apps and flows added from outside solutions will not automatically be upgraded to use connection references. 
 > - Connection references get associated with canvas apps only at the time a data source is added to the app. To upgrade apps you must remove the connection from the app and then add a connection containing an associated connection reference. 
 
