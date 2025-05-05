@@ -32,8 +32,14 @@ If your environment doesn't meet the prerequisites, you're routed to your own de
 
 Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 
-### Preview feature within plan designer
+### Turn on preview features for Plan designer
 
 Some features within Plan designer are in preview. To identify a preview feature, look for a **Preview** label in the user interface.
 
+Enable the Plan Designer preview features by checking the **Enable new preview features** option when you enter your problem.
+
+:::image type="content" source="media/create-a-plan/image13-preview-features.png" alt-text="Enable preview feature for Plan designer":::
+
 Preview Copilot features are enabled by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
+
+

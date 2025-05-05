@@ -18,10 +18,11 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the [Plan designer](plan-designer.md) to quickly create comprehensive business solutions. It guides you through a multi-step process to generate user roles, user stories, data tables, and user experiences.
+Use the [Plan designer](plan-designer.md) to quickly create comprehensive business solutions. 
 
+Open the Plan designer from the Power Apps home page. It guides you through a multistep process to generate user roles, user stories, data tables, and user experiences.
 
-To show how the Plan designer works, this article uses a sample scenario to build a solution for managing paid time off (PTO) requests for employees and managers.
+This article uses a sample scenario to show how the Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.ers.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
@@ -31,7 +32,7 @@ To show how the Plan designer works, this article uses a sample scenario to buil
     Employees need to log vacation days, and managers need to approve them.
     ```
 
-   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a textbox for entering business scenarios.":::
+   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface showing a textbox for entering business scenarios.":::
 
 Copilot opens the Plan designer and analyzes your business scenario based on your description.
 
@@ -137,44 +138,47 @@ The Plan designer proposes artifacts from the following list of technologies:
 
 ## Generate process diagrams (preview)
 
-[This article is prerelease documentation and is subject to change.]
+[This section is prerelease documentation and is subject to change.]
 
-Creating process diagrams are a default part of the Plan designer experience when Preview features have been enabled. To enable preview features, check the “” when initially creating your plan.
+The Plan Designer simplifies diagram creation and refinement, helping teams define user roles and develop effective solutions. Process diagrams enhance clarity, communication, and efficiency in workflows, especially in complex projects.
 
-:::image type="content" source="media/create-a-plan/image13.png" alt-text="Screenshot of the Plan Designer interface showing a white rectangular object with a black border.":::
+You can add pictures of process diagrams as an additional source during the creation experience to impact the process. However, including a predefined process can bias Copilot, limit creativity and potentially cause it to misinterpret and duplicate steps.
 
-Tip: Pictures of process diagrams can be added as an additional source during the creation experience that will impact the process. However, it is worth noting that including a predefined process can bias the Copilot and limit the creativity for creating the optimal process experience or possibly cause it to hallucinate and duplicate process steps if it sees the diagram differently than the user stories.
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - Make sure you have privew features turned on for Plan desigher. Learn more: [Turn on preview features for Plan designer](plan-designer.md#turn-on-preview-features-for-plan-designer)
 
-Once enabled, the diagram on the right-hand side of the Plan Designer experience is replaced with the process diagram.
+When process diagrams are enabled, the diagram on the right side of the Plan designer is replaced with the process diagram.
 
-Process generate immediately after User Stories have completed, and have a two-level hierarchy:
+Processes are generated immediately after [user requirements](create-plan.md#generate-user-requirements) hare completed and follow a two-level hierarchy.
 
-1. Process Stages – Overview of the processes required to resolve the business problem and user stories
+1. **Process Stages**: Overview of the processes required to resolve the business problem and user stories
 
    :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
 
-1. Process Maps – Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
+1. **Process Maps**: Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
 
    :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::
 
-## Understanding a Process
+### Understand a process
 
-Processes currently support a select number of process nodes.
+Processes support the following process nodes.
 
-1. Events  
-   1. Start – Event that triggers the start of the process  
-   1. Intermediate – Events that happen in the middle of a process that happen in-line before the process continues  
-   1. End – Event that signals the process has been completed  
+1. **Events** 
+   - **Start**: Event that triggers the start of the process  
+   - **Intermediate**: Events that happen in the middle of a process that happen in-line before the process continues  
+   - **End**: Event that signals the process has been completed  
 
 1. Gateways  
-   1. Exclusive – From a decision point, only one path from the gateway is taken  
+   - **Exclusive**: From a decision point, only one path from the gateway is taken  
 
 1. Activities  
-   1. Task – The core actions that are taken by a user to complete the user stories  
+   - **Task**: The core actions that are taken by a user to complete the user stories  
 
-## Editing a process
+### Edit a process
 
-Process is an AI-first experience and may not align with the expected process. To resolve any discrepancies, processes can be edited via natural language or manual edits.
+Process is an AI-first experience and might not align with the expected process. To resolve any discrepancies, processes can be edited using natural language or manual edits.
 
 1. Editing a process with natural language is done by clicking the Process Agent icon and describing the changes you want made to the process.  
    Example: Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
@@ -186,7 +190,7 @@ Process is an AI-first experience and may not align with the expected process. T
 1. To delete nodes, click the trash can on the node. Connecting lines can be deleted by clicking backspace.
 
 > [!NOTE]
-> - All changes are batched and not saved until the “Validate changes” button is clicked, either on the top left of the canvas or from a newly added node.
+> - All changes are batched and not saved until the **Validate changes** button is clicked, either on the top left of the canvas or from a newly added node.
 > - The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is clicked, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
 > - Batch up 3-5 manual changes at a time, and then validate changes. If wanting to make more than 5 changes, try the natural language update first.
 
