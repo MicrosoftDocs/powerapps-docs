@@ -153,11 +153,11 @@ When process diagrams are enabled, the diagram on the right side of the Plan des
 
 Processes are generated immediately after [user requirements](create-plan.md#generate-user-requirements) are completed and follow a two-level hierarchy.
 
-1. **Process Stages**: Overview of the processes required to resolve the business problem and user stories
+- **Process Stages**: Overview of the processes required to resolve the business problem and user stories
 
    :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
 
-1. **Process Maps**: Detailed steps, events, and decision points for developing a process. Process maps are accessed by selecting View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
+- **Process Maps**: Detailed steps, events, and decision points for developing a process. Process maps are accessed by selecting View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
 
    :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::
 
@@ -170,10 +170,10 @@ Processes include the following process nodes.
    - **Intermediate**: Events that happen in the middle of a process that happen in-line before the process continues  
    - **End**: Event that signals the process has been completed  
 
-1. Gateways  
+1. **Gateways**  
    - **Exclusive**: From a decision point, only one path from the gateway is taken  
 
-1. Activities  
+1. **Activities**
    - **Task**: The core actions that are taken by a user to complete the user stories  
 
 ### Edit a process
