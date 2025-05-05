@@ -157,7 +157,7 @@ Processes are generated immediately after [user requirements](create-plan.md#gen
 
    :::image type="content" source="media/create-a-plan/image14.png" alt-text="Screenshot of the Plan Designer interface showing process stages overview.":::
 
-1. **Process Maps**: Detailed steps, events, and decision points for developing a process. Process maps are accessed by clicking View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
+1. **Process Maps**: Detailed steps, events, and decision points for developing a process. Process maps are accessed by selecting View Process on a process stage. Each activity shows the User Role that is expected to complete the defined action.
 
    :::image type="content" source="media/create-a-plan/image15.png" alt-text="Screenshot of the Plan Designer interface showing detailed process maps with steps, events, and decision points.":::
 
@@ -182,9 +182,9 @@ The process is an AI-first experience and might not align with the expected proc
 
 1. Edit a process with natural language by selecting the Process Agent icon and describing the changes you want to make to the process.
 
- Type your prompt in the text box such as the example prompt shown below.
+     Type your prompt in the text box such as the example prompt shown below.
 
-    ```copilot-prompt
+     ```copilot-prompt
     Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
     ```
 
@@ -192,11 +192,11 @@ The process is an AI-first experience and might not align with the expected proc
 
 1. Add edits manually by selecting the icon to add the appropriate node. Additionally, if you drag a connecting line from a node, it will automatically add an activity node.
 
-1. To delete nodes, select the trash can on the node. Connecting lines can be deleted by clicking backspace.
+1. To delete nodes, select the trash can on the node. Connecting lines can be deleted by selecting backspace.
 
 > [!NOTE]
-> - All changes are batched and not saved until the **Validate changes** button is clicked, either on the top left of the canvas or from a newly added node.
-> - The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is clicked, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
+> - All changes are batched and not saved until the **Validate changes** button is selected, either on the top left of the canvas or from a newly added node.
+> - The process experience in plan is an AI-first experience, even when performing manual edits. When the validate changes button is selected, the AI reasons over the changes that were made and merges those changes with the existing process that was generated.
 > - Batch 3–5 manual changes at a time, and then validate changes. If wanting to make more than 5 changes, try the natural language update first.
 
 :::image type="content" source="media/create-a-plan/image16.png" alt-text="Screenshot of a computer AI-generated content may be incorrect.":::
