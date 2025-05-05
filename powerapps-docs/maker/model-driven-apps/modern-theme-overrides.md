@@ -2,7 +2,7 @@
 title: "Use modern themes in Power Apps"
 description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
-ms.date: 04/04/2025
+ms.date: 05/05/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,7 +17,7 @@ contributors:
 ---
 
 # Use modern themes in model-driven apps
-<!-- Hasn't this entire feature been updated so that the whole article should be marked as preview? (Not just the following section.) -->
+
 Users of model-driven apps with the modern, refreshed look for model-driven apps enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](#see-also) isn't honored; however, makers can modify the colors used by the app to help align with their organizational branding for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
@@ -25,11 +25,11 @@ Users of model-driven apps with the modern, refreshed look for model-driven apps
 > - Modern themes currently support providing a custom theme for the entire app and overriding the app header colors. Other customizations like customizing the business process flow control aren't available.
 > - For modern themes to work, the model-driven app must be using the **New look**. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
 
-## Modify app header, selection highlight, hover, and more (preview)
+## Modify the app theme
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can create a custom theme that helps align to their organizational branding. <!-- Can we add a sentence about what in the app can be changed via a theme? E.g. Using the Custom theme definition setting, you can create your own custom theme to modify the app header, selection highlight, hover, and font, (what else?) --> To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
+With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can create a custom theme that helps align to their organizational branding. With a custom theme you can change the app header, hyperlinks, lookups, primary buttons,  active tab indicators, row selection, and hover effects. The custom theme also lets you change the font that is used in the application. To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
 
 > [!IMPORTANT]
 >
