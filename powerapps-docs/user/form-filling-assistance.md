@@ -24,7 +24,7 @@ Copilot provides form fill assistance for model-driven apps. This means that use
 
 1. Based on the user's usage of the app, what information is already available in the form, and their frequently used data.
 2. Based on the copied text the user provides through the **Smart paste (Preview)** capability.
-3. Based on the file, contents the user provides through the **Files (Preview)** capability.
+3. Based on the file contents the user provides through the **Files (Preview)** capability.
 
 This feature makes it easier and faster to enter data in forms. The suggestions are entirely optional, and don't get saved until the user explicitly reviews and accepts them.
 
