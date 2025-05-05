@@ -4,6 +4,7 @@ description: Guide to crafting low-code plug-ins in Microsoft Dataverse
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 11/13/2024
 ms.custom: template-how-to

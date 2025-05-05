@@ -8,7 +8,7 @@ ms.topic: "conceptual"
 applies_to: 
   - "powerapps"
 author: "MilindaV2"
-ms.subservice: troubleshoot
+ms.subservice: dataverse-maker
 ms.author: "milindav"
 search.audienceType: 
   - maker
