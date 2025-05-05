@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Panel"
+title: "Xrm.Panel (Client API reference) in model-driven apps"
 description: "Provides the loadPanel method to display a web page in the side pane of model-driven apps form."
 author: sriharibs-msft
 ms.author: srihas
