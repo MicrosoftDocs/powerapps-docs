@@ -34,7 +34,6 @@ Multiple features within the Power Platform are enabled via Dataverse search, na
 
 ### Microsoft Copilot Studio Agents
 1.	[Add Files as a knowledge source](/microsoft-copilot-studio/knowledge-add-file-upload)
-
 2.	[Add Dataverse as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse)
 3.	[Virtual Agents](/microsoft-copilot-studio/guidance/cux-types#virtual-agents)
 
