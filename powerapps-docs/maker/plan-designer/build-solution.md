@@ -15,7 +15,7 @@ Create apps like canvas apps, model-driven apps, Power Automate flows, and Copil
 
 Before creating an object, create a plan and save the tables.
 
-:::image type="content" source="media/build-your-solution/image1.png" alt-text="Screenshot of the Plan designer interface showing the Save tables option.":::  
+:::image type="content" source="media/build-your-solution/image1.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
 
 
 
@@ -23,19 +23,19 @@ Before creating an object, create a plan and save the tables.
 
 After you save your tables, select **Create** for a canvas app.
 
-:::image type="content" source="media/build-your-solution/image2.png" alt-text="Screenshot of the Create button on a canvas app in Power Apps.":::
+:::image type="content" source="media/build-your-solution/image2.png" alt-text="Screenshot of the **Create** button on a canvas app in Power Apps.":::
 
-Selecting **Create** for a canvas app opens Power Apps Studio with a data-connected app that's already started for you. The app includes responsive screens to view and edit data for each recommended table, and a welcome screen for navigating the app. Learn more about customizing these screens in the [modern templates documentation](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen).
+Selecting **Create** for a canvas app opens Power Apps Studio with a data-connected app that starts for you. The app includes responsive screens to view and edit data for each recommended table, and a welcome screen to navigate the app. Learn more about customizing these screens in the [modern templates documentation](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen).
 
-Save and publish the canvas app for use.
+Save and publish the canvas app to use it.
 
 ## Create model-driven apps
 
-After you save your tables, select **Create** in the model-driven app.
+After saving your tables, select **Create** in the model-driven app.
 
-The modern app designer opens with the tables already added. Save and publish the model-driven app to use it.
+The modern app designer opens with the tables already added. Save and publish the model-driven app to start using it.
 
-:::image type="content" source="media/build-your-solution/image3.png" alt-text="Screenshot of the modern app designer showing tables already added.":::
+:::image type="content" source="media/build-your-solution/image3.png" alt-text="Screenshot of the modern app designer that shows tables already added.":::
 
 ## Create Power Automate flows
 
