@@ -193,6 +193,10 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 
 Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
 
+## Why does searching on the RegardingObjectId attribute not work when search is enabled on it?
+
+Search is not supported on polymorphic lookup attributes. RegardingObjectId attribute in activity table like email, task etc. is a polymorphic lookup attribute.
+
 ## How is the Dataverse search API throttled?
 
 When using the Dataverse search API, there's a throttling limit of one request per second for each user. Additionally, there's a throttling limit of 150 requests per minute per organization.
