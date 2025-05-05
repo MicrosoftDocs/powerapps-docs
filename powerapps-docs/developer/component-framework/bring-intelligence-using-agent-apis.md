@@ -1,28 +1,28 @@
 ---
-title: "Bring intelligence into your app using Agent Xrm APIs"
-description: "Learn about how you can integrate Copilot studio topics into your model-driven apps using Xrm.Apis"
+title: "Bring intelligence into your components using Agent APIs"
+description: "Learn about how you can integrate Copilot studio topics into your custom components using Agent APIs"
 author: adrianorth
 ms.author: aorth
 ms.date: 05/05/2025
 ms.reviewer: jdaly
 ms.topic: conceptual
-ms.subservice: mda-developer
+ms.subservice: pcf
 search.audienceType: 
   - developer
 contributors: 
   - JimDaly
 ---
 
-# Bring intelligence into your app using Agent Xrm APIs
+# Bring intelligence into your component using Agent Xrm APIs
 
-Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow model-driven apps to interact with Topics created in Microsoft Copilot Studio. These APIs are available in two forms: XRM (for use in event handlers) and [PCF (for use in custom controls)](../../component-framework/bring-intelligence-using-agent-apis.md).
+Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow components to interact with Topics created in Microsoft Copilot Studio. These APIs are available in two forms: [XRM (for use in event handlers)](../model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md) and PCF (for use in custom controls).
 
 These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences.
 
 |API|Description|
 |---------|---------|
-|[Xrm.Copilot.executeEvent](reference/Xrm-Copilot/executeevent.md)|[!INCLUDE [executeevent-description](reference/Xrm-Copilot/includes/executeevent-description.md)]|
-|[Xrm.Copilot.executePrompt](reference/Xrm-Copilot/executeprompt.md)|[!INCLUDE [executeprompt-description](reference/Xrm-Copilot/includes/executeprompt-description.md)]|
+|[copilot.executeEvent](reference/copilot/executeevent.md)|[!INCLUDE [executeevent-description](reference/copilot/includes/executeevent-description.md)]|
+|[copilot.executePrompt](reference/copilot/executeprompt.md)|[!INCLUDE [executeprompt-description](reference/copilot/includes/executeprompt-description.md)]|
 
 ## Limitations
 
@@ -52,7 +52,10 @@ To ensure responsible use, makers must handle MCS responses appropriately within
 
 ### Related articles
 
-[Xrm.Copilot (Client API reference)](reference/xrm-copilot.md)  
-[Xrm.Copilot.executeEvent (Client API reference)](reference/Xrm-Copilot/executeevent.md)  
-[Xrm.Copilot.executePrompt (Client API reference)](reference/Xrm-Copilot/executeprompt.md)  
-[Copilot (Power Apps component framework API reference)](../../component-framework/reference/copilot.md)
+[Copilot](reference/copilot.md)  
+[executeEvent](reference/copilot/executeevent.md)  
+[executePrompt](reference/copilot/executeprompt.md)  
+[Power Apps component framework overview](overview.md)  
+[Create your first code component](implementing-controls-using-typescript.md)  
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)  
+[Xrm.Copilot (Client API reference)](../model-driven-apps/clientapi/reference/xrm-copilot.md)

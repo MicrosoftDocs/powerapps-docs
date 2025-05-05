@@ -1,17 +1,19 @@
 ---
-title: MCSResponse Interface (Client API reference) | Microsoft Docs
-description: The interface that describes the properties of contains data returned by the Xrm.Copilot.executeEvent and Xrm.Copilot.executePrompt methods.
+title: "MCSResponse Interface (Power Apps component framework API reference)"
+description: The interface that describes the properties of contains data returned by the context.executeEvent and context.executePrompt methods.
 author: adrianorth
 ms.author: aorth
 ms.date: 05/05/2025
 ms.reviewer: jdaly
 ms.topic: reference
-ms.subservice: pcf
+applies_to: "Dynamics 365 (online)"
+search.audienceType:
+  - developer
 contributors:
   - JimDaly
 ---
 
-# MCSResponse Interface (Client API reference)
+# MCSResponse Interface (Power Apps component framework API reference)
 
 An interface that describes the data returned by the [executeEvent](executeevent.md) and [executePrompt](executeprompt.md) methods.
 
@@ -46,3 +48,5 @@ The following table describes the `MCSResponse` properties.
 |---|---|---|
 | `content`| `unknown` |  **Required.** The content of the attachment. |
 | `contentType`| `string` |  Describes the type of content. |
+
+
