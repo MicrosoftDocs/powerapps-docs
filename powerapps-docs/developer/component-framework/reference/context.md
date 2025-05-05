@@ -28,6 +28,12 @@ Model-driven apps, canvas apps, & portals.
 [!INCLUDE [client-description](includes/client-description.md)]
 **Type**: [Client](client.md)
 
+### copilot
+
+[!INCLUDE [copilot-description](includes/copilot-description.md)]
+
+**Type**: [Copilot](copilot.md)
+
 ### device
 
 [!INCLUDE [device-description](includes/device-description.md)]
