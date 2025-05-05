@@ -26,9 +26,7 @@ The wrap feature wraps your canvas apps in a native mobile app shell that you ca
 
 1. Sign in to [Power Apps maker portal](https://make.powerapps.com).
 
-2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
-
-3. Select the app that you want to wrap, and then select **Wrap** on the command bar.
+2. Select the app that you want to wrap, and then select **Wrap** on the command bar.
 
 ### Step 1: Select apps 
 
