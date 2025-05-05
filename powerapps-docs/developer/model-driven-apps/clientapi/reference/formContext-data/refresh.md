@@ -18,6 +18,9 @@ contributors:
 
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
 
+> [!NOTE]
+> File columns are not currently refreshed by this API. 
+
 ## Syntax
 
 `formContext.data.refresh(save).then(successCallback, errorCallback);`
