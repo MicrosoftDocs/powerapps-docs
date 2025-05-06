@@ -6,7 +6,7 @@ ms.date: 03/26/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
