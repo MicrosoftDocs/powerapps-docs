@@ -2,7 +2,7 @@
 title: "FAQs for timeline control in Power Apps | MicrosoftDocs"
 description: "Frequently asked questions (FAQs) for the timeline control in Power Apps"
 ms.date: 10/05/2023
-ms.topic: article
+ms.topic: faq
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
