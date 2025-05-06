@@ -2,7 +2,7 @@
 title: Sign in to Power Apps
 description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: alaug
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: get-started
 ms.reviewer: 
 ms.date: 1/24/2025
