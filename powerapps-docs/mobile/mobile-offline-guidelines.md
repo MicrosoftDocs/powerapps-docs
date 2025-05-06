@@ -124,7 +124,7 @@ If a custom filter results in a slow Dataverse query, downloads take longer. Fol
 
 - Avoid using small time windows to reduce data downloads on tables that change frequently. If a table in your offline profile is large and changes frequently, reduce the number of records downloaded by filtering on fields like status, group, region, owner, or assigned to.
 
-### Improve sync time and data usage by optimizing the data that is downloaded on the device 
+### Optimize data downloaded to improve sync time and usage
 
 #### For model-driven apps
    
