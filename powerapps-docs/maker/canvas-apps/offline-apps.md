@@ -3,7 +3,7 @@ title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/18/2024
