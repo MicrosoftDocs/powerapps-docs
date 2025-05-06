@@ -4,7 +4,7 @@ description: How to export to an Excel PivotTable in model-driven Power Apps
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/24/2022
 ms.subservice: end-user
 ms.author: smurkute

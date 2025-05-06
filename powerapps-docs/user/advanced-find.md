@@ -4,7 +4,7 @@ description: How to use advanced find search in model-driven apps
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/16/2024
 ms.subservice: end-user
 ms.author: smurkute
