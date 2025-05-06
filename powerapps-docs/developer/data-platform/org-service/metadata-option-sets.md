@@ -5,7 +5,7 @@ ms.date: 01/09/2023
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType:
   - developer
 contributors:

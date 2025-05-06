@@ -2,7 +2,7 @@
 title: "Query table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "The capability to query table definitions (metadata) is available using the Web API and using the SDK for .NET by using RetrieveMetadataChangesRequest"
 ms.date: 03/01/2023
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 author: mkannapiran
