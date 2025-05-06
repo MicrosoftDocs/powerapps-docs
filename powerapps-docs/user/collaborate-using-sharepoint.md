@@ -23,7 +23,8 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 -   [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint)  
 
 > [!IMPORTANT]
-> SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
+> - SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site.
+> - SharePoint Document libraries are not merged when records are merged. The subordinate record is deactivated, but its SharePoint folder and documents remain accessible unless manually deleted.
 
 ## Where do you access the documents from?
 
