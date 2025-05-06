@@ -78,6 +78,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed.
 >   - The column is of type `Owner` (example: `ownerid`).
 
-
+> [!IMPORTANT]
+> Merging records with a SharePoint Documents library only merges the records and not the Documents libraries.  See details in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
