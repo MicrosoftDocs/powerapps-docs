@@ -900,7 +900,7 @@ Whether the requested operation occurs depends on the state of the system job. F
 |Option|Valid StateCode values|Change|
 |--|--|--|
 |**Delete**|any|System Job is deleted|
-|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**)|
+|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**), or `StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `31` (**Failed**) |
 |**Resume**|`1` (**Suspended**)|StateCode changed to `0` (**Ready**)|
 |**Postpone**|`0` (**Ready**) <br />`2` (**Locked**)|Postpone Job dialog prompts user for datetime value to postpone the system job. [Learn to Postpone system jobs](#postpone-system-jobs)|
 |**Pause**|`2` (**Locked**)|StateCode changed to `1` (**Suspended**)|

@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 03/24/2025
+ms.date: 04/04/2025
 ms.topic: how-to
 ms.author: msomara
 author: Mattp123
@@ -38,7 +38,7 @@ The modern text editor is designed to align with the familiar and intuitive inte
 > Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
 > - Configuration options, as described in this article for the classic experience
 > - Mentions
-> For more information, refer to [Modern text editor limitations](#modern-rich-text-editor-limitations)
+> Learn more in [Modern text editor limitations](#modern-rich-text-editor-limitations)
 
 ### Enable the modern rich text editor experience from the classic experience
 
@@ -66,10 +66,7 @@ If you need to revert to the classic rich text editor experience, follow the sam
 When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
 
 Notes:
-- Localization isn't currently supported.
-- In-app notifications aren't currently supported.
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- Offline mode isn't currently supported.
 - Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
  
 Knowledge management: 
@@ -169,12 +166,6 @@ The editable global configuration file `RTEGlobalConfiguration.json` is the seco
 If your business needs require you to customize the control everywhere, specify the values you need in the `RTEGlobalConfiguration.json` file. Use the read-only file as an example to make sure you enter property-value pairs in the right format.
 
 ## Use Copilot to refine text in the editor
-
-> [!IMPORTANT]
->
->- This feature is for early-access users. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they didn't opt in for early access.  
->- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
 
