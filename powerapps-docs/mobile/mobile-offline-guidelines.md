@@ -128,21 +128,21 @@ If a custom filter results in a slow Dataverse query, downloads take longer. Fol
 
 #### For model-driven apps
    
-The first sync can take time for organizations with large datasets, especially in remote areas. You can optimize this by explicitly selecting only the required columns to download on the device and avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync should see a greater impact as there are more records to download.
+The first sync can take time for organizations with large datasets, especially in remote areas. Optimize this by explicitly selecting only the required columns to download on the device and avoid downloading columns that are never used in the app. This saves both network and disk usage and results in faster sync time. While this impacts both the first sync and delta syncs, the first sync sees a greater impact as there are more records to download.
 
 1. In [Power Apps Studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 1. Select your model-driven app, and then select **Edit**.
 1. Select **Settings**.
 1. Select **General**.
 1. In the **Select offline mode and profile** section, select **Edit selected profile** from the **More actions (...)** icon for the selected profile.
-1. In the **Edit Profile** pane under the **Data for offline use** section, identify the table you want to optimize and select the **More actions** (**...**) icon, and then select **Edit**.
-1. You'll see **Edit Table Name** page appears. Under the **Selected columns** section, select the **Manage columns** option.
+1. In the **Edit Profile** pane, under the **Data for offline use** section, identify the table to optimize. Select the **More actions** (**...**) icon, and then select **Edit**.
+1. The **Edit Table Name** page appears. Under the **Selected columns** section, select the **Manage columns** option.
 1. In this **Managed selected columns** pane, select the **Select only required columns** option.
-1. You'll now see columns that are used in the app automatically selected. For all other columns, you can optimize by selecting only those that are necessary. 
+1. Columns used in the app are automatically selected. For all other columns, optimize by selecting only those that are necessary. 
    
      > [!IMPORTANT]
-     > If you have custom JavaScript code in the app, make sure that the columns used in the custom code are selected in the offline profile.
-     > If you have added additional columns after the offline profile was optimized, you'll need to go back and select that new column as **Required Column**, in the **Managed selected columns** pane.      
+     > If you have custom JavaScript code in the app, ensure the columns used in the custom code are selected in the offline profile.
+     > If you add additional columns after optimizing the offline profile, go back and select that new column as **Required Column**, in the **Managed selected columns** pane.      
 1. Select **Back**.
 1. Select **Save**.
 1. Select **Save + close**.
