@@ -20,21 +20,21 @@ ms.custom:
 
 Use the [Plan designer](plan-designer.md) to quickly create business solutions. 
 
-Open the Plan designer from the Power Apps home page. It guides you through generating user roles, user stories, data tables, and user experiences.
+Open the Plan designer from the Power Apps home page. It helps you generate user roles, user stories, data tables, and user experiences.
 
 This article uses a sample scenario to show how the Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Type your prompt in the text box, such as the example prompt below. Add more context, like process diagrams, data models, or screenshots of legacy apps. When you're done, press **Enter**.
+1. Enter your prompt in the text box, such as the example prompt below. Add more context, like process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
 
     ```copilot-prompt
     Employees need to log vacation days, and managers need to approve them.
     ```
 
-   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface showing a text box for entering business scenarios.":::
+   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a text box for entering business scenarios.":::
 
-Copilot opens the Plan designer and analyzes your business scenario using your description.
+Copilot opens the Plan designer and analyzes your business scenario based on your description.
 
 **Plan agents**
 
@@ -45,7 +45,7 @@ Within the Plan designer, view the presence status of plan agents, which are AI 
 - The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
 - The **Process Agent** (preview) generates a process diagram depicting the different steps in the business problem, along with the personas and artifacts in context.
 
-Review and refine the outputs that the agents generate.
+Review and refine the outputs the agents generate.
 
 :::image type="content" source="media/create-a-plan/image2.png" alt-text="Screenshot of the Plan designer that shows the presence status of plan agents."::: 
 
@@ -53,16 +53,16 @@ Review and refine the outputs that the agents generate.
 
 The **Requirements Agent** identifies user needs based on your description.
 
-In this scenario, two roles are generated: employee and manager. Each role has descriptions and user stories. On the left side, the user roles and stories appear in a bullet list, while a visual diagram is on the right side.
+In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user stories. The user roles and stories appear in a bullet list on the left side, while a visual diagram is on the right side.
 
-1. Review the user roles and stories. Then choose one of the following options:
+1. Review the user roles and stories, then choose one of the following options:
 
    - Select **Add these roles** to generate a data model.
    - Select **Edit** to make edits inline or add new user roles or needs.
 
     :::image type="content" source="media/create-a-plan/image3.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
 
-1. Inline editing includes these options:
+1. Inline editing offers these options:
 
     :::image type="content" source="media/create-a-plan/image4.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
 
@@ -74,7 +74,7 @@ In this scenario, two roles are generated: employee and manager. Each role has d
     1. Add a new user need above or below the selected user need, or delete the selected user need.  
     1. Add a new user role.
 
-1. Use **Copilot** to give feedback on the generated user needs.
+1. Use **Copilot** to provide feedback on the generated user needs.
 
     :::image type="content" source="media/create-a-plan/image5.png" alt-text="Screenshot of Copilot that gives feedback on user needs in the Plan designer.":::
 
@@ -86,7 +86,7 @@ In this scenario, two roles are generated: employee and manager. Each role has d
 
 1. Review the changes and select **Keep** or **Undo**.
 
-1. When you're done, select **Looks good** to proceed to the next step and generate data tables.
+1. When you're done, select **Looks good** to move to the next step and generate data tables.
 
     :::image type="content" source="media/create-a-plan/image6.png" alt-text="Screenshot of the Plan designer with the 'Looks good' button to proceed to the next step.":::
 
@@ -94,18 +94,18 @@ In this scenario, two roles are generated: employee and manager. Each role has d
 
 1. The proposed data tables appear in the **Data model** section of the plan.
 
-   1. Select **Edit**, and describe what you want to change or add using Copilot.
-   2. Select **Show details** to view the data in a diagram and edit it.
+   1. Select **Edit** and describe what you want to change or add using Copilot.
+   2. Select **Show details** to view the data in a diagram, and edit it.
 
-2. **Show details** opens the data workspace. Use the table visual designer to create tables, set up table relationships, and view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
+1. **Show details** opens the data workspace. Use the table visual designer to create tables, set up table relationships, and view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
-   :::image type="content" source="media/create-a-plan/image8.png" alt-text="Screenshot of the data workspace in the Plan designer showing table relationships.":::
+   :::image type="content" source="media/create-a-plan/image8.png" alt-text="Screenshot of the data workspace in the plan designer showing table relationships.":::
 
-3. When you're done, select **Back**.
+1. When you're done, select **Back**.
 
-4. When you're ready to generate user experiences, select **Looks good** to continue.
+1. When you're ready to generate user experiences, select **Looks good** to continue.
 
-   :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the Plan designer showing the 'Looks good' button to continue to user experiences.":::
+   :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the plan designer showing the 'Looks good' button to continue to user experiences.":::
 
 ## Generate technology proposal
 
@@ -143,18 +143,18 @@ Before creating your apps, save your plan to a solution.
 1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
 1. Select **Save**.
 
-:::image type="content" source="media/create-a-plan/image20.png" alt-text="Screenshot of the Save your plan screen showing the solution name and publisher options.":::
+:::image type="content" source="media/create-a-plan/image20.png" alt-text="Screenshot of the 'Save your plan' screen showing the solution name and publisher options."::
 
 The plan is stored within a solution. Learn more here – \<link to Manage solution docs\>.
 
 ## View and edit plans
 
-When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access your plans and make edits as needed.
+When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access your plans and edit them as needed.
 
-:::image type="content" source="media/create-a-plan/image21.png" alt-text="Screenshot of the Plans menu in the left navigation pane showing options to create, view, and edit plans.":::
+:::image type="content" source="media/create-a-plan/image21.png" alt-text="Screenshot of the Plans menu in the left navigation pane with options to create, view, and edit plans.":::
 
-1. **Plans**: Use to access your plans.  
-1. **Create a plan**: Use to create a new plan.  
-1. **Your plans**: Use to view your plans.  
-1. **Edit**: Use to edit the selected plan.  
-1. **Edit or Delete**: Use to edit or delete the selected plan.  
+1. **Plans**: Access your plans.
+1. 1. **Create a plan**: Create a new plan.
+1. 1. **Your plans**: View your plans.
+1. 1. **Edit**: Edit the selected plan.
+1. 1. **Edit or Delete**: Edit or delete the selected plan.
