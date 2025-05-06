@@ -3,7 +3,7 @@ title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent a
 description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 11/10/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dmartens # MSFT alias of Microsoft employees only
