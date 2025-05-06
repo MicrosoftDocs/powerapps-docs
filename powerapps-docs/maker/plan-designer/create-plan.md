@@ -34,7 +34,7 @@ This article uses a sample scenario to show how the Plan designer works by build
 
    :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a text box for entering business scenarios.":::
 
-Copilot opens the Plan designer and analyzes your business scenario based on your description.
+    Copilot opens the Plan designer and analyzes your business scenario based on your description.
 
 **Plan agents**
 
