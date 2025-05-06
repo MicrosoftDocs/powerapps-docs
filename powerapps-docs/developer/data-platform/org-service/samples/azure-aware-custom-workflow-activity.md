@@ -5,7 +5,7 @@ ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType:
   - developer
 ---
