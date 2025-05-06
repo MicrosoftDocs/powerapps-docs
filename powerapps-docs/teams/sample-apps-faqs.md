@@ -3,7 +3,7 @@ title: Frequently Asked Questions (FAQs) and answers when using sample app templ
 description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample app templates.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: faq
 ms.custom: 
 ms.date: 10/05/2020
 ms.subservice: teams
