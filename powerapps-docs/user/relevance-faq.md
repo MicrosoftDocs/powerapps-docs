@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/13/2025
+ms.date: 05/06/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -136,7 +136,7 @@ Once Dataverse search is turned to “Default” after being turned off, only wh
 |Microsoft Copilot Studio Agent – Add Knowledge     |•	Can't upload files •	Can't select Dataverse tables •	Agent won't provide results until Dataverse is enabled for the environment (Warning banner with call to action for environment’s Admin to enable it)       |•	Agent won't provide results until Dataverse is enabled for the environment (default to Fallback answer)        |
 |Microsoft Copilot Studio Agent – Using Copilot Chat  | •	Agent won't provide results until Dataverse is enabled for the environment (Warning banner with call to action to connect with environment’s Admin to enable it)  |•	Agent won't provide results until Dataverse is enabled for the environment (default to Fallback answer)  |
 |Model Driven Applications – Dataverse search  | •	Search bar won't be visible in model-driven applications  |•	Same as Maker experience |
-|Model Driven Applications – Copilot Chat  |•	Can use Model Driven App for record management (add, edit, delete, and so on) •	Agent won't provide results until Dataverse is enabled for the environment (Warning banner with call to action to connect with environment’s Admin to enable it)  |•	Same as Maker experience|
+|Model Driven Applications – Copilot Chat  |•	Can use a Model Driven App for record management (add, edit, delete, and so on) •	Agent won't provide results until Dataverse is enabled for the environment (Warning banner with call to action to connect with environment’s Admin to enable it)  |•	Same as Maker experience|
 |Prompt actions with AI Builder / Custom AI Prompts •	Microsoft Copilot Studio •	Power Apps •	Power Automate  |•	If enabled in the settings, prompts won't be grounded with Dataverse knowledge|•	N/A|
 
 
@@ -169,7 +169,7 @@ Suggestions are quick results based on a search performed on the primary column 
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results.
 
-## Can I configure the order of tables appearing in search results page?
+## Can I configure the order of tables appearing in the search results page?
 
 The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
 
@@ -192,6 +192,10 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 ## Why does searching on the OwnerID attribute not work when search is enabled on it?
 
 Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
+
+## Why doesn't search on the RegardingObjectId attribute work when search is enabled on it?
+
+Search isn't supported on polymorphic lookup attributes. The RegardingObjectId attribute in activity tables like email and task is a polymorphic lookup attribute.
 
 ## How is the Dataverse search API throttled?
 
