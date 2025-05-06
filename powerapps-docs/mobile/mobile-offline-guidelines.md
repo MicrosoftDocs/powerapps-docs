@@ -1,17 +1,19 @@
 ---
 title: Optimize the offline profile
 description: Guidance for optimizing offline profiles for model-driven apps.
-author: trdehove
+author: RitGan
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 05/06/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: ritwikganni
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
 contributors:
 - lancedMicrosoft 
+- RitGan
+- shwetamurkute
 search.audienceType: 
   - enduser
 ---
