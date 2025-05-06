@@ -1,13 +1,12 @@
 ---
 title: "Add code components to a custom page for your model-driven app" 
 description: "This article outlines the use of code components built by professional developers using the Power Apps component framework within a custom page."
-ms.custom: ""
 ms.date: 05/26/2022
 ms.reviewer: ""
-
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
@@ -86,4 +85,4 @@ Or try some from the [Power Apps community gallery](/powerapps/developer/compone
 
 [Overview of Power Apps connectors](../canvas-apps/connections-list.md)
 
-[Add data connection in canvas designer](../canvas-apps/add-data-connection.md)
+[Add data connection in Power Apps Studio](../canvas-apps/add-data-connection.md)

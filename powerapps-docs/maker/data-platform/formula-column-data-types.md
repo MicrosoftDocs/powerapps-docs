@@ -6,7 +6,7 @@ reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
 ms.date: 01/06/2025
-ms.subservice: teams
+ms.subservice: dataverse-maker
 ms.author: dikamath
 ms.reviewer: matp
 ms.collection: bap-ai-copilot

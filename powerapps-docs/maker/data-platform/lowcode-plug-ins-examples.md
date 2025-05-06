@@ -4,6 +4,7 @@ description: Examples of Microsoft Dataverse low-code plug-ins
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 11/10/2023
 ms.custom: template-how-to

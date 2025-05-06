@@ -1,10 +1,7 @@
 ---
 title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
-ms.custom: ""
 ms.date: 01/27/2025
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
@@ -13,6 +10,7 @@ applies_to:
 author: "Mattp123"
 ms.author: "emcoope"
 ms.reviewer: "matp"
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---

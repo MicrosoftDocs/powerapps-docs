@@ -46,7 +46,7 @@
           href: ./search/statistics-status.md
         - name: Legacy search
           href: ./search/legacy.md
-        - name: Custom Analyzers
+        - name: Configure Azure AI built-in analyzers
           href: ./search/custom-search-analyzer.md
     - name: Query data using FetchXml
       items:

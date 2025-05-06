@@ -5,6 +5,7 @@ author: MilindaV2
 ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 03/10/2025
 ms.custom: template-how-to

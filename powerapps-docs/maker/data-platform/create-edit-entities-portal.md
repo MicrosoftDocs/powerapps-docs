@@ -54,9 +54,6 @@ Use the table visual designer experience where you create tables, configure tabl
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
-> [!NOTE]
-> The table visual designer currently only supports creating and editing tables. You can add existing tables to the designer, but existing tables will be in read-only mode and can only be edited in a new tab.
-
 1. Command bar:
 
    - **Back**. Takes you back where you were in Power Apps.
@@ -114,8 +111,6 @@ The following data types aren't currently supported when you create a column in 
 - Customer
 - Autonumber
 - Formula
-
-Editing existing tables isn’t currently supported in the table visual designer. To edit an existing table, select it, and then select **View data** > **Edit** on the new tab. This opens the selected table in the traditional table designer, allowing you to edit the table.
 
 Some relationship configurations are currently not supported.
 
