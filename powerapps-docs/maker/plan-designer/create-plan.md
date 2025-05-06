@@ -138,13 +138,13 @@ Save the tables in your plan to create objects like apps, flows, and agents.
 
 1. Select **Save tables**.
 
-:::image type="content" source="media/create-a-plan/save-tables.png" alt-text="Save tables to create objects":::
+    :::image type="content" source="media/create-a-plan/save-tables.png" alt-text="Save tables to create objects":::
 
 1. Enter a Solution name.  
 1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
 1. Select **Save**.
 
-:::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen that shows the solution name and publisher options.":::
+    :::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen that shows the solution name and publisher options.":::
 
 The plan is stored in a solution. This action enables the **Objects** view in the Plan designer, letting makers switch between their plan and the solution view without leaving the Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 

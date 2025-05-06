@@ -11,17 +11,11 @@ ms.reviewer: mkaur
 
 # Build a solution from a plan
 
-To follow this article, you need to create a plan and save the plan to a solution. Learn more about creating a plan in [Create a plan](create-plan.md).
+To follow this article, you need to create a plan and save it. Learn more about creating a plan in [Create a plan](create-plan.md).
 
-Once your plan is saved to solution.
+Once your plan is saved to solution, you can create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
 
-Create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
-
-Before creating an object, create a plan and save the tables.
-
-:::image type="content" source="media/build-your-solution/image1.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
-
-
+:::image type="content" source="media/build-your-solution/saved-plan.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
 
 ## Create canvas apps
 
