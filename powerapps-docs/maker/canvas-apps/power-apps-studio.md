@@ -2,7 +2,7 @@
 title: Understand Power Apps Studio
 description:  Learn the components inside Power Apps Studio.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 9/11/2024
