@@ -2,7 +2,7 @@
 title: Add a Copilot control to a canvas app (preview)
 description: Learn how to add a Copilot control, an AI assistant, to your canvas apps in Microsoft Power Apps.
 author: mduelae
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom:
   - canvas
   - ai-gen-diyeditor
