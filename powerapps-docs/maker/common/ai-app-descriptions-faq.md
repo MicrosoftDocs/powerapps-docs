@@ -1,7 +1,7 @@
 ---
 title: FAQ for generate app descriptions with Copilot 
 description: FAQ that discusses generating app descriptions with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 10/26/2023
+ms.date: 05/06/2025
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -9,7 +9,8 @@ author: amchern
 ms.author: amchern
 ms.collection: 
     - bap-ai-copilot
-ms.reviewer: 
+ms.reviewer: matp
+contributors: ASheehi1
 ---
 
 # FAQ for generate app descriptions with Copilot
@@ -40,9 +41,10 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 - This capability is in process of rolling out, and might not be available in your region yet. 
 - This capability can be subject to usage limits or capacity throttling.
 
-### For Canvas Apps (Preview)
+### For canvas apps (preview)
+
 - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
+- For more information, go to [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
 - Your environment must be in the United States region.
 - This feature doesn’t support non-English language browsers.
 
@@ -50,9 +52,10 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 
 If you get this error, **Something happened and we weren’t able to generate a description for you**, this might be due to capacity limits. We recommend you give the system some time before trying again.
 
-## See also 
+## See also
+
 - [Create a Canvas App description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
-- [Create a model-driven app description with Copilot](../model-driven-apps/build-first-model-driven-app.md#create-an-app-description-with-copilot-preview)
+- [Create a model-driven app description with Copilot](../model-driven-apps/build-first-model-driven-app.md#create-an-app-description-with-copilot)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app with Power Apps"
 description: "Learn how to build your first model driven app with Power Apps"
-ms.date: 01/27/2025
+ms.date: 05/06/2025
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -9,7 +9,6 @@ ms.author: matp
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 contributors:
-- matp
 - jessicaszelo
 - asheehi
 ---
