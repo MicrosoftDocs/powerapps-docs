@@ -9,7 +9,11 @@ ms.author: mkaur
 ms.reviewer: mkaur  
 ---  
 
-# Build your solution
+# Build a solution from a plan
+
+To follow this article, you need to create a plan and save the plan to a solution. Learn more about creating a plan in [Create a plan](create-plan.md).
+
+Once your plan is saved to solution.
 
 Create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
 

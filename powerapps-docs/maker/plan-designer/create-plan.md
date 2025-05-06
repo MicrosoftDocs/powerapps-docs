@@ -110,7 +110,7 @@ The **Data Agent** suggests tables that store your business data.
 
 ## Generate technology proposal
 
-The **Solution Agent** proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. These user requirements are designed for specific user roles and rely on data tables generated from earlier steps.
+The **Solution Agent**  analyzes the paln and proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. 
 
 :::image type="content" source="media/create-a-plan/technology-proposed.png" alt-text="Screenshot of the Plan designer that displays proposed technologies for the solution." lightbox="media/create-a-plan/technology-proposed.png":::
 
@@ -132,11 +132,15 @@ The Plan designer suggests items from the following list of technologies:
 1. [Copilot Studio Agents](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder)
 
 
-## Save your plan
+## Save tables
 
-Before creating your apps, save your plan to a solution.
+Save the tables in your plan to create objects like apps, flows, and agents.
 
-1. Enter the Solution name.  
+1. Select **Save tables**.
+
+:::image type="content" source="media/create-a-plan/save-tables.png" alt-text="Save tables to create objects":::
+
+1. Enter a Solution name.  
 1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
 1. Select **Save**.
 
@@ -157,3 +161,8 @@ Legend:
 1. **Your plans**: View your plans.
 1. **Edit**: Edit the selected plan.
 1. **Edit or Delete**: Edit or delete the selected plan.
+
+## Next steps
+
+[Build a solution from a plan](build-solution.md)
+
