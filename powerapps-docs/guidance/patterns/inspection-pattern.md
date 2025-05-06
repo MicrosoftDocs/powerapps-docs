@@ -3,7 +3,7 @@ title: "Power Apps pattern: Inspection | Microsoft Docs"
 description: See real-world examples of how customers have used Power Apps to create timely, efficient, and actionable inspections, from aircraft maintenance to elementary school.
 author: kathyos
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/21/2021
 ms.subservice: guidance
