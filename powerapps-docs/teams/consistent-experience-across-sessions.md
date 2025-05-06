@@ -3,7 +3,7 @@ title: Enable consistent experience across sessions using LoadData and SaveData 
 description: Learn how to make your Teams-based Power Apps store session data so that the users don't lose their work when leaving the app tab.
 author: joel-lindstrom
 ms.subservice: teams
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/18/2021
 ms.author: saperlmu
