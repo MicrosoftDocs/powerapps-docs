@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 01/27/2025
+ms.date: 05/06/2025
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -36,7 +36,7 @@ You must select **Publish** to activate an app settings change.
     |-------------|--------------|-----------------|
     | **General**  | **Solution**  | Read-only property that displays the solution name where the app is located.  |
     |**General** |**App name**| The friendly name for the app.|  
-    |**General** |**Description**| The description of the app (optional). If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can select **Create description using AI** to have  Copilot generate one for you. More information: [Create an app description with Copilot (preview)](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview) |  
+    |**General** |**Description**| The description of the app (optional). If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can select **Create description using AI** to have  Copilot generate one for you. More information: [Create an app description with Copilot](build-first-model-driven-app.md#create-an-app-description-with-copilot) |  
     |**General** | **Icon** | Change the app icon by selecting **Select icon**, to browse and select an image web resource. This icon is displayed on the preview tile of the app. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)|
     | **Advanced settings**   | **Unique name**  | Read-only property that displays the app unique name including the publisher prefix.  |
     | **Advanced settings**   | **Welcome page**   | This option allows a maker to select from the web resources available in your organization. The welcome pages created contain information that's useful to users, such as links to videos, upgrade instructions, or getting started information. The welcome page is displayed when an app is opened. Users can select **Do not show this Welcome Screen next time** on the welcome page to disable the page so it doesn't appear the next time the app starts. Notice that the **Do not show this Welcome Screen next time** option is a user-level setting and can't be controlled by administrators or app makers. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)  |
