@@ -3,7 +3,7 @@ title: "Files and images overview (Microsoft Dataverse) | Microsoft Docs" # Inte
 description: "Learn about using file and image data in Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/26/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: concept-article
 author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
