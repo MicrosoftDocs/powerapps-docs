@@ -2,7 +2,7 @@
 title: Export and import a canvas app as a single app file 
 description: Learn how to export and import a canvas app as a single app file.
 author: caburk
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: caburk
