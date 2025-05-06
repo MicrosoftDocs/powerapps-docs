@@ -5027,7 +5027,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/samples/assign-record-to-new-owner.md",
-      "redirect_url": "../../../data-platform/org-service/samples/assign-record-to-new-owner",
+      "redirect_url": "../../../data-platform/org-service/samples/assign-records-to-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-record-to-new-owner.md",
+      "redirect_url": "./assign-records-to-team",
       "redirect_document_id": false
     },
     {
@@ -9543,6 +9548,16 @@
     {
       "source_path": "powerapps-docs/maker/common/ai-plugin.md",
       "redirect_url": "../../../microsoft-copilot-studio/microsoft-copilot-extend-action-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/use-ai-builder.md",
+      "redirect_url": "../ai-builder/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/smartGrid.md",
+      "redirect_url": "../../power-apps/maker/model-driven-apps/power-apps-grid-control",
       "redirect_document_id": false
     }
   ]

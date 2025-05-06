@@ -311,7 +311,7 @@ To create a model-driven app with the same site map items as the legacy app, the
 
 After the new model-driven app is available, the "Dynamics 365 - custom" app should be hidden for nonadmins in all environments.
 
-1. Open [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and select the environment to hide the legacy app.
+1. Open [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and open the environment to hide the legacy app.
 
 1. Select **Settings > Product > Behavior**.
 
