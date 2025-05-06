@@ -99,13 +99,13 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
 1. **Show details** opens the data workspace. Use the table visual designer to create tables, set up table relationships, and view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
-   :::image type="content" source="media/create-a-plan/image8.png" alt-text="Screenshot of the data workspace in the plan designer showing table relationships.":::
+   :::image type="content" source="media/create-a-plan/image8.png" alt-text="Screenshot of the data workspace in the Plan designer showing table relationships.":::
 
 1. When you're done, select **Back**.
 
 1. When you're ready to generate user experiences, select **Looks good** to continue.
 
-   :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the plan designer showing the 'Looks good' button to continue to user experiences.":::
+   :::image type="content" source="media/create-a-plan/image9.png" alt-text="Screenshot of the Plan designer showing the 'Looks good' button to continue to user experiences.":::
 
 ## Generate technology proposal
 
