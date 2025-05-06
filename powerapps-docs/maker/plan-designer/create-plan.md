@@ -26,7 +26,7 @@ This article uses a sample scenario to show how the Plan designer works by build
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Enter your prompt in the text box, such as the example prompt below. Add more context, like process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
+1. Enter your prompt in the text box, such as the example prompt below. Add more context like process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
 
     ```copilot-prompt
     Employees need to log vacation days, and managers need to approve them.
@@ -34,23 +34,23 @@ This article uses a sample scenario to show how the Plan designer works by build
 
    :::image type="content" source="media/create-a-plan/enter-problem-1.png" alt-text="Screenshot of the Plan designer interface with a text box for entering business scenarios.":::
 
-    Copilot opens the Plan designer and analyzes your business scenario based on your description.
+    Copilot opens the Plan designer and analyzes the business scenario based on your description.
 
 **Plan agents**
 
-Within the Plan designer, view the presence status of other collaborators including plan agents. The agents are AI assistants that analyze your business problem and help generate a plan.
+Within the Plan designer, view the presence status of other collaborators, including plan agents. The agents are AI assistants that analyze the business problem and help generate a plan.
 
 - The **Requirement Agent** examines the business problem and uses AI to generate user requirements.
 - The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
 - The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
 
-As the plan built your can review and edit the outputs the agents generate.
+As the plan builds, you can review and edit the outputs the agents generate.
 
 :::image type="content" source="media/create-a-plan/plan-agents.png" alt-text="Screenshot of the Plan designer that shows the presence status of plan agents."::: 
 
 ## Generate user requirements
 
-The **Requirements Agent** identifies user requirements based on your description.
+The **Requirements Agent** identifies user needs based on your description.
 
 In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user needs. The user roles and needs appear in a bullet list on the left side, while a visual diagram is on the right side.
 
@@ -61,7 +61,7 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
     :::image type="content" source="media/create-a-plan/requirements-generated.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
 
-    Edit inline editing offers these options:
+    Inline editing offers these options:
 
     :::image type="content" source="media/create-a-plan/inline-edit-requirements.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
 
@@ -73,7 +73,7 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
     1. Add a new user need above or below the selected user need, or delete the selected user need.  
     1. Add a new user role.
 
-    Or, you can edit using **Copilot** and provide feedback on the generated user needs.
+   Alternatively, edit using **Copilot** to provide feedback on the generated user needs.
 
     :::image type="content" source="media/create-a-plan/inline-edit-copolit.png" alt-text="Screenshot of Copilot that gives feedback on user needs in the Plan designer.":::
 
@@ -91,14 +91,14 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
 ## Generate data model
 
-The **Data Agent** proposes tables that store your business data.
+The **Data Agent** suggests tables that store your business data.
 
-1. The proposed data tables appear in the **Data model** section of the plan.
+1. The suggested data tables appear in the **Data model** section of the plan
 
    - Select **Edit** and describe what you want to change or add using Copilot.
    - Select **Show details** to view the data in a diagram, and edit it.
     
-    :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of show details button to view or edit data" lightbox="media/create-a-plan/show-details.png"::: 
+    :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of the **Show details** button to view or edit data." lightbox="media/create-a-plan/show-details.png"::: 
    
 1. **Show details** opens the data workspace. Use the table visual designer to create tables, set up table relationships, and view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
@@ -106,24 +106,24 @@ The **Data Agent** proposes tables that store your business data.
 
 1. When you're done, select **Back**.
 
-1. When you're ready to generate technology proposal, select **Looks good** to continue.
+1. When you're ready to generate the technology proposal, select **Looks good** to continue.
 
 ## Generate technology proposal
 
-The **Solution Agent** proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. These user requirements are designed for specific user roles and use data tables generated from earlier steps.
+The **Solution Agent** proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. These user requirements are designed for specific user roles and rely on data tables generated from earlier steps.
 
 :::image type="content" source="media/create-a-plan/technology-proposed.png" alt-text="Screenshot of the Plan designer that displays proposed technologies for the solution." lightbox="media/create-a-plan/technology-proposed.png":::
 
-To view details of the proposed technologies, hover over the **information icon**. The pop-up info card displays the user roles and data tables.
+To view details of the proposed technologies, point to the **information icon**. The pop-up info card displays the user roles and data tables.
 
 :::image type="content" source="media/create-a-plan/more-info-about-apps.png" alt-text="Screenshot of the Plan designer that displays details of proposed technologies.":::
 
-Aelect **Looks good** to accept the proposed technologies. Or, select **Edit** to use Copolit and describle what you want to change.
+Select **Looks good** to accept the proposed technologies. Or, select **Edit** to use Copilot and describe what you want to change.
 
 
 ### Proposed technologies
 
-The Plan designer suggests artifacts from the following list of technologies:
+The Plan designer suggests items from the following list of technologies:
 
 1. Apps like [canvas apps](../canvas-apps/getting-started.md) or [model-driven apps](../model-driven-apps/model-driven-app-overview.md)
 1. [Power Pages](/power-pages/introduction) websites
@@ -136,19 +136,19 @@ The Plan designer suggests artifacts from the following list of technologies:
 
 Before creating your apps, save your plan to a solution.
 
-1. Type the Solution name.  
+1. Enter the Solution name.  
 1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
 1. Select **Save**.
 
-:::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen showing the solution name and publisher options.":::
+:::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen that shows the solution name and publisher options.":::
 
-The plan is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
+The plan is stored in a solution. This action enables the **Objects** view in the Plan designer, letting makers switch between their plan and the solution view without leaving the Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
 ## View and edit plans
 
-When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access your plans and edit them as needed.
+When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access and edit your plans as needed.
 
-:::image type="content" source="media/create-a-plan/edit-plans.png" alt-text="Screenshot of the Plans menu in the left navigation pane with options to create, view, and edit plans.":::
+:::image type="content" source="media/create-a-plan/edit-plans.png" alt-text="Screenshot of the Plans menu in the left navigation pane. Options include creating, viewing, and editing plans.":::
 
 Legend:
 
