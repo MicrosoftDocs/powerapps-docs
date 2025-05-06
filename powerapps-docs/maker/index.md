@@ -4,7 +4,7 @@ description: Get an introduction to creating canvas or model-driven apps in Powe
 author: alaug
 ms.subservice: common
 ms.topic: overview
-ms.date: 1/25/2025
+ms.date: 5/06/2025
 ms.author: alaug
 ms.reviewer: mkaur-msft
 searchScope:
@@ -13,7 +13,7 @@ searchScope:
 
 # Overview of creating apps in Power Apps
 
-Power Apps is a high-productivity development platform for business apps, and has four major components:
+Power Apps is a high-productivity development platform for business apps, and has these major components:
 
 - Canvas apps
 - Model-driven apps
