@@ -140,7 +140,7 @@ Before creating your apps, save your plan to a solution.
 1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
 1. Select **Save**.
 
-:::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen showing the solution name and publisher options."::
+:::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen showing the solution name and publisher options.":::
 
 The plan is stored within a solution. This action also enables the **Objects** view in the Plan designer, allowing makers to seamlessly switch between their plan and the solution view without leaving the Plan designer. For more information about solutions, see [Solution view](../data-platform/solutions-area.md).
 
