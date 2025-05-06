@@ -18,9 +18,9 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the [Plan designer](plan-designer.md) to quickly create business solutions. 
+Use the [Plan designer](plan-designer.md) to quickly create business solutions.
 
-Open the Plan designer from the Power Apps home page. It helps you generate user roles, user stories, data tables, and user experiences.
+Access the Plan designer from the Power Apps home page. It assists in creating user roles, data tables, and suggested apps to address your business needs.
 
 This article uses a sample scenario to show how the Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
@@ -32,35 +32,34 @@ This article uses a sample scenario to show how the Plan designer works by build
     Employees need to log vacation days, and managers need to approve them.
     ```
 
-   :::image type="content" source="media/create-a-plan/image1.png" alt-text="Screenshot of the Plan designer interface with a text box for entering business scenarios.":::
+   :::image type="content" source="media/create-a-plan/enter-problem-1.png" alt-text="Screenshot of the Plan designer interface with a text box for entering business scenarios.":::
 
     Copilot opens the Plan designer and analyzes your business scenario based on your description.
 
 **Plan agents**
 
-Within the Plan designer, view the presence status of plan agents, which are AI assistants that analyze your business problem and generate a plan. These plan agents utilize AI to help build your plan.
+Within the Plan designer, view the presence status of other collaborators including plan agents. The agents are AI assistants that analyze your business problem and help generate a plan.
 
 - The **Requirement Agent** examines the business problem and uses AI to generate user requirements.
 - The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
 - The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
-- The **Process Agent** (preview) generates a process diagram depicting the different steps in the business problem, along with the personas and artifacts in context.
 
-Review and refine the outputs the agents generate.
+As the plan built your can review and edit the outputs the agents generate.
 
-:::image type="content" source="media/create-a-plan/image2.png" alt-text="Screenshot of the Plan designer that shows the presence status of plan agents."::: 
+:::image type="content" source="media/create-a-plan/plan-agents.png" alt-text="Screenshot of the Plan designer that shows the presence status of plan agents."::: 
 
 ## Generate user requirements
 
 The **Requirements Agent** identifies user needs based on your description.
 
-In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user stories. The user roles and stories appear in a bullet list on the left side, while a visual diagram is on the right side.
+In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user needs. The user roles and stories appear in a bullet list on the left side, while a visual diagram is on the right side.
 
 1. Review the user roles and stories, then choose one of the following options:
 
-   - Select **Add these roles** to generate a data model.
+   - Select **Looks good** to generate a data model.
    - Select **Edit** to make edits inline or add new user roles or needs.
 
-    :::image type="content" source="media/create-a-plan/image3.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
+    :::image type="content" source="media/create-a-plan/requirements-generated.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
 
 1. Inline editing offers these options:
 
