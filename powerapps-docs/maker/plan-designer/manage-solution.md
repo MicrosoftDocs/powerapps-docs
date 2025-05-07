@@ -18,18 +18,17 @@ ms.custom:
 
 # Manage your solution
 
-Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices from the start, using Power Platform solutions. By packaging all plan components into a single solution artifact, makers can use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions
+Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices from the start by using Power Platform solutions. By packaging all plan components into a single solution artifact, makers use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions.
 
-When you create a plan, it is stored within a solution. This also enables the **Objects** view in Plan designer, letting makers switch between their plan and the solution view without leaving the designer.
+When you create a plan, it is stored within a solution, which enables the Objects view in Plan designer. This lets makers switch between their plan and the solution view without leaving Plan designer.
 
-A plan can be associated with multiple solutions. For example, if the maker adds an existing Dataverse table to the plan’s data model, the solutions associated with the Dataverse table also become associated with the plan.
+A plan can be associated with multiple solutions. For example, if you add an existing Dataverse table to the plan’s data model, the solutions linked to the Dataverse table also link to the plan.
 
-The solutions associated with the plan are listed as tabs across the top of the **Objects** view screen. Makers can click between the tabs to view the objects of each solution. If there are more than 5 solutions, then an overflow menu will house the rest of the solutions.
+The solutions associated with the plan are displayed as tabs across the top of the **Objects** view. Select a tab to view the objects in the solution. If there are more than five solutions, an overflow menu shows the remaining solutions. All solution objects are displayed, not just those included in the plan.
 
-All solution objects, not just the ones in the plan, are shown.
+:::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer showing objects in a solution.":::
 
 For more information about solutions, see [Solution view](/power-apps/maker/data-platform/solutions-area).
 
 
 
-:::image type="content" source="media/manage-solution/image-1.png" alt-text="Screenshot of the Objects view in Plan designer showing associated solutions.":::
