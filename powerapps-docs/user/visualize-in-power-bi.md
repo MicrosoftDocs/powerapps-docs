@@ -4,7 +4,7 @@ description: Visualize your data in a view quickly with Power BI service.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/19/2023
 ms.subservice: end-user
 ms.author: smurkute
