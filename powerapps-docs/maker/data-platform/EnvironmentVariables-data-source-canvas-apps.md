@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 ms.date: 01/31/2025
-ms.topic: conceptual
+ms.topic: how-to
 search.audienceType: 
   - maker
 contributors:

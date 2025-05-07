@@ -2,7 +2,7 @@
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns."
 ms.date: 04/30/2024
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

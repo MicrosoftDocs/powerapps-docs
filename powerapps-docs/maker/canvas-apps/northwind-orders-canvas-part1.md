@@ -3,7 +3,7 @@ title: Create an order gallery in a canvas app
 description: Learn about how to create an order gallery in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2021

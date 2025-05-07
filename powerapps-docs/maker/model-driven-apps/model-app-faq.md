@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
 ms.date: 01/27/2025
-ms.topic: article
+ms.topic: faq
 applies_to: 
   - "powerapps"
 search.audienceType: 

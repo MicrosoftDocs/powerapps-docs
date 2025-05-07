@@ -5,7 +5,7 @@ ms.date: 04/22/2025
 author: olegovanesyan
 ms.author: olegov
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:

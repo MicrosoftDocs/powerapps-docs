@@ -3,7 +3,7 @@ title: Create a summary form in a canvas app
 description: Learn about how to create an summary form in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/06/2019

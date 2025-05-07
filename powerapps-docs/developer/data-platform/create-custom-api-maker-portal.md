@@ -4,7 +4,7 @@ description: "Create a custom API definition using Power Apps (make.powerapps.co
 ms.custom: ""
 ms.date: 04/19/2022
 ms.reviewer: "jdaly"
-ms.topic: "article"
+ms.topic: how-to
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair

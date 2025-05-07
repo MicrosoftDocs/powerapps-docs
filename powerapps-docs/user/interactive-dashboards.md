@@ -4,7 +4,7 @@ description: Learn how to use interactive dashboards to filter data in Power App
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 9/14/2020
 ms.subservice: end-user
 ms.author: smurkute

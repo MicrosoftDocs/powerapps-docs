@@ -2,7 +2,7 @@
 title: Create a canvas app from Figma (preview)
 description: Learn about how to create canvas apps from Figma.
 author: mduelae
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/10/2025

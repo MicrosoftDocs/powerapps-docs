@@ -3,7 +3,7 @@ title: Use sample app templates in Teams | Microsoft Docs
 description: Learn how to use sample app templates in Teams
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: article
 ms.collection: get-started
 ms.date: 01/19/2023
 ms.subservice: teams

@@ -3,7 +3,7 @@ title: "Search for Dataverse records (Microsoft Dataverse) | Microsoft Docs"
 description: "Use Dataverse search to return search results across multiple tables and provide suggestions and autocompletion experiences in apps." 
 ms.date: 10/20/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: seanwat-msft
 ms.author: seanwat
 search.audienceType: 

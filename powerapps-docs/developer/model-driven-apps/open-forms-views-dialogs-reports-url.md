@@ -5,7 +5,7 @@ author: MitiJ
 ms.author: mijosh
 ms.date: 06/20/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

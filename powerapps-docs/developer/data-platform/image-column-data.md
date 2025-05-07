@@ -3,7 +3,7 @@ title: "Use image column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in image columns." 
 ms.date: 02/04/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

@@ -3,7 +3,7 @@ title: Planning a Power Apps project example | Microsoft Docs
 description: This expense reporting example shows how a typical paper-based expense approval within the organization has inefficiencies for multiple departments and employees.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

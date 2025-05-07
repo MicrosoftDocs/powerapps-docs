@@ -3,7 +3,7 @@ title:  Best practices and recommendations when working with gallery in canvas a
 description: Best practices and recommendations when working with gallery in canvas apps.
 author: tahoon-ms
 
-ms.topic: conceptual
+ms.topic: best-practice
 ms.custom: canvas
 ms.date: 11/15/2023
 ms.subservice: canvas-maker
