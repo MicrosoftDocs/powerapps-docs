@@ -4,7 +4,7 @@ description: Learn how to to use the different search option
 author: smurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 05/10/2023
 ms.subservice: end-user
 ms.author: smurkute
