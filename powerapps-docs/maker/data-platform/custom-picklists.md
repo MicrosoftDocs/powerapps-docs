@@ -1,10 +1,10 @@
 ---
-title: Create a choice| Microsoft Docs
-description: Step-by-step instructions for how to create a choice.
+title: Create a choice column
+description: Step-by-step instructions for how to create a choice in Power Apps.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 03/21/2018
+ms.date: 05/07/2025
 ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
