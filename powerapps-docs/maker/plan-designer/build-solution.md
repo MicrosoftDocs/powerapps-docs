@@ -52,13 +52,13 @@ After your plan is saved to solution, you can create apps like canvas apps, mode
 
         Test your agent before publishing. 
 
-    Learn more about Copilot Studio:
+        Learn more about Copilot Studio:
 
-    - [Agent flows overview](/microsoft-copilot-studio/flows-overview)  
-    - [Add actions to custom agents](/microsoft-copilot-studio/advanced-plugin-actions)  
-    - [Test your agent](/microsoft-copilot-studio/authoring-test-bot?tabs=webApp)  
-    - [Key concepts – Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)  
-    - [Key concepts - Analytics](/microsoft-copilot-studio/analytics-overview)  
+        - [Agent flows overview](/microsoft-copilot-studio/flows-overview)  
+        - [Add actions to custom agents](/microsoft-copilot-studio/advanced-plugin-actions)  
+        - [Test your agent](/microsoft-copilot-studio/authoring-test-bot?tabs=webApp)  
+        - [Key concepts – Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)  
+        - [Key concepts - Analytics](/microsoft-copilot-studio/analytics-overview)  
 
 ## Replace with an existing app
 
