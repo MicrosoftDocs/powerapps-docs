@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Create a choice
 
-Choice columns allow you to include dropdown lists of fixed values to a user within your app to ensure data consistency. Choice columns, were formerly referred to as option sets and are sometimes called picklists. Similar to tables, there are both standard choices or makers have the ability to create custom choice columns to use in apps.
+Choice columns allow you to include dropdown lists of fixed values to a user within your app to ensure data consistency. Choice columns were formerly referred to as option sets and are sometimes called picklists. Similar to tables, there are both standard choices or makers have the ability to create custom choice columns to use in apps.
 
 Choices can be created while working from a solution in powerapps.com or on a table form in the form designer.
 
