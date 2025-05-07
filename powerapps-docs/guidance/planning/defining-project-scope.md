@@ -3,7 +3,7 @@ title: Planning - Defining the Power Apps project scope | Microsoft Docs
 description: Your scope directly affects and determines which features to include and not to include when making the app. Learn about scope constraints to consider.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
