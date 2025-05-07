@@ -5,7 +5,7 @@ ms.date: 4/15/2025
 author: noazarur-microsoft
 ms.author: noazarur
 ms.reviewer: mkaur
-ms.topic: article
+ms.topic: faq
 ms.subservice: common
 ms.custom: transparency-note
  - responsible-ai-faqs
