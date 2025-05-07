@@ -30,5 +30,19 @@ The solutions associated with the plan are displayed as tabs across the top of t
 
 For more information about solutions, see [Solution view](/power-apps/maker/data-platform/solutions-area).
 
+## Show objects in this plan
 
+Each plan has a main solution, but other solutions can become associated with the plan as you add existing tables or apps from other solutions. Each of these associated solutions can have many objects beyond those that you added to the plan. 
+
+To track which objects from the associated solutions are specifically tied to the plan, select **Only show objects in this plan** to narrow the view to just those components explicitly designated as part of the plan. 
+
+:::image type="content" source="media/manage-solution/only-show-objects-in-plan.png" alt-text="Only show objects in this plan":::
+
+When you uncheck **Only show objects in this plan** it display the complete contents of these solutions, which helps in understanding the broader context, overall composition, and potential dependencies.
+
+## Known issues
+
+- When the **Only show objects in this plan** filter is on, some object categories with (0) items will still appear in the left tree view.
+-	Some existing canvas apps that are added to the plan might not filter properly with the **Only show objects in this plan** filter. This sometimes affects canvas apps that are not a part of Dataverse.
+-	There are intermittent caching issues. If associated solutions are not showing up in **Objects** view, please resave the plan and refresh the **Objects** view.
 
