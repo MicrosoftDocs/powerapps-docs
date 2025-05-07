@@ -15,7 +15,7 @@ To follow this article, you need to create a plan and save it. Learn more about 
 
 After your plan is saved to solution, you can create apps like canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents based on the solution proposal from Plan designer.
 
-:::image type="content" source="media/build-your-solution/saved-plan.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
+:::image type="content" source="media/build-your-solution/save-plan.png" alt-text="Screenshot of the Plan designer interface that shows the Save tables option.":::  
 
 ## Create canvas apps
 
