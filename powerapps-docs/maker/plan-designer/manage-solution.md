@@ -26,8 +26,7 @@ A plan can be associated with multiple solutions. For example, if the maker adds
 
 The solutions associated with the plan are listed as tabs across the top of the **Objects** view screen. Makers can click between the tabs to view the objects of each solution. If there are more than 5 solutions, then an overflow menu will house the rest of the solutions.
 
-> [!NOTE]  
-> All solution objects, not just the ones in the plan, are shown.
+All solution objects, not just the ones in the plan, are shown.
 
 For more information about solutions, see [Solution view](/power-apps/maker/data-platform/solutions-area).
 
