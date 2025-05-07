@@ -20,7 +20,7 @@ ms.custom:
 
 Use the [Plan designer](plan-designer.md) to quickly create business solutions.
 
-Access the Plan designer from the Power Apps home page. It assists in creating user roles, data tables, and suggested apps to address your business needs.
+Access the Plan designer from the Power Apps home page. It helps creating user roles, data tables, and suggested apps to address your business needs.
 
 This article uses a sample scenario to show how the Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
@@ -148,7 +148,7 @@ Save the tables in your plan to create objects like apps, flows, and agents.
 
     The plan is stored in a solution. This action enables the **Objects** view in the Plan designer, letting makers switch between their plan and the solution view without leaving the Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
-1. You are now ready to [build your solutions](build-solution.md).
+1. You're now ready to [build your solutions](build-solution.md).
 
     :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Ready to build your solution":::
 

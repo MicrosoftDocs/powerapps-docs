@@ -45,7 +45,7 @@ After saving your plan to the solution, create apps like canvas apps, model-driv
  
         - **Knowledge**: All tables created by the plan are added to the agent as knowledge sources.  
  
-        Review the instructions and update the agent as needed for your scenario. For example, you may need to add a trigger or an action to the agent. Test the agent before publishing. 
+        Review the instructions and update the agent as needed for your scenario. For example, you might need to add a trigger or an action to the agent. Test the agent before publishing. 
 
         Learn more about Copilot Studio:
 

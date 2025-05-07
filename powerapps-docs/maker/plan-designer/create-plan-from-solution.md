@@ -15,14 +15,14 @@ Use Plan Designer to create a plan for your existing solution. Plan Designer gen
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. On the left navigation pane, select **Solutions**.
-1. Select **Create plan from a solution** or from the list of solutions select a solutions and then select **Commands** > **Create a plan**.
+1. Select **Create plan from a solution** or from the list of solutions select a solution and then select **Commands** > **Create a plan**.
 
     :::image type="content" source="media/create-a-plan-from-a-solution/create-plan-from-solution.png" alt-text="Screenshot of the solutions page with the Create plan from a solution option highlighted.":::
 
 1. Select **Select solution** and then choose a solution.
     
     > [!NOTE]  
-    > The solution must have at least 1 app and 1 associated table.  
+    > The solution must have at least one app and one associated table.  
 
 1. Select **Create plan**.
 

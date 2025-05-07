@@ -18,13 +18,13 @@ ms.custom:
 
 # Manage your solution
 
-Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices by using Power Platform solutions. By packaging all plan components into a single solution artifact, makers use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions.
+Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices by using Power Platform solutions. Take advantage of advanced ALM capabilities to deploy your artifacts to target environments through managed solutions by packaging all the components of a plan into a single solution artifact
 
-When you create a plan, it is stored in a solution, which enables the **Objects** view in Plan designer. This lets makers switch between the plan and the solution view without leaving Plan designer.
+When you create a plan, it's stored in a solution, which enables the **Objects** view in Plan designer. This lets makers switch between the plan and the solution view without leaving Plan designer.
 
 A plan might be associated with multiple solutions. For example, if you add an existing Dataverse table to the plan's data model, the solutions linked to the Dataverse table also link to the plan.
 
-The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view the objects in the solution. If there is more than five solutions, an overflow menu displays the remaining solutions. All solution objects are displayed, not just those included in the plan.
+The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view the objects in the solution. If there's more than five solutions then an overflow menu displays the remaining solutions. All solution objects are displayed, not just the ones included in the plan.
 
 :::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer that shows objects in a solution.":::
 
@@ -44,7 +44,7 @@ When you uncheck **Only show objects in this plan**, it shows the complete conte
 
 - When the **Only show objects in this plan** filter is on, some object categories with zero items still appear in the left tree view.
 - Some existing canvas apps added to the plan might not filter properly with the **Only show objects in this plan** filter. This issue sometimes affects canvas apps that aren't part of Dataverse.
-- There is intermittent caching issues. If associated solutions don't show up in the**Objects** view. To fix the issue, resave the plan and refresh the **Objects** view.
+- There's intermittent caching issues. If associated solutions don't show up in the**Objects** view. To fix the issue, resave the plan and refresh the **Objects** view.
 
 ## Related information
 
