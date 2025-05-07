@@ -3,7 +3,7 @@ title: Planning - Prioritizing feature requests | Microsoft Docs
 description: Following a systematic approach to prioritizing feature requests for your Power Apps project will  help you prioritize the right features and explain your decisions.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

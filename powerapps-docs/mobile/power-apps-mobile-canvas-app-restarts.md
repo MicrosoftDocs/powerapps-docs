@@ -3,7 +3,7 @@ title: Prevent canvas app restarts in the Power Apps mobile app
 description: Learn how to prevent canvas app restarts on Power Apps mobile
 author: anuitz
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/11/2024
 ms.subservice: mobile
 ms.author: anuitz

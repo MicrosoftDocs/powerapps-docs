@@ -3,7 +3,7 @@ title: Planning - Defining the app project goals | Microsoft Docs
 description: Having a clear objective for what your Power Apps project team is trying to achieve is important so that your project team members share the same goals.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

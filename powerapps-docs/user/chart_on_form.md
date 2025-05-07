@@ -4,7 +4,7 @@ description: View charts on form page or in a row
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 9/14/2020
 ms.subservice: end-user
 ms.author: smurkute

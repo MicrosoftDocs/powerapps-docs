@@ -4,7 +4,7 @@ description: How to use charts in Power Apps.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 01/16/2025
 ms.subservice: end-user
 ms.author: smurkute

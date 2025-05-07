@@ -5,7 +5,7 @@ author: sriharibs-msft
 ms.author: srihas
 ms.date: 08/23/2024
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

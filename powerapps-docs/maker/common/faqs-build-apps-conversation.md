@@ -4,7 +4,7 @@ description: FAQ that discusses building apps through conversation and the key c
 ms.date: 9/24/2024
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: franklanmsft
 ms.author: franklan
 ms.reviewer: mduelae

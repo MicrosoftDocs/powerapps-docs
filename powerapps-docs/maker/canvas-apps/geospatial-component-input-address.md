@@ -2,7 +2,7 @@
 title: Enter and resolve addresses in maps
 description: Use the address input control in Power Apps to quickly and easily enter accurate addresses.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022

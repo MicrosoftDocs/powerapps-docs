@@ -7,7 +7,7 @@ ms.reviewer: "matp"
 ms.subservice: mda-maker
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: troubleshooting-general
 author: "aorth"
 ms.author: "aorth"
 tags: 

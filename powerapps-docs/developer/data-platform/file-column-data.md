@@ -3,7 +3,7 @@ title: "Use file column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in file columns."
 ms.date: 03/29/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

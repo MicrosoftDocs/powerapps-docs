@@ -2,7 +2,7 @@
 title: Share a canvas app with guest users
 description: Learn about how to share canvas app with guest users.
 author: alaug
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 8/22/2023

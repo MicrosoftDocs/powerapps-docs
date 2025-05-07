@@ -3,7 +3,7 @@ title: "Use change tracking to synchronize data with external systems (Microsoft
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized."
 ms.date: 06/23/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: paulliew
 ms.subservice: dataverse-developer
 ms.author: paulliew 

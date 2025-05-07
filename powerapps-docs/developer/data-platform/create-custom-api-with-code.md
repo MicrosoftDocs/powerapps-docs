@@ -4,7 +4,7 @@ description: "You can write code create custom APis." # 115-145 characters inclu
 author: MicroSri
 ms.author: sriknair
 ms.date: 09/27/2022
-ms.topic: article
+ms.topic: how-to
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 

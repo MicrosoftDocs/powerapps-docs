@@ -3,7 +3,7 @@ title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 05/06/2025
 ms.subservice: end-user
 ms.author: smurkute
