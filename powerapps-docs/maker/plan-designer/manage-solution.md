@@ -20,11 +20,11 @@ ms.custom:
 
 Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices by using Power Platform solutions. By packaging all plan components into a single solution artifact, makers use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions.
 
-When you create a plan, it is stored in a solution, which enables the Objects view in Plan designer. This lets makers switch between the plan and the solution view without leaving Plan designer.
+When you create a plan, it is stored in a solution, which enables the **Objects** view in Plan designer. This lets makers switch between the plan and the solution view without leaving Plan designer.
 
 A plan might be associated with multiple solutions. For example, if you add an existing Dataverse table to the plan's data model, the solutions linked to the Dataverse table also link to the plan.
 
-The solutions associated with the plan display as tabs across the top of the **Objects** view. Select a tab to view the objects in the solution. If there are more than five solutions, an overflow menu displays the remaining solutions. All solution objects are displayed, not just those included in the plan.
+The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view the objects in the solution. If there is more than five solutions, an overflow menu displays the remaining solutions. All solution objects are displayed, not just those included in the plan.
 
 :::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer that shows objects in a solution.":::
 
