@@ -3,7 +3,7 @@ title: Share Excel files used by an app
 description: Learn about sharing Excel files in Dropbox, OneDrive, and Google Drive.
 author: jamesol-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/16/2016
