@@ -12,7 +12,7 @@ ms.subservice: mda-maker
 ms.author: matp
 ms.date: 06/27/2018
 
-ms.topic: conceptual
+ms.topic: article
 search.audienceType: 
   - maker
 ---

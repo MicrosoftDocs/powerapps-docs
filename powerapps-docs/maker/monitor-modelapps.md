@@ -3,7 +3,7 @@ title: Debug a model-driven app with Live monitor
 description: Learn how to diagnose model-driven app issues using Live monitor
 author: mattp123
 ms.subservice: troubleshoot
-ms.topic: article
+ms.topic: how-to
 ms.custom: 
 ms.reviewer: Mattp123
 ms.date: 08/16/2023

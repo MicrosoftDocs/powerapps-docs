@@ -2,7 +2,7 @@
 title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
 author: Mattp123
-ms.topic: conceptual
+ms.topic: article
 ms.collection: get-started
 ms.date: 05/28/2025
 ms.subservice: teams
