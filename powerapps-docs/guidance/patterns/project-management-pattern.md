@@ -3,7 +3,7 @@ title: "Power Apps pattern: Project management | Microsoft Docs"
 description: Learn how project management apps help you manage projects to ensure teams achieve their goals and meet success criteria as planned.
 author: Vasavib
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 1/4/2021
 ms.subservice: guidance
