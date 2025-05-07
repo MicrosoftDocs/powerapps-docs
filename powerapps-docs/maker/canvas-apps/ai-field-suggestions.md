@@ -4,7 +4,7 @@ description: Learn how to use field suggestions by Copilot, an AI feature in Mic
 author: norliu
 ms.author: norliu
 ms.date: 4/16/2025
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.collection:

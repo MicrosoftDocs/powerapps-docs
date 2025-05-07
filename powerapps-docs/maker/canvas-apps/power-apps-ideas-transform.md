@@ -3,7 +3,7 @@ title: "Transform natural language to Power Fx formulas"
 description: Learn how to use Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 10/04/2022
 ms.subservice: canvas-maker
