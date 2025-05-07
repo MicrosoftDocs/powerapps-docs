@@ -110,7 +110,7 @@ The **Data Agent** suggests tables that store your business data.
 
 ## Generate technology proposal
 
-The **Solution Agent**  analyzes the paln and proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. 
+The **Solution Agent**  analyzes the plan and proposes technologies tailored to solve your business problem. In this scenario, a canvas apps, a model-driven app, and a Power Automate flow are created. 
 
 :::image type="content" source="media/create-a-plan/technology-proposed.png" alt-text="Screenshot of the Plan designer that displays proposed technologies for the solution." lightbox="media/create-a-plan/technology-proposed.png":::
 
