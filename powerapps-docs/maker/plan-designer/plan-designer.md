@@ -43,3 +43,6 @@ Enable the Plan Designer preview features by checking the **Enable new preview f
 Preview Copilot features are enabled by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
 
 
+## Next steps
+
+[Create a plan using Plan designer](create-plan.md)

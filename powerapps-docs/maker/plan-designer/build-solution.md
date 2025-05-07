@@ -64,3 +64,6 @@ When new apps are proposed, you can replace them with existing apps. On the app 
 :::image type="content" source="media/build-your-solution/replace-app.png" alt-text="Screenshot of the Replace existing app option.":::
 
 
+## Next steps
+
+[Manage your solution](manage-solution.md)

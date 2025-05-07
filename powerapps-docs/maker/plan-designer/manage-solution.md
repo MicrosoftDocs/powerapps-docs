@@ -46,3 +46,7 @@ When you uncheck **Only show objects in this plan**, it shows the complete conte
 - Some existing canvas apps added to the plan might not filter properly with the **Only show objects in this plan** filter. This issue sometimes affects canvas apps that aren't part of Dataverse.
 - There is intermittent caching issues. If associated solutions don't show up in the**Objects** view. To fix the issue, resave the plan and refresh the **Objects** view.
 
+## Related information
+
+- [Create a plan using Plan designer](create-plan.md)
+- [Create a plan from a solution](create-plan-from-solution.md)
