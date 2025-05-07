@@ -4,7 +4,7 @@ description: "Use custom process actions when you want to automate a series of c
 ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: "matp"
-ms.topic: "conceptual"
+ms.topic: article
 author: "Mattp123"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 ms.subservice: dataverse-maker
