@@ -3,7 +3,7 @@ title: Understand New, Preview, Experimental, and Retired features in canvas app
 description: Learn about New, Preview, Experimental, and Retired features.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 04/29/2025
