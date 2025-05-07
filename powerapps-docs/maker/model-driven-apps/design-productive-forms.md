@@ -7,7 +7,7 @@ ms.reviewer: "Mattp123"
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "PowerApps"
 author: "mspilde"
