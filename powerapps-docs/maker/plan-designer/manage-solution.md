@@ -18,7 +18,7 @@ ms.custom:
 
 # Manage your solution
 
-Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices from the start, using Microsoft Power Platform solutions. By packaging all plan components into a single solution artifact, makers can use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions.
+Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices from the start, using Power Platform solutions. By packaging all plan components into a single solution artifact, makers can use advanced ALM capabilities to deploy their artifacts to target environments through managed solutions
 
 When you create a plan, it is stored within a solution. This also enables the **Objects** view in Plan designer, letting makers switch between their plan and the solution view without leaving the designer.
 
