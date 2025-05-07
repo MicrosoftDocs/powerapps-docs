@@ -41,4 +41,4 @@ Use Plan Designer to create a plan for your existing solution. Plan Designer gen
 
 ## Related information
 
-[Create a plan using Plan designer](create-plan.md).
+[Create a plan using Plan designer](create-plan.md)
