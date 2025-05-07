@@ -125,11 +125,11 @@ Select **Looks good** to accept the proposed technologies. Or, select **Edit** t
 
 The Plan designer suggests items from the following list of technologies:
 
-1. Apps like [canvas apps](../canvas-apps/getting-started.md) or [model-driven apps](../model-driven-apps/model-driven-app-overview.md)
-1. [Power Pages](/power-pages/introduction) websites
-1. [Power Automate](/power-automate/flow-types) flows  
-1. [Power BI Report](/power-bi/report-server/get-started)  
-1. [Copilot Studio Agents](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder)
+- Apps like [canvas apps](../canvas-apps/getting-started.md) or [model-driven apps](../model-driven-apps/model-driven-app-overview.md)
+- [Power Pages](/power-pages/introduction) websites
+- [Power Automate](/power-automate/flow-types) flows  
+- [Power BI Report](/power-bi/report-server/get-started)  
+- [Copilot Studio Agents](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder)
 
 
 ## Save tables
