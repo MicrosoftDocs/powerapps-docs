@@ -25,7 +25,7 @@ After saving your plan to the solution, create apps like canvas apps, model-driv
 
 1. Select **Create** to create the selected object.
 
-    :::image type="content" source="media/build-your-solution/create-app-tiles.png" alt-text="Screenshot of the Create button to create the object." lightbox="media/create-app-tiles/save-plan.png":::
+    :::image type="content" source="media/build-your-solution/create-app-tiles.png" alt-text="Screenshot of the Create button to create the object." lightbox="media/build-your-solution/create-app-tiles.png":::
 
 2. When you select **Create** on one of these tiles, here's what happens:
 
