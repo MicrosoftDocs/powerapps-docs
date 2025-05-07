@@ -4,7 +4,7 @@ description: FAQ that discusses generating app descriptions with Copilot and the
 ms.date: 10/26/2023
 ms.custom: 
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: amchern 
 ms.author: amchern
 ms.collection: 
