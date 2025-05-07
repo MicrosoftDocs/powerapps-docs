@@ -3,7 +3,7 @@ title: Use the Plan designer to create a business solution with Copilot (preview
 description: Use the Plan designer to create business solutions with AI-powered experiences.
 author: mduelae
 contributors:
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 4/28/2025
 ms.author: szlo
 ms.reviewer: mkaur
