@@ -54,34 +54,36 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
 1. Review the user roles and needs, then choose one of the following options:
 
-   - Select **Looks good** to generate a data model.
+   - Select **Looks good** to move to the next step and generate a data model.
    - Select **Edit** to make edits inline or add new user roles or needs.
 
     :::image type="content" source="media/create-a-plan/requirements-generated.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
 
-    Inline editing offers these options:
+    **Making edits**  
 
-    :::image type="content" source="media/create-a-plan/inline-edit-requirements.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
+    1. Inline editing offers these options:
 
-    Legend:
+        :::image type="content" source="media/create-a-plan/inline-edit-requirements.png" alt-text="Screenshot of inline editing options for user roles and needs in the Plan designer.":::
 
-    1. Select a user role to edit it.  
-    1. Add a new user role or delete the selected role.  
-    1. Add a new user need.  
-    1. Add a new user need above or below the selected user need, or delete the selected user need.  
-    1. Add a new user role.
+        Legend:
 
-   Alternatively, edit using **Copilot** to provide feedback on the generated user needs.
+         1. Select a user role to edit it.  
+         1. Add a new user role or delete the selected role.  
+        1. Add a new user need.  
+        1. Add a new user need above or below the selected user need, or delete the selected user need.  
+        1. Add a new user role.
 
-    :::image type="content" source="media/create-a-plan/inline-edit-copolit.png" alt-text="Screenshot of Copilot that gives feedback on user needs in the Plan designer.":::
+    1. Alternatively, edit using **Copilot** to provide feedback on the generated user needs.
 
-    To make changes, provide a brief description of what you want to modify. Here are examples of what to ask Copilot to do:
+        :::image type="content" source="media/create-a-plan/inline-edit-copolit.png" alt-text="Screenshot of Copilot that gives feedback on user needs in the Plan designer.":::
 
-    - Add a user role for HR admin to monitor PTO across teams to manage payroll.
-    - Add a user story for employees to view PTO blackout dates.
-    - Remove the user story for managers for viewing vacation history of team members.
+        To make changes, provide a brief description of what you want to modify. Here are examples of what to ask Copilot to do:
 
-   Select **Keep** or **Review** to review your edits.
+        - Add a user role for HR admin to monitor PTO across teams to manage payroll.
+        - Add a user story for employees to view PTO blackout dates.
+        - Remove the user story for managers for viewing vacation history of team members.
+
+       Select **Keep** or **Review** to review your edits.
 
 1. When you're done, select **Looks good** to move to the next step and generate data tables.
 
