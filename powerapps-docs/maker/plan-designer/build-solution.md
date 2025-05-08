@@ -59,7 +59,7 @@ After you save a plan in a solution, you can create apps like canvas apps, model
 
 When Plan designer proposes apps, you can replace them with existing apps in your plan. This saves time, reduces redundancy, and keeps your solutions consistent.
 
-When new apps are proposed, you can replace them with existing apps. On the app tile, select **Replace**, and choose an existing app.
+On the app tile, select **Replace**, and choose an existing app.
 
 :::image type="content" source="media/build-your-solution/replace-app.png" alt-text="Screenshot of the Replace option on an app tile.":::
 
