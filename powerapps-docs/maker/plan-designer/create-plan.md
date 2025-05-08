@@ -48,7 +48,7 @@ As the plan builds, you can review and edit the outputs the agents generate.
 
 ## Generate user requirements
 
-When Plan designer starts the **Requirements Agent** identifies user needs based on your description.
+When Plan designer starts you'll see the **Requirements Agent** identify user needs based on your description.
 
 In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user needs. The user roles and needs appear in a bullet list on the left side, while a visual diagram is on the right side.
 
