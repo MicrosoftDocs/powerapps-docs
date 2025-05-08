@@ -38,7 +38,7 @@ Copilot opens the Plan designer and analyzes the business scenario based on your
 
 Within the Plan designer, view the presence status of other collaborators, including plan agents. The agents are AI assistants that analyze your business problem and help generate a plan. 
 
-- The **Requirement Agent** examines the business problem and uses AI to generate user requirements. This is the first step in the paln.
+- The **Requirement Agent** examines the business problem and uses AI to generate user requirements. This is the first step in the plan.
 - The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
 - The **Solution Agent** evaluates the needs, processes, and data to create a solution that includes technologies such as apps, flows, and AI agents to addresses your business problem.
 
@@ -48,7 +48,7 @@ As the plan builds, you can review and edit the outputs the agents generate.
 
 ## Generate user requirements
 
-When Plan desigher starts the **Requirements Agent** identifies user needs based on your description.
+When Plan designer starts the **Requirements Agent** identifies user needs based on your description.
 
 In this scenario, two roles are generated: employee and manager. Each role includes descriptions and user needs. The user roles and needs appear in a bullet list on the left side, while a visual diagram is on the right side.
 
