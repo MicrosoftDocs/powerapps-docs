@@ -91,7 +91,7 @@ In this scenario, two roles are generated: the employee and the manager. Each ro
 
 ## Generate data model
 
-Next, **Data Agent** suggests tables that store your business data.
+Next, the **Data Agent** suggests tables that store your business data.
 
 1. Suggested data tables appear in the **Data model** section of the plan.
 
