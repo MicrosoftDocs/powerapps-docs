@@ -31,9 +31,9 @@ After you save a plan in a solution, you can create apps like canvas apps, model
 
     - **Canvas app**: Opens Power Apps Studio with a data-connected app that starts for you. The app includes responsive screens to view and edit data for each recommended table and a welcome screen to navigate the app. Learn more about customizing screens in the [Add and navigate screens](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen). Before using the app, [save and publish it](../canvas-apps/save-publish-app.md). 
 
-    - **Model-driven app**: Opens the modern app designer with data tables already added. Save and publish the model-driven app to start using it.
+    - **Model-driven app**: Opens the modern app designer with data tables already added. Before using the app save and publish it.
 
-    - **Power Automate flow**: Opens Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. Save and publish the flow to use it.
+    - **Power Automate flow**: Opens Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
     
     - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, enhances productivity, and automates repetitive tasks. The plan designer includes agents as part of its recommended technologies. The agent created by the plan is prefilled with the following information:
 
@@ -57,7 +57,7 @@ After you save a plan in a solution, you can create apps like canvas apps, model
 
 ## Replace with an existing app
 
-When Plan designer proposes apps, you can replace them with existing apps in your plan. This saves time, reduces redundancy, and keeps your solutions consistent.
+When Plan designer proposes apps, you can replace them with existing apps in your plan. Using existing apps saves time, reduces redundancy, and keeps your solutions consistent.
 
 On the app tile, select **Replace**, and choose an existing app.
 
