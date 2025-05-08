@@ -30,7 +30,7 @@ Use Plan Designer to create a plan for your existing solution. Plan Designer gen
 
 1. Save the plan after it's created. For an unmanaged solution, the plan is saved in the same solution. For a managed solution, the plan is saved by default in a new unmanaged solution.
 
-    :::image type="content" source="media/create-a-plan-from-a-solution/save-existing-plan.png" alt-text="Screenshot of the save plan interface for unmanaged and managed solutions.":::
+    :::image type="content" source="media/create-a-plan-from-a-solution/save-existing-plan.png" alt-text="Screenshot of the saved plan interface for unmanaged and managed solutions.":::
 
 ## Known limitations
 
