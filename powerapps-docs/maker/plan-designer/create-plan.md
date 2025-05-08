@@ -18,13 +18,11 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the [Plan designer](plan-designer.md) to quickly create business solutions.
-
-Access the Plan designer from the Power Apps home page. It helps creating user roles, data tables, and suggested apps to address your business needs.
+Use the [Plan designer](plan-designer.md) to create user roles, data tables, and suggested apps to address your business needs.
 
 This article uses a sample scenario to show how the Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. Access the Plan designer from the Power Apps home page. Sign in to [Power Apps](https://make.powerapps.com/).
 
 1. Enter your prompt in the text box, such as the example prompt below. Add more context like process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
 
@@ -42,7 +40,7 @@ Within the Plan designer, view the presence status of other collaborators, inclu
 
 - The **Requirement Agent** examines the business problem and uses AI to generate user requirements.
 - The **Data Agent** suggests a set of tables for storing business information, complete with recommended columns, data types, and relationships.
-- The **Solution Agent** evaluates the needs, processes, and data to create a solution that addresses your business problem.
+- The **Solution Agent** evaluates the needs, processes, and data to create a solution that includes technologies such as apps, flows, and AI agents to addresses your business problem.
 
 As the plan builds, you can review and edit the outputs the agents generate.
 
