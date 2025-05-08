@@ -36,9 +36,9 @@ Confirm that this feature is available in your region. Learn more in [Explore Co
 
 Some features within Plan designer are in preview. To identify a preview feature, look for a **Preview** label in the user interface.
 
-Turn on preview features by checking the **Enable new preview features** option when you enter your problem.
+Turn on preview features by checking the **Include processs diagram (preview)** option when you enter your problem.
 
-:::image type="content" source="media/overview-plan-designer/pd-preview-features.png" alt-text="Enable preview feature for Plan designer":::
+:::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Enable preview feature for Plan designer":::
 
 Preview Copilot features are enabled by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
 
