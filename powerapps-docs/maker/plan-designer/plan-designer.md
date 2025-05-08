@@ -36,7 +36,7 @@ Confirm that this feature is available in your region. Learn more in [Explore Co
 
 Some features within Plan designer are in preview. To identify a preview feature, look for a **Preview** label in the user interface.
 
-Enable the Plan Designer preview features by checking the **Enable new preview features** option when you enter your problem.
+Turn on preview features by checking the **Enable new preview features** option when you enter your problem.
 
 :::image type="content" source="media/overview-plan-designer/pd-preview-features.png" alt-text="Enable preview feature for Plan designer":::
 
