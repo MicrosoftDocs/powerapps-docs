@@ -98,7 +98,7 @@ The **Data Agent** suggests tables that store your business data.
    - Select **Edit** and describe what you want to change or add using Copilot.
    - Select **Show details** to view the data in a diagram, and edit it.
     
-    :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of the **Show details** button to view or edit data." lightbox="media/create-a-plan/show-details.png"::: 
+     :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of the **Show details** button to view or edit data." lightbox="media/create-a-plan/show-details.png"::: 
    
 1. **Show details** opens the data workspace. Use the table visual designer to create tables, set up table relationships, and view a diagram of your data. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
