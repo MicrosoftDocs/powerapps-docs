@@ -57,7 +57,7 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
    - Select **Looks good** to move to the next step and generate a data model.
    - Select **Edit** to make edits inline or add new user roles or needs.
 
-    :::image type="content" source="media/create-a-plan/requirements-generated.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
+     :::image type="content" source="media/create-a-plan/requirements-generated.png" alt-text="Screenshot of the Plan designer that shows user roles and stories. Options to edit or add roles are visible.":::
 
     **Making edits**  
 
