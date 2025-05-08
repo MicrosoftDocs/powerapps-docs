@@ -20,11 +20,11 @@ ms.custom:
 
 Solutions built with Plan designer promote healthy application lifecycle management (ALM) practices by using Power Platform solutions. Use advanced ALM capabilities to deploy artifacts to target environments through managed solutions by packaging all components of a plan into a single solution artifact.
 
-When you create a plan, it's stored in a solution, which enables the **Objects** view in Plan designer. Makers can switch between the plan and the solution view without leaving Plan designer.
+When you create a plan, the plan is stored in a solution, which enables the **Objects** view in Plan designer. Makers can switch between the plan and the solution view without leaving Plan designer.
 
 A plan might be associated with multiple solutions. For example, adding an existing Dataverse table to the plan's data model links the solutions associated with the Dataverse table to the plan.
 
-The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there is more than five solutions, an overflow menu shows the remaining solutions. All solution objects display, not just those included in the plan.
+The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there are more than five solutions, an overflow menu shows the remaining solutions. All solution objects are displayed, not just the ones included in the plan.
 
 Learn more about solutions in [Solution view](/power-apps/maker/data-platform/solutions-area).
 
@@ -32,7 +32,7 @@ Learn more about solutions in [Solution view](/power-apps/maker/data-platform/so
 
 ## Show objects in this plan
 
-Each plan has a main solution, but other solutions are associated with the plan when you add existing tables or apps from them. These associated solutions might include many objects beyond those you add to the plan. 
+Each plan has a main solution, but other solutions are associated with the plan when you add existing tables or apps from them. These associated solutions might include many objects beyond the ones you add to the plan.
 
 To track which objects from the associated solutions are tied to the plan, select **Only show objects in this plan**. This option lets you view components explicitly designated as part of the plan. 
 
