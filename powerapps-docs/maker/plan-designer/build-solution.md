@@ -59,16 +59,16 @@ After saving a plan in a solution, create apps like canvas apps, model-driven ap
 
 When Plan designer proposes apps, you can add an existing app or replace a proposed app. This approach is helpful if you already have developed apps and want to use them in a new business solution. It saves time, reduces redundancy, and keeps your solutions consistent.
 
-To replace an app proposed in the plan, select **Replace** on the app tile you want to replace, and then select an app.
+- To replace an app proposed in the plan, select **Replace** on the app tile you want to replace, and then select an app.
 
-:::image type="content" source="media/build-your-solution/replace-app.png" alt-text="Screenshot of the Replace option on an app tile.":::
+    :::image type="content" source="media/build-your-solution/replace-app.png" alt-text="Screenshot of the Replace option on an app tile.":::
 
 
-To add an existing app that isn't related to the proposed scenarios, select **Add technology**, and then select an app.
+- To add an existing app that isn't related to the proposed scenarios, select **Add technology**, and then select an app.
 
-:::image type="content" source="media/build-your-solution/add-technology.png" alt-text="Screenshot showing how to add an existing app to the plan.":::
+    :::image type="content" source="media/build-your-solution/add-technology.png" alt-text="Screenshot showing how to add an existing app to the plan.":::
 
-Existing apps added to the plan aren't included in a new solution. Use the solution view to see all solutions related to the plan.
+    Existing apps added to the plan aren't included in a new solution. Use the solution view to see all solutions related to the plan.
 
 ## Next steps
 
