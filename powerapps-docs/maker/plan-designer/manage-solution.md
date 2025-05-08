@@ -24,7 +24,7 @@ When you create a plan, it's stored in a solution, which enables the **Objects**
 
 A plan might be associated with multiple solutions. For example, adding an existing Dataverse table to the plan's data model links the solutions associated with the Dataverse table to the plan.
 
-The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there are more than five solutions, an overflow menu shows the remaining solutions. All solution objects display, not just those included in the plan.
+The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there is more than five solutions, an overflow menu shows the remaining solutions. All solution objects display, not just those included in the plan.
 
 :::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer that shows objects in a solution.":::
 
