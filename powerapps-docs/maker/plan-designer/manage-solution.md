@@ -26,9 +26,9 @@ A plan might be associated with multiple solutions. For example, adding an exist
 
 The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there is more than five solutions, an overflow menu shows the remaining solutions. All solution objects display, not just those included in the plan.
 
-:::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer that shows objects in a solution.":::
-
 Learn more about solutions in [Solution view](/power-apps/maker/data-platform/solutions-area).
+
+:::image type="content" source="media/manage-solution/object-view.png" alt-text="Screenshot of the Objects view in Plan designer that shows objects in a solution.":::
 
 ## Show objects in this plan
 
