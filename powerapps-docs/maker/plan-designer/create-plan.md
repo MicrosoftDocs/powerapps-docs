@@ -91,11 +91,11 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
 ## Generate data model
 
-The **Data Agent** suggests tables that store your business data.
+Next the **Data Agent** suggests tables that store your business data.
 
-1. The suggested data tables appear in the **Data model** section of the plan
+1. The suggested data tables appear in the **Data model** section of the plan.
 
-   - Select **Edit** and describe what you want to change or add using Copilot.
+   - Select **Edit** and use Copilot to describe what you want to change or add.
    - Select **Show details** to view the data in a diagram, and edit it.
     
      :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of the **Show details** button to view or edit data." lightbox="media/create-a-plan/show-details.png"::: 
@@ -114,11 +114,11 @@ The **Solution Agent**  analyzes the plan and proposes technologies tailored to 
 
 :::image type="content" source="media/create-a-plan/technology-proposed.png" alt-text="Screenshot of the Plan designer that displays proposed technologies for the solution." lightbox="media/create-a-plan/technology-proposed.png":::
 
-To view details of the proposed technologies, point to the **information icon**. The pop-up info card displays the user roles and data tables.
+1. To view details of the proposed technologies, point to the **information icon**. The pop-up info card displays the user roles and data tables.
 
-:::image type="content" source="media/create-a-plan/more-info-about-apps.png" alt-text="Screenshot of the Plan designer that displays details of proposed technologies.":::
+    :::image type="content" source="media/create-a-plan/more-info-about-apps.png" alt-text="Screenshot of the Plan designer that displays details of proposed technologies.":::
 
-Select **Looks good** to accept the proposed technologies. Or, select **Edit** to use Copilot and describe what you want to change.
+2. Select **Looks good** to accept the proposed technologies. Or, select **Edit** to use Copilot and describe what you want to change.
 
 
 ### Proposed technologies
