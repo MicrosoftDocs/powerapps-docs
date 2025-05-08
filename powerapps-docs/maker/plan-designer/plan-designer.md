@@ -18,9 +18,9 @@ ms.custom:
 
 # Overview of Plan designer
 
-Plan designer is a copilot-first development tool that lets you create comprehensive business solutions quickly. It lets you describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. The Plan Designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
+Plan designer is a copilot-first development tool that lets you create comprehensive business solutions quickly. Simply describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
 
-:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan Designer landing page in Power Apps.":::
+:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan de landing page in Power Apps.":::
 
 ## Prerequisites
 
