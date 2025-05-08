@@ -67,11 +67,11 @@ In this scenario, two roles are generated: employee and manager. Each role inclu
 
         Legend:
 
-         1. Select a user role to edit it.  
-         1. Add a new user role or delete the selected role.  
-        1. Add a new user need.  
-        1. Add a new user need above or below the selected user need, or delete the selected user need.  
-        1. Add a new user role.
+        a. Select a user role to edit it.  
+        b. Add a new user role or delete the selected role.  
+        c. Add a new user need.  
+        d. Add a new user need above or below the selected user need, or delete the selected user need.  
+        e. Add a new user role.
 
     1. Alternatively, edit using **Copilot** to provide feedback on the generated user needs.
 
