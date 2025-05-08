@@ -134,19 +134,18 @@ The Plan designer suggests items from the following list of technologies:
 
 ## Save tables
 
-Save the tables in your plan to create objects like apps, flows, and agents.
+To create objects such as apps, flows, and agents, save your plan.
 
 1. Select **Save tables**.
 
     :::image type="content" source="media/create-a-plan/save-tables.png" alt-text="Save tables to create objects":::
 
 1. Enter a Solution name.  
-1. Choose a publisher or select an existing solution that will contain the items generated from the plan.  
-1. Select **Save**.
+1. Choose a publisher or select an existing solution that will contain the items generated from the plan and then select **Save**.
 
     :::image type="content" source="media/create-a-plan/save-plan.png" alt-text="Screenshot of the 'Save your plan' screen that shows the solution name and publisher options.":::
 
-    The plan is stored in a solution. This action enables the **Objects** view in the Plan designer, letting makers switch between their plan and the solution view without leaving the Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
+    The plan is stored in a solution. This action enables the **Objects** view in the Plan designer, letting you switch between the plan and the solution view without leaving the Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
 1. You're now ready to [build your solutions](build-solution.md).
 
@@ -154,7 +153,7 @@ Save the tables in your plan to create objects like apps, flows, and agents.
 
 ## View and edit plans
 
-When the Plan designer is turned on, you see the **Plans** menu in the left navigation pane. Use this menu to access and edit your plans as needed.
+Use **Plans** menu in the left navigation pane to access and edit your plans.
 
 :::image type="content" source="media/create-a-plan/edit-plans.png" alt-text="Screenshot of the Plans menu in the left navigation pane. Options include creating, viewing, and editing plans.":::
 
