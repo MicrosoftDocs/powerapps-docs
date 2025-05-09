@@ -501,7 +501,7 @@ To resolve this issue, make sure the [format of the column is set to **Rich text
 
 ### I’ve exceeded the character limit but there are fewer characters than the limit. Why?
 
-The database stores the entire HTML formatting, not just the characters, which takes up additional space.
+The database stores the entire HTML formatting, not just the characters, which takes up extra space.
 
 ### Related information
 
