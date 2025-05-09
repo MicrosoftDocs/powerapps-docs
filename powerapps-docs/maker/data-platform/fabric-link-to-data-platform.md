@@ -45,7 +45,7 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](fabric-troubleshoot.md)
 >
-> When the initial sync is complete, system continuosly refreshes updates in Dataverse in the lakehouse. It might take upto 60 minutes for the data to be refreshed especially during peak load periods.
+> When the initial sync is complete, system continuosly refreshes updates in Dataverse in the lakehouse. It might take upto 60 minutes for the data to be refreshed especially during peak load periods. We are working on improving refresh times.
 >   
 > In case you have more than 2,000 active Dataverse tables, Link to Fabric mail fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
 > 
