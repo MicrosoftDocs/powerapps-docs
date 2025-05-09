@@ -3,7 +3,7 @@ title: Use file data with Attachment and Note records
 description: Learn how to work with file data in the Attachments and Notes tables in Microsoft Dataverse
 ms.date: 02/02/2023
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

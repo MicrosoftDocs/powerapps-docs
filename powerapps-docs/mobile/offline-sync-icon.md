@@ -5,7 +5,7 @@ ms.date: 09/13/2024
 ms.author: trdehove
 author: trdehove
 ms.reviewer: smurkute
-ms.topic: conceptual
+ms.topic: article
 ms.service: powerapps
 ms.custom: bap-template
 applies_to: Dynamics 365 apps

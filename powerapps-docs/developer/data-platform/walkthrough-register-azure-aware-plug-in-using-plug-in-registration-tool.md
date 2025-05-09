@@ -5,7 +5,7 @@ ms.date: 04/03/2022
 author: marcelbf
 ms.author: marcelbf
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: tutorial
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

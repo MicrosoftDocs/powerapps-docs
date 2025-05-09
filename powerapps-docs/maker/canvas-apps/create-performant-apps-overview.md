@@ -3,7 +3,7 @@ title: Overview on how to create performant Power Apps
 description: Learn about how to create well performing Power Apps.
 author: lancedMicrosoft
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 02/26/2025
 ms.author: lanced
 ms.reviewer: mkaur

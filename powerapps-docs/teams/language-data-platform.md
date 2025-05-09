@@ -3,7 +3,7 @@ title: Dataverse for Teams environment language | Microsoft Docs
 description: Dataverse for Teams environment language.
 author: NHelgren
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams

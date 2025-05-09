@@ -2,7 +2,7 @@
 title: Visualize data in a view with Copilot (preview)
 description: Learn how to visualize your data in a view using Copilot in Power Apps.
 ms.date: 01/24/2025
-ms.topic: article
+ms.topic: how-to
 ms.subservice: end-user
 author: sriharibs-msft
 ms.author: srihas

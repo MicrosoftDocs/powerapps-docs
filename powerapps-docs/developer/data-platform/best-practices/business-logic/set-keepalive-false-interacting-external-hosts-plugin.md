@@ -5,7 +5,7 @@ suite: powerapps
 author: jowells
 ms.author: jowells
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 ms.date: 8/21/2019
 ms.subservice: dataverse-developer
 search.audienceType: 

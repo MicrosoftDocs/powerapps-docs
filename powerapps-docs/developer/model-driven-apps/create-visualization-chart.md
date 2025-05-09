@@ -5,7 +5,7 @@ author: jasongre
 ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 9dbed5ee-21a4-ab86-fc4c-08c3838e42f2
 ms.subservice: mda-developer
 search.audienceType:

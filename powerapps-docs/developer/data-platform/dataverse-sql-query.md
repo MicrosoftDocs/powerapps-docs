@@ -3,7 +3,7 @@ title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent a
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/06/2024
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: how-to
 author: "pnghub" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "gned" # MSFT alias of Microsoft employees only

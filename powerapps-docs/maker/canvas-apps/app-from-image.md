@@ -2,7 +2,7 @@
 title: Create a canvas app from an image 
 description: Learn about how to use your own designs saved in image formats and create canvas apps from them.
 author: norliu
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 03/13/2025
 ms.subservice: canvas-maker

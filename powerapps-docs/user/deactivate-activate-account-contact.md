@@ -4,7 +4,7 @@ description: How to deactivate and activate an account or contact
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 12/10/2024
 ms.subservice: end-user
 ms.author: smurkute

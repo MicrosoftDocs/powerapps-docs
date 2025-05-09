@@ -5,7 +5,7 @@ author: jasonHQX
 contributors: mgreen
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/18/2024
 ms.subservice: end-user
 ms.author: jasonhuang

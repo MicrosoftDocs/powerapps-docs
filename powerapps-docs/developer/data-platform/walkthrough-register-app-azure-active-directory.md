@@ -3,7 +3,7 @@ title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) 
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
 ms.date: 02/24/2025
-ms.topic: article
+ms.topic: tutorial
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer

@@ -3,7 +3,7 @@ title: Planning a Power Apps project - Measuring success | Microsoft Docs
 description: As part of planning a Power Apps project, identify SMART measures to track progress against realizing the business value you think is achievable for your app.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

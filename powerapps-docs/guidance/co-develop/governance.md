@@ -2,7 +2,7 @@
 title: "Co-development governance | Microsoft Docs"
 description: "Learn how to establish an effective co-development governance framework to ensure consistency and repeatability in maker-defined projects and fusion teams."
 author: luis-camino-ms
-ms.topic: article
+ms.topic: best-practice
 ms.custom: Focus-center
 ms.date: 09/06/2022
 ms.subservice: guidance
