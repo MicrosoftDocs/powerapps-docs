@@ -1,9 +1,9 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/25/2025
+ms.date: 05/09/2025
 ms.topic: how-to
-ms.author: msomara
+ms.author: saperlmu
 author: Mattp123
 ms.reviewer: matp
 ms.subservice: mda-maker
@@ -48,11 +48,11 @@ The modern rich text editor is enabled by default, but if you're using the class
 When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
 
 > [!Important]
-> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version if you have installed. Otherwise, your templates might not display correctly.
+> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
 
 Notes:
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- The following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
+- The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
  
 Knowledge management: 
 - A preview tab isn't currently available.
@@ -133,7 +133,7 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 "propertyName": "value",
 }
 ```
-The last *propertyName:value* pair doesn't end with a comma.
+   The last *propertyName:value* pair doesn't end with a comma.
 
 3. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
 
@@ -311,30 +311,11 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 "enterMode": 2,
 ```
 
-### Paste or create plain text only
-
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
-
-```json
-"enterMode": 2,
-"shiftEnterMode": 2,
-"forcePasteAsPlainText": true,
-"toolbar": [],
-"removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools",
-```
-
-Set this [individual property](#individual-properties) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
-
-```json
-"disableImages": true,
-```
-
 ### Allow the editor to use the full screen
 
 Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
-"showAsTabControl": true,
 "showFullScreenExpander": true,
 ```
 
@@ -398,7 +379,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ```json
 "autoGrow_onStartup": false,
-"autoGrow_maxHeight": 0,
+"autoGrow_maxHeight": 8000,
 "autoGrow_minHeight": 30,
 "height": 30,
 ```
@@ -425,27 +406,6 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 ```json
 "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools",
 ```
-
-## Find the configuration of a rich text editor control
-
-If you're not sure where the configuration of an instance of the rich text editor is coming from, you can find it using your browser's developer tools.
-
-1. In Microsoft Edge or Google Chrome, run your model-driven app and open a form that has the rich text editor control.
-1. Right-click the rich text editor content area and select **Inspect**.
-1. In the inspection pane, select the **Console** tab.
-1. Select the parent **Main.aspx** page in the list box on the command bar.
-
-  :::image type="content" source="media/cke-select-parent-main.png" alt-text="Screenshot of the browser developer tools, with the Console tab and main.aspx page highlighted.":::
-
-1. Select the **Clear console** icon on the inspection pane command bar, and then enter **CKEDITOR.config.** in the console.
-
-  :::image type="content" source="media/cke-clear-console.png" alt-text="Screenshot of the browser developer tools, with the Clear console icon highlighted.":::
-
-1. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
-
-  :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations.":::
-
-1. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
 
 ## The rich text editor toolbar
 
@@ -528,15 +488,19 @@ If the image file name, including the path, is long, the file might fail to uplo
 
 If the rich text editor control is used in a column that isn't formatted for rich text, the content appears in the underlying HTML instead of as formatted text.
 
+### What's the size limit of HTML content?
+
+For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you might notice slower response times for loading and editing.
+
 :::image type="content" source="./media/html-markup-issue.png" alt-text="Screenshot of HTML appearing in the editor content area.":::
 
-To resolve this issue, see make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
+To resolve this issue, make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
 
 ### I’ve exceeded the character limit but there are fewer characters than the limit. Why?
 
 The database stores the entire HTML formatting, not just the characters, which takes up additional space.
 
-### See also
+### Related information
 
 - [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
 - [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
