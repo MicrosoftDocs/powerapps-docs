@@ -28,16 +28,6 @@ Low-code makers can build apps and automations to orchestrate business processes
 Watch this video to learn about accessing Dataverse data in Fabric:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=ddd288c6-e47a-4bc6-974b-4fe0f1a49362]
 
-## Prerequisites
-
-- A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1."
-- If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
-
-- Your administrator can grant you access to create Fabric lakehouses and artifacts. You can find these settings in the  Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
-- You must have the system administrator security role in the Dataverse environment.
-- You must be an administrator of the Power BI workspace. You also need to be a Power BI capacity administrator to a capacity within the same geographic location as the Dataverse environment.
-- To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
-   :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
 ## Link to Fabric from Power Apps
 
