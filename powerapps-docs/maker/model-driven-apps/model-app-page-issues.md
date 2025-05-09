@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 04/16/2025
 ms.reviewer: ""
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: troubleshooting-known-issue
 author: "adrianorth"
 ms.author: "aorth"
 search.audienceType: 

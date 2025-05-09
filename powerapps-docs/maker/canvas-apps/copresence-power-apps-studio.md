@@ -4,7 +4,7 @@ description: Learn how to use copresence and coauthoring to view who's working o
 author: mkaur
 ms.author: szlo
 ms.date: 10/29/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 search.audienceType: 

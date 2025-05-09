@@ -6,6 +6,7 @@ ms.author: matp
 ms.topic: how-to
 ms.date: 1/14/2025
 ms.custom: template-how-to
+ms.subservice: dataverse-maker
 ---
 # View solution deployments on the deployment page (preview)
 

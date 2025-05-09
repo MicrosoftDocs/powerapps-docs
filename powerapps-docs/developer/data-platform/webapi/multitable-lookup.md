@@ -3,7 +3,7 @@ title: "Use multi-table lookup columns"
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables."
 ms.date: 07/07/2021
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 search.audienceType: 

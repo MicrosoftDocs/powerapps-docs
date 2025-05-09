@@ -2,7 +2,7 @@
 title: Enable a custom Copilot to a canvas app
 description: "Add a custom Copilot created in Microsoft Copilot Studio and enabled it for your canvas app."
 author: mduelae
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 4/10/2025

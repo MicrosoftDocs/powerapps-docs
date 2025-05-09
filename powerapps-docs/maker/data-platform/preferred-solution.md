@@ -2,7 +2,7 @@
 title: "Set a preferred solution | MicrosoftDocs"
 description: "Set your preferred solution in Power Apps."
 ms.date: 04/09/2025
-ms.topic: conceptual
+ms.topic: how-to
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp

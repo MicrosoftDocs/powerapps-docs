@@ -4,7 +4,7 @@ description: Learn how to create a connection reference.
 ms.custom: ""
 ms.date: 04/23/2024
 ms.reviewer: angieandrews
-ms.topic: conceptual
+ms.topic: how-to
 author: ChrisGarty
 contributors:
   - ChrisGarty

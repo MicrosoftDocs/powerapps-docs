@@ -4,7 +4,7 @@ description: How to filter rows by using facets.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 2/8/2021
 ms.subservice: end-user
 ms.author: smurkute

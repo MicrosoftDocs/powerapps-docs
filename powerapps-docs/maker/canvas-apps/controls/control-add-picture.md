@@ -105,7 +105,7 @@ The picture control has these limitations:
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**UseMobileCamera** – Whether to use a mobile camera directly, when available. For Android devices, this property requires the experimental setting **Improved Media Capture** turned on.
+**UseMobileCamera** – Whether to use a mobile camera directly, when available. Setting this to **TRUE** forces users to take a picture using the camera and disables uploading existing images from the device gallery.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 

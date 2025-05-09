@@ -3,8 +3,8 @@ title: Use the Plan designer to create a business solution with Copilot (preview
 description: Use the Plan designer to create business solutions with AI-powered experiences.
 author: mduelae
 contributors:
-ms.topic: conceptual
-ms.date: 4/16/2025
+ms.topic: how-to
+ms.date: 4/28/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -70,7 +70,7 @@ Review and correct the outputs created by the agent.
 :::image type="content" source="media/pd-5-plan-agents.png" alt-text="Plan agents analyze your plan":::
 
 
-### Generate user needs
+### Generate user requirments
 
 The Requirements Agent identifies user needs based on your description.
 
@@ -79,7 +79,7 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 1. Review the user roles and stories. Then, choose one of the following options:
 
-    - Select **Add these roles** to generate a data model.
+    - Select **Looks good** to generate a data model.
     - Select **Edit** to make edits inline or add new user roles or needs.
     
         :::image type="content" source="media/pd-6-generate-roles-stories.png" alt-text="Screenshot of the generated user roles and stories in the Plan designer." lightbox="media/pd-6-generate-roles-stories.png":::
@@ -112,27 +112,19 @@ In this scenario, two roles were generated: employee and manager. Each role come
 
 ### Generate data tables
 
-1. The proposed data tables appear in the **Data** section of the plan. Select **Show details** to view the data in a diagram.
+1. The proposed data tables appear in the **Data** section of the plan.
+    - Select **Edit** and describe what you'd like to change or add using Copilot.
+    - Select **Show details** to view the data in a diagram and make edits.
 
       :::image type="content" source="media/pd-8-show-detailed-data.png" alt-text="Screenshot of the proposed data tables in the Plan designer." lightbox="media/pd-8-show-detailed-data.png":::
 
-1. **Show details** opens the data workspace, where you can view the complete Entity Relationship Diagram (ERD) containing all the generated tables. These Dataverse tables come with predefined columns and sample data. To see the specific details of a table, select **View data**.
+1. **Show details** opens the data workspace. Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data. For more information, see [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md#create-new-tables).
 
       :::image type="content" source="media/pd-9-view-data.png" alt-text="Screenshot of the data workspace showing the ERD." lightbox="media/pd-9-view-data.png":::
 
-      :::image type="content" source="media/pd-10-view-data-2.png" alt-text="Screenshot of the data workspace with table details." lightbox="media/pd-10-view-data-2.png":::
+1. When you're done, select **Back**
 
-> [!IMPORTANT]
-> During preview, the data workspace experience is read-only. The following items aren't supported:
-> - Editing tables or columns
-> - Editing relationships between tables
-> - Adding existing tables
-
-### Edit tables
-
-1. To modify the proposed tables, go back to the Plan designer and select **Edit**.
-
-1. When you're ready to generate user experiences, select **Add these tables** to proceed.  
+1. When you're ready to generate user experiences, select **Looks good** to proceed.  
 
       :::image type="content" source="media/pd-11-save-tables.png" alt-text="Screenshot of the Plan designer with the option to save tables." lightbox="media/pd-11-save-tables.png":::
 
@@ -203,8 +195,6 @@ When the Plan designer is turned on, you see the **Plans** menu in the left navi
 
 ## Known limitations
 
-- **Edit tables in Data workspace**: Editing Dataverse tables in the Plan designer isn't supported.
-- **Add existing tables in Data workspace**: Adding existing tables to the data workspace in the Plan designer isn't supported.
 - **Supported user experiences**: The Plan designer generates canvas apps, model-driven apps, and suggested Power Automate flows.
 - **Generated Power Automate flows**: Power Automate flows created in the Plan designer take you to the Power Automate page but aren't generated automatically.
 - **Solution/ALM support**: Data and artifacts are saved to a new solution with the same name as the plan. The publisher defaults to your preferred publisher. Select the **Saved** icon in the top right corner to define the publisher.

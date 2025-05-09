@@ -2,8 +2,8 @@
 title: Have a conversation about your business data in a Teams app.
 description: Learn how to enable conversations about your business from within your Power Apps in Teams.
 author: joel-lindstrom
-
-ms.topic: conceptual
+ms.subservice: teams
+ms.topic: how-to
 ms.custom: 
 ms.date: 10/06/2021
 ms.author: saperlmu

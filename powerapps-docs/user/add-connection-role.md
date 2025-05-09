@@ -4,7 +4,7 @@ description: How to add a connection role linked to records
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 8/01/2019
 ms.subservice: end-user
 ms.author: smurkute

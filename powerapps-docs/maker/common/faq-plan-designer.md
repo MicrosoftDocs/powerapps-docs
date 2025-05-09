@@ -3,7 +3,7 @@ title: FAQ for the Plan designer
 description: FAQ that discusses the Power Apps the Plan designer and the key considerations for making use of this technology responsibly.
 author: norliu
 contributors: mduelae 
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 4/10/2025
 ms.author: norliu
 ms.reviewer: mkaur

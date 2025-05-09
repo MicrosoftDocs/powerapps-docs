@@ -2,7 +2,7 @@
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about how to use the wrap wizard to package canvas apps into a native mobile app package.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 02/04/2025
@@ -167,6 +167,9 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 1. The **View builds** option appears at the top header. Select it to view the build status and other options.
 
 :::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
+
+> [!NOTE]
+> To manually code sign an iOS app, unzip the IPA file created using a Mac device only.
 
 ## Test and distribute mobile app package
 

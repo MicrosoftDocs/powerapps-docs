@@ -3,7 +3,7 @@ title: Microsoft Dataverse and the improve data source experience
 description: Learn about upgrading native Microsoft Dataverse connector for improve data source experience.
 author: lancedMicrosoft
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/24/2024

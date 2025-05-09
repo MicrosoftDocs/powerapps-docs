@@ -3,7 +3,7 @@ title: Use an alternate key to reference a record
 description: Alternate keys can be used to create instances of Entity and EntityReference classes. This article discusses the usage patterns and possible exceptions that might be thrown when using alternate keys.
 ms.date: 05/30/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair

@@ -3,7 +3,7 @@ title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
 author: gandhamm
 
-ms.topic: conceptual
+ms.topic: article
 ms.date: 05/05/2023
 ms.subservice: end-user
 ms.author: mgandham

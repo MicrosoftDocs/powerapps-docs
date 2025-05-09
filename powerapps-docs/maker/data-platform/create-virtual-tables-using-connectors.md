@@ -3,9 +3,10 @@ title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | M
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
 ms.date: 02/07/2025
 ms.reviewer: matp
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
+ms.subservice: dataverse-maker
 search.audienceType: 
   - maker
 contributors: 

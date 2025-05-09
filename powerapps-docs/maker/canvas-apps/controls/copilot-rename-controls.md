@@ -2,7 +2,7 @@
 title: Rename controls with Copilot (preview)
 description: Rename controls in bulk for canvas apps with AI in Microsoft Power Apps.
 author: mamali-ms
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
   - bap-ai-copilot
   - get started

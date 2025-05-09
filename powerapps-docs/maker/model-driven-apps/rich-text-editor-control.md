@@ -157,12 +157,6 @@ If your business needs require you to customize the control everywhere, specify 
 
 ## Use Copilot to refine text in the editor
 
-> [!IMPORTANT]
->
->- This feature is for early-access users. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they didn't opt in for early access.  
->- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
-
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
 
 ## Rich text editor properties

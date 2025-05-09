@@ -3,7 +3,7 @@ title: "Work with column definitions (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes common operations on column definitions (attribute metadata)."
 ms.date: 12/12/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 search.audienceType: 

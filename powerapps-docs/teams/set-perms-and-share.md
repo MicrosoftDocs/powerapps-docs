@@ -3,7 +3,7 @@ title: Set permission and share your app using Power Apps in Teams | Microsoft D
 description: Learn how to share your apps and set table permissions using Power Apps in Teams.
 author: matthewbolanos
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 07/18/2022
 ms.subservice: teams

@@ -2,7 +2,7 @@
 title: Troubleshoot common errors when creating app from Figma
 description: Learn about common errors and resolutions when creating apps from a Figma design.
 author: mduelae
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/24/2022
