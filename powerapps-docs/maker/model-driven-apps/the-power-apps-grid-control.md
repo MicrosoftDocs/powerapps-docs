@@ -61,7 +61,7 @@ When you configure the Power Apps grid control for a table, all views for that t
 
 ## Configure the Power Apps grid control
 
-1.	Select the **Power Apps grid control** components. More infomation: [Configure components on a form](add-move-configure-or-delete-components-on-form#configure-components-on-a-form)
+1.	Select the **Power Apps grid control** components. More infomation: [Configure components on a form](add-move-configure-or-delete-components-on-form.md#configure-components-on-a-form)
 1.	There are several properties included with the control to let you tailor the grid experience for that table. To modify any of these properties, select **Edit** in the corresponding row, and then change the value using the dropdown list under **Bind to static options**. 
     - The **Enable editing** property determines whether the grid is read-only or editable. The default value is **No**. Select **Yes** to make the grid editable. Editable grids have subtle visual differences to read-only grids including boolean columns showing toggle switches and dropdown and date fields displaying chevrons and date picker icons on hover or focus.
     - The **Enable filtering** property determines if filtering options are available to users in the grid column header dropdowns. The default value is **Yes**.
