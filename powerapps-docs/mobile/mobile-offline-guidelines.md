@@ -141,8 +141,8 @@ The first sync can take time for organizations with large datasets, especially i
 1. Columns used in the app are automatically selected. For all other columns, optimize by selecting only those that are necessary. 
    
      > [!IMPORTANT]
-     > If you have custom JavaScript code in the app, ensure the columns used in the custom code are selected in the offline profile.
-     > If you add additional columns after optimizing the offline profile, go back and select that new column as **Required Column**, in the **Managed selected columns** pane.      
+     > - If you have custom JavaScript code in the app, ensure the columns used in the custom code are selected in the offline profile.
+     > - If you add additional columns after optimizing the offline profile, go back and select that new column as **Required Column**, in the **Managed selected columns** pane.      
 1. Select **Back**.
 1. Select **Save**.
 1. Select **Save + close**.
