@@ -29,9 +29,10 @@ The Power Apps grid control represents the next evolution of the classic Power A
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
 ## Add the Power Apps grid control using form designer
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Table** within the solution, and then select the **Forms** area. Open the **Main Form** that contains the subgrid for editing.
-1. In the form designer, select **Components** on the left navigation pane, expand **Grid**, and then select **Power Apps grid control**. **. If the component isn't listed, select the subgrid on the form canvas, expand **Components** on the right property pane, select **+ Component**, and then select **Power Apps grid control** from the **Add component** page.
+1. In the form designer, select **Components** on the left navigation pane, expand **Grid**, and then select **Power Apps grid control**. If the component isn't listed, select the subgrid on the form canvas, expand **Components** on the right property pane, select **+ Component**, and then select **Power Apps grid control** from the **Add component** page.
 1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
 1. Select **Done**.
 1. **Save and publish** the form to save and make it available to app users.
