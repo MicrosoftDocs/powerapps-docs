@@ -35,6 +35,8 @@ To add a Stream video in your canvas app, follow these steps to get the embed UR
 1. Copy the URL starting from **https://** to the **UniqueId=** including the Unique ID numbers.
 :::image type="content" source="media/sample-embed-code.png" alt-text="embed URL example":::
 
+> [!IMPORTANT] 
+> The Microsoft Stream control in Power Apps only supports URLs that follow the *.sharepoint.com pattern. If your SharePoint domain doesn't follow this pattern, the Stream control will show an invalid URL error.
 
 ## Add Stream control 
 
