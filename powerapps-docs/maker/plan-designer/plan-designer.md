@@ -13,7 +13,7 @@ ms.custom:
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - copilot-scenario-highlight
+  - copilot-scenario
 ---
 
 # Overview of Plan designer
@@ -26,7 +26,7 @@ Plan designer is a copilot-first development tool that lets you create comprehen
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, you will be routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 ## Availability
 
@@ -34,20 +34,23 @@ Confirm that this feature is available in your region. Learn more in [Explore Co
 
 ### Turn on preview features for Plan designer
 
-Some features within Plan designer are only available in preview. When enabling the preview experience for a Plan, the enire plan is generated using the preview experience which can entail multiple preview features at any given time.
+Some features within Plan designer are only available in preview. When you turn on the preview experience for a plan, the entire plan is generated using the preview experience, which might include multiple preview features at any time.
 
-Turn on preview features when creating your plan by checking the **Include preview features** option when you enter your business problem.
+To turn on preview features, select the **Include preview features** option when entering your business problem.
 
 :::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Enable preview feature for Plan designer":::
 
-If you havea already created a plan and wish to toggle between the preview and generally available experience, click the megaphone icon and turn preview off or on.  A plan can only be changed from preview to generally available after it has been saved.  To restart an unsaved plan without preview featues, return to the Power Apps homepage and generate a new plan.
+
+If you've already created a plan and want to switch between the preview and General Availability (GA) experience, select the **Preview feature** icon to turn preview features on or off for the plan. A plan can only be changed from preview to General Availability after it has been saved. To restart an unsaved plan without preview features, go back to the Power Apps homepage and create a new plan.
+
+:::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Turn off preview feature for Plan designer":::
 
 > [!CAUTION]
-> When switching the preview experience off or on, some content in the plan may be edited, regenerated, or removed.
+> When you switch the preview experience for Plan designer on or off, some content in the plan might be edited, regenerated, or removed.
 
 Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
 
 
-## Next steps
-
+## Next s
+ds
 [Create a plan using Plan designer](create-plan.md)
