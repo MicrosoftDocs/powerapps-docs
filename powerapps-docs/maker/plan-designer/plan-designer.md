@@ -20,13 +20,13 @@ ms.custom:
 
 Plan designer is a copilot-first development tool that lets you create comprehensive business solutions quickly. Simply describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. The Plan designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
 
-:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan de landing page in Power Apps.":::
+:::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan designer landing page in Power Apps.":::
 
 ## Prerequisites
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites, you will be routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 ## Availability
 
@@ -36,7 +36,7 @@ Confirm that this feature is available in your region. Learn more in [Explore Co
 
 Some features within Plan designer are only available in preview. When enabling the preview experience for a Plan, the enire plan is generated using the preview experience which can entail multiple preview features at any given time.
 
-Turn on preview features when creating your plan by checking the **Include preview features** option when you enter your problem.
+Turn on preview features when creating your plan by checking the **Include preview features** option when you enter your business problem.
 
 :::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Enable preview feature for Plan designer":::
 
