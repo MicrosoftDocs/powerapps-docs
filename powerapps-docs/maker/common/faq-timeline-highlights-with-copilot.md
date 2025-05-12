@@ -3,7 +3,7 @@ title: Responsible AI FAQ for Copilot in the timeline | MicrosoftDocs
 description: Learn about frequently asked questions for using Copilot in the timeline control within a model-driven app.
 author: lalexms
 ms.reviewer: matp
-ms.topic: conceptual
+ms.topic: faq
 ms.component: model
 ms.date: 10/29/2024
 ms.subservice: mda-maker

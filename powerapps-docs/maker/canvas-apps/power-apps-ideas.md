@@ -5,7 +5,7 @@ author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 2/13/2025
+ms.date: 3/20/2025
 ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: mkaur
@@ -53,7 +53,7 @@ If you want to see Ideas again, right-click on the control to see suggested Idea
 ## Next steps
 
 - [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
-- 
+
 ### See also
 
 [Formula reference](formula-reference.md)

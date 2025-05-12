@@ -30,7 +30,7 @@ Model-driven and canvas apps
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|0 or more|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

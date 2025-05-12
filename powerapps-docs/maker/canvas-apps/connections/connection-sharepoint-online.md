@@ -5,7 +5,7 @@ author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 3/1/2025
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType:
@@ -86,6 +86,67 @@ If you build a new app or have an existing app, you can connect to SharePoint th
    > :::image type="content" source="./media/connection-sharepoint-online/custom-list.png" alt-text="Screenshot that shows the box where you can add a list name.":::
 
    You see a confirmation banner that your data source was added to your app.
+
+   
+## Power Apps data type mappings
+
+|Power Apps      | SharePoint                                                                         |
+| -------------- | ---------------------------------------------------------------------------------- |
+| `Boolean`      | Yes/No (checkbox)                                                                  |
+| `DateTime`     | Date and Time                                                                      |
+| `Image`        | Hyperlink or Picture, Image                                                        |
+| `Complex`      | Choice, Lookup, Person, Group, Task Outcome, External Data, Managed Metadata       |
+| `Number`       | Number, Currency, ID                                                               |
+| `Text`         | Single line of text, Multiple lines of text, Calculated                            |
+
+> [!NOTE]
+  > SharePoint types that map to Power Apps as complex often have subfields that map to basic types such as text and number.
+
+## Power Apps delegable functions and operations for SharePoint
+
+The following Power Apps operations, for a given data type, may be delegated to SharePoint for processing (rather than processing locally within Power Apps).
+
+| Operation/Function [1]  | Number  | Text         | Boolean | DateTime    | Complex [2] |
+|-------------------------|---------|--------------|---------|-------------|-------------|
+| `<, <=,<>, >, >=`       | Yes [3] | No           | No      | Yes         | Yes         |
+| `=`                     | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `Filter`                | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `IsBlank`               | -       | No [4]       | -       | -           | No          |
+| `Lookup`                | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `Sort`                  | Yes     | Yes          | Yes     | Yes         | No          |
+| `SortByColumns`         | Yes     | Yes          | Yes     | Yes         | No          |
+| `StartsWith`            | -       | Yes          | -       | -           | Yes         |
+| `UpdateIf/RemoveIf` [5] | Yes     | No           | -       | -           | No          |
+
+### Notes
+
+1. Expressions that are joined with **And** or **Or** are delegable to SharePoint. **Not** won't delegate. SharePoint system fields don't generally delegate. These fields include:
+  * ​​​​​​Identifier
+  * IsFolder
+  * Thumbnail
+  * Link​
+  * Name
+  * FilenameWithExtension
+  * Path
+  * FullPath
+  * ModerationStatus
+  * ModerationComment
+  * ContentType
+  * IsCheckedOut
+  * VersionNumber
+  * TriggerWindowStartToken
+  * TriggerWindowEndToken
+
+2. SharePoint supports delegation of complex types by deferring the decision for delegation to the subfield involved. Check the type of the subfield being used on the complex type and then check this table for delegation capabilities.  Only Email and DisplayName are delegable in the Person data type.
+3. SharePoint ID fields are shown as a number field in Power Apps. However, the underlying type is actually Text. SharePoint only supports the equal ('=') operation for delegation on an ID field. Relational operations such as `<, <=,<>, >, >=` won't work on a SharePoint ID field.
+4. A formula such as Filter(..., IsBlank(CustomerId)) won't delegate to SharePoint. However, that formula is semantically close to Filter(..., CustomerId = Blank()), will delegate to SharePoint. These formulas aren't equivalent because the second formula won't treat the empty string ("") as empty. However, the second formula might work for your purposes. On SharePoint, this approach works for the 'equals' operator ("=") but not the operator for 'not equals' ("<>").
+5. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
+
+  
+
+
+
+
 
 ## Related information
 

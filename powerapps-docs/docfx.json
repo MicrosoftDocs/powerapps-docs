@@ -81,7 +81,8 @@
         ]
       },
       "ms.topic": {
-        "developer/**/*.md": "overview"
+        "developer/**/*.md": "overview",
+        "developer/data-platform/webapi/samples/*.md": "sample"
       },
       "ms.service": {
         "**.*": "powerapps"

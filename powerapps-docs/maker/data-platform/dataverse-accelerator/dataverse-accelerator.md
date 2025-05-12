@@ -6,8 +6,9 @@ ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/13/2024
+ms.date: 04/01/2025
 ms.custom: template-how-to
+ms.subservice: dataverse-maker
 contributors:
 - sriknair
 ---
@@ -15,9 +16,9 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Microsoft Dataverse accelerator is an application that provides access to select preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
+The Microsoft Dataverse accelerator is a model-driven application that provides access to select preview features and tooling related to Dataverse development. The featured set of capabilities include early prototype experiences that represent backlog features scheduled to be in the native platform and tools for enriching Dataverse development for makers, delivered in a convenient and accessible web application built with low-code.
 
-![Dataverse accelerator landing page with low-code plug-in and plug-in monitoring preview features](./media/home.svg)
+![Dataverse accelerator landing page with low-code plug-in and plug-in monitoring preview features](./media/dataverse-accelerator-app.png)
 
 While preview features shouldn't be used in production instances, the accelerator offers the opportunity to proactively evaluate, share feedback, and prepare for integration. Using features available with the Dataverse accelerator helps you leverage cutting-edge capabilities to enhance productivity, optimize Dataverse processes, and maintain a competitive edge in Power Platform.
 
@@ -28,11 +29,22 @@ While preview features shouldn't be used in production instances, the accelerato
 
 The Dataverse accelerator interface adheres to the same UX and accessibility standards as any Microsoft Power Platform experience. Furthermore, it serves as a demonstration of our platform's powerful low-code capability to ship enterprise-grade applications.
 
+## Features available with the Dataverse accelerator
+
+| Feature | Description |
+| -- | -- |
+| Low-code plug-ins  | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. For more information about how to use this feature, go to [Low-code plug-ins](../low-code-plug-ins.md). |
+| Plug-in monitor | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs. For more information about how to use this feature, go to [Plug-in monitor](plugin-monitoring.md). |
+| API playground | A preauthenticated software testing tool that helps makers quickly and conveniently interact with the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview). For more information about how to use this feature, go to [API playground](api-playground.md). |
+
+> [!NOTE]
+> If all features aren't available in the Dataverse accelerator app, update the app. More information: [update the Dataverse accelerator app](#install-or-update-the-dataverse-accelerator).
+
 ## Play the Dataverse accelerator
 
 Play the Dataverse accelerator app in any environment where it's installed.
 
-The app is automatically available in all new Microsoft Dataverse environments. If your environment doesn't already have it, you can  [install the Dataverse accelerator](#install-the-dataverse-accelerator).
+The app is automatically available in all new Microsoft Dataverse environments. If your environment doesn't already have it, you can  [install the Dataverse accelerator](#install-or-update-the-dataverse-accelerator).
 
 The app appears in two places:
 
@@ -40,7 +52,7 @@ The app appears in two places:
 
    :::image type="content" source="media/apps.svg" alt-text="Power Apps app list" lightbox="media/apps.svg":::
 
-1. In the **Unified Interface apps** view:
+1. On the Power Apps or Dynamics 365 home page.
 
    ![Power Apps Unified Client Applications View](./media/uci.svg)
 
@@ -53,18 +65,6 @@ You must have the following privileges in your Dataverse environment:
 - Security role: System customizer.
 - App-level access to the Dataverse accelerator model driven app, such as system customizer or direct access from a security role.
 
-### Features available with the Dataverse accelerator
-
-| Feature | Description |
-| -- | -- |
-| [Low-code plug-ins](../low-code-plug-ins.md) | Reusable, real-time workflows that execute a specific set of commands within Dataverse. Low-code plug-ins run server-side and are triggered by personalized event handlers, defined in Power Fx. |
-| [Plug-in monitor](plugin-monitoring.md) | A modern interface to surface the existing plug-in trace log table in Dataverse environments, designed for developing and debugging Dataverse plug-ins and custom APIs.  |
-| [API playground](api-playground.md) | A preauthenticated software testing tool that helps makers quickly and conveniently interact with the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview). |
-
-## Manage the Dataverse accelerator app
-
-The Dataverse accelerator is automatically installed as a Microsoft package in all new environments. It's hosted and distributed using the App Source framework as a [Dynamics 365 app](/power-platform/admin/manage-apps).
-
 ### Prerequisites for managing the app
 
 You must have the following security role assignment and your Dataverse environment must be the same or later than the minimum version:
@@ -72,22 +72,18 @@ You must have the following security role assignment and your Dataverse environm
 - Security role: You must have the system administrator security role in the environment.
 
 - A Dataverse environment with minimum database (DB) version of `9.2.22122.00148`. Check the database version:  
-  - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments**, and then select the environment you want. Select **Detailed view**, and under **Version** the version is displayed.
+  - In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) select **Manage** > **Environments**, and then select the environment you want. Select **Detailed view**, and under **Version** the version is displayed.
   - By using the [RetrieveVersion function](/power-apps/developer/data-platform/webapi/reference/retrieveversion) with your browser. Type `https://<your org>.<your region code>.dynamics.com/api/data/v9.2/RetrieveVersion` in your browser address bar and view the JSON returned.
 
-### Install the Dataverse accelerator
+## Install or update the Dataverse accelerator
 
-If the Dataverse accelerator isn't already installed in the environment, follow the steps to [install an app in the environment view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) for the Dataverse Accelerator offering.
+If the Dataverse accelerator isn't already installed or if you want to install the latest version, Power Platform admins should follow these steps:
 
-### Update the Dataverse accelerator
-
-If the Dataverse accelerator is already installed and you want to install the latest version, follow these steps:
-
-1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Environments**.
-1. Open the [environment-level view of apps](/power-platform/admin/manage-apps#environment-level-view-of-apps)
-1. Locate the **Dataverse Accelerator** app.
-1. When there's an update available, select **Update available** next to the app.
-1. Follow the instructions on your screen to apply the update.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Manage** > **Environments**, select the environment you want, and then select **Resources** > **Dynamics 365 apps** on the command bar. If you're using the earlier version of the admin center, expand **Resources**, and then select **Dynamics 365 apps**.
+1. Find **Dataverse Accelerator** in the list. 
+   - If **Update available** appears next to the **Dataverse Accelerator**, select the app and then select **Update**.
+   - Otherwise, select **Install app**, select **Dataverse Accelerator** in the list, and then select **Next**.
+1. Follow the instructions on your screen to install the app or apply the update.
 
 ### Uninstall the Dataverse accelerator
 
@@ -124,7 +120,7 @@ Yes, Dataverse accelerator is compatible with existing Power Platform environmen
 
 **How do I install Dataverse Accelerator?**
 
-Follow the [install instructions](#install-the-dataverse-accelerator) of this article to install the Dataverse accelerator, which points to the documentation for installing any Dynamics 365 app in a Dataverse environment.
+Follow the [install instructions](#install-or-update-the-dataverse-accelerator) of this article to install the Dataverse accelerator, which points to the documentation for installing any Dynamics 365 app in a Dataverse environment.
 
 **If I don't want the Dataverse accelerator installed in my environment, can I delete it?**
 

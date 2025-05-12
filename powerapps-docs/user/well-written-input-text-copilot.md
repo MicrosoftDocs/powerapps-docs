@@ -4,7 +4,7 @@ description: Learn how to use Copilot to quickly generate well-written text that
 ms.date: 01/15/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: how-to
 ms.component: pa-user
 ms.subservice: end-user
 author: jordanchodak
@@ -29,7 +29,6 @@ When trying to quickly input text into multiline text boxes or rich text editors
 > - To use this feature, the browser language must be US English.
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
-> - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 

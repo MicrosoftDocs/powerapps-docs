@@ -5,7 +5,6 @@ ms.date: 02/08/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 search.app:

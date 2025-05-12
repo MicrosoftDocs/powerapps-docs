@@ -3,7 +3,7 @@
 - Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
 - Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
-- Install the Az PowerShell  module version 11.1.0 or higher. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+- Install the Az PowerShell module version 11.1.0 or higher. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
 
    To [update an existing installation to the latest version](/powershell/module/powershellget/update-module), use `Update-Module -Name Az -Force`
 

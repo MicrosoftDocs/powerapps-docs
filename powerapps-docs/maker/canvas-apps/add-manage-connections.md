@@ -3,10 +3,10 @@ title: Manage connections in canvas apps
 description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business.
 author: lancedMicrosoft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 07/15/2021
+ms.date: 04/2/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -97,11 +97,13 @@ The exception to this rule is for actions used in a Power Automate Flow that is 
 
 ## Manage the consent dialog appearance for custom connectors using Microsoft Entra ID OAuth
 
-By default, when end-users launch canvas apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using Microsoft Entra ID OAuth.
+By default, when end-users launch canvas apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: 
+* Microsoft First Party connectors (like SharePoint, Office 365 Users) and 
+* Custom connectors using either Microsoft Entra ID OAuth or NoAuth (No Authentication)
 
 ### Suppress consent dialog for apps that use custom connectors using Microsoft Entra ID OAuth
 
-To suppress consent dialog for apps created using Power Apps that connect through custom connectors using Microsoft Entra ID OAuth, follow the below steps.
+To suppress consent dialog for apps created using Power Apps that connect through custom connectors using Microsoft Entra ID OAuth/NoAuth, follow the below steps.
 
 #### Step 1. Provision Microsoft’s Azure API connections service principal in your Microsoft Entra tenant
 
@@ -132,14 +134,14 @@ To set the scope using Azure portal, go to [Azure portal](https://portal.azure.c
   
 #### Step 3. Grant admin consent the client third-party Microsoft Entra app
   
-For each custom connector using OAuth where consent is expected to be suppressed, an admin must use [Microsoft Entra’s grant tenant-wide admin consent to an application](/azure/active-directory/manage-apps/grant-admin-consent).
+For each custom connector using OAuth/NoAuth where consent is expected to be suppressed, an admin must use [Microsoft Entra’s grant tenant-wide admin consent to an application](/azure/active-directory/manage-apps/grant-admin-consent).
 
 > [!NOTE]
 > Admins have granular control on which custom applications, and the corresponding custom connector consent may be suppressed.  
 
 #### Step 4. Update custom connector in Power Platform to attempt single-sign-on
   
-For each custom connector using OAuth where consent is expected to be suppressed, a user with edit permissions on the custom connector must change the "Enable on-behalf-of login" value to "true".
+For each custom connector using OAuth/NoAuth where consent is expected to be suppressed, a user with edit permissions on the custom connector must change the "Enable on-behalf-of login" value to "true".
   
 The owner of the custom connector must choose to edit the connector, go to the **Security** section, and change the value in **Enable on-behalf-of login** from "false" to "true".
 
@@ -153,7 +155,7 @@ In addition to the admin consent granted on a custom application in Microsoft En
   Set-AdminPowerAppApisToBypassConsent -AppName <Power Apps app id>
 ```
 
-### Remove consent suppression for apps that use custom connectors using Microsoft Entra ID OAuth
+### Remove consent suppression for apps that use custom connectors using Microsoft Entra ID OAuth/NoAuth
 
 To remove consent suppression for a custom connector, an admin must perform at least one of the following actions:
 

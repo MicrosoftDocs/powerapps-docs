@@ -3,7 +3,7 @@ title: Understand SharePoint forms integration
 description: Learn about integration of SharePoint forms with Power Apps, and how to customize those forms.
 author: NickWaggoner
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 3/1/2025
@@ -65,6 +65,9 @@ The default generated form consists of the following controls and their correspo
   | OnCancel | Resets the changes to **SharePointForm1**. SharePoint always hides the form when a user selects **Cancel** in SharePoint. | *ResetForm(SharePointForm1)* |
 
 These defaults ensure that the form works when running within SharePoint. The defaults change the Power Apps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
+
+> [!NOTE]
+> While you can manually copy a form from one environment to another, there is currently no automated method in Power Apps to copy a form from one environment to another.
 
 ## Understand the SharePointIntegration control
 

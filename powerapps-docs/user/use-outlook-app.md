@@ -4,7 +4,7 @@ description: "Use Dynamics 365 App for Outlook with Power Apps and Microsoft Dat
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 5/21/2021
 ms.subservice: end-user
 ms.author: smurkute

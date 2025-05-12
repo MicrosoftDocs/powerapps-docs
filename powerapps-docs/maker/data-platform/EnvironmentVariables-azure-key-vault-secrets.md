@@ -6,13 +6,13 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 11/19/2024
+ms.date: 03/31/2025
 ms.topic: overview
 ms.collection: bap-ai-copilot
 search.audienceType: 
   - maker
 contributors:
-  - shmcarth
+  - matapg007
   - asheehi1
   - Laskewitz
 ---
@@ -58,7 +58,7 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 
 > [!NOTE]
 >
-> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: "This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'."
+> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: "This variable didn't save properly. User isn't authorized to read secrets from 'Azure Key Vault path'."
 > - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
 > - The Azure Key Vault must be in the same tenant as your Power Platform subscription.
 
@@ -85,7 +85,7 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 A simple scenario to demonstrate how to use a secret obtained from Azure Key Vault is to create a Power Automate flow to use the secret to authenticate against a web service.
 
 > [!NOTE]
-> The URI for the web service in this example is not a functioning web service.
+> The URI for the web service in this example isn't a functioning web service.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
@@ -147,7 +147,7 @@ By completing the previous steps in this section, Copilot Studio now has access 
 1. Select **Save** to save your topic.
 1. In the test pane, test your topic by using one of the start phrases of the topic where you just added the **Send a message** node with the environment variable secret. You should run into an error that looks like this:
 
-   :::image type="content" source="media/env-var-secret8.png" alt-text="Error message: Bot is not allowed to use environment variable. To add the bot to the allowed list add a tag 'AllowedBots' with value.":::
+   :::image type="content" source="media/env-var-secret8.png" alt-text="Error message: Bot isn't allowed to use environment variable. To add the bot to the allowed list add a tag 'AllowedBots' with value.":::
    
    This means you need to go back to Azure Key Vault and edit the secret. Leave Copilot Studio open, because you come back here later.
 
@@ -172,6 +172,24 @@ Alternatively, you can allow all copilots in an environment access to the secret
 ## Limitation
 
 Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows, Copilot Studio agents, and custom connectors.
+
+## Integrate Azure Key Vault private link with environment variables
+
+Using Azure Key Vault secrets with environment variables requires configuring Azure Key Vault so that Power Platform can read the specific secrets you want to reference. This capability enables support for environment variables with Azure Key Vault secrets connecting via a private link, enhancing security and providing a more robust integration.
+
+1. Set up Azure Virtual Network support for Power Platform to integrate environment variables with Azure Key Vault secrets without exposing them to the public internet. For detailed instructions, go to [set up virtual network](/power-platform/admin/vnet-support-setup-configure).
+1. Ensure that the Azure subscription for Key Vault and Power Platform Virtual Network are in the same tenant, as cross-tenant integration isn't supported.
+1. Ensure that the user who creates the environment variables has appropriate permissions to the Azure Key Vault resource. For more details, go to [Configure the Azure key Vault](/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets#configure-azure-key-vault)
+1. Create a key vault and establish a private link connection. The steps to create the key vault should include the following actions:
+
+   - Disable public access.
+   - Create a private endpoint.
+   - Select the virtual network and subnet where you want this private endpoint to be created. Ensure to connect the Virtual Network (virtual network) delegated to Power Platform.
+   - Validate the private link connectivity.
+
+   For detailed steps, go to [Set up Virtual Network support for Power Platform](/power-platform/admin/vnet-support-setup-configure).
+
+1. Create [environment variables](/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets#create-a-new-environment-variable-for-the-key-vault-secret) secrets by linking to the Azure Key Vault.
 
 ### See also
 

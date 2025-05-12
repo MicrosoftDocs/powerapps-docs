@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/13/2024
+ms.date: 03/07/2025
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -182,8 +182,7 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 1. Select **Save** and then publish the app.
 
-## Define sync settings on mobile (Preview)
-[This section is prerelease documentation and is subject to change.]
+## Define sync settings on mobile
 
 You can allow users to control the automatic sync intervals or the connection type to synchronize the data.
 
@@ -194,12 +193,6 @@ You can allow users to control the automatic sync intervals or the connection ty
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
   
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-
 ## Turn on Online mode (Preview)
 [This section is prerelease documentation and is subject to change.]
 

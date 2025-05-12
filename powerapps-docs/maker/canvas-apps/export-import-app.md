@@ -3,7 +3,7 @@ title: Overview of exporting and importing canvas apps
 description: Overview of exporting and importing canvas apps.
 author: caburk
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/1/2024
 ms.subservice: canvas-maker
 ms.author: caburk

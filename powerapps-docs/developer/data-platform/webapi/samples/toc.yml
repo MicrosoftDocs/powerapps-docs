@@ -55,6 +55,8 @@ items:
   items:
   - name: About the client-side samples
     href: ../web-api-samples-client-side-javascript.md
+  - name: DataverseWebAPI sample library
+    href: ../dataversewebapi-sample-library.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
   - name: Conditional Operations

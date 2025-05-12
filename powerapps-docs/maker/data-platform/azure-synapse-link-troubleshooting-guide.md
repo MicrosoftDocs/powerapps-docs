@@ -4,11 +4,11 @@ description: "Troubleshoot issues in Azure Synapse Link service in Power Apps."
 ms.custom: ""
 ms.date: 10/15/2024
 ms.reviewer: "matp"
-ms.topic: "conceptual"
+ms.topic: troubleshooting-general
 applies_to: 
   - "powerapps"
 author: "MilindaV2"
-ms.subservice: troubleshoot
+ms.subservice: dataverse-maker
 ms.author: "milindav"
 search.audienceType: 
   - maker

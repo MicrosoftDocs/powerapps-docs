@@ -12,6 +12,8 @@ ms.collection:
 
 # Create a shopping list card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 In this tutorial, you'll create a card that displays a shopping list and lets you add items. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
 At the end of the tutorial, your shopping list card should look like the following example:

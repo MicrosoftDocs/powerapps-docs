@@ -4,7 +4,7 @@ description: FAQ that discusses renaming canvas apps controls with Copilot.
 ms.date: 11/13/2024
 ms.custom: 
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: mamali 
 ms.author: mamali
 ms.reviewer: 

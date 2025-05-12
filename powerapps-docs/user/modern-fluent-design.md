@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated user interface that makes model-driven apps easier to use.
 author: adrianorth
 ms.topic: overview
-ms.date: 10/10/2024
+ms.date: 03/28/2025
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: aorth
@@ -16,6 +16,7 @@ contributors:
   - HemantGaur
   - adrianorth
   - jasongre
+  - geniaalbre
 ---
 
 # Modern, refreshed look for model-driven apps
@@ -23,7 +24,9 @@ contributors:
 Model-driven apps have a modern, refreshed look when the **New look** toggle is turned on. The new look provides updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
 > [!IMPORTANT]
-> With the [October monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle is removed. Learn more in [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
+> With the **2025 Wave 1** release, the **New Look** toggle is removed for users. Learn more in [Managing always on rollout](#managing-always-on-rollout).
+>
+> With the [October 2024 monthly channel release](/power-platform/released-versions/common-data-service/monthly-2410), the **New Look** toggle is removed for monthly channel users. Learn more in [Managing always on rollout](#managing-always-on-rollout). This change was shared in [2024 wave 2 release note](/power-platform/release-plan/2024wave2/power-apps/use-modern-refreshed-look-model-driven-apps) and [October 2024 monthly release note](/power-platform/released-versions/common-data-service/monthly-2410#new-look-always-on).
 
 ## What's included with the modern, refreshed look
 
@@ -129,29 +132,28 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 
 ### Managing always on rollout
 
-With the October 2024 monthly release, monthly channel users no longer see the **New look** toggle in the app header. The new look is always on. Makers and admins can force users to have the classic look by turning the app setting **New look for model driven apps** to **false**. Learn more in [Revert to the classic look](#revert-to-the-old-ui).
+With the **2025 Wave 1** (or October 2024 monthly release for monthly channel users), users no longer see the **New look** toggle in the app header. The new look is always on. Makers and admins can force users to have the classic look by turning the app setting **New look for model driven apps** to **false**. Learn more in [Revert to the classic look](#revert-to-the-old-ui).
 
 ### Revert to the old UI
-
-End users in the semi-annual channel can switch back to the old UI by turning off the **New look** toggle. Makers can also turn off the new look by updating the app setting.
+ > [!NOTE]
+ > Starting **2025 Wave 1** end users in the semi-annual channel lose the option of switching back to the old UI. Admins can still turn off the new look for all users by updating the app setting.
 
 Learn more about turning off the modern, refreshed look, in [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 Admins can turn off the **New look** setting across all apps in an organization by using the solution explorer to set the **New look for model driven apps** value to **No**. This hides the **New look** toggle and prevents the modern, refreshed look from taking effect.
 
 1. Open <https://make.powerapps.com/>
-1. Under Solutions open an existing solution with one or more model-driven apps:
-1. Select **Add Existing** > **More** > **Setting**.
-1. Search for **New look**.
-1. Select **New look for model driven apps**.
-1. Select **Add** to add it to the solution.
-1. Select **New look for model driven apps** from the solution explorer.
-1. Update **Setting Environment Value** to **No**.
-1. Select **Save**.
-1. Publish all customizations.
-
-    > [!NOTE]
-    > If you are using 2023 release wave 2 and want to turn off the new look, update the **Try the new look** setting.
+2. Under Solutions open an existing solution with one or more model-driven apps:
+3. Select **Add Existing** > **More** > **Setting**.
+4. Search for **New look**.
+5. Select **New look for model driven apps**.
+6. Select **Add** to add it to the solution.
+7. Select **New look for model driven apps** from the solution explorer.
+8. Update **Setting Environment Value** to **No**.
+9. Add the **apps to the solution** for which you want to turn off new look
+10. Update the **value of the apps** to **No**
+11. Select **Save**.
+12. Publish all customizations.
 
 ### Enabling the modern look for my app and removing the toggle
 

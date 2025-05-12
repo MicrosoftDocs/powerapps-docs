@@ -4,7 +4,7 @@ description: FAQ that discusses model-driven apps with Copilot chat and the key 
 ms.date: 9/16/2024
 ms.custom: 
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: Mattp123 
 ms.author: mijosh
 ms.reviewer: matp

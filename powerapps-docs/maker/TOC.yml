@@ -12,12 +12,16 @@
       href: ../user/request-license.md
     - name: Request licenses for your app users
       href: common/request-licenses-for-users.md
+  - name: Overview of creating apps
+    href: index.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: Copilot in Power Apps (preview)
     href: ./canvas-apps/ai-overview.md
+  - name: Use the learn hub
+    href: ./common/learn-hub.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: Get your developer environment
@@ -43,8 +47,6 @@
       items:
       - name: Draft well-written, input text (preview)
         href: ../user/well-written-input-text-copilot.md
-      - name: Filter, sort, and search galleries (preview)
-        href: ../user/smartGrid.md
   - name: Use model-driven apps
     items:
     - name: Overview
@@ -63,6 +65,8 @@
         href: ../user/use-copilot-model-driven-apps.md
       - name: Use Copilot to visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
+      - name: Use Copilot case summary in model-driven apps
+        href: ../user/copilot-case-summary.md       
     - name: Navigation and basics
       items:
       - name: Basic navigation
@@ -229,18 +233,12 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: Find it with unified search
+    href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Create apps
-  items:
-  - name: Overview
-    href: index.md
-  - name: Use the Plan designer (preview)
-    href: ./plan-designer/plan-designer.md  
-  - name: Use the learn hub
-    href: ./common/learn-hub.md
-  - name: Find it with unified search
-    href: search.md
+- name: Use the Plan designer (preview)
+  href: ./plan-designer/plan-designer.md  
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -249,8 +247,10 @@
     href: ./canvas-apps/getting-started.md
   - name: Keyboard shortcuts
     href: ./canvas-apps/keyboard-shortcuts.md
-  - name: Create your first app
+  - name: Create canvas apps
     items:
+    - name: Create a blank canvas app
+      href: ./canvas-apps/create-blank-app.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
@@ -262,7 +262,7 @@
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
-        href: ./canvas-apps/data-platform-create-app.md
+        href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From SharePoint
         items:
         - name: Overview
@@ -276,7 +276,7 @@
         - name: Customize a list or form
           href: ./canvas-apps/customize-list-form.md  
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
@@ -300,22 +300,6 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Make basic customizations
-      items:
-      - name: Galleries
-        href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Forms
-        href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Cards
-        href: ./canvas-apps/customize-card.md
-  - name: Create an app from scratch
-    items:
-    - name: With a blank app
-      href: ./canvas-apps/create-blank-app.md
-    - name: From Dataverse
-      href: ./canvas-apps/data-platform-create-app-scratch.md
-    - name: From Excel
-      href: ./canvas-apps/get-started-create-from-blank.md
   - name: Design and build an app
     items:
       - name: Connect to data
@@ -324,6 +308,8 @@
           href: ./canvas-apps/connections-list.md
         - name: Working with untyped and dynamic objects
           href: ./canvas-apps/untyped-and-dynamic-objects.md
+        - name: Manage expired tokens
+          href: ./canvas-apps/working-with-tokens.md  
         - name: Popular connectors
           items:
             - name: Dataverse
@@ -343,7 +329,7 @@
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
-              href: canvas-apps/connections/connection-excel.md
+              href: canvas-apps/get-started-create-from-blank.md#connect-to-an-external-excel-file-from-power-apps
             - name: Microsoft Translator
               href: canvas-apps/connections/connection-microsoft-translator.md
             - name: Office 365 Outlook
@@ -374,8 +360,6 @@
           href: ./canvas-apps/add-manage-connections.md
         - name: Rename a data source in an app
           href: ./canvas-apps/rename-data-source.md
-        - name: Prepare Excel data
-          href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
           href: ./canvas-apps/delegation-overview.md
         - name: Manage gateways
@@ -388,6 +372,14 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
+      - name: Make basic customizations
+        items:
+          - name: Galleries
+            href: ./canvas-apps/customize-layout-sharepoint.md
+          - name: Forms
+            href: ./canvas-apps/customize-forms-sharepoint.md
+          - name: Cards
+            href: ./canvas-apps/customize-card.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -722,8 +714,6 @@
             href: ./canvas-apps/power-apps-ideas.md
           - name: Transform natural language to Power Fx formulas
             href: ./canvas-apps/power-apps-ideas-transform.md
-          - name: Transform examples to Power Fx formulas
-            href: ./canvas-apps/power-apps-ideas-train-examples.md
         - name: Formula reference
           items:
           - name: Overview
@@ -1158,30 +1148,6 @@
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
-  - name: How-to guides
-    items:
-    - name: Create a canvas app connected to Dataverse from scratch
-      href: ./canvas-apps/how-to/build-connected-dataverse.md
-    - name: Create a canvas app with Power BI visual
-      href: ./canvas-apps/how-to/build-powerbi-visual.md
-    - name: Create a canvas app that can trigger a Power Automate flow
-      href: ./canvas-apps/how-to/trigger-flow.md
-    - name: Create a canvas app to scan barcodes
-      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
-    - name: Create an app that uses mobile sensors
-      href: ./canvas-apps/how-to/mobile-sensors.md
-    - name: Create an app with 3D and mixed reality controls
-      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
-    - name: Create an app to view a shape in mixed reality
-      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
-    - name: Create an app with address input and map controls
-      href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measuring Camera control
-      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
-    - name: Create a canvas app with deep link to a specific screen
-      href: ./canvas-apps/how-to/deep-linking.md
-    - name: Work with the PDF function (experimental)
-      href: ./canvas-apps/how-to/pdf-function.md
   - name: Preview an app
     href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
@@ -1240,13 +1206,35 @@
           href: ../developer/test-engine/yaml.md
         - name: Test Engine Power Fx functions
           href: ../developer/test-engine/powerfx.md
-  - name: Transform your InfoPath forms to Power Apps
-    href: ./canvas-apps/transform-infopath.md
-  - name: Create native mobile apps
+  - name: How-to guides
+    items:
+    - name: Create a canvas app connected to Dataverse from scratch
+      href: ./canvas-apps/how-to/build-connected-dataverse.md
+    - name: Create a canvas app with Power BI visual
+      href: ./canvas-apps/how-to/build-powerbi-visual.md
+    - name: Create a canvas app that can trigger a Power Automate flow
+      href: ./canvas-apps/how-to/trigger-flow.md
+    - name: Create a canvas app to scan barcodes
+      href: ./canvas-apps/how-to/create-app-barcode-scanner.md
+    - name: Create an app that uses mobile sensors
+      href: ./canvas-apps/how-to/mobile-sensors.md
+    - name: Create an app with 3D and mixed reality controls
+      href: ./canvas-apps/how-to/build-view-in-mr-3d-apps.md
+    - name: Create an app to view a shape in mixed reality
+      href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
+    - name: Create an app with address input and map controls
+      href: ./canvas-apps/how-to/mobile-apps-address-map.md
+    - name: Create an app using the Measuring Camera control
+      href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
+    - name: Create a canvas app with deep link to a specific screen
+      href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md 
+  - name: Create native mobile apps using wrap wizard
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
-      - name: System requirements and prerequisites for Wrap
+      - name: System requirements and prerequisites for wrap
         href: ./common/wrap/prerequisites.md
       - name: Use the wrap wizard to build your mobile app
         href: ./common/wrap/wrap-how-to.md
@@ -1254,21 +1242,23 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
-      - name: Create Azure key vault for wrap
+      - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
-      - name: Benefits and limitations of Wrap
+      - name: Benefits and limitations of wrap
         href: ./common/wrap/limitations.md
       - name: FAQ about wrapped mobile apps
         href: ./common/wrap/faq.yml
+      - name: Troubleshoot wrap issues
+        href: /troubleshoot/power-platform/power-apps/manage-apps/wrap-issues
   - name: For developers
     items:
     - name: Working with Source Code
       items:
-        - name: Code View (preview)
+        - name: Code View
           href: ./canvas-apps/code-view.md        
-        - name: View source code files for canvas apps (preview)
+        - name: Source code files for canvas apps
           href: ./canvas-apps/power-apps-yaml.md
         - name: Use Git version control to edit canvas apps (experimental)
           href: ./canvas-apps/git-version-control.md
@@ -1322,6 +1312,119 @@
       href: ./canvas-apps/app-business-logic.md  
     - name: Canvas apps coding standards and guidelines
       href: ../guidance/coding-guidelines/overview.md
+  - name: Teams integration
+    items:
+    - name: Overview
+      href: ../teams/overview.md
+    - name: Embed apps in Teams
+      items:
+      - name: Embed a canvas app as tab app
+        href: ../teams/embed-teams-tab.md
+      - name: Embed a canvas app as personal app
+        href: ../teams/embed-teams-app.md
+    - name: Create apps in Teams
+      items:
+      - name: Create apps in Teams
+        href: ../teams/create-apps-overview.md
+      - name: Get started
+        items:
+          - name: Install the Power Apps personal app
+            href: ../teams/install-personal-app.md
+          - name: Create your first app
+            href: ../teams/create-first-app.md
+    - name: Understand the Power Apps interface
+      items:
+        - name: Overview of the Power Apps app
+          href: ../teams/overview-of-the-power-apps-app.md
+        - name: Understand Power Apps Studio in a Teams environment
+          href: ../teams/understand-power-apps-studio.md
+        - name: Use the Fluent UI controls
+          href: ../teams/use-the-fluent-ui-controls.md
+    - name: Create additional apps
+      href: ../teams/create-additional-apps.md
+    - name: Create apps from lists in Teams
+      href: ../teams/create-apps-lists.md
+    - name: Work with Dataverse for Teams
+      items:
+        - name: Overview
+          href: ../teams/overview-data-platform.md
+          displayName: Overview of Dataverse for Teams
+        - name: Dataverse for Teams vs Dataverse
+          href: ../teams/data-platform-compare.md
+        - name: Compare Microsoft Lists, Dataverse for Teams, and Dataverse
+          href: ../teams/compare-data-sources.md
+        - name: Create a table
+          href: ../teams/create-table.md
+          displayName: Create a Dataverse for Teams table
+        - name: Edit or delete a table
+          href: ../teams/edit-delete-table.md
+          displayName: Edit or delete a Dataverse for Teams table
+        - name: Work with table relationships
+          href: ../teams/relationships-table.md
+        - name: Work with table columns
+          href: ../teams/table-columns.md
+        - name: Work with formula table columns (preview)
+          href: ../teams/formula-columns.md
+        - name: Edit table data in Excel
+          href: ../teams/edit-data-in-excel.md
+        - name: Move customizations between environments
+          href: ../teams/import-solution-in-teams.md
+        - name: View table data in Power BI
+          href: ../teams/view-table-data-power-bi.md
+          displayName: View Dataverse for Teams table data in Power BI
+        - name: Environment language
+          href: ../teams/language-data-platform.md
+          displayName: Dataverse for Teams environment language
+        - name: FAQ about Dataverse for Teams
+          href: ../teams/data-platform-faqs.md
+    - name: Build collaborative apps
+      items:
+        - name: Use Teams integration object
+          href: ../teams/use-teams-integration-object.md
+        - name: How to build apps for Teams
+          href: ../teams/how-templates-built.md
+        - name: Add notifications to make your apps collaborative
+          href: ../teams/add-app-notifications.md
+        - name: Integrate with Planner
+          href: ../teams/integrate-planner.md
+        - name: Integrate with Microsoft Entra ID
+          href: ../teams/integrate-azure-ad.md
+        - name: Integrate with calls and meetings
+          href: ../teams/integrate-calls-and-meetings.md
+        - name: Enable consistent experience across sessions
+          href: ../teams/consistent-experience-across-sessions.md
+        - name: Have a conversation about your business data in a Teams app
+          href: ../teams/business-data.md
+        - name: Build an app to retrieve videos
+          href: ../teams/tutorial-buildapp-retrieve-videos.md
+    - name: Manage your apps
+      href: ../teams/manage-your-apps.md
+    - name: Set permission and share your app
+      href: ../teams/set-perms-and-share.md
+    - name: Publish your app
+      href: ../teams/publish-and-share-apps.md
+    - name: Remove your apps
+      href: ../teams/remove-your-apps.md
+    - name: Uninstall Power Apps personal app
+      href: ../teams/uninstall-personal-apps.md
+    - name: Sample app templates
+      items:
+        - name: Use sample app templates in Teams
+          href: ../teams/use-sample-apps.md
+        - name: Customize sample app templates
+          href: ../teams/customize-sample-apps.md
+        - name: Localize sample app templates
+          href: ../teams/localizing-sample-apps.md
+        - name: Theming in sample app templates
+          href: ../teams/sample-app-theming.md
+        - name: Working with table permission in sample app templates
+          href: ../teams/dataverse-for-teams-table-permissions.md
+        - name: FAQ about sample app templates
+          href: ../teams/sample-apps-faqs.md
+    - name: Known issues and limitations
+      href: ../teams/known-issues-limitations.md
+    - name: Migrate Access data to Dataverse for Teams
+      href: ../teams/migrate-access-to-dvft.md
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1699,8 +1802,12 @@
           href: ./model-driven-apps/copilot-chat-mda-knowledge.md
         - name: Add topics to Copilot chat
           href: ./model-driven-apps/copilot-chat-mda-topics.md
+        - name: Send a messages to Copilot chat
+          href: ./model-driven-apps/copilot-chat-send-messages.md
         - name: Prompt guide customizations
           href: ./model-driven-apps/copilot-chat-prompt-guide.md
+        - name: Zero prompt experience
+          href: ./model-driven-apps/copilot-chat-zpe-guide.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use modern themes
@@ -1727,6 +1834,12 @@
       href: ./model-driven-apps/delete-model-driven-app.md
     - name: Run an app
       href: ./model-driven-apps/run-model-driven-app.md
+  - name: Teams integration
+    items:
+    - name: Embed a model-driven app as tab app
+      href: ../teams/embed-model-driven-teams-tab.md
+    - name: Embed a model-driven app as personal app
+      href: ../teams/embed-model-driven-teams-personal.md 
   - name: Advanced app making and customization
     href:
     items:
@@ -2201,41 +2314,29 @@
       href: ./data-platform/data-get-insights-overview.md
     - name: Power BI with Dataverse
       href: ./data-platform/use-powerbi-dataverse.md
-    - name: Create a Power BI report
-      href: ./data-platform/data-platform-powerbi-connector.md
-    - name: View table data in Power BI Desktop
-      href: ./data-platform/view-entity-data-power-bi.md
-  - name: License requirements for tables
-    href: ./data-platform/data-platform-entity-licenses.md
-    items:
-    - name: Complex tables and licensing
-      href: ./data-platform/data-platform-complex-entities.md
-    - name: Restricted tables requiring Dynamics 365 licenses
-      href: ./data-platform/data-platform-restricted-entities.md
-  - name: SharePoint, OneNote, and OneDrive integration
-    href: ./data-platform/sharepoint-onedrive-onenote-intro.md
-  - name: Translate customized table and column text
-    href: ./data-platform/export-customized-entity-field-text-translation.md
-  - name: Import translated table and column text
-    href: ./data-platform/import-translated-entity-field-text.md
-  - name: Privileges for customization
-    href: ./model-driven-apps/privileges-required-customization.md
-  - name: API limits overview
-    href: ./data-platform/api-limits-overview.md
-  - name: Get preview features early (preview)
-    items:
-    - name: Use the Dataverse accelerator
-      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
-    - name: Monitor plug-ins
-      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
-    - name: Explore the Dataverse Web API
-      href: ./data-platform/dataverse-accelerator/api-playground.md
-  - name: For admins
-    items:
-    - name: Security in Dataverse
-      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
-    - name: Manage access to views (preview)
-      href: ./model-driven-apps/manage-view-access.md
+      items:
+      - name: Create a Power BI report
+        href: ./data-platform/data-platform-powerbi-connector.md
+      - name: View table data in Power BI Desktop
+        href: ./data-platform/view-entity-data-power-bi.md
+    - name: Transition from legacy data integration services
+      items:
+      - name: Transition from legacy data integration services overview
+        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
+      - name: Transition from legacy data integration services FAQ
+        href: ./data-platform/azure-synapse-link-transition-faq.md
+    - name: Link to Microsoft Fabric
+      items:
+      - name: Link Dataverse to Microsoft Fabric overview
+        href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name:  Create a link to Fabric
+        href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Work with Fabric data and Power BI
+        href: ./data-platform/fabric-work-data-and-power-bi.md      
+      - name: Build apps using Fabric data
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
+      - name: Troubleshoot link to Fabric
+        href: ./data-platform/fabric-troubleshoot.md 
     - name: Azure Synapse Link
       items:
       - name: Azure Synapse Link Overview
@@ -2254,8 +2355,6 @@
         href: ./data-platform/azure-synapse-link-troubleshooting-guide.md
       - name: Receive Azure Synapse Link for Dataverse notifications
         href: ./data-platform/azure-synapse-link-notifications.md
-      - name: Transtion from legacy data integration services
-        href: ./data-platform/azure-synapse-link-transition-from-FnO.md
       - name: FAQ about Azure Synapse Link
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
@@ -2286,10 +2385,6 @@
           href: ./data-platform/azure-synapse-link-choices-serverless.md
         - name: Export data in Delta Lake format
           href: ./data-platform/azure-synapse-link-delta-lake.md
-        - name: View Dataverse data in Microsoft Fabric
-          href: ./data-platform/azure-synapse-link-view-in-fabric.md
-        - name: Build apps using Fabric data (preview)
-          href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
       - name: Analyze in Azure Data Lake Storage Gen2
         items:
         - name: Ingest exported data with Azure Data Factory
@@ -2305,137 +2400,49 @@
         - name: Access choice labels from Azure Synapse Link for Dataverse
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
-          href: ./data-platform/azure-synapse-link-choices-powerbi.md
+          href: ./data-platform/azure-synapse-link-choices-powerbi.md      
+  - name: License requirements for tables
+    href: ./data-platform/data-platform-entity-licenses.md
+    items:
+    - name: Complex tables and licensing
+      href: ./data-platform/data-platform-complex-entities.md
+    - name: Restricted tables requiring Dynamics 365 licenses
+      href: ./data-platform/data-platform-restricted-entities.md
+  - name: SharePoint, OneNote, and OneDrive integration
+    href: ./data-platform/sharepoint-onedrive-onenote-intro.md
+  - name: Translate customized table and column text
+    href: ./data-platform/export-customized-entity-field-text-translation.md
+  - name: Import translated table and column text
+    href: ./data-platform/import-translated-entity-field-text.md
+  - name: Privileges for customization
+    href: ./model-driven-apps/privileges-required-customization.md
+  - name: API limits overview
+    href: ./data-platform/api-limits-overview.md
+  - name: Access migration
+    href: ./data-platform/migrate-access-to-dataverse.md
+    items:
+    - name: Data types and sizes for Access migration
+      href: ./data-platform/migrate-access-datatypes.md
+    - name: System columns and tables in Dataverse
+      href: ./data-platform/access-migrate-linked-tables.md  
+  - name: Get preview features early (preview)
+    items:
+    - name: Use the Dataverse accelerator
+      href: ./data-platform/dataverse-accelerator/dataverse-accelerator.md
+    - name: Monitor plug-ins
+      href: ./data-platform/dataverse-accelerator/plugin-monitoring.md
+    - name: Explore the Dataverse Web API
+      href: ./data-platform/dataverse-accelerator/api-playground.md
+  - name: For admins
+    items:
+    - name: Security in Dataverse
+      href: /power-platform/admin/wp-security-cds?context=/power-apps/maker/context
+    - name: Manage access to views (preview)
+      href: ./model-driven-apps/manage-view-access.md
   - name: For developers
     href: ../developer/data-platform/overview.md
   - name: Community tools for Dataverse
     href: ./model-driven-apps/model-driven-app-community.md
-- name: Teams integration
-  items:
-  - name: Overview
-    href: ../teams/overview.md
-  - name: Embed apps in Teams
-    items:
-    - name: Embed a canvas app as tab app
-      href: ../teams/embed-teams-tab.md
-    - name: Embed a canvas app as personal app
-      href: ../teams/embed-teams-app.md
-    - name: Embed a model-driven app as tab app
-      href: ../teams/embed-model-driven-teams-tab.md
-    - name: Embed a model-driven app as personal app
-      href: ../teams/embed-model-driven-teams-personal.md
-  - name: Create apps in Teams
-    items:
-    - name: Create apps in Teams
-      href: ../teams/create-apps-overview.md
-    - name: Get started
-      items:
-        - name: Install the Power Apps personal app
-          href: ../teams/install-personal-app.md
-        - name: Create your first app
-          href: ../teams/create-first-app.md
-    - name: Understand the Power Apps interface
-      items:
-        - name: Overview of the Power Apps app
-          href: ../teams/overview-of-the-power-apps-app.md
-        - name: Understand Power Apps Studio in a Teams environment
-          href: ../teams/understand-power-apps-studio.md
-        - name: Use the Fluent UI controls
-          href: ../teams/use-the-fluent-ui-controls.md
-    - name: Create additional apps
-      href: ../teams/create-additional-apps.md
-    - name: Create apps from lists in Teams
-      href: ../teams/create-apps-lists.md
-    - name: Work with Dataverse for Teams
-      items:
-        - name: Overview
-          href: ../teams/overview-data-platform.md
-          displayName: Overview of Dataverse for Teams
-        - name: Dataverse for Teams vs Dataverse
-          href: ../teams/data-platform-compare.md
-        - name: Compare Microsoft Lists, Dataverse for Teams, and Dataverse
-          href: ../teams/compare-data-sources.md
-        - name: Create a table
-          href: ../teams/create-table.md
-          displayName: Create a Dataverse for Teams table
-        - name: Edit or delete a table
-          href: ../teams/edit-delete-table.md
-          displayName: Edit or delete a Dataverse for Teams table
-        - name: Work with table relationships
-          href: ../teams/relationships-table.md
-        - name: Work with table columns
-          href: ../teams/table-columns.md
-        - name: Work with formula table columns (preview)
-          href: ../teams/formula-columns.md
-        - name: Edit table data in Excel
-          href: ../teams/edit-data-in-excel.md
-        - name: Move customizations between environments
-          href: ../teams/import-solution-in-teams.md
-        - name: View table data in Power BI
-          href: ../teams/view-table-data-power-bi.md
-          displayName: View Dataverse for Teams table data in Power BI
-        - name: Environment language
-          href: ../teams/language-data-platform.md
-          displayName: Dataverse for Teams environment language
-        - name: FAQ about Dataverse for Teams
-          href: ../teams/data-platform-faqs.md
-    - name: Build collaborative apps
-      items:
-        - name: Use Teams integration object
-          href: ../teams/use-teams-integration-object.md
-        - name: How to build apps for Teams
-          href: ../teams/how-templates-built.md
-        - name: Add notifications to make your apps collaborative
-          href: ../teams/add-app-notifications.md
-        - name: Integrate with Planner
-          href: ../teams/integrate-planner.md
-        - name: Integrate with Microsoft Entra ID
-          href: ../teams/integrate-azure-ad.md
-        - name: Integrate with calls and meetings
-          href: ../teams/integrate-calls-and-meetings.md
-        - name: Enable consistent experience across sessions
-          href: ../teams/consistent-experience-across-sessions.md
-        - name: Have a conversation about your business data in a Teams app
-          href: ../teams/business-data.md
-        - name: Build an app to retrieve videos
-          href: ../teams/tutorial-buildapp-retrieve-videos.md
-    - name: Manage your apps
-      href: ../teams/manage-your-apps.md
-    - name: Set permission and share your app
-      href: ../teams/set-perms-and-share.md
-    - name: Publish your app
-      href: ../teams/publish-and-share-apps.md
-    - name: Remove your apps
-      href: ../teams/remove-your-apps.md
-    - name: Uninstall Power Apps personal app
-      href: ../teams/uninstall-personal-apps.md
-    - name: Sample app templates
-      items:
-        - name: Use sample app templates in Teams
-          href: ../teams/use-sample-apps.md
-        - name: Customize sample app templates
-          href: ../teams/customize-sample-apps.md
-        - name: Localize sample app templates
-          href: ../teams/localizing-sample-apps.md
-        - name: Theming in sample app templates
-          href: ../teams/sample-app-theming.md
-        - name: Working with table permission in sample app templates
-          href: ../teams/dataverse-for-teams-table-permissions.md
-        - name: FAQ about sample app templates
-          href: ../teams/sample-apps-faqs.md
-    - name: Known issues and limitations
-      href: ../teams/known-issues-limitations.md
-  - name: Migrate Access data to Dataverse for Teams
-    href: ../teams/migrate-access-to-dvft.md
-- name: Access migration
-  href: ./data-platform/migrate-access-to-dataverse.md
-  items:
-  - name: Data types and sizes for Access migration
-    href: ./data-platform/migrate-access-datatypes.md
-  - name: System columns and tables in Dataverse
-    href: ./data-platform/access-migrate-linked-tables.md
-- name: Chatbots
-  href: ../chatbots.md
 - name: Cards
   items:
     - name: What are cards?
@@ -2526,54 +2533,6 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: AI plugins (preview)
-  items:
-  - name: AI plugins in Power Platform
-    href: common/ai-plugin.md
-  - name: Building AI plugins for discovery by Copilot
-    href: common/build-ai-plugin-for-copilot.md
-- name: AI Builder
-  href: ../use-ai-builder.md
-- name: Responsible AI
-  items:
-  - name: Overview
-    href: ./common/responsible-ai-overview.md
-  - name: FAQ about building apps through conversation
-    href: ./common/faqs-build-apps-conversation.md
-  - name: FAQ about generating app descriptions with Copilot
-    href: ./common/ai-app-descriptions-faq.md
-  - name: FAQ about editing your app with Copilot
-    href: ./common/faqs-copilot-panel.md
-  - name: FAQ about using Copilot in model-driven apps
-    href: ./common/faqs-copilot-model-driven-app.md
-  - name: FAQ about using the Copilot control in canvas apps
-    href: ./common/faq-copilot-control.md
-  - name: FAQ about using Copilot in the rich text editor
-    href: ./common/faqs-email-assist-rte.md
-  - name: FAQ for Excel to table and app
-    href: ./common/faqs-excel-to-table-app.md
-  - name: FAQ for SharePoint list to table and app
-    href: ./common/faqs-sharepoint-list-to-table-app.md
-  - name: FAQ for drafting well-written, input text with Copilot
-    href: ./common/faq-draft-with-copilot.md
-  - name: FAQ about form fill assistance
-    href: ./common/faq-from-filling-assistance.md
-  - name: FAQ about using Copilot in timeline highlights
-    href: ./common/faq-timeline-highlights-with-copilot.md
-  - name: FAQ about using Copilot with Power Fx
-    href: ./common/faqs-copilot-powerfx.md
-  - name: FAQ about field suggestions by Copilot
-    href: ./common/faq-field-suggestions.md
-  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
-    href: ./common/faq-filter-with-copilot.md
-  - name:  FAQ about agent builder in canvas apps 
-    href: ./common/faq-agent-builder.md  
-  - name: FAQ about the Plan designer
-    href: ./common/faq-plan-designer.md
-  - name: FAQ about renaming controls with Copilot
-    href: ./common/faq-rename-control.md
-  - name: FAQ about Copilot visualizations on a view
-    href: ./common/faq-visualize-view.md
 - name: Resources
   items:
   - name: Microsoft Credentials for Power Platform
@@ -2618,3 +2577,43 @@
     href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/
+- name: Responsible AI
+  items:
+  - name: Overview
+    href: ./common/responsible-ai-overview.md
+  - name: FAQ about building apps through conversation
+    href: ./common/faqs-build-apps-conversation.md
+  - name: FAQ about generating app descriptions with Copilot
+    href: ./common/ai-app-descriptions-faq.md
+  - name: FAQ about editing your app with Copilot
+    href: ./common/faqs-copilot-panel.md
+  - name: FAQ about using Copilot in model-driven apps
+    href: ./common/faqs-copilot-model-driven-app.md
+  - name: FAQ about using the Copilot control in canvas apps
+    href: ./common/faq-copilot-control.md
+  - name: FAQ about using Copilot in the rich text editor
+    href: ./common/faqs-email-assist-rte.md
+  - name: FAQ for Excel to table and app
+    href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for SharePoint list to table and app
+    href: ./common/faqs-sharepoint-list-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
+  - name: FAQ about form fill assistance
+    href: ./common/faq-from-filling-assistance.md
+  - name: FAQ about using Copilot in timeline highlights
+    href: ./common/faq-timeline-highlights-with-copilot.md
+  - name: FAQ about using Copilot with Power Fx
+    href: ./common/faqs-copilot-powerfx.md
+  - name: FAQ about field suggestions by Copilot
+    href: ./common/faq-field-suggestions.md
+  - name: FAQ about filtering, sorting, and searching canvas galleries with Copilot
+    href: ./common/faq-filter-with-copilot.md
+  - name:  FAQ about agent builder in canvas apps 
+    href: ./common/faq-agent-builder.md  
+  - name: FAQ about the Plan designer
+    href: ./common/faq-plan-designer.md
+  - name: FAQ about renaming controls with Copilot
+    href: ./common/faq-rename-control.md
+  - name: FAQ about Copilot visualizations on a view
+    href: ./common/faq-visualize-view.md

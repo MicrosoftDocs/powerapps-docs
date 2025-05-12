@@ -21,7 +21,7 @@ A model-driven app has multiple components including dashboards, forms, views, c
 > [!IMPORTANT]
 > Because canvas apps provide a lot of control over the user experience and can essentially be anything, there isn’t much help documentation on how to *use a canvas app*. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-### Related topics
+### Related articles
 
 [Enhanced user experience with the Unified Interface](unified-interface.md)<br/>
 [Basic navigation in a model-driven app](navigation.md)

@@ -2,10 +2,10 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 1/30/2025
+ms.date: 4/29/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -97,6 +97,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azure-apim.net |https |API Hubs - Different subdomains for each locale |
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
+| \*.gateway.prod.island.powerapps.com | WSS | Required for communication with and startup of canvas apps. |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
 | \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
@@ -110,7 +111,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com <br> *.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
@@ -152,6 +153,7 @@ The following table shows some of the examples where embedding a canvas app is a
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, for example, Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
 | A canvas app is embedded in a third party client.                                                 | Third party websites in a browser         | Third party native applications            |
 |A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
+| A canvas app embedded in Power BI | Web, for example, app.powerbi.com | Power BI Desktop Client |
 
 ### Model-driven app embedding
 

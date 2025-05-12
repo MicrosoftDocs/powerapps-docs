@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 03/05/2025
+ms.date: 03/20/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -499,12 +499,14 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
   - Data column: Select to show the createdon or modifiedon date.
   - Display option: Always show, show on expand, this footer containing the createdon or modifiedon date.
 
-## Configure mentions in notes and posts on timeline
+## Configure @mentions in notes and posts on timeline
 
-To enable mentions in notes and posts, follow the instructions provided in this article: [Use @mention for collaborating with your team using notes](/power-apps/user/use-@mentions)
+To enable @mentions in notes and posts, follow the instructions provided in this article: [Use @mention for collaborating with your team using notes](/power-apps/user/use-@mentions)
 
 > [!IMPORTANT]
-> The mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+> The @mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+> <br><br>
+> Users must have the Read privilege for the **msdyn_postconfig** entity, and the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
 
 <!-- 
 ## Configure dashboard timelines

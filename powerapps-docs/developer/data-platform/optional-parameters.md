@@ -3,7 +3,7 @@ title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs"
 description: "Use optional parameters to control operation behaviors" 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair

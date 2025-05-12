@@ -8,6 +8,7 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 09/24/2024
 ms.custom: template-how-to 
+ms.subservice: dataverse-maker
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
@@ -152,14 +153,14 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 1. Obtain the Dataverse environment ID.
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-   1. Select **Environments**, and then open your environment.
+   1. Select **Manage** > **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
    1. To link to the Dataverse environment, run this PowerShell script: `./NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
    1. Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
 1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-1. Select **Environments**, and then open the environment you specified earlier.
+1. Select **Manage** > **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
 ## Configure network access to the Azure Data Lake Storage Gen2

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 02/21/2025
+ms.date: 04/28/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -30,12 +30,12 @@ Customize Copilot chat to make it even more intelligent and relevant for your or
 
 You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-studio/) and expand the capabilities to go beyond just handling [Microsoft Dataverse tables questions](/power-apps/user/use-copilot-model-driven-apps) and out-of-the-box skills. Before customizing, make sure [Copilot chat is enabled](/power-apps/maker/model-driven-apps/add-ai-copilot#enable-copilot-for-model-driven-apps-in-your-environment) for your environment.
 
-<!-- [!VIDEO https://learn-video.azurefd.net/vod/player?id=d0439343-f464-4ec7-a92d-b3c528430fb5] -->
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d0439343-f464-4ec7-a92d-b3c528430fb5]
 
 > [!NOTE]
 >
 > - Copilot Studio license and agent editing permissions are required to customize Copilot chat.
-> - This feature is only available in standalone model-driven apps and [Copilot in Dynamics 365 Sales](/dynamics365/sales/extend-copilot-chat). This feature isn't yet supported for other Dynamics 365 apps.
+> - This feature is only available in standalone model-driven apps, which don't include both lead and opportunity tables. This feature isn't yet supported for Dynamics 365 apps.
 
 1. Go to https://make.preview.powerapps.com. 
 1. Open your model-driven app in edit mode, and then on the left navigation bar select **...** > **Configure in Copilot Studio**. You're taken to Microsoft Copilot Studio where your app’s agent is set up. Every standalone model-driven app Copilot has its own dedicated agent available for customizations. Setting up the agent for the first time takes a few seconds.
@@ -50,7 +50,6 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
 
 - Copilot chat agents currently aren’t identified by the platform as a dependency. You must manually add the relevant Copilot chat agent to your model-driven app solution before export and import to another environment.
 - **Configure in Copilot Studio** action can create agents with the same display name for apps that have the same initial characters in the app name. When this occurs, rename the agent while publishing to avoid confusion.
-- The [Image](/microsoft-copilot-studio/authoring-send-message#add-an-image) and [Video](/microsoft-copilot-studio/authoring-send-message#add-an-image) message types from agent to user aren't supported. As a workaround, you can use Adaptive Cards.
 
 ## Related information
 

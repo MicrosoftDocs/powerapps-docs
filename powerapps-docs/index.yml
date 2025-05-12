@@ -52,12 +52,12 @@ additionalContent:
           links:
             - text: Choose an app type
               url: maker/index.md
+            - text: Use the Plan designer 
+              url: maker/plan-designer/plan-designer.md
             - text: Create a canvas app
               url: maker/canvas-apps/index.yml
             - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
-            - text: Create a card
-              url: cards/overview.md
         - title: AI copilot capabilities
           links:
             - text: Get started with AI copilot (preview)

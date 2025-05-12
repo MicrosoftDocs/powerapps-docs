@@ -3,8 +3,8 @@ title: FAQ for the Plan designer
 description: FAQ that discusses the Power Apps the Plan designer and the key considerations for making use of this technology responsibly.
 author: norliu
 contributors: mduelae 
-ms.topic: conceptual
-ms.date: 12/05/2024
+ms.topic: faq
+ms.date: 4/10/2025
 ms.author: norliu
 ms.reviewer: mkaur
 ms.collection: 
@@ -34,10 +34,7 @@ We evaluate the feature both qualitatively and quantitatively. To assess the qua
 - To use this capability, you must have a Microsoft Dataverse database in your environment.
 - Preview features aren’t meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. For more information, see preview terms.
 - This capability is powered by Azure OpenAI Service.
-- This capability is in process of rolling out, and might not be available in your region yet.
 - This capability can be subject to usage limits or capacity throttling.
-- Your environment must be in the United States region.
-- This feature doesn’t support non-English language input.
 - This feature allows maximum input size of 4k tokens, including both text and images. (~ 3,000 words if your input only contains text)
 
 ## What operational factors and settings allow for effective and responsible use of the Plan designer?

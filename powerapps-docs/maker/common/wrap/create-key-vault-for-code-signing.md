@@ -1,8 +1,8 @@
 ---
-title: Create Key Vault for code signing
-description:  Learn how to create Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
+title: Key vault for code signing
+description:  Learn how to configure Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 5/9/2024
@@ -13,23 +13,26 @@ search.audienceType:
 contributors:
   - mduelae
 ---
-# Create Azure Key Vault for wrap using default subscription
+# Azure key vault for wrap using default subscription
 
-In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
+In order to automatically, sign your Android or iOS mobile app package during access key and [Step 2: Target platform](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
 
 
 In this article, you'll learn how to use an existing Azure Key Vault or create a new [Azure portal](https://portal.azure.com).
 
 ## Prerequisites
   
-- Microsoft Entra subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Microsoft Entra subscription to [create key vault](/azure/key-vault/general/quick-create-portal).
 - Your subscription ID needs to be the default one. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 
    
-## Create Azure Key Vault and configure Key Vault URI
+## Configure key vault URI
+
+> [!IMPORTANT]
+> Before configuring the Key Vault URI, you need to create an Azure Key Vault. Follow the steps listed in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault) to proceed further.
 
 1. To create a new Azure service principal for the 1P Microsoft Entra application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
 
@@ -94,9 +97,11 @@ In this article, you'll learn how to use an existing Azure Key Vault or create a
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s).
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s). If you have already created a [bundle ID in the wrap wizard](wrap-how-to.md#step-2-target-platform), use the same one here.
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
+
+A video for configuring key vault is available at [How to configure access to key vault](https://www.youtube.com/watch?v=QV5xAUoJDcA&t=7s)
   
 ## Troubleshoot 
 
