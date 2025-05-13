@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.date: 04/29/2025
+ms.date: 05/13/2025
 ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
@@ -78,7 +78,7 @@ This configuration can be considered a bootstrap step for average use cases.
 >
 > - Use the Spark pool exclusively for Delta Lake conversation operation with Synapse Link for Dataverse. For optimal reliability and performance, avoid running other Spark jobs using the same Spark pool.
 > - You might need to increase the number of nodes of the Spark pool if you expect a large number of rows to be processed. If the size of the Spark pool is insufficient, Delta conversion jobs might fail
-> - The same Spark pool is used by the system to run a nightly job that compacts Delta files in the lake between 11PM and 6AM local time. The system determines the night time to run this job based on the location of your Dataverse environment. You can't provide a specific time window. This option reduces the size of Delta files by merging files known as "compaction." In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures.
+> - The same Spark pool is used by the system to run a nightly job that compacts Delta files in the lake between 11 PM and 6 AM local time. The system determines the night time to run this job based on the location of your Dataverse environment. You can't provide a specific time window. This option reduces the size of Delta files by merging files known as "compaction." In rare cases, this job might interfere with the incremental conversion job. You can increase the number of nodes to 20 in case you notice these failures.
 > - You're only charged for the spark pool nodes actually utilized. Increasing the number of nodes might not result in higher charges.
 
 ## Connect Dataverse to Synapse workspace and export data in Delta Lake format

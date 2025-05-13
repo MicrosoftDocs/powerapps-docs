@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 04/30/2025
+ms.date: 05/13/2025
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights
@@ -27,7 +27,6 @@ Low-code makers can build apps and automations to orchestrate business processes
 
 Watch this video to learn about accessing Dataverse data in Fabric:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=ddd288c6-e47a-4bc6-974b-4fe0f1a49362]
-
 
 ## Link to Fabric from Power Apps
 
