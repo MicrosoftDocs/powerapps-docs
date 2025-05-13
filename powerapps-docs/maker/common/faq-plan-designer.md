@@ -15,7 +15,7 @@ ms.collection:
 
 ## What is the Plan designer?
 
-The Plan designer is an AI-powered experience that builds an end-to-end business solution in a matter of minutes. By simply describing a business problem in natural language, and including images such as a legacy app, process diagram, you can expect an outlined user role and requirements; more importantly, an end-to-end Power Platform solution generated with objects like Dataverse tables, Power Apps (canvas and model-driven apps), Power Automate cloud flows, Power Pages, Power BI, and Microsoft Copilot Studio agents. In the Plan designer you can iterate and further refine your business requirements to generate a more precise output based on your exact needs.
+The Plan designer is an AI-powered experience that builds an end-to-end business solution in a matter of minutes. By simply describing a business problem in natural language, and including images such as a screenshot of a legacy app, process diagram, you can expect an outlined user role and requirements; more importantly, an end-to-end Power Platform solution generated with objects like Dataverse tables, Power Apps (canvas and model-driven apps), Power Automate cloud flows, Power Pages sites, Power BI, and Microsoft Copilot Studio agents. In the Plan designer you can iterate and further refine your business requirements to generate a more precise output based on your exact needs.
 
 ## What can the Plan designer do?
 
@@ -23,7 +23,9 @@ The plan designer can build an end-to-end business solution based on a descripti
 
 ## What is the Plan designer’s intended use?
 
-The intended use is a maker could come to Plan designer and by just describing their business problem, we can come up with a comprehensive plan including user stories, data schema, and apps/flows/agents to build so it can save time for the user to learn different products in power platform and have to jump here and there creating assets. Furthermore, the plan would serve as a documentation for user to refer to later.
+The intended use is a maker could come to Plan designer and by just describing their business problem, we can come up with a comprehensive plan including user stories, data schema, and apps/flows/agents to build so it can save time for the user to learn and integrate different products in the Power Platform.
+
+Furthermore, the plan would serve as a documentation for user to refer to later.
 
 ## How was the Plan designer evaluated? What metrics are used to measure performance?
 

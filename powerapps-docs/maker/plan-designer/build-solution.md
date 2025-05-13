@@ -33,6 +33,8 @@ After saving a plan in a solution, create apps like canvas apps, model-driven ap
 
     - **Model-driven app**: Opens the modern app designer with data tables already added. Before using the app, save and publish it.
 
+    - **Power Pages site**: Opens Power Pages Studio with the initial setup, including layout design, domain configuration, and pages tailored to your goals. You can use this to develop your website. Learn more about [customizing pages in the site](/power-pages/configure/design-build-overview). Save and publish the site before using it. Save the site to the same Solution as the Plan for healthy ALM.
+
     - **Power Automate flow**: Opens Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
     
     - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. The plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
@@ -55,7 +57,7 @@ After saving a plan in a solution, create apps like canvas apps, model-driven ap
          - [Key concepts – Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)  
          - [Key concepts - Analytics](/microsoft-copilot-studio/analytics-overview)  
 
-## Use existing app
+## Use existing apps
 
 When Plan designer proposes apps, you can replace a proposed app with an existing app or add an existing app to the plan. This approach is helpful if you already have developed apps and want to use them in a new business solution. It saves time, reduces redundancy, and keeps your solutions consistent.
 

@@ -100,7 +100,7 @@ Next, the **Data Agent** suggests tables to store your business data.
     
      :::image type="content" source="media/create-a-plan/show-details.png" alt-text="Screenshot of the **Show details** button to view or edit data." lightbox="media/create-a-plan/show-details.png"::: 
    
-1. If you select, **Show details** it opens the data workspace. Use the table visual designer to create tables, set up relationships, and view a data diagram. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
+1. If you select, **Show details** it opens the data workspace. Use the data workspace to create tables, set up relationships, and view a data diagram. For more information, see [Create and edit tables using Power Apps](/power-apps/maker/data-platform/create-edit-entities-portal#create-new-tables).
 
    :::image type="content" source="media/create-a-plan/data-workspace.png" alt-text="Screenshot of the data workspace in the Plan designer showing table relationships.":::
 
@@ -135,7 +135,7 @@ The Plan designer suggests technologies from the following list:
 ## Save tables
 
 
-To create objects such as apps, flows, and agents, you need to save your plan and tables.
+To create objects such as apps, flows, sites and agents, you need to save your plan and tables.
 
 1. Select **Save tables**.
 
