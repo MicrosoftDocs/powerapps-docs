@@ -45,7 +45,7 @@ If you've already created a plan and want to switch between the preview and Gene
 
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Turn off preview feature for Plan designer":::
 
-> [!CAUTION]
+> [!NOTE]
 > When you switch the preview experience for Plan designer on or off, some content in the plan might be edited, regenerated, or removed.
 
 Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
