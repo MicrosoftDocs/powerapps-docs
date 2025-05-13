@@ -82,7 +82,7 @@ You can also code sign your mobile app package manually instead of using automat
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 > [!NOTE]
-> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform.
 
 6.  Select **Next**.
 
