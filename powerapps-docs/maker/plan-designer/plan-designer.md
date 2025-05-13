@@ -18,7 +18,7 @@ ms.custom:
 
 # Overview of Plan designer
 
-Plan designer is a copilot-first development tool that helps you create comprehensive business solutions quickly. Simply describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. Plan designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
+Plan designer is a copilot-first development tool that helps you create comprehensive business solutions quickly. Describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. Plan designer generates a complete Power Platform solution tailored to your needs. It includes Dataverse tables, canvas apps, model-driven apps, and Power Automate flows.
 
 :::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan designer landing page in Power Apps.":::
 
@@ -40,8 +40,7 @@ To turn on preview features, select the **Include preview features** option when
 
 :::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Screenshot of enabling preview feature for Plan designer.":::
 
-
-If you've already created a plan and want to switch between the preview and General Availability (GA) experience, select the **Preview feature** icon to turn preview features on or off for the plan. A plan can only be changed from preview to GA experience after it's saved. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
+If you have a plan and want to switch between preview and General Availability (GA), select the **Preview feature** icon to turn preview features on or off. You can change a plan from preview to GA only after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
 
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan Designer.":::
 
