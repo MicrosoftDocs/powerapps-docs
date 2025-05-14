@@ -19,7 +19,7 @@ Power Apps provides an easy way to view and create table alternate keys with Mic
 
 ## View alternate keys
 
-1. In [Power Apps]([https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Solutions** and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Solutions** and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Tables** on the left **Objects** pane, and then open the table that you want to view.
 1. In the **Schema** area, select **Keys** to view a list of any alternate keys that might be defined.
 
