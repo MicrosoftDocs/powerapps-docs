@@ -243,7 +243,7 @@
     href: ./plan-designer/plan-designer.md  
   - name: Create a plan
     href: ./plan-designer/create-plan.md 
-    name: Generate process diagrams (preview)
+  - name: Generate process diagrams (preview)
     href: ./plan-designer/process-diagrams.md
   - name: Build a solution
     href: ./plan-designer/build-solution.md
