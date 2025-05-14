@@ -17,6 +17,9 @@ search.audienceType:
 
 # Create email templates
 
+> [!IMPORTANT]
+> The enhanced email template experience is no longer available. 
+
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. 
 
 You can create email templates by using one of the following options:  
@@ -69,9 +72,6 @@ Start with an existing template to create an email template faster and with less
        :::image type="content" source="media/email-start-with-existing-templates-1a.png" alt-text="Screenshot that shows existing email templates to start from.":::
   
 3. The template editor page is displayed.
-
-
-
 
 ## Email template editor
 
