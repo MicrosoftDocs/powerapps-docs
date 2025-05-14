@@ -3,7 +3,7 @@ title: Create a plan for your solution using Plan designer
 description: Learn how to use Plan designer to create a detailed plan for your existing solution, including business problems, user requirements, data models, and technology stacks.  
 author: mduelae  
 contributors:  
-ms.topic: conceptual  
+ms.topic: how-to  
 ms.date: 05/01/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  

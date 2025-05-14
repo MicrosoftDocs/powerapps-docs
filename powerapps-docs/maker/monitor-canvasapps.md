@@ -4,7 +4,7 @@ description: Learn about debugging canvas apps by using Live monitor.
 author: mattgon
 
 ms.subservice: troubleshoot
-ms.topic: how-to
+ms.topic: 
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/14/2024

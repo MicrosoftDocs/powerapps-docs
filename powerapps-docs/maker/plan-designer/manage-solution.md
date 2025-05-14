@@ -1,9 +1,9 @@
 ---
-title: Plan designer Solutions and ALM Practices  
-description: Learn how Plan designer promotes healthy Application Lifecycle Management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
+title: Plan designer Solutions and ALM practices  
+description: Learn how Plan designer promotes healthy application lifecycle management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
 author: szlo  
 contributors:  
-ms.topic: conceptual  
+ms.topic: how-to  
 ms.date: 05/19/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
