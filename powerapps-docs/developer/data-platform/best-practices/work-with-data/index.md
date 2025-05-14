@@ -4,7 +4,7 @@ description: Best practices and guidance around working with data for developers
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: best-practice
 ms.date: 03/26/2021
 ms.subservice: dataverse-developer
 search.audienceType: 

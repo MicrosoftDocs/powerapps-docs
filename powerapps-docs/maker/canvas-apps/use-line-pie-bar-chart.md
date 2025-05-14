@@ -3,7 +3,7 @@ title: Show data in a line, pie, or bar chart in canvas apps
 description: Learn about how to show categories of data as line charts, pie charts, or bar charts in a canvas app.
 author: fikaradz
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/23/2016

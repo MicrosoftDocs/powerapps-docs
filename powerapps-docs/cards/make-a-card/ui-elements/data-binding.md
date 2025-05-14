@@ -3,7 +3,7 @@ title: Work with repeating controls in cards
 description: Learn how to make controls repeat in a table in cards for Microsoft Power Apps.
 keywords: "Card Designer, Power Apps, cards, controls"
 ms.date: 09/20/2022
-ms.topic: conceptual
+ms.topic: article
 author: iaanw
 ms.author: iawilt
 ms.reviewer: 

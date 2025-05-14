@@ -2,7 +2,7 @@
 title: Use inline actions when you're building  a canvas app
 description: Learn how to use inline actions while you’re building a canvas app in Power Apps Studio.
 author: tashaev
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/29/2024

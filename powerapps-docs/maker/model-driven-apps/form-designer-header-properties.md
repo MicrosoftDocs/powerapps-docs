@@ -6,7 +6,7 @@ ms.date: 01/06/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"

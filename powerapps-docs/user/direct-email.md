@@ -4,7 +4,7 @@ description: Learn how to send email to multiple recipients.
 author: sbmjais
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 05/28/2020
 ms.subservice: end-user
 ms.author: shjais

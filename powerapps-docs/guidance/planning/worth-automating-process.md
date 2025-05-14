@@ -3,7 +3,7 @@ title: Is it worth automating this process? | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, consider the effort it will take to build the solution and decide whether it's justified by business value.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

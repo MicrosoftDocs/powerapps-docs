@@ -2,10 +2,10 @@
 title: Disconnect Git version control to edit canvas apps 
 description: Learn how to disconnect Git version control to edit canvas app
 author: angela21k
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/01/2024
+ms.date: 5/14/2025
 ms.subservice: canvas-maker
 ms.author: angelakim
 search.audienceType:
@@ -31,6 +31,6 @@ If you are using PASopa, download your app from your Git provider and [pack the 
 
 
  > [!NOTE]
- > Git version control will be replaced with the source control integration feature. More information: [Source code integration](/power-platform/release-plan/2024wave1/data-platform/source-code-integration)
+ > Git version control is replaced with the source control integration feature. More information: [Source code integration](/power-platform/alm/git-integration/canvas-apps-git-integration)
 
 

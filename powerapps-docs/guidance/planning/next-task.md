@@ -3,7 +3,7 @@ title: Planning  - How does this task pass to the next one | Microsoft Docs
 description: When you are deeply inspecting a step in business process you want to automate by using Power Apps, the last question is how does this step end and the next step begin?
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

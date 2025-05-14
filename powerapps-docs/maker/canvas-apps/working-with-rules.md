@@ -3,7 +3,7 @@ title: Convert rules to expressions
 description: Learn about how to convert rules to expressions in canvas apps.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/23/2019

@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 01/21/2025
+ms.date: 05/12/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -19,9 +19,9 @@ Tables are used to model and manage business data. When you develop an app, you 
 To create and edit tables in Dataverse, you need the following:
 
 - A Power Platform environment with Dataverse.
-- Appropriate permission with either of the following privileges: 
-  - The system customizer security role in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database).
-  - The environment maker security role with a custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the environment maker to create and edit tables in Dataverse, however a Power Platform admin must grant them data access to these tables.
+- Appropriate permission that includes *both* of the following privileges: 
+  - The system customizer security role in the environment. Note that, apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database).
+  - A system or custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the user to create and edit tables in Dataverse. Note that a Power Platform admin must grant the user data access to edit the rows of these tables.
 
 ## View tables
 
@@ -155,7 +155,7 @@ Select **Advanced options** to display additional properties that are optional f
 
 |Property |Description|
 |--|--|
-| **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
+| **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved. |
 |**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can't be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements. |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
@@ -178,7 +178,7 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network. |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Save** to continue. This action closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+Select **Save** to continue. This action closes the **New table** panel and displays the [table hub](#edit-table-components-using-the-table-hub).
 
 ### Create with external data
 

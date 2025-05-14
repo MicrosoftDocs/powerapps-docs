@@ -3,7 +3,7 @@ title: Design phase - Planning a Power Apps project | Microsoft Docs
 description: In the designing phase, you'll prepare the specifications and designs of your app. This article introduces the conceptual and architectural design phases.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

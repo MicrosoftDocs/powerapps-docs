@@ -4,7 +4,7 @@ description: How to export data from your model-driven app to Excel
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/22/2024
 ms.subservice: end-user
 ms.author: smurkute
