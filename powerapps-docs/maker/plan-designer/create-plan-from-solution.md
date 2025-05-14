@@ -1,6 +1,6 @@
 ---  
-title: Create a plan for your solution using plan Designer  
-description: Learn how to use Plan Designer to create a detailed plan for your existing solution, including business problems, user requirements, data models, and technology stacks.  
+title: Create a plan for your solution using Plan designer  
+description: Learn how to use Plan designer to create a detailed plan for your existing solution, including business problems, user requirements, data models, and technology stacks.  
 author: mduelae  
 contributors:  
 ms.topic: conceptual  
@@ -17,7 +17,7 @@ Use Plan designer to create a plan for your existing solution. Plan designer gen
 1. In the navigation pane, select **Solutions**.
 1. Select **Create plan from a solution**. Or, from the list of solutions, select a solution, and then select **Commands** > **Create a plan**.
 
-    :::image type="content" source="media/create-a-plan-from-a-solution/create-plan-from-solution.png" alt-text="Screenshot of the solutions page with the Create plan from a solution option highlighted.":::
+    :::image type="content" source="media/create-a-plan-from-a-solution/create-plan-from-solution.png" alt-text="Screenshot of creating a plan from a solution.":::
 
 1. Select **Select solution** and then choose a solution.
     
@@ -36,7 +36,7 @@ Use Plan designer to create a plan for your existing solution. Plan designer gen
 
 - A solution needs at least one app and one associated table to create a plan.
 - The plan recognizes apps, flows, and tables in a solution. Other objects, like sites and agents, are out of scope.
-- To create a plan from an existing solution, publish the apps in the solution and publish the solution.
+- To create a plan from an existing solution, publish the apps in the solution and then publish the solution.
 
 ## Related information
 
