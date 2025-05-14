@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 05/12/2025
+ms.date: 05/14/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -50,7 +50,7 @@ There are several ways to create a new table:
 
 ### Create new tables
 
-Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data.
+Use the data workspace experience where you create tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
 
@@ -63,8 +63,8 @@ Use the table visual designer experience where you create tables, configure tabl
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
       (NOTE: many-to-many relationships aren't supported)
    - **Remove**. Deletes the table and all associated table rows when *a new table* is selected. Remove doesn't delete the table and associated rows when an existing table is selected.
-2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
-3. Table visual designer canvas actions:
+2. Data workspace canvas. On the data workspace canvas, you can drag tables around the data workspace to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
+3. Data workspace canvas actions:
    - **+**. Zoom in to increase the size of the table objects on the canvas.
    - **-**. Zoom out to decrease the size of the table objects on the canvas.
    - **Fit view**. Resize to fit within the available space in the browser tab.
@@ -76,10 +76,10 @@ Use the table visual designer experience where you create tables, configure tabl
    - **Remove**. Remove the table and all associated rows. If the tables is a new table, all data is deleted. For existing tables, that table is only removed from the table designer and no data is removed.
 5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
 6. Show more or less column. You can select and clear the columns to be displayed in the table card. Also displays or hides the relationship for lookup columns that connect to another table currently in the designer.
-7. Add new relationship handle. Drag the handle and create a new relationship by pointing it towards another table. Some relationship types are currently not supported. More information: [Limitations using the table visual designer](#limitations-using-the-table-visual-designer)
+7. Add new relationship handle. Drag the handle and create a new relationship by pointing it towards another table. Some relationship types are currently not supported. More information: [Limitations using the data workspace](#limitations-using-the-data-workspace)
 
 > [!TIP]
-> Can't find the tables you created on the canvas? Select **Fit view** on the table visual designer canvas actions menu.
+> Can't find the tables you created on the canvas? Select **Fit view** on the data workspace canvas actions menu.
 
 Create a table with the visual table designer by using any of the following methods:
 
@@ -103,9 +103,9 @@ Describe your data in natural language and Copilot generates tables along with r
 3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#review-the-table)
 4. When you're finished, select **Save and exit**.
 
-#### Limitations using the table visual designer
+#### Limitations using the data workspace
 
-The following data types aren't currently supported when you create a column in the table visual designer:
+The following data types aren't currently supported when you create a column in the data workspace:
 
 - Rich text
 - Customer
