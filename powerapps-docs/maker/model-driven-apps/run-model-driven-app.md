@@ -2,7 +2,7 @@
 title: How to run a model-driven app | MicrosoftDocs
 description: "How to run a Power Apps model-driven app"
 ms.custom: ""
-ms.date: 08/13/2024
+ms.date: 05/06/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -60,7 +60,7 @@ When a user hovers over the app name at the top of the web browser, the app's de
 
 :::image type="content" source="media/app-description-browser.png" alt-text="hovering over the app name shows the app description":::
 
- If the app's description was [generated using AI](build-first-model-driven-app.md#create-an-app-description-with-copilot-preview), a disclaimer is shown. Selecting the app name opens the app switcher where the user can play another app that they have access to.
+If the app's description was [generated using AI](build-first-model-driven-app.md#create-an-app-description-with-copilot), a disclaimer is shown. Selecting the app name opens the app switcher where the user can play another app that they have access to.
 
 ### See also
 
