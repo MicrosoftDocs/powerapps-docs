@@ -1,7 +1,7 @@
 ---  
 title: Build Your Solution With canvas apps, model-driven Apps, flows, and agents  
 description: Learn how to build business solutions using canvas apps, model-driven apps, Power Automate flows, and Copilot Studio agents. Incorporate existing apps into your plans for efficiency and consistency.  
-author: mduelae  
+author: szlo 
 contributors:  
 ms.topic: how-to  
 ms.date: 05/19/2025  
