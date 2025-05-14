@@ -1,6 +1,6 @@
 ---
-title: Plan Designer Solutions and ALM Practices  
-description: Learn how Plan Designer promotes healthy Application Lifecycle Management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
+title: Plan designer Solutions and ALM Practices  
+description: Learn how Plan designer promotes healthy Application Lifecycle Management (ALM) practices by packaging plan components into solutions for advanced ALM capabilities.  
 author: szlo  
 contributors:  
 ms.topic: conceptual  
@@ -38,7 +38,7 @@ To track which objects from the associated solutions are tied to the plan, selec
 
 :::image type="content" source="media/manage-solution/only-show-objects-in-plan.png" alt-text="Screenshot of the 'Only show objects in this plan' option.":::
 
-When you clear **Only show objects in this plan**, the complete contents of these solutions are shown. This helps you understand the broader context, overall composition, and potential dependencies.
+When you clear **Only show objects in this plan**, the complete contents of these solutions are shown. It helps you understand the broader context, overall composition, and potential dependencies.
 
 ## Known issues
 
