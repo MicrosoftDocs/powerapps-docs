@@ -4,7 +4,7 @@ description: "Learn about tables in Dataverse that represent the structure and i
 ms.custom: ""
 ms.date: 05/18/2022
 ms.reviewer: "matp"
-ms.topic: "conceptual"
+ms.topic: article
 author: "si-matthews"
 ms.subservice: dataverse-maker
 ms.author: "simatthe"

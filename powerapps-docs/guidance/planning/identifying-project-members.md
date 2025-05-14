@@ -3,7 +3,7 @@ title: Planning - Identify your Power Apps project team | Microsoft Docs
 description: Anyone who is involved in designing, making, and testing apps will be a project team member. Consider who will fill these project roles.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

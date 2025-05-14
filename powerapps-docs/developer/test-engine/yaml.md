@@ -5,7 +5,7 @@ author: pvillads
 ms.author: pvillads
 ms.date: 02/23/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 contributors:
  - JimDaly
  - jt000

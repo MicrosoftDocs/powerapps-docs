@@ -4,7 +4,7 @@ description: Learn about how to embed canvas apps in websites and other services
 author: gregli-msft
 
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/11/2025

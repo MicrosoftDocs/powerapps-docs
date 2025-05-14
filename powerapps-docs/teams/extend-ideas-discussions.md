@@ -3,7 +3,7 @@ title: Enable users to discuss ideas
 description: Explains how to extend the Employee Ideas sample app template for Microsoft Teams to take users to a discussion about an idea in Teams.
 author: joel-lindstrom
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/26/2021
 ms.subservice: teams

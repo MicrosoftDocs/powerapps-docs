@@ -4,7 +4,7 @@ description: This FAQ provides information about the AI technology used to draft
 ms.date: 05/22/2024
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: jordanchodak
 ms.author: jordanchodak
 ms.reviewer: smurkute

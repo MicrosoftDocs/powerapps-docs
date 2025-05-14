@@ -3,7 +3,7 @@ title: Planning - Identifying Power Apps project risks | Microsoft Docs
 description: When planning a Power Apps project, identify what might present a risk to your project, what kind of risks are created by the app, and what you'll do to address them.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

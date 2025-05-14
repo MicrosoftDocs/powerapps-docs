@@ -7,7 +7,7 @@ ms.reviewer: "Mattp123"
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: concept-article
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"

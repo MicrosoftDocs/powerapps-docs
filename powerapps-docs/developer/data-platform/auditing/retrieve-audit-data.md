@@ -3,7 +3,7 @@ title: Retrieve the history of audited data changes
 description: Learn how to programmatically retrieve the audit change history of records in Microsoft Dataverse.
 ms.date: 06/02/2023
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: how-to
 author: paulliew
 ms.author: paulliew
 ms.subservice: dataverse-developer

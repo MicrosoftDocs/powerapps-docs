@@ -4,7 +4,7 @@ description: Learn about how to view source code files for canvas apps.
 author: marcelbf
 ms.author: marcelbf
 ms.date: 3/18/2025
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: 
 ms.subservice: canvas-maker
 ms.collection: get-started

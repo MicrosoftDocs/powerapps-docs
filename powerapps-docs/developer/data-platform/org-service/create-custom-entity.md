@@ -3,7 +3,7 @@ title: "Create a custom table using code (Microsoft Dataverse) | Microsoft Docs"
 description: "Shows how to programmatically create a custom table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 search.audienceType: 

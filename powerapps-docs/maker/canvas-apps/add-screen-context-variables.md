@@ -4,7 +4,7 @@ description: Learn how to add screens to your canvas app, use arrows to navigate
 author: emcoope-msft
 ms.author: emcoope
 ms.date: 10/29/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker

@@ -4,7 +4,7 @@ description: Learn how to use Copilot to quickly generate well-written text that
 ms.date: 01/15/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: how-to
 ms.component: pa-user
 ms.subservice: end-user
 author: jordanchodak
