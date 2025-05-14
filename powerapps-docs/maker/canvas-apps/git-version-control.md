@@ -31,6 +31,6 @@ If you are using PASopa, download your app from your Git provider and [pack the 
 
 
  > [!NOTE]
- > Git version control is now be replaced with the source control integration feature. More information: [Source code integration](/power-platform/alm/git-integration/canvas-apps-git-integration.md)
+ > Git version control is now be replaced with the source control integration feature. More information: [Source code integration](/power-platform/alm/git-integration/canvas-apps-git-integration)
 
 
