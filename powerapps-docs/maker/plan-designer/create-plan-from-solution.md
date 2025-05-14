@@ -35,7 +35,7 @@ Use Plan designer to create a plan for your existing solution. Plan designer gen
 ## Known limitations
 
 - A solution needs at least one app and one associated table to create a plan.
-- The plan recognizes apps and tables in a solution. Other objects, like flows, sites and agents are currently out of scope.
+- The plan recognizes apps and tables in a solution. Other objects, like flows, sites, and agents are out of scope.
 - To create a plan from an existing solution, publish the apps in the solution and then publish the solution.
 
 ## Related information
