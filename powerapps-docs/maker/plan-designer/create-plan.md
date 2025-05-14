@@ -24,7 +24,7 @@ This article uses a sample scenario to show how the Plan designer works by build
 
 1. Access the Plan designer from the Power Apps home page. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Enter your prompt in the text box, like the example below. Add context such as process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
+1. Enter your prompt in the text box, like the example. Add context such as process diagrams, data models, or screenshots of legacy apps. When you're done, select **Enter**.
 
     ```copilot-prompt
     Employees need to log vacation days, and managers need to approve them.
