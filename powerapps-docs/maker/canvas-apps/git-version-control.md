@@ -5,7 +5,7 @@ author: angela21k
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/01/2024
+ms.date: 5/14/2025
 ms.subservice: canvas-maker
 ms.author: angelakim
 search.audienceType:
@@ -31,6 +31,6 @@ If you are using PASopa, download your app from your Git provider and [pack the 
 
 
  > [!NOTE]
- > Git version control is now be replaced with the source control integration feature. More information: [Source code integration](/power-platform/alm/git-integration/canvas-apps-git-integration)
+ > Git version control is replaced with the source control integration feature. More information: [Source code integration](/power-platform/alm/git-integration/canvas-apps-git-integration)
 
 
