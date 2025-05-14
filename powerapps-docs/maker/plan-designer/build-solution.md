@@ -27,7 +27,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
 
     :::image type="content" source="media/build-your-solution/create-app-tiles.png" alt-text="Screenshot of the Create button. The Create button is selected in the app tiles interface." lightbox="media/build-your-solution/create-app-tiles.png":::
 
-1. When you select **Create** on one of these tiles, this happens:
+1. When you select **Create** on one of these tiles, these objects are created:
 
     - **Canvas app**: Opens Power Apps Studio with a data-connected app that starts for you. The app has responsive screens to view and edit data for each recommended table, and a welcome screen to navigate the app. Learn more about customizing screens in [Add and navigate screens](/power-apps/maker/canvas-apps/add-screen-context-variables#welcome-screen). Before you use the app, [save and publish it](../canvas-apps/save-publish-app.md). 
 
