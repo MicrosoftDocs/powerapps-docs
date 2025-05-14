@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 9/11/2024
+ms.date: 5/14/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -88,7 +88,7 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Redo**: Repeat the last action.
 
  > [!NOTE]
- > You cannot undo or redo data operations, such as insert or delete a datasource.
+ > You can't undo or redo data operations, such as insert or delete a datasource.
 
 #### Cut, copy, and paste
 
