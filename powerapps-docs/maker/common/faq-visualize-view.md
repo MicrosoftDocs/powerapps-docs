@@ -6,7 +6,7 @@ author: sriharibs-msft
 ms.author: srihas
 reviewer: shwetamurkute
 ms.reviewer: smurkute
-ms.topic: article
+ms.topic: faq
 ms.subservice: common
 ms.custom: transparency-note
  - responsible-ai-faqs

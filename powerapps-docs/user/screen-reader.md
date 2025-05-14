@@ -4,7 +4,7 @@ description: How to use a screen reader in Power Apps
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/16/2018
 ms.subservice: end-user
 ms.author: smurkute

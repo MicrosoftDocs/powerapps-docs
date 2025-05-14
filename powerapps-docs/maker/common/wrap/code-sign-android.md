@@ -2,7 +2,7 @@
 title: Code sign for Android
 description: Learn how to code sign for Android for Power Apps wrap.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 03/12/2025

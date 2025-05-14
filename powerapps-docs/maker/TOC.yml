@@ -47,8 +47,6 @@
       items:
       - name: Draft well-written, input text (preview)
         href: ../user/well-written-input-text-copilot.md
-      - name: Filter, sort, and search galleries (preview)
-        href: ../user/smartGrid.md
   - name: Use model-driven apps
     items:
     - name: Overview

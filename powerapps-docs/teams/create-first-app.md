@@ -3,7 +3,7 @@ title: Create your first app in Teams | Microsoft Docs
 description: Learn how to create your first app in Teams. 
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: get-started
 ms.date: 02/05/2025
 ms.subservice: teams

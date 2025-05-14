@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 01/22/2025
 ms.reviewer: ""
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: how-to
 author: "aorth"
 ms.author: "matp"
 search.audienceType: 

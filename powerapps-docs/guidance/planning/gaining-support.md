@@ -3,7 +3,7 @@ title: Planning a Power Apps project - management support | Microsoft Docs
 description: Ensure your company is supportive of making and using your app to replace an existing business process by gaining support or sponsorship from your management.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 12/18/2020
 ms.subservice: guidance

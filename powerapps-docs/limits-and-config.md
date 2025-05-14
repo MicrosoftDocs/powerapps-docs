@@ -2,10 +2,10 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 1/30/2025
+ms.date: 4/29/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -97,6 +97,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azure-apim.net |https |API Hubs - Different subdomains for each locale |
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
+| \*.gateway.prod.island.powerapps.com | WSS | Required for communication with and startup of canvas apps. |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
 | \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |

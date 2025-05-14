@@ -3,7 +3,7 @@ title: "Configure Exchange folder-level tracking rules (Microsoft Dataverse) | M
 description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/24/2021
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dmartens # MSFT alias of Microsoft employees only

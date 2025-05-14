@@ -2,7 +2,7 @@
 title: "Establishing a collaboration model | Microsoft Docs"
 description: "Learn more about how to establish a well-defined and structured collaboration model for fusion app development."
 author: luis-camino-ms
-ms.topic: article
+ms.topic: best-practice
 ms.custom: Focus-center
 ms.date: 07/22/2022
 ms.subservice: guidance

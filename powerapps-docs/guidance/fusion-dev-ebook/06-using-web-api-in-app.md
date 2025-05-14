@@ -3,7 +3,7 @@ title: "6: Using the Web API in the app  | Microsoft Docs"
 description: "Learn about how to use the Web API that you created in Azure in your app"
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance

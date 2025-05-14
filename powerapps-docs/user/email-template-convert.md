@@ -4,7 +4,7 @@ description: How to convert an email to a template
 author: paulliew
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 02/12/2025
 ms.subservice: end-user
 ms.author: paulliew

@@ -4,7 +4,7 @@ description: Learn how to use the code view in Microsoft Power Apps Studio to un
 author: marcelbf
 ms.author: marcelbf
 ms.date: 3/18/2025
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.collection: get-started

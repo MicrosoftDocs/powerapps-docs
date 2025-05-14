@@ -3,7 +3,7 @@ title: Show text, dates, and times in canvas apps
 description: Learn about how to show text, dates, and times in a canvas app.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 02/11/2025

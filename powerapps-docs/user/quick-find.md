@@ -4,7 +4,7 @@ description: Learn how to use quick find to search for records
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/22/2024
 ms.subservice: end-user
 ms.author: smurkute

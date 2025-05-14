@@ -3,9 +3,9 @@ title: Set permission and share your app using Power Apps in Teams | Microsoft D
 description: Learn how to share your apps and set table permissions using Power Apps in Teams.
 author: matthewbolanos
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
-ms.date: 07/18/2022
+ms.date: 05/12/2025
 ms.subservice: teams
 ms.author: mabolan
 ms.reviewer: mkaur
@@ -80,6 +80,9 @@ To set the permissions of a table:
 1. Select **Save**.
 
 1. Repeat the above steps for the remaining tables in your app.
+
+> [!IMPORTANT]
+> When using **Share app with Colleagues in the Microsoft Teams app store** and the security group doesn't exist in the Dataverse organization, the Teams app will be created and assigned the **Basic User** role. 
 
 ## Assign the colleagues with access role to a security group and share the app
 

@@ -6,7 +6,7 @@ ms.date: 01/10/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: troubleshooting-general
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"

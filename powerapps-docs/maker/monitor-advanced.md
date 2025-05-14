@@ -4,7 +4,7 @@ description: Learn about advanced monitoring concepts related to Live monitor.
 author: mattgon
 
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/14/2022

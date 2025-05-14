@@ -2,7 +2,7 @@
 title: Create and edit Dataverse tables in canvas apps using the table designer
 description: Create and edit Dataverse tables in canvas apps using the table designer.
 author: mduelae
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/29/2024
