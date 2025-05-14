@@ -4,7 +4,7 @@ description: Learn how to build business solutions using canvas apps, model-driv
 author: mduelae  
 contributors:  
 ms.topic: conceptual  
-ms.date: 05/01/2025  
+ms.date: 05/19/2025  
 ms.author: mkaur  
 ms.reviewer: mkaur  
 ---  
@@ -40,7 +40,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
  
     - **Power Automate flow**: Opens Power Automate with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
     
-        - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. The plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
+        - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. The Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
 
         - **Name**: Name of the agent.
         - **Description**: Purpose of the agent.
