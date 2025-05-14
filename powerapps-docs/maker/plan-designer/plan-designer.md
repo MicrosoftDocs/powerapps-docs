@@ -1,6 +1,6 @@
 ---
-title: Use Plan Designer to Create AI-Powered Business Solutions with Copilot
-description: Learn how to use the Plan Designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
+title: Use Plan designer to Create AI-Powered Business Solutions with Copilot
+description: Learn how to use the Plan designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
 author: szlo
 contributors:
 ms.topic: conceptual
@@ -26,11 +26,11 @@ Plan designer is a copilot-first development tool that helps you create comprehe
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 ## Availability
 
-Plan designer is General Availabille (GA). Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is General Available (GA). Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 
@@ -42,7 +42,7 @@ To turn on preview features, select the **Include preview features** option when
 
 If you have a plan and want to switch between preview and General Availability (GA), select the **Preview feature** icon to turn preview features on or off. You can change a plan from preview to GA only after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
 
-:::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan Designer.":::
+:::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan designer.":::
 
 > [!NOTE]
 > When you switch the preview experience for Plan designer on or off, some content in the plan might be edited, regenerated, or removed.
