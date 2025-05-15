@@ -52,7 +52,7 @@ The following table explains different resource types, supportability, and impor
 
 ## Permissions
 
-Only the **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, the **Environment Maker** permission is required on the destination environment.
+Only the **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles)  security role is required on the destination environment, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported. 
 
 ### See also
 
