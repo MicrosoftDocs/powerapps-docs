@@ -24,7 +24,7 @@ In Power Apps, create a blank canvas app that you can customize further and add 
 
 ## Prerequisites
 
-Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles)  security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category.
+Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles)  security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
 
 ## Create a blank canvas app
 
