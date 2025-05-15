@@ -33,13 +33,14 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
 
     - **Model-driven app**: Opens the modern app designer with data tables already added. Before you use the app, save and publish it.
 
-    - **Power Pages site**: Opens [Power Pages design stuido(/power-pages/getting-started/use-design-studio)) with the initial setup, including layout design, domain configuration, and pages tailored to your goals. Use the studio to develop your website. Learn more in [Overview of designing and building sites](/power-pages/configure/design-build-overview). To create a Power Pages site, you need the [System administrator](/power-pages/admin/admin-roles#system-administrator) role in the environment.
+    - **Power Pages site**: Opens [Power Pages design stuido](/power-pages/getting-started/use-design-studio)) with the initial setup, including layout design, domain configuration, and pages tailored to your goals. Use the studio to develop your website. Learn more in [Overview of designing and building sites](/power-pages/configure/design-build-overview). To create a Power Pages site, you need the [System administrator](/power-pages/admin/admin-roles#system-administrator) role in the environment.
         - Save and publish the site before you use it. Save the site to the same solution as the plan for healthy application lifecycle management (ALM).
         - When you save a plan in a new solution, make sure to select the **Set this as your preferred solution in this environment** option to save the subsequent items created in this solution by default.
         :::image type="content" source="media/build-your-solution/power-pages-save-option.png" alt-text="Sceenshot of saving plan to preferred solution in a environment":::
  
-    - **Power Automate cloud flow**: Opens the Power Automate NL2Flow experience with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
-        - Known Limitation: If using the Flow creation experience from preview, ensure the environment being used is enabled for the Early Release Cycle, otherwise the experience may not work as intended
+    - **Power Automate cloud flow**: Opens the Power Automate using natural language to flow experience with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
+        > [!NOTE]
+        > If you're using the preview experience to create flows, make sure you're using a preview environment. Learn more in [Early release cycle environments](/power-platform/admin/early-release)
     
     - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. The Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
 
