@@ -22,21 +22,21 @@ ms.custom:
 
 [This article is prerelease documentation and is subject to change.]
 
-Plan designer makes it easier to create and refine diagrams as part of the plan, so teams can clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
+Plan designer helps teams create and refine diagrams as part of the plan to clarify user interactions and build effective solutions. Process diagrams make workflows clearer, improve communication, and help teams work more efficiently, especially on complex projects.
 
-You optionally add images of process diagrams you already have as another resource during the creation experience to make the process clearer. Including predefined processes may bias Copilot to just duplicating what is provided, effectively limiting creativity and causing potential duplication or misinterpretation.
+Optionally, include images of existing process diagrams as additional resources during the creation experience to enhance clarity. But if you add predefined processes, Copilot might just replicate what you provide, which can limit creativity and cause duplication or misinterpretation.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 > - Make sure you have preview features turned on for Plan designer. Learn more: [Turn on preview features for Plan designer](plan-designer.md#turn-on-preview-features-for-plan-designer)
 
-To use the process diagram feature, you need to turn on preview features. Once enabled, the process diagram will appears the right as you [creating a plan](create-plan.md). The diagram is generated after [user requirements](create-plan.md#generate-user-requirements) are created.
+To use the process diagram feature, turn on preview features. When preview features are on, the process diagram appears on the right as you [create a plan](create-plan.md). The diagram generates after you [create user requirements](create-plan.md#generate-user-requirements).
 
 
-Processes use a two-level hierarchy.
+Processes use a two level hierarchy.
 
-- **Process stages**: An overview of the processes needed to address the business problem and user stories
+- **Process stages**: An overview of the processes needed to address the business problem and user stories.
 
   :::image type="content" source="media/process-diagram/process-diagram-1.png" alt-text="Screenshot of a process diagram that shows process stages for a business problem and user stories." lightbox="media/process-diagram/process-diagram-1.png":::
 
@@ -46,43 +46,43 @@ Processes use a two-level hierarchy.
 
 ## Understand a process
 
-A process includes these process nodes.
+A process has these types of nodes.
 
 1. **Events** 
-   - **Start**: Event that triggers the process to start.
-   - **Intermediate**: Events that occur in the middle of a process and happen inline before it continues.
-   - **End**: Event that signals the process is complete.
+   - **Start**: Event that starts the process.
+   - **Intermediate**: Event that happens during the process before it continues.
+   - **End**: Event that signals the process is finished.
 
 1. **Gateways**  
-   - **Exclusive**: At a decision point, only one path from the gateway is taken.
+   - **Exclusive**: At a decision point, the process takes only one path from the gateway.
 
 1. **Activities**
-   - **Task**: The core actions a user or system takes to finish the user stories.
+   - **Task**: The main action a user or system takes to finish a user story.
 
 ### Edit a process
 
-The process is an AI-first experience that might not generate results exactly as you would expect. Use natural language to describe what you want to change, or manually edit it, and AI will again reason over your changes and the overall process to generate a new process map.
+The process is an AI-first experience and might not always produce the results you expect. Use natural language to describe the changes you want, or manually edit the process. The AI then reassesses your changes and the overall process to generate a new process map.
 
 
-:::image type="content" source="media/process-diagram/edit-process.png" alt-text="Screenshot of the process diagram with edit icons for making changes to the process.":::
+:::image type="content" source="media/process-diagram/edit-process.png" alt-text="Screenshot of a process diagram that shows edit icons for making changes to the process.":::
 
-Legend:
+Legend
 
 
-1. **Ask Process Agent**: Use natural language to enter the changes you want to make. Type your prompt in the text box, like the example prompt below.
+1. **Ask Process Agent**: Use natural language to enter the changes you want to make. Type your prompt in the text box, as in the example prompt below.
 
      ```copilot-prompt
     Add an approval gateway for HR to approve or reject the vacation request based on company HR policies.
     ```
 
 1. **Add event**: Add a new event.
-1. **Add decision**: Add a decision.
-1. **Add step**: Add a step.
-1. **Validate changes**: Confirm your changes. Changes aren't finalized and saved with the plan until they're validated. The process experience in plans is an AI-first experience, even when you make manual edits. When you validate changes, the AI reviews the changes you made and merges them with the existing process. As a recommended practice, batch three to five manual changes at a time, then validate them. If you want to make more than five changes, try the natural language update first to save time and improve the accuracy of the AI generated content.
+1. **Add decision**: Add a new decision.
+1. **Add step**: Add a new step.
+1. **Validate changes**: Confirm your changes. Changes aren't finalized or saved with the plan until you validate them. The process experience in plans is an AI-first experience, even when you make manual edits. When you validate changes, the AI reviews and merges them with the existing process. As a best practice, batch three to five manual changes at a time, then validate them. If you want to make more than five changes, try the natural language update first to save time and improve the accuracy of the AI-generated content.
 
-1. **Delete**: Delete a node. Remove connecting lines by using the backspace key.
+1. **Delete**: Delete a node. Remove connecting lines by selecting the backspace key.
 
-Add connecting edges between nodes by selecting a node anchor and dragging to another node.
+Add connecting edges between nodes by selecting a node anchor and dragging it to another node.
 
 
 ## Known limitations (preview)
@@ -101,4 +101,4 @@ Add connecting edges between nodes by selecting a node anchor and dragging to an
 
 - You can't edit process stages directly. To edit them, refine user stories and regenerate the process.
 
-- You can't change node types; you can only delete and readd them.
+- You can't change node types. You can only delete and readd them.
