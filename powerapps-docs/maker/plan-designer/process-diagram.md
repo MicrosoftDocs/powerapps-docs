@@ -80,7 +80,7 @@ Legend
 1. **Add step**: Add a new step.
 1. **Validate changes**: Confirm your changes. Changes aren't finalized or saved with the plan until you validate them. The process experience in plans is an AI-first experience, even when you make manual edits. When you validate changes, the AI reviews and merges them with the existing process. As a best practice, batch three to five manual changes at a time, then validate them. If you want to make more than five changes, try the natural language update first to save time and improve the accuracy of the AI-generated content.
 1. **Delete**: Delete a node. Remove connecting lines by selecting the backspace key.
-1. Add connecting edges between nodes by selecting a node anchor and dragging it to another node.
+1. **Connect nodes**: Add connecting edges between nodes by selecting a node anchor and dragging it to another node.
 
 
 ## Known limitations (preview)
