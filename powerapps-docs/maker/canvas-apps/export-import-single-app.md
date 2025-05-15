@@ -21,7 +21,7 @@ In this article, you'll learn how to export and import a single canvas app. Befo
 Using this option, you’re able to export a single canvas app in the format of a **.msapp** file extension. This allows you to export a single file that contains the canvas app that you’re currently editing and import it.
 
 ## Permissions 
-Only the **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, the **Environment Maker** permission is required on the destination environment. 
+Only the **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles)  security role is required on the destination environment, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported. 
 
 ## Export .msapp files in Power Apps
 
