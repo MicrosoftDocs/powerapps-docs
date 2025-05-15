@@ -21,11 +21,7 @@ search.audienceType:
 
 With Dataverse search turned **On**, the search box is always available at the top of every page in your app and becomes default global search experience for all your model-driven apps. You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you're looking for.
 
-> [!NOTE]
-> When Dataverse search is in the **Default** state, the search box isn't visible at the top of the model-driven apps, so users can't search. 
-> Dataverse search is turned **On** for new production environment and **Default** for other scenarios or environments.
-
-Turn on Dataverse search to give users a better search experience in model-driven apps and leverage the benefits of generative AI capabilities. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
+Turn on Dataverse search to give users a better search experience in model-driven apps. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
