@@ -41,7 +41,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
  
     - **Power Automate cloud flow**: Opens the Power Automate using natural language to flow experience with a prefilled prompt based on the business problem, user story, flow description, and data sources. To use the flow, save and publish it.
         > [!NOTE]
-        > If you're using the preview experience to create flows, make sure you're using a preview environment. Learn more in [Early release cycle environments](/power-platform/admin/early-release).
+        > If you're using the preview experience to create flows, use a preview environment for consistent results. Learn more in [Early release cycle environments](/power-platform/admin/early-release).
     
     - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. The Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
 
