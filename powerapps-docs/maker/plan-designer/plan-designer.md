@@ -1,6 +1,6 @@
 ---
 title: Use Plan designer to Create AI-Powered Business Solutions with Copilot
-description: Learn how to use the Plan designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
+description: Learn how to use Plan designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
 author: szlo
 contributors:
 ms.topic: how-to
