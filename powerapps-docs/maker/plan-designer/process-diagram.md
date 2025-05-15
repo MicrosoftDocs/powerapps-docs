@@ -85,7 +85,7 @@ Legend
 
 ## Known limitations (preview)
 
-- Only exclusive gateways are supported.
+- Exclusive gateways are only supported.
 
 - You can't add events manually.
 
