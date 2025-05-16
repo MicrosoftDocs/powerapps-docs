@@ -1667,7 +1667,7 @@
             href: ./model-driven-apps/quick-view-control-properties-legacy.md
           - name: Timer control overview
             href: ./model-driven-apps/timer-control-legacy.md
-          - name: Add the calendar control to entities
+          - name: Add the calendar control to a table view
             href: ./model-driven-apps/add-calendar-control.md
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
