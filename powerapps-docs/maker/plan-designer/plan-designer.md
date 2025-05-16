@@ -30,7 +30,7 @@ If your environment doesn't meet the prerequisites, you're routed to your own de
 
 ## Availability
 
-Plan designer is General Available (GA). Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is Generally Available (GA). Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 
