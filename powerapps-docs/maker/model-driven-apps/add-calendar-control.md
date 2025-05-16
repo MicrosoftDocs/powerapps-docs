@@ -15,11 +15,11 @@ contributors:
 
 # Add the calendar control to tables
 
-The **Calendar** control displays scheduled activities and their associated details in a calendar. Activities can be viewed, created, and deleted in a day, week, or month view. 
+The calendar control displays scheduled activities and their associated details in a calendar layout. Activities can be viewed, created, and deleted in a day, week, or month view.
 
-:::image type="content" source="media/calendar-control-appointments.png" alt-text="Calendar control for the appoinment table view":::
+:::image type="content" source="media/calendar-control-appointments.png" alt-text="Calendar control for the appoinment table view" lightbox="media/calendar-control-appointments.png":::
 
-System customizer or system administrator privileges are needed to add the **Calendar Control** control.
+System customizer or system administrator privileges are needed to add the calendar control to a table.
 
 ## Add the control using the modern app designer
 
@@ -78,9 +78,9 @@ When you add the calendar control to a table, you can specify the columns that a
 
 ### Mobile experience
 
-The **Calendar** control is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There's a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown isn't available on mobile devices.
+The calendar* control is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There's a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown isn't available on mobile devices.
 
-### See also
+### Related articles
 
 [Work with rows in the new calendar view](../../user/calendar-view.md)
 
