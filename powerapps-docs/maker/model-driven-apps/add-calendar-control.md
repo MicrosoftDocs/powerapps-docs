@@ -28,7 +28,7 @@ When you add the calendar control to a table, you can specify the columns that a
 > [!NOTE]
 > When you add the control to a table view, it replaces the standard view for all views for that table.
 
-1. While working in the app designer on the **Pages** tab, hover over the table view and then select the **Edit view** (pencil icon).  
+1. While working in the app designer on the **Pages** tab, hover over the table view and then select **Edit view** (pencil icon).  
 1. Open the view where you want to replace the standard view with the calendar control.
    The view designer opens.
 1. On the command bar select **Components**, and then select **Add a component**.
