@@ -22,7 +22,7 @@ Business solutions built with Plan designer promote healthy application lifecycl
 
 When you create a plan, the plan is stored in the main solution, which enables the **Objects** view in Plan designer. Makers can switch between the plan and the solution view without leaving Plan designer.
 
-A plan might be associated with multiple solutions. For example, adding an existing Dataverse table to the plan's data model links the solutions associated with the Dataverse table to the plan.
+A plan might be associated with multiple solutions. For example, adding an existing Microsoft Dataverse table to the plan's data model links the solutions associated with the Dataverse table to the plan.
 
 The solutions associated with the plan display as tabs across the top when you select the **Objects** view. Select a tab to view objects in the solution. If there are more than five solutions, an overflow menu shows the remaining solutions. All solution objects are displayed, not just the ones included in the plan.
 
