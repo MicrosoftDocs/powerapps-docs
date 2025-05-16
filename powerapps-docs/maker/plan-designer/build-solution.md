@@ -13,7 +13,7 @@ ms.reviewer: mkaur
 
 Build a solution based on the objects Plan designer suggests for your business problem.
 
-To follow this article, create and save a plan. Learn more in [create a plan](create-plan.md).
+To follow this article, create and save a plan. Learn more in [Create a plan](create-plan.md).
 
 :::image type="content" source="media/build-your-solution/save-plan.png" alt-text="Screenshot of Plan designer interface showing the Save tables option." lightbox="media/build-your-solution/save-plan.png":::
 
