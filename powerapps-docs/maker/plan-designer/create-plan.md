@@ -18,7 +18,7 @@ ms.custom:
 
 # Create a plan using Plan designer
 
-Use the [Plan designer](plan-designer.md) to create user roles, data tables, and apps that address your business needs.
+Use [Plan designer](plan-designer.md) to create user roles, data tables, and apps that address your business needs.
 
 This article uses a sample scenario to show how Plan designer works by building a solution for managing paid time off (PTO) requests for employees and managers.
 
