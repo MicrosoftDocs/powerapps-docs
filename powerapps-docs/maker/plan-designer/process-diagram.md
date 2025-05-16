@@ -66,7 +66,7 @@ The process is an AI-first experience and might not always produce the results y
 
 :::image type="content" source="media/process-diagram/edit-process.png" alt-text="Screenshot of a process diagram that shows edit icons for making changes to the process.":::
 
-Legend
+Legend:
 
 
 1. **Ask Process Agent**: Use natural language to enter the changes you want to make. Type your prompt in the text box, as in the example prompt.
