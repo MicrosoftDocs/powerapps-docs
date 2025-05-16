@@ -30,7 +30,7 @@ If your environment doesn't meet the prerequisites, you're routed to your own de
 
 ## Availability
 
-Plan designer is Generally Available (GA). Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is generally available. Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 
@@ -40,12 +40,13 @@ To turn on preview features, select the **Include preview features** option when
 
 :::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Screenshot of enabling preview feature for Plan designer.":::
 
-If you have a plan and want to switch between preview and General Availability (GA), select the **Preview feature** icon to turn preview features on or off. You can change a plan from preview to GA only after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
+If you have a plan and want to switch between preview and generally available (GA) version, select the **Preview feature** icon to turn preview features on or off. You can only change a plan from preview to GA after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
 
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan designer.":::
 
 > [!NOTE]
-> When you switch the preview experience for Plan designer on or off, some content in the plan might be edited, regenerated, or removed.
+> When you switch the preview experience for Plan designer on or off, some content in the plan might be modified, regenerated, or deleted.
+
 
 Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
 
