@@ -29,7 +29,7 @@ Optionally, include images of existing process diagrams as additional resources 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
-> - Make sure you have preview features turned on for Plan designer. Learn more: [Turn on preview features for Plan designer](plan-designer.md#turn-on-preview-features-for-plan-designer)
+> - Make sure you have preview features turned on for Plan designer. Learn more in [Turn on preview features for Plan designer](plan-designer.md#turn-on-preview-features-for-plan-designer)
 
 To use the process diagram feature, turn on preview features. When preview features are on, the process diagram appears on the right as you [create a plan](create-plan.md). The diagram generates after you [create user requirements](create-plan.md#generate-user-requirements).
 
