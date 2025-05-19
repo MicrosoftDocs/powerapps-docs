@@ -5,7 +5,7 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.subservice: dataverse-maker
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 01/04/2023
 ms.custom: template-concept
 ---

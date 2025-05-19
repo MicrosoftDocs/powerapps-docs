@@ -4,7 +4,7 @@ description: View your user profile in Power Apps
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/22/2024
 ms.subservice: end-user
 ms.author: smurkute

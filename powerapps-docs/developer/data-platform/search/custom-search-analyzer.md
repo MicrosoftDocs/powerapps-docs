@@ -3,7 +3,7 @@ title: "Configure Azure AI built-in analyzers for Dataverse Search"
 description: "You can tailor the search results you get from Dataverse search by applying special search analyzers for specific table columns. You can use Azure AI built-in analyzers to modify the search results you get." 
 ms.date: 03/28/2025
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: seanwat-msft
 ms.author: seanwat
 search.audienceType: 

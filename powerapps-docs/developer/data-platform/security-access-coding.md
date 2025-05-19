@@ -3,7 +3,7 @@ title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Inten
 description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 06/05/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: concept-article
 author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: paulliew # MSFT alias of Microsoft employees only

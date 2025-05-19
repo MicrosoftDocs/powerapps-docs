@@ -5,7 +5,7 @@ author: clromano
 ms.author: clromano
 ms.reviewer: jdaly
 ms.date: 04/01/2022
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

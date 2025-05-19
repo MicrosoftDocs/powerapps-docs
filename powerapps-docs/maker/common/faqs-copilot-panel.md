@@ -4,7 +4,7 @@ description: FAQ that discusses continuing to edit your app with Copilot and the
 ms.date: 10/10/2024
 ms.custom: 
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: norliu 
 ms.author: norliu
 ms.reviewer: mduelae

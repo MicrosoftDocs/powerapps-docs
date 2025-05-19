@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/09/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 

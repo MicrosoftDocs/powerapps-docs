@@ -3,7 +3,7 @@ title: Build global support into canvas apps
 description: Learn about how to use Power Apps to build apps that use different languages.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/25/2016

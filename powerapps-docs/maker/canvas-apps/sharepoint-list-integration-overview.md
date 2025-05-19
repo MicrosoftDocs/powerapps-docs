@@ -3,7 +3,7 @@ title: Integrate SharePoint Online into Power Apps overview
 description: An overview of how to integrate lists from SharePoint Online or Microsoft Lists into Microsoft Power Apps.
 author: NickWaggoner
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.reviewer: mkaur
 ms.date: 3/1/2025
 ms.subservice: canvas-maker

@@ -2,7 +2,7 @@
 title: "Best practices: Collaborating and co-developing apps using Power Apps | Microsoft Docs"
 description: "Learn more about how to collaborate and co-develop low code apps in Power Apps."
 author: luis-camino-ms
-ms.topic: article
+ms.topic: best-practice
 ms.custom: Focus-center
 ms.date: 07/26/2022
 ms.subservice: guidance
