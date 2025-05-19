@@ -3,7 +3,7 @@ title: Canvas component overview
 description: Learn about how to create reusable components for canvas apps.
 author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 07/22/2022
 ms.author: jorisde
 ms.reviewer: mkaur

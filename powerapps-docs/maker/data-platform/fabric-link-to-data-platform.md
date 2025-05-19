@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/15/2025
+ms.date: 05/13/2025
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -21,20 +21,10 @@ You can use an existing Dataverse environment or create a new developer environm
 - You must have the Systems Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. 
 - You must be an administrator of the Power BI workspace. 
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity within the same region as the Dataverse environment.
-
-The system creates a data connection between the Power Apps environment and Fabric workspace using the credentials of the user at the time of link creation. If you use the **Fabric link** option from the Power Apps **Tables** area, the system creates the connection and asks you to save. If you use the **Synapse Link** option, you must create a data connection yourself before enabling the link.
-
-The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. 
-
-### Share the data connection with other users
-
-1. Go to [Fabric.Microsoft.com](https://fabric.microsoft.com) and select the gear icon on top left (next to user icon).
-2. On the **Settings** menu, select **Data connections and Gateways**. The available data connections are displayed.
-3. Select the **Connections** tab, and then choose the data connection you created with the connection type **Dataverse**. You might see a connection that is named like **org...crm.dynamics.com**. In case you have multiple connections like this, you need to select the connection that links to the specific Power Platform environment.
-4. Once you select the correct data connection, select **...** > **manage users**. Then you're shown users who have access to this connection.
-5. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
-
-You might need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. You can secure the lakehouse as well as tables within the lakehouse using OneLake security. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
+- A Power BI premium license or Fabric capacity within the same Azure geographical region as your Dataverse environment is required. If you don’t have Power BI premium license or Fabric capacity within the same geographical region, you can buy a capacity or sign up for a free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
+- Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the  Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
+- To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
+   :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
 ## Create a link to Fabric
 
@@ -42,13 +32,6 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 
 1. Sign into [Power Apps](https://make.powerapps.com).
 2. Select the environment you want, select **Tables** on the left navigation pane, and then select **Analyze** > **Link to Microsoft Fabric** on the command bar.
-   > [!NOTE]
-   >
-   > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
-   > 
-   > This option has moved from the **Export** menu since public preview. You can no longer select this option from the context menu for specific tables because this option applies to all tables.
-   >
-
 3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
 4. The wizard validates your Fabric subscription settings the first time. In the event you don't have a Fabric capacity in the same geography or region as your Dataverse environment, the wizard notifies you to get a capacity in the required geography. 
 5. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step. This connection is needed to enable Fabric and Dataverse services to securely access data. You need to sign in and then save the connection to proceed.
@@ -62,7 +45,9 @@ Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze**
 >
 > It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](fabric-troubleshoot.md)
 >
-> Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
+> When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. It might take up to 60 minutes for the data to be refreshed especially during peak load periods.
+>
+> If you have more than 2,000 active Dataverse tables, Link to Fabric can fail with an error. Go to [Troubleshooting common issues](fabric-troubleshoot.md) for help resolving issues.
 
 ## Manage link to Fabric
 
@@ -89,6 +74,22 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 > If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
 > 
 > Removing already added tables has been disabled since it might impact already built reports.
+
+### Share the data connection with other users
+
+The system creates a data connection between the Power Platform environment and Fabric workspace using the credentials of the user at the time of link creation. If you use the **Fabric link** option from the Power Apps **Tables** area, the system creates the connection and asks you to save it. If you use the **Synapse Link** option, you must create a data connection yourself before enabling the link. 
+
+The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. 
+
+1. Go to [Fabric.Microsoft.com](https://fabric.microsoft.com) and select the gear icon on top left (next to the user icon).
+2. On the **Settings** menu, select **Data connections and Gateways**. The available data connections are displayed.
+3. Select the **Connections** tab, and then choose the data connection you created with the connection type **Dataverse**. You might notice a connection that is named similar to **org...crm.dynamics.com**. In case you have multiple connections like this, you need to select the connection that links to the specific Power Platform environment.
+4. Once you select the correct data connection, select **...** > **manage users**. Then you're shown users who have access to this connection.
+5. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
+
+You might need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. You can secure the lakehouse as well as tables within the lakehouse using OneLake security. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
+
+You can only create user based connections at this time.
 
 ## Link existing Azure Synapse Link for Dataverse links with Fabric
 

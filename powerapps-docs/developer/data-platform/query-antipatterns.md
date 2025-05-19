@@ -2,7 +2,7 @@
 title: "Query anti-patterns (Microsoft Dataverse)"
 description: "Read about patterns to avoid when constructing queries to retrieve data from Dataverse."
 ms.date: 01/06/2025
-ms.topic: article
+ms.topic: how-to
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -74,7 +74,7 @@ Dataverse [heavily throttles](query-throttling.md) leading wild card queries tha
 > Name: `DataEngineLeadingWildcardQueryThrottling`<br />
 > Code: `0x80048644`<br />
 > Number: `-2147187132`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`
 
 If you find yourself using leading wild card queries, look into these options:
 
@@ -110,7 +110,7 @@ Dataverse [heavily throttles](query-throttling.md) queries that have filters on 
 > Name: `DataEngineComputedColumnQueryThrottling`<br />
 > Code: `0x80048744`<br />
 > Number: `-2147186876`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`
 
 ## <a name="OrderOnEnumAttribute"></a> Avoid ordering by choice columns
 

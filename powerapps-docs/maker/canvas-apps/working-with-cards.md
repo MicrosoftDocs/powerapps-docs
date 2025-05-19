@@ -3,7 +3,7 @@ title: Understand data cards in canvas apps
 description: Learn about how to use cards to collect and display information from a data source in canvas apps.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 4/16/2025

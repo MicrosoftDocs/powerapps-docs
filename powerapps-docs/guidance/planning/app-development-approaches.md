@@ -3,7 +3,7 @@ title: Power Apps vs. traditional app development approaches | Microsoft Docs
 description: Learn how Power Apps development compares to traditional app development in two key areas - how team members collaborate and the development process methodology
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

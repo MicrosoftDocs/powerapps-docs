@@ -3,7 +3,7 @@ title: "Power Apps pattern: Calculation | Microsoft Docs"
 description: Learn how calculation apps make work easier and more accurate. For example, help someone select the right part, adjust equipment, or provide a price estimate.
 author: topness-msft
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 07/20/2020
 ms.subservice: guidance

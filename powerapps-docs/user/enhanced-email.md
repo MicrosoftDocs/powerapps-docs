@@ -4,7 +4,7 @@ description: Use the enhanced email experience to compose an email without leavi
 author: smurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 04/09/2020
 ms.subservice: end-user
 ms.author: shujoshi

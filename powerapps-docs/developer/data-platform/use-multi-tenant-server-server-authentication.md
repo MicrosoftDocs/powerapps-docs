@@ -3,7 +3,7 @@ title: "Use multi-tenant server-to-server authentication (Microsoft Dataverse) |
 description: "Learn how to access Microsoft Dataverse data across multiple tenants from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 4/05/2019
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only

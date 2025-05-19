@@ -3,7 +3,7 @@ title: Restore your canvas app to a previous version
 description: Learn about how to restore a canvas app to a previous version.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 10/14/2024

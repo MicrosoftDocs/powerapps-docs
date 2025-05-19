@@ -4,7 +4,7 @@ description: "Learn how to authenticate applications with Microsoft Dataverse us
 ms.custom: has-adal-ref
 ms.date: 12/04/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only

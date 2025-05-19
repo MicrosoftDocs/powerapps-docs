@@ -4,7 +4,7 @@ description: "This first run tutorial shows you how to build a model-driven app 
 keywords: ""
 ms.date: 04/07/2022
 ms.custom: 
-ms.topic: conceptual
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

@@ -3,7 +3,7 @@ title: Show items of different heights in canvas apps gallery
 description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery.
 author: fikaradz
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2022

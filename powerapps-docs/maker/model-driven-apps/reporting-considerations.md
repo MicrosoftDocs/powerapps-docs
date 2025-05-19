@@ -6,7 +6,7 @@ ms.date: 12/20/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: conceptual
+ms.topic: concept-article
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
   - PowerApps

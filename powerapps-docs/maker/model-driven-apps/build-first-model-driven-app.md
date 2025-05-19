@@ -1,7 +1,7 @@
 ---
 title: "Build your first modern model-driven app with Power Apps"
 description: "Learn how to build your first model driven app with Power Apps"
-ms.date: 01/27/2025
+ms.date: 05/06/2025
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -9,7 +9,6 @@ ms.author: matp
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
 contributors:
-- matp
 - jessicaszelo
 - asheehi
 ---
@@ -69,21 +68,15 @@ To save without publishing, on the app designer command bar, select **Save**.
 
 To save and publish, on the app designer command bar, select **Publish**.
 
-## Create an app description with Copilot (preview)
-
-[This section is prerelease documentation and is subject to change.]
+## Create an app description with Copilot
 
 If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and might not be available in your region yet.
-> - This capability  might be subject to usage limits or capacity throttling.
+> - This capability might be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
 When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.

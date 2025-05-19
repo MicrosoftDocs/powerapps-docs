@@ -3,7 +3,7 @@ title: "Power Apps pattern: Communication | Microsoft Docs"
 description: Learn how communication apps help you quickly share news, event announcements, and the latest up-to-date info with your employees no matter where they are.
 author: Vasavib
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 07/20/2020
 ms.subservice: guidance

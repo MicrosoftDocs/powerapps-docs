@@ -4,7 +4,7 @@ description: This FAQ provides information about the AI technology used in the f
 ms.date: 03/28/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: MitiJ
 ms.author: mijosh 
 ms.reviewer: smurkute

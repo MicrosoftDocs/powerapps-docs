@@ -3,7 +3,7 @@ title:  Making Phase - Planning a Power Apps project | Microsoft Docs
 description: You've now planned and designed your app. The next step is to actually make it. This article provides an overview of steps for creating canvas apps and model-driven apps.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

@@ -5,7 +5,7 @@ suite: powerapps
 author: sriharibs-msft
 ms.author: srihas
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.date: 1/15/2019
 ms.subservice: mda-developer
 search.audienceType: 

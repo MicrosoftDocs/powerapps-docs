@@ -4,7 +4,7 @@ description: Learn about app navigation in model-driven apps in Power Apps.
 author: Mattp123
 editor: ''
 tags: ''
-ms.topic: conceptual
+ms.topic: article
 ms.component: model
 ms.date: 01/27/2025
 ms.author: matp
