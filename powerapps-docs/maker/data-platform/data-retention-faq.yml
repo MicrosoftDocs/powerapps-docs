@@ -9,6 +9,7 @@ metadata:
   ms.reviewer: 
   contributors: gned
   ms.topic: faq
+  ms.subservice: dataverse-maker
 title: Dataverse long term data retention FAQ
 summary: This article provides information on frequently asked questions about long term data retention with Microsoft Dataverse.
 sections:

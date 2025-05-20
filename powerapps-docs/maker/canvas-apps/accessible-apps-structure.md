@@ -3,7 +3,7 @@ title: Organize controls in accessible canvas apps
 description: Learn about organizing controls for accessibility in canvas apps.
 author: tahoon-ms
 
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 07/12/2024
 ms.subservice: canvas-maker

@@ -4,7 +4,7 @@ description: Learn about using solutions to package your Microsoft Dataverse cus
 suite: powerapps
 author: shmcarth # GitHub ID
 ms.author: shmcarth
-ms.topic: article
+ms.topic: concept-article
 ms.reviewer: pehecke
 ms.collection: get-started
 ms.date: 03/17/2021

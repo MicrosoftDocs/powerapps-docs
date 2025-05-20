@@ -5,7 +5,7 @@ suite: powerapps
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: best-practice
 ms.date: 04/14/2021
 ms.subservice: mda-developer
 search.audienceType: 

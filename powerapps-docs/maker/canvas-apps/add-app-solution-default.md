@@ -7,7 +7,7 @@ contributors:
   - mduelae
 ms.author: cgarty
 ms.reviewer: angieandrews
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, bap-template
 ms.date: 11/18/2024
 ms.subservice: canvas-maker

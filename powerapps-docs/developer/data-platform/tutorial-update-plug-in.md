@@ -3,7 +3,7 @@ title: "Tutorial: Update a plug-in (Microsoft Dataverse) | Microsoft Docs" # Int
 description: "The third of three tutorials that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 07/12/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: tutorial
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair

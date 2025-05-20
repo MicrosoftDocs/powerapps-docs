@@ -2,10 +2,10 @@
 title: Understand Power Apps Studio
 description:  Learn the components inside Power Apps Studio.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 9/11/2024
+ms.date: 5/14/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -86,6 +86,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 - **Undo**: Undo the last action.
 - **Redo**: Repeat the last action.
+
+ > [!NOTE]
+ > You can't undo or redo data operations, such as insert or delete a datasource.
 
 #### Cut, copy, and paste
 

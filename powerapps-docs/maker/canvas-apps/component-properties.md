@@ -3,7 +3,7 @@ title: Canvas component properties (preview)
 description: Using properties in canvas components.
 author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 01/07/2025
 ms.author: jorisde
 ms.reviewer: mkaur

@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 09/07/2021
 
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair

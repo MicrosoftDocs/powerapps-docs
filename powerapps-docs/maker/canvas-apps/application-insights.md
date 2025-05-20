@@ -2,7 +2,7 @@
 title: Analyze system-generated logs using Application Insights
 description: Learn how to analyze and use system-generated logs from your canvas apps using Application Insights.
 author: mattgon
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 04/8/2025

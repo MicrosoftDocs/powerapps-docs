@@ -6,7 +6,7 @@ author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 ms.date: 01/28/2025
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - PowerApps
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
