@@ -135,8 +135,6 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
-        - name: Customize an email template using the template editor
-          href: ../user/cs-template-options.md
         - name: Personalize emails with dynamic text
           href: ../user/email-dynamic-text.md
         - name: Insert an email template
@@ -1863,8 +1861,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Configure the enhanced email template editor page
-      href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
     - name: Performance insights overview
