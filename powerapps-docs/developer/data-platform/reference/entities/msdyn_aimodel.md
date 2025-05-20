@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_ActiveRunConfigurationId](#BKMK_msdyn_ActiveRunConfigurationId)
+- [msdyn_AIModelCatalog](#BKMK_msdyn_AIModelCatalog)
 - [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
 - [msdyn_ModelCreationContext](#BKMK_msdyn_ModelCreationContext)
 - [msdyn_Name](#BKMK_msdyn_Name)
@@ -143,6 +144,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets||
+
+### <a name="BKMK_msdyn_AIModelCatalog"></a> msdyn_AIModelCatalog
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to AI Model Catalog**|
+|DisplayName|**AI Model Catalog**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aimodelcatalog`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_aimodelcatalog|
 
 ### <a name="BKMK_msdyn_AIModelId"></a> msdyn_AIModelId
 
@@ -655,6 +669,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_aimodel_createdonbehalfby](#BKMK_lk_msdyn_aimodel_createdonbehalfby)
 - [lk_msdyn_aimodel_modifiedby](#BKMK_lk_msdyn_aimodel_modifiedby)
 - [lk_msdyn_aimodel_modifiedonbehalfby](#BKMK_lk_msdyn_aimodel_modifiedonbehalfby)
+- [msdyn_aimodelcatalog_msdyn_aimodel](#BKMK_msdyn_aimodelcatalog_msdyn_aimodel)
 - [msdyn_aitemplate_msdyn_aimodel](#BKMK_msdyn_aitemplate_msdyn_aimodel)
 - [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel)
@@ -726,6 +741,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_aimodel_modifiedonbehalfby](syste
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aimodelcatalog_msdyn_aimodel"></a> msdyn_aimodelcatalog_msdyn_aimodel
+
+One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_msdyn_aimodel](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_msdyn_aimodel)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aimodelcatalog`|
+|ReferencedAttribute|`msdyn_aimodelcatalogid`|
+|ReferencingAttribute|`msdyn_aimodelcatalog`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AIModelCatalog`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_msdyn_aitemplate_msdyn_aimodel"></a> msdyn_aitemplate_msdyn_aimodel
 
@@ -904,7 +932,7 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_aimodel_msdyn_aiconfigura
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aimodel_msdyn_aiconfiguration`|
-|IsCustomizable|`False`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aimodel_msdyn_aievent"></a> msdyn_aimodel_msdyn_aievent

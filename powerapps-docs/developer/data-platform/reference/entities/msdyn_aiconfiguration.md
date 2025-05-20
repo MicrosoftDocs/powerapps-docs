@@ -785,7 +785,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Property|Value|
 |---|---|
 |Description|**This is a file type attribute to store Ai builder Model.**|
-|DisplayName|**msdyn_Model**|
+|DisplayName|**msdyn\_Model**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_model`|
@@ -1047,7 +1047,7 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_msdyn_aiconfiguration](ms
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencingEntityNavigationPropertyName|`msdyn_AIModelId`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_createdfromconfiguration_msdyn_toconfiguration-many-to-one"></a> msdyn_createdfromconfiguration_msdyn_toconfiguration
 

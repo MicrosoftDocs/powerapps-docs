@@ -1,6 +1,6 @@
 ---
-title: "Trait Registration (TraitRegistration) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Trait Registration (TraitRegistration) table/entity with Microsoft Dataverse."
+title: "Approval Stage Approval (approvalstageapproval) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Approval Stage Approval (approvalstageapproval) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
@@ -8,42 +8,41 @@ search.audienceType:
   - developer
 ---
 
-# Trait Registration (TraitRegistration) table/entity reference (Microsoft Dataverse)
+# Approval Stage Approval (approvalstageapproval) table/entity reference (Microsoft Dataverse)
 
-
+The approval stage in multi-stage approvals
 
 ## Messages
 
-The following table lists the messages for the Trait Registration (TraitRegistration) table.
+The following table lists the messages for the Approval Stage Approval (approvalstageapproval) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /approvalstageapprovals(*approvalstageapprovalid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /traitregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /approvalstageapprovals<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /traitregistrations(*traitregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /approvalstageapprovals(*approvalstageapprovalid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retrieve`<br />Event: True |`GET` /traitregistrations(*traitregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /traitregistrations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /approvalstageapprovals(*approvalstageapprovalid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /approvalstageapprovals<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /traitregistrations(*traitregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /approvalstageapprovals(*approvalstageapprovalid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /approvalstageapprovals(*approvalstageapprovalid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /traitregistrations(*traitregistrationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /approvalstageapprovals(*approvalstageapprovalid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Trait Registration (TraitRegistration) table.
+The following table lists the events for the Approval Stage Approval (approvalstageapproval) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -56,19 +55,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Trait Registration (TraitRegistration) table.
+The following table lists selected properties for the Approval Stage Approval (approvalstageapproval) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Trait Registration** |
-| **DisplayCollectionName** | **Trait Registrations** |
-| **SchemaName** | `TraitRegistration` |
-| **CollectionSchemaName** | `TraitRegistrations` |
-| **EntitySetName** | `traitregistrations`|
-| **LogicalName** | `traitregistration` |
-| **LogicalCollectionName** | `traitregistrations` |
-| **PrimaryIdAttribute** | `traitregistrationid` |
-| **PrimaryNameAttribute** |`traitname` |
+| **DisplayName** | **Approval Stage Approval** |
+| **DisplayCollectionName** | **Approval Stage Approvals** |
+| **SchemaName** | `approvalstageapproval` |
+| **CollectionSchemaName** | `approvalstageapprovals` |
+| **EntitySetName** | `approvalstageapprovals`|
+| **LogicalName** | `approvalstageapproval` |
+| **LogicalCollectionName** | `approvalstageapprovals` |
+| **PrimaryIdAttribute** | `approvalstageapprovalid` |
+| **PrimaryNameAttribute** |`name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -76,16 +75,119 @@ The following table lists selected properties for the Trait Registration (TraitR
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AllowCancel](#BKMK_AllowCancel)
+- [AllowReassign](#BKMK_AllowReassign)
+- [Approval](#BKMK_Approval)
+- [approvalstageapprovalId](#BKMK_approvalstageapprovalId)
+- [CustomFields](#BKMK_CustomFields)
+- [Details](#BKMK_Details)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [ItemLink](#BKMK_ItemLink)
+- [ItemLinkDescription](#BKMK_ItemLinkDescription)
+- [ModelId](#BKMK_ModelId)
+- [ModelType](#BKMK_ModelType)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [Result](#BKMK_Result)
+- [SendEmailNotification](#BKMK_SendEmailNotification)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [TraitName](#BKMK_TraitName)
-- [TraitRegistrationId](#BKMK_TraitRegistrationId)
+- [Title](#BKMK_Title)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_AllowCancel"></a> AllowCancel
+
+|Property|Value|
+|---|---|
+|Description|**Choice to allow cancellation of approval**|
+|DisplayName|**Allow Cancel**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`allowcancel`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`approvalstageapproval_allowcancel`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_AllowReassign"></a> AllowReassign
+
+|Property|Value|
+|---|---|
+|Description|**Choice to allow approval reassignment**|
+|DisplayName|**Allow Reassign**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`allowreassign`|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+|GlobalChoiceName|`approvalstageapproval_allowreassign`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_Approval"></a> Approval
+
+|Property|Value|
+|---|---|
+|Description|**The linked parent approval**|
+|DisplayName|**Approval**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`approval`|
+|RequiredLevel|ApplicationRequired|
+|Type|Lookup|
+|Targets|msdyn_flow_approval|
+
+### <a name="BKMK_approvalstageapprovalId"></a> approvalstageapprovalId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Approval Stage Approval**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`approvalstageapprovalid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_CustomFields"></a> CustomFields
+
+|Property|Value|
+|---|---|
+|Description|**Custom fields provided by customer**|
+|DisplayName|**Custom Fields**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`customfields`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
+
+### <a name="BKMK_Details"></a> Details
+
+|Property|Value|
+|---|---|
+|Description|**Description of approval**|
+|DisplayName|**Details**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`details`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -100,6 +202,91 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_ItemLink"></a> ItemLink
+
+|Property|Value|
+|---|---|
+|Description|**Optional link to the item to approve**|
+|DisplayName|**Item Link**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`itemlink`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
+
+### <a name="BKMK_ItemLinkDescription"></a> ItemLinkDescription
+
+|Property|Value|
+|---|---|
+|Description|**Optional description for the item link**|
+|DisplayName|**Item Link Description**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`itemlinkdescription`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
+
+### <a name="BKMK_ModelId"></a> ModelId
+
+|Property|Value|
+|---|---|
+|Description|**The guid of the linked approval model**|
+|DisplayName|**Model Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`modelid`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_ModelType"></a> ModelType
+
+|Property|Value|
+|---|---|
+|Description|**The type of the linked approval model**|
+|DisplayName|**Model Type**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`modeltype`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_Name"></a> Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`name`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|850|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -143,11 +330,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_Result"></a> Result
+
+|Property|Value|
+|---|---|
+|Description|**The result of the approval**|
+|DisplayName|**Result**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`result`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|500|
+
+### <a name="BKMK_SendEmailNotification"></a> SendEmailNotification
+
+|Property|Value|
+|---|---|
+|Description|**Whether to send system generated emails**|
+|DisplayName|**Send Email Notification**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sendemailnotification`|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+|GlobalChoiceName|`approvalstageapproval_sendemailnotification`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Trait Registration**|
+|Description|**Status of the Approval Stage Approval**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -155,7 +375,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`traitregistration_statecode`|
+|GlobalChoiceName|`approvalstageapproval_statecode`|
 
 #### statecode Choices/Options
 
@@ -168,7 +388,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Trait Registration**|
+|Description|**Reason for the status of the Approval Stage Approval**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -176,7 +396,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`traitregistration_statuscode`|
+|GlobalChoiceName|`approvalstageapproval_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -199,34 +419,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
-### <a name="BKMK_TraitName"></a> TraitName
+### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
 |---|---|
-|Description||
-|DisplayName|**Trait Name**|
-|IsValidForForm|True|
+|Description|**Title of the approval**|
+|DisplayName|**Title**|
+|IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`traitname`|
+|LogicalName|`title`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_TraitRegistrationId"></a> TraitRegistrationId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**TraitRegistration**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`traitregistrationid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
+|MaxLength|2000|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -437,18 +645,32 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_traitregistration](#BKMK_business_unit_traitregistration)
-- [lk_traitregistration_createdby](#BKMK_lk_traitregistration_createdby)
-- [lk_traitregistration_createdonbehalfby](#BKMK_lk_traitregistration_createdonbehalfby)
-- [lk_traitregistration_modifiedby](#BKMK_lk_traitregistration_modifiedby)
-- [lk_traitregistration_modifiedonbehalfby](#BKMK_lk_traitregistration_modifiedonbehalfby)
-- [owner_traitregistration](#BKMK_owner_traitregistration)
-- [team_traitregistration](#BKMK_team_traitregistration)
-- [user_traitregistration](#BKMK_user_traitregistration)
+- [approvalstageapproval_approval_msdyn_flow_approval](#BKMK_approvalstageapproval_approval_msdyn_flow_approval)
+- [business_unit_approvalstageapproval](#BKMK_business_unit_approvalstageapproval)
+- [lk_approvalstageapproval_createdby](#BKMK_lk_approvalstageapproval_createdby)
+- [lk_approvalstageapproval_createdonbehalfby](#BKMK_lk_approvalstageapproval_createdonbehalfby)
+- [lk_approvalstageapproval_modifiedby](#BKMK_lk_approvalstageapproval_modifiedby)
+- [lk_approvalstageapproval_modifiedonbehalfby](#BKMK_lk_approvalstageapproval_modifiedonbehalfby)
+- [owner_approvalstageapproval](#BKMK_owner_approvalstageapproval)
+- [team_approvalstageapproval](#BKMK_team_approvalstageapproval)
+- [user_approvalstageapproval](#BKMK_user_approvalstageapproval)
 
-### <a name="BKMK_business_unit_traitregistration"></a> business_unit_traitregistration
+### <a name="BKMK_approvalstageapproval_approval_msdyn_flow_approval"></a> approvalstageapproval_approval_msdyn_flow_approval
 
-One-To-Many Relationship: [businessunit business_unit_traitregistration](businessunit.md#BKMK_business_unit_traitregistration)
+One-To-Many Relationship: [msdyn_flow_approval approvalstageapproval_approval_msdyn_flow_approval](msdyn_flow_approval.md#BKMK_approvalstageapproval_approval_msdyn_flow_approval)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_flow_approval`|
+|ReferencedAttribute|`msdyn_flow_approvalid`|
+|ReferencingAttribute|`approval`|
+|ReferencingEntityNavigationPropertyName|`approval`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_business_unit_approvalstageapproval"></a> business_unit_approvalstageapproval
+
+One-To-Many Relationship: [businessunit business_unit_approvalstageapproval](businessunit.md#BKMK_business_unit_approvalstageapproval)
 
 |Property|Value|
 |---|---|
@@ -459,9 +681,9 @@ One-To-Many Relationship: [businessunit business_unit_traitregistration](busines
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_traitregistration_createdby"></a> lk_traitregistration_createdby
+### <a name="BKMK_lk_approvalstageapproval_createdby"></a> lk_approvalstageapproval_createdby
 
-One-To-Many Relationship: [systemuser lk_traitregistration_createdby](systemuser.md#BKMK_lk_traitregistration_createdby)
+One-To-Many Relationship: [systemuser lk_approvalstageapproval_createdby](systemuser.md#BKMK_lk_approvalstageapproval_createdby)
 
 |Property|Value|
 |---|---|
@@ -472,9 +694,9 @@ One-To-Many Relationship: [systemuser lk_traitregistration_createdby](systemuser
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_traitregistration_createdonbehalfby"></a> lk_traitregistration_createdonbehalfby
+### <a name="BKMK_lk_approvalstageapproval_createdonbehalfby"></a> lk_approvalstageapproval_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_traitregistration_createdonbehalfby](systemuser.md#BKMK_lk_traitregistration_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_approvalstageapproval_createdonbehalfby](systemuser.md#BKMK_lk_approvalstageapproval_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -485,9 +707,9 @@ One-To-Many Relationship: [systemuser lk_traitregistration_createdonbehalfby](sy
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_traitregistration_modifiedby"></a> lk_traitregistration_modifiedby
+### <a name="BKMK_lk_approvalstageapproval_modifiedby"></a> lk_approvalstageapproval_modifiedby
 
-One-To-Many Relationship: [systemuser lk_traitregistration_modifiedby](systemuser.md#BKMK_lk_traitregistration_modifiedby)
+One-To-Many Relationship: [systemuser lk_approvalstageapproval_modifiedby](systemuser.md#BKMK_lk_approvalstageapproval_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -498,9 +720,9 @@ One-To-Many Relationship: [systemuser lk_traitregistration_modifiedby](systemuse
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_traitregistration_modifiedonbehalfby"></a> lk_traitregistration_modifiedonbehalfby
+### <a name="BKMK_lk_approvalstageapproval_modifiedonbehalfby"></a> lk_approvalstageapproval_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_traitregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_traitregistration_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_approvalstageapproval_modifiedonbehalfby](systemuser.md#BKMK_lk_approvalstageapproval_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -511,9 +733,9 @@ One-To-Many Relationship: [systemuser lk_traitregistration_modifiedonbehalfby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_traitregistration"></a> owner_traitregistration
+### <a name="BKMK_owner_approvalstageapproval"></a> owner_approvalstageapproval
 
-One-To-Many Relationship: [owner owner_traitregistration](owner.md#BKMK_owner_traitregistration)
+One-To-Many Relationship: [owner owner_approvalstageapproval](owner.md#BKMK_owner_approvalstageapproval)
 
 |Property|Value|
 |---|---|
@@ -524,9 +746,9 @@ One-To-Many Relationship: [owner owner_traitregistration](owner.md#BKMK_owner_tr
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_traitregistration"></a> team_traitregistration
+### <a name="BKMK_team_approvalstageapproval"></a> team_approvalstageapproval
 
-One-To-Many Relationship: [team team_traitregistration](team.md#BKMK_team_traitregistration)
+One-To-Many Relationship: [team team_approvalstageapproval](team.md#BKMK_team_approvalstageapproval)
 
 |Property|Value|
 |---|---|
@@ -537,9 +759,9 @@ One-To-Many Relationship: [team team_traitregistration](team.md#BKMK_team_traitr
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_traitregistration"></a> user_traitregistration
+### <a name="BKMK_user_approvalstageapproval"></a> user_approvalstageapproval
 
-One-To-Many Relationship: [systemuser user_traitregistration](systemuser.md#BKMK_user_traitregistration)
+One-To-Many Relationship: [systemuser user_approvalstageapproval](systemuser.md#BKMK_user_approvalstageapproval)
 
 |Property|Value|
 |---|---|
@@ -555,97 +777,136 @@ One-To-Many Relationship: [systemuser user_traitregistration](systemuser.md#BKMK
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [processorregistration_traitregistration_traitname](#BKMK_processorregistration_traitregistration_traitname)
-- [traitregistration_AsyncOperations](#BKMK_traitregistration_AsyncOperations)
-- [traitregistration_BulkDeleteFailures](#BKMK_traitregistration_BulkDeleteFailures)
-- [traitregistration_MailboxTrackingFolders](#BKMK_traitregistration_MailboxTrackingFolders)
-- [traitregistration_PrincipalObjectAttributeAccesses](#BKMK_traitregistration_PrincipalObjectAttributeAccesses)
-- [traitregistration_ProcessSession](#BKMK_traitregistration_ProcessSession)
-- [traitregistration_SyncErrors](#BKMK_traitregistration_SyncErrors)
+- [approvalstageapproval_Annotations](#BKMK_approvalstageapproval_Annotations)
+- [approvalstageapproval_AsyncOperations](#BKMK_approvalstageapproval_AsyncOperations)
+- [approvalstageapproval_BulkDeleteFailures](#BKMK_approvalstageapproval_BulkDeleteFailures)
+- [approvalstageapproval_DuplicateBaseRecord](#BKMK_approvalstageapproval_DuplicateBaseRecord)
+- [approvalstageapproval_DuplicateMatchingRecord](#BKMK_approvalstageapproval_DuplicateMatchingRecord)
+- [approvalstageapproval_MailboxTrackingFolders](#BKMK_approvalstageapproval_MailboxTrackingFolders)
+- [approvalstageapproval_PrincipalObjectAttributeAccesses](#BKMK_approvalstageapproval_PrincipalObjectAttributeAccesses)
+- [approvalstageapproval_ProcessSession](#BKMK_approvalstageapproval_ProcessSession)
+- [approvalstageapproval_SyncErrors](#BKMK_approvalstageapproval_SyncErrors)
+- [approvalstageorder_stageapproval_approvalstageapproval](#BKMK_approvalstageorder_stageapproval_approvalstageapproval)
 
-### <a name="BKMK_processorregistration_traitregistration_traitname"></a> processorregistration_traitregistration_traitname
+### <a name="BKMK_approvalstageapproval_Annotations"></a> approvalstageapproval_Annotations
 
-Many-To-One Relationship: [processorregistration processorregistration_traitregistration_traitname](processorregistration.md#BKMK_processorregistration_traitregistration_traitname)
+Many-To-One Relationship: [annotation approvalstageapproval_Annotations](annotation.md#BKMK_approvalstageapproval_Annotations)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`processorregistration`|
-|ReferencingAttribute|`traitname`|
-|ReferencedEntityNavigationPropertyName|`processorregistration_traitregistration_traitname`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|ReferencingEntity|`annotation`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_Annotations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_AsyncOperations"></a> traitregistration_AsyncOperations
+### <a name="BKMK_approvalstageapproval_AsyncOperations"></a> approvalstageapproval_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation traitregistration_AsyncOperations](asyncoperation.md#BKMK_traitregistration_AsyncOperations)
+Many-To-One Relationship: [asyncoperation approvalstageapproval_AsyncOperations](asyncoperation.md#BKMK_approvalstageapproval_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_BulkDeleteFailures"></a> traitregistration_BulkDeleteFailures
+### <a name="BKMK_approvalstageapproval_BulkDeleteFailures"></a> approvalstageapproval_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure traitregistration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_traitregistration_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure approvalstageapproval_BulkDeleteFailures](bulkdeletefailure.md#BKMK_approvalstageapproval_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_MailboxTrackingFolders"></a> traitregistration_MailboxTrackingFolders
+### <a name="BKMK_approvalstageapproval_DuplicateBaseRecord"></a> approvalstageapproval_DuplicateBaseRecord
 
-Many-To-One Relationship: [mailboxtrackingfolder traitregistration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_traitregistration_MailboxTrackingFolders)
+Many-To-One Relationship: [duplicaterecord approvalstageapproval_DuplicateBaseRecord](duplicaterecord.md#BKMK_approvalstageapproval_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstageapproval_DuplicateMatchingRecord"></a> approvalstageapproval_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord approvalstageapproval_DuplicateMatchingRecord](duplicaterecord.md#BKMK_approvalstageapproval_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstageapproval_MailboxTrackingFolders"></a> approvalstageapproval_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder approvalstageapproval_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_approvalstageapproval_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_PrincipalObjectAttributeAccesses"></a> traitregistration_PrincipalObjectAttributeAccesses
+### <a name="BKMK_approvalstageapproval_PrincipalObjectAttributeAccesses"></a> approvalstageapproval_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess traitregistration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_traitregistration_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess approvalstageapproval_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_approvalstageapproval_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_ProcessSession"></a> traitregistration_ProcessSession
+### <a name="BKMK_approvalstageapproval_ProcessSession"></a> approvalstageapproval_ProcessSession
 
-Many-To-One Relationship: [processsession traitregistration_ProcessSession](processsession.md#BKMK_traitregistration_ProcessSession)
+Many-To-One Relationship: [processsession approvalstageapproval_ProcessSession](processsession.md#BKMK_approvalstageapproval_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_traitregistration_SyncErrors"></a> traitregistration_SyncErrors
+### <a name="BKMK_approvalstageapproval_SyncErrors"></a> approvalstageapproval_SyncErrors
 
-Many-To-One Relationship: [syncerror traitregistration_SyncErrors](syncerror.md#BKMK_traitregistration_SyncErrors)
+Many-To-One Relationship: [syncerror approvalstageapproval_SyncErrors](syncerror.md#BKMK_approvalstageapproval_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`traitregistration_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstageorder_stageapproval_approvalstageapproval"></a> approvalstageorder_stageapproval_approvalstageapproval
+
+Many-To-One Relationship: [approvalstageorder approvalstageorder_stageapproval_approvalstageapproval](approvalstageorder.md#BKMK_approvalstageorder_stageapproval_approvalstageapproval)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageorder`|
+|ReferencingAttribute|`stageapproval`|
+|ReferencedEntityNavigationPropertyName|`approvalstageorder_stageapproval_approvalstageapproval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
 
