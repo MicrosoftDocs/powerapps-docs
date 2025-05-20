@@ -11,6 +11,9 @@ ms.custom: template-how-to
 ---
 # Email address validation for email columns (preview)
 
+> [!IMPORTANT]
+> This feature is deprioritized and will not be delivered.
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Get email address columns validated automatically in model-driven apps with no-code. With smart data validation, makers can build smarter and contextually aware next-gen apps for their workflows with better data quality.
@@ -19,7 +22,6 @@ Traditionally, the existing email column type had only basic email validation. W
 
 > [!IMPORTANT]
 >
-> - This feature is deprioritized and will not be delivered.
 > - This is a preview feature.
 > - During preview, these regions will have email address validation feature available: Asia (East, Southeast), Australia (East, Southeast), Canada (Central, East), Europe (North, West), France (Central, South), India (Central, South), Japan (East, West), South America – Brazil (South), Switzerland (North, West), UAE (North), UK (South, West), US (East, West).
 > - Smart email validation only works for model-driven apps.
