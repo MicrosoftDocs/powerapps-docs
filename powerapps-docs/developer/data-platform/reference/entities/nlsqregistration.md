@@ -87,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PartitionId](#BKMK_PartitionId)
 - [RegistrationStatus](#BKMK_RegistrationStatus)
+- [Skill](#BKMK_Skill)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
 ### <a name="BKMK_AllowedEntityList"></a> AllowedEntityList
@@ -350,6 +351,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |2|**InProgress**|
 |3|**Failed**|
 
+### <a name="BKMK_Skill"></a> Skill
+
+|Property|Value|
+|---|---|
+|Description|**(Optional) the skill associated with the registration**|
+|DisplayName|**Skill**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`skill`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets||
+
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 
 |Property|Value|
@@ -511,7 +525,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 

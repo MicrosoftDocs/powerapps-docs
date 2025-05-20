@@ -83,7 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Conversation Transcripts related to customer interactions with a Bot**|
-|DisplayName|**bot_conversationtranscript**|
+|DisplayName|**bot\_conversationtranscript**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`bot_conversationtranscriptid`|
