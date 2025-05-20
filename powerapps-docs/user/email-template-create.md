@@ -18,7 +18,7 @@ search.audienceType:
 # Create email templates
 
 > [!IMPORTANT]
-> The enhanced email template experience is no longer available. 
+> The enhanced email template enahnced and legacy rich text editor will no longer be available from May 23, 2025. The drag and drop functionality will no longer be available. The modern rich text editor supports HTML formatting.
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. 
 
