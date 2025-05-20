@@ -9574,6 +9574,11 @@
       "source_path": "powerapps-docs/user/smartGrid.md",
       "redirect_url": "../../power-apps/maker/model-driven-apps/power-apps-grid-control",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/well-written-input-text-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
     }
   ]
 }
