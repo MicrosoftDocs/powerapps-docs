@@ -60,6 +60,17 @@ Code view lets you copy and paste code to any screen in your app or outside of P
 > [!IMPORTANT]
 > Use the YAML format that Power Apps Studio generates. The code is validated before the new control is created.
 
+## Browser clipboard access required
+
+To paste code into Power Apps Studio using code view, your browser must have access to the clipboard. If you encounter issues pasting code, check your browser settings and ensure clipboard permissions are enabled for the site.
+
+The first time you paste code, your browser will likely prompt you to grant clipboard access. Approve this request to enable pasting functionality in Power Apps Studio.
+
+:::image type="content" source="media/code-view/edge-clipboard-warning.png" alt-text="Screenshot of edge asking for permission to access the clipboard content.":::
+
+> [!TIP]
+> If pasting doesn't work, check if clipboard access to Power Apps is blocked in your browser. In Microsoft Edge, you can manually add `https://make.powerapps.com` to the allowed sites for clipboard access in your browser settings.
+
 ## Known limitations
 
 - You can't copy and paste or view the code for the **App Object**.
