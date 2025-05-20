@@ -951,7 +951,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [team_msdyn_aievent](#BKMK_team_msdyn_aievent)
 - [team_msdyn_aifptrainingdocument](#BKMK_team_msdyn_aifptrainingdocument)
 - [team_msdyn_aimodel](#BKMK_team_msdyn_aimodel)
-- [team_msdyn_aimodelcatalog](#BKMK_team_msdyn_aimodelcatalog)
 - [team_msdyn_aiodimage](#BKMK_team_msdyn_aiodimage)
 - [team_msdyn_aiodlabel](#BKMK_team_msdyn_aiodlabel)
 - [team_msdyn_aiodtrainingboundingbox](#BKMK_team_msdyn_aiodtrainingboundingbox)
@@ -2498,18 +2497,6 @@ Many-To-One Relationship: [msdyn_aimodel team_msdyn_aimodel](msdyn_aimodel.md#BK
 |ReferencingEntity|`msdyn_aimodel`|
 |ReferencingAttribute|`owningteam`|
 |ReferencedEntityNavigationPropertyName|`team_msdyn_aimodel`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_team_msdyn_aimodelcatalog"></a> team_msdyn_aimodelcatalog
-
-Many-To-One Relationship: [msdyn_aimodelcatalog team_msdyn_aimodelcatalog](msdyn_aimodelcatalog.md#BKMK_team_msdyn_aimodelcatalog)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`owningteam`|
-|ReferencedEntityNavigationPropertyName|`team_msdyn_aimodelcatalog`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

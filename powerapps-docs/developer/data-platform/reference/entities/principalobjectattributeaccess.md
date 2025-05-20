@@ -335,7 +335,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aievent_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aievent_PrincipalObjectAttributeAccesses)
 - [msdyn_aifptrainingdocument_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aifptrainingdocument_PrincipalObjectAttributeAccesses)
 - [msdyn_aimodel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aimodel_PrincipalObjectAttributeAccesses)
-- [msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses)
 - [msdyn_aiodimage_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiodimage_PrincipalObjectAttributeAccesses)
 - [msdyn_aiodlabel_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiodlabel_PrincipalObjectAttributeAccesses)
 - [msdyn_aiodtrainingboundingbox_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiodtrainingboundingbox_PrincipalObjectAttributeAccesses)
@@ -2239,19 +2238,6 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_PrincipalObjectAttributeA
 |ReferencedAttribute|`msdyn_aimodelid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_aimodel`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses"></a> msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_PrincipalObjectAttributeAccesses)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`objectid`|
-|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aimodelcatalog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

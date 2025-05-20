@@ -244,7 +244,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [owner_msdyn_aievent](#BKMK_owner_msdyn_aievent)
 - [owner_msdyn_aifptrainingdocument](#BKMK_owner_msdyn_aifptrainingdocument)
 - [owner_msdyn_aimodel](#BKMK_owner_msdyn_aimodel)
-- [owner_msdyn_aimodelcatalog](#BKMK_owner_msdyn_aimodelcatalog)
 - [owner_msdyn_aiodimage](#BKMK_owner_msdyn_aiodimage)
 - [owner_msdyn_aiodlabel](#BKMK_owner_msdyn_aiodlabel)
 - [owner_msdyn_aiodtrainingboundingbox](#BKMK_owner_msdyn_aiodtrainingboundingbox)
@@ -1756,18 +1755,6 @@ Many-To-One Relationship: [msdyn_aimodel owner_msdyn_aimodel](msdyn_aimodel.md#B
 |ReferencingEntity|`msdyn_aimodel`|
 |ReferencingAttribute|`ownerid`|
 |ReferencedEntityNavigationPropertyName|`owner_msdyn_aimodel`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_owner_msdyn_aimodelcatalog"></a> owner_msdyn_aimodelcatalog
-
-Many-To-One Relationship: [msdyn_aimodelcatalog owner_msdyn_aimodelcatalog](msdyn_aimodelcatalog.md#BKMK_owner_msdyn_aimodelcatalog)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`ownerid`|
-|ReferencedEntityNavigationPropertyName|`owner_msdyn_aimodelcatalog`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

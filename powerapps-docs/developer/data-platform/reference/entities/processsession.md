@@ -838,7 +838,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aievent_ProcessSession](#BKMK_msdyn_aievent_ProcessSession)
 - [msdyn_aifptrainingdocument_ProcessSession](#BKMK_msdyn_aifptrainingdocument_ProcessSession)
 - [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
-- [msdyn_aimodelcatalog_ProcessSession](#BKMK_msdyn_aimodelcatalog_ProcessSession)
 - [msdyn_aiodimage_ProcessSession](#BKMK_msdyn_aiodimage_ProcessSession)
 - [msdyn_aiodlabel_ProcessSession](#BKMK_msdyn_aiodlabel_ProcessSession)
 - [msdyn_aiodtrainingboundingbox_ProcessSession](#BKMK_msdyn_aiodtrainingboundingbox_ProcessSession)
@@ -2880,19 +2879,6 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_ProcessSession](msdyn_aim
 |ReferencedAttribute|`msdyn_aimodelid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodel`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_ProcessSession"></a> msdyn_aimodelcatalog_ProcessSession
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_ProcessSession](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodelcatalog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

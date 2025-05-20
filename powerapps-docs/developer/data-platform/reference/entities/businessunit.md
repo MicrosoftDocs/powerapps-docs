@@ -1577,7 +1577,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
 - [business_unit_msdyn_aifptrainingdocument](#BKMK_business_unit_msdyn_aifptrainingdocument)
 - [business_unit_msdyn_aimodel](#BKMK_business_unit_msdyn_aimodel)
-- [business_unit_msdyn_aimodelcatalog](#BKMK_business_unit_msdyn_aimodelcatalog)
 - [business_unit_msdyn_aiodimage](#BKMK_business_unit_msdyn_aiodimage)
 - [business_unit_msdyn_aiodlabel](#BKMK_business_unit_msdyn_aiodlabel)
 - [business_unit_msdyn_aiodtrainingboundingbox](#BKMK_business_unit_msdyn_aiodtrainingboundingbox)
@@ -3016,18 +3015,6 @@ Many-To-One Relationship: [msdyn_aimodel business_unit_msdyn_aimodel](msdyn_aimo
 |ReferencingEntity|`msdyn_aimodel`|
 |ReferencingAttribute|`owningbusinessunit`|
 |ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aimodel`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_business_unit_msdyn_aimodelcatalog"></a> business_unit_msdyn_aimodelcatalog
-
-Many-To-One Relationship: [msdyn_aimodelcatalog business_unit_msdyn_aimodelcatalog](msdyn_aimodelcatalog.md#BKMK_business_unit_msdyn_aimodelcatalog)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencedEntityNavigationPropertyName|`business_unit_msdyn_aimodelcatalog`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

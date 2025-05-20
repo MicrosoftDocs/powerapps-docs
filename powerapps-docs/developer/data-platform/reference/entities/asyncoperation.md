@@ -1299,7 +1299,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aievent_AsyncOperations](#BKMK_msdyn_aievent_AsyncOperations)
 - [msdyn_aifptrainingdocument_AsyncOperations](#BKMK_msdyn_aifptrainingdocument_AsyncOperations)
 - [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
-- [msdyn_aimodelcatalog_AsyncOperations](#BKMK_msdyn_aimodelcatalog_AsyncOperations)
 - [msdyn_aiodimage_AsyncOperations](#BKMK_msdyn_aiodimage_AsyncOperations)
 - [msdyn_aiodlabel_AsyncOperations](#BKMK_msdyn_aiodlabel_AsyncOperations)
 - [msdyn_aiodtrainingboundingbox_AsyncOperations](#BKMK_msdyn_aiodtrainingboundingbox_AsyncOperations)
@@ -3562,19 +3561,6 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_AsyncOperations](msdyn_ai
 |ReferencedAttribute|`msdyn_aimodelid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodel`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_AsyncOperations"></a> msdyn_aimodelcatalog_AsyncOperations
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_AsyncOperations](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_AsyncOperations)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodelcatalog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

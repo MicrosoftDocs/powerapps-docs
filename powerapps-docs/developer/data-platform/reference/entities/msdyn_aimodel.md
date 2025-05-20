@@ -669,7 +669,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_aimodel_createdonbehalfby](#BKMK_lk_msdyn_aimodel_createdonbehalfby)
 - [lk_msdyn_aimodel_modifiedby](#BKMK_lk_msdyn_aimodel_modifiedby)
 - [lk_msdyn_aimodel_modifiedonbehalfby](#BKMK_lk_msdyn_aimodel_modifiedonbehalfby)
-- [msdyn_aimodelcatalog_msdyn_aimodel](#BKMK_msdyn_aimodelcatalog_msdyn_aimodel)
 - [msdyn_aitemplate_msdyn_aimodel](#BKMK_msdyn_aitemplate_msdyn_aimodel)
 - [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel)
@@ -741,19 +740,6 @@ One-To-Many Relationship: [systemuser lk_msdyn_aimodel_modifiedonbehalfby](syste
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_msdyn_aimodel"></a> msdyn_aimodelcatalog_msdyn_aimodel
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_msdyn_aimodel](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_msdyn_aimodel)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`msdyn_aimodelcatalog`|
-|ReferencingEntityNavigationPropertyName|`msdyn_AIModelCatalog`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_msdyn_aitemplate_msdyn_aimodel"></a> msdyn_aitemplate_msdyn_aimodel
 

@@ -700,7 +700,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aievent_SyncErrors](#BKMK_msdyn_aievent_SyncErrors)
 - [msdyn_aifptrainingdocument_SyncErrors](#BKMK_msdyn_aifptrainingdocument_SyncErrors)
 - [msdyn_aimodel_SyncErrors](#BKMK_msdyn_aimodel_SyncErrors)
-- [msdyn_aimodelcatalog_SyncErrors](#BKMK_msdyn_aimodelcatalog_SyncErrors)
 - [msdyn_aiodimage_SyncErrors](#BKMK_msdyn_aiodimage_SyncErrors)
 - [msdyn_aiodlabel_SyncErrors](#BKMK_msdyn_aiodlabel_SyncErrors)
 - [msdyn_aiodtrainingboundingbox_SyncErrors](#BKMK_msdyn_aiodtrainingboundingbox_SyncErrors)
@@ -2916,19 +2915,6 @@ One-To-Many Relationship: [msdyn_aimodel msdyn_aimodel_SyncErrors](msdyn_aimodel
 |ReferencedAttribute|`msdyn_aimodelid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodel`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_SyncErrors"></a> msdyn_aimodelcatalog_SyncErrors
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_SyncErrors](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_SyncErrors)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aimodelcatalog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

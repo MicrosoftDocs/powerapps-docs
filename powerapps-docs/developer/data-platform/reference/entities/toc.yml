@@ -70,9 +70,6 @@ items:
 - name: "AI Model"
   displayName: "msdyn_AIModel entity"
   href: msdyn_aimodel.md
-- name: "AI Model Catalog"
-  displayName: "msdyn_AIModelCatalog entity"
-  href: msdyn_aimodelcatalog.md
 - name: "AI Object Detection Bounding Box"
   displayName: "msdyn_AIOdTrainingBoundingBox entity"
   href: msdyn_aiodtrainingboundingbox.md

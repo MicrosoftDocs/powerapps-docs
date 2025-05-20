@@ -354,8 +354,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aibfileattacheddata_DuplicateMatchingRecord](#BKMK_msdyn_aibfileattacheddata_DuplicateMatchingRecord)
 - [msdyn_aievent_DuplicateBaseRecord](#BKMK_msdyn_aievent_DuplicateBaseRecord)
 - [msdyn_aievent_DuplicateMatchingRecord](#BKMK_msdyn_aievent_DuplicateMatchingRecord)
-- [msdyn_aimodelcatalog_DuplicateBaseRecord](#BKMK_msdyn_aimodelcatalog_DuplicateBaseRecord)
-- [msdyn_aimodelcatalog_DuplicateMatchingRecord](#BKMK_msdyn_aimodelcatalog_DuplicateMatchingRecord)
 - [msdyn_aiodimage_DuplicateBaseRecord](#BKMK_msdyn_aiodimage_DuplicateBaseRecord)
 - [msdyn_aiodimage_DuplicateMatchingRecord](#BKMK_msdyn_aiodimage_DuplicateMatchingRecord)
 - [msdyn_aiodlabel_DuplicateBaseRecord](#BKMK_msdyn_aiodlabel_DuplicateBaseRecord)
@@ -2364,32 +2362,6 @@ One-To-Many Relationship: [msdyn_aievent msdyn_aievent_DuplicateMatchingRecord](
 |ReferencedAttribute|`msdyn_aieventid`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aievent`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_DuplicateBaseRecord"></a> msdyn_aimodelcatalog_DuplicateBaseRecord
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_DuplicateBaseRecord](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_DuplicateBaseRecord)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`baserecordid`|
-|ReferencingEntityNavigationPropertyName|`baserecordid_msdyn_aimodelcatalog`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_msdyn_aimodelcatalog_DuplicateMatchingRecord"></a> msdyn_aimodelcatalog_DuplicateMatchingRecord
-
-One-To-Many Relationship: [msdyn_aimodelcatalog msdyn_aimodelcatalog_DuplicateMatchingRecord](msdyn_aimodelcatalog.md#BKMK_msdyn_aimodelcatalog_DuplicateMatchingRecord)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`msdyn_aimodelcatalog`|
-|ReferencedAttribute|`msdyn_aimodelcatalogid`|
-|ReferencingAttribute|`duplicaterecordid`|
-|ReferencingEntityNavigationPropertyName|`duplicaterecordid_msdyn_aimodelcatalog`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

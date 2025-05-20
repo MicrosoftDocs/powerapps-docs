@@ -3423,10 +3423,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [lk_msdyn_aimodel_createdonbehalfby](#BKMK_lk_msdyn_aimodel_createdonbehalfby)
 - [lk_msdyn_aimodel_modifiedby](#BKMK_lk_msdyn_aimodel_modifiedby)
 - [lk_msdyn_aimodel_modifiedonbehalfby](#BKMK_lk_msdyn_aimodel_modifiedonbehalfby)
-- [lk_msdyn_aimodelcatalog_createdby](#BKMK_lk_msdyn_aimodelcatalog_createdby)
-- [lk_msdyn_aimodelcatalog_createdonbehalfby](#BKMK_lk_msdyn_aimodelcatalog_createdonbehalfby)
-- [lk_msdyn_aimodelcatalog_modifiedby](#BKMK_lk_msdyn_aimodelcatalog_modifiedby)
-- [lk_msdyn_aimodelcatalog_modifiedonbehalfby](#BKMK_lk_msdyn_aimodelcatalog_modifiedonbehalfby)
 - [lk_msdyn_aiodimage_createdby](#BKMK_lk_msdyn_aiodimage_createdby)
 - [lk_msdyn_aiodimage_createdonbehalfby](#BKMK_lk_msdyn_aiodimage_createdonbehalfby)
 - [lk_msdyn_aiodimage_modifiedby](#BKMK_lk_msdyn_aiodimage_modifiedby)
@@ -4629,7 +4625,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [user_msdyn_aievent](#BKMK_user_msdyn_aievent)
 - [user_msdyn_aifptrainingdocument](#BKMK_user_msdyn_aifptrainingdocument)
 - [user_msdyn_aimodel](#BKMK_user_msdyn_aimodel)
-- [user_msdyn_aimodelcatalog](#BKMK_user_msdyn_aimodelcatalog)
 - [user_msdyn_aiodimage](#BKMK_user_msdyn_aiodimage)
 - [user_msdyn_aiodlabel](#BKMK_user_msdyn_aiodlabel)
 - [user_msdyn_aiodtrainingboundingbox](#BKMK_user_msdyn_aiodtrainingboundingbox)
@@ -13761,54 +13756,6 @@ Many-To-One Relationship: [msdyn_aimodel lk_msdyn_aimodel_modifiedonbehalfby](ms
 |ReferencingEntity|`msdyn_aimodel`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencedEntityNavigationPropertyName|`lk_msdyn_aimodel_modifiedonbehalfby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_msdyn_aimodelcatalog_createdby"></a> lk_msdyn_aimodelcatalog_createdby
-
-Many-To-One Relationship: [msdyn_aimodelcatalog lk_msdyn_aimodelcatalog_createdby](msdyn_aimodelcatalog.md#BKMK_lk_msdyn_aimodelcatalog_createdby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`createdby`|
-|ReferencedEntityNavigationPropertyName|`lk_msdyn_aimodelcatalog_createdby`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_msdyn_aimodelcatalog_createdonbehalfby"></a> lk_msdyn_aimodelcatalog_createdonbehalfby
-
-Many-To-One Relationship: [msdyn_aimodelcatalog lk_msdyn_aimodelcatalog_createdonbehalfby](msdyn_aimodelcatalog.md#BKMK_lk_msdyn_aimodelcatalog_createdonbehalfby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`createdonbehalfby`|
-|ReferencedEntityNavigationPropertyName|`lk_msdyn_aimodelcatalog_createdonbehalfby`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_msdyn_aimodelcatalog_modifiedby"></a> lk_msdyn_aimodelcatalog_modifiedby
-
-Many-To-One Relationship: [msdyn_aimodelcatalog lk_msdyn_aimodelcatalog_modifiedby](msdyn_aimodelcatalog.md#BKMK_lk_msdyn_aimodelcatalog_modifiedby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`modifiedby`|
-|ReferencedEntityNavigationPropertyName|`lk_msdyn_aimodelcatalog_modifiedby`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_lk_msdyn_aimodelcatalog_modifiedonbehalfby"></a> lk_msdyn_aimodelcatalog_modifiedonbehalfby
-
-Many-To-One Relationship: [msdyn_aimodelcatalog lk_msdyn_aimodelcatalog_modifiedonbehalfby](msdyn_aimodelcatalog.md#BKMK_lk_msdyn_aimodelcatalog_modifiedonbehalfby)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`modifiedonbehalfby`|
-|ReferencedEntityNavigationPropertyName|`lk_msdyn_aimodelcatalog_modifiedonbehalfby`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -28233,18 +28180,6 @@ Many-To-One Relationship: [msdyn_aimodel user_msdyn_aimodel](msdyn_aimodel.md#BK
 |ReferencingEntity|`msdyn_aimodel`|
 |ReferencingAttribute|`owninguser`|
 |ReferencedEntityNavigationPropertyName|`user_msdyn_aimodel`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_user_msdyn_aimodelcatalog"></a> user_msdyn_aimodelcatalog
-
-Many-To-One Relationship: [msdyn_aimodelcatalog user_msdyn_aimodelcatalog](msdyn_aimodelcatalog.md#BKMK_user_msdyn_aimodelcatalog)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`owninguser`|
-|ReferencedEntityNavigationPropertyName|`user_msdyn_aimodelcatalog`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

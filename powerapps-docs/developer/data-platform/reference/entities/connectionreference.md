@@ -821,7 +821,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
 - [connectionreference_SyncErrors](#BKMK_connectionreference_SyncErrors)
 - [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
-- [msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId](#BKMK_msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId)
 - [msdyn_connreference_msdyn_connectordatasource](#BKMK_msdyn_connreference_msdyn_connectordatasource)
 - [msdyn_dfcr_cr_connect](#BKMK_msdyn_dfcr_cr_connect)
 
@@ -954,18 +953,6 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_AIConfiguration_Connectio
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_connectionreferenceid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_AIConfiguration_ConnectionReference`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId"></a> msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId
-
-Many-To-One Relationship: [msdyn_aimodelcatalog msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId](msdyn_aimodelcatalog.md#BKMK_msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`msdyn_aimodelcatalog`|
-|ReferencingAttribute|`msdyn_connectionreferenceid`|
-|ReferencedEntityNavigationPropertyName|`msdyn_connectionreference_msdyn_aimodelcatalog_ConnectionReferenceId`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
