@@ -28,6 +28,8 @@ This article explains how to set up and use the Dataverse MCP server with Claude
 
 ## Prerequisites
 
+Power Platform admin role.
+
 During this preview, only a new Dataverse environment provisioned as outlined here works with the MCP server.  
 
 After you create your environment for the preview, make a note of this information: 
