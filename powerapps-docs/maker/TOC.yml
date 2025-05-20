@@ -2411,6 +2411,12 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
+  - name: Connect to Dataverse with MCP (preview)
+    items:
+    - name: Connect to Dataverse with MCP overview
+      href: ./data-platform/data-platform-mcp.md
+    - name: Connect to Dataverse with MCP FAQ
+      href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
