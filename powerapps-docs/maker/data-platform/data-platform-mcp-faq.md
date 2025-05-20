@@ -28,11 +28,11 @@ Check the claude_desktop_config.json file and verify that the values are correct
 
 ## Why do you make a distinction between exit and close Claude desktop?
 
-Because **Exit** and **Close** have different effects. Exit really removes the Claude desktop app from memory and when you start it again, it’s a fresh start. Close just closes the experience but the app remains to run.
+Because **Exit** and **Close** have different effects. Exit really removes the Claude desktop app from memory and when you start it again, it’s a fresh start. Close just closes the experience but the app is still running.
 
 ## I don’t see any authentication experience to reauthorization
 
-Exit Claude desktop and reopen it. Make sure you don’t have any connectivity problems. If the problem persists, check if there are any files in `C:\Users\<user>\AppData\Local\Microsoft.PowerPlatform.Dataverse.MCP\authCache`. If so, delete all, close Claude desktop and reopen Claude desktop.
+Exit Claude desktop and reopen it. Make sure you don’t have any connectivity problems. If the problem persists, check if there are any files in `C:\Users\<user>\AppData\Local\Microsoft.PowerPlatform.Dataverse.MCP\authCache`. If so, delete all, exit Claude desktop, and then reopen Claude desktop.
 
 ## I want to sign in with a different account but I don’t get prompted anymore
 

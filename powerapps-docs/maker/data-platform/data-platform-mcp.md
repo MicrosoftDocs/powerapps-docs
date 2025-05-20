@@ -19,7 +19,7 @@ The Model Context Protocol (MCP) is an open protocol that enables seamless integ
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment. These tools are: list tables, describe table, read data, create record, update record, list prompts, execute prompt, list knowledge sources, and retrieve knowledge.
 
-This article explains how to set up and use the Dataverse MCP server with Claude Desktop or Visual Studio Code (VS Code) GitHub Copilot as an MCP client. By following the steps, you can interact with Dataverse, asking natural language questions like "show me my contacts" and receive answers based on stored data.
+This article explains how to set up and use the Dataverse MCP server with Claude desktop or Visual Studio Code (VS Code) GitHub Copilot as an MCP client. By following the steps in this article, you can interact with Dataverse, asking natural language questions like "show me my contacts" and receive answers based on stored data.
 
 > [!IMPORTANT]
 >
@@ -74,16 +74,18 @@ You might need to update the version of the Microsoft Dynamics 365 – PowerAIEx
 1. Complete the instructions on your screen.
 1. Note the user name in the connection **Name**, this should be the same name that you used to create the environment earlier.
 1. Select the connection to open it and copy the entire URL from the browser and save it. You need this URL for Claude desktop and VS Code MCP configuration.
-   :::image type="content" source="media/copy-entire-browser-url.png" alt-text="Copy entire browser URL":::
+   :::image type="content" source="media/copy-entire-browser-url.png" alt-text="Copy entire browser URL" lightbox="media/copy-entire-browser-url.png":::
 
 ## Install the Dataverse MCP server local proxy
 
-These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude Desktop or VS Code GitHub Copilot.
+These steps install the Dataverse MCP server local proxy that is used by the MCP client, such as Claude desktop or VS Code GitHub Copilot.
 
 1. Install the .NET SDK 8.0 either from Downloads or with this PowerShell command.
+
    `winget install Microsoft.DotNet.SDK.8`
 
 1. In the Terminal window you opened earlier, run this command to install the Microsoft.PowerPlatform.Dataverse.MCP local proxy.
+
    `dotnet tool install --global --add-source https://api.nuget.org/v3/index.json Microsoft.PowerPlatform.Dataverse.MCP`
 
 ## Get the tenant ID of your Dataverse environment
@@ -109,7 +111,7 @@ Here’s one of the ways to get tenant ID details:
 The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
 
 You can now interact with the Dataverse MCP Server tool in the **Test your agent** chat pane. Try commands like "list tables in Dataverse," "describe table account," or "how many accounts do I have."
-:::image type="content" source="media/copilot-studio-mcp.png" alt-text="Dataverse MCP in Copilot Studio":::
+:::image type="content" source="media/copilot-studio-mcp.png" alt-text="Dataverse MCP in Copilot Studio" lightbox="media/copilot-studio-mcp.png":::
 
 ## Configure and use the Dataverse MCP server in Claude
 
@@ -129,7 +131,7 @@ Once you have Claude desktop installed, you can find and launch Claude from your
 1. Open Claude desktop and go to **File** > **Settings**.
 1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
 1. This takes you to the Claude desktop files. Open the **claude_desktop_config.json** file with your favorite JSON editor.
-1. Enter this text into configuration – replacing &lt;URL from prerequisite&gt; and &lt;Tenant Id GUID from Prerequisite&gt; from the [Prerequisites](#prerequisites) described earlier. Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. 
+1. Enter this text into configuration – replacing &lt;connection URL&gt; and &lt;Tenant Id&gt; from the [Prerequisites](#prerequisites) described earlier. Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. 
 
 ```json
 {
@@ -181,18 +183,10 @@ This section shows you how to configure your MCP server in two ways in VS Code G
 
 If you don’t have VS Code installed, [download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/download).
 
-For more resources about how to use GitHub Copilot in VS Code:
-
-- [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) 
-- [Get started with GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/getting-started)
-- [Getting started with Copilot Chat in VS Code](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat)
-
-To learn how to use Visual Studio Code and MCP Severs go to this document: [Use MCP servers in VS Code (Preview)](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-
 ### Reuse Claude Desktop configuration
 
 1. In VS Code, open the command palette using Ctrl+Shift+P or **View** > **Command Palette**. Type *MCP:* and a list of relevant MCP commands are displayed, such as MCP: List Servers and MCP: Add Servers.  
-1. If you have configured the Dataverse MCP server as described earlier in the [Claude desktop](#configure-and-use-the-dataverse-mcp-server-in-claude) step and your VS Code MCP setting is set as "chat.mcp.discovery.enabled": true, VS Code is able to discover it. For example, when you choose **MCP: List Servers**, the MCP server, such as **MyDataverseMCPServer Running**, is displayed.
+1. If you have configured the Dataverse MCP server as described earlier in the [Claude desktop](#configure-and-use-the-dataverse-mcp-server-in-claude) step and your VS Code MCP setting is set as `"chat.mcp.discovery.enabled": true`, VS Code is able to discover it. For example, when you choose **MCP: List Servers**, the MCP server, such as **MyDataverseMCPServer Running**, is displayed.
    :::image type="content" source="media/mcp-server-running.png" alt-text="MCP Dataverse server running":::
 
    If the Dataverse MCP server isn't running, select the server and then select **Start Server**. Observe the server start in the **Output** window of VS Code.
@@ -241,6 +235,14 @@ These instructions help you configure a Dataverse MCP server at the user setting
 
 > [!TIP]
 > If you other MCP servers registered with GitHub Copilot it's best to add "in Dataverse" to your prompt to be specific about which MCP server you’d like to use for your question.
+
+For more resources about how to use GitHub Copilot in VS Code:
+
+- [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) 
+- [Get started with GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/getting-started)
+- [Getting started with Copilot Chat in VS Code](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat)
+
+To learn how to use Visual Studio Code and MCP Severs go to this document: [Use MCP servers in VS Code (Preview)](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
 
 ## List of tools available in Dataverse MCP server
 
