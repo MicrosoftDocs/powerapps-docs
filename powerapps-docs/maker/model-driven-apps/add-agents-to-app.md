@@ -31,13 +31,13 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 
 ## Working with an Interactive agent
 
-The **Interactive agent** makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The Copilot Chat, Agent APIs and Agent reponse components access the topics within this agent.
+The **Interactive agent** makes a model-driven app more intelligent and relevant for your organization by adding additional topics, knowledge sources, and more. The [Copilot Chat](add-ai-copilot.md), Agent APIs and Agent reponse components access the topics within this agent.
 
 > [!div class="mx-imgBorder"] 
 > ![App Designer Agents pane Interactive agent](media/add-agents-to-app/app-designer-interactive-agent.png "App Designer Agents pane Interactive agent")
 
 > [!NOTE]
-> The **Interactive agent** is improved experience of the **... > Configure in Copilot Studio**. The agents created with the previous expeience are now shown as the **Interactive agent**
+> The **Interactive agent** is improved experience for **... > Configure in Copilot Studio** and is gradually rolling out. The agents created with the previous expeience are now shown as the **Interactive agent**.
 
 ### Creating an Interactive agent
 
@@ -45,8 +45,8 @@ When an Interactive agent is created, it is named as "Copilot in Power Apps - " 
 
 1. Open **Agents** pane
 1. Expand **In your app** > **AI capabilities**
-1. On **Interactive agent", click **... > Configure**
-1. Click **Configure in Copilot Studio** to create the agent
+1. On **Interactive agent**, select **... > Configure**
+1. Select **Configure in Copilot Studio** to create the agent
 1. While the agent is being created "Setting up your app's copilot" will be shown in the popup
 1. New browser tab for **Copilot Studio** will be opened with the new agent
    > [!NOTE]
