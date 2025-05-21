@@ -21,7 +21,7 @@ Model-driven apps
 
 ## Syntax
 
-`context.copilot.executeEvent(eventName, eventParameters).then(successCallback, errorCallback);`
+`context.copilot.executeEvent(promptText).then(successCallback, errorCallback);`
 
 ## Return Value
 
