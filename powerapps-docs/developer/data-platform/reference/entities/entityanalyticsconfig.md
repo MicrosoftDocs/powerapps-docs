@@ -83,7 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`entitydatasource`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
-|DefaultFormValue|0|
+|DefaultFormValue|1|
 |GlobalChoiceName|`entityanalyticsconfig_entitydatasourcee`|
 
 #### EntityDataSource Choices/Options

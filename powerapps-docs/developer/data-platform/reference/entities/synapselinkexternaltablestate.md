@@ -63,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncState](#BKMK_LastSyncState)
 - [MaxRecordVersion](#BKMK_MaxRecordVersion)
 - [MetadataVersion](#BKMK_MetadataVersion)
+- [MinSyncedDataVersion](#BKMK_MinSyncedDataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [RecordCount](#BKMK_RecordCount)
@@ -216,6 +217,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|32|
+
+### <a name="BKMK_MinSyncedDataVersion"></a> MinSyncedDataVersion
+
+|Property|Value|
+|---|---|
+|Description|**Last Synced Minimum Data Version**|
+|DisplayName|**MinSyncVersion**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`minsynceddataversion`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_name"></a> name
 

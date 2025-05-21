@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_publishername](#BKMK_msdyn_publishername)
 - [msdyn_result](#BKMK_msdyn_result)
 - [msdyn_retrycount](#BKMK_msdyn_retrycount)
+- [msdyn_solutionhistorydescription](#BKMK_msdyn_solutionhistorydescription)
 - [msdyn_solutionhistoryId](#BKMK_msdyn_solutionhistoryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_solutionversion](#BKMK_msdyn_solutionversion)
@@ -382,6 +383,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|0|
+
+### <a name="BKMK_msdyn_solutionhistorydescription"></a> msdyn_solutionhistorydescription
+
+|Property|Value|
+|---|---|
+|Description|**Comments associated with solution installation**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_solutionhistorydescription`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_msdyn_solutionhistoryId"></a> msdyn_solutionhistoryId
 

@@ -67,6 +67,7 @@ The following table lists selected properties for the Flow Machine Group (flowma
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
+- [DisconnectionPlannedOn](#BKMK_DisconnectionPlannedOn)
 - [DomainSetting](#BKMK_DomainSetting)
 - [FlowGroupType](#BKMK_FlowGroupType)
 - [flowmachineimage](#BKMK_flowmachineimage)
@@ -77,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [KeyCreationDate](#BKMK_KeyCreationDate)
 - [KeyExpiryGracePeriod](#BKMK_KeyExpiryGracePeriod)
 - [KeyValidityPeriod](#BKMK_KeyValidityPeriod)
+- [LastRunDate](#BKMK_LastRunDate)
 - [ManagementType](#BKMK_ManagementType)
 - [MaxManagedMachineCount](#BKMK_MaxManagedMachineCount)
 - [name](#BKMK_name)
@@ -115,6 +117,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_DisconnectionPlannedOn"></a> DisconnectionPlannedOn
+
+|Property|Value|
+|---|---|
+|Description|**If set, the date on which the machines of the group will be disconnected.**|
+|DisplayName|**Disconnection planned on**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`disconnectionplannedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_DomainSetting"></a> DomainSetting
 
@@ -273,6 +292,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2628000|
 |MinValue|129600|
+
+### <a name="BKMK_LastRunDate"></a> LastRunDate
+
+|Property|Value|
+|---|---|
+|Description|**Last date at which a run has targeted the group.**|
+|DisplayName|**Last run date**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`lastrundate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ManagementType"></a> ManagementType
 

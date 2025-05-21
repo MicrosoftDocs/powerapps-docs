@@ -211,7 +211,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Regular Expression in C#**|
+|Description|**Regular Expression in C\#**|
 |DisplayName|**Regular Expression**|
 |IsValidForForm|True|
 |IsValidForRead|True|

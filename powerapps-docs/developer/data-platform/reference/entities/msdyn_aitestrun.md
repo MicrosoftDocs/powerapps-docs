@@ -1,6 +1,6 @@
 ---
-title: "Signal Registration (SignalRegistration) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the Signal Registration (SignalRegistration) table/entity with Microsoft Dataverse."
+title: "AI Test Run (msdyn_AITestRun) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the AI Test Run (msdyn_AITestRun) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
@@ -8,42 +8,41 @@ search.audienceType:
   - developer
 ---
 
-# Signal Registration (SignalRegistration) table/entity reference (Microsoft Dataverse)
+# AI Test Run (msdyn_AITestRun) table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-The following table lists the messages for the Signal Registration (SignalRegistration) table.
+The following table lists the messages for the AI Test Run (msdyn_AITestRun) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /signalregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /msdyn_aitestruns<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /signalregistrations(*signalregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Restore`<br />Event: True |<xref:Microsoft.Dynamics.CRM.Restore?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
-| `Retrieve`<br />Event: True |`GET` /signalregistrations(*signalregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /signalregistrations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_aitestruns<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /signalregistrations(*signalregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /signalregistrations(*signalregistrationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_aitestruns(*msdyn_aitestrunid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the Signal Registration (SignalRegistration) table.
+The following table lists the events for the AI Test Run (msdyn_AITestRun) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -56,19 +55,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the Signal Registration (SignalRegistration) table.
+The following table lists selected properties for the AI Test Run (msdyn_AITestRun) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **Signal Registration** |
-| **DisplayCollectionName** | **Signal Registrations** |
-| **SchemaName** | `SignalRegistration` |
-| **CollectionSchemaName** | `SignalRegistrations` |
-| **EntitySetName** | `signalregistrations`|
-| **LogicalName** | `signalregistration` |
-| **LogicalCollectionName** | `signalregistrations` |
-| **PrimaryIdAttribute** | `signalregistrationid` |
-| **PrimaryNameAttribute** |`signalname` |
+| **DisplayName** | **AI Test Run** |
+| **DisplayCollectionName** | **AI Test Run** |
+| **SchemaName** | `msdyn_AITestRun` |
+| **CollectionSchemaName** | `msdyn_AITestRuns` |
+| **EntitySetName** | `msdyn_aitestruns`|
+| **LogicalName** | `msdyn_aitestrun` |
+| **LogicalCollectionName** | `msdyn_aitestruns` |
+| **PrimaryIdAttribute** | `msdyn_aitestrunid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -77,11 +76,25 @@ The following table lists selected properties for the Signal Registration (Signa
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_AccuracyScore](#BKMK_msdyn_AccuracyScore)
+- [msdyn_ActualOutput](#BKMK_msdyn_ActualOutput)
+- [msdyn_AdditionalResponseMetadata](#BKMK_msdyn_AdditionalResponseMetadata)
+- [msdyn_AITestCaseId](#BKMK_msdyn_AITestCaseId)
+- [msdyn_AITestRunBatchId](#BKMK_msdyn_AITestRunBatchId)
+- [msdyn_AITestRunId](#BKMK_msdyn_AITestRunId)
+- [msdyn_Comment](#BKMK_msdyn_Comment)
+- [msdyn_CompletedOn](#BKMK_msdyn_CompletedOn)
+- [msdyn_ConfigurationId](#BKMK_msdyn_ConfigurationId)
+- [msdyn_ErrorMessage](#BKMK_msdyn_ErrorMessage)
+- [msdyn_ExpectedOutput](#BKMK_msdyn_ExpectedOutput)
+- [msdyn_Name](#BKMK_msdyn_Name)
+- [msdyn_RunDuration](#BKMK_msdyn_RunDuration)
+- [msdyn_StartedOn](#BKMK_msdyn_StartedOn)
+- [msdyn_TestRunSetting](#BKMK_msdyn_TestRunSetting)
+- [msdyn_TestRunStatus](#BKMK_msdyn_TestRunStatus)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
-- [SignalName](#BKMK_SignalName)
-- [SignalRegistrationId](#BKMK_SignalRegistrationId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -100,6 +113,265 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_msdyn_AccuracyScore"></a> msdyn_AccuracyScore
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Accuracy score**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_accuracyscore`|
+|RequiredLevel|None|
+|Type|Double|
+|ImeMode|Auto|
+|MaxValue|100|
+|MinValue|0|
+|Precision|2|
+
+### <a name="BKMK_msdyn_ActualOutput"></a> msdyn_ActualOutput
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Actual output**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_actualoutput`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_msdyn_AdditionalResponseMetadata"></a> msdyn_AdditionalResponseMetadata
+
+|Property|Value|
+|---|---|
+|Description|**Addition Response Metadata.**|
+|DisplayName|**Addition Response Metadata**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_additionalresponsemetadata`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_msdyn_AITestCaseId"></a> msdyn_AITestCaseId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for AITestCase associated with AITestRun.**|
+|DisplayName|**AITestCase**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aitestcaseid`|
+|RequiredLevel|SystemRequired|
+|Type|Lookup|
+|Targets|msdyn_aitestcase|
+
+### <a name="BKMK_msdyn_AITestRunBatchId"></a> msdyn_AITestRunBatchId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for AITestRunBatch associated with AITestRun.**|
+|DisplayName|**AITestRunBatch**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aitestrunbatchid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_aitestrunbatch|
+
+### <a name="BKMK_msdyn_AITestRunId"></a> msdyn_AITestRunId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**AITestRun**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aitestrunid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_Comment"></a> msdyn_Comment
+
+|Property|Value|
+|---|---|
+|Description|**Comment**|
+|DisplayName|**Comment**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_comment`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|400|
+
+### <a name="BKMK_msdyn_CompletedOn"></a> msdyn_CompletedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time when the test run was completed.**|
+|DisplayName|**Completed On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_completedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
+
+### <a name="BKMK_msdyn_ConfigurationId"></a> msdyn_ConfigurationId
+
+|Property|Value|
+|---|---|
+|Description|**Configuration id.**|
+|DisplayName|**Configuration id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_configurationid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_ErrorMessage"></a> msdyn_ErrorMessage
+
+|Property|Value|
+|---|---|
+|Description|**The error message of the test run.**|
+|DisplayName|**ErrorMessage**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_errormessage`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
+
+### <a name="BKMK_msdyn_ExpectedOutput"></a> msdyn_ExpectedOutput
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Expected output**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_expectedoutput`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_msdyn_Name"></a> msdyn_Name
+
+|Property|Value|
+|---|---|
+|Description|**The name of the AI test run.**|
+|DisplayName|**Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_name`|
+|RequiredLevel|SystemRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_msdyn_RunDuration"></a> msdyn_RunDuration
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Run Duration**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_runduration`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
+
+### <a name="BKMK_msdyn_StartedOn"></a> msdyn_StartedOn
+
+|Property|Value|
+|---|---|
+|Description|**Date and time when the test run was started.**|
+|DisplayName|**Started On**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_startedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
+
+### <a name="BKMK_msdyn_TestRunSetting"></a> msdyn_TestRunSetting
+
+|Property|Value|
+|---|---|
+|Description|**Test Run Setting.**|
+|DisplayName|**Test Run Setting**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_testrunsetting`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_msdyn_TestRunStatus"></a> msdyn_TestRunStatus
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**TestRun Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_testrunstatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`msdyn_aitestrun_msdyn_testrunstatus`|
+
+#### msdyn_TestRunStatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Created**|
+|1|**InProgress**|
+|2|**Paused**|
+|3|**Blocked**|
+|4|**Succeeded**|
+|5|**Failed**|
+|6|**Canceled**|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -143,40 +415,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
-### <a name="BKMK_SignalName"></a> SignalName
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Signal Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`signalname`|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
-
-### <a name="BKMK_SignalRegistrationId"></a> SignalRegistrationId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**SignalRegistration**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`signalregistrationid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |---|---|
-|Description|**Status of the Signal Registration**|
+|Description|**Status of the AI Test Run**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -184,7 +427,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`signalregistration_statecode`|
+|GlobalChoiceName|`msdyn_aitestrun_statecode`|
 
 #### statecode Choices/Options
 
@@ -197,7 +440,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the Signal Registration**|
+|Description|**Reason for the status of the AI Test Run**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -205,7 +448,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`signalregistration_statuscode`|
+|GlobalChoiceName|`msdyn_aitestrun_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -389,7 +632,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -437,18 +680,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_signalregistration](#BKMK_business_unit_signalregistration)
-- [lk_signalregistration_createdby](#BKMK_lk_signalregistration_createdby)
-- [lk_signalregistration_createdonbehalfby](#BKMK_lk_signalregistration_createdonbehalfby)
-- [lk_signalregistration_modifiedby](#BKMK_lk_signalregistration_modifiedby)
-- [lk_signalregistration_modifiedonbehalfby](#BKMK_lk_signalregistration_modifiedonbehalfby)
-- [owner_signalregistration](#BKMK_owner_signalregistration)
-- [team_signalregistration](#BKMK_team_signalregistration)
-- [user_signalregistration](#BKMK_user_signalregistration)
+- [business_unit_msdyn_aitestrun](#BKMK_business_unit_msdyn_aitestrun)
+- [lk_msdyn_aitestrun_createdby](#BKMK_lk_msdyn_aitestrun_createdby)
+- [lk_msdyn_aitestrun_createdonbehalfby](#BKMK_lk_msdyn_aitestrun_createdonbehalfby)
+- [lk_msdyn_aitestrun_modifiedby](#BKMK_lk_msdyn_aitestrun_modifiedby)
+- [lk_msdyn_aitestrun_modifiedonbehalfby](#BKMK_lk_msdyn_aitestrun_modifiedonbehalfby)
+- [msdyn_aitestcase_msdyn_aitestrun](#BKMK_msdyn_aitestcase_msdyn_aitestrun)
+- [msdyn_aitestrunbatch_msdyn_aitestrun](#BKMK_msdyn_aitestrunbatch_msdyn_aitestrun)
+- [owner_msdyn_aitestrun](#BKMK_owner_msdyn_aitestrun)
+- [team_msdyn_aitestrun](#BKMK_team_msdyn_aitestrun)
+- [user_msdyn_aitestrun](#BKMK_user_msdyn_aitestrun)
 
-### <a name="BKMK_business_unit_signalregistration"></a> business_unit_signalregistration
+### <a name="BKMK_business_unit_msdyn_aitestrun"></a> business_unit_msdyn_aitestrun
 
-One-To-Many Relationship: [businessunit business_unit_signalregistration](businessunit.md#BKMK_business_unit_signalregistration)
+One-To-Many Relationship: [businessunit business_unit_msdyn_aitestrun](businessunit.md#BKMK_business_unit_msdyn_aitestrun)
 
 |Property|Value|
 |---|---|
@@ -459,9 +704,9 @@ One-To-Many Relationship: [businessunit business_unit_signalregistration](busine
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_signalregistration_createdby"></a> lk_signalregistration_createdby
+### <a name="BKMK_lk_msdyn_aitestrun_createdby"></a> lk_msdyn_aitestrun_createdby
 
-One-To-Many Relationship: [systemuser lk_signalregistration_createdby](systemuser.md#BKMK_lk_signalregistration_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestrun_createdby](systemuser.md#BKMK_lk_msdyn_aitestrun_createdby)
 
 |Property|Value|
 |---|---|
@@ -472,9 +717,9 @@ One-To-Many Relationship: [systemuser lk_signalregistration_createdby](systemuse
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_signalregistration_createdonbehalfby"></a> lk_signalregistration_createdonbehalfby
+### <a name="BKMK_lk_msdyn_aitestrun_createdonbehalfby"></a> lk_msdyn_aitestrun_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_signalregistration_createdonbehalfby](systemuser.md#BKMK_lk_signalregistration_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestrun_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aitestrun_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -485,9 +730,9 @@ One-To-Many Relationship: [systemuser lk_signalregistration_createdonbehalfby](s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_signalregistration_modifiedby"></a> lk_signalregistration_modifiedby
+### <a name="BKMK_lk_msdyn_aitestrun_modifiedby"></a> lk_msdyn_aitestrun_modifiedby
 
-One-To-Many Relationship: [systemuser lk_signalregistration_modifiedby](systemuser.md#BKMK_lk_signalregistration_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestrun_modifiedby](systemuser.md#BKMK_lk_msdyn_aitestrun_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -498,9 +743,9 @@ One-To-Many Relationship: [systemuser lk_signalregistration_modifiedby](systemus
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_signalregistration_modifiedonbehalfby"></a> lk_signalregistration_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_aitestrun_modifiedonbehalfby"></a> lk_msdyn_aitestrun_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_signalregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_signalregistration_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestrun_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aitestrun_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -511,9 +756,35 @@ One-To-Many Relationship: [systemuser lk_signalregistration_modifiedonbehalfby](
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_signalregistration"></a> owner_signalregistration
+### <a name="BKMK_msdyn_aitestcase_msdyn_aitestrun"></a> msdyn_aitestcase_msdyn_aitestrun
 
-One-To-Many Relationship: [owner owner_signalregistration](owner.md#BKMK_owner_signalregistration)
+One-To-Many Relationship: [msdyn_aitestcase msdyn_aitestcase_msdyn_aitestrun](msdyn_aitestcase.md#BKMK_msdyn_aitestcase_msdyn_aitestrun)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcase`|
+|ReferencedAttribute|`msdyn_aitestcaseid`|
+|ReferencingAttribute|`msdyn_aitestcaseid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AITestCaseId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestrunbatch_msdyn_aitestrun"></a> msdyn_aitestrunbatch_msdyn_aitestrun
+
+One-To-Many Relationship: [msdyn_aitestrunbatch msdyn_aitestrunbatch_msdyn_aitestrun](msdyn_aitestrunbatch.md#BKMK_msdyn_aitestrunbatch_msdyn_aitestrun)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestrunbatch`|
+|ReferencedAttribute|`msdyn_aitestrunbatchid`|
+|ReferencingAttribute|`msdyn_aitestrunbatchid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AITestRunBatchId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_msdyn_aitestrun"></a> owner_msdyn_aitestrun
+
+One-To-Many Relationship: [owner owner_msdyn_aitestrun](owner.md#BKMK_owner_msdyn_aitestrun)
 
 |Property|Value|
 |---|---|
@@ -524,9 +795,9 @@ One-To-Many Relationship: [owner owner_signalregistration](owner.md#BKMK_owner_s
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_signalregistration"></a> team_signalregistration
+### <a name="BKMK_team_msdyn_aitestrun"></a> team_msdyn_aitestrun
 
-One-To-Many Relationship: [team team_signalregistration](team.md#BKMK_team_signalregistration)
+One-To-Many Relationship: [team team_msdyn_aitestrun](team.md#BKMK_team_msdyn_aitestrun)
 
 |Property|Value|
 |---|---|
@@ -537,9 +808,9 @@ One-To-Many Relationship: [team team_signalregistration](team.md#BKMK_team_signa
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_signalregistration"></a> user_signalregistration
+### <a name="BKMK_user_msdyn_aitestrun"></a> user_msdyn_aitestrun
 
-One-To-Many Relationship: [systemuser user_signalregistration](systemuser.md#BKMK_user_signalregistration)
+One-To-Many Relationship: [systemuser user_msdyn_aitestrun](systemuser.md#BKMK_user_msdyn_aitestrun)
 
 |Property|Value|
 |---|---|
@@ -555,95 +826,82 @@ One-To-Many Relationship: [systemuser user_signalregistration](systemuser.md#BKM
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [processorregistration_signalregistration_signalname](#BKMK_processorregistration_signalregistration_signalname)
-- [signalregistration_AsyncOperations](#BKMK_signalregistration_AsyncOperations)
-- [signalregistration_BulkDeleteFailures](#BKMK_signalregistration_BulkDeleteFailures)
-- [signalregistration_MailboxTrackingFolders](#BKMK_signalregistration_MailboxTrackingFolders)
-- [signalregistration_PrincipalObjectAttributeAccesses](#BKMK_signalregistration_PrincipalObjectAttributeAccesses)
-- [signalregistration_ProcessSession](#BKMK_signalregistration_ProcessSession)
-- [signalregistration_SyncErrors](#BKMK_signalregistration_SyncErrors)
+- [msdyn_aitestrun_AsyncOperations](#BKMK_msdyn_aitestrun_AsyncOperations)
+- [msdyn_aitestrun_BulkDeleteFailures](#BKMK_msdyn_aitestrun_BulkDeleteFailures)
+- [msdyn_aitestrun_MailboxTrackingFolders](#BKMK_msdyn_aitestrun_MailboxTrackingFolders)
+- [msdyn_aitestrun_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aitestrun_PrincipalObjectAttributeAccesses)
+- [msdyn_aitestrun_ProcessSession](#BKMK_msdyn_aitestrun_ProcessSession)
+- [msdyn_aitestrun_SyncErrors](#BKMK_msdyn_aitestrun_SyncErrors)
 
-### <a name="BKMK_processorregistration_signalregistration_signalname"></a> processorregistration_signalregistration_signalname
+### <a name="BKMK_msdyn_aitestrun_AsyncOperations"></a> msdyn_aitestrun_AsyncOperations
 
-Many-To-One Relationship: [processorregistration processorregistration_signalregistration_signalname](processorregistration.md#BKMK_processorregistration_signalregistration_signalname)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`processorregistration`|
-|ReferencingAttribute|`signalname`|
-|ReferencedEntityNavigationPropertyName|`processorregistration_signalregistration_signalname`|
-|IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_signalregistration_AsyncOperations"></a> signalregistration_AsyncOperations
-
-Many-To-One Relationship: [asyncoperation signalregistration_AsyncOperations](asyncoperation.md#BKMK_signalregistration_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_aitestrun_AsyncOperations](asyncoperation.md#BKMK_msdyn_aitestrun_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_signalregistration_BulkDeleteFailures"></a> signalregistration_BulkDeleteFailures
+### <a name="BKMK_msdyn_aitestrun_BulkDeleteFailures"></a> msdyn_aitestrun_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure signalregistration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_signalregistration_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_aitestrun_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aitestrun_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_signalregistration_MailboxTrackingFolders"></a> signalregistration_MailboxTrackingFolders
+### <a name="BKMK_msdyn_aitestrun_MailboxTrackingFolders"></a> msdyn_aitestrun_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder signalregistration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_signalregistration_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_aitestrun_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aitestrun_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_signalregistration_PrincipalObjectAttributeAccesses"></a> signalregistration_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_aitestrun_PrincipalObjectAttributeAccesses"></a> msdyn_aitestrun_PrincipalObjectAttributeAccesses
 
-Many-To-One Relationship: [principalobjectattributeaccess signalregistration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_signalregistration_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_aitestrun_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aitestrun_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_signalregistration_ProcessSession"></a> signalregistration_ProcessSession
+### <a name="BKMK_msdyn_aitestrun_ProcessSession"></a> msdyn_aitestrun_ProcessSession
 
-Many-To-One Relationship: [processsession signalregistration_ProcessSession](processsession.md#BKMK_signalregistration_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_aitestrun_ProcessSession](processsession.md#BKMK_msdyn_aitestrun_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_signalregistration_SyncErrors"></a> signalregistration_SyncErrors
+### <a name="BKMK_msdyn_aitestrun_SyncErrors"></a> msdyn_aitestrun_SyncErrors
 
-Many-To-One Relationship: [syncerror signalregistration_SyncErrors](syncerror.md#BKMK_signalregistration_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_aitestrun_SyncErrors](syncerror.md#BKMK_msdyn_aitestrun_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`signalregistration_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestrun_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

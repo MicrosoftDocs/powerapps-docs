@@ -71,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_CreditConsumed](#BKMK_msdyn_CreditConsumed)
 - [msdyn_DataInfo](#BKMK_msdyn_DataInfo)
 - [msdyn_DataType](#BKMK_msdyn_DataType)
+- [msdyn_EventData](#BKMK_msdyn_EventData)
 - [msdyn_Name](#BKMK_msdyn_Name)
 - [msdyn_Output](#BKMK_msdyn_Output)
 - [msdyn_PartnerSource](#BKMK_msdyn_PartnerSource)
@@ -196,6 +197,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**PowerAutomation**|
 |1|**PowerApps**|
 |2|**API**|
+|3|**MCS**|
 
 ### <a name="BKMK_msdyn_CreditConsumed"></a> msdyn_CreditConsumed
 
@@ -244,6 +246,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_msdyn_EventData"></a> msdyn_EventData
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Event Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_eventdata`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
