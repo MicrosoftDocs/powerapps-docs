@@ -90,7 +90,7 @@ When testing canvas apps using Test Studio, consider the following best practice
 
 ## Known limitations
 
-While work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
+While we work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
 
 - Components.
 - Code components written in the Power Apps Component Framework.
