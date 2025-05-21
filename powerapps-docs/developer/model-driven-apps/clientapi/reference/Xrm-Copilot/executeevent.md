@@ -38,10 +38,8 @@ An array of [MCSResponse](mcsresponse.md)
 
 In Microsoft Copilot Studio, a custom topic has been registered that accepts id (entity record id) as input parameter. Based on the input, it fetches the related activities of that entity record and returns the results as an MCS event activity.
 
-<!-- TODO I don't see any callback functions in this example. -->
-
 ```javascript
-await Xrm.Copilot.executeEvent(
+const response = await Xrm.Copilot.executeEvent(
    "Microsoft.PowerApps.Copilot.RelatedActivities", 
    { id:"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"});
 ```
