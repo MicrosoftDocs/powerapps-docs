@@ -16,7 +16,7 @@ contributors:
 ---
 
 # Use row summaries in model-driven apps
-The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record (row). Summaries helps users quickly understand essential information without requiring you to manually scanning through fields, related records, or activity timelines. They are presented in either a paragraph or bullet point format, ensuring clarity and ease of consumption.
+The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record (row). Summaries helps users quickly understand essential information without requiring them to manually scanning through fields, related records, or activity timelines. They are presented in either a paragraph or bullet point format, ensuring clarity and ease of consumption.
 
 Summaries can be accessed in two ways:
 - From the **Insights bar** at the top of main forms. 
