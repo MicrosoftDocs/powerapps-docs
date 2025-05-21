@@ -37,10 +37,8 @@ An array of [MCSResponse](mcsresponse.md)
 
 In Microsoft Copilot Studio, a topic is triggered by queries like "hello" or "hi." When `executePrompt` runs with matching promptText, it activates the topic and returns a Message activity with the response text.
 
-<!-- I don't see any callbacks in this example. Update to show how the response value is captured -->
-
 ```javascript
-await Xrm.Copilot.executePrompt("hello"); 
+const response = await Xrm.Copilot.executePrompt("hello"); 
 ```
 
 ### Response
