@@ -19,14 +19,13 @@ contributors:
 
 ## Syntax
 
-`Xrm.Copilot.executePrompt(eventName, eventParameters).then(successCallback, errorCallback);`
+`Xrm.Copilot.executePrompt(promptText).then(successCallback, errorCallback);`
 
 ## Parameters
 
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
-| `eventName` | string | Yes | Event Name registered in the MCS topic  |
-| `eventParameters` | Unknown  | Yes | Parameters needed for the event execution. These depend on what the topic does.|
+| `promptText` | string | Yes | The text that is registered as a trigger query in the MCS topic.  |
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
 
