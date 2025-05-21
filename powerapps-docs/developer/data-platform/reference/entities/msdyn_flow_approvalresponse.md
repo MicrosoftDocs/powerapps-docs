@@ -77,6 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [StageNumber](#BKMK_StageNumber)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -334,6 +335,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+### <a name="BKMK_StageNumber"></a> StageNumber
+
+|Property|Value|
+|---|---|
+|Description|**The stage number to which this approval response belongs.**|
+|DisplayName|**Stage Number**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`stagenumber`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_statecode"></a> statecode
 

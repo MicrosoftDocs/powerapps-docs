@@ -360,6 +360,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |100000201|**WorkqueueProcessorLog**|
 |100000300|**DesktopFlowOrchestrationRepairSessionMismatchRequest**|
 |100000301|**DesktopFlowOrchestrationRepairSessionMismatchResponse**|
+|100000310|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectRequest**|
+|100000311|**DesktopFlowOrchestrationRepairWindowsIdentityIncorrectResponse**|
 
 ### <a name="BKMK_workqueueid"></a> workqueueid
 

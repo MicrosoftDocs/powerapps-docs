@@ -445,7 +445,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
 - [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
-- [entity_aiinsightcard_entityid](#BKMK_entity_aiinsightcard_entityid)
+- [emailaddressconfiguration_entity_EntityId](#BKMK_emailaddressconfiguration_entity_EntityId)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
@@ -453,6 +453,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [entity_solutioncomponentbatchconfiguration_PrimaryEntity](#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity)
 - [entity_solutioncomponentbatchconfiguration_RelatedEntity](#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity)
 - [entity_solutioncomponentconfiguration](#BKMK_entity_solutioncomponentconfiguration)
+- [entityclusterconfig_extensionofrecordid](#BKMK_entityclusterconfig_extensionofrecordid)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_entity_msdyn_entitylinkchatconfiguration](#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
@@ -509,17 +510,17 @@ Many-To-One Relationship: [dvtablesearchentity DVTableSearchEntity_Entity_Entity
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entity_aiinsightcard_entityid"></a> entity_aiinsightcard_entityid
+### <a name="BKMK_emailaddressconfiguration_entity_EntityId"></a> emailaddressconfiguration_entity_EntityId
 
-Many-To-One Relationship: [aiinsightcard entity_aiinsightcard_entityid](aiinsightcard.md#BKMK_entity_aiinsightcard_entityid)
+Many-To-One Relationship: [emailaddressconfiguration emailaddressconfiguration_entity_EntityId](emailaddressconfiguration.md#BKMK_emailaddressconfiguration_entity_EntityId)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`aiinsightcard`|
+|ReferencingEntity|`emailaddressconfiguration`|
 |ReferencingAttribute|`entityid`|
-|ReferencedEntityNavigationPropertyName|`entity_aiinsightcard_entityid`|
+|ReferencedEntityNavigationPropertyName|`emailaddressconfiguration_entity_EntityId`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
 
@@ -604,6 +605,18 @@ Many-To-One Relationship: [solutioncomponentconfiguration entity_solutioncompone
 |ReferencedEntityNavigationPropertyName|`entity_solutioncomponentconfiguration`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_entityclusterconfig_extensionofrecordid"></a> entityclusterconfig_extensionofrecordid
+
+Many-To-One Relationship: [entityclusterconfig entityclusterconfig_extensionofrecordid](entityclusterconfig.md#BKMK_entityclusterconfig_extensionofrecordid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`entityclusterconfig`|
+|ReferencingAttribute|`extensionofrecordid`|
+|ReferencedEntityNavigationPropertyName|`entityclusterconfig_extensionofrecordid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_metadataforarchival_extensionofrecordid"></a> metadataforarchival_extensionofrecordid
 

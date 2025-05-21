@@ -1019,7 +1019,7 @@ See [contact powerpagecomponent_mspp_webrole_contact Many-To-Many Relationship](
 |SchemaName|`powerpagecomponent_mspp_webrole_contact`|
 |IntersectAttribute|`powerpagecomponentid`|
 |NavigationPropertyName|`powerpagecomponent_mspp_webrole_contact`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 103100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 103100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_powerpagecomponent_powerpagecomponent"></a> powerpagecomponent_powerpagecomponent
 

@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_ActiveRunConfigurationId](#BKMK_msdyn_ActiveRunConfigurationId)
+- [msdyn_AIModelCatalog](#BKMK_msdyn_AIModelCatalog)
 - [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
 - [msdyn_ModelCreationContext](#BKMK_msdyn_ModelCreationContext)
 - [msdyn_Name](#BKMK_msdyn_Name)
@@ -143,6 +144,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets||
+
+### <a name="BKMK_msdyn_AIModelCatalog"></a> msdyn_AIModelCatalog
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to AI Model Catalog**|
+|DisplayName|**AI Model Catalog**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aimodelcatalog`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_aimodelcatalog|
 
 ### <a name="BKMK_msdyn_AIModelId"></a> msdyn_AIModelId
 
@@ -904,7 +918,7 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_aimodel_msdyn_aiconfigura
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aimodel_msdyn_aiconfiguration`|
-|IsCustomizable|`False`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aimodel_msdyn_aievent"></a> msdyn_aimodel_msdyn_aievent
