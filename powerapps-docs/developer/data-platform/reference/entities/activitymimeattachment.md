@@ -382,7 +382,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier of the user or team who owns the activity_mime_attachment.**|
+|Description|**Unique identifier of the user or team who owns the activity\_mime\_attachment.**|
 |DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|

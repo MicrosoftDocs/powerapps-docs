@@ -55,15 +55,18 @@ items:
 - name: "AI Configuration"
   displayName: "msdyn_AIConfiguration entity"
   href: msdyn_aiconfiguration.md
+- name: "AI Evaluation Configuration"
+  displayName: "msdyn_AIEvaluationConfiguration entity"
+  href: msdyn_aievaluationconfiguration.md
+- name: "AI Evaluation Run"
+  displayName: "msdyn_AIEvaluationRun entity"
+  href: msdyn_aievaluationrun.md
 - name: "AI Event"
   displayName: "msdyn_AIEvent entity"
   href: msdyn_aievent.md
 - name: "AI Form Processing Document"
   displayName: "msdyn_AIFpTrainingDocument entity"
   href: msdyn_aifptrainingdocument.md
-- name: "AI Insight Card"
-  displayName: "aiinsightcard entity"
-  href: aiinsightcard.md
 - name: "AI Model"
   displayName: "msdyn_AIModel entity"
   href: msdyn_aimodel.md
@@ -94,6 +97,21 @@ items:
 - name: "AI Template"
   displayName: "msdyn_AITemplate entity"
   href: msdyn_aitemplate.md
+- name: "AI Test Case"
+  displayName: "msdyn_AITestCase entity"
+  href: msdyn_aitestcase.md
+- name: "AI Test Case Document"
+  displayName: "msdyn_AITestCaseDocument entity"
+  href: msdyn_aitestcasedocument.md
+- name: "AI Test Case Input"
+  displayName: "msdyn_AITestCaseInput entity"
+  href: msdyn_aitestcaseinput.md
+- name: "AI Test Run"
+  displayName: "msdyn_AITestRun entity"
+  href: msdyn_aitestrun.md
+- name: "AI Test Run Batch"
+  displayName: "msdyn_AITestRunBatch entity"
+  href: msdyn_aitestrunbatch.md
 - name: "AICopilot"
   displayName: "AICopilot entity"
   href: aicopilot.md
@@ -205,12 +223,24 @@ items:
 - name: "Approval"
   displayName: "msdyn_flow_approval entity"
   href: msdyn_flow_approval.md
+- name: "Approval Process"
+  displayName: "approvalprocess entity"
+  href: approvalprocess.md
 - name: "Approval Request"
   displayName: "msdyn_flow_approvalrequest entity"
   href: msdyn_flow_approvalrequest.md
 - name: "Approval Response"
   displayName: "msdyn_flow_approvalresponse entity"
   href: msdyn_flow_approvalresponse.md
+- name: "Approval Stage Approval"
+  displayName: "approvalstageapproval entity"
+  href: approvalstageapproval.md
+- name: "Approval Stage Condition"
+  displayName: "approvalstagecondition entity"
+  href: approvalstagecondition.md
+- name: "Approval Stage Order"
+  displayName: "approvalstageorder entity"
+  href: approvalstageorder.md
 - name: "Approval Step"
   displayName: "msdyn_flow_approvalstep entity"
   href: msdyn_flow_approvalstep.md
@@ -292,6 +322,9 @@ items:
 - name: "Bulk Delete Operation"
   displayName: "BulkDeleteOperation entity"
   href: bulkdeleteoperation.md
+- name: "Business Process"
+  displayName: "businessprocess entity"
+  href: businessprocess.md
 - name: "Business Unit"
   displayName: "BusinessUnit entity"
   href: businessunit.md
@@ -463,6 +496,9 @@ items:
 - name: "Data Processing configuration"
   displayName: "DataProcessingConfiguration entity"
   href: dataprocessingconfiguration.md
+- name: "Data Processing Event"
+  displayName: "msdyn_AIDataProcessingEvent entity"
+  href: msdyn_aidataprocessingevent.md
 - name: "Dataflow"
   displayName: "msdyn_dataflow entity"
   href: msdyn_dataflow.md
@@ -541,6 +577,9 @@ items:
 - name: "Email"
   displayName: "Email entity"
   href: email.md
+- name: "Email Address Configuration"
+  displayName: "EmailAddressConfiguration entity"
+  href: emailaddressconfiguration.md
 - name: "Email Server Profile"
   displayName: "EmailServerProfile entity"
   href: emailserverprofile.md
@@ -553,6 +592,9 @@ items:
 - name: "Entity Analytics Config"
   displayName: "EntityAnalyticsConfig entity"
   href: entityanalyticsconfig.md
+- name: "Entity Cluster Configuration"
+  displayName: "EntityClusterConfig entity"
+  href: entityclusterconfig.md
 - name: "Entity Image Configuration"
   displayName: "EntityImageConfig entity"
   href: entityimageconfig.md
@@ -637,6 +679,9 @@ items:
 - name: "Fixed Monthly Fiscal Calendar"
   displayName: "FixedMonthlyFiscalCalendar entity"
   href: fixedmonthlyfiscalcalendar.md
+- name: "Flow Aggregation"
+  displayName: "flowaggregation entity"
+  href: flowaggregation.md
 - name: "Flow Approval"
   displayName: "msdyn_flow_flowapproval entity"
   href: msdyn_flow_flowapproval.md
@@ -736,6 +781,9 @@ items:
 - name: "Index Attribute"
   displayName: "IndexAttributes entity"
   href: indexattributes.md
+- name: "indexedtrait"
+  displayName: "indexedtrait entity"
+  href: indexedtrait.md
 - name: "Insights Store Data Source"
   displayName: "msdyn_datalakeds entity"
   href: msdyn_datalakeds.md
@@ -1126,9 +1174,6 @@ items:
 - name: "Process Trigger"
   displayName: "ProcessTrigger entity"
   href: processtrigger.md
-- name: "Processor Registration"
-  displayName: "ProcessorRegistration entity"
-  href: processorregistration.md
 - name: "ProcessStageParameter"
   displayName: "processstageparameter entity"
   href: processstageparameter.md
@@ -1246,6 +1291,9 @@ items:
 - name: "Saved View"
   displayName: "UserQuery entity"
   href: userquery.md
+- name: "Saving Rule"
+  displayName: "savingrule entity"
+  href: savingrule.md
 - name: "Schedule"
   displayName: "msdyn_schedule entity"
   href: msdyn_schedule.md
@@ -1294,6 +1342,9 @@ items:
 - name: "Semiannual Fiscal Calendar"
   displayName: "SemiAnnualFiscalCalendar entity"
   href: semiannualfiscalcalendar.md
+- name: "Sensitivity Label"
+  displayName: "sensitivitylabel entity"
+  href: sensitivitylabel.md
 - name: "Service Configuration"
   displayName: "msdyn_serviceconfiguration entity"
   href: msdyn_serviceconfiguration.md
@@ -1342,9 +1393,6 @@ items:
 - name: "signal"
   displayName: "signal entity"
   href: signal.md
-- name: "Signal Registration"
-  displayName: "SignalRegistration entity"
-  href: signalregistration.md
 - name: "Similarity Rule"
   displayName: "SimilarityRule entity"
   href: similarityrule.md
@@ -1504,6 +1552,15 @@ items:
 - name: "Table Permission"
   displayName: "mspp_entitypermission entity"
   href: mspp_entitypermission.md
+- name: "Tag"
+  displayName: "tag entity"
+  href: tag.md
+- name: "Tagged Flow Session"
+  displayName: "taggedflowsession entity"
+  href: taggedflowsession.md
+- name: "Tagged Process"
+  displayName: "taggedprocess entity"
+  href: taggedprocess.md
 - name: "Task"
   displayName: "Task entity"
   href: task.md
@@ -1525,6 +1582,9 @@ items:
 - name: "Text Analytics Entity Mapping"
   displayName: "TextAnalyticsEntityMapping entity"
   href: textanalyticsentitymapping.md
+- name: "TextDataRecordsIndexingStatus"
+  displayName: "textdatarecordsindexingstatus entity"
+  href: textdatarecordsindexingstatus.md
 - name: "Theme"
   displayName: "Theme entity"
   href: theme.md
@@ -1552,9 +1612,6 @@ items:
 - name: "trait"
   displayName: "trait entity"
   href: trait.md
-- name: "Trait Registration"
-  displayName: "TraitRegistration entity"
-  href: traitregistration.md
 - name: "Transformation Mapping"
   displayName: "TransformationMapping entity"
   href: transformationmapping.md
@@ -1564,6 +1621,12 @@ items:
 - name: "Translation Process"
   displayName: "TranslationProcess entity"
   href: translationprocess.md
+- name: "UnstructuredFileSearchEntity"
+  displayName: "unstructuredfilesearchentity entity"
+  href: unstructuredfilesearchentity.md
+- name: "UnstructuredFileSearchRecord"
+  displayName: "unstructuredfilesearchrecord entity"
+  href: unstructuredfilesearchrecord.md
 - name: "User"
   displayName: "SystemUser entity"
   href: systemuser.md
@@ -1651,6 +1714,9 @@ items:
 - name: "Workflow Binary"
   displayName: "workflowbinary entity"
   href: workflowbinary.md
+- name: "Workflow Metadata"
+  displayName: "WorkflowMetadata entity"
+  href: workflowmetadata.md
 - name: "workflowcardconnections"
   displayName: "workflowcardconnections entity"
   href: workflowcardconnections.md

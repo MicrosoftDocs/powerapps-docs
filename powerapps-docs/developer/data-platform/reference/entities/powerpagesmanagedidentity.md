@@ -620,8 +620,8 @@ Many-To-One Relationship: [certificatecredential ComponentId_CertificateCredenti
 |ReferencingEntity|`certificatecredential`|
 |ReferencingAttribute|`componentid`|
 |ReferencedEntityNavigationPropertyName|`ComponentId_CertificateCredential_PowerPagesManagedIdentity`|
-|IsCustomizable|`True`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10001<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_powerpagesmanagedidentity_AsyncOperations"></a> powerpagesmanagedidentity_AsyncOperations
 

@@ -88,7 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`deprecationdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-|CanChangeDateTimeBehavior|True|
+|CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|
@@ -122,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`endofsupportdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-|CanChangeDateTimeBehavior|True|
+|CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|

@@ -799,6 +799,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4812|**Time Zone Localized Name**|
 |5000|**Recently Used**|
 |5004|**NL2SQ Registration Information**|
+|5006|**Event Expander Breadcrumb**|
 |7000|**System Application Metadata**|
 |7001|**User Application Metadata**|
 |7100|**Solution**|
@@ -1004,268 +1005,300 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |10083|**ApplicationUser**|
 |10086|**OData v4 Data Source**|
 |10087|**Workflow Binary**|
-|10088|**Credential**|
-|10089|**Desktop Flow Module**|
-|10090|**Flow Capacity Assignment**|
-|10091|**Flow Credential Application**|
-|10092|**Flow Event**|
-|10093|**Flow Machine**|
-|10094|**Flow Machine Group**|
-|10095|**Flow Machine Image**|
-|10096|**Flow Machine Image Version**|
-|10097|**Flow Machine Network**|
-|10098|**ProcessStageParameter**|
-|10099|**Work Queue**|
-|10100|**Work Queue Item**|
-|10101|**Desktop Flow Binary**|
-|10102|**Flow Log**|
-|10103|**Flow Run**|
-|10104|**Action Approval Model**|
-|10105|**Approval**|
-|10106|**Approval Request**|
-|10107|**Approval Response**|
-|10108|**Approval Step**|
-|10109|**Await All Action Approval Model**|
-|10110|**Await All Approval Model**|
-|10111|**Basic Approval Model Data**|
-|10112|**Flow Approval**|
-|10121|**Connection Reference**|
-|10122|**DVFileSearch**|
-|10123|**DVFileSearchAttribute**|
-|10124|**DVFileSearchEntity**|
-|10125|**DVTableSearch**|
-|10126|**DVTableSearchAttribute**|
-|10127|**DVTableSearchEntity**|
-|10128|**AICopilot**|
-|10129|**AIPluginAuth**|
-|10130|**AI Plugin Conversation Starter**|
-|10131|**AI Plugin Conversation Starter Mapping**|
-|10132|**AI Plugin Governance**|
-|10133|**AI Plugin Governance Extended**|
-|10134|**AIPluginOperationResponseTemplate**|
-|10135|**AIPluginTitle**|
-|10136|**SideloadedAIPlugin**|
-|10137|**AIPlugin**|
-|10138|**AIPluginExternalSchema**|
-|10139|**AIPluginExternalSchemaProperty**|
-|10140|**AIPluginInstance**|
-|10141|**AIPluginOperation**|
-|10142|**AIPluginOperationParameter**|
-|10143|**AIPluginUserSetting**|
-|10145|**AI Event**|
-|10146|**AI Builder Feedback Loop**|
-|10147|**AI Form Processing Document**|
-|10148|**AI Object Detection Image**|
-|10149|**AI Object Detection Label**|
-|10150|**AI Object Detection Bounding Box**|
-|10151|**AI Object Detection Image Mapping**|
-|10153|**AI Builder Dataset**|
-|10154|**AI Builder Dataset File**|
-|10155|**AI Builder Dataset Record**|
-|10156|**AI Builder Datasets Container**|
-|10157|**AI Builder File**|
-|10158|**AI Builder File Attached Data**|
-|10159|**Help Page**|
-|10160|**Tour**|
-|10161|**BotContent**|
-|10162|**ConversationTranscript**|
-|10163|**Copilot**|
-|10164|**Copilot component**|
-|10165|**Copilot component collection**|
-|10176|**Comment**|
-|10177|**Governance Configuration**|
-|10178|**Fabric AISkill**|
-|10179|**App Insights Metadata**|
-|10180|**Dataflow Connection Reference**|
-|10181|**Schedule**|
-|10182|**Dataflow Template**|
-|10183|**Dataflow DatalakeFolder**|
-|10184|**Data Movement Service Request**|
-|10185|**Data Movement Service Request Status**|
-|10186|**DMS Sync Request**|
-|10187|**DMS Sync Status**|
-|10188|**Knowledge Asset Configuration**|
-|10189|**Module Run Detail**|
-|10190|**QnA**|
-|10191|**Salesforce Structured Object**|
-|10192|**Salesforce Structured QnA Config**|
-|10193|**Workflow Action Status**|
-|10194|**FederatedKnowledgeConfiguration**|
-|10195|**FederatedKnowledgeEntityConfiguration**|
-|10196|**Form Mapping**|
-|10197|**Copilot Interactions**|
-|10198|**PDF Setting**|
-|10199|**Activity File Attachment**|
-|10200|**Teams chat**|
-|10201|**Service Configuration**|
-|10202|**SLA KPI**|
-|10203|**Integrated search provider**|
-|10204|**Knowledge Management Setting**|
-|10205|**Knowledge Federated Article**|
-|10206|**Knowledge Federated Article Incident**|
-|10207|**Search provider**|
-|10208|**Knowledge Article Image**|
-|10209|**Knowledge Configuration**|
-|10210|**Knowledge Interaction Insight**|
-|10211|**Knowledge Search Insight**|
-|10212|**Favorite knowledge article**|
-|10213|**Knowledge article language setting**|
-|10214|**Knowledge Article Attachment**|
-|10215|**Knowledge personalization**|
-|10216|**Knowledge Article Template**|
-|10217|**Knowledge search personal filter config**|
-|10218|**Knowledge search filter**|
-|10220|**SupportUserTable**|
-|10221|**FxExpression**|
-|10222|**Function**|
-|10223|**Plug-in**|
-|10224|**PowerfxRule**|
-|10225|**Planner Business Scenario**|
-|10226|**Planner Sync Action**|
-|10227|**Ms Graph Resource To Subscription**|
-|10228|**Virtual Entity  Metadata**|
-|10229|**Background Operation**|
-|10230|**Report Parameter**|
-|10231|**MobileOfflineProfileExtension**|
-|10232|**MobileOfflineProfileItemFilter**|
-|10233|**TeamMobileOfflineProfileMembership**|
-|10234|**UserMobileOfflineProfileMembership**|
-|10235|**OrganizationDataSyncSubscription**|
-|10236|**OrganizationDataSyncSubscriptionEntity**|
-|10237|**OrganizationDataSyncSubscriptionFnoTable**|
-|10238|**OrganizationDataSyncFnoState**|
-|10239|**OrganizationDataSyncState**|
-|10240|**ArchiveCleanupInfo**|
-|10241|**ArchiveCleanupOperation**|
-|10242|**BulkArchiveConfig**|
-|10243|**BulkArchiveFailureDetail**|
-|10244|**BulkArchiveOperation**|
-|10245|**BulkArchiveOperationDetail**|
-|10246|**EnableArchivalRequest**|
-|10247|**MetadataForArchival**|
-|10248|**ReconciliationEntityInfo**|
-|10249|**ReconciliationEntityStepInfo**|
-|10250|**ReconciliationInfo**|
-|10251|**RetentionCleanupInfo**|
-|10252|**RetentionCleanupOperation**|
-|10253|**RetentionConfig**|
-|10254|**RetentionFailureDetail**|
-|10255|**RetentionOperation**|
-|10256|**RetentionOperationDetail**|
-|10257|**RetentionSuccessDetail**|
-|10258|**CertificateCredential**|
-|10259|**Notification**|
-|10260|**User Rating**|
-|10261|**Mobile App**|
-|10262|**Insights Store Data Source**|
-|10263|**Insights Store Virtual Entity**|
-|10264|**RoleEditorLayout**|
-|10265|**Deleted Record Reference**|
-|10266|**Restore Deleted Records Configuration**|
-|10267|**App Action**|
-|10268|**App Action Migration**|
-|10269|**App Action Rule**|
-|10272|**Card**|
-|10273|**Card State Item**|
-|10276|**Entity link chat configuration**|
-|10277|**SharePoint Managed Identity**|
-|10278|**AI Insight Card**|
-|10279|**AI Skill Config**|
-|10280|**Rich Text Attachment**|
-|10281|**Custom Control Extended Setting**|
-|10282|**Timeline Pin**|
-|10283|**Virtual Connector Data Source**|
-|10284|**Virtual Table Column Candidate**|
-|10286|**PM Analysis History**|
-|10287|**PM Business Rule Automation Config**|
-|10288|**PM Calendar**|
-|10289|**PM Calendar Version**|
-|10290|**PM Inferred Task**|
-|10291|**PM Process Extended Metadata Version**|
-|10292|**PM Process Template**|
-|10293|**PM Process User Settings**|
-|10294|**PM Process Version**|
-|10295|**PM Recording**|
-|10296|**PM Simulation**|
-|10297|**PM Template**|
-|10298|**PM View**|
-|10299|**Analysis Component**|
-|10300|**Analysis Job**|
-|10301|**Analysis Override**|
-|10302|**Analysis Result**|
-|10303|**Analysis Result Detail**|
-|10304|**Solution Health Rule**|
-|10305|**Solution Health Rule Argument**|
-|10306|**Solution Health Rule Set**|
-|10307|**Power BI Dataset**|
-|10308|**powerbidatasetapdx**|
-|10309|**Power BI Mashup Parameter**|
-|10310|**Power BI Report**|
-|10311|**powerbireportapdx**|
-|10312|**File Upload**|
-|10313|**MainFewShot**|
-|10314|**MakerFewShot**|
-|10315|**SearchAttributeSettings**|
-|10316|**SearchCustomAnalyzer**|
-|10317|**SearchRelationshipSettings**|
-|10318|**SearchResultsCache**|
-|10319|**Search Telemetry**|
-|10320|**ViewAsExampleQuestion**|
-|10321|**CopilotExampleQuestion**|
-|10322|**CopilotGlossaryTerm**|
-|10323|**CopilotSynonyms**|
-|10324|**Site Component**|
-|10325|**Site**|
-|10326|**Site Language**|
-|10327|**Power Pages Site Published**|
-|10330|**External Identity**|
-|10331|**Invitation**|
-|10332|**Invite Redemption**|
-|10333|**Portal Comment**|
-|10334|**Setting**|
-|10335|**Multistep Form Session**|
-|10339|**Ad Placement**|
-|10340|**Column Permission**|
-|10341|**Column Permission Profile**|
-|10342|**Content Snippet**|
-|10343|**Basic Form**|
-|10344|**Basic Form Metadata**|
-|10345|**List**|
-|10346|**Table Permission**|
-|10347|**Page Template**|
-|10348|**Poll Placement**|
-|10349|**Power Pages Core Entity DS**|
-|10350|**Publishing State**|
-|10351|**Publishing State Transition Rule**|
-|10352|**Redirect**|
-|10353|**Shortcut**|
-|10354|**Site Marker**|
-|10355|**Site Setting**|
-|10356|**Web File**|
-|10357|**Multistep Form**|
-|10358|**Multistep Form Metadata**|
-|10359|**Form Step**|
-|10360|**Web Link**|
-|10361|**Web Link Set**|
-|10362|**Web Page**|
-|10363|**Web Page Access Control Rule**|
-|10364|**Web Role**|
-|10365|**Website**|
-|10366|**Website Access**|
-|10367|**Website Language**|
-|10368|**Web Template**|
-|10375|**Power Pages Scan Report**|
-|10376|**Power Pages Log**|
-|10377|**PowerPagesManagedIdentity**|
-|10378|**Power Pages Site AI Feedback**|
-|10383|**Catalog Submission Files**|
-|10384|**Package Submission Store**|
-|10385|**Processor Registration**|
-|10386|**signal**|
-|10387|**Signal Registration**|
-|10388|**trait**|
-|10389|**Trait Registration**|
-|18085|**Event Expander Breadcrumb**|
+|10088|**Business Process**|
+|10089|**Credential**|
+|10090|**Desktop Flow Module**|
+|10091|**Flow Capacity Assignment**|
+|10092|**Flow Credential Application**|
+|10093|**Flow Event**|
+|10094|**Flow Machine**|
+|10095|**Flow Machine Group**|
+|10096|**Flow Machine Image**|
+|10097|**Flow Machine Image Version**|
+|10098|**Flow Machine Network**|
+|10099|**ProcessStageParameter**|
+|10100|**Saving Rule**|
+|10101|**Tag**|
+|10102|**Tagged Flow Session**|
+|10103|**Tagged Process**|
+|10104|**Workflow Metadata**|
+|10105|**Work Queue**|
+|10106|**Work Queue Item**|
+|10107|**Desktop Flow Binary**|
+|10108|**Flow Aggregation**|
+|10109|**Flow Log**|
+|10110|**Flow Run**|
+|10111|**Action Approval Model**|
+|10112|**Approval**|
+|10113|**Approval Request**|
+|10114|**Approval Response**|
+|10115|**Approval Step**|
+|10116|**Await All Action Approval Model**|
+|10117|**Await All Approval Model**|
+|10118|**Basic Approval Model Data**|
+|10119|**Flow Approval**|
+|10128|**Connection Reference**|
+|10129|**DVFileSearch**|
+|10130|**DVFileSearchAttribute**|
+|10131|**DVFileSearchEntity**|
+|10132|**DVTableSearch**|
+|10133|**DVTableSearchAttribute**|
+|10134|**DVTableSearchEntity**|
+|10135|**AICopilot**|
+|10136|**AIPluginAuth**|
+|10137|**AI Plugin Conversation Starter**|
+|10138|**AI Plugin Conversation Starter Mapping**|
+|10139|**AI Plugin Governance**|
+|10140|**AI Plugin Governance Extended**|
+|10141|**AIPluginOperationResponseTemplate**|
+|10142|**AIPluginTitle**|
+|10143|**SideloadedAIPlugin**|
+|10144|**AIPlugin**|
+|10145|**AIPluginExternalSchema**|
+|10146|**AIPluginExternalSchemaProperty**|
+|10147|**AIPluginInstance**|
+|10148|**AIPluginOperation**|
+|10149|**AIPluginOperationParameter**|
+|10150|**AIPluginUserSetting**|
+|10152|**Data Processing Event**|
+|10153|**AI Event**|
+|10154|**AI Model Catalog**|
+|10155|**AI Builder Feedback Loop**|
+|10156|**AI Form Processing Document**|
+|10157|**AI Object Detection Image**|
+|10158|**AI Object Detection Label**|
+|10159|**AI Object Detection Bounding Box**|
+|10160|**AI Object Detection Image Mapping**|
+|10162|**AI Builder Dataset**|
+|10163|**AI Builder Dataset File**|
+|10164|**AI Builder Dataset Record**|
+|10165|**AI Builder Datasets Container**|
+|10166|**AI Builder File**|
+|10167|**AI Builder File Attached Data**|
+|10168|**Help Page**|
+|10169|**Tour**|
+|10170|**BotContent**|
+|10171|**ConversationTranscript**|
+|10172|**Copilot**|
+|10173|**Copilot component**|
+|10174|**Copilot component collection**|
+|10185|**Comment**|
+|10186|**Governance Configuration**|
+|10187|**Fabric AISkill**|
+|10188|**App Insights Metadata**|
+|10189|**Dataflow Connection Reference**|
+|10190|**Schedule**|
+|10191|**Dataflow Template**|
+|10192|**Dataflow DatalakeFolder**|
+|10193|**Data Movement Service Request**|
+|10194|**Data Movement Service Request Status**|
+|10195|**DMS Sync Request**|
+|10196|**DMS Sync Status**|
+|10197|**Knowledge Asset Configuration**|
+|10198|**Module Run Detail**|
+|10199|**QnA**|
+|10200|**Salesforce Structured Object**|
+|10201|**Salesforce Structured QnA Config**|
+|10202|**Workflow Action Status**|
+|10203|**FederatedKnowledgeConfiguration**|
+|10204|**FederatedKnowledgeEntityConfiguration**|
+|10205|**Form Mapping**|
+|10206|**Copilot Interactions**|
+|10207|**PDF Setting**|
+|10208|**Activity File Attachment**|
+|10209|**Teams chat**|
+|10210|**Service Configuration**|
+|10211|**SLA KPI**|
+|10212|**Integrated search provider**|
+|10213|**Knowledge Management Setting**|
+|10214|**Knowledge Federated Article**|
+|10215|**Knowledge Federated Article Incident**|
+|10216|**Search provider**|
+|10217|**Knowledge Article Image**|
+|10218|**Knowledge Configuration**|
+|10219|**Knowledge Interaction Insight**|
+|10220|**Knowledge Search Insight**|
+|10221|**Favorite knowledge article**|
+|10222|**Knowledge article language setting**|
+|10223|**Knowledge Article Attachment**|
+|10224|**Knowledge personalization**|
+|10225|**Knowledge Article Template**|
+|10226|**Knowledge search personal filter config**|
+|10227|**Knowledge search filter**|
+|10229|**Entity Cluster Configuration**|
+|10230|**SupportUserTable**|
+|10231|**FxExpression**|
+|10232|**Function**|
+|10233|**Plug-in**|
+|10234|**PowerfxRule**|
+|10235|**Planner Business Scenario**|
+|10236|**Planner Sync Action**|
+|10237|**Sensitivity Label**|
+|10238|**Ms Graph Resource To Subscription**|
+|10239|**Virtual Entity  Metadata**|
+|10240|**Background Operation**|
+|10241|**Report Parameter**|
+|10242|**MobileOfflineProfileExtension**|
+|10243|**MobileOfflineProfileItemFilter**|
+|10244|**TeamMobileOfflineProfileMembership**|
+|10245|**UserMobileOfflineProfileMembership**|
+|10246|**OrganizationDataSyncSubscription**|
+|10247|**OrganizationDataSyncSubscriptionEntity**|
+|10248|**OrganizationDataSyncSubscriptionFnoTable**|
+|10249|**OrganizationDataSyncFnoState**|
+|10250|**OrganizationDataSyncState**|
+|10251|**ArchiveCleanupInfo**|
+|10252|**ArchiveCleanupOperation**|
+|10253|**BulkArchiveConfig**|
+|10254|**BulkArchiveFailureDetail**|
+|10255|**BulkArchiveOperation**|
+|10256|**BulkArchiveOperationDetail**|
+|10257|**EnableArchivalRequest**|
+|10258|**MetadataForArchival**|
+|10259|**ReconciliationEntityInfo**|
+|10260|**ReconciliationEntityStepInfo**|
+|10261|**ReconciliationInfo**|
+|10262|**RetentionCleanupInfo**|
+|10263|**RetentionCleanupOperation**|
+|10264|**RetentionConfig**|
+|10265|**RetentionFailureDetail**|
+|10266|**RetentionOperation**|
+|10267|**RetentionOperationDetail**|
+|10268|**RetentionSuccessDetail**|
+|10269|**CertificateCredential**|
+|10270|**Notification**|
+|10271|**User Rating**|
+|10272|**Mobile App**|
+|10273|**Insights Store Data Source**|
+|10274|**Insights Store Virtual Entity**|
+|10275|**RoleEditorLayout**|
+|10276|**Deleted Record Reference**|
+|10277|**Restore Deleted Records Configuration**|
+|10278|**App Action**|
+|10279|**App Action Migration**|
+|10280|**App Action Rule**|
+|10283|**Card**|
+|10284|**Card State Item**|
+|10287|**Entity link chat configuration**|
+|10288|**SharePoint Managed Identity**|
+|10289|**AI Insight Card**|
+|10290|**AI Skill Config**|
+|10291|**Data Workspace**|
+|10292|**Plan**|
+|10293|**Plan Artifact**|
+|10294|**Plan Attachment**|
+|10295|**Rich Text Attachment**|
+|10296|**Custom Control Extended Setting**|
+|10298|**Timeline Pin**|
+|10299|**Virtual Connector Data Source**|
+|10300|**Virtual Table Column Candidate**|
+|10302|**PM Analysis History**|
+|10303|**PM Business Rule Automation Config**|
+|10304|**PM Calendar**|
+|10305|**PM Calendar Version**|
+|10306|**PM Inferred Task**|
+|10307|**PM Process Extended Metadata Version**|
+|10308|**PM Process Template**|
+|10309|**PM Process User Settings**|
+|10310|**PM Process Version**|
+|10311|**PM Recording**|
+|10312|**PM Simulation**|
+|10313|**PM Template**|
+|10314|**PM View**|
+|10315|**Analysis Component**|
+|10316|**Analysis Job**|
+|10317|**Analysis Override**|
+|10318|**Analysis Result**|
+|10319|**Analysis Result Detail**|
+|10320|**Solution Health Rule**|
+|10321|**Solution Health Rule Argument**|
+|10322|**Solution Health Rule Set**|
+|10323|**Power BI Dataset**|
+|10324|**powerbidatasetapdx**|
+|10325|**Power BI Mashup Parameter**|
+|10326|**Power BI Report**|
+|10327|**powerbireportapdx**|
+|10328|**File Upload**|
+|10329|**MainFewShot**|
+|10330|**MakerFewShot**|
+|10331|**SearchAttributeSettings**|
+|10332|**SearchCustomAnalyzer**|
+|10333|**SearchRelationshipSettings**|
+|10334|**SearchResultsCache**|
+|10335|**Search Telemetry**|
+|10336|**TextDataRecordsIndexingStatus**|
+|10337|**ViewAsExampleQuestion**|
+|10338|**CopilotExampleQuestion**|
+|10339|**CopilotGlossaryTerm**|
+|10340|**CopilotSynonyms**|
+|10341|**Site Component**|
+|10342|**Site**|
+|10343|**Site Language**|
+|10344|**Power Pages Site Published**|
+|10347|**External Identity**|
+|10348|**Invitation**|
+|10349|**Invite Redemption**|
+|10350|**Portal Comment**|
+|10351|**Setting**|
+|10352|**Multistep Form Session**|
+|10356|**Ad Placement**|
+|10357|**Column Permission**|
+|10358|**Column Permission Profile**|
+|10359|**Content Snippet**|
+|10360|**Basic Form**|
+|10361|**Basic Form Metadata**|
+|10362|**List**|
+|10363|**Table Permission**|
+|10364|**Page Template**|
+|10365|**Poll Placement**|
+|10366|**Power Pages Core Entity DS**|
+|10367|**Publishing State**|
+|10368|**Publishing State Transition Rule**|
+|10369|**Redirect**|
+|10370|**Shortcut**|
+|10371|**Site Marker**|
+|10372|**Site Setting**|
+|10373|**Web File**|
+|10374|**Multistep Form**|
+|10375|**Multistep Form Metadata**|
+|10376|**Form Step**|
+|10377|**Web Link**|
+|10378|**Web Link Set**|
+|10379|**Web Page**|
+|10380|**Web Page Access Control Rule**|
+|10381|**Web Role**|
+|10382|**Website**|
+|10383|**Website Access**|
+|10384|**Website Language**|
+|10385|**Web Template**|
+|10392|**Power Pages Scan Report**|
+|10393|**Power Pages Log**|
+|10394|**PowerPagesManagedIdentity**|
+|10395|**Power Pages Site AI Feedback**|
+|10400|**Catalog Submission Files**|
+|10401|**Package Submission Store**|
+|10402|**processor registration**|
+|10403|**signal**|
+|10404|**signal registration**|
+|10405|**trait**|
+|10406|**trait registration**|
+|10627|**FederatedKnowledgeCitation**|
+|10628|**FederatedKnowledgeMetadataRefresh**|
+|10629|**Email Address Configuration**|
+|10630|**indexedtrait**|
+|10645|**AI Evaluation Configuration**|
+|10646|**AI Evaluation Run**|
+|10647|**AI Test Case**|
+|10648|**AI Test Case Document**|
+|10649|**AI Test Case Input**|
+|10650|**AI Test Run**|
+|10651|**AI Test Run Batch**|
+|10667|**Approval Process**|
+|10668|**Approval Stage Approval**|
+|10669|**Approval Stage Condition**|
+|10670|**Approval Stage Order**|
+|10671|**UnstructuredFileSearchEntity**|
+|10672|**UnstructuredFileSearchRecord**|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 

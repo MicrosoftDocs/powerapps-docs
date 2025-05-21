@@ -62,6 +62,7 @@ The following table lists selected properties for the DVFileSearch table.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DVFileSearchId](#BKMK_DVFileSearchId)
+- [DVTableSearch](#BKMK_DVTableSearch)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
@@ -84,6 +85,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`dvfilesearchid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_DVTableSearch"></a> DVTableSearch
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**DVTableSearch**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dvtablesearch`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|dvtablesearch|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -534,6 +548,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_dvfilesearch](#BKMK_business_unit_dvfilesearch)
+- [DVTableSearch_DVFileSearch](#BKMK_DVTableSearch_DVFileSearch)
 - [lk_dvfilesearch_createdby](#BKMK_lk_dvfilesearch_createdby)
 - [lk_dvfilesearch_createdonbehalfby](#BKMK_lk_dvfilesearch_createdonbehalfby)
 - [lk_dvfilesearch_modifiedby](#BKMK_lk_dvfilesearch_modifiedby)
@@ -554,6 +569,19 @@ One-To-Many Relationship: [businessunit business_unit_dvfilesearch](businessunit
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_DVTableSearch_DVFileSearch"></a> DVTableSearch_DVFileSearch
+
+One-To-Many Relationship: [dvtablesearch DVTableSearch_DVFileSearch](dvtablesearch.md#BKMK_DVTableSearch_DVFileSearch)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`dvtablesearch`|
+|ReferencedAttribute|`dvtablesearchid`|
+|ReferencingAttribute|`dvtablesearch`|
+|ReferencingEntityNavigationPropertyName|`DVTableSearch`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_lk_dvfilesearch_createdby"></a> lk_dvfilesearch_createdby
 
