@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: hemantg
 ms.reviewer: matp
-ms.date: 04/28/2025
+ms.date: 05/21/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -44,7 +44,7 @@ You customize Copilot chat using [Microsoft Copilot Studio](/microsoft-copilot-s
    :::image type="content" source="media/mda-copilot-chat-copilot-studio.png" alt-text="Model-driven-app Copilot chat in Copilot Studio" lightbox="media/mda-copilot-chat-copilot-studio.png":::
 1. **Publish** the agent after you make customizations to ensure changes are available to users.
 
-Power Apps also creates a platform owned environment agent **Copilot in Power Apps** in each environment. This agent is only editable by the environment admin and is not published to any channels by default. However this agent shouldn't be edited since it is not used by model driven apps. 
+Power Apps creates a platform-owned agent named **Copilot in Power Apps** in each environment. This agent is only editable by a Power Platform admin and isn’t published to any channels by default. Although this agent can be viewed in Microsoft Copilot Studio, this agent shouldn't be edited since it is not used by model-driven apps.
 
 ## Related information
 
