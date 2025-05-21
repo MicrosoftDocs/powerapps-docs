@@ -25,7 +25,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise<[MCSResponse](mcsresponse.md)>`
+Type: `Promise<`[MCSResponse](mcsresponse.md)`>`
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [MCSResponse](mcsresponse.md)
 
