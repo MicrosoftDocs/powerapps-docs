@@ -38,6 +38,8 @@ Row summaries can be configured for table main forms.
 
 > [!NOTE]
 > When you configure the row summary, it applies to all main forms for the table.
+> 
+> The CASE table is exempt from row summary.
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.
