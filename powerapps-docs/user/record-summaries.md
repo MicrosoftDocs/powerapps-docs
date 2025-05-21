@@ -46,7 +46,7 @@ You can view the record summary from either a form or a view when a [table has b
   [!NOTE] Record summaries only appear after a new record has been successfully saved. For unsaved records, the summary area remains hidden. 
 
 - **Views**: When browsing records in a view, select the inline Summary action next to a record to open the summary in a modal popup.
-  //Add image
+  :::image type="content" source="media/gridEntry.png" alt-text="Screenshot that shows a row summary card accessed from a grid row.":::
 
 ### Interacting with summaries 
 - **Copy**: Select the Copy button to copy the summary content directly to your clipboard for easy sharing or documentation. 
