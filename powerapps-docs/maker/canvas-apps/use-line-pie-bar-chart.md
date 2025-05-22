@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 5/21/2025
 ms.subservice: canvas-maker
-ms.author: fikaradz
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
