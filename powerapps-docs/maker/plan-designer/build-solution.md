@@ -43,7 +43,7 @@ After you save a plan in a solution, create apps like canvas apps, model-driven 
         > [!NOTE]
         > If you're using the preview experience to create flows, use a preview environment for consistent results. Learn more in [Early release cycle environments](/power-platform/admin/early-release).
     
-    - **Copilot Studio agents**: Opens Microsoft Copilot Studio (MCS), where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
+    - **Copilot Studio agents**: Opens Microsoft Copilot Studio, where you finish creating your agent and then publish it. An agent is an AI-powered assistant that simplifies workflows, boosts productivity, and automates repetitive tasks. Plan designer includes agents as part of its recommended technologies. The plan prefills the agent with the following information:
 
         - **Name**: Name of the agent.
         - **Description**: Purpose of the agent.

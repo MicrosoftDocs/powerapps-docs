@@ -6,7 +6,7 @@ author: emcoope-MSFT
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/13/2024
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
@@ -81,7 +81,7 @@ Customize a canvas app by changing its screen size and orientation.
 | 1        | Enabled      | Enabled           | The screen width and height are set by the maker. The screen scales to the window size available.                                                                                                                       |                                                                                                                                                                                    |
 | 2        | Disabled     | Enabled           | Not applicable. When scale to fit is disabled, lock aspect ratio is also disabled.                                                                                                                                      |                                                                                                                                                                                    |
 | 3        | Enabled      | Disabled          | In Power Apps Studio, the screen scales to the window size available.     In the end-user experience, Power Apps scales to the smallest edge (width or height), and then fills the UI for the larger edge.  | For apps built for mobile, we recommend makers use **lock orientation** with this setting.                                                                               |
-| 4        | Disabled     | Disabled          | App experiences can be responsive. Makers can manulipate control locations using Power Fx to set X and Y values as well as width and height.                                                                                                        | For more information, see [Responsive layout documentation](create-responsive-layout.md) and consider using auto-layout containers.       |
+| 4        | Disabled     | Disabled          | App experiences can be responsive. Makers can manipulate control locations using Power Fx to set X and Y values as well as width and height.                                                                                                        | For more information, see [Responsive layout documentation](create-responsive-layout.md) and consider using auto-layout containers.       |
 
 ## Next steps
 

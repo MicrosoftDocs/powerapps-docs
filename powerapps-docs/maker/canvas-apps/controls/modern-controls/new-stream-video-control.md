@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 2/11/2025
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -48,7 +48,7 @@ To add a Stream video in your canvas app, follow these steps to get the embed UR
 
 ## Properties
 
-**Steam URL (Required)** - The URL of the Stream video that you want to embed. This is the embed URL of the video. The URL should only have Unique ID. If URL detects other parameters, the control detects as invalid URL.
+**Stream URL (Required)** - The URL of the Stream video that you want to embed. This is the embed URL of the video. The URL should only have Unique ID. If URL detects other parameters, the control detects as invalid URL.
  
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 

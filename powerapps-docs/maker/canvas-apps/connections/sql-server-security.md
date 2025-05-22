@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/7/2024
+ms.date: 05/21/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -57,7 +57,7 @@ The older style simple implicit connection actually distributes a connection obj
 Again, with older style simple implicit connections, after you deploy the app, end users can use the connection deployed with your app in any new apps they create. In the new apps, users can see the data you filtered out in your application. It's important to use the new secure implicit connections. 
 
 > [!IMPORTANT]
-> Once an an older implicitly shared connection is deployed to end users, the restrictions you may have put in the app you shared (such as filters or read-only access) are no longer valid for new apps end users create. The end users will have whatever rights the authentication allows as part of implicitly shared connection. Therefore, when you convert an app to use secure implicit connections, you must **also** revoke the connections you shared with your app.  Admins can get a report of apps with implicitly shared connections with the COE toolkit. 
+> Once an older implicitly shared connection is deployed to end users, the restrictions you may have put in the app you shared (such as filters or read-only access) are no longer valid for new apps end users create. The end users will have whatever rights the authentication allows as part of implicitly shared connection. Therefore, when you convert an app to use secure implicit connections, you must **also** revoke the connections you shared with your app.  Admins can get a report of apps with implicitly shared connections with the COE toolkit. 
 
 
 ## Client and server security
