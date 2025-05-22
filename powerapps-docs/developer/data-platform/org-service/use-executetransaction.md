@@ -1,7 +1,7 @@
 ---
 title: "Execute messages in a single database transaction (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can execute two or more requests in a single database transaction using the ExecuteTransactionRequest class." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 05/21/2025
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: pehecke
@@ -23,6 +23,8 @@ It is a common requirement in business applications to coordinate changes of mul
  Should any one of the requests fail and the transaction is rolled back, any data changes completed during the transaction are undone. In addition, a <xref:Microsoft.Xrm.Sdk.ExecuteTransactionFault> is returned identifying the index into the request collection of the request message that caused the fault.  
   
  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> may contain one or more <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instances.  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instance may not contain a <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest>. For more information on <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, see [Execute multiple requests using the SDK for .NET](execute-multiple-requests.md). 
+
+ More information: [Do not use batch request types in plug-ins and workflow activities](../best-practices/business-logic/avoid-batch-requests-plugin.md)
 
 ## Example
 
