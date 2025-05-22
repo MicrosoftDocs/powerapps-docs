@@ -61,6 +61,7 @@ The following table lists selected properties for the Approval (msdyn_flow_appro
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CurrentStage](#BKMK_CurrentStage)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_flow_approval_additionalfields](#BKMK_msdyn_flow_approval_additionalfields)
 - [msdyn_flow_approval_allowreassign](#BKMK_msdyn_flow_approval_allowreassign)
@@ -96,10 +97,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ProcessId](#BKMK_ProcessId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+### <a name="BKMK_CurrentStage"></a> CurrentStage
+
+|Property|Value|
+|---|---|
+|Description|**The link to the current stage of the multi stage approvals**|
+|DisplayName|**Current Stage**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`currentstage`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|approvalstageorder|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -686,6 +701,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
+### <a name="BKMK_ProcessId"></a> ProcessId
+
+|Property|Value|
+|---|---|
+|Description|**The id of the approval process from which the approval is created**|
+|DisplayName|**Process Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`processid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
@@ -961,6 +993,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_msdyn_flow_approval_createdonbehalfby](#BKMK_lk_msdyn_flow_approval_createdonbehalfby)
 - [lk_msdyn_flow_approval_modifiedby](#BKMK_lk_msdyn_flow_approval_modifiedby)
 - [lk_msdyn_flow_approval_modifiedonbehalfby](#BKMK_lk_msdyn_flow_approval_modifiedonbehalfby)
+- [msdyn_flow_approval_currentstage_approvalstageorder](#BKMK_msdyn_flow_approval_currentstage_approvalstageorder)
 - [msdyn_flow_basicapprovalmodelrelationship_approval](#BKMK_msdyn_flow_basicapprovalmodelrelationship_approval)
 - [owner_msdyn_flow_approval](#BKMK_owner_msdyn_flow_approval)
 - [team_msdyn_flow_approval](#BKMK_team_msdyn_flow_approval)
@@ -1031,6 +1064,19 @@ One-To-Many Relationship: [systemuser lk_msdyn_flow_approval_modifiedonbehalfby]
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_flow_approval_currentstage_approvalstageorder"></a> msdyn_flow_approval_currentstage_approvalstageorder
+
+One-To-Many Relationship: [approvalstageorder msdyn_flow_approval_currentstage_approvalstageorder](approvalstageorder.md#BKMK_msdyn_flow_approval_currentstage_approvalstageorder)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageorder`|
+|ReferencedAttribute|`approvalstageorderid`|
+|ReferencingAttribute|`currentstage`|
+|ReferencingEntityNavigationPropertyName|`currentstage`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_flow_basicapprovalmodelrelationship_approval"></a> msdyn_flow_basicapprovalmodelrelationship_approval
 
 One-To-Many Relationship: [msdyn_flow_basicapprovalmodel msdyn_flow_basicapprovalmodelrelationship_approval](msdyn_flow_basicapprovalmodel.md#BKMK_msdyn_flow_basicapprovalmodelrelationship_approval)
@@ -1088,6 +1134,9 @@ One-To-Many Relationship: [systemuser user_msdyn_flow_approval](systemuser.md#BK
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [approvalstageapproval_approval_msdyn_flow_approval](#BKMK_approvalstageapproval_approval_msdyn_flow_approval)
+- [approvalstagecondition_approval_msdyn_flow_approval](#BKMK_approvalstagecondition_approval_msdyn_flow_approval)
+- [approvalstageorder_approval_msdyn_flow_approval](#BKMK_approvalstageorder_approval_msdyn_flow_approval)
 - [msdyn_flow_approval_Annotations](#BKMK_msdyn_flow_approval_Annotations)
 - [msdyn_flow_approval_AsyncOperations](#BKMK_msdyn_flow_approval_AsyncOperations)
 - [msdyn_flow_approval_BulkDeleteFailures](#BKMK_msdyn_flow_approval_BulkDeleteFailures)
@@ -1101,6 +1150,42 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_flow_approvalrelationship_approvalresponses](#BKMK_msdyn_flow_approvalrelationship_approvalresponses)
 - [msdyn_flow_approvalrelationship_approvalsteps](#BKMK_msdyn_flow_approvalrelationship_approvalsteps)
 - [msdyn_flow_approvalrelationship_flowapprovals](#BKMK_msdyn_flow_approvalrelationship_flowapprovals)
+
+### <a name="BKMK_approvalstageapproval_approval_msdyn_flow_approval"></a> approvalstageapproval_approval_msdyn_flow_approval
+
+Many-To-One Relationship: [approvalstageapproval approvalstageapproval_approval_msdyn_flow_approval](approvalstageapproval.md#BKMK_approvalstageapproval_approval_msdyn_flow_approval)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageapproval`|
+|ReferencingAttribute|`approval`|
+|ReferencedEntityNavigationPropertyName|`approvalstageapproval_approval_msdyn_flow_approval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstagecondition_approval_msdyn_flow_approval"></a> approvalstagecondition_approval_msdyn_flow_approval
+
+Many-To-One Relationship: [approvalstagecondition approvalstagecondition_approval_msdyn_flow_approval](approvalstagecondition.md#BKMK_approvalstagecondition_approval_msdyn_flow_approval)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstagecondition`|
+|ReferencingAttribute|`approval`|
+|ReferencedEntityNavigationPropertyName|`approvalstagecondition_approval_msdyn_flow_approval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_approvalstageorder_approval_msdyn_flow_approval"></a> approvalstageorder_approval_msdyn_flow_approval
+
+Many-To-One Relationship: [approvalstageorder approvalstageorder_approval_msdyn_flow_approval](approvalstageorder.md#BKMK_approvalstageorder_approval_msdyn_flow_approval)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalstageorder`|
+|ReferencingAttribute|`approval`|
+|ReferencedEntityNavigationPropertyName|`approvalstageorder_approval_msdyn_flow_approval`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_flow_approval_Annotations"></a> msdyn_flow_approval_Annotations
 

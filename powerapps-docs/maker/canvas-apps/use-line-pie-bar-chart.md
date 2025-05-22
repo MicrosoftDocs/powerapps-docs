@@ -6,9 +6,9 @@ author: fikaradz
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/23/2016
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
-ms.author: fikaradz
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -43,7 +43,7 @@ You can create and use these charts within Power Apps. Let's get started.
 ## Import the sample data
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
 
-1. On the command bar selelct, **Insert** > **Media** > **Import**.
+1. On the command bar select, **Insert** > **Media** > **Import**.
 
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
 

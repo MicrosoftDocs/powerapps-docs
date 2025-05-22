@@ -111,7 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_actionlist**|
+|DisplayName|**msdyn\_actionlist**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_actionlist`|
@@ -134,7 +134,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_autosuggestionfield**|
+|DisplayName|**msdyn\_autosuggestionfield**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_autosuggestionfield`|
@@ -151,7 +151,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_defaultemailrecipient**|
+|DisplayName|**msdyn\_defaultemailrecipient**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_defaultemailrecipient`|
@@ -168,7 +168,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Logical Name of the Entity for which Knowledge Management is being enabled.**|
-|DisplayName|**msdyn_entityname**|
+|DisplayName|**msdyn\_entityname**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_entityname`|
@@ -185,7 +185,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_isautosuggestionsenabled**|
+|DisplayName|**msdyn\_isautosuggestionsenabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_isautosuggestionsenabled`|
@@ -213,7 +213,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_showcontextualactions**|
+|DisplayName|**msdyn\_showcontextualactions**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_showcontextualactions`|
@@ -229,7 +229,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_status**|
+|DisplayName|**msdyn\_status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_status`|

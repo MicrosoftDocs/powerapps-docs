@@ -9171,6 +9171,16 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/user/cs-template-options.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/control-portal-creation.md",
       "redirect_url": "/power-pages/admin/control-site-creation",
       "redirect_document_id": "false"

@@ -344,7 +344,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiinsightcard, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, annotation, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, attributemaskingrule, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessunit, businessunitnewsarticle, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, channelaccessprofile, channelaccessprofilerule, chat, comment, connection, connectioninstance, connectionreference, connectionrole, connector, contact, conversationtranscript, convertrule, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, customerrelationship, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, enablearchivalrequest, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, expiredprocess, exportedexcel, exportsolutionupload, externalparty, externalpartyitem, fabricaiskill, fax, featurecontrolsetting, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, fxexpression, goal, goalrollupquery, governanceconfiguration, holidaywrapper, internalcatalogassignment, kbarticle, kbarticlecomment, kbarticletemplate, keyvaultreference, knowledgearticle, knowledgebaserecord, letter, mailbox, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, metric, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, newprocess, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, position, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processorregistration, processstageparameter, provisionlanguageforuser, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshiprole, report, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, rollupfield, routingrule, routingruleitem, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointmanagedidentity, sharepointsite, sideloadedaiplugin, signalregistration, sla, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, subject, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, systemuserauthorizationchangetracker, task, tdsmetadata, team, teammobileofflineprofilemembership, template, territory, theme, traitregistration, transactioncurrency, translationprocess, usermapping, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workqueue, workqueueitem|
+|Targets|account, activityfileattachment, adx_externalidentity, adx_invitation, adx_inviteredemption, adx_portalcomment, adx_setting, adx_webformsession, aicopilot, aiinsightcard, aiplugin, aipluginauth, aipluginconversationstarter, aipluginconversationstartermapping, aipluginexternalschema, aipluginexternalschemaproperty, aiplugingovernance, aiplugingovernanceext, aiplugininstance, aipluginoperation, aipluginoperationparameter, aipluginoperationresponsetemplate, aiplugintitle, aipluginusersetting, aiskillconfig, annotation, appaction, appactionmigration, appactionrule, appelement, application, applicationuser, appmodulecomponentedge, appmodulecomponentnode, appointment, approvalprocess, approvalstageapproval, approvalstagecondition, approvalstageorder, appsetting, appusersetting, archivecleanupinfo, archivecleanupoperation, attributemaskingrule, bot, botcomponent, botcomponentcollection, bulkarchiveconfig, bulkarchivefailuredetail, bulkarchiveoperation, bulkarchiveoperationdetail, businessprocess, businessunit, businessunitnewsarticle, canvasappextendedmetadata, card, cascadegrantrevokeaccessrecordstracker, cascadegrantrevokeaccessversiontracker, catalog, catalogassignment, certificatecredential, channelaccessprofile, channelaccessprofilerule, chat, comment, connection, connectioninstance, connectionreference, connectionrole, connector, contact, conversationtranscript, convertrule, copilotexamplequestion, copilotglossaryterm, copilotsynonyms, credential, customapi, customapirequestparameter, customapiresponseproperty, customeraddress, customerrelationship, datalakefolder, datalakefolderpermission, datalakeworkspace, datalakeworkspacepermission, dataprocessingconfiguration, delegatedauthorization, deleteditemreference, desktopflowbinary, desktopflowmodule, dvfilesearch, dvfilesearchattribute, dvfilesearchentity, dvtablesearch, dvtablesearchattribute, dvtablesearchentity, email, enablearchivalrequest, entityclusterconfig, entityrecordfilter, environmentvariabledefinition, environmentvariablevalue, expiredprocess, exportedexcel, exportsolutionupload, externalparty, externalpartyitem, fabricaiskill, fax, featurecontrolsetting, federatedknowledgecitation, federatedknowledgeconfiguration, federatedknowledgeentityconfiguration, federatedknowledgemetadatarefresh, flowcapacityassignment, flowcredentialapplication, flowevent, flowmachine, flowmachinegroup, flowmachineimage, flowmachineimageversion, flowmachinenetwork, fxexpression, goal, goalrollupquery, governanceconfiguration, holidaywrapper, internalcatalogassignment, kbarticle, kbarticlecomment, kbarticletemplate, keyvaultreference, knowledgearticle, knowledgebaserecord, letter, mailbox, mailmergetemplate, mainfewshot, makerfewshot, managedidentity, maskingrule, metadataforarchival, metric, mobileofflineprofileextension, msdynce_botcontent, msdyn_aibdataset, msdyn_aibdatasetfile, msdyn_aibdatasetrecord, msdyn_aibdatasetscontainer, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aibfileattacheddata, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aievaluationconfiguration, msdyn_aievaluationrun, msdyn_aievent, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aimodelcatalog, msdyn_aiodimage, msdyn_aiodlabel, msdyn_aiodtrainingboundingbox, msdyn_aiodtrainingimage, msdyn_aitemplate, msdyn_aitestcase, msdyn_aitestcasedocument, msdyn_aitestcaseinput, msdyn_aitestrun, msdyn_aitestrunbatch, msdyn_analysiscomponent, msdyn_analysisjob, msdyn_analysisoverride, msdyn_analysisresult, msdyn_analysisresultdetail, msdyn_appinsightsmetadata, msdyn_copilotinteractions, msdyn_customcontrolextendedsettings, msdyn_dataflow, msdyn_dataflowconnectionreference, msdyn_dataflowrefreshhistory, msdyn_dataflowtemplate, msdyn_dataflow_datalakefolder, msdyn_dataworkspace, msdyn_dmsrequest, msdyn_dmsrequeststatus, msdyn_dmssyncrequest, msdyn_dmssyncstatus, msdyn_entitylinkchatconfiguration, msdyn_entityrefreshhistory, msdyn_favoriteknowledgearticle, msdyn_federatedarticle, msdyn_federatedarticleincident, msdyn_fileupload, msdyn_flow_actionapprovalmodel, msdyn_flow_approval, msdyn_flow_approvalrequest, msdyn_flow_approvalresponse, msdyn_flow_approvalstep, msdyn_flow_awaitallactionapprovalmodel, msdyn_flow_awaitallapprovalmodel, msdyn_flow_basicapprovalmodel, msdyn_flow_flowapproval, msdyn_formmapping, msdyn_function, msdyn_helppage, msdyn_insightsstorevirtualentity, msdyn_integratedsearchprovider, msdyn_kalanguagesetting, msdyn_kbattachment, msdyn_kmfederatedsearchconfig, msdyn_kmpersonalizationsetting, msdyn_knowledgearticleimage, msdyn_knowledgearticletemplate, msdyn_knowledgeassetconfiguration, msdyn_knowledgeconfiguration, msdyn_knowledgeinteractioninsight, msdyn_knowledgemanagementsetting, msdyn_knowledgepersonalfilter, msdyn_knowledgesearchfilter, msdyn_knowledgesearchinsight, msdyn_mobileapp, msdyn_modulerundetail, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pmanalysishistory, msdyn_pmbusinessruleautomationconfig, msdyn_pmcalendar, msdyn_pmcalendarversion, msdyn_pminferredtask, msdyn_pmprocessextendedmetadataversion, msdyn_pmprocesstemplate, msdyn_pmprocessusersettings, msdyn_pmprocessversion, msdyn_pmrecording, msdyn_pmsimulation, msdyn_pmtemplate, msdyn_pmview, msdyn_qna, msdyn_richtextfile, msdyn_salesforcestructuredobject, msdyn_salesforcestructuredqnaconfig, msdyn_schedule, msdyn_serviceconfiguration, msdyn_slakpi, msdyn_solutionhealthrule, msdyn_solutionhealthruleargument, msdyn_solutionhealthruleset, msdyn_tour, msdyn_virtualtablecolumncandidate, msdyn_workflowactionstatus, msgraphresourcetosubscription, mspcat_catalogsubmissionfiles, mspcat_packagestore, newprocess, organizationdatasyncfnostate, organizationdatasyncstate, organizationdatasyncsubscription, organizationdatasyncsubscriptionentity, organizationdatasyncsubscriptionfnotable, organizationsetting, package, packagehistory, pdfsetting, phonecall, plannerbusinessscenario, plannersyncaction, plugin, position, powerbidataset, powerbidatasetapdx, powerbimashupparameter, powerbireport, powerbireportapdx, powerfxrule, powerpagecomponent, powerpagesite, powerpagesitelanguage, powerpagesitepublished, powerpagesmanagedidentity, powerpagesscanreport, privilegecheckerlog, privilegecheckerrun, privilegesremovalsetting, processorregistration, processstageparameter, provisionlanguageforuser, queue, queueitem, reconciliationentityinfo, reconciliationentitystepinfo, reconciliationinfo, recordfilter, recurringappointmentmaster, recyclebinconfig, relationshiprole, report, reportparameter, retaineddataexcel, retentioncleanupinfo, retentioncleanupoperation, retentionconfig, retentionfailuredetail, retentionoperation, retentionoperationdetail, retentionsuccessdetail, revokeinheritedaccessrecordstracker, roleeditorlayout, rollupfield, routingrule, routingruleitem, savingrule, searchattributesettings, searchcustomanalyzer, searchrelationshipsettings, serviceplan, serviceplancustomcontrol, serviceplanmapping, settingdefinition, sharedlinksetting, sharedobject, sharedworkspace, sharedworkspacepool, sharepointdocumentlocation, sharepointmanagedidentity, sharepointsite, sideloadedaiplugin, signalregistration, sla, socialactivity, socialprofile, solutioncomponentattributeconfiguration, solutioncomponentbatchconfiguration, solutioncomponentconfiguration, solutioncomponentrelationshipconfiguration, stagedentity, stagedentityattribute, stagedmetadataasyncoperation, stagesolutionupload, subject, supportusertable, synapsedatabase, synapselinkexternaltablestate, synapselinkprofile, synapselinkprofileentity, synapselinkprofileentitystate, synapselinkschedule, systemuser, systemuserauthorizationchangetracker, tag, taggedflowsession, taggedprocess, task, tdsmetadata, team, teammobileofflineprofilemembership, template, territory, theme, traitregistration, transactioncurrency, translationprocess, unstructuredfilesearchentity, unstructuredfilesearchrecord, usermapping, usermobileofflineprofilemembership, userrating, viewasexamplequestion, virtualentitymetadata, workflowbinary, workflowmetadata, workqueue, workqueueitem|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
@@ -705,7 +705,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [adx_setting_ProcessSession](#BKMK_adx_setting_ProcessSession)
 - [adx_webformsession_ProcessSession](#BKMK_adx_webformsession_ProcessSession)
 - [aicopilot_ProcessSession](#BKMK_aicopilot_ProcessSession)
-- [aiinsightcard_ProcessSession](#BKMK_aiinsightcard_ProcessSession)
 - [aiplugin_ProcessSession](#BKMK_aiplugin_ProcessSession)
 - [aipluginauth_ProcessSession](#BKMK_aipluginauth_ProcessSession)
 - [aipluginconversationstarter_ProcessSession](#BKMK_aipluginconversationstarter_ProcessSession)
@@ -727,10 +726,15 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [application_ProcessSession](#BKMK_application_ProcessSession)
 - [applicationuser_ProcessSession](#BKMK_applicationuser_ProcessSession)
 - [Appointment_ProcessSessions](#BKMK_Appointment_ProcessSessions)
+- [approvalprocess_ProcessSession](#BKMK_approvalprocess_ProcessSession)
+- [approvalstageapproval_ProcessSession](#BKMK_approvalstageapproval_ProcessSession)
+- [approvalstagecondition_ProcessSession](#BKMK_approvalstagecondition_ProcessSession)
+- [approvalstageorder_ProcessSession](#BKMK_approvalstageorder_ProcessSession)
 - [attributemaskingrule_ProcessSession](#BKMK_attributemaskingrule_ProcessSession)
 - [bot_ProcessSession](#BKMK_bot_ProcessSession)
 - [botcomponent_ProcessSession](#BKMK_botcomponent_ProcessSession)
 - [botcomponentcollection_ProcessSession](#BKMK_botcomponentcollection_ProcessSession)
+- [businessprocess_ProcessSession](#BKMK_businessprocess_ProcessSession)
 - [BusinessUnit_ProcessSessions](#BKMK_BusinessUnit_ProcessSessions)
 - [BusinessUnitNewsArticle_ProcessSessions](#BKMK_BusinessUnitNewsArticle_ProcessSessions)
 - [card_ProcessSession](#BKMK_card_ProcessSession)
@@ -768,6 +772,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [dvtablesearchattribute_ProcessSession](#BKMK_dvtablesearchattribute_ProcessSession)
 - [dvtablesearchentity_ProcessSession](#BKMK_dvtablesearchentity_ProcessSession)
 - [Email_ProcessSessions](#BKMK_Email_ProcessSessions)
+- [entityclusterconfig_ProcessSession](#BKMK_entityclusterconfig_ProcessSession)
 - [entityrecordfilter_ProcessSession](#BKMK_entityrecordfilter_ProcessSession)
 - [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
 - [environmentvariablevalue_ProcessSession](#BKMK_environmentvariablevalue_ProcessSession)
@@ -827,6 +832,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aibfile_ProcessSession](#BKMK_msdyn_aibfile_ProcessSession)
 - [msdyn_aibfileattacheddata_ProcessSession](#BKMK_msdyn_aibfileattacheddata_ProcessSession)
 - [msdyn_aiconfiguration_ProcessSession](#BKMK_msdyn_aiconfiguration_ProcessSession)
+- [msdyn_aidataprocessingevent_ProcessSession](#BKMK_msdyn_aidataprocessingevent_ProcessSession)
+- [msdyn_aievaluationconfiguration_ProcessSession](#BKMK_msdyn_aievaluationconfiguration_ProcessSession)
+- [msdyn_aievaluationrun_ProcessSession](#BKMK_msdyn_aievaluationrun_ProcessSession)
 - [msdyn_aievent_ProcessSession](#BKMK_msdyn_aievent_ProcessSession)
 - [msdyn_aifptrainingdocument_ProcessSession](#BKMK_msdyn_aifptrainingdocument_ProcessSession)
 - [msdyn_aimodel_ProcessSession](#BKMK_msdyn_aimodel_ProcessSession)
@@ -835,6 +843,11 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [msdyn_aiodtrainingboundingbox_ProcessSession](#BKMK_msdyn_aiodtrainingboundingbox_ProcessSession)
 - [msdyn_aiodtrainingimage_ProcessSession](#BKMK_msdyn_aiodtrainingimage_ProcessSession)
 - [msdyn_aitemplate_ProcessSession](#BKMK_msdyn_aitemplate_ProcessSession)
+- [msdyn_aitestcase_ProcessSession](#BKMK_msdyn_aitestcase_ProcessSession)
+- [msdyn_aitestcasedocument_ProcessSession](#BKMK_msdyn_aitestcasedocument_ProcessSession)
+- [msdyn_aitestcaseinput_ProcessSession](#BKMK_msdyn_aitestcaseinput_ProcessSession)
+- [msdyn_aitestrun_ProcessSession](#BKMK_msdyn_aitestrun_ProcessSession)
+- [msdyn_aitestrunbatch_ProcessSession](#BKMK_msdyn_aitestrunbatch_ProcessSession)
 - [msdyn_analysiscomponent_ProcessSession](#BKMK_msdyn_analysiscomponent_ProcessSession)
 - [msdyn_analysisjob_ProcessSession](#BKMK_msdyn_analysisjob_ProcessSession)
 - [msdyn_analysisoverride_ProcessSession](#BKMK_msdyn_analysisoverride_ProcessSession)
@@ -947,7 +960,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [privilegecheckerlog_ProcessSession](#BKMK_privilegecheckerlog_ProcessSession)
 - [privilegecheckerrun_ProcessSession](#BKMK_privilegecheckerrun_ProcessSession)
 - [privilegesremovalsetting_ProcessSession](#BKMK_privilegesremovalsetting_ProcessSession)
-- [processorregistration_ProcessSession](#BKMK_processorregistration_ProcessSession)
 - [processstageparameter_ProcessSession](#BKMK_processstageparameter_ProcessSession)
 - [provisionlanguageforuser_ProcessSession](#BKMK_provisionlanguageforuser_ProcessSession)
 - [Queue_ProcessSessions](#BKMK_Queue_ProcessSessions)
@@ -965,6 +977,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [retentionsuccessdetail_ProcessSession](#BKMK_retentionsuccessdetail_ProcessSession)
 - [roleeditorlayout_ProcessSession](#BKMK_roleeditorlayout_ProcessSession)
 - [rollupfield_ProcessSessions](#BKMK_rollupfield_ProcessSessions)
+- [savingrule_ProcessSession](#BKMK_savingrule_ProcessSession)
 - [searchattributesettings_ProcessSession](#BKMK_searchattributesettings_ProcessSession)
 - [searchcustomanalyzer_ProcessSession](#BKMK_searchcustomanalyzer_ProcessSession)
 - [searchrelationshipsettings_ProcessSession](#BKMK_searchrelationshipsettings_ProcessSession)
@@ -978,7 +991,6 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [sharepointmanagedidentity_ProcessSession](#BKMK_sharepointmanagedidentity_ProcessSession)
 - [SharePointSite_ProcessSessions](#BKMK_SharePointSite_ProcessSessions)
 - [sideloadedaiplugin_ProcessSession](#BKMK_sideloadedaiplugin_ProcessSession)
-- [signalregistration_ProcessSession](#BKMK_signalregistration_ProcessSession)
 - [slabase_ProcessSessions](#BKMK_slabase_ProcessSessions)
 - [SocialActivity_ProcessSessions](#BKMK_SocialActivity_ProcessSessions)
 - [SocialProfile_ProcessSessions](#BKMK_SocialProfile_ProcessSessions)
@@ -1000,6 +1012,9 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [synapselinkschedule_ProcessSession](#BKMK_synapselinkschedule_ProcessSession)
 - [SystemUser_ProcessSessions](#BKMK_SystemUser_ProcessSessions)
 - [systemuserauthorizationchangetracker_ProcessSession](#BKMK_systemuserauthorizationchangetracker_ProcessSession)
+- [tag_ProcessSession](#BKMK_tag_ProcessSession)
+- [taggedflowsession_ProcessSession](#BKMK_taggedflowsession_ProcessSession)
+- [taggedprocess_ProcessSession](#BKMK_taggedprocess_ProcessSession)
 - [Task_ProcessSessions](#BKMK_Task_ProcessSessions)
 - [team_processsession](#BKMK_team_processsession)
 - [Team_ProcessSessions](#BKMK_Team_ProcessSessions)
@@ -1007,15 +1022,17 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [Template_ProcessSessions](#BKMK_Template_ProcessSessions)
 - [Territory_ProcessSessions](#BKMK_Territory_ProcessSessions)
 - [theme_ProcessSession](#BKMK_theme_ProcessSession)
-- [traitregistration_ProcessSession](#BKMK_traitregistration_ProcessSession)
 - [TransactionCurrency_ProcessSessions](#BKMK_TransactionCurrency_ProcessSessions)
 - [TranslationProcess_ProcessSessions](#BKMK_TranslationProcess_ProcessSessions)
+- [unstructuredfilesearchentity_ProcessSession](#BKMK_unstructuredfilesearchentity_ProcessSession)
+- [unstructuredfilesearchrecord_ProcessSession](#BKMK_unstructuredfilesearchrecord_ProcessSession)
 - [usermapping_ProcessSession](#BKMK_usermapping_ProcessSession)
 - [usermobileofflineprofilemembership_ProcessSession](#BKMK_usermobileofflineprofilemembership_ProcessSession)
 - [userrating_ProcessSession](#BKMK_userrating_ProcessSession)
 - [viewasexamplequestion_ProcessSession](#BKMK_viewasexamplequestion_ProcessSession)
 - [virtualentitymetadata_ProcessSession](#BKMK_virtualentitymetadata_ProcessSession)
 - [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
+- [workflowmetadata_ProcessSession](#BKMK_workflowmetadata_ProcessSession)
 - [workqueue_ProcessSession](#BKMK_workqueue_ProcessSession)
 - [workqueueitem_ProcessSession](#BKMK_workqueueitem_ProcessSession)
 
@@ -1133,19 +1150,6 @@ One-To-Many Relationship: [aicopilot aicopilot_ProcessSession](aicopilot.md#BKMK
 |ReferencedAttribute|`aicopilotid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_aicopilot`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_aiinsightcard_ProcessSession"></a> aiinsightcard_ProcessSession
-
-One-To-Many Relationship: [aiinsightcard aiinsightcard_ProcessSession](aiinsightcard.md#BKMK_aiinsightcard_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`aiinsightcard`|
-|ReferencedAttribute|`aiinsightcardid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_aiinsightcard`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -1422,6 +1426,58 @@ One-To-Many Relationship: [appointment Appointment_ProcessSessions](appointment.
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_approvalprocess_ProcessSession"></a> approvalprocess_ProcessSession
+
+One-To-Many Relationship: [approvalprocess approvalprocess_ProcessSession](approvalprocess.md#BKMK_approvalprocess_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalprocess`|
+|ReferencedAttribute|`approvalprocessid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_approvalprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalstageapproval_ProcessSession"></a> approvalstageapproval_ProcessSession
+
+One-To-Many Relationship: [approvalstageapproval approvalstageapproval_ProcessSession](approvalstageapproval.md#BKMK_approvalstageapproval_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageapproval`|
+|ReferencedAttribute|`approvalstageapprovalid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_approvalstageapproval`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalstagecondition_ProcessSession"></a> approvalstagecondition_ProcessSession
+
+One-To-Many Relationship: [approvalstagecondition approvalstagecondition_ProcessSession](approvalstagecondition.md#BKMK_approvalstagecondition_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstagecondition`|
+|ReferencedAttribute|`approvalstageconditionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_approvalstagecondition`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalstageorder_ProcessSession"></a> approvalstageorder_ProcessSession
+
+One-To-Many Relationship: [approvalstageorder approvalstageorder_ProcessSession](approvalstageorder.md#BKMK_approvalstageorder_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageorder`|
+|ReferencedAttribute|`approvalstageorderid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_approvalstageorder`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_attributemaskingrule_ProcessSession"></a> attributemaskingrule_ProcessSession
 
 One-To-Many Relationship: [attributemaskingrule attributemaskingrule_ProcessSession](attributemaskingrule.md#BKMK_attributemaskingrule_ProcessSession)
@@ -1471,6 +1527,19 @@ One-To-Many Relationship: [botcomponentcollection botcomponentcollection_Process
 |ReferencedAttribute|`botcomponentcollectionid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_botcomponentcollection`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_businessprocess_ProcessSession"></a> businessprocess_ProcessSession
+
+One-To-Many Relationship: [businessprocess businessprocess_ProcessSession](businessprocess.md#BKMK_businessprocess_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessprocess`|
+|ReferencedAttribute|`businessprocessid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_businessprocess`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -1952,6 +2021,19 @@ One-To-Many Relationship: [email Email_ProcessSessions](email.md#BKMK_Email_Proc
 |ReferencedAttribute|`activityid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_email`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_entityclusterconfig_ProcessSession"></a> entityclusterconfig_ProcessSession
+
+One-To-Many Relationship: [entityclusterconfig entityclusterconfig_ProcessSession](entityclusterconfig.md#BKMK_entityclusterconfig_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`entityclusterconfig`|
+|ReferencedAttribute|`entityclusterconfigid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_entityclusterconfig`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -2722,6 +2804,45 @@ One-To-Many Relationship: [msdyn_aiconfiguration msdyn_aiconfiguration_ProcessSe
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_msdyn_aidataprocessingevent_ProcessSession"></a> msdyn_aidataprocessingevent_ProcessSession
+
+One-To-Many Relationship: [msdyn_aidataprocessingevent msdyn_aidataprocessingevent_ProcessSession](msdyn_aidataprocessingevent.md#BKMK_msdyn_aidataprocessingevent_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aidataprocessingevent`|
+|ReferencedAttribute|`msdyn_aidataprocessingeventid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aidataprocessingevent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aievaluationconfiguration_ProcessSession"></a> msdyn_aievaluationconfiguration_ProcessSession
+
+One-To-Many Relationship: [msdyn_aievaluationconfiguration msdyn_aievaluationconfiguration_ProcessSession](msdyn_aievaluationconfiguration.md#BKMK_msdyn_aievaluationconfiguration_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aievaluationconfiguration`|
+|ReferencedAttribute|`msdyn_aievaluationconfigurationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aievaluationconfiguration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aievaluationrun_ProcessSession"></a> msdyn_aievaluationrun_ProcessSession
+
+One-To-Many Relationship: [msdyn_aievaluationrun msdyn_aievaluationrun_ProcessSession](msdyn_aievaluationrun.md#BKMK_msdyn_aievaluationrun_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aievaluationrun`|
+|ReferencedAttribute|`msdyn_aievaluationrunid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aievaluationrun`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_msdyn_aievent_ProcessSession"></a> msdyn_aievent_ProcessSession
 
 One-To-Many Relationship: [msdyn_aievent msdyn_aievent_ProcessSession](msdyn_aievent.md#BKMK_msdyn_aievent_ProcessSession)
@@ -2823,6 +2944,71 @@ One-To-Many Relationship: [msdyn_aitemplate msdyn_aitemplate_ProcessSession](msd
 |ReferencedAttribute|`msdyn_aitemplateid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitemplate`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestcase_ProcessSession"></a> msdyn_aitestcase_ProcessSession
+
+One-To-Many Relationship: [msdyn_aitestcase msdyn_aitestcase_ProcessSession](msdyn_aitestcase.md#BKMK_msdyn_aitestcase_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcase`|
+|ReferencedAttribute|`msdyn_aitestcaseid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitestcase`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestcasedocument_ProcessSession"></a> msdyn_aitestcasedocument_ProcessSession
+
+One-To-Many Relationship: [msdyn_aitestcasedocument msdyn_aitestcasedocument_ProcessSession](msdyn_aitestcasedocument.md#BKMK_msdyn_aitestcasedocument_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcasedocument`|
+|ReferencedAttribute|`msdyn_aitestcasedocumentid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitestcasedocument`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestcaseinput_ProcessSession"></a> msdyn_aitestcaseinput_ProcessSession
+
+One-To-Many Relationship: [msdyn_aitestcaseinput msdyn_aitestcaseinput_ProcessSession](msdyn_aitestcaseinput.md#BKMK_msdyn_aitestcaseinput_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcaseinput`|
+|ReferencedAttribute|`msdyn_aitestcaseinputid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitestcaseinput`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestrun_ProcessSession"></a> msdyn_aitestrun_ProcessSession
+
+One-To-Many Relationship: [msdyn_aitestrun msdyn_aitestrun_ProcessSession](msdyn_aitestrun.md#BKMK_msdyn_aitestrun_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestrun`|
+|ReferencedAttribute|`msdyn_aitestrunid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitestrun`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestrunbatch_ProcessSession"></a> msdyn_aitestrunbatch_ProcessSession
+
+One-To-Many Relationship: [msdyn_aitestrunbatch msdyn_aitestrunbatch_ProcessSession](msdyn_aitestrunbatch.md#BKMK_msdyn_aitestrunbatch_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestrunbatch`|
+|ReferencedAttribute|`msdyn_aitestrunbatchid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_msdyn_aitestrunbatch`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -4282,19 +4468,6 @@ One-To-Many Relationship: [privilegesremovalsetting privilegesremovalsetting_Pro
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_processorregistration_ProcessSession"></a> processorregistration_ProcessSession
-
-One-To-Many Relationship: [processorregistration processorregistration_ProcessSession](processorregistration.md#BKMK_processorregistration_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`processorregistration`|
-|ReferencedAttribute|`processorregistrationid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_processorregistration`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_processstageparameter_ProcessSession"></a> processstageparameter_ProcessSession
 
 One-To-Many Relationship: [processstageparameter processstageparameter_ProcessSession](processstageparameter.md#BKMK_processstageparameter_ProcessSession)
@@ -4516,6 +4689,19 @@ One-To-Many Relationship: [rollupfield rollupfield_ProcessSessions](rollupfield.
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_savingrule_ProcessSession"></a> savingrule_ProcessSession
+
+One-To-Many Relationship: [savingrule savingrule_ProcessSession](savingrule.md#BKMK_savingrule_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`savingrule`|
+|ReferencedAttribute|`savingruleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_savingrule`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_searchattributesettings_ProcessSession"></a> searchattributesettings_ProcessSession
 
 One-To-Many Relationship: [searchattributesettings searchattributesettings_ProcessSession](searchattributesettings.md#BKMK_searchattributesettings_ProcessSession)
@@ -4682,19 +4868,6 @@ One-To-Many Relationship: [sideloadedaiplugin sideloadedaiplugin_ProcessSession]
 |ReferencedAttribute|`sideloadedaipluginid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_sideloadedaiplugin`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_signalregistration_ProcessSession"></a> signalregistration_ProcessSession
-
-One-To-Many Relationship: [signalregistration signalregistration_ProcessSession](signalregistration.md#BKMK_signalregistration_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`signalregistration`|
-|ReferencedAttribute|`signalregistrationid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_signalregistration`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -4971,6 +5144,45 @@ One-To-Many Relationship: [systemuserauthorizationchangetracker systemuserauthor
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_tag_ProcessSession"></a> tag_ProcessSession
+
+One-To-Many Relationship: [tag tag_ProcessSession](tag.md#BKMK_tag_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`tag`|
+|ReferencedAttribute|`tagid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_tag`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_taggedflowsession_ProcessSession"></a> taggedflowsession_ProcessSession
+
+One-To-Many Relationship: [taggedflowsession taggedflowsession_ProcessSession](taggedflowsession.md#BKMK_taggedflowsession_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`taggedflowsession`|
+|ReferencedAttribute|`taggedflowsessionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_taggedflowsession`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_taggedprocess_ProcessSession"></a> taggedprocess_ProcessSession
+
+One-To-Many Relationship: [taggedprocess taggedprocess_ProcessSession](taggedprocess.md#BKMK_taggedprocess_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`taggedprocess`|
+|ReferencedAttribute|`taggedprocessid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_taggedprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Task_ProcessSessions"></a> Task_ProcessSessions
 
 One-To-Many Relationship: [task Task_ProcessSessions](task.md#BKMK_Task_ProcessSessions)
@@ -5062,19 +5274,6 @@ One-To-Many Relationship: [theme theme_ProcessSession](theme.md#BKMK_theme_Proce
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_traitregistration_ProcessSession"></a> traitregistration_ProcessSession
-
-One-To-Many Relationship: [traitregistration traitregistration_ProcessSession](traitregistration.md#BKMK_traitregistration_ProcessSession)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`traitregistration`|
-|ReferencedAttribute|`traitregistrationid`|
-|ReferencingAttribute|`regardingobjectid`|
-|ReferencingEntityNavigationPropertyName|`regardingobjectid_traitregistration`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
 ### <a name="BKMK_TransactionCurrency_ProcessSessions"></a> TransactionCurrency_ProcessSessions
 
 One-To-Many Relationship: [transactioncurrency TransactionCurrency_ProcessSessions](transactioncurrency.md#BKMK_TransactionCurrency_ProcessSessions)
@@ -5098,6 +5297,32 @@ One-To-Many Relationship: [translationprocess TranslationProcess_ProcessSessions
 |ReferencedAttribute|`businessprocessflowinstanceid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_translationprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_unstructuredfilesearchentity_ProcessSession"></a> unstructuredfilesearchentity_ProcessSession
+
+One-To-Many Relationship: [unstructuredfilesearchentity unstructuredfilesearchentity_ProcessSession](unstructuredfilesearchentity.md#BKMK_unstructuredfilesearchentity_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`unstructuredfilesearchentity`|
+|ReferencedAttribute|`unstructuredfilesearchentityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_unstructuredfilesearchentity`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_unstructuredfilesearchrecord_ProcessSession"></a> unstructuredfilesearchrecord_ProcessSession
+
+One-To-Many Relationship: [unstructuredfilesearchrecord unstructuredfilesearchrecord_ProcessSession](unstructuredfilesearchrecord.md#BKMK_unstructuredfilesearchrecord_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`unstructuredfilesearchrecord`|
+|ReferencedAttribute|`unstructuredfilesearchrecordid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_unstructuredfilesearchrecord`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -5176,6 +5401,19 @@ One-To-Many Relationship: [workflowbinary workflowbinary_ProcessSession](workflo
 |ReferencedAttribute|`workflowbinaryid`|
 |ReferencingAttribute|`regardingobjectid`|
 |ReferencingEntityNavigationPropertyName|`regardingobjectid_workflowbinary`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_workflowmetadata_ProcessSession"></a> workflowmetadata_ProcessSession
+
+One-To-Many Relationship: [workflowmetadata workflowmetadata_ProcessSession](workflowmetadata.md#BKMK_workflowmetadata_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workflowmetadata`|
+|ReferencedAttribute|`workflowmetadataid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_workflowmetadata`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

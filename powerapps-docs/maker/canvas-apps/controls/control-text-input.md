@@ -81,7 +81,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **MaxLength** – The number of characters that the user can type into a text-input control.
 
-**Mode** – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
+**Mode** – The control is in **SingleLine**, **Multiline**, or **Password** mode.
 
 **[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 

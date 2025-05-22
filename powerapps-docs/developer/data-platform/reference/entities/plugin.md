@@ -135,7 +135,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |100000000|**PoweFx**|
-|100000001|**C#**|
+|100000001|**C\#**|
 
 ### <a name="BKMK_name"></a> name
 

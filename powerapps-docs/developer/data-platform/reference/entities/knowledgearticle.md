@@ -383,8 +383,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**field to indicate the agent review status of the article**|
-|DisplayName|**Agent Review Status**|
+|Description|**field to indicate the review status of the article**|
+|DisplayName|**Representative Review**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_agentreviewstatus`|
@@ -398,7 +398,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |100000000|**Not Reviewed**|
-|100000001|**Reviewed By Agent**|
+|100000001|**Reviewed**|
 
 ### <a name="BKMK_msdyn_compliancestatecode"></a> msdyn_compliancestatecode
 

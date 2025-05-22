@@ -6,10 +6,13 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 05/12/2025
+ms.date: 05/20/2025
 ms.custom: template-how-to
 ---
 # Email address validation for email columns (preview)
+
+> [!IMPORTANT]
+> This feature is deprioritized and will not be delivered.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -21,7 +24,7 @@ Traditionally, the existing email column type had only basic email validation. W
 >
 > - This is a preview feature.
 > - During preview, these regions will have email address validation feature available: Asia (East, Southeast), Australia (East, Southeast), Canada (Central, East), Europe (North, West), France (Central, South), India (Central, South), Japan (East, West), South America – Brazil (South), Switzerland (North, West), UAE (North), UK (South, West), US (East, West).
-> - Smart email validation currently only works for model-driven apps.
+> - Smart email validation only works for model-driven apps.
 > - Smart email validation shows validation issues but won't block users from saving their record.
 
 Email address validation detects the following issues:

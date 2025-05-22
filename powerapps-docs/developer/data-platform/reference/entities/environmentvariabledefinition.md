@@ -73,9 +73,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinitionId)
 - [Hint](#BKMK_Hint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InputControlConfig](#BKMK_InputControlConfig)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsRequired](#BKMK_IsRequired)
+- [LearnMoreUrl](#BKMK_LearnMoreUrl)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -214,6 +216,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
+### <a name="BKMK_InputControlConfig"></a> InputControlConfig
+
+|Property|Value|
+|---|---|
+|Description|**A JSON object describing the options for the input control that should be presented to the user for setting the current value of the Environment variable.**|
+|DisplayName|**Input Control Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`inputcontrolconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
+
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
@@ -258,6 +277,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
+
+### <a name="BKMK_LearnMoreUrl"></a> LearnMoreUrl
+
+|Property|Value|
+|---|---|
+|Description|**Clicking on this url will take the user to a webpage which further explains the environment variable being populated.**|
+|DisplayName|**Learn More Url**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`learnmoreurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -926,6 +962,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId)
 - [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
 - [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
+- [mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
 
 ### <a name="BKMK_envdefinition_envdefinition-one-to-many"></a> envdefinition_envdefinition
 
@@ -1165,6 +1202,18 @@ Many-To-One Relationship: [powerbimashupparameter envvardefinition_powerbimashup
 |ReferencingAttribute|`environmentvariableid`|
 |ReferencedEntityNavigationPropertyName|`envvardefinition_powerbimashupparameter`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable"></a> mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable
+
+Many-To-One Relationship: [mspp_sitesetting mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](mspp_sitesetting.md#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_sitesetting`|
+|ReferencingAttribute|`mspp_environmentvariable`|
+|ReferencedEntityNavigationPropertyName|`mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 

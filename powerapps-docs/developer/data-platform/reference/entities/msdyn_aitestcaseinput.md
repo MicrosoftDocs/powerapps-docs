@@ -1,6 +1,6 @@
 ---
-title: "AI Insight Card (aiinsightcard) table/entity reference (Microsoft Dataverse)"
-description: "Includes schema information and supported messages for the AI Insight Card (aiinsightcard) table/entity with Microsoft Dataverse."
+title: "AI Test Case Input (msdyn_AITestCaseInput) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the AI Test Case Input (msdyn_AITestCaseInput) table/entity with Microsoft Dataverse."
 ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
@@ -8,41 +8,41 @@ search.audienceType:
   - developer
 ---
 
-# AI Insight Card (aiinsightcard) table/entity reference (Microsoft Dataverse)
+# AI Test Case Input (msdyn_AITestCaseInput) table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-The following table lists the messages for the AI Insight Card (aiinsightcard) table.
+The following table lists the messages for the AI Test Case Input (msdyn_AITestCaseInput) table.
 Messages represent operations that can be performed on the table. They may also be events.
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /aiinsightcards(*aiinsightcardid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Assign`<br />Event: True |`PATCH` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
-| `Create`<br />Event: True |`POST` /aiinsightcards<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Create`<br />Event: True |`POST` /msdyn_aitestcaseinputs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-| `Delete`<br />Event: True |`DELETE` /aiinsightcards(*aiinsightcardid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: True |`DELETE` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-| `Retrieve`<br />Event: True |`GET` /aiinsightcards(*aiinsightcardid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /aiinsightcards<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Retrieve`<br />Event: True |`GET` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_aitestcaseinputs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SetState`<br />Event: True |`PATCH` /aiinsightcards(*aiinsightcardid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-| `Update`<br />Event: True |`PATCH` /aiinsightcards(*aiinsightcardid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `SetState`<br />Event: True |`PATCH` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-| `Upsert`<br />Event: False |`PATCH` /aiinsightcards(*aiinsightcardid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_aitestcaseinputs(*msdyn_aitestcaseinputid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 | `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 
 ## Events
 
-The following table lists the events for the AI Insight Card (aiinsightcard) table.
+The following table lists the events for the AI Test Case Input (msdyn_AITestCaseInput) table.
 Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
 
 |Name|Web API Operation |SDK for .NET |
@@ -55,19 +55,19 @@ Events are messages that exist so that you can subscribe to them. Unless you add
 
 ## Properties
 
-The following table lists selected properties for the AI Insight Card (aiinsightcard) table.
+The following table lists selected properties for the AI Test Case Input (msdyn_AITestCaseInput) table.
 
 |Property|Value|
 | --- | --- |
-| **DisplayName** | **AI Insight Card** |
-| **DisplayCollectionName** | **AIInsightCards** |
-| **SchemaName** | `aiinsightcard` |
-| **CollectionSchemaName** | `aiinsightcards` |
-| **EntitySetName** | `aiinsightcards`|
-| **LogicalName** | `aiinsightcard` |
-| **LogicalCollectionName** | `aiinsightcards` |
-| **PrimaryIdAttribute** | `aiinsightcardid` |
-| **PrimaryNameAttribute** |`name` |
+| **DisplayName** | **AI Test Case Input** |
+| **DisplayCollectionName** | **AI Test Case Input** |
+| **SchemaName** | `msdyn_AITestCaseInput` |
+| **CollectionSchemaName** | `msdyn_AITestCaseInputs` |
+| **EntitySetName** | `msdyn_aitestcaseinputs`|
+| **LogicalName** | `msdyn_aitestcaseinput` |
+| **LogicalCollectionName** | `msdyn_aitestcaseinputs` |
+| **PrimaryIdAttribute** | `msdyn_aitestcaseinputid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
 | **TableType** | `Standard` |
 | **OwnershipType** | `UserOwned` |
 
@@ -75,95 +75,20 @@ The following table lists selected properties for the AI Insight Card (aiinsight
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [aiinsightcardId](#BKMK_aiinsightcardId)
-- [aiskillid](#BKMK_aiskillid)
-- [controlconfig](#BKMK_controlconfig)
-- [description](#BKMK_description)
-- [entityid](#BKMK_entityid)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [name](#BKMK_name)
+- [msdyn_AITestCaseId](#BKMK_msdyn_AITestCaseId)
+- [msdyn_AITestCaseInputId](#BKMK_msdyn_AITestCaseInputId)
+- [msdyn_Description](#BKMK_msdyn_Description)
+- [msdyn_InputData](#BKMK_msdyn_InputData)
+- [msdyn_Name](#BKMK_msdyn_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [surface](#BKMK_surface)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-
-### <a name="BKMK_aiinsightcardId"></a> aiinsightcardId
-
-|Property|Value|
-|---|---|
-|Description|**Unique identifier for entity instances**|
-|DisplayName|**AI Insight Card**|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`aiinsightcardid`|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-### <a name="BKMK_aiskillid"></a> aiskillid
-
-|Property|Value|
-|---|---|
-|Description|**The related AI Skill Config record**|
-|DisplayName|**AI Skill Config**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`aiskillid`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|aiskillconfig|
-
-### <a name="BKMK_controlconfig"></a> controlconfig
-
-|Property|Value|
-|---|---|
-|Description|**The config JSON for the insight card**|
-|DisplayName|**Control Config JSON**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`controlconfig`|
-|RequiredLevel|SystemRequired|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|1048576|
-
-### <a name="BKMK_description"></a> description
-
-|Property|Value|
-|---|---|
-|Description|**The description of the insight card**|
-|DisplayName|**Description**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`description`|
-|RequiredLevel|None|
-|Type|Memo|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|10000|
-
-### <a name="BKMK_entityid"></a> entityid
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Entity**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`entityid`|
-|RequiredLevel|SystemRequired|
-|Type|Lookup|
-|Targets|entity|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -191,16 +116,75 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
-### <a name="BKMK_name"></a> name
+### <a name="BKMK_msdyn_AITestCaseId"></a> msdyn_AITestCaseId
 
 |Property|Value|
 |---|---|
-|Description|**The name of the custom entity.**|
+|Description|**Unique identifier for AITestCase associated with AITestCaseInput.**|
+|DisplayName|**AITestCase**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aitestcaseid`|
+|RequiredLevel|SystemRequired|
+|Type|Lookup|
+|Targets|msdyn_aitestcase|
+
+### <a name="BKMK_msdyn_AITestCaseInputId"></a> msdyn_AITestCaseInputId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**AITestCaseInput**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aitestcaseinputid`|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+### <a name="BKMK_msdyn_Description"></a> msdyn_Description
+
+|Property|Value|
+|---|---|
+|Description|**The description of the test case input.**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_description`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|400|
+
+### <a name="BKMK_msdyn_InputData"></a> msdyn_InputData
+
+|Property|Value|
+|---|---|
+|Description|**Input Data for the test case.**|
+|DisplayName|**Input Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_inputdata`|
+|RequiredLevel|SystemRequired|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_msdyn_Name"></a> msdyn_Name
+
+|Property|Value|
+|---|---|
+|Description|**The name of the AI test case input.**|
 |DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`name`|
-|RequiredLevel|ApplicationRequired|
+|LogicalName|`msdyn_name`|
+|RequiredLevel|None|
 |Type|String|
 |Format|Text|
 |FormatName|Text|
@@ -254,7 +238,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Status of the AI Insight Card**|
+|Description|**Status of the AI Test Case Input**|
 |DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -262,7 +246,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|State|
 |DefaultFormValue||
-|GlobalChoiceName|`aiinsightcard_statecode`|
+|GlobalChoiceName|`msdyn_aitestcaseinput_statecode`|
 
 #### statecode Choices/Options
 
@@ -275,7 +259,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the AI Insight Card**|
+|Description|**Reason for the status of the AI Test Case Input**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -283,7 +267,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Status|
 |DefaultFormValue||
-|GlobalChoiceName|`aiinsightcard_statuscode`|
+|GlobalChoiceName|`msdyn_aitestcaseinput_statuscode`|
 
 #### statuscode Choices/Options
 
@@ -291,27 +275,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |1|Label: **Active**<br />State:0<br />TransitionData: None|
 |2|Label: **Inactive**<br />State:1<br />TransitionData: None|
-
-### <a name="BKMK_surface"></a> surface
-
-|Property|Value|
-|---|---|
-|Description||
-|DisplayName|**Surface**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`surface`|
-|RequiredLevel|SystemRequired|
-|Type|MultiSelectPicklist|
-|DefaultFormValue|-1|
-|GlobalChoiceName|`aiinsightcard_surface`|
-
-#### surface Choices/Options
-
-|Value|Label|
-|---|---|
-|0|**Table**|
-|1|**Record**|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -326,23 +289,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
-
-### <a name="BKMK_UniqueName"></a> UniqueName
-
-|Property|Value|
-|---|---|
-|Description|**Unique Name for the entity.**|
-|DisplayName|**Unique Name**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`uniquename`|
-|RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|128|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -579,7 +525,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -651,19 +597,19 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_aiinsightcard](#BKMK_business_unit_aiinsightcard)
-- [entity_aiinsightcard_entityid](#BKMK_entity_aiinsightcard_entityid)
-- [lk_aiinsightcard_createdby](#BKMK_lk_aiinsightcard_createdby)
-- [lk_aiinsightcard_createdonbehalfby](#BKMK_lk_aiinsightcard_createdonbehalfby)
-- [lk_aiinsightcard_modifiedby](#BKMK_lk_aiinsightcard_modifiedby)
-- [lk_aiinsightcard_modifiedonbehalfby](#BKMK_lk_aiinsightcard_modifiedonbehalfby)
-- [owner_aiinsightcard](#BKMK_owner_aiinsightcard)
-- [team_aiinsightcard](#BKMK_team_aiinsightcard)
-- [user_aiinsightcard](#BKMK_user_aiinsightcard)
+- [business_unit_msdyn_aitestcaseinput](#BKMK_business_unit_msdyn_aitestcaseinput)
+- [lk_msdyn_aitestcaseinput_createdby](#BKMK_lk_msdyn_aitestcaseinput_createdby)
+- [lk_msdyn_aitestcaseinput_createdonbehalfby](#BKMK_lk_msdyn_aitestcaseinput_createdonbehalfby)
+- [lk_msdyn_aitestcaseinput_modifiedby](#BKMK_lk_msdyn_aitestcaseinput_modifiedby)
+- [lk_msdyn_aitestcaseinput_modifiedonbehalfby](#BKMK_lk_msdyn_aitestcaseinput_modifiedonbehalfby)
+- [msdyn_aitestcase_msdyn_aitestcaseinput](#BKMK_msdyn_aitestcase_msdyn_aitestcaseinput)
+- [owner_msdyn_aitestcaseinput](#BKMK_owner_msdyn_aitestcaseinput)
+- [team_msdyn_aitestcaseinput](#BKMK_team_msdyn_aitestcaseinput)
+- [user_msdyn_aitestcaseinput](#BKMK_user_msdyn_aitestcaseinput)
 
-### <a name="BKMK_business_unit_aiinsightcard"></a> business_unit_aiinsightcard
+### <a name="BKMK_business_unit_msdyn_aitestcaseinput"></a> business_unit_msdyn_aitestcaseinput
 
-One-To-Many Relationship: [businessunit business_unit_aiinsightcard](businessunit.md#BKMK_business_unit_aiinsightcard)
+One-To-Many Relationship: [businessunit business_unit_msdyn_aitestcaseinput](businessunit.md#BKMK_business_unit_msdyn_aitestcaseinput)
 
 |Property|Value|
 |---|---|
@@ -674,22 +620,9 @@ One-To-Many Relationship: [businessunit business_unit_aiinsightcard](businessuni
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_entity_aiinsightcard_entityid"></a> entity_aiinsightcard_entityid
+### <a name="BKMK_lk_msdyn_aitestcaseinput_createdby"></a> lk_msdyn_aitestcaseinput_createdby
 
-One-To-Many Relationship: [entity entity_aiinsightcard_entityid](entity.md#BKMK_entity_aiinsightcard_entityid)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`entity`|
-|ReferencedAttribute|`entityid`|
-|ReferencingAttribute|`entityid`|
-|ReferencingEntityNavigationPropertyName|`entityid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_lk_aiinsightcard_createdby"></a> lk_aiinsightcard_createdby
-
-One-To-Many Relationship: [systemuser lk_aiinsightcard_createdby](systemuser.md#BKMK_lk_aiinsightcard_createdby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestcaseinput_createdby](systemuser.md#BKMK_lk_msdyn_aitestcaseinput_createdby)
 
 |Property|Value|
 |---|---|
@@ -700,9 +633,9 @@ One-To-Many Relationship: [systemuser lk_aiinsightcard_createdby](systemuser.md#
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiinsightcard_createdonbehalfby"></a> lk_aiinsightcard_createdonbehalfby
+### <a name="BKMK_lk_msdyn_aitestcaseinput_createdonbehalfby"></a> lk_msdyn_aitestcaseinput_createdonbehalfby
 
-One-To-Many Relationship: [systemuser lk_aiinsightcard_createdonbehalfby](systemuser.md#BKMK_lk_aiinsightcard_createdonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestcaseinput_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aitestcaseinput_createdonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -713,9 +646,9 @@ One-To-Many Relationship: [systemuser lk_aiinsightcard_createdonbehalfby](system
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiinsightcard_modifiedby"></a> lk_aiinsightcard_modifiedby
+### <a name="BKMK_lk_msdyn_aitestcaseinput_modifiedby"></a> lk_msdyn_aitestcaseinput_modifiedby
 
-One-To-Many Relationship: [systemuser lk_aiinsightcard_modifiedby](systemuser.md#BKMK_lk_aiinsightcard_modifiedby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestcaseinput_modifiedby](systemuser.md#BKMK_lk_msdyn_aitestcaseinput_modifiedby)
 
 |Property|Value|
 |---|---|
@@ -726,9 +659,9 @@ One-To-Many Relationship: [systemuser lk_aiinsightcard_modifiedby](systemuser.md
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_lk_aiinsightcard_modifiedonbehalfby"></a> lk_aiinsightcard_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_aitestcaseinput_modifiedonbehalfby"></a> lk_msdyn_aitestcaseinput_modifiedonbehalfby
 
-One-To-Many Relationship: [systemuser lk_aiinsightcard_modifiedonbehalfby](systemuser.md#BKMK_lk_aiinsightcard_modifiedonbehalfby)
+One-To-Many Relationship: [systemuser lk_msdyn_aitestcaseinput_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aitestcaseinput_modifiedonbehalfby)
 
 |Property|Value|
 |---|---|
@@ -739,9 +672,22 @@ One-To-Many Relationship: [systemuser lk_aiinsightcard_modifiedonbehalfby](syste
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_owner_aiinsightcard"></a> owner_aiinsightcard
+### <a name="BKMK_msdyn_aitestcase_msdyn_aitestcaseinput"></a> msdyn_aitestcase_msdyn_aitestcaseinput
 
-One-To-Many Relationship: [owner owner_aiinsightcard](owner.md#BKMK_owner_aiinsightcard)
+One-To-Many Relationship: [msdyn_aitestcase msdyn_aitestcase_msdyn_aitestcaseinput](msdyn_aitestcase.md#BKMK_msdyn_aitestcase_msdyn_aitestcaseinput)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcase`|
+|ReferencedAttribute|`msdyn_aitestcaseid`|
+|ReferencingAttribute|`msdyn_aitestcaseid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AITestCaseId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_owner_msdyn_aitestcaseinput"></a> owner_msdyn_aitestcaseinput
+
+One-To-Many Relationship: [owner owner_msdyn_aitestcaseinput](owner.md#BKMK_owner_msdyn_aitestcaseinput)
 
 |Property|Value|
 |---|---|
@@ -752,9 +698,9 @@ One-To-Many Relationship: [owner owner_aiinsightcard](owner.md#BKMK_owner_aiinsi
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_team_aiinsightcard"></a> team_aiinsightcard
+### <a name="BKMK_team_msdyn_aitestcaseinput"></a> team_msdyn_aitestcaseinput
 
-One-To-Many Relationship: [team team_aiinsightcard](team.md#BKMK_team_aiinsightcard)
+One-To-Many Relationship: [team team_msdyn_aitestcaseinput](team.md#BKMK_team_msdyn_aitestcaseinput)
 
 |Property|Value|
 |---|---|
@@ -765,9 +711,9 @@ One-To-Many Relationship: [team team_aiinsightcard](team.md#BKMK_team_aiinsightc
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_user_aiinsightcard"></a> user_aiinsightcard
+### <a name="BKMK_user_msdyn_aitestcaseinput"></a> user_msdyn_aitestcaseinput
 
-One-To-Many Relationship: [systemuser user_aiinsightcard](systemuser.md#BKMK_user_aiinsightcard)
+One-To-Many Relationship: [systemuser user_msdyn_aitestcaseinput](systemuser.md#BKMK_user_msdyn_aitestcaseinput)
 
 |Property|Value|
 |---|---|
@@ -783,82 +729,95 @@ One-To-Many Relationship: [systemuser user_aiinsightcard](systemuser.md#BKMK_use
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
-- [aiinsightcard_AsyncOperations](#BKMK_aiinsightcard_AsyncOperations)
-- [aiinsightcard_BulkDeleteFailures](#BKMK_aiinsightcard_BulkDeleteFailures)
-- [aiinsightcard_MailboxTrackingFolders](#BKMK_aiinsightcard_MailboxTrackingFolders)
-- [aiinsightcard_PrincipalObjectAttributeAccesses](#BKMK_aiinsightcard_PrincipalObjectAttributeAccesses)
-- [aiinsightcard_ProcessSession](#BKMK_aiinsightcard_ProcessSession)
-- [aiinsightcard_SyncErrors](#BKMK_aiinsightcard_SyncErrors)
+- [msdyn_aitestcaseinput_AsyncOperations](#BKMK_msdyn_aitestcaseinput_AsyncOperations)
+- [msdyn_aitestcaseinput_BulkDeleteFailures](#BKMK_msdyn_aitestcaseinput_BulkDeleteFailures)
+- [msdyn_aitestcaseinput_MailboxTrackingFolders](#BKMK_msdyn_aitestcaseinput_MailboxTrackingFolders)
+- [msdyn_aitestcaseinput_msdyn_aitestcasedocument](#BKMK_msdyn_aitestcaseinput_msdyn_aitestcasedocument)
+- [msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses)
+- [msdyn_aitestcaseinput_ProcessSession](#BKMK_msdyn_aitestcaseinput_ProcessSession)
+- [msdyn_aitestcaseinput_SyncErrors](#BKMK_msdyn_aitestcaseinput_SyncErrors)
 
-### <a name="BKMK_aiinsightcard_AsyncOperations"></a> aiinsightcard_AsyncOperations
+### <a name="BKMK_msdyn_aitestcaseinput_AsyncOperations"></a> msdyn_aitestcaseinput_AsyncOperations
 
-Many-To-One Relationship: [asyncoperation aiinsightcard_AsyncOperations](asyncoperation.md#BKMK_aiinsightcard_AsyncOperations)
+Many-To-One Relationship: [asyncoperation msdyn_aitestcaseinput_AsyncOperations](asyncoperation.md#BKMK_msdyn_aitestcaseinput_AsyncOperations)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`asyncoperation`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_AsyncOperations`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_AsyncOperations`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiinsightcard_BulkDeleteFailures"></a> aiinsightcard_BulkDeleteFailures
+### <a name="BKMK_msdyn_aitestcaseinput_BulkDeleteFailures"></a> msdyn_aitestcaseinput_BulkDeleteFailures
 
-Many-To-One Relationship: [bulkdeletefailure aiinsightcard_BulkDeleteFailures](bulkdeletefailure.md#BKMK_aiinsightcard_BulkDeleteFailures)
+Many-To-One Relationship: [bulkdeletefailure msdyn_aitestcaseinput_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aitestcaseinput_BulkDeleteFailures)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`bulkdeletefailure`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_BulkDeleteFailures`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiinsightcard_MailboxTrackingFolders"></a> aiinsightcard_MailboxTrackingFolders
+### <a name="BKMK_msdyn_aitestcaseinput_MailboxTrackingFolders"></a> msdyn_aitestcaseinput_MailboxTrackingFolders
 
-Many-To-One Relationship: [mailboxtrackingfolder aiinsightcard_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_aiinsightcard_MailboxTrackingFolders)
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_aitestcaseinput_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aitestcaseinput_MailboxTrackingFolders)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`mailboxtrackingfolder`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_MailboxTrackingFolders`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_MailboxTrackingFolders`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiinsightcard_PrincipalObjectAttributeAccesses"></a> aiinsightcard_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_aitestcaseinput_msdyn_aitestcasedocument"></a> msdyn_aitestcaseinput_msdyn_aitestcasedocument
 
-Many-To-One Relationship: [principalobjectattributeaccess aiinsightcard_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_aiinsightcard_PrincipalObjectAttributeAccesses)
+Many-To-One Relationship: [msdyn_aitestcasedocument msdyn_aitestcaseinput_msdyn_aitestcasedocument](msdyn_aitestcasedocument.md#BKMK_msdyn_aitestcaseinput_msdyn_aitestcasedocument)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aitestcasedocument`|
+|ReferencingAttribute|`msdyn_aitestcaseinputid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_msdyn_aitestcasedocument`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses"></a> msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`principalobjectattributeaccess`|
 |ReferencingAttribute|`objectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_PrincipalObjectAttributeAccesses`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_PrincipalObjectAttributeAccesses`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiinsightcard_ProcessSession"></a> aiinsightcard_ProcessSession
+### <a name="BKMK_msdyn_aitestcaseinput_ProcessSession"></a> msdyn_aitestcaseinput_ProcessSession
 
-Many-To-One Relationship: [processsession aiinsightcard_ProcessSession](processsession.md#BKMK_aiinsightcard_ProcessSession)
+Many-To-One Relationship: [processsession msdyn_aitestcaseinput_ProcessSession](processsession.md#BKMK_msdyn_aitestcaseinput_ProcessSession)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`processsession`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_ProcessSession`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_aiinsightcard_SyncErrors"></a> aiinsightcard_SyncErrors
+### <a name="BKMK_msdyn_aitestcaseinput_SyncErrors"></a> msdyn_aitestcaseinput_SyncErrors
 
-Many-To-One Relationship: [syncerror aiinsightcard_SyncErrors](syncerror.md#BKMK_aiinsightcard_SyncErrors)
+Many-To-One Relationship: [syncerror msdyn_aitestcaseinput_SyncErrors](syncerror.md#BKMK_msdyn_aitestcaseinput_SyncErrors)
 
 |Property|Value|
 |---|---|
 |ReferencingEntity|`syncerror`|
 |ReferencingAttribute|`regardingobjectid`|
-|ReferencedEntityNavigationPropertyName|`aiinsightcard_SyncErrors`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aitestcaseinput_SyncErrors`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
