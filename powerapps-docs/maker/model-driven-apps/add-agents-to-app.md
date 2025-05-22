@@ -43,7 +43,7 @@ To add an autonomous agent to a model-driven app:
 1. To view or edit the agent in Copilot Studio, select **View in Microsoft Copilot Stuio**.
 
 > [!NOTE]
-> To be eligible for addition to an app, an agent must be published, have generative AI enabled, and include at least one trigger.
+> To be eligible for addition to an app, an agent must be published, have [generative AI enabled](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions), and include at least one [trigger](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers-about).
 
 > [!KNOWN LIMITATION]
 > For now, only ten agents may be added to an app at once.
