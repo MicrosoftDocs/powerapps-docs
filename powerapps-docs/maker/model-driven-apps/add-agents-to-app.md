@@ -22,6 +22,9 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 
 - **Interactive agent**, which can be created to provide custom topics, knowledge sources, and more within the model-driven app.
 
+> [!div class="mx-imgBorder"] 
+> ![App Designer Agents pane](media/add-agents-to-app/app-designer-agent-tab.png "App Designer Agents pane")
+
 > [!IMPORTANT]
 >
 > - This is a preview feature.
@@ -31,8 +34,7 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by end users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows. 
 
 > [!IMPORTANT]
->
-> - Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent data with other users is a top priority and is actively being developed.
+> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent data with other users is a top priority and is actively being developed.
 
 ### Add autonomous agents to an app
 To add an autonomous agent to a model-driven app:
@@ -42,20 +44,29 @@ To add an autonomous agent to a model-driven app:
 1. Select the **...** (more options) menue next to the agent and choose **Add to app**.
 1. To view or edit the agent in Copilot Studio, select **View in Microsoft Copilot Stuio**.
 
-> [!NOTE]
-> To be eligible for addition to an app, an agent must be published, have [generative AI enabled](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions), and include at least one [trigger](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers-about).
+> [!div class="mx-imgBorder"] 
+> ![App Designer Add Agent to App](media/add-agents-to-app/app-designer-add-agent-to-app.png "App Designer Add Agent to App")
 
-> [!KNOWN LIMITATION]
-> For now, only ten agents may be added to an app at once.
+> [!NOTE]
+> To be eligible for addition to an app, an agent must be published, have [generative AI enabled](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions), and include at least one [trigger](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers-about).A maker can verify an agent's eligibility to be added to an app via the right-hand peroperties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button will be disabled for any agents that do not meet the requirements to be eligible for addition.
 
 > [!div class="mx-imgBorder"] 
-> ![]()
+> ![App Designer Properties pane](media/add-agents-to-app/app-designer-properties-pane.png "App Designer Properties pane")
+
+> [!IMPORTANT]
+> Use the **Create agent** button to navigate to Microsoft Copilot Studio for agent creation. Note that even if the agent is created through a link inside the App Designer, the maker must ensure it meets all requirements to be added to the app.
 
 ### Remove autonmous agents from an app
 To remove an autonomous agent from a model-driven app: 
 1. In the app designer, go to the **Agents** tab.
 1. In the **In your app** dropdown, select **For supervision**.
 1. Locate the agent you want to remove, select the **...** (more options) menu, and choose **Remove from app**.
+
+> [!div class="mx-imgBorder"] 
+> ![App Designer Remove Agent from App](media/add-agents-to-app/app-designer-remove-agent.png "App Designer Remove Agent from App")
+
+> [!NOTE]
+> Removing an agent from an app will not remove the agent from the environment.
 
 ## Working with an Interactive agent
 
