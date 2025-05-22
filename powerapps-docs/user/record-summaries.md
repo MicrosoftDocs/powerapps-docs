@@ -1,7 +1,7 @@
 ---
 title: Use row summaries in model-driven apps 
 description: Learn how to access and utilize AI-generated row summaries in main forms.
-ms.date: 01/16/2025
+ms.date: 05/22/2025
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -16,7 +16,13 @@ contributors:
 ---
 
 # Use row summaries in model-driven apps
-The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record (row). Displayed within the **AI assistance** area at the top of main forms, the summary helps users quickly understand essential information without manually scanning through fields, related records, or activity timelines. Summaries are presented in either a paragraph or bullet point format, ensuring clarity and ease of consumption.
+
+The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record. Summaries help users quickly understand essential information without manually scanning fields, related records, or activity timelines. You see summaries as a paragraph or bullet points, so they're easy to read.
+
+Summaries can be accessed in two ways:
+
+- From the **Insights** bar at the top of main forms. 
+- From view pages by selecting the inline **Summary** action in the grid, which opens the summary for a record in a modal popup.
 
 The feature enhances user efficiency by delivering context-rich insights directly within the form. Users can interact with summaries to copy content, regenerate updated information, and provide feedback on their relevance, improving both usability and accuracy.
 
@@ -26,35 +32,37 @@ The feature enhances user efficiency by delivering context-rich insights directl
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
+
 Copilot assistance is available for all model-driven apps where the [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on. 
 
 ## Limitations
+
 Summaries are only currently supported in the English language.
 
 ## Feature details
 
-### Viewing the record summary
-- When a [table has been configured to display summaries](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary), the record summary will appear in the **AI assistance** area at the top of the main form.
-- The summary content is dynamically generated and presented in a clear paragraph or bullet point format, emphasizing key details about the record.
+### Accessing record summaries
+
+View the record summary from a form or a view when a [table is configured to display summaries](../maker/data-platform/configure-form-row-summary.md#create-a-row-summary).
+
+- **Forms**: When viewing a record in a main form, the summary appears in the insights bar at the top of the main form.
+  :::image type="content" source="media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the insights bar on a form." lightbox="media/row_summary_expanded.png":::
 
 > [!NOTE]
-> Record summaries only appear after a new record has been successfully saved. For unsaved records, the summary area remains hidden.
+> You see the record summary after you save a new record. If you haven't saved the record, the summary area stays hidden.
 
-:::image type="content" source="media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the AI assistance area on a form.":::
+- **Views**: When browsing records in a view, select the inline Summary action next to a record to open the summary in a modal popup.
+  :::image type="content" source="media/row_summary_gridEntry.png" alt-text="Screenshot that shows a row summary card accessed from a grid row." lightbox="media/row_summary_gridEntry.png":::
 
-### Expanding and collapsing the summary
-- Users can **expand** or **collapse** the summary section as needed. The system remembers the expanded/collapsed state for each user across sessions per device, ensuring a consistent experience when revisiting records.
-- Summaries are currently expanded by default. 
+### Interacting with summaries 
 
-:::image type="content" source="media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary.":::
+Here are some actions you can take with summaries:
 
-### Acting on the summary
-- **Copy**: Users can select the **Copy** button to copy the summary content directly to their clipboard for easy sharing or documentation.
-- **Refresh**: Users can select the **Refresh** button to regenerate the summary content, ensuring the displayed information reflects the latest updates to the record.
-
-### Providing feedback
-- To improve the usefulness of summaries, users are encouraged to rate the feature using the **thumbs up** or **thumbs down** icons.
-- This feedback mechanism helps refine summary generation, ensuring future summaries better meet user expectations and needs.
+- **Copy**: Select to copy the summary content directly to your clipboard for easy sharing or documentation. 
+- **Feedback**: Use the thumbs up or thumbs down icons to rate the summary's usefulness. Your feedback helps improve future summaries so they better meet your expectations and needs.
+- **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
+- **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
+  :::image type="content" source="media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary." lightbox="media/row_summary_collapsed.png"::: 
 
 ### Related information
 
