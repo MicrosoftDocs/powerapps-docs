@@ -4,7 +4,7 @@ description: Learn how end users, app makers, admins, and developers can use Pow
 author: tapanm-msft
 ms.subservice: common
 ms.topic: overview
-ms.date: 08/07/2024
+ms.date: 05/21/2025
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -72,7 +72,7 @@ Dynamics 365 apps (such as Dynamics 365 Sales, Dynamics 365 Customer Service, an
 
 ## Try Power Apps for free
 
-You can build Power Apps for free. Simply sign in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](maker/canvas-apps/intro-maker-portal.md). Initially, you'll have access to the default environment. You can build in your own developer environment with Dataverse by signing up for the [Power Apps Developer Plan](maker/developer-plan.md).
+You can build Power Apps for free. Simply sign in to [Power Apps](https://make.powerapps.com). For more information, go to [Sign in to Power Apps for the first time](maker/canvas-apps/intro-maker-portal.md). Initially, you'll have access to the default environment. You can build in your own developer environment with Dataverse by signing up for the [Power Apps Developer Plan](https://www.microsoft.com/en-us/power-platform/products/power-apps/free). For more information, see [About the Power Apps Developer Plan](maker/developer-plan.md).
 
 A license is needed to play the apps made with Power Apps. You can play Power Apps for free by signing up for a [30-day trial](maker/signup-for-powerapps.md).
 
