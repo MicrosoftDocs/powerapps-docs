@@ -90,7 +90,7 @@ If the chart colors were customized, the new look overrides the custom colors. T
 <Chart CustomColorOverride="true">
 ```
 
-## Header and Navigation Refresh 
+## Header and navigation refresh 
 
 The refreshed header and navigation make apps easier to use with a modern app header, streamlined sitemap, and condensed page headers with compact commands. This experience enhances productivity by reducing time spent navigating pages, finding commands, and learning layouts.
 
