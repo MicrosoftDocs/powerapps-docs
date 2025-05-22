@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [unstructuredfilesearchentityId](#BKMK_unstructuredfilesearchentityId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_DVTableSearch"></a> DVTableSearch
@@ -271,6 +272,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_unstructuredfilesearchentityId"></a> unstructuredfilesearchentityId
+
+|Property|Value|
+|---|---|
+|Description|**Contains reference from DVTableSearch to UnstructuredFileSearchEntity**|
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`unstructuredfilesearchentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|unstructuredfilesearchentity|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -582,6 +596,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [business_unit_dvtablesearchentity](#BKMK_business_unit_dvtablesearchentity)
 - [DVTableSearch_DVTableSearch_DVTableSearch](#BKMK_DVTableSearch_DVTableSearch_DVTableSearch)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
+- [dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId](#BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId)
 - [lk_dvtablesearchentity_createdby](#BKMK_lk_dvtablesearchentity_createdby)
 - [lk_dvtablesearchentity_createdonbehalfby](#BKMK_lk_dvtablesearchentity_createdonbehalfby)
 - [lk_dvtablesearchentity_modifiedby](#BKMK_lk_dvtablesearchentity_modifiedby)
@@ -626,6 +641,19 @@ One-To-Many Relationship: [entity DVTableSearchEntity_Entity_Entity](entity.md#B
 |ReferencedAttribute|`entityid`|
 |ReferencingAttribute|`entity`|
 |ReferencingEntityNavigationPropertyName|`Entity`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId"></a> dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId
+
+One-To-Many Relationship: [unstructuredfilesearchentity dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId](unstructuredfilesearchentity.md#BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`unstructuredfilesearchentity`|
+|ReferencedAttribute|`unstructuredfilesearchentityid`|
+|ReferencingAttribute|`unstructuredfilesearchentityid`|
+|ReferencingEntityNavigationPropertyName|`unstructuredfilesearchentityId`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 

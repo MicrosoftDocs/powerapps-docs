@@ -122,7 +122,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Parent entity record ID**|
-|DisplayName|**msdyn_ParentEntityRecordID**|
+|DisplayName|**msdyn\_ParentEntityRecordID**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_parententityrecordid`|

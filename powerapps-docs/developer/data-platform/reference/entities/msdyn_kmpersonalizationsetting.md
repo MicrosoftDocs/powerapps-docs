@@ -102,7 +102,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Unique identifier for entity instances**|
-|DisplayName|**msdyn_kmpersonalizationsettingid**|
+|DisplayName|**msdyn\_kmpersonalizationsettingid**|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`msdyn_kmpersonalizationsettingid`|
@@ -131,7 +131,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**The name of the custom entity.**|
-|DisplayName|**msdyn_name**|
+|DisplayName|**msdyn\_name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_name`|

@@ -507,7 +507,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier of the Microsoft Office Outlook appointment owner that correlates to the PR_OWNER_APPT_ID MAPI property.**|
+|Description|**Unique identifier of the Microsoft Office Outlook appointment owner that correlates to the PR\_OWNER\_APPT\_ID MAPI property.**|
 |DisplayName|**Outlook Appointment Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|

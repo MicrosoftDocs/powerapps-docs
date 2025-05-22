@@ -61,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EncodingFormat](#BKMK_EncodingFormat)
 - [FileExtension](#BKMK_FileExtension)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InvokeSubstitutionForAttribute](#BKMK_InvokeSubstitutionForAttribute)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsEnabledForDependencyExtraction](#BKMK_IsEnabledForDependencyExtraction)
 - [IsExportDisabled](#BKMK_IsExportDisabled)
@@ -182,6 +183,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-2147483648|
+
+### <a name="BKMK_InvokeSubstitutionForAttribute"></a> InvokeSubstitutionForAttribute
+
+|Property|Value|
+|---|---|
+|Description|**Boolean that indicates if invoke substitution API will be used on attribute on template mode import**|
+|DisplayName|**Invoke substitution API on attribute**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`invokesubstitutionforattribute`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`_solutioncomponentattributeconfiguration_invokesubstitutionforattribute`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
