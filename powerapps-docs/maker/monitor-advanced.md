@@ -2,7 +2,6 @@
 title: Advanced Live monitor concepts
 description: Learn about advanced monitoring concepts related to Live monitor.
 author: mattgon
-
 ms.subservice: troubleshoot
 ms.topic: concept-article
 ms.custom: canvas

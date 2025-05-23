@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 9/11/2024
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -86,6 +86,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 - **Undo**: Undo the last action.
 - **Redo**: Repeat the last action.
+
+ > [!NOTE]
+ > You can't undo or redo data operations, such as insert or delete a datasource.
 
 #### Cut, copy, and paste
 
@@ -321,7 +324,7 @@ Select the tree view to show the screens available in the app.
 
 Switch to the **Components** tab of **Tree view** to work with component library features. You can add new components or reuse ones from the published component libraries. For more information, see [Component library](component-library.md).
 
-:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screeshot showing the Components tab of the Tree view pane.":::
+:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screenshot showing the Components tab of the Tree view pane.":::
 
 For more information on adding components by selecting **+ New component**, see the [Insert](#insert) section.
 

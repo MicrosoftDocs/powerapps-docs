@@ -226,4 +226,4 @@ Many-To-One Relationship: [syncerror attributepicklistvalue_SyncErrors](syncerro
 
 [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.attributepicklistvalue?displayProperty=fullName>

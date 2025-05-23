@@ -235,14 +235,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**CUD_IN**|
-|1|**RELATED_CUD_IN**|
-|2|**SHARED_IN**|
-|3|**RELATED_SHARED_IN**|
-|4|**CUD_OUT**|
-|5|**FULL_SYNC**|
-|6|**RELATED_ENTITIES**|
-|7|**RELATED_INTERSECT_ENTITIES**|
+|0|**CUD\_IN**|
+|1|**RELATED\_CUD\_IN**|
+|2|**SHARED\_IN**|
+|3|**RELATED\_SHARED\_IN**|
+|4|**CUD\_OUT**|
+|5|**FULL\_SYNC**|
+|6|**RELATED\_ENTITIES**|
+|7|**RELATED\_INTERSECT\_ENTITIES**|
 
 ### <a name="BKMK_type"></a> type
 
@@ -262,11 +262,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**DELTA_IN**|
-|1|**DELTA_OUT**|
-|2|**FULL_SYNC**|
-|3|**TOP_1**|
-|4|**RELATED_ENTITIES**|
+|0|**DELTA\_IN**|
+|1|**DELTA\_OUT**|
+|2|**FULL\_SYNC**|
+|3|**TOP\_1**|
+|4|**RELATED\_ENTITIES**|
 
 
 ## Read-only columns/attributes
