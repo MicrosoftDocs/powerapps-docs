@@ -39,6 +39,7 @@ Autonomous agents can be added to model-driven apps to assist users with task co
 
 > [!NOTE]
 > To be eligible for addition to an app, an agent must be published, have [generative AI enabled](/microsoft-copilot-studio/advanced-generative-actions), and include at least one [trigger](/microsoft-copilot-studio/authoring-triggers-about). A maker can verify an agent's eligibility to be added to an app via the right-hand properties pane where the requirements for an agent to be added to an app are displayed. The **Add to app** button is disabled for any agents that don't meet the requirements to be eligible for addition.
+:::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
@@ -47,7 +48,7 @@ Autonomous agents can be added to model-driven apps to assist users with task co
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
 1. To view or edit the agent in Copilot Studio, select **View in Microsoft Copilot Studio**.
 <!--The screenshot below seems out of place. You've called out the properties but the step mentions the "View in Microsoft Copilot Studio." The UI has "Edit in Microsoft Copilot Studio." If the "Edit" UI is what you want then that should be framed with the red box.-->
-:::image type="content" source="media/add-agents-to-app/app-designer-properties-pane.png" alt-text="App Designer Properties pane":::
+:::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App Designer add agent to app":::
 
 > [!IMPORTANT]
 > Use the **Create agent** button to open Copilot Studio for agent creation. Note that even if the agent is created through a link inside the app designer, the maker must ensure it meets all requirements to be added to the app.
