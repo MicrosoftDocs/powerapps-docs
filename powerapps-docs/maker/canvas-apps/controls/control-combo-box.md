@@ -5,7 +5,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 03/25/2024
+ms.date: 05/23/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 search.audienceType: 
@@ -25,7 +25,7 @@ Single or multi-select mode is configured via the SelectMultiple property.
 
 When searching for items to select, for each item you can choose to show a single data value, two values, or a picture and two values (Person) by modifying the Layout settings in the Data pane.
 
-When viewing on small screens, the items list flyout will become a full screen control for better usability.
+When you view the control on small screens, the items list flyout becomes a full screen control for better usability.
 
 > [!NOTE]
 > If you want to search for items with *numbers*, convert numbers to text with [Text()](../functions/function-text.md) function. For example, *Text(12345)*.
@@ -144,9 +144,9 @@ The steps in this example apply to any [data source that provides tables](../con
     > [!NOTE]
     > The If statement will check to see how may selected items exist and display them in a comma delimited label or a "NO SELECTED ITEM" message when empty.
 
-### Simulate simple drop down behavior
+### Simulate simple drop-down behavior
 
-By setting **IsSearchable** to false and **SelectMultiple** to false, you can achieve the same functionality of a drop down.
+By setting **IsSearchable** to false and **SelectMultiple** to false, you can achieve the same functionality of a drop-down.
 
 1. Select **Insert** > **Input**, and then select **Combo box**.  
 
@@ -189,7 +189,7 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
     > [!NOTE]
-  > The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop down when opened.
+  > The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop-down when opened.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
