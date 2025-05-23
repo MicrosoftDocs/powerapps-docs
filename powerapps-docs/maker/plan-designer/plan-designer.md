@@ -26,7 +26,9 @@ Plan designer is a copilot-first development tool that helps you create comprehe
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites, and you have access to developer environments, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+
+If your environment doesn't meet the prerequisites, and you do not have access to existing developer environments you own or the ability to create developer environments, you will not be able to create plans in your currently selected environment. If this is the case, you can still switch your current environment to one where you have access to create tables and can being building your plan there.
 
 ## Availability
 
