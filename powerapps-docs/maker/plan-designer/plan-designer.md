@@ -18,7 +18,7 @@ ms.custom:
 
 # Overview of Plan designer
 
-Plan designer is a copilot-first development tool that helps you create comprehensive business solutions quickly. Describe your business use case in natural language and add relevant images, such as business process flows or screenshots of legacy apps. Plan designer generates a complete Power Platform solution tailored to your needs. It includes Microsoft Dataverse tables, canvas apps, model-driven apps, Power Pages sites, Power Automate flows, and Copilot Studio agents.
+Plan designer is a copilot-first development tool that lets you quickly create comprehensive business solutions. Describe your business use case in natural language and add relevant images, like business process flows or screenshots of legacy apps. Plan designer generates a complete Power Platform solution tailored to your needs. It includes Microsoft Dataverse tables, canvas apps, model-driven apps, Power Pages sites, Power Automate flows, and Copilot Studio agents.
 
 :::image type="content" source="media/overview-plan-designer/pd-overview-landing-page.png" alt-text="Screenshot of Plan designer landing page in Power Apps.":::
 
@@ -26,31 +26,30 @@ Plan designer is a copilot-first development tool that helps you create comprehe
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, and you have access to developer environments, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites and you have access to developer environments, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
-
-If your environment doesn't meet the prerequisites, and you have access to developer environments, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
-
-If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you won't be able to create plans in your current environment. In this situation, you can switch to an environment where you have the necessary permissions to create tables and start building your plan there.
+If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have the necessary permissions to create tables and start building your plan there.
 
 ## Availability
 
-Plan designer is generally available. Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is generally available and is still rolling out, so it might not be available in your region yet. If you don't have access to the feature, you can use it in [preview](../powerapps-preview-program.md).
+
+Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 
-Some features within Plan designer are only available in preview. When you turn on the preview experience for a plan, the entire plan is generated using the preview experience, which includes multiple preview features at any time.
+Some features in Plan designer are only available in preview. When you turn on the preview experience for a plan, the entire plan is generated using the preview experience, which can include multiple preview features at any time.
 
-To turn on preview features, select the **Include preview features** option when entering your business problem.
+To turn on preview features, select the **Include preview features** option when you enter your business problem.
 
 :::image type="content" source="media/overview-plan-designer/preview-in-pd.png" alt-text="Screenshot of enabling preview feature for Plan designer.":::
 
-If you have a plan and want to switch between preview and generally available (GA) version, select the **Preview feature** icon to turn preview features on or off. You can only change a plan from preview to GA after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
+If you have a plan and want to switch between the preview and generally available (GA) version, select the **Preview feature** icon to turn preview features on or off. You can change a plan from preview to GA only after saving it. To restart an unsaved plan without preview features, go to the Power Apps homepage and create a new plan.
 
 :::image type="content" source="media/overview-plan-designer/turn-off-preview.png" alt-text="Screenshot of turning off preview feature for Plan designer.":::
 
 > [!NOTE]
-> When you switch the preview experience for Plan designer on or off, some content in the plan might be modified, regenerated, or deleted.
+> When you switch the preview experience for Plan designer on or off, some content in the plan can be modified, regenerated, or deleted.
 
 
 Preview Copilot features are available by default, but admins can turn them off for a specific environment or tenant. Learn more in [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md#disable-copilot-in-power-apps).
