@@ -1,1 +1,1 @@
-Azure Active Directory Access Control Service (ACS)
+Microsoft Entra Access Control Service (ACS)

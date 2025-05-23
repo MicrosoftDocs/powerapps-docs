@@ -2,21 +2,24 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 06/10/2022
+ms.reviewer: mkaur
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
   - alaug
   - amchern
+ms.contributors:
+- arijitba
+- norliu
+ms.collection: 
+    - bap-ai-copilot
 ---
 # System requirements, limits, and configuration values for Power Apps
 
@@ -28,7 +31,7 @@ This article contains information on supported device platforms, web browser req
 | --- | --- |
 | iOS |The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.|
 | Android |The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile. 
-| Windows | Windows 10 version 17763.0 or later to run [Power Apps for Windows (preview)](mobile/windows-app-install.md).
+| Windows | Windows 10 version 17763.0 or later to run [Power Apps for Windows](mobile/windows-app-install.md).
 
 > [!NOTE]
 > New major versions of iOS and Android are released each year. When a new version is released, if you're using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
@@ -37,23 +40,23 @@ This article contains information on supported device platforms, web browser req
 
 | **Browser** | **Supported versions** |  **App type** |
 | --- | --- | --- |
-| Google Chrome|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
-| Microsoft Edge|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
-| Mozilla Firefox |Latest three major releases| Model-driven apps, canvas apps, Power Apps portals.  |
-| Apple Safari|13 and later| Model-driven apps, canvas apps, Power Apps portals.  |
+| Google Chrome|Latest three major releases| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.  |
+| Microsoft Edge|Latest three major releases| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.  |
+| Mozilla Firefox |Latest three major releases| Model-driven apps and canvas apps. |
+| Apple Safari|13 and later| Model-driven apps and canvas apps.  |
 
-<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+<sup>1</sup>App and component designers include Power Apps studio, model-driven app designer, and model-driven custom page designer.
 
 ## Supported operating systems for browsers running Power Apps
 
 | **Operating system** | **Supported versions** |  **App type**  |
 | --- | --- | ---|
-| Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
-| macOS|10.13 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
-| iOS |iOS 13 or later| Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
-| Android |10 or later | Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
+| Windows |Windows 10 or later| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.   |
+| macOS|10.13 or later| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.   |
+| iOS |iOS 13 or later| Model-driven apps<sup>2</sup> and canvas apps. |
+| Android |10 or later | Model-driven apps<sup>2</sup> and canvas apps.  |
 
-<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+<sup>1</sup>App and component designers include Power Apps studio, model-driven app designer, and model-driven custom page designer.
 
 <sup>2</sup>Using the web browser on a phone to run a model-driven app isn't supported; use the [Power Apps mobile app](mobile/run-powerapps-on-mobile.md).
 
@@ -86,53 +89,95 @@ This list identifies all services to which Power Apps communicates and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
-| api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com<br>\*.api.bap.microsoft.com | https | Environment permissions management |
 | management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
-| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |Microsoft Authentication Library |
+| login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
-| gallery.azure.com |https |Sample and Template apps |
-| \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
+| \*.azure-apim.net |https |API Hubs - Different subdomains for each locale |
+| \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| \*.dynamics.com | https | Microsoft Dataverse |
-| vortex.data.microsoft.com |https |Telemetry |
-| localhost | https | Power Apps Mobile|
-| 127.0.0.1 | http | Power Apps Mobile|
+| \*.gateway.prod.island.powerapps.com | WSS | Required for communication with and startup of canvas apps. |
+| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
+| \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.ces.microsoftcloud.com<br/>config.centro.core.microsoft<br/>admin.microsoft.com<br/>petrol.office.microsoft.com  | https  | Access to net promoter score (NPS) and surveys. |
+| \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
+| \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>Singapore: 20</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
+| browser.pipe.aria.microsoft.com | https | Rest of the World telemetry endpoint for model-driven apps |
+| *.events.data.microsoft.com | https | Telemetry endpoint for Power Apps|
+| localhost | http | Power Apps Mobile|
+| 127.0.0.1 | http <br><br>You might need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
+| augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
-| gov.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC). |
-| high.content.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High). |
-| content.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD). |
+| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com <br> *.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
+| ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
+| arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
+| *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
+| dc.services.visualstudio.com | https | [Application Insights](/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in canvas app](maker/canvas-apps/application-insights.md) |
+| *.ocv.microsoft.com | https | Allows users to provide Copilot feedback data in Power Apps |
+| js.monitor.azure.com | https | This is used by the office header for reporting telemetry |
 
-> [!NOTE]
-> If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+<sup>1</sup> Replaces domain name `gov.content.powerapps.us` used before July 2022. <br>
+<sup>2</sup> Replaces domain name `high.content.powerapps.us` used before July 2022. <br>
+<sup>3</sup> Replaces domain name `content.appsplatform.us` used before July 2022.
 
-## Embedding limits for canvas apps
+> [!IMPORTANT]
+> - If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+> - If you are a US Government customer or a customer in China, there are additional service URLs that must be unblocked. More information:<br/>**US Government**: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls), [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)<br/>**China**: [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china).
+
+## Deprecated endpoints
+
+This section lists endpoints that we no longer support. Instead, use the new endpoints listed below. We recommend updating any bookmarks you might have that use the deprecated endpoint to the new endpoint.
+
+| Deprecated endpoint | New endpoint |
+| --- | --- |
+| web.powerapps.com/apps/{yourAppGuid} | apps.powerapps.com/play/{yourAppGuid}
+| web.powerapps.com/apps/{yourAppGuid}/open | apps.powerapps.com/play/{yourAppGuid}
+
+## Embedding limits for Power Apps
+
+### Canvas app embedding
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
 
-The following table shows some of the examples where embedding a canvas app isn't supported:
+The following table shows some of the examples where embedding a canvas app is and isn't supported:
+  
+| Power Apps embedding scenario                                                                   | Supported clients                                 | Unsupported clients                            |
+|-------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------------------------------|
+| A canvas app embedded in a SharePoint page.                                                     | Web, for example,   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app embedded in a SharePoint page that is added as a tab in a Microsoft Teams channel. | Web, for example.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app used as a custom form in the SharePoint page.                                      | Web, for example,   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, for example.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
+| A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, for example, Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
+| A canvas app is embedded in a third party client.                                                 | Third party websites in a browser         | Third party native applications            |
+|A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
+| A canvas app embedded in Power BI | Web, for example, app.powerbi.com | Power BI Desktop Client |
 
-| Canvas apps embedded to | Unsupported client |
-| - | - |
-| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
-| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+### Model-driven app embedding
+
+Power Apps doesn't support embedding a model-driven app or page within an IFrame in another application.
 
 ## Proxies
 
-Power Apps does not support running with a proxy enabled. Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app. Hence, if your app has any problems while loading when proxy is enabled, disable the proxy and then try again.
+Power Apps doesn't support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
+
+- Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app.
+- Some proxies (such as Microsoft Defender for Cloud Apps, McAfee) might intercept and change the URL of an app or embedded app. For example, if there's a Dynamics 365 app that is running under domain **org.crm.dynamics.com** or a canvas app that is running under domain **apps.powerapps.com**, the platform doesn't support a proxy that changes these domains to a custom domain such as **mycustomdomain.com**. This can cause unpredictable behavior when the platform tries to retrieve tokens that are necessary to run the app.
 
 ## Data types size limits
 
-For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](maker/canvas-apps/functions/data-types.md#text-hyperlink-image-and-media).
+For canvas app data type limits, you can find information about size limits on text, hyperlinks, images, and media in [Data types in Power Apps](/power-platform/power-fx/data-types#text-hyperlink-image-and-media).
 
 For Microsoft Dataverse data type size limits, you can find information on column types, such as text and image columns, in [Types of columns](maker/data-platform/types-of-fields.md).
 
 ## Power Apps per app plan
 
 Information is now available in the [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+
+  
+## See also
+
+[System requirements, limits, and configuration values for Power Pages](/power-pages/system-requirements)

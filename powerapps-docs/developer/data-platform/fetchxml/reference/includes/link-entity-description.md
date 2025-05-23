@@ -1,0 +1,1 @@
+Joins a table related to the [entity](../entity.md) or [link-entity](../link-entity.md) to return additional columns with the result. Also used with [filter](../filter.md) elements to [apply conditions on column values in related tables](../../filter-rows.md#filter-on-values-in-related-records).

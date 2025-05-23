@@ -1,56 +1,51 @@
 ---
-title: "ExpiredProcess table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the ExpiredProcess table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Expired Process (ExpiredProcess) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Expired Process (ExpiredProcess) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# ExpiredProcess table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Expired Process (ExpiredProcess) table/entity reference (Microsoft Dataverse)
 
 Expired Process Business Process Flow
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/expiredprocesses<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/expiredprocesses(*businessprocessflowinstanceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/expiredprocesses(*businessprocessflowinstanceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/expiredprocesses<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/expiredprocesses(*businessprocessflowinstanceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/expiredprocesses(*businessprocessflowinstanceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Expired Process (ExpiredProcess) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /expiredprocesses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /expiredprocesses(*businessprocessflowinstanceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /expiredprocesses(*businessprocessflowinstanceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /expiredprocesses<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /expiredprocesses(*businessprocessflowinstanceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /expiredprocesses(*businessprocessflowinstanceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /expiredprocesses(*businessprocessflowinstanceid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ExpiredProcesses|
-|DisplayCollectionName|Expired Process|
-|DisplayName|Expired Process|
-|EntitySetName|expiredprocesses|
-|IsBPFEntity|True|
-|LogicalCollectionName|expiredprocesses|
-|LogicalName|expiredprocess|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|businessprocessflowinstanceid|
-|PrimaryNameAttribute|name|
-|SchemaName|ExpiredProcess|
+The following table lists selected properties for the Expired Process (ExpiredProcess) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Expired Process** |
+| **DisplayCollectionName** | **Expired Process** |
+| **SchemaName** | `ExpiredProcess` |
+| **CollectionSchemaName** | `ExpiredProcesses` |
+| **EntitySetName** | `expiredprocesses`|
+| **LogicalName** | `expiredprocess` |
+| **LogicalCollectionName** | `expiredprocesses` |
+| **PrimaryIdAttribute** | `businessprocessflowinstanceid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -70,710 +65,552 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [TraversedPath](#BKMK_TraversedPath)
 
-
 ### <a name="BKMK_ActiveStageId"></a> ActiveStageId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the active stage for the Business Process Flow instance.|
-|DisplayName|Active Stage|
+|---|---|
+|Description|**Unique identifier of the active stage for the Business Process Flow instance.**|
+|DisplayName|**Active Stage**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|activestageid|
+|LogicalName|`activestageid`|
 |RequiredLevel|None|
-|Targets|processstage|
 |Type|Lookup|
-
+|Targets|processstage|
 
 ### <a name="BKMK_ActiveStageStartedOn"></a> ActiveStageStartedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when current active stage is started.|
-|DisplayName|Active Stage Started On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time when current active stage is started.**|
+|DisplayName|**Active Stage Started On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|activestagestartedon|
+|LogicalName|`activestagestartedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_BusinessProcessFlowInstanceId"></a> BusinessProcessFlowInstanceId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Expired Process bpf entity instances|
-|DisplayName|Expired Process Instance Id|
+|---|---|
+|Description|**Unique identifier for Expired Process bpf entity instances**|
+|DisplayName|**Expired Process Instance Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|businessprocessflowinstanceid|
+|LogicalName|`businessprocessflowinstanceid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_CompletedOn"></a> CompletedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when Business Process Flow instance is completed.|
-|DisplayName|Completed On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time when Business Process Flow instance is completed.**|
+|DisplayName|**Completed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|completedon|
+|LogicalName|`completedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_KnowledgeArticleId"></a> KnowledgeArticleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the workflow associated to the Business Process Flow instance.|
-|DisplayName|Knowledge Article|
+|---|---|
+|Description|**Unique identifier of the workflow associated to the Business Process Flow instance.**|
+|DisplayName|**Knowledge Article**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|knowledgearticleid|
+|LogicalName|`knowledgearticleid`|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
 |Type|Lookup|
-
+|Targets|knowledgearticle|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Process Name.|
-|DisplayName|Process Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Process Name.**|
+|DisplayName|**Process Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|200|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ProcessId"></a> ProcessId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the workflow associated to the Business Process Flow instance.|
-|DisplayName|Process|
+|---|---|
+|Description|**Unique identifier of the workflow associated to the Business Process Flow instance.**|
+|DisplayName|**Process**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|processid|
+|LogicalName|`processid`|
 |RequiredLevel|None|
-|Targets|workflow|
 |Type|Lookup|
-
+|Targets|workflow|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the Delve action record is pending, completed, or tracking.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the Delve action record is pending, completed, or tracking.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`expiredprocess_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the delve action record status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the delve action record status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`expiredprocess_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Finished|1|
-|3|Aborted|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Finished**<br />State:1<br />TransitionData: None|
+|3|Label: **Aborted**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the local currency for the record to make sure budgets are reported in the correct currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Choose the local currency for the record to make sure budgets are reported in the correct currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_TraversedPath"></a> TraversedPath
 
 |Property|Value|
-|--------|-----|
-|Description|Traversed Path|
-|DisplayName|Comma delimited string of process stage ids that represent visited stages of the Business Process Flow instance.|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Traversed Path**|
+|DisplayName|**Comma delimited string of process stage ids that represent visited stages of the Business Process Flow instance.**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|traversedpath|
-|MaxLength|1250|
+|LogicalName|`traversedpath`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Active|
+|IsLocalizable|False|
+|MaxLength|1250|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [ActiveStageIdName](#BKMK_ActiveStageIdName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [Duration](#BKMK_Duration)
 - [ExchangeRate](#BKMK_ExchangeRate)
-- [KnowledgeArticleIdName](#BKMK_KnowledgeArticleIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
-- [ProcessIdName](#BKMK_ProcessIdName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
-
-### <a name="BKMK_ActiveStageIdName"></a> ActiveStageIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|activestageidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_Duration"></a> Duration
 
 |Property|Value|
-|--------|-----|
-|Description|Duration the business process flow was active.|
-|DisplayName|Duration|
-|Format|Duration|
+|---|---|
+|Description|**Duration the business process flow was active.**|
+|DisplayName|**Duration**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|duration|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`duration`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
-
-### <a name="BKMK_KnowledgeArticleIdName"></a> KnowledgeArticleIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|knowledgearticleidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization with which the SDK message request is associated.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization with which the SDK message request is associated.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_ProcessIdName"></a> ProcessIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|processidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the business process instance.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the business process instance.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
-- [ExpiredProcess_SyncErrors](#BKMK_ExpiredProcess_SyncErrors)
-- [ExpiredProcess_ProcessSessions](#BKMK_ExpiredProcess_ProcessSessions)
-
-
-### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
-
-Same as the [lk_expiredprocess_workflowlogs](workflowlog.md#BKMK_lk_expiredprocess_workflowlogs) many-to-one relationship for the [workflowlog](workflowlog.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|workflowlog|
-|ReferencingAttribute|asyncoperationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|workflowlogs_expiredprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_ExpiredProcess_SyncErrors"></a> ExpiredProcess_SyncErrors
-
-Same as the [ExpiredProcess_SyncErrors](syncerror.md#BKMK_ExpiredProcess_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|ExpiredProcess_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_ExpiredProcess_ProcessSessions"></a> ExpiredProcess_ProcessSessions
-
-Same as the [ExpiredProcess_ProcessSessions](processsession.md#BKMK_ExpiredProcess_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ExpiredProcess_ProcessSessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_expiredprocess_createdonbehalfby](#BKMK_lk_expiredprocess_createdonbehalfby)
-- [transactioncurrency_expiredprocess](#BKMK_transactioncurrency_expiredprocess)
-- [lk_expiredprocess_modifiedonbehalfby](#BKMK_lk_expiredprocess_modifiedonbehalfby)
-- [organization_expiredprocess](#BKMK_organization_expiredprocess)
-- [lk_expiredprocess_knowledgearticleid](#BKMK_lk_expiredprocess_knowledgearticleid)
-- [lk_expiredprocess_createdby](#BKMK_lk_expiredprocess_createdby)
 - [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
-- [lk_expiredprocess_processid](#BKMK_lk_expiredprocess_processid)
+- [lk_expiredprocess_createdby](#BKMK_lk_expiredprocess_createdby)
+- [lk_expiredprocess_createdonbehalfby](#BKMK_lk_expiredprocess_createdonbehalfby)
+- [lk_expiredprocess_knowledgearticleid](#BKMK_lk_expiredprocess_knowledgearticleid)
 - [lk_expiredprocess_modifiedby](#BKMK_lk_expiredprocess_modifiedby)
-
-
-### <a name="BKMK_lk_expiredprocess_createdonbehalfby"></a> lk_expiredprocess_createdonbehalfby
-
-See the [lk_expiredprocess_createdonbehalfby](systemuser.md#BKMK_lk_expiredprocess_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_transactioncurrency_expiredprocess"></a> transactioncurrency_expiredprocess
-
-See the [transactioncurrency_expiredprocess](transactioncurrency.md#BKMK_transactioncurrency_expiredprocess) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_lk_expiredprocess_modifiedonbehalfby"></a> lk_expiredprocess_modifiedonbehalfby
-
-See the [lk_expiredprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_expiredprocess_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_expiredprocess"></a> organization_expiredprocess
-
-See the [organization_expiredprocess](organization.md#BKMK_organization_expiredprocess) one-to-many relationship for the [organization](organization.md) table/entity.
-
-### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
-
-See the [lk_expiredprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_expiredprocess_knowledgearticleid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-### <a name="BKMK_lk_expiredprocess_createdby"></a> lk_expiredprocess_createdby
-
-See the [lk_expiredprocess_createdby](systemuser.md#BKMK_lk_expiredprocess_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [lk_expiredprocess_modifiedonbehalfby](#BKMK_lk_expiredprocess_modifiedonbehalfby)
+- [lk_expiredprocess_processid](#BKMK_lk_expiredprocess_processid)
+- [organization_expiredprocess](#BKMK_organization_expiredprocess)
+- [transactioncurrency_expiredprocess](#BKMK_transactioncurrency_expiredprocess)
 
 ### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
 
-See the [lk_expiredprocess_activestageid](processstage.md#BKMK_lk_expiredprocess_activestageid) one-to-many relationship for the [processstage](processstage.md) table/entity.
+One-To-Many Relationship: [processstage lk_expiredprocess_activestageid](processstage.md#BKMK_lk_expiredprocess_activestageid)
 
-### <a name="BKMK_lk_expiredprocess_processid"></a> lk_expiredprocess_processid
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processstage`|
+|ReferencedAttribute|`processstageid`|
+|ReferencingAttribute|`activestageid`|
+|ReferencingEntityNavigationPropertyName|`activestageid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [lk_expiredprocess_processid](workflow.md#BKMK_lk_expiredprocess_processid) one-to-many relationship for the [workflow](workflow.md) table/entity.
+### <a name="BKMK_lk_expiredprocess_createdby"></a> lk_expiredprocess_createdby
+
+One-To-Many Relationship: [systemuser lk_expiredprocess_createdby](systemuser.md#BKMK_lk_expiredprocess_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdbyname`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_expiredprocess_createdonbehalfby"></a> lk_expiredprocess_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_expiredprocess_createdonbehalfby](systemuser.md#BKMK_lk_expiredprocess_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfbyname`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
+
+One-To-Many Relationship: [knowledgearticle lk_expiredprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_expiredprocess_knowledgearticleid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`knowledgearticleid`|
+|ReferencingEntityNavigationPropertyName|`knowledgearticleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_expiredprocess_modifiedby"></a> lk_expiredprocess_modifiedby
 
-See the [lk_expiredprocess_modifiedby](systemuser.md#BKMK_lk_expiredprocess_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_expiredprocess_modifiedby](systemuser.md#BKMK_lk_expiredprocess_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedbyname`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_expiredprocess_modifiedonbehalfby"></a> lk_expiredprocess_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_expiredprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_expiredprocess_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfbyname`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_expiredprocess_processid"></a> lk_expiredprocess_processid
+
+One-To-Many Relationship: [workflow lk_expiredprocess_processid](workflow.md#BKMK_lk_expiredprocess_processid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workflow`|
+|ReferencedAttribute|`workflowid`|
+|ReferencingAttribute|`processid`|
+|ReferencingEntityNavigationPropertyName|`processid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_expiredprocess"></a> organization_expiredprocess
+
+One-To-Many Relationship: [organization organization_expiredprocess](organization.md#BKMK_organization_expiredprocess)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_transactioncurrency_expiredprocess"></a> transactioncurrency_expiredprocess
+
+One-To-Many Relationship: [transactioncurrency transactioncurrency_expiredprocess](transactioncurrency.md#BKMK_transactioncurrency_expiredprocess)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [ExpiredProcess_ProcessSessions](#BKMK_ExpiredProcess_ProcessSessions)
+- [ExpiredProcess_SyncErrors](#BKMK_ExpiredProcess_SyncErrors)
+- [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
+
+### <a name="BKMK_ExpiredProcess_ProcessSessions"></a> ExpiredProcess_ProcessSessions
+
+Many-To-One Relationship: [processsession ExpiredProcess_ProcessSessions](processsession.md#BKMK_ExpiredProcess_ProcessSessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ExpiredProcess_ProcessSessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ExpiredProcess_SyncErrors"></a> ExpiredProcess_SyncErrors
+
+Many-To-One Relationship: [syncerror ExpiredProcess_SyncErrors](syncerror.md#BKMK_ExpiredProcess_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ExpiredProcess_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
+
+Many-To-One Relationship: [workflowlog lk_expiredprocess_workflowlogs](workflowlog.md#BKMK_lk_expiredprocess_workflowlogs)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`workflowlog`|
+|ReferencingAttribute|`asyncoperationid`|
+|ReferencedEntityNavigationPropertyName|`workflowlogs_expiredprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.expiredprocess?text=expiredprocess EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.expiredprocess?displayProperty=fullName>

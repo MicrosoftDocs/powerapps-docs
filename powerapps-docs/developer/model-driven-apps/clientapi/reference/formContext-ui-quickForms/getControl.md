@@ -1,24 +1,18 @@
 ---
-title: "quickViewControl.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "quickViewControl.getControl (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the quickViewControl.getControl method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # quickViewControl.getControl (Client API reference)
-
-
 
 [!INCLUDE[./includes/getControl-description.md](./includes/getControl-description.md)]
 
@@ -28,7 +22,7 @@ contributors:
 
 ## Parameter
 
-**arg**: Optional. You can access a single control in the constituent controls collection by passing an argument as either the name or the index value of the constituent control in a quick view control. For example: `quickViewControl.getControl("firstname")` or `quickViewControl.getControl(0)`
+**`arg`**: Optional. You can access a single control in the constituent controls collection by passing an argument as either the name or the index value of the constituent control in a quick view control. For example: `quickViewControl.getControl("firstname")` or `quickViewControl.getControl(0)`
 
 
 ## Return Value
@@ -50,12 +44,8 @@ For more information about methods supported for a control, see [Controls](../co
 
 >Also, the way you retrieve constituent controls in a quick view control on forms using the new form rendering engine is different from the legacy forms. So, if you are using legacy forms and have code targeting constituent controls in a quick view control, you must update your code when you decide to use the new form rendering engine.
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

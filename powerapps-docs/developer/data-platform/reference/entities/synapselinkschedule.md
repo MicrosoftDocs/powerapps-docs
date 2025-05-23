@@ -1,59 +1,55 @@
 ---
-title: "synapselinkschedule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the synapselinkschedule table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Synapse Link Schedule (synapselinkschedule) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Synapse Link Schedule (synapselinkschedule) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# synapselinkschedule table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Synapse Link Schedule (synapselinkschedule) table/entity reference (Microsoft Dataverse)
 
 Synapse link schedules
 
-**Added by**: Synapse Link Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/synapselinkschedules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/synapselinkschedules(*synapselinkscheduleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/synapselinkschedules(*synapselinkscheduleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/synapselinkschedules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/synapselinkschedules(*synapselinkscheduleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/synapselinkschedules(*synapselinkscheduleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Synapse Link Schedule (synapselinkschedule) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /synapselinkschedules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /synapselinkschedules(*synapselinkscheduleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Retrieve`<br />Event: True |`GET` /synapselinkschedules(*synapselinkscheduleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /synapselinkschedules<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /synapselinkschedules(*synapselinkscheduleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /synapselinkschedules(*synapselinkscheduleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /synapselinkschedules(*synapselinkscheduleid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|synapselinkschedules|
-|DisplayCollectionName|Synapse Link Schedules|
-|DisplayName|Synapse Link Schedule|
-|EntitySetName|synapselinkschedules|
-|IsBPFEntity|False|
-|LogicalCollectionName|synapselinkschedules|
-|LogicalName|synapselinkschedule|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|synapselinkscheduleid|
-|PrimaryNameAttribute|name|
-|SchemaName|synapselinkschedule|
+The following table lists selected properties for the Synapse Link Schedule (synapselinkschedule) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Synapse Link Schedule** |
+| **DisplayCollectionName** | **Synapse Link Schedules** |
+| **SchemaName** | `synapselinkschedule` |
+| **CollectionSchemaName** | `synapselinkschedules` |
+| **EntitySetName** | `synapselinkschedules`|
+| **LogicalName** | `synapselinkschedule` |
+| **LogicalCollectionName** | `synapselinkschedules` |
+| **PrimaryIdAttribute** | `synapselinkscheduleid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -76,892 +72,501 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_EntityName"></a> EntityName
 
 |Property|Value|
-|--------|-----|
-|Description|Entity name, if schedule is entity specific|
-|DisplayName|Entity Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Entity name, if schedule is entity specific**|
+|DisplayName|**Entity Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|entityname|
-|MaxLength|100|
+|LogicalName|`entityname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_profile"></a> profile
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Synapse Link Profile associated with Synapse Link Schedule.|
-|DisplayName|Profile|
+|---|---|
+|Description|**Unique identifier for Synapse Link Profile associated with Synapse Link Schedule.**|
+|DisplayName|**Profile**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|profile|
+|LogicalName|`profile`|
 |RequiredLevel|SystemRequired|
-|Targets|synapselinkprofile|
 |Type|Lookup|
-
+|Targets|synapselinkprofile|
 
 ### <a name="BKMK_RecurrenceInterval"></a> RecurrenceInterval
 
 |Property|Value|
-|--------|-----|
-|Description|Recurrence interval|
-|DisplayName|Recurrence Interval|
-|Format|None|
+|---|---|
+|Description|**Recurrence interval**|
+|DisplayName|**Recurrence Interval**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|recurrenceinterval|
-|MaxValue|1000|
-|MinValue|0|
+|LogicalName|`recurrenceinterval`|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
-
+|MaxValue|999999|
+|MinValue|0|
 
 ### <a name="BKMK_RecurrenceUnit"></a> RecurrenceUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Recurrence unit|
-|DisplayName|Recurrence Unit|
+|---|---|
+|Description|**Recurrence unit**|
+|DisplayName|**Recurrence Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|recurrenceunit|
+|LogicalName|`recurrenceunit`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`synapselinkschedulerecurrenceunit`|
 
 #### RecurrenceUnit Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|None|None|
-|1|Minute|Minute|
-|2|Hour|Hour|
-|3|Day|Day|
-|4|Week|Week|
-|5|Month|Month|
-|6|Year|Year|
-
-
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Minute**|
+|2|**Hour**|
+|3|**Day**|
+|4|**Week**|
+|5|**Month**|
+|6|**Year**|
 
 ### <a name="BKMK_StartTime"></a> StartTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Start time|
-|DisplayName|Start Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Start time**|
+|DisplayName|**Start Time**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|starttime|
+|LogicalName|`starttime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Synapse Link Schedule|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Synapse Link Schedule**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`synapselinkschedule_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Synapse Link Schedule|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Synapse Link Schedule**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`synapselinkschedule_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_synapselinkscheduleId"></a> synapselinkscheduleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Synapse Link Schedule|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Synapse Link Schedule**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|synapselinkscheduleid|
+|LogicalName|`synapselinkscheduleid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Type"></a> Type
 
 |Property|Value|
-|--------|-----|
-|Description|Schedule type|
-|DisplayName|Type|
+|---|---|
+|Description|**Schedule type**|
+|DisplayName|**Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|type|
+|LogicalName|`type`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`synapselinkscheduletype`|
 
 #### Type Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Snapshot|Snapshot|
-|1|IncrementalUpdate|Incremental update|
-
-
+|Value|Label|
+|---|---|
+|0|**Snapshot**|
+|1|**IncrementalUpdate**|
 
 ### <a name="BKMK_UniqueName"></a> UniqueName
 
 |Property|Value|
-|--------|-----|
-|Description|Unique name|
-|DisplayName|Unique Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Unique name**|
+|DisplayName|**Unique Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|uniquename|
-|MaxLength|100|
+|LogicalName|`uniquename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [profileName](#BKMK_profileName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|None|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
-
-### <a name="BKMK_profileName"></a> profileName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|profilename|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [synapselinkschedule_SyncErrors](#BKMK_synapselinkschedule_SyncErrors)
-- [synapselinkschedule_DuplicateMatchingRecord](#BKMK_synapselinkschedule_DuplicateMatchingRecord)
-- [synapselinkschedule_DuplicateBaseRecord](#BKMK_synapselinkschedule_DuplicateBaseRecord)
-- [synapselinkschedule_AsyncOperations](#BKMK_synapselinkschedule_AsyncOperations)
-- [synapselinkschedule_MailboxTrackingFolders](#BKMK_synapselinkschedule_MailboxTrackingFolders)
-- [synapselinkschedule_ProcessSession](#BKMK_synapselinkschedule_ProcessSession)
-- [synapselinkschedule_BulkDeleteFailures](#BKMK_synapselinkschedule_BulkDeleteFailures)
-- [synapselinkschedule_PrincipalObjectAttributeAccesses](#BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_synapselinkschedule_SyncErrors"></a> synapselinkschedule_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_SyncErrors](syncerror.md#BKMK_synapselinkschedule_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_DuplicateMatchingRecord"></a> synapselinkschedule_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_DuplicateMatchingRecord](duplicaterecord.md#BKMK_synapselinkschedule_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_DuplicateBaseRecord"></a> synapselinkschedule_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_DuplicateBaseRecord](duplicaterecord.md#BKMK_synapselinkschedule_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_AsyncOperations"></a> synapselinkschedule_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_AsyncOperations](asyncoperation.md#BKMK_synapselinkschedule_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_MailboxTrackingFolders"></a> synapselinkschedule_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_synapselinkschedule_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_ProcessSession"></a> synapselinkschedule_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_ProcessSession](processsession.md#BKMK_synapselinkschedule_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_BulkDeleteFailures"></a> synapselinkschedule_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_BulkDeleteFailures](bulkdeletefailure.md#BKMK_synapselinkschedule_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses"></a> synapselinkschedule_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [synapselinkschedule_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|synapselinkschedule_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_synapselinkschedule_createdby](#BKMK_lk_synapselinkschedule_createdby)
 - [lk_synapselinkschedule_createdonbehalfby](#BKMK_lk_synapselinkschedule_createdonbehalfby)
@@ -970,43 +575,198 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_synapselinkschedule](#BKMK_organization_synapselinkschedule)
 - [profileschedules](#BKMK_profileschedules)
 
-
 ### <a name="BKMK_lk_synapselinkschedule_createdby"></a> lk_synapselinkschedule_createdby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkschedule_createdby](systemuser.md#BKMK_lk_synapselinkschedule_createdby)
 
-See the [lk_synapselinkschedule_createdby](systemuser.md#BKMK_lk_synapselinkschedule_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkschedule_createdonbehalfby"></a> lk_synapselinkschedule_createdonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkschedule_createdonbehalfby](systemuser.md#BKMK_lk_synapselinkschedule_createdonbehalfby)
 
-See the [lk_synapselinkschedule_createdonbehalfby](systemuser.md#BKMK_lk_synapselinkschedule_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkschedule_modifiedby"></a> lk_synapselinkschedule_modifiedby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkschedule_modifiedby](systemuser.md#BKMK_lk_synapselinkschedule_modifiedby)
 
-See the [lk_synapselinkschedule_modifiedby](systemuser.md#BKMK_lk_synapselinkschedule_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_synapselinkschedule_modifiedonbehalfby"></a> lk_synapselinkschedule_modifiedonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_synapselinkschedule_modifiedonbehalfby](systemuser.md#BKMK_lk_synapselinkschedule_modifiedonbehalfby)
 
-See the [lk_synapselinkschedule_modifiedonbehalfby](systemuser.md#BKMK_lk_synapselinkschedule_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_synapselinkschedule"></a> organization_synapselinkschedule
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [organization organization_synapselinkschedule](organization.md#BKMK_organization_synapselinkschedule)
 
-See the [organization_synapselinkschedule](organization.md#BKMK_organization_synapselinkschedule) one-to-many relationship for the [organization](organization.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_profileschedules"></a> profileschedules
 
-See the [profileschedules](synapselinkprofile.md#BKMK_profileschedules) one-to-many relationship for the [synapselinkprofile](synapselinkprofile.md) table/entity.
+One-To-Many Relationship: [synapselinkprofile profileschedules](synapselinkprofile.md#BKMK_profileschedules)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`synapselinkprofile`|
+|ReferencedAttribute|`synapselinkprofileid`|
+|ReferencingAttribute|`profile`|
+|ReferencingEntityNavigationPropertyName|`profile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [synapselinkschedule_AsyncOperations](#BKMK_synapselinkschedule_AsyncOperations)
+- [synapselinkschedule_BulkDeleteFailures](#BKMK_synapselinkschedule_BulkDeleteFailures)
+- [synapselinkschedule_DuplicateBaseRecord](#BKMK_synapselinkschedule_DuplicateBaseRecord)
+- [synapselinkschedule_DuplicateMatchingRecord](#BKMK_synapselinkschedule_DuplicateMatchingRecord)
+- [synapselinkschedule_MailboxTrackingFolders](#BKMK_synapselinkschedule_MailboxTrackingFolders)
+- [synapselinkschedule_PrincipalObjectAttributeAccesses](#BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses)
+- [synapselinkschedule_ProcessSession](#BKMK_synapselinkschedule_ProcessSession)
+- [synapselinkschedule_SyncErrors](#BKMK_synapselinkschedule_SyncErrors)
+
+### <a name="BKMK_synapselinkschedule_AsyncOperations"></a> synapselinkschedule_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation synapselinkschedule_AsyncOperations](asyncoperation.md#BKMK_synapselinkschedule_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_BulkDeleteFailures"></a> synapselinkschedule_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure synapselinkschedule_BulkDeleteFailures](bulkdeletefailure.md#BKMK_synapselinkschedule_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_DuplicateBaseRecord"></a> synapselinkschedule_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord synapselinkschedule_DuplicateBaseRecord](duplicaterecord.md#BKMK_synapselinkschedule_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_DuplicateMatchingRecord"></a> synapselinkschedule_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord synapselinkschedule_DuplicateMatchingRecord](duplicaterecord.md#BKMK_synapselinkschedule_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_MailboxTrackingFolders"></a> synapselinkschedule_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder synapselinkschedule_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_synapselinkschedule_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses"></a> synapselinkschedule_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess synapselinkschedule_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_synapselinkschedule_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_ProcessSession"></a> synapselinkschedule_ProcessSession
+
+Many-To-One Relationship: [processsession synapselinkschedule_ProcessSession](processsession.md#BKMK_synapselinkschedule_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_synapselinkschedule_SyncErrors"></a> synapselinkschedule_SyncErrors
+
+Many-To-One Relationship: [syncerror synapselinkschedule_SyncErrors](syncerror.md#BKMK_synapselinkschedule_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`synapselinkschedule_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.synapselinkschedule?text=synapselinkschedule EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.synapselinkschedule?displayProperty=fullName>

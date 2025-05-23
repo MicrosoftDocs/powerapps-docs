@@ -1,68 +1,67 @@
 ---
-title: "solutioncomponentattributeconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the solutioncomponentattributeconfiguration table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# solutioncomponentattributeconfiguration table/entity reference
+# Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Solution Component Configuration Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /solutioncomponentattributeconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: False |`DELETE` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Retrieve`<br />Event: False |`GET` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /solutioncomponentattributeconfigurations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: False |`PATCH` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: False |`PATCH` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /solutioncomponentattributeconfigurations(*solutioncomponentattributeconfigurationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|solutioncomponentattributeconfigurations|
-|DisplayCollectionName|Solution Component Attribute Configurations|
-|DisplayName|Solution Component Attribute Configuration|
-|EntitySetName|solutioncomponentattributeconfigurations|
-|IsBPFEntity|False|
-|LogicalCollectionName|solutioncomponentattributeconfigurations|
-|LogicalName|solutioncomponentattributeconfiguration|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|solutioncomponentattributeconfigurationid|
-|PrimaryNameAttribute|name|
-|SchemaName|solutioncomponentattributeconfiguration|
+The following table lists selected properties for the Solution Component Attribute Configuration (solutioncomponentattributeconfiguration) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Solution Component Attribute Configuration** |
+| **DisplayCollectionName** | **Solution Component Attribute Configurations** |
+| **SchemaName** | `solutioncomponentattributeconfiguration` |
+| **CollectionSchemaName** | `solutioncomponentattributeconfigurations` |
+| **EntitySetName** | `solutioncomponentattributeconfigurations`|
+| **LogicalName** | `solutioncomponentattributeconfiguration` |
+| **LogicalCollectionName** | `solutioncomponentattributeconfigurations` |
+| **PrimaryIdAttribute** | `solutioncomponentattributeconfigurationid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AttributeId](#BKMK_AttributeId)
+- [CustomManagedBehaviorType](#BKMK_CustomManagedBehaviorType)
+- [DependencyRemovalCapability](#BKMK_DependencyRemovalCapability)
 - [EncodingFormat](#BKMK_EncodingFormat)
 - [FileExtension](#BKMK_FileExtension)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InvokeSubstitutionForAttribute](#BKMK_InvokeSubstitutionForAttribute)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsEnabledForDependencyExtraction](#BKMK_IsEnabledForDependencyExtraction)
 - [IsExportDisabled](#BKMK_IsExportDisabled)
@@ -77,997 +76,777 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_AttributeId"></a> AttributeId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Attribute associated with Solution Component Attribute Configuration.|
-|DisplayName|Attribute|
+|---|---|
+|Description|**Unique identifier for Attribute associated with Solution Component Attribute Configuration.**|
+|DisplayName|**Attribute**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|attributeid|
+|LogicalName|`attributeid`|
 |RequiredLevel|SystemRequired|
-|Targets|attribute|
 |Type|Lookup|
+|Targets|attribute|
 
+### <a name="BKMK_CustomManagedBehaviorType"></a> CustomManagedBehaviorType
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Custom Managed Behavior Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`custommanagedbehaviortype`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_custommanagedbehaviortype`|
+
+#### CustomManagedBehaviorType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**State Transition**|
+
+### <a name="BKMK_DependencyRemovalCapability"></a> DependencyRemovalCapability
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether 1 click dependency removal is enabled or disabled**|
+|DisplayName|**dependency removal capability**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dependencyremovalcapability`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_dependencyremovalcapability`|
+
+#### DependencyRemovalCapability Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Disabled**|
+|1|**Enabled**|
 
 ### <a name="BKMK_EncodingFormat"></a> EncodingFormat
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Encoding Format|
+|DisplayName|**Encoding Format**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|encodingformat|
+|LogicalName|`encodingformat`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_encodingformat`|
 
 #### EncodingFormat Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|None||
-|1|Base64||
-|2|UTF8||
-
-
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Base64**|
+|2|**UTF8**|
 
 ### <a name="BKMK_FileExtension"></a> FileExtension
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|File Extension|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**File Extension**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|fileextension|
-|MaxLength|30|
+|LogicalName|`fileextension`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|30|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
+### <a name="BKMK_InvokeSubstitutionForAttribute"></a> InvokeSubstitutionForAttribute
+
+|Property|Value|
+|---|---|
+|Description|**Boolean that indicates if invoke substitution API will be used on attribute on template mode import**|
+|DisplayName|**Invoke substitution API on attribute**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`invokesubstitutionforattribute`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`_solutioncomponentattributeconfiguration_invokesubstitutionforattribute`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_IsEnabledForDependencyExtraction"></a> IsEnabledForDependencyExtraction
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Enabled for Dependency Extraction|
+|DisplayName|**Enabled for Dependency Extraction**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isenabledfordependencyextraction|
+|LogicalName|`isenabledfordependencyextraction`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsEnabledForDependencyExtraction Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_isenabledfordependencyextraction`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsExportDisabled"></a> IsExportDisabled
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Export Disabled|
+|DisplayName|**Export Disabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isexportdisabled|
+|LogicalName|`isexportdisabled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsExportDisabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_isexportdisabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsExportedAsFile"></a> IsExportedAsFile
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|IsExportedAsFile|
+|DisplayName|**IsExportedAsFile**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isexportedasfile|
+|LogicalName|`isexportedasfile`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsExportedAsFile Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_isexportedasfile`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsPrefixedByTemplate"></a> IsPrefixedByTemplate
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Prefixed by Template|
+|DisplayName|**Prefixed by Template**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isprefixedbytemplate|
+|LogicalName|`isprefixedbytemplate`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsPrefixedByTemplate Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_isprefixedbyttemplate`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_solutioncomponentattributeconfigurationId"></a> solutioncomponentattributeconfigurationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Solution Component Attribute Configuration|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Solution Component Attribute Configuration**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|solutioncomponentattributeconfigurationid|
+|LogicalName|`solutioncomponentattributeconfigurationid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SolutionComponentConfigurationId"></a> SolutionComponentConfigurationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the Solution Component Configuration associated with Solution Component Attribute Configuration.|
-|DisplayName|Solution Component Attribute Configuration|
+|---|---|
+|Description|**Unique identifier for the Solution Component Configuration associated with Solution Component Attribute Configuration.**|
+|DisplayName|**Solution Component Attribute Configuration**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|solutioncomponentconfigurationid|
+|LogicalName|`solutioncomponentconfigurationid`|
 |RequiredLevel|None|
-|Targets|solutioncomponentconfiguration|
 |Type|Lookup|
-
+|Targets|solutioncomponentconfiguration|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Solution Component Attribute Configuration|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Solution Component Attribute Configuration**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Solution Component Attribute Configuration|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Solution Component Attribute Configuration**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`solutioncomponentattributeconfiguration_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [AttributeIdName](#BKMK_AttributeIdName)
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [solutioncomponentconfigurationidName](#BKMK_solutioncomponentconfigurationidName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
-### <a name="BKMK_AttributeIdName"></a> AttributeIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|attributeidname|
-|MaxLength|128|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|None|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
-
-### <a name="BKMK_solutioncomponentconfigurationidName"></a> solutioncomponentconfigurationidName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|solutioncomponentconfigurationidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [solutioncomponentattributeconfiguration_SyncErrors](#BKMK_solutioncomponentattributeconfiguration_SyncErrors)
-- [solutioncomponentattributeconfiguration_DuplicateMatchingRecord](#BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord)
-- [solutioncomponentattributeconfiguration_DuplicateBaseRecord](#BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord)
-- [solutioncomponentattributeconfiguration_AsyncOperations](#BKMK_solutioncomponentattributeconfiguration_AsyncOperations)
-- [solutioncomponentattributeconfiguration_MailboxTrackingFolders](#BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders)
-- [solutioncomponentattributeconfiguration_ProcessSession](#BKMK_solutioncomponentattributeconfiguration_ProcessSession)
-- [solutioncomponentattributeconfiguration_BulkDeleteFailures](#BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures)
-- [solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses](#BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_SyncErrors"></a> solutioncomponentattributeconfiguration_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentattributeconfiguration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord"></a> solutioncomponentattributeconfiguration_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord"></a> solutioncomponentattributeconfiguration_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_AsyncOperations"></a> solutioncomponentattributeconfiguration_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentattributeconfiguration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders"></a> solutioncomponentattributeconfiguration_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_ProcessSession"></a> solutioncomponentattributeconfiguration_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentattributeconfiguration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures"></a> solutioncomponentattributeconfiguration_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses"></a> solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
 - [lk_solutioncomponentattributeconfiguration_createdby](#BKMK_lk_solutioncomponentattributeconfiguration_createdby)
 - [lk_solutioncomponentattributeconfiguration_createdonbehalfby](#BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby)
 - [lk_solutioncomponentattributeconfiguration_modifiedby](#BKMK_lk_solutioncomponentattributeconfiguration_modifiedby)
 - [lk_solutioncomponentattributeconfiguration_modifiedonbehalfby](#BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby)
 - [organization_solutioncomponentattributeconfiguration](#BKMK_organization_solutioncomponentattributeconfiguration)
-- [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
 - [solutioncomponentconfig_solutioncomponentattrconfig](#BKMK_solutioncomponentconfig_solutioncomponentattrconfig)
-
-
-### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdby"></a> lk_solutioncomponentattributeconfiguration_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_solutioncomponentattributeconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby"></a> lk_solutioncomponentattributeconfiguration_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_solutioncomponentattributeconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedby"></a> lk_solutioncomponentattributeconfiguration_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_solutioncomponentattributeconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentattributeconfiguration_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_solutioncomponentattributeconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_solutioncomponentattributeconfiguration"></a> organization_solutioncomponentattributeconfiguration
-
-**Added by**: System Solution Solution
-
-See the [organization_solutioncomponentattributeconfiguration](organization.md#BKMK_organization_solutioncomponentattributeconfiguration) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_attribute_solutioncomponentattrconfig"></a> attribute_solutioncomponentattrconfig
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [attribute attribute_solutioncomponentattrconfig](attribute.md#BKMK_attribute_solutioncomponentattrconfig)
 
-See the [attribute_solutioncomponentattrconfig](attribute.md#BKMK_attribute_solutioncomponentattrconfig) one-to-many relationship for the [attribute](attribute.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`attribute`|
+|ReferencedAttribute|`attributeid`|
+|ReferencingAttribute|`attributeid`|
+|ReferencingEntityNavigationPropertyName|`AttributeId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdby"></a> lk_solutioncomponentattributeconfiguration_createdby
+
+One-To-Many Relationship: [systemuser lk_solutioncomponentattributeconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby"></a> lk_solutioncomponentattributeconfiguration_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_solutioncomponentattributeconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedby"></a> lk_solutioncomponentattributeconfiguration_modifiedby
+
+One-To-Many Relationship: [systemuser lk_solutioncomponentattributeconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentattributeconfiguration_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_solutioncomponentattributeconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_solutioncomponentattributeconfiguration"></a> organization_solutioncomponentattributeconfiguration
+
+One-To-Many Relationship: [organization organization_solutioncomponentattributeconfiguration](organization.md#BKMK_organization_solutioncomponentattributeconfiguration)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_solutioncomponentconfig_solutioncomponentattrconfig"></a> solutioncomponentconfig_solutioncomponentattrconfig
 
-See the [solutioncomponentconfig_solutioncomponentattrconfig](solutioncomponentconfiguration.md#BKMK_solutioncomponentconfig_solutioncomponentattrconfig) one-to-many relationship for the [solutioncomponentconfiguration](solutioncomponentconfiguration.md) table/entity.
+One-To-Many Relationship: [solutioncomponentconfiguration solutioncomponentconfig_solutioncomponentattrconfig](solutioncomponentconfiguration.md#BKMK_solutioncomponentconfig_solutioncomponentattrconfig)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`solutioncomponentconfiguration`|
+|ReferencedAttribute|`solutioncomponentconfigurationid`|
+|ReferencingAttribute|`solutioncomponentconfigurationid`|
+|ReferencingEntityNavigationPropertyName|`solutioncomponentconfigurationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [solutioncomponentattributeconfiguration_AsyncOperations](#BKMK_solutioncomponentattributeconfiguration_AsyncOperations)
+- [solutioncomponentattributeconfiguration_BulkDeleteFailures](#BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures)
+- [solutioncomponentattributeconfiguration_DuplicateBaseRecord](#BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord)
+- [solutioncomponentattributeconfiguration_DuplicateMatchingRecord](#BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord)
+- [solutioncomponentattributeconfiguration_MailboxTrackingFolders](#BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders)
+- [solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses](#BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses)
+- [solutioncomponentattributeconfiguration_ProcessSession](#BKMK_solutioncomponentattributeconfiguration_ProcessSession)
+- [solutioncomponentattributeconfiguration_SyncErrors](#BKMK_solutioncomponentattributeconfiguration_SyncErrors)
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_AsyncOperations"></a> solutioncomponentattributeconfiguration_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation solutioncomponentattributeconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentattributeconfiguration_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures"></a> solutioncomponentattributeconfiguration_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure solutioncomponentattributeconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentattributeconfiguration_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord"></a> solutioncomponentattributeconfiguration_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord solutioncomponentattributeconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentattributeconfiguration_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord"></a> solutioncomponentattributeconfiguration_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord solutioncomponentattributeconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentattributeconfiguration_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders"></a> solutioncomponentattributeconfiguration_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder solutioncomponentattributeconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentattributeconfiguration_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses"></a> solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_ProcessSession"></a> solutioncomponentattributeconfiguration_ProcessSession
+
+Many-To-One Relationship: [processsession solutioncomponentattributeconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentattributeconfiguration_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_solutioncomponentattributeconfiguration_SyncErrors"></a> solutioncomponentattributeconfiguration_SyncErrors
+
+Many-To-One Relationship: [syncerror solutioncomponentattributeconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentattributeconfiguration_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`solutioncomponentattributeconfiguration_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.solutioncomponentattributeconfiguration?text=solutioncomponentattributeconfiguration EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.solutioncomponentattributeconfiguration?displayProperty=fullName>

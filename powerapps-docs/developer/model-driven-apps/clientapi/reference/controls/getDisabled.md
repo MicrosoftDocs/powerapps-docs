@@ -1,18 +1,14 @@
 ---
-title: "control.getDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.getDisabled (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.getDisabled method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,7 +26,7 @@ Returns whether the control is disabled.
 
 **Description**: true if disabled; false otherwise. 
 
-### Related topics
+### Related articles
 
 [setDisabled](setDisabled.md)
 

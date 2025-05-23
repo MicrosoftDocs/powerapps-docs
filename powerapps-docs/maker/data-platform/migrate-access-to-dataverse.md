@@ -1,20 +1,16 @@
 ---
-title: Migrate Microsoft Access data to Microsoft Dataverse (contains video) | Microsoft Docs
+title: Migrate Microsoft Access data to Microsoft Dataverse | Microsoft Docs
 description: You can migrate your Microsoft Access data to Microsoft Dataverse or Microsoft Dataverse for Teams
 author: NHelgren
-
 ms.topic: overview
-ms.custom: 
-  - model
-  - intro-internal
+ms.custom: model
+ms.collection: get-started
 ms.reviewer: matp
-ms.date: 10/18/2021
+ms.date: 01/09/2023
 ms.subservice: dataverse-maker
-ms.author: NHelgren
+ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
 # Migrate Microsoft Access data to Microsoft Dataverse
@@ -22,7 +18,7 @@ contributors:
 Microsoft Access users can now choose to migrate their data into Dataverse or Dataverse for Teams to make use of Azure cloud security and Microsoft Power Platform functionality. Migrating Access data to Dataverse provides many new opportunities for interaction and management of data.  
 
 Watch this short video about migrating Access data to Dataverse.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO6T0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c151d1a0-3a30-4715-95cb-aab380611592]
 
 Migration is handled in Access using the export feature, and the migration tool that streamlines the process.
 
@@ -84,26 +80,33 @@ For more information, go to [How are Dataverse for Teams and Dataverse different
 
 Users integrating Access with Dataverse or Dataverse for Teams may find some differences in names for general features and functions. This section provides a guide to understand naming differences.
 
-Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Power Virtual Agents. The lists below encompass naming differences and similarities at the database layer only.
+Unlike Access, Dataverse and Dataverse for Teams are data sources. The user interface layer will depend on what Power Platform feature you are using: Power Apps, Power Automate, Power BI, or Microsoft Copilot Studio. The lists below encompass naming differences and similarities at the database layer only.
 
 |Access  |Dataverse and Dataverse for Teams  |Comments  |
 |---------|---------|---------|
 |Primary Key  | Primary Key   | The usage is the same but the key contents are different    |
 |Calculated Field   | Calculated Column (property)   |  Dataverse does not have a calculated column data type but rather allows calculations to be created on individual data types like whole number, decimal, or text       |
 |Row    | Row  or record   |  Sometimes referred to as a record in Dataverse and Dataverse for Teams    |
-|Short Text  |  Text    |  Supported for migration       |
-|Long Text  |  Multiline Text    |  Supported for migration       |
-|Number: Single   | Float        |  Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)           |
-|Number: Double     |  Float       | Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)            |
-|Large Number      |  Big Integer (BigInt)       | Supported for migration, usable through Dataverse API, Power Apps UI does not currently support this       |
+|Short Text |  Text    |  Supported for migration       |
+|Long Text  |  Multiline Text    |  Supported for migration   |
+|Rich Text  |  Rich Text         |  Supported for migration   |
+|Number: Single   | Float        |  Supported for migration   |
+|Number: Double   | Float        |  Supported for migration   |
+|Large Number     |  Big Integer (BigInt)      | Supported for migration, usable through Dataverse API, Power Apps UI does not currently support this |
 |Number: Decimal      | Decimal         | Supported for migration         |
 |Yes/No      | Yes/No         |  Supported for migration        |
 |Int      | Whole Number         |  Supported for migration       |
 |Multi-Select Options      | Choices        | Supported for migration         |
 |GUID      | Unique Identifier           |   In Dataverse and Dataverse for Teams, this is currently only used as a key        |
-|  Hyperlink         |  URL       | Supported for migration         |
+|Hyperlink         |  URL       | Supported for migration         |
 |Unique Index      |  Alternate Key        | Not supported for migration      |
 |Multi-Value Lookup      | Choice        | Supported for migration         |
+
+## Migrating Access databases into Dataverse solutions
+
+To enable application lifecycle management (ALM), Dataverse uses solutions to allow for the management, and distribution of content including apps, tables, and more. A solution is a package of components such as tables, relationships, or other items that can be distributed across multiple Dataverse environments through solution export and import.
+
+The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Access databases in solutions are exported as an unmanaged solution. A solution must exist or be created in Dataverse prior to the migration to be used for the migration process. To learn more about solutions, go to: [Solution Concepts](/power-platform/alm/solution-concepts-alm)
 
 ### See also
 

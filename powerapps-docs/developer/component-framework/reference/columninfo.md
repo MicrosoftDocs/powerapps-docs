@@ -1,9 +1,8 @@
 ---
-title: ColumnInfo | Microsoft Docs
+title: ColumnInfo (Power Apps component framework API reference) | Microsoft Docs
 description: Provides column information.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -25,7 +24,7 @@ Provides column information.
 | security     | [SecurityValues](./securityvalues.md) | Security values for the column. |
 | type         | string                                | Type of the column.             |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

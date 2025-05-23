@@ -1,20 +1,21 @@
 ---
 title: Migrate data between Microsoft Dataverse environments using the dataflows OData connector
-author: denisem-msft
-ms.reviewer: "nabuthuk"
+author: denise-msft
+ms.reviewer: jdaly
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 11/24/2021
-
-ms.topic: "article"
+ms.date: 12/09/2022
+ms.topic: upgrade-and-migration-article
 ms.subservice: dataverse-developer
 ms.author: demora
-search.app: 
-  - PowerApps
+contributors:
+ - JimDaly
 ---
 
 # Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-
+> [!NOTE]
+> Consider using the [Power Query Dataverse Connector](/power-query/connectors/dataverse) with Dataflows rather than the OData connector. 
+> Dataflows are the recommended method to migrate data between Dataverse environments. More information [What are dataflows?](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)
 
 Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 
@@ -105,7 +106,7 @@ In the **target** environment, create a new dataflow with the OData connector.
     | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
     | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
    > [!IMPORTANT] 
-    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
+    > Disable pop-up and cookies blockers in your browser in order to configure the Microsoft Entra ID authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
 
@@ -149,7 +150,7 @@ For each table chosen, select the behavior for importing that table in these set
 
     - The dataflow syncs data from the source environment's table to the target environment, and the same table schema is already defined in the target environment.
     - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.    
-    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.
+    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.
       > [!NOTE]
       > This option should only be used if the goal is to make data in source and target the same. If another process in the destination environment adds data to the same table (or if there is other existing data in the table) it will be deleted by this dataflow.
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
@@ -194,8 +195,8 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 ## Limitations
 
 - Many-to-many relationship data imports are not supported.
-
 - Parent dataflows must be manually configured to run before child dataflows.
+- Mapping to Status and Status Reason fields is currently not supported.  For more field mapping limitations see [Field mapping considerations for standard dataflows > Known limitations](/power-query/dataflows/get-best-of-standard-dataflows#known-limitations)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,17 +1,13 @@
 ---
-title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
+title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps"
 description: This event occurs before the stage of a business process flow control changes.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -36,7 +32,7 @@ When you invoke `preventDefault`:
 
 An execution context object is passed to event handlers for this event. You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to retrieve an object that has the following methods:
 
-- **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
+- **getDirection**: Returns a string that is either `Next` or `Previous` to show the direction of the stage change.
 - **getStage**: Returns a stage object. Except when the navigation moves to a new table, the stage returned represents the destination stage object—that is, the next active stage. When the navigation moves to a new table, the stage is the stage being navigated from—that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
@@ -46,8 +42,9 @@ An execution context object is passed to event handlers for this event. You can 
 - **formContext.data.process**.[addOnPreStageChange](../formcontext-data-process/eventhandlers/addOnPreStageChange.md) method to add event handlers for this event.
 - **formContext.data.process**.[removeOnPreStageChange](../formcontext-data-process/eventhandlers/removeOnPreStageChange.md) method to remove event handlers for this event. 
 
+### Related articles
 
-
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

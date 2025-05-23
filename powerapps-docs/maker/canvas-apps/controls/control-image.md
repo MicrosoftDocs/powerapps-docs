@@ -1,21 +1,19 @@
 ---
 title: Image control in Power Apps
 description: Learn about the details, properties and examples of the image control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 09/22/2021
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
   - tahoon-ms
 ---
 # Image control in Power Apps
@@ -126,7 +124,7 @@ If you add one or more **Image** controls to your app, you can show individual i
     The **Image** control shows the image that you specified.
 
 ### Show a set of images from a data source
-1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
+1. Download this [Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), and save it on your local device.
 2. In Power Apps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
 
     If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.

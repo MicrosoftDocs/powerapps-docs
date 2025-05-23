@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: best-practice
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -16,12 +16,8 @@ caps.latest.revision:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # OData v4 Data Provider configuration, requirements, and best practices

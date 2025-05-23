@@ -1,13 +1,13 @@
 ---
 title: "Apply custom business logic with business rules and flows in model-driven apps | MicrosoftDocs"
 description: "Learn about the types of business logic you can use in your app"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/02/2018
 ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,12 +17,8 @@ caps.latest.revision: 44
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Apply custom business logic with business rules and flows in model-driven apps
 

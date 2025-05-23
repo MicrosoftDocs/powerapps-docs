@@ -1,20 +1,18 @@
 ---
 title: Build a multi-language app
 description: Use Power Apps to build apps that that can support multiple languages.
-author: tapanm-msft
+author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2021
 ms.subservice: canvas-maker
 ms.author: lunune
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Build a multi-language app
@@ -88,9 +86,9 @@ When working with a multi-language app, the first step is to create a reusable c
 
     ![OnReset property for the component.](media/multi-language-apps/onreset.png "OnReset property for the component")
 
-1. Copy and pate the following formula in the formula bar for the **OnReset** property.
+1. Copy and paste the following formula in the formula bar for the **OnReset** property.
 
-   ```powerapps-dot
+   ```power-fx
    Set(
     varTranslations,
     Table(
@@ -120,9 +118,9 @@ When working with a multi-language app, the first step is to create a reusable c
 
     ![Labels property for the component.](media/multi-language-apps/labels.png "Labels property for the component")
 
-1. Copy and pate the following formula in the formula bar for the **Labels** property.
+1. Copy and paste the following formula in the formula bar for the **Labels** property.
 
-    ```powerapps-dot
+    ```power-fx
        LookUp(
         varTranslations,
         Language = Lower(
@@ -181,7 +179,7 @@ Previously, you created the translation component library for reuse. In this sec
 
 1. Update the formula for the **OnCheck** property of the toggle control to the following.
 
-    ```powerapps-dot
+    ```power-fx
         Set(varLanguage,"pt-br")
     ```
 
@@ -189,7 +187,7 @@ Previously, you created the translation component library for reuse. In this sec
 
 1. Update the formula for the **OnUncheck** property of the toggle control to the following.
 
-    ```powerapps-dot
+    ```power-fx
         Set(varLanguage,"en-us")
     ```
 

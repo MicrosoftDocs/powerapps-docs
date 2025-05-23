@@ -3,16 +3,14 @@ title: Review a canvas app for accessibility in Power Apps
 description: Identify ways to make a canvas app more accessible to users who have vision, hearing, and other impairments
 author: emcoope-msft
 
-ms.topic: article
+ms.topic: how-to
 ms.date: 02/18/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Review a canvas app for accessibility in Power Apps

@@ -1,91 +1,85 @@
 ---
-title: "Query throttling (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about how the server can throttle a query to reduce system performance impact and what you can do about it."
-ms.custom: ""
-ms.date: 04/29/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Query throttling (Microsoft Dataverse)"
+description: "Read about how the server can throttle a query that reduces system performance and what you can do about it."
+ms.date: 01/08/2025
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
-caps.latest.revision: 78
-author: "pnghub"
+author: pnghub
 ms.subservice: dataverse-developer
-ms.author: "gned"
-ms.reviewer: "pehecke"
-manager: "mayadumesh"
+ms.author: gned
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Query throttling
 
-If a specific query creates a disproportional load on the database storing
-Microsoft Dataverse data, it can starve the database of resources and negatively impact
-performance of all data operations. When this happens Dataverse can start
-throttling that particular query which would allow all other scenarios to
-perform normally.
+If a query creates a disproportional load on the database storing Microsoft Dataverse data, it can starve the database of resources and negatively impact performance of all data operations. When this happens, Dataverse starts throttling that query to allow all other scenarios to perform normally.
 
-The primary way in which *query throttling* is different from 
-[Service protection API limits](api-limits.md) is
-query throttling targets a specific query that causes a performance degradation while
-leaving the rest of the traffic unaffected. If the throttled query
-originates from a non-interactive application, throttling is likely to not be
-noticeable for end-users. If the query originates from an interactive
-application it will affect users that exercise that particular scenario.
+The primary way in which *query throttling* is different from [Service protection API limits](api-limits.md) is
+query throttling targets a query that causes a performance degradation while leaving the rest of the traffic unaffected. If the throttled query originates from a non-interactive application, throttling is likely to not be noticeable for end-users. If the query originates from an interactive application, it affects users that exercise that particular scenario.
 
 ## Query throttling behavior
 
-Throttling can manifest in two ways:
+Throttling can manifest in three ways:
 
-- A delay is introduced before each execution of the query, making the
-    scenario that uses it slower
+- A delay is introduced before each execution of the query, making the scenario that uses it slower
+- Some fraction of attempts to execute the query are failing with any of the following errors:
 
-- Some fraction of attempts to execute the query are failing with a dedicated
-    error:
+|Error code<br />Hex code|Name|Message|
+|---|---|---|
+|`-2147187388`<br />`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.` <br />or <br /> `This query is throttled as it negatively impacts the database health.`|
+|`-2147187132`<br />`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186876`<br />`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` <br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186875`<br />`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` <br />or <br /> `This query is throttled as it negatively impacts the database health; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.`|
 
-| **Error code** | **Hex code** | **Message**                                                                                                                    |
-|----------------|--------------|--------------------------------------------------------------------------------------------------------------------------------|
-| \-2147187388   | 0x80048544   | This query cannot be executed because it conflicts with query throttling. Please refer to [Query throttling](query-throttling.md) |
+## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
+
+Dataverse heavily throttles queries that use [known query anti-patterns](query-antipatterns.md) when they're identified as a risk to the health of the environment to help prevent outages.
+
+When a query fails due to throttling and the query is using one of the anti-patterns, Dataverse returns the following unique error to help identify which anti-patterns the query is using:
+
+> Name: `DataEnginePerformanceValidationIssuesQueryThrottling`<br />
+> Code: `0x80048745`<br />
+> Number: `-2147186875`<br />
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952` 
+<br />or <br /> 
+`This query is throttled as it negatively impacts the database health; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
+
+[!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
+
+> [!NOTE]
+> If a query contains either the `PerformanceLeadingWildCard` or the `FilteringOnCalculatedColumns` anti-pattern, a different Dataverse error is thrown. Queries that use the `PerformanceLeadingWildCard` anti-pattern throw the `DataEngineLeadingWildcardQueryThrottling` error mentioned on this page, and queries that use the `FilteringOnCalculatedColumns` anti-pattern throw the `DataEngineComputedColumnQueryThrottling` error mentioned on this page. 
+> 
+> The `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` errors predate the `DataEnginePerformanceValidationIssuesQueryThrottling` error; `DataEngineLeadingWildcardQueryThrottling` and `DataEngineComputedColumnQueryThrottling` continue to be thrown to maintain backward compatibility.  
 
 ## Common causes
 
-Most of the situations when query throttling is necessary fall into one of the
-two broad categories:
+Most of the situations when query throttling is necessary fall into one of these two broad categories:
 
-- Some query in a common interactive scenario, for example a saved query used
-    in a grid or a query executed by a plug-in, is inefficient and requires a lot
-    of database resources for each execution
+- Some query in a common interactive scenario is inefficient and requires a lot of database resources for each execution
+  - Common examples are a saved query used in a grid or a query executed by a plug-in
 
-- An automated operation, for example data integration involving moving a
-    large amount of data into or out of Dataverse, executes a query at a very
-    high rate which consumes a lot of database resources in aggregate even if
-    each execution is cheap
+- An automated operation executes a query at a high rate that consumes a lot of database resources in aggregate even if each execution is less expensive
+  - A common example is data integration that moves a large amount of data into or out of Dataverse
 
 ## How to avoid query throttling
 
-Query throttling depends on the query and the scenario where it is executed but there are some common guidelines:
+Query throttling depends on the query and the scenario where it runs but there are some common guidelines:
 
-- For slow low-frequency queries, typically used in interactive
-    applications, the query structure needs to be changed to make it more
-    efficient
+- For slow low-frequency queries, typically used in interactive applications, the query structure needs to be changed to make it more efficient
 
-    - Some common guidelines for improving the query performance can be found
-        in [Improve FetchXML request performance](fetchxml-performance.md)
+  - Some common guidelines for improving the query performance can be found in [Optimize performance using FetchXml](fetchxml/optimize-performance.md)
 
-- For non-interactive applications the common ways to reduce the database load
-    are:
+- For non-interactive applications the common ways to reduce the database load are:
 
-    - If [ExecuteMultiple](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) (or another batching mechanism) is used, the batch
-        size can be reduced
-
-    - If the application uses concurrency, the number of threads can be reduced
-
-    - A delay between requests can be introduced to reduce the request rate
-        when neither batching nor concurrency are used
-
+  - When using [ExecuteMultiple](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) (or another batching mechanism), reduce the size of the batch
+  - If the application is multi-threaded, reduce the number of concurrent threads
+  - If you aren't using batching or concurrent requests, add a delay between requests to reduce the request rate
+ 
+### See also
+[Query anti-patterns](query-antipatterns.md)  
+[Optimize performance using FetchXml](fetchxml/optimize-performance.md)  
+[Optimize performance using QueryExpression](org-service/queryexpression//optimize-performance.md)  
+[Service protection API limits](api-limits.md)

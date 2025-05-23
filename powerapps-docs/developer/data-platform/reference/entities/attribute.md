@@ -1,51 +1,45 @@
 ---
-title: "Attribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Attribute table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Attribute table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Attribute table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Attribute table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
+# Attribute table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/attributes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Attribute table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `RetrieveMultiple`<br />Event: False |`GET` /attributes<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Attributes|
-|DisplayCollectionName|Attributes|
-|DisplayName|Attribute|
-|EntitySetName|attributes|
-|IsBPFEntity|False|
-|LogicalCollectionName|attributes|
-|LogicalName|attribute|
-|OwnershipType|None|
-|PrimaryIdAttribute|attributeid|
-|PrimaryNameAttribute|name|
-|SchemaName|Attribute|
+The following table lists selected properties for the Attribute table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Attribute** |
+| **DisplayCollectionName** | **Attributes** |
+| **SchemaName** | `Attribute` |
+| **CollectionSchemaName** | `Attributes` |
+| **EntitySetName** | `attributes`|
+| **LogicalName** | `attribute` |
+| **LogicalCollectionName** | `attributes` |
+| **PrimaryIdAttribute** | `attributeid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -60,137 +54,141 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PhysicalName](#BKMK_PhysicalName)
 - [TableColumnName](#BKMK_TableColumnName)
 
-
 ### <a name="BKMK_AttributeId"></a> AttributeId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the attribute.|
-|DisplayName|Attribute|
+|---|---|
+|Description|**Unique identifier of the attribute.**|
+|DisplayName|**Attribute**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|attributeid|
+|LogicalName|`attributeid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ExternalName"></a> ExternalName
 
 |Property|Value|
-|--------|-----|
-|Description|The external name of this attribute.|
-|DisplayName|External Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The external name of this attribute.**|
+|DisplayName|**External Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|externalname|
-|MaxLength|128|
+|LogicalName|`externalname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_LogicalName"></a> LogicalName
 
 |Property|Value|
-|--------|-----|
-|Description|The logical name of this attribute.|
-|DisplayName|Logical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The logical name of this attribute.**|
+|DisplayName|**Logical Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|logicalname|
-|MaxLength|128|
+|LogicalName|`logicalname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_ManagedPropertyLogicalName"></a> ManagedPropertyLogicalName
 
 |Property|Value|
-|--------|-----|
-|Description|The managed property logical name of this attribute.|
-|DisplayName|Managed Property Logical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The managed property logical name of this attribute.**|
+|DisplayName|**Managed Property Logical Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|managedpropertylogicalname|
-|MaxLength|128|
+|LogicalName|`managedpropertylogicalname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_ManagedPropertyParentAttributeName"></a> ManagedPropertyParentAttributeName
 
 |Property|Value|
-|--------|-----|
-|Description|The managed property parent attribute name of this attribute.|
-|DisplayName|Managed Property Parent Attribute Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The managed property parent attribute name of this attribute.**|
+|DisplayName|**Managed Property Parent Attribute Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|managedpropertyparentattributename|
-|MaxLength|128|
+|LogicalName|`managedpropertyparentattributename`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of this Attribute.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of this Attribute.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|128|
+|LogicalName|`name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_PhysicalName"></a> PhysicalName
 
 |Property|Value|
-|--------|-----|
-|Description|The physical name of this attribute.|
-|DisplayName|Physical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The physical name of this attribute.**|
+|DisplayName|**Physical Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|physicalname|
-|MaxLength|128|
+|LogicalName|`physicalname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_TableColumnName"></a> TableColumnName
 
 |Property|Value|
-|--------|-----|
-|Description|The table column name of this attribute.|
-|DisplayName|Table Column Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The table column name of this attribute.**|
+|DisplayName|**Table Column Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|tablecolumnname|
-|MaxLength|128|
+|LogicalName|`tablecolumnname`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AttributeOf](#BKMK_AttributeOf)
 - [AttributeTypeId](#BKMK_AttributeTypeId)
@@ -200,188 +198,199 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ValidForReadAPI](#BKMK_ValidForReadAPI)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_AttributeOf"></a> AttributeOf
 
-**Added by**: Metadata Extension Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Attribute Of|
-|DisplayName|Attribute Of|
+|---|---|
+|Description|**Attribute Of**|
+|DisplayName|**Attribute Of**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|attributeof|
+|LogicalName|`attributeof`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_AttributeTypeId"></a> AttributeTypeId
 
-**Added by**: Metadata Extension Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Attribute Type Id|
-|DisplayName|Attribute Type Id|
+|---|---|
+|Description|**Attribute Type Id**|
+|DisplayName|**Attribute Type Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|attributetypeid|
+|LogicalName|`attributetypeid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ValidForReadAPI"></a> ValidForReadAPI
 
-**Added by**: Metadata Extension Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Valid For Read API|
-|DisplayName|Valid For Read API|
+|---|---|
+|Description|**Valid For Read API**|
+|DisplayName|**Valid For Read API**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|validforreadapi|
+|LogicalName|`validforreadapi`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### ValidForReadAPI Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-
+|GlobalChoiceName|`_attribute_validforreadapi`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Metadata Extension Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The version number of this attribute.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**The version number of this attribute.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## One-to-Many relationships
 
-## One-To-Many Relationships
+These relationships are one-to-many. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
+- [attribute_dvfilesearchattribute](#BKMK_attribute_dvfilesearchattribute)
+- [attribute_dvtablesearchattribute](#BKMK_attribute_dvtablesearchattribute)
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
-- [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
+- [emailaddressconfiguration_attribute_AttributeId](#BKMK_emailaddressconfiguration_attribute_AttributeId)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
+- [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 
+### <a name="BKMK_attribute_dvfilesearchattribute"></a> attribute_dvfilesearchattribute
+
+Many-To-One Relationship: [dvfilesearchattribute attribute_dvfilesearchattribute](dvfilesearchattribute.md#BKMK_attribute_dvfilesearchattribute)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`dvfilesearchattribute`|
+|ReferencingAttribute|`attribute`|
+|ReferencedEntityNavigationPropertyName|`attribute_dvfilesearchattribute`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_attribute_dvtablesearchattribute"></a> attribute_dvtablesearchattribute
+
+Many-To-One Relationship: [dvtablesearchattribute attribute_dvtablesearchattribute](dvtablesearchattribute.md#BKMK_attribute_dvtablesearchattribute)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`dvtablesearchattribute`|
+|ReferencingAttribute|`attribute`|
+|ReferencedEntityNavigationPropertyName|`attribute_dvtablesearchattribute`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_attribute_solutioncomponentattrconfig"></a> attribute_solutioncomponentattrconfig
 
-**Added by**: Solution Component Configuration Solution
-
-Same as the [attribute_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_attribute_solutioncomponentattrconfig) many-to-one relationship for the [solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md) table/entity.
+Many-To-One Relationship: [solutioncomponentattributeconfiguration attribute_solutioncomponentattrconfig](solutioncomponentattributeconfiguration.md#BKMK_attribute_solutioncomponentattrconfig)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|solutioncomponentattributeconfiguration|
-|ReferencingAttribute|attributeid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|attribute_solutioncomponentattrconfig|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|---|---|
+|ReferencingEntity|`solutioncomponentattributeconfiguration`|
+|ReferencingAttribute|`attributeid`|
+|ReferencedEntityNavigationPropertyName|`attribute_solutioncomponentattrconfig`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_emailaddressconfiguration_attribute_AttributeId"></a> emailaddressconfiguration_attribute_AttributeId
 
-### <a name="BKMK_referencingattribute_relationshipattribute"></a> referencingattribute_relationshipattribute
-
-**Added by**: Metadata Extension Solution
-
-Same as the [referencingattribute_relationshipattribute](relationshipattribute.md#BKMK_referencingattribute_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
+Many-To-One Relationship: [emailaddressconfiguration emailaddressconfiguration_attribute_AttributeId](emailaddressconfiguration.md#BKMK_emailaddressconfiguration_attribute_AttributeId)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|relationshipattribute|
-|ReferencingAttribute|referencingattributeid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|referencingdattribute_relationshipattribute|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
+|---|---|
+|ReferencingEntity|`emailaddressconfiguration`|
+|ReferencingAttribute|`attributeid`|
+|ReferencedEntityNavigationPropertyName|`emailaddressconfiguration_attribute_AttributeId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_referencedattribute_relationshipattribute"></a> referencedattribute_relationshipattribute
 
-**Added by**: Metadata Extension Solution
-
-Same as the [referencedattribute_relationshipattribute](relationshipattribute.md#BKMK_referencedattribute_relationshipattribute) many-to-one relationship for the [relationshipattribute](relationshipattribute.md) table/entity.
+Many-To-One Relationship: [relationshipattribute referencedattribute_relationshipattribute](relationshipattribute.md#BKMK_referencedattribute_relationshipattribute)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|relationshipattribute|
-|ReferencingAttribute|referencedattributeid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|referencedattribute_relationshipattribute|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|---|---|
+|ReferencingEntity|`relationshipattribute`|
+|ReferencingAttribute|`referencedattributeid`|
+|ReferencedEntityNavigationPropertyName|`referencedattribute_relationshipattribute`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_referencingattribute_relationshipattribute"></a> referencingattribute_relationshipattribute
+
+Many-To-One Relationship: [relationshipattribute referencingattribute_relationshipattribute](relationshipattribute.md#BKMK_referencingattribute_relationshipattribute)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`relationshipattribute`|
+|ReferencingAttribute|`referencingattributeid`|
+|ReferencedEntityNavigationPropertyName|`referencingdattribute_relationshipattribute`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.attribute?text=attribute EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.attribute?displayProperty=fullName>

@@ -1,20 +1,14 @@
 ---
 title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
-ms.custom: ""
-ms.date: 03/25/2018
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 01/30/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: dmartens
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # ActivityParty table
 
@@ -26,7 +20,7 @@ An activity party represents a person or group associated with an activity. An a
 
 ## Activity Party Types  
 
- There are 11 activity party types in Microsoft Dataverse. The activity party type is stored as an integer value in the `ActivityParty.ParticipationTypeMask` column. The following table lists the different activity party types, the corresponding integer value for the `ActivityParty.ParticipationTypeMask` column, and the description.  
+ There are 12 activity party types in Microsoft Dataverse. The activity party type is stored as an integer value in the `ActivityParty.ParticipationTypeMask` column. The following table lists the different activity party types, the corresponding integer value for the `ActivityParty.ParticipationTypeMask` column, and the description.  
   
 |Activity party type|Value|Description|  
 |-------------------------|-----------|-----------------|  
@@ -41,6 +35,8 @@ An activity party represents a person or group associated with an activity. An a
 |Owner|9|Specifies the activity owner.|  
 |Resource|10|Specifies a resource.|  
 |Customer|11|Specifies a customer.|  
+|ChatParticipant|12|Specifies a participant in a Teams chat.|  
+|Related|13|Specifies one or more related records.|  
   
 <a name="SupportedActivityPartyTypes"></a>   
 
@@ -57,17 +53,18 @@ Not all activity party types are available for each activity in Dataverse, excep
 |Appointment|OptionalAttendee<br />Organizer<br />RequiredAttendee|Appointment.OptionalAttendees<br />Appointment.Organizer<br />Appointment.RequiredAttendees|  
 |CampaignActivity|Sender|CampaignActivity.Partners<br />CampaignActivity.From|  
 |CampaignResponse|Customer|CampaignResponse.Customer<br />CampaignResponse.Partner<br />CampaignResponse.From|  
-|Email|BccRecipient<br />CcRecipient<br />Sender<br />ToRecipient|Email.Bcc<br />Email.Cc<br />Email.From<br />Email.To|  
+|Chat|ChatParticipant|None|  
+|Email|BccRecipient<br />CcRecipient<br />Related<br />Sender<br />ToRecipient|Email.Bcc<br />Email.Cc<br />Email.Related<br />Email.From<br />Email.To|  
 |Fax|Sender<br />ToRecipient|Fax.From<br />Fax.To|  
 |Letter|BccRecipient<br />Sender<br />ToRecipient|Letter.Bcc<br />Letter.From<br />Letter.To|  
 |PhoneCall|Sender<br />ToRecipient|PhoneCall.From<br />PhoneCall.To|  
 |RecurringAppointmentMaster|OptionalAttendee<br />Organizer<br />RequiredAttendee|RecurringAppointmentMaster.OptionalAttendees<br />RecurringAppointmentMaster.Organizer<br />RecurringAppointmentMaster.RequiredAttendees|  
 |ServiceAppointment|Customer<br />Resource|ServiceAppointment.Customers<br />ServiceAppointment.Resources|  
   
-### See also  
- [Activity tables](activity-entities.md)   
+### See also
 
- [ActivityParty table](reference/entities/activityparty.md)   
+[Activity tables](activity-entities.md)<br />
+[ActivityParty table](reference/entities/activityparty.md)
  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

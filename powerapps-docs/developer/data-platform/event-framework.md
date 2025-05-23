@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "jaredha" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -37,7 +33,7 @@ To leverage the event framework for your custom extensions you must understand:
 
 ## Available events
 
-As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Dataverse platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with tables. There are also specialized messages for more complex operations, and custom actions add new messages.
+As described in [Use messages with the SDK for .NET](org-service/use-messages.md), data operations in the Dataverse platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with tables. There are also specialized messages for more complex operations, and custom actions add new messages.
 
 When you use the Plug-in Registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 

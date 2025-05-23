@@ -1,18 +1,14 @@
 ---
-title: "getActivePath (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getActivePath (Client API reference) in model-driven apps"
 description: Gets a collection of stages currently in the active path with methods to interact with the stages displayed in the business process flow control.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -36,10 +32,10 @@ The active path represents stages currently rendered in the process control base
 
 ## Example
 
-The Sdk.formOnLoad function uses the **formContext.data.process.getActivePath** method to retrieve a collection of stages. Then, the sample code uses the [forEach](../../collections/forEach.md) method of the collection to loop through each stage. The code then writes key properties of the stage to the console using the **Sdk.writeToConsole** function defined in this library. The code then accesses a collection of steps for each stage using the [getSteps](../stage/getSteps.md) method. Finally, the sample uses the [forEach](../../collections/forEach.md) method of the steps collection to access each step and write key properties of the step to the console.
+The **Sdk.formOnLoad** function uses the **formContext.data.process.getActivePath** method to retrieve a collection of stages. Then, the sample code uses the [forEach](../../collections/forEach.md) method of the collection to loop through each stage. The code then writes key properties of the stage to the console using the **Sdk.writeToConsole** function defined in this library. The code then accesses a collection of steps for each stage using the [getSteps](../stage/getSteps.md) method. Finally, the sample uses the [forEach](../../collections/forEach.md) method of the steps collection to access each step and write key properties of the step to the console.
 
 >[!NOTE]
->The **Sdk.formOnLoad** function in the sample JavaScript library must be set as the **OnLoad** event handler for a form, and the **Pass execution context as the first parameter** check box must be selected in the **Handler Properties** dialog.<br/>Also, this sample just illustrates the use of some of the methods in the **formContext.data.process** API. It doesn’t represent using this API to meet a business requirement; it’s only intended to demonstrate how the key property values can be accessed in code.
+>The **Sdk.formOnLoad** function in the sample JavaScript library must be set as the **OnLoad** event handler for a form, and the **Pass execution context as the first parameter** check box must be selected in the **Handler Properties** dialog.<br/>Also, this sample just illustrates the use of some of the methods in the **formContext.data.process** API. It doesn't represent using this API to meet a business requirement; it's only intended to demonstrate how the key property values can be accessed in code.
 
 ```JavaScript
 // A namespace defined for SDK sample code
@@ -183,12 +179,8 @@ Status: inactive
 ---------------------------------------
 ```
 
-### Related topics
+### Related articles
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

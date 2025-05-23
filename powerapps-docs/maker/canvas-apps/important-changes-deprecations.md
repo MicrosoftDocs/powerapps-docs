@@ -1,26 +1,30 @@
 ---
-title: Important upcoming changes and deprecations in canvas apps
+title: Important upcoming changes (deprecations) in canvas apps
 description: Learn about the important changes including deprecation coming soon to canvas apps.
-author: tapanm-msft
+author: mduelae
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
-ms.date: 01/13/2022
+ms.date: 08/29/2024
 ms.subservice: canvas-maker
 ms.author: tapanm
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-    - tapanm-msft
+    - mduelae
 ---
 
-# Important upcoming changes and deprecations in canvas apps
+# Important upcoming changes (deprecations) in canvas apps
 
-The announcements for changes, and deprecations described in this article apply to canvas apps.
+The announcements for changes (deprecations) described in this article apply to canvas apps.
 
 Makers, developers, and IT professionals can use this information to prepare for future releases.
 
 > [!IMPORTANT]
 > "Deprecated" means we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few months or years. After removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
+
+## Deprecated endpoints
+
+For information about deprecated endpoints, see [Deprecated endpoints](../../limits-and-config.md#deprecated-endpoints)
 
 ## New addition for restrictive firewall rules to filter subdomains
 

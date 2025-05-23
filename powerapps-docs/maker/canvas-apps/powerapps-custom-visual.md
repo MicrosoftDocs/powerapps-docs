@@ -1,21 +1,19 @@
 ---
 title: Power Apps visual for Power BI
 description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI. 
-author: tapanm-msft
+author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.reviewer: mkaur
+ms.date: 03/4/2025
 ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mikkelsen2000
-  - tapanm-msft
+  - mduelae
 ---
 
 # Power Apps visual for Power BI
@@ -57,7 +55,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 5. After you have completed building or making changes to your app, save and publish the app in Power Apps to see your app in the Power BI report.
 
-6. Once you're satisfied with your changes, make sure to share the Power Apps app with users of your report and then save your report.
+6. Once you're satisfied with your changes, make sure to share the app with users of your report and then save your report.
 
 7. You've created a report in which your users can take actions as they gain insights from your data.
 
@@ -71,6 +69,8 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
+- Only **https** is supported for the Launch function in the Power Apps Visual.
+- Power Apps visual is only supported for [Embed for your organization](/power-bi/developer/embedded/embed-organization-app). [Embed for your customers](/power-bi/developer/embedded/embed-customer-app) is not supported.
 - The maximum number of records that can be passed from Power BI to Power Apps visual using "PowerBIIntegration" object is limited to 1000.
 - Power Apps visual is only supported for [guest users](share-app-guests.md) when the following conditions are met:
   - The canvas app URI (weblink) includes the tenantId of the app in the query string.
@@ -80,7 +80,7 @@ The following limitations apply to the Power Apps visual:
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps visual can't filter the data or send any data back to the report.
-- You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
+- You'll need to share the app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
 - Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.

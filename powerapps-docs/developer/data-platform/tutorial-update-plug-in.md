@@ -1,18 +1,14 @@
 ---
 title: "Tutorial: Update a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The third of three tutorials that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 07/12/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.topic: tutorial
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---
@@ -49,7 +45,7 @@ The goal of this tutorial is:
 
 - Create a synchronous plug-in registered on the pre-validation stage of the Update message of the account table.
 - The plug-in will evaluate a set of string values passed as configuration data when the plug-in is registered.
-- If the name of the account is changed to one of these values and the previous value didn’t contain the new name, cancel the operation and send an error message back to the user.
+- If the name of the account is changed to one of these values and the previous value didn't contain the new name, cancel the operation and send an error message back to the user.
 
 ## Prerequisites
 
@@ -166,7 +162,7 @@ namespace BasicPlugin
     - Update message
     - On the account table
     - With the account name included in the attributes
-    - With PreEntityImage using specific alias ‘a’
+    - With PreEntityImage using specific alias 'a'
     - With PreEntityImage including the name columns.
 - If the step configuration is not correct, the plug-in will only write to the trace that it is not configured correctly
 - If no invalid names are set in the configuration, the plugin will only write to the trace that no invalid names were passed to the configuration
@@ -221,6 +217,9 @@ Configure the **ValidateAccountName** plug-in using these settings:
 1. When the image is registered you will see it in the Plug-in Registration tool.
 
     ![The registered image.](media/tutorial-update-plug-in-image-added.png)
+
+> [!IMPORTANT]
+> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
 
 ## Test the plug-in
 

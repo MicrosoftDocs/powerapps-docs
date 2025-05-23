@@ -1,21 +1,19 @@
 ---
 title: Container control in Power Apps
 description: Learn about the details, properties and examples of the container control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
-ms.author: chmoncay
-ms.reviewer: tapanm-msft
+ms.author: yogupt
+ms.reviewer: mkaur-msft
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - chmoncay
+  - yogeshgupta698
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
 ---
 # Container control in Power Apps
 

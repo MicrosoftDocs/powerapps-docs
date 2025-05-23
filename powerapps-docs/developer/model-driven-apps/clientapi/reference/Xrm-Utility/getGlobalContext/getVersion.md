@@ -1,24 +1,18 @@
 ---
-title: "getVersion (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getVersion (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getVersion method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getVersion (Client API reference)
-
-
 
 Returns the version number of the model-driven apps instance.
 
@@ -28,6 +22,7 @@ Returns the version number of the model-driven apps instance.
 var globalContext = Xrm.Utility.getGlobalContext();
 globalContext.getVersion();
 ``` 
+
 ## Return Value
 
 **Type**: String
@@ -36,7 +31,7 @@ globalContext.getVersion();
 
 `"9.0.0.1103"`
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

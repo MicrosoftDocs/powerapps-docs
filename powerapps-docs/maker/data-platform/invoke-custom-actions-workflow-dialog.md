@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,9 +17,6 @@ ms.assetid: 1fd5d39e-3dc8-4d1a-8b4b-ccaa303f4bbb
 caps.latest.revision: 12
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser

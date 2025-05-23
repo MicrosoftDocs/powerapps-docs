@@ -1,21 +1,19 @@
 ---
 title: Text input control in Power Apps
 description: Learn about the details, properties and examples of the text input control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/22/2019
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Text input control in Power Apps
 A box in which the user can type text, numbers, and other data.
@@ -39,7 +37,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
+**Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control. Only works in **SingleLine** mode.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -65,7 +63,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**Format** – Whether the user input is restricted to numbers only or can be any text.
+**Format** – Whether the user input is restricted to numbers only or can be any text. When set to **Number**, only digits and certain numeric symbols can be entered. Supported symbols and formats depend on the browser language and cannot be set on individual controls.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -83,7 +81,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **MaxLength** – The number of characters that the user can type into a text-input control.
 
-**Mode** – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
+**Mode** – The control is in **SingleLine**, **Multiline**, or **Password** mode.
 
 **[OnChange](properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
 

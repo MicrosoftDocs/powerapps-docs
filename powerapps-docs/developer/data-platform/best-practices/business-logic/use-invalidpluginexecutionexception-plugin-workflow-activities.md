@@ -2,18 +2,14 @@
 title: "Use InvalidPluginExecutionException in plug-ins and workflow activities | MicrosoftDocs"
 description: "Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity."
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 suite: powerapps
 ms.topic: article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -29,11 +25,11 @@ contributors:
 
 ## Symptoms
 
-If a synchronous plug-in returns an exception other than <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> back to the platform, in a Power Apps client an error  is displayed to the user with the message of the exception <xref:System.Exception.Message> and the stack trace. This provides an unfriendly user experience in what is likely already a frustrating situation.
+If a synchronous plug-in returns an exception other than <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> back to the platform, in a Power Apps client an error is displayed to the user with the message of the exception <xref:System.Exception.Message> and the stack trace. This provides an unfriendly user experience in what is likely already a frustrating situation.
 
 If you are using <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to intentionally cancel the operation because of data validation logic issue, you should provide guidance applicable to the application user so that they can correct the issue and continue.
 
-If the error is unexpected, it is still recommended to catch the error and convert it into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> so that applications can show a friendly error message with guidance to help a user or technical staff quickly identify the issue.
+If the error is unexpected, it is still recommended to catch the exception, convert it into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>, and then throw the new exception so that applications can show a friendly error message with guidance to help a user or technical staff quickly identify the issue.
 
 <a name='guidance'></a>
 
@@ -44,7 +40,7 @@ Plug-ins should only return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionExc
 - Show a useful message to the user
 - Avoiding event log/trace file bloat
 
-Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> will result in an `IsvUnExpected` error with no message displayed to the user from a Power Apps client.
+A thrown <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> returns to the caller with a friendly message and an `IsvAborted` error code. Failure to catch and convert an exception into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> will result in an `IsvUnExpected` error code with no friendly message displayed to the user from a Power Apps client. 
 
 ### Handle errors from functions called in plug-ins
 

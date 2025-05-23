@@ -4,21 +4,21 @@ description: "This sample shows how to retrieve changes from a table and synchro
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Synchronize data with external systems using change tracking
 
-This sample code shows how to retrieve changes from a table and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).
+This sample code shows how to retrieve changes from a table and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Synchronize data with external systems using change tracking sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Changetracking)
 
 For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](../../use-change-tracking-synchronize-data-external-systems.md).
 
@@ -51,6 +51,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the managed solution imported in [Setup](#setup), which removes the `sample_book` table and all the data created in the sample. The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the `ChangeTrackingSample` to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

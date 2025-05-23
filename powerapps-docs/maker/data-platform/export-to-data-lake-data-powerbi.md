@@ -8,18 +8,14 @@ author: sabinn-msft
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - sama-zaki
 ---
@@ -59,14 +55,14 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 1. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
 
-1. Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
+1. Enter the storage container name in the format<br>`https://accountname.dfs.core.windows.net/containername/` and replace **accountname** and **containername** with your storage account's information.
    -  Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Dataverse data.
    - Find the container name by going to **Storage Explorer (preview)** > **Containers** and select the name of the container with the exported Dataverse data.
     ![Find the storage container name.](media/find-container-name.png "Find the storage container name")
 
 1. Select **CDM Folder View (Beta)**, and then select **OK**.
 
-1. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
+1. If prompted to sign in, you can sign in with your Microsoft Entra account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
 1. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 

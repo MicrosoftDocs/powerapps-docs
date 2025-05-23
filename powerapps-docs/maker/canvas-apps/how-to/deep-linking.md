@@ -2,21 +2,18 @@
 title: Create a canvas app with deep link to a specific screen
 description: Learn how to deep link to a specific screen within canvas apps.
 author: vasavib
-
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/27/2022
+ms.reviewer: mkaur
+ms.date: 07/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
     - TashasEv
     - slaouist
-    - tapanm-msft
+    - mduelae
     - vasavib
 ---
 
@@ -24,11 +21,11 @@ contributors:
 
 A common scenario when building apps is the need to share a "deep link" to a specific screen. Deep links are useful when you want to get users straight to a specific screen and data rather than asking them to navigate from the "home" screen of your app.
 
-To deep link into a Power Apps app, you'll use this URL syntax: `https://web.powerapps.com/apps/{AppID}?query`.
+To deep link into Power Apps, you'll use this URL syntax: `https://apps.powerapps.com/play/{App ID}?{Query}`.
 
 In this syntax:
-- **AppID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
-- Query&mdash;The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
+- **App ID**&mdash;ID of the app. Go to [Power Apps](https://make.powerapps.com) > **Apps** > Select your app > **Details**.
+- **Query**&mdash;The query text allows you to supply the data to deep link to. You'll need to make some code changes to your canvas app to use the provided parameters to open the app using the query URL.
 
 In this article, you'll learn about how to:
 
@@ -58,7 +55,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
 1. Select first record of **BrowseGallery** gallery. And then, under **OnSelect**, enter the following:
 
-    ```powerapps-dot
+    ```power-fx
     Navigate(DetailScreen1, Fade, {accountVal:ThisItem})
     ```
 
@@ -78,7 +75,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
     :::image type="content" source="media/deep-linking/set-account-detail.png" alt-text="AccountVal.":::
 
-1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account deep linking".
+1. [Save](../save-publish-app.md) with the name "Account deep linking".
 
 ## Get the App ID
 
@@ -101,7 +98,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. To store the **App ID** value, update the **OnStart** property formula as below.
 
-    ```powerapps-dot
+    ```power-fx
     Set(AppID, "GUID");
     If(Not(IsBlank(Param("accountId"))),Set(accountId,Param("accountId")));
     ```
@@ -115,7 +112,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. Select **StartScreen** property for the app, and add the following:
 
-    ```powerapps-dot
+    ```power-fx
     If(Not(IsBlank(Param("accountId"))),DetailScreen1,BrowseScreen1)
     ```
 
@@ -127,7 +124,7 @@ The goal of this example is to take users to the **DetailsScreen1** when the app
 
 1. Select **OnVisible** property, and enter the following:
 
-    ```powerapps-dot
+    ```power-fx
     If(Not(IsBlank(accountId)), UpdateContext({accountVal:LookUp(Accounts, Account = GUID(accountId))}))
     ```
 
@@ -141,7 +138,7 @@ Your app is now configured to receive **accountId** as the parameter that contai
 
 To invoke app with the parameter value, we have to use the following syntax:
 
-`https://web.powerapps.com/apps/[App ID]*}?*query*`
+`https://apps.powerapps.com/play/{App ID}?{Query}`
 
 In the above syntax, we have to add the **App ID** and the query that contains **accountId** variable with its value.
 
@@ -168,8 +165,8 @@ For this purpose, we'll create a button and add the ability to invoke an email f
 
 1. On the button's **OnSelect** property, enter the following:
 
-    ```powerapps-dot
-    Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://web.powerapps.com/apps/[App ID]?accountId=" & accountVal.Account)
+    ```power-fx
+    Office365Outlook.SendEmailV2("Recipient", "Subject", "Here's the deep link to the selected account - https://apps.powerapps.com/play/{App ID}?accountId=" & accountVal.Account)
     ```
 
     This formula uses the Microsoft 365 connector for Outlook to send an email using the [SendEmailV2](/connectors/office365/#send-an-email-(v2)) operation.

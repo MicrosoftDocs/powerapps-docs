@@ -1,19 +1,15 @@
 ---
 title: "Custom virtual table data providers (Microsoft Dataverse) | Microsoft Docs"
 description: "Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 03/22/2022
+ms.date: 01/24/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 author: "NHelgren" # GitHub ID
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -45,10 +41,10 @@ There are two general categories of data provider you can create using the virtu
 
 |**Category**|**Dev Model**|**Description**|
 |------------|-------------|---------------|
-|Generic|"Bare metal" provider|These providers can flexibly translate FetchXML query expressions to the associated request to the external data source, then return the resulting table instances. Such a provider can be reused for all instances of this data source type. This approach is the most general but is more complicated to develop.  If the schema of the data source changes, the affected virtual tables must only be remapped.|
+|Generic|"Bare metal" provider|These providers can flexibly translate FetchXML query expressions to the associated request to the external data source, then return the resulting records. Such a provider can be reused for all instances of this data source type. This approach is the most general but is more complicated to develop.  If the schema of the data source changes, the affected virtual tables must only be remapped.|
 |Targeted|LINQ provider for known schema|Such a provider only narrowly translates queries into the associated LINQ call to a known, existing data source instance. The data source must be a LINQ provider as described in the topic [Enabling a Data Source for LINQ Querying](/dotnet/csharp/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1). This approach is limited to a specific data source instance, but requires much less coding. If the schema of the data source changes, the data provider must be updated and rebuilt.|
 
-The standard OData v4 Data Provider and the Cosmos DB Data Provider are examples of generic providers.
+The standard OData v4 Data Provider and the Azure Cosmos DB Data Provider are examples of generic providers.
 
 ## Steps to use a custom data provider
 
@@ -60,6 +56,7 @@ There are several steps that are required to create a virtual table data provide
 4. Customize the data source table to reflect your data type or specific instance.
 5. Export the custom data provider solution.
 
+More information: [Sample: Custom virtual table provider with CRUD operations](sample-ve-provider-crud-operations.md)
 
 ### Plug-in development
 
@@ -90,8 +87,7 @@ If for any reason your code cannot achieve the expected result, you must throw t
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidMetadataException>| |
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidQueryException>|The specified query is invalid; for example it an invalid clause combination or unsupported comparison operator.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.ObjectNotFoundException>|The specified record in the external data source does not exist.|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|The external operation did not complete within the allowed time; for example, the result of a HTTP status 408 from the external data service.|
-
+|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|The external operation did not complete within the allowed time; for example, the result of an HTTP status 408 from the external data service.|
 
 ### Plug-in registration
 
@@ -103,6 +99,8 @@ Unlike an ordinary plug-in, you will only use the Plug-in Registration Tool (PRT
 |[EntityDataProvider](../reference/entities/entitydataprovider.md)|Defines the plug-ins to use for each event and the logical name of the data source.|
 
 When the definitions for your virtual table is configured, your plug-ins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** table, your virtual table will start to respond to requests.
+
+More information: [Creating data provider and adding plug-ins to the provider](sample-ve-provider-crud-operations.md#step-2-creating-data-provider-and-adding-plug-ins-to-the-provider)
 
 ### Debugging plug-ins
 

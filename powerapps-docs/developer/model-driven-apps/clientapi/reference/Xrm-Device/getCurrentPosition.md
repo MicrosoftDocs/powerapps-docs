@@ -1,18 +1,14 @@
 ---
-title: "getCurrentPosition| MicrosoftDocs"
+title: "getCurrentPosition (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCurrentPosition method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -31,10 +27,10 @@ This method is supported only for the mobile clients.
 
 ## Parameters
 
-| Parameter Name  | Type     | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| successCallback | Function | Yes      | A function to call when the current geolocation information is returned. A geolocation object with the following values is passed to the function.:<br/>- **coords**: Contains a set of geographic coordinates along with associated accuracy as well as a set of other optional values such as altitude and speed. <br/>- **timestamp**: Represents the time when the object was acquired and is represented as DOMTimeStamp.                                                                                                     |
-| errorCallback   | Function | Yes      | A function to call when the operation fails. An object with the following properties will be passed: <br/>- **code**: The error code. Number. <br/>- **message**: RLocalized message describing the error details. String.<br/><br/>If the user location setting is not enabled on your mobile device, the error message indicates the same. If you are using an earlier version of the model-driven apps mobile client or if geolocation capability is not available on your mobile device, null is passed to the error callback. |
+| Parameter Name  | Type     | Required | Description|
+| --------------- | -------- | -------- | -----------|
+| `successCallback` | Function | Yes      | A function to call when the current geolocation information is returned. A geolocation object with the following values is passed to the function.:<br/>- **`coords`**: Contains a set of geographic coordinates along with associated accuracy and a set of other optional values such as altitude and speed. <br/>- **`timestamp`**: Represents the time when the object was acquired and is represented as DOMTimeStamp.|
+| `errorCallback`   | Function | Yes      | A function to call when the operation fails. An object with the following properties is passed: <br/>- **`code`**: The error code. Number. <br/>- **`message`**: Localized message describing the error details. String.<br/><br/>If the user location setting isn't enabled on your mobile device, the error message indicates the same. If you're using an earlier version of the model-driven apps mobile client or if geolocation capability isn't available on your mobile device, null is passed to the error callback. |
 
 ## Return Value
 
@@ -42,7 +38,7 @@ On success, returns a geolocation object with the values specified earlier in th
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ## Remarks
 
@@ -64,7 +60,7 @@ Xrm.Device.getCurrentPosition().then(
 );
 ```
 
-### Related topics
+### Related articles
 
 [Xrm.Device](../xrm-device.md)
 

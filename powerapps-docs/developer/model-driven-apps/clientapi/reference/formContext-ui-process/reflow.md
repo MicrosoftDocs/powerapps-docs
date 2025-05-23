@@ -1,18 +1,14 @@
 ---
-title: "reflow (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "reflow (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the reflow method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -28,16 +24,12 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|updateUI|Boolean|No|Specify **true** to update the UI of the process control; **false** otherwise.|
-|parentStage|String|No|Specify the ID of the parent stage in the GUID format.|
-|nextStage|String|No|Specify the ID of the next stage in the GUID format.|
+|`updateUI`|Boolean|No|Specify **true** to update the UI of the process control; **false** otherwise.|
+|`parentStage`|String|No|Specify the ID of the parent stage in the GUID format.|
+|`nextStage`|String|No|Specify the ID of the next stage in the GUID format.|
 
-### Related topics
+### Related articles
 
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

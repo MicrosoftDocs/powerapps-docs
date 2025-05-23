@@ -5,16 +5,12 @@ ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Browse table definitions in your environment
 

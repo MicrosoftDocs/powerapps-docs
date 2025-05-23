@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "mayadumesh"
 ms.subservice: dataverse-developer
 ms.author: "mayadu" 
-manager: "annbe" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Server-side synchronization tables
 
@@ -40,7 +36,7 @@ In Power Apps, server-side synchronization provides an interface between Microso
   
 - Automatically track Microsoft Exchange emails in Power Apps for a user based on the folder-level tracking rules.  
   
-### Related topics  
+### Related articles  
  [Configure folder level tracking rules](configure-exchange-folder-level-tracking-rules.md) 
 
 

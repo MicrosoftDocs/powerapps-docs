@@ -7,18 +7,14 @@ ms.reviewer: "matp"
 author: sabinn-msft
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - sama-zaki
 ---

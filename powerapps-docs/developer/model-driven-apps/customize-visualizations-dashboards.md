@@ -1,25 +1,21 @@
 ---
-title: "Customize visualizations and dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about configuring dashboards in such a way that enables you to view data from multiple areas of Dynamics 365 such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Customize visualizations and dashboards (model-driven apps)"
+description: "Learn about configuring dashboards in such a way that enables you to view data from multiple areas of Dynamics 365 such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters."
 ms.date: 04/01/2022
 ms.topic: article
-author: mspilde # GitHub ID
+author: jasongre
+ms.author: jasongre
+ms.reviewer: jdaly
 ms.subservice: mda-developer
-ms.author: mspilde # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 
 # Customize visualizations and dashboards
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
 
 Data visualization and analytics in model-driven apps enable you to graphically view and analyze the data for your business, and help you to derive quick insights to make important business decisions. You can configure dashboards in such a way that enables you to view data from multiple areas such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters.  
   
@@ -35,7 +31,4 @@ Data visualization and analytics in model-driven apps enable you to graphically 
 [View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)<br/>
 [Visualization Data Description Schema](visualization-data-description-schema.md)  
   
-
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

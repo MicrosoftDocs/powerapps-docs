@@ -4,15 +4,11 @@ description: "About the messages used to edit table column definitions, also kno
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Table column definitions messages
 
@@ -26,15 +22,15 @@ The following table lists the messages that you can use to perform actions on ta
   
 |Message|Web API Operation|SDK Assembly|
 |-------------|-----------------|-----------------|  
-|`CreateAttribute`</br></br>Create table columns|POST to EntityMetadata Attributes collection-valued navigation property with JSON definition of column. More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)|<xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>|
+|`CreateAttribute`</br></br>Create table columns|POST to EntityMetadata Attributes collection-valued navigation property with JSON definition of column. More information: [Create columns](webapi/create-update-column-definitions-using-web-api.md#create-columns)|<xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>|
 |`DeleteAttribute`</br></br>Delete table columns|DELETE to the URL of the column.|<xref:Microsoft.Xrm.Sdk.Messages.DeleteAttributeRequest>|  
-|`DeleteOptionValue`</br></br>Delete a choice from <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> columns|<xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action>|<xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>|
-|`InsertOptionValue`</br></br>Add a choice to a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column|<xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action" />|<xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>|
-|`InsertStatusValue`</br></br>Add a choice to a <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> column|<xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|<xref:Microsoft.Xrm.Sdk.Messages.InsertStatusValueRequest>|  
-|`OrderOption`</br></br>Changes the order of the choice presented in an <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column|<xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>|<xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>|
+|`DeleteOptionValue`</br></br>Delete a choice from <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> columns|[DeleteOptionValue action](xref:Microsoft.Dynamics.CRM.DeleteOptionValue)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>|
+|`InsertOptionValue`</br></br>Add a choice to a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column|[InsertOptionValue action](xref:Microsoft.Dynamics.CRM.InsertOptionValue)|<xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>|
+|`InsertStatusValue`</br></br>Add a choice to a <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> column|[InsertStatusValue action](xref:Microsoft.Dynamics.CRM.InsertStatusValue)|<xref:Microsoft.Xrm.Sdk.Messages.InsertStatusValueRequest>|  
+|`OrderOption`</br></br>Changes the order of the choice presented in an <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column|[OrderOption action](xref:Microsoft.Dynamics.CRM.OrderOption)|<xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest>|
 |`RetrieveAttribute`</br></br>Retrieve a table column|Use the Web API query mentioned in [Querying EntityMetadata columns](webapi/query-metadata-web-api.md#bkmk_queryAttributesexample) to retrieve table columns.|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>|  
 |`UpdateAttribute`</br></br>Update a table column|See [Update tables](webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest>|  
-|`UpdateStateValue`</br></br>Update the label for a <xref:Microsoft.Xrm.Sdk.Metadata.StateAttributeMetadata> column|<xref:Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action>|<xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>|
+|`UpdateStateValue`</br></br>Update the label for a <xref:Microsoft.Xrm.Sdk.Metadata.StateAttributeMetadata> column|[UpdateStateValue action](xref:Microsoft.Dynamics.CRM.UpdateStateValue)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>|
 
 ### See also  
 

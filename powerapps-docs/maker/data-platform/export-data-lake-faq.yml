@@ -4,75 +4,125 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 02/10/2021
+  ms.date: 05/06/2024
   ms.author: sabinn
-  ms.reviewer: 
+  ms.reviewer: matp
   contributors: JasonHQX
   ms.topic: faq
+  ms.subservice: dataverse-maker
 title: Azure Synapse Link for Dataverse FAQ
 summary: This article provides information on frequently asked questions about exporting Microsoft Dataverse table data to Azure Synapse Analytics and Azure Data Lake.
 sections:
 - name: General
   questions:
-   - question: Does adding multiple Microsoft Dataverse tables simultaneously to the lake impact performance?
+   - question: Can I manually perform tasks such as creating, updating, deleting, or setting autodelete policies for data files in the connected Azure storage?
      answer: |
-        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenario: 
-        - Delta sync: After the initial sync of tables are completed, any change in Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
+        Data files shouldn't be modified by a customer and no customer files should be placed in the data folders.
+        > [!NOTE]
+        > To drop stale and stagnant data in the data lake without breaking the Azure Synapse Link, consider using the feature [Query and analyze the incremental updates](azure-synapse-incremental-updates.md)
    - question: How can I access my table relationships?
      answer: |
-        To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
+        To access many-to-many relationships, the relationship is available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a pre-existing link.
+        > [!NOTE]
+        > All relationships data is in Append-only mode by default when written in CSV format.
+   - question: How can I get estimated costs before adding Azure Synapse Link?
+     answer: |
+        Azure Synapse Link is a free feature with Dataverse. Utilizing Azure Synapse Link for Dataverse doesn't incur additional charges under Dataverse. However, consider potential costs for the Azure service:
+        - Data storage in Azure Data Lake Storage Gen2: [Azure Storage Data Lake Gen2 Pricing | Microsoft Azure](https://azure.microsoft.com/pricing/details/storage/data-lake/)
+        - Data consumption cost (such as Synapse Workspace): [Pricing - Azure Synapse Analytics | Microsoft Azure](https://azure.microsoft.com/pricing/details/synapse-analytics/)
+        For comprehensive Microsoft Cost Management information, go to: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](/azure/cost-management-billing/understand/plan-manage-costs)
    - question: What happens when I add a column?
      answer: |
-        When you add a new column to a table in the source, it is also added at the end of the file in the destination in the corresponding file partition. While the rows that existed prior to the addition of the column won't show the new column, new or updated rows will show the newly added column.
+        When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed before the addition of the column are't shown in the new column, new or updated rows show the newly added column.
    - question: What happens when I delete a column?
      answer: |
-        When you delete a column from a table in the source, the column is not dropped from the destination. Instead, the rows are no longer updated and are marked as null while preserving the previous rows.
+        When you delete a column from a table in the source, the column isn't dropped from the destination. Instead, the rows are no longer updated and are marked as null while preserving the previous rows.
    - question: What happens if I change the data type of a column?
      answer: |
-        Changing the data type of a column is a breaking change and you will need to unlink and relink.
+        Changing the data type of a column is a breaking change and you need to unlink and relink.
    - question: What happens when I delete a row?
      answer: |
         Deleting a row is handled differently based on which data write options you choose:
-        - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
-        - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
-   - question: What happens when I add a new table to sync to the data lake?
+        - In-place update with CSV format: This is the default mode. When you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
+        - Append-only with CSV format and incremental folder update: In this mode, when a Dataverse table row is deleted, it isn't hard deleted from the destination. Instead, a row is added and set as `isDeleted=True` to the file in the corresponding data partition in Azure Data Lake.
+        - Export to Delta lake format: Azure Synapse Link performs a soft delete on data during the next delta synchronization cycle, followed by a hard delete after 30 days.
+   - question: Why am I not seeing a column header in the exported file?
      answer: |
-        It is important to note that Azure Synapse Link for Dataverse simultaneously processes a fixed set of tables for initial sync at any given time. When a new table is added to the profile, the incremental or delta sync for the existing tables are paused. While the delta messages for existing tables continue to queue, Azure Synapse Link won't process any messages from the delta queue until the initial sync for the newly added table is complete. This is true whether you create a new linked lake, a new profile, or add a table to an existing profile. For new or existing profiles, we recommend that you add no more than 5 tables to sync to the data lake at a time. Adding more tables won't expedite the sync process. While initial sync for the newly added tables in ongoing, it will queue any delta changes on those tables into a single queue. The Azure Synapse Link for Dataverse won't process these deltas change until the initial sync for all previously added tables is complete.
+        Azure Synapse Link follows the Common Data Model to make it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure. In each CDM folder, metadata like a column header is stored in the model.json file. More information: [Common Data Model and Azure Data Lake Storage Gen2 | Microsoft Learn](/common-data-model/data-lake)   
+   - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
+     answer: |
+        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
+        > [!NOTE]
+        > Memo fields are defined as `varchar(max)` with a default maximum length of 9999.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
           
-        | Column Name                              | Format                           | Example                            |
-        |------------------------------------------|----------------------------------|------------------------------------|
-        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | 6/28/2021 4:34:35 PM               |
-        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | 2018-05-25T16:21:09.0000000+00:00  |
-        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | 2021-06-25T16:21:12Z               |
+        | Column Name                              | Format                           | Data Type                          | Example                            |
+        |------------------------------------------|----------------------------------|------------------------------------|------------------------------------|
+        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | datetime                           | 6/28/2021 4:34:35 PM               |
+        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | datetimeOffset                     | 2018-05-25T16:21:09.0000000+00:00  |
+        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | datetime                           | 2021-06-25T16:21:12Z               |
+        
+        > [!NOTE]
+        > **CreatedOn** data type changed from `datetime` to `datetimeOffset` on 07/29/2022. To edit the data type format for a table created before the change, drop and readd the table.
+        > 
+        > You can choose different column behaviors for a Date and Time column in Dataverse, which updates the data type format. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
+   - question: Why am I seeing 1.csv or 1_001.csv file names instead of regular date time partitioned file names for some Dataverse tables?
+     answer: |
+        This behavior is expected when you choose append-only export mode and have tables without a valid **CreatedOn** column. Blobs are organized into files such as 1.csv, 2.csv (employing custom partitioning due to the absence of a valid creation date). When any partition approaches 95% of the MaxBlockPerBlobLimit, the system automatically generates a new file—illustrated here as 1_001.csv.   
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
-        For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
-   - question: When do I use Append only mode for a historical view of changes?
+        For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files helps improve performance in the case of in-place update scenarios. Delta Lake is only available with yearly partition due to its superior performance compared to CSV format.        
+   - question: What is append only mode and what is the difference between append only and in-place update mode?
+     answer: |
+        In append only mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. For more information: [Advanced Configuration Options in Azure Synapse Link](azure-synapse-link-advanced-configuration.md)
+   - question: When do I use append only mode for a historical view of changes?
      answer: |
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
-   - question: Which Dataverse tables are not supported for export?
+   - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
      answer: |
-        Any table that does not have change tracking enabled will not be supported in addition to following system tables:
+        In append only mode, you should identify the latest version of record with the same ID using `VersionNumber` and `SinkModifiedOn` then apply `isDeleted=0` on the latest version.
+   - question: Why do I see duplicated version numbers when I export data using append only mode?   
+     answer: |
+         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using `SinkModifiedOn`.     
+   - question: Why am I seeing differences in Sinkmodifiedon and Modifiedon columns?   
+     answer: |
+         It's expected. `Modifiedon` is the datetime that record being changed in Dataverse; `Sinkmodifiedon` is the date and time that record is modified in the data lake.  
+   - question: Which Dataverse tables aren't supported for export?
+     answer: |
+        Any table that doesn't have change tracking enabled isn't supported in addition to following system tables:
         - Attachment
-        - Annotation
-        - String Map
         - Calendar
-   - question: Which Dataverse tables use Append only by default?
+        - Calendarrule
+
+        > [!NOTE]
+        > You can add the audit table for export using Azure Synapse Link for Dataverse. However, the export of the audit table is only supported with [Delta Lake profiles](/power-apps/maker/data-platform/azure-synapse-link-delta-lake).
+   - question: I'm using export to delta lake feature, can I stop the Apache Spark job or change the execution time?
      answer: |
-        All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
-   - question: Why does Azure Synapse Link for Dataverse require all resources to be in the same region and what can I do about it?
+        The Delta Lake conversion job is triggered when there was a data change in the configured time interval. There's no option to stop or pause the Apache Spark pool. However, you can modify the time interval after the link creation under Manage tables > Advanced Time interval.
+   - question: Does Azure Synapse Link support lookup columns?
+     answer: |  
+        Lookup columns are made up of an ID and a value. Lookup values only change on the root table. To better reflect the value of a lookup column, we recommend joining with the original root table to get the latest value.
+   - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        To ensure high performance and low latency in addition to preventing egress charges, Synapse Link requires all resources to be located in the same region. If you have a cross-region scenario, you can:
-        - Move the Azure resources to the same region as the environment.
-        - Move the environment to the same region as the Azure resources by contacting [Microsoft customer support](/power-platform/admin/get-help-support).
-        - Enable **Read Access - Geo Redundant Storage (RA-GRS)** on the Azure Data Lake to replicate Azure data to a near by region. More information: [Read access to data in the secondary region](/azure/storage/common/storage-redundancy#read-access-to-data-in-the-secondary-region)
-        - Use Azure Synapse pipelines or Azure Data Factory to copy data from Azure resources in one region to Azure resources in another.
-   - question: Why do I see the error message - cannot bulk load because the file is incomplete or could not be read?
+        In Dataverse, calculated columns keep only the formula information and the real value depends on the base table column. So calculated columns are only supported when all columns are located within the same exported table.    
+   - question: Which Dataverse tables use append only mode by default?
      answer: |
-        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data-preview)
+        All tables that don't have a createdOn field is synced using append only mode by default. This includes relationship tables and the ActivityParty table.
+   - question: Why do I see the error message - Content of directory on path can't be listed?
+     answer: |
+        - Dataverse data is stored in the connected storage container. You need the "Storage Blob Data Contributor" role in the linked storage account to perform read and query operations through Synapse Workspace.
+        - If you choose to export data with Delta Lake format, your CSV file is cleaned up after the Delta Lake conversion. You need to query data with **non_partitioned** tables through Synapse Workspace.
+   - question: Why do I see the error message - can't bulk load because the file is incomplete or couldn't be read (CSV file only)?
+     answer: |
+        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you read data from it. So, for tables with continuous changes, change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Troubleshoot serverless SQL pool](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#cant-bulk-load-because-the-file-couldnt-be-opened)
+   - question: How can I use Azure Synapse Link to archive critical data?
+     answer: |
+        Azure Synapse Link for Dataverse is designed for analytics purposes. We recommend customers use long-term-retention for archive purposes. More information: [Dataverse long term data retention overview](/power-apps/maker/data-platform/data-retention-overview)
+   - question: Why don't I see any data changes in the data lake when records have been deleted in Dataverse?
+     answer: |
+        For any direct SQL call to remove a record, the Azure Synapse Link for Dataverse service doesn't trigger because BPO.Delete isn't being called. For a sample feature go to [How to clean up inherited access](/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access).
 additionalContent: |
 
   ## See also

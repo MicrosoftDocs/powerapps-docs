@@ -2,23 +2,23 @@
 title: "Sample: Use QueryExpresion with a paging cookie (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use the paging cookie in a QueryExpresion" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Use QueryExpression with a paging cookie
 
-This sample shows how to use the paging cookie in a QueryExpression query to retrieve successive pages of query results. It uses the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseQueryExpressionwithPaging).
+This sample shows how to use the paging cookie in a QueryExpression query to retrieve successive pages of query results. It uses the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use QueryExpression with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseQueryExpressionwithPaging)
 
 ## How to run this sample
 
@@ -27,6 +27,7 @@ This sample shows how to use the paging cookie in a QueryExpression query to ret
 ## What this sample does
 
 The `IOrganizationService.RetreiveMultiple` method is intended to be used in a scenario where it retrieves a collection of records.
+
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
@@ -44,6 +45,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

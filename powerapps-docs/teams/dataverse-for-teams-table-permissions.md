@@ -1,15 +1,14 @@
 ---
-title: Granting permission to tables in Dataverse for Microsoft Teams (contains video) | Microsoft Docs
+title: Granting permission to tables in Dataverse for Microsoft Teams | Microsoft Docs
 description: Learn about managing table permissions in Dataverse for Teams while building apps.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/19/2021
 ms.author: saperlmu
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-  - tapanm-msft
+  - mduelae
   - msftsamperl
   - joel-lindstrom
 ---
@@ -30,14 +29,14 @@ For example, if there's a table that the users should only be able to modify for
 > Only team owners have the ability to edit table permissions currently.
 
 Watch this video to learn how to configure table permissions:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6P]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=23f33cc0-7db3-40fc-85e9-d6c3057b2489]
 
 ## Understanding team roles
 
 Permission to apps and the data that they use in Teams are based on the following roles in Teams team.
 
 - **Owner** - A team member with the owner role. This includes the creator of the team, and anyone who has been given the owner role by another users. Owners get full access to the data used in apps in the team.
-- **Member** - A team member who isn't an owner. By default, team members get full access like owners, but you can also change the permission for team members. You might want to restrict members from being able to edit certain tables. For example, in the [Bulletins app for Teams](bulletins.md), if you wanted to have members be able to read the bulletins but not edit them, you could give team members **Reference** permission on the **Bulletins** table.
+- **Member** - A team member who isn't an owner. By default, team members get full access like owners, but you can also change the permission for team members. You might want to restrict members from being able to edit certain tables. 
 - **Guest** - A guest is someone outside of your organization who is added to the team. By default, guests can create records, but not view records created by others.
 - **Colleagues with access**: With Power Apps for Teams, you can share an app with Azure AD security group whose members need not be part of the Teams team where the app was built. This enables you to add users to the application without having to add them to the specific team, and opens up “Broad Distribution” scenarios. For example, you may want to build an app that is enabled for every accountant in the organization, or even every employee in that organization.
 
@@ -46,7 +45,7 @@ Permission to apps and the data that they use in Teams are based on the followin
 When assigning security to a table, the following are the permissions that you can assign:
 
 - **Full Access** – Allows end users to see and edit all records in the table.
-- **Collaborate** – Allows end users to see all records and create new records. But they can only edit or delete their own records. An example for when you want to use collaborate is "up votes" in the Ideas the Perspectives app. You want each user of the app to view the up-votes of other users. But they shouldn't be able tor change the votes for any users other than their own.
+- **Collaborate** – Allows end users to see all records and create new records. But they can only edit or delete their own records. An example for when you want to use collaborate is "up votes" in the Ideas the Perspectives app. You want each user of the app to view the up-votes of other users. But they shouldn't be able to change the votes for any users other than their own.
 - **Reference** – Provides a read-only view of data. Users can't create, edit, or delete any records. An example is in Bulletins app&mdash;if you want users to read bulletin records but not edit them, you'd give them **Reference** permission on the **Bulletin** table.
 - **Private** – Users can create new records. Additionally, they can view, edit, or delete their own records only. An example is in the Issue reporting app&mdash;if you want users to only be able to create and see their own issue records in Dataverse, you'd give them **Private** permission on the **Issue Report** table.
 
@@ -123,7 +122,7 @@ Log out of Teams and log back in as the Team owner. We'll now go to the table an
 
     ![View table records](media/granting-permissions-to-tables-in-dataverse-for-teams/seeing-them-in-practice-4.png "View table records")
 
-So how would this apply to one of the sample apps for Teams?
+So how would this apply to one of the sample app templates for Teams?
 
 For example, with Bulletins we might set the following permissions for the tables in the app:
 
@@ -145,7 +144,7 @@ For example, with Bulletins we might set the following permissions for the table
 
 Before assigning permissions, you should plan your security based on the personas of users of your app. Who will administer the app? Who will use the app? How will they use it?
 
-For example, the Inspection sample app for Teams is designed to address the following personas:
+For example, the Inspection sample app template for Teams is designed to address the following personas:
 
 - **Inspection manager** - Creates Inspection forms and manages the list of locations or assets.
 - **Inspection reviewer** - Reviews inspection data and approves inspections.
@@ -157,20 +156,7 @@ Once we have the personas defined, relate these personas to the team role to whi
 - **Inspection reviewer** - Since inspection reviewers should be able to edit all inspections, but they won't create inspection forms, we'll make them team members. This will enable us to give them reference access to the Area **Inspection Checklist** table (where inspection form data is stored), but full access to **Area Inspection** table (where inspection records are stored).
 - **Inspection user** - Inspection users should only be able to submit new inspections, but not create new inspection forms or see other user’s inspections. So we won't make them members of the team in which the app is installed&mdash;we'll share the app with them as colleagues, and give them **Reference** permission to **Area Inspection Checklist** and **Private** permission to **Area Inspection**. This will allow users to view inspection forms and create their own inspection records.
 
-For more details about the recommended table permissions for the sample apps for Teams, see articles about deploying sample apps broadly, such as [Deploy Profile + as broad distribution app](deploy-profile-plus-broad-distribution.md).
+For more details about the recommended table permissions for the sample app templates for Teams, see articles about deploying sample app templates broadly, such as [Deploy Profile + as broad distribution app](deploy-profile-plus-broad-distribution.md).
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected sample app](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

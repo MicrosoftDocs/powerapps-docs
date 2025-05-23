@@ -3,7 +3,7 @@ title: Design - Securing the app and data | Microsoft Docs
 description: This article explains general security concepts for people undertaking a Power Apps project, explaining security layers and how to apply them.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -100,7 +100,7 @@ information.
 **Step 3**: Identify the requirements for who can see the records.
 
 **Step 4**: If you're using data sources other than Dataverse&mdash;or
-services that don't have Office 365 or Azure Active Directory authentication&mdash;you should
+services that don't have Office 365 or Microsoft Entra authentication&mdash;you should
 consider how you'll allow access to those systems. If you aren't in charge
 of those systems, seek advice from those service administrators.
 

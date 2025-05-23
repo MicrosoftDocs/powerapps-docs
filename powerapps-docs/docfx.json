@@ -42,19 +42,15 @@
         "marycc",
         "tinaburden",
         "almostdunh",
-        "AshleyWoodruff"
+        "AshleyWoodruff",
+        "kimberleybrown",
+        "nathlaroche"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
-      "extendBreadcrumb": true,
       "ms.suite": "office",
       "titleSuffix": "Power Apps",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
+      "feedback_system": "Standard",
       "feedback_product_url": "https://ideas.powerapps.com",
-      "search.appverid": "met150",
-      "search.app": [
-        "PowerApps"
-      ],
       "recommendations": true
     },
     "fileMetadata": {
@@ -79,14 +75,60 @@
         ]
       },
       "searchScope": {
-        "**.*": [ "Power Platform", "Power Apps" ]
+        "**.*": [
+          "Power Platform",
+          "Power Apps"
+        ]
+      },
+      "ms.topic": {
+        "developer/**/*.md": "overview",
+        "developer/data-platform/webapi/samples/*.md": "sample"
       },
       "ms.service": {
         "**.*": "powerapps"
       },
       "ms.subservice": {
         "developer/data-platform/**/*.md": "dataverse-developer",
-        "developer/model-driven-apps/**/*.md": "mda-developer"
+        "developer/model-driven-apps/**/*.md": "mda-developer",
+        "developer/component-framework/**/*.md": "pcf",
+        "maker/portals/**/*.md": "portals",
+        "maker/model-driven-apps/**/*.md": "mda-maker",
+        "maker/canvas/**/*.md": "canvas-maker",
+        "maker/data-platform/**/*.md": "dataverse-maker",
+        "maker/common/**/*.md": "common",
+        "teams/**/*.md": "teams",
+        "user/**/*.md": "end-user",
+        "mobile/**/*.md": "mobile",
+        "sample-apps/**/*.md": "sample-apps",
+        "guidance/**/*.md": "guidance"
+      },
+      "search.app": {
+        "**.*": [
+          "PowerApps",
+          "powerapps-docs"
+        ],
+        "developer/data-platform/**/*.md": [
+          "PowerApps",
+          "powerapps-docs",
+          "dataverse-docs"
+        ],
+        "maker/data-platform/**/*.md": [
+          "PowerApps",
+          "powerapps-docs",
+          "dataverse-docs"
+        ],
+        "teams/**/*.md": [
+          "PowerApps",
+          "powerapps-docs",
+          "teams-docs"
+        ],
+        "maker/portals/**/*.md": [
+          "PowerApps",
+          "powerpages-docs"
+        ]
+      },
+      "ms.date": {
+        "developer/data-platform/reference/entities/*.md": "01/21/2025"
       }
     },
     "template": [],

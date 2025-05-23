@@ -7,18 +7,14 @@ ms.reviewer: "Mattp123"
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "PowerApps"
 author: "mspilde"
 ms.subservice: mda-maker
 ms.author: "mspilde"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Design productive main forms in model-driven apps
 
@@ -87,7 +83,7 @@ Imagine a scenario where a salesperson needs to maintain data for an account tha
 
 - A primary contact ([lookup](model-driven-app-glossary.md#lookup)).
 - Additional contacts ([subgrid](model-driven-app-glossary.md#subgrid)).
-- A reference panel where a user can select to see lists of related records with access to read-only views (quick view) in the reference panel. The reference panel includes a a timeline control that's used to quickly access and create activities for that record.
+- A reference panel where a user can select to see lists of related records with access to read-only views (quick view) in the reference panel. The reference panel includes a timeline control that's used to quickly access and create activities for that record.
 
 This form is in regular use, so it is worth spending time on the layout to ensure it is simple and efficient to operate.
 

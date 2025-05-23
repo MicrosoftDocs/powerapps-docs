@@ -1,20 +1,16 @@
 ---
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/16/2020
+ms.date: 10/09/2024
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # How Dataverse SQL differs from Transact-SQL
@@ -23,7 +19,7 @@ This article describes the differences between Dataverse SQL and Transact-SQL. D
 
 ## Data types
 
-In a SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+In an SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
 
 More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)
 
@@ -39,7 +35,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - money
 - nchar
 - numeric
-- nvarchar*
+- [nvarchar*](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql#nvarchar---n--max--)
 - nvarchar(max) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# multi-line text
 - real
 - smalldatetime
@@ -47,7 +43,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - smallmoney
 - tinyint
 - uniqueidentifier
-- varchar*
+- [varchar*](/sql/t-sql/data-types/char-and-varchar-transact-sql#varchar---n--max--)
 - picklist
 - lookup
 - primarykey
@@ -55,7 +51,6 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - owner
 - state
 - status
-- multiselectpicklist
 
 ### [Not supported](#tab/not-supported)
 
@@ -70,12 +65,13 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - managedproperty
 - file
 - xml
+- multiselectpicklist
 
 ---
 
 ## Statements
 
-A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. 
+A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compile successfully.
 
 More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
 
@@ -92,9 +88,9 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - All WHERE conditions
   - All nested queries (SELECT, FROM, WHERE)
   - Union
+  - PIVOT and UNPIVOT
   - [GROUP BY](#select-group-by)/Having
 - General
-  - IF THEN ELSE
   - DECLARE variable
 
 ### [Not supported](#tab/not-supported)
@@ -106,7 +102,6 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
 - DCL
 - Stored Procedure
 - DQL
-  - Pivot
   - DQL XML function
   - DQL JSON function
   - CUBE and ROLLUP
@@ -114,6 +109,7 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
   - Without unique column name and alias
 - General
   - WHILE LOOP
+  - IF THEN ELSE
 
 ---
 
@@ -400,7 +396,7 @@ Retrieves rows from a Dataverse environment and enables the selection of one or 
 
 ### Hints
 
-Hints are not supported.
+Hints aren't supported.
 
 ### Predicates
 

@@ -2,17 +2,13 @@
 title: "Impersonate a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write plug-in code to act on behalf of a specific user."
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -27,7 +23,7 @@ There are two ways to apply impersonation in plug-ins: at registration or execut
 
 When you register a plug-in step you can specify a user account to use when the code is run by choosing from the **Run in User's Context** option. By default this is set to use the **Calling User**, which is the user account which initiated the action. When this default option is applied, the [SdkMessageProcessingStep.ImpersonatingUserId](reference/entities/sdkmessageprocessingstep.md#BKMK_ImpersonatingUserId) will be set to null or <xref:System.Guid.Empty>.
 
-More information: [Register plug-in step](register-plug-in.md#register-plug-in-step)
+More information: [Register plug-in step](register-plug-in.md#step-registration)
 
 ## During plug-in execution
 

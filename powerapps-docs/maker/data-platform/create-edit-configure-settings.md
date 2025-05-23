@@ -6,14 +6,10 @@ author: aneesmsft
 ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
-manager: kvivek
 ms.date: 03/01/2022
 ms.topic: how-to
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use settings to provide customized app experiences
 
@@ -41,14 +37,14 @@ A setting definition specifies the base properties of a setting. The full list o
 |**Description** | The description helps others understand what the setting is used for in all user interfaces where settings are displayed. |
 |**Data type** | The data type of a setting controls how the setting’s value is stored. Data type can be set to **Number**, **String**, or **Yes/No**. Data type can't be changed after the setting is created. |
 |**Default value** | The default value becomes available after you select a **Data type**. It specifies the setting's value that will be used unless it is overridden by a setting environment value or a setting app value. |
-|**Value can be changed for** | A setting can be overridden at one of the following levels :<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value. </li><li>**None**, the setting can’t not be overridden. </li></ul>|
+|**Value can be changed for** | A setting can be overridden at one of the following levels :<ul><li>**Environment and app**, allows both the setting environment value and setting app values to override the default value.</li><li>**Environment only**, allows only the setting environment value to override the default value.</li><li>**App only**, allows only setting app values to override the default value. </li><li>**None**, the setting can’t be overridden. </li></ul>|
 |**Release level** | Release level is used to inform the framework and other consumers of the setting about the state of the feature that the setting is used with. Release level can be set to **Generally available** or **Preview**. |
 |**Information Url** | A link to documentation to help consumers of the setting understand the purpose of the setting. Will be used as a *Learn more* link in all user interfaces where settings are displayed.|
 
 ### Adding a new setting definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to add the setting to.
 1. In the command bar, select **New > More > Setting > Setting definition**.
 1. In the **New setting** dialog, provide values for each of the properties based on your requirements. For information about setting definition properties, go to: [Setting definition](#setting-definition)
@@ -57,7 +53,7 @@ A setting definition specifies the base properties of a setting. The full list o
 ### Adding an existing setting definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to add the setting to.
 1. In the command bar, select **Add existing > More > Setting**.
 1. In the **Add existing setting definition** dialog, select one or more settings that you want to add.
@@ -68,7 +64,7 @@ A setting definition specifies the base properties of a setting. The full list o
 ### Updating a setting definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you created the setting in.
 1. In the tree view, select **Settings > Setting definitions**.
 1. Select the setting definition that you want to update.
@@ -78,7 +74,7 @@ A setting definition specifies the base properties of a setting. The full list o
 ### Removing a setting definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you created or added the setting to.
 1. In the tree view, select **Settings > Setting definitions**.
 1. Select the setting definition you want to remove.
@@ -87,7 +83,7 @@ A setting definition specifies the base properties of a setting. The full list o
 ### Deleting a setting definition
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you created or added the setting to.
 1. In the tree view, select **Settings > Setting definitions**.
 1. Select the setting definition you want to delete.
@@ -100,7 +96,7 @@ A setting environment value is used to override the setting's default value for 
 ### Adding a new setting environment value
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to add the setting environment value to.
 1. If the setting definition *is* available in the solution:
    1. Select the setting definition.
@@ -116,7 +112,7 @@ A setting environment value is used to override the setting's default value for 
 ### Adding an existing setting environment value
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to add the setting environment value to.
 1. If the setting definition *is* available in the solution:
    1. Select the setting definition.
@@ -133,7 +129,7 @@ A setting environment value is used to override the setting's default value for 
 ### Updating a setting environment value
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you added the settings environment value to.
 1. In the tree view, select **Settings > Setting environment values**.
 1. Select the setting environment value that you want to update.
@@ -142,7 +138,7 @@ A setting environment value is used to override the setting's default value for 
 ### Removing a setting environment value
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you created or added the setting to.
 1. In the tree view, select **Settings > Setting environment values**.
 1. Select the setting environment value you want to remove.
@@ -151,7 +147,7 @@ A setting environment value is used to override the setting's default value for 
 ### Deleting a setting environment value
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you created or added the setting to.
 1. In the tree view, select **Settings > Setting environment values**.
 1. Select the setting environment value you want to delete.
@@ -183,7 +179,7 @@ Setting app value is used to override the setting's default value and any settin
 ### Adding or updating a setting app value using the solution explorer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to add the setting app value to.
 1. If the setting definition or setting environment value is not available in the solution, add one of them. Go to [**Adding an existing setting definition**](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [**Adding an existing setting environment value**](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Select the setting definition or setting environment value.
@@ -194,7 +190,7 @@ Setting app value is used to override the setting's default value and any settin
 ### Deleting a setting app value using the solution explorer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. In the navigation pane, select **Solutions**.
+1. In the navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. From the list of solutions, open the solution you want to delete the setting app value from.
 1. If the setting definition or setting environment value is not available in the solution, add one of them. More information: [Adding an existing setting definition](create-edit-configure-settings.md#adding-an-existing-setting-definition) or [Adding an existing setting environment value](create-edit-configure-settings.md#adding-an-existing-setting-environment-value).
 1. Select the setting definition or setting environment value.

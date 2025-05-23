@@ -1,62 +1,57 @@
 ---
-title: "Rollup Query (GoalRollupQuery)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Rollup Query (GoalRollupQuery)  table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Rollup Query (GoalRollupQuery) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Rollup Query (GoalRollupQuery) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Rollup Query (GoalRollupQuery)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Rollup Query (GoalRollupQuery) table/entity reference (Microsoft Dataverse)
 
 Query that is used to filter the results of the goal rollup.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/goalrollupqueries(*goalrollupqueryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/goalrollupqueries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/goalrollupqueries(*goalrollupqueryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/goalrollupqueries(*goalrollupqueryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/goalrollupqueries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/goalrollupqueries(*goalrollupqueryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/goalrollupqueries(*goalrollupqueryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Rollup Query (GoalRollupQuery) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /goalrollupqueries(*goalrollupqueryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /goalrollupqueries<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /goalrollupqueries(*goalrollupqueryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /goalrollupqueries(*goalrollupqueryid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /goalrollupqueries<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /goalrollupqueries(*goalrollupqueryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /goalrollupqueries(*goalrollupqueryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /goalrollupqueries(*goalrollupqueryid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|goalrollupqueries|
-|DisplayCollectionName|Rollup Queries|
-|DisplayName|Rollup Query|
-|EntitySetName|goalrollupqueries|
-|IsBPFEntity|False|
-|LogicalCollectionName|goalrollupqueries|
-|LogicalName|goalrollupquery|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|goalrollupqueryid|
-|PrimaryNameAttribute|name|
-|SchemaName|GoalRollupQuery|
+The following table lists selected properties for the Rollup Query (GoalRollupQuery) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Rollup Query** |
+| **DisplayCollectionName** | **Rollup Queries** |
+| **SchemaName** | `GoalRollupQuery` |
+| **CollectionSchemaName** | `goalrollupqueries` |
+| **EntitySetName** | `goalrollupqueries`|
+| **LogicalName** | `goalrollupquery` |
+| **LogicalCollectionName** | `goalrollupqueries` |
+| **PrimaryIdAttribute** | `goalrollupqueryid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -75,785 +70,676 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_FetchXml"></a> FetchXml
 
 |Property|Value|
-|--------|-----|
-|Description|String that specifies the condition criteria in FetchXML.|
-|DisplayName|Condition Criteria|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**String that specifies the condition criteria in FetchXML.**|
+|DisplayName|**Condition Criteria**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|fetchxml|
-|MaxLength|1073741823|
+|LogicalName|`fetchxml`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_GoalRollupQueryId"></a> GoalRollupQueryId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the rollup query.|
-|DisplayName|Goal Rollup Query|
+|---|---|
+|Description|**Unique identifier of the rollup query.**|
+|DisplayName|**Goal Rollup Query**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|goalrollupqueryid|
+|LogicalName|`goalrollupqueryid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Type a descriptive name for the goal rollup query.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a descriptive name for the goal rollup query.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_QueryEntityType"></a> QueryEntityType
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the record type of the rollup query.|
-|DisplayName|Entity Type|
+|---|---|
+|Description|**Enter the record type of the rollup query.**|
+|DisplayName|**Entity Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|queryentitytype|
+|LogicalName|`queryentitytype`|
 |RequiredLevel|ApplicationRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the goal rollup query is active or inactive.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the goal rollup query is active or inactive.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`goalrollupquery_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|0|Active|
-|1|Inactive|1|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 0<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 1<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the goal rollup query's status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the goal rollup query's status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`goalrollupquery_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|0|Open|0|
-|1|Closed|1|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Open**<br />State:0<br />TransitionData: None|
+|1|Label: **Closed**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the record.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the record.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team who owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team who owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the goal rollup query.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the goal rollup query.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [goalrollupquery_actualint](#BKMK_goalrollupquery_actualint)
-- [goal_rollupquery_actualmoney](#BKMK_goal_rollupquery_actualmoney)
-- [goal_rollupquery_actualdecimal](#BKMK_goal_rollupquery_actualdecimal)
-- [goal_rollupquery_customint](#BKMK_goal_rollupquery_customint)
-- [goal_rollupquery_custommoney](#BKMK_goal_rollupquery_custommoney)
-- [goal_rollupquery_customdecimal](#BKMK_goal_rollupquery_customdecimal)
-- [goal_rollupquery_inprogressint](#BKMK_goal_rollupquery_inprogressint)
-- [goal_rollupquery_inprogressmoney](#BKMK_goal_rollupquery_inprogressmoney)
-- [goal_rollupquery_inprogressdecimal](#BKMK_goal_rollupquery_inprogressdecimal)
-- [GoalRollupQuery_SyncErrors](#BKMK_GoalRollupQuery_SyncErrors)
-- [goalrollupquery_AsyncOperations](#BKMK_goalrollupquery_AsyncOperations)
-- [GoalRollupQuery_DuplicateMatchingRecord](#BKMK_GoalRollupQuery_DuplicateMatchingRecord)
-- [GoalRollupQuery_DuplicateBaseRecord](#BKMK_GoalRollupQuery_DuplicateBaseRecord)
-- [goalrollupquery_ProcessSessions](#BKMK_goalrollupquery_ProcessSessions)
-
-
-### <a name="BKMK_goalrollupquery_actualint"></a> goalrollupquery_actualint
-
-Same as the [goalrollupquery_actualint](goal.md#BKMK_goalrollupquery_actualint) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryactualintegerid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goalrollupquery_actualint|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_actualmoney"></a> goal_rollupquery_actualmoney
-
-Same as the [goal_rollupquery_actualmoney](goal.md#BKMK_goal_rollupquery_actualmoney) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryactualmoneyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_actualmoney|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_actualdecimal"></a> goal_rollupquery_actualdecimal
-
-Same as the [goal_rollupquery_actualdecimal](goal.md#BKMK_goal_rollupquery_actualdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryactualdecimalid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_actualdecimal|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_customint"></a> goal_rollupquery_customint
-
-Same as the [goal_rollupquery_customint](goal.md#BKMK_goal_rollupquery_customint) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupquerycustomintegerid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_customint|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_custommoney"></a> goal_rollupquery_custommoney
-
-Same as the [goal_rollupquery_custommoney](goal.md#BKMK_goal_rollupquery_custommoney) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupquerycustommoneyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_custommoney|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_customdecimal"></a> goal_rollupquery_customdecimal
-
-Same as the [goal_rollupquery_customdecimal](goal.md#BKMK_goal_rollupquery_customdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupquerycustomdecimalid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_customdecimal|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_inprogressint"></a> goal_rollupquery_inprogressint
-
-Same as the [goal_rollupquery_inprogressint](goal.md#BKMK_goal_rollupquery_inprogressint) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryinprogressintegerid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_inprogressint|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_inprogressmoney"></a> goal_rollupquery_inprogressmoney
-
-Same as the [goal_rollupquery_inprogressmoney](goal.md#BKMK_goal_rollupquery_inprogressmoney) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryinprogressmoneyid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_inprogressmoney|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goal_rollupquery_inprogressdecimal"></a> goal_rollupquery_inprogressdecimal
-
-Same as the [goal_rollupquery_inprogressdecimal](goal.md#BKMK_goal_rollupquery_inprogressdecimal) many-to-one relationship for the [goal](goal.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|goal|
-|ReferencingAttribute|rollupqueryinprogressdecimalid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goal_rollupquery_inprogressdecimal|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_GoalRollupQuery_SyncErrors"></a> GoalRollupQuery_SyncErrors
-
-Same as the [GoalRollupQuery_SyncErrors](syncerror.md#BKMK_GoalRollupQuery_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|GoalRollupQuery_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_goalrollupquery_AsyncOperations"></a> goalrollupquery_AsyncOperations
-
-Same as the [goalrollupquery_AsyncOperations](asyncoperation.md#BKMK_goalrollupquery_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goalrollupquery_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_GoalRollupQuery_DuplicateMatchingRecord"></a> GoalRollupQuery_DuplicateMatchingRecord
-
-Same as the [GoalRollupQuery_DuplicateMatchingRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|GoalRollupQuery_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_GoalRollupQuery_DuplicateBaseRecord"></a> GoalRollupQuery_DuplicateBaseRecord
-
-Same as the [GoalRollupQuery_DuplicateBaseRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|GoalRollupQuery_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_goalrollupquery_ProcessSessions"></a> goalrollupquery_ProcessSessions
-
-Same as the [goalrollupquery_ProcessSessions](processsession.md#BKMK_goalrollupquery_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|goalrollupquery_ProcessSessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [team_goalrollupquery](#BKMK_team_goalrollupquery)
+- [business_unit_goalrollupquery](#BKMK_business_unit_goalrollupquery)
 - [lk_goalrollupquery_createdby](#BKMK_lk_goalrollupquery_createdby)
 - [lk_goalrollupquery_createdonbehalfby](#BKMK_lk_goalrollupquery_createdonbehalfby)
 - [lk_goalrollupquery_modifiedby](#BKMK_lk_goalrollupquery_modifiedby)
 - [lk_goalrollupquery_modifiedonbehalfby](#BKMK_lk_goalrollupquery_modifiedonbehalfby)
-- [business_unit_goalrollupquery](#BKMK_business_unit_goalrollupquery)
-
-
-### <a name="BKMK_team_goalrollupquery"></a> team_goalrollupquery
-
-See the [team_goalrollupquery](team.md#BKMK_team_goalrollupquery) one-to-many relationship for the [team](team.md) table/entity.
-
-### <a name="BKMK_lk_goalrollupquery_createdby"></a> lk_goalrollupquery_createdby
-
-See the [lk_goalrollupquery_createdby](systemuser.md#BKMK_lk_goalrollupquery_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_goalrollupquery_createdonbehalfby"></a> lk_goalrollupquery_createdonbehalfby
-
-See the [lk_goalrollupquery_createdonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_goalrollupquery_modifiedby"></a> lk_goalrollupquery_modifiedby
-
-See the [lk_goalrollupquery_modifiedby](systemuser.md#BKMK_lk_goalrollupquery_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_goalrollupquery_modifiedonbehalfby"></a> lk_goalrollupquery_modifiedonbehalfby
-
-See the [lk_goalrollupquery_modifiedonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [owner_goalrollupquery](#BKMK_owner_goalrollupquery)
+- [team_goalrollupquery](#BKMK_team_goalrollupquery)
 
 ### <a name="BKMK_business_unit_goalrollupquery"></a> business_unit_goalrollupquery
 
-See the [business_unit_goalrollupquery](businessunit.md#BKMK_business_unit_goalrollupquery) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_goalrollupquery](businessunit.md#BKMK_business_unit_goalrollupquery)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_goalrollupquery_createdby"></a> lk_goalrollupquery_createdby
+
+One-To-Many Relationship: [systemuser lk_goalrollupquery_createdby](systemuser.md#BKMK_lk_goalrollupquery_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_goalrollupquery_createdonbehalfby"></a> lk_goalrollupquery_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_goalrollupquery_createdonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_goalrollupquery_modifiedby"></a> lk_goalrollupquery_modifiedby
+
+One-To-Many Relationship: [systemuser lk_goalrollupquery_modifiedby](systemuser.md#BKMK_lk_goalrollupquery_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_goalrollupquery_modifiedonbehalfby"></a> lk_goalrollupquery_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_goalrollupquery_modifiedonbehalfby](systemuser.md#BKMK_lk_goalrollupquery_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_goalrollupquery"></a> owner_goalrollupquery
+
+One-To-Many Relationship: [owner owner_goalrollupquery](owner.md#BKMK_owner_goalrollupquery)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_goalrollupquery"></a> team_goalrollupquery
+
+One-To-Many Relationship: [team team_goalrollupquery](team.md#BKMK_team_goalrollupquery)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [goal_rollupquery_actualdecimal](#BKMK_goal_rollupquery_actualdecimal)
+- [goal_rollupquery_actualmoney](#BKMK_goal_rollupquery_actualmoney)
+- [goal_rollupquery_customdecimal](#BKMK_goal_rollupquery_customdecimal)
+- [goal_rollupquery_customint](#BKMK_goal_rollupquery_customint)
+- [goal_rollupquery_custommoney](#BKMK_goal_rollupquery_custommoney)
+- [goal_rollupquery_inprogressdecimal](#BKMK_goal_rollupquery_inprogressdecimal)
+- [goal_rollupquery_inprogressint](#BKMK_goal_rollupquery_inprogressint)
+- [goal_rollupquery_inprogressmoney](#BKMK_goal_rollupquery_inprogressmoney)
+- [goalrollupquery_actualint](#BKMK_goalrollupquery_actualint)
+- [goalrollupquery_AsyncOperations](#BKMK_goalrollupquery_AsyncOperations)
+- [GoalRollupQuery_DuplicateBaseRecord](#BKMK_GoalRollupQuery_DuplicateBaseRecord)
+- [GoalRollupQuery_DuplicateMatchingRecord](#BKMK_GoalRollupQuery_DuplicateMatchingRecord)
+- [goalrollupquery_ProcessSessions](#BKMK_goalrollupquery_ProcessSessions)
+- [GoalRollupQuery_SyncErrors](#BKMK_GoalRollupQuery_SyncErrors)
+
+### <a name="BKMK_goal_rollupquery_actualdecimal"></a> goal_rollupquery_actualdecimal
+
+Many-To-One Relationship: [goal goal_rollupquery_actualdecimal](goal.md#BKMK_goal_rollupquery_actualdecimal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryactualdecimalid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_actualdecimal`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_actualmoney"></a> goal_rollupquery_actualmoney
+
+Many-To-One Relationship: [goal goal_rollupquery_actualmoney](goal.md#BKMK_goal_rollupquery_actualmoney)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryactualmoneyid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_actualmoney`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_customdecimal"></a> goal_rollupquery_customdecimal
+
+Many-To-One Relationship: [goal goal_rollupquery_customdecimal](goal.md#BKMK_goal_rollupquery_customdecimal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupquerycustomdecimalid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_customdecimal`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_customint"></a> goal_rollupquery_customint
+
+Many-To-One Relationship: [goal goal_rollupquery_customint](goal.md#BKMK_goal_rollupquery_customint)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupquerycustomintegerid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_customint`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_custommoney"></a> goal_rollupquery_custommoney
+
+Many-To-One Relationship: [goal goal_rollupquery_custommoney](goal.md#BKMK_goal_rollupquery_custommoney)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupquerycustommoneyid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_custommoney`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_inprogressdecimal"></a> goal_rollupquery_inprogressdecimal
+
+Many-To-One Relationship: [goal goal_rollupquery_inprogressdecimal](goal.md#BKMK_goal_rollupquery_inprogressdecimal)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryinprogressdecimalid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_inprogressdecimal`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_inprogressint"></a> goal_rollupquery_inprogressint
+
+Many-To-One Relationship: [goal goal_rollupquery_inprogressint](goal.md#BKMK_goal_rollupquery_inprogressint)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryinprogressintegerid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_inprogressint`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goal_rollupquery_inprogressmoney"></a> goal_rollupquery_inprogressmoney
+
+Many-To-One Relationship: [goal goal_rollupquery_inprogressmoney](goal.md#BKMK_goal_rollupquery_inprogressmoney)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryinprogressmoneyid`|
+|ReferencedEntityNavigationPropertyName|`goal_rollupquery_inprogressmoney`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goalrollupquery_actualint"></a> goalrollupquery_actualint
+
+Many-To-One Relationship: [goal goalrollupquery_actualint](goal.md#BKMK_goalrollupquery_actualint)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`goal`|
+|ReferencingAttribute|`rollupqueryactualintegerid`|
+|ReferencedEntityNavigationPropertyName|`goalrollupquery_actualint`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goalrollupquery_AsyncOperations"></a> goalrollupquery_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation goalrollupquery_AsyncOperations](asyncoperation.md#BKMK_goalrollupquery_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`goalrollupquery_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_GoalRollupQuery_DuplicateBaseRecord"></a> GoalRollupQuery_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord GoalRollupQuery_DuplicateBaseRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`GoalRollupQuery_DuplicateBaseRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_GoalRollupQuery_DuplicateMatchingRecord"></a> GoalRollupQuery_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord GoalRollupQuery_DuplicateMatchingRecord](duplicaterecord.md#BKMK_GoalRollupQuery_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`GoalRollupQuery_DuplicateMatchingRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_goalrollupquery_ProcessSessions"></a> goalrollupquery_ProcessSessions
+
+Many-To-One Relationship: [processsession goalrollupquery_ProcessSessions](processsession.md#BKMK_goalrollupquery_ProcessSessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`goalrollupquery_ProcessSessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_GoalRollupQuery_SyncErrors"></a> GoalRollupQuery_SyncErrors
+
+Many-To-One Relationship: [syncerror GoalRollupQuery_SyncErrors](syncerror.md#BKMK_GoalRollupQuery_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`GoalRollupQuery_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.goalrollupquery?text=goalrollupquery EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.goalrollupquery?displayProperty=fullName>

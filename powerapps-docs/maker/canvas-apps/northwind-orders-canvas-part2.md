@@ -3,18 +3,16 @@ title: Create a summary form in a canvas app
 description: Learn about how to create an summary form in a canvas app to manage data for Northwind Traders.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/06/2019
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 
@@ -217,7 +215,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 1. Set the summary form's **Item** property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     Gallery1.Selected
     ```
 
@@ -296,7 +294,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the **Image** property of the image to this formula, replacing the number at the end of DataCardValue if necessary:
 
-    ```powerapps-dot
+    ```power-fx
     DataCardValue7.Selected.Picture
     ```
 
@@ -329,7 +327,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. In the **Tree view** pane, confirm that the form's name is **Form1**, and then set the icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     SubmitForm( Form1 )
     ```
 
@@ -340,7 +338,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the icon's **DisplayMode** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
@@ -351,7 +349,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the icon's **DisabledColor** property to this value:
 
-    ```powerapps-dot
+    ```power-fx
     Gray
     ```
 
@@ -382,7 +380,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Cancel icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     ResetForm( Form1 )
     ```
 
@@ -393,7 +391,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Cancel icon's **DisplayMode** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
@@ -404,7 +402,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Cancel icon's **DisabledColor** property to this value:
 
-    ```powerapps-dot
+    ```power-fx
     Gray
     ```
 
@@ -435,7 +433,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Add icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     NewForm( Form1 )
     ```
 
@@ -446,7 +444,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Add icon's **DisplayMode** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
@@ -460,7 +458,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Add icon's **DisabledColor** property to this value:
 
-    ```powerapps-dot
+    ```power-fx
     Gray
     ```
 
@@ -494,7 +492,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Trash icon's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove( Orders, Gallery1.Selected )
     ```
 
@@ -505,7 +503,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Trash icon's **DisplayMode** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
@@ -516,7 +514,7 @@ The **Orders** table has a many-to-one relationship with the **Employees** table
 
 1. Set the Trash icon's **DisabledColor** property to this value:
 
-    ```powerapps-dot
+    ```power-fx
     Gray
     ```
 

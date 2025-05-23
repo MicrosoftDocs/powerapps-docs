@@ -1,24 +1,18 @@
 ---
-title: "deleteRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "deleteRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the deleteRecord method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # deleteRecord (Client API reference)
-
-
 
 [!INCLUDE[./includes/deleteRecord-description.md](./includes/deleteRecord-description.md)] 
 
@@ -28,47 +22,22 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the record you want to delete. For example: "account". </td>
-</tr>
-<tr>
-<td>id</td>
-<td>String</td>
-<td>Yes</td>
-<td>GUID of the table record you want to delete.</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when a record is deleted. An object with the following properties will be passed to identify the deleted record:</p>
-<ul>
-<li><b>entityType</b>: String. The table type of the record.</li>
-<li><b>id</b>: String. GUID of the record.</li>
-<li><b>name</b>: String. Name of the record.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the record you want to delete. For example: `account`.|
+|`id`|String|Yes|GUID of the table record you want to delete.|
+|`successCallback`|Function|No|A function to call when a record is deleted. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 ## Return Value
 
-On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object to the `successCallback` with the following properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`entityType`|String|The table logical name of the record.|
+|`id`|String|GUID of the record.|
+|`name`|String|Name of the  record.|
 
 ## Examples
 
@@ -89,13 +58,8 @@ Xrm.WebApi.deleteRecord("account", "5531d753-95af-e711-a94e-000d3a11e605").then(
 );
 ```
  
-### Related topics
+### Related articles
 
 [Xrm.WebApi](../xrm-webapi.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

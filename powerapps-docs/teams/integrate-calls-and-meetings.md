@@ -1,26 +1,25 @@
 ---
-title: Integrate your Teams app with calls and meetings (contains video)
+title: Integrate your Teams app with calls and meetings
 description: Learn how to use Teams calls and meetings with your Power Apps in Teams.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/25/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-    - tapanm-msft
+    - mduelae
     - msftsamperl
     - joel-lindstrom
 ---
 # Integrate with calls and meetings
 
-Apps in Microsoft Teams drive collaboration by enabling users to do work where they communicate and collaborate. Many apps require a “back and forth” communication or passing items between people. For example, in the Inspection sample app for Teams, managers create inspection forms, users complete the inspection, and reviewers review the inspections.
+Apps in Microsoft Teams drive collaboration by enabling users to do work where they communicate and collaborate. Many apps require a “back and forth” communication or passing items between people. For example, in the Inspection sample app template for Teams, managers create inspection forms, users complete the inspection, and reviewers review the inspections.
 
 Power Apps in Teams can leverage deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to make calls or schedule meetings with other users within the organization.
 
 Watch this video to learn how to integrate Power Apps with calls and meetings:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=022e5ad1-7a6d-49bb-99de-93dd4041bebd]
 
 ## Prerequisites
 
@@ -68,7 +67,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Select the app from the left-pane, and update the **OnStart** property of the app with the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Set(gblIsHostClientWeb,Param("hostClientType")="web")
     ```
 
@@ -93,7 +92,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
     Copy the following formula in the **OnSelect** property of the button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
@@ -126,7 +125,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Copy the following formula in the **OnSelect** property of the new button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
@@ -154,7 +153,7 @@ Well create an app with a gallery of users and buttons on each of the display fo
 
 1. Copy the following formula in the **OnSelect** property of the new button:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         gblIsHostClientWeb,
         Launch(
@@ -204,24 +203,10 @@ The call button launches a new call. The meeting button creates a meeting invita
 
 ## See chat, call, and meeting integration in action
 
-For an example of chat, call, and meeting integration in action, check out the [Profile +](profile-app.md) sample app for Teams.
+For an example of chat, call, and meeting integration in action, check out the [Profile +](profile-app.md) sample app for template Teams.
 
 When opened from within a Team, the app displays the other members of the team. You can select the **Select people to connect with** and select one or more people, then start a call or chat with the selected people, or schedule a meeting.
 
 ![See chat](media/integrate-with-calls-and-meetings/see-chat-call-and-meeting-integration-in-action-1.png "See chat")
-
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

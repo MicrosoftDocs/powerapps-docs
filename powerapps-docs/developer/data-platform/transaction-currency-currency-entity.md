@@ -2,18 +2,14 @@
 title: "Transaction Currency (currency) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about transaction table, which is a multicurrency feature enabling users to perform financial transactions in multiple currencies. Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency using the base currency." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/19/2021
+ms.date: 07/25/2024
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Transaction Currency (currency) table
 
@@ -35,7 +31,7 @@ Dataverse is a multicurrency system, in which each record can be associated with
   
 - Define product pricelists for each currency.  
   
-To use multiple currencies, the base currency must be defined for an organization during server installation and organization setup. After the base currency is set for an organization, it cannot be changed. This value is stored in the `Organization.BaseCurrencyID` attribute.  
+To use multiple currencies, the base currency must be defined for an organization during server installation and organization setup. This value is stored in the `Organization.BaseCurrencyID` attribute.  
   
 Transaction currencies are defined as a part of the system settings. An unlimited number of transaction currencies can be defined. Transaction currencies are related to the base currency with the definition of a currency exchange rate.  
   

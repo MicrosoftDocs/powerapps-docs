@@ -1,11 +1,10 @@
 ---
-title: Create a table in Teams (contains video) | Microsoft Docs
+title: Create a table in Teams | Microsoft Docs
 description: Explains how to create a Dataverse for Teams table.
 author: NHelgren
-
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
-ms.date: 11/09/2020
+ms.date: 07/01/2024
 ms.subservice: teams
 ms.author: nhelgren
 ms.reviewer: matp
@@ -27,7 +26,7 @@ There are four different types of table ownership. When you create a table, the 
 ## Create a table
 
 Watch this video for a quick overview about how to create a table in Dataverse for Teams:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NNw1]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a7b07bc4-1e08-4ed9-8675-b700a8e1a6a3]
 
 1. Sign in to Teams, and then select the link for **Power Apps**.
    > [!div class="mx-imgBorder"] 
@@ -37,7 +36,7 @@ Watch this video for a quick overview about how to create a table in Dataverse f
    > [!div class="mx-imgBorder"] 
    > ![The Build tab.](media/create-table2.png "The Build tab")
 
-3. Select **New**, and then select **Table**.
+3. Select **New** on the command bar, and then select **Table**.
     > [!div class="mx-imgBorder"] 
     > ![New table menu option.](media/create-table3.png "New table menu option")
 

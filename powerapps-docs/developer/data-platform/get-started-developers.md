@@ -3,17 +3,13 @@ title: "Developers: Get started with Microsoft Dataverse | Microsoft Docs"
 description: Learn about some available methods that developers can use to access business data, customize business logic, write applications, and access external systems.
 suite: powerapps
 author: JimDaly
-manager: kvivek
 ms.date: 04/03/2022
 ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: pehecke
-ms.custom: intro-internal
+ms.collection: get-started
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Developers: Get started with Microsoft Dataverse
@@ -22,7 +18,7 @@ Where to start depends on what problem you are trying to solve. This guide inclu
 
 ## Work with data using web services
 
-There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and (SOAP) Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK API.
+There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and the Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK for .NET.
 
 Which one you should use depends on the type of project you are working on. More information: [Work with data using code](work-with-data.md)
 
@@ -56,7 +52,7 @@ More information:
 
 ## Work with table definitions
 
-Developing a good working understanding of the *metadata* (data that describes data) in the system can help you understand how the Dataverse platform works. In general you will use designers to add, update, or delete table columns that will store business data. You can also define metadata that provides additional information about a table or column. For example, most tables have a "Name" column and there is metadata that describes if that column is required, when it was modified, and by whom. Both the (OData) data access point and the Organization service endpoint provide capabilities to perform common operations on the table definition and other metadata. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the *metadata* (data that describes data) in the system can help you understand how the Dataverse platform works. In general you will use designers to add, update, or delete table columns that will store business data. You can also define metadata that provides additional information about a table or column. For example, most tables have a "Name" column and there is metadata that describes if that column is required, when it was modified, and by whom. Both the Web API and SDK for .NET provide capabilities to perform common operations on the table definition and other metadata. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 
@@ -65,7 +61,7 @@ If you are going to distribute the extensions you create or any customizations t
  - [Introduction to solutions](introduction-solutions.md)
  - [SolutionPackager tool](/power-platform/alm/solution-packager-tool)
  - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
- - [Publish your app on AppSource](publish-app-appsource.md)
+ - [Publish your app on AppSource](/power-platform/developer/appsource/publish-app)
 
 ## Create client applications and authentication
 

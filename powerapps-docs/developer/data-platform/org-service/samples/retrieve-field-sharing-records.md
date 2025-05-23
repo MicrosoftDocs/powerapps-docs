@@ -4,21 +4,21 @@ description: "This sample shows how to retrieve the field sharing records for a 
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Retrieve field sharing records
 
-This sample shows how to retrieve the `PrincipalObjectAttributeAccess` (field sharing) records for a table. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveFieldSharing).
+This sample shows how to retrieve the `PrincipalObjectAttributeAccess` (field sharing) records for a table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve field sharing records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveFieldSharing)
 
 ## How to run this sample
 
@@ -47,6 +47,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

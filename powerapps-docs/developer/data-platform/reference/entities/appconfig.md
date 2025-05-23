@@ -1,56 +1,50 @@
 ---
-title: "App Configuration (AppConfig)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the App Configuration (AppConfig)  table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "App Configuration (AppConfig) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the App Configuration (AppConfig) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# App Configuration (AppConfig)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# App Configuration (AppConfig) table/entity reference (Microsoft Dataverse)
 
 Contains a mapping between an app configuration instance and an app, which defines the properties that can be customized for the app. Optionally, also contains navigation setting for an app. For internal use only.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/appconfigs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/appconfigs(*appconfigid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the App Configuration (AppConfig) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /appconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /appconfigs(*appconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /appconfigs(*appconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /appconfigs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrieveUnpublishedMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
+| `Update`<br />Event: True |`PATCH` /appconfigs(*appconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /appconfigs(*appconfigid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|AppConfigs|
-|DisplayCollectionName|App Configuration|
-|DisplayName|App Configuration|
-|EntitySetName|appconfigs|
-|IsBPFEntity|False|
-|LogicalCollectionName|appconfigs|
-|LogicalName|appconfig|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|appconfigid|
-|PrimaryNameAttribute||
-|SchemaName|AppConfig|
+The following table lists selected properties for the App Configuration (AppConfig) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **App Configuration** |
+| **DisplayCollectionName** | **App Configuration** |
+| **SchemaName** | `AppConfig` |
+| **CollectionSchemaName** | `AppConfigs` |
+| **EntitySetName** | `appconfigs`|
+| **LogicalName** | `appconfig` |
+| **LogicalCollectionName** | `appconfigs` |
+| **PrimaryIdAttribute** | `appconfigid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -63,576 +57,490 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
 
-
 ### <a name="BKMK_AppConfigIdUnique"></a> AppConfigIdUnique
 
 |Property|Value|
-|--------|-----|
-|Description|System-populated app configuration unique ID.|
-|DisplayName|App Config ID Unique|
+|---|---|
+|Description|**System-populated app configuration unique ID.**|
+|DisplayName|**App Config ID Unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|appconfigidunique|
+|LogicalName|`appconfigidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_AppConfigImportXml"></a> AppConfigImportXml
 
 |Property|Value|
-|--------|-----|
-|Description|The App Config diff computed for managed solutions containing the AppConfig entity. For internal use only.|
+|---|---|
+|Description|**The App Config diff computed for managed solutions containing the AppConfig entity. For internal use only.**|
 |DisplayName||
-|Format|TextArea|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|appconfigimportxml|
-|MaxLength|1073741823|
+|LogicalName|`appconfigimportxml`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_AppModuleId"></a> AppModuleId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the app module to associate with the app configuration.|
-|DisplayName|App Module ID|
+|---|---|
+|Description|**Choose the app module to associate with the app configuration.**|
+|DisplayName|**App Module ID**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|appmoduleid|
+|LogicalName|`appmoduleid`|
 |RequiredLevel|SystemRequired|
-|Targets|appmodule|
 |Type|Lookup|
-
+|Targets|appmodule|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Version in which the similarity rule is introduced.|
-|DisplayName|Introduced Version|
-|FormatName|VersionNumber|
-|IsLocalizable|False|
+|---|---|
+|Description|**Version in which the similarity rule is introduced.**|
+|DisplayName|**Introduced Version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|introducedversion|
-|MaxLength|100|
+|LogicalName|`introducedversion`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|VersionNumber|
+|FormatName|VersionNumber|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the app configuration is Active or Inactive. Inactive records are read-only and can't be edited unless they are reactivated.|
-|DisplayName|Status|
+|---|---|
+|Description|**Shows whether the app configuration is Active or Inactive. Inactive records are read-only and can't be edited unless they are reactivated.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|None|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`appconfig_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`appconfig_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AppConfigId](#BKMK_AppConfigId)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_AppConfigId"></a> AppConfigId
 
 |Property|Value|
-|--------|-----|
-|Description|System-populated app configuration ID.|
-|DisplayName|App Config ID|
+|---|---|
+|Description|**System-populated app configuration ID.**|
+|DisplayName|**App Config ID**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|appconfigid|
+|LogicalName|`appconfigid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalfÂ of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalfÂ of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
-|Description|Is Managed|
-|DisplayName|Indicates whether this is part of a managed solution.|
+|---|---|
+|Description|**Is Managed**|
+|DisplayName|**Indicates whether this is part of a managed solution.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization.|
-|DisplayName|OrganizationId|
+|---|---|
+|Description|**Unique identifier for the organization.**|
+|DisplayName|**OrganizationId**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was migrated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Shows the date and time when the record was migrated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Internal use only|
-|DisplayName|Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**Internal use only**|
+|DisplayName|**Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Supporting Solution ID|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Supporting Solution ID**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [navigationsetting_appconfig](#BKMK_navigationsetting_appconfig)
-- [appconfig_appconfiginstance](#BKMK_appconfig_appconfiginstance)
-
-
-### <a name="BKMK_navigationsetting_appconfig"></a> navigationsetting_appconfig
-
-Same as the [navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig) many-to-one relationship for the [navigationsetting](navigationsetting.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|navigationsetting|
-|ReferencingAttribute|appconfigid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|appconfig_navigationsetting|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
-
-Same as the [appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance) many-to-one relationship for the [appconfiginstance](appconfiginstance.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|appconfiginstance|
-|ReferencingAttribute|appconfigid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|appconfig_appconfiginstance|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_appconfig_createdby](#BKMK_lk_appconfig_createdby)
-- [lk_appconfig_modifiedonbehalfby](#BKMK_lk_appconfig_modifiedonbehalfby)
-- [lk_appconfig_createdonbehalfby](#BKMK_lk_appconfig_createdonbehalfby)
-- [organization_appconfig](#BKMK_organization_appconfig)
 - [appmodule_appconfig](#BKMK_appmodule_appconfig)
+- [lk_appconfig_createdby](#BKMK_lk_appconfig_createdby)
+- [lk_appconfig_createdonbehalfby](#BKMK_lk_appconfig_createdonbehalfby)
 - [lk_appconfig_modifiedby](#BKMK_lk_appconfig_modifiedby)
-
-
-### <a name="BKMK_lk_appconfig_createdby"></a> lk_appconfig_createdby
-
-See the [lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_appconfig_modifiedonbehalfby"></a> lk_appconfig_modifiedonbehalfby
-
-See the [lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_appconfig_createdonbehalfby"></a> lk_appconfig_createdonbehalfby
-
-See the [lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_appconfig"></a> organization_appconfig
-
-See the [organization_appconfig](organization.md#BKMK_organization_appconfig) one-to-many relationship for the [organization](organization.md) table/entity.
+- [lk_appconfig_modifiedonbehalfby](#BKMK_lk_appconfig_modifiedonbehalfby)
+- [organization_appconfig](#BKMK_organization_appconfig)
 
 ### <a name="BKMK_appmodule_appconfig"></a> appmodule_appconfig
 
-See the [appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig) one-to-many relationship for the [appmodule](appmodule.md) table/entity.
+One-To-Many Relationship: [appmodule appmodule_appconfig](appmodule.md#BKMK_appmodule_appconfig)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`appmodule`|
+|ReferencedAttribute|`appmoduleid`|
+|ReferencingAttribute|`appmoduleid`|
+|ReferencingEntityNavigationPropertyName|`appmodule_appconfig`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_appconfig_createdby"></a> lk_appconfig_createdby
+
+One-To-Many Relationship: [systemuser lk_appconfig_createdby](systemuser.md#BKMK_lk_appconfig_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`appconfig_createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_appconfig_createdonbehalfby"></a> lk_appconfig_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_appconfig_createdonbehalfby](systemuser.md#BKMK_lk_appconfig_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`appconfig_createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_appconfig_modifiedby"></a> lk_appconfig_modifiedby
 
-See the [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`appconfig_modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_appconfig_modifiedonbehalfby"></a> lk_appconfig_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_appconfig_modifiedonbehalfby](systemuser.md#BKMK_lk_appconfig_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`appconfig_modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_appconfig"></a> organization_appconfig
+
+One-To-Many Relationship: [organization organization_appconfig](organization.md#BKMK_organization_appconfig)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organization_appconfig`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [appconfig_appconfiginstance](#BKMK_appconfig_appconfiginstance)
+- [navigationsetting_appconfig](#BKMK_navigationsetting_appconfig)
+
+### <a name="BKMK_appconfig_appconfiginstance"></a> appconfig_appconfiginstance
+
+Many-To-One Relationship: [appconfiginstance appconfig_appconfiginstance](appconfiginstance.md#BKMK_appconfig_appconfiginstance)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`appconfiginstance`|
+|ReferencingAttribute|`appconfigid`|
+|ReferencedEntityNavigationPropertyName|`appconfig_appconfiginstance`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_navigationsetting_appconfig"></a> navigationsetting_appconfig
+
+Many-To-One Relationship: [navigationsetting navigationsetting_appconfig](navigationsetting.md#BKMK_navigationsetting_appconfig)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`navigationsetting`|
+|ReferencingAttribute|`appconfigid`|
+|ReferencedEntityNavigationPropertyName|`appconfig_navigationsetting`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.appconfig?text=appconfig EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.appconfig?displayProperty=fullName>

@@ -1,857 +1,887 @@
 ---
-title: "Security Role (Role)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Security Role (Role)  table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Security Role (Role) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Security Role (Role) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Security Role (Role)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Security Role (Role) table/entity reference (Microsoft Dataverse)
 
 Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|AddPrivilegesRole|<xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/roles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|RemovePrivilegeRole|<xref href="Microsoft.Dynamics.CRM.RemovePrivilegeRole?text=RemovePrivilegeRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemovePrivilegeRoleRequest>|
-|ReplacePrivilegesRole|<xref href="Microsoft.Dynamics.CRM.ReplacePrivilegesRole?text=ReplacePrivilegesRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.ReplacePrivilegesRoleRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAadUserRoles|<xref href="Microsoft.Dynamics.CRM.RetrieveAadUserRoles?text=RetrieveAadUserRoles Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAadUserRolesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/roles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveRolePrivilegesRole|<xref href="Microsoft.Dynamics.CRM.RetrieveRolePrivilegesRole?text=RetrieveRolePrivilegesRole Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRolePrivilegesRoleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Security Role (Role) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `AddPrivilegesRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /roles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /roles(*roleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `RemovePrivilegeRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemovePrivilegeRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemovePrivilegeRoleRequest>|
+| `ReplacePrivilegesRole`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ReplacePrivilegesRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ReplacePrivilegesRoleRequest>|
+| `Retrieve`<br />Event: False |`GET` /roles(*roleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveAadUserRoles`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveAadUserRoles?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveAadUserRolesRequest>|
+| `RetrieveMultiple`<br />Event: False |`GET` /roles<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrieveRolePrivilegesRole`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveRolePrivilegesRole?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveRolePrivilegesRoleRequest>|
+| `Update`<br />Event: True |`PATCH` /roles(*roleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /roles(*roleid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Roles|
-|DisplayCollectionName|Security Roles|
-|DisplayName|Security Role|
-|EntitySetName|roles|
-|IsBPFEntity|False|
-|LogicalCollectionName|roles|
-|LogicalName|role|
-|OwnershipType|BusinessOwned|
-|PrimaryIdAttribute|roleid|
-|PrimaryNameAttribute|name|
-|SchemaName|Role|
+The following table lists selected properties for the Security Role (Role) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Security Role** |
+| **DisplayCollectionName** | **Security Roles** |
+| **SchemaName** | `Role` |
+| **CollectionSchemaName** | `Roles` |
+| **EntitySetName** | `roles`|
+| **LogicalName** | `role` |
+| **LogicalCollectionName** | `roles` |
+| **PrimaryIdAttribute** | `roleid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `BusinessOwned` |
 
 ## Writable columns/attributes
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AppliesTo](#BKMK_AppliesTo)
 - [BusinessUnitId](#BKMK_BusinessUnitId)
 - [CanBeDeleted](#BKMK_CanBeDeleted)
+- [Description](#BKMK_Description)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsAutoAssigned](#BKMK_IsAutoAssigned)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsInherited](#BKMK_IsInherited)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [RoleId](#BKMK_RoleId)
+- [SummaryofCoreTablePermissions](#BKMK_SummaryofCoreTablePermissions)
 
+### <a name="BKMK_AppliesTo"></a> AppliesTo
+
+|Property|Value|
+|---|---|
+|Description|**Personas/Licenses the security role applies to**|
+|DisplayName|**Applies To**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`appliesto`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_BusinessUnitId"></a> BusinessUnitId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit with which the role is associated.|
-|DisplayName|Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit with which the role is associated.**|
+|DisplayName|**Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|businessunitid|
+|LogicalName|`businessunitid`|
 |RequiredLevel|SystemRequired|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_CanBeDeleted"></a> CanBeDeleted
 
 |Property|Value|
-|--------|-----|
-|Description|Tells whether the role can be deleted.|
-|DisplayName|Can Be Deleted|
+|---|---|
+|Description|**Tells whether the role can be deleted.**|
+|DisplayName|**Can Be Deleted**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|canbedeleted|
+|LogicalName|`canbedeleted`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
+### <a name="BKMK_Description"></a> Description
+
+|Property|Value|
+|---|---|
+|Description|**Description of the security role**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`description`|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
+### <a name="BKMK_IsAutoAssigned"></a> IsAutoAssigned
+
+|Property|Value|
+|---|---|
+|Description|**Value indicating whether security role is auto-assigned based on user license**|
+|DisplayName|**Is Auto Assigned**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`isautoassigned`|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`securityrole_isautoassigned`|
+
+#### IsAutoAssigned Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**No**|
+|1|**Yes**|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 |Property|Value|
-|--------|-----|
-|Description|Information that specifies whether this component can be customized.|
-|DisplayName|Customizable|
+|---|---|
+|Description|**Information that specifies whether this component can be customized.**|
+|DisplayName|**Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_IsInherited"></a> IsInherited
 
 |Property|Value|
-|--------|-----|
-|Description|Role is inherited by users from team membership, if role associated with team.|
-|DisplayName|Is Inherited|
+|---|---|
+|Description|**Role is inherited by users from team membership, if role associated with team.**|
+|DisplayName|**Is Inherited**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isinherited|
+|LogicalName|`isinherited`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`isinherited`|
 
 #### IsInherited Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Team privileges only||
-|1|Direct User (Basic) access level and Team privileges||
-
-
+|Value|Label|
+|---|---|
+|0|**Team privileges only**|
+|1|**Direct User (Basic) access level and Team privileges**|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the role.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the role.**|
+|DisplayName|**Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_RoleId"></a> RoleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the role.|
-|DisplayName|Role|
+|---|---|
+|Description|**Unique identifier of the role.**|
+|DisplayName|**Role**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|roleid|
+|LogicalName|`roleid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-<a name="read-only-attributes"></a>
+### <a name="BKMK_SummaryofCoreTablePermissions"></a> SummaryofCoreTablePermissions
+
+|Property|Value|
+|---|---|
+|Description|**Summary of Core Table Permissions of the Role**|
+|DisplayName|**Summary of Core Table Permissions**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`summaryofcoretablepermissions`|
+|RequiredLevel|ApplicationRequired|
+|Type|Memo|
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
+
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
+- [ApplicationId](#BKMK_ApplicationId)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
+- [IsSystemGenerated](#BKMK_IsSystemGenerated)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [ParentRoleId](#BKMK_ParentRoleId)
-- [ParentRoleIdName](#BKMK_ParentRoleIdName)
 - [ParentRootRoleId](#BKMK_ParentRootRoleId)
-- [ParentRootRoleIdName](#BKMK_ParentRootRoleIdName)
 - [RoleIdUnique](#BKMK_RoleIdUnique)
 - [RoleTemplateId](#BKMK_RoleTemplateId)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
-### <a name="BKMK_BusinessUnitIdName"></a> BusinessUnitIdName
+### <a name="BKMK_ApplicationId"></a> ApplicationId
 
 |Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
+|---|---|
+|Description|**Application Id of user who created the role**|
+|DisplayName|**Application Id**|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|businessunitidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|LogicalName|`applicationid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the role.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the role.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the role was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the role was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the role.|
-|DisplayName|Created By Impersonator|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the role.**|
+|DisplayName|**Created By Impersonator**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|State|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
-#### IsManaged Choices/Options
+### <a name="BKMK_IsSystemGenerated"></a> IsSystemGenerated
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|Property|Value|
+|---|---|
+|Description|**Is this role generated by the system**|
+|DisplayName|**Is System Generated**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`issytemgenerated`|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+|GlobalChoiceName|`role_issytemgenerated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the role.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the role.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the role was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the role was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the role.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the role.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the role.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the role.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
+|LogicalName|`organizationidname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ParentRoleId"></a> ParentRoleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the parent role.|
-|DisplayName|Parent Role|
+|---|---|
+|Description|**Unique identifier of the parent role.**|
+|DisplayName|**Parent Role**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentroleid|
+|LogicalName|`parentroleid`|
 |RequiredLevel|None|
-|Targets|role|
 |Type|Lookup|
-
-
-### <a name="BKMK_ParentRoleIdName"></a> ParentRoleIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|parentroleidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|role|
 
 ### <a name="BKMK_ParentRootRoleId"></a> ParentRootRoleId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the parent root role.|
-|DisplayName|Parent Root Role|
+|---|---|
+|Description|**Unique identifier of the parent root role.**|
+|DisplayName|**Parent Root Role**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|parentrootroleid|
+|LogicalName|`parentrootroleid`|
 |RequiredLevel|SystemRequired|
-|Targets|role|
 |Type|Lookup|
-
-
-### <a name="BKMK_ParentRootRoleIdName"></a> ParentRootRoleIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|parentrootroleidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|role|
 
 ### <a name="BKMK_RoleIdUnique"></a> RoleIdUnique
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Unique Id|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Unique Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|roleidunique|
+|LogicalName|`roleidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_RoleTemplateId"></a> RoleTemplateId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the role template that is associated with the role.|
-|DisplayName|Role Template|
+|---|---|
+|Description|**Unique identifier of the role template that is associated with the role.**|
+|DisplayName|**Role Template**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|roletemplateid|
+|LogicalName|`roletemplateid`|
 |RequiredLevel|None|
-|Targets|roletemplate|
 |Type|Lookup|
-
+|Targets|roletemplate|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the role.|
-|DisplayName|Version number|
+|---|---|
+|Description|**Version number of the role.**|
+|DisplayName|**Version number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [role_parent_role](#BKMK_role_parent_role)
-- [Role_AsyncOperations](#BKMK_Role_AsyncOperations)
-- [role_parent_root_role](#BKMK_role_parent_root_role)
-- [Role_BulkDeleteFailures](#BKMK_Role_BulkDeleteFailures)
-- [Role_SyncErrors](#BKMK_Role_SyncErrors)
-
-
-### <a name="BKMK_role_parent_role"></a> role_parent_role
-
-Same as the [role_parent_role](role.md#BKMK_role_parent_role) many-to-one relationship for the [role](role.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|role|
-|ReferencingAttribute|parentroleid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|role_parent_role|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Role_AsyncOperations"></a> Role_AsyncOperations
-
-Same as the [Role_AsyncOperations](asyncoperation.md#BKMK_Role_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Role_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_role_parent_root_role"></a> role_parent_root_role
-
-Same as the [role_parent_root_role](role.md#BKMK_role_parent_root_role) many-to-one relationship for the [role](role.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|role|
-|ReferencingAttribute|parentrootroleid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|role_parent_root_role|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Role_BulkDeleteFailures"></a> Role_BulkDeleteFailures
-
-Same as the [Role_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Role_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Role_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Role_SyncErrors"></a> Role_SyncErrors
-
-Same as the [Role_SyncErrors](syncerror.md#BKMK_Role_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|Role_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_rolebase_modifiedby](#BKMK_lk_rolebase_modifiedby)
-- [role_parent_role](#BKMK_role_parent_role)
-- [organization_roles](#BKMK_organization_roles)
 - [business_unit_roles](#BKMK_business_unit_roles)
 - [lk_role_createdonbehalfby](#BKMK_lk_role_createdonbehalfby)
 - [lk_role_modifiedonbehalfby](#BKMK_lk_role_modifiedonbehalfby)
-- [role_parent_root_role](#BKMK_role_parent_root_role)
 - [lk_rolebase_createdby](#BKMK_lk_rolebase_createdby)
+- [lk_rolebase_modifiedby](#BKMK_lk_rolebase_modifiedby)
+- [organization_roles](#BKMK_organization_roles)
+- [role_parent_role](#BKMK_role_parent_role-many-to-one)
+- [role_parent_root_role](#BKMK_role_parent_root_role-many-to-one)
+- [role_template_roles](#BKMK_role_template_roles)
 - [solution_role](#BKMK_solution_role)
-
-
-### <a name="BKMK_lk_rolebase_modifiedby"></a> lk_rolebase_modifiedby
-
-See the [lk_rolebase_modifiedby](systemuser.md#BKMK_lk_rolebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_role_parent_role"></a> role_parent_role
-
-See the [role_parent_role](role.md#BKMK_role_parent_role) one-to-many relationship for the [role](role.md) table/entity.
-
-### <a name="BKMK_organization_roles"></a> organization_roles
-
-See the [organization_roles](organization.md#BKMK_organization_roles) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_business_unit_roles"></a> business_unit_roles
 
-See the [business_unit_roles](businessunit.md#BKMK_business_unit_roles) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_roles](businessunit.md#BKMK_business_unit_roles)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`businessunitid`|
+|ReferencingEntityNavigationPropertyName|`businessunitid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_role_createdonbehalfby"></a> lk_role_createdonbehalfby
 
-See the [lk_role_createdonbehalfby](systemuser.md#BKMK_lk_role_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_role_createdonbehalfby](systemuser.md#BKMK_lk_role_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_role_modifiedonbehalfby"></a> lk_role_modifiedonbehalfby
 
-See the [lk_role_modifiedonbehalfby](systemuser.md#BKMK_lk_role_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_role_modifiedonbehalfby](systemuser.md#BKMK_lk_role_modifiedonbehalfby)
 
-### <a name="BKMK_role_parent_root_role"></a> role_parent_root_role
-
-See the [role_parent_root_role](role.md#BKMK_role_parent_root_role) one-to-many relationship for the [role](role.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_rolebase_createdby"></a> lk_rolebase_createdby
 
-See the [lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_rolebase_modifiedby"></a> lk_rolebase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_rolebase_modifiedby](systemuser.md#BKMK_lk_rolebase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_roles"></a> organization_roles
+
+One-To-Many Relationship: [organization organization_roles](organization.md#BKMK_organization_roles)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid_organization`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_role_parent_role-many-to-one"></a> role_parent_role
+
+One-To-Many Relationship: [role role_parent_role](#BKMK_role_parent_role-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`role`|
+|ReferencedAttribute|`roleid`|
+|ReferencingAttribute|`parentroleid`|
+|ReferencingEntityNavigationPropertyName|`parentroleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_role_parent_root_role-many-to-one"></a> role_parent_root_role
+
+One-To-Many Relationship: [role role_parent_root_role](#BKMK_role_parent_root_role-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`role`|
+|ReferencedAttribute|`roleid`|
+|ReferencingAttribute|`parentrootroleid`|
+|ReferencingEntityNavigationPropertyName|`parentrootroleid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_role_template_roles"></a> role_template_roles
+
+One-To-Many Relationship: [roletemplate role_template_roles](roletemplate.md#BKMK_role_template_roles)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`roletemplate`|
+|ReferencedAttribute|`roletemplateid`|
+|ReferencingAttribute|`roletemplateid`|
+|ReferencingEntityNavigationPropertyName|`roletemplateid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_solution_role"></a> solution_role
 
-See the [solution_role](solution.md#BKMK_solution_role) one-to-many relationship for the [solution](solution.md) table/entity.
-<a name="manytomany"></a>
+One-To-Many Relationship: [solution solution_role](solution.md#BKMK_solution_role)
 
-## Many-To-Many Relationships
+|Property|Value|
+|---|---|
+|ReferencedEntity|`solution`|
+|ReferencedAttribute|`solutionid`|
+|ReferencingAttribute|`solutionid`|
+|ReferencingEntityNavigationPropertyName|`solution_role`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-Relationship details provided where the Role table is the first table in the relationship. Listed by **SchemaName**.
 
-- [systemuserroles_association](#BKMK_systemuserroles_association)
-- [roleprivileges_association](#BKMK_roleprivileges_association)
-- [appmoduleroles_association](#BKMK_appmoduleroles_association)
-- [teamroles_association](#BKMK_teamroles_association)
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [Role_AsyncOperations](#BKMK_Role_AsyncOperations)
+- [Role_BulkDeleteFailures](#BKMK_Role_BulkDeleteFailures)
+- [role_parent_role](#BKMK_role_parent_role-one-to-many)
+- [role_parent_root_role](#BKMK_role_parent_root_role-one-to-many)
+- [Role_SyncErrors](#BKMK_Role_SyncErrors)
+
+### <a name="BKMK_Role_AsyncOperations"></a> Role_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation Role_AsyncOperations](asyncoperation.md#BKMK_Role_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Role_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Role_BulkDeleteFailures"></a> Role_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure Role_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Role_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Role_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_role_parent_role-one-to-many"></a> role_parent_role
+
+Many-To-One Relationship: [role role_parent_role](#BKMK_role_parent_role-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`role`|
+|ReferencingAttribute|`parentroleid`|
+|ReferencedEntityNavigationPropertyName|`role_parent_role`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_role_parent_root_role-one-to-many"></a> role_parent_root_role
+
+Many-To-One Relationship: [role role_parent_root_role](#BKMK_role_parent_root_role-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`role`|
+|ReferencingAttribute|`parentrootroleid`|
+|ReferencedEntityNavigationPropertyName|`role_parent_root_role`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Role_SyncErrors"></a> Role_SyncErrors
+
+Many-To-One Relationship: [syncerror Role_SyncErrors](syncerror.md#BKMK_Role_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Role_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
+
+- [application_role](#BKMK_application_role)
 - [applicationuserrole](#BKMK_applicationuserrole)
+- [appmoduleroles_association](#BKMK_appmoduleroles_association)
+- [roleprivileges_association](#BKMK_roleprivileges_association)
+- [systemuserroles_association](#BKMK_systemuserroles_association)
+- [teamroles_association](#BKMK_teamroles_association)
 
+### <a name="BKMK_application_role"></a> application_role
 
-### <a name="BKMK_systemuserroles_association"></a> systemuserroles_association
+See [application application_role Many-To-Many Relationship](application.md#BKMK_application_role)
 
-See the [systemuserroles_association](systemuser.md#BKMK_systemuserroles_association) many-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
-
-See the [roleprivileges_association](privilege.md#BKMK_roleprivileges_association) many-to-many relationship for the [privilege](privilege.md) table/entity.
-
-### <a name="BKMK_appmoduleroles_association"></a> appmoduleroles_association
-
-See the [appmoduleroles_association](appmodule.md#BKMK_appmoduleroles_association) many-to-many relationship for the [appmodule](appmodule.md) table/entity.
-
-### <a name="BKMK_teamroles_association"></a> teamroles_association
-
-See the [teamroles_association](team.md#BKMK_teamroles_association) many-to-many relationship for the [team](team.md) table/entity.
+|Property|Value|
+|---|---|
+|IntersectEntityName|`applicationroles`|
+|IsCustomizable|False|
+|SchemaName|`application_role`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`application_role`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_applicationuserrole"></a> applicationuserrole
 
-See the [applicationuserrole](applicationuser.md#BKMK_applicationuserrole) many-to-many relationship for the [applicationuser](applicationuser.md) table/entity.
+See [applicationuser applicationuserrole Many-To-Many Relationship](applicationuser.md#BKMK_applicationuserrole)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`applicationuserrole`|
+|IsCustomizable|False|
+|SchemaName|`applicationuserrole`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`applicationuserrole`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_appmoduleroles_association"></a> appmoduleroles_association
+
+See [appmodule appmoduleroles_association Many-To-Many Relationship](appmodule.md#BKMK_appmoduleroles_association)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`appmoduleroles`|
+|IsCustomizable|False|
+|SchemaName|`appmoduleroles_association`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`appmoduleroles_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_roleprivileges_association"></a> roleprivileges_association
+
+See [privilege roleprivileges_association Many-To-Many Relationship](privilege.md#BKMK_roleprivileges_association)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`roleprivileges`|
+|IsCustomizable|False|
+|SchemaName|`roleprivileges_association`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`roleprivileges_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_systemuserroles_association"></a> systemuserroles_association
+
+See [systemuser systemuserroles_association Many-To-Many Relationship](systemuser.md#BKMK_systemuserroles_association)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`systemuserroles`|
+|IsCustomizable|False|
+|SchemaName|`systemuserroles_association`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`systemuserroles_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_teamroles_association"></a> teamroles_association
+
+See [team teamroles_association Many-To-Many Relationship](team.md#BKMK_teamroles_association)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`teamroles`|
+|IsCustomizable|False|
+|SchemaName|`teamroles_association`|
+|IntersectAttribute|`roleid`|
+|NavigationPropertyName|`teamroles_association`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.role?text=role EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.role?displayProperty=fullName>

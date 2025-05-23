@@ -8,18 +8,13 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
+
 # Sample: Work with solutions
 
-
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to how to perform the following actions with solutions:
 
@@ -33,7 +28,8 @@ This sample shows how to how to perform the following actions with solutions:
 - Install or upgrade a solution.
 - Delete a solution.
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkwithSolutions).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with solutions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/WorkwithSolutions)
 
 ## How to run this sample
 
@@ -50,7 +46,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Publisher` method defines a new publisher. 
+1. The `Publisher` method defines a new publisher.
 1. The `Solution` method creates a new solution.
 1. The `OptionSetMetadata` method adds a solution component.
 1. The `ExportSolutionRequest` method exports the created solution in the [Setup](#setup).
@@ -66,6 +62,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

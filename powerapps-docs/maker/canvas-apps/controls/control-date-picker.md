@@ -1,21 +1,19 @@
 ---
 title: Date Picker control in Power Apps
 description: Learn about the details, properties and examples of the Date Picker control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 07/06/2021
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 
 # Date Picker control in Power Apps
@@ -128,7 +126,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 
 2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to the following formula:
 
-   ```powerapps-dot
+   ```power-fx
     DateDiff(Today(), Deadline.SelectedDate) & " days to go!"
     ```
 
@@ -147,7 +145,7 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add a **[Button](control-button.md)** control, and set its **[OnChange](properties-core.md)** property to the following formula:
-    ```powerapps-dot
+    ```power-fx
     Reset(DateTimeReset)
     ```
 

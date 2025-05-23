@@ -3,21 +3,18 @@ title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 06/16/2022
+ms.reviewer: mkaur
+ms.date: 03/21/2025
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - melzoghbi
-  - ProfessorKendrick
 ---
 
 # Common canvas app performance issues and resolutions
@@ -66,7 +63,7 @@ Ensure that required service URLs haven't been blocked or that they've been adde
 
 *Delegable functions* delegate the processing of data to the data source, minimizing the overhead at the client side. When delegation isn't possible, you can restrict the data row limit for non-delegable queries so that the number of rows returned from a server-based connection remain optimal.
 
-The use of non-delegable functions and inappropriate [data row limits for non-delegable queries](delegation-overview.md#non-delegable-limits) add extra overhead to data transfer. This overhead results in manipulation of the received data to the [JS heap](#memory-pressure-at-the-client-side) at the client side. Be sure to use delegable functions for the app whenever available, and use the optimum data row limit for non-delegable queries.
+The use of non-delegable functions and inappropriate [data row limits for non-delegable queries](delegation-overview.md#nondelegable-limits) add extra overhead to data transfer. This overhead results in manipulation of the received data to the [JS heap](#memory-pressure-at-the-client-side) at the client side. Be sure to use delegable functions for the app whenever available, and use the optimum data row limit for non-delegable queries.
 
 More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
 
@@ -109,7 +106,7 @@ Developer tools for most browsers allow you to profile memory. It helps you visu
 
 ## Performance considerations for the SQL Server connector
 
-You can use the [SQL Server connector](connections/connection-azure-sqldatabase.md) for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app. More information: [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md), [Create a canvas app from Azure SQL Database](app-from-azure-sql-database.md)
+You can use the [SQL Server connector](connections/sql-connection-overview.md) for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app.
 
 > [!NOTE]
 > Though this section references the SQL Server connector for performance issues and resolutions, most of the recommendations also apply to using any database type&mdash;such as MySQL or PostgreSQL&mdash;as the data source.

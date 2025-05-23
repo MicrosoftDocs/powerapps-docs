@@ -2,15 +2,11 @@
 title: "Microsoft Dataverse Web API versions (Dataverse)| Microsoft Docs"
 description: "Read how versioning of Microsoft Dataverse Web API works. Dataverse Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -20,14 +16,14 @@ Beginning with the v9.0 release of Dynamics 365, the Web API supports version sp
   
 This is different from the behavior for in the v8.*x* releases. In the previous releases new capabilities were available to any version of the service depending on the update applied to the environment.  After an upgrade to v8.2, the v8.0, and v8.1 services were all identical. This was possible because all the changes were additive. Nothing was removed or introduced breaking changes. As a result, the specific version referenced in the service URL for the v8.*x* wasn't actually important.  
   
-Going forward the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This will allow for improvements to be applied on an on-going basis. This topic will record any version specific differences and any limitations where the Web API hasn't yet achieved parity with the organization service.  
+Going forward the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This will allow for improvements to be applied on an on-going basis. This topic will record any version specific differences and any limitations where the Web API hasn't yet achieved parity with the SDK for .NET.  
 
 > [!NOTE]
 > While the v9.x releases can support specific differences, there have been no breaking changes added to v9.0, v9.1, or v9.2 releases. Each of these releases are have identical Web API behaviors.
 >
 > Differences in API behavior is driven more by the solutions installed in the system rather than version of the product. However, if we need to make a fundamental change that is not backward compatible, it will be included in a new version number.
 >
-> **Guidance**: Use the version number that was current when your code was written. Do not automatically use a newer version without looking for documented differences here and testing. Do not assume a newer version wll be fully backward compatible.
+> **Guidance**: Use the version number that was current when your code was written. Do not automatically use a newer version without looking for documented differences here and testing. Do not assume a newer version will be fully backward compatible.
   
 ## Web API version specific differences
 
@@ -55,10 +51,10 @@ The following operations have been added to the Web API for the v9.x release.
 
 ## Web API Limitations  
 
-The Dataverse Web API provides complete parity with the capabilities of the Organization service. For Dataverse, this topic describes the limitations carried forward from the Dataverse v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
+The Dataverse Web API provides complete parity with the capabilities of the SDK for .NET. For Dataverse, this topic describes the limitations carried forward from the Dataverse v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
  
 > [!NOTE] 
-> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the 2011 SOAP endpoint. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
+> If you defined a custom action which included a complex return value and a simple return value, a corresponding Action was not available in the Web API but was available using the Organization service. A complex return value is an `EntityReference`, `Entity`, or `EntityCollection`. You can have any combination of simple return values or a single complex return value. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions).
 
 ### See also  
 

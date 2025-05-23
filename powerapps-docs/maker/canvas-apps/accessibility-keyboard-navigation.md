@@ -5,16 +5,14 @@ author: hemantgaur
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/25/2021
+ms.date: 11/13/2024
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - MSYuey
-  - tapanm-msft
+  - mduelae
   - hemantgaur
 ---
 
@@ -23,10 +21,10 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> - This is an experimental feature.
+> - This is an experimental feature, and will be deprecated soon. Instead of using this experimental feature, consider [structuring an app appropriately](accessible-apps-structure.md#logical-control-order) to achieve the desired tab navigation order.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved canvas keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
+When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#acceptsfocus-and-tabindex) isn't respected sometimes. **Improved canvas keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.
 
 This feature also adds support for handling accessibility for keyboard tabs inline with rest of the controls in canvas apps. And addresses manual TabIndex assignments for all controls.
 
@@ -38,13 +36,13 @@ When this feature is turned on, it also enables the following boolean properties
 | Property Name | Description |
 | - | - |
 | **Prioritize child controls** | Determines the order of navigation (**Z-order**) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **On** (Default): Pressing the tab key on the keyboard will first progress through all child controls before moving the focus outside of the selected container or component instance. This option is recommended for similarly nested HTML elements. </li> <li> **Off**: Pressing the tab key on the keyboard will progress through all controls only based on Z-order, ignoring parent-child relationship between controls or containers for keyboard navigation. </li> </ul> **Note**: This property isn't applicable to [responsive or autolayout](create-responsive-layout.md) containers. |
-| **Enable child control focus** | Determines the value of [TabIndex](controls/properties-accessibility.md#tabindex) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **On** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **Off**: Pressing the tab key doesn't move focus to any child control within the selected container or component instance. Sets the TabIndex value to **-1** for all child controls. </li> </ul> |
+| **Enable child control focus** | Determines the value of [TabIndex](controls/properties-accessibility.md#acceptsfocus-and-tabindex) for child controls on canvas when pressing tab key on the keyboard. <ul> <li> **On** (Default): Pressing the tab key behaves as per TabIndex values defined on each control. </li> <li> **Off**: Pressing the tab key doesn't move focus to any child control within the selected container or component instance. Sets the TabIndex value to **-1** for all child controls. </li> </ul> |
 
 ## Configure improved canvas keyboard navigation in your app
 
 If not already enabled, follow these steps to enable this feature in your app, and set the properties mentioned earlier.
 
-1. Sign in to [Power Apps](https://make.poweraps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left-pane.
 
@@ -68,7 +66,7 @@ Now that you understand the new feature with improved canvas keyboard navigation
 
 ### Default improved canvas keyboard navigation behavior
 
-The following example shows multiple Text input controls, and several nesting scenarios. The number displayed in the input represents the value of the [TabIndex](controls/properties-accessibility.md#tabindex) property. There are two nested containers, and component controls overlaid on top of each other.
+The following example shows multiple Text input controls, and several nesting scenarios. The number displayed in the input represents the value of the [TabIndex](controls/properties-accessibility.md#acceptsfocus-and-tabindex) property. There are two nested containers, and component controls overlaid on top of each other.
 
 The default order is determined by the relative position of the controls. When focus enters a container or a component, tabs first traverse the children of the container before moving on to the next available control.
 
@@ -82,7 +80,7 @@ In the following example, each container and component control has the **Priorit
 
 ### Advanced configuration with mixed settings
 
-In the following example, the orange outlined containers have **Prioritize child controls** property set to "Off". All others controls have this property set to "On". Also, a custom [TabIndex](controls/properties-accessibility.md#tabindex) property has been set for some inputs, indicated by the number shown in each input.
+In the following example, the orange outlined containers have **Prioritize child controls** property set to "Off". All others controls have this property set to "On". Also, a custom [TabIndex](controls/properties-accessibility.md#acceptsfocus-and-tabindex) property has been set for some inputs, indicated by the number shown in each input.
 
 Tab order first proceeds through the containers and controls with TabIndex value of greater than 0, and then proceeds through all others with value of 0. This behavior was also the in the earlier implementation.
 
@@ -96,3 +94,4 @@ Tab order first proceeds through the containers and controls with TabIndex value
 - [Use the Accessibility checker](accessibility-checker.md)
 - [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
 - [Accessibility properties](controls/properties-accessibility.md)
+- [Improved canvas keyboard navigation in canvas apps (video)](https://youtu.be/p_tCI6Kpj68?feature=shared)

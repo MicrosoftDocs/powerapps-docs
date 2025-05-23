@@ -1,15 +1,16 @@
 ---
 title: Formatting API component | Microsoft Docs
 description: This sample component explores the various methods available as part of the Power Apps component framework formatting API.
-keywords:
-ms.author: jdaly
-author: noazarur-microsoft
-manager: kvivek
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 
 # Implementing formatting API component
@@ -29,7 +30,7 @@ Model-driven and canvas apps
 
 You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FormattingAPIControl).
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

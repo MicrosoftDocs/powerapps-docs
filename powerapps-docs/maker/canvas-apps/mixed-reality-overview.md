@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -22,19 +20,12 @@ Add mixed reality (MR) controls to your canvas apps to interact with the real wo
 
 You can use MR controls to:
 
-- View and manipulate 3D content
-- Overlay 3D content and 2D images on the camera feed
-- Measure distance, area, and volume
-- Identify spaces and locations
+- View and manipulate 3D content with [3D object](mixed-reality-component-view-3d.md)
+- Overlay 3D content and 2D images on the camera feed with [View in mixed reality](mixed-reality-component-view-mr.md)
+- Measure distance, area, and volume with [Measure in mixed reality](mixed-reality-component-measure-distance.md)
+- Identify spaces and locations by painting 3D lines and arrows with [Markup in mixed reality](mixed-reality-component-view-shape.md)
 
 :::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A screenshot of a phone app with a 3D control under construction in Microsoft Power Apps Studio, alongside a photo that shows the app in use.":::
-
-[Build your own controls](../../developer/component-framework/custom-controls-overview.md) or use prebuilt controls for MR applications:
-
-- [3D object](mixed-reality-component-view-3d.md)
-- [View in mixed reality](mixed-reality-component-view-mr.md)
-- [Measure in mixed reality](mixed-reality-component-measure-distance.md)
-- [View shape in mixed reality](mixed-reality-component-view-shape.md)
 
 You'll find the controls on the **Insert** pane, under **Media** and **Mixed Reality**:
 
@@ -63,7 +54,7 @@ iPhones and iPads with specific hardware can run MR apps using the ARKit framewo
 
 ## Mixed reality controls
 
-Start installing the controls in your apps:
+Start adding the controls to your apps:
 
 - View 3D content with the **[3D object](mixed-reality-component-view-3d.md)** control.
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
@@ -73,6 +64,8 @@ Start installing the controls in your apps:
 
 ### See also
 
-[Microsoft Learn: Build a 3D mobile app with Power Apps in mixed reality](/learn/modules/power-apps-tutorial/)
+[Build a 3D mobile app with Power Apps in mixed reality](/training/modules/power-apps-tutorial/)
+
+[Improve sales conversation by placing products directly in your customer's space with Mixed Reality](https://powerapps.microsoft.com/blog/improving-sales-conversion-by-placing-products-directly-in-your-customers-space-with-mixed-reality/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

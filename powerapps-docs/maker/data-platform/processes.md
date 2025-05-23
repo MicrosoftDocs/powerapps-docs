@@ -1,13 +1,13 @@
 ---
 title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 12/20/2019
 ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,12 +17,8 @@ caps.latest.revision: 44
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Apply business logic in Microsoft Dataverse
 
@@ -42,7 +38,7 @@ You can also use the following Dataverse processes:
 
 - [Real-time workflows](overview-realtime-workflows.md)
 
-- [Actions](actions.md).
+- [Actions](actions.md)
 
 ## Power Automate
 Power Automate has several different flows you can use to create automated workflows within Dataverse or between Dataverse and another app or service that can be used to synchronize files, get notifications, collect data, and more. 

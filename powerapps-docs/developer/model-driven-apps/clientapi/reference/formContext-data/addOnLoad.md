@@ -1,18 +1,14 @@
 ---
-title: "data.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "data.addOnLoad (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the data.addOnLoad method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,12 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be executed when the form data loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
+|`myFunction`|function reference|Yes|The function to be executed when the form data loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
 
-### Related topics
+### Related articles
 
-[removeOnLoad](removeOnLoad.md)
-
+[removeOnLoad](removeOnLoad.md)   
 [Form data OnLoad event](../events/form-data-onload.md)
 
 

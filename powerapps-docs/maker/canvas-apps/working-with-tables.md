@@ -3,18 +3,16 @@ title: Understand tables and records in canvas apps
 description: Reference information about working with tables, columns, and records in canvas apps.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 07/07/2021
+ms.reviewer: mkaur
+ms.date: 02/11/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand tables and records in canvas apps
@@ -101,7 +99,7 @@ Let's walk through some simple examples.
 
 2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:
 
-    `Sort(CustomGallerySample, SampleHeading, Descending)`
+    `Sort(CustomGallerySample, SampleHeading, SortOrder.Descending)`
 
     This formula incorporates the **[Sort](functions/function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
 
@@ -109,7 +107,7 @@ Let's walk through some simple examples.
 
 3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
 
-    `FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
+    `FirstN(Sort(CustomGallerySample, SampleHeading, SortOrder.Descending), 2)`
 
     In this formula, you use the **[FirstN](functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](functions/function-sort.md)** function as the first argument to **[FirstN](functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
 
@@ -225,7 +223,7 @@ For example, take a table of **Products**:
 
 To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in Power Apps Studio):
 
-```powerapps-dot
+```power-fx
 Set( Products,
     Table(
         { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
@@ -246,7 +244,7 @@ The first argument to **Filter** is the table of records to operate on, and the 
 
 Adding to this example, we can calculate how much of each product to order:
 
-```powerapps-dot
+```power-fx
 AddColumns( 
     Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
     "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
@@ -259,7 +257,7 @@ Here we are adding a calculated column to the result. **AddColumns** has its own
 
 Finally, we can reduce the result table to just the columns that we want:
 
-```powerapps-dot
+```power-fx
 ShowColumns(
     AddColumns(
         Filter( Products, 'Quantity Requested' > 'Quantity Available' ),
@@ -299,7 +297,7 @@ In addition, define a context variable named **Value** with this formula: **Upda
 
 Let's put it all together. In this context, the following formula:
 
-```powerapps-dot
+```power-fx
 Ungroup(
     ForAll( X,
         ForAll( Y,
@@ -320,7 +318,7 @@ The innermost **ForAll** function defines another record scope for **Y**.  Since
 
 Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
 
-```powerapps-dot
+```power-fx
 Ungroup(
     ForAll( X,
         ForAll( Y,
@@ -339,7 +337,7 @@ All the **ForAll** record scopes override the global scope. The **Value** contex
 
 To operate on a single column from a table, use the **ShowColumns** function as in this example:
 
-```powerapps-dot
+```power-fx
 ShowColumns( Products, "Product" )
 ```
 
@@ -349,7 +347,7 @@ This formula produces this single-column table:
 
 For a shorter alternative, specify *Table.Column*, which extracts the single-column table of just *Column* from *Table*. For example, this formula produces exactly the same result as using **ShowColumns**.
 
-```powerapps-dot
+```power-fx
 Products.Product
 ```
 
@@ -374,7 +372,7 @@ Note that the value in the **Price** column doesn't include a currency symbol, s
 ## Inline tables
 You can create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
 
-```powerapps-dot
+```power-fx
 Table( 
 	{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },
 	{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },
@@ -384,7 +382,7 @@ Table(
 
 You can also nest tables:
 
-```powerapps-dot
+```power-fx
 Table( 
 	{ Name: "Chocolate", 
 	  'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },

@@ -3,18 +3,16 @@ title: Send notification from an app
 description: Learn how to send push notifications from a canvas app in Power Apps.
 author: kavishi
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/23/2020
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - kavishi
 ---
 # Send notification from an app
@@ -73,7 +71,7 @@ In this article, the sample app used for notifications is built from the default
 
 | Name | Type | Description |
 | --- | --- | --- |
-| recipients |String array, required |A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Azure Active Directory</li></ul> |
+| recipients |String array, required |A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Microsoft Entra ID</li></ul> |
 | message |String, required |The message body of the push notification. |
 | openApp |Boolean, optional |Whether to open the app when the user taps the push notification. |
 | params |Parameters, optional |Key-value parameters to pass with the notification. These can be further processed in the app to open a specific page and load a specific state. |
@@ -81,7 +79,7 @@ In this article, the sample app used for notifications is built from the default
 ### Sample formulas
 Send a basic notification.
 
-```powerapps-dot
+```power-fx
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
@@ -92,11 +90,11 @@ PowerAppsNotification.SendPushNotification(
 
 Send a notification that opens an app and passes along specific parameters.
 
-```powerapps-dot
+```power-fx
 PowerAppsNotification.SendPushNotification(
 	{
 		recipients: ["email1@contoso.com", "email2@contoso.com"],
-		message: "message in the notif toast",
+		message: "message in the notification toast",
 		params: Table({key:"notificationKey", value:"The value for notificationKey"}),
 		openApp: true
  	}

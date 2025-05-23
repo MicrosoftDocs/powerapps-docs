@@ -3,29 +3,26 @@ title: Understand canvas app execution phases and data call flow
 description: Learn about the execution phases of canvas apps while starting-up, and the flow of data calls.
 author: JinManAhn-MSFT
 
-ms.topic: conceptual
-ms.reviewer: tapanm
+ms.topic: how-to
+ms.reviewer: mkaur
 ms.date: 01/22/2021
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - yingchin
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 
-# Understand canvas app execution phases and data call flow
+# Understand canvas app execution phases, data call flow, and performance monitoring
 
 When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](./connections-list.md#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
 
-In this article, you'll learn about these different phases of execution and how an app connects to data sources.
+In this article, you'll learn about these different phases of execution and how an app connects to data sources and about tools you can use to monitor performance.
 
 ## Execution phases in canvas apps
 
@@ -37,13 +34,13 @@ A canvas app goes through the following phases of execution before showing the i
 
 1. **Initialize the app**: Performs any tasks specified in the [OnStart](functions/object-app.md#onstart-property) property.
 
-1. **Render the screens**: Renders the first screen with controls that the app has populated with data. If the user opens other screens, the app renders them by using the same process.  
+1. **Render the screens**: Renders the first screen with controls that the app populates with data. If the user opens other screens, the app renders them by using the same process.  
 
 ## Data call flow in canvas apps
 
-Data calls from canvas apps send data sources by using connectors over the OData protocol. OData requests flow to back-end layers to reach out to the target data source and retrieve data for the client, or commit data to the data source.
+Data calls from canvas apps send data to tabular data sources by using connectors over the OData protocol.OData requests flow to back-end layers to reach out to the target data source and retrieve data for the client, or commit data to the data source. Action based connectors that enable APIs work in the same way. 
 
-Understanding how OData requests travel in canvas apps can help you to optimize your canvas app performance and your back-end data sources.
+Understanding how OData and API requests travel in canvas apps can help you to optimize your canvas app performance and your back-end data sources.
 
 In this section, you'll learn about how the data call flows in canvas apps with different data source types.
 
@@ -71,22 +68,37 @@ If the app uses a data source on-premises, the location and the specification of
 
 ### Data call flow with Microsoft Dataverse
 
-When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is much faster compared to the rest of the data sources. The app is by default connected to Microsoft Dataverse when you create a new canvas app.
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is faster compared to the rest of the data sources. The app is by default connected to Microsoft Dataverse when you create a new canvas app.
 
 ![Data call flow with Microsoft Dataverse.](media\execution-phases-data-flow\dataverse-connector.png "Data call flow with Microsoft Dataverse")
 
 With the understanding of this high-level concept of how data calls travel, you can get into the details of reviewing the performance of your app. In summary, performance overhead can happen at any of the layers&mdash;from client, API Management, connector, on-premises data gateway, or back-end data sources.
 
-## Next steps
+## Measuring performance
 
-[Common sources of slow performance for a canvas app](slow-performance-sources.md)
+### Power Apps Monitoring tool
+While you can use the browser's developer tools to see performance, Power Apps subsets the set of calls in the Monitoring tool to just those that are Power Apps. 
+
+The Power Apps monitoring tool can help you track what is actually sent to the data source and timestamps for when requests are sent and responses come from the server. 
+
+You can learn more about the monitoring tool in this article: [Debugging canvas apps with Monitor](optimized-query-data-patterns.md) . 
+
+![Monitoring tool.](./media/execution-phases-data-flow/monitoring-screen.png)
+
+### Measuring memory pressure on the client
+
+To see memory consumption graphically, you can use the developer tools for your browser to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/landing/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
+
+ ![Memory usage graph.](./media/execution-phases-data-flow/memorygraph.png)
+
+
+## Next steps
+[Small data payloads](small-data-payloads.md)
+
 
 ### See also
 
-[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
-[Tips and best practices to improve canvas app performance](performance-tips.md) <br>
-[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
-[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
+[Troubleshooting issues for Power Apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

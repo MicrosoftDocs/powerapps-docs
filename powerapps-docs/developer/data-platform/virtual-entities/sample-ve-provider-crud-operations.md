@@ -1,17 +1,13 @@
 ---
 title: "Sample: Custom virtual table provider with CRUD operations (Microsoft Dataverse) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom virtual table that supports CRUD operations.."
-ms.date: 04/01/2022
-author: NHelgren
-ms.author: nhelgren
+ms.date: 12/04/2024
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: sample
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke
@@ -50,22 +46,21 @@ There are four steps to enable a custom data provider to create a virtual table.
 
 ## Step 1: Implementing CRUD plug-ins and registering the assembly
 
-
 1. Create your plug-in project and install the following NuGet packages. The solution in this example is named **StubProvider**.
 
    |Assembly                                         |  URL |
    |-------------------------------------------------|-------|
-   | Microsoft.CrmSdk.CoreAssemblies                 | https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies  |
-   | Microsoft.CrmSdk.Data                           | https://www.nuget.org/packages/Microsoft.CrmSdk.Data            |
-   | Microsoft.CrmSdk.Deployment                     | https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment      |
-   | Microsoft.CrmSdk.Workflow                       | https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow        |
-   | Microsoft.CrmSdk.XrmTooling.CoreAssembly        | https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly   |
-   | Microsoft.IdentityModel.Clients.ActiveDirectory | https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory |
-   | Microsoft.Rest.ClientRuntime                    | https://www.nuget.org/packages/Microsoft.Rest.ClientRuntime                    |
-   | Newtonsoft.Json                                 | https://www.nuget.org/packages/Newtonsoft.Json/13.0.1-beta2    |
+   | Microsoft.CrmSdk.CoreAssemblies                 | <https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies>  |
+   | Microsoft.CrmSdk.Data                           | <https://www.nuget.org/packages/Microsoft.CrmSdk.Data>            |
+   | Microsoft.CrmSdk.Deployment                     | <https://www.nuget.org/packages/Microsoft.CrmSdk.Deployment>      |
+   | Microsoft.CrmSdk.Workflow                       | <https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow>        |
+   | Microsoft.CrmSdk.XrmTooling.CoreAssembly        | <https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly>   |
+   | Microsoft.IdentityModel.Clients.ActiveDirectory | <https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory> |
+   | Microsoft.Rest.ClientRuntime                    | <https://www.nuget.org/packages/Microsoft.Rest.ClientRuntime>                    |
+   | Newtonsoft.Json                                 | <https://www.nuget.org/packages/Newtonsoft.Json/13.0.1-beta2>    |
    |||
 
-1. Add the following six class files to your solution. In each of the class files, add the following using statements
+2. Add the following six class files to your solution. In each of the class files, add the following using statements
 
     ```csharp
     using System; 
@@ -92,187 +87,150 @@ There are four steps to enable a custom data provider to create a virtual table.
     | **DeletePlugin.cs**  | This class contains code that allows you to delete a record in the virtual table.|
     |||
 
-     #### Code for Connection.cs   
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
-     ```csharp
-      public static class Connection
+#### Code for Connection.cs
+
+ ```csharp
+  public static class Connection
+{
+    public static SqlConnection GetConnection()
     {
-        public static SqlConnection GetConnection()
+        try
         {
-            try
-            {
-                //sample database to connect to 
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "Enter name or network address of the SQL Server";
-                builder.UserID = "Enter User Name";
-                builder.Password = "Enter password";
-                builder.InitialCatalog = "Enter database details";
-                SqlConnection connection = new SqlConnection(builder.ConnectionString);
-                return connection;
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.ToString());
-                throw;
-            }
+            //sample database to connect to 
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "Enter name or network address of the SQL Server";
+            builder.UserID = "Enter User Name";
+            builder.Password = "Enter password";
+            builder.InitialCatalog = "Enter database details";
+            SqlConnection connection = new SqlConnection(builder.ConnectionString);
+            return connection;
+        }
+        catch (SqlException e)
+        {
+            Console.WriteLine(e.ToString());
+            throw;
         }
     }
-     ```
+}
+ ```
 
-    #### Code for CreatePlugin.cs  
+#### Code for CreatePlugin.cs  
 
-    ```csharp
-    public class CreatePlugin : IPlugin
+```csharp
+public class CreatePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        public void Execute(IServiceProvider serviceProvider)
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
         {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
-            {
-                Entity entity = (Entity)context.InputParameters["Target"];
-                Guid id = Guid.NewGuid();
-                //change the table name below to the source table name you have created 
-                string cmdString = "INSERT INTO VETicket (TicketID,Name,Severity) VALUES (@TicketID, @Name, @Severity)";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = cmdString;
-                    command.Parameters.AddWithValue("@TicketID", id);
-                    command.Parameters.AddWithValue("@Name", entity["new_name"]);
-                    command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
-                    connection.Open();
-                    try
-                    {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("inserted {0} records", numRecords);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-                context.OutputParameters["id"] = id;
-            }
-        }
-    }
-    ```
-    #### Code for UpdatePlugin.cs 
-
-    ```csharp
-    public class UpdatePlugin: IPlugin {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
-            {
-                Entity entity = (Entity)context.InputParameters["Target"];
-                //change the table name below to the source table name you have created  
-                string cmdString = "UPDATE VETicket SET {0} WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.Parameters.AddWithValue("@TicketID", entity["new_ticketid"]);
-                    List<string> setList = new List<string>();
-                    if (entity.Attributes.Contains("new_name"))
-                    {
-                        command.Parameters.AddWithValue("@Name", entity["new_name"]);
-                        setList.Add("Name=@Name");
-                    }
-                    if (entity.Attributes.Contains("new_severity"))
-                    {
-                        command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
-                        setList.Add("Severity=@Severity");
-                    }
-                    command.CommandText = string.Format(cmdString, string.Join(",", setList)); connection.Open();
-                    try
-                    {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("updated {0} records", numRecords);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-            }
-        }
-    }
-    ```
-
-    #### Code for RetrievePlugin.cs  
-
-    ```csharp
-    public class RetrievePlugin : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
-            {
-                EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
-                Entity e = new Entity("new_ticket");
-                //change the table name below to the source table name you have created  
-                string cmdString = "SELECT TicketID, Severity, Name FROM VETicket WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = cmdString;
-                    command.Parameters.AddWithValue("@TicketID", entityRef.Id);
-                    connection.Open();
-                    try
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                e.Attributes.Add("new_ticketid", reader.GetGuid(0));
-                                e.Attributes.Add("new_severity", reader.GetInt32(1));
-                                e.Attributes.Add("new_name", reader.GetString(2));
-                            }
-                        }
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
-                }
-                context.OutputParameters["BusinessEntity"] = e;
-            }
-        }
-    }
-    ```
-    #### Code for RetrieveMultiplePlugin.cs 
-
-    ```csharp
-    public class RetrieveMultiplePlugin : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            EntityCollection collection = new EntityCollection();
-            //change the table name below to the source table name you have created  
-            string cmdString = "SELECT TicketID, Severity, Name FROM VETicket";
+            Entity entity = (Entity)context.InputParameters["Target"];
+            Guid id = Guid.NewGuid();
+            //change the table name below to the source table name you have created 
+            string cmdString = "INSERT INTO VETicket (TicketID,Name,Severity) VALUES (@TicketID, @Name, @Severity)";
             SqlConnection connection = Connection.GetConnection();
             using (SqlCommand command = connection.CreateCommand())
             {
                 command.CommandText = cmdString;
+                command.Parameters.AddWithValue("@TicketID", id);
+                command.Parameters.AddWithValue("@Name", entity["new_name"]);
+                command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
+                connection.Open();
+                try
+                {
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("inserted {0} records", numRecords);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
+            }
+            context.OutputParameters["id"] = id;
+        }
+    }
+}
+```
+
+#### Code for UpdatePlugin.cs
+
+```csharp
+public class UpdatePlugin: IPlugin {
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
+        {
+            Entity entity = (Entity)context.InputParameters["Target"];
+            //change the table name below to the source table name you have created  
+            string cmdString = "UPDATE VETicket SET {0} WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.Parameters.AddWithValue("@TicketID", entity["new_ticketid"]);
+                List<string> setList = new List<string>();
+                if (entity.Attributes.Contains("new_name"))
+                {
+                    command.Parameters.AddWithValue("@Name", entity["new_name"]);
+                    setList.Add("Name=@Name");
+                }
+                if (entity.Attributes.Contains("new_severity"))
+                {
+                    command.Parameters.AddWithValue("@Severity", entity["new_severity"]);
+                    setList.Add("Severity=@Severity");
+                }
+                command.CommandText = string.Format(cmdString, string.Join(",", setList)); connection.Open();
+                try
+                {
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("updated {0} records", numRecords);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
+            }
+        }
+    }
+}
+```
+
+#### Code for RetrievePlugin.cs  
+
+```csharp
+public class RetrievePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
+        {
+            EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
+            Entity e = new Entity("new_ticket");
+            //change the table name below to the source table name you have created  
+            string cmdString = "SELECT TicketID, Severity, Name FROM VETicket WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = cmdString;
+                command.Parameters.AddWithValue("@TicketID", entityRef.Id);
                 connection.Open();
                 try
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.Read())
                         {
-                            Entity e = new Entity("new_ticket");
                             e.Attributes.Add("new_ticketid", reader.GetGuid(0));
                             e.Attributes.Add("new_severity", reader.GetInt32(1));
                             e.Attributes.Add("new_name", reader.GetString(2));
-                            collection.Entities.Add(e);
                         }
                     }
                 }
@@ -280,62 +238,104 @@ There are four steps to enable a custom data provider to create a virtual table.
                 {
                     connection.Close();
                 }
-                context.OutputParameters["BusinessEntityCollection"] = collection;
+                // other codes. 
             }
+            context.OutputParameters["BusinessEntity"] = e;
         }
     }
-    ```
+}
+```
 
-    #### Code for DeletePlugin.cs 
+#### Code for RetrieveMultiplePlugin.cs
 
-    ```csharp
-    public class DeletePlugin : IPlugin
+```csharp
+public class RetrieveMultiplePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        public void Execute(IServiceProvider serviceProvider)
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        EntityCollection collection = new EntityCollection();
+        //change the table name below to the source table name you have created  
+        string cmdString = "SELECT TicketID, Severity, Name FROM VETicket";
+        SqlConnection connection = Connection.GetConnection();
+        using (SqlCommand command = connection.CreateCommand())
         {
-            var context = serviceProvider.Get<IPluginExecutionContext>();
-            //comment 
-            Guid id = Guid.Empty;
-            if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
+            command.CommandText = cmdString;
+            connection.Open();
+            try
             {
-                EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
-                id = entityRef.Id;
-                //change the table name below to the source table name you have created 
-                string cmdString = "DELETE VETicket WHERE TicketID=@TicketID";
-                SqlConnection connection = Connection.GetConnection();
-                using (SqlCommand command = connection.CreateCommand())
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    command.CommandText = cmdString; command.Parameters.AddWithValue("@TicketID", id);
-                    connection.Open();
-                    try
+                    while (reader.Read())
                     {
-                        var numRecords = command.ExecuteNonQuery();
-                        Console.WriteLine("deleted {0} records", numRecords);
+                        Entity e = new Entity("new_ticket");
+                        e.Attributes.Add("new_ticketid", reader.GetGuid(0));
+                        e.Attributes.Add("new_severity", reader.GetInt32(1));
+                        e.Attributes.Add("new_name", reader.GetString(2));
+                        collection.Entities.Add(e);
                     }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    // other codes. 
                 }
             }
+            finally
+            {
+                connection.Close();
+            }
+            context.OutputParameters["BusinessEntityCollection"] = collection;
         }
     }
-    ```
+}
+```
 
-1. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
+#### Code for DeletePlugin.cs
+
+```csharp
+public class DeletePlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.Get<IPluginExecutionContext>();
+        //comment 
+        Guid id = Guid.Empty;
+        if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is EntityReference)
+        {
+            EntityReference entityRef = (EntityReference)context.InputParameters["Target"];
+            id = entityRef.Id;
+            //change the table name below to the source table name you have created 
+            string cmdString = "DELETE VETicket WHERE TicketID=@TicketID";
+            SqlConnection connection = Connection.GetConnection();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = cmdString; command.Parameters.AddWithValue("@TicketID", id);
+                connection.Open();
+                try
+                {
+                    var numRecords = command.ExecuteNonQuery();
+                    Console.WriteLine("deleted {0} records", numRecords);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                // other codes. 
+            }
+        }
+    }
+}
+```
+
+3. Compile and build the solution. You will now have an assembly file (.dll) that you can use to register in your Dataverse environment. You will find this file in the  ***solution folder/bin/Debug*** directory.
 
     > [!div class="mx-imgBorder"]
     > ![Assembly dll.](../media/custom-ve-assembly-dll.png "Assembly dll")
 
-1. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
+4. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
 
-1. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
+5. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
 
    > [!div class="mx-imgBorder"]
    > ![Register new step.](../media/custom-ve-register-plugin-step.png "Register new step")
 
-1. Select the assembly file and register the plug-ins. Make sure that you have selected all the plug-ins (Create, Update, Delete, Retrieve, and RetrieveMultiple plug-ins).
+6. Select the assembly file and register the plug-ins. Make sure that you have selected all the plug-ins (Create, Update, Delete, Retrieve, and RetrieveMultiple plug-ins).
 
     > [!div class="mx-imgBorder"]
     > ![Register new assembly.](../media/custom-ve-register-assembly-step.png "Register new assembly")
@@ -348,7 +348,7 @@ There are four steps to enable a custom data provider to create a virtual table.
 
     1. Enter **Data Provider Name**.
 
-    2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**. 
+    2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**.
 
     3. In the **Data Source Table (Entity)** option, select **Create New Data Source**. Enter the details. Make sure that the data source is part of the solution you created or selected.
 

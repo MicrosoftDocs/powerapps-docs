@@ -1,18 +1,14 @@
 ---
-title: "Define ribbon actions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about defining the actions to be performed by a command bar or ribbon control in a <CommandDefinition> element together with rules that control whether the control is enabled or visible in the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+title: "Define ribbon actions (model-driven apps)"
+description: "Learn about defining the actions to be performed by a command bar or ribbon control in a <CommandDefinition> element together with rules that control whether the control is enabled or visible in the ribbon."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -26,7 +22,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
   
  A Ribbon control can perform two types actions and may include multiple actions:  
   
-- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a [Script (JScript) web resource](./script-jscript-web-resources.md).  
+- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a [JavaScript web resource](./script-jscript-web-resources.md).  
   
 - **Open a URL**: The ribbon opens a URL using the value from an Address attribute in the `<Url>` element. Additional parameters can pass information about how what querystring parameters are passed and the mode in which the window opens.  
   

@@ -1,15 +1,15 @@
 ---
 title: platform-library Element | Microsoft Docs
 description: "Platform library resources used in the component."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
  - JimDaly
+ - miglisic
 ---
 
 # platform-library element
@@ -38,15 +38,15 @@ Model-driven and canvas apps
 
 ```xml
 <resources>
-    <code path="index.ts" order="1" />
-   <platform-library name="React" version="16.8.6" />
-   <platform-library name="Fluent" version="8.29.0" />
+   <code path="index.ts" order="1" />
+   <platform-library name="React" version="16.14.0" />
+   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
 
-### Related topics
+### Related articles
 
-[React controls & platform libraries (Preview) ](../react-controls-platform-libraries.md)<br />
+[React controls & platform libraries](../react-controls-platform-libraries.md)<br />
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

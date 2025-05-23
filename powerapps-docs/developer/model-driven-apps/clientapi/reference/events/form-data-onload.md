@@ -1,18 +1,14 @@
 ---
-title: "Form data OnLoad event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form data OnLoad event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the form data OnLoad event.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -27,7 +23,9 @@ This event occurs whenever form data is loaded, specifically:
 Use the formContext.data.[addOnLoad](../formContext-data/addOnLoad.md) and formContext.data.[removeOnLoad](../formContext-data/removeOnLoad.md) methods to manage event handlers for this event. 
 
 
+## Related articles
 
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

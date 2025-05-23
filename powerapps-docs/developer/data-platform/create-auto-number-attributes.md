@@ -1,53 +1,49 @@
 ---
-title: "Create autonumber columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about creating autonumber column in the same way you create a string column using the StringAttributeMetadata class except that you use the new AutoNumberFormat property. Use the AutoNumberFormat property to define a pattern that includes sequential numbers and random strings by composing placeholders, which indicates the length and type of values that are generated."
-keywords: "Autonumber columns" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create autonumber columns (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about creating autonumber column in the same way you create a string column using the StringAttributeMetadata class except that you use the new AutoNumberFormat property. Use the AutoNumberFormat property to define a pattern that includes sequential numbers and random strings by composing placeholders that indicate the length and type of values that are generated."
+keywords: "Autonumber columns"
 ms.date: 06/15/2022
 ms.reviewer: jdaly
-ms.topic: "article"
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
 # Create autonumber columns
 
-With Microsoft Dataverse, you can add an autonumber column for any table. To create auto-number colums in Power Apps, see [Autonumber columns](../../maker/data-platform/autonumber-fields.md).
+With Microsoft Dataverse, you can add an autonumber column for any table. To create autonumber columns in Power Apps, see [Autonumber columns](../../maker/data-platform/autonumber-fields.md).
 
-This topic explains how you can programmatically create an autonumber column and set a seed value for sequential elements. In addition, the topic shows how to set the sequence number for the next record if you need to reset the seed at any time later.
+This article explains how you can programmatically create an autonumber column and set a seed value for sequential elements. In addition, the article shows how to set the sequence number for the next record if you need to reset the seed at any time later.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 > [!NOTE]
 >The setting of the seed is optional. There is no need to call the seed if you don't need to reseed.
 
-You can create an autonumber column in the same way you create a string column using the <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata Class> except that you use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AutoNumberFormat?text=AutoNumberFormat Property>. Use the `AutoNumberFormat` property to define a pattern that includes sequential numbers and random strings by composing placeholders, which indicates the length and type of values that are generated. The random strings help you to avoid duplicates or collisions, especially when offline clients trying to create autonumbers.
+You can create an autonumber column in the same way you create a string column using the [StringAttributeMetadata Class](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) except that you use the [AutoNumberFormat Property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AutoNumberFormat). Use the `AutoNumberFormat` property to define a pattern that includes sequential numbers and random strings by composing placeholders that indicate the length and type of values that are generated. The random strings help you to avoid duplicates or collisions, especially when offline clients trying to create autonumbers.
 
-When creating an autonumber column, the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.FormatName?text=FormatName Property> or the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.Format?text=Format Property> values must be `Text`. Since these are the default values you will typically not set this property. You cannot create an autonumber column that uses any other special kind of format such as `Email`, `Phone`, `TextArea`, `Url` or any other <xref:Microsoft.Xrm.Sdk.Metadata.StringFormatName?text=existing formats>.
+When you create an autonumber column, the [FormatName Property](xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.FormatName) or the [Format Property](xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.Format) values must be `Text`. Since these values are the default values, you'll typically not set this property. You can't create an autonumber column that uses any other special format such as `Email`, `Phone`, `TextArea`, `Url`, or any other [existing formats](xref:Microsoft.Xrm.Sdk.Metadata.StringFormatName).
 
-The sequential segment is generated by SQL and hence uniqueness is guaranteed by SQL.
+SQL generates the sequential segment guarantees uniqueness.
 
 > [!NOTE]
 >You can modify an existing format text column to be an autonumber format.
 
-For model-driven apps, in the legacy web client, when adding a control on a form bound to an autonumber column, the control is disabled automatically and behaves as read-only in the form where end-users cannot edit the control. In Unified Interface, controls bound to an autonumber column need to explicitly be set as disabled. If you do not set the initial column value on the form, the value is set only after you save the table. Autonumbering can be applied to column values in views, grids and so on.
+In model-driven apps using Unified Interface, controls bound to an autonumber column need to explicitly be set as disabled. If you don't set the initial column value on the form, the value is set only after you save the table. Autonumbering can be applied to column values in views, grids, and so on.
 
 ## Examples
 
-The following examples show how to create a new autonumber column named `new_SerialNumber` for a custom table named `new_Widget` which will have a value that looks like this: `WID-00001-AB7LSFG-20170913070240` using the Web API and the Dataverse SDK for .NET.
+The following examples show how to create a new autonumber column named `new_SerialNumber` for a custom table named `new_Widget` that has a value that looks like this: `WID-00001-AB7LSFG-20170913070240` using the Web API and the Dataverse SDK for .NET.
 
 #### [Web API](#tab/webapi)
 
 You can create and update table definitions using the Web API. More information: [Create and update table definitions using the Web API](/powerapps/developer/data-platform/webapi/create-update-entity-definitions-using-web-api).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='new_widget')/Attributes HTTP/1.1
@@ -96,19 +92,19 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/Attributes(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 ```
 
 
 
 #### [SDK for .NET](#tab/sdk)
 
-Using the Organization service with SDK for .NET  <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
+Using the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
 
 ```csharp
 string conn = $@"
@@ -122,6 +118,7 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
   {
@@ -147,9 +144,10 @@ var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
 
 > [!NOTE]
 > Autonumber values are preselected by the database when the record is started. If a record is started but cancelled, the number it was assigned is not used. If, during this time, another record is completed with the next sequential number, gaps will be present in the autonumbering of records.
+
 ## AutoNumberFormat options
 
-These examples show how you can configure the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AutoNumberFormat?text=AutoNumberFormat Property> to get different results:
+These examples show how you can configure the [AutoNumberFormat Property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AutoNumberFormat) to get different results:
 
 |AutoNumberFormat value|Example value|
 |:----------|:----------|
@@ -164,7 +162,7 @@ These examples show how you can configure the <xref:Microsoft.Xrm.Sdk.Metadata.A
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMMddhh}-{RANDSTRING:6}`|`CAS-002002-2017091309-HTZOUR`|
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMM}-{RANDSTRING:6}-{DATETIMEUTC:hhmmss}`|`CAS-002000-201709-Z8M2Z6-110901`|
 
-The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings).
+The random string placeholders are optional. You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ### String length
 
@@ -175,9 +173,9 @@ The table shows the string length value for the random and sequential placeholde
 |`{RANDSTRING:MIN_LENGTH}`|The value of `MIN_LENGTH` is between 1 and 6.|When you save the row, the autonumber column generates the random string with the defined length if the value is between 1 and 6. If you use the `MIN_LENGTH` value as 7 or beyond 7, you get to see an Invalid Argument error.|
 |`{SEQNUM:MIN_LENGTH}`|The minimum value of the `MIN_LENGTH` is 1. The number continues to increment beyond the minimum length.|When you save the row, the autonumber column works fine and continue to work fine for larger values of `MIN_LENGTH`.|
 
-For sequential value placeholders, the `MIN_LENGTH` is a minimum length. If you set the value to be 2, the initial value will be 01, and the 100th row value will be 100. The number will continue to increment beyond the minimum length. The value in setting the length for sequential values is to establish a consistent length for the autogenerated value by adding additional 0s to the initial value. It will not limit the absolute value. Random value placeholders will always be the same length.
+For sequential value placeholders, the `MIN_LENGTH` is a minimum length. If you set the value to be 2, the initial value is 01, and the 100th row value is 100. The number continues to increment beyond the minimum length. The value in setting the length for sequential values is to establish a consistent length for the autogenerated value by adding more 0s to the initial value. It doesn't limit the absolute value. Random value placeholders are always the same length.
 
-Because the sequential values can get larger than the minimum length allotted for them, you should not adjust the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.MaxLength?text=StringAttributeMetadata.MaxLength Property> to match the length of your formatted value. There is little value in doing this and it could cause an error in the future if the value exceeds the `MaxLength` value. Make sure you leave enough room for a realistic range of sequential values.
+Because the sequential values can get larger than the minimum length allotted for them, you shouldn't adjust the [StringAttributeMetadata.MaxLength Property](xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata.MaxLength) to match the length of your formatted value. There's little value in setting this property and it could cause an error in the future if the value exceeds the `MaxLength` value. Make sure you leave enough room for a realistic range of sequential values.
 
 > [!NOTE]
 > There is no validation of the placeholder values when you create the column. The error appears only when you try to save a table that uses an incorrectly configured `AutoNumberFormat` value.
@@ -187,9 +185,9 @@ Because the sequential values can get larger than the minimum length allotted fo
 
 If you create an autonumber column with an incorrect configuration or you want to modify an existing autonumber column, you can update the column the `AutoNumberFormat` value.
 
-The following code snippet explains you to retrieve, modify, and update the autonumber column using the SDK for .NET:
+The following code snippet demonstrates how to retrieve, modify, and update the autonumber column using the SDK for .NET:
 
-To modify an existing autonumber column, you must retrieve the column using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest?text=RetrieveAttributeRequest Class>.
+To modify an existing autonumber column, you must retrieve the column using the [RetrieveAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest).
 
 ```csharp
 // Create the retrieve request
@@ -223,10 +221,10 @@ _serviceProxy.Execute(updateRequest);
 
 ## Set a seed value
 
-By default, all autonumber sequential values start with 1000 and use 0 as the prefix depending on the length. In this way, the length of the value is always same. If you want to change the initial value, you need to change the initial seed value using the API below to set the next number that are used for the sequential segment.
+By default, all autonumber sequential values start with 1000 and use 0 as the prefix depending on the length. In this way, the length of the value is always same. If you want to change the initial value, you need to change the initial seed value using the `SetAutoNumberSeed` message to set the next number that is used for the sequential segment.
 
-For example, when the length of the sequential number is 5, you may want to start with an initial value of 10000 instead of the default value of 00001.
-If you want to choose a different starting value after creating the autonumbering column, use the SetAutoNumberSeed message. Use the <xref:Microsoft.Crm.Sdk.Messages.SetAutoNumberSeedRequest?text=SetAutoNumberSeedRequest Class> when using the SDK assemblies and [SetAutoNumberSeed Action](xref:Microsoft.Dynamics.CRM.SetAutoNumberSeed) when using the Web API.
+For example, when the length of the sequential number is 5, you might want to start with an initial value of 10000 instead of the default value of 00001.
+If you want to choose a different starting value after creating the autonumbering column, use the `SetAutoNumberSeed` message. Use the [SetAutoNumberSeedRequest class](xref:Microsoft.Crm.Sdk.Messages.SetAutoNumberSeedRequest) when using the SDK assemblies and [SetAutoNumberSeed Action](xref:Microsoft.Dynamics.CRM.SetAutoNumberSeed) when using the Web API.
 
 The `AutoNumberSeed` message has the following parameters:
 
@@ -247,7 +245,7 @@ The following samples set the seed to 10000 for an autonumber column named `new_
 
 Using the Web API [SetAutoNumberSeed Action](xref:Microsoft.Dynamics.CRM.SetAutoNumberSeed).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/SetAutoNumberSeed HTTP/1.1
@@ -263,7 +261,7 @@ OData-Version: 4.0
 } 
 ```
 
-**Response**
+**Response:**
 
 ```json
 HTTP/1.1 204 No Content
@@ -274,7 +272,7 @@ More information: [Use Web API actions > Unbound actions](webapi/use-web-api-act
 
 #### [SDK for .NET](#tab/sdk)
 
-Using the <xref:Microsoft.Crm.Sdk.Messages.SetAutoNumberSeedRequest?text=SetAutoNumberSeedRequest Class>:
+Using the [SetAutoNumberSeedRequest class](xref:Microsoft.Crm.Sdk.Messages.SetAutoNumberSeedRequest):
 
 ```csharp
 
@@ -289,6 +287,8 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
+
 //Define the seed 
 SetAutoNumberSeedRequest req = new SetAutoNumberSeedRequest();
 req.EntityName = "newWidget";
@@ -302,9 +302,9 @@ service.Execute(req);
 
 ### Auto Number Manager
 
-**[Auto Number Manager](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.AutoNumManager/)** for XrmToolBox is a community driven tool for Dataverse that provides a UI to set, update and remove autonumber format on new or existing columns.
+**[Auto Number Manager](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.AutoNumManager/)** for XrmToolBox is a community driven tool for Dataverse that provides a UI to set, update, and remove autonumber format on new or existing columns.
 
-Please see the [Developer tools](developer-tools.md) topic for community developed tools and [anm.xrmtoolbox.com](https://anm.xrmtoolbox.com) for more information about Auto Number Manager.
+See the [Developer tools](developer-tools.md) article for community developed tools and [anm.xrmtoolbox.com](https://anm.xrmtoolbox.com) for more information about Auto Number Manager.
 
 > [!NOTE]
 > The community tools are not a product of Dataverse and does not extend support to the community tools. 

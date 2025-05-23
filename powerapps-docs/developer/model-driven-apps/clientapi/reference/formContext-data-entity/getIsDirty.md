@@ -1,18 +1,14 @@
 ---
 title: entity.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any attributes of the entity have been modified.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,10 +30,9 @@ contributors:
 
 **Description**: true if any columns in the form have been changed; false otherwise.
 
-### Related topics
+### Related articles
 
-[formContext.data.getIsDirty](../formContext-data/getIsDirty.md)
-
+[formContext.data.getIsDirty](../formContext-data/getIsDirty.md)   
 [formContext](../../clientapi-form-context.md)
 
 

@@ -1,9 +1,8 @@
 ---
 title: Property Set Element | Microsoft Docs
 description: Defines an inner configuration within a dataset manifest node to allow you to explicitly configure a column of your dataset against a column of a given type from the table against which the dataset is configured.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -50,7 +49,7 @@ The `of-type` attribute value must be one of the following:
 
 [!INCLUDE [type-table](includes/type-table.md)]
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

@@ -3,18 +3,16 @@ title: Show data in a line, pie, or bar chart in canvas apps
 description: Learn about how to show categories of data as line charts, pie charts, or bar charts in a canvas app.
 author: fikaradz
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 10/23/2016
+ms.reviewer: mkaur
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
-ms.author: fikaradz
+ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - fikaradz
 ---
 # Show data in a line, pie, or bar chart in canvas apps
@@ -26,7 +24,12 @@ Use line charts, pie charts, and bar charts to display your data in a canvas app
 
 For example, your data should look similar to the following:
 
-![Data example][9]
+
+|Product  |Revenue2012  |Revenue2013 | Revenue2014|
+|----------|-----------|------------|------------|
+|Europa    |21000      |26000      | 28000       |
+|Ganymede    |15000      |17000      | 21000       |
+|Callisto    |14000      |19000      | 23000       |
 
 You can create and use these charts within Power Apps. Let's get started.
 
@@ -35,37 +38,33 @@ You can create and use these charts within Power Apps. Let's get started.
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in Power Apps.
-* Download [ChartData.zip](https://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).
+* Create your own [sample data](/power-platform/admin/add-remove-sample-data) using the example above and save it in Excel. Follow the steps in this topic to import it directly into your app.
 
 ## Import the sample data
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
 
-1. On the **Insert** tab, select **Controls**, and then select **Import**:  
-
-    ![Insert controls][11]  
+1. On the command bar select, **Insert** > **Media** > **Import**.
 
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
 
    ```Collect(ProductRevenue, Import1.Data)```
 
-3. Press F5 to open Preview mode, and then select the **Import Data** button.
+3. On the [app actions menu](power-apps-studio.md#2--app-actions), select **Preview the app** and then select the **Import Data** button.
 
-4. In the **Open** dialog box, select ChartData.zip, select **Open**, and then press Esc.
+4. In the **Open** dialog box, select your Excel file, select **Open**, and then press Esc.
 
-5. On the **File** menu, select **Collections**.
+5. On the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) select, **Variables** > **Collections**.
 
-    The ProductRevenue collection is listed with the chart data you imported:
-
-    ![File - collections][1]  
+    The ProductRevenue collection should be listed with the chart data you imported.
 
    > [!NOTE]
    > The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
-   >
+   
 
 6. Press Esc to return to the default workspace.
 
 ## Add a pie chart
-1. On the **Insert** tab, select **Charts**, and then select **Pie Chart**.
+1. On the command bar selelct, **Insert** > **Charts** > **Pie Chart**.
 
 2. Move the pie chart under the **Import data** button.
 
@@ -84,9 +83,9 @@ In these steps, we import the sample data into a collection, named **ProductReve
 ## Add a bar chart to display your data
 Now, let's use this ProductRevenue collection in a bar chart:
 
-1. On the **Home** tab, add a screen.]
+1. On the command bar, select **New screen** > **Blank**. 
 
-2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
+2.  On the command bar, select **Insert** > **Tree view** > **Column Chart**.
 
 3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
@@ -101,8 +100,6 @@ Now, let's use this ProductRevenue collection in a bar chart:
     ![Select center square][5]
 
 5. On the **Chart** tab, select **Number of Series**, and then enter **3** in the formula bar:
-
-    ![Select number of series and enter 3][6]  
 
     The column chart shows revenue data for each product over three years:
 

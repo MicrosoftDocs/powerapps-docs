@@ -1,17 +1,14 @@
 ---
-title: Model-driven apps in Power Apps Developer Overview | Microsoft Docs
+title: Model-driven apps in Power Apps Developer Overview
 description: "Learn how developers can add value to model-driven apps; tutorial; introduction for model-apps developer in Power Apps"
 author: JimDaly
-manager: kvivek
+ms.author: jdaly
+ms.reviewer: jdaly
 ms.topic: overview
 ms.date: 04/01/2022
 ms.subservice: mda-developer
-ms.author: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Model-driven apps Developer Guide
@@ -28,7 +25,7 @@ If you are new to the Dataverse applications, the topics in this section provide
 > [!div class="nextstepaction"]
 > [Get started](supported-customizations.md)
 
-### Related topics
+### Related articles
 
 [Understand model-driven apps components](../../maker/model-driven-apps/model-driven-app-components.md)<br/>
 [Create your first model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md)

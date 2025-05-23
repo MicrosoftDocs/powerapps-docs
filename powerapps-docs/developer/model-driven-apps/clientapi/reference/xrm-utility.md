@@ -1,18 +1,14 @@
 ---
-title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
+title: "Xrm.Utility (Client API reference)"
 description: Provides container for useful methods.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -54,16 +50,12 @@ The following table lists the new methods you should use instead of the deprecat
 |[openWebResource](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_OpenWebResource)|Xrm.Navigation.[openWebResource](Xrm-Navigation/openWebResource.md)|
 
 
-### Related topics
+### Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
-[Client API Xrm object](../clientapi-xrm.md)
-
-[Client API reference](../reference.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
+[Client API Xrm object](../clientapi-xrm.md)   
+[Client API reference](../reference.md)   
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

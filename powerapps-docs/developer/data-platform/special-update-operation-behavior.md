@@ -4,15 +4,11 @@ description: "Describes special behavior in plug-ins and workflows for update ev
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -45,7 +41,7 @@ When update requests are processed that include both state/status fields plus ot
 
 ### See also
 
-[Update and Delete tables using the Organization Service](org-service/entity-operations-update-delete.md)<br />
+[Update and Delete tables using the SDK for .NET](org-service/entity-operations-update-delete.md)<br />
 [Event Framework](event-framework.md)
 
 

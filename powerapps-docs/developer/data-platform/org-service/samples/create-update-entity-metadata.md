@@ -2,26 +2,25 @@
 title: "Sample: Create and update table definitions  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create and update table definitions." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
-manager: sunilg
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Create and update table definitions
 
 This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.
 
-You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEntityMetadata).
+You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership).
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and update table definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEntityMetadata)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -31,7 +30,7 @@ You can also create organization-owned custom tables. More information: [Table o
 
 ## What this sample does
 
-The `CreateEntityRequest` message is intended to be used in a scenario where it contains  the data that is needed to create a custom table, and optionally, to add it to a specified unmanaged solution.
+The `CreateEntityRequest` message is intended to be used in a scenario where it contains the data that is needed to create a custom table, and optionally, to add it to a specified unmanaged solution.
 
 ## How this sample works
 
@@ -43,7 +42,7 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `createrequest` method creates the custom table. 
+1. The `createrequest` method creates the custom table.
 2. The `Entity` method is used to define the table.
 3. The `StringAttributeMetadata` method defines the primary column of the table.
 4. The `CreateBankNameAttributeRequest` method creates a string column to the table.
@@ -53,6 +52,5 @@ Checks for the current version of the org.
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

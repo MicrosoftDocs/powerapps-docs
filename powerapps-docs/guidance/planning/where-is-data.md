@@ -3,7 +3,7 @@ title: Accessing and storing data for a Power Apps project | Microsoft Docs
 description: As part of the design phase of a Power Apps project, document where and how you'll access existing data you need, and decide where you'll store data you create.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -88,7 +88,7 @@ needs:
     data connector.
 
 - **Copied data**: Our expense reports also include some data that we looked up from
-    Azure Active Directory, such as the employee ID, manager, and department. We
+    Microsoft Entra ID, such as the employee ID, manager, and department. We
     don't want to change that data in the original system, but we do need to
     keep a copy of it. We want to record the employee's manager and department at
     the time they created the report, not at some point in the future when we

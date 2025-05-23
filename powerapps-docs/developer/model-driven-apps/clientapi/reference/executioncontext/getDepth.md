@@ -1,18 +1,14 @@
 ---
-title: "getDepth (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getDepth (Client API reference) in model-driven apps"
 description: "Learn about the getDepth method that returns a value that indicates the order in which this handler is executed." 
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -33,7 +29,8 @@ Returns a value that indicates the order in which this handler is executed.
 **Description**: The order in which this handler is executed. The order begins with 0.
 
 
-### Related topics
+### Related articles
+
 [Execution context](../execution-context.md)
 
 

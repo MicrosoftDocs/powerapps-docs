@@ -3,7 +3,7 @@ title: Designing - Sketching the screens | Microsoft Docs
 description: After you've identified the tasks for your Power Apps project, the next step is to sketch the screens. With these tips, you don't have to be an artist! 
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

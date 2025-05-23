@@ -13,16 +13,12 @@ ms.assetid: e82e7f64-37ad-41e5-acd7-16309881c6a2
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Delete a model-driven app
@@ -49,7 +45,8 @@ The process for removing an app is straightforward. However, it is worth noting 
    If the component has dependencies, such as relationships, these must be removed before the app can be deleted. To see the dependencies of an app, select the app and then select **Show Dependencies** on the command bar.
 
 5. When an app is deleted, you should also delete the associated site map. If you don't delete the site map, the site map designer displays an error the first time there is an attempt to create another app with the same name. However, it is possible to ignore the error, and the error will not appear when trying to create the app again.
-   1. On the left navigation pane, select **Solutions**, and then open the **Default Solution**.
+   1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+   1. Open the **Default Solution**.
    1. On the left navigation pane, select **Site maps**, select the site map that has the same name of the app that was deleted earlier, and then select **Delete from this environment**.
    1. Select **Delete** to confirm.
 

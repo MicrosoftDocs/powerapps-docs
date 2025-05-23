@@ -1,25 +1,27 @@
 ---
-title: Embed a model-driven app as a personal app | Microsoft Docs
+title: Embed a model-driven app as a personal app (preview)
 description: You can embed a model-driven app created in Power Apps in Microsoft Teams to share it.
-author: aheaney
-
+author: aorth
 ms.topic: how-to
-ms.custom: 
-  - model
-  - intro-internal
+ms.custom: model
+ms.collection: get-started
 ms.reviewer: matp
-ms.date: 01/09/2021
+ms.date: 11/13/2024
 ms.subservice: teams
-ms.author: aheaney
+ms.author: aorth
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
-# Embed a model-driven app as personal app in Teams
+# Embed a model-driven app as personal app in Teams (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
@@ -73,7 +75,8 @@ If you're an admin, you can use the **Download app** option to also [publish the
 
 ### See also
 
-[Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)
+[Welcome to Microsoft Teams](/MicrosoftTeams/teams-overview)  
+[Embed a model-driven app in Microsoft Teams (video)](https://youtu.be/vRzJAN5P4X8?feature=shared)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

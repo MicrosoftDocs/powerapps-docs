@@ -3,9 +3,8 @@ title: "Autonumber columns in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
-
 ms.custom: 
-ms.topic: conceptual
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -13,19 +12,14 @@ applies_to:
 author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
-ms.author: kvivek
-manager: kvivek
+ms.author: matp
 ms.reviewer: Mattp123
 ms.suite: 
 ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Autonumber columns
-
 
 Autonumber columns are columns that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these columns to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 
@@ -71,7 +65,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
   
 1.  Sign in to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2.  On the left pane expand **Data** and select **Tables**.
+2.  On the left pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 3.  Select the table that you would like to add an autonumber column to and then select **Columns**.
   
@@ -91,7 +85,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
 9. Select **Done**.
 
 ## See also
- [Create and edit columns for Microsoft Dataverse using Power Apps portal](create-edit-field-portal.md)
 
+ [Create and edit columns for Microsoft Dataverse using Power Apps portal](create-edit-field-portal.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

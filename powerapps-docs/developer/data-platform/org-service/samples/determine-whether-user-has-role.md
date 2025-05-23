@@ -4,24 +4,23 @@ description: "This sample showcases how to determine whether a user has a specif
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Determine whether a user has a role
 
-This sample shows how to determine whether a user in Microsoft Dataverse has been associated with a specific role. This is performed by using a query with the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.  You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DetermineWhetherUserHasRole).
+This sample shows how to determine whether a user in Microsoft Dataverse has been associated with a specific role. This is performed by using a query with the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
-This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
+> [!div class="nextstepaction"]
+> [SDK for .NET: Determine whether a user has a role sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/DetermineWhetherUserHasRole)
+
+This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below.
 
 **First Name**: Dan<br/>
 **Last Name**: Park<br/>
@@ -43,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates a user with no security role assigned to him as shown above.
+2. The `CreateRequiredRecords` method creates a user with no security role assigned to them as shown above.
 
 ### Demonstrate
 
@@ -53,6 +52,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 This sample creates no records. No cleanup is required.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

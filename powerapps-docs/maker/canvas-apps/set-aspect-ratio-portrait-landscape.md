@@ -3,18 +3,16 @@ title: Change screen size and orientation of canvas apps
 description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in Power Apps.
 author: emcoope-MSFT
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/24/2021
+ms.reviewer: mkaur
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Change screen size and orientation of canvas apps
@@ -57,7 +55,10 @@ Customize a canvas app by changing its screen size and orientation.
 
     If this setting is on, the app retains the screen orientation and aspect ratio that you specified in steps 2 and 3, no matter the device. For example, a phone app that's running in a web browser retains the ratio for a phone, showing a dark bar on each side instead of filling the window.
 
-    If this setting is off, the app adjusts to the aspect ratio of the device on which it's running (and distorting the UI if necessary).
+    If this setting is off, the app adjusts to the aspect ratio of the device on which it's running. We don't recommend this because the app can be distorted to the point of being unusable, depending on the screen size. For example, controls may overlap or text might be clipped.
+
+    > [!NOTE]
+    > This setting can't be turned off for certain controls such as **[Rich text editor](controls/control-richtexteditor.md)** and [Fluent UI controls](../../teams/use-the-fluent-ui-controls.md). They won't distort according to screen size. [Create a responsive layout](create-responsive-layout.md) to specify how these controls should adapt to different screen sizes.
 
 1. Under **Lock orientation**, specify either **On** or **Off**.
 
@@ -72,6 +73,15 @@ Customize a canvas app by changing its screen size and orientation.
 1. Close **Settings** dialog.
 
 1. [Save and publish](save-publish-app.md) your app.
+ 
+### Enumerated app behavior for scale to fit and lock aspect ratio settings
+
+| Scenario | Scale to fit | Lock aspect ratio | App layout behavior on 'screen resize'                                                                                                                                                                                  | Notes to include in docs                                                                                                                                                           |
+|----------|--------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1        | Enabled      | Enabled           | The screen width and height are set by the maker. The screen scales to the window size available.                                                                                                                       |                                                                                                                                                                                    |
+| 2        | Disabled     | Enabled           | Not applicable. When scale to fit is disabled, lock aspect ratio is also disabled.                                                                                                                                      |                                                                                                                                                                                    |
+| 3        | Enabled      | Disabled          | In Power Apps Studio, the screen scales to the window size available.     In the end-user experience, Power Apps scales to the smallest edge (width or height), and then fills the UI for the larger edge.  | For apps built for mobile, we recommend makers use **lock orientation** with this setting.                                                                               |
+| 4        | Disabled     | Disabled          | App experiences can be responsive. Makers can manipulate control locations using Power Fx to set X and Y values as well as width and height.                                                                                                        | For more information, see [Responsive layout documentation](create-responsive-layout.md) and consider using auto-layout containers.       |
 
 ## Next steps
 
@@ -79,3 +89,8 @@ Customize a canvas app by changing its screen size and orientation.
 - Check [common issues and resolutions](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) if you're running into any problems.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+
+
+## Related information
+
+[Change screen size and orientation of canvas apps (video)](https://youtu.be/dsow8q4LzA8?feature=shared)

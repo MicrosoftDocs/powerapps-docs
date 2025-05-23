@@ -1,57 +1,67 @@
 ---
-title: Find the apps, templates, and information you need using Power Apps unified search | Microsoft Docs
-description: Use unified search to find what you need.
+title: Find it with unified search
+description: Use unified search to find apps, flows, templates, and web content.
 author: Mattp123
+ms.reviewer: angieandrews
 ms.subservice: common
-ms.topic: conceptual
-ms.date: 02/24/2021
+ms.topic: how-to
+ms.date: 05/25/2023
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mattp123
+  - v-aangie
+ms.contributors:
+  - saperlmu
 ---
-# Find the apps, templates, and information you need
 
-Power Apps unified search helps you quickly discover apps, templates, and external web content. From a single entry point you can find:
+# Find it with unified search
+
+Unified search helps you quickly discover apps in Power Apps, flows in Power Automate, templates, and external web content. From a single entry point, you can find:
 
 |Item  |Content type  |
 |---------|---------|
-|Apps that have been built and published   | Environment        |
+|(Power Apps) Apps that have been built and published   | Environment        |
+|(Power Automate) Flows that have been built and published   | Environment        |
 |Templates    | Environment  |
 |Documentation and learn content    |  External web     |
 |Community content     |  External web       |
 |Blog posts     | External web        |
-| Video tutorials  | External web  |
+
+> [!NOTE]
+> To open the Power Automate documentation, go to the [Power Automate Overview](/power-automate/getting-started).
 
 ## Use search
 
-Type in the **Search** box to see suggestions for apps and templates appear in the drop down below the search box.
+By default, search displays items only from your environment, which are apps, flows, and templates.
 
-Choose any suggestion to go directly to that item.
+1. To display suggestions, type in the **Search** box.
 
-> [!NOTE]
-> By default, search only displays items from your environment, which are apps and templates. Users can select the **See web results** option to expand their search to external web content.
-> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
+    - For Power Apps, suggestions include apps and templates.
+    - For Power Automate, suggestions include flows and templates.
 
-> [!WARNING]
-> Do not send personal data or confidential/proprietary information as part of your search when you choose this option.
+1. To go directly to that item, select any suggestion.
 
-To prevent users from using the **See web results** option to perform external web content searches for an environment, see [Manage search providers](#manage-search-providers).
+1. (Optional) To expand your search to external web content, select **See web results**.
+
+    :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
+
+    > [!WARNING]
+    > Don't send personal data or confidential/proprietary information as part of your search when you choose this option.
+
+To prevent users from using the **See web results** option to perform external web content searches for an environment, go to [Manage search providers](#manage-search-providers).
 
 ## Manage search providers
 
-The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
+The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Power Platform administrator or Dynamics 365 administrator security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 
-By default, all search providers are enabled. The following search providers can be disabled.
+By default, all search providers are enabled, except for the docs search provider `PowerPlatform.Search.disableDocsSearch`. The following search providers can be enabled or disabled.
 
-|Search provider namespace |Description  |
-|---------|---------|
-|`PowerPlatform.Search.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
-|`PowerPlatform.Search.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
-| `PowerPlatform.Search.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
+|Search provider namespace |Default |Description  |
+|---------|---------|---------|
+|`PowerPlatform.Search.disableDocsSearch`  |True |  Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.  <br /><br /> When the provider is enabled, users' keywords might be sent outside their company, region, or cloud. Make sure keywords don't contain sensitive or confidential information. |
+|`PowerPlatform.Search.disableCommunitySearch`     |False | Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
@@ -72,6 +82,13 @@ To enable the Microsoft Learn and Documentation search provider, run this cmdlet
 ```powershell
 $requestBody = @{PowerPlatform.Search.disableDocsSearch = $false}
 Set-TenantSettings -RequestBody $requestBody
+```
+
+Alternatively, run:
+```powershell
+$settings = Get-TenantSettings 
+$settings.PowerPlatform.Search.disableDocsSearch = $false
+Set-TenantSettings -RequestBody $settings
 ```
 
 ### See also

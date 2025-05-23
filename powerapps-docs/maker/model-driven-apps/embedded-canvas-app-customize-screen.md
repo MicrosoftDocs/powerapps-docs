@@ -15,14 +15,10 @@ applies_to:
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Customize the screen size and orientation of a canvas app embedded on a model-driven form
@@ -32,7 +28,7 @@ You can customize the screen size (tablet layout only) and orientation of a canv
 1. Follow the steps to add or edit an embedded canvas app on a model-driven form.
     - [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
     - [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md)
-2. With the canvas app open in Power Apps Studio, select the **File** tab, select **Settings**, and then select the **Screen size + orientiation** tab to set the orientation screen and orientation of the canvas app. More information: [Change screen size and orientation of a canvas app in Power Apps](../canvas-apps/set-aspect-ratio-portrait-landscape.md)
+2. With the canvas app open in Power Apps Studio, select the **File** tab, select **Settings**, and then select the **Screen size + orientation** tab to set the orientation screen and orientation of the canvas app. More information: [Change screen size and orientation of a canvas app in Power Apps](../canvas-apps/set-aspect-ratio-portrait-landscape.md)
 
 
 ### See also

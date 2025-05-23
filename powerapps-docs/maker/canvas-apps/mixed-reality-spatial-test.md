@@ -1,9 +1,9 @@
 ---
 title: Test whether an object will fit in a space using mixed reality
 description: Use mixed-reality controls in a canvas app to test whether objects of a given size will fit in a measured space.
-author: mduelae
+author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: anuitz
 ms.date: 03/04/2022
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
   - alex-msft
 ---
@@ -85,7 +83,7 @@ Finally, we'll add text labels to display the measurements that were taken and t
 
     - First label:
 
-        ```powerapps-dot
+        ```power-fx
             If(IsBlankOrError(testVolume), "No Measurement captured",
                 If(testVolume.Height >= Value(minHeight.Text) &&
                 ((testVolume.BoundingWidth >= Value(minWidth.Text) && testVolume.BoundingDepth >= Value(minDepth.Text)) ||
@@ -99,7 +97,7 @@ Finally, we'll add text labels to display the measurements that were taken and t
 
     - Second label:
 
-        ```powerapps-dot
+        ```power-fx
             Concatenate("Bounding Width: ", Text(testVolume.BoundingWidth))
         ```
 
@@ -107,7 +105,7 @@ Finally, we'll add text labels to display the measurements that were taken and t
 
     - Third label:
 
-        ```powerapps-dot
+        ```power-fx
             Concatenate("Bounding Depth: ", Text(testVolume.BoundingDepth))
         ```
 
@@ -115,7 +113,7 @@ Finally, we'll add text labels to display the measurements that were taken and t
 
     - Fourth label:
 
-        ```powerapps-dot
+        ```power-fx
             Concatenate("Bounding Height: ", Text(testVolume.Height))
         ```
 
@@ -142,7 +140,7 @@ The app we created tests a single set of dimensions that are specified by the us
 
 For example, let's say that our app contains a reference to a Dataverse table named **Products** that includes three columns: **Width**, **Depth**, and **Height** (corresponding to each product's dimensions). To filter the collection to show only the measurements that would fit in a measured volume, we can apply the following formula.
 
-```powerapps-dot
+```power-fx
     If(IsBlankOrError(testVolume), Products,
     Filter(Products, testVolume.Height >= Height &&
         ((testVolume.BoundingWidth >= Width && testVolume.BoundingDepth >= Depth) ||

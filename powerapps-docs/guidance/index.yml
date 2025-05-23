@@ -10,9 +10,9 @@ metadata:
   ms.subservice: guidance
   ms.topic: landing-page 
   ms.collection: collection
-  author: KumarVivek
-  ms.author: kvivek
-  ms.date: 07/26/2020 
+  author: tapanm-msft
+  ms.author: tapanm
+  ms.date: 07/26/2022 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -32,6 +32,8 @@ landingContent:
             url: patterns/communication-pattern.md
           - text: "Pattern: Inspection"
             url: patterns/inspection-pattern.md
+          - text: More patterns
+            url: patterns/more-patterns.md
   
   # Card 
   - title: Planning a Power Apps project
@@ -52,15 +54,18 @@ landingContent:
             url: planning/discoverability.md
 
   # Card
-  - title: "Ebook: Fusion development approach"
+  - title: "Collaborative app development"
     linkLists:
        - linkListType: overview
          links:
-          - text: Introduction to the ebook
+          - text: "Ebook: Fusion development approach"
             url: fusion-dev-ebook/index.md
-          - text: What is the fusion development approach?
-            url: fusion-dev-ebook/01-what-is-fusion-dev-approach.md    
-
+          - text: "Best practices: Collaborate and co-develop apps"
+            url: co-develop/overview.md
+       - linkListType: reference
+         links:
+          - text: "Community solutions and tools"
+            url: co-develop/community-solutions-tools.md   
 
   # Card
   - title: Related content
@@ -72,6 +77,8 @@ landingContent:
           - text: Power Automate guidance
             url: /power-automate/guidance/         
           - text: Microsoft Power Platform ALM guide
-            url: /power-platform/alm/          
+            url: /power-platform/alm/
+          - text: Power Apps docs
+            url: /power-apps/          
 
         

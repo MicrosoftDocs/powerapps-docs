@@ -1,20 +1,18 @@
 ---
 title: Keyboard shortcuts for canvas apps
 description: Learn about the different keyboard shortcuts available to run various actions and operations within canvas apps.
-author: adrianorth
+author: TashasEv
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/12/2020
 ms.subservice: canvas-maker
-ms.author: aorth
+ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Keyboard shortcuts for canvas apps
 
@@ -68,6 +66,7 @@ contributors:
 | Shortcut | Action |
 |--|--|
 | Tab | Select the next control |
+| Shift + F11 | Sets focus to the inline action bar |
 | Ctrl+Click or Shift+Click | Select multiple objects at once |
 | Right arrow | Nudge the selected control to the right |
 | Left arrow | Nudge the selected control to the left |

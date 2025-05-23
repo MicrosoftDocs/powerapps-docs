@@ -1,20 +1,18 @@
 ---
 title: HTML text control in Power Apps
 description: Learn about the details, properties, and examples of the HTML text control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
-ms.date: 03/25/2022
-ms.author: chmoncay
-search.audienceType: 
+ms.date: 07/19/2022
+ms.author: yogupt
+search.audienceType:
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # HTML text control in Power Apps
 A box that shows text and converts HTML tags to formatting.
@@ -25,6 +23,20 @@ An **HTML text** control not only shows plain text and numbers but also converts
 > [!NOTE]
 > HTML text control assumes the HtmlText is relatively positioned. If you need to use an absolute position for your HTML text, wrap the text around a relatively positioned div. For example, `"<div style='position:relative'>" & varPageContent & "</div>"`
 
+> [!NOTE]
+> For some HTML elements default browser styling might be deleted. For instance, for HTML list (`<ul>`, `<ol>`) you will need to write your own inline styles to get the default styling back. For example,
+```html
+<ul style='display: block;
+           list-style-type: disc;
+           margin-block-start: 1em;
+           margin-block-end: 1em;
+           margin-inline-start: 0px;
+           margin-inline-end: 0px;
+           padding-inline-start: 40px;'>
+  ...
+</ul>
+```
+
 ## Key properties
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -33,6 +45,11 @@ An **HTML text** control not only shows plain text and numbers but also converts
 **HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
 
 ## Additional properties
+**[AutoHeight](properties-core.md)** – Set to true to allow the control to auto-grow its height to show all text. Set to false to truncate the text to the height assigned.
+
+> [!NOTE]
+> Enabling the **AutoHeight** property will grow the **Height** property of the control to a maximum value of 7680.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -89,22 +106,21 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 1. Add an **HTML text** control, and set its **HtmlText** property to this value:<br>
    **Source.Text**
-   
+
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** isn't meant to be interactive. Use it only for text display.
+
+ARIA mapping for elements inside the **HTML text** control are not defined automatically by Power Apps.
 
 ### Color contrast
 There must be adequate color contrast between:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
 * Text with custom colors and its background
 
-### Screen reader support
-* **HtmlText** must be present.
-
 ### Keyboard support
-* **HtmlText** shouldn't contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps doesn't consider elements inside **HtmlText**.
+* The control can't act as a button. It doesn't have **TabIndex** and keyboard users won't be able to focus on it.
+* The control can contain interactive parts in **HtmlText** like `<a>` elements, but the app setting **Simplified tab indexes" must be enabled. Otherwise, the tab navigation order will be wrong.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

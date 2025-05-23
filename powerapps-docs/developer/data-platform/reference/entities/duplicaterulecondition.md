@@ -1,56 +1,49 @@
 ---
-title: "DuplicateRuleCondition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the DuplicateRuleCondition table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Duplicate Rule Condition (DuplicateRuleCondition) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Duplicate Rule Condition (DuplicateRuleCondition) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# DuplicateRuleCondition table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Duplicate Rule Condition (DuplicateRuleCondition) table/entity reference (Microsoft Dataverse)
 
 Condition of a duplicate detection rule.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|CompoundUpdateDuplicateDetectionRule|<xref href="Microsoft.Dynamics.CRM.CompoundUpdateDuplicateDetectionRule?text=CompoundUpdateDuplicateDetectionRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.CompoundUpdateDuplicateDetectionRuleRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/duplicateruleconditions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/duplicateruleconditions(*duplicateruleconditionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/duplicateruleconditions(*duplicateruleconditionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/duplicateruleconditions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/duplicateruleconditions(*duplicateruleconditionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Duplicate Rule Condition (DuplicateRuleCondition) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /duplicateruleconditions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /duplicateruleconditions(*duplicateruleconditionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /duplicateruleconditions(*duplicateruleconditionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /duplicateruleconditions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: False |`PATCH` /duplicateruleconditions(*duplicateruleconditionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /duplicateruleconditions(*duplicateruleconditionid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|DuplicateRuleConditions|
-|DisplayCollectionName|Duplicate Rule Conditions|
-|DisplayName|Duplicate Rule Condition|
-|EntitySetName|duplicateruleconditions|
-|IsBPFEntity|False|
-|LogicalCollectionName|duplicateruleconditions|
-|LogicalName|duplicaterulecondition|
-|OwnershipType|None|
-|PrimaryIdAttribute|duplicateruleconditionid|
-|PrimaryNameAttribute||
-|SchemaName|DuplicateRuleCondition|
+The following table lists selected properties for the Duplicate Rule Condition (DuplicateRuleCondition) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Duplicate Rule Condition** |
+| **DisplayCollectionName** | **Duplicate Rule Conditions** |
+| **SchemaName** | `DuplicateRuleCondition` |
+| **CollectionSchemaName** | `DuplicateRuleConditions` |
+| **EntitySetName** | `duplicateruleconditions`|
+| **LogicalName** | `duplicaterulecondition` |
+| **LogicalCollectionName** | `duplicateruleconditions` |
+| **PrimaryIdAttribute** | `duplicateruleconditionid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -66,192 +59,164 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [UniqueRuleName](#BKMK_UniqueRuleName)
 
-
 ### <a name="BKMK_BaseAttributeName"></a> BaseAttributeName
 
 |Property|Value|
-|--------|-----|
-|Description|Field that is being compared.|
-|DisplayName|Base Field|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Field that is being compared.**|
+|DisplayName|**Base Field**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|baseattributename|
-|MaxLength|128|
+|LogicalName|`baseattributename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_DuplicateRuleConditionId"></a> DuplicateRuleConditionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the condition.|
-|DisplayName|Duplicate Rule Condition|
+|---|---|
+|Description|**Unique identifier of the condition.**|
+|DisplayName|**Duplicate Rule Condition**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|duplicateruleconditionid|
+|LogicalName|`duplicateruleconditionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_IgnoreBlankValues"></a> IgnoreBlankValues
 
 |Property|Value|
-|--------|-----|
-|Description|Determines whether to consider blank values as non-duplicate values|
-|DisplayName|Ignore Blank Values|
+|---|---|
+|Description|**Determines whether to consider blank values as non-duplicate values**|
+|DisplayName|**Ignore Blank Values**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ignoreblankvalues|
+|LogicalName|`ignoreblankvalues`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IgnoreBlankValues Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|True||
-|0|False||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`duplicaterulecondition_ignoreblankvalues`|
+|DefaultValue|False|
+|True Label|True|
+|False Label|False|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_MatchingAttributeName"></a> MatchingAttributeName
 
 |Property|Value|
-|--------|-----|
-|Description|Field that is being compared with the base field.|
-|DisplayName|Matching Field|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Field that is being compared with the base field.**|
+|DisplayName|**Matching Field**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|matchingattributename|
-|MaxLength|128|
+|LogicalName|`matchingattributename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_OperatorCode"></a> OperatorCode
 
 |Property|Value|
-|--------|-----|
-|Description|Operator for this rule condition.|
-|DisplayName|Operator Code|
+|---|---|
+|Description|**Operator for this rule condition.**|
+|DisplayName|**Operator Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|operatorcode|
+|LogicalName|`operatorcode`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`duplicaterulecondition_operatorcode`|
 
 #### OperatorCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Exact Match||
-|1|Same First Characters||
-|2|Same Last Characters||
-|3|Same Date||
-|4|Same Date and Time||
-|5|Exact Match (Pick List Label)||
-|6|Exact Match (Pick List Value)||
-
-
+|Value|Label|
+|---|---|
+|0|**Exact Match**|
+|1|**Same First Characters**|
+|2|**Same Last Characters**|
+|3|**Same Date**|
+|4|**Same Date and Time**|
+|5|**Exact Match (Pick List Label)**|
+|6|**Exact Match (Pick List Value)**|
 
 ### <a name="BKMK_OperatorParam"></a> OperatorParam
 
 |Property|Value|
-|--------|-----|
-|Description|Parameter value of N if the operator is Same First Characters or Same Last Characters.|
-|DisplayName|Operator Parameter|
-|Format|None|
+|---|---|
+|Description|**Parameter value of N if the operator is Same First Characters or Same Last Characters.**|
+|DisplayName|**Operator Parameter**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|operatorparam|
-|MaxValue|2147483647|
-|MinValue|1|
+|LogicalName|`operatorparam`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|1|
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the object with which the condition is associated.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Unique identifier of the object with which the condition is associated.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
-|Targets|duplicaterule|
 |Type|Lookup|
-
+|Targets|duplicaterule|
 
 ### <a name="BKMK_UniqueRuleName"></a> UniqueRuleName
 
-**Added by**: msft_DupDetectionNewColumnsExtension Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|UniqueRuleName|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**UniqueRuleName**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|uniquerulename|
-|MaxLength|100|
+|LogicalName|`uniquerulename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -260,441 +225,329 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the condition.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the condition.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the condition was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the condition was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the duplicate rule condition.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the duplicate rule condition.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the condition.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the condition.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the condition was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the condition was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the duplicate rule condition.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the duplicate rule condition.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the duplicate rule condition.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the duplicate rule condition.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the condition.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the condition.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the condition.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns the condition.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_DuplicateRuleCondition_SyncErrors"></a> DuplicateRuleCondition_SyncErrors
-
-Same as the [DuplicateRuleCondition_SyncErrors](syncerror.md#BKMK_DuplicateRuleCondition_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|DuplicateRuleCondition_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_duplicaterulecondition_createdonbehalfby](#BKMK_lk_duplicaterulecondition_createdonbehalfby)
 - [DuplicateRule_DuplicateRuleConditions](#BKMK_DuplicateRule_DuplicateRuleConditions)
+- [lk_duplicaterulecondition_createdonbehalfby](#BKMK_lk_duplicaterulecondition_createdonbehalfby)
 - [lk_duplicaterulecondition_modifiedonbehalfby](#BKMK_lk_duplicaterulecondition_modifiedonbehalfby)
-- [lk_duplicateruleconditionbase_modifiedby](#BKMK_lk_duplicateruleconditionbase_modifiedby)
 - [lk_duplicateruleconditionbase_createdby](#BKMK_lk_duplicateruleconditionbase_createdby)
-
-
-### <a name="BKMK_lk_duplicaterulecondition_createdonbehalfby"></a> lk_duplicaterulecondition_createdonbehalfby
-
-See the [lk_duplicaterulecondition_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [lk_duplicateruleconditionbase_modifiedby](#BKMK_lk_duplicateruleconditionbase_modifiedby)
 
 ### <a name="BKMK_DuplicateRule_DuplicateRuleConditions"></a> DuplicateRule_DuplicateRuleConditions
 
-See the [DuplicateRule_DuplicateRuleConditions](duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) one-to-many relationship for the [duplicaterule](duplicaterule.md) table/entity.
+One-To-Many Relationship: [duplicaterule DuplicateRule_DuplicateRuleConditions](duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`duplicaterule`|
+|ReferencedAttribute|`duplicateruleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_duplicaterulecondition_createdonbehalfby"></a> lk_duplicaterulecondition_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_duplicaterulecondition_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_duplicaterulecondition_modifiedonbehalfby"></a> lk_duplicaterulecondition_modifiedonbehalfby
 
-See the [lk_duplicaterulecondition_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_duplicaterulecondition_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterulecondition_modifiedonbehalfby)
 
-### <a name="BKMK_lk_duplicateruleconditionbase_modifiedby"></a> lk_duplicateruleconditionbase_modifiedby
-
-See the [lk_duplicateruleconditionbase_modifiedby](systemuser.md#BKMK_lk_duplicateruleconditionbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_duplicateruleconditionbase_createdby"></a> lk_duplicateruleconditionbase_createdby
 
-See the [lk_duplicateruleconditionbase_createdby](systemuser.md#BKMK_lk_duplicateruleconditionbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_duplicateruleconditionbase_createdby](systemuser.md#BKMK_lk_duplicateruleconditionbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_duplicateruleconditionbase_modifiedby"></a> lk_duplicateruleconditionbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_duplicateruleconditionbase_modifiedby](systemuser.md#BKMK_lk_duplicateruleconditionbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_DuplicateRuleCondition_SyncErrors"></a> DuplicateRuleCondition_SyncErrors
+
+Many-To-One Relationship: [syncerror DuplicateRuleCondition_SyncErrors](syncerror.md#BKMK_DuplicateRuleCondition_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`DuplicateRuleCondition_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.duplicaterulecondition?text=duplicaterulecondition EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.duplicaterulecondition?displayProperty=fullName>

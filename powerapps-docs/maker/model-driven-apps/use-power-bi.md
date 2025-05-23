@@ -2,25 +2,20 @@
 title: "Use Power BI with model-driven apps | MicrosoftDocs"
 description: Use Power BI with model-driven apps in Power Apps
 ms.custom: 
-ms.date: 05/28/2020
-ms.reviewer: 
-
+ms.date: 12/06/2024
+ms.reviewer: matp
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: overview
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 search.audienceType: 
   - admin
-search.app: 
-  - D365CE
-  - Powerplatform
 ---
 # Use Power BI
 
-The Power BI cloud service works with Microsoft Dataverse apps to provide a self-service analytics solution. Power BI automatically refreshes the app's data displayed. With Power BI Desktop or Microsoft Excel, Power Query for authoring reports and Power BI for sharing dashboards and refreshing data from model-driven apps, your users have a powerful way to work with your app's data. For more information, see these articles:
+The Power BI cloud service works with Microsoft Dataverse apps to provide a self-service analytics solution. Power BI automatically refreshes the app's data displayed. With Power BI Desktop or Microsoft Excel, Power Query for authoring reports and Power BI for sharing dashboards and refreshing data from model-driven apps, your users have a powerful way to work with your app's data. For more information, go to these articles:
 
 - [Visualize data in a view with Power BI](../../user/visualize-in-power-bi.md)
 - [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)

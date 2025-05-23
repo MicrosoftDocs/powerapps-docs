@@ -1,20 +1,18 @@
 ---
 title: Get the session or app ID
 description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
-author: tapanm-msft
+author: mduelae
 
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 09/02/2021
+ms.date: 11/09/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Get session and app ID details
 
@@ -24,9 +22,7 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 
 ### When editing a canvas app
 
-1. In the upper-left corner, select **File**.
-
-1. Select **Account**.
+1. Select **Settings**.
 
 1. Select **Support** > **Session details**.
 
@@ -36,7 +32,7 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 
 ### When running a canvas app in a browser
 
-1. In the upper-right corner, select ![Gear icon.](media/get-sessionid/gear-icon.png "Gear icon").
+1. In the upper-right corner, select the **Settings** icon ![Settings icon.](media/get-sessionid/gear-icon.png "Gear icon").
 
 1. Select **Session details**.
 
@@ -44,11 +40,11 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 
 ### When running a canvas app on a phone or a tablet
 
-1. In the upper-left corner, select ![App settings from top-left.](media/get-sessionid/mobile-icon.png "App settings from top-left").
+1. In the upper-left corner, select your profile picture.
 
-    ![App settings from top-left - on mobile screen.](media/get-sessionid/mobile-2.png "App settings from top-left - on mobile screen")
+   ![Default Home screen.](../../mobile/media/default-home-screen.png "Default Home screen")
 
-1. Tap **Session details**.
+1. Select **Session details**.
 
     ![Get a session ID from a phone or a tablet.](media/get-sessionid/mobile.png "Get a session ID from a phone or a tablet")
 

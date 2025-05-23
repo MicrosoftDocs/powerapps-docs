@@ -1,17 +1,13 @@
 ---
-title: "clearGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "clearGlobalNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the clearGlobalNotification method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -25,34 +21,11 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>uniqueId</td>
-<td>String</td>
-<td>Yes</td>
-<td>The ID to use to clear a specific notification that was set using <a href="addGlobalNotification.md">addGlobalNotification</a>.
-</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when the notification is cleared.</p>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`uniqueId`|String|Yes|The ID to use to clear a specific notification that was set using [addGlobalNotification](addGlobalNotification.md).|
+|`successCallback`|Function|No|A function to call when the notification is cleared.|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
 
 ## Return Value
 
@@ -86,7 +59,7 @@ Xrm.App.addGlobalNotification(notification).then(
 );
 ```
 
-### See also
+### Related articles
 
 [addGlobalNotification](addGlobalnotification.md)
 

@@ -1,10 +1,9 @@
 ---
-title: save | Microsoft Docs
+title: save (Power Apps component framework API reference) | Microsoft Docs
 description: Saves the record
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -18,7 +17,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
+Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -28,7 +27,12 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 
 Type: `Promise`
 
-### Related topics
+## Remarks
+
+You can get an error saying `Invalid snapshot with id undefined` when the incorrect column name parameter was used with [setValue](setValue.md). Make sure to use the logical name of the column.
+
+
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

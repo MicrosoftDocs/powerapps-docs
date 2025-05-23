@@ -17,12 +17,8 @@ ms.assetid: b2b64771-083b-42f9-a3d5-2218f9d8a713
 caps.latest.revision: 63
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app timer control overview (Classic)
 
@@ -42,7 +38,7 @@ To add a timer control to a form:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  On the left navigation pane, expand **Data**, and then select **Tables**.
+2.  On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3.  Select a table, such as the account table, and then select the **Forms** area.
 

@@ -1,24 +1,18 @@
 ---
-title: "updateRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "updateRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the updateRecord method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # updateRecord (Client API reference)
-
-
 
 [!INCLUDE[./includes/updateRecord-description.md](./includes/updateRecord-description.md)] 
 
@@ -28,65 +22,31 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the record you want to update. For example: "account".</td>
-</tr>
-<tr>
-<td>id</td>
-<td>String</td>
-<td>Yes</td>
-<td>GUID of the table record you want to update.</td>
-</tr>
-<tr>
-<td>data</td>
-<td>Object</td>
-<td>Yes</td>
-<td><p>A JSON object containing <code>key: value</code> pairs, where `key` is the property of the table and <code>value</code> is the value of the property you want to update.</p>
-<p>See examples later in this topic to see how you can define the <code>data</code> object for various update scenarios.</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when a record is updated. An object with the following properties will be passed to identify the updated record:</p>
-<ul>
-<li><b>entityType</b>: String. The table type of the updated record.</li>
-<li><b>id</b>: String. GUID of the updated record.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails. An object with the following properties will be passed:
-<ul>
-<li><b>errorCode</b>: Number. The error code.</li>
-<li><b>message</b>: String. An error message describing the issue.</li>
-</ul></td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the record you want to update. For example: `account`.|
+|`id`|String|Yes|GUID of the table record you want to update.|
+|`data`|Object|Yes|A JSON object containing `key: value` pairs, where `key` is the property of the table and `value` is the value of the property you want to update.<br />See [Examples](#examples) to see how you can define the `data` object for various update scenarios.|
+|`successCallback`|Function|No|A function to call when a record is updated. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
+
 
 ## Return Value
 
-On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object to the `successCallback` with the following properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`entityType`|String|The table logical name of the record.|
+|`id`|String|GUID of the record.|
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
+These examples use some of the same request objects as demonstrated in [Update and delete table rows using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
 
-### Basic update 
+### Basic update
 
-Updates an existing account record with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
+Updates an existing account record with record ID = `5531d753-95af-e711-a94e-000d3a11e605`.
 
 ```JavaScript
 // define the data to update a record
@@ -114,9 +74,9 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 
 ### Update associations to the related tables
 
-To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios:
+To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
 
-**For online scenario (connected to server)**
+Here is code example:
 
 The following example updates an account record to associate another contact record as the primary contact for the account:
 
@@ -139,9 +99,12 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-**For mobile offline scenario**
+**Deprecated method for mobile offline scenario**
 
-Here is the updated sample code to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
+> [!NOTE]
+>  Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for exisiting customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+
+The following example uses the deprecated method to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
 
 ```JavaScript
 // define the data to update a record
@@ -165,6 +128,7 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
     }
 );
 ```
+
 ### Update associations to the related tables of type Activity
 
 To update association to the related tables of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
@@ -189,6 +153,7 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
     }
 );
 ```
+
 **Update Regarding column on task**
 
  ```JavaScript
@@ -211,9 +176,10 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
 ```
 
 ### Update associations for collection-valued navigation properties
+
 The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
 
-### Related topics
+### Related articles
 
 [Xrm.WebApi](../xrm-webapi.md)
 

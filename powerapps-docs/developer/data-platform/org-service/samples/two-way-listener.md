@@ -4,23 +4,22 @@ description: "This sample shows how to write a Azure Service Bus Listener for a 
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Two-way listener
 
-This sample shows how to write a `Azure Service Bus` Listener for a two-way endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/TwoWayListener).
+This sample shows how to write a `Azure Service Bus` Listener for a two-way endpoint contract.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Two-way listener sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/TwoWayListener)
 
 This sample registers a remote service plug-in that executes whenever a message is posted to a two-way endpoint on the `Azure Service Bus`. When the plug-in executes, it prints to the console the contents of the execution context contained in the message.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,9 +1,8 @@
 ---
-title: getColumnInfo | Microsoft Docs
+title: getColumnInfo (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the current state of the column for the record.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -34,7 +33,7 @@ Canvas apps
 
 **Type**: [ColumnInfo](./../columninfo.md)
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

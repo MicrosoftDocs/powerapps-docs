@@ -4,15 +4,11 @@ description: "Demonstrates updating a Dataverse service endpoint imported from a
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: tutorial
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -26,7 +22,7 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
   
 ## Update the SAS Key  
   
-1. Run the Plug-in Registration tool, which is available for download from NuGet. More information: [Download tools from NuGet](download-tools-nuget.md)
+1. Run the Plug-in Registration tool, which is available for download from NuGet. More information: [Dataverse development tools](download-tools-nuget.md)
   
 1. Using the Plug-in Registration tool, sign in to the organization that contains the imported solution.  
   

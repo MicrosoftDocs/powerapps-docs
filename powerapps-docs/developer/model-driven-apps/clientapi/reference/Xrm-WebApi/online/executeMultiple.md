@@ -1,17 +1,13 @@
 ---
-title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.online.executeMultiple method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -25,8 +21,8 @@ contributors:
 If you want to execute multiple requests in a transaction, you must pass in a change set as a parameter to this method. [Change sets](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md#change-sets) represent a collection of operations that are executed in a transaction. You can also pass in individual requests and change sets together as parameters to this method.
 
 > [!NOTE]
-> - You cannot include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
-> - Requests can contain up to 1000 individual requests and cannot contain other batches. More information: [Execute batch operations](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md).
+> - You can't include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
+> - Requests can contain up to 1,000 individual requests and can't contain other batches. More information: [Execute batch operations](../../../../../data-platform/webapi/execute-batch-operations-using-web-api.md).
 
 ## Syntax
 
@@ -39,7 +35,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 **Execute multiple requests in a transaction:**
 
-In this case, `req1`, `req2`, and `req3` will be executed in transaction.
+In this case, `req1`, `req2`, and `req3` are executed in a transaction.
 
 ```JavaScript
 var changeSet = [req1, req2, req3];
@@ -50,7 +46,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 **Execute a mix of individual requests and multiple requests in a transaction:**
 
-In this case, `req1`, `req2`, and `req3` will be executed in transaction, but `req4` and `req5` will be executed individually.
+In this case, `req1`, `req2`, and `req3` are executed in transaction, but `req4` and `req5` are executed individually.
 
 ```JavaScript
 var changeSet = [req1, req2, req3];
@@ -60,58 +56,29 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>requests</td>
-<td>Array of objects</td>
-<td>Yes</td>
-<td><p>An array of one of the following types:</p>
-<ul>
-<li>objects where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a <b>getMetadata</b> method that lets you define the metadata for the action, function, or CRUD request you want to execute. This is the same object that you pass in the <code>execute</code> method. For information about the object, see <a href="execute.md">execute</a>.</li>
-<li>Change set (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set will get executed in a transaction.</li>
-</ul>
-<p>See request examples earlier in the **Syntax** section for more information.</p>
-</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following values:</p>
-<ul>
-<li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
-<li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
-<li><b>headers</b>: Object. Response headers.</li>
-<li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
-<li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
-<li><b>statusText</b>: String. Description of the response status code. For example: <b>OK</b></li>
-<li><b>type</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
-<li><b>url</b>: String. Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.</b></li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`requests`|Array of objects|Yes|An array of one of the following types:<br /><br />**Objects** where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a [getMetadata method](execute.md#requestgetmetadata-method) that lets you define the metadata for the action, function, or CRUD request you want to execute. The [execute method](execute.md) accepts this type of parameter.<br /><br />**Change set** (an array of objects), where each object in the change set is as previously explained. In this case, all the request objects specified in the change set are executed in a transaction.<br /><br />Find request examples in the [Syntax section](#syntax).|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. An array of response objects is passed to the function. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](../includes/errorcallback-description.md)]|
 
 ## Return Value
 
-On success, returns a promise containing an array of objects with the values specified earlier in the description of **successCallback** function.
+On success, returns a promise containing an array of objects to the `successCallback`. The objects have these properties:
 
-### See also
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`json`|Promise|No|Response body in JSON format.|
+|`text`|Promise|No|Response body in plaintext format. |
+|`headers`|Object|Yes|Response headers.|
+|`ok`|Boolean|Yes|Indicates whether the request was successful.|
+|`status`|Number|Yes|Numeric value in the response status code. For example: `200`|
+|`statusText`|String|Yes|Description of the response status code. For example: `OK`|
+|`type`|String|Yes|Response type. Values are: the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`.|
+|`url`|String|Yes|Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.|
+
+### Related articles
 
 [Xrm.WebApi](../../xrm-webapi.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

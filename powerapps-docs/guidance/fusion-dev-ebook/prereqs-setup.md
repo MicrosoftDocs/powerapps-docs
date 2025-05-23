@@ -3,12 +3,12 @@ title: "Fusion development ebook: Prerequisites and setup | Microsoft Docs"
 description: "Prerequisites and setup for fusion development."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 # Prerequisites and setup
@@ -21,9 +21,9 @@ To perform the steps described in this guide, you must have the following licens
 
 -   An Azure subscription. The apps built by the steps in this guide create and use resources in Azure. If you don't have a subscription, you can sign up on the Azure page at <https://azure.microsoft.com>.
 
--   The **Azure CLI**, available at [https://docs.microsoft.com/cli/azure/install-azure-cli](/cli/azure/install-azure-cli).
+-   The **Azure CLI**, available at [https://learn.microsoft.com/cli/azure/install-azure-cli](/cli/azure/install-azure-cli).
 
--   **.NET 5.0**, available on at <https://dotnet.microsoft.com/download>.
+-   **.NET 6.0**, available on at <https://dotnet.microsoft.com/download>.
 
 -   **Visual Studio Code**, available at <https://code.visualstudio.com/download>. You'll also need the following extensions for Visual Studio Code:
 

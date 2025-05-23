@@ -1,18 +1,14 @@
 ---
-title: "addOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnSelection (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnSelection method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -35,12 +31,10 @@ kbSearchControl.addOnSelection(myFunction);
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **OnSelection** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|----|----|----|----|
+|`myFunction` |Function |Yes|The function to add to the [OnSelection event](../events/onselection.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
-
-[OnSelection event](../events/onselection.md)
+### Related articles
 
 [removeOnSelection](removeOnSelection.md)
 

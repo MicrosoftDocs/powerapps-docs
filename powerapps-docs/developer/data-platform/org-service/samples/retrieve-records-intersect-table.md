@@ -2,24 +2,23 @@
 title: "Sample: Retrieve records from an intersect table(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve record from an intersect table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Retrieve records from an intersect table
 
+This sample shows how to retrieve records from an intersect table.
 
-This sample shows how to retrieve records from an intersect table. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveRecordsFromIntersectTable).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve records from an intersect table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveRecordsFromIntersectTable)
 
 ## How to run this sample
 
@@ -35,12 +34,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org. 
+1. Checks for the current version of the org.
 1. The `CreateRequireRecords` method creates table records that are used by the sample.
 1. The `QueryExpression` message is used to retrieve the default business unit needed to create the team.
 1. The `WhoAmIRequest` gets the GUID of the current user.
 1. The `Role` message instantiate a role table record and set its property values.
-1. The `AssociateRequest` assigns the user to the Managers role. 
+1. The `AssociateRequest` assigns the user to the Managers role.
 
 ### Demonstrate
 
@@ -50,6 +49,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,10 +1,9 @@
 ---
-title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview (contains video) | MicrosoftDocs"
-description: "Learn how to create one-to-many or many-to-one table relationships"
+title: "Create 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps overview"
+description: "Learn how to create one-to-many or many-to-one table relationships in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 10/04/2021
+ms.date: 09/18/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -17,50 +16,34 @@ ms.assetid: 52c00707-b2bc-4950-abec-89baefd94f6e
 caps.latest.revision: 33
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-# Create one-to-many or many-to-one table relationships overview
+# Create one-to-many or many-to-one table relationships in Microsoft Dataverse overview
 
-
-
-In Microsoft Dataverse 1:N (one-to-many) or N:1 (many-to-one) relationships define how two tables are related to each other.
+In Microsoft Dataverse a one-to-many (1:N) or many-to-one (N:1) relationship defines how two tables are related to each other.
   
 Before you create a custom table relationship, evaluate whether using an existing table relationship would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
 Watch this video for a quick overview about how to create a table, a table relationship, and columns:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWLPQb]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=19b21a48-4a49-4163-8506-7fb79f3290ef]
 
-There are two designers you can use to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships:
+You create and edit table relationships, including one-to-many and many-to-one relationships, in Power Apps.
 
-|Designer| Description|
-|--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps portal](create-edit-1n-relationships-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md) |
+You can also create new table relationship in your environment using any of the following experiences:
 
-> [!NOTE]
-> You can also create new table relationship in your environment using the following:
-> - In model-driven apps, select **New Column** from the form editor and create a *Lookup* column. <br />More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md)
-> - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-fields.md)
-> - Import a solution that contains the definition of the table relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
-> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Table relationship definitions](/powerapps/developer/data-platform/entity-relationship-metadata)
+- In model-driven apps, select **New Column** from the form editor and create a *Lookup* column. More information: [Add, configure, move, or delete columns on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md)
+- Create a new Lookup column for the related table.More information: [Create and edit columns](create-edit-fields.md)
+- Import a solution that contains the definition of the table relationship. More information: [Import, update, and export solutions](import-update-export-solutions.md)
+- Use Power Query to create new tables and fill them with data. More information: [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
+- A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. More information: [Table relationship definitions](/powerapps/developer/data-platform/entity-relationship-metadata)
 
-Information in this topic will help you choose which designer you can use. 
+Information in this article helps you choose which designer you can use.
 
-You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships unless you need to address any of the following requirements:
+## Create a one-to-many or many-to-one relationship
 
-- Configure column mappings
-- Configure navigation pane options for model-driven app
-- Configure relationship behaviors
-- Define whether the relationship is hidden in advanced find.
-- Make a Hierarchical relationship
-
+[Create and edit one-to-many or many-to-one table relationships in Power Apps](create-edit-1n-relationships-portal.md)<br />
 
 ## Community tools
 
@@ -73,7 +56,7 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 ### See also
 
 [Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
+
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)

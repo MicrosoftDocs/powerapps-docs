@@ -1,9 +1,8 @@
 ---
-title: isValid | Microsoft Docs
+title: isValid (Power Apps component framework API reference) | Microsoft Docs
 description: Whether this record is valid.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,7 +27,7 @@ Model-driven and canvas apps
 
 Type: `boolean`
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -1,9 +1,8 @@
 ---
-title: FileObject | Microsoft Docs
+title: FileObject (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to all the properties of a file.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -18,7 +17,7 @@ contributors:
 
 ## Available for
 
-Model-driven apps
+Model-driven and canvas apps.
 
 ## Properties
 
@@ -26,25 +25,29 @@ Model-driven apps
 
 Contents of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileName
 
 Name of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileSize
 
 Size of the file in KB.
 
-**Type**: `Number`
+**Type**: `number`
 
 ### mimeType
 
 File MIME type.
 
-**Type**: `String`
+**Type**: `string`
+
+## Sample controls
+
+[Image upload component](../sample-controls/image-upload-control.md)
 
 ## Related topics
 

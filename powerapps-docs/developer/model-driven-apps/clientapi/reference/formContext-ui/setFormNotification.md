@@ -1,18 +1,14 @@
 ---
-title: "setFormNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setFormNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setFormNotification method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -32,9 +28,9 @@ You can display any number of notifications and they will be displayed until the
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|message|String|Yes|The text of the message.|
-|level|String|Yes|The level of the message, which defines how the message will be displayed. Specify one of the following values:<br>`ERROR` : Notification will use the system error icon.<br/>`WARNING` : Notification will use the system warning icon.<br/>`INFO` : Notification will use the system info icon.|
-|uniqueId|String|Yes|A unique identifier for the message that can be used later with [clearFormNotification](clearFormNotification.md) to remove the notification.|
+|`message`|String|Yes|The text of the message.|
+|`level`|String|Yes|The level of the message, which defines how the message will be displayed. Specify one of the following values:<br>`ERROR` : Notification will use the system error icon.<br/>`WARNING` : Notification will use the system warning icon.<br/>`INFO` : Notification will use the system info icon.|
+|`uniqueId`|String|Yes|A unique identifier for the message that can be used later with [clearFormNotification](clearFormNotification.md) to remove the notification.|
 
 ## Return Value
 
@@ -43,14 +39,10 @@ You can display any number of notifications and they will be displayed until the
 **Description**: true if the method succeeded; false otherwise. 
 
 
-### Related topics
+### Related articles
 
-[clearFormNotification](clearFormNotification.md)
-
-[formContext.ui](../formContext-ui.md)
-
+[clearFormNotification](clearFormNotification.md)   
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

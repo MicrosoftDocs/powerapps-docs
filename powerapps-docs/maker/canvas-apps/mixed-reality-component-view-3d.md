@@ -2,7 +2,7 @@
 title: Use the 3D object control in Power Apps
 description: View 3D models in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mduelae
 ms.date: 02/15/2022
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz

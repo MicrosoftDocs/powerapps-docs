@@ -1,27 +1,30 @@
 ---
-title: Embed a model-driven app as tab app | Microsoft Docs
+title: Embed a model-driven app as tab app (preview)
 description: "Embed a model-driven app as tab app"
 author: mattp123
-manager: kvivek
-
 ms.component: pa-user
-ms.topic: article
-ms.date: 11/16/2020
+ms.topic: how-to
+ms.date: 12/10/2024
 ms.subservice: teams
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
-search.app: 
-  - PowerApps
-  - D365CE
-contributors:
+contributors: sriharibs-msft
   - mattp123
 ---
 
-# Embed a model-driven app as tab app in Teams
+# Embed a model-driven app as tab app in Teams (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab. 
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - Running model-driven apps on the Microsoft Teams mobile app is currently not supported.
+> - Opening or downloading file attachments in a model-driven app when the app is embedded in Teams as a tab isn't supported.
 
 ## Embed a model-driven app
 

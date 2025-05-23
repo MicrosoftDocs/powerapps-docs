@@ -4,23 +4,21 @@ description: "This sample shows how to book or schedule an appointment " # 115-1
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Book an appointment
 
+This sample shows how to book or schedule an appointment by using the [BookRequest](/dotnet/api/microsoft.crm.sdk.messages.bookrequest) message.
 
-
-This sample shows how to book or schedule an appointment by using the [BookRequest](/dotnet/api/microsoft.crm.sdk.messages.bookrequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BookAppointment).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Book an appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/BookAppointment)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -48,6 +46,5 @@ Creates the appointment instance using the [BookRequest](/dotnet/api/microsoft.c
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

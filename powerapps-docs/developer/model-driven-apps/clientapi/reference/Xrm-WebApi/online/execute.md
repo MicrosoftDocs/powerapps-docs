@@ -1,19 +1,14 @@
 ---
-title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,75 +25,54 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>request</td>
-<td>Object</td>
-<td>Yes</td>
-<td><p>Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a <b>getMetadata</b> method <u>via its prototype</u> that lets you define the metadata for the action, function or CRUD request you want to execute. The <b>getMetadata</b> method has the following parameters:</p>
-<ul>
-<li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
-<ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
-<li>Specify <code>null</code> if the action or function to execute is not bound to any table.</li>
-<li>Specify <code>entity</code> in case the action or function to execute is bound to a table. </li></ul>
-<li><b>operationName</b>: (Optional). String. Name of the action, function, or one of the following values if you are executing a CRUD request: "Create", "Retrieve", "Update", or "Delete".</li>
-<li><b>operationType</b>: (Optional). Number. Indicates the type of operation you are executing; specify one of the following values:
-<br/><code>0: Action</code>
-<br/><code>1: Function</code>
-<br/><code>2: CRUD</code></li>
-<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following values:
-<ul>
-<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string values: <b>name</b> and <b>value</b></li>
-<li><b>structuralProperty</b>: Number. The category of the parameter type. Specify one of the following values:
-<br/><code>0: Unknown</code>
-<br/><code>1: PrimitiveType</code>
-<br/><code>2: ComplexType</code>
-<br/><code>3: EnumerationType</code>
-<br/><code>4: Collection</code>
-<br/><code>5: EntityType</code></li>
-<li><b>typeName</b>: String. The fully qualified name of the parameter type.
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following values:</p>
-<ul>
-<li><b>body (Deprecated)</b>: Object. Response body.</li>
-<li><b>headers</b>: Object. Response headers.</li>
-<li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
-<li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
-<li><b>statusText</b>: String. Description of the response status code. For example: <b>OK</b></li>
-<li><b>type (Deprecated)</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
-<li><b>url</b>: String. Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.</b></li>
-<li><b>json</b>: Promise. Parameter to the callback delegate is of type any (JSON object).</b></li>
-<li><b>text</b>: Promise. Parameter to the callback delegate is a String.</b></li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`request`|Object|Yes|Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that lets you define the metadata for the action, function or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](../includes/errorcallback-description.md)]|
+
+### request.getMetadata method
+
+The `getMetadata` method has the following parameters:
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`boundParameter`|String|No|The name of the bound parameter for the action or function to execute.<br />- Specify `undefined` if you are executing a CRUD request.<br />- Specify `null` if the action or function to execute is not bound to any table.<br />- Specify `entity` in case the action or function to execute is bound to a table.|
+|`operationName`|String|No|Name of the action, function, or one of the following values if you are executing a CRUD request: `Create`, `Retrieve`, `Update`, or `Delete`.|
+|`operationType`|Number|No|Indicates the type of operation you are executing; specify one of the following values:<br/>- `0`: Action<br/>- `1`: Function<br/>- `2`: CRUD|
+|`parameterTypes`|Object|Yes|The metadata for parameter types. The object has the following values:<br />`enumProperties` : (Optional) Object. The metadata for enum types. The object has two string values: `name` and `value`<br />`structuralProperty` : Number. The category of the parameter type. Specify one of the following values:<br />- `0`: Unknown<br />- `1`: PrimitiveType<br />- `2`: ComplexType<br />- `3`: EnumerationType<br />- `4`: Collection<br />- `5`: EntityType<br />`typeName` : String. The fully qualified name of the parameter type.|
 
 ## Return Value
 
-On success, returns a promise object with the values specified earlier in the description of **successCallback** function.
+On success, returns a promise object to the `successCallback` with the following properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`body`(Deprecated)|Object|Response body.|
+|`headers`|Object|Response headers.|
+|`ok`|Boolean|Indicates whether the request was successful.|
+|`status`|Number|Numeric value in the response status code. For example: `200`|
+|`statusText`|String|Description of the response status code. For example: `OK`|
+|`type`(Deprecated)|String|Response type. Values are: the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`.|
+|`url`|String|Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.|
+|`json`|Promise|Parameter to the callback delegate is of type any (JSON object).|
+|`text`|Promise|Parameter to the callback delegate is a String.|
 
 ## Examples
+
+Find these examples below:
+
+- [Execute an action](#execute-an-action)
+- [Execute a function](#execute-a-function)
+- [Create a record](#create-a-record)
+- [Retrieve a record](#retrieve-a-record)
+- [Update a record](#update-a-record)
+- [Delete a record](#delete-a-record)
+- [Associate a record](#associate-a-record)
+- [Disassociate a record](#disassociate-a-record)
+
+> [!TIP]
+> You can use the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) to generate JavaScript code that uses the `Xrm.WebApi.online.execute` method.
 
 ### Execute an action
 
@@ -164,7 +138,7 @@ Xrm.WebApi.online.execute(winOpportunityRequest).then(function (response) {
 
 ### Execute a function
 
-The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WhoAmI> function:
+The following example demonstrates how to execute the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI):
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -772,7 +746,7 @@ Xrm.WebApi.online.execute(manyToManyDisassociateRequest)
 });
 ```
 
-### Related topics
+### Related articles
 
 
 [Xrm.WebApi](../../xrm-webapi.md)

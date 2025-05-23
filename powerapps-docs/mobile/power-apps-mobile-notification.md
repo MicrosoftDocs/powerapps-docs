@@ -1,23 +1,21 @@
 ---
-title: Set up push notification for the Power Apps mobile app| Microsoft Docs
+title: Create push notifications for the Power Apps mobile app using Power Automate
 description: Learn how to send push notifications for Power Apps mobile.
-author: anuitz
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 1/24/2022
+ms.date: 3/14/2023
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 ---
 
-# Create push notifications for Power Apps mobile
+# Create push notifications for the Power Apps mobile app using Power Automate
 
 
 Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
@@ -39,14 +37,14 @@ Create an app
 
 You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md#create-your-model-driven-app)
+- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md)
 - [Create a canvas app](../maker/canvas-apps/get-started-test-drive.md)
      
 ## Create a notification from a flow
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
-1. Go to [Power Automate](https://flow.microsoft.com) and select **Create**.
+1. Go to [Power Automate](https://make.powerautomate.com) and select **Create**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select Create.](media/create-notification.png)
@@ -114,8 +112,6 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
-	 
-     ![Enter the notification information.](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.
@@ -153,12 +149,11 @@ You can set your app to open, for example, the **Case details** page as soon as 
 > 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 
-## Known limitations
+## Considerations
 
-* Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
-* Currently, we don't provide push notifications for users who run apps only in a web browser.
+* You can send a push notification from one app to another or to the same app. For more information, see [Send notification from an app](../maker/canvas-apps/add-notifications.md).
 * Notifications show the generic Power Apps icon instead of a specific app icon.
-* Notifications are not supported in China.
+* Notifications are not supported in China on Android devices.
 * Battery optimization settings on an Android device can interfere with receiving notifications for Power Apps mobile. To receive notifications for Power Apps mobile, turn off battery optimization for the app.
 * The example push notifications that are mentioned in this topic are only supported on Power Apps mobile. Other mobile apps such as  [Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/use-sales-mobile-app) or [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) do not support these types of notifications.
 

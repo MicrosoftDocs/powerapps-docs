@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: best-practice
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,9 +17,6 @@ ms.assetid: 34e34c33-003a-494f-858c-3d34aacb308c
 caps.latest.revision: 10
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser

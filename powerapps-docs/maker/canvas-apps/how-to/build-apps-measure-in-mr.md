@@ -6,15 +6,13 @@ author: joel-lindstrom
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 12/15/2021
 ms.author: anuitz
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -31,7 +29,7 @@ Screenshots taken during the mixed reality experience are stored in the **Photos
 In this article, we'll create a screen in an app to use the **Measuring camera** control to measure the area of a user-defined space as well as view a photo of the space that was measured.
 
 Watch this video to learn how to build mobile apps with Measuring Camera control:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLPQh]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=94d7ae60-3cb4-41e5-80bd-d8212fa3e4a8]
 
 ## Prerequisites
 
@@ -61,7 +59,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
 1. Select the Advanced tab and change the **OnMixedRealitySelect** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ClearCollect(colMRMeasurements, Self.Measurements);  
     ClearCollect(colMRPhotos, Self.Photos)  
     ```
@@ -103,7 +101,7 @@ See [prerequisites for mixed-reality capable devices](../mixed-reality-overview.
 
 1. Change the **Text** property of the label to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     "Area: " & If(IsEmpty(colMRMeasurements), "no area measured", First(colMRMeasurements).Area & " sq. " & First(colMRMeasurements).Unit)
     ```
 

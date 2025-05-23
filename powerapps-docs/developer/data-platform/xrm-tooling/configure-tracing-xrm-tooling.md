@@ -5,15 +5,11 @@ ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure tracing for XRM tooling
 

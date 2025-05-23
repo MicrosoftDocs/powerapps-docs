@@ -8,16 +8,11 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
+
 # Sample: Detect solution dependencies
-
-
 
 This sample shows how to detect dependencies before you delete a solution component.
 
@@ -27,7 +22,10 @@ This sample shows how to detect dependencies before you delete a solution compon
 
 ## What this sample does
 
-The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SolutionDependencies).
+The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Detect solution dependencies sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SolutionDependencies)
 
 ## How this sample works
 
@@ -51,6 +49,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the solutions created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

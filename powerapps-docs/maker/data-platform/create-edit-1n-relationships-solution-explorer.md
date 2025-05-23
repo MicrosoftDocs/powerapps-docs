@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,12 +15,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer 

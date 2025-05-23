@@ -1,16 +1,13 @@
 ---
 title: Restricted tables requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted tables in Microsoft Dataverse that require Dynamics 365 licenses.
-author: KumarVivek
-ms.topic: conceptual
+author: mattp123
+ms.topic: article
 ms.date: 05/16/2022
 ms.subservice: dataverse-maker
-ms.author: kvivek
+ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Restricted tables requiring Dynamics 365 licenses
@@ -78,14 +75,14 @@ Unique Number|msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynam
 Work Order<sup>2</sup> |msdyn_workorder |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
-[1] *Case table actions permitted with only Power Apps, Power Automate, or Power Virtual Agents license:*  
-Power Apps, Power Automate, or Power Virtual Agents licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Power Virtual Agents licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
+[1] *Case table actions permitted with only Power Apps, Power Automate, Power Pages or Microsoft Copilot Studio license:*  
+Power Apps, Power Automate, or Copilot Studio  licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on behalf of customers. Power Apps, Power Automate, or Copilot Studio licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’, ‘close’,‘delete’,‘assign’,‘duplicate’, ‘merge’, ‘create child cases’ or perform any other custom operation on cases created by others. Users can't act as a customer service agent, can't manage cases.
 
-[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case creating, reading, updating, and deleting work orders is permitted with the Power Apps license. Users cannot complete/close work orders or act in a manner similar to that of performing or completing service.*
+[2] *Work Order table requires Dynamics 365 for Field Service license in most scenarios except for users self-reporting issues (for example, an employee reporting a facilities issue) in which case creating, reading, updating, and deleting work orders is permitted with the Power Apps or Power Pages license. Users cannot complete/close work orders or act in a manner similar to that of performing or completing service.*
 
 
 ## Licensing
-For more information on Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
+For more information on Power Apps, Power Automate, Power Pages, Copilot Studio, and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
 
 
 

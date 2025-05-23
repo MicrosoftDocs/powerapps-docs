@@ -1,9 +1,8 @@
 ---
-title: getCommands | Microsoft Docs
+title: getCommands (Power Apps component framework API reference) | Microsoft Docs
 description: The commands for this dataset.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: clromano
+ms.author: clromano
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,13 +27,13 @@ Canvas apps
 
 | Parameter Name | Type       | Required | description                                      |
 | -------------- | ---------- | -------- | ------------------------------------------------ |
-| ids            | `string[]` | Yes      | Array of IDs for which to command should be run. |
+| IDs            | `string[]` | Yes      | Array of IDs for which to command should be run. |
 
 ## Return value
 
 Type: [ICommand](../icommand.md)
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

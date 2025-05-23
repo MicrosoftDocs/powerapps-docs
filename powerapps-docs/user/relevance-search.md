@@ -1,35 +1,30 @@
 ---
-title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
+title: "Search for records by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
-author: mduelae
-manager: kvivek
+author: jasonHQX
+contributors: mgreen
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 12/16/2021
+ms.topic: how-to
+ms.date: 11/18/2024
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: jasonhuang
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
+ms.contributors: green.michael
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Search for tables and rows by using Dataverse search
+# Search for records by using Dataverse search
 
+With Dataverse search turned **On**, the search box is always available at the top of every page in your app and becomes default global search experience for all your model-driven apps. You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you're looking for.
 
-
-With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
-
-When Dataverse search is turned on, it becomes your default and only global search experience for all of your model-driven apps. You won't be able to switch to [quick find search also known as categorized search](quick-find.md).
+Turn on Dataverse search to give users a better search experience in model-driven apps. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
-
 
 ## See recent rows and searches
 
@@ -37,7 +32,7 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a few rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for Dataverse search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of the Dataverse search flyout window.](media/legend-for-new-exp.png "Screenshot of the Dataverse search flyout window]") 
@@ -49,7 +44,10 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for Dataverse search and included in your model-driven app. Suggested results are sometimes also based on non-primary columns of tables enabled for Dataverse search, depending on your search usage pattern and the search usage pattern in the environment. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+> [!NOTE]
+> If you're using custom analyzers for searching records, the records don't show in the inline suggestions.
+
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on all searchable columns of a table, which is enabled for Dataverse search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
@@ -57,7 +55,10 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-Suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is either the field that has the search text or the first non-primary field on the table’s quick find view that contains data for the row.
+Suggested rows display a secondary field alongside the primary field to help differentiate rows with the same primary field value. The secondary field is selected based on the table’s quick find view:
+
+- If the search text appears in a field within the quick find view, that field is used as the secondary field.
+- If no match is found, the first non-primary field in the quick find view that contains data for the row is displayed instead.
 
 
 ![Suggested results that appear when you enter a search query.](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
@@ -70,8 +71,12 @@ View the full results for a search by pressing **Enter** on your keyboard or sel
 
 Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
+When a search query contains multiple words, it's automatically split into individual search terms. Additionally, our fuzzy search feature expands results by including related words such as synonyms, acronyms, and abbreviations. For example, searching for "Robert Clark" might return results for "Bob Clark" due to fuzzy matching and "John Clark" because one of the search terms matches. To ensure an exact match, enclose the entire query in double quotes (for example, "Robert Clark").
+
 To understand why a row appears in your search results, hover over the icon at the beginning of each row to see the text that matched your search.
 
+> [!NOTE]
+> Rows returned in the search grid can't be sorted.
 
 ![See the text that matched your search query.](media/relevance-search-matched-results.png "See the text that matched your search query")
 
@@ -148,7 +153,7 @@ All **Lookup** and **Choice** data types are text-based facets. For example, the
 
 ![The Priority facet has values of High, Normal, and Low.](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
 
-Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
+Filters in these facets are sorted in descending order by count. By default, the top four-facet values are displayed. When there are more than four-facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
 When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.
 
@@ -162,7 +167,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the search experience. 
 
-Currently there is no option to disable the feedback question prompt.
+Currently there's no option to disable the feedback question prompt.
 
 > [!div class="mx-imgBorder"]
 > ![Feedback link.](media/feedbacklink.png "Feedback link")  
@@ -172,7 +177,7 @@ Currently there is no option to disable the feedback question prompt.
 Dataverse search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
 
 > [!NOTE]
-> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
+> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric** and **Date** aren't searched on.
 > - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
 > - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 

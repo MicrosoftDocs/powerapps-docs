@@ -3,12 +3,12 @@ title: "2: Introduction to the sample scenario | Microsoft Docs"
 description: "Learn more about the sample scenario used in the ebook."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -68,15 +68,15 @@ VanArsdel can use an app that acts as a front end to the legacy system. It would
 
 VanArsdel Heating and Air Conditioning started a fusion development team to design and build solutions that solve the problems and inefficiencies highlighted in the previous sections. The team members are:
 
-- **Kiana Anderson: Professional developer**. Kiana is a full-stack developer and software architect specializing in C\# and .NET. She has written and designed many of VanArsdel's applications, but is getting stretched very thin by all the new requests. Kiana is familiar with Power Apps at a high level but is skeptical of having non-developers create applications.
+- **Kiana Anderson: Professional developer**. Kiana is a full-stack developer and software architect specializing in C\# and .NET. Kiana has written and designed many of VanArsdel's applications, but is getting stretched very thin by all the new requests. Kiana is familiar with Power Apps at a high level but is skeptical of having non-developers create applications.
 
-- **Maria Zelaya: Inventory management**. Maria makes sure VanArsdel runs like a well-oiled machine. She verifies that the warehouse has enough parts and, if it doesn't, orders more by using a legacy system that Kiana wrote. But more than that, Maria audits inventory, checks with vendors for the best prices, and performs other inventory supply management tasks.
+- **Maria Zelaya: Inventory management**. Maria verifies that the warehouse has enough parts and, if it doesn't, orders more by using a legacy system that Kiana wrote. But more than that, Maria audits inventory, checks with vendors for the best prices, and performs other inventory supply management tasks.
 
-- **Caleb Foster: Field technician/engineer**. Caleb is VanArsdel's lead field technician. He's very knowledgeable and is on the phone a lot, mentoring junior technicians. Caleb's time is very valuable, and VanArsdel wants to make sure he visits as many of their most valuable customers as possible on a daily basis.
+- **Caleb Foster: Field technician/engineer**. Caleb, VanArsdel's lead field technician is very knowledgeable and is on the phone a lot, mentoring junior technicians. Caleb's time is very valuable, and VanArsdel wants to make sure Caleb visits as many of their most valuable customers as possible on a daily basis.
 
-- **Malik Barden: Office receptionist**. Malik is the heart of the VanArsdel office. He answers all customer inquiries, schedules appointments, and even helps technicians find answers when they need to. In other words, he's overworked and needs to automate some of his repetitive tasks to provide even better customer service.
+- **Malik Barden: Office receptionist**. Malik, the heart of the VanArsdel office, answers all customer inquiries, schedules appointments, and even helps technicians find answers when they need to. In other words, Malik is overworked and needs to automate some of the repetitive tasks to provide even better customer service.
 
-- **Preeti Rajdan: IT Operations**. Preeti is responsible for making sure the IT systems are up and running. She worries a lot about security and applications that might accidentally leave "back doors" open. She also is stretched thin and needs to be sure any new apps are easy to govern and administer.
+- **Preeti Rajdan: IT Operations**. Preeti is responsible for making sure the IT systems are up and running. Preeti worries a lot about security and applications that might accidentally leave "back doors" open. Preeti also is stretched thin and needs to be sure any new apps are easy to govern and administer.
 
 > [!div class="step-by-step"]
 > [Previous](01-what-is-fusion-dev-approach.md)

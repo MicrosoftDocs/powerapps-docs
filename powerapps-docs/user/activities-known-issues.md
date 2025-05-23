@@ -1,22 +1,18 @@
 ---
 title: "Email FAQs and known issues| MicrosoftDocs"
 description: Email FAQs and known issues.
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 06/30/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Email FAQs and known issues
 

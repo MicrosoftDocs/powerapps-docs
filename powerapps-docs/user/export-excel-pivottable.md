@@ -1,22 +1,18 @@
 ---
 title: "Export to an Excel PivotTable in model-driven Power Apps| MicrosoftDocs"
 description: How to export to an Excel PivotTable in model-driven Power Apps
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 3/17/2021
+ms.topic: how-to
+ms.date: 10/24/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Export to an Excel PivotTable
 
@@ -28,7 +24,7 @@ A few things to note:
 - Currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency. 
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
 
-## Export data to a pivot table
+## Export data to a PivotTable
 
 1. On the left nav, select a table.
 2. On the command bar select the **Export to Excel** menu, and then select **Dynamic PivotTable**.  
@@ -64,10 +60,13 @@ A few things to note:
    > [!div class="mx-imgBorder"] 
    > ![Enable content.](media/enable-content.png "Enable content") 
 
- > [!NOTE]
- > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
+   > [!NOTE]
+   > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
  
-7. To add a pivot table, on the **Insert** tab, select **PivotTable**.
+7. To add a PivotTable, on the **Insert** tab, select **PivotTable**.
+
+    > [!Note]
+    > You must complete this step to insert the PivotTable.  The PivotTable is not created automatically.
   
 8. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
   

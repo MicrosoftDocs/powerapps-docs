@@ -4,22 +4,17 @@ description: "Learn how to read the incremental updates of your Dataverse data."
 ms.custom: ""
 ms.date: 08/06/2021
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: "sama-zaki"
 ---
 

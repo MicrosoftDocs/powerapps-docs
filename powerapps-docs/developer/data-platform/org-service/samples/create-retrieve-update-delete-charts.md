@@ -4,17 +4,13 @@ description: "This sample showcases how to create, retrieve, update, and delete 
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Create, retrieve, update, and delete a chart
@@ -26,7 +22,8 @@ This sample shows how to create, retrieve, update, and delete an user-owned visu
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create, retrieve, update, and delete a chart sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsChart)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -49,16 +46,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `presentationXml` method sets the presentation XML string. 
+1. The `presentationXml` method sets the presentation XML string.
 2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization table instance.
+3. The `newUserOwnedVisualization` method creates the visualization record.
 4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
 5. The `newDataXml` method updates the name and the data description string.
-
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

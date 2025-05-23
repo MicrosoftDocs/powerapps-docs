@@ -1,10 +1,10 @@
 - name: Work with data using code
   href: ../work-with-data.md
-- name: Use Organization Service
+- name: Use the SDK for .NET
   href: overview.md
 - name: Get started
   items:
-  - name: 'Quickstart: Create a console app'
+  - name: 'Quickstart: Execute service request'
     href: quick-start-org-service-console-app.md
   - name: Late and Early-bound programming
     href: early-bound-programming.md
@@ -18,8 +18,6 @@
       href: subscribe-sdk-assembly-updates-using-nuget.md
     - name: Visual Studio and the .NET Framework
       href: visual-studio-dot-net-framework.md
-    - name: Discovery Service
-      href: discovery-service.md
     - name: Use XRM Tooling
       href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
 - name: Table  operations
@@ -28,21 +26,36 @@
   - name: Query Data
     href: entity-operations-query-data.md
     items:
-    - name: Build queries with QueryExpression
-      href: build-queries-with-queryexpression.md
+    - name: Query data using QueryExpression
+      href: queryexpression/overview.md
       items:
-      - name: Use the QueryExpression class
-        href: use-queryexpression-class.md
-      - name: Use the ConditionExpression class
-        href: use-conditionexpression-class.md
-      - name: Use the FilterExpression class
-        href: use-filterexpression-class.md
-      - name: Use the ColumnSet class
-        href: use-the-columnset-class.md
-      - name: Page large result sets with QueryExpression
-        href: page-large-result-sets-with-queryexpression.md
-      - name: Use a left outer join in QueryExpression to query for rows "not in"
-        href: use-left-outer-join-queryexpression-query-records-not-in.md
+      - name: Select columns
+        displayName: Select columns using QueryExpression
+        href: queryexpression/select-columns.md
+      - name: Join tables
+        displayName: Join tables using QueryExpression
+        href: queryexpression/join-tables.md
+      - name: Order rows
+        displayName: Order rows using QueryExpression
+        href: queryexpression/order-rows.md
+      - name: Filter rows
+        displayName: Filter rows using QueryExpression
+        href: queryexpression/filter-rows.md
+      - name: Page results
+        displayName: Page results using QueryExpression
+        href: queryexpression/page-results.md
+      - name: Aggregate data
+        displayName: Aggregate data using QueryExpression
+        href: queryexpression/aggregate-data.md
+      - name: Count rows
+        displayName: Count rows using QueryExpression
+        href: queryexpression/count-rows.md
+      - name: Optimize performance
+        displayName: Optimize performance using QueryExpression
+        href: queryexpression/optimize-performance.md
+      - name: Sample code
+        displayName: QueryExpression, Sample code
+        href: queryexpression/sample.md
     - name: Use the QueryByAttribute class
       href: use-querybyattribute-class.md
   - name: Create table rows
@@ -53,8 +66,6 @@
     href: entity-operations-update-delete.md
   - name: Associate and disassociate table rows
     href: entity-operations-associate-disassociate.md
-  - name: Access table data faster using partitions
-    href: azure-storage-partitioning-sdk.md
 - name: Use messages
   href: use-messages.md
 - name: Special Operations
@@ -83,9 +94,6 @@
   href: detect-duplicate-data.md
 - name: Generate classes for early-bound programming
   href: generate-early-bound-classes.md
-  items:
-  - name: Create extensions for the code generation tool
-    href: extend-code-generation-tool.md
 - name: Work with table definitions (metadata)
   href: work-with-metadata.md
   items:
@@ -106,14 +114,14 @@
   - name: Create a table row to send email activities
     href: create-update-entity-emailed.md
 - name: Import data
-  href: ../import-data.md #Topic is for both Web API and Organization service
+  href: ../import-data.md #Topic is for both Web API and SDK for .NET
 - name: Sample data
-  href: ../sample-data.md #Topic is for both Web API and Organization service
+  href: ../sample-data.md #Topic is for both Web API and SDK for .NET
 - name: Coding practices
   items:
   - name: Handle exceptions in your code
     href: handle-exceptions-code.md
   - name: Web service error codes
-    href: web-service-error-codes.md 
+    href: ../reference/web-service-error-codes.md 
 - name: Samples
   href: samples/toc.yml

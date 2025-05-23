@@ -1,16 +1,13 @@
 ---
-title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
-ms.date: 04/26/2022
-author: divka78
-ms.author: dikamath
+title: Web API Functions and Actions Sample
+description: This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#.
+ms.topic: sample
+ms.date: 09/02/2022
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -21,469 +18,1039 @@ contributors:
 
 This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
   
-- [Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
+- [Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 - [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
   
-This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
+This article explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample articles above for language-specific implementation details about how to perform the operations described in this article.  
   
 <a name="bkmk_demonstrates"></a>  
  
 ## Demonstrates  
 
-This sample is divided into the following principal sections, containing Web API functions and actions operations which are discussed in greater detail in the associated conceptual topics.  
+This sample is divided into the following principal sections, containing Web API functions and actions operations that are discussed in greater detail in the associated conceptual articles.  
   
-|Topic section|Associated topic(s)|  
-|-------------------|---------------------------|  
-|[Sample data](#bkmk_sampleData)||  
-|[Using unbound function with no parameters](#bkmk_unboundFunctionNoParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type|  
-|[Using unbound function with parameters](#bkmk_unboundFunctionWithParams)|[Unbound functions](use-web-api-functions.md#bkmk_unboundFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName> function|  
-|[Using bound function with no parameters](#bkmk_boundFunctionWithParams)|[Bound functions](use-web-api-functions.md#bkmk_boundFunctions)<br /><br /> `CalculateTotalTimeIncident` function|  
-|[Using unbound action with parameters](#bkmk_unboundActionWithParams)|[Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> `WinOpportunity` action<br /><br /> `opportunity` entity type|  
-|[Using bound action with parameters](#bkmk_boundActionWithParams)|[Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.AddToQueue> action<br /><br /> <xref:Microsoft.Dynamics.CRM.WhoAmI> function<br /><br /> <xref:Microsoft.Dynamics.CRM.systemuser> entity type<br /><br /> <xref:Microsoft.Dynamics.CRM.letter> entity type|  
-|[Using bound custom action with parameters](#bkmk_boundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Bound actions](use-web-api-actions.md#bkmk_boundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.contact> entity type|  
-|[Using unbound custom action with parameters](#bkmk_unboundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.account> entity type|  
-|[Handling custom action exceptions](#bkmk_boundCustomActionErrorHandling)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref:Microsoft.Dynamics.CRM.contact> entity type|  
+|Article section|Associated article(s)|  
+|-------------------|---------------------------|
+|[Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Unbound functions](use-web-api-functions.md#unbound-functions)|
+|[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
+|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
+|[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
+|[Section 6: Bound Function IsSystemAdmin custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use custom APIs](../custom-api.md)|
+|[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)<br /><xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function>|
+|[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
+|[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.  
-  
-<a name="bkmk_sampleData"></a>
+
+## Section 1: Unbound Function WhoAmI
+
+[WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
+
+**Request:**
+
+```http
+GET [Organization Uri]/api/data/v9.2/WhoAmI HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
+  "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+  "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+  "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+}
+```
+
+**Console output:**
+
+```
+WhoAmI tells us:
+WhoAmIResponse.BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+WhoAmIResponse.UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
+WhoAmIResponse.OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+```
+
+The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).
+
+## Section 2: Unbound Function FormatAddress
+
+[FormatAddress function](xref:Microsoft.Dynamics.CRM.FormatAddress) is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
+
+In this example, the parameters are set using query string parameter values.
+
+1. A request for an address in the United States:
+
+   **Request:**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='123%20Maple%20St.'&@p2='Seattle'&@p3='WA'&@p4='98007'&@p5='USA' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
+   "Address": "123 Maple St.\r\nSeattle, WA 98007\r\nUSA"
+   }
+   ```
+
+   **Console output:**
+
+   ```
+   USA Formatted Address:
+   123 Maple St.
+   Seattle, WA 98007
+   USA
+   ```
+
+1. A request for an address in Japan.
+
+   **Request:**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='1-2-3%20Sakura'&@p2='Nagoya'&@p3='Aichi'&@p4='455-2345'&@p5='JAPAN' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
+   "Address": "455-2345\r\nAichi\r\nNagoya\r\n1-2-3 Sakura\r\nJAPAN"
+   }
+   ```
+
+   **Console output:**
+
+   ```
+   JAPAN Formatted Address:
+   455-2345
+   Aichi
+   Nagoya
+   1-2-3 Sakura
+   JAPAN
+   ```
+
+## Section 3: Unbound Function InitializeFrom
+
+[InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
+
+More information:
+
+- [Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)
+- [Map table columns](../../../maker/data-platform/map-entity-fields.md)
+- [Customize table and column mappings](../customize-entity-attribute-mappings.md)
+
+1. Create a record to be the original record:
+
+   **Request:**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "accountcategorycode": 1,
+   "address1_addresstypecode": 3,
+   "address1_city": "Redmond",
+   "address1_country": "USA",
+   "address1_line1": "123 Maple St.",
+   "address1_name": "Corporate Headquarters",
+   "address1_postalcode": "98000",
+   "address1_shippingmethodcode": 4,
+   "address1_stateorprovince": "WA",
+   "address1_telephone1": "555-1234",
+   "customertypecode": 3,
+   "description": "Contoso is a business consulting company.",
+   "emailaddress1": "info@contoso.com",
+   "industrycode": 7,
+   "name": "Contoso Consulting",
+   "numberofemployees": 150,
+   "ownershipcode": 2,
+   "preferredcontactmethodcode": 2,
+   "telephone1": "(425) 555-1234"
+   }
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
+   ```
+
+1. Use `InitializeFrom` to get the data for a new record from the original record.
+
+   **Request:**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   Preference-Applied: return=representation
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)"
+   }
+   ```
+
+   **Console output:**
+
+   ```
+   New data based on original record:
+   {
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)"
+   }
+   ```
+
+   > [!NOTE]
+   > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, only the `parentaccountid` lookup to associate the new record with the original.
+
+   If all the available columns are mapped for this relationship, the value returned includes more data from the original record, for example:
+
+   ```json
+   {
+      "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
+      "@odata.type": "#Microsoft.Dynamics.CRM.account",
+      "territorycode": 1,
+      "address2_freighttermscode": 1,
+      "address2_shippingmethodcode": 1,
+      "address1_telephone1": "555-1234",
+      "accountclassificationcode": 1,
+      "creditonhold": false,
+      "donotbulkemail": false,
+      "donotsendmm": false,
+      "emailaddress1": "info@contoso.com",
+      "address1_line1": "123 Maple St.",
+      "customertypecode": 3,
+      "ownershipcode": 2,
+      "businesstypecode": 1,
+      "donotpostalmail": false,
+      "donotbulkpostalmail": false,
+      "name": "Contoso Consulting",
+      "address1_city": "Redmond",
+      "description": "Contoso is a business consulting company.",
+      "donotemail": false,
+      "address2_addresstypecode": 1,
+      "donotphone": false,
+      "statuscode": 1,
+      "address1_name": "Corporate Headquarters",
+      "followemail": true,
+      "preferredcontactmethodcode": 2,
+      "numberofemployees": 150,
+      "industrycode": 7,
+      "telephone1": "(425) 555-1234",
+      "address1_shippingmethodcode": 4,
+      "donotfax": false,
+      "address1_addresstypecode": 3,
+      "customersizecode": 1,
+      "marketingonly": false,
+      "accountratingcode": 1,
+      "shippingmethodcode": 1,
+      "address1_country": "USA",
+      "participatesinworkflow": false,
+      "accountcategorycode": 1,
+      "address1_postalcode": "98000",
+      "address1_stateorprovince": "WA",
+      "parentaccountid@odata.bind": "accounts(fe9873ac-2f1b-ed11-b83e-00224837179f)"
+   }     
+   ```
+
+1. Create a new record using the data returned with `InitializeFrom`.
+
+   **Request:**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)",
+   "name": "Contoso Consulting Chicago Branch",
+   "address1_city": "Chicago",
+   "address1_line1": "456 Elm St.",
+   "address1_name": "Chicago Branch Office",
+   "address1_postalcode": "60007",
+   "address1_stateorprovince": "IL",
+   "address1_telephone1": "(312) 555-3456",
+   "numberofemployees": 12
+   }
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
+   ```
+
+   **Console output:**
+
+   ```
+   New Record:
+   {
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)",
+   "name": "Contoso Consulting Chicago Branch",
+   "address1_city": "Chicago",
+   "address1_line1": "456 Elm St.",
+   "address1_name": "Chicago Branch Office",
+   "address1_postalcode": "60007",
+   "address1_stateorprovince": "IL",
+   "address1_telephone1": "(312) 555-3456",
+   "numberofemployees": 12
+   }
+   ```
+
+## Section 4: Unbound Function RetrieveCurrentOrganization
+
+[RetrieveCurrentOrganization function](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization) returns information about the current organization. It requires an [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) value as a parameter.
+
+`RetrieveCurrentOrganization` returns a [RetrieveCurrentOrganizationResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse) which includes a `Detail` property that is an [OrganizationDetail complex type](xref:Microsoft.Dynamics.CRM.OrganizationDetail), which has complex properties that use the [EndpointCollection complex type](xref:Microsoft.Dynamics.CRM.EndpointCollection), [EndpointType enum type](xref:Microsoft.Dynamics.CRM.EndpointType) and [OrganizationState enum type](xref:Microsoft.Dynamics.CRM.OrganizationState)
+
+> [!NOTE]
+> Notice how the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value is passed in the URL. The fully qualified name with the selected member name is required.
+
+
+**Request:**
+
+```http
+GET [Organization Uri]/api/data/v9.2/RetrieveCurrentOrganization(AccessType=@p1)?@p1=Microsoft.Dynamics.CRM.EndpointAccessType'Default' HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse",
+  "Detail": {
+    "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+    "FriendlyName": "[Organization Name]",
+    "OrganizationVersion": "9.2.22074.168",
+    "EnvironmentId": "Default-aaaabbbb-0000-cccc-1111-dddd2222eeee",
+    "DatacenterId": "695014e1-bafd-4d7e-9d3d-2261d4aaf780",
+    "Geo": "NA",
+    "TenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+    "UrlName": "org619726b5",
+    "UniqueName": "org0335df44",
+    "State": "Enabled",
+    "Endpoints": {
+      "Count": 3,
+      "IsReadOnly": false,
+      "Keys": [
+        "WebApplication",
+        "OrganizationService",
+        "OrganizationDataService"
+      ],
+      "Values": [
+        "[Organization URI]/",
+        "[Organization URI]/XRMServices/2011/Organization.svc",
+        "[Organization URI]/XRMServices/2011/OrganizationData.svc"
+      ]
+    }
+  }
+}
+```
+
+**Console output:**
+
+```
+Data returned with RetrieveCurrentOrganizationResponse:
+{
+  "OrganizationId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+  "FriendlyName": "[Organization Name]",
+  "OrganizationVersion": "9.2.22074.168",
+  "EnvironmentId": "Default-aaaabbbb-0000-cccc-1111-dddd2222eeee",
+  "DatacenterId": "695014e1-bafd-4d7e-9d3d-2261d4aaf780",
+  "Geo": "NA",
+  "TenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+  "UrlName": "org619726b5",
+  "UniqueName": "org0335df44",
+  "Endpoints": {
+    "Count": 3,
+    "IsReadOnly": false,
+    "Keys": [
+      "WebApplication",
+      "OrganizationService",
+      "OrganizationDataService"
+    ],
+    "Values": [
+      "[Organization URI]/",
+      "[Organization URI]/XRMServices/2011/Organization.svc",
+      "[Organization URI]/XRMServices/2011/OrganizationData.svc"
+    ]
+  },
+  "State": "Enabled"
+}
+```
+
+## Section 5: Unbound Function RetrieveTotalRecordCount
+
+[RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The data retrieved is from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
+
+**Request:**
+
+```http
+GET [Organization Uri]/api/data/v9.2/RetrieveTotalRecordCount(EntityNames=@p1)?@p1=["account","contact"] HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveTotalRecordCountResponse",
+  "EntityRecordCountCollection": {
+    "Count": 2,
+    "IsReadOnly": false,
+    "Keys": [
+      "account",
+      "contact"
+    ],
+    "Values": [
+      19,
+      3
+    ]
+  }
+}
+```
+
+**Console output:**
+
+```
+The number of records for each table according to RetrieveTotalRecordCount:
+        account:19
+        contact:3
+```
+
+## Section 6: Bound Function IsSystemAdmin custom API
+
+To demonstrate a bound function, this sample imports a custom message defined within a solution before running this portion of the sample.
+
+The sample uses the `sample_IsSystemAdmin` custom message that is defined using a [custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
+
+> [!NOTE]
+> When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
+
+**Request:**
+
+```http
+GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.sample_IsSystemAdminResponse",
+  "HasRole": false
+}
+```
+
+This sample retrieves 10 user records and test each one to determine whether each user has the System Administrator security role.
+
+**Console output:**
+
+The actual names depend on the people in your environment.
+
+```
+Top 10 users and whether they have System Administrator role.
+        Gediminas Matulis does not have the System Administrator role.
+        Gaby Frost does not have the System Administrator role.
+        Henrikas Martinkus does not have the System Administrator role.
+        Alain Davignon HAS the System Administrator role.
+        Isobel Macintyre HAS the System Administrator role.
+        Ale Laukaitiene HAS the System Administrator role.
+        Rudabeh Yekta HAS the System Administrator role.
+        Grazina Januliene HAS the System Administrator role.
+        Pranciskus Sukys HAS the System Administrator role.
+        Asha Sawant HAS the System Administrator role.
+```
+
+For another example of a bound function, see the use of the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) in the next example.
+
+## Section 7: Unbound Action GrantAccess
+
+[GrantAccess action](xref:Microsoft.Dynamics.CRM.GrantAccess) is an unbound action allows people to share specific privileges to other users in their environment.
+
+The sample code demonstrates the following operations:
+
+1. Create a record to share.
+1. Find an enabled user other than the current user.
+1. Use [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to determine what access rights the user has for the record created.
+
+   **Request:**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
+   "AccessRights": "ShareAccess"
+   }
+   ```
+
+   **Console output:**
+
+   ```
+   Testing user: Gediminas Matulis
+   Current users access: ShareAccess
+   ```
+
+1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access using the `GrantAccess` action.
+
+   **Request:**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/GrantAccess HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "Target": {
+      "accountid": "659876fd-6d29-ed11-9db1-00224804f8e2",
+      "@odata.type": "Microsoft.Dynamics.CRM.account"
+   },
+   "PrincipalAccess": {
+      "AccessMask": "DeleteAccess",
+      "Principal": {
+         "systemuserid": "ce31e691-f559-ec11-8f8f-000d3a308de4",
+         "@odata.type": "Microsoft.Dynamics.CRM.systemuser"
+      }
+    }
+   }
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
+
+1. Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
+
+   **Request:**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
+   "AccessRights": "DeleteAccess, ShareAccess"
+   }
+   ```
+
+   **Console output:**
+
+   ```
+   Gediminas Matulis was granted DeleteAccess
+   ```
+
+## Section 8: Bound Action AddPrivilegesRole
+
+[AddPrivilegesRole action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole) is an action bound to the [role entity type](xref:Microsoft.Dynamics.CRM.role). It's the way to add privileges to a security role.
+
+The sample code performs the following operations:
+
+1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
    
-## Sample data  
+   **Request:**
 
-To ensure the operations in this sample work properly, we first create sample data on the Dataverse server. These sample data will be deleted from the server unless the user chooses to not delete them. The data in this sample are created individually as follows.  
-  
-- Create an account (e.g.: `Fourth Coffee`) and associate it with an incident that has three 30 minute tasks (90 minutes total). After the tasks are created, they are then marked as completed. The operation will calculate the total time it took to complete these three tasks.  
-  
-    ```json  
-    {  
-      title: "Sample Case",  
-      "customerid_account@odata.bind": accountUri,  
-      Incident_Tasks: [  
-       {  
-        subject: "Task 1",  
-        actualdurationminutes: 30  
-       },  
-       {  
-        subject: "Task 2",  
-        actualdurationminutes: 30  
-       },  
-       {  
-        subject: "Task 3",  
-        actualdurationminutes: 30  
-       }  
-      ]  
-     };  
-    ```  
-  
-- Create an account and associate it with an opportunity. This opportunity will be mark as won in the sample operation.  
-  
-    ```json  
-    {  
-     name: "Sample Account for WebAPIFunctionsAndActions sample",  
-     opportunity_customer_accounts: [{  
-      name: "Opportunity to win"  
-     }]  
-    };  
-    ```  
-  
-- Create a letter activity. The letter will be added to the current user's queue in the sample operation.  
-  
-    ```json  
-    {  
-      description: "Example letter"  
-    }  
-    ```  
-  
-- Create a contact to use with a custom action `sample_AddNoteToContact` in the sample operation.  
-  
-    ```json  
-    {  
-      firstname: "Jon",  
-      lastname: "Fogg"  
-    }  
-    ```  
-  
-<a name="bkmk_sampleOperations"></a>
+   ```http
+   POST [Organization Uri]/api/data/v9.2/roles HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "businessunitid@odata.bind": "businessunits(cca3985e-c618-ea11-a811-000d3a33f066)",
+   "name": "Test Role"
+   }
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
+   ```
+
+1. Retrieve the role, expanding the `roleprivileges_association` collection-valued navigation property to include the privileges included with the role.
    
-## Sample operations  
+   **Request:**
 
-The sample operations in this topic are organized in the following ways.  
-  
-- Working with functions: These operations show bound and unbound functions that either accept parameters or not.  
-- Working with actions: These operations show bound and unbound actions that either accept parameters or not.  
-- Custom actions: These operations show bound and unbound actions and how to handle custom error exceptions.  
-  
-<a name="bkmk_workingWithFunctions"></a> 
-  
-## Working with functions  
+   ```http
+   GET [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-[Functions](web-api-functions.md) are operations that do not have side effects. A function can be bound to a table row or table (entity type) collection. Query functions are never bound. For more info, see [Use Web API functions](use-web-api-functions.md). This section shows samples of how bound and unbound functions are used and how parameters are passed in.  
-  
-<a name="bkmk_unboundFunctionNoParams"></a>  
- 
-### Using unbound function with no parameters 
- 
-Use an unbound function to retrieve the current user's full name by making use of the <xref:Microsoft.Dynamics.CRM.WhoAmI> function. This operation demonstrates how to call an unbound function that does not accept parameters. This operation returns the current user's full name.  
-  
-Getting the request and response for the <xref:Microsoft.Dynamics.CRM.WhoAmI> function.  
-  
- **Request**  
-  
-```http  
-GET https://[Organization URI]/api/data/v9.0/WhoAmI HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8   
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 273  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
-   "BusinessUnitId":"0d6cc84a-d3f6-e511-80d0-00155da84802",  
-   "UserId":"b08dc84a-d3f6-e511-80d0-00155da84802",  
-   "OrganizationId":"0f47eae2-a906-4ae4-9215-f09875979f6a"  
-}  
-```  
-  
-<a name="bkmk_unboundFunctionWithParams"></a>
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   ETag: W/"13278232"
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#roles(roleid,roleprivileges_association(name))/$entity",
+   "@odata.etag": "W/\"13278232\"",
+   "roleid": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
+   "roleprivileges_association": [
+      {
+         "@odata.etag": "W/\"142279\"",
+         "name": "prvReadSharePointData",
+         "privilegeid": "fecbd29c-df64-4ede-a611-47226b402c22"
+      },
+      {
+         "@odata.etag": "W/\"142304\"",
+         "name": "prvReadSdkMessage",
+         "privilegeid": "94c3ac2c-eb23-41cb-a903-4e2e49e910b4"
+      },
+      {
+         "@odata.etag": "W/\"142421\"",
+         "name": "prvWriteSharePointData",
+         "privilegeid": "cfdd12cf-090b-4599-8302-771962d2350a"
+      },
+      {
+         "@odata.etag": "W/\"142477\"",
+         "name": "prvReadSdkMessageProcessingStepImage",
+         "privilegeid": "122e085f-8c52-47e8-8415-875dee1c961e"
+      },
+      {
+         "@odata.etag": "W/\"142695\"",
+         "name": "prvReadSdkMessageProcessingStep",
+         "privilegeid": "db10a828-ec49-4035-8b7e-c58efaf169ec"
+      },
+      {
+         "@odata.etag": "W/\"142713\"",
+         "name": "prvReadPluginAssembly",
+         "privilegeid": "f5b50296-a212-488a-be92-cbcca8971717"
+      },
+      {
+         "@odata.etag": "W/\"142735\"",
+         "name": "prvCreateSharePointData",
+         "privilegeid": "5eb85025-363b-46ea-a77e-ce24159cd231"
+      },
+      {
+         "@odata.etag": "W/\"142740\"",
+         "name": "prvReadPluginType",
+         "privilegeid": "9365005c-4703-473b-8d3c-d073cfd8670c"
+      },
+      {
+         "@odata.etag": "W/\"142761\"",
+         "name": "prvReadSharePointDocument",
+         "privilegeid": "d71fc8d0-99bc-430e-abd7-d95c64f11e9c"
+      }
+   ]
+   }
+   ```
+
+1. Show the number of privileges created by default for the new role.
    
-### Using unbound function with parameters  
+   **Console output:**
 
-Use an unbound function to retrieve the time zone code. This operation demonstrates how to call an unbound function that accept parameters. This operation returns the current time zone code for the specified time zone. More information: [Passing parameters to a function](use-web-api-functions.md#bkmk_passParametersToFunctions)  
-  
- **Request**  
-  
-```http  
-GET https://[Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific%20Standard%20Time'&@p2=1033 HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8 
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 154  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedNameResponse",  
-   "TimeZoneCode":4  
-}  
-```  
-  
- **Console output**  
-  
-```  
-Unbound function: GetTimeZoneCodeByLocalizedName  
-    Function returned time zone Pacific Standard Time, with code '4'.  
-```  
-  
-<a name="bkmk_boundFunctionWithParams"></a>
+   ```
+   Number of privileges in new role: 9
+         prvReadSharePointData
+         prvReadSdkMessage
+         prvWriteSharePointData
+         prvReadSdkMessageProcessingStepImage
+         prvReadSdkMessageProcessingStep
+         prvReadPluginAssembly
+         prvCreateSharePointData
+         prvReadPluginType
+         prvReadSharePointDocument
+   ```
+
+1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>.
    
-### Using bound function with no parameters  
+   **Request:**
 
-Use a  bound function to retrieve the total time it took to complete all the tasks of an incident. This operation demonstrates how to call a bound function that does not accept parameters. This operation returns the total minutes the incident took to close out all its tasks. This function also makes use of the incident data we created for this sample program. More information: [Bound functions](use-web-api-functions.md#bkmk_boundFunctions)  
-  
- **Request**  
-  
-```http  
-GET https://[Organization URI]/api/data/v9.0/incidents(3d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.CalculateTotalTimeIncident() HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 148  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse",  
-   "TotalTime":90  
-}  
-```  
-  
- **Console output**  
-  
-```  
-Bound function: CalculateTotalTimeIncident  
-    Function returned 90 minutes - total duration of tasks associated with the incident.  
-```  
-  
-<a name="bkmk_workingWithActions"></a> 
-  
-## Working with actions  
+   ```http
+   GET [Organization Uri]/api/data/v9.2/privileges?$select=name&$filter=name eq 'prvCreateAccount' or name eq 'prvReadAccount' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-[Actions](web-api-actions.md) are operations that allow side effects. An action is either bound or unbound. For more info, see [Use Web API actions](use-web-api-actions.md). This section shows samples of how bound and unbound actions are used and how parameters are passed in. It also shows how custom actions are used and how to handle exceptions from these custom actions.  
-  
-<a name="bkmk_unboundActionWithParams"></a>
+   **Response:**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#privileges(name)",
+   "value": [
+      {
+         "@odata.etag": "W/\"142189\"",
+         "name": "prvReadAccount",
+         "privilegeid": "886b280c-6396-4d56-a0a3-2c1b0a50ceb0"
+      },
+      {
+         "@odata.etag": "W/\"142359\"",
+         "name": "prvCreateAccount",
+         "privilegeid": "d26fe964-230b-42dd-ad93-5cc879de411e"
+      }
+    ]
+   }
+   ```
+
+1. Prepare a list of <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege ComplexType> instances for the `prvCreateAccount` and `prvReadAccount` privileges with the `Depth` property set to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.'Basic'.
+1. Pass the list as the `AddPrivilegesRole.Privileges` parameter.
+
+   **Request:**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "Privileges": [
+      {
+         "Depth": "Basic",
+         "PrivilegeId": "886b280c-6396-4d56-a0a3-2c1b0a50ceb0",
+         "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
+         "PrivilegeName": "prvReadAccount"
+      },
+      {
+         "Depth": "Basic",
+         "PrivilegeId": "d26fe964-230b-42dd-ad93-5cc879de411e",
+         "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
+         "PrivilegeName": "prvCreateAccount"
+      }
+    ]
+   }
+   ```
+
+   **Response:**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
+
+1. Retrieve the privileges associated with the role again to confirm that they have been added.
    
-### Using unbound action with parameters 
- 
-Use an unbound action that takes a set of parameters. This operation closes an opportunity and marks it as won by calling the `WinOpportunity` action. The `opportunity` entity type was created as sample data earlier in the program. More information: [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)  
-  
- **Request**  
-  
-```http  
-POST https://[Organization URI]/api/data/v9.0/WinOpportunity HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-  
-{  
-   "Status":3,  
-   "OpportunityClose":{  
-      "subject":"Won Opportunity",  
-      "opportunityid@odata.bind":"https://[Organization URI]/api/data/v9.0/opportunities(47920da5-fb4a-e611-80d5-00155da84802)"  
-   }  
-}  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 204 No Content  
-OData-Version: 4.0   
-```  
-  
- **Console output**  
-  
-```  
-Unbound Action: WinOpportunity  
-    Opportunity won.  
-```  
-  
-<a name="bkmk_boundActionWithParams"></a>
-   
-### Using bound action with parameters
-  
-Use a bound action that takes parameters. This operation adds a letter to the current user's queue. To accomplish this, we use the <xref:Microsoft.Dynamics.CRM.WhoAmI> function and the <xref:Microsoft.Dynamics.CRM.systemuser> entity type to get a reference to the current user's queue.  We also need reference to the <xref:Microsoft.Dynamics.CRM.letter> entity type. This letter was created as sample data earlier in the program. Then the bound <xref:Microsoft.Dynamics.CRM.AddToQueue> action is called to add the letter to the current user's queue. More information: [Bound actions](use-web-api-actions.md#bkmk_boundActions)  
-  
- **Request**  
-  
-```http  
-POST https://[Organization URI]/api/data/v9.0/queues(1f7bcc50-d3f6-e511-80d0-00155da84802)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-Content-Length: 110  
-  
-{  
-   "Target":{  
-      "activityid":"4c920da5-fb4a-e611-80d5-00155da84802",  
-      "@odata.type":"Microsoft.Dynamics.CRM.letter"  
-   }  
-}  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 170  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",  
-   "QueueItemId":"67bdfabd-fc4a-e611-80d5-00155da84802"  
-}  
-```  
-  
- **Console output**  
-  
-```  
-Bound Action: AddToQueue  
-    QueueItemId returned from AddToQueue Action: 67bdfabd-fc4a-e611-80d5-00155da84802  
-```  
-  
-<a name="bkmk_customActions"></a> 
-  
-## Working with custom actions  
+   **Request:**
 
-If you define custom actions for your solution, you can call them using the Dataverse Web API. Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function. More information: [Use a custom action](use-web-api-actions.md#bkmk_customActions).  
-  
-This sample comes with two custom actions. They both require parameters but one is bound and the other is unbound.  
-  
-- `sample_AddNoteToContact`: A bound custom action that takes two parameters. One is a `NoteTitle` and the other is a `NoteText`. This custom action adds a note to a <xref:Microsoft.Dynamics.CRM.contact> enity type. Below is a screen shot of the **Information** page for this custom action.  
+   ```http
+   GET [Organization Uri]/api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-:::image type="content" source="../media/custom-action-add-note-contact.PNG" alt-text="Custom action AddNoteToContact information":::
-  
-- `sample_CreateCustomer`: An unbound custom action that require different parameters depending on what type of customer is being created. For example, when the `AccountType` is "account" then it only requires `AccountName` parameter. When the `AccountType` is "contact", a `ContactFirstName` and `ContactLastName` parameters are required. Below is a screen shot of the **Information** page for this custom action.  
+   **Response:**
 
-:::image type="content" source="../media/custom-action-create-customer.PNG" alt-text="Custom Action - Create Customer information":::
+   ```http
+   HTTP/1.1 200 OK
+   ETag: W/"13278248"
+   OData-Version: 4.0
 
-<a name="bkmk_boundCustomActionWithParams"></a>
-   
-### Using bound custom action with parameters 
- 
-This example calls the `sample_AddNoteToContact` custom action which is bound to the contact table  with the required parameters. This custom action adds a note to an existing contact. This action returns a row with an `annotationid` property. To show that the note was added, the `annotationid` is used to request information about the note.  
-  
-The request and response of the action.  
-  
- **Request**  
-  
-```http  
-POST https://[Organization URI]/api/data/v9.0/contacts(4d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.sample_AddNoteToContact HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-Content-Length: 80  
-  
-{  
-   "NoteTitle":"The Title of the Note",  
-   "NoteText":"The text content of the note."  
-}  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 149  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#annotations/$entity",  
-   "annotationid":"ba146d0b-fd4a-e611-80d5-00155da84802"  
-}  
-```  
-  
- The request and response of the annotation.  
-  
- **Request**  
-  
-```http  
-GET https://[Organization URI]/api/data/v9.0/annotations(ba146d0b-fd4a-e611-80d5-00155da84802)?$select=subject,notetext&$expand=objectid_contact($select=fullname) HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 200 OK  
-OData-Version: 4.0  
-Content-Length: 450  
-  
-{  
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#annotations(subject,notetext,objectid_contact,objectid_contact(fullname))/$entity",  
-   "@odata.etag":"W/\"622978\"",  
-   "subject":"The Title of the Note",  
-   "notetext":"The text content of the note.",  
-   "annotationid":"ba146d0b-fd4a-e611-80d5-00155da84802",  
-   "objectid_contact":{  
-      "@odata.etag":"W/\"622968\"",  
-      "fullname":"Jon Fogg",  
-      "contactid":"4d920da5-fb4a-e611-80d5-00155da84802"  
-   }  
-}  
-```  
-  
- **Console output**  
-  
-```http  
-Custom action: sample_AddNoteToContact  
-    A note with the title 'The Title of the Note' and the content 'The text content of the note.' was created and associated with the contact Jon Fogg.  
-```  
-  
-<a name="bkmk_unboundCustomActionWithParams"></a> 
-  
-### Using unbound custom action with parameters  
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#roles(roleid,roleprivileges_association(name))/$entity",
+   "@odata.etag": "W/\"13278248\"",
+   "roleid": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc",
+   "roleprivileges_association": [
+      {
+         "@odata.etag": "W/\"142189\"",
+         "name": "prvReadAccount",
+         "privilegeid": "886b280c-6396-4d56-a0a3-2c1b0a50ceb0"
+      },
+      {
+         "@odata.etag": "W/\"142279\"",
+         "name": "prvReadSharePointData",
+         "privilegeid": "fecbd29c-df64-4ede-a611-47226b402c22"
+      },
+      {
+         "@odata.etag": "W/\"142304\"",
+         "name": "prvReadSdkMessage",
+         "privilegeid": "94c3ac2c-eb23-41cb-a903-4e2e49e910b4"
+      },
+      {
+         "@odata.etag": "W/\"142359\"",
+         "name": "prvCreateAccount",
+         "privilegeid": "d26fe964-230b-42dd-ad93-5cc879de411e"
+      },
+      {
+         "@odata.etag": "W/\"142421\"",
+         "name": "prvWriteSharePointData",
+         "privilegeid": "cfdd12cf-090b-4599-8302-771962d2350a"
+      },
+      {
+         "@odata.etag": "W/\"142477\"",
+         "name": "prvReadSdkMessageProcessingStepImage",
+         "privilegeid": "122e085f-8c52-47e8-8415-875dee1c961e"
+      },
+      {
+         "@odata.etag": "W/\"142695\"",
+         "name": "prvReadSdkMessageProcessingStep",
+         "privilegeid": "db10a828-ec49-4035-8b7e-c58efaf169ec"
+      },
+      {
+         "@odata.etag": "W/\"142713\"",
+         "name": "prvReadPluginAssembly",
+         "privilegeid": "f5b50296-a212-488a-be92-cbcca8971717"
+      },
+      {
+         "@odata.etag": "W/\"142735\"",
+         "name": "prvCreateSharePointData",
+         "privilegeid": "5eb85025-363b-46ea-a77e-ce24159cd231"
+      },
+      {
+         "@odata.etag": "W/\"142740\"",
+         "name": "prvReadPluginType",
+         "privilegeid": "9365005c-4703-473b-8d3c-d073cfd8670c"
+      },
+      {
+         "@odata.etag": "W/\"142761\"",
+         "name": "prvReadSharePointDocument",
+         "privilegeid": "d71fc8d0-99bc-430e-abd7-d95c64f11e9c"
+      }
+   ]
+   }
+   ```
 
-This operation calls the `sample_CreateCustomer`  custom action to create an "account" customer. Required parameters  are passed in for a `CustomerType` of `account`.  
-  
- **Request**  
-  
-```http  
-POST https://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-Content-Length: 103  
-  
-{  
-   "CustomerType":"account",  
-   "AccountName":"Account Customer Created in WebAPIFunctionsAndActions sample"  
-}  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-  
-```  
-  
-<a name="bkmk_boundCustomActionErrorHandling"></a> 
-  
-### Handling custom action exceptions  
+   **Console output:**
 
-This example shows that custom actions can return custom error messages. You handle custom exceptions the same way you handle standard exceptions. To get the custom error message from the  `sample_CreateCustomer`  custom action , this example creates a "contact" customer. However, we intentionally pass in the wrong parameters for this `CustomerType` parameter. This operation then catches the exception and displays the error message, then continues with the sample program.  
-  
- **Request**  
-  
-```http  
-POST https://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-Content-Type: application/json; charset=utf-8  
-Content-Length: 103  
-  
-{  
-   "CustomerType":"contact",  
-   "AccountName":"Account Customer Created in WebAPIFunctionsAndActions sample"  
-}  
-```  
-  
- **Response**  
-  
-```http  
-HTTP/1.1 500 Internal Server Error  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-Content-Length: 2760  
-  
-{  
-   "error":{  
-      "code":"",  
-      "message":"ContactFirstName and ContactLastName are required when CustomerType is contact."
-   }  
-}  
-```  
-  
- **Console output**  
-  
-```  
-Expected custom error: ContactFirstName and ContactLastName are required when CustomerType is contact.  
-```  
-  
+   ```
+   Number of privileges after: 11
+         prvReadAccount
+         prvReadSharePointData
+         prvReadSdkMessage
+         prvCreateAccount
+         prvWriteSharePointData
+         prvReadSdkMessageProcessingStepImage
+         prvReadSdkMessageProcessingStep
+         prvReadPluginAssembly
+         prvCreateSharePointData
+         prvReadPluginType
+         prvReadSharePointDocument
+   ```
+
+## Section 9: Delete sample records
+
+Each record created in this sample was added to a list to be deleted at the end. These records are deleted using a `$batch` request.
+
+**Request:**
+
+```http
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/accounts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa) HTTP/1.1
+
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb) HTTP/1.1
+
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 122
+
+DELETE /api/data/v9.2/solutions(b37bc86a-4c3a-41be-b35d-ddfd129276c5) HTTP/1.1
+
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/accounts(659876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
+
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 118
+
+DELETE /api/data/v9.2/roles(44ee44ee-ff55-aa66-bb77-88cc88cc88cc) HTTP/1.1
+
+
+--batch_d6010246-cd97-429f-bc05-cf20054cfe8a--
+
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_cb852192-c300-4ed7-a54f-dc5fc7ee27c3--
+
+```
+
+**Console output:**
+
+```
+Deleting created records.
+```
+
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
-[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
-
+[Web API Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

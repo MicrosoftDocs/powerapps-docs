@@ -1,1 +1,1 @@
-Open dataset item for a given EntityReference. It checks if there is a command with command button id `Mscrm.OpenRecordItem`. If exists, it executes the command, otherwise it just navigates to the associated form of the EntityReference.
+Open dataset item for a given EntityReference. It checks if there's a command with command button ID `Mscrm.OpenRecordItem`. If exists, it executes the command, otherwise it just navigates to the associated form of the EntityReference.

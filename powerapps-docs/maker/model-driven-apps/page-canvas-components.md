@@ -9,12 +9,8 @@ ms.subservice: mda-maker
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Add canvas components to a custom page for your model-driven app
@@ -44,7 +40,7 @@ This section explains how to create a canvas component that you can use in a cus
 
 ### Enable modern controls for the component library
 
-First, enable the **Modern controls** setting in the canvas app designer. To do this, go to **File** > **Settings** > **Upcoming features** > **Experimental**.
+First, enable the **Modern controls** setting in Power Apps Studio. To do this, go to **File** > **Settings** > **Upcoming features** > **Experimental**.
 
 ![Settings dialog for enabling modern controls](media/add-component-to-model-app/lib-setting-for-modern-controls.png "Settings dialog for enabling modern controls")
 
@@ -97,4 +93,4 @@ You can evaluate and use canvas component samples from Microsoft and other Power
 
 [Overview of Power Apps connectors](../canvas-apps/connections-list.md)
 
-[Add data connection in canvas designer](../canvas-apps/add-data-connection.md)
+[Add data connection in Power Apps Studio](../canvas-apps/add-data-connection.md)

@@ -1,20 +1,16 @@
 ---
-title: Apply business logic using client scripting in model-driven apps using JavaScript | Microsoft Docs
+title: Apply business logic using client scripting in model-driven apps using JavaScript
 description: Learn how developers can use JavaScript in client-side scripts to apply custom business logic in model-driven apps.
 suite: powerapps
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.custom: "intro-internal"
+ms.collection: get-started
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -27,9 +23,9 @@ Client-side scripting using JavaScript is one of the ways to apply custom busine
 > [!IMPORTANT]
 > All the client scripting concepts and APIs explained in this documentation also apply to [Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview) users.
 
-Client scripting shouldn't be your first choice though for applying custom business process logic in model-driven app forms. *Business rules* provide a way for someone, who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules to apply logic](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md). You will find the business rule designer within the **Data** > **Tables** > [table_name] area on [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). When you view table, look for the **Business rules** tab.
+Client scripting shouldn't be your first choice though for applying custom business process logic in model-driven app forms. *Business rules* provide a way for someone, who doesn't know JavaScript and isn't a developer, to apply business process logic in a form. More information: [Create business rules to apply logic](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md). You find the business rule designer within the **Data** > **Tables** > [table_name] area on [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). When you view table, look for the **Business rules** tab.
 
-However, if your business requirement can't be achieved using a business rule, you will find that client-scripting using the client API object model provides a powerful way to extend the behavior of the application and enable automation in the client.
+However, if your business requirement can't be achieved using a business rule, you'll find that client-scripting using the client API object model provides a powerful way to extend the behavior of the application and enable automation in the client.
 
 ## Use client scripting in model-driven apps
 
@@ -41,7 +37,7 @@ Forms in model-driven apps help display data to the user. A form in model-driven
 
 You can attach your JavaScript code to "react" to these events so that your code gets executed when the event occurs on the form. You attach your JavaScript code (scripts) to these events by using a [Script web resource](script-jscript-web-resources.md) in model-driven apps. 
 
-Model-driven apps provides you a rich set of **client APIs** to interact with form objects and events to control what and when to display on a form.
+Model-driven apps provide you with a rich set of **client APIs** to interact with form objects and events to control what and when to display on a form.
 
 > [!NOTE]
 > Some client APIs are deprecated in the current release of model-driven apps. Ensure that you are aware of these APIs as you write your client-side code for model-driven apps. More information: [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
@@ -57,7 +53,7 @@ Model-driven apps provides you a rich set of **client APIs** to interact with fo
 [Client API reference](clientapi/reference.md)
 
 
-### Related topics
+### Related articles
 
 [Web resources for model-driven apps](web-resources.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>

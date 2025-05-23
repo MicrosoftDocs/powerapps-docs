@@ -8,14 +8,12 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: gregli
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
   - gregli-msft
 ---
 # Card control in Power Apps

@@ -3,18 +3,16 @@ title: Edit a canvas app
 description: Step-by-step instructions for editing canvas apps and session-locking scenarios in Power Apps.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/16/2020
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Edit a canvas app
@@ -47,13 +45,7 @@ An app can be shared with others. Any **Co-owner** for an app can edit it. Consi
 
 ### Edit an app already being edited
 
-Only one user can edit an app at a time.
-
-If you try to edit an app that someone else is already editing, you'll see the following message.
-
-![App open by another user.](./media/edit-app/applock-otheruser.png "App open by another user")
-
-You can't continue until the other user closes the app, or that user's session times out.
+Only one user can edit an app at a time. For more information, see [Find out who's working on the same app](copresence-power-apps-studio.md).
 
 ### Edit an app across multiple sessions
 

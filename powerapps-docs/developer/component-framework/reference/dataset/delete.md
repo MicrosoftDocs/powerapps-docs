@@ -1,9 +1,8 @@
 ---
-title: delete | Microsoft Docs
+title: delete (Power Apps component framework API reference) | Microsoft Docs
 description: Delete the records from data source.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: clromano
+ms.author: clromano
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,13 +27,13 @@ Canvas apps
 
 | Parameter Name | Type       | Required | description                 |
 | -------------- | ---------- | -------- | --------------------------- |
-| ids            | `string[]` | Yes      | Array of IDs to be deleted. |
+| `ids`          | `string[]` | Yes      | Array of IDs to be deleted. |
 
 ## Return value
 
 Type: Promise
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

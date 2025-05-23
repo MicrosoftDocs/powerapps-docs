@@ -1,18 +1,14 @@
 ---
-title: "getUrl (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getUrl (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getUrl method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,7 +30,7 @@ Read-only and editable grids
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|client|Number|No|Indicates the client type. You can specify one of the following values:<br/>0: Browser<br/>1: MobileApplication|
+|`client`|Number|No|Indicates the client type. You can specify one of the following values:<br/>0: Browser<br/>1: MobileApplication|
 
 ## Return Value
 
@@ -45,9 +41,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

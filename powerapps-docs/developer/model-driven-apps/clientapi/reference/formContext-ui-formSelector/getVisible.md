@@ -1,17 +1,13 @@
 ---
-title: "formItem.getVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formItem.getVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the formItem.getVisible method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,7 +26,7 @@ contributors:
 
 **Description**: true if the form is visible; false otherwise.
 
-### Related topics
+### Related articles
 
 [setVisible](setVisible.md)
 

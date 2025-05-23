@@ -1,22 +1,18 @@
 ---
 title: "Use the rich text editor toolbar in email | MicrosoftDocs"
 description: Use the rich text editor toolbar in email
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 6/30/2021
+ms.topic: article
+ms.date: 10/03/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use the rich text editor toolbar in email
@@ -59,6 +55,7 @@ The following table describes the different formatting features and functionalit
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Defaul personalization.](media/personalization.png "User Personalization")| User personalization | | Select the default Font Name and Font Size. After they're added, the **Font** and **Font Size** reflect these values as default font and font size. | 
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
 
 > [!Note]

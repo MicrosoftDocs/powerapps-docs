@@ -1,19 +1,17 @@
 ---
 title: Map input fields of a component
 description: Learn about how to map input fields of a component to the table or record.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
+ms.topic: how-to
 ms.date: 06/01/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
   - gregli-msft
 ---
 
@@ -42,7 +40,7 @@ The input property expects table data type:
 
 The schema of the input property looks like the following formula:
 
-```powerapps-dot
+```power-fx
 Table({Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold:20})
 ```
 
@@ -59,7 +57,7 @@ The app consuming this component has the following **IceCreams** table that does
 
 To map the correct fields, use **RenameColumn()** function to rename expected columns.
 
-```powerapps-dot
+```power-fx
 RenameColumns(IceCreams,"cra56_flavorname","Flavor","cra56_price","UnitPrice","cra56_salenumber","QuantitySold")
 ```
 
@@ -73,7 +71,7 @@ Use [With()](functions/function-with.md) function to map a single record.
 
 For example, continuing from the [earlier example](#map-columns) for mapping columns, the custom input property of a component inside an app expects a record type with the following schema:
 
-```powerapps-dot
+```power-fx
 {Flavor: "Strawberry",UnitPrice: 1.99, QuantitySold: 20}
 ```
 
@@ -83,7 +81,7 @@ Since the **IceCreams** data source expects column names as **FlavorName**, **Pr
 
 Use **With()** function to select the columns of the **IceCreams** table, and map them to the input fields of the component:
 
-```powerapps-dot
+```power-fx
 With(Gallery3.Selected,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
 ```
 
@@ -99,7 +97,7 @@ Use [ForAll()](functions/function-forall.md) function to map a table of records 
 
 For example, at the end of the [map columns](#map-columns) example, you can use the **ForAll()** function to map the entire table with the specific columns to point to the fields from the component for each row:
 
-```powerapps-dot
+```power-fx
 ForAll(IceCreams,{Flavor:FlavorName,UnitPrice:Price,QuantitySold:SaleNumber})
 ```
 

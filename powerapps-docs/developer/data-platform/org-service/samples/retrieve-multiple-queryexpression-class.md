@@ -2,28 +2,27 @@
 title: "Sample: Retrieve multiple with QueryExpression (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve multiple using QueryExpression" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Retrieve multiple with the QueryExpression class
 
-This sample shows how to retrieve multiple tables using the [IOrganizationService.RetrieveMultiple(QueryBase)](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple#Microsoft_Xrm_Sdk_IOrganizationService_RetrieveMultiple_Microsoft_Xrm_Sdk_Query_QueryBase_) method with [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression) along with their related table columns. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleByQueryExpression).
+This sample shows how to retrieve multiple tables using the [IOrganizationService.RetrieveMultiple(QueryBase)](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple#Microsoft_Xrm_Sdk_IOrganizationService_RetrieveMultiple_Microsoft_Xrm_Sdk_Query_QueryBase_) method with [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression) along with their related table columns. 
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve multiple with the QueryExpression class sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveMultipleByQueryExpression)
 
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
-
 
 ## What this sample does
 
@@ -45,6 +44,5 @@ Checks for the current version of the org.
 ### Clean up
 
 No clean up is required.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

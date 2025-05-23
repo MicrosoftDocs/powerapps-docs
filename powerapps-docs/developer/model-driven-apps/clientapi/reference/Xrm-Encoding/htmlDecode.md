@@ -1,18 +1,14 @@
 ---
-title: "htmlDecode| MicrosoftDocs"
-description: "The Client API method converts a string that has been HTML-encoded into a decoded string."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+title: "htmlDecode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the htmlDecode method.
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -28,9 +24,9 @@ contributors:
 
 ## Parameters
 
-|Parameter Name        | Type           | Required  |Description  |
-| ------------- |-------------| -----|-----|
-|arg        | String           | Required  |HTML-encoded string to be decoded.  |
+|Parameter Name | Type| Required  |Description  |
+| --- |---|---|---|
+|`arg`| String | Required  |HTML-encoded string to be decoded.  |
 
 
 ## Return Value
@@ -39,11 +35,9 @@ contributors:
 
 **Description**: Decoded string.
 
-## Related topics
+## Related articles
 
-[htmlEncode](htmlEncode.md)
-
+[htmlEncode](htmlEncode.md)   
 [htmlAttributeEncode](htmlAttributeEncode.md)
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

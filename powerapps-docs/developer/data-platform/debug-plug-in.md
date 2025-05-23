@@ -3,16 +3,12 @@ title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and prod
 description: "Learn how to debug plug-ins using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/10/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---
@@ -55,7 +51,7 @@ If you want to use a test automation framework, you will find that the community
 
 ## Use Tracing
 
-As described in [Use the tracing service](write-plug-in.md#use-the-tracing-service), you can write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) within the code of your plug-in by using the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace*> method.
+As described in [Tracing service](write-plug-in.md#tracing-service), you can write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) within the code of your plug-in by using the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace*> method.
 
 Before you will be able to use this service, you must enable tracing in your Microsoft Dataverse environment. The process is described in  [View trace logs](tutorial-write-plug-in.md#view-trace-logs).
 
@@ -80,7 +76,7 @@ The JSON results will be returned to your browser like so:
 ```
 
 > [!TIP]
-> This works best if you install a browser plug-in that will format the returned JSON. Or you may want to use Postman. More information: [Use Postman with Web API](/dynamics365/customer-engagement/developer/webapi/use-postman-web-api)
+> This works best if you install a browser plug-in that will format the returned JSON. Or you may want to use an API client like Postman or [Insomnia](webapi/insomnia.md), or you may want to use [VS Code with PowerShell](webapi/quick-start-ps.md).
 > 
 > You may prefer to use the [XrmToolbox Plugin Trace Viewer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.PluginTraceViewer/). This community tool is not supported by Microsoft. If you have questions pertaining to this tool, contact the publisher.
 

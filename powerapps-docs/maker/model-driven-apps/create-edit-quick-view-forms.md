@@ -2,9 +2,8 @@
 title: "Create or edit model-driven app quick view forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick view form"
 ms.custom: ""
-ms.date: 07/23/2020
+ms.date: 07/29/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,14 +16,9 @@ ms.assetid: 9b101734-cc11-4d05-bd45-eb611eae9931
 caps.latest.revision: 14
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Create a quick view form to view information about a related table
 
 This article describes how to create a quick view form and how to add a quick view control to a main form.
@@ -42,6 +36,7 @@ In the example below notice the module that relates to a given lesson within the
 > [!NOTE]
 > - Data in quick view form controls can't be edited and they do not support form scripts. 
 > - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated.
+> - Custom controls aren't supported in quick view forms, and there is limited customization support for complex controls such as subgrids. If this is required, consider using a [Form component control](form-component-control.md)
   
 <a name="BKMK_CreateQFV"></a>
 
@@ -50,21 +45,17 @@ In the example below notice the module that relates to a given lesson within the
  You create quick view forms using the form editor in a manner similar to the way you create other forms. Quick view forms are read-only. Use them to create forms that are for reading purposes only.  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Select **Tables** on the left navigation pane, and then select the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area.
+1. On the toolbar, select **Add form** > **Quick View Form**.  
+1. In the **Form** panel, enter a **Display Name** and **Description** to differentiate this quick view form from others.  
+1. In the form designer, drag any columns from the **Columns Explorer** into the section on the form.
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.
-  
-3. On the toolbar, select **Add form** > **Quick View Form**.  
-  
-4. In the **Form** panel, enter a **Display Name** and **Description** to differentiate this quick view form from others.  
-  
-5. In the form designer, drag any columns from the **Columns Explorer** into the section on the form.
+   > [!IMPORTANT]
+   > Required columns can't be removed from a form. If you add a required column to the form and want to remove it, you must delete the form and then re-create it. When you set the required property for a column, a row can't be saved without data in the column.
 
-    > [!IMPORTANT]
-    > Required columns can't be removed from a form. If you add a required column to the form and want to remove it, you must delete the form and then re-create it. When you set the required property for a column, a row can't be saved without data in the column.
-
-7. To save the form select **Save**.  
-
-8. Select **Publish** to see the new form in the app.
+1. To save the form select **Save**.  
+1. Select **Publish** to see the new form in the app.
   
 <a name="BKMK_EditQVF"></a>   
 ## Edit a quick view form
@@ -91,24 +82,22 @@ Quick view forms have a simplified layout because they are designed to be viewed
 
 Quick view forms can only be added to a main form where a lookup column exists that targets the table of the quick view form.  
   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.  
+1. Select **Tables** on the left navigation pane, and then select the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area.  
+1. Select a form, which **Type** is **Main**
+1. In the form designer, from the **Components** pane select **Quick view**.  
+1. In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
 
-3. Select a form, which **Type** is **Main**
-4. In the form designer, from the **Components** pane select **Quick view**.  
-  
-5.  In the **Select quick view forms** dialog box, select the **Lookup** column, and then select the lookup column value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
+   > [!div class="mx-imgBorder"] 
+   > ![Add quick view control.](media/add-quick-view-control.png "Add quick view control to main form")
 
-    > [!div class="mx-imgBorder"] 
-    > ![Add quick view control.](media/add-quick-view-control.png "Add quick view control to main form")
+1. Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form.
+1. To save the form select **Save**.  
 
-6.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form.
-
-7.  To save the form select **Save**.  
-
-    > [!IMPORTANT]
-    > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and a lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If this issue is experienced it can be resolved by removing the parent row id on the quick create form before saving the row.
+> [!IMPORTANT]
+> Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and a lookup is created that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If this issue is experienced it can be resolved by removing the parent row id on the quick create form before saving the row.
 
 ## Quick view form properties
 

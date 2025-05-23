@@ -1,24 +1,24 @@
 ---
-title: How to add tag to mark prioritized ideas in the Employee ideas app (contains video)
+title: How to add tag to mark prioritized ideas in the Employee ideas app
 description: Learn about how to customize the employee ideas app to mark prioritized ideas.
 author: sbahl10
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 07/02/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
   - sbahl10
 ---
 
 # Add tag to mark prioritized ideas
 
-The Employee Ideas sample app for Microsoft Teams provides a platform for employees to submit ideas for various campaigns (that is, categories for grouping ideas around common themes).
+The Employee Ideas sample app template for Microsoft Teams provides a platform for employees to submit ideas for various campaigns (that is, categories for grouping ideas around common themes).
 
 With the Ideas app, managers can set up campaigns, users can submit ideas, view other users’ ideas, and also vote for ideas that they like the best. The experience can be customized by the admin or managers by editing campaigns, specifying justification questions that need to be answered by people submitting the ideas and also specify date threshold between which the campaign would be open for submitting ideas. The app also includes insights about who is submitting the greatest number of ideas and the most popular ideas during the week.
 
@@ -30,11 +30,11 @@ In this article, we'll learn how to add a **Priority** tag to an idea in the Man
 > Before starting with the steps in this article, read [Customize the Employee Ideas app](customize-employee-ideas.md).
 
 Watch this video to learn how to add a tag to mark prioritized ideas:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLn9D]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=50df516b-65a5-436b-83be-da737271ed28]
 
 ## Prerequisites
 
-To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the [Employee Ideas sample app](employee-ideas.md) installed. This app can also be installed using <https://aka.ms/TeamsEmployeeIdeas>.
+To complete this tutorial, you'll need the ability to sign in to Microsoft Teams, which will be available as part of select Microsoft 365 subscriptions. You'll also need to have the [Employee Ideas sample app template](employee-ideas.md) installed. This app can also be installed using <https://aka.ms/TeamsEmployeeIdeas>.
 
 ## Log in into the Manage Ideas app
 
@@ -116,7 +116,7 @@ All the changes to the Manage Ideas app are completed. The app can now be publis
 
 1. To update the label text to indicate that the idea is prioritized, update the **Text** property to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Concatenate(
     
     gblRecordCampaignIdea.'Owning User'.'Full Name',
@@ -155,8 +155,8 @@ All the changes to the Manage Ideas app are completed. The app can now be publis
 ### See also
 
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Teams store](use-sample-apps-from-Teams-store.md)
+- [Customize sample app templates](customize-sample-apps.md)
+- [Sample app templates FAQs](sample-apps-faqs.md)
+- [Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

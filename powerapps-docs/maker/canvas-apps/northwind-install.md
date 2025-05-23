@@ -3,18 +3,16 @@ title: Install Northwind Traders database and apps
 description: Learn about how to install the Northwind database and apps into an environment to explore relational concepts.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/06/2019
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 
@@ -32,7 +30,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 ## Download the solution
 
 > [!div class="nextstepaction"]
-> [Download the Northwind Traders Solution File](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_6.zip)
+> [Download the Northwind Traders Solution File](https://download.microsoft.com/download/f/8/d/f8ddbb69-5499-4776-bd41-00f3bae050a6/NorthwindTraders_final.zip)
 
 This [solution](../../developer/data-platform/introduction-solutions.md) file (.zip) contains the definitions of tables, choices, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
@@ -40,7 +38,7 @@ This [solution](../../developer/data-platform/introduction-solutions.md) file (.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Dataverse database.
 
-1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
+1. In the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] Then select **Import** in the toolbar near the top of the screen:
 
     > [!div class="mx-imgBorder"]
     > ![Solutions view and import-solution entry point.](media/northwind-install/solution-import.png)

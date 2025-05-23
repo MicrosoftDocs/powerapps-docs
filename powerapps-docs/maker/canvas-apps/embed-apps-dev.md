@@ -4,17 +4,15 @@ description: Learn about how to embed canvas apps in websites and other services
 author: gregli-msft
 
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/31/2022
+ms.date: 03/11/2025
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Integrate canvas apps into websites and other services
@@ -25,7 +23,8 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 ![Power BI dashboard with embedded app.](./media/embed-apps-dev/embed-dashboard.png)
 
 > [!NOTE]
-> Only Power Apps users in the same tenant can access the embedded app.
+> - Only Power Apps users in the same tenant can access the embedded app.
+> - Embedding canvas apps in any native desktop application isn't supported, which includes Andrioid and iOS. This excludes first-party integrations such as Power Apps in Teams.
 
 You can also integrate canvas apps into SharePoint Online without using an iframe. More information: [Use the Power Apps web part](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
@@ -91,7 +90,7 @@ The following image shows the Asset Ordering app embedded in a Contoso sample we
 
 Keep the following points in mind for authenticating users of your app:
 
-- If your website uses Azure Active Directory (AAD) based authentication, no additional sign-in is required.
+- If your website uses Microsoft Entra ID based authentication, no additional sign-in is required.
 - If your website uses any other sign-in mechanism or is not authenticated, your users see a sign-in prompt on the iframe. After they sign-in, they will be able to run the app as long as the author of the app has shared it with them.
 
 As you can see, embedding apps is simple and powerful. Embedding enables you to bring apps right to the places you and your customers work – websites, Power BI dashboards, SharePoint pages, and more.

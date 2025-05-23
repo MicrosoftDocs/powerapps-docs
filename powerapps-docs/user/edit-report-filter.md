@@ -1,29 +1,25 @@
 ---
 title: Edit the default filter of a report| Microsoft Docs
 description: Edit the default filter of a report
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/27/2019
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Edit the default filter of a report
 
 When a report is a SQL Server Reporting Services report, is enabled for prefiltering, and has a default filter, you can change the default filter to display the data you expect to see in the report. This filter is used each time any user runs the report.
 
 1. From the left navigation pane, select the reports area
-2. Choose a report and on the commbar bar, select **Edit Default Filter**.
+2. Choose a report and on the command bar, select **Edit Default Filter**.
 
      > [!div class="mx-imgBorder"]
      > ![Edit default report filter.](media/edit_filter.png "Edit default report filter")

@@ -1,24 +1,22 @@
 ---
-title: "getSaveErrorInfo (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSaveErrorInfo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSaveErrorInfo method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getSaveErrorInfo (Client API reference)
 
 Use this method to know the error details on why a table save failed.
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

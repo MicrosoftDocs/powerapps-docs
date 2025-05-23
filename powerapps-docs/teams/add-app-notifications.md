@@ -1,24 +1,24 @@
 ---
-title: Add notifications to make your apps collaborative (contains video)
+title: Add notifications to make your apps collaborative
 description: Learn how to add notifications to your Power Apps in Teams to make them more collaborative
 author: joel-lindstrom
-
-ms.topic: conceptual
+ms.subservice: teams
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/17/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Add notifications to make your apps collaborative
 
-Apps in Microsoft Teams are designed to enable collaboration between people in your organization. When you have an app that has a hand-off of information, such as group A doing something that group B then needs to process, if everything happens in the app, users may miss important updates and processes might stall.
+Apps in Microsoft Teams are designed to enable collaboration between people in your organization. When you have an app that has a hand-off of information, such as group A doing something that group B then needs to process, if everything happens in the app, users may miss important updates, and processes might stall.
 
-Using notifications for critical events in your apps in Teams enhances collaboration by proactively letting users know that there's something that needs their attention, or needs to be done.
+Using notifications for critical events in your apps in Teams enhances collaboration by proactively letting users know that something needs their attention or needs to be done.
 
 Teams and Power Platform give you many options in the ways that you can notify people.
 
@@ -29,11 +29,11 @@ Teams and Power Platform give you many options in the ways that you can notify p
 - Channel posts
 
 Watch this video to learn how to add notifications to make your apps collaborative:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLaWd]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c17e7bd1-aa38-434e-8120-e26b90cb3618]
 
 ## Choose the right notification type
 
-How should you decide what type of notification to use? Many people default to email notifications, but many people also complain that they receive too many emails. Email is an acceptable type of notification, but it should be used sparingly. Especially for urgent notifications, as frequently emails aren't seen immediately.
+How should you decide what type of notification to use? Many people default to email notifications, but many people also complain that they receive too many emails. Email is an acceptable type of notification, but it should be used sparingly. Especially for urgent notifications, as frequent emails are only seen after a period of time.
 
 Here are some questions to ask when defining the appropriate type of notification:
 
@@ -43,7 +43,7 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. **Is the notification informational or actionable? If you're creating a notification, what do you want to have the notification recipient do with the notification?**
 
-    Informational notifications are to notify users, but they're for information purposes only. For example, in the Employee Ideas sample app for Teams, when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
+    Informational notifications are to notify users, but they're for information purposes only. For example, in the Employee Ideas sample app template for Teams, when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
 
     Actionable notification enable one or more follow-up activities by the recipient. In the extending Employee Ideas article, we show how to change the notification to an adaptive card so users can open the submitted idea and vote for it.
 
@@ -57,7 +57,7 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. **What is the frequency of notification?**
 
-    In the Inspection sample app for Teams, by default, a message is posted to a Teams channel when an inspection is completed. However, if you've a high frequency of inspections, many messages will be posted to the channel. And when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center&mdash;when you've a few apps giving you notifications, they're helpful, but if you've many apps posting updates, notifications become noise. In this case, you'd want to reevaluate your notifications, and either change the notification to only notify on urgent inspections, or issues.
+    In the Inspection sample app template for Teams, by default, a message is posted to a Teams channel when an inspection is completed. However, if you've a high frequency of inspections, many messages will be posted to the channel. And when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center&mdash;when you've a few apps giving you notifications, they're helpful, but if you've many apps posting updates, notifications become noise. In this case, you'd want to reevaluate your notifications, and either change the notification to only notify on urgent inspections, or issues.
 
 1. **What is the impact on the users?**
 
@@ -80,7 +80,7 @@ The decision as to which approach you should use depends on what type of notific
 
 - Power Apps sending notifications directly use formulas to define the notification logic, Power Automate flow uses a more graphical interface to set the properties of a notification. For example, from a Power Apps app, you can use the following formula to send email with the Outlook connector:
 
-```powerapps-dot
+```power-fx
 Microsoft365Outlook.SendEmail("mailbox@contoso.com", Summary, Description)
 ```
 
@@ -89,19 +89,5 @@ In Power Automate instead, the send an email action is presented in a graphical 
 ![Power Automate notification](media/add-app-notifications/notification-choices.png "Power Automate notification")
 
 Sending an email from Power Apps directly is faster for experienced makers, but the more details are required&mdash;such as attachment files and formatted text. For the less experienced makers, sending the email with Power Automate flow might be easier.
-
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

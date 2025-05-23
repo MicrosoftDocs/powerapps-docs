@@ -1,25 +1,20 @@
 ---
-title: "getGlobalContext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getGlobalContext (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getGlobalContext method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getGlobalContext (Client API reference)
 
-
-
 [!INCLUDE[./includes/getGlobalContext-description.md](./includes/getGlobalContext-description.md)]
+
 The method provides access to the global context without going through the form context. It contains an equivalent of all the methods available for the **Xrm.Page.context** object (now deprecated) to retrieve information specific to the client, organization or user.
 
 > [!IMPORTANT]
@@ -49,14 +44,5 @@ Use the following properties of global context to return information about the c
 |[getWebResourceUrl](getGlobalContext/getWebResourceUrl.md) |Returns the relative URL with the caching token for the specified web resource.|
 |[isOnPremises](getGlobalContext/isOnPremises.md) |Returns a boolean value indicating if the model-driven apps instance is hosted on-premises or online.|
 |[prependOrgName](getGlobalContext/prependOrgName.md) |Prefixes the current organization's unique name to a string, typically a URL path.|
-
-
-
-
- 
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

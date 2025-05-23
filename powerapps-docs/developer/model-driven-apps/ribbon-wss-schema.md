@@ -1,24 +1,20 @@
 ---
-title: "Ribbon WSS schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The following is the schema definition for the ribbon types WSS of an import/export customization file. It is included from the Ribbon Core Schema." # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+title: "Ribbon WSS schema (model-driven apps)"
+description: "The following is the schema definition for the ribbon types WSS of an import/export customization file. It is included from the Ribbon Core Schema."
+author: clromano
+ms.author: clromano
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 # Ribbon WSS schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-wss-schema -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-wss-schema -->
 
 The following is the schema definition for the ribbon types WSS of an import/export customization file. Ribbon WSS is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema in the `Schemas\9.0.0.2090\RibbonWSS.xsd` folder when you download the Schemas zip file.
 
@@ -1004,10 +1000,11 @@ For more information, see [Package and Distribute Extensions with Solutions](../
 </xs:schema>
 ```  
   
-### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbon Types Schema](ribbon-types-schema.md)   
- [Customization XML Reference](customization-xml-reference.md)
+### See also
+
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Ribbon Types Schema](ribbon-types-schema.md)   
+[Customization XML Reference](customization-xml-reference.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

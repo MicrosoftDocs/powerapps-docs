@@ -1,17 +1,16 @@
 ---
-title: Integrate Power Apps in Teams with Azure Active Directory (contains video)
+title: Integrate Power Apps in Teams with Azure Active Directory
 description: Learn how to integrate your apps with Azure Active Directory to use data about the people in your organization in your app.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/24/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Integrate with Azure Active Directory
@@ -25,7 +24,7 @@ This integration can also be used to grant access to app functionality based on 
 In this article, we'll create a Power Apps app with a button with administrative access on it. The visibility of the button will depend on whether the user is a member of the admin group or not.
 
 Watch this video to learn how to integrate Power Apps app with Azure Active Directory:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DW]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9fabda9a-e9b5-43af-addd-a27d3f381f18]
 
 ## Prerequisites
 
@@ -112,7 +111,7 @@ We'll create an app with a button that will only show up if the user is a member
 
 1. Enter the following formula for the app OnStart:
 
-    ```powerapps-dot
+    ```power-fx
     If(
         !IsEmpty(
             AzureAD.CheckMemberGroups(
@@ -164,25 +163,12 @@ The admin access button is now visible on Screen 2, and the label shows admin le
 
 ## See Azure AD integration in action
 
-You can see an example of Azure AD integration in the **Profile+** sample app for Teams.
+You can see an example of Azure AD integration in the **Profile+** sample app template for Teams.
 
 ![See Active Directory integration in action](media/integrate-with-azure-active-directory/see-active-directory-integration-in-action-1.png "See Active Directory integration in action")
 
 - **Office 365 Users** connector is used to retrieve the user profile, including name, photo, manager, and other details.
 - **Office 365 Groups** connector is used to retrieve the people who report to a selected user.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

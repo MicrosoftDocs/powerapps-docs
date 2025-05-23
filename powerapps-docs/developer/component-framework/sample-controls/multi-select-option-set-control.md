@@ -1,13 +1,16 @@
 ---
-title: " Multi Select OptionSet component| Microsoft Docs" 
+title: "Multi Select OptionSet component| Microsoft Docs" 
 description: "This sample demonstrates how to leverage the multi select option set type on properties of field components." 
-ms.custom: ""
-ms.author: jdaly
-author: noazarur-microsoft
-manager: kvivek
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 # Implementing  choices (multi select option set) component
 
@@ -36,11 +39,11 @@ This component renders a standard `select` element, with options for each value 
 
 For MultiSelectOptionSets, each option has a display name for the value as well as a numerical value associated with it. To track the currently selected options, the control maintains an array of the value's of all the currently selected options. This method is to align with what PCF expects back from the control for MultiSelectOptionSet in `getOutputs`.
 
-The `getOutputs` method simply returns the currently selected set of values back to the framework for it to update. In `updateView` method, the component simply updates the content of the `selected options` text label to align with the newest value received from the framework through the MultiSelectOptionSet properyt’s formatted value.
+The `getOutputs` method simply returns the currently selected set of values back to the framework for it to update. In `updateView` method, the component simply updates the content of the `selected options` text label to align with the newest value received from the framework through the MultiSelectOptionSet properyt's formatted value.
 
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

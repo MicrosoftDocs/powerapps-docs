@@ -5,16 +5,12 @@ ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: concept-article
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Authenticating .NET applications
@@ -55,7 +51,7 @@ If you prefer to not have a dependency on any SDK assemblies, you can also use t
 
 The SDK APIs available in [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) and other "crmsdk" owned NuGet packages do not support .NET Core code development.
 
-For .NET Core application development there is a `DataverseServiceClient` class, currently in preview release, that is patterned after the `CrmServiceClient` class mentioned previously. You can download the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) package from Nuget.org to begin using this new service client class in your applications. Documentation and sample code for the `DataverseServiceClient` and related classes will be made available in a future documentation release.
+For .NET Core application development there is a `DataverseServiceClient` class, that is patterned after the `CrmServiceClient` class mentioned previously. You can download the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) package from Nuget.org to begin using this new service client class in your applications. Documentation and sample code for the `DataverseServiceClient` and related classes will be made available in a future documentation release.
 
 To update existing .NET Framework based application code that uses `CrmServiceClient`, begin by substituting the `DataverseServiceClient` class for `CrmServiceClient` in your code. You will need to set the project type to build a .NET Core application, remove any .NET Framework specific references and NuGet packages, and then add the Microsoft.PowerPlatform.Dataverse.Client package to the project.
 

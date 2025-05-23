@@ -1,21 +1,16 @@
 ---
-title: "getFetchXml (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getFetchXml (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getFetchXml method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 06/29/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
-  - ProfessorKendrick
 ---
 # getFetchXml (Client API reference)
 
@@ -47,15 +42,13 @@ The following example displays the retrieved Fetch XML of the Contacts subgrid i
 function myFunction(executionContext) {
     var formContext = executionContext.getFormContext(); // get the form context
     var gridContext = formContext.getControl("Contacts"); // get the grid context
-    var retrieveFetchXML = function () {
-        var result = gridContext.getFetchXml();
+    var retrieveFetchXML = function (exeCtx) {
+        var gridCtx = exeCtx.getFormContext().getControl("Contacts");
+        var result = gridCtx.getFetchXml();
         console.log(result)
     };
-    gridContext.addOnLoad(retrieveFetchXML);    
+    gridContext.addOnLoad(retrieveFetchXML);
 }
 ```
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

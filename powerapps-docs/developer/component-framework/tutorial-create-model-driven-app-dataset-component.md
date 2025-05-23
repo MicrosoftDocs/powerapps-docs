@@ -1,9 +1,8 @@
 ---
 title: "Create a model-driven app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: tutorial
@@ -45,7 +44,7 @@ Firstly, download the [sample code](https://github.com/microsoft/PowerApps-Sampl
 npm install
 ```
 
-Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using `pac auth`.
+Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial: Deploy and configure the component](tutorial-create-canvas-dataset-component.md#deploy-and-configure-the-component). Also, make sure that you have authenticated against Microsoft Dataverse using [pac auth](/power-platform/developer/cli/reference/auth).
 
 At the terminal, use:
 
@@ -167,7 +166,7 @@ Once configured on a subgrid, it will look similar to the following:
 
 ### Related articles
 
-[Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring)<br/>
+[Creating a canvas app dataset component tutorial: Deploy and configure the component](tutorial-create-canvas-dataset-component.md#deploy-and-configure-the-component)<br/>
 [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Create your first component](implementing-controls-using-typescript.md)<br/>

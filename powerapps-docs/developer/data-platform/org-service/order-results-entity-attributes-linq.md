@@ -2,16 +2,12 @@
 title: "Order results using table columns with LINQ (Microsoft Dataverse) | Microsoft Docs" 
 description: "Read how you can use lookup or choices (picklist) columns to order results within a LINQ query."
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
-manager: pemikkel
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: how-to
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -75,7 +71,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 ### See also
 
- [Build queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
+ [Build queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)
  [Page large result sets with LINQ](page-large-result-sets-linq.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

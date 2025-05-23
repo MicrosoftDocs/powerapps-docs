@@ -1,19 +1,15 @@
 ---
-title: "Controls collection (Client API reference)| MicrosoftDocs"
+title: "Controls collection (Client API reference)"
 description: "Learn about how to access controls associated with columns."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -28,11 +24,8 @@ When a form displays a business process flow control in the header, additional c
 
 When performing actions on controls that are tied to a column, you should always consider that the control may be included on the page more than once and you should generally perform the same actions for each control for the column. You can do this by looping through the column controls collection and perform the actions on each control.
 
-### Related topics
+### Related articles
 
 [Columns (Client API reference)](../attributes.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

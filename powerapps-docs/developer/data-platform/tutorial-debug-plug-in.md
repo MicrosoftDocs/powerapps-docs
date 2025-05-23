@@ -3,16 +3,12 @@ title: "Tutorial: Debug a plug-in (Microsoft Dataverse) | Microsoft Docs" # Inte
 description: "The second of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.topic: tutorial
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---

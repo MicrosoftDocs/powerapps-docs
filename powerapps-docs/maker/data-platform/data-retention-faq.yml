@@ -1,0 +1,118 @@
+### YamlMime:FAQ
+metadata:
+  title: Frequently asked questions about long term data retention with Dataverse
+  description: Get answers to frequently asked questions about long term retention with Dataverse.
+  author: Mattp123
+  ms.search.keywords: 
+  ms.date: 04/11/2025
+  ms.author: matp
+  ms.reviewer: 
+  contributors: gned
+  ms.topic: faq
+  ms.subservice: dataverse-maker
+title: Dataverse long term data retention FAQ
+summary: This article provides information on frequently asked questions about long term data retention with Microsoft Dataverse.
+sections:
+- name: General
+  questions:
+   - question: Can a data retention policy be set only on a particular table and not the related tables?
+     answer: |
+       No. Admins can set up a retention policy on a root table, such as the Dynamics 365 apps accounts table. Dataverse automatically sets all related child tables for data retention. So if the account row has related task rows, all task rows are also set for data retention. 
+       Admins can always set up a retention policy on a specific table with no related tables.
+
+   - question: What about my existing custom Dataverse native delete action logic to ensure business rules are followed when any live data is deleted?
+     answer: |
+        All custom logic with Dataverse native delete actions are always honored during the data retention process. 
+
+   - question: Why can't I view some data in a table while a particular policy is being executed in the background that was a part of the policy criteria?
+     answer: |
+        Until all records are purged, records are available for viewing. Retention is a multi-step process that includes reconciliation to confirm that all the records within the criteria are retained for long-term before delete from Dataverse. <b>We recommend that you set up long term retention only for nonactive records, or records that aren't actively required for your business operations.</b> 
+
+   - question: If a policy run has errors, are the errors available for admin to view?
+     answer: |
+        Yes. Errors from a policy run are available in the run history details. More information: data-retention-manage.md#view-and-manage-retention-policies
+
+   - question: Will Dataverse schema changes be handled by Dataverse long term retention? What if a maker adds custom columns or deletes columns to tables that have existing retained data in Dataverse long term retention?
+     answer: |
+        The changes are reflected in the long term retained data. When retention policies run, the new custom columns contain data for the new rows. The data that was retained prior to these changes won't have any value in these columns. If a column is deleted in the live table, the column remains in the long term retained data with a value for all new rows.
+
+   - question: What if a maker adds custom child tables?
+     answer: |
+        Dataverse long term retention ensures that the new child tables are a part of the next retention policy run. 
+
+   - question: Can a retention policy run be stopped?
+     answer: | 
+         No. A policy being executed currently can't be stopped.
+
+   - question: Will running data retention jobs impact the performance of my business applications?
+     answer: |
+         No. Data retention jobs are a background process with secondary priority to your apps.
+
+   - question: Are there any limits on how many records can be retained in a single policy?
+     answer: |
+         No. While running a policy one-time is an option, we recommend you set up policies that run on a recurring basis to ensure historical data is efficiently managed. 
+        
+   - question: How long will a policy run take to complete?
+     answer: |
+        Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting the live application processes. The policy run can take from three or four days up to two weeks for very large data volumes. An option is to schedule long term retention policy runs on a regular cadence like monthly or quarterly, unless the scenario absolutely requires longer durations, such as yearly schedules. 
+
+   - question: Where can I view the capacity savings?
+     answer: |
+        The [Power Platform capacity reports](data-retention-overview.md#storage-capacity-reports) displays the total capacity consumed. The reduction in database capacity consumed, after running a Dataverse long term retention policy, depends on the number of rows and column data types involved in the retention process. For production environments, the reports could take a few days to a week to reflect the fully reduced savings. For nonproduction environments, the reports could take up to two weeks to reflect the savings.
+   - question: What is expected for the performance when accessing retained nonactive data from Dataverse?
+     answer: |
+        Retained data reads are significantly slower than live data reads. Notice that long term data retention isn't a feature for transactional operations, but should be used for rarely accessed data required for compliance.
+
+   - question: Are data retention policies solution aware?
+     answer: |
+        Yes. You can create a solution and add the policy from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
+
+   - question: Is the audit table supported for long term retention? 
+     answer: | 
+       No, the audit table isn't currently supported for long term retention. 
+   
+   - question: In which regions is Dataverse long term retention available? 
+     answer: | 
+       The feature is currently available in all public cloud regions. GCC, GCC High, and DOD aren't currently supported.  
+
+   - question: Can data be moved from Dataverse long term store to my own data lake?
+     answer: |
+        This isn't currently supported. 
+
+   - question: Does Dataverse long term retention support Dual Write apps?
+     answer: |
+        This isn't currently supported.
+
+   - question: Can the one Dataverse connector be used with Power BI for reporting long term retained data?
+     answer: |
+        This isn't supported. However you can access live and retained data with Microsoft Fabric and build Power BI reports.
+
+   - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
+     answer: |
+         No.
+         
+   - question: I use Azure Synapse Link. Does retaining data with Dataverse long term retention remove the retained data from my own data lake?
+     answer: |
+         No. You can create an [Azure Synapse Link](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse) for Dataverse to move all of the application data into your own data lake. Then set up a long term retention policy to retain data. Dataverse long term retention doesn't delete retained data already in your own data lake. Dataverse APIs are available to [delete retained data](data-retention-manage.md#bulk-delete-long-term-retained-data) from Dataverse long term retention. This capability is the same for all Dynamics 365 customers including finance and operations applications. 
+
+   - question: Do retention policy runs consume API requests?
+     answer: |
+        Yes. When a retention policy runs, the process makes API requests to Microsoft Power Platform. These requests are counted towards your available API request limits.
+
+   - question: Is  customer managed key supported for long term retained data?
+     answer: |
+        No, currently long term data retention isn't supported for customer manged key enabled environments.
+
+   - question: Why is the status of my Dataverse long term policy deactivated by default when I create a new Dataverse long term retention policy?
+     answer: |
+        Your environment doesn't meet the licensing criteria. More information: [Data retention overview](data-retention-overview.md) Contact your account manager to discuss options on licensing.
+
+   - question: I used Dataverse long term retention during the public preview phase without meeting the current licensing requirement. Will my tenant and environment still be able to use Dataverse long term retention?
+     answer: |
+        Yes. Since your tenant and environment participated in the public preview, Dataverse long term retention is being made available for continued use.  
+
+   - question: Can multiple long-term retention policies run simultaneously?
+     answer: |
+        You can schedule multiple retention policies, however only one policy is executed at a time.  
+
+                              

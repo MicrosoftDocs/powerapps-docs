@@ -1,51 +1,45 @@
 ---
-title: "EntityRelationship table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the EntityRelationship table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Entity Relationship (EntityRelationship) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Entity Relationship (EntityRelationship) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# EntityRelationship table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
+# Entity Relationship (EntityRelationship) table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entityrelationships<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Entity Relationship (EntityRelationship) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `RetrieveMultiple`<br />Event: False |`GET` /entityrelationships<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|EntityRelationships|
-|DisplayCollectionName|Entity Relationships|
-|DisplayName|Entity Relationship|
-|EntitySetName|entityrelationships|
-|IsBPFEntity|False|
-|LogicalCollectionName|entityrelationships|
-|LogicalName|entityrelationship|
-|OwnershipType|None|
-|PrimaryIdAttribute|entityrelationshipid|
-|PrimaryNameAttribute|schemaname|
-|SchemaName|EntityRelationship|
+The following table lists selected properties for the Entity Relationship (EntityRelationship) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Entity Relationship** |
+| **DisplayCollectionName** | **Entity Relationships** |
+| **SchemaName** | `EntityRelationship` |
+| **CollectionSchemaName** | `EntityRelationships` |
+| **EntitySetName** | `entityrelationships`|
+| **LogicalName** | `entityrelationship` |
+| **LogicalCollectionName** | `entityrelationships` |
+| **PrimaryIdAttribute** | `entityrelationshipid` |
+| **PrimaryNameAttribute** |`schemaname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -54,123 +48,116 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityRelationshipId](#BKMK_EntityRelationshipId)
 - [SchemaName](#BKMK_SchemaName)
 
-
 ### <a name="BKMK_EntityRelationshipId"></a> EntityRelationshipId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the entity relationship.|
-|DisplayName|Entity Relationship|
+|---|---|
+|Description|**Unique identifier of the entity relationship.**|
+|DisplayName|**Entity Relationship**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|entityrelationshipid|
+|LogicalName|`entityrelationshipid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
 
 |Property|Value|
-|--------|-----|
-|Description|The name of this Entity Relationship.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of this Entity Relationship.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|schemaname|
-|MaxLength|100|
+|LogicalName|`schemaname`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-<a name="onetomany"></a>
+## One-to-Many relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
+These relationships are one-to-many. Listed by **SchemaName**.
 
 ### <a name="BKMK_entityrelationship_config"></a> entityrelationship_config
 
-**Added by**: Solution Component Configuration Solution
-
-Same as the [entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config) many-to-one relationship for the [solutioncomponentrelationshipconfiguration](solutioncomponentrelationshipconfiguration.md) table/entity.
+Many-To-One Relationship: [solutioncomponentrelationshipconfiguration entityrelationship_config](solutioncomponentrelationshipconfiguration.md#BKMK_entityrelationship_config)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|solutioncomponentrelationshipconfiguration|
-|ReferencingAttribute|entityrelationshipid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|entityrelationship_config|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|---|---|
+|ReferencingEntity|`solutioncomponentrelationshipconfiguration`|
+|ReferencingAttribute|`entityrelationshipid`|
+|ReferencedEntityNavigationPropertyName|`entityrelationship_config`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.entityrelationship?text=entityrelationship EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.entityrelationship?displayProperty=fullName>

@@ -1,23 +1,18 @@
 ---
 title: "Use the lookup column on a row | MicrosoftDocs"
 description: How to use the lookup column in Power Apps
-author: mduelae
-manager: kvivek
-
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 08/01/2021
 ms.subservice: end-user
-ms.author: mkaur
-ms.reviewer: ""
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-#  Use the lookup column on a row
+# Use the lookup column on a row
 
 Lookup helps you to choose rows from a related table. When you select a related table and enter search criteria, such as a name or email address, lookup automatically begins to resolve the partial text and displays any matching rows. If no rows are displayed after you have typed the full text of your search criteria, a message is displayed specifying that there are no rows.
 
@@ -167,6 +162,8 @@ Legend
 6. **Only my records**: Select to only show rows that you own.
 7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
 
+> [!WARNING]
+> Advanced lookup isn't available with offline scenarios. The **Advanced lookup** button is replaced by a **Change view** button when the user is offline.  
 
 ### Regarding advanced lookup
 

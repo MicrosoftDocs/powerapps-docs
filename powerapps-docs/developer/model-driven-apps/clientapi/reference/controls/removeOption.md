@@ -1,24 +1,20 @@
 ---
-title: "removeOption (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOption (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOption method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # removeOption (Client API reference)
 
-Removes an option from a control. 
+Removes an option from a control.
 
 ## Control types supported
 
@@ -31,18 +27,13 @@ choice, choices
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
-|value |Number |Yes|The value of the option you want to remove.|
+|----|----|----|----|
+|`value` |Number |Yes|The value of the option you want to remove.|
 
-### Related topics
+### Related articles
 
-[addOption](addOption.md)
-
+[addOption](addOption.md)   
 [clearOptions](clearOptions.md)
-
- 
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

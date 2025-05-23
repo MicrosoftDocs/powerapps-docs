@@ -1,26 +1,19 @@
 ---
-title: "formContext.data.process (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.data.process (Client API reference) in model-driven apps"
 description: "Provides events, methods, and objects to interact with the business process flow data on a form."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # formContext.data.process (Client API reference)
-
-
 
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
 
@@ -135,17 +128,11 @@ Use these methods to find information about the stages in the active path, enabl
 |[getEnabledProcesses](formContext-data-process/getEnabledProcesses.md)|[!INCLUDE[formcontext-data-process/includes/getEnabledProcesses-description.md](formcontext-data-process/includes/getEnabledProcesses-description.md)]|
 |[getSelectedStage](formContext-data-process/getSelectedStage.md)|[!INCLUDE[formcontext-data-process/includes/getSelectedStage-description.md](formcontext-data-process/includes/getSelectedStage-description.md)]|
 
-### Related topics
+### Related articles
 
-[formContext.ui.process (Client API reference)](formContext-ui-process.md)
-
-[Understand Xrm object model](../understand-clientapi-object-model.md)
-
+[formContext.ui.process (Client API reference)](formContext-ui-process.md)   
+[Understand Xrm object model](../understand-clientapi-object-model.md)   
 [Controls (Client API reference)](controls.md)
-
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

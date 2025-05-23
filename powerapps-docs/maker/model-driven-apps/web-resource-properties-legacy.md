@@ -9,15 +9,11 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 06/10/2022
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # View and edit web resource properties for model-driven app forms
 

@@ -1,17 +1,13 @@
 ---
-title: "Work with column definitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes common operations on column definitions (attribute metadata)." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "NHelgren" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+title: "Work with column definitions (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes common operations on column definitions (attribute metadata)."
+ms.date: 12/12/2022
+ms.reviewer: jdaly
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -31,57 +27,59 @@ This topic describes a number of common operations that can be applied to column
   
  The following code sample defines the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a number of different types of columns and adds them to a `List<AttributeMetadata>`. At the end of the code the column definitions are passed to an instance of the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> class and the column is created using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.  
   
- The following sample code assumes that the current customization prefix is ‘new’ because that is the default customization prefix for the organization solution publisher. You should use the customization prefix for the solution publisher that makes sense for your solution context.  
+ The following sample code assumes that the current customization prefix is 'new' because that is the default customization prefix for the organization solution publisher. You should use the customization prefix for the solution publisher that makes sense for your solution context.  
 
 ```csharp
-// Create storage for new attributes being created
-addedAttributes = new List<AttributeMetadata>();
+// Create storage for new  being created
+var addedColumns = new List<AttributeMetadata>();
+int languageCode = 1033; //English
 
-// Create a boolean attribute
-BooleanAttributeMetadata boolAttribute = new BooleanAttributeMetadata
+
+// Create a yes/no column
+var boolColumn = new BooleanAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Boolean",
     LogicalName = "new_boolean",
-    DisplayName = new Label("Sample Boolean", _languageCode),
+    DisplayName = new Label("Sample Boolean", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Boolean Attribute", _languageCode),
+    Description = new Label("Boolean Column", languageCode),
     // Set extended properties
     OptionSet = new BooleanOptionSetMetadata(
-        new OptionMetadata(new Label("True", _languageCode), 1),
-        new OptionMetadata(new Label("False", _languageCode), 0)
+        new OptionMetadata(new Label("True", languageCode), 1),
+        new OptionMetadata(new Label("False", languageCode), 0)
         )
 };
 
 // Add to list
-addedAttributes.Add(boolAttribute);
+addedColumns.Add(boolColumn);
 
-// Create a date time attribute
-DateTimeAttributeMetadata dtAttribute = new DateTimeAttributeMetadata
+// Create a date time column
+var dateTimeColumn = new DateTimeAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Datetime",
     LogicalName = "new_datetime",
-    DisplayName = new Label("Sample DateTime", _languageCode),
+    DisplayName = new Label("Sample DateTime", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("DateTime Attribute", _languageCode),
+    Description = new Label("DateTime Column", languageCode),
     // Set extended properties
     Format = DateTimeFormat.DateOnly,
     ImeMode = ImeMode.Disabled
 };
 
 // Add to list
-addedAttributes.Add(dtAttribute);
+addedColumns.Add(dateTimeColumn);
 
-// Create a decimal attribute	
-DecimalAttributeMetadata decimalAttribute = new DecimalAttributeMetadata
+// Create a decimal column   
+var decimalColumn = new DecimalAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Decimal",
     LogicalName = "new_decimal",
-    DisplayName = new Label("Sample Decimal", _languageCode),
+    DisplayName = new Label("Sample Decimal", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Decimal Attribute", _languageCode),
+    Description = new Label("Decimal Column", languageCode),
     // Set extended properties
     MaxValue = 100,
     MinValue = 0,
@@ -89,17 +87,17 @@ DecimalAttributeMetadata decimalAttribute = new DecimalAttributeMetadata
 };
 
 // Add to list
-addedAttributes.Add(decimalAttribute);
+addedColumns.Add(decimalColumn);
 
-// Create a integer attribute	
-IntegerAttributeMetadata integerAttribute = new IntegerAttributeMetadata
+// Create a integer column   
+var integerColumn = new IntegerAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Integer",
     LogicalName = "new_integer",
-    DisplayName = new Label("Sample Integer", _languageCode),
+    DisplayName = new Label("Sample Integer", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Integer Attribute", _languageCode),
+    Description = new Label("Integer Column", languageCode),
     // Set extended properties
     Format = IntegerFormat.None,
     MaxValue = 100,
@@ -107,17 +105,17 @@ IntegerAttributeMetadata integerAttribute = new IntegerAttributeMetadata
 };
 
 // Add to list
-addedAttributes.Add(integerAttribute);
+addedColumns.Add(integerColumn);
 
-// Create a memo attribute 
-MemoAttributeMetadata memoAttribute = new MemoAttributeMetadata
+// Create a memo column 
+var memoColumn = new MemoAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Memo",
     LogicalName = "new_memo",
-    DisplayName = new Label("Sample Memo", _languageCode),
+    DisplayName = new Label("Sample Memo", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Memo Attribute", _languageCode),
+    Description = new Label("Memo Column", languageCode),
     // Set extended properties
     Format = StringFormat.TextArea,
     ImeMode = ImeMode.Disabled,
@@ -125,17 +123,17 @@ MemoAttributeMetadata memoAttribute = new MemoAttributeMetadata
 };
 
 // Add to list
-addedAttributes.Add(memoAttribute);
+addedColumns.Add(memoColumn);
 
-// Create a money attribute	
-MoneyAttributeMetadata moneyAttribute = new MoneyAttributeMetadata
+// Create a money column   
+var moneyColumn = new MoneyAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Money",
     LogicalName = "new_money",
-    DisplayName = new Label("Money Picklist", _languageCode),
+    DisplayName = new Label("Sample Money", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Money Attribue", _languageCode),
+    Description = new Label("Money Column", languageCode),
     // Set extended properties
     MaxValue = 1000.00,
     MinValue = 0.00,
@@ -145,18 +143,18 @@ MoneyAttributeMetadata moneyAttribute = new MoneyAttributeMetadata
 };
 
 // Add to list
-addedAttributes.Add(moneyAttribute);
+addedColumns.Add(moneyColumn);
 
-// Create a picklist attribute	
-PicklistAttributeMetadata pickListAttribute =
+// Create a choice column   
+var picklistColumn =
     new PicklistAttributeMetadata
     {
         // Set base properties
         SchemaName = "new_Picklist",
         LogicalName = "new_picklist",
-        DisplayName = new Label("Sample Picklist", _languageCode),
+        DisplayName = new Label("Sample Picklist", languageCode),
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-        Description = new Label("Picklist Attribute", _languageCode),
+        Description = new Label("Picklist Attribute", languageCode),
         // Set extended properties
         // Build local picklist options
         OptionSet = new OptionSetMetadata
@@ -164,82 +162,93 @@ PicklistAttributeMetadata pickListAttribute =
             IsGlobal = false,
             OptionSetType = OptionSetType.Picklist,
             Options =
-        {
-            new OptionMetadata(
-                new Label("Created", _languageCode), null),
-            new OptionMetadata(
-                new Label("Updated", _languageCode), null),
-            new OptionMetadata(
-                new Label("Deleted", _languageCode), null)
-        }
+            {
+               new OptionMetadata(
+                  new Label("Created", languageCode), null),
+               new OptionMetadata(
+                  new Label("Updated", languageCode), null),
+               new OptionMetadata(
+                  new Label("Deleted", languageCode), null)
+            }
         }
     };
 
 // Add to list
-addedAttributes.Add(pickListAttribute);
+addedColumns.Add(picklistColumn);
 
-// Create a string attribute
-StringAttributeMetadata stringAttribute = new StringAttributeMetadata
+// Create a string column
+var stringColumn = new StringAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_String",
     LogicalName = "new_string",
 
-    DisplayName = new Label("Sample String", _languageCode),
+    DisplayName = new Label("Sample String", languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("String Attribute", _languageCode),
+    Description = new Label("String Column", languageCode),
     // Set extended properties
     MaxLength = 100
 };
 
 // Add to list
-addedAttributes.Add(stringAttribute);
+addedColumns.Add(stringColumn);
 
-//Multi-select attribute requires version 9.0 or higher.
+//Multi-select column requires version 9.0 or higher.
 if (_productVersion > new Version("9.0"))
 {
 
-    // Create a multi-select optionset
-    MultiSelectPicklistAttributeMetadata multiSelectOptionSetAttribute = new MultiSelectPicklistAttributeMetadata()
+    // Create a multi-select Choices column
+    var multiSelectChoiceColumn = new MultiSelectPicklistAttributeMetadata()
     {
         SchemaName = "new_MultiSelectOptionSet",
         LogicalName = "new_multiselectoptionset",
-        DisplayName = new Label("Multi-Select OptionSet", _languageCode),
+        DisplayName = new Label("Choices column", languageCode),
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-        Description = new Label("Multi-Select OptionSet description", _languageCode),
+        Description = new Label("Choices columndescription", languageCode),
         OptionSet = new OptionSetMetadata()
         {
             IsGlobal = false,
             OptionSetType = OptionSetType.Picklist,
             Options = {
-        new OptionMetadata(new Label("First Option",_languageCode),null),
-        new OptionMetadata(new Label("Second Option",_languageCode),null),
-        new OptionMetadata(new Label("Third Option",_languageCode),null)
-        }
+               new OptionMetadata(new Label("First Option",languageCode),null),
+               new OptionMetadata(new Label("Second Option",languageCode),null),
+               new OptionMetadata(new Label("Third Option",languageCode),null)
+            }
         }
     };
     // Add to list
-    addedAttributes.Add(multiSelectOptionSetAttribute);
+    addedColumns.Add(multiSelectChoiceColumn);
+
+    // Create a BigInt column
+    var bigIntColumn = new BigIntAttributeMetadata
+    {
+        // Set base properties
+        SchemaName = "new_BigInt",
+        LogicalName = "new_bigint",
+        DisplayName = new Label("Sample Big Int", languageCode),
+        RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
+        Description = new Label("Big Int Column", languageCode)
+       
+
+    };
+    // Add to list
+    addedColumns.Add(bigIntColumn);
+
 }
 
-// NOTE: LookupAttributeMetadata cannot be created outside the context of a relationship.
-// Refer to the WorkWithRelationships.cs reference SDK sample for an example of this attribute type.
-
-// NOTE: StateAttributeMetadata and StatusAttributeMetadata cannot be created via the SDK.
-
-foreach (AttributeMetadata anAttribute in addedAttributes)
+foreach (AttributeMetadata aColumn in addedColumns)
 {
     // Create the request.
-    CreateAttributeRequest createAttributeRequest = new CreateAttributeRequest
+    var createAttributeRequest = new CreateAttributeRequest
     {
         EntityName = Contact.EntityLogicalName,
-        Attribute = anAttribute
+        Attribute = aColumn
     };
 
-    // Execute the request.
-    _serviceProxy.Execute(createAttributeRequest);
+    // Execute the request using IOrganizationService instance
+    service.Execute(createAttributeRequest);
 
-    Console.WriteLine("Created the attribute {0}.", anAttribute.SchemaName);
+    Console.WriteLine($"Created the {aColumn.SchemaName} column.");
 }
 ```
 
@@ -247,7 +256,7 @@ foreach (AttributeMetadata anAttribute in addedAttributes)
 
 ## Retrieve a column
 
- This code sample shows how to retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a column using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>. This sample retrieves the definition for a custom <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column called ‘new_string’ from the Contact table that was created in [Create columns](#BKMK_CreateAttributes).
+ This code sample shows how to retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a column using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>. This sample retrieves the definition for a custom <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column called 'new_string' from the Contact table that was created in [Create columns](#BKMK_CreateAttributes).
   
 > [!NOTE]
 > Because <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest.RetrieveAsIfPublished> is true, this request returns the current unpublished definition of this column. You might use this if you are creating a column editor and you want to retrieve the unpublished definition of the column. Otherwise, you should not specify `RetrieveAsIfPublished`. More information: [Retrieving unpublished definitions](/dynamics365/customer-engagement/developer/customize-dev/publish-customizations#retrieving-unpublished-metadata).  
@@ -261,9 +270,9 @@ RetrieveAttributeRequest attributeRequest = new RetrieveAttributeRequest
     RetrieveAsIfPublished = true
 };
 
-// Execute the request
+// Execute the request using IOrganizationService instance
 RetrieveAttributeResponse attributeResponse =
-    (RetrieveAttributeResponse)_serviceProxy.Execute(attributeRequest);
+    (RetrieveAttributeResponse)service.Execute(attributeRequest);
 
 Console.WriteLine("Retrieved the attribute {0}.",
     attributeResponse.AttributeMetadata.SchemaName);
@@ -280,7 +289,7 @@ Console.WriteLine("Retrieved the attribute {0}.",
 AttributeMetadata retrievedAttributeMetadata =
     attributeResponse.AttributeMetadata;
 retrievedAttributeMetadata.DisplayName =
-    new Label("Update String Attribute", _languageCode);
+    new Label("Update String Attribute", 1033); // English
 
 // Update an attribute retrieved via RetrieveAttributeRequest
 UpdateAttributeRequest updateRequest = new UpdateAttributeRequest
@@ -290,8 +299,8 @@ UpdateAttributeRequest updateRequest = new UpdateAttributeRequest
     MergeLabels = false
 };
 
-// Execute the request
-_serviceProxy.Execute(updateRequest);
+// Execute the request using IOrganizationService instance
+service.Execute(updateRequest);
 
 Console.WriteLine("Updated the attribute {0}.",
     retrievedAttributeMetadata.SchemaName);
@@ -338,7 +347,8 @@ CreateOneToManyRequest req = new CreateOneToManyRequest()
         SchemaName = "new_lead_new_bankaccount"
     }
 };
-_serviceProxy.Execute(req);
+// Execute the request using IOrganizationService instance
+service.Execute(req);
 ```
 
 <a name="BKMK_createcustlookup"></a>
@@ -373,7 +383,8 @@ CreateCustomerRelationshipsRequest createCustomerReq = new CreateCustomerRelatio
         }
     },
 };
-_serviceProxy.Execute(createCustomerReq);
+// Execute the request using IOrganizationService instance
+service.Execute(createCustomerReq);
 ```
 
 <a name="BKMK_CreatePicklistGlobalOptionSet"></a>
@@ -394,7 +405,7 @@ CreateAttributeRequest createRequest = new CreateAttributeRequest
     {
         SchemaName = "sample_examplepicklist",
         LogicalName = "sample_examplepicklist",
-        DisplayName = new Label("Example Picklist", _languageCode),
+        DisplayName = new Label("Example Picklist", 1033), //English
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
 
         // In order to relate the picklist to the global option set, be sure
@@ -407,8 +418,8 @@ CreateAttributeRequest createRequest = new CreateAttributeRequest
         }
     }
 };
-
-_serviceProxy.Execute(createRequest);
+// Execute the request using IOrganizationService instance
+service.Execute(createRequest);
 ```
 
 <a name="BKMK_InsertNewStatusValue"></a>
@@ -430,13 +441,13 @@ InsertStatusValueRequest insertStatusValueRequest =
 {
     AttributeLogicalName = "statuscode",
     EntityLogicalName = Contact.EntityLogicalName,
-    Label = new Label("Dormant", _languageCode),
+    Label = new Label("Dormant", 1033), //English
     StateCode = 0
 };
 
-// Execute the request and store newly inserted value 
+// Execute the request using IOrganizationService instance and store newly inserted value 
 // for cleanup, used later part of this sample. 
-_insertedStatusValue = ((InsertStatusValueResponse)_serviceProxy.Execute(
+_insertedStatusValue = ((InsertStatusValueResponse)service.Execute(
     insertStatusValueRequest)).NewOptionValue;
 
 Console.WriteLine("Created {0} with the value of {1}.",
@@ -460,11 +471,11 @@ UpdateStateValueRequest updateStateValue = new UpdateStateValueRequest
     AttributeLogicalName = "statecode",
     EntityLogicalName = Contact.EntityLogicalName,
     Value = 1,
-    Label = new Label("Open", _languageCode)
+    Label = new Label("Open", 1033) //English
 };
 
-// Execute the request.
-_serviceProxy.Execute(updateStateValue);
+// Execute the request using IOrganizationService instance
+service.Execute(updateStateValue);
 
 Console.WriteLine(
     "Updated {0} state attribute of {1} entity from 'Active' to '{2}'.",
@@ -489,11 +500,11 @@ InsertOptionValueRequest insertOptionValueRequest =
 {
     AttributeLogicalName = "new_picklist",
     EntityLogicalName = Contact.EntityLogicalName,
-    Label = new Label("New Picklist Label", _languageCode)
+    Label = new Label("New Picklist Label", 1033) //English
 };
 
-// Execute the request.
-int insertOptionValue = ((InsertOptionValueResponse)_serviceProxy.Execute(
+// Execute the request using IOrganizationService instance
+int insertOptionValue = ((InsertOptionValueResponse)service.Execute(
     insertOptionValueRequest)).NewOptionValue;
 
 Console.WriteLine("Created {0} with the value of {1}.",
@@ -520,9 +531,9 @@ RetrieveAttributeRequest retrieveAttributeRequest =
     RetrieveAsIfPublished = true
 };
 
-// Execute the request.
+// Execute the request using IOrganizationService instance
 RetrieveAttributeResponse retrieveAttributeResponse =
-    (RetrieveAttributeResponse)_serviceProxy.Execute(
+    (RetrieveAttributeResponse)service.Execute(
     retrieveAttributeRequest);
 
 // Access the retrieved attribute.
@@ -557,8 +568,8 @@ OrderOptionRequest orderOptionRequest = new OrderOptionRequest
     Values = updateOptionList.Select(x => x.Value.Value).ToArray()
 };
 
-// Execute the request
-_serviceProxy.Execute(orderOptionRequest);
+// Execute the request using IOrganizationService instance
+service.Execute(orderOptionRequest);
 
 Console.WriteLine("Option Set option order changed");
 ```
@@ -580,8 +591,8 @@ foreach (AttributeMetadata anAttribute in addedAttributes)
         EntityLogicalName = Contact.EntityLogicalName,
         LogicalName = anAttribute.SchemaName
     };
-    // Execute the request
-    _serviceProxy.Execute(deleteAttribute);
+    // Execute the request using IOrganizationService instance
+    service.Execute(deleteAttribute);
 }
 ```
 

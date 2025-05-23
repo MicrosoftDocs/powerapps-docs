@@ -1,29 +1,27 @@
 ---
 title: Run apps in a web browser | Microsoft Docs
 description: In this topic, you learn how to run apps in a web browser
-author: mduelae
-
+author: shwetamurkute
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/14/2022
+ms.date: 06/05/2024
 ms.subservice: end-user
-ms.author: mkaur
-manager: "kvivek"
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- brsova
+- amchern 
 ---
 
 # Run an app in a web browser
 
 When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md) or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
-For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [Required privileges and supported devices](../mobile/run-powerapps-on-mobile.md#required-privileges-and-supported-devices).
+For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). If you don't have the Power Apps mobile app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [Required privileges and supported devices](../mobile/run-powerapps-on-mobile.md#required-privileges-and-supported-devices).
 
 > [!NOTE]
 > Using the web browser on your phone to run your model-driven apps isn't supported; you must use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
@@ -38,10 +36,36 @@ To follow this quickstart, you need:
 Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Business Apps** to launch your business app that you have access to.
-
+The Home page may show several types of business apps. 
 
 ![Busines Apps.](media/bussinessapps.png)
+
+The list of Office apps is a limited, curated list based on the following criteria:
+
+- Apps that you launched in the last week.
+- Apps that you created. 
+- Apps your admin marked as **Featured** in your tenant.
+- First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access and are hosted in production or default environments.
+
+> [!NOTE]
+> Marking an app as **Featured** is the only way to guarantee inclusion in the list.
+
+### Known limitations
+- When a new app is shared with users, the app needs to meet the criteria listed above. It can take up to 24 hours for the app to appear in the list of **Office** apps.
+- Some model-driven apps aren't recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Featured apps only appear to users who have access to the apps. Featured apps don't appear to all users.
+- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users won't be able to see model-driven apps that they have access to.
+- It can take up to a week for users to start seeing the new URL after an org URL update.
+- In the case of model-driven apps, changes made only to the icon may not be reflected. Until this issue is resolved, changing another property, like description, causes the icon to be updated.
+
+### What if I can't find an app?
+
+Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
+
+1. To find the web link for an app, sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com) or [Power Apps](https://make.powerapps.com).
+2. Find the app that you're looking for.
+3. Across the app name, select (...) **More Commands** > **Details**.
+4. From the **Details** tab copy the **Web link**.
+5. Paste the web link in a browser window to launch the app.
 
 The Microsoft 365 apps page has a different URL per cloud. 
 
@@ -75,6 +99,7 @@ To sign out of the Microsoft 365 apps page, select your profile image and then s
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
 - run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
 - use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
+- mark an app as featured, see [Set-AdminPowerAppsFeatured](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true)
 
 
 

@@ -1,17 +1,13 @@
 ---
-title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "retrieveMultipleRecords (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 04/19/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -27,92 +23,69 @@ contributors:
 
 ## Parameters
 
-<table>
- <tr>
-  <th>Name</th>
-  <th>Type</th>
-  <th>Required</th>
-  <th>Description</th>
- </tr>
- <tr>
-  <td>entityLogicalName</td>
-  <td>String</td>
-  <td>Yes</td>
-  <td>The table logical name of the records you want to retrieve. For example: "account".</td>
- </tr>
- <tr>
-  <td>options</td>
-  <td>String</td>
-  <td>No</td>
-  <td>
-   <p>OData system query options or FetchXML query to retrieve your data. </p>
-   <ul>
-    <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
-    <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
-   </ul>
-   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-   <p>You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
-   <p>When you specify an OData query string for the `options` parameter, the query <b>should be encoded</b> for special characters.
-   <p>When you specify a FetchXML query for the `options` parameter, the query <b>should not be encoded</b>.
-   <p>See examples later in this topic to see how you can define the `options` parameter for various retrieve multiple scenarios.
-  </td>
- </tr>
- <tr>
-  <td>maxPageSize</td>
-  <td>Number</td>
-  <td>No</td>
-  <td>
-   <p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p>
-   <p>If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.
-  </td>
- </tr>
- <tr>
-  <td>successCallback</td>
-  <td>Function</td>
-  <td>No</td>
-  <td>
-   <p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
-   <ul>
-    <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as `key: value` pairs. The Id of the table record is retrieved by default.</li>
-    <li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.</li>
-    <li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
-   </ul>
-  </td>
- </tr>
- <tr>
-  <td>errorCallback</td>
-  <td>Function</td>
-  <td>No</td>
-  <td>A function to call when the operation fails.</td>
- </tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the records you want to retrieve. For example: `account`.|
+|`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
+|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
+|`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
+### Options
+
+The following system query options are supported: `$select`, `$top`, `$filter`, `$expand`, and `$orderby`.
+
+Use the `$expand` system query option to control what data from related tables is returned. If you just include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both *single-valued* and *collection-valued* navigation properties. Note that for offline we only support nested `$select` option inside the `$expand`.
+
+To specify a FetchXML query, use the `fetchXml` column to specify the query.
+
+> [!NOTE]
+> You must always use the `$select`system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using `$select`, all properties will be returned.
+
+You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
+  
+When you specify an OData query string for the `options` parameter, the query **should be encoded** for special characters.
+
+When you specify a FetchXML query for the `options` parameter, the query **should not be encoded**.
+
+See [Examples](#examples) to see how you can define the `options` parameter for various retrieve multiple scenarios.
+ 
 ## Return Value
 
-For a successful OData query retrieveMultipleRecords operation, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next page of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+On success, returns a promise object to the `successCallback` with the following properties:
 
-For a succesful FetchXML-based retrieveMultipleRecords operations the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
+|Name|Type|Description|
+|---|---|---|
+|`entities`|Array of JSON objects|Each object represents the retrieved table record containing columns and their values as `key: value` pairs. The ID of the table record is retrieved by default|
+|`nextLink`|String|(optional) If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.|
+|`fetchXmlPagingCookie`||(optional) For a fetchXml-based `retrieveMultipleRecords` operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.|
 
 ## Unsupported Attribute Types for OData query options in Mobile Offline
-The following [Column types](../../../../data-platform/entity-attribute-metadata.md#column-types) are not supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (e.g. `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
 
-- MultiSelectPicklist
-- File
-- Image
-- ManagedProperty
-- CalendarRules
-- PartyList
-- Virtual
+The following [Column types](../../../../data-platform/entity-attribute-metadata.md#column-types) aren't supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (for example, `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
+
+- `MultiSelectPicklist`
+- `File`
+- `Image`
+- `ManagedProperty`
+- `CalendarRules`
+- `PartyList`
+- `Virtual`
+
+## Unsupported features in Mobile Offline
+
+The following features aren't supported in Mobile Offline:
+- Grouping and Aggregation features
 
 ## Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML
+
 The following operations are supported for all attribute types when working with FetchXML:
 - Equals (`eq`)
 - Not Equals (`neq`)
 - Null (`null`)
 - Not Null (`not-null`)
 
-The following table lists additional operations supported for each attribute type:
+The following table lists more operations supported for each attribute type:
 
 
 |Attribute Type|Supported Operations|
@@ -120,16 +93,16 @@ The following table lists additional operations supported for each attribute typ
 |BigInt, Decimal, Double, Integer|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)|
 |Boolean, Customer|In (`in`)<br />Not In (`not-in`)|
 |EntityName, Picklist, State, Status|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)<br />In (`in`)<br />Not In (`not-in`)|
-|Guid, Lookup|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)|
+|Guid, Lookup|In (`in`)<br />Not In (`not-in`)<br />Equals User ID (`eq-userid`)<br />Not Equals User ID (`ne-userid`)|
 |Money|Greater Than (`gt`)<br />Greater Than or Equals (`gte`)<br />Less Than (`lt`)<br />Less Than or Equals (`lte`)<br />In (`in`)<br />Not In (`not-in`)|
-|Owner|In (`in`)<br />Not In (`not-in`)<br />Equals User Id (`eq-userid`)<br />Not Equals User Id (`ne-userid`)<br />Equals User Or Team (`eq-useroruserteams`)<br />|
+|Owner|In (`in`)<br />Not In (`not-in`)<br />Equals User ID (`eq-userid`)<br />Not Equals User ID (`ne-userid`)<br />Equals User Or Team (`eq-useroruserteams`)<br />|
 |String|Like (`like`)<br />Not Like (`not-like`)<br />Begins With (`begins-with`)<br />Not Begin With (`not-begin-with`)<br />Ends With (`ends-with`)<br />Not End With (`not-end-with`)|
-|DateTime|On Or After (`on-or-after`)<br />On (`on`)<br />On Or Before (`on-or-before`)<br />Today (`today`)<br />Tomorrow (`tomorrow`)<br />Yesterday (`yesterday`)<br />Next 7 Days (`next-seven-days`)<br />Last 7 Days (`last-seven-days`)<br />Next Week (`next-week`)<br />Last Week (`last-week`)<br />This Week (`this-week`)<br />Next Month (`next-month`)<br />Last Month (`last-month`)<br />This Month (`this-month`)<br />Next Year (`next-year`)<br />Last Year (`last-year`)<br />This Year (`this-year`)<br />Last X Days (`last-x-days`)<br />Next X Days (`next-x-days`)<br />Last X Weeks (`last-x-weeks`)<br />Next X Weeks (`next-x-weeks`)<br />Last X Months (`last-x-months`)<br />Next X Months (`next-x-months`)<br />Last X Years (`last-x-years`)<br />Next X Years (`next-x-years`)<br />Greater Than (`gt`)<br />Greater Than Or Equal (`gte`)<br />Less Than (`lt`)<br />Less Than Or Equal (`lte`)<br />|
+|DateTime|On Or After (`on-or-after`)<br />On (`on`)<br />On Or Before (`on-or-before`)<br />Today (`today`)<br />Tomorrow (`tomorrow`)<br />Yesterday (`yesterday`)<br />Next seven Days (`next-seven-days`)<br />Last seven Days (`last-seven-days`)<br />Next Week (`next-week`)<br />Last Week (`last-week`)<br />This Week (`this-week`)<br />Next Month (`next-month`)<br />Last Month (`last-month`)<br />This Month (`this-month`)<br />Next Year (`next-year`)<br />Last Year (`last-year`)<br />This Year (`this-year`)<br />Last X Days (`last-x-days`)<br />Next X Days (`next-x-days`)<br />Last X Weeks (`last-x-weeks`)<br />Next X Weeks (`next-x-weeks`)<br />Last X Months (`last-x-months`)<br />Next X Months (`next-x-months`)<br />Last X Years (`last-x-years`)<br />Next X Years (`next-x-years`)<br />Greater Than (`gt`)<br />Greater Than Or Equal (`gte`)<br />Less Than (`lt`)<br />Less Than Or Equal (`lte`)<br />|
 
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -173,7 +146,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
 ```
 
 ### Retrieve or filter by lookup properties
-For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
+For most single-valued navigation properties you'll find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options aren't supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null isn't supported in offline mode.
 
 More information: [Lookup properties](../../../../data-platform/webapi/web-api-properties.md#lookup-properties)
 
@@ -216,6 +189,40 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$f
     }
 );
 ```
+
+#### Using FetchXML to retrieve or filter by lookup properties (online and offline scenario)
+
+You can use the `FetchXML` parameter while online or offline to retrieve the `name` and `primarycontactid` property for account records that have a primary contact that matches a condition:
+
+```JavaScript
+var fetchXml = `?fetchXml=
+    <fetch mapping='logical'>
+       <entity name='account'>
+          <attribute name='name'/>
+          <attribute name='primarycontactid'/>
+          <link-entity name='contact' from='contactid' to='primarycontactid'>
+             <filter type='and'>
+                <condition attribute='lastname' operator='eq' value='Contoso'/>
+             </filter>
+          </link-entity>
+       </entity>
+    </fetch>`;
+
+Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
 ### Specify the number of tables to return in a page
 
 The following example demonstrates the use of the `maxPageSize` parameter to specify the number of records (3) to be displayed in a page.
@@ -236,7 +243,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name", 3).then(
 );
 ```
 
-This example will display 3 records and a link to the next page. Here is an example output from the **Console** in the browser developer tools:
+This example will display three records and a link to the next page. Here's an example output from the **Console** in the browser developer tools:
 
 ```
 {@odata.etag: "W/"1035541"", name: "A. Datum", accountid: "475b158c-541c-e511-80d3-3863bb347ba8"}
@@ -249,9 +256,9 @@ VM5595:6
 Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257bAAA19CDD-88DF-E311-B8E5-6C3BE5A8B200%257d%2522%2520first%253d%2522%257b475B158C-541C-E511-80D3-3863BB347BA8%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E
 ```
 
-Use the query part in the URL in the `nextLink` property as the value for the `options` parameter in your subsequent **retrieveMultipleRecords** call to request the next set of records. Don’t change or append any additional system query options to the value. For every subsequent request for additional pages, you should use the same `maxPageSize` value used in the original retrieve multiple request. Also, cache the results returned or the value of the nextLink property so that previously retrieved pages can be returned. 
+Use the query part in the URL in the `nextLink` property as the value for the `options` parameter in your subsequent **retrieveMultipleRecords** call to request the next set of records. Don't change or append any more system query options to the value. For every subsequent request for more pages, you should use the same `maxPageSize` value used in the original retrieve multiple request. Also, cache the results returned or the value of the nextLink property so that previously retrieved pages can be returned. 
 
-For example, to get the next page of records, we will pass in the query part of the `nextLink` URL to the `options` parameter:
+For example, to get the next page of records, we'll pass in the query part of the `nextLink` URL to the `options` parameter:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257bAAA19CDD-88DF-E311-B8E5-6C3BE5A8B200%257d%2522%2520first%253d%2522%257b475B158C-541C-E511-80D3-3863BB347BA8%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E", 3).then(
@@ -310,28 +317,28 @@ Xrm.WebApi.online.retrieveMultipleRecords("account", fetchXml).then(
 );
 ```
 
-This example will display 3 records and return a FetchXML Paging Cookie to the retrieve the results of the next page if there are additional records belonging to the result set. Here is an example output from the **Console** in the browser developer tools:
+This example will display three records and return a FetchXML Paging Cookie to the retrieve the results of the next page if there are more records belonging to the result set. Here's an example output from the **Console** in the browser developer tools:
 
 ```JSON
 {
-	"entities": [
-		{
-			"@odata.etag": "W/\"1035542\"",
-			"accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "Blue Yonder Airlines"
-		},
-		{
-			"@odata.etag": "W/\"1031348\"",
-			"accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "City Power & Light"
-		},
-		{
-			"@odata.etag": "W/\"1035543\"",
-			"accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "Coho Winery"
-		}
-	],
-	"fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
+   "entities": [
+      {
+         "@odata.etag": "W/\"1035542\"",
+         "accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "Blue Yonder Airlines"
+      },
+      {
+         "@odata.etag": "W/\"1031348\"",
+         "accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "City Power & Light"
+      },
+      {
+         "@odata.etag": "W/\"1035543\"",
+         "accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "Coho Winery"
+      }
+   ],
+   "fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
 }
 ```
 
@@ -429,7 +436,7 @@ function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
 
 var count = 3;
 var fetchXml =
-  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+  '<fetch><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
 
 retrieveAllRecords("account", fetchXml, null, count, null).then(
   function success(result) {
@@ -446,9 +453,8 @@ retrieveAllRecords("account", fetchXml, null, count, null).then(
 ```
 
 ### Retrieve related tables by expanding navigation properties
-#### For online scenario (connected to server)
 
-Use the **$expand** system query option in the navigation properties to control the data that is returned from related tables. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the `contactid` and `fullname`:
+Use the **$expand** system query option in the navigation properties to control the data that is returned from related tables. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we're only retrieving the `contactid` and `fullname`:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)", 3).then(
@@ -467,22 +473,28 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=prim
 The above piece of code returns a result with a schema like:
 ```JSON
 {
-	"entities": [
-		{
-			"@odata.etag": "W/\"1459919\"",
-			"name": "Test Account",
-			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
-			"primarycontactid": {
-				"contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
-				"fullname": "Test Contact"
-			}
-		}
-	]
+   "entities": [
+      {
+         "@odata.etag": "W/\"1459919\"",
+         "name": "Test Account",
+         "accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+         "primarycontactid": {
+            "contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
+            "fullname": "Test Contact"
+         }
+      }
+   ]
 }
 ```
+> [!NOTE] 
+> Similar to the online scenario, use the **$expand** system query option to retrieve data from related tables in offline. However, many-to-many relationships are not supported in offline.
 
-#### For mobile offline scenario
-**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
+#### Deprecated method for mobile offline scenario
+
+> [!NOTE] 
+> The `@odata.nextLink` is deprecated for mobile offline scenarios. While it is still supported for existing customizations, it is not recommended to use it anymore.
+
+An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
 
 ```JavaScript
 Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {
@@ -536,15 +548,13 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 });
 ```
 
-For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
+For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query/overview.md).
 
  
-### Related topics
+### Related articles
 
-[Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)
-
-[Xrm.WebApi.retrieveRecord](retrieveRecord.md)
-
+[Query Data using the Web API](../../../../data-platform/webapi/query/overview.md)<br />
+[Xrm.WebApi.retrieveRecord](retrieveRecord.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)
 
 

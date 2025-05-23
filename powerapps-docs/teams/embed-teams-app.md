@@ -2,22 +2,19 @@
 title: Embed an app in Teams  | Microsoft Docs
 description: You can embed an app created in Power Apps in Microsoft Teams to share it.
 author: msftsamperl
-ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
-ms.reviewer: tapanm
-ms.date: 04/20/2022
+ms.topic: how-to
+ms.custom: canvas
+ms.collection: get-started
+ms.reviewer: mkaur
+ms.date: 08/25/2022
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - alaug
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 # Embed a canvas app as personal app in Teams
 
@@ -66,6 +63,28 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
     > [!TIP]
     > You can also [pin the app](install-personal-app.md#pin-power-apps-to-teams) for easy access.
+
+## Add to Teams using the web player
+
+You can also add canvas apps to Teams using the web player.
+
+1. Go to [Power Apps](https://make.powerapps.com) > **Apps** > select the app to launch in a new browser tab.
+
+1. [Edit the app](../maker/canvas-apps/edit-app.md) > select ![Play the app.](media/embed-teams-app/play.png) or press **F5** to play the app.
+
+1. After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
+
+    :::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
+
+1. When prompted, select **Cancel**.
+
+1. Select **Launch it now** to open the Teams app. Alternatively, you can also choose **Use the web app instead** to open the app in Teams web.
+
+> [!NOTE]
+> - To add canvas apps to Teams using the web player:
+>     - Your organization must have **Allow interaction with custom apps** turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+>     - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
+> - You can only add apps to Teams that belong to the same tenant as your Teams account. Otherwise, you'll see an error "App was not found in tenant".
 
 ## Publish the app to the Teams catalog
 
@@ -122,20 +141,7 @@ The following context variables from Teams are supported:
 
 ## Improve the performance of your app
 
-You can optionally preload your app within Teams to increase performance.
-
-1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
-
-2. Select **More actions** (...) for the app you want to share in Teams, and then select **Settings**.
-
-3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
-
-    :::image type="content" source="media/embed-teams-app/preload-app.png" alt-text="Preload app for enhanced performance.":::
-
-4. For the changes to take effect, remove and add your app into Teams again.
-
-    > [!NOTE]
-    > This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that your app data won't be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in.  
+You can optionally preload your app within Teams to increase performance. For mor information: [Enable Preload app for enhanced performance](../maker/canvas-apps/performance-tips.md#enable-preload-app-for-enhanced-performance). 
 
 ### See also
 

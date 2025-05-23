@@ -1,0 +1,1 @@
+The value is within or before the specified fiscal period and year.

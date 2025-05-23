@@ -3,34 +3,43 @@ items:
   items:
   - name: Overview
     href: overview.md
-  - name: What are code components
-    items:
-    - name: Overview
-      href: custom-controls-overview.md
-    - name: Limitations
-      href: limitations.md
-    - name: Code components for model-driven apps
-      href: code-components-model-driven-apps.md
-    - name: Code components for canvas apps
-      href: component-framework-for-canvas-apps.md
-    - name: Code components for portals
-      href: ../../maker/portals/component-framework.md
-    - name: "React controls & platform libraries (Preview)"
-      href: react-controls-platform-libraries.md
-  - name: Get Microsoft Power Platform CLI
+  - name: Code components
+    href: custom-controls-overview.md
+    displayName: "What are code components?"
+  - name: For model-driven apps
+    href: code-components-model-driven-apps.md
+  - name: For canvas apps
+    href: component-framework-for-canvas-apps.md
+  - name: For Power Pages
+    href: /power-pages/configure/component-framework
+  - name: "React controls & platform libraries"
+    href: react-controls-platform-libraries.md
+  - name: "Style components with modern theming (preview)"
+    href: fluent-modern-theming.md
+  - name: Dependent libraries (preview)
+    href: dependent-libraries.md
+  - name: Events  (preview)
+    href: events.md
+  - name: Get tooling
     href: get-powerapps-cli.md
-  - name: Learn Power Apps component framework
-    href: /learn/paths/use-power-apps-component-framework
-  - name: Tutorial
+  - name: Limitations
+    href: limitations.md
+  - name: Tutorials
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
-    - name: Creating model-driven app field type component
+    - name: Create a model-driven app field component
       href: tutorial-create-model-driven-field-component.md
-    - name: Creating model-driven app dataset type component
+    - name: Create a model-driven app dataset component
       href: tutorial-create-model-driven-app-dataset-component.md
-    - name: Creating canvas app dataset type component
+    - name: Create a canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
+    - name: Define an event in a component
+      href: tutorial-define-event.md
+    - name: Use dependent libraries
+      href: tutorial-use-dependent-libraries.md
+  - name: Online learning
+    href: /training/paths/use-power-apps-component-framework
   - name: Code components ALM
     href: code-components-alm.md
   - name: Best practices
@@ -49,10 +58,10 @@ items:
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
     - name: Add components to portals (Preview)
       href: ../../maker/portals/component-framework-tutorial.md
-    - name: Update existing code components
-      href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
+    - name: Customize the editable grid control
+      href: customize-editable-grid-control.md
   - name: Troubleshooting
     items:
     - name: Common issues and workarounds
@@ -71,10 +80,14 @@ items:
       href: tutorial-create-model-driven-field-component.md
     - name: Control State API component
       href: sample-controls/control-state-api.md
+    - name: Customized editable grid
+      href: sample-controls/customized-editable-grid-control.md
     - name: Data Set Grid component
       href: sample-controls/data-set-grid-control.md
     - name: Device API component
       href: sample-controls/device-api-control.md
+    - name: Modern theming API component
+      href: sample-controls/modern-theming-api-control.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
     - name: IFRAME component
@@ -97,6 +110,8 @@ items:
       href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Object Output component
+      href: sample-controls/object-output.md
     - name: Property set table component
       href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
@@ -123,6 +138,8 @@ items:
           href: reference/client/getclient.md
         - name: getFormFactor
           href: reference/client/getformfactor.md
+        - name: isNetworkAvailable
+          href: reference/client/isnetworkavailable.md
         - name: isOffline
           href: reference/client/isoffline.md
       - name: Column
@@ -189,6 +206,8 @@ items:
           href: reference/device/getcurrentposition.md
         - name: pickFile
           href: reference/device/pickfile.md
+      - name: Theming
+        href: reference/theming.md
       - name: Entity
         href: reference/entity.md
       - name: EntityFormOptions
@@ -218,6 +237,8 @@ items:
         href: reference/entitymetadata.md
       - name: EntityReference
         href: reference/entityreference.md
+      - name: Events
+        href: reference/events.md
       - name: Factory
         href: reference/factory.md
         items:
@@ -273,6 +294,8 @@ items:
           href: reference/formatting/parsedatefrominput.md
       - name: ICommand
         href: reference/icommand.md
+      - name: ImageObject
+        href: reference/imageobject.md
       - name: Linking
         href: reference/linking.md
         items:
@@ -282,6 +305,8 @@ items:
           href: reference/linking/getlinkedentities.md
       - name: LinkEntityExposedExpression
         href: reference/ilinkentityexposedexpression.md
+      - name: LookupValue
+        href: reference/lookupvalue.md
       - name: Metadata
         href: reference/metadata.md
       - name: Mode
@@ -354,13 +379,15 @@ items:
         href: reference/position.md
       - name: Property
         href: reference/property.md
-      - name: ReactControl (Preview)
+      - name: ReactControl
         href: reference/react-control.md
         items:
         - name: destroy
           href: reference/react-control/destroy.md
         - name: getOutputs
           href: reference/react-control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/react-control/getoutputschema.md
         - name: init
           href: reference/react-control/init.md
         - name: updateView
@@ -387,6 +414,8 @@ items:
           href: reference/control/destroy.md
         - name: getOutputs
           href: reference/control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/control/getoutputschema.md
         - name: init
           href: reference/control/init.md
         - name: updateView
@@ -431,14 +460,28 @@ items:
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: dependency
+        href: manifest-schema-reference/dependency.md
+      - name: domain
+        href: manifest-schema-reference/domain.md
+      - name: external-service-usage
+        href: manifest-schema-reference/external-service-usage.md
+      - name: event
+        href: manifest-schema-reference/event.md
       - name: feature-usage
         href: manifest-schema-reference/feature-usage.md
       - name: img
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
+      - name: platform-action
+        href: manifest-schema-reference/platform-action.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
+      - name: property-dependencies
+        href: manifest-schema-reference/property-dependencies.md
+      - name: property-dependency
+        href: manifest-schema-reference/property-dependency.md
       - name: property-set
         href: manifest-schema-reference/property-set.md
       - name: property

@@ -1,50 +1,43 @@
 ---
 title: "Add transformation mappings for import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Transformation mapping enables optional modification of source data before importation." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/15/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 08/03/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add transformation mappings for import
 
-
-
 Use transformation mapping to modify data before importing it. For example, split a full name that is contained in the source file into a first name and a last name to match the target columns for a table.  
   
- To implement transformation mapping, use the transformation mapping (`TransformationMapping`) table and transformation parameter mapping (`TransformationParameterMapping`) table.  
+To implement transformation mapping, use the [TransformationMapping](reference/entities/transformationmapping.md) table and the [TransformationParameterMapping](reference/entities/transformationparametermapping.md) table.  
   
- The transformed data must be compatible with the Microsoft Dataverse column types.  
+The transformed data must be compatible with the Microsoft Dataverse column types.  
   
- The transformation type is described by the `TransformationMapping.TransformationTypeName` property. The valid values for this property are listed in the following table:  
+The transformation type is described by the `TransformationMapping.TransformationTypeName` property. The valid values for this property are listed in the following table:  
   
 |Column|Value|  
 |-----------|-----------|  
-|AddToCurrentDate|"Microsoft.Crm.Transformations.AddToCurrentDate"|  
-|AddToDate|"Microsoft.Crm.Transformations.AddToDate"|  
-|AdvancedAddToCurrentDate|"Microsoft.Crm.Transformations.AdvancedAddToCurrentDate"|  
-|AssignValue|"Microsoft.Crm.Transformations.AssignValue"|  
-|Concatenate|"Microsoft.Crm.Transformations.Concatenate"|  
-|Replace|"Microsoft.Crm.Transformations.Replace"|  
-|Split|"Microsoft.Crm.Transformations.Split"|  
-|Substring|"Microsoft.Crm.Transformations.Substring"|  
+|`AddToCurrentDate`|`Microsoft.Crm.Transformations.AddToCurrentDate`|  
+|`AddToDate`|`Microsoft.Crm.Transformations.AddToDate`|  
+|`AdvancedAddToCurrentDate`|`Microsoft.Crm.Transformations.AdvancedAddToCurrentDate`|  
+|`AssignValue`|`Microsoft.Crm.Transformations.AssignValue`|  
+|`Concatenate`|`Microsoft.Crm.Transformations.Concatenate`|  
+|`Replace`|`Microsoft.Crm.Transformations.Replace`|  
+|`Split`|`Microsoft.Crm.Transformations.Split`|  
+|`Substring`|`Microsoft.Crm.Transformations.Substring`|  
   
  The following sections describe the available transformations.  
   
-<a name="BKMK_Concatenation"></a>   
+<a name="BKMK_Concatenation"></a>
 
-## Concatenation  
- Concatenates strings and separates them with a delimiter.  
+## Concatenation
+
+Concatenates strings and separates them with a delimiter.  
   
 |Input Parameters|Description|  
 |----------------------|-----------------|  
@@ -57,10 +50,11 @@ Use transformation mapping to modify data before importing it. For example, spli
 |-----------------------|-----------------|  
 |String|Concatenated string.|  
   
-<a name="BKMK_Split"></a>   
+<a name="BKMK_Split"></a>
 
-## Split  
- Separates a string that includes a delimiter into substrings. There can be up to ten substrings.  
+## Split
+
+Separates a string that includes a delimiter into substrings. There can be up to ten substrings.  
   
 |Input Parameters|Description|  
 |----------------------|-----------------|  
@@ -73,34 +67,28 @@ Use transformation mapping to modify data before importing it. For example, spli
   
  For example, if the input string contains eleven substrings, the output contains ten substrings as shown in the following example:  
   
- Input string: a;b;c;d;e;f;g;h;i;j;k  
+Input string: `a;b;c;d;e;f;g;h;i;j;k`  
   
- Output:  
-  
- a  
-  
- b  
-  
- c  
-  
- d  
-  
- e  
-  
- f  
-  
- g  
-  
- h  
-  
- i  
-  
- j;k  
-  
-<a name="BKMK_Substring"></a>   
+ Output:
 
-## Substring  
- Returns a substring of a specified length, starting at a specified point in the string.  
+```
+ a  
+ b  
+ c  
+ d  
+ e  
+ f 
+ g
+ h  
+ i  
+ j;k  
+```
+ 
+<a name="BKMK_Substring"></a>
+
+## Substring
+
+Returns a substring of a specified length, starting at a specified point in the string.  
   
 |Input Parameters|Description|  
 |----------------------|-----------------|  
@@ -187,7 +175,7 @@ Use transformation mapping to modify data before importing it. For example, spli
 |Input Parameters|Description|  
 |----------------------|-----------------|  
 |Year Offset|Positive or negative value that is added to the year component of a current date or absolute year.|  
-|Year Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table. To view the metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata). You can also browse the reference documentation for tables in the [Table Reference](/dynamics365/customer-engagement/developer/about-entity-reference).  
+|Year Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table. To view the metadata for your organization, install the Metadata Browser solution described in [Browse table definitions in your environment](browse-your-metadata.md). You can also browse the reference documentation for tables in the [Dataverse table/entity reference](reference/about-entity-reference.md).  
 |Month Offset|Positive or negative value that is added to the month component of a current date or absolute month.|  
 |Month Offset Mode|Specify whether the offset is relative to the current date or absolute value by using the `TransformationParameterMapping.Data` column. If you are using early bound types, you can use the `TransformationOffsetMode` enumeration to specify relative or absolute offset. For a list of the DataTypeCode values, see the choice values for this table.|  
 |Day Offset|Positive or negative value that is added to the day component of a current date or absolute day.|  

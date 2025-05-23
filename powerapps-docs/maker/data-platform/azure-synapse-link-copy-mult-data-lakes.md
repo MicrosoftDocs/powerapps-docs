@@ -7,19 +7,15 @@ ms.reviewer: "Mattp123"
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: "sama-zaki"
 ---
 # Copy Dataverse data from multiple data Lakes to a single data lake

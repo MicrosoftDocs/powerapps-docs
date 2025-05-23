@@ -1,21 +1,19 @@
 ---
-title: Create a canvas app that can trigger a Power Automate flow (contains video)
+title: Create a canvas app that can trigger a Power Automate flow
 description: Learn about how to create a canvas app that can trigger a Power Automate flow.
 author: joel-lindstrom
 
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
 ---
 
 
@@ -26,7 +24,7 @@ Power Automate can be used to create logic that performs one or more tasks when 
 In this article, we'll learn how create and trigger a flow using canvas apps.
 
 Watch this video to learn how to create a canvas app that can trigger a flow:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLvLE]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=97f1d303-9f0d-4817-9f9d-c899d023d9b1]
 
 ## Prerequisites
 
@@ -173,59 +171,48 @@ In this lesson, we'll create an app to search, view, and create customer account
 
     ![Navigate to screen 1](media/trigger-flow/build-a-canvas-app-27.png "Navigate to screen 1")
 
-1. Select the **Yes** button, select **Action** on the top, and then select **Power Automate**.
+1. Select the **Yes** button, on the app authoring menu select **Power Automate**.
 
-    ![Select the Yes button and select Action on the top](media/trigger-flow/build-a-canvas-app-28.png "Select the Yes button and select Action on the top")
+    ![Select Power Automate fromt he app authoring menu.](media/trigger-flow/build-a-canvas-app-28-1.png "Select the Yes button and select Action on the top")
 
 1. Select **Create a new flow** to create a new Power Automate flow.
 
-    ![Select Create a new flow to create](media/trigger-flow/build-a-canvas-app-29.png "Select Create a new flow to create")
+    ![Select Create a new flow.](media/trigger-flow/build-a-canvas-app-29-1.png "Select Create a new flow to create")
 
 ## Create the Power Automate Flow
 
-1. After Power Automate opens, select **+ Create** > **Instant cloud flow**.
+1. On the **Create your flow** screen, from the list of instant templates, select **Click a button in Power Apps to send an email**.
 
-    ![select the Instant cloud flow option](media/trigger-flow/create-the-power-automate-flow-1.png "select the Instant cloud flow option")
+   > [!div class="mx-imgBorder"]
+   > ![Select the Click a button in Power Apps to send an email template.](media/trigger-flow/create-the-power-automate-flow-1-1.png "select the Click a button in Power Apps to send an email.")
 
 1. Enter a name for the flow as "Flow triggered by Power Apps", and select **Power Apps** as the trigger.
+    
+   > [!div class="mx-imgBorder"]
+   > ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2-1.png "Enter a name for the flow")
 
-    ![Enter a name for the flow](media/trigger-flow/create-the-power-automate-flow-2.png "Enter a name for the flow")
+1. Select **Edit in advanced mode** and then select, **Continue**.
+     
+   > [!div class="mx-imgBorder"]
+   > ![Edit the flow in advacned mode](media/trigger-flow/edit-advacned-mode.png "Edit in advacned mode")
 
-1. Select **+ New Step**.
+1. The **To** field and the **Body** field are automatically auto-populated with the following:
+  
+   - To: **Sendanemail(V2)_To**.
+   - Body: **Sendanemail(V2)_Body**
 
-    ![Power Apps gets added as the trigger](media/trigger-flow/create-the-power-automate-flow-3.png "Power Apps gets added as the trigger")
 
-1. Enter "Send an email" in the search connections textbox, and select **Send an email (V2)** action.
+1. In **Subject** field, delete **Sendanemail(V2)_To** and enten **Thank you for your business!** in the **Subject** field.
 
-    ![Enter Send an email in the search connections textbox](media/trigger-flow/create-the-power-automate-flow-4.png "Enter Send an email in the search connections textbox")
+    ![Enter Thank you for your business](media/trigger-flow/add-subject.png "Enter Thank you for your business")
 
-1. For the **To** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_To**.
-
-    ![For the To field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-5.png "For the To field, select Add dynamic content")
-
-1. For the **Body** field, select **Add dynamic content** > select **Ask in Power Apps** > select **Sendanemail(V2)_Body**
-
-    ![For the Body field, select Add dynamic content](media/trigger-flow/create-the-power-automate-flow-6.png "For the Body field, select Add dynamic content")
-
-    ![select Ask in PowerApps and then select Sendanemail V2](media/trigger-flow/create-the-power-automate-flow-7.png "select Ask in PowerApps and then select Sendanemail V2")
-
-1. Enter "Thank you for your business!" in the **Subject** field.
-
-    ![Enter Thank you for your business](media/trigger-flow/create-the-power-automate-flow-8.png "Enter Thank you for your business")
-
-1. Save the Power Automate flow, and go back to Power Apps.
+1. Select **Save** to save the flow.
 
 ## Trigger the flow from within the canvas app
 
-1. Select the **Yes** button > select **Action** > **Power Automate**, and then select the flow created earlier.
+1. Select the **Yes** button > in the **OnSelect** property enter the two parameters for the To email address and the Body of the email as follows:
 
-    ![Flow triggered by a Powerapp](media/trigger-flow/trigger-the-flow-from-within-the-power-app-1.png "Flow triggered by a Powerapp")
-
-    Function `FlowtriggeredbyaPowerapp.Run(` is also added to the **OnSelect** property.
-
-1. Fill in the two parameters for the To email address and the Body of the email as follows:
-
-    ```powerapps-dot
+    ```power-fx
     FlowtriggeredbyaPowerapp.Run(
        EditForm3.LastSubmit.Email,
        TextInput1.Text
@@ -236,13 +223,15 @@ In this lesson, we'll create an app to search, view, and create customer account
     > [!NOTE]
     > The email address is picked up from the new account record created on the previous screen. and the body for the email is picked from the text box text captured on this screen.
 
-    ![Fill in the two parameters for the To email address](media/trigger-flow/trigger-the-flow-from-within-the-power-app-2.png "Fill in the two parameters for the To email address")
+    
+   > [!div class="mx-imgBorder"]
+   > ![Fill in the two parameters for the To email address](media/trigger-flow/onselect-flow.png "Fill in the two parameters for the To email address")
 
 ## Test the app
 
 Run the app in preview mode. In this test, we'll create a new account by entering details like account name, phone number, city, and email address on the **New Account** screen. On saving the new account details, we'll be prompted to send an email to the customer where we can update the verbiage of the email, and then select **Yes** to send the email. This will trigger the flow, and email will be sent to the email address on the account.
 
-![Run the app in Preview mode](media/trigger-flow/test-the-app-1.png "Run the app in Preview mode")
+![Run the app in Preview mode](media/trigger-flow/test-the-app-1-1.png "Run the app in Preview mode")
 
 ![Create a new account by entering details like account name](media/trigger-flow/test-the-app-2.gif "Create a new account by entering details like account name")
 
@@ -252,4 +241,4 @@ An email like this should appear in your inbox
 
 ### See also
 
-[Start a flow in canvas apps](../using-logic-flows.md)
+[Use Power Automate pane](../working-with-flows.md)

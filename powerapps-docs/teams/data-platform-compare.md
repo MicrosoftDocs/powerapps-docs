@@ -1,23 +1,19 @@
 ---
 title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
-author: mmercuri
-
-ms.topic: conceptual
-ms.custom: intro-internal
-ms.date: 06/16/2022
+author: Mattp123
+ms.topic: article
+ms.collection: get-started
+ms.date: 05/28/2025
 ms.subservice: teams
-ms.author: mmercuri
+ms.author: olegov
 ms.reviewer: matp
 contributors:
   - mattp123
   - hemantgaur
-  - tapanm-msft
-  - ProfessorKendrick
+  - mduelae
 ---
 # How are Dataverse for Teams and Dataverse different?
-
-
 
 Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires more capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
 
@@ -29,7 +25,6 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 |---------|---------|---------|
 |Basic data types     |  Yes       |  Yes       |
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
-|Common Data Model    |  Coming Soon       |  Yes       |
 |Relational storage      | Yes       |  Yes       |
 |Non-relational storage (logs)   |  No       |  Yes       |
 |Managed data lake      |  No       | Yes        |
@@ -40,7 +35,7 @@ Following are the differences between a Dataverse for Teams and Dataverse table 
 
 Most of the standard tables that are provided with a Power Platform environment won't be present as part of Dataverse for Teams.
 
-## Business intelligence and professional developer features
+## Business intelligence, professional developer, and maker features
 
 This table describes the differences between Dataverse for Teams and Dataverse business intelligence and professional developer features.
 
@@ -52,6 +47,8 @@ This table describes the differences between Dataverse for Teams and Dataverse b
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plug-ins       |   No      |  Yes       |
 |      |  Power Apps component framework       |   No      |  Yes       |
+| Maker     |  Create canvas apps      |   Yes     |  Yes       |
+|        |  Create model-driven apps      |   No     |  Yes       |
 
 ## Environments
 
@@ -65,7 +62,7 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 10,000
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
-|Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
+|Maximum size     |   1 million rows or 2 GB      |  Unlimited     |
 |Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
@@ -89,6 +86,13 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |
 |Record sharing     |  No       |  Yes       |
+|Create Owner Teams**  | Yes      |  Yes       |
+|Create Microsoft Entra group Teams  | No      |  Yes       |
+|Record sharing to Group Teams | No      |  Yes       |
+|Assign Teams Roles to Owner Teams<sup>1</sup> | Yes     | Yes   |
+|Change record ownership** | Yes   | Yes  |
+
+<sup>1</sup> *Can be done via a custom app in Power Apps* 
 
 ## Integration
 

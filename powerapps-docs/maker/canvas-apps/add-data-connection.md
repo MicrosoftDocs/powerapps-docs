@@ -3,18 +3,16 @@ title: Add data connections to canvas apps
 description: Learn about how to add a data connection in an existing canvas app.
 author: lancedMicrosoft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Add data connections to canvas apps
@@ -32,29 +30,15 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
-## Open a blank app
-
-Create a [blank canvas app](create-blank-app.md).
-
 ## Add data source
 
-1. In the center pane, select **connect to data** to open the **Data** pane.
-
-    If this were an existing app and the screen already contained a control, select **View** > **Data sources** to open the same pane.
-
-1. Select **Add data source**.
-
+1. Create a [blank canvas app](create-blank-app.md).
+1. From the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) in Power Apps Studio, select **Data** > **Add data**.
 1. Expand **Connectors**, and if the list of connections includes the one that you want, select it to add it to the app. Otherwise, skip to the next step. To connect to a table in Microsoft Dataverse instead, choose a table from the list of tables.
-
-    ![Choose an existing connection.](./media/add-data-connection/choose-existing-connection.png)
-
 1. To create a new connection, search for or select a connector such as SharePoint.
+1. Select **Add a connection** to both create the connection and add it to your app.
 
-    ![Add connection.](./media/add-data-connection/add-connection.png)
-
-1. Select **Create** to both create the connection and add it to your app.
-
-    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them. With [Dataverse](connections/connection-common-data-service.md), you can change the environment before you select a table.
+    Some connectors, such as **Office 365 Outlook**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/sql-connection-overview.md) require additional information before you can use them. With [Dataverse](connections/connection-common-data-service.md), you can change the environment before you select a table.
 
 ## Identify or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or that you created long ago.
@@ -63,13 +47,9 @@ If you're updating an app, you might need to identify or change the source of da
 
     The name of the data source appears on the **Properties** tab of the right-hand pane.
 
-    ![Identify a connection.](./media/add-data-connection/identify-connection.png)
-
 1. To show more information about the data source or to change it, select the down arrow next to its name.
 
     More information about the current data source appears, and you can select or create another source.
-
-    ![Change a connection.](./media/add-data-connection/change-connection.png)
 
 ## Next steps
 

@@ -1,36 +1,39 @@
 ---
 title: "Use an email signature| MicrosoftDocs"
 description: Learn how to use an email signature.
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 6/30/2021
-ms.subservice: end-user
-ms.author: mkaur
-ms.custom: ""
-ms.reviewer: ""
+ms.date: 04/10/2023
+ms.topic: how-to
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+ms.custom: bap-template
 ---
 
 
 # Create a signature for emails
 
-Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.  
+Email signatures are an important and valuable tool for users. Email signatures are like electronic business cards you include when you send an email, and can promote professional branding for your company.
 
-## Add an email signature
-Adding an email signature is easy and can be done at any point while you are composing an email.
+## Add text to an email signature
+Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic placeholders are used to define dynamic text. The placeholders are replaced  with the corresponding values of the email's sender, specified in the **From** field. 
+
 
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
 - From the drop-down list, select an existing signature or select **New Email Signature**.<BR>
 ![How to add an email signature.](media\email-how-to-add-an-email-signature-1a.png "How to add an email signature")
+
+Based on the email's sender specified in the **From** field, one of the following actions occur:
+
+- If the sender is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the user.
+- If the sender is set to a queue and the  queue's owner is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the queue's owner. 
+ - If the sender is set to a queue and the queue's owner is a team, the dynamic placeholders are replaced with the values corresponding to the team's administrator.
+
 
 ## Create an email signature
 You can quickly create an email signature at any point while you are composing an email.
@@ -45,9 +48,10 @@ You can add a new email signature by:
    2. **Signature editor**. This allows you to create your email signature and **Save** when finished. 
 
       > [!Note] 
-      > - You can include inline images, such as a business logo, in an email signatures, as long as they are under 1 MB in size.
+      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size. However, the inline image might not render properly if you open the email in the Outlook Desktop app.
+      > -  You can add only those fields as dynamic placeholders that are linked to the **Record type** user.
       > - Signatures can also be created and used for queues.
-
+      
 ## Manage email signature lists
 
 You can view and manage email signatures you have created to make edits, change default, and who can view your signatures.
@@ -68,3 +72,4 @@ While you can create multiple email signatures depending on your needs, only one
    To change your default email signature setting:
    1. Select the email signature you want to set as default. This will change the command bar to display **Edit**.
    2. Select **Edit**. A new page opens, where you can update the email default setting. While you are on this page, you can also delete one or multiple email signatures just by selecting them.
+

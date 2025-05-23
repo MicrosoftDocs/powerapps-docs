@@ -8,17 +8,18 @@ ms.custom: canvas
 ms.date: 04/20/2021
 ms.subservice: canvas-maker
 ms.author: fikaradz
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
+
+> [!IMPORTANT]
+> The Stream (Classic) control is deprecated and will be removed from Power Apps Studio. Microsoft is working on releasing a new control for Stream that is based on SharePoint. For more information, see [Migration Overview - Stream (Classic) to Stream (on SharePoint)](/stream/streamnew/stream-classic-to-new-migration-overview#migration--retirement-timeline).
 
 ## Description
 The control will allow app users to play videos and browse through channels from the Microsoft Stream service. For a list of supported regions for this control, go to [Microsoft Stream FAQ](/stream/faq#which-regions-does-microsoft-stream-host-my-data-in-).
@@ -117,6 +118,9 @@ Provide closed captions and/or transcript if the video content has color contras
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.
+
+### Known issue 
+Microsoft Stream appears as a connection in the [connection consent dialog](/power-apps/maker/canvas-apps/connections-list#connection-consent-dialog) although it is a control. The control will appear in the app regardless of what actions the end-user takes in the connection consent dialog. The Microsoft Stream control will only display video for end-users that have permissions to the content presented in the control. 
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

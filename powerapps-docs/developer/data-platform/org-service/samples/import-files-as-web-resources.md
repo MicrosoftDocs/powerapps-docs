@@ -4,24 +4,21 @@ description: "This sample shows how to import files as web resources" # 115-145 
 ms.date: 04/03/2022
 author: adrianorth
 ms.author: aorth
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
-# Import files as web resources 
+# Import files as web resources
 
+This sample shows how to import files as web resources.
 
-
-This sample shows how to import files as web resources. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Import files as web resources sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ImportWebResources)
 
 ## How to run this sample
 
@@ -40,17 +37,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. The `CreateRequiredRecords` class creates a publisher and a solution required for the sample when adding the web resources.
 
-
 ### Demonstrate
 
-1. The `XDocument` method reads the descriptive data from the XML files. 
+1. The `XDocument` method reads the descriptive data from the XML files.
 1. The `WebResource` is used to set the web resource properties.
 1. The `CreateRequest` method is used to add optional parameters.
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

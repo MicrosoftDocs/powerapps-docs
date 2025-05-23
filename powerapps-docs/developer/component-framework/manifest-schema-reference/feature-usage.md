@@ -1,9 +1,8 @@
 ---
 title: feature-usage | Microsoft Docs
 description: The feature-usage element acts as a wrapper around the uses-feature elements, which themselves allow developers to declare which features their component wants to use.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

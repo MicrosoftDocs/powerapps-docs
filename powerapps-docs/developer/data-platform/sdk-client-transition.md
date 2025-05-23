@@ -2,27 +2,23 @@
 title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/01/2022
+ms.date: 10/17/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Transition apps to Dataverse ServiceClient
 
-We are transitioning from [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new web service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+We are transitioning from [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new web service client that uses Microsoft Authentication Library (MSAL) for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
 > [!NOTE]
-> All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
+> Some of our existing developer documentation and sample code uses the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. This article describes the newer and recommended [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. Updates to documentation and sample code is happening over time.
 
 ## Why the change?
 
@@ -34,21 +30,21 @@ The new Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.
 
 ### MSAL authentication
 
-Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API use MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
+Microsoft Azure Active Directory Authentication Library (ADAL.NET) is no longer receiving support. Microsoft Authentication Library (MSAL.NET) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
 
 ### Performance and functional benefits
 
-The Dataverse `ServiceClient` class supports a smaller interface surface, inline authentication by instance, and `ILogger`. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
+The Dataverse `ServiceClient` class supports a smaller interface surface, inline authentication by instance, and <xref:Microsoft.Extensions.Logging.ILogger?displayProperty=fullName>. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
 
 ## What is impacted?
 
 Below is a quick summary of the impact to certain types of coding projects.
 
-- Plug-ins or custom workflow activities - no changes, just business as usual
+- Plug-ins or custom workflow activities - no changes
 
-- New or existing online applications - this article is definitely for you
+- New or existing online applications - this article is for you
 
-- On-premise applications - this article is not for you, yet
+- On-premises applications - this article is not for you, yet
 
 ## What do you need to do?
 
@@ -71,27 +67,33 @@ Simply add the [Dataverse.Client](https://www.nuget.org/packages/Microsoft.Power
 
 Nothing really for you to do here. Continue using the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) (and related) NuGet packages with .NET Framework 4.6.2.
 
-### On-premise clients
+### On-premises clients
 
 Leave your application projects and code as is. Continue using the Microsoft.CrmSdk.CoreAssemblies NuGet package and `CrmServiceClient`class. However, plan to update your projects from using any custom service clients to instead use the `CrmServiceClient` or `ServiceClient` in the near future. See the planned [timeline](#timeline) for 2011 SOAP endpoint shutdown below.
 
 > [!NOTE]
 > If you are using custom authentication with `CrmServiceClient`, you can continue to use your custom authentication code with `ServiceClient`.
 
+## Code samples
+
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ServiceClient)
+
 ## Timeline
 
 The following table lists some important dates to keep in mind.
 
-| Timeframe | Event |
-| --- | --- |
-|June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|Fall 2022|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
-|December 2022|Microsoft support for ADAL ends|
+| Timeframe        | Event                                                                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| June 2022        | GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package |
+| December 2022    | Microsoft support for ADAL ends                                                                                                                      |
+| At a future date | Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)   |
+
+> [!IMPORTANT]
+> The `CrmServiceClient` class will continue to function as documented even after ADAL authentication is turned off. Both service client classes will continue to function as documented after the 2011 SOAP endpoint has been turned off. If required, we may release an updated assembly containing revised service clients that your application will need to load at run-time.
 
 ### See also
 
-[ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient)  
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
-[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
+[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

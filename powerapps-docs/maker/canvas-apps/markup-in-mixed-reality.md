@@ -2,7 +2,7 @@
 title: Use the Markup in MR control in Power Apps
 description: Paint lines in 3D or draw 3D arrows with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 4/26/2022
 ms.reviewer: mduelae
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -21,15 +19,14 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-
 >[!IMPORTANT]
 >This is a preview feature.
 >[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Add the **Markup in MR** control in your app to allow users to add markups to visually specify an area or a particular asset in their environment. 
-Users can instantly place mixed-reality markups such as arrows, add drawings, and then take photos of the marked-up object.
+Add the **Markup in MR** control in your app to allow users to add markups to visually specify an area or a particular asset in their environment.
+Users can instantly place mixed reality markups such as arrows, add drawings, and then take photos of the marked-up object.
 
-The **Markup in MR** control creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object. 
+The **Markup in MR** control creates a **Markup in MR** button in your mixed reality app. When a user selects the **Markup in MR** button, it shows a live camera feed of the device. A user can identify points of interest to begin inking or adding arrows directly on the object.
 
 Ink and arrows will scale appropriately depending on the distance from the objects. When you exit the **Markup in MR** screen screenshots are captured in the control's **Photos** output property.
 
@@ -85,7 +82,8 @@ Studio](https://create.powerapps.com/):
 You can modify the control with several properties.
 
 > [!TIP]
-> Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
+> Some properties are only available under **More options** in the **Advanced** tab on the **Markup in MR** pane.
+> 
 >   ![Markup in MR control properties.](./media/mr-controls/markup-control-properties-2.png)
 
 

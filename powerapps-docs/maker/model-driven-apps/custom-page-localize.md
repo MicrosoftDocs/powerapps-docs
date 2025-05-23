@@ -4,17 +4,12 @@ description: "This article outlines how to load resx files with localized conten
 ms.custom: ""
 ms.date: 05/26/2022
 ms.reviewer: ""
-
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: how-to
 author: "mspilde"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Localize labels, messages, and tooltips on a custom page
 
@@ -49,8 +44,8 @@ Adding a web resource while working on a custom page is covered later in this ar
 
 Localized content will be based on the user or organizational locale for the application the custom page is running. The language for your application is based on user or admin defined language preferences in the user app settings or admin settings in the Power Platform admin center.  If neither has been set, the base language set when the environment was created is used.
 
-> [NOTE!]
-> Content shown in a Power App Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
+> [!NOTE]
+> Content shown in a Power Apps Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
 
 ## Add localized RESX Web resource files to your solution
 

@@ -2,23 +2,20 @@
 title: " Create and update an emailable table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create and update emailable table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
-manager: sunilg
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and update an emailable table
 
 This sample shows how to create and update a table using the [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) message.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateEmailableEntity).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEmailableEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -28,7 +25,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 
 ## What this sample does
 
-The `CreateEntityRequest` message is intended to be used in a scenario where it contains  the data that is needed to create a custom table, and optionally, to add it to a specified unmanaged solution.
+The `CreateEntityRequest` message is intended to be used in a scenario where it contains the data that is needed to create a custom table, and optionally, to add it to a specified unmanaged solution.
 
 ## How this sample works
 
@@ -48,7 +45,5 @@ Checks for the current version of the org.
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

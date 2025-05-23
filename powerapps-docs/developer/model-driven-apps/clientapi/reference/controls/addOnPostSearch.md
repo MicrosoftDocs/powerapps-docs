@@ -1,18 +1,14 @@
 ---
-title: "addOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnPostSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnPostSearch method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -37,11 +33,9 @@ kbSearchControl.addOnPostSearch(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **PostSearch** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.| 
+|`myFunction` |Function |Yes|The function to add to the [PostSearch event](../events/postsearch.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
-
-[PostSearch event](../events/postsearch.md)
+### Related articles
 
 [removeOnPostSearch](removeOnPostSearch.md)
 

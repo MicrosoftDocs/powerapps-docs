@@ -4,7 +4,6 @@ description: "Learn how to export table and column text for translation"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,22 +16,17 @@ ms.assetid: 7e269d09-4453-490a-b50c-f0795ff6f348
 caps.latest.revision: 34
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Translate customized table, form, and column text into other languages
-
 
 After you create customized table and column text in your unmanaged solution, you may want to translate it into other languages.  
 
 > [!IMPORTANT]
 > When you export translations, the export translations feature exports translations for the table. So, that means even if the solution contains only a single form, labels for all the forms for the table will be exported. Make sure you only modify the form's labels when importing the translations back otherwise another component translation you modify will be added as a dependency to the solution.
   
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.    
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 2. Select the unmanaged solution you want, on the command bar select **…**, select **Translations**, and then select **Export translations**.  
 

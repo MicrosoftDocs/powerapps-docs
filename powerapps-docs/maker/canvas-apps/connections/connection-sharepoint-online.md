@@ -1,52 +1,54 @@
 ---
 title: Connect to SharePoint from a canvas app
-description: See the available functions, responses, and examples for SharePoint.
+description: Connect to SharePoint from a canvas app in Microsoft Power Apps.
 author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/11/2021
+ms.reviewer: mkaur
+ms.date: 3/14/2025
 ms.subservice: canvas-maker
-ms.author: niwaggon
+ms.author: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
+
 # Connect to SharePoint from a canvas app
 
-![SharePoint.](./media/connection-sharepoint-online/sharepointicon.png "SharePoint")
+:::image type="icon" source="./media/connection-sharepoint-online/sharepointicon.png":::
 
-Connect to a SharePoint site to generate an app automatically from a list, or create a connection before you add data to an existing app or build an app from scratch.
+There are different ways to connect to SharePoint in a canvas app:
 
-Depending on where your data resides, you can take either or both of these approaches:
-
-- Show data from a list in a SharePoint Online site or an on-premises site.
-- Show images and play video or audio files in a library (SharePoint Online only).
-
-## Generate an app
-
-If you want to manage data in a list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
+- Connect to a SharePoint site to generate an app automatically from a list.
+- Create a SharePoint connection before you add data to a new or existing app.
 
 > [!NOTE]
-> If your list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5).
 
-## Create a connection
+## Connect SharePoint to an app by creating an app
 
-1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Connections** in the left navigation bar, and then select **New connection** near the upper-left corner.
+If you have a SharePoint site with a SharePoint list, you can create an app in Power Apps through the list menu in Microsoft Lists.
 
-    ![Select Data > Connections in the left navigation bar, and then select New connection near the upper-left corner.](./media/connection-sharepoint-online/new-connection.png "Create a connection")
+The **Integrate** > **Power Apps** > **Create an app** menu in Microsoft Lists takes you to Power Apps and builds an app using your list as a data source.
 
-1. Select **SharePoint**.
+Learn more in [Create a canvas app with data from Microsoft Lists](../app-from-sharepoint.md).
 
-    ![Select SharePoint.](./media/connection-sharepoint-online/select-sharepoint.png "Select SharePoint")
+## Create a SharePoint connection
 
-1. Perform either of these sets of steps:
+If you build a new app or have an existing app, you can connect to SharePoint through the **Data** menu in Power Apps.
 
-    - To connect to SharePoint Online, select **Connect directly (cloud services)**, select **Create**, and then provide credentials (if prompted).
+1. [Sign in to Power Apps](https://make.powerapps.com/).
+1. Select **More** > **Connections** in the left navigation bar.
+
+   :::image type="content" source="./media/connection-sharepoint-online/connections-menu.png" alt-text="Screenshot that shows the location of the Connections menu option in the More menu.":::
+
+1. Select **+ New connection** and choose **SharePoint**. A popup appears.
+
+1. Choose either the cloud-services or on-premises option:
+
+    - To connect to SharePoint Online, select **Connect directly (cloud services)** and then **Create**. Provide credentials (if prompted).
 
         ![To connect to SharePoint Online, select Connect directly (cloud services).](./media/connection-sharepoint-online/select-online.png "Connect to a site")
 
@@ -54,166 +56,101 @@ If you want to manage data in a list, Power Apps can [generate a three-screen ap
 
     - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
-        ![To connect to on-premises site, select **Connect using on-premises data gateway).](./media/connection-sharepoint-online/select-onprem.png "Create a connection to on-premises site")
+      Choose **Windows** as the authentication type and add your credentials. If your credentials include a domain name, specify it as `domain\alias`.
 
-        Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
+      :::image type="content" source="./media/connection-sharepoint-online/specify-creds.png" alt-text="Screenshot of the popup showing how to connect using on-premises data gateway.":::
 
-        ![Specify credentials.](./media/connection-sharepoint-online/specify-creds.png "Specify credentials")
+      Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
 
-        Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
+      > [!NOTE]
+      > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the  refresh icon for a list of gateways.
 
-        > [!NOTE]
-        > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the icon to refresh the list of gateways.
-
-        ![Choose gateway.](./media/connection-sharepoint-online/choose-gateway.png "Choose gateway")
-
-        The connection is created, and you can add data to an existing app or build an app from scratch.
+      The connection is created. You can add data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
 
 1. In Power Apps Studio, open the app that you want to update, select **Data** on the left-pane.
 
-    ![Select Data on the left-pane.](./media/connection-sharepoint-online/view-data-sources.png "Select Data on the left-pane")
-
 1. Select **Add data** > **Connectors** > **SharePoint**.
 
-1. Under **Connect to a SharePoint site**, select an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then select **Connect**.
+   :::image type="content" source="./media/connection-sharepoint-online/select-sp-site.png" alt-text="Screenshot showing the menu path to connect to SharePoint from the Data menu.":::
 
-    ![Select site.](./media/connection-sharepoint-online/select-sp-site.png "Select site")
+1. A side panel opens. Under **Connect to a SharePoint site**, select an entry in the **Recent sites** list (or add your own URL), and then select **Connect**.
 
-1. Under **Choose a list**, select the check box for one or more lists that you want to use, and then select **Connect**:
+1. Under **Choose a list**, select the check box for one or more lists, then select **Connect**:
 
-    ![Under Choose a list, select the check box for one or more lists that you want to use, and then select Connect.](./media/connection-sharepoint-online/select-sp-tables.png "Select list")
+   :::image type="content" source="./media/connection-sharepoint-online/select-sp-tables.png" alt-text="Screenshot that shows lists you can choose to include.":::
 
-    Not all types of lists appear by default. Power Apps supports lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
+   > [!NOTE]
+   > Power Apps supports lists, not template-based lists. If you don't see your list, type the list name in **Enter custom table name** box.
+   > :::image type="content" source="./media/connection-sharepoint-online/custom-list.png" alt-text="Screenshot that shows the box where you can add a list name.":::
 
-    ![Type the name of the list in the box that contains Enter a list name.](./media/connection-sharepoint-online/custom-list.png "Enter name")
-    The data source or sources are added to your app.
+   You see a confirmation banner that your data source was added to your app.
 
-## Build your own app from scratch
+   
+## Power Apps data type mappings
 
-Apply the concepts in [Create an app from scratch](../get-started-create-from-blank.md) to SharePoint instead of Excel.
-
-## Show list columns in a gallery
-
-If your list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
-
-- For a **Choice** or **Lookup** column, specify **ThisItem.**_ColumnName_**.Value** to show data in that column.
-
-    For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
-
-- For a **Person or Group** column, specify **ThisItem.**_ColumnName_**.DisplayName** to show the display name of the user or the group.
-
-    For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
-
-    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.**_ColumnName_**.** (including the trailing period).
-
-    > [!NOTE]
-    > For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
-
-- For a **Managed Metadata** column, specify **ThisItem.**_ColumnName_**.Label** to show data in that column.
-
-    For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
-
-## Show data from a library
-
-If you have several images in a SharePoint library, you can add a **Drop down** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
-
-1. If you haven't already, [create a connection](#create-a-connection), and then [add data to an existing app](#add-data-to-an-existing-app).
-
-1. Add a **Drop down** control, and name it **ImageList**.
-
-1. Set the **Items** property of **ImageList** to **Documents**.
-
-1. On the **Properties** tab of the right-hand pane, open the **Value** list, and then select **Name**.
-
-    The file names of the images in your library appear in **ImageList**.
-
-    > [!div class="mx-imgBorder"]
-    > ![List of images.](./media/connection-sharepoint-online/dropdown-items.png "List of images")
-
-1. Add an **Image** control, and set its **Image** property to this expression:
-
-    `ImageList.Selected.'Link to item'`
-
-1. Press F5, and then select a different value in **ImageList**.
-
-    The image that you specified appears.
-
-    > [!div class="mx-imgBorder"]
-    > ![Image list.](./media/connection-sharepoint-online/golden-honey.png "Image list")
-
-You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
-
-1. After you download the app, open [Power Apps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
-1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
+|Power Apps      | SharePoint                                                                         |
+| -------------- | ---------------------------------------------------------------------------------- |
+| `Boolean`      | Yes/No (checkbox)                                                                  |
+| `DateTime`     | Date and Time                                                                      |
+| `Image`        | Hyperlink or Picture, Image                                                        |
+| `Complex`      | Choice, Lookup, Person, Group, Task Outcome, External Data, Managed Metadata       |
+| `Number`       | Number, Currency, ID                                                               |
+| `Text`         | Single line of text, Multiple lines of text, Calculated                            |
 
 > [!NOTE]
-> By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
+  > SharePoint types that map to Power Apps as complex often have subfields that map to basic types such as text and number.
 
-In this one-screen app, the list in the lower-left corner shows all files in your library.
+## Power Apps delegable functions and operations for SharePoint
 
-- You can search for a file by typing or pasting one or more characters in the search box near the top.
-- If your library contains folders, you can filter the list of files by selecting a filter icon in the list of folders just under the title bar.
+The following Power Apps operations, for a given data type, may be delegated to SharePoint for processing (rather than processing locally within Power Apps).
 
-When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
+| Operation/Function [1]  | Number  | Text         | Boolean | DateTime    | Complex [2] |
+|-------------------------|---------|--------------|---------|-------------|-------------|
+| `<, <=,<>, >, >=`       | Yes [3] | No           | No      | Yes         | Yes         |
+| `=`                     | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `Filter`                | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `IsBlank`               | -       | No [4]       | -       | -           | No          |
+| `Lookup`                | Yes     | Yes          | Yes     | Yes         | Yes         |
+| `Sort`                  | Yes     | Yes          | Yes     | Yes         | No          |
+| `SortByColumns`         | Yes     | Yes          | Yes     | Yes         | No          |
+| `StartsWith`            | -       | Yes          | -       | -           | Yes         |
+| `UpdateIf/RemoveIf` [5] | Yes     | No           | -       | -           | No          |
 
-> [!div class="mx-imgBorder"]
-> ![Sample image.](./media/connection-sharepoint-online/library-app.png "Sample image")
+### Notes
 
-## Known issues
+1. Expressions that are joined with **And** or **Or** are delegable to SharePoint. **Not** won't delegate. SharePoint system fields don't generally delegate. These fields include:
+  * ​​​​​​Identifier
+  * IsFolder
+  * Thumbnail
+  * Link​
+  * Name
+  * FilenameWithExtension
+  * Path
+  * FullPath
+  * ModerationStatus
+  * ModerationComment
+  * ContentType
+  * IsCheckedOut
+  * VersionNumber
+  * TriggerWindowStartToken
+  * TriggerWindowEndToken
 
-### Lists
+2. SharePoint supports delegation of complex types by deferring the decision for delegation to the subfield involved. Check the type of the subfield being used on the complex type and then check this table for delegation capabilities.  Only Email and DisplayName are delegable in the Person data type.
+3. SharePoint ID fields are shown as a number field in Power Apps. However, the underlying type is actually Text. SharePoint only supports the equal ('=') operation for delegation on an ID field. Relational operations such as `<, <=,<>, >, >=` won't work on a SharePoint ID field.
+4. A formula such as Filter(..., IsBlank(CustomerId)) won't delegate to SharePoint. However, that formula is semantically close to Filter(..., CustomerId = Blank()), will delegate to SharePoint. These formulas aren't equivalent because the second formula won't treat the empty string ("") as empty. However, the second formula might work for your purposes. On SharePoint, this approach works for the 'equals' operator ("=") but not the operator for 'not equals' ("<>").
+5. UpdateIf and RemoveIf work locally but simulate delegation to a limit of 500/2000 records. They successively bring down records beyond the non-delegation 500/2000 record limit. Records that meet the If condition are collected. Generally, a maximum of 500/2000 records are collected separately and then changed per execution. However, more records may be updated if the existing local data cache is large as the function may have access to more records for evaluation.
 
-Power Apps can read column names that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+  
 
-Not all types of columns are supported, and not all types of columns support all types of cards.
 
-| Column type | Support | Default cards |
-| --- | --- | --- |
-| Single line of text |Yes |View text |
-| Multiple lines of text |Yes |View text |
-| Choice |Yes |View lookup<br>Edit lookup<br>View multiselect (SharePoint Online only)<br>Edit multiselect (SharePoint Online only) |
-| Number |Yes |View percentage<br>View rating<br>View text |
-| Currency |Yes |View percentage<br>View rating<br>View text |
-| Date and Time |Yes |View text |
-| Lookup |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
-| Boolean (Yes/No) |Yes |View text<br>View toggle |
-| Person or Group |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
-| Hyperlink |Yes |View URL<br>View text |
-| Picture |Yes (read-only) |View image<br>View text |
-| Attachment |Yes (read-only) |View Attachments|
-| Calculated |Yes (read-only) | |
-| Image |No | |
-| Task Outcome |No | |
-| External data |No | |
-| Managed Metadata |Yes (read-only) | |
-| Rating |No | |
 
-### Libraries
 
-- You can't upload files from Power Apps to a library.
-- You can't show PDF files from a library in a PDF Viewer control.
-- Power Apps Mobile doesn't support the **Download** function.
-- If your users will run the app in Power Apps Mobile or the Windows 10 app, use the **Launch** function to display library content in a gallery.
 
-### SharePoint document library images render intermittently
+## Related information
 
-Lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
-
-Power Apps connections to SharePoint are made to an explicitly identified list, and not to a SharePoint site in general. Power Apps will try to resolve an external link to an external source. Rendering such images succeeds if there's no authentication required, or if the user has previously authenticated to the referenced SharePoint site. However, it's common that the Power Apps users on mobile devices may not have previously authenticated to the referenced SharePoint site for images. Using links to refer to images from SharePoint document libraries in this scenario may not succeed. This behavior applies even if a separate connection exists for the document library inside the app.
-
-As a solution for such scenarios, store images on a CORS-enabled source such as [Azure Storage](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services), or a CDN service such as [Azure CDN](/azure/cdn/cdn-cors) that allows anonymous access.
-
-## Next steps
-
-- Learn how to [show data from a data source](../add-gallery.md).
-- Learn how to [view details and create or update records](../add-form.md).
-- See other types of [data sources](../connections-list.md) to which you can connect.
-
-### See also
-
-- [SharePoint integration scenarios](../sharepoint/scenarios-intro.md)
-
+- Learn more about working with lists in Power Apps in [Integrate SharePoint Online into Power Apps overview](../sharepoint-list-integration-overview.md)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

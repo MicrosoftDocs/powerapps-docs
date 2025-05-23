@@ -4,24 +4,21 @@ description: "This sample shows how to disable and enable a system user." # 115-
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Disable or enable a user
 
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DisableOrEnableUser)
+> [!div class="nextstepaction"]
+> [SDK for .NET: Disable or enable a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/DisableOrEnableUser)
 
 ## How to run this sample
 
@@ -29,7 +26,7 @@ The user account under which you run this program must have the System Administr
 
 Before building this sample, open the solution in Visual Studio and select **View** > **Task List**. There are two TODO comments that you must follow to provide the required information about an existing system user in your organization.
 
-See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/README.md) for information about how to run this sample.
+See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for information about how to run this sample.
 
 ## What this sample does
 
@@ -53,7 +50,6 @@ To view the summary of the specified system user in Customer Engagement, navigat
 
 Displays an option to enable the user account that was disabled in the `Main()` method.
 
-Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Active Directory or Microsoft 365 to achieve the same result.
-
+Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Microsoft Entra ID or Microsoft 365 to achieve the same result.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

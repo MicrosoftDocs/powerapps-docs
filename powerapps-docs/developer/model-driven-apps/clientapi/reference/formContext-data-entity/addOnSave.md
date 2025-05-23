@@ -1,18 +1,14 @@
 ---
-title: "addOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnSave (Client API reference) in model-driven apps"
 description: Adds a function to be called when the OnSave event is triggered.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,12 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be executed when the record is saved. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
+|`myFunction`|function reference|Yes|The function to be executed when the record is saved. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
 
-### Related topics
+### Related articles
 
-[removeOnSave](removeOnSave.md)
-
+[removeOnSave](removeOnSave.md)   
 [Form OnSave event](../events/form-onsave.md)
 
 

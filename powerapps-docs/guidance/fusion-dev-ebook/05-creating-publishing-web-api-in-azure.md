@@ -3,12 +3,12 @@ title: "5: Creating and publishing a Web API in Azure  | Microsoft Docs"
 description: "Learn about creating and publishing a Web API in Azure."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -72,9 +72,9 @@ Kiana started with the Field Inventory functionality because this is the most st
 
 ![The BoilerParts table showing Id, Name, CategoryId, Price, Overview, NumberInStock, and ImageURL columns.](media/image82.png)
 
-Kiana took the "code-first" approach to building the Web API. With this strategy, she did the following:
+Kiana took the "code-first" approach to building the Web API and did the following:
 
-1.  Defined her own C\# **model** class that mirrored the structure of the **BoilerParts** table in the **InventoryDB** database.
+1.  Defined their own C\# **model** class that mirrored the structure of the **BoilerParts** table in the **InventoryDB** database.
 
 2.  Created an Entity Framework **context** class that the Web API uses to connect to the database, to perform queries.
 
@@ -88,7 +88,7 @@ The following image shows the high-level structure of the Web API.
 
 ![High-level structure of the Inventory Web API.](media/image83.png)
 
-Kiana used the following procedure to create the Web API using .NET 5.0 command-line tools and Visual Studio Code:
+Kiana used the following procedure to create the Web API using .NET 6.0 command-line tools and Visual Studio Code:
 
 1.  Open a terminal window in Visual Studio Code.
 
@@ -376,7 +376,7 @@ The Field Knowledgebase operations in the Web API work on three tables in the **
 
 ![Knowledgebase tables relationships.](media/image97.png)
 
-Kiana adopted a similar approach for the Field Knowledgebase database that she used for the Field Inventory Management database. She performed the following tasks:
+Kiana adopted a similar approach for the Field Knowledgebase database that was used for the Field Inventory Management database and performed the following tasks:
 
 1.  Create C\# model classes that mirror the structure of the **Tips**, **BoilerParts**, and **Engineers** table in the **KnowledgeDB** database. The code for each of these classes is shown in the following.
 

@@ -7,18 +7,14 @@ ms.reviewer: "Mattp123"
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "PowerApps"
 author: "mspilde"
 ms.subservice: mda-maker
 ms.author: "mspilde"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Design forms for performance in model-driven apps
 

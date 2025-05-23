@@ -1,26 +1,21 @@
 ---
 title: "Sample: Audit table data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to audit table data changes" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: Bluebear73
-ms.author: munzinge
-manager: mayadu
+ms.date: 12/08/2022
+author: paulliew
+ms.author: paulliew
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Audit table data changes
 
-
-
-This sample shows how to enable and disable auditing on a table and its columns, retrieve the data change history of the audited table, and delete the audit records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditEntityData).
+This sample shows how to enable and disable auditing on a table and its columns, retrieve the data change history of the audited table, and delete the audit records. You can view the sample [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AuditEntityData).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -30,8 +25,17 @@ This sample shows how to enable and disable auditing on a table and its columns,
 
 ## What this sample does
 
-The `RetrieveRecordChangeHistoryRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the audit history for a table.
+This sample does the following:
 
+1. Enable auditing for the organization and the account table if not already enabled.
+2. Create an account record.
+3. Use the `RetrieveRecordChangeHistory` message via the [RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest) to retrieve the history of the account record created in step 2.
+4. Display some of the details information in each audit record.
+5. Update the account record, updating a specific column.
+6. Retrieve the change history of the changed column using the `RetrieveAttributeChangeHistory` message with the [RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest).
+7. Display the attribute change history.
+8. Use the `RetrieveAuditDetails` message via the [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest) to display some of the audit details.
+9. Return the environent auditing to the original state and delete the account record created.
 
 ## How this sample works
 
@@ -40,17 +44,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates an sample account table.
+1. Enables auditing for the organization and account table if necessary.
+1. Creates an sample account record.
 
 ### Demonstrate
 
-1. Gets the organization's ID from the system user record.
-2. Enabling auditing on organization and also on the sample account table.
-3. The `RetrieveRecordChangeHistoryRequest` retrieves the audit history for the account table and displays the result.
+Use of the  `RetrieveRecordChangeHistory`, `RetrieveAttributeChangeHistory`, and `RetrieveAuditDetails` messages to show the kinds of data available through these auditing apis.
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

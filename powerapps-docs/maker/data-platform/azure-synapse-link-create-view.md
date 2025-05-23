@@ -2,9 +2,8 @@
 title: "Create a view of your Azure Synapse Link for Dataverse data | MicrosoftDocs"
 description: "Learn how to create a view of your exported Dataverse table data"
 ms.custom: ""
-ms.date: 01/24/2022
+ms.date: 10/31/2024
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -14,13 +13,11 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
-contributors: "sama-zaki"
+contributors: 
+ - "sama-zaki"
+ - "saviegas"
 ---
 # Create a view of your Azure Synapse Link for Dataverse data
 
@@ -41,7 +38,6 @@ This section describes the prerequisites necessary to create a view of your Data
 
 - **Synapse administrator.** You must be granted **Synapse Administrator** role access within Synapse studio.
 
-- **SQL Database.** This guide assumes you have created an additional SQL database (Serverless Pool or Dedicated Pool) in your Azure Synapse Analytics workspace to save the view.
 
 ## Create a view of your Dataverse data
 
@@ -49,23 +45,32 @@ This section describes the prerequisites necessary to create a view of your Data
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
-2. Expand **SQL database**, and select the **...** next to the database where you will store your view. Then select **New SQL script** > **New external table**.
-
-    ![New empty script.](media/new-empty-script.png "New empty script")
-
-3. Run a create view script by specifying a **view name**, the **column names**, **Dataverse database name**, and the exported **table name**.
+2. Create User-defined schema within Synapse SQL
 
    ```sql
-   CREATE VIEW [VIEW NAME] 
+   CREATE SCHEMA [SCHEMA NAME] 
+   GO
+   ```
+   
+3. Run a create view script by specifying a **view name**, the **column names**, **Dataverse database name** under the new **schema**, and then exported **table name**.
+
+   ```sql
+   CREATE OR ALTER VIEW [SCHEMA NAME].[VIEW NAME] 
    AS
    SELECT [COLUMN NAMES]
    FROM [DATAVERSE DATABASE NAME].[dbo].[TABLE NAME]
 
    ```
 
-4. Find the new view under the **Views** folder in the SQL database.
+## Use a view of your Dataverse data
 
-    ![Create view result.](media/create-view-result.png "Create view result")
+You can use views in your queries the same way you use views in SQL Server queries.
+The view will be created and accessible under views folder in **SQL Server Management Studio (SSMS)** or **Azure Data Studio**
+
+> [!IMPORTANT]
+> Custom database objects created by a customer within the Azure Synapse Link database are deleted once the unlink is completed.
+>
+> Customers will need to implement their own version control of their custom database objects scripts to ensure they have a backup.
 
 ### See also
 

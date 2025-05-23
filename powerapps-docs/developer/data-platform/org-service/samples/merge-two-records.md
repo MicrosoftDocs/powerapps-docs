@@ -2,24 +2,23 @@
 title: "Sample: Merge two records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to merge two records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Merge two records
 
-This sample shows how to merge two record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MergeTwoRecords).
+This sample shows how to merge two record.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Merge two records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/MergeTwoRecords)
 
 ## How to run this sample
 
@@ -40,14 +39,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `MergeRequest` method creates the request. 
+1. The `MergeRequest` method creates the request.
 2. The `Account` message creates another account to hold new data to merge into the table.
-
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

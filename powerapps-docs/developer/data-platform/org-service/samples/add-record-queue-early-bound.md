@@ -4,25 +4,25 @@ description: "This sample shows how to add a record to a queue." # 115-145 chara
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Add a record to a queue
 
-This sample shows how to add a record to a queue. It creates source and destination queues. It adds a letter activity to the source queue and then moves it to the destination queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecordToQueue).
+This sample shows how to add a record to a queue. It creates source and destination queues. It adds a letter activity to the source queue and then moves it to the destination queue.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Add a record to a queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RecordToQueue)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample requires additional users that are not in your system. Create the users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
+This sample requires additional users that are not in your system. Create the users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below.
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
@@ -57,6 +57,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

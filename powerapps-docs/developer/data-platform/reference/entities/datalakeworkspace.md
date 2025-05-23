@@ -1,59 +1,55 @@
 ---
-title: "datalakeworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the datalakeworkspace table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Data Lake Workspace (datalakeworkspace) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Data Lake Workspace (datalakeworkspace) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# datalakeworkspace table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Data Lake Workspace (datalakeworkspace) table/entity reference (Microsoft Dataverse)
 
 A workspace is a place to store data in Azure Data Lake.
 
-**Added by**: Data lake workspaces Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/datalakeworkspaces<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/datalakeworkspaces(*datalakeworkspaceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/datalakeworkspaces(*datalakeworkspaceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakeworkspaces<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/datalakeworkspaces(*datalakeworkspaceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/datalakeworkspaces(*datalakeworkspaceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Data Lake Workspace (datalakeworkspace) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /datalakeworkspaces<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /datalakeworkspaces(*datalakeworkspaceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Retrieve`<br />Event: True |`GET` /datalakeworkspaces(*datalakeworkspaceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /datalakeworkspaces<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /datalakeworkspaces(*datalakeworkspaceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /datalakeworkspaces(*datalakeworkspaceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /datalakeworkspaces(*datalakeworkspaceid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|datalakeworkspaces|
-|DisplayCollectionName|Data Lake Workspaces|
-|DisplayName|Data Lake Workspace|
-|EntitySetName|datalakeworkspaces|
-|IsBPFEntity|False|
-|LogicalCollectionName|datalakeworkspaces|
-|LogicalName|datalakeworkspace|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|datalakeworkspaceid|
-|PrimaryNameAttribute|name|
-|SchemaName|datalakeworkspace|
+The following table lists selected properties for the Data Lake Workspace (datalakeworkspace) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Data Lake Workspace** |
+| **DisplayCollectionName** | **Data Lake Workspaces** |
+| **SchemaName** | `datalakeworkspace` |
+| **CollectionSchemaName** | `datalakeworkspaces` |
+| **EntitySetName** | `datalakeworkspaces`|
+| **LogicalName** | `datalakeworkspace` |
+| **LogicalCollectionName** | `datalakeworkspaces` |
+| **PrimaryIdAttribute** | `datalakeworkspaceid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -74,273 +70,223 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [whitelistedappid](#BKMK_whitelistedappid)
 
-
 ### <a name="BKMK_datalakeworkspace_UniqueName"></a> datalakeworkspace_UniqueName
 
 |Property|Value|
-|--------|-----|
-|Description|Unique Name for the entity.|
-|DisplayName|Unique Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Unique Name for the entity.**|
+|DisplayName|**Unique Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|datalakeworkspace_uniquename|
-|MaxLength|128|
+|LogicalName|`datalakeworkspace_uniquename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_datalakeworkspaceId"></a> datalakeworkspaceId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Data Lake Workspace|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Data Lake Workspace**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|datalakeworkspaceid|
+|LogicalName|`datalakeworkspaceid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_iscustomercapacity"></a> iscustomercapacity
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if workspace data storage uses customer capacity.|
-|DisplayName|Is Customer Capacity|
+|---|---|
+|Description|**Indicates if workspace data storage uses customer capacity.**|
+|DisplayName|**Is Customer Capacity**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|iscustomercapacity|
+|LogicalName|`iscustomercapacity`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### iscustomercapacity Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`datalakeworkspace_iscustomercapacity`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_isdeepcopyenabled"></a> isdeepcopyenabled
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if deep copy is enabled for workspace.|
-|DisplayName|Is Deep Copy Enabled|
+|---|---|
+|Description|**Indicates if deep copy is enabled for workspace.**|
+|DisplayName|**Is Deep Copy Enabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isdeepcopyenabled|
+|LogicalName|`isdeepcopyenabled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### isdeepcopyenabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`datalakeworkspace_isdeepcopyenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_isprivate"></a> isprivate
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if workspace data and metadata are visible to all applications, or only visible to the workspace owner and applications with explicit permissions to the workspace.|
-|DisplayName|Is Private|
+|---|---|
+|Description|**Indicates if workspace data and metadata are visible to all applications, or only visible to the workspace owner and applications with explicit permissions to the workspace.**|
+|DisplayName|**Is Private**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isprivate|
+|LogicalName|`isprivate`|
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
-
-#### isprivate Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`datalakeworkspace_isprivate`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_owningappid"></a> owningappid
 
 |Property|Value|
-|--------|-----|
-|Description|The app id which owns this workspace. The owning app id has full control i.e. read, write and execute permissions on the ADLS folder.|
-|DisplayName|Owning App Id|
+|---|---|
+|Description|**The app id which owns this workspace. The owning app id has full control i.e. read, write and execute permissions on the ADLS folder.**|
+|DisplayName|**Owning App Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|owningappid|
+|LogicalName|`owningappid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_tenantid"></a> tenantid
 
 |Property|Value|
-|--------|-----|
-|Description|AAD tenant id where the owning application id is registered.|
-|DisplayName|Tenant Id|
+|---|---|
+|Description|**AAD tenant id where the owning application id is registered.**|
+|DisplayName|**Tenant Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|tenantid|
+|LogicalName|`tenantid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_whitelistedappid"></a> whitelistedappid
 
 |Property|Value|
-|--------|-----|
-|Description|Application Id that is allow listed in AAD Tenant ID to access the Graph API.|
-|DisplayName|Whitelisted App Id|
+|---|---|
+|Description|**Application Id that is approved in AAD Tenant ID to access the Graph API.**|
+|DisplayName|**Whitelisted App Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|whitelistedappid|
+|LogicalName|`whitelistedappid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [containerendpoint](#BKMK_containerendpoint)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [path](#BKMK_path)
 - [SolutionId](#BKMK_SolutionId)
@@ -349,653 +295,290 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_containerendpoint"></a> containerendpoint
 
 |Property|Value|
-|--------|-----|
-|Description|Azure Data Lake container endpoint for this workspace.|
-|DisplayName|Container Endpoint|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Azure Data Lake container endpoint for this workspace.**|
+|DisplayName|**Container Endpoint**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|containerendpoint|
-|MaxLength|100|
+|LogicalName|`containerendpoint`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|None|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_path"></a> path
 
 |Property|Value|
-|--------|-----|
-|Description|Workspace path in the Azure Data Lake container.|
-|DisplayName|Path|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Workspace path in the Azure Data Lake container.**|
+|DisplayName|**Path**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|path|
-|MaxLength|100|
+|LogicalName|`path`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Data Lake Workspace|
-|DisplayName|Status|
+|---|---|
+|Description|**Status of the Data Lake Workspace**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`datalakeworkspace_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Data Lake Workspace|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Data Lake Workspace**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`datalakeworkspace_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [datalakeworkspace_SyncErrors](#BKMK_datalakeworkspace_SyncErrors)
-- [datalakeworkspace_DuplicateMatchingRecord](#BKMK_datalakeworkspace_DuplicateMatchingRecord)
-- [datalakeworkspace_DuplicateBaseRecord](#BKMK_datalakeworkspace_DuplicateBaseRecord)
-- [datalakeworkspace_AsyncOperations](#BKMK_datalakeworkspace_AsyncOperations)
-- [datalakeworkspace_MailboxTrackingFolders](#BKMK_datalakeworkspace_MailboxTrackingFolders)
-- [datalakeworkspace_ProcessSession](#BKMK_datalakeworkspace_ProcessSession)
-- [datalakeworkspace_BulkDeleteFailures](#BKMK_datalakeworkspace_BulkDeleteFailures)
-- [datalakeworkspace_PrincipalObjectAttributeAccesses](#BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses)
-- [datalakeworkspace_workspacepermission](#BKMK_datalakeworkspace_workspacepermission)
-
-
-### <a name="BKMK_datalakeworkspace_SyncErrors"></a> datalakeworkspace_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_SyncErrors](syncerror.md#BKMK_datalakeworkspace_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_DuplicateMatchingRecord"></a> datalakeworkspace_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspace_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_DuplicateBaseRecord"></a> datalakeworkspace_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspace_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_AsyncOperations"></a> datalakeworkspace_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspace_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_MailboxTrackingFolders"></a> datalakeworkspace_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspace_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_ProcessSession"></a> datalakeworkspace_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_ProcessSession](processsession.md#BKMK_datalakeworkspace_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_BulkDeleteFailures"></a> datalakeworkspace_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspace_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses"></a> datalakeworkspace_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [datalakeworkspace_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_datalakeworkspace_workspacepermission"></a> datalakeworkspace_workspacepermission
-
-Same as the [datalakeworkspace_workspacepermission](datalakeworkspacepermission.md#BKMK_datalakeworkspace_workspacepermission) many-to-one relationship for the [datalakeworkspacepermission](datalakeworkspacepermission.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|datalakeworkspacepermission|
-|ReferencingAttribute|workspaceid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|datalakeworkspace_workspacepermission|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_datalakeworkspace_createdby](#BKMK_lk_datalakeworkspace_createdby)
 - [lk_datalakeworkspace_createdonbehalfby](#BKMK_lk_datalakeworkspace_createdonbehalfby)
@@ -1003,39 +586,198 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_datalakeworkspace_modifiedonbehalfby](#BKMK_lk_datalakeworkspace_modifiedonbehalfby)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 
-
 ### <a name="BKMK_lk_datalakeworkspace_createdby"></a> lk_datalakeworkspace_createdby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_datalakeworkspace_createdby](systemuser.md#BKMK_lk_datalakeworkspace_createdby)
 
-See the [lk_datalakeworkspace_createdby](systemuser.md#BKMK_lk_datalakeworkspace_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_datalakeworkspace_createdonbehalfby"></a> lk_datalakeworkspace_createdonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_datalakeworkspace_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspace_createdonbehalfby)
 
-See the [lk_datalakeworkspace_createdonbehalfby](systemuser.md#BKMK_lk_datalakeworkspace_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_datalakeworkspace_modifiedby"></a> lk_datalakeworkspace_modifiedby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_datalakeworkspace_modifiedby](systemuser.md#BKMK_lk_datalakeworkspace_modifiedby)
 
-See the [lk_datalakeworkspace_modifiedby](systemuser.md#BKMK_lk_datalakeworkspace_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_datalakeworkspace_modifiedonbehalfby"></a> lk_datalakeworkspace_modifiedonbehalfby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser lk_datalakeworkspace_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspace_modifiedonbehalfby)
 
-See the [lk_datalakeworkspace_modifiedonbehalfby](systemuser.md#BKMK_lk_datalakeworkspace_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_datalakeworkspace"></a> organization_datalakeworkspace
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [organization organization_datalakeworkspace](organization.md#BKMK_organization_datalakeworkspace)
 
-See the [organization_datalakeworkspace](organization.md#BKMK_organization_datalakeworkspace) one-to-many relationship for the [organization](organization.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [datalakeworkspace_AsyncOperations](#BKMK_datalakeworkspace_AsyncOperations)
+- [datalakeworkspace_BulkDeleteFailures](#BKMK_datalakeworkspace_BulkDeleteFailures)
+- [datalakeworkspace_DuplicateBaseRecord](#BKMK_datalakeworkspace_DuplicateBaseRecord)
+- [datalakeworkspace_DuplicateMatchingRecord](#BKMK_datalakeworkspace_DuplicateMatchingRecord)
+- [datalakeworkspace_MailboxTrackingFolders](#BKMK_datalakeworkspace_MailboxTrackingFolders)
+- [datalakeworkspace_PrincipalObjectAttributeAccesses](#BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses)
+- [datalakeworkspace_ProcessSession](#BKMK_datalakeworkspace_ProcessSession)
+- [datalakeworkspace_SyncErrors](#BKMK_datalakeworkspace_SyncErrors)
+- [datalakeworkspace_workspacepermission](#BKMK_datalakeworkspace_workspacepermission)
+
+### <a name="BKMK_datalakeworkspace_AsyncOperations"></a> datalakeworkspace_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation datalakeworkspace_AsyncOperations](asyncoperation.md#BKMK_datalakeworkspace_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_BulkDeleteFailures"></a> datalakeworkspace_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure datalakeworkspace_BulkDeleteFailures](bulkdeletefailure.md#BKMK_datalakeworkspace_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_DuplicateBaseRecord"></a> datalakeworkspace_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord datalakeworkspace_DuplicateBaseRecord](duplicaterecord.md#BKMK_datalakeworkspace_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_DuplicateMatchingRecord"></a> datalakeworkspace_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord datalakeworkspace_DuplicateMatchingRecord](duplicaterecord.md#BKMK_datalakeworkspace_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_MailboxTrackingFolders"></a> datalakeworkspace_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder datalakeworkspace_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_datalakeworkspace_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses"></a> datalakeworkspace_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess datalakeworkspace_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_datalakeworkspace_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_ProcessSession"></a> datalakeworkspace_ProcessSession
+
+Many-To-One Relationship: [processsession datalakeworkspace_ProcessSession](processsession.md#BKMK_datalakeworkspace_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_SyncErrors"></a> datalakeworkspace_SyncErrors
+
+Many-To-One Relationship: [syncerror datalakeworkspace_SyncErrors](syncerror.md#BKMK_datalakeworkspace_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_datalakeworkspace_workspacepermission"></a> datalakeworkspace_workspacepermission
+
+Many-To-One Relationship: [datalakeworkspacepermission datalakeworkspace_workspacepermission](datalakeworkspacepermission.md#BKMK_datalakeworkspace_workspacepermission)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`datalakeworkspacepermission`|
+|ReferencingAttribute|`workspaceid`|
+|ReferencedEntityNavigationPropertyName|`datalakeworkspace_workspacepermission`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.datalakeworkspace?text=datalakeworkspace EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.datalakeworkspace?displayProperty=fullName>

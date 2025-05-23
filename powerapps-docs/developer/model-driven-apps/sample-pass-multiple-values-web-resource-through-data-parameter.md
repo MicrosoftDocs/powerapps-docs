@@ -1,26 +1,24 @@
 ---
-title: "Sample: Pass multiple values to a  web resource through the data parameter (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The sample represents a technique to pass the additional values within a single parameter and then process them within your web resource." # 115-145 characters including spaces. This abstract displays in the search result.
-author: JimDaly
-ms.author: jdaly
-manager: kvivek
-ms.date: 04/01/2022
+title: "Sample: Pass multiple values to a  web resource through the data parameter (model-driven apps)"
+description: "The sample represents a technique to pass the additional values within a single parameter and then process them within your web resource."
+author: anushikhas96
+ms.author: anushisharma
+ms.date: 11/01/2023
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sample: Pass multiple values to a  web resource through the data parameter
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-pass-multiple-values-web-resource-through-data-parameter -->
 
 An (HTML) web resource page can only accept a single custom parameter called `data`. To pass more than one value in the data parameter, you need to encode the parameters and decode the parameters in your page.  
   
- The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource. 
+ The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource.
+ 
+> [!NOTE]
+> Only alphanumeric characters are supported as parameters to web resources. All characters included in the query string go through validation to ensure the validity of the parameters passed. If there are any parameters found to be not valid, the request will fail. For example, passing text values enclosed in angular brackets is considered an invalid parameter type.
   
 ## Sample HTML web resource
 
@@ -31,7 +29,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
 - **parseDataValue**: Receives the data parameter from `getDataParam` and builds a DHTML table to display any values passed within the `data` parameter.  
   
   > [!NOTE]
-  >  All characters included in the query string will be encoded using the [encodeURIComponent function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). This function uses the JavaScript [decodeURIComponent function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) to decode the values passed.  
+  >  All characters included in the query string will be encoded using the [encodeURIComponent function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). This function uses the JavaScript [decodeURIComponent function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) to decode the values passed.  
   
 - **noParams**: Displays a message when no parameters are passed to the page.  
   
@@ -163,14 +161,14 @@ An (HTML) web resource page can only accept a single custom parameter called `da
   
 #### Using this page  
   
-1.  Create a webpage web resource called "new_/ShowDataParams.htm" using the sample code.  
+1. Create a webpage web resource called "new_/ShowDataParams.htm" using the sample code.  
   
      The parameters you want to pass are: `first=First Value&second=Second Value&third=Third Value`  
   
     > [!NOTE]
-    >  If you’re adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** column. These values will be encoded for you, but you’ll still need to decode them and extract the values in your page.  
+    >  If you're adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** column. These values will be encoded for you, but you'll still need to decode them and extract the values in your page.  
   
-2.  For dynamic values generated in code, use the `encodeURIComponent` method on the parameters. The encoded values should be:  
+1. For dynamic values generated in code, use the `encodeURIComponent` method on the parameters. The encoded values should be:  
   
      `first%3DFirst%20Value%26second%3DSecond%20Value%26third%3DThird%20Value`  
   
@@ -183,7 +181,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
     > [!NOTE]
     >  If you have added the web resource to a form and have pasted the un-encoded parameters into the **Custom Parameters(data)** column, you can just preview the form.  
   
-3.  The `new_/ShowDataParams.htm` will display a dynamically generated table:  
+1. The `new_/ShowDataParams.htm` will display a dynamically generated table:  
   
     |Parameter|Value|  
     |---------------|-----------|  
@@ -201,9 +199,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
   
 ### See also  
 
- [Web Resources](web-resources.md)<br />
- [Sample: Import Files as Web Resources](sample-import-files-web-resources.md)<br />
- [Web Page (HTML) Web Resources](webpage-html-web-resources.md)<br />
-
+[Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
+[Web Resources](web-resources.md)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

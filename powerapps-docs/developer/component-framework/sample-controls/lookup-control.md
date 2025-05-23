@@ -1,12 +1,16 @@
 ---
-title: " Lookup component| Microsoft Docs" 
+title: "Lookup component| Microsoft Docs" 
 description: "demonstrates how to leverage the Lookup.Simple type on properties of field components." 
-ms.author: jdaly
-author: noazarur-microsoft
-manager: kvivek
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 # Implementing simple lookup component
 
@@ -37,7 +41,7 @@ You'll notice that each of the `Lookup Objects` buttons have the same `onClick` 
 In `getOutputs`, the component sends back the newly selected record to consume and update. In `updateView`, the component uses the raw value of both lookup properties to display the currently selected lookups for both bound properties.
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

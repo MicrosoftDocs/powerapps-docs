@@ -1,17 +1,14 @@
 ---
-title: "Sample dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
-author: mspilde
-ms.author: mspilde
-manager: lwelicki
+title: "Sample dashboards (model-driven apps)"
+description: "The topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the SystemForm.FormXml for an organization-owned dashboard or UserForm.FormXml for a user-owned dashboard."
+author: jasongre
+ms.author: jasongre
+ms.reviewer: jdaly
 ms.date: 04/01/2022
-ms.topic: "article"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -21,8 +18,10 @@ This topic contains sample dashboards along with the respective FormXML strings.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   
-<a name="Sample1"></a>   
-## Dashboard with charts and grids  
+<a name="Sample1"></a>
+
+## Dashboard with charts and grids
+
  The following is a sample dashboard that has four components: three charts and a grid. This is one of the default organization-owned dashboards,  available in model-driven apps.  
   
  ![Sample dashboard.](media/dashboard-sample.png "Sample dashboard: Microsoft Dynamics 365 Overview")  
@@ -206,10 +205,8 @@ This topic contains sample dashboards along with the respective FormXML strings.
 </form>  
 ```  
   
-### See also  
+### See also
+
 [Dashboards](analyze-data-with-dashboards.md)   
  
-
-
-
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

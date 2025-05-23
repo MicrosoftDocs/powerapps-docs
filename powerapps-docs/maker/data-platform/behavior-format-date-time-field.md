@@ -2,122 +2,186 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 05/25/2018
+ms.date: 05/28/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
-ms.assetid: 73d691c7-344e-4c96-8979-c661c290bf81
-caps.latest.revision: 47
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - tahoon-ms
 ---
-# Behavior and format of the Date and Time column
+# Behavior and format of the date and time column
 
+In Microsoft Dataverse, you can specify how date and time values are shown to users and how they're adjusted for time zones.
 
+Two options are available for date and time columns.
 
-In Microsoft Dataverse, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only**, or **Time-Zone Independent**.  
-  
-<a name="Behavior"></a>   
+- **Behavior**: Whether to adjust values for time zones.
+- **Format**: Whether to display the time portion of the value.
 
-## Date and time column behavior and format  
+## Behavior
 
-The following table contains information about the date and time column behavior and format.  
-  
-|Behavior|Format|Description|  
-|--------------|------------|-------------------------------|  
-|**User Local** |**Date Only**<br />- or -<br />**Date and Time**|This is the default behavior of custom date and time columns.<br /><br />The column values are displayed in the current user's local time.<br />In Web services, these values are returned using a common UTC time zone format.<br /><br />You can change this one time if you select the default behavior. More information [Change User Local Behavior](#change-user-local-behavior)|  
-|**Date Only**|**Date Only**|No Time zone conversion.<br /><br />The time portion of the value is always 12:00AM.<br />The date portion of the value is stored and retrieved as specified in the UI and Web services.|  
-|**Time-Zone Independent**|**Date Only**<br />- or -<br />**Date and Time**|No Time zone conversion.<br /><br />The date and time values are stored and retrieved as specified in the UI and Web services.|  
+Dataverse stores all date and time values in UTC time zone. When your app displays values or processing values entered by users, Dataverse and model-driven apps can adjust for the user's time zone with these **Behavior** options.
 
-## Change User Local Behavior:
+- **User local**: Adjust values for the user's time zone. This is the default behavior. You can [change this once to another behavior](#change-user-local-behavior).
+- **Time zone independent**: No time zone conversion.
+- **Date only**: No time zone conversion. Unlike **Time zone independent**, the time portion isn't stored.
 
-Unless the publisher of a managed solution prevents this, you can change the behavior of an existing custom Date columns from  **User Local** to **Date Only** or **Time-Zone Independent**. This is a one time change.
+The user's time zone is set in [personal options](../../user/set-personal-options.md#general-tab-options), not the system time zone in Windows, Android, iOS, or macOS. However, the [system time zone might affect client scripts that work with JavaScript Dates](#get-values-with-client-api).
 
-Changing the column behavior affects the column values that are added or modified after the column behavior was changed. The existing column values remain in the database in the UTC time zone format. To change the behavior of the existing column values from UTC to Date Only, you may need a help of a developer to do it programmatically. More Information:  [Convert behavior of existing date and time values in the database](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute#convert-behavior-of-existing-date-and-time-values-in-the-database). 
+## Format
+
+All date and time columns have a time portion unless its behavior is **Date Only**. **Format** determines whether to display the time portion of the value.
+
+- **Date and time**: Displays the date and time of the value.
+- **Date only**: Displays the date portion of the value only.
+
+> [!NOTE]
+> Users can still change the time portion if the **Format** is **Date Only**. For example, with Web API calls or by using a control that has the time portion. This is different from **Date only** **Behavior**, where the time portion is not stored at all.
+
+## Usage guidelines
+
+Use **Time zone independent** behavior when time zone information isn't required, such as hotel check-in times. With this selection, users in all time zones see the same date and time value.
+
+Use **Date only** behavior when information about the time of the day and the time zone isn't required, such as birthdays or anniversaries. With this selection, users in all time zones see the exact same date value.
+
+**Time zone independent** behavior with **Date only** format is practically the same as **Date only** behavior. Use the former if you aren't sure whether you need the time portion in the future.
+
+> [!IMPORTANT]
+> Avoid **Date only** format with **User local** behavior. Users in different time zones might see a different date, which is not intended in most scenarios. When a user sets a date in a model-driven app, the time portion will automatically be set to midnight of their time zone. This might cause the date to appear a day earlier or later for other users.
+
+## Examples
+
+### Display values
+
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query/select-columns.md#formatted-values):
+
+| Behavior | Format | Display value |
+| -------- | ------ | ------------- |
+| User local | Date and time | October 14th, 2023, 11:30 pm |
+| User local | Date only | October 14th, 2023 |
+| Time zone Independent | Date and time | October 15th, 2023, 7:30 am |
+| Time zone Independent | Date only | October 15th, 2023 |
+| Date only | - | October 15th, 2023 |
+
+### Enter values in an app
+
+Users in the time zone UTC-8 enter `October 14th, 2023, 11:30 pm` in a model-driven app. The value is saved in Dataverse as:
+
+| Behavior | Format | Value saved in Dataverse |
+| -------- | ------ | ------------------------ |
+| User local | Date and time | 2023-10-15T07:30:00Z |
+| User local | Date only | 2023-10-15T07:30:00Z |
+| Time zone Independent | Date and time | 2023-10-14T23:30:00Z |
+| Time zone Independent | Date only | 2023-10-14T23:30:00Z |
+| Date only | - | 2023-10-14 |
+
+If the user enters just the date `October 14th, 2023`, the time portion is assumed to be 12:00 AM.
+
+| Behavior | Format | Value saved in Dataverse |
+| -------- | ------ | ------------------------ |
+| User local | Date only | 2023-10-14T08:00:00Z |
+| Time zone Independent | Date only | 2023-10-14T00:00:00Z |
+| Date only | - | 2023-10-14 |
+
+### Enter invalid values in an app
+
+Different clients have different ways to handle invalid input. For example, in Pacific time zone, daylight saving started on March 12th, 2023 at 2:00 AM, moving the time forward one hour to 3:00 AM. The time between 2:00 AM and 3:00 AM on that day doesn't exist. When users try to enter a value in that time range, apps might do one of the following:
+
+* Change to the previous or next valid time.
+* Revert to the last known value.
+* Show an error message.
+* Don't show times between 2:00 AM and 3:00 AM in the time picker, so that users can't select them in the first place.
+
+Similarly, different clients have different ways to handle repeated time ranges. For example, in Pacific time zone, daylight saving ended on November 5th, 2023 at 2:00 AM, moving the time backward one hour to 1:00 AM. The time between 1:00 AM and 2:00 AM on that day is repeated twice. A time like 1:30 AM could refer to either time zones. If you need to unambiguously show or enter times in that range, it's best to temporarily switch to a time zone that doesn't use daylight saving.
+
+### Get raw values with Web API
+
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in all time zones get these with a [Web API request for the value](../../developer/data-platform/webapi/query/select-columns.md):
+
+| Behavior | Format | Raw value |
+| -------- | ------ | --------- |
+| User local | Date and time | 2023-10-15T07:30:00Z |
+| User local | Date only | 2023-10-15T07:30:00Z |
+| Time zone Independent | Date and time | 2023-10-15T07:30:00Z |
+| Time zone Independent | Date only | 2023-10-15T07:30:00Z |
+| Date only | - | 2023-10-15 |
+
+### Get values with Client API
+
+Users in the time zone UTC-8 enter `October 14th, 2023, 11:30 pm` in a model-driven app. [Client API](../../developer/model-driven-apps/client-scripting.md) functions like `formContext.getAttribute(<column name>).getValue()` return the value with time zone adjustments applied:
+
+| Behavior | Format | JavaScript `dateValue.toUTCString()` |
+| -------- | ------ | ------------------------------------ |
+| User local | Date and time | 2023-10-15 07:30 (UTC)|
+| User local | Date only | 2023-10-15 07:30 (UTC) |
+
+For **Time zone independent** behavior, the JavaScript Date value is in the browser's time zone:
+
+| Behavior | Format | JavaScript `dateValue.toString()` |
+| -------- | ------ | --------------------------------- |
+| Time zone Independent | Date and time | 2023-10-14 23:30 (browser time zone) |
+| Time zone Independent | Date only | 2023-10-14 23:30 (browser time zone) |
+
+JavaScript date values always have a time component. That's why **Date only** behavior has a time component of 12:00 AM:
+
+| Behavior | Format | JavaScript `dateValue.toString()` |
+| -------- | ------ | --------------------------------- |
+| Date only | - | 2023-10-15 00:00 (browser time zone) |
+
+> [!NOTE]
+> JavaScript date values are affected by the browser's time zone, which comes from the device operating system settings.
+>
+> For **User local** behavior, the Client API result should be interpreted as a UTC value. Use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. to work with it. To get what the user sees, apply [getTimeZoneOffsetMinutes](../../developer/component-framework/reference/usersettings/gettimezoneoffsetminutes.md). Do not use `Date.getDate()`, `Date.getHours()`, etc. because these will show the value in the browser's time zone.
+>
+> For **Time zone independent** and **Date only** behavior, the Client API result should be interpreted as a value in the browser's time zone. Use `Date.getDate()`, `Date.getHours()`, etc. to work with it. Don't use `Date.getUTCDate()`, `Date.getUTCHours()`, and so on because you don't have to adjust for any time zones.
+
+## Change user local behavior
+
+Unless the publisher of a managed solution prevents this, you can change the behavior of existing custom date columns from  **User local** to **Date only** or **Time zone independent**. This is a one-time change.
+
+Changing the column behavior affects the column values that are added or modified after the column behavior was changed. The existing column values remain in the database in the UTC time zone format. To change the behavior of the existing column values from UTC to **Date only**, you might need a help of a developer to [convert behavior of existing date and time values in the database](../../developer/data-platform/behavior-format-date-time-attribute.md#convert-behavior-of-existing-date-and-time-values-in-the-database). 
 
 > [!WARNING]
-> Before changing the behavior of an existing date and time column, you should review all the dependencies of the column, such as business rules, workflows, calculated columns, or rollup columns, to ensure that there are no issues as a result of changing the behavior. After changing the behavior of a date and time column, you should open each business rule, workflow, calculated column, and rollup column dependent on the column that you changed, review the information, and save it, to ensure that the latest date and time column's behavior and value are used. 
+> Before changing the behavior of an existing date and time column, you should review all the dependencies of the column, such as business rules, workflows, calculated columns, or rollup columns, to ensure that there are no issues as a result of changing the behavior. After changing the behavior of a date and time column, open each business rule, workflow, calculated column, and rollup column dependent on the column that you changed, review the information, and save it, to ensure that the latest date and time column's behavior and value are used.
 
 ### Change behavior during a solution import
 
-When you import a solution that contains a Date column using the User Local behavior, you may have the option to change the behavior to **Date Only** or **Time Zone Independent**.  
+When you import a solution that contains a Date column with **User local** behavior, you can change the behavior to **Date only** or **Time zone independent**.  
+
+> [!NOTE]
+> You can only change the behavior of an existing managed **Date only** or **Date and time** column if you are the publisher. In order to make a change to these fields, an upgrade must be made to the solution that added the **Date only** or **Date and time** column. More information: [Upgrade or update a solution](update-solutions.md)
 
 ### Prevent changing behavior
 
-If you are distributing a custom date column in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for columns](set-managed-properties-for-field.md)
-  
-## Use cases 
+If you're distributing a custom date column in a managed solution, prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set managed properties for columns](set-managed-properties-for-field.md)
 
-Consider the following use cases for **Date Only** and **Time-Zone Independent** behaviors.
+## Date and time query operators not supported for Date only behavior
 
-### Date Only scenario: birthdays and anniversaries
+The following date and time related query operators are invalid for the **Date only** behavior. An invalid operator exception error is thrown when one of these operators is used in the query.
 
-The Date Only behavior is good for cases when information about the time of the day and the time zone isn't required, such as birthdays or anniversaries. With this selection, all app users around the world see the exact same date value.  
-  
-### Time-Zone-Independent scenario: hotel check-in
+- Older Than X Minutes
+- Older Than X Hours
+- Last X Hours
+- Next X Hours
 
-You can use this behavior when time zone information isn't required, such as the hotel check-in time. With this selection, all app users around the world see the same date and time value.  
-
-
-## Best practices for using time zone
-
-### For my Date/Time column I was expecting (UTC/Local) and I am seeing the opposite value
-
-This is caused by a lack of parity between the table column setting and the app form setting. When a table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
- 
-This tells the form how to interpret the data it receives from the Dataverse. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user’s time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form’s date time zone values can be modified without disrupting the existing rows.
-
-### I picked Date Only in my table column, but my form is showing a time picker along with the date
-
-This would happen if you chose a behavior of time zone independent or user local for your date only column. In the Dataverse it will store a time of 00:00:00 by default, but if you add the column to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. How can you fix this
-* Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone-based date calculations.
-* If your column is currently set to user local, and you don’t need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone-independent behavior columns. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
-
-### I have a date only column, but it is showing the wrong date for some users
-If this happens, check the behavior that is set up for the date only column. If the column is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved row. Alternately, if you need this to be a static date that does not change and the column is currently user local, you can change the column behavior to Date Only. Be cautious though, this can't be undone.
-
-### My (script/plug-in) is supposed to intercept the date submitted using the Universal Client before the user local conversion occurs, but instead it is being treated as User Local data 
-
-The web client and universal client have slightly different behaviors when it comes to when data is translated between UTC and User Local. 
-In the web client, dates are entered into the client, passed to the API as provided, and converted later into user local time. This allowed scripts/plug-ins to retrieve the data and take action before data was passed to the platform services and translated into user local time. 
-In the universal client, the translation of a date into user local values happens before the data is passed to the API, because of this, the data provided will not be a UTC date but rather a user local date based on the user who retrieved or posted it. 
-To resolve this, a user can either:
-
-* Change the form to time zone independent which will retain the UTC value. This only works if the user does not need the form to display in user local time.
-* Modify their script to detect the time zone offset used, recalculate back to UTC within the script, then take action.
-
-## Date and time query operators not supported for Date Only behavior  
-
-The following date and time related query operators are invalid for the **Date Only** behavior. An invalid operator exception error is thrown when one of these operators is used in the query.  
-  
-- Older Than X Minutes  
-- Older Than X Hours  
-- Last X Hours  
-- Next X Hours  
-
-  
 ### See also
 
-[Create and edit columns](create-edit-fields.md)<br />
-[Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
-[Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)<br />
-[Managed properties](/power-platform/alm/managed-properties-alm)  
-[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
-
-
-
+[Troubleshoot date and time issues in model-driven apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues)   
+[Create and edit columns](create-edit-fields.md)   
+[Define calculated columns to automate manual calculations](define-calculated-fields.md)   
+[Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)   
+[Managed properties](/power-platform/alm/managed-properties-alm)   
+[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)   
+[Configure the behavior and format of the date and time column using code](../../developer/data-platform/behavior-format-date-time-attribute.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

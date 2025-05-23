@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Authenticate with Microsoft Dataverse web services
 
@@ -30,10 +26,10 @@ If your client application uses the .NET Framework, you have two authentication 
 
 ### OAuth
 
-OAuth is the preferred means to authenticate because it provides access to *both* the OData RESTful web services (Web API and OData global Discovery service) as well as to the SOAP web services (Organization service and Discovery service).
+OAuth is the preferred means to authenticate because it provides access to all web services.
 
 OAuth is also required to support:
- - Azure Active Directory configurations for conditional access, such as Two-factor Authentication (2FA)
+ - Microsoft Entra ID configurations for conditional access, such as Two-factor Authentication (2FA)
  - Use of client secrets to enable server-to-server authentication scenarios.
  - Cross-Origin Resource Sharing (CORS) to connect a Single-page Application (SPA)
 
@@ -41,7 +37,7 @@ More information: [Use OAuth with Dataverse](authenticate-oauth.md)
 
 ### Microsoft 365
 
-Microsoft 365 authentication (referred to as Office365 in code) requires using the .NET Framework SDK assemblies with the SOAP web services only.
+Microsoft 365 authentication (referred to as Office365 in code) requires using the .NET Framework SDK assemblies with the web services.
 
 Using Microsoft 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 

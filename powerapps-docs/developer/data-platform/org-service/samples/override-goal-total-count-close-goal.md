@@ -4,23 +4,21 @@ description: "This sample shows how to override the goal total count and close t
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Override goal total count and close the goal
 
+This sample shows how to override the goal total count and close the goal.
 
-
-This sample shows how to override the goal total count and close the goal. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OverrideGoalTotal).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Override goal total count and close the goal sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/OverrideGoalTotal)
 
 This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the `OrgName` of your organization.
 
@@ -34,7 +32,6 @@ This sample requires additional users that are not in your system. Create the re
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
-
 
 This sample shows how to override the goal total count and close the goal.
 
@@ -56,15 +53,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Creates Metric, and setting the Metric type to `count` and also setting `IsAmount` to false.
 2. The `RollupFields` creates a rollup column which targets completed (received) phone calls.
-3. The `GoalRollupQuery` creates the goal rollup queries, locating the incoming and outgoing closed phone calls. 
+3. The `GoalRollupQuery` creates the goal rollup queries, locating the incoming and outgoing closed phone calls.
 4. Creates a goal to track the open incoming phone calls.
-5. The `RecalculateRequest` calculates the rollup for goals. 
+5. The `RecalculateRequest` calculates the rollup for goals.
 6. Overrides the actual and in-progress values of the goal.
 7. Set `goal.IsOverridden =true` prevents the rollup values to be overwritten during the next recalculate operation.
 
 ### Clean up
 
 Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -3,18 +3,16 @@ title: Build global support into canvas apps
 description: Learn about how to use Power Apps to build apps that use different languages.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Build global support into canvas apps
@@ -97,7 +95,7 @@ Among other things, you can use **Language** to display translated text for your
 
 And then use a formula such as the following to pull translated strings from the table:
 
-```powerapps-dot
+```power-fx
 LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText
 ```
 

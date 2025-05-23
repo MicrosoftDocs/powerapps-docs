@@ -1,54 +1,48 @@
 ---
-title: "Post table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Post table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Post table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Post table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Post table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Post table/entity reference (Microsoft Dataverse)
 
 An activity feed post.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/posts<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/posts(*postid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/posts<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Post table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /posts<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /posts(*postid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /posts(*postid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /posts<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Posts|
-|DisplayCollectionName|Posts|
-|DisplayName|Post|
-|EntitySetName|posts|
-|IsBPFEntity|False|
-|LogicalCollectionName|posts|
-|LogicalName|post|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|postid|
-|PrimaryNameAttribute|text|
-|SchemaName|Post|
+The following table lists selected properties for the Post table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Post** |
+| **DisplayCollectionName** | **Posts** |
+| **SchemaName** | `Post` |
+| **CollectionSchemaName** | `Posts` |
+| **EntitySetName** | `posts`|
+| **LogicalName** | `post` |
+| **LogicalCollectionName** | `posts` |
+| **PrimaryIdAttribute** | `postid` |
+| **PrimaryNameAttribute** |`text` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -57,7 +51,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LargeText](#BKMK_LargeText)
 - [PostId](#BKMK_PostId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
 - [Source](#BKMK_Source)
 - [Text](#BKMK_Text)
@@ -65,692 +58,531 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Type](#BKMK_Type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_LargeText"></a> LargeText
 
-**Added by**: Activities Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Shows the text of a post.|
-|DisplayName|Text|
-|Format|Email|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the text of a post.**|
+|DisplayName|**Text**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|largetext|
-|MaxLength|1073741823|
+|LogicalName|`largetext`|
 |RequiredLevel|ApplicationRequired|
 |Type|Memo|
-
+|Format|Email|
+|FormatName|Email|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_PostId"></a> PostId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Post|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Post**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|postid|
+|LogicalName|`postid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the parent record for the post to identify the customer, opportunity, case, or other record that the post most closely relates to.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Choose the parent record for the post to identify the customer, opportunity, case, or other record that the post most closely relates to.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|SystemRequired|
-|Targets||
 |Type|Lookup|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjectidname|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets||
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Type of the RegardingObject|
-|DisplayName|RegardingObjectTypeCode|
+|---|---|
+|Description|**Type of the RegardingObject**|
+|DisplayName|**RegardingObjectTypeCode**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Source"></a> Source
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether the post was created manually or automatically.|
-|DisplayName|Source|
+|---|---|
+|Description|**Select whether the post was created manually or automatically.**|
+|DisplayName|**Source**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|source|
+|LogicalName|`source`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|2|
+|GlobalChoiceName|`post_source`|
 
 #### Source Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Auto Post||
-|2|Manual Post||
-|3|ActionHub Post||
-
-
+|Value|Label|
+|---|---|
+|1|**Auto Post**|
+|2|**Manual Post**|
+|3|**ActionHub Post**|
 
 ### <a name="BKMK_Text"></a> Text
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the text of a post. If this is a manual post, it appears in plain text. If this is an auto post, it appears in XML.|
-|DisplayName|Text|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the text of a post. If this is a manual post, it appears in plain text. If this is an auto post, it appears in XML.**|
+|DisplayName|**Text**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|text|
-|MaxLength|2000|
+|LogicalName|`text`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Type"></a> Type
 
 |Property|Value|
-|--------|-----|
-|Description|Select the post type.|
-|DisplayName|Type|
+|---|---|
+|Description|**Select the post type.**|
+|DisplayName|**Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|type|
+|LogicalName|`type`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`post_type`|
 
 #### Type Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Check-in||
-|2|Idea||
-|3|News||
-|4|Private Message||
-|5|Question||
-|6|Re-post||
-|7|Status||
-
-
+|Value|Label|
+|---|---|
+|1|**Check-in**|
+|2|**Idea**|
+|3|**News**|
+|4|**Private Message**|
+|5|**Question**|
+|6|**Re-post**|
+|7|**Status**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [PostRegardingId](#BKMK_PostRegardingId)
 - [PostToYammer](#BKMK_PostToYammer)
-- [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [RegardingObjectOwnerId](#BKMK_RegardingObjectOwnerId)
 - [RegardingObjectOwnerIdType](#BKMK_RegardingObjectOwnerIdType)
 - [RegardingObjectOwningBusinessUnit](#BKMK_RegardingObjectOwningBusinessUnit)
 - [YammerPostState](#BKMK_YammerPostState)
 - [YammerRetryCount](#BKMK_YammerRetryCount)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the solution.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the solution.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_PostRegardingId"></a> PostRegardingId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the post regarding with which the post is associated.|
-|DisplayName|Post Regarding|
+|---|---|
+|Description|**Unique identifier of the post regarding with which the post is associated.**|
+|DisplayName|**Post Regarding**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|postregardingid|
+|LogicalName|`postregardingid`|
 |RequiredLevel|SystemRequired|
-|Targets|postregarding|
 |Type|Lookup|
-
+|Targets|postregarding|
 
 ### <a name="BKMK_PostToYammer"></a> PostToYammer
 
 |Property|Value|
-|--------|-----|
-|Description|Internal use only.|
-|DisplayName|post to yammer|
+|---|---|
+|Description|**Internal use only.**|
+|DisplayName|**post to yammer**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|posttoyammer|
+|LogicalName|`posttoyammer`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### PostToYammer Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
-
-### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|GlobalChoiceName|`post_posttoyammer`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_RegardingObjectOwnerId"></a> RegardingObjectOwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the regarding object.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the regarding object.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectownerid|
+|LogicalName|`regardingobjectownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_RegardingObjectOwnerIdType"></a> RegardingObjectOwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Type of the RegardingObjectOwnerId|
-|DisplayName|RegardingObjectOwnerIdType|
+|---|---|
+|Description|**Type of the RegardingObjectOwnerId**|
+|DisplayName|**RegardingObjectOwnerIdType**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectowneridtype|
+|LogicalName|`regardingobjectowneridtype`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_RegardingObjectOwningBusinessUnit"></a> RegardingObjectOwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the regarding object.|
-|DisplayName|Regarding object owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the regarding object.**|
+|DisplayName|**Regarding object owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectowningbusinessunit|
+|LogicalName|`regardingobjectowningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_YammerPostState"></a> YammerPostState
 
 |Property|Value|
-|--------|-----|
-|Description|Internal use only.|
-|DisplayName|Yammer Post State|
-|Format|None|
+|---|---|
+|Description|**Internal use only.**|
+|DisplayName|**Yammer Post State**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|yammerpoststate|
-|MaxValue|5|
-|MinValue|0|
+|LogicalName|`yammerpoststate`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|5|
+|MinValue|0|
 
 ### <a name="BKMK_YammerRetryCount"></a> YammerRetryCount
 
 |Property|Value|
-|--------|-----|
-|Description|Internal use only.|
-|DisplayName|Yammer Retry Count|
-|Format|None|
+|---|---|
+|Description|**Internal use only.**|
+|DisplayName|**Yammer Retry Count**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|yammerretrycount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`yammerretrycount`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [post_AsyncOperations](#BKMK_post_AsyncOperations)
-- [post_BulkDeleteFailures](#BKMK_post_BulkDeleteFailures)
-- [Post_Comments](#BKMK_Post_Comments)
-- [Post_Likes](#BKMK_Post_Likes)
-- [post_activity_file_attachment](#BKMK_post_activity_file_attachment)
-
-
-### <a name="BKMK_post_AsyncOperations"></a> post_AsyncOperations
-
-Same as the [post_AsyncOperations](asyncoperation.md#BKMK_post_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|post_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_post_BulkDeleteFailures"></a> post_BulkDeleteFailures
-
-Same as the [post_BulkDeleteFailures](bulkdeletefailure.md#BKMK_post_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|post_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Post_Comments"></a> Post_Comments
-
-Same as the [Post_Comments](postcomment.md#BKMK_Post_Comments) many-to-one relationship for the [postcomment](postcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postcomment|
-|ReferencingAttribute|postid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Post_Comments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_Post_Likes"></a> Post_Likes
-
-Same as the [Post_Likes](postlike.md#BKMK_Post_Likes) many-to-one relationship for the [postlike](postlike.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postlike|
-|ReferencingAttribute|postid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|Post_Likes|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_post_activity_file_attachment"></a> post_activity_file_attachment
-
-**Added by**: Activities Patch Solution
-
-Same as the [post_activity_file_attachment](activityfileattachment.md#BKMK_post_activity_file_attachment) many-to-one relationship for the [activityfileattachment](activityfileattachment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activityfileattachment|
-|ReferencingAttribute|parentid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|post_activity_file_attachment|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_post_createdby](#BKMK_lk_post_createdby)
 - [lk_post_createdonbehalfby](#BKMK_lk_post_createdonbehalfby)
 - [lk_post_modifiedby](#BKMK_lk_post_modifiedby)
 - [lk_post_modifiedonbehalfby](#BKMK_lk_post_modifiedonbehalfby)
 - [organization_post](#BKMK_organization_post)
-
+- [post_PostRegardings](#BKMK_post_PostRegardings)
 
 ### <a name="BKMK_lk_post_createdby"></a> lk_post_createdby
 
-See the [lk_post_createdby](systemuser.md#BKMK_lk_post_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_post_createdby](systemuser.md#BKMK_lk_post_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_post_createdonbehalfby"></a> lk_post_createdonbehalfby
 
-See the [lk_post_createdonbehalfby](systemuser.md#BKMK_lk_post_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_post_createdonbehalfby](systemuser.md#BKMK_lk_post_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_post_modifiedby"></a> lk_post_modifiedby
 
-See the [lk_post_modifiedby](systemuser.md#BKMK_lk_post_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_post_modifiedby](systemuser.md#BKMK_lk_post_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_post_modifiedonbehalfby"></a> lk_post_modifiedonbehalfby
 
-See the [lk_post_modifiedonbehalfby](systemuser.md#BKMK_lk_post_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_post_modifiedonbehalfby](systemuser.md#BKMK_lk_post_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_post"></a> organization_post
 
-See the [organization_post](organization.md#BKMK_organization_post) one-to-many relationship for the [organization](organization.md) table/entity.
+One-To-Many Relationship: [organization organization_post](organization.md#BKMK_organization_post)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_post_PostRegardings"></a> post_PostRegardings
+
+One-To-Many Relationship: [postregarding post_PostRegardings](postregarding.md#BKMK_post_PostRegardings)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`postregarding`|
+|ReferencedAttribute|`postregardingid`|
+|ReferencingAttribute|`postregardingid`|
+|ReferencingEntityNavigationPropertyName|`postregardingid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [post_activity_file_attachment](#BKMK_post_activity_file_attachment)
+- [post_AsyncOperations](#BKMK_post_AsyncOperations)
+- [post_BulkDeleteFailures](#BKMK_post_BulkDeleteFailures)
+- [Post_Comments](#BKMK_Post_Comments)
+- [Post_Likes](#BKMK_Post_Likes)
+
+### <a name="BKMK_post_activity_file_attachment"></a> post_activity_file_attachment
+
+Many-To-One Relationship: [activityfileattachment post_activity_file_attachment](activityfileattachment.md#BKMK_post_activity_file_attachment)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activityfileattachment`|
+|ReferencingAttribute|`parentid`|
+|ReferencedEntityNavigationPropertyName|`post_activity_file_attachment`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_post_AsyncOperations"></a> post_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation post_AsyncOperations](asyncoperation.md#BKMK_post_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`post_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_post_BulkDeleteFailures"></a> post_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure post_BulkDeleteFailures](bulkdeletefailure.md#BKMK_post_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`post_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Post_Comments"></a> Post_Comments
+
+Many-To-One Relationship: [postcomment Post_Comments](postcomment.md#BKMK_Post_Comments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postcomment`|
+|ReferencingAttribute|`postid`|
+|ReferencedEntityNavigationPropertyName|`Post_Comments`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Post_Likes"></a> Post_Likes
+
+Many-To-One Relationship: [postlike Post_Likes](postlike.md#BKMK_Post_Likes)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postlike`|
+|ReferencingAttribute|`postid`|
+|ReferencedEntityNavigationPropertyName|`Post_Likes`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.post?text=post EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.post?displayProperty=fullName>

@@ -4,15 +4,11 @@ description: "Learn about Format and FormatName columns that store the format va
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: NHelgren # GitHub ID
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

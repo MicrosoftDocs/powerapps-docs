@@ -2,15 +2,11 @@
 title: "Tutorial: Create workflow extension (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -203,7 +199,7 @@ Add the logic within the Execute method to apply the logic to increment the inpu
 
 ## Register your assembly
 
-Custom workflow activity assemblies are registered using the Plug-in Registration tool. The tool provides a graphical user interface and supports registering assemblies that contain plug-ins or custom workflow activities. To get the Plug-in Registration tool see: [Download tools from NuGet](../download-tools-nuget.md)
+Custom workflow activity assemblies are registered using the Plug-in Registration tool. The tool provides a graphical user interface and supports registering assemblies that contain plug-ins or custom workflow activities. To get the Plug-in Registration tool see: [Dataverse development tools](../download-tools-nuget.md)
 
 [!INCLUDE [cc-connect-plugin-registration-tool](../includes/cc-connect-plugin-registration-tool.md)]
 

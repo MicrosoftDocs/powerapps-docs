@@ -1,34 +1,34 @@
 ---
-title: "Get started with Microsoft Dataverse Web API (C#) (Dataverse)| Microsoft Docs"
-description: "Learn how to access the Microsoft Dataverse Web API using the Microsoft Visual C# programming language"
-ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+title: "Get started with Dataverse Web API (C#) (Dataverse)| Microsoft Docs"
+description: "Learn how to access the Dataverse Web API using the Microsoft Visual C# programming language."
+ms.date: 06/22/2023
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
-# Get started with Microsoft Dataverse Web API (C#)
+# Get started with the Dataverse Web API (C#)
 
-This section shows you how to access the Dataverse Web API using the C# programming language. The first topic, [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to accomplish this, as all source code is simplified and provided in one file. The rest of this section shows you how to create and configure Visual Studio projects that use the Dataverse Web API to perform common business data operations.  
-  
-After completing this guide, you will have learned enough to explore the many other business operations that are supported by the Dataverse Web API.   You will also have a better understanding about how the [Web API Samples (C#)](web-api-samples-csharp.md) are structured.  
+This section introduces some simple ways start accessing the Dataverse Web API using the C# programming language.
+
+- [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to access data, as all source code is simplified and provided in one file.
+- [Quickstart: Blazor Server Web API sample (C#)](quick-start-blazor-server-app.md) shows how to create a web application that can connect to Dataverse and retrieve data using the Web API.
+
+
+To learn more, please explore the [Web API Samples (C#)](web-api-samples-csharp.md).
   
 ## In this section
 
-[Quick Start: Web API sample](quick-start-console-app-csharp.md)  (Do this first)  
-[Enhanced quick start](enhanced-quick-start.md)  (Do this next)  
-[Start a Dataverse Web API project in Visual Studio](start-web-api-project-visual-studio-csharp.md)
+[Quick Start: Web API sample](quick-start-console-app-csharp.md)  
+[Quickstart: Blazor Server Web API sample (C#)](quick-start-blazor-server-app.md)
 
 ### See also
   
-[Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Web API Samples (C#)](web-api-samples-csharp.md)
+[Perform operations using the Web API](perform-operations-web-api.md)  
+[Web API Samples (C#)](web-api-samples-csharp.md)  
+[Use Insomnia with Dataverse Web API](insomnia.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

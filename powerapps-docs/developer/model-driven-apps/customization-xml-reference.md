@@ -1,25 +1,21 @@
 ---
-title: "Customization XML reference (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The customizations.xml file is one of the files included in an exported unmanaged solution. The file contains all or selected portions of the customizations and configurations for your system" # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Customization XML reference (model-driven apps)"
+description: "The customizations.xml file is one of the files included in an exported unmanaged solution. The file contains all or selected portions of the customizations and configurations for your system"
 author: caburk
 ms.author: caburk
-manager: evlew
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 
 # Customization XML reference
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customization-xml-reference -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customization-xml-reference -->
 
 The customizations.xml file is one of the files included in an exported unmanaged solution. The file contains all or selected portions of the customizations and configurations for your system. 
   
@@ -34,8 +30,7 @@ The customizations.xml file is one of the files included in an exported unmanage
  [Ribbon core schema](ribbon-core-schema.md) 
  [Ribbon types schema](ribbon-types-schema.md)  
  [Ribbon WSS schema](ribbon-wss-schema.md)  
- [Form XML schema](form-xml-schema.md)  
- [FetchXML schema](../data-platform/fetchxml-schema.md) 
+ [Form XML schema](form-xml-schema.md)   
 
 ## Related Sections
 

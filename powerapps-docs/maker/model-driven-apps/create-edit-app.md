@@ -2,10 +2,9 @@
 title: "Create or edit a model-driven app using the app designer in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 03/05/2020
-
+ms.date: 11/05/2024
 ms.custom: 
-ms.topic: get-started-article
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -14,7 +13,6 @@ author: "Mattp123"
 ms.assetid: 2a44229e-44f0-4c4e-ba21-a476210d0a12
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,20 +20,20 @@ caps.latest.revision: 19
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a model-driven app using the classic app designer
 
 This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated)
+
 ## Prerequisites to creating model-driven apps
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/learn/modules/create-manage-environments/)
+- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/training/modules/create-manage-environments/)
 - Within the environment the app developer needs to have an environment maker, system administrator, or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create a model-driven app  
@@ -43,8 +41,7 @@ Verify the following prerequisites before creating an app:
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 1. Choose the environment by selecting the environment icon ![Environment icon.](media/icon-environment.PNG "Environment icon")
-1. Select **Solutions** from the left navigation pane.
-
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
 1. Select **New** > **App** > **Model-driven app**.  
 1. There a two options.  [Modern app designer](app-designer-overview.md) and Classic App designer.  Select **Classic App Designer**.  
@@ -52,7 +49,7 @@ Verify the following prerequisites before creating an app:
 
     - **Name**: Enter a name for the app.  
   
-    - **Unique Name**: The unique name is automatically populated based on the app name that is specified. It is prefixed with a publisher prefix. It is possible to change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
+    - **Unique Name**: The unique name is automatically populated based on the app name that is specified. It's prefixed with a publisher prefix. It's possible to change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
   
         > [!NOTE]
         >  The publisher prefix is the text that's added to any table or column created for a solution that has this publisher.
@@ -62,7 +59,7 @@ Verify the following prerequisites before creating an app:
       > [!div class="mx-imgBorder"]
       > ![Create a new app.](media/create-new-app.png "Create a new app")
 
-     - **Icon**: By default, the **Use Default Image**check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
+     - **Icon**: By default, the **Use Default Image** check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon is displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
   
     - **Use existing solution to create the App (Optional)**: Select this option to create the app from a list of installed solutions. When this option is selected, **Done** switches to **Next** on the header. If **Next** is selected, the **Create app from existing solution** page opens. From the **Select Solution** drop-down list, select a solution. If any site map is available for the selected solution, the **Select Sitemap** drop-down list will appear. Select the site map, and then select **Done**.
 
@@ -85,6 +82,9 @@ Verify the following prerequisites before creating an app:
 
     :::image type="content" source="media/app-designer-draft.png" alt-text="App designer shown in draft stage":::
 
+    > [!NOTE]
+    > When opening the classic app designer, an error might appear similar to the image here. When this occurs, it doesn't impact the classic app designer functionality and you can close the error and continue editing the app. However, to avoid this issue, use the [Modern app designer](app-designer-overview.md).
+    > ![Expected error in legacy app designer.](media/legacy-app-designer-error-message.png "Expected error in legacy app designer")
 
 ## Configure the site map
 
@@ -115,7 +115,7 @@ The site map describes the components that make up a model driven app.
 
 ## Finalizing the app
 
-By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
+By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It's also possible to create new components, such as a custom form. For this app, leave all components enabled.
 
 :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
 

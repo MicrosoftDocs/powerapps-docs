@@ -5,7 +5,6 @@ keywords: outlook app; app for outlook; Dynamics 365
 author: mduelae
 ms.subservice: mda-maker
 ms.author: mkaur
-manager: kvivek
 ms.date: 05/21/2021
 
 ms.topic: how-to
@@ -16,9 +15,6 @@ applies_to:
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up and customize Dynamics 365 App for Outlook

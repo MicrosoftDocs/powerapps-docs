@@ -3,18 +3,16 @@ title: Manage an on-premises data gateway in Power Apps
 description: Learn about how to manage an on-premises data gateway and its connections.
 author: arthiriyer
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/16/2020
 ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - arthiriyer
 ---
 
@@ -47,7 +45,7 @@ To install a gateway, follow the steps in [Install an on-premises data gateway](
 For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
 
 > [!NOTE]
-> **Can use** and **Can use + share** does not apply to custom connectors.
+> **Can use** and **Can use + share** does not apply to custom connectors.  Only gateway **Admins** can create connections for custom connectors.
 
 ## View and manage gateway connections
 
@@ -69,7 +67,7 @@ For more information about troubleshooting issues with gateways, see [Troublesho
 ## Next steps
 
 * [Install the on-premises data gateway](/data-integration/gateway/service-gateway-install).
-* Create an app that connects to an on-premises data source, such as [SQL Server](connections/connection-azure-sqldatabase.md) or [SharePoint](connections/connection-sharepoint-online.md).
+* Create an app that connects to an on-premises data source, such as [SQL Server](connections/sql-connection-overview.md) or [SharePoint](connections/connection-sharepoint-online.md).
 * [Share an app](share-app.md) that connects to an on-premises data source.
 
 

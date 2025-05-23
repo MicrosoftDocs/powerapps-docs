@@ -16,18 +16,15 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use controls for model-driven app data visualizations
 
-In this article, you learn how to configure a control for a column using the classic for designer.
+In this article, you learn how to configure a control for a column using the classic form designer.
 
-To add a control using the modern Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
+> [!IMPORTANT]
+> This article describes classic controls many of which are now deprecated. For information about how to add modern controls using the modern Power Apps form designer, go to [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form). For a list and descriptions of the current controls available for model-driven apps, go to [List of controls available for model-driven apps](additional-controls-for-dynamics-365-for-phones-and-tablets.md).
 
 ## Use a control using the classic form designer
 
@@ -49,12 +46,11 @@ You can set one type of custom control to appear in the web browser client while
  Following the steps in this procedure will change the default label and text box column  of the **Budget Amount** column to the slider custom control on the opportunity table. You can use similar steps to replace an existing column with a custom control or configure a custom control for a custom column.
 
 [!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
-> 
-> The opportunity table requires a Dynamics 365 app, such as Dynamics 365 Service.
+> <br /><br /> The opportunity table requires a Dynamics 365 app, such as Dynamics 365 Sales.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the Opportunity table, and then select the **Forms** area.  
+2. Select **Tables** on the left navigation pane, select the **Opportunity** table, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 3. Open a form such as the **Main** form for the **Opportunity** table.
 
@@ -103,11 +99,11 @@ You can set one type of custom control to appear in the web browser client while
        > > [!div class="mx-imgBorder"] 
        > > ![Default control.](media/default-control.png "Default control")  
   
-8.  Select **OK**, to close the **Column Properties** page.  
+10.  Select **OK**, to close the **Column Properties** page.  
   
-9. To activate the customization, on the table form select **Save**, and then select **Publish**.  
+11. To activate the customization, on the table form select **Save**, and then select **Publish**.  
   
-10. Select **Save and Close** to close the form editor.  
+12. Select **Save and Close** to close the form editor.  
   
 ### See the custom control in action
 

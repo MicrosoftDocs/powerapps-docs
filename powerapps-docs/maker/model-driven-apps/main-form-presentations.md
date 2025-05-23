@@ -6,7 +6,7 @@ ms.date: 04/19/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -16,12 +16,8 @@ ms.assetid: da3ac59a-5413-46cb-b355-1987e42e3853
 caps.latest.revision: 35
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # How model-driven app main forms appear on different devices
 

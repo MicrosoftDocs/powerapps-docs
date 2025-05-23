@@ -1,18 +1,14 @@
 ---
-title: "addNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addNotification (Client API reference) in model-driven apps"
 description: Displays an error or recommendation notification for a control, and lets you specify to execute based on the notification.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,31 +26,29 @@ All
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>notification</td>
-<td>Object</td>
-<td>Yes</td>
-<td>The notification to add. The object contains the following parameters:
-<ul>
-<li><b>actions</b>: (Optional) Array of objects. A collection of objects with the following parameters:
-<ul>
-<li><b>message</b>: (Optional) String. The body message of the notification to be displayed to the user. Limit your message to 100 characters for optimal user experience.</li>
-<li><b>actions</b>: (Optional) Array of functions. The corresponding actions for the message.</li>
-</ul>
-<li><b>messages</b>: Array of Strings. The message to display in the notification. In the current release, only the first message specified in this array will be displayed. The string that you specify here appears as bold text in the notification, and is typically used for title or subject of the notification. You should limit your message to 50 characters for optimal user experience.</li>
-<li><b>notificationLevel</b>: String. Defines the type of notification. Valid values are ERROR or RECOMMENDATION.</li>
-<li><b>uniqueId</b>: String. The ID to use to clear this notification when using the <b>clearNotification</b> method.</li>
-</ul></td>
-</tr>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`notification`|Object|Yes|The notification to add. See [`notification` parameter](#notification-parameter)|
 
-</table>
+## `notification` parameter
+
+The `notification` parameter accepts an object with the following properties
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`actions`|Array of objects|No|See [`actions` property](#actions-property)|
+|`messages`|Array of Strings|Yes|The message to display in the notification. In the current release, only the first message specified in this array will be displayed. The string that you specify here appears as bold text in the notification, and is typically used for title or subject of the notification. You should limit your message to 50 characters for optimal user experience.|
+|`notificationLevel`|String|Yes|Defines the type of notification. Valid values are `ERROR` or `RECOMMENDATION`.|
+|`uniqueId`|String|Yes|The ID to use to clear this notification when using the [clearNotification method](clearNotification.md).|
+
+### `actions` property
+
+The `actions` property contains an array of objects with the following properties:
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`message`|String|No|The body message of the notification to be displayed to the user. Limit your message to 100 characters for optimal user experience.|
+|`actions`|Array of functions|No|The corresponding actions for the message.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
@@ -113,14 +107,9 @@ This how the notification appears in model-driven apps:
 > [!div class="mx-imgBorder"]
 > ![Example add notification.](../../../media/clientapi_addnotification.png "Example add notification")
 
-### Related topics
+### Related articles
 
-[clearNotification](clearNotification.md)
-
+[clearNotification](clearNotification.md)   
 [setNotification](setNotification.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

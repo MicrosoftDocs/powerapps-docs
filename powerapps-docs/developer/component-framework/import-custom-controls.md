@@ -1,12 +1,11 @@
 ---
-title: Import components into model-driven apps in Microsoft Dataverse | Microsoft Docs
+title: Package a code component| Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 12/04/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -22,7 +21,7 @@ To create and import a solution file:
 
 1. Create a new folder inside the sample component folder and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
-2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Dataverse.
+2. Create a new solutions project using the [pac solution init](/power-platform/developer/cli/reference/solution) command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Dataverse.
    
    ```CLI
    pac solution init --publisher-name developer --publisher-prefix dev
@@ -31,7 +30,7 @@ To create and import a solution file:
    > [!NOTE]
    > The `publisher-name` and `publisher-prefix` values must be unique to your environment.
  
-3. Once the new solution project is created, refer the **Solutions** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
+3. Once the new solution project is created, refer the **Solutions** folder to the location where the created sample component is located. You can add the reference using the [pac solution add-reference](/power-platform/developer/cli/reference/solution) command. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
 
    ```CLI   
     pac solution add-reference --path c:\downloads\mysamplecomponent
@@ -40,8 +39,18 @@ To create and import a solution file:
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the following command. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
 
    ```CLI
-   msbuild /t:build /restore
+   msbuild /t:restore
    ```
+   ```CLI
+   msbuild
+   ```
+
+   Or if you have installed the .NET SDK, version >= 6 :
+
+   ```CLI
+   dotnet build
+   ```
+
 
     > [!TIP]
     > - If msbuild 15.9.* is not in the path, open Developer Command Prompt for VS 2017 to run the `msbuild` commands.
@@ -58,32 +67,32 @@ You can deploy the code components directly from Microsoft Power Platform CLI by
 
 Follow the steps below to create the authentication profile, connect to Dataverse, and push the updated components. 
  
-1. Create your authentication profile using the command: 
+1. Create your authentication profile using the [pac auth create](/power-platform/developer/cli/reference/auth) command: 
  
     ```CLI
     pac auth create --url https://xyz.crm.dynamics.com 
     ```
  
-2. If you have previously created an authentication profile, you can view all the existing profiles using the command: 
+2. If you have previously created an authentication profile, you can view all the existing profiles using the [pac auth list](/power-platform/developer/cli/reference/auth) command: 
 
    ```CLI
     pac auth list 
    ```
  
-3. To switch between the previously created authentication profiles, use the command: 
+3. To switch between the previously created authentication profiles, use the [pac auth select](/power-platform/developer/cli/reference/auth) command: 
    
    ```CLI
     pac auth select --index <index of the active profile>
     ``` 
 
-4. To get the basic information about the environment, use the following command. The connection will be made using the default authentication profile. 
+4. To get the basic information about the environment, use the [pac org who](/power-platform/developer/cli/reference/org) command. The connection will be made using the default authentication profile. 
 
     ```CLI
     pac org who 
     ```
  
-5. To delete a particular authentication profile, use the command `pac auth delete --index <index of the profile>`. 
-6. If you want to clear all the authentication profiles from your local machine, use the command `pac auth clear`. This action is irreversible because it completely deletes the `authprofile.json` file and token cache file from your local machine. 
+5. To delete a particular authentication profile, use the [pac auth delete](/power-platform/developer/cli/reference/auth) command `pac auth delete --index <index of the profile>`. 
+6. If you want to clear all the authentication profiles from your local machine, use the [pac auth clear](/power-platform/developer/cli/reference/auth) command.. This action is irreversible because it completely deletes the `authprofile.json` file and token cache file from your local machine. 
 
 ## Deploying code components 
 
@@ -95,7 +104,7 @@ To use the `push` capability, do the following:
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the directory where the sample component file is located.
-3. Run the command.
+3. Run the [pac pcf push](/power-platform/developer/cli/reference/pcf) command.
 
    ```CLI
    pac pcf push --publisher-prefix <your publisher prefix>
@@ -103,56 +112,6 @@ To use the `push` capability, do the following:
 
    > [!NOTE]
    > The publisher prefix that you use with the `push` command should match the publisher prefix of your solution in which the components will be included.
-
-## Create a solution project based on an existing solution in Dataverse
-
-To create a solution project based on an existing solution in Dataverse, run the command `pac solution clone`. To do so:
-
-1. Ensure that you have a valid authentication profile created.
-2. Run the command 
-
-   ```CLI
-   pac solution clone –-name(-n) <name of the solution to be exported> --targetversion(-v) <version of your solution> --include(-i) <settings that should be included>
-   ```
-
-   > [!NOTE]
-   > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
-
-More information: [Settings options](/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest)
-
-> [!NOTE]
-> Manually publish the customizations if you are importing unmanaged solution.
-
-## Create a plug-in project and add a reference to it in your solution 
-
-> [!NOTE]
-> The plugin command is in public preview and 
-Microsoft Power Platform CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
-
-1. Ensure that you have a valid authentication profile created.
-2. Navigate to the root directory where you want the project to be created.
-3. Run the command 
-
-   ```CLI
-   pac auth create –url <https://xyz.crm.dynamics.com>
-   ```
-4. Run the command to create the plug-in project
-
-   ```CLI
-   pac plugin init
-   ```
-
-5. Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
-
-   ```CLI
-   pac solution add-reference –path <path to your plugin project>
-   ```
-
-6. Run the command to build the solution and the referenced plug-in.
-
-   ```CLI
-   msbuild
-   ```
 
 ## Remove components from a solution
 
@@ -184,7 +143,8 @@ If you want to remove a code component from a solution file:
 [Add code components to a column or table in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
-[Power Apps component framework overview](overview.md)
+[Power Apps component framework overview](overview.md)<br />
+[Microsoft Power Platform CLI Command Groups](/power-platform/developer/cli/reference/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

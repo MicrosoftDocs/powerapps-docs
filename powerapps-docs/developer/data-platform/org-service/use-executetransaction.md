@@ -1,17 +1,13 @@
 ---
 title: "Execute messages in a single database transaction (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can execute two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message request." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+description: "You can execute two or more requests in a single database transaction using the ExecuteTransactionRequest class." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 05/21/2025
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -22,11 +18,13 @@ contributors:
 
 It is a common requirement in business applications to coordinate changes of multiple table rows in the system so that either all the data changes succeed, or none of them do. In database terms, this is known as executing multiple operations in a single transaction with the ability to roll back all data changes should any one operation fail.  
   
- You can execute two or more organization service requests in a single database transaction using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request. To use this message, populate the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection with two or more organization requests that are to be executed in the transaction. Set <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.ReturnResponses> to `true` if you want to get back a collection of responses, one for each message request executed, in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionResponse.Responses> collection. Message requests in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection are executed in order as they appear in the collection, where the element at index 0 is executed first. This same order is preserved in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> collection.  
+ You can execute two or more requests in a single database transaction using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request. To use this message, populate the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection with two or more organization requests that are to be executed in the transaction. Set <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.ReturnResponses> to `true` if you want to get back a collection of responses, one for each message request executed, in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionResponse.Responses> collection. Message requests in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection are executed in order as they appear in the collection, where the element at index 0 is executed first. This same order is preserved in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> collection.  
   
  Should any one of the requests fail and the transaction is rolled back, any data changes completed during the transaction are undone. In addition, a <xref:Microsoft.Xrm.Sdk.ExecuteTransactionFault> is returned identifying the index into the request collection of the request message that caused the fault.  
   
- An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> may contain one or more <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instances.  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instance may not contain a <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest>. For more information on <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, see [Execute multiple requests using the Organization service](execute-multiple-requests.md). 
+ An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> may contain one or more <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instances.  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instance may not contain a <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest>. For more information on <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, see [Execute multiple requests using the SDK for .NET](execute-multiple-requests.md). 
+
+ More information: [Do not use batch request types in plug-ins and workflow activities](../best-practices/business-logic/avoid-batch-requests-plugin.md)
 
 ## Example
 
@@ -87,7 +85,7 @@ throw;
 
 ### See also
 
-[Use messages with the Organization service](use-messages.md)<br />
-[Execute multiple requests using the Organization service](execute-multiple-requests.md)
+[Use messages with the SDK for .NET](use-messages.md)<br />
+[Execute multiple requests using the SDK for .NET](execute-multiple-requests.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

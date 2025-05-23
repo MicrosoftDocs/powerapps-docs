@@ -2,15 +2,11 @@
 title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -22,7 +18,7 @@ Because custom workflow extensions are .NET Framework assemblies you can debug t
 
 ## Use the Plug-in Registration Tool
 
-The Plug-in Registration Tool (PRT) is one of the tools you can download from NuGet. More information: [Download tools from NuGet](../download-tools-nuget.md).
+The Plug-in Registration Tool (PRT) is one of the tools you can download from NuGet. More information: [Dataverse development tools](../download-tools-nuget.md).
 
 Once you have downloaded the PRT, click the `PluginRegistration.exe` to run it.
 
@@ -50,8 +46,8 @@ This will open the **Profiler Settings** dialog which will provide the following
 
 |Field|Description|
 |--|--|
-|**Workflow**|Select the Workflow or Custom action that contains the workflow activity you want to debug.|
-|**Steps**|Select the specific steps within that workflow or custom action that you want to debug.|
+|**Workflow**|Select the Workflow that contains the workflow activity you want to debug.|
+|**Steps**|Select the specific steps within that workflow that you want to debug.|
 |**Specify profile storage**|We recommend that you choose **Persist to Entity**.|
 |**Set profiler settings**|If your are working with a system where the workflow is being executed frequently, you can reduce performance impact by choosing to limit the number of profiles that are captured.|
 |**Include secure configuration**|This provides the option to avoid seeing potentially sensitive data that may be passed as secure configuration.|

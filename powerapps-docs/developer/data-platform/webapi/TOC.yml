@@ -12,16 +12,16 @@
       href: quick-start-console-app-csharp.md
     - name: 'Quick Start: Blazor Server sample (C#)'
       href: quick-start-blazor-server-app.md
-    - name: Enhanced quick start (C#)
-      href: enhanced-quick-start.md
-    - name: Start Web API project in Visual Studio
-      href: start-web-api-project-visual-studio-csharp.md
-- name: Security and web service access
-  items:
-  - name: Web service authentication
-    href: authenticate-web-api.md
-  - name: Active Directory group teams
-    href: aad-group-team.md
+  - name: (PowerShell)
+    items:
+    - name: Get started using PowerShell
+      href: quick-start-ps.md
+  - name: (JavaScript)
+    items:
+    - name: Get started using JavaScript
+      href: quick-start-js-spa.md
+- name: Web service authentication
+  href: authenticate-web-api.md
 - name: Types and operations
   href: web-api-types-operations.md
   items:
@@ -47,12 +47,35 @@
     href: compose-http-requests-handle-errors.md
   - name: Query Data with Web API
     items:
-    - name: Query data
-      href: query-data-web-api.md
-    - name: Retrieve related rows with query
-      href: retrieve-related-entities-query.md
-  - name: Retrieve and execute predefined queries
-    href: retrieve-and-execute-predefined-queries.md
+    - name: Overview
+      displayName: OData
+      href: query/overview.md
+    - name: Select columns
+      displayName: OData, Select columns
+      href: query/select-columns.md
+    - name: Join tables
+      displayName: OData, Join tables
+      href: query/join-tables.md
+    - name: Order rows
+      displayName: OData, Order rows
+      href: query/order-rows.md
+    - name: Filter rows
+      displayName: OData, Filter rows
+      href: query/filter-rows.md
+    - name: Page results
+      displayName: OData, Page results
+      href: query/page-results.md
+    - name: Aggregate data
+      displayName: OData, Aggregate data
+      href: query/aggregate-data.md
+    - name: Count rows
+      displayName: OData, Count rows
+      href: query/count-rows.md
+    - name: Optimize performance
+      displayName: OData, Optimize performance
+      href: query/optimize-performance.md
+    - name: Retrieve and execute predefined queries
+      href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row
     href: create-entity-web-api.md
   - name: Retrieve a table row
@@ -75,8 +98,6 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-  - name: Access table data faster using partitions
-    href: azure-storage-partitioning.md
   - name: Troubleshoot client errors
     href: /troubleshoot/power-platform/power-apps/web-api-client-errors
 - name: Work with table definitions (metadata)
@@ -88,34 +109,26 @@
   - name: Retrieve table definitions by name or MetadataId
     href: retrieve-metadata-name-metadataid.md
   - name: Create and update table definitions
-    href: create-update-entity-definitions-using-web-api.md 
+    href: create-update-entity-definitions-using-web-api.md
+  - name: Create and update column definitions
+    href: create-update-column-definitions-using-web-api.md
   - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
     href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
-- name: Use Postman with Web API
-  items:
-  - name: Get started with Postman
-    href: use-postman-web-api.md
-  - name: Setup a Postman environment
-    href: setup-postman-environment.md
-  - name: Use Postman to perform operations
-    href: use-postman-perform-operations.md
+  - name: Web API table schema operations sample
+    href: web-api-metadata-operations-sample.md
+  - name: Web API table schema operations sample (C#)
+    href: samples/webapiservice-metadata-operations.md
+- name: Use Insomnia with Web API
+  href: insomnia.md
+- name: Use PowerShell and Visual Studio Code with Web API
+  href: use-ps-and-vscode-web-api.md
 - name: Client-side JavaScript using Web API in model-driven apps
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
   href: web-api-versions.md
-- name: Dataverse search, suggestions, and autocomplete
-  href: relevance-search.md
-- name: Discover the URL for your organization
-  items:
-  - name: Get started
-    href: discover-url-organization-web-api.md
-  - name: Modify your code to use global Discovery Service
-    href: discovery-orgsdk-to-webapi.md
-  - name: Global Discovery Service Sample (C#)
-    href: samples/global-discovery-service-csharp.md
 - name: Samples
   href: samples/toc.yml

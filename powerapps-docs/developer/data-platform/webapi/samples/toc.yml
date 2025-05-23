@@ -1,3 +1,4 @@
+items:
 - name: (HTTP) samples
   items:
     - name: About the samples
@@ -10,32 +11,52 @@
       href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
       href: ../web-api-functions-actions-sample.md
-    - name: AADUser table request examples
-      href: ../web-api-aaduser-samples.md
+    - name: Metadata Operations
+      href: ../web-api-metadata-operations-sample.md
 - name: (C#) samples
   items:
     - name: About the samples
       href: ../web-api-samples-csharp.md
-    - name: CDSWebApiService class
-      href: cdswebapiservice.md
+    - name: WebApiService class library
+      href: webapiservice.md
     - name: Basic Operations
-      href: cdswebapiservice-basic-operations.md
+      href: webapiservice-basic-operations.md
     - name: Query Data
-      href: cdswebapiservice-query-data.md
+      href: webapiservice-query-data.md
     - name: Conditional Operations
-      href: cdswebapiservice-conditional-operations.md
+      href: webapiservice-conditional-operations.md
     - name: Functions and Actions
-      href: functions-actions-csharp.md
+      href: webapiservice-functions-and-actions.md
+    - name: Metadata Operations
+      href: webapiservice-metadata-operations.md
     - name: Parallel Operations
-      href: cdswebapiservice-parallel-operations.md
-    - name: Async Parallel Operations
-      href: cdswebapiservice-async-parallel-operations.md
-    - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
+      href: webapiservice-parallel-operations.md
+    - name: TPL Dataflow Parallel Operations
+      href: webapiservice-tpl-dataflow-parallel-operations.md
+    - name: File operations
+      href: file-operations.md
+    - name: Image operations
+      href: image-operations.md
+    - name: Attachment and Annotation file operations
+      href: attachment-annotation-file-operations.md
+    - name: Query schema definitions and detect changes
+      href: retrievemetadatachanges.md
+    - name: Use bulk operations
+      href: create-update-multiple.md
+- name: PowerShell samples
+  items:
+  - name: About the PowerShell samples
+    href: ../web-api-samples-powershell.md
+  - name: Basic Operations
+    href: basic-operations-powershell.md
+  - name: Metadata Operations
+    href: metadata-operations-powershell.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
     href: ../web-api-samples-client-side-javascript.md
+  - name: DataverseWebAPI sample library
+    href: ../dataversewebapi-sample-library.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
   - name: Conditional Operations

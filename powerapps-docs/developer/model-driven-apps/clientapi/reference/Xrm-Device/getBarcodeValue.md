@@ -1,18 +1,14 @@
 ---
-title: "getBarcodeValue| MicrosoftDocs"
+title: "getBarcodeValue (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getBarCodeValue method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -31,10 +27,10 @@ This method is supported only for the mobile clients.
 
 ## Parameters
 
-| Parameter Name  | Type     | Required | Description                                                                                                                                          |
-| --------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| successCallback | Function | Yes      | A function to call when the barcode value is returned as a String.                                                                                   |
-| errorCallback   | Function | Yes      | A function to call when the operation fails. An error object with the **message** property (String) will be passed that describes the error details. |
+| Parameter Name  | Type     | Required | Description|
+| --------------- | -------- | -------- | -----------|
+| `successCallback` | Function | Yes      | A function to call when the barcode value is returned as a String.                                                                                   |
+| `errorCallback`   | Function | Yes      | A function to call when the operation fails. An error object with the **message** property (String) will be passed that describes the error details. |
 
 ## Return Value
 
@@ -42,7 +38,7 @@ On success, returns a string containing the scanned barcode value.
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ## Example
 
@@ -57,7 +53,7 @@ Xrm.Device.getBarcodeValue().then(
 );
 ```
 
-### Related topics
+### Related articles
 
 [Xrm.Device](../xrm-device.md)
 

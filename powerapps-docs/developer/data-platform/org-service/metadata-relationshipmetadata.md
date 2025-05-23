@@ -1,34 +1,33 @@
 ---
-title: "Create and retrieve table row relationships (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Shows code samples to create and retrieve table row relationships." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
-manager: sunilg
+title: Create and retrieve table relationships
+description: Shows code samples to create and retrieve table relationships.
+ms.date: 08/12/2023
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
-ms.topic: "article"
-search.audienceType: 
+ms.topic: how-to
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
-# Create and retrieve table row relationships
+# Create and retrieve table relationships
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This topic shows how to create and retrieve table row relationships. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateRetrieveEntityRelationships).
-  
-<a name="BKMK_Create1NEntityRelationship"></a>   
+This topic shows how to create and retrieve table relationships.
 
-## Create a 1:N row relationship  
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateRetrieveEntityRelationships)
 
- The following code sample uses the [EligibleCreateOneToManyRelationship](#eligiblecreateonetomanyrelationship) method to verify that the `Account` and `Campaign` tables can participate in a 1:N row relationship and then creates the relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.  
-  
+<a name="BKMK_Create1NEntityRelationship"></a>
+
+## Create a 1:N relationship
+
+The following code sample uses the [EligibleCreateOneToManyRelationship](#eligiblecreateonetomanyrelationship) method to verify that the `Account` and `Campaign` tables can participate in a 1:N relationship and then creates the relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.
+
 ```csharp
 bool eligibleCreateOneToManyRelationship =
     EligibleCreateOneToManyRelationship("account", "campaign");
@@ -77,7 +76,7 @@ if (eligibleCreateOneToManyRelationship)
 
     _oneToManyRelationshipId =
         createOneToManyRelationshipResponse.RelationshipId;
-    _oneToManyRelationshipName = 
+    _oneToManyRelationshipName =
         createOneToManyRelationshipRequest.OneToManyRelationship.SchemaName;
 
     Console.WriteLine(
@@ -85,13 +84,13 @@ if (eligibleCreateOneToManyRelationship)
         "account", "campaign");
 }
 ```
-  
+
 <a name="BKMK_EligibleCreateOneToManyRelationship"></a>
 
-### EligibleCreateOneToManyRelationship  
+### EligibleCreateOneToManyRelationship
 
- The following code sample uses the `EligibleCreateOneToManyRelationship` method that in turn uses <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest> to verify whether two table rows can participate in a 1:N relationship.  
-  
+The following code sample uses the `EligibleCreateOneToManyRelationship` method that in turn uses <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest> to verify whether two table can participate in a 1:N relationship.
+
 ```csharp
 /// <summary>
 /// Determines whether two entities are eligible to participate in a relationship
@@ -99,7 +98,7 @@ if (eligibleCreateOneToManyRelationship)
 /// <param name="referencedEntity">Primary Entity</param>
 /// <param name="referencingEntity">Referencing Entity</param>
 /// <returns></returns>
-public bool EligibleCreateOneToManyRelationship(string referencedEntity, 
+public bool EligibleCreateOneToManyRelationship(string referencedEntity,
     string referencingEntity)
 {
     //Checks whether the specified entity can be the primary entity in one-to-many
@@ -115,7 +114,7 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
     if (!canBeReferencedResponse.CanBeReferenced)
     {
         Console.WriteLine(
-            "Entity {0} can't be the primary entity in this one-to-many relationship", 
+            "Entity {0} can't be the primary entity in this one-to-many relationship",
             referencedEntity);
     }
 
@@ -132,7 +131,7 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
     if (!canBeReferencingResponse.CanBeReferencing)
     {
         Console.WriteLine(
-            "Entity {0} can't be the referencing entity in this one-to-many relationship", 
+            "Entity {0} can't be the referencing entity in this one-to-many relationship",
             referencingEntity);
     }
 
@@ -148,13 +147,13 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
     }
 }
 ```
-  
-<a name="BKMK_CreateNNEntityRelationship"></a>   
 
-## Create an N:N relationship  
+<a name="BKMK_CreateNNEntityRelationship"></a>
 
- The following code sample uses the [EligibleCreateManyToManyRelationship](#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` tables can participate in a N:N row relationship and then creates the table row relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
-  
+## Create an N:N relationship
+
+The following code sample uses the [EligibleCreateManyToManyRelationship](#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` tables can participate in a N:N relationship and then creates the relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.
+
 ```csharp
 bool accountEligibleParticipate =
     EligibleCreateManyToManyRelationship("account");
@@ -207,13 +206,13 @@ if (accountEligibleParticipate && campaignEligibleParticipate)
         "account", "campaign");
 }
 ```
-  
-<a name="BKMK_EligibleCreateManyToManyRelationship"></a>   
 
-### EligibleCreateManyToManyRelationship  
+<a name="BKMK_EligibleCreateManyToManyRelationship"></a>
 
- The following code sample creates a `EligibleCreateManyToManyRelationship` method that uses <xref:Microsoft.Xrm.Sdk.Messages.CanManyToManyRequest> to verify whether a table can participate in a N:N row relationship.  
-  
+### EligibleCreateManyToManyRelationship
+
+The following code sample creates a `EligibleCreateManyToManyRelationship` method that uses <xref:Microsoft.Xrm.Sdk.Messages.CanManyToManyRequest> to verify whether a table can participate in a N:N relationship.
+
 ```csharp
 /// <summary>
 /// Determines whether the entity can participate in a many-to-many relationship.
@@ -233,20 +232,20 @@ public bool EligibleCreateManyToManyRelationship(string entity)
     if (!canManyToManyResponse.CanManyToMany)
     {
         Console.WriteLine(
-            "Entity {0} can't participate in a many-to-many relationship.", 
+            "Entity {0} can't participate in a many-to-many relationship.",
             entity);
     }
 
     return canManyToManyResponse.CanManyToMany;
 }
 ```
-  
+
 <a name="BKMK_RetrieveEntityRelationships"></a>
 
-## Retrieve table row relationships
+## Retrieve table relationships
 
- The following code sample retrieves the two table row relationships previously created using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest>. The first example uses the `MetadataId` and the second uses the `Name`.  
-  
+The following code sample retrieves the two table relationships previously created using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest>. The first example uses the `MetadataId` and the second uses the `Name`.
+
 ```csharp
 //You can use either the Name or the MetadataId of the relationship.
 
@@ -267,8 +266,8 @@ RetrieveRelationshipResponse retrieveManyToManyResponse =
 Console.WriteLine("Retrieved {0} Many-to-Many relationship by Name", retrieveManyToManyResponse.RelationshipMetadata.MetadataId);
 ```
 
-### See Also  
+### See Also
 
- [Table relationship definition messages](../entity-relationship-metadata-messages.md)   
+[Table relationship definition messages](../entity-relationship-metadata-messages.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,18 +1,15 @@
 ---
-title: "When to edit customizations file (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This topic covers when to edit customizations file and different possible ways to do that" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "When to edit customizations file (model-driven apps)"
+description: "This topic covers when to edit customizations file and different possible ways to do that"
 author: caburk
 ms.author: caburk
-manager: evlew
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---

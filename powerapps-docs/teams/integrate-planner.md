@@ -1,16 +1,16 @@
 ---
-title: Integrate your Teams Power App with Planner (contains video)
+title: Integrate your Teams Power Apps with Planner
 description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams
 ms.date: 08/25/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Integrate with Microsoft Planner
@@ -20,7 +20,7 @@ In this article, we'll learn how to integrate Power Apps with Planner to create 
 Power Apps in Microsoft Teams enables collaboration between people and groups. Employees already use Teams to work, communicate, and collaborate. Apps in Teams have deep integration with other Teams capabilities. For example, in Teams, you can assign tasks to team members using Planner in your Teams channel. Apps that require follow-up by others in your team, such as to address issues reported in the Issue Reporting app, can leverage Planner in the Teams channel and create Tasks where users already manage their tasks.
 
 Watch this video to learn how to integrate Power Apps with Planner:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ut]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37312c36-393d-44fd-ba8a-9b3dbdf8d60e]
 
 ## Prerequisites
 
@@ -196,7 +196,7 @@ We'll create an app with five fields capturing details that will be used to crea
 
 1. Copy the following formula in the **OnSelect** property of **Button_CreateTask**.
 
-    ```powerapps-dot
+    ```power-fx
     Planner.CreateTaskV3(
         Param("groupId"),
         PlannerID.Selected.id,
@@ -258,22 +258,8 @@ We'll create an app with five fields capturing details that will be used to crea
 
 ## See Planner integration in action
 
-To see an example of Planner integration, check out the [Issue Reporting](issue-reporting.md) sample app for Teams. Issue Reporting makes it easy for users to report issues. These issues are created in Planner and assigned for follow-up.
+To see an example of Planner integration, check out the [Issue Reporting](issue-reporting.md) sample app template for Teams. Issue Reporting makes it easy for users to report issues. These issues are created in Planner and assigned for follow-up.
 
 This integration can be easily extended to add logic to automatically assign the Planner Tasks or [provide notifications for issue tasks](extend-issue-sign-up-notification.md).
-
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

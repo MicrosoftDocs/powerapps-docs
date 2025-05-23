@@ -1,34 +1,34 @@
-﻿---
-title: Code sign for iOS
-description: Learn about how to code sign for iOS for Power Apps wrap.
-author: larryk78
+---
+title: Manual code sign for iOS
+description: Learn how to manually code sign for iOS for Power Apps wrap.
+author: komala2019
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 06/06/2022
+ms.reviewer: smurkute
+ms.date: 03/22/2024
 ms.subservice: canvas-maker
-ms.author: lknibb
+ms.author: koagarwa
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - larryk78
+  - mduelae
 ---
 
-# Code sign for iOS
+# Manual code sign for iOS
 
-In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-custom-branded-native-power-apps-for-ios-and-android-using-the-wrap-wizard).
+
+ > [!Important]
+ > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
 
 ## Prerequisites
 
-You'll need the following information to get started:
+You need the following information to get started:
 
 - App ID
 - Device UDIDs (only for testing and development purpose)
 
-You'll also need a macOS device to code sign for iOS.
+You also need a macOS device to code sign for iOS.
 
 ## Prepare your Mac
 
@@ -37,7 +37,7 @@ Set up your Mac with the following configuration.
 1. Install **Xcode**. More information: [Xcode](https://developer.apple.com/support/xcode/)
 1. Install PowerShell for macOS. More information: [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-on-macos)
 1. Enroll in [Apple Developer Program](https://developer.apple.com/programs/)
-1. To distribute your apps within the organization, you'll need to sign up for [Apple Enterprise Developer Program](https://developer.apple.com/programs/enterprise/).
+1. To distribute your apps within the organization, you need to sign up for [Apple Enterprise Developer Program](https://developer.apple.com/programs/enterprise/).
 
 ## Create App ID
 
@@ -63,7 +63,7 @@ Set up your Mac with the following configuration.
 
     1. **Description** - Name of your app.
     1. **Bundle ID** - select **Explicit Bundle ID**.
-    1. Enter the bundle ID that you used while [creating the wrap project](how-to.md#bundle-id). More information: [Bundle ID](overview.md#bundle-id)
+    1. Enter the bundle ID that you used while [creating the wrap project](wrap-how-to.md#step-2-target-platform). More information: [Bundle ID](overview.md#bundle-id)
     1. Enable the following capabilities:
         - Associated Domains
         - iCloud
@@ -115,7 +115,10 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Take a note of the **Name** of the certificate (usually like **iPhone Distribution: Name (Team ID)**). This value is the code signing identity that needs to be provided for signing.
 
-## Add all the devices where the iPA needs to be installed
+## Add all the devices where the IPA needs to be installed
+
+ > [!NOTE]
+ > This step is only necessary if you're distributing to app to external users. It's not required if the app is only for internal users. 
 
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
@@ -167,7 +170,12 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Sign the iOS Archive
 
-1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
+1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
+
+1. If signing with enterprise certificate, open the file **Distribution-exportOptions.plist** with Xcode and change the value for the **method** field inside the file to **enterprise**.
+
+  > [!NOTE]
+  > Enterprise signing is not supported with Key Vault signing.
 
 1. Open terminal, and change directory to the unzipped folder.
 
@@ -175,15 +183,25 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
 
-    :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
+   > [!NOTE]
+   >  'CodeSigningIdentity' is the name of the certificate that was created at the Apple developer website. To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (this is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the **Name** field under **Certificates** in the **.mobileprovision** file.
 
-1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
+   > [!TIP]
+   > 'ProvisioningProfilePath' is the path to the provisioning profile file that you have downloaded from the Apple developer website in the previous step [**Create an iOS Provisioning Profile**](code-sign-ios.md#create-an-ios-provisioning-profile). For example, it could be located at /Users/username/Downloads/MyProvisioningProfile.mobileprovision on your computer.
+
+   :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
+
+1. When the script finishes, a **.ipa** file is created such as **com.single.wrap.ipa**.
+   - If the command **./SignAndGenerateIPA.ps1** fails, then delete the unzipped folder and files because they might be corrupted. Unzip **iOS-Archive.zip** again before you try to sign again.
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
-1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+1. Install the **.ipa** file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](wrap-how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 ### See also
 
 - [Wrap overview](overview.md)
-- [Code sign on Android](code-sign-android.md)
+- [Manual code sign on Android](code-sign-android.md)  
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+

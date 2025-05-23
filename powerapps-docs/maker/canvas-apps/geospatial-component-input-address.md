@@ -2,7 +2,7 @@
 title: Enter and resolve addresses in maps
 description: Use the address input control in Power Apps to quickly and easily enter accurate addresses.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -25,21 +23,16 @@ The control returns the address as structured data. Your app can extract informa
 
 ## Prerequisites
 
-Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites).
-
+Before you can use the control in your apps, you'll need to [enable geospatial features for the environment](geospatial-overview.md#enable-geospatial-features-for-the-environment). Make sure you also [review the prerequisites for using geospatial controls](geospatial-overview.md#prerequisites-for-full-support). Refer to the [privacy and security table](geospatial-overview.md#privacy-and-security-considerations) for more details on the address input control's data usage.
 
 ## Add an address input control to your app
 
 With your app open for [editing](./edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Input**.
-1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely.
+1. Select **Address input** to place an address input box in the app screen, or drag the control to the screen to position it more precisely. You must enter at least three characters including one number for the address input control.
 
 ## Set a default search radius
-=======
-
-
-
 
 By default, the control will search around the user's location. You can refine the default search area to help narrow the initial results.
 
@@ -52,17 +45,18 @@ The control will start searching at the given latitude and longitude, out to the
 
 You can add a button to your app to save entered addresses as a data collection. Then you can retrieve the addresses and display them in [the map control](geospatial-component-map.md).
 
-
 1. Add a map control and an address input control to your app.
+
 1. Insert and place a **Button** control.
+
 1. Change the **OnSelect** property of the button control as follows. (Hint: Copy the formula and paste it in the formula bar or on the **Advanced** properties tab, whichever you prefer.)
-=======
+
 1. Enter a longitude, latitude, and radius (in meters).
 
-The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
+    The control will start searching at the latitude and longitude, out to the distance specified in the radius field.
 
 
-    ```json
+    ```power-fx
     If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
     ```
 
@@ -72,11 +66,11 @@ The control will start searching at the latitude and longitude, out to the dista
 
 1. Select the map control. Change its properties as follows:
 
-  | Property name | Value | Where |
-  | - | - | - |
-  | Items | "Locations" | **Properties** tab |
-  | ItemsLatitudes | "Latitude" | **Advanced** tab |
-  | ItemsLongitudes | "Longitude" | **Advanced** tab |
+    | Property name | Value | Where |
+    | - | - | - |
+    | Items | "Locations" | **Properties** tab |
+    | ItemsLatitudes | "Latitude" | **Advanced** tab |
+    | ItemsLongitudes | "Longitude" | **Advanced** tab |
 
 When the user selects the button, the result from the address input control is added to the map as a new pin.
 
@@ -101,7 +95,7 @@ Change an address input control's behavior and appearance using properties. Some
 | Longitude | Sets the longitude coordinate of the center point used for address suggestions. Requires **Search within radius** to be on. | Floating point number from -180 to 180 | Properties; Advanced: **Longitude** |
 | Radius | Sets the radius, in meters, around **Latitude** and **Longitude** to constrain address suggestions. Requires **Search within radius** to be on. | Floating point number | Properties; Advanced: **Radius** |
 | Language | Sets the language that address suggestions are returned in. | String | Properties; Advanced: **Language** |
-| Country set | Identifies a comma-separated list of countries to constrain address suggestions to, in ISO 3166 alpha-2 format; for example, *US,CA,MX*. | String | Properties; Advanced: **CountrySet** |
+| Country set | Identifies a comma-separated list of countries/regions to constrain address suggestions to, in ISO 3166 alpha-2 format; for example, *US,CA,MX*. | String | Properties; Advanced: **CountrySet** |
 | Visible | Shows or hides the control. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
 | Padding top | Sets the distance between the control text and the top of the control. | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)** |
 | Padding bottom | Sets the distance between the control text and the bottom of the control. | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)** |
@@ -117,9 +111,9 @@ Change an address input control's behavior and appearance using properties. Some
 | Hover color | Sets the colors of the control text, the control background, and the control border when the user hovers the mouse pointer over it. | Not applicable | Properties; Advanced: **HoverFontColor**, **HoverFillColor**, **HoverBorderColor** |
 | Disabled color | Sets the colors of the control text, the control background, and the control border if **DisplayMode** is *Disabled*. | Not applicable | Properties; Advanced: **DisabledFontColor**, **DisabledFillColor**, **DisabledBorderColor** |
 | Pressed color | Sets the colors of the control text, the control background, and the control border when the user selects the control. | Not applicable | Properties; Advanced: **PressedFontColor**, **PressedFillColor**, **PressedBorderColor** |
-| OnMixedAddressSelect | Contains code that runs when the user selects a suggested address. | Event | Advanced |
-| OnChange | Contains code that runs when a control property is changed. | Event | Advanced |
 | ContentLanguage | Determines the display language of the control, if it's different from the language that's used in the app. | String | Advanced |
+| OnAddressSelect | Contains code that runs when the user selects a suggested address. | Event | Advanced |
+| OnChange | Contains code that runs when a control property is changed. | Event | Advanced |
 
 ### Output properties
 
@@ -136,16 +130,16 @@ Other properties become available when a user interacts with the address input c
 | PostalCode | The postal code |
 | ExtendedPostalCode | The extended postal code |
 | CountryCode | The country code |
-| Country | The country name |
+| Country | The country/region name |
 | CountryCodeISO3 | The country code in ISO alpha-3 format |
-| CountrySubdivisionName | The country subdivision name |
+| CountrySubdivisionName | The country/region subdivision name |
 | StreetName | The street name |
 | StreetNumber | The street number |
 | Municipality | The municipality |
 | MunicipalitySubdivision | The municipality subdivision |
-| CountryTertiarySubdivision | The country tertiary subdivision |
-| CountrySecondarySubdivision | The country secondary subdivision |
-| CountrySubdivision | The country subdivision |
+| CountryTertiarySubdivision | The country/region tertiary subdivision |
+| CountrySecondarySubdivision | The country/region secondary subdivision |
+| CountrySubdivision | The country/region subdivision |
 
 ## Other geospatial controls
 

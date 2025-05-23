@@ -4,22 +4,21 @@ description: "This sample shows how to reschedule and cancel a recurring appoint
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Reschedule and cancel a recurring appointment
 
-This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecurringAppointment).
+This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Reschedule and cancel a recurring appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RecurringAppointment)
 
 ## How to run this sample
 
@@ -35,7 +34,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org. 
+1. Checks for the current version of the org.
 2. Defines an anonymous type to define the possible recurrence pattern values and possible values for days of the week.
 3. Defines an anonymous type to define tbe possible values for recurrence rule pattern end type.
 4. The `RecurringAppointmentMaster` creates a new recurring appointment.
@@ -49,6 +48,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

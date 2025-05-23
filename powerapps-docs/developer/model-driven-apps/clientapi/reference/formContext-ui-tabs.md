@@ -1,25 +1,19 @@
 ---
-title: "formContext.ui.tabs (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.tabs (Client API reference) in model-driven apps"
 description: "A tab is a group of sections on a page. It contains properties and methods to manipulate tabs as well as access to sections within the tab through the sections collection."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # formContext.ui.tabs (Client API reference)
-
-
 
 A tab is a group of sections on a page. It contains properties and methods to manipulate tabs as well as access to sections within the tab through the sections collection.
 
@@ -31,7 +25,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 
 ## Properties
 
-- **sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext-ui Tab sections](formContext-ui-tab-sections.md) for information about the properties and methods of the section objects in the collection.
+**`sections`**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui.tabs section](formContext-ui-tab-sections.md) for information about the properties and methods of the section objects in the collection.
 
 ## Methods
 
@@ -51,12 +45,9 @@ var tabObj = formContext.ui.tabs.get(arg);
 |[setLabel](formcontext-ui-tabs/setLabel.md)|[!INCLUDE[formcontext-ui-tabs/includes/setLabel-description.md](formcontext-ui-tabs/includes/setLabel-description.md)]|
 |[setVisible](formcontext-ui-tabs/setVisible.md)|[!INCLUDE[formcontext-ui-tabs/includes/setVisible-description.md](formcontext-ui-tabs/includes/setVisible-description.md)]|
 
-### Related topics
+### Related articles
 
-[formcontext.ui.tabs](formcontext-ui-tabs.md)
-
+[formcontext.ui.tabs](formcontext-ui-tabs.md)   
 [formContext](../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

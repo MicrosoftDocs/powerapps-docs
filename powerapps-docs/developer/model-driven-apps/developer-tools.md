@@ -1,18 +1,14 @@
 ---
-title: "Developer tools (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Developer tools (model-driven apps)"
 description: "Provides information about the community developed tools that you can use with model-driven apps in Power Apps."
 ms.date: 04/01/2022
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
-manager: kvivek
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Developer tools
 
@@ -33,7 +29,7 @@ The following is a selected list of community tools distributed via the XrmToolB
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
-Another tool that is not distributed via the XrmToolBox is Jason Lattimer's [REST Builder](https://github.com/jlattimer/CRMRESTBuilder). This tool generates JavaScript code for use with the Web API.
+Another tool that is not distributed via the XrmToolBox is the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB). This tool generates JavaScript code for use with the Web API.
 
 > [!IMPORTANT]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.

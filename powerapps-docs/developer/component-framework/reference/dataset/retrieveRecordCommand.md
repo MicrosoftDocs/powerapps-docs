@@ -1,9 +1,8 @@
 ---
-title: retrieveRecordCommand | Microsoft Docs
+title: retrieveRecordCommand (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieve record's associated commands.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: clromano
+ms.author: clromano
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -38,7 +37,7 @@ Model-driven apps
 
 Type: `ICommandObjectWrapper`
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

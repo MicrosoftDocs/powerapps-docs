@@ -1,19 +1,17 @@
 ---
-title: Develop offline-capable canvas apps (contains video)
+title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 03/02/2022
+ms.reviewer: mkaur
+ms.date: 03/18/2024
 ms.author: mustlaz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mustlaz
 ---
 
@@ -21,19 +19,25 @@ contributors:
 
 Mobile users often need to be productive even when they have limited or no connectivity. When you build a canvas app, you can perform these tasks:
 
-- Open Power Apps Mobile and run apps when offline.
+- Open Power Apps Mobile and run apps when the device is not connected to the network.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
-- Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+- Synchronize data between your device and the server.
+
+If your app connects to Dataverse, offline support is [**built-in**](../../mobile/canvas-mobile-offline-overview.md). Power Apps will allows you to download data to your device and upload changes back to Dataverse. If your app does not use Dataverse, you can use collections and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic storage when offline.
 
 > [!NOTE]
-> - Offline capability for canvas apps is only available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
+> - Offline capability for canvas apps is available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
 > - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 > - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)
 
-This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+## Enable offline support in a Dataverse-based canvas app
+For Microsoft Dataverse-based canvas apps, you must use the offline capability built-in with the [offline-first](../../mobile/canvas-mobile-offline-overview.md) experience.  For more information, see [Set up mobile offline for canvas apps](../../mobile/canvas-mobile-offline-setup.md) and [Working with canvas apps offline](../../mobile/canvas-mobile-offline-working.md). With the flip of a switch, your app can work with Dataverse data wherever you are, with or without a network connection. Just build your app with standard Power Fx formulas and the offline feature handles all the complexity for you. 
 
-Watch this video to learn how to create offline enabled canvas apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
+## Use LoadData and SaveData for all other connectors
+This section includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
+
+Watch this video to learn how to create offline enabled canvas apps which don't use Dataverse data:
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=60fd9b60-80a9-445b-bd4e-b7f4f068431e]
 
 ## Limitations
 
@@ -49,7 +53,7 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![Power Apps app with connectors.](./media/offline-apps/online-app.png)
+![Power Apps with connectors.](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 
@@ -84,7 +88,7 @@ At a high level, the app performs these tasks:
 
 1. In the **Tree view** pane, select **App**, and then set its **OnStart** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
             Set( statusText, "Online data" ),
@@ -154,7 +158,7 @@ This formula determines whether the device is online. If it is, the label shows 
 
 1. Set the button's **OnSelect** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
@@ -165,7 +169,7 @@ This formula determines whether the device is online. If it is, the label shows 
 
 1. In the **OnStart** property for the **App**, add a line at the end of the formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
             Set( statusText, "Online data" ),
@@ -199,7 +203,7 @@ Then the formula resets the text in the text-input box.
 
 1. Set the timer's **OnTimerEnd** to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     If( Connection.Connected,
         ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
         Clear( LocalTweetsToPost );

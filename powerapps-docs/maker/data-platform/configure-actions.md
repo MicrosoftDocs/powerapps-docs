@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,9 +17,6 @@ ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 caps.latest.revision: 19
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser
@@ -54,7 +51,7 @@ Custom process actions also have something that real-time workflow processes don
 
 
 > [!NOTE]
-> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use Custom API instead. More information: [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use custom API instead. More information: [Compare Custom Process Action and custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
   
 Like real-time workflow processes, actions have the following properties in the **Create Process** dialog box:  
   
@@ -168,7 +165,7 @@ Custom process actions have two relevant managed properties
 
 ### Is Customizable
 
-The **Is Customizabl**e managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
+The **Is **Is Customizable** managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
 
 ### Is Custom Processing Step Allowed for Other Publishers
 

@@ -1,31 +1,30 @@
 ---
-title: Theming in sample apps (contains video)
+title: Theming in sample app templates
 description: Learn how to theming formulas in the template Power Apps for Microsoft Teams.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/05/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - msftsamperl
   - joel-lindstrom
 ---
 
-# Theming in sample apps
+# Theming in sample app templates
 
 The most attractive feature about canvas apps is the ability to customize the user interface per the user or organization’s branding and liking. Theming strategy provides us with the ability to create apps that match the organizational brand. A **theme** contains a collection of styles that define multiple design properties for controls and components such as colors, fonts, and borders.
 
 In this article, we'll learn how to use global variables to define themes, and how the colors and properties can be easily changed throughout the app by just updating the global variables.
 
-Watch this video to learn about theming in sample apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Us]
+Watch this video to learn about theming in sample app templates:
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c8ddd966-a7fc-431b-8b2c-375e85b862ba]
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to create apps within Microsoft Teams that will be available as part of select Microsoft 365 subscriptions. You'll also need the Milestones sample app for Microsoft Teams installed in your Team. You can install it in your team at <https://aka.ms/TeamsMilestones>.
+To complete this lesson, we'd need the ability to create apps within Microsoft Teams that will be available as part of select Microsoft 365 subscriptions. You'll also need the Milestones sample app template for Microsoft Teams installed in your Team. You can install it in your team at <https://aka.ms/TeamsMilestones>.
 
 ## Defining the theming strategy
 
@@ -52,7 +51,7 @@ Two hidden screens have been defined for testing the theming strategy:
     
       ![The hidden control screen](media/sample-app-theming/hidden-control-screen.png "The hidden control screen")
 
-## Using the theming variables for a sample app
+## Using the theming variables for a sample app templates
 
 1. To understand the usage of theming in the Milestones app, select  **Projects Screen** in the Tree view to open the screen and then select **+New Project**.
 
@@ -87,7 +86,7 @@ Two hidden screens have been defined for testing the theming strategy:
     > [!NOTE]
     > Another possible extension to the app would be to add Font as a Property, either as one variable to be used across all controls, or once per control (like how the other styling properties are defined separately for primary buttons, or secondary buttons). The font throughout the Milestones app is Segoe UI and there was no need identified for theming of the font.
 
-## Updating the theme in the sample app
+## Updating the theme in the sample app template
 
 In this section, we'll see how we can change a property of a particular control and how the control gets updated across various screens. In our example, we'll update the Fill property of the Primary button and see how the button color changes in the Dark mode, and the Default mode.
 
@@ -118,18 +117,5 @@ In this section, we'll see how we can change a property of a particular control 
     > [!NOTE]
     > Updating the fill function directly is a quick way of testing theming as shown earlier. If the color needs to be changed for not just the Primary Button control but for all other controls where it is being used as well, then the color palette under the variable gblAppColors should be updated with the formula of the desired colors and names that makes the most sense to your organization. For example,`companynameDefaultHeader: ColorValue("#30D5C8")` would be the formula for turquoise blue.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected sample app](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Dataverse for Teams environment language | Microsoft Docs
 description: Dataverse for Teams environment language.
 author: NHelgren
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams
@@ -28,7 +28,7 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
 
     - Already has the required language pack installed, the environment will use the user’s language.
 
-    Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match her/his language.
+    Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match their language.
 
 > [!IMPORTANT]
 > - Any existing tables or columns at the time of the language change will not be translated to another language. They will continue to use the existing names.
@@ -42,7 +42,7 @@ User B’s language is set to French in Teams and they access the Power Apps app
 - If the Dataverse for Teams environment doesn't have the French language pack installed, it will be automatically installed in the environment for Team 1. The user interface for User B immediately changes to French while the language pack is installed. After the language pack is installed, any new tables and columns will be created in the French language.
 - If the Dataverse for Teams environment for Team 1 already has the French language pack installed, no additional installation is required.
  
-If the User B changes her/his language in Teams again and accesses the Power Apps app in the team next time, the new language pack will be installed if the language isn't already installed in Dataverse for Teams environment.
+If the User B changes their language in Teams again and accesses the Power Apps app in the team next time, the new language pack will be installed if the language isn't already installed in Dataverse for Teams environment.
 
 ## Supported languages and fallbacks
 

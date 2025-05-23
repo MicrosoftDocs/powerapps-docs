@@ -3,12 +3,12 @@ title: "3: Building a low-code prototype | Microsoft Docs"
 description: "Learn about building a low-code prototype."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -17,15 +17,15 @@ ms.reviewer: kvivek
 > [!NOTE] 
 > [Chapter 2](02-intro-sample-scenario.md) referenced the mobile app used by the field technicians and engineers, and desktop app used by on-premises staff. The following chapters focus on the design, implementation, and rollout of the mobile apps built with Power Apps. The desktop apps are left as an exercise for the reader.
 
-Kiana is skeptical of low-code solutions and Power Apps, but she and Maria decide to build an app together to help the field technicians check inventory (and order parts, if necessary), query the knowledge base, and check their next appointment while they're out of the office on service calls. Kiana and Maria plan to use this experience to explore how to add controls and use formulas in Power Apps.
+Kiana is skeptical of low-code solutions and Power Apps. However, Kiana and and Maria decide to build an app together to help the field technicians check inventory (and order parts, if necessary), query the knowledge base, and check their next appointment while they're out of the office on service calls. Kiana and Maria plan to use this experience to explore how to add controls and use formulas in Power Apps.
 
-Although building an initial, low-code prototype is typically a citizen developer task, Kiana decides to pay attention to the process to ensure that she understands how the app is constructed. She needs this information to enable her to help Maria integrate the real-world data sources, Web APIs, and other required services into the app.
+Although building an initial, low-code prototype is typically a citizen developer task, Kiana decides to pay attention to the process to understand how the app is constructed. Kiana needs this information to help Maria integrate the real-world data sources, Web APIs, and other required services into the app.
 
 ## Item 1: Field inventory management
 
-Maria's initial aim is to build a canvas app that displays a list of parts and enables the user to view the details of any part. Eventually, the user should also be able to order a part; however, this initial version of the app will simply be a prototype and won't be hooked up to a back end yet. After she has obtained feedback from Caleb, the lead field technician, Maria will work with Kiana on integrating the canvas app with the inventory system running on-premises.
+Maria's initial aim is to build a canvas app that displays a list of parts and enables the user to view the details of any part. Eventually, the user should also be able to order a part; however, this initial version of the app will simply be a prototype and won't be hooked up to a back end yet. After obtaining feedback from Caleb, the lead field technician, Maria will work with Kiana on integrating the canvas app with the inventory system running on-premises.
 
-Maria is very familiar with the existing inventory management system and understands the information that it contains. She starts by creating an Excel workbook that contains tables holding mock data with details for some sample parts. The fields in the table are **ID**, **Name**, **CategoryID**, **Price**, **Overview**, **NumberInStock**, and **Image** (a URL that references an image of the part). She can use this workbook to build and test the canvas app, to ensure that it displays the required data correctly. She stores this workbook in her OneDrive account with the name **BoilerParts.xlsx**.
+Maria is very familiar with the existing inventory management system and understands the information that it contains. Maria starts by creating an Excel workbook that contains tables holding mock data with details for some sample parts. The fields in the table are **ID**, **Name**, **CategoryID**, **Price**, **Overview**, **NumberInStock**, and **Image** (a URL that references an image of the part). This workbook can be used to build and test the canvas app, to ensure that it displays the required data correctly. Maria stores this workbook in a OneDrive account with the name **BoilerParts.xlsx**.
 
 > [!NOTE] 
 > You can find a copy of this workbook in the [Assets](https://github.com/microsoft/fusion-dev-ebook/tree/main/Assets) folder in the Git repository for this guide.
@@ -240,7 +240,7 @@ Now you can save and test the app.
 
 ## Item 2: Field knowledge base
 
-For access to the knowledge base, Maria and Caleb (the technician) envisage a simple interface where the user enters a search term and the app displays all knowledge base articles that mention the term. Maria knows that this process is going to involve Azure Cognitive Search, but doesn't need&mdash;or even want&mdash;to understand how it works. Therefore, Maria decides to just provide the basic user interface. She'll work with Kiana later to add the actual functionality.
+For access to the knowledge base, Maria and Caleb (the technician) envisage a simple interface where the user enters a search term and the app displays all knowledge base articles that mention the term. Maria knows that this process is going to involve Azure Cognitive Search, but doesn't need&mdash;or even want&mdash;to understand how it works. Therefore, Maria decides to just provide the basic user interface and work with Kiana later to add the actual functionality.
 
 Maria decides to create a new screen based on the **List** template available in Power Apps Studio.
 
@@ -299,17 +299,17 @@ Maria works with Malik, the office receptionist, to design the interface for the
 > [!NOTE] 
 > As with the field inventory management data, this workbook presents a denormalized view of the data. In the existing appointments system, this data is stored in separate tables that hold appointment data and customer data.
 
-Maria stores this file in her OneDrive account with the name **Appointments.xlsx**. Remembering that she previously used the default name for the table in the workbook and had to change the title in the various screens that were generated, she renames the table in the workbook to **Appointments**.
+Maria stores this file in a OneDrive account with the name **Appointments.xlsx**. Remembering that previously the default name for the table was used in the workbook and the title had to be changed in the various screens that were generated, Maria renames the table in the workbook to **Appointments**.
 
 > [!NOTE] 
 > This workbook is available in the [Assets](https://github.com/microsoft/fusion-dev-ebook/tree/main/Assets) folder of the Git repository for this guide.
 
-Maria wants to build the appointments section of the app directly from the Excel file. She decides to follow a similar approach to that of the field inventory management functionality, except that this time the engineer will be allowed to create and edit appointments.
+Maria wants to build the appointments section of the app directly from the Excel file. Maria decides to follow a similar approach to that of the field inventory management functionality, except that this time the engineer will be allowed to create and edit appointments.
 
-Maria decides to build the appointments screens initially as a separate app. This way, she can use Power Apps Studio to generate much of the app automatically. Power Apps Studio doesn't currently let you generate additional screens from a data connection in an existing app. When Maria has created and tested the screens, she'll copy them to the field inventory and knowledge base app.
+Maria decides to build the appointments screens initially as a separate app. This way, Maria can use Power Apps Studio to generate much of the app automatically. Power Apps Studio doesn't currently let you generate additional screens from a data connection in an existing app. After creating and testing the screens, Maria will copy them to the field inventory and knowledge base app.
 
 > [!NOTE] 
-> An alternative approach is to add the **Appointments** table in the Excel file as a second data source to the existing app, and then hand-craft the screens for appointments. Maria opted to generate the new screens from the workbook and copy the screens; she's currently more familiar with the concepts of copy and paste than building screens manually, although she'll gradually learn how to create screens from scratch as the process of building this app progresses.
+> An alternative approach is to add the **Appointments** table in the Excel file as a second data source to the existing app, and then hand-craft the screens for appointments. Maria opted to generate the new screens from the workbook and copy the screens. Currently, Maria is more familiar with the concepts of copy and paste than building screens manually, and will gradually learn how to create screens from scratch as the process of building this app progresses.
 
 **To create the appointments app**
 
@@ -482,7 +482,7 @@ You can now save and test the app.
 
 ## Combining the screens into a single app
 
-Maria has built two apps, but she wants to combine them into a single app. To do this, she copies the screens for the appointments app into the field inventory management and knowledge base app, as follows:
+Maria has built two apps, but wants to combine them into a single app. To do this, Maria copies the screens for the appointments app into the field inventory management and knowledge base app, as follows:
 
 1.  Open a new browser window and sign in to Power Apps Studio with your account details.
 
@@ -633,7 +633,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 9.  Similarly, add an icon named **IconReturn3** to the **RectQuickActionBar1\_1** control in the **BrowseAppointments** screen.
 
-10. On the **Tree view** pane, select the **App** object. Change the **OnStart** action property to the expression **Navigate(Home, ScreenTransition.Fade)**. This action ensures that the **Home** screen is displayed whenever the app starts:
+10. On the **Tree view** pane, select the **App** object. Change the **StartScreen** property to the expression **Home**. This ensures that the **Home** screen is displayed whenever the app starts:
 
     ![Set App OnStart formula.](media/image74.png)
 

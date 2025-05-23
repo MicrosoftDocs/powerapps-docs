@@ -4,28 +4,24 @@ description: "This sample showcases how to retrieve charts attached to a table "
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Retrieve all charts attached to a table
 
-This sample shows how to retrieve all the organization-owned visualizations attached to a table by using the [IOrganizationService.RetrieveMultiple](//dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
+This sample shows how to retrieve all the organization-owned visualizations attached to a table by using the [IOrganizationService.RetrieveMultiple](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple) method.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve all charts attached to a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveChartsAttachedToEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
-
 
 ## What this sample does
 
@@ -43,10 +39,8 @@ Checks for the current version of the org.
 
 The `newSavedQuery` method creates a query for retrieving all organization-owned visualizations that are attached to the account table.
 
-
 ### Clean up
 
 This sample creates no records. No cleanup is required.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

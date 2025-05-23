@@ -1,18 +1,14 @@
 ---
-title: "retrieveRecord (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "retrieveRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the retrieveRecord method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -28,58 +24,40 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the record you want to retrieve. For example: "account".</td>
-</tr>
-<tr>
-<td>id</td>
-<td>String</td>
-<td>Yes</td>
-<td>GUID of the table record you want to retrieve.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>String</td>
-<td>No</td>
-<td><p>OData system query options, <b>$select</b> and <b>$expand</b>, to retrieve your data.</p>
-<ul><li>Use the <b>$select</b> system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
-<li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
-</ul>
-<p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&</code> to separate the query options. For example:</p>
-<code>?$select=name&$expand=primarycontactid($select=contactid,fullname)</code>
-<p>See examples later in this article to see how you can define the <code>options</code> parameter for various retrieve scenarios.</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when a record is retrieved. A JSON object with the retrieved properties and values will be passed to the function.</p>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the record you want to retrieve. For example: `account`.|
+|`id`|String|Yes|GUID of the table record you want to retrieve.|
+|`options`|String|No|OData system query options to control what is returned. See [Options](#options)|
+|`successCallback`|Function|No|A function to call when a record is retrieved. A JSON object with the retrieved properties and values passed to the function.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
+
+## Options
+
+To control what is returned, use the `$select` and `$expand` OData system query options to retrieve your data.
+
+Use the `$select` system query option to limit the properties returned by including a comma-separated list of property names. Selecting specific properties is an important performance best practice. If properties aren't specified using `$select`, all properties are returned.
+
+Use the `$expand` system query option to control what data from related tables is returned. If you just include the name of the navigation property, you receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both *single-valued* and *collection-valued* navigation properties. For offline we only support nested `$select` option inside the  `$expand`.
+
+You specify the query options starting with `?`. You can also specify multiple query options by using `&` to separate the query options. For example:
+
+`?$select=name&$expand=primarycontactid($select=contactid,fullname)`
+
+See [Examples](#examples) to see how you can define the options parameter for various retrieve scenarios.
+
 
 ## Return Value
 
 On success, returns a promise containing a JSON object with the retrieved columns and their values.
-If the requested record does not exist, returns an error.
+If the requested record doesn't exist, returns an error.
 
 ## Examples
+
+See the following examples:
+
+- [Basic retrieve](#basic-retrieve)
+- [Retrieve related tables for a table instance by expanding single-valued navigation properties](#retrieve-related-tables-for-a-table-instance-by-expanding-single-valued-navigation-properties)
 
 ### Basic retrieve 
 
@@ -98,13 +76,13 @@ Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$
 );
 ```
 
-The above example displays the following in your console; you might see other values depending on your data:
+The above example displays the following text in your console; you might see other values depending on your data:
 
 `Retrieved values: Name: Sample Account, Revenue: 5000000`
 
 ### Retrieve related tables for a table instance by expanding single-valued navigation properties
 
- The following example demonstrates how to retrieve the contact for an account record with record ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact record, we are only retrieving the **contactid** and **fullname** properties.
+ The following example demonstrates how to retrieve the contact for an account record with record ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact record, we're only retrieving the **contactid** and **fullname** properties.
 
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name&$expand=primarycontactid($select=contactid,fullname)").then(
@@ -120,20 +98,14 @@ Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$
 );
 ```
 
-The above example displays the following in your console; you might see other values depending on your data:
+The above example displays the following text in your console; you might see other values depending on your data:
 
 `Retrieved values: Name: Adventure Works, Primary Contact ID: 49a0e5b9-88df-e311-b8e5-6c3be5a8b200, Primary Contact Name: Adrian Dumitrascu`
 
  
-### Related topics
+### Related articles
 
-[Xrm.WebApi.retrieveMultipleRecords](retrieveMultipleRecords.md)
-
+[Xrm.WebApi.retrieveMultipleRecords](retrieveMultipleRecords.md)   
 [Xrm.WebApi](../xrm-webapi.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

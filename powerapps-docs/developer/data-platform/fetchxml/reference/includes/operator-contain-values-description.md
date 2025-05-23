@@ -1,0 +1,1 @@
+The choice value is one of the specified values.

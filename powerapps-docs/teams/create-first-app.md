@@ -1,16 +1,16 @@
 ---
-title: Create your first app in Teams (contains video) | Microsoft Docs
+title: Create your first app in Teams | Microsoft Docs
 description: Learn how to create your first app in Teams. 
-author: tapanm-msft
+author: mduelae
 
-ms.topic: conceptual
-ms.custom: intro-internal
-ms.date: 08/05/2021
+ms.topic: how-to
+ms.collection: get-started
+ms.date: 02/05/2025
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-  - tapanm-msft
+  - mduelae
   - wimcoor
   - msftsamperl
 ---
@@ -28,14 +28,14 @@ Creating an app in Microsoft Teams is a quick and easy 3-step process.
 ![Create your first app in 3 steps.](media/create-your-first-app.png "Create your first app in 3 steps")
 
 Watch this video to learn how to create your first app.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEmEP]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=3e63d41c-d4eb-411e-b99a-7cc87bb2992d]
 Ensure you refer to the [latest steps](#create-your-first-table) when creating the table.
 
 Now let's go through each step in detail.
 
 ## Create your app
 
-After installing the Power Apps app from the Teams store:
+After installing the Power Apps app template:
 
 1. Start Teams, and sign in.
 
@@ -83,13 +83,13 @@ To get started creating your first table:
 
     ![Select With data](media/start-with-data.png "Select With data")
 
-1. Select **Create new table**.
+1. Select **Create new table** > **Start with blank table**.
 
     ![Create your first table.](media/create-first-table.png "Create your first table")
 
-1. In the **Create a table** dialog box, type a meaningful name for your
+1. In the **Create a table** dialog box, select **Edit table properties** and type a meaningful name for your
 new table that describes this dataset, and then select
-**Create**.
+**Save**.
 
 1. After the table is created, you can add columns of different types, add rows, and
 work with data in the visual editor.
@@ -100,7 +100,7 @@ work with data in the visual editor.
 
 To add a new column to track new data:
 
-1. Select **Add column.**  
+1. Select **New column.**  
 
 1. Enter a name that best describes your new column.
 
@@ -112,16 +112,14 @@ To add a new column to track new data:
 
 1. If required, change **Advanced options** for the selected column type.
 
-1. Select **Create**.
+1. Select **Save**.
 
 1. Repeat the previous steps to add the rest of the data columns.
 
 ### Add rows to the table
 
-To add rows, select the empty row and start typing additional data, or
-select **Add row**.
+To add rows, select **Add row**.
 
-![Add rows.](media/add-rows.png "Add rows")
 
 #### Paste the copied data into the table
 
@@ -138,10 +136,6 @@ To paste the data from clipboard into the table:
     <br> For example, inserting row above the selected row:
 
     ![Insert row above.](media/insert-row.png "Insert row above")
-
-    To add rows at the top instead, select **Add row**.
-
-    ![Add row.](media/add-row.png "Add row")
 
 1. Repeat the above step to add more empty rows, as needed.
 
@@ -208,12 +202,12 @@ To manually connect to the new data:
 
     Change from:
 
-    ```powerapps-dot
+    ```power-fx
     Remove(Instructions, selectedRecord); If(IsEmpty(Errors(Instructions, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Instructions)););
     ```
     Change to:
 
-    ```powerapps-dot
+    ```power-fx
     Remove(Recipes, selectedRecord); If(IsEmpty(Errors(Recipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Recipes)););
     ```
 
@@ -235,11 +229,9 @@ To update the selected item background color:
 
 3. Update the *TemplateFill* property value in the formula bar to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
     ```
-
-    ![Update TemplateFill property.](media/templatefill-property.png "Update TemplateFill property")
 
 ### Update fields on the form
 
@@ -282,8 +274,6 @@ The gallery on the default app template might need updates to reflect the fields
 To update the fields in the gallery:
 
 1. Select **Edit fields** from the property pane on the right.
-
-    ![Edit fields for the gallery.](media/edit-gallery-fields.png "Edit fields for the gallery")
 
 1. Select the drop-down menu for a gallery component (such as image, title, or subtitle) and change the selection to the field you want.
 

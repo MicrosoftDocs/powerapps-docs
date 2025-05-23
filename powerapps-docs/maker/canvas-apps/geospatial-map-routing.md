@@ -2,7 +2,7 @@
 title: Calculate routes between waypoint pins on a map (preview)
 description: Add waypoint pins to a map and calculate routes between them in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -65,7 +63,7 @@ In this example, we'll import waypoint data from an Excel table named *TestData*
 
 ### Bind the data source to a map control
 
-1. [Create a canvas app](./create-blank-app.md). Make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
+1. [Create a canvas app](./create-blank-app.md). Make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites-for-full-support).
 1. [Insert a map control](./geospatial-component-map.md).
 1. On the control's **Properties** tab, select the **Route waypoints(Items)** box and type *excel*.
 
@@ -80,7 +78,7 @@ In this example, we'll import waypoint data from an Excel table named *TestData*
 1. On the **Advanced** tab, find **RouteWaypointsLabels**, **RouteWaypointsLatitudes**, **RouteWaypointsLongitudes**, and **RouteWaypointsAddresses** and enter the name of the corresponding column in the table. (In this example, enter *Name* in **RouteWaypointsLabels**, *Latitude* in **RouteWaypointsLatitudes**, and so on.) Enclose the column name in quotation marks.
 
     >[!NOTE]
-    >Address is interchangeable with Latitude and Longitude. If Latitude and Longitude are provided, then Address isn't used. If Address is provided, then Latitude and Longitude aren't needed.
+    >Address is interchangeable with Latitude and Longitude. If Latitude and Longitude are provided, then Address isn't used. If Address is provided, then Latitude and Longitude aren't needed. There is a limit to the number of waypoints that can be displayed when using address, so use Latitude and Longitude when possible. 
 
 Pins appear on the map at the locations described by the coordinates or addresses in the table. If the table included labels, the pins are labeled. The pins are numbered in the order the waypoint locations appear in the table.
 

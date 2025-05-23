@@ -4,23 +4,21 @@ description: "This sample shows how to audit user access" # 115-145 characters i
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Audit user access
 
+This sample code shows how to audit user access.
 
-
-This sample code shows how to audit user access. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditUserAccess).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Audit user access sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AuditUserAccess)
 
 ## How to run this sample
 
@@ -49,6 +47,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

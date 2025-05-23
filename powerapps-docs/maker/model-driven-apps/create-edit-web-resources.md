@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
-ms.date: 06/08/2022
+ms.date: 11/13/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,12 +16,8 @@ ms.assetid: ef4ba8df-9ba9-4066-b40d-def9761c7de2
 caps.latest.revision: 21
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create or edit model-driven app web resources to extend an app
 
@@ -38,24 +34,24 @@ For example, if you create an HTML page as a web resource named “new_myWebReso
  
 `<base URL>/WebResources/new_myWebResource.htm`
   
-where *\<base URL>* is the part of the URL you use to view apps that ends in `dynamics.com`. Because the web resource is data in the system, only licensed users for your organization can access them this way. Normally, web resources are included in forms rather than referenced directly. The most common usage is to provide JavaScript libraries for form scripts.  
+where *\<base URL>* is the part of the URL you use to view apps that end in `dynamics.com`. Because the web resource is data in the system, only licensed users for your organization can access them this way. Normally, web resources are included in forms rather than referenced directly. The most common usage is to provide JavaScript libraries for form scripts.  
 
 Because web resources are data in the system and are solution aware, you can move them to different organizations by exporting them as part of a solution and importing the solution into a different organization. You must use solution explorer to work with web resources.
   
 ## Solution publisher prefix
 
-Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
+Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you're working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
 
 ## Add a web resource to a solution
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution, on the command bar select **Add existing**, point to **More**, and then select **Web resource**. 
    The list of web resources available are displayed. 
 1. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**.
 
 ## Create or edit a web resource for a solution
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution.
 1. To edit an existing web resource that is part of the unmanaged solution, select it to display the **Edit web resource** pane. To create a new one, on the command bar select **New**, point to **More**, and then select **Web resource**.
 1. Complete the fields on the right web resource pane to create or edit the web resource:
@@ -66,7 +62,7 @@ Part of the name of any web resource you create is the solution publisher prefix
    |-----------|-----------------|  
    |**Upload file**|Select the **Upload file** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
    |**Display Name**|The name displayed if you view a list of web resources.|  
-   |**Name**|*Required*. This is the unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
+   |**Name**|*Required*. The unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
    |**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
    |**Description**|A description of the web resource.|  
    |**Advanced options**| Expand **Advanced options** to reveal the **Language** field, which allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
@@ -85,6 +81,9 @@ Part of the name of any web resource you create is the solution publisher prefix
    - **Image web resource**. Use image web resources to make images available for use in model-driven apps. Supported image formats are: PNG, JPG, GIF, ICO, and  SVG (vector format). More information: [Image web resources](../../developer/model-driven-apps/image-web-resources.md)
 
 1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Web resource properties for model-driven app forms](web-resource-properties-legacy.md)
+
+> [!NOTE]
+> You can’t add a web resource to a form header or footer.
 
 ## Add a web resource to an app (preview)
 
@@ -113,13 +112,13 @@ You can add a web resource as a subarea type in a model-driven app. Web resource
   
 |Column|Description|  
 |-----------|-----------------|  
-|**Name**|*Required*. This is the unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
+|**Name**|*Required*. This is the unique name for this web resource. You can’t change it after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
 |**Display Name**|The name displayed if you view a list of web resources.|  
 |**Description**|A description of the web resource.|  
-|**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
+|**Type**|*Required*. Type of web resource. You can’t change this after you save the web resource.|  
 |**Text Editor**|When the type of web resource represents a kind of text file, select this button to open a page to edit the content using the text editor.<br />More information: [Use the text editor appropriately](#use-the-text-editor-appropriately)| 
 |**Language**|Allows for a selection of a language. This option just tags the row that stores the web resource data. It doesn’t change the behavior of the web resource.|  
-|**Upload File**|Select the **Choose File** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
+|**Upload File**|Select the **Choose File** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5 MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
 1. After you have added your changes, select **Save** and then select **Publish**.  
@@ -163,7 +162,7 @@ When you finish editing the form, on the **Home** tab, select **Save and Close**
 #### Publish
 
 When your customizations are complete, publish them:
-- To publish customizations for only the component that you are currently editing, in the navigation pane, select the table you have been working on, and then select **Publish**.
+- To publish customizations for only the component that you're currently editing, in the navigation pane, select the table you have been working on, and then select **Publish**.
 - To publish customizations for all unpublished components at one time, in the navigation pane, select **Entities**, and then on the **Actions** toolbar, select **Publish All Customizations**.
    
   
@@ -172,7 +171,8 @@ When your customizations are complete, publish them:
 [Web resource properties](web-resource-properties-legacy.md) <br /> 
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
-[Developer Documentation: Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md)
+[Developer Documentation: Web resources in model-driven apps](../../developer/model-driven-apps/web-resources.md) <br />
+[Create or edit model-driven app web resources (video)](https://youtu.be/8JRZQGX5mUU?feature=shared)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

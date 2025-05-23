@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -73,6 +69,6 @@ You can take advantage of new query condition operators to query tables with exp
   
 ### See Also
 
-[Work with Quick Find’s search item limit](quick-find-limit.md)
+[About quick find queries](quick-find.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

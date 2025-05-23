@@ -3,18 +3,15 @@ title: How to create a canvas app connected to Microsoft Dataverse from scratch
 description: Learn about how to create a canvas app from scratch.
 author: sbahl10
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.subservice: canvas-maker
 ms.date: 06/17/2022
 ms.author: tapanm
-ms.reviewer: tapanm
-search.app: 
-  - PowerApps
+ms.reviewer: mkaur
 contributors:
     - sbahl10
-    - tapanm-msft
-    - ProfessorKendrick
+    - mduelae
 ---
 
 # How to create a canvas app connected to Microsoft Dataverse from scratch
@@ -136,7 +133,7 @@ When you previewed the app, you may have noticed that searching by account name 
 
 1. In the formula bar, update the formula as follows:
 
-   ```powerapps-dot
+   ```power-fx
    SortByColumns(Search([@Accounts], TextSearchBox1.Text, "name","address1_city","address1_composite"), "name", If(SortDescending1, Descending, Ascending))
    ```
 

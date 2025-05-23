@@ -5,16 +5,14 @@ author: arthiriyer
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/16/2019
 ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - arthiriyer
 ---
 
@@ -44,6 +42,9 @@ There are four main steps for using a gateway.
 2. [Configure](/data-integration/gateway/service-gateway-app) the gateway based on your firewall and other network requirements.
 3. [Add gateway admins](/data-integration/gateway/service-gateway-manage) who can also manage and administer other network requirements.
 4. [Troubleshoot](/data-integration/gateway/service-gateway-tshoot) the gateway in case of errors.
+
+## End user accessing via a gateway
+An end user will use the credentials for the gateway that the Power Apps author used to create the gateway. End users will see a connection in the consent dialog but it will be with the credentials provided by the Power Apps author. 
 
 ## Next steps
 

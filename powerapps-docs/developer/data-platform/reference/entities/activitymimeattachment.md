@@ -1,55 +1,50 @@
 ---
-title: "Attachment (ActivityMimeAttachment)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Attachment (ActivityMimeAttachment)  table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Attachment (ActivityMimeAttachment) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Attachment (ActivityMimeAttachment) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Attachment (ActivityMimeAttachment)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Attachment (ActivityMimeAttachment) table/entity reference (Microsoft Dataverse)
 
 MIME attachment for an activity.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitymimeattachments<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Attachment (ActivityMimeAttachment) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /activitymimeattachments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /activitymimeattachments<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ActivityMimeAttachments|
-|DisplayCollectionName|Attachments|
-|DisplayName|Attachment|
-|EntitySetName|activitymimeattachments|
-|IsBPFEntity|False|
-|LogicalCollectionName|activitymimeattachments|
-|LogicalName|activitymimeattachment|
-|OwnershipType|None|
-|PrimaryIdAttribute|activitymimeattachmentid|
-|PrimaryNameAttribute|filename|
-|SchemaName|ActivityMimeAttachment|
+The following table lists selected properties for the Attachment (ActivityMimeAttachment) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Attachment** |
+| **DisplayCollectionName** | **Attachments** |
+| **SchemaName** | `ActivityMimeAttachment` |
+| **CollectionSchemaName** | `ActivityMimeAttachments` |
+| **EntitySetName** | `activitymimeattachments`|
+| **LogicalName** | `activitymimeattachment` |
+| **LogicalCollectionName** | `activitymimeattachments` |
+| **PrimaryIdAttribute** | `activitymimeattachmentid` |
+| **PrimaryNameAttribute** |`filename` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -68,190 +63,184 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [Subject](#BKMK_Subject)
 
-
 ### <a name="BKMK_ActivityId"></a> ActivityId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the activity with which the attachment is associated.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Unique identifier of the activity with which the attachment is associated.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|activityid|
+|LogicalName|`activityid`|
 |RequiredLevel|None|
-|Targets|activitypointer|
 |Type|Lookup|
-
+|Targets|activitypointer|
 
 ### <a name="BKMK_ActivityMimeAttachmentId"></a> ActivityMimeAttachmentId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the attachment.|
-|DisplayName|Activity Mime Attachment|
+|---|---|
+|Description|**Unique identifier of the attachment.**|
+|DisplayName|**Activity Mime Attachment**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|activitymimeattachmentid|
+|LogicalName|`activitymimeattachmentid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ActivityMimeAttachmentIdUnique"></a> ActivityMimeAttachmentIdUnique
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
+|---|---|
+|Description|**For internal use only.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|activitymimeattachmentidunique|
+|LogicalName|`activitymimeattachmentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_AttachmentContentId"></a> AttachmentContentId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only|
-|DisplayName|Content Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only**|
+|DisplayName|**Content Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|attachmentcontentid|
-|MaxLength|250|
+|LogicalName|`attachmentcontentid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_AttachmentId"></a> AttachmentId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the attachment with which this activitymimeattachment is associated.|
-|DisplayName|Attachment|
+|---|---|
+|Description|**Unique identifier of the attachment with which this activitymimeattachment is associated.**|
+|DisplayName|**Attachment**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|attachmentid|
+|LogicalName|`attachmentid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|attachment|
 |Type|Lookup|
-
+|Targets|attachment|
 
 ### <a name="BKMK_AttachmentNumber"></a> AttachmentNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Number of the attachment.|
-|DisplayName|Attachment Number|
-|Format|None|
+|---|---|
+|Description|**Number of the attachment.**|
+|DisplayName|**Attachment Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|attachmentnumber|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`attachmentnumber`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_Body"></a> Body
 
 |Property|Value|
-|--------|-----|
-|Description|Contents of the attachment.|
-|DisplayName|Body|
-|FormatName|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Contents of the attachment.**|
+|DisplayName|**Body**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|body|
-|MaxLength|1073741823|
+|LogicalName|`body`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_FileName"></a> FileName
 
 |Property|Value|
-|--------|-----|
-|Description|File name of the attachment.|
-|DisplayName|File Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**File name of the attachment.**|
+|DisplayName|**File Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|filename|
-|MaxLength|255|
+|LogicalName|`filename`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
 
 ### <a name="BKMK_MimeType"></a> MimeType
 
 |Property|Value|
-|--------|-----|
-|Description|MIME type of the attachment.|
-|DisplayName|Mime Type|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**MIME type of the attachment.**|
+|DisplayName|**Mime Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|mimetype|
-|MaxLength|256|
+|LogicalName|`mimetype`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_ObjectId"></a> ObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the record with which the attachment is associated|
-|DisplayName|Item|
+|---|---|
+|Description|**Unique identifier of the record with which the attachment is associated**|
+|DisplayName|**Item**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|objectid|
+|LogicalName|`objectid`|
 |RequiredLevel|SystemRequired|
-|Targets|activitypointer,template|
 |Type|Lookup|
-
+|Targets|activitypointer, template|
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Object Type Code of the entity that is associated with the attachment.|
-|DisplayName|Entity|
+|---|---|
+|Description|**Object Type Code of the entity that is associated with the attachment.**|
+|DisplayName|**Entity**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|objecttypecode|
+|LogicalName|`objecttypecode`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Subject"></a> Subject
 
 |Property|Value|
-|--------|-----|
-|Description|Descriptive subject for the attachment.|
-|DisplayName|Subject|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Descriptive subject for the attachment.**|
+|DisplayName|**Subject**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|subject|
-|MaxLength|2000|
+|LogicalName|`subject`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivitySubject](#BKMK_ActivitySubject)
 - [AnonymousLink](#BKMK_AnonymousLink)
@@ -269,335 +258,356 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ActivitySubject"></a> ActivitySubject
 
 |Property|Value|
-|--------|-----|
-|Description|Descriptive subject for the activity.|
-|DisplayName|ActivitySubject|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Descriptive subject for the activity.**|
+|DisplayName|**ActivitySubject**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|activitysubject|
-|MaxLength|2000|
+|LogicalName|`activitysubject`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_AnonymousLink"></a> AnonymousLink
 
 |Property|Value|
-|--------|-----|
-|Description|anonymous link|
-|DisplayName|For internal use only.|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**anonymous link**|
+|DisplayName|**For internal use only.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|anonymouslink|
-|MaxLength|2000|
+|LogicalName|`anonymouslink`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_FileSize"></a> FileSize
 
 |Property|Value|
-|--------|-----|
-|Description|File size of the attachment.|
-|DisplayName|File Size (Bytes)|
-|Format|None|
+|---|---|
+|Description|**File size of the attachment.**|
+|DisplayName|**File Size (Bytes)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|filesize|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`filesize`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_IsFollowed"></a> IsFollowed
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if this attachment is followed.|
-|DisplayName|Followed|
+|---|---|
+|Description|**Indicates if this attachment is followed.**|
+|DisplayName|**Followed**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isfollowed|
+|LogicalName|`isfollowed`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsFollowed Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`activitymimeattachment_isfollowed`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the activity_mime_attachment.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the activity\_mime\_attachment.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the activity mime attachment.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the activity mime attachment.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the activity mime attachment.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user who owns the activity mime attachment.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the activity mime attachment.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the activity mime attachment.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
+- [activity_pointer_activity_mime_attachment](#BKMK_activity_pointer_activity_mime_attachment)
+- [appointment_activity_mime_attachment](#BKMK_appointment_activity_mime_attachment)
+- [attachment_activity_mime_attachments](#BKMK_attachment_activity_mime_attachments)
+- [email_activity_mime_attachment](#BKMK_email_activity_mime_attachment)
+- [template_activity_mime_attachments](#BKMK_template_activity_mime_attachments)
+
+### <a name="BKMK_activity_pointer_activity_mime_attachment"></a> activity_pointer_activity_mime_attachment
+
+One-To-Many Relationship: [activitypointer activity_pointer_activity_mime_attachment](activitypointer.md#BKMK_activity_pointer_activity_mime_attachment)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`activitypointer`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_activitypointer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_appointment_activity_mime_attachment"></a> appointment_activity_mime_attachment
+
+One-To-Many Relationship: [appointment appointment_activity_mime_attachment](appointment.md#BKMK_appointment_activity_mime_attachment)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`appointment`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_appointment`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_attachment_activity_mime_attachments"></a> attachment_activity_mime_attachments
+
+One-To-Many Relationship: [attachment attachment_activity_mime_attachments](attachment.md#BKMK_attachment_activity_mime_attachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`attachment`|
+|ReferencedAttribute|`attachmentid`|
+|ReferencingAttribute|`attachmentid`|
+|ReferencingEntityNavigationPropertyName|`attachmentid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_email_activity_mime_attachment"></a> email_activity_mime_attachment
+
+One-To-Many Relationship: [email email_activity_mime_attachment](email.md#BKMK_email_activity_mime_attachment)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`email`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_email`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_template_activity_mime_attachments"></a> template_activity_mime_attachments
+
+One-To-Many Relationship: [template template_activity_mime_attachments](template.md#BKMK_template_activity_mime_attachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`template`|
+|ReferencedAttribute|`templateid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_template`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
 
 - [ActivityMimeAttachment_AsyncOperations](#BKMK_ActivityMimeAttachment_AsyncOperations)
 - [ActivityMimeAttachment_BulkDeleteFailures](#BKMK_ActivityMimeAttachment_BulkDeleteFailures)
 - [ActivityMimeAttachment_SyncErrors](#BKMK_ActivityMimeAttachment_SyncErrors)
 
-
 ### <a name="BKMK_ActivityMimeAttachment_AsyncOperations"></a> ActivityMimeAttachment_AsyncOperations
 
-Same as the [ActivityMimeAttachment_AsyncOperations](asyncoperation.md#BKMK_ActivityMimeAttachment_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Many-To-One Relationship: [asyncoperation ActivityMimeAttachment_AsyncOperations](asyncoperation.md#BKMK_ActivityMimeAttachment_AsyncOperations)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ActivityMimeAttachment_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ActivityMimeAttachment_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_ActivityMimeAttachment_BulkDeleteFailures"></a> ActivityMimeAttachment_BulkDeleteFailures
 
-Same as the [ActivityMimeAttachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityMimeAttachment_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Many-To-One Relationship: [bulkdeletefailure ActivityMimeAttachment_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ActivityMimeAttachment_BulkDeleteFailures)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ActivityMimeAttachment_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ActivityMimeAttachment_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_ActivityMimeAttachment_SyncErrors"></a> ActivityMimeAttachment_SyncErrors
 
-Same as the [ActivityMimeAttachment_SyncErrors](syncerror.md#BKMK_ActivityMimeAttachment_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Many-To-One Relationship: [syncerror ActivityMimeAttachment_SyncErrors](syncerror.md#BKMK_ActivityMimeAttachment_SyncErrors)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|ActivityMimeAttachment_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [appointment_activity_mime_attachment](#BKMK_appointment_activity_mime_attachment)
-- [template_activity_mime_attachments](#BKMK_template_activity_mime_attachments)
-- [email_activity_mime_attachment](#BKMK_email_activity_mime_attachment)
-- [activity_pointer_activity_mime_attachment](#BKMK_activity_pointer_activity_mime_attachment)
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ActivityMimeAttachment_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
-### <a name="BKMK_appointment_activity_mime_attachment"></a> appointment_activity_mime_attachment
-
-See the [appointment_activity_mime_attachment](appointment.md#BKMK_appointment_activity_mime_attachment) one-to-many relationship for the [appointment](appointment.md) table/entity.
-
-### <a name="BKMK_template_activity_mime_attachments"></a> template_activity_mime_attachments
-
-See the [template_activity_mime_attachments](template.md#BKMK_template_activity_mime_attachments) one-to-many relationship for the [template](template.md) table/entity.
-
-### <a name="BKMK_email_activity_mime_attachment"></a> email_activity_mime_attachment
-
-See the [email_activity_mime_attachment](email.md#BKMK_email_activity_mime_attachment) one-to-many relationship for the [email](email.md) table/entity.
-
-### <a name="BKMK_activity_pointer_activity_mime_attachment"></a> activity_pointer_activity_mime_attachment
-
-See the [activity_pointer_activity_mime_attachment](activitypointer.md#BKMK_activity_pointer_activity_mime_attachment) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.activitymimeattachment?text=activitymimeattachment EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.activitymimeattachment?displayProperty=fullName>

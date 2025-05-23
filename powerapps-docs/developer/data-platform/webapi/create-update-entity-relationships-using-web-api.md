@@ -2,15 +2,11 @@
 title: "Create and update table relationships using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table relationships using the Web API"
 ms.date: 04/06/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -25,7 +21,7 @@ The Web API supports working with relationship definitions (metadata). The conce
 
 ## Eligibility for relationships
 
-Before you create a table (entity) relationship you should confirm whether the table is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the Organization service messages described in [Table relationship eligibility](../entity-relationship-eligibility.md).  
+Before you create a table (entity) relationship you should confirm whether the table is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the SDK for .NET messages described in [Table relationship eligibility](../entity-relationship-eligibility.md).  
   
 |Action|Description|  
 |------------|-----------------|  
@@ -40,15 +36,15 @@ Before you create a table (entity) relationship you should confirm whether the t
 
 ## Create a one-to-many relationship
 
-When you create a one-to-many relationship, you define it by using the <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />. This definition includes the lookup attribute, which is defined by using <xref href="Microsoft.Dynamics.CRM.LookupAttributeMetadata?text=LookupAttributeMetadata EntityType" /> and also requires complex properties using <xref href="Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />. The lookup attribute is set to the Lookup single-valued navigation property of the `OneToManyRelationshipMetadata` object and gets created at the same time using *deep insert*. More information: [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated) and [Table relationship metadata](../entity-relationship-metadata.md)
+When you create a one-to-many relationship, you define it by using the <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />. This definition includes the lookup attribute, which is defined by using <xref href="Microsoft.Dynamics.CRM.LookupAttributeMetadata?text=LookupAttributeMetadata EntityType" /> and also requires complex properties using <xref href="Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />. The lookup attribute is set to the Lookup single-valued navigation property of the `OneToManyRelationshipMetadata` object and gets created at the same time using *deep insert*. More information: [Create related table rows in one operation](create-entity-web-api.md#bkmk_CreateRelated) and [Table relationship metadata](../entity-relationship-metadata.md)
   
 If you want to apply a custom navigation property name for a one-to-many relationship you can set values for the `ReferencingEntityNavigationPropertyName` and `ReferencedEntityNavigationPropertyName` properties.  
   
-Once you have generated the necessary JSON to define the relationship and the lookup attribute, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata` to clarify the type of relationship you’re creating because this same entity set is used to create many-to-many relationships. The uri for the resulting relationship is returned in the response.  
+Once you have generated the necessary JSON to define the relationship and the lookup attribute, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create many-to-many relationships. The uri for the resulting relationship is returned in the response.  
   
- **Request**  
+ **Request:**  
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -134,11 +130,11 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)  
 ```  
   
 <a name="bkmk_CreateManyToMany"></a>
@@ -150,12 +146,12 @@ When you create a many-to-many relationship, you must the relationship by using 
   
  If you want to apply a custom navigation property name for a many-to-many relationship, you can set values for the `Entity1NavigationPropertyName` and `Entity2NavigationPropertyName` properties.  
   
- Once you have generated the necessary JSON to define the relationship, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata` to clarify the type of relationship you’re creating because this same entity set is used to create one-to-many relationships. The URI for the resulting relationship is returned in the response.  
+ Once you have generated the necessary JSON to define the relationship, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create one-to-many relationships. The URI for the resulting relationship is returned in the response.  
   
- **Request**
+ **Request:**
   
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -210,11 +206,11 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)    
 ```
 
 ## Create relationships to support a multi-table lookup
@@ -231,7 +227,7 @@ More information: [Use multi-table lookup columns](multitable-lookup.md)
 
 ## Update relationships
 
-As discussed in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), you update relationships using the HTTP PUT method to replace the existing definition with changes you want to apply. You can’t edit individual properties using the HTTP PATCH method as you can with business data tables. Just like with entities and attributes, you should include a `MSCRM.MergeLabels` header with the value set to `true` to avoid overwriting localized labels not included in your update and you must publish customizations before they are active in the system.  
+As discussed in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), you update relationships using the HTTP PUT method to replace the existing definition with changes you want to apply. You can't edit individual properties using the HTTP PATCH method as you can with business data tables. Just like with entities and attributes, you should include a `MSCRM.MergeLabels` header with the value set to `true` to avoid overwriting localized labels not included in your update and you must publish customizations before they are active in the system.  
   
 <a name="bkmk_deleteRelationship"></a>
  
@@ -241,11 +237,11 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
   
 ### See also
 
-<!-- TODO:
-[Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
-[Use the Web API with table definitions](use-web-api-metadata.md)<br />
-[Query table definitions using the Web API](query-metadata-web-api.md)<br />
-[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
-[Model tables and columns using the Web API](create-update-entity-definitions-using-web-api.md)
+[Use the Web API with table definitions](use-web-api-metadata.md)  
+[Query table definitions using the Web API](query-metadata-web-api.md)  
+[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
+[Model tables and columns using the Web API](create-update-entity-definitions-using-web-api.md)  
+[Web API table schema operations sample](web-api-metadata-operations-sample.md)  
+[Web API table schema operations sample (C#)](samples/webapiservice-metadata-operations.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,19 +1,14 @@
 ---
-title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getGlobalContext.organizationSettings (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getGlobalContext.organizationSettings method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -23,198 +18,64 @@ Returns information about the current organization settings.
 
 `var organizationSettings = Xrm.Utility.getGlobalContext().organizationSettings`
 
-The **organizationSettings** object has the following properties.
+## Properties
 
-## attributes
+The `organizationSettings` object has the following properties:
 
-Returns columns and their values as `key:value` pairs that are available for the organization table. Additional values will be available as columns if they are specified as column dependencies in the web resource dependency list. The `key` will be the column logical name.
 
-### Syntax
+|Name|Type|Description|
+|---------|---------|---------|
+|`attributes`|object|An object with columns and their values. See [attributes](#attributes)|
+|`baseCurrencyId`|string|Deprecated. Use `baseCurrency` property instead.|
+|`baseCurrency`|object|Object containing the `id`, `name`, and `entityType` of the base currency for the current organization. See [baseCurrency](#basecurrency)|
+|`defaultCountryCode`|string|The default country/region code for phone numbers for the current organization.|
+|`isAutoSaveEnabled`|bool|Whether the auto-save option is enabled for the current organization.|
+|`languageId`|string|The preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a) for the current organization.|
+|`organizationId`|string|ID of the current organization.|
+|`isTrialOrganization`|bool|Whether the organization is a trial environment.|
+|`organizationExpiryDate`|Date?|The expiry date of the current organization if it's a trial environment, otherwise null.|
+|`uniqueName`|string|the unique name of the current organization.|
+|`useSkypeProtocol`|bool|Whether the Skype protocol is used for the current organization.|
+|`fullNameConventionCode`|number|The `FullNameConventionCode` setting of the current organization. See [fullNameConventionCode](#fullnameconventioncode)|
 
-`organizationSettings.attributes`
+### attributes
 
-### Return Value
+Returns columns and their values as `key:value` pairs that are available for the organization table. More values are available as columns if they're specified as column dependencies in the web resource dependency list. The `key` is the column logical name.
 
-**Type**: Object
+### baseCurrency
 
-**Description**: An object with columns and their values.
+This method is supported only on Unified Interface.
 
-## baseCurrencyId 
+The lookup object will look something like the following:
 
-Returns the ID of the base currency for the current organization.
+```json
+{
+   id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", 
+   entityType: "transactioncurrency", 
+   name: "US Dollar"
+}
+```
 
-Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to access the display name along with the ID of the base currency.
 
-### Syntax
+### fullNameConventionCode
 
-`organizationSettings.baseCurrencyId`
+Returns a number denoting the full name format selected in the system settings. The following are the possible values and the corresponding format:
 
-### Return Value
+|Number |Format|
+|---------|---------|
+|0|LastName, FirstName|
+|1|FirstName LastName|
+|2|LastName, FirstName MiddleInitial|
+|3|FirstName MiddleInitial LastName|
+|4|LastName, FirstName MiddleName |
+|5|FirstName MiddleName LastName |
+|6|LastName FirstName|
+|7|LastNameFirstName|
 
-**Type**: String
+## Related articles
 
-**Description**: ID of the base currency. 
-
-## baseCurrency 
-
-Returns a lookup object containing the ID, name, and table type of the base currency for the current organization. This method is supported only on Unified Interface.
-
-### Syntax
-
-`organizationSettings.baseCurrency`
- 
-### Return Value
-
-**Type**: Lookup Object
-
-**Description**: Object containing the `id`, `name`, and `entityType` of the base currency. For example:
-
-`{id: "e7dd9bc6-d239-ea11-a813-000d3a35b14a", entityType: "transactioncurrency", name: "US Dollar"}`
-
-## defaultCountryCode 
-
-Returns the default country/region code for phone numbers for the current organization.
-
-### Syntax
-
-`organizationSettings.defaultCountryCode`
-
-### Return Value
-
-**Type**: String
-
-**Description**: Default country/region code for phone numbers.
-
-## isAutoSaveEnabled 
-
-Indicates whether the auto-save option is enabled for the current organization.
-
-### Syntax
-
-`organizationSettings.isAutoSaveEnabled`
-
-### Return Value
-
-**Type**: Boolean
-
-**Description**: **true** if enabled; **false** otherwise.
-
-## languageId 
-
-Returns the preferred language ID for the current organization.
-
-### Syntax
-
-`organizationSettings.languageId`
-
-### Return Value
-
-**Type**: Number
-
-**Description**: Preferred Language ID. For example:
-
-`1033`
-
-## organizationId 
-
-Returns the ID of the current organization.
-
-### Syntax
-
-`organizationSettings.organizationId`
-
-### Return Value
-
-**Type**: String
-
-**Description**: Id of the current organization.
-
-## isTrialOrganization
-
-Returns a boolean indicating whether the organization is a trial organization.
-
-### Syntax
-
-`organizationSettings.isTrialOrganization`
-
-### Return Value
-
-**Type**: Boolean
-
-**Description**: **true** if the organization is a trial organization; **false** otherwise.
-
-## organizationExpiryDate
-
-Returns the expiry date of the current organization if it is a trial organization.
-
-### Syntax
-
-`organizationSettings.organizationExpiryDate`
-
-### Return Value
-
-**Type**: Date
-
-**Description**: Returns a `Date` object with the organization's expiry date if it is a trial organization. Returns NULL if the organization is not a trial organization.
-
-## uniqueName 
-
-Returns the unique name of the current organization.
-
-### Syntax
-
-`organizationSettings.uniqueName`
-
-### Return Value
-
-**Type**: String
-
-**Description**: Unique name of the current organization.
-
-## useSkypeProtocol 
-
-Indicates whether the Skype protocol is used for the current organization.
-
-### Syntax
-
-`organizationSettings.useSkypeProtocol`
-
-### Return Value
-
-**Type**: Boolean
-
-**Description**: **true** if Skype protocol is used; **false** otherwise.
-
-## fullNameConventionCode 
-
-Returns the FullNameConventionCode setting of the current organization.
-
-### Syntax
-
-`organizationSettings.fullNameConventionCode`
-
-### Return Value
-
-**Type**: Number
-
-**Description**: Returns a number denoting the full name format selected in the system settings. Below are the possible values and the corresponding format:
-
-0: LastName, FirstName <br/>
-1: FirstName LastName <br/>
-2: LastName, FirstName MiddleInitial <br/>
-3: FirstName MiddleInitial LastName <br/>
-4: LastName, FirstName MiddleName <br/>
-5: FirstNamet MiddleName LastName <br/>
-6: LastName FirstName <br/>
-7: LastNameFirstName 
-
-## Related topics
-
-[Client context](client.md)
-
-[User settings](userSettings.md)
-
+[Client context](client.md)   
+[User settings](userSettings.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

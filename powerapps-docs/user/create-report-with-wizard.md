@@ -1,38 +1,36 @@
 ---
 title: Create a report using the Report Wizard| Microsoft Docs
 description: Create a report using the Report Wizard in Power Apps
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 06/27/2019
+ms.topic: how-to
+ms.date: 11/17/2023
 ms.subservice: end-user
-ms.author: mkaur
-ms.reviewer: ""
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- markha52 
 ---
 # Create a report using the Report Wizard
 
 
 Use the Report Wizard to create reports with charts and tables that allow you to easily analyze your data. 
 
-All reports that are created using the Report Wizard are Fetch-based reports. Note that all reports generated with the Report Wizard print in landscape mode.
+All reports that are created using the Report Wizard are Fetch-based reports. All reports generated with the Report Wizard print in landscape mode.
 
 ## Create a new report
 
 1. From the left navigation pane, select the reports area.  
-2. On the command bar select **New**.
+2. On the command bar, select **New**.
 
     > [!div class="mx-imgBorder"]
     > ![Create a new report.](media/newreport.png "Create a new report")
   
-3. A **Report:New Report** screen will appear. For **Report Type** leave the default selection to, **Report Wizard Report** and select the **Report Wizard** button. 
+3. A **Report:New Report** screen appears. For **Report Type** leave the default selection to, **Report Wizard Report** and select the **Report Wizard** button. 
 
     > [!div class="mx-imgBorder"]
     > ![Report wizard.](media/report_wizard.png "Report wizard screen")
@@ -47,7 +45,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![Report properties screen.](media/report_wizard_2.png "Report properties screen")
   
-5.  On the **Select Rows to Include in the Report** screen choose the filters to determine which rows are included in your report. For example, if you only want to see results for rows modified in the last 60 days, you can set that filter in this screen. If you don’t want the data filtered, select **Clear**.
+5.  On the **Select Rows to Include in the Report** screen, choose the filters to determine which rows are included in your report. For example, if you only want to see results for rows modified in the last 60 days, you can set that filter in this screen. If you don’t want the data filtered, select **Clear**.
 
     > [!div class="mx-imgBorder"]
     > ![Select Rows to Include in the Report*.](media/report_wizard_3.png "Select Rows to Include in the Report")
@@ -72,12 +70,12 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![add column screen.](media/report_wizard_7.png "Add column screen")
   
-10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, select **Next**.
+10. Repeat the previous step for any more columns that you want to add. When you are done, on the **Lay Out Columns** screen, select **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![add more column screen.](media/report_wizard_8.png "Add more column screen")
   
-11. On the **Format Report** screen choose how to format your report and then select **Next**.
+11. On the **Format Report** screen, choose how to format your report and then select **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![Format report.](media/report_wizard_9.png "Format report screen")
@@ -89,8 +87,10 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     
 > [!NOTE]
 > The reports that are querying notes, may display in HTML-formatted text instead of plain text. This is because the rich-text editor is enabled by default. To workaround this issue, do one of the following:
-> - Disable the rich-text editor, for more information see, [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options). When you disable the rich-text editor, new notes that are created will not then have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
+> - Disable the rich-text editor. For more information, see [Rich text editor control in Power Apps](../maker/canvas-apps/controls/control-richtexteditor.md). When you disable the rich-text editor, new notes that are created will not then have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
 > - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
+>
+> Note that [multi-select picklist fields](../developer/data-platform/multi-select-picklist.md) are not fully supported in the Report Wizard. Multi-select picklist fields can't be added as a grouping or a column to the report.
     
 
 ### See Also

@@ -1,18 +1,14 @@
 ---
-title: "CSS web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources. " # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+title: "CSS web resources (model-driven apps)"
+description: "Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources. "
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -43,13 +39,13 @@ With CSS web resources, you can manage the appearance of webpage web resources b
  To reference a style sheet from a different publisher, the path must include that solution publisher customization prefix. For example, for the `sample_/content/contentpage.htm` page to reference the `MyIsv_/styles/styles.css` page, the href parameter value should be `../../MyIsv_/styles/styles.css`.  
   
 > [!NOTE]
->  References included in code between web resources aren’t tracked as solution dependencies.  
+>  References included in code between web resources aren't tracked as solution dependencies.  
   
 ### See also  
 
  [Web resources](web-resources.md)   
  [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  

@@ -1,58 +1,165 @@
 ---
-title: "Sample: Set and retrieve entity images (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to set and retrieve entity images." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
-manager: sunilg
+title: "Sample: Image Operations using Dataverse SDK for .NET | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to work with image column data." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 12/04/2024
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
-# Sample: Set and retrieve entity images
+# Sample: Image Operations using Dataverse SDK for .NET
 
-This sample shows how to set and retrieve data for entity images. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SetRetrieveImages).
+This .NET 6.0 sample demonstrates how to perform operations with image columns using the Dataverse SDK for .NET.
 
-## How to run this sample
+This sample uses the [Microsoft.PowerPlatform.Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient).
 
-[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
+## Prerequisites
 
-## What this sample does
+- Microsoft Visual Studio 2022
+- Access to Dataverse with system administrator or system customizer privileges.
 
-This sample shows how to set and retrieve entity images using the Organization Service SDK assemblies.
+## How to run the sample
 
-## How this sample works
+1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
+1. Open the `PowerApps-Samples\dataverse\orgsvc\C#-NETCore\ImageOperations\ImageOperations.sln` file using Visual Studio 2022.
+1. Edit the *appsettings.json* file. Set the connection string `Url` and `Username` parameters as appropriate for your test environment.
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+   The environment Url can be found in the Power Platform admin center. It has the form https://\<environment-name>.crm.dynamics.com.
 
-### Setup
+1. Build the solution, and then run the desired project.
 
-Checks the current version of the org.
+When the sample runs, you'll be prompted in the default browser to select an environment user account and enter a password. To avoid having to do this every time you run a sample, insert a password parameter into the connection string in the appsettings.json file. For example:
 
-### Demonstrate
+```json
+{
+"ConnectionStrings": {
+    "default": "AuthType=OAuth;Url=https://myorg.crm.dynamics.com;Username=someone@myorg.onmicrosoft.com;Password=mypassword;RedirectUri=http://localhost;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;LoginPrompt=Auto"
+  }
+}
+```
 
-1. Uses the CreateImageAttributeDemoEntity method to create a custom table with the schema name `sample_ImageAttributeDemo` and a primary column with the schema name `sample_Name`.
-2. Create an image column with the schema name `EntityImage`. All image columns use this name.
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
 
-3. Retrieve and update the main form for the `sample_ImageAttributeDemo` table to set the `showImage` column to true so that the image is displayed in the form.
+> [!TIP]
+> You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take effect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
 
-4. Publish the `sample_ImageAttributeDemo` table.
+## Sample Output
 
-5. Creates five new records for the `sample_ImageAttributeDemo` table using five different sized images located in the Images folder as shown here.After each record is created you have the opportunity to view the record in the web browser application using the `ShowEntityFormInBrowser` method so that you can see how the source images are resized to fit the space available in the form.
-6. Retrieves the records with the `entityimage` column and saves the resized files. After you run the sample you can find the files saved in the `\bin\Debug` folder.
-7. Retrieves the records with the `entityimage_url` column and displays the relative URL values you can include in your application to access the images. This query should be more responsive because the amount of data transferred is smaller.
+The output of the sample should look something like this:
+
+```
+Creating image column named 'sample_ImageColumn' on the account table ...
+Created image column named 'sample_ImageColumn' in the account table.
+Create 5 records while CanStoreFullImage is false.
+        Created account: 'CanStoreFullImage false 144x144.png'
+        Created account: 'CanStoreFullImage false 144x400.png'
+        Created account: 'CanStoreFullImage false 400x144.png'
+        Created account: 'CanStoreFullImage false 400x500.png'
+        Created account: 'CanStoreFullImage false 60x80.png'
+Set the CanStoreFullImage property to True
+Create 5 records while CanStoreFullImage is true.
+        Created account: 'CanStoreFullImage true 144x144.png'
+        Created account: 'CanStoreFullImage true 144x400.png'
+        Created account: 'CanStoreFullImage true 400x144.png'
+        Created account: 'CanStoreFullImage true 400x500.png'
+        Created account: 'CanStoreFullImage true 60x80.png'
+Retrieving records with thumbnail images:
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage false 144x144.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage false 144x400.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage false 400x144.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage false 400x500.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage false 60x80.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage true 144x144.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage true 144x400.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage true 400x144.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage true 400x500.png_retrieved.png
+        Thumbnail-sized file column data saved to DownloadedImages\CanStoreFullImage true 60x80.png_retrieved.png
+Attempt to download full-size images for all 10 records. 5 should fail.
+        Download failed: No FileAttachment records found for imagedescriptorId: a81a473d-3a8d-ed11-81ad-000d3a993550 for image attribute: sample_imagecolumn of account record with id a51a473d-3a8d-ed11-81ad-000d3a993550
+        Download failed: No FileAttachment records found for imagedescriptorId: 2a813f43-3a8d-ed11-81ad-000d3a993550 for image attribute: sample_imagecolumn of account record with id 29813f43-3a8d-ed11-81ad-000d3a993550
+        Download failed: No FileAttachment records found for imagedescriptorId: 2e813f43-3a8d-ed11-81ad-000d3a993550 for image attribute: sample_imagecolumn of account record with id 2d813f43-3a8d-ed11-81ad-000d3a993550
+        Download failed: No FileAttachment records found for imagedescriptorId: 34813f43-3a8d-ed11-81ad-000d3a993550 for image attribute: sample_imagecolumn of account record with id 32813f43-3a8d-ed11-81ad-000d3a993550
+        Download failed: No FileAttachment records found for imagedescriptorId: 3d813f43-3a8d-ed11-81ad-000d3a993550 for image attribute: sample_imagecolumn of account record with id 3c813f43-3a8d-ed11-81ad-000d3a993550
+        Full-sized file downloaded to DownloadedImages\CanStoreFullImage true 144x144.png_downloaded.png
+        Full-sized file downloaded to DownloadedImages\CanStoreFullImage true 144x400.png_downloaded.png
+        Full-sized file downloaded to DownloadedImages\CanStoreFullImage true 400x144.png_downloaded.png
+        Full-sized file downloaded to DownloadedImages\CanStoreFullImage true 400x500.png_downloaded.png
+        Full-sized file downloaded to DownloadedImages\CanStoreFullImage true 60x80.png_downloaded.png
+Deleted the records created for this sample.
+Deleting the image column named 'sample_ImageColumn' on the account table ...
+Deleted the image column named 'sample_ImageColumn' in the account table.
+Sample completed.
+```
+
+## Demonstrates
+
+The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ImageOperations/Program.cs) file.
+
+The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ImageOperations/Utility.cs) file.
+
+This project performs these operations:
+
+### Create an image column
+
+This sample needs to create a new image column that is the primary image for the account table. It must also return the system to the original state when it's finished. So these steps are performed:
+
+1. Capture the original primary image name using the `Utility.GetTablePrimaryImageName` method.
+1. Use the `Utility.CreateImageColumn` method to create a new image column named `sample_ImageColumn` on the account table if it doesn't exist already.
+
+   > [!NOTE]
+   > This image column `CanStoreFullImage` value is false.
+
+1. Use the `Utility.SetTablePrimaryImageName` method to make `sample_ImageColumn` the primary image.
+
+### Create account records with image data
+
+1. The program loops through a list of five filenames that match the names of files in the `Images` folder.
+1. For each image, it creates an account record with the `name` set to `CanStoreFullImage false {fileName}` and the file `byte[]` set as the `sample_ImageColumn` value.
+1. The program then uses the `Utility.UpdateCanStoreFullImage` method to set the `sample_ImageColumn` definition `CanStoreFullImage` value to true.
+1. Again, the program loops through the file names and creates five account records with the same image files set to the `sample_ImageColumn` value. This time the `name` is set to: `CanStoreFullImage true {fileName}`.
+
+In the following program, we can see how the value of the `CanStoreFullImage` property changes what data is available.
+
+### Retrieve the account records
+
+1. The program retrieves the 10 account records created in the previous step, including the image data.
+1. For each account record, the image data is downloaded to the `DownloadedImages` folder with the name `{recordName}_retrieved.png`.
+
+   > [!NOTE]
+   > All of these records are thumbnail-sized images.
+
+### Download the account record images
+
+The program uses the static `DownloadFile` method, which encapsulates the use of the <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest> and <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest> classes to download the files.
+
+> [!NOTE]
+> It's expected that 5 of the 10 operations will fail because no full-sized images were uploaded while `CanStoreFullImage` was false. Those records created while `CanStoreFullImage` was true succeed.
+
+### Delete the image data
+
+1. The program deletes the image data for each account record by setting the `sample_ImageColumn` value to null and updating the record.
+1. The program verifies the deletion by retrieving the records again using the same criteria as before. No value is returned for the `CanStoreFullImage` attribute because it's null.
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
+To leave the system in the state before the sample ran, it does the following:
 
+- Delete the account records
+- Set the primary image back to the original
+- Delete the image column
+
+### See Also
+
+[Use image column data](../../image-column-data.md)<br />
+[Work with image column definitions using code](../../image-attributes.md)<br />
+[Use file column data](../../file-column-data.md)<br />
+[Sample: Image Operations using Dataverse Web API](../../webapi/samples/image-operations.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

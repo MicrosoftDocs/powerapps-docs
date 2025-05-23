@@ -2,39 +2,36 @@
 title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
-# Sample: Modify query in PreOperation stage
 
+# Sample: Modify query in PreOperation stage
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 
 Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and tables that should not be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page may not match the expected paging sizes.
 
-The approach described by this sample is different. Rather than filter tables after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed. 
+The approach described by this sample is different. Rather than filter tables after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed.
 
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleAccountPreOperation).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Modify query in PreOperation stage sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveMultipleAccountPreOperation)
 
 ## How to run this sample
 
 1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\cds\orgsvc\C#\RetrieveMultipleAccountPreOperation.
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (RetrieveMultipleAccountPreOperation.dll).
-1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` table. 
+1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` table.
 1. Using an app or write code to retrieve accounts to trigger the plug-in. See [Code to test this sample](#code-to-test-this-sample) below for an example.
 1. When you are done testing, unregister the assembly and step.
 
@@ -181,7 +178,7 @@ private void RemoveAttributeConditions(FilterExpression filter, string attribute
 
 ### QueryByAttribute
 
-Because <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> doesn't support complex filters, only write a message to the plug-in trace log. 
+Because <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> doesn't support complex filters, only write a message to the plug-in trace log.
 
 If you don't want this type of query to be used at all, you could throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to prevent the operation, but this would be better applied during the `PreValidation` stage.
 
@@ -189,14 +186,14 @@ If you don't want this type of query to be used at all, you could throw an <xref
 if (queryByAttributeQuery != null)
 {
     tracingService.Trace("Found Query By Attribute Query");
-    //Query by attribute doesn't provide a complex query model that 
+    //Query by attribute doesn't provide a complex query model that
     // can be manipulated
 }
 ```
 
 ## Code to test this sample
 
-The following code demonstrates 5 different ways to perform the same query that will trigger the plug-in. 
+The following code demonstrates 5 different ways to perform the same query that will trigger the plug-in.
 
 By specifying a specific criteria, in this case the `address1_city` column value, which only one active record will match, these queries will return just that record.
 
@@ -226,14 +223,14 @@ try
 
     //Fetch
     var fetchXml = $@"<fetch mapping='logical' count='1'>
-                <entity name='account'>  
+                <entity name='account'>
                     <attribute name='accountid'/>
                     <attribute name='name'/>
                     <order attribute='name' descending='true' />
                     <filter>
                     <condition attribute='address1_city' operator='eq' value='{account_city_value}' />
                     </filter>
-                </entity>  
+                </entity>
             </fetch>";
 
     var fetchExpression = new FetchExpression(fetchXml);
@@ -322,6 +319,5 @@ catch (Exception ex)
 ### See also
 
 [Implement all types of queries when filtering results using PreOperation RetrieveMultiple](../../best-practices/business-logic/implement-all-types-of-queries-when-filtering-preoperation-retrievemultiple.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

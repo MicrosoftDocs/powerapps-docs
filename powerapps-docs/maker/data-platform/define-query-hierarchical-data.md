@@ -2,12 +2,11 @@
 title: "Define and query hierarchical data with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
-ms.date: 06/02/2018
+ms.date: 08/02/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,18 +16,15 @@ ms.assetid: 0cf62817-5ff5-40bb-ad17-e1f6b0921720
 caps.latest.revision: 42
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define and query hierarchically related data
 
+> [!IMPORTANT]
+> This feature is deprecated. For more information, go to [Hierarchy control in model-driven apps is deprecated](/power-platform/important-changes-coming#hierarchy-control-in-model-driven-apps-is-deprecated).
 
-
-You can get valuable business insights by defining and querying hierarchically related data. The hierarchical modelling and visualization capabilities give you a number of benefits:  
+You can get valuable business insights by defining and querying hierarchically related data. The hierarchical modeling and visualization capabilities give you a number of benefits:  
   
 - View and explore complex hierarchical information.  
 - View key performance indicators (KPIs) in the contextual view of a hierarchy.  
@@ -49,7 +45,7 @@ When a self-referential one-to-many (1:N) relationship exists, in the relationsh
 
 To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. 
 
-To turn the hierarchy on:  
+To turn on the hierarchy:  
   
 1. While [viewing 1:N relationships](create-edit-1n-relationships-solution-explorer.md#view-table-relationships), select the self-referential relationship  you want to edit.
 2. In the relationship definition, set **Hierarchical** to **Yes**.  
@@ -70,7 +66,7 @@ To turn the hierarchy on:
   
 ## Query hierarchical data  
 
-Without a defined hierarchy, to retrieve hierarchical data, need to iteratively query for the related rows. With a defined hierarchy, you can query the related data as a hierarchy in one step. You are able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps#setting-conditions-for-workflow-actions). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+Without a defined hierarchy, to retrieve hierarchical data, need to iteratively query for the related rows. With a defined hierarchy, you can query the related data as a hierarchy in one step. You're able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps#setting-conditions-for-workflow-actions). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](/dynamics365/customer-engagement/basics/save-advanced-find-search)  
 
 > [!NOTE]
 > Developers will also be able to use these operators in code. More information [Developer Documentation: Query hierarchical data](/dynamics365/customer-engagement/developer/org-service/query-hierarchical-data)

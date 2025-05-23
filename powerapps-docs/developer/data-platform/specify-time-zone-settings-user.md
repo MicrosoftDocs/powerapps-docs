@@ -11,9 +11,6 @@ ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Specify time zone settings for a user
 
@@ -46,7 +43,7 @@ Use the `UserSettings` table to specify time zone settings for a user in Microso
 ### See also  
  [SystemUser Entity](reference/entities/systemuser.md)   
  [Time Zone Entities](time-zone-entities.md)   
- [Behavior and format of the date and time column](behavior-format-date-time-attribute.md)   
+ [Configure the behavior and format of the date and time column using code](behavior-format-date-time-attribute.md)   
  [User and Team Entities](user-team-entities.md)
 
 

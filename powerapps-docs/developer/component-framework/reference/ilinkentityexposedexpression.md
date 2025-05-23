@@ -1,9 +1,8 @@
 ---
-title: ILinkEntityExposedExpression in Microsoft Dataverse| Microsoft Docs
+title: ILinkEntityExposedExpression (Power Apps component framework API reference) | Microsoft Docs
 description: Learn how to use different methods and properties available for ILinkEntityExposedExpression in Power Apps component framework.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -52,7 +51,7 @@ The `alias` for the link-entity relationship.
 
 **Type**:  `string`
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

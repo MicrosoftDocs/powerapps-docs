@@ -1,20 +1,17 @@
 ---
 title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
-author: hemantgaur
+author: jorisde
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/16/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.date: 12/19/2023
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
-  - ProfessorKendrick
+  - jorisdg
+  - mduelae
 ---
 
 # Component library
@@ -45,9 +42,7 @@ You can preview component library components using the screens inside the librar
 
 ## Working with component library
 
-You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
-
-![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
+You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com) > select **More** from left navigation > select **Discover all** > select **Component libraries** from the **App enhancements** section. You can also pin **Component libraries** option to your Power Apps interface. More information: [Left navigation in Power Apps](intro-maker-portal.md#1--left-navigation-pane)
 
 ## Create an example component library
 
@@ -55,7 +50,8 @@ The steps to create components inside a component library are the same as creati
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation, select **Component Libraries**, and then select **New component library**.
+1. Select **Component libraries** in the left navigation, and then select **New component library**.
+   Alternatively, select **More** from left navigation > select **Discover all** > select **Component libraries** from the **App enhancements** section.
 
 1. Name the component library as *Menu components*; you can also provide a different name of your choice.
 
@@ -171,6 +167,11 @@ If a component library is referenced by a canvas app, it can't be deleted. This 
 ## Component library permissions
 
 Sharing a component library works the same way you share a canvas app. When you share a component library, you allow others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps. If shared as a co-owner, a user can use, edit, and share a component library but not delete or change the owner.
+
+Additional considerations when sharing component libraries to security groups:
+
+- You can't use the [sharing UI](share-app.md) when sharing component libraries created as part of a solution. Instead, use [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment#parameters) with **CanEdit** permission level to share the component libraries with the selected security group.
+- Component libraries created in a Power Platform environment [without a Dataverse database](/power-platform/admin/create-environment#create-an-environment-in-the-power-platform-admin-center) shared as **Co-owner** automatically grant **CanEdit** permission to the selected security group.
 
 ## Known limitations
 

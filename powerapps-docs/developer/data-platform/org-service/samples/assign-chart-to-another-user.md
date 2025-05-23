@@ -4,28 +4,25 @@ description: "This sample showcases how to assign a user-owned visualization to 
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Assign a chart to another user
 
+This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message.
 
-
-This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignChartToAnotherUser).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Assign a chart to another user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignChartToAnotherUser)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
+This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below.
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
@@ -48,7 +45,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. The `CreateRequiredRecords` method creates a sample account and some opportunity records for the visualization.
-3. The `newUserOwnedVisualization` method creates the visualization table instance.
+3. The `newUserOwnedVisualization` method creates the visualization record.
 
 ### Demonstrate
 
@@ -57,6 +54,5 @@ The `AssignRequest` method assigns the visualization or chart to the newly creat
 ### Clean up
 
 Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

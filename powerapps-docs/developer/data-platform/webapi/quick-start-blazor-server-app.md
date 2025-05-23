@@ -1,282 +1,351 @@
 ---
 title: "Quickstart: Blazor Server Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Microsoft Dataverse from a Blazor Server application and then call a basic WhoAmI Web API function."
-ms.custom: intro-internal
-ms.date: 07/07/2020
-
-ms.topic: "article"
-author: "JeremyLikness" # GitHub ID
-ms.author: "jeliknes" # MSFT alias of Microsoft employees only
-ms.reviewer: "pehecke"
-manager: "" # MSFT alias of manager or PM counterpart
+ms.date: 12/20/2022
+ms.topic: quickstart
+author: JimDaly # GitHub ID
+ms.author: jdaly # MSFT alias of Microsoft employees only
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Quickstart: Blazor Server Web API sample (C#)
 
-In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
+In this quickstart, you create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
-You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI](/dynamics365/customer-engagement/web-api/whoami) function. The response will be a [WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse) complex type. After call completion, the `UserId` property value is displayed.
+You authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response is a [WhoAmIResponse ComplexType ](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). After call completion, the `WhoAmIResponse` properties are displayed.
 
 > [!NOTE]
-> This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quickstart](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
+> This is a very simple example to show how to get connected with a minimum of code.
 
 ## Prerequisites
 
-- Visual Studio 2019 (version 16.6.2 or later recommended)
-- Familiarity with the Microsoft Azure portal
-- Internet connection
-- Valid user account for a Dataverse instance
-- Administrator access to grant application registrations
-- URL to the Dataverse environment you want to connect with
-- Basic understanding of the Visual C# language
+- Visual Studio 2022 with the **ASP.NET and web development** workload.
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- Familiarity with the Microsoft Azure portal.
+- Internet connection.
+- Valid user account for a Dataverse instance.
+- Administrator access to grant application registrations.
+- URL to the Dataverse environment you want to connect with.
+- Basic understanding of the Visual C# language.
+
 
 > [!NOTE]
-> To authenticate you must have an app registered in Azure Active Directory. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
+> To authenticate you must have an app registered in Microsoft Entra ID. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
 
 ## Create a Visual Studio project
 
-1. Create a new Blazor Server app using .NET Core 3.1 but don't choose **Create** just yet.
+1. Open Visual Studio 2022 and select **Create a new project**.
 
-    ![Start a Blazor Server project.](../media/quick-start-blazor-server-app-csharp-1.png)
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-1.png" alt-text="Open Visual Studio 2022":::
 
-1. Select **Change** under **Authentication** and then choose **Work or School Accounts**. 
+1. In the **Create a new project** dialog, search for *Blazor Server App*. Select the template and select **Next**.
 
-    ![Choose authentication.](../media/quick-start-blazor-server-app-csharp-2.png)
+    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-2.png" alt-text="Create a new project":::
 
-1. Choose the appropriate dropdown and then replace `CRM520451` in the example with your environment's name.
+1. In the **Configure your new project** dialog, set the **Project name**, and **Location**. Then select **Next**.
 
-1. Select **Create**.
+    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-2.5.png" alt-text="Enter project name and location":::
 
-## Configure the application in Active Directory
+   In this example, we'll use **DataverseWebApiBlazorServerQuickStart** as the **Project name**.
 
-By default, the template will create a registered application. Connecting to Dataverse will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to **Active Directory** and **App Registrations**, and then choose the entry with the same name as your application.
+1. In the **Additional information** dialog, specify **Framework** and **Authentication type**.
 
-1. Choose **Authentication**, select (check) **Access tokens** under **Implicit grant**, and then click **Save**.
+   In this example, the Framework is **.NET 7.0 (Standard Term Support)**.
 
-    ![Implicit grant.](../media/quick-start-blazor-server-app-csharp-3.png)
+   > [!IMPORTANT]
+   > Set the **Authentication type** to **Microsoft identity platform**.
 
-1. Choose **Certificates & secrets** and then select **New client secret**.
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-3.png" alt-text="Set the Authentication type to Microsoft identity platform":::
 
-1. Assign the secret a name (for example, "Blazor Server client") and expiration date, and then select **Add**.
+1. Select **Create** to create the project.
+1. The project template opens a **Required components** dialog. Select **Next**.
 
-1. Select the clipboard icon next to your secret to copy it.
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-4.png" alt-text="Required components":::
 
-    ![Copy secret.](../media/quick-start-blazor-server-app-csharp-4.png)
+1. In the **Microsoft identity platform** dialog, make sure that the selected Azure account has permissions to manage applications in Microsoft Entra ID and the selected tenant is the one associated with your Power Platform environment.
 
-1. In your Blazor Server app, open `appsettings.json` and add an entry for "ClientSecret". The Active Directory settings should look like this:
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-5.png" alt-text="Microsoft identity platform dialog":::
+
+1. Select **Create new**.
+1. In the **Register an application** dialog, set the **Display name** and select **Register** to close the dialog.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.png" alt-text="Register an application":::
+
+   In this example, we're using the name *Dataverse Web Api Blazor Server Quick Start*. We'll search for the application using this name in a later step.
+
+1. Select **Next**.
+
+    > [!NOTE]
+    > You don't need to do anything in this step.
+
+   This step provides capabilities to connect to Microsoft Graph or another API, but connecting to another API isn't necessary for this quickstart.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.5.png" alt-text="Additional settings step.":::
+
+1. Select **Next**. This step summarizes the changes that are made to the project.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.6.png" alt-text="Summary of changes":::
+
+1. Select **Finish**.
+
+   The **Dependency configuration progress** dialog shows the automated steps performed by the template to register the application.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-7.png" alt-text="Dependency configuration progress":::
+
+1. Select **Close** to close the dialog.
+
+## Configure the application in Microsoft Entra ID
+
+The Visual Studio template created a registered application using the information you provided. Connecting to Dataverse requires more permissions.
+
+1. From the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home), select **Admin Centers** > **Microsoft Entra ID**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-8.png" alt-text="Microsoft Entra ID admin center from the Power Platform admin center":::
+
+1. In the **Microsoft Entra admin center**, search for the application created by name within **App Registrations**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-9.png" alt-text="Search for the application registration":::
+
+1. Open the application and select **API permissions**. Select **Add a permission**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-10.png" alt-text="API permissions":::
+
+1. In the **Request API permissions** fly-out, select the **APIs my organization uses** tab and search for *Dataverse*.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-11.png" alt-text="search for Dataverse in APIs my organization uses":::
+
+1. Select **Dataverse**, and **Dynamics CRM API** opens.
+1. Select the `user_impersonation` delegated permission and select **Add permissions**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-12.png" alt-text="Add the user_impersonation delegated privilege":::
+
+1. Select **Certificates & secrets** and select **New client secret**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-13.png" alt-text="Certificates & secrets":::
+
+1. In the **Add a client secret** fly-out, enter a **Description** and **Expires** duration, then select **Add**.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-14.png" alt-text="Add a client secret":::
+
+   > [!IMPORTANT]
+   > Copy the secret now. You can't access it after you leave this page.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.png" alt-text="Copy the client secret":::
+
+1. In Visual Studio, within your Blazor Server app project, open `appsettings.json` and add an entry for `ClientSecret` with the secret value. The contents of the `appsettings.json` file should look like this:
     
     ```json
     {
-      "AzureAd": {
+    "AzureAd": {
         "Instance": "https://login.microsoftonline.com/",
-        "Domain": "{org}.onmicrosoft.com",
-        "TenantId": "{tenantId}",
-        "ClientId": "{clientId}",
-        "ClientSecret": "{secret}",
-        "CallbackPath": "/signin-oidc"
-      }
+        "Domain": "<your org>.onmicrosoft.com",
+        "TenantId": "<your tenantid>",
+        "ClientId": "<your clientid>",
+        "CallbackPath": "/signin-oidc",
+        "ClientSecret": "<your secret>"
+    },
+    "Logging": {
+        "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "AllowedHosts": "*"
     }
     ```
 
-1. Navigate to **API permissions**
+## Edit the app
 
-1. Select **Add a permission** and choose **Dynamics CRM**
+To enable calls to Dataverse, you must edit three files in the application:
 
-1. Choose **Delegated permissions** and select (check) **user_impersonation**, and then click **Add permissions**
+- appsettings.json
+- Program.cs
+- Pages/FetchData.razor
 
-    ![Add permission.](../media/quick-start-blazor-server-app-csharp-5.png)
+### appsettings.json
 
-1. Select the newly created permission to highlight it, and then shoose **Grant admin consent for organization** (your environment name is shown)
+There are several places in the other files that require a reference to the base uri used to access the Dataverse Web API. Adding this data to the `appsettings.json` allows you to set this data in one place.
 
-1. Verify the permissions have green checkboxes in the **status** column
+Add the following below `"AllowedHosts": "*"` where `<your org>` represents the base url to access the Dataverse Web API. If you aren't sure what this is, see [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions).
 
-## Prepare the app to use Azure AD tokens
+```json
+  "AllowedHosts": "*",
+  "DataverseConfig": {
+    "BaseUri": "https://<your org>.api.crm.dynamics.com/"
+  }
+```
 
-The application requires some extra steps to capture the authentication token and pass it to the Web API request.
+> [!NOTE]
+> Make sure to :
+> 
+> - Add the comma after `"AllowedHosts": "*"` so that the JSON is valid.
+> - End the `BaseUri` value with "`/`".
 
-1. Right-click on the **Data** folder and add a new class named `TokenProvider`.
+### Program.cs
 
-    ```csharp
-    public class TokenProvider
-    {
-        public string AccessToken { get; set; }
-    }
-    ```
+1. To access the value of the Web API base URI in the settings, add the line below commented with `// Get BaseUri from appsettings.json`  in the `Main` method below the line: <br />`var builder = WebApplication.CreateBuilder(args);`
 
-1. Open the App.razor file and add the following statements to the top of the file. Change the namespace to match the name of your application.
+   ```csharp
+   public static void Main(string[] args)
+   {
+     var builder = WebApplication.CreateBuilder(args);
 
-    ```razor
-    @using BlazorWebAPIExample.Data
-    @inject TokenProvider Service
-    ```
+     // Get BaseUri from appsettings.json
+     string dataverseBaseUri = builder.Configuration.GetSection("DataverseConfig").GetValue<string>("BaseUri");
+   ```
 
-1. Add a `@code` block to accept a parameter and move the token into the service.
+1. Add the following two lines below the line: <br />`.AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))`
 
-    ```csharp
-    [Parameter]
-    public TokenProvider InitialState { get; set; }
+   ```csharp
+   // Add services to the container.
+   builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+     .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))
+       .EnableTokenAcquisitionToCallDownstreamApi(new string[] { $"{dataverseBaseUri}user_impersonation" })
+       .AddInMemoryTokenCaches();
+   ```
+ 
+   - The [MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi Method](/dotnet/api/microsoft.identity.web.microsoftidentitywebapiauthenticationbuilder.enabletokenacquisitiontocalldownstreamapi) adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user can consent to the capability to use the Dataverse Web API.
+   - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
 
-    protected override void OnInitialized()
-    {
-        Service.AccessToken = InitialState.AccessToken;
-        base.OnInitialized();
-    }
-    ```
 
-1. Open the Pages/\_Host.cshtml file and add the following using statements after the namespace declaration.
+### Pages/FetchData.razor
 
-    ```razor
-    @using BlazorCommonDataService.Data
-    @using Microsoft.AspNetCore.Authentication
-    ```
+The default `Pages/FetchData.razor` component retrieves some weather forecast data. We're going to replace this completely.
 
-1. After the `<body>` tag, add the following code and update the app component to acquire and pass the token.
+Copy the following code and replace all the code in `Pages/FetchData.razor`:
 
-    ```razor
-    @{
-        var token = new TokenProvider
-        {
-            AccessToken = await HttpContext.GetTokenAsync("access_token")
-        };
-    }
-    <app>
-        <component type="typeof(App)" param-InitialState="token" render-mode="ServerPrerendered" />
-    </app>
-    ```
+```razor
+@page "/fetchdata"
+@using Microsoft.Identity.Client;
+@using Microsoft.Identity.Web
+@using System.Text.Json;
+@inject MicrosoftIdentityConsentAndConditionalAccessHandler ConsentHandler
+@inject IHttpClientFactory HttpClientFactory
+@inject Microsoft.Identity.Web.ITokenAcquisition TokenAcquisitionService
+@inject IConfiguration configuration;
 
-1. Obtain the environment name for the Dataverse management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
+<PageTitle>WhoAmI</PageTitle>
 
-1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v9.0/` to the end of the URL so it looks like this:
+<h1>WhoAmI</h1>
 
-    ```json
-    { "CDSAPI": "https://{org}.crm.dynamics.com/api/data/v9.0/" }
-    ```
+<p>This component demonstrates fetching data from Dataverse.</p>
 
-1. Add this `using` statement to the file Startup.cs.
+@if (WhoIAm == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BusinessUnitId</td>
+                <td>@WhoIAm.BusinessUnitId</td>
+            </tr>
+            <tr>
+                <td>OrganizationId</td>
+                <td>@WhoIAm.OrganizationId</td>
+            </tr>
+            <tr>
+                <td>UserId</td>
+                <td>@WhoIAm.UserId</td>
+            </tr>
+        </tbody>
+    </table>
+}
 
-    ```csharp
-    using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-    ```
-
-1. In the `Startup.cs` class, add registrations to retrieve the authentication token and configure a client ready to use the token. Place this code between `services.AddAuthentication` and `services.AddControllersWithViews`.
-
-    ```csharp
-    services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme,
-        opt =>
-        {
-            var resourceUri = new Uri(Configuration["CDSAPI"]);
-            var resource = $"{resourceUri.Scheme}://{resourceUri.Host}/";
-            opt.ResponseType = "code";
-            opt.SaveTokens = true;
-            opt.Scope.Add("user_impersonation");
-            opt.Scope.Add(new Uri(Configuration["CDSAPI"]).Host);
-            opt.Resource = resource;
-        });
-    services.AddScoped<TokenProvider>();
-    services.AddHttpClient("CDS", client =>
-    {
-        client.BaseAddress = new Uri(Configuration["CDSAPI"]);
-    });
-    ```
-
-The first registration allows requesting the token with the proper scope. The second registers the service that tracks the token, and the third creates a client with the base API address pre-configured.
-
-## Make a call to the Web API
-
-Next, you'll update the `Index.razor` component to call the Web API. 
-
-1. Open the Index.razor file and add these statements to the top:
-
-    ```razor
-    @using System.Text.Json
-    @using BlazorWebAPIExample.Data;
-    @using System.Net.Http.Headers;
-    @inject IHttpClientFactory Factory
-    @inject TokenProvider TokenProvider
-    ```
-
-1. Add this markup after the `SurveyPrompt` component:
-
-    ```razor
-    @if (Loading)
-    {
-        <div class="alert alert-warning">Loading...</div>
-    }
-    @if (Error)
-    {
-        <div class="alert alert-danger">@ErrorMessage</div>
-    }
-    @if (!Loading && !Error)
-    {
-        <div class="alert alert-info">You did it! Your user id is: @UserId</div>
-    }
-    ```
-
-1. Finally, add a `@code` block with the following code:
-
-    ```csharp
-    public bool Loading;
-    public string ErrorMessage;
-    public bool Error => !string.IsNullOrWhiteSpace(ErrorMessage);
-    public string UserId;
+@code {
+    private WhoAmIResponse WhoIAm;
+    private HttpClient _httpClient;
 
     protected override async Task OnInitializedAsync()
     {
-        Loading = true;
+        string baseUrl = configuration["DataverseConfig:BaseUri"];
+
+        // Get the HttpClient
+        _httpClient = HttpClientFactory.CreateClient();
+        
+        // Get the token
+        var token = string.Empty;
         try
         {
-            var client = Factory.CreateClient("CDS");
-            client.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", TokenProvider.AccessToken);
-            var result = await client.GetAsync("WhoAmI");
-            result.EnsureSuccessStatusCode();
-            UserId = JsonDocument.Parse(await result.Content.ReadAsStringAsync())
-                .RootElement.GetProperty("UserId").GetGuid().ToString();
+            token = await TokenAcquisitionService.GetAccessTokenForUserAsync(new string[] { $"{baseUrl}user_impersonation" });
         }
-        catch (Exception ex)
+        // Microsoft Identity Web specific exception class for use in Blazor or Razor pages to process the user challenge. 
+        // Handles the MsalUiRequiredException.
+        catch (MicrosoftIdentityWebChallengeUserException ex)
         {
-            ErrorMessage = ex.Message;
+            ConsentHandler.HandleException(ex);
         }
-        finally
+        catch (Exception)
         {
-            Loading = false;
+            throw new Exception("Error getting access token.");
         }
-        await base.OnInitializedAsync();
-    }
-    ```
 
-The application is now ready!
+        // Set the auth token
+        _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+        // Send the request
+        var dataRequest = await _httpClient.GetAsync($"{baseUrl}api/data/v9.2/WhoAmI");
+
+        if (dataRequest.IsSuccessStatusCode)
+        {
+            var jsonString = System.Text.Json.JsonDocument.Parse(await dataRequest.Content.ReadAsStreamAsync());
+            WhoIAm = JsonSerializer.Deserialize<WhoAmIResponse>(jsonString);
+        }
+        else
+        {
+            throw new Exception("Error sending request.");
+        }
+    }
+
+    // Used with System.Text.Json.JsonSerializer.Deserialize to deserialize response body
+    public class WhoAmIResponse
+    {
+        public Guid BusinessUnitId { get; set; }
+        public Guid OrganizationId { get; set; }
+        public Guid UserId { get; set; }
+    }
+
+}
+```
 
 ## Run the program
 
-Press F5 to run the program. The output should look like this:
+The application is now ready.
 
-![Connection success.](../media/quick-start-blazor-server-app-csharp-6.png)
+1. Press F5 to run the program. The first time the program runs you should see this consent dialog:
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.5.png" alt-text="Consent dialog":::
+
+1. Select **Accept**.
+1. Select **Fetch data**.
+
+   The output should look like this:
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-16.png" alt-text="final result":::
 
 **Congratulations!** You have successfully connected to the Web API.
 
-This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. You can expand on the example to perform more complex operations, and wrap the `HttpClient` object in a service class to handle the permissions.
+This quickstart shows a simple approach to create a Blazor Server web application that connects to data in Dataverse.
 
-The [Enhanced quickstart](enhanced-quick-start.md) topic shows how to:
-
-- Implement exception handling methods
-- Use basic authentication with a connection string
-- Create a reusable method to refresh the access token
-- Build reusable methods for data operations
-
-## Next steps
-
-Learn how to structure your code for a better design.
+Learn more about Dataverse Web API capabilities by understanding the service documents.
 
 > [!div class="nextstepaction"]
-> [Enhanced quickstart](enhanced-quick-start.md)<br/>
+> [Web API types and operations](web-api-types-operations.md)
+
+
 
 ### See Also
 
-[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)
+[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)<br />
+[Tutorial: Create a Blazor Server app that uses the Microsoft identity platform for authentication](/azure/active-directory/develop/tutorial-blazor-server)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

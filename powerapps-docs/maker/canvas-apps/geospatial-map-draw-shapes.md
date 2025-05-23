@@ -3,7 +3,7 @@ title: Draw and insert shapes on maps
 description: Allow canvas app users to draw shapes on a map, or insert predefined shapes and display their measurements, in Power Apps.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -34,7 +32,7 @@ Add a drawing panel to your maps to let users draw and label shapes on them. You
 
 ## Prerequisites
 
-1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](geospatial-overview.md#prerequisites).
+1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](geospatial-overview.md#prerequisites-for-full-support).
 1. [Insert a map](./geospatial-component-map.md#add-a-map-to-an-app-screen).
 
 ## Draw and label shapes on an interactive map
@@ -127,6 +125,7 @@ In the following example, we used four text labels to display both the area and 
 
 - [Use data from Excel to insert pins](./geospatial-map-excel.md)
 - [Add info cards to pins](./geospatial-map-infocards.md)
+- [Show routes between waypoints](geospatial-map-routing.md)
 
 ## Other geospatial controls
 

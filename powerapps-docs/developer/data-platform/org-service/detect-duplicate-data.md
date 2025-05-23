@@ -1,25 +1,21 @@
 ---
-title: "Detect duplicate data using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Organization service allows you to detect duplicate rows in Microsoft Dataverse to maintain integrity of data" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Detect duplicate data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "SDK for .NET allows you to detect duplicate rows in Microsoft Dataverse to maintain integrity of data" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/09/2021
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-# Detect duplicate data using the Organization service
+# Detect duplicate data using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The Microsoft Dataverse Organization service allows you to detect duplicate rows to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
+The Microsoft Dataverse SDK for .NET allows you to detect duplicate rows to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
 > [!NOTE]
 > Make sure there are appropriate duplicate detection rules in place. Dataverse includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of rows. If you want the system to detect duplicates for other row types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule tables](../duplicaterule-entities.md)

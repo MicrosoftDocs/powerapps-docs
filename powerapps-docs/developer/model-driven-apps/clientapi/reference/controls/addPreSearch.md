@@ -1,18 +1,14 @@
 ---
-title: "addPreSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addPreSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnPreSearch method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/12/2023
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,15 +30,33 @@ Lookup
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes| The function that will be run just before the search to provide results for a lookup occurs. You can use this function to call one of the other lookup control functions and improve the results to be displayed in the lookup. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction` |Function |Yes| The function that is run just before the search to provide results for a lookup occurs. You can use this function to call one of the other lookup control functions and improve the results to be displayed in the lookup. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
+## Example
 
-[PreSearch event](../events/PreSearch.md)
+<!-- Added from https://github.com/MicrosoftDocs/powerapps-docs/issues/4252 -->
 
+In the following example, the `onLoad` function is set for the form onload event. It modifies the search filter for all the lookup controls associated with the `primaryid` lookup attribute because there may be more than one.
+
+It adds the `myPreSearchCallBack` function using the `addPreSearch` method. This example requires all the contact records returned to have the `firstname` value of 'Eric'.
+
+```javascript
+function onLoad(executionContext) {
+   var formContext = executionContext.getFormContext()
+   var attribute = formContext.getAttribute("primarycontactid") 
+   attribute.controls.forEach(control => control.addPreSearch(myPreSearchCallBack))
+}
+
+function myPreSearchCallBack(executionContext) {
+   var control = executionContext.getEventSource();
+   var filter = "<filter><condition attribute='firstname' operator='eq' value='Eric' /></filter>";
+   control.addCustomFilter(filter);
+}
+```
+
+### Related articles
+
+[PreSearch event](../events/PreSearch.md)   
 [removePreSearch](removePreSearch.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

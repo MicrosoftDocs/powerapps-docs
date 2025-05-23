@@ -1,18 +1,14 @@
 ---
-title: "showProgressIndicator (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "showProgressIndicator (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the showProgressIndicator method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -38,11 +34,11 @@ Any subsequent call to this method will update the displayed message in the exis
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|message|String|Yes|The message to be displayed in the progress dialog.|
+|`message`|String|Yes|The message to be displayed in the progress dialog.|
 
 
 
-### Related topics
+### Related articles
 
 [closeProgressIndicator](closeProgressIndicator.md)
 

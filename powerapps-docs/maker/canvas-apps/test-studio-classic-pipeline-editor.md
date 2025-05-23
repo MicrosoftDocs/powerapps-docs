@@ -3,18 +3,16 @@ title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
 author: maustinjones
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.reviewer: mkaur
+ms.date: 08/22/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - TYLEROL
   - maustinjones
@@ -271,7 +269,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 | OnlineUrl                 | <https://make.powerapps.com>                                                                                                   |
 | TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the [*Test URLs .json*](#step-2---create-test-url-json-file) file you created earlier.                      |
 | UsePrivateMode            | true                                                                                                                           |
-| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. |
+| OnlineUsername            | Enter the Microsoft Entra email address of the user context that will sign in to the application. Tests will run under the context of this user account. Ensure this user has the ability to run the app and connect to any data sources the app might connect to. |
 
 1. Select **Add** and enter **OnlinePassword** in the variable name.
 
@@ -310,7 +308,7 @@ Select **RunTestAutomation** test to drill into the details on what test case ha
 
 - Test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results. 
 
-- Any authentication process other than Azure Active Directory sign-in flow requires customization of the sign-in process in the **PowerAppsTestAutomation** solution.
+- Any authentication process other tha Microsoft Entra sign-in flow requires customization of the sign-in process in the **PowerAppsTestAutomation** solution.
 
 ### See also
 

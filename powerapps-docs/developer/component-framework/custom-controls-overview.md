@@ -1,27 +1,26 @@
 ---
-title: "What are code components? | MicrosoftDocs"
-description: "Use the Power Apps component framework to create code components to provide enhanced user experiences for users to view and work with data in forms, views, and dashboards."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+title: "Code components | MicrosoftDocs"
+description: "What are code components? Use the Power Apps component framework to create code components to provide enhanced user experiences for users to view and work with data in model-driven apps, canvas apps, and Power Pages."
+author: anuitz
+ms.author: anuitz
+ms.date: 02/10/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
 ---
 
-# What are code components
+# Code components
 
-Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution component, which means they can be included in a solution file and imported into different environments. [Learn how to package and distribute extensions using solutions](/power-platform/alm/solution-concepts-alm).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 > [!div class="mx-imgBorder"] 
 > ![Code components.](media/code-components.gif "Code components")
 
-Code components can be including into a solution and then imported into Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+You can include code components in a solution and then import the solution into a Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
@@ -34,18 +33,18 @@ Code components consist of three elements:
 
 ## Manifest
 
-Manifest is the metadata file that defines a component. It is an XML document that describes:
+Manifest is the `ControlManifest.Input.xml` metadata file that defines a component. It is an XML document that describes:
 
 - The name of the component.
 - The kind of data that can be configured, either a `field` or a `dataset`.
 - Any properties that can be configured in the application when the component is added.
-- A list of resource files that the component needs. 
+- A list of resource files that the component needs.
 
 When a user configures a code component, the data in the manifest file filters the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration columns so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
 
 ## Component implementation
 
-Code components are implemented using TypeScript. Each code component must include an object that implements the methods described in the code component interface. The CLI will auto-generate an `index.ts` file that includes stubbed implementations for these methods. This file is auto-generated via CLI tooling with main stub methods.
+Code components are implemented using TypeScript. Each code component must include an object that implements the methods described in the code component interface. The [Power Platform CLI](/power-platform/developer/cli/introduction) will auto-generate an `index.ts` file that includes stubbed implementations for these methods. This file is auto-generated using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command with main stub methods.
 
 The object implements the following methods:
 
@@ -99,9 +98,17 @@ Developers should implement the [destroy](reference/control/destroy.md) method, 
 
 ## Resources
 
-Each code component should have a resource file to construct its visualization. You can define a resource file in the manifest. The resource node in the manifest file refers to the resources that the component requires to implement its visualization. More information: [resources element](manifest-schema-reference/resources.md)
+The resource node in the manifest file refers to the resources that the component requires to implement its visualization. Each code component must have a resource file to construct its visualization. The `index.ts` file generated by the tooling is a `code` resource. There must be at least 1 code resource.
 
-### Related topics
+You can define additional resource files in the manifest to include:
+
+- CSS files
+- image web resources
+- resx web resources for localization
+
+ More information: [resources element](manifest-schema-reference/resources.md)
+
+### Related articles
 
 [Create and build a code component](create-custom-controls-using-pcf.md)
 

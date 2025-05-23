@@ -1,20 +1,18 @@
 ---
 title: Combo box control in Power Apps
 description: Learn about the details, properties and examples of the combo box control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/09/2022
+ms.reviewer: mkaur
+ms.date: 03/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 
 # Combo box control in Power Apps
@@ -32,6 +30,12 @@ When viewing on small screens, the items list flyout will become a full screen c
 > [!NOTE]
 > If you want to search for items with *numbers*, convert numbers to text with [Text()](../functions/function-text.md) function. For example, *Text(12345)*.
 
+## Limitations
+
+The combo box control has these limitations:
+
+- When you use a Combo box control inside a gallery, its selections aren't maintained when the user scrolls the gallery. This isn't an issue if you use a Combo box control inside a gallery that doesn't scroll. A workaround isn't currently available.
+
 ## People picker
 To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.
 
@@ -44,6 +48,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 > **Default** property is deprecated, use **DefaultSelectedItems** instead.
 
 **SelectedItems** – List of selected items resulting from user interaction.
+
+**Selected** – The last selected item resulting from user interaction.
 
 **SelectMultiple** – Whether the user can select a single item or multiple items.
 
@@ -122,7 +128,7 @@ The steps in this example apply to any [data source that provides tables](../con
 
 1. Set the **DefaultSelectedItems** property to this expression, replacing *DataSource* with the name of your data source:
     
-    ```powerapps-dot    
+    ```power-fx    
     First(DataSource)
     ```
 
@@ -131,7 +137,7 @@ The steps in this example apply to any [data source that provides tables](../con
 1. Select **Insert** > **Text label**, and then select **Label**.  
 1. Set the **Text** property to this expression, replacing *Text* with the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     If(CountRows(ComboBox1.SelectedItems)>0, Concat(ComboBox1.SelectedItems,'Account Name',", "), "NO SELECTED ITEM")
     ```
 

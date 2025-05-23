@@ -1,10 +1,9 @@
 ---
 title: Work with Dataverse for Teams formula table columns | Microsoft Docs
 description: Explains how to create and use formula table columns in Dataverse for Teams.
-author: revachauhan
+author: MicroSri
 reviewer: mattp123
-
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 01/24/2022
 ms.subservice: teams
@@ -21,8 +20,7 @@ contributors:
 Formula columns are a data type in Microsoft Dataverse for Teams that are built on Power Fx. You can add a formula column to a table in real time. The Dataverse table stores the logic and gives you the values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. As you enter the formula, Intellisense helps you with recommendations for formula, syntax, and errors.
 
 > [!NOTE]
-> - Currently, formula columns are only available with Dataverse for Teams environments.
-> - Formula columns can be added as a calculated field. Currently, formula columns can't be used in roll-up fields or with plugins.
+> Formula columns can be added as a calculated field. Currently, formula columns can't be used in roll-up fields or with plugins.
 
 ## Add a formula column
 

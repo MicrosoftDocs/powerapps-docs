@@ -1,22 +1,18 @@
 ---
 title: "Use OneNote in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to use OneNote to take notes 
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/02/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduserS
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Take notes by using OneNote 
 

@@ -1,32 +1,28 @@
 ---
-title: "Update and delete table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to update and delete table rows using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+title: "Update and delete table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to update and delete table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 07/22/2023
+ms.reviewer: pehecke
+ms.topic: how-to
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
 ---
 
-# Update and delete table rows using the Organization Service
+# Update and delete table rows using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and late-bound programming using the Organization service](early-bound-programming.md)
+This article includes examples using both late-bound and early-bound programming styles. More information: [Early-bound and late-bound programming using the SDK for .NET](early-bound-programming.md)
 
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
-> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven’t actually changed.
+> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven't actually changed.
 >
 > You should create a new `Entity` instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the table row.
 
@@ -37,18 +33,18 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 
 ## Basic update
 
-Both of the examples below uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method to set column values for a table row that was previously retrieved.
+Both of the examples below use the [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A) to set column values for a table row that was previously retrieved.
 
-Use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Id> property to transfer the unique identifier value of the retrieved row to the entity instance used to perform the update operation.
+Use the [Entity.Id property](xref:Microsoft.Xrm.Sdk.Entity.Id) to transfer the unique identifier value of the retrieved row to the entity instance used to perform the update operation.
 
 > [!NOTE]
 > If you attempt to update a row without a primary key value you will get the error: `Entity Id must be specified for Update`.
 > 
 > If you don't have a primary key value, you can also update rows using alternate keys. More information: [Update with Alternate Key](#update-with-alternate-key)
 
-### Late-bound example
+#### [Late-bound](#tab/late)
 
-The following example shows using the <xref:Microsoft.Xrm.Sdk.Entity> class to create an account using the  <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method. 
+The following example shows using the [Entity class](xref:Microsoft.Xrm.Sdk.Entity) to create an account using the  [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A).
 
 ```csharp
 var retrievedAccount = new Entity("account", new Guid("a976763a-ba1c-e811-a954-000d3af451d6"));
@@ -75,9 +71,9 @@ account["accountcategorycode"] = new OptionSetValue(2); //Standard customer
 svc.Update(account);
 ```
 
-### Early-bound example
+#### [Early-bound](#tab/early)
 
-The following example shows using the generated `Account` class to update an account row using the  <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method.
+The following example shows using the generated `Account` class to update an account row using the  [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A).
 
 ```csharp
 var retrievedAccount = new Account()
@@ -103,37 +99,45 @@ account.AccountCategoryCode = new OptionSetValue(2); //Standard customer
 //Update the account
 svc.Update(account);
 ```
+---
 
 ## Use the UpdateRequest class
 
-Instead of using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method, you can use either the late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or the generated early-bound entity classes with the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class by setting the entity instance to the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target> property and then using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+Instead of using the [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A), you can use either the late-bound [Entity class](xref:Microsoft.Xrm.Sdk.Entity) or the generated early-bound entity classes with the [UpdateRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) by setting the entity instance to the [UpdateRequest.Target property](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target) and then using the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 > [!NOTE]
-> The <xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse> has no properties. While it is returned by the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method, it isn't necessary to refer to it.
+> The [UpdateResponse class](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse) has no properties. While it is returned by the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), it isn't necessary to refer to it.
  
 ```csharp
 var request = new UpdateRequest()
 { Target = account };
 svc.Execute(request);
 ```
+
 ### When to use the UpdateRequest class
 
-You must use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to pass optional parameters. There are two cases where you might need special parameters.
- - When you want duplicate detection rules to be applied. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
- - When you are creating a table row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
+You must use the [UpdateRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) if you want to pass optional parameters. There are two cases where you might need special parameters.
+
+- When you want duplicate detection rules to be applied. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
+- When you're creating a table row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
+
+
+## Use the UpdateMultipleRequest class
+
+The [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) is the most performant way to update multiple records in a single request. More information: [Bulk Operation messages](../bulk-operations.md)
 
 ## Update related entities in one operation
 
 In a similar manner to how you can [Create related table rows in one operation](entity-operations-create.md#create-related-entities-in-one-operation), you can also update related table rows.
 
-To do this, you have to retrieve a row with the related rows so that you can access the id values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
+To update related table rows, you have to retrieve a row with the related rows so that you can access the ID values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
 
 > [!IMPORTANT]
-> Updates to rows are made in a specific order. First, primary table rows are processed, and then related table rows are processed. If a change is made by the primary row for a lookup or related row column, and then a related row updates the same column, the related row value is retained. In general, a lookup column value and its equivalent in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities> for the same relationship should not be used at the same time.
+> Updates to rows are made in a specific order. First, primary table rows are processed, and then related table rows are processed. If a change is made by the primary row for a lookup or related row column, and then a related row updates the same column, the related row value is retained. In general, a lookup column value and its equivalent in the [Entity.RelatedEntities](xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities) for the same relationship should not be used at the same time.
 
-### Late-bound example
+#### [Late-bound](#tab/late)
 
 
 ```csharp
@@ -181,8 +185,7 @@ account.RelatedEntities.Add(AccountTasksRelationship, new EntityCollection(updat
 svc.Update(account);
 ```
 
-
-### Early-bound example
+#### [Early-bound](#tab/early)
 
 ```csharp
 var account = new Account();
@@ -220,20 +223,22 @@ account.Account_Tasks = updatedTasks;
 svc.Update(account);
 ```
 
+---
+
 ## Check for duplicate records
 
-When updating a table row you may change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
+When updating a table row, you may change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
 
 ## Update with Alternate Key
 
-If you have an alternate key defined for a table, you can use that in place of the primary key to update a row. You cannot use the early-bound class to specify the alternate key. You must use the [Entity(String, KeyAttributeCollection)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor#Microsoft_Xrm_Sdk_Entity__ctor_System_String_Microsoft_Xrm_Sdk_KeyAttributeCollection_) constructor to specify the alternate key.
+If you have an alternate key defined for a table, you can use that in place of the primary key to update a row. You can't use the early-bound class to specify the alternate key. You must use the [Entity(String, KeyAttributeCollection) constructor](/dotnet/api/microsoft.xrm.sdk.entity.-ctor#Microsoft_Xrm_Sdk_Entity__ctor_System_String_Microsoft_Xrm_Sdk_KeyAttributeCollection_) to specify the alternate key.
 
-If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sdk.Entity> to an early bound class using the <xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1> method.
+If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sdk.Entity> to an early bound class using the [Entity.ToEntity&lt;T&gt; method](xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1).
 
 The following example shows how to update an `Account` using an alternate key defined for the `accountnumber` column (attribute).
 
 > [!IMPORTANT]
-> By default there are no alternate keys defined for any tables. This method can only be used when the environment is configured to define an alternate key for a table.
+> Most tables for business data do not have alternate keys defined. This method can only be used when the environment is configured to define an alternate key for a table.
 
 ```csharp
 var accountNumberKey = new KeyAttributeCollection();
@@ -244,21 +249,22 @@ exampleAccount.Name = "New Account Name";
 svc.Update(exampleAccount);
 ```
 
-More information: 
+More information:
+
 - [Work with alternate keys](../define-alternate-keys-entity.md)
-- [Use an alternate key to create a row](../use-alternate-key-create-record.md)
+- [Use an alternate key to reference a record](../use-alternate-key-reference-record.md)
 
-## Update and delete documents in storage partitions
+## Update and delete records in elastic tables
 
-If you are updating or deleting table data stored in partitions be sure to specify the partition key when accessing that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you're updating or deleting elastic table data stored in partitions, be sure to specify the partition key when accessing that data. More information: [Partitioning and horizontal scaling](../elastic-tables.md#partitioning-and-horizontal-scaling)
 
 ## Use Upsert
 
-Typically in data integration scenarios you will need to create or update data in Microsoft Dataverse from other sources. Dataverse may already have records with the same unique identifier, which may be an alternate key. If a table row exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
+Typically in data integration scenarios you need to create or update data in Dataverse from other sources. Dataverse may already have records with the same unique identifier, which may be an alternate key. If a table row exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is the scenario when you want to use upsert.
 
-The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account row is created, and the second time it is updated because it has an `accountnumber` value and there is an alternate key using that column (attrbute).
+The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account row is created, and the second time it's updated because it has an `accountnumber` value and there's an alternate key using that column (attrbute).
 
-For both calls, the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse>.<xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> property indicates whether the operation created a row or not.
+For both calls, the [UpsertResponse.RecordCreated property](xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated) indicates whether the operation created a row or not.
 
 ```csharp
 // This environment has an alternate key set for the accountnumber attribute.
@@ -286,28 +292,32 @@ Target = account
 };
 
 //The existing entity is updated.
-var response2 = (UpsertResponse)svc.Execute(request1);
+var response2 = (UpsertResponse)svc.Execute(request2);
 Console.WriteLine("Record Created: {0}", response2.RecordCreated); //false
 ```
+
 More information: [Use Upsert to insert or update a record](../use-upsert-insert-update-record.md)
 
 ## Delete
 
-The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method simply requires the logical name of the table and the unique identifier. Regardless of whether you are using late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or a generated early-bound class, you can use the following syntax for a delete operation by passing the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.LogicalName> and <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Id> properties.
+The [IOrganizationService.Delete method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A) simply requires the logical name of the table and the unique identifier. Regardless of whether you're using late-bound [Entity class](xref:Microsoft.Xrm.Sdk.Entity) or a generated early-bound class, you can use the following syntax for a delete operation by passing the [Entity.LogicalName](xref:Microsoft.Xrm.Sdk.Entity.LogicalName) and [Entity.Id](xref:Microsoft.Xrm.Sdk.Entity.Id) properties.
 
 ```csharp
 svc.Delete(retrievedEntity.LogicalName, retrievedEntity.Id);
 ```
+
 Or you can use the values:
+
 ```csharp
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
+
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](/powerapps/developer/data-platform/org-service/create-edit-entity-relationships#entity-relationship-behavior)
+> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
 
 ## Use the DeleteRequest class
 
-You can use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> instead of the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method, but it is only required when you want to specify optimistic concurrency behavior.
+You can use the [DeleteRequest class](xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest) instead of the [IOrganizationService.Delete method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A), but it's only required when you want to specify optimistic concurrency behavior.
 
 ```csharp
 var retrievedEntity = new Entity("account")
@@ -334,12 +344,13 @@ The logic to update or delete the row may be based on stale data. If the current
 
 To determine whether the row has been changed, you don't need to compare all the values, you can use the <xref:Microsoft.Xrm.Sdk.Entity.RowVersion> property to see if it has changed.
 
-The following example will succeed only when:
+The following example succeeds only when:
+
 - The `RowVersion` of the row in the database equals `986323`
-- The account row is enabled for optimistic concurrency (<xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> is `true`)
+- The account table is enabled for optimistic concurrency ([EntityMetadata.IsOptimisticConcurrencyEnabled property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is `true`)
 - The `RowVersion` property is set on the row passed with the request.
 
-If the `RowVersion` doesn't match, an error with the message `The version of the existing record doesn't match the RowVersion property provided.` will occur.
+If the `RowVersion` doesn't match, an error with the message `The version of the existing record doesn't match the RowVersion property provided.` occurs.
 
 ```csharp
 var retrievedAccount = new Account()
@@ -381,15 +392,14 @@ catch (FaultException<OrganizationServiceFault> ex)
 }
 ```
 
-More information: 
+More information:
+
 - [Optimistic Concurrency](../optimistic-concurrency.md)
-- <xref href="Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum"  />
+- [ConcurrencyBehavior Enum](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior)
 
 ## Legacy update messages
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
-
-There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+There are several deprecated specialized messages that perform update operations. In earlier versions, it was required to use these messages, but now the same operations should be performed using [IOrganizationService.Update](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A) or [UpdateRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) with [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 [!INCLUDE [cc-legacy-update-messages](../includes/cc-legacy-update-messages.md)]
 
@@ -397,8 +407,8 @@ More information: [Behavior of specialized update operations](../special-update-
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)   
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)   
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,8 +1,8 @@
 ---
 title: Overview of the model-driven app form editor user interface for Power Apps | MicrosoftDocs
 description: Know the form editor user interface to edit forms in Power Apps
-
 ms.topic: overview
+ms.date: 10/17/2023
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
@@ -10,20 +10,18 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
-
 ms.assetid: 146f8035-4fcd-4572-8e71-4270cd150495
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Classic form editor overview
 
 This article describes the [classic](model-driven-app-glossary.md#classic) form editor.
 
-We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to using the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 
@@ -45,7 +43,7 @@ Main forms provide navigation options through the navigation bar, but use the sa
 **Body** <br>
 Located in the center, use the body area to control the layout of the form. You can select and drag form elements to position them. Double-clicking on an element will open the properties for the element. 
 
-By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom tables, this section is not available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five columns. Other than columns, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
+By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom tables, this section isn't available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five columns. Other than columns, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
  
 >[!NOTE] 
 > To preserve the card format (as shown in the following image), we recommend that you do not move the quick view form to any other section on the form.
@@ -57,7 +55,7 @@ More information: [Create and edit quick view forms](create-edit-quick-view-form
  
 -   To add a column, select it from the **Column Explorer** and drag it into a section.  
   
-    -   To add an element that is not a column, select where you want to place it and use the appropriate command from the **Insert** tab add it.  
+    -   To add an element that isn't a column, select where you want to place it and use the appropriate command from the **Insert** tab add it.  
   
     -   To remove an element, select it and use the **Remove** command in the **Edit** group of the **Home** tab.  
   
@@ -68,7 +66,7 @@ Located on the right side, the content of the explorer area depends on the conte
   
 When you select **Body**, **Header**, or **Footer** in the **Select** group of the **Home** tab, you’ll see the **Column Explorer**. Use the **Column Explorer** to drag columns you want to display into a section in the form or within the header or footer. You can include the same column multiple times in a form. Use the **New Column** button as a shortcut to create a new column.  
   
-When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table).
+When you select Navigation in the Select group of the Home tab, you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You can't add the same relationship twice. Relationships are available based on how they're configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table).
   
 You can use the **New 1:N** and **New N:N buttons** as a shortcut to add new table relationships.  
 
@@ -105,7 +103,7 @@ Select the **File** tab to add/view the following options:
 ||**Save As**|Create a copy of this form with a different name.|
 ||**Save and Close**|Save the form and close the form editor.|
 ||**Publish**|Publish the form. More information: Publishing customizations|
-|**Edit**|**Change properties**|Change properties of the selected item in the body.<br /><br /> See the following sections depending on the selected item:<br /><br /> -   [Tab Properties](tab-properties-legacy.md)<br />-   [Section properties](section-properties-legacy.md)<br />-   [Common Column properties](common-field-properties-legacy.md)<br />-   [Special column properties](special-field-properties-legacy.md)<br />-  [Sub-grid properties](sub-grid-properties-legacy.md)<br />-   [Quick view control properties](quick-view-control-properties-legacy.md)|
+|**Edit**|**Change properties**|Change properties of the selected item in the body.<br /><br /> See the following sections depending on the selected item:<br /><br /> -   [Tab Properties](tab-properties-legacy.md)<br />-   [Section properties](section-properties-legacy.md)<br />-   [Common Column properties](common-field-properties-legacy.md)<br />-   [Special column properties](special-field-properties-legacy.md)<br />-  [Subgrid properties](sub-grid-properties-legacy.md)<br />-   [Quick view control properties](quick-view-control-properties-legacy.md)|
 ||**Remove**|Remove the selected item.|
 ||**Undo** **(Ctrl+Z)**|Undo the previous action.|
 ||**Redo** **(Ctrl+Y)**|Redo the previous action.|
@@ -115,10 +113,10 @@ Select the **File** tab to add/view the following options:
 ||**Navigation**|Edit the form navigation.<br /><br /> More information: [Edit Navigation](use-the-form-editor-legacy.md)
 |**Form**|**Business Rules**|View, edit, or create new business rules with the Business Rules explorer. **Note:**  For the interactive forms, only the “Entity” and “All Forms” scope is supported.<br /><br /> More information: [Create and edit business rules](create-business-rules-recommendations-apply-logic-form.md)|
 ||**Form Properties**| More information: [Form Properties](form-properties-legacy.md)|  
-||**Preview**|Use this to see how form looks after it is published. You can also preview to test scripts associated with from events.|         
+||**Preview**|Use this to see how form looks after it's published. You can also preview to test scripts associated with from events.|         
 ||**Enable Security Roles**|Use this to set which security roles will have access to the forms. More information:  [Control access to forms](control-access-forms.md) **Important:**  If you create a new form, only the System Administrator and System Customizer security roles will have access to the form. You must assign access to other security roles before people can use it.|  
 ||**Show Dependencies**|See which solution components depend on this form and which solution components are required by this form. |  
-||**Managed Properties**|Managed properties command has two properties **Customizable** and **Can be Deleted**. Setting these properties to false means the form won’t be customizable and cannot be deleted after you included it in a solution, export that solution as a managed solution, and import that managed solution into a different environment. More information: [Managed properties](/power-platform/alm/managed-properties-alm)| 
+||**Managed Properties**|Managed properties command has two properties **Customizable** and **Can be Deleted**. Setting these properties to false means the form won’t be customizable and can't be deleted after you included it in a solution, export that solution as a managed solution, and import that managed solution into a different environment. More information: [Managed properties](/power-platform/alm/managed-properties-alm)| 
 |**Upgrade**|**Merge forms**|If applicable, this option lets you merge this form with a form from a previous version of Dynamics 365 form|
   
 
@@ -137,7 +135,7 @@ The Insert tab displays the commands in the following table:
 ||**Two Columns**|Insert a two-column tab with a wider left column.|  
 ||**Two Columns**|Insert a two-column tab with equal width columns.|  
 |**1 Tab**|**One Column**|Insert a one-column tab.|  
-|**Control**|**Sub-Grid**|Format a sub-grid and insert it into the form.<br /><br /> More information: [Sub-grid properties](sub-grid-properties-legacy.md)|  
+|**Control**|**Sub-Grid**|Format a subgrid and insert it into the form.<br /><br /> More information: [Subgrid properties](sub-grid-properties-legacy.md)|  
 ||**Spacer**|Insert an empty space.|  
 ||**Quick View Form**|Insert a Quick View Form.<br /><br /> More information: [Quick view control properties](quick-view-control-properties-legacy.md)|  
 ||**Web Resource**|Insert a web resource to embed content from other locations in one page.<br /><br /> More information: [Web Resource properties](web-resource-properties-legacy.md)|  

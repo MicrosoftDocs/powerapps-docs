@@ -8,19 +8,16 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
+
 # Sample: Export ribbon definitions (Microsoft Dataverse)
 
+This sample shows how to export ribbon definitions. It uses the [RetrieveApplicationRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveapplicationribbonrequest) and [RetrieveEntityRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveentityribbonrequest) messages.
 
-
-This sample shows how to export ribbon definitions. It uses the [RetrieveApplicationRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveapplicationribbonrequest) and [RetrieveEntityRibbonRequest](/dotnet/api/microsoft.crm.sdk.messages.retrieveentityribbonrequest) messages. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions).
-
+> [!div class="nextstepaction"]
+> [SDK for .NET: Export ribbon definitions (Microsoft Dataverse) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportRibbonDefinitions)
 
 ## How to run this sample
 
@@ -46,6 +43,5 @@ Checks for the current version of the org.
 ### Clean up
 
 No clean up is required for this sample
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,169 +1,160 @@
 ---
-title: "Use the XRM tooling common login control in your client applications (Microsoft Dataverse)| Microsoft Docs"
+title: "Use the XRM tooling common login control in your client apps (Microsoft Dataverse)| Microsoft Docs"
 description: "The Microsoft Dataverse SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse"
-ms.date: 04/01/2022
+ms.date: 02/01/2023
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
 ---
 # Use the XRM tooling common login control in your client applications
 
-There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
+ The logic for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the common login control control so that you can quickly leverage these capabilities in your Windows (WPF) client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>. Below is an image of the control.  
   
-![XRM Tooling common login control.](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
-  
-<a name="Prereq"></a>
+:::image type="content" source="../media/crm-sdk-v6-commonlogincontrol.png" alt-text="XRM tooling common login control":::
 
 ## Prerequisites
   
-- .NET Framework 4.6.2 or higher.
-- Visual Studio 2017 (recommended)
-- Connected to Internet so that you can download/restore the required Nuget packages while using the project template.  
-  
-<a name="NewProjectUsingTemplate"></a>
+- .NET Framework 4.8 or later
+- Visual Studio 2019 or later
+- Internet access so that you can download the required NuGet packages
+- Network access to a Dataverse test environment, and valid logon credentials
    
-## Create a WPF application using the common login control template
+## Create a WPF application that uses the common login control
   
-Here is a quick way to create a **Windows Presentation Foundation (WPF)** application that leverages the common login control and the underlying code for authentication, credential storage and reuse, and default tracing or logging.  
-  
-1.  Start Visual Studio, and create a new project.  
-2.  In the **New Project** dialog box:  
-    1.  From the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**.  
-    2.  Ensure that **.NET Framework 4.6.2** is selected.  
-    3.  Select **WPF Application for Dynamics 365**.  
-    4.  Specify the name and location of the project, and click **OK**.  
-  
-     > [!div class="mx-imgBorder"]
-     > ![WPF Application for Dataverse template.](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")   
+Let's walk through the process of creating a **Windows Presentation Foundation (WPF)** application that leverages the common login control including the underlying code for authentication, credential storage and reuse, and default tracing or logging.
 
-> [!NOTE]
-> **Known Issue with Visual Studio 2015**
-> 
-> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
->
-> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
->
-> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
-  
-3. To test the project:
-  
-    1. Save the project and press **F5** or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you’ll see a MainWindow with **Login to Dynamics 365** button. Click the button to display the common login control.  
+The completed application can be found here: [AppWithLoginControl](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/App-with-login-control).
 
-    2.  Test the authentication by providing your credentials to connect to Dataverse, and then click **Login**. A message displays your Dataverse connection status.  
+### Create a project with the login control
 
-  
- For a sample that uses the common login control template to connect to Dataverse and perform various operations, see [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md).  
-  
-<a name="Add"></a>
+Start by creating a new Visual Studio solution and WPF project, then add the login control XAML code to it.
 
-## Add the common login control template to your existing WPF application
+1. Start Visual Studio and create a new project using the _WPF App (.NET Framework)_ template for a Windows C# Desktop app.
 
- If you already have a WPF client application, you can easily add the common login control template to it to leverage the uniform sign-in experience and the underlying code for Dataverse authentication, credential storage and reuse, and default tracing or logging. In this case, you must create a control in the user interface of your existing client application to call the common login control, instantiate an instance of the Dataverse connection object, and then use the connection object to perform various operations in Dataverse.  
-  
-1. Open an existing WPF application project in Visual Studio. For this example, let’s assume that the name of your WPF application project is `SampleWPFApp`.  
-  
-2. Add the common login control template to your project.  
-  
-    1. In the **Solution Explorer** pane, right-click the project name, and click **Add** > **New Item**.  
-  
+    :::image type="content" source="../media/xrm-new-project.png" alt-text="New project from template":::
 
-    2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**. Click **Dataverse Login Form for WPF Applications**, and click **OK**.  
+1. Configure the project and target the .NET 4.8 framework.
 
-          > [!div class="mx-imgBorder"]
-          > ![Add the common login control template.](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
-  
-3. The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
-  
-    > [!div class="mx-imgBorder"]
-    > ![Verify that the login control renders properly.](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
-  
+    :::image type="content" source="../media/xrm-project-config.png" alt-text="Project configuration":::
 
-4.  You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to Dataverse** respectively.  
- 
-     > [!div class="mx-imgBorder"]
-     > ![Add a control to call the login form.](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")
-  
-5. Double-click the button to add code for the click event of the **btnSignIn** button in the `MainWindow.xaml.cs` file.  
-  
-6.  Add the following sample code in the click event of the **btnSignIn** button to call the `CrmLoginForm1` control, and create an instance of the Dataverse connection object.  
- 
+1. Select **Project > Manage NuGet Packages**. Browse or search for the following packages and install them (in the order shown below) into the project.
+
+    - Microsoft.CrmSdk.XrmTooling.CoreAssembly
+    - Microsoft.CrmSdk.XrmTooling.WpfControls
+
+    :::image type="content" source="../media/xrm-nuget-packages.png" alt-text="NuGet package install":::
+
+1. In **Solution Explorer**, right-click the project name and select **Add > New Folder**.
+
+1. Name the folder "LoginUX" and then copy the [login control XAML code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/LoginUX) into that folder. You can just drag and drop the ExampleLoginForm.xaml file from File Explorer into the Visual Studio project folder and the associated C# file will magically also show up in the project.
+
+    :::image type="content" source="../media/xrm-new-folder.png" alt-text="LoginUX folder":::
+
+1. Test build the solution (F6). It should build with no errors or warnings.
+
+### Connect the login control to the app
+
+Now we are going to wire up the login control to the application.
+
+1. Double click the _ExampleLoginForm.xaml_ file in **Solution Explorer**. You should see an image of the control in the designer.
+
+    :::image type="content" source="../media/xrm-designer-control.png" alt-text="Login control in UI designer":::
+
+2. Switch to the MainWindow.xaml designer tab. Add a Button control in the designer and set the Name and Common Content property values to _btnSignIn_ and _Sign in to Dataverse_ respectively.
+
+    :::image type="content" source="../media/xrm-add-button.png" alt-text="Add a button":::
+
+3. Double-click the button to add code for the click event of the button. A code editing window for the MainWindow class file is shown.
+
+4. Replace the empty Button_Click event handler method with this code (below) to call the login control, and create an instance of the Dataverse connection object.
+
 ```csharp
-    // Establish the Login control.  
-    CRMLoginForm1 ctrl = new CRMLoginForm1();  
-  
-    // Wire event to login response.   
-    ctrl.ConnectionToCrmCompleted += ctrl_ConnectionToCrmCompleted;  
-  
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+    // Instantiate the login control.  
+    ExampleLoginForm ctrl = new ExampleLoginForm();
+
+    // Wire the button click event to the login response.   
+    ctrl.ConnectionToCrmCompleted += ctrl_ConnectionToCrmCompleted;
+
     // Show the login control.   
-    ctrl.ShowDialog();  
-  
-    // Handle the returned CRM connection object.  
-    // On successful connection, display the CRM version and connected org name   
-    if (ctrl.CrmConnectionMgr != null && ctrl.CrmConnectionMgr.CrmSvc != null && ctrl.CrmConnectionMgr.CrmSvc.IsReady)  
-    {  
-        MessageBox.Show("Connected to CRM! Version: " + ctrl.CrmConnectionMgr.CrmSvc.ConnectedOrgVersion.ToString() +   
-        " Org: " + ctrl.CrmConnectionMgr.CrmSvc.ConnectedOrgUniqueName, "Connection Status");  
-  
-        // Perform your actions here  
-    }  
-    else  
-    {  
-        MessageBox.Show("Cannot connect; try again!", "Connection Status");  
-    }  
-```  
-  
-7. Add the definition of the `ctrl_ConnectionToCrmCompleted` event below the click event of the button:  
-  
-```csharp  
-    private void ctrl_ConnectionToCrmCompleted(object sender, EventArgs e)  
-    {  
-        if (sender is CRMLoginForm1)  
-        {  
-            this.Dispatcher.Invoke(() =>  
-            {  
-                ((CRMLoginForm1)sender).Close();  
-            });  
-        }  
-    }  
- ```  
-  
-8. This is how your `MainWindow.xaml.cs` file appears after adding code from the previous two steps:
+    ctrl.ShowDialog();
 
-    > [!div class="mx-imgBorder"]
-    > ![Sample code.](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
-  
-9. To test the project:  
-  
-    1.  Save the project and press F5 or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you will see a MainWindow with the new **Sign In to Dataverse** button. Click it to display the common login control.  
-  
-    2.  Test the authentication by providing your credentials to connect to Dataverse, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
-  
- 
-    > [!div class="mx-imgBorder"]
-    > ![Project test results.](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
+    // Check that a web service connection is returned and the service is ready.     
+    if (ctrl.CrmConnectionMgr != null && ctrl.CrmConnectionMgr.CrmSvc != null && ctrl.CrmConnectionMgr.CrmSvc.IsReady)
+    {
+        // Display the Dataverse version and connected environment name  
+        MessageBox.Show("Connected to Dataverse version: " + ctrl.CrmConnectionMgr.CrmSvc.ConnectedOrgVersion.ToString() +
+            " Organization: " + ctrl.CrmConnectionMgr.CrmSvc.ConnectedOrgUniqueName, "Connection Status");
+        // TODO Additional web service operations can be performed here
+    }
+    else
+    {
+        MessageBox.Show("Cannot connect; try again!", "Connection Status");
+    }
+}
+```
 
-  
-    3. If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
-  
-        > [!div class="mx-imgBorder"]
-        > ![Stored credentials.](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
+5. Add the definition of the ctrl_ConnectionToCrmCompleted event handler method into the MainWindow class below the Button_Click event handler method and at the same indent level.
+
+```csharp
+private void ctrl_ConnectionToCrmCompleted(object sender, EventArgs e)
+{
+    if (sender is ExampleLoginForm)
+    {
+        this.Dispatcher.Invoke(() =>
+        {
+            ((ExampleLoginForm)sender).Close();
+        });
+    }
+}
+```
+
+6. Add a using statement at the beginning of the C# file so that the ExampleLoginForm class is resolved.
+
+```csharp
+using PowerApps.Samples.LoginUX;
+```
+
+7. Build the program (F6). It should build with no errors or warnings.
+
+### Test the program
+
+Now we will run the program and test its operation.
+
+1. Run the program (F5).
+
+1. Select the button **Sign in to Dataverse**. The login control will be displayed.
+
+1. The figure below shows selecting the **Office 365** online environment and then checking **Display list of available organizations** to see a list of environments that the user is a member of.
+
+    :::image type="content" source="../media/xrm-online-logon.png" alt-text="Office 365 logon":::
+
+1. Select **Login**.
+
+1. When prompted for login information, enter it. The entered account is in the form someone@my-env.onmicrosoft.com.
+
+1. A list of environments is displayed in the control. Choose one and select **Login** a second time.
+
+1. A connection status dialog is shown containing the Dataverse version and organization name.
+
+    :::image type="content" source="../media/xrm-connection-status.png" alt-text="Connection status":::
+
+1. Click **OK**.
+
+1. If you click **Sign in to Dataverse** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter credentials.
+1. When you are done testing, close the program window.
   
 ### See also  
-
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
+  
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

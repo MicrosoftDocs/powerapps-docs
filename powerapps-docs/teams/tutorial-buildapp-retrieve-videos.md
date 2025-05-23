@@ -3,14 +3,14 @@ title: Build an app in Teams using Power Apps and Dataverse for Teams to retriev
 description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: tapanm
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Build an app to retrieve Power Platform videos for readiness
@@ -730,7 +730,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Update the property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Feed.Description
     ```
 
@@ -742,7 +742,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Update the property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Feed.Title
     ```
 
@@ -754,7 +754,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Update the property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Feed.'Image Link'
     ```
 
@@ -795,7 +795,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Set the **Text** property value to the following formula: 
 
-    ```powerapps-dot
+    ```power-fx
     'Video Library'.Selected.Title
     ```
 
@@ -818,7 +818,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Set the **Media** property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     'Video Library'.Selected.'Video Link'
     ```
 
@@ -843,7 +843,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Set the **HtmlText** property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     'Video Library'.Selected.Description
     ```
 
@@ -868,7 +868,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Set the **Text** property value to the following formula: 
 
-    ```powerapps-dot
+    ```power-fx
     Concatenate("Published On ",Text('Video Library'.Selected.'Published On'))
     ```
 
@@ -898,7 +898,7 @@ Currently there are two separate screens, but no way to toggle between them. The
 
 1. Set the **OnSelect** property value to the following formula: 
 
-    ```powerapps-dot
+    ```power-fx
     Navigate(Screen1)
     ```
 
@@ -923,7 +923,7 @@ Currently there are two separate screens, but no way to toggle between them. The
 
 1. Set the **OnSelect** property value to the following formula:
 
-    ```powerapps-dot
+    ```power-fx
     Navigate(Screen2)
     ```
 
@@ -975,7 +975,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 ### See also
 
-[Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+[Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,18 +1,14 @@
 ---
-title: "getEntityMetadata (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getEntityMetadata (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getEntityMetadata method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,10 +26,10 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the table.|
-|attributes|array of strings|No|The columns to get definitions for.|
-|successCallback|function|No|A function to call when the table definitions are returned.|
-|errorCallback|function|No|A function to call when the operation fails.|
+|`entityName`|String|Yes|The logical name of the table.|
+|`attributes`|Array of strings|No|The columns to get definitions for.|
+|`successCallback`|function|No|A function to call when the table definitions are returned.|
+|`errorCallback`|function|No|A function to call when the operation fails.|
 
 ## Returns
 
@@ -41,304 +37,144 @@ contributors:
 
 **Description**: An object containing the table definitions information with the following values.
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>ActivityTypeMask</td>
-<td>Number</td>
-<td>Whether a custom activity should appear in the activity menus in the Web application. 0 indicates that the custom activity doesn't appear; 1 indicates that it does appear.</td>
-</tr>
-<tr>
-<td>AutoRouteToOwnerQueue</td>
-<td>Boolean</td>
-<td>Indicates whether to automatically move records to the owner’s default queue when a record of this type is created or assigned. </td>
-</tr>
+|Name|Type|Description|
+|---|---|---|
+|`ActivityTypeMask`|Number|Whether a custom activity should appear in the activity menus in the Web application. `0` indicates that the custom activity doesn't appear; `1` indicates that it does appear.|
+|`AutoRouteToOwnerQueue`|Boolean|Indicates whether to automatically move records to the owner's default queue when a record of this type is created or assigned.|
+|`CanEnableSyncToExternalSearchIndex`|Boolean|For internal use only.|
+|`CanTriggerWorkflow`|Boolean|Indicates whether the table can trigger a workflow process.|
+|`Description`|String|Description for the table.|
+|`DisplayCollectionName`|String|Plural display name for the table.|
+|`DisplayName`|String|Display name for the table.|
+|`EnforceStateTransitions`|Boolean|Indicates whether the table will enforce custom state transitions.|
+|`EntityColor`|String|The hexadecimal code to represent the color to be used for this table in the application.|
+|`EntitySetName`|String|The name of the Web API table set for this table.|
+|`HasActivities`|Boolean|Indicates whether activities are associated with this table.|
+|`IsActivity`|Boolean|Indicates whether the table is an activity.|
+|`IsActivityParty`|Boolean|Indicates whether the email messages can be sent to an email address stored in a record of this type.|
+|`IsBusinessProcessEnabled`|Boolean|Indicates whether the table is enabled for business process flows.|
+|`IsBPFEntity`|Boolean|Indicates whether the table is a business process flow table.|
+|`IsChildEntity`|Boolean|Indicates whether the table is a child table.|
+|`IsConnectionsEnabled`|Boolean|Indicates whether connections are enabled for this table.|
+|`IsCustomEntity`|Boolean|Indicates whether the table is a custom table.|
+|`IsCustomizable`|Boolean|Indicates whether the table is customizable.|
+|`IsDocumentManagementEnabled`|Boolean|Indicates whether document management is enabled.|
+|`IsDocumentRecommendationsEnabled`|Boolean|Indicates whether the document recommendations is enabled.|
+|`IsDuplicateDetectionEnabled`|Boolean|Indicates whether duplicate detection is enabled.|
+|`IsEnabledForCharts`|Boolean|Indicates whether charts are enabled.|
+|`IsImportable`|Boolean|Indicates whether the table can be imported using the Import Wizard.|
+|`IsInteractionCentricEnabled`|Boolean|Indicates the table is enabled for interactive experience.|
+|`IsKnowledgeManagementEnabled`|Boolean|Indicates whether knowledge management is enabled for the table.|
+|`IsMailMergeEnabled`|Boolean|Indicates whether mail merge is enabled for this table.|
+|`IsManaged`|Boolean|Indicates whether the table is part of a managed solution.|
+|`IsOneNoteIntegrationEnabled`|Boolean|Indicates whether OneNote integration is enabled for the table.|
+|`IsOptimisticConcurrencyEnabled`|Boolean|Indicates whether optimistic concurrency is enabled for the table.|
+|`IsQuickCreateEnabled`|Boolean|Indicates whether the table is enabled for quick create forms.|
+|`IsStateModelAware`|Boolean|Indicates whether the table supports setting custom state transitions.|
+|`IsValidForAdvancedFind`|Boolean|Indicates whether the table is will be shown in Advanced Find.|
+|`IsVisibleInMobileClient`|Boolean|Indicates whether Microsoft Dynamics 365 for tablets users can see data for this table.|
+|`IsEnabledInUnifiedInterface`|Boolean|Indicates whether the table is enabled for Unified Interface.|
+|`LogicalCollectionName`|String|The logical collection name.|
+|`LogicalName`|String|The logical name for the table.|
+|`ObjectTypeCode`|Number|The table type code.|
+|`OwnershipType`|String|The ownership type for the table: `UserOwned` or `OrganizationOwned`.|
+|`PrimaryIdAttribute`|String|The name of the column that is the primary id for the table.|
+|`PrimaryImageAttribute`|String|The name of the primary image column for a table.|
+|`PrimaryNameAttribute`|String|The name of the primary column for a table.|
+|`Privileges`|Array of objects|Objects that define the security privilege for access to a table. See [Privilege object](#privilege-object)|
+|`Attributes`|Collection|A collection of column definitions objects. See [Attribute objects](#attribute-objects)|
 
-<tr>
-<td>CanEnableSyncToExternalSearchIndex</td>
-<td>Boolean</td>
-<td>For internal use only.</td>
-</tr>
-<tr>
-<td>CanTriggerWorkflow</td>
-<td>Boolean</td>
-<td>Indicates whether the table can trigger a workflow process.</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>String</td>
-<td>Description for the table.</td>
-</tr>
-<tr>
-<td>DisplayCollectionName</td>
-<td>String</td>
-<td>Plural display name for the table.</td>
-</tr>
-<tr>
-<td>DisplayName</td>
-<td>String</td>
-<td>Display name for the table.</td>
-</tr>
-<tr>
-<td>EnforceStateTransitions</td>
-<td>Boolean</td>
-<td>Indicates whether the table will enforce custom state transitions.</td>
-</tr>
-<tr>
-<td>EntityColor</td>
-<td>String</td>
-<td>The hexadecimal code to represent the color to be used for this table in the application.</td>
-</tr>
-<tr>
-<td>EntitySetName</td>
-<td>String</td>
-<td>The name of the Web API table set for this table.</td>
-</tr>
-<tr>
-<td>HasActivities</td>
-<td>Boolean</td>
-<td>Indicates whether activities are associated with this table.</td>
-</tr>
-<tr>
-<td>IsActivity</td>
-<td>Boolean</td>
-<td>Indicates whether the table is an activity.</td>
-</tr>
-<tr>
-<td>IsActivityParty</td>
-<td>Boolean</td>
-<td>Indicates whether the email messages can be sent to an email address stored in a record of this type.</td>
-</tr>
-<tr>
-<td>IsBusinessProcessEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether the table is enabled for business process flows.</td>
-</tr>
-<tr>
-<td>IsBPFEntity</td>
-<td>Boolean</td>
-<td>Indicates whether the table is a business process flow table.</td>
-</tr>
-<tr>
-<td>IsChildEntity</td>
-<td>Boolean</td>
-<td>Indicates whether the table is a child table.</td>
-</tr>
-<tr>
-<td>IsConnectionsEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether connections are enabled for this table.</td>
-</tr>
-<tr>
-<td>IsCustomEntity</td>
-<td>Boolean</td>
-<td>Indicates whether the table is a custom table.</td>
-</tr>
-<tr>
-<td>IsCustomizable</td>
-<td>Boolean</td>
-<td>Indicates whether the table is customizable.</td>
-</tr>
-<tr>
-<td>IsDocumentManagementEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether document management is enabled.</td>
-</tr>
-<tr>
-<td>IsDocumentRecommendationsEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether the document recommendations is enabled.</td>
-</tr>
-<tr>
-<td>IsDuplicateDetectionEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether duplicate detection is enabled.</td>
-</tr>
-<tr>
-<td>IsEnabledForCharts</td>
-<td>Boolean</td>
-<td>Indicates whether charts are enabled.</td>
-</tr>
-<tr>
-<td>IsImportable</td>
-<td>Boolean</td>
-<td>Indicates whether the table can be imported using the Import Wizard.</td>
-</tr>
-<tr>
-<td>IsInteractionCentricEnabled</td>
-<td>Boolean</td>
-<td>Indicates the table is enabled for interactive experience.</td>
-</tr>
-<tr>
-<td>IsKnowledgeManagementEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether knowledge management is enabled for the table.</td>
-</tr>
-<tr>
-<td>IsMailMergeEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether mail merge is enabled for this table.</td>
-</tr>
-<tr>
-<td>IsManaged</td>
-<td>Boolean</td>
-<td>Indicates whether the table is part of a managed solution.</td>
-</tr>
-<tr>
-<td>IsOneNoteIntegrationEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether OneNote integration is enabled for the table.</td>
-</tr>
-<tr>
-<td>IsOptimisticConcurrencyEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether optimistic concurrency is enabled for the table.</td>
-</tr>
-<tr>
-<td>IsQuickCreateEnabled</td>
-<td>Boolean</td>
-<td>Indicates whether the table is enabled for quick create forms.</td>
-</tr>
-<tr>
-<td>IsStateModelAware</td>
-<td>Boolean</td>
-<td>Indicates whether the table supports setting custom state transitions.</td>
-</tr>
-<tr>
-<td>IsValidForAdvancedFind</td>
-<td>Boolean</td>
-<td>Indicates whether the table is will be shown in Advanced Find.</td>
-</tr>
-<tr>
-<td>IsVisibleInMobileClient</td>
-<td>Boolean</td>
-<td>Indicates whether Microsoft Dynamics 365 for tablets users can see data for this table.</td>
-</tr>
-<tr>
-<td>IsEnabledInUnifiedInterface</td>
-<td>Boolean</td>
-<td>Indicates whether the table is enabled for Unified Interface.</td>
-</tr>
-<tr>
-<td>LogicalCollectionName</td>
-<td>String</td>
-<td>The logical collection name.</td>
-</tr>
-<tr>
-<td>LogicalName</td>
-<td>String</td>
-<td>The logical name for the table.</td>
-</tr>
-<tr>
-<td>ObjectTypeCode</td>
-<td>Number</td>
-<td>The table type code.</td>
-</tr>
-<tr>
-<td>OwnershipType</td>
-<td>String</td>
-<td>The ownership type for the table: "UserOwned" or "OrganizationOwned".</td>
-</tr>
-<tr>
-<td>PrimaryIdAttribute</td>
-<td>String</td>
-<td>The name of the column that is the primary id for the table.</td>
-</tr>
-<tr>
-<td>PrimaryImageAttribute</td>
-<td>String</td>
-<td>The name of the primary image column for a table.</td>
-</tr>
-<tr>
-<td>PrimaryNameAttribute</td>
-<td>String</td>
-<td>The name of the primary column for a table.</td>
-</tr>
-<tr>
-<td>Privileges</td>
-<td>Array of objects</td>
-<td>The privilege definitions for the table where *each* object contains the following values to define the security privilege for access to a table:
-<ul>
-<li><b>CanBeBasic</b>: Boolean. Whether the privilege can be basic access level.</li>
-<li><b>CanBeDeep</b>: Boolean. Whether the privilege can be deep access level.</li>
-<li><b>CanBeEntityReference</b>: Boolean. Whether the privilege for an external party can be basic access level.</li>
-<li><b>CanBeGlobal</b>: Boolean. Whether the privilege can be global access level.</li>
-<li><b>CanBeLocal</b>: Boolean. Whether the privilege can be local access level.</li>
-<li><b>CanBeParentEntityReference</b>: Boolean. Whether the privilege for an external party can be parent access level.</li>
-<li><b>Name</b>: String. The name of the privilege.</li>
-<li><b>PrivilegeId</b>: String. The ID of the privilege.</li>
-<li><b>PrivilegeType</b>: Number. The type of privilege, which is one of the following:</li>
-<ul>
-<li>0: None</li>
-<li>1: Create</li>
-<li>2: Read</li>
-<li>3: Write</li>
-<li>4: Delete</li>
-<li>5: Assign</li>
-<li>6: Share</li>
-<li>7: Append</li>
-<li>8: AppendTo</li>
-</ul>
-</ul></td>
-</tr>
-<tr>
-<td>Attributes</td>
-<td>Collection</td>
-<td>A collection of column definitions objects. The object returned depends on the type of column definitions.
-<p><b>Column definitions for the <i>base</i> type</b><br/>
-An object returned with the following properties:</p>
-<ul>
-<li><b>AttributeType</b>: Number. Type of a column. For a list of column type values, see <a href="/dotnet/api/microsoft.xrm.sdk.metadata.attributetypecode">AttributeTypeCode</a></li>
-<li><b>DisplayName</b>: String. Display name for the column.</li>
-<li><b>EntityLogicalName</b>: String. Logical name of the table that contains the column.</li>
-<li><b>LogicalName</b>: String. Logical name for the column.</li></ul>
+### Privilege object
 
-<p><b>Column definitions for the <i>boolean</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
-<ul>
-<li><b>DefaultFormValue</b>: Boolean. Default value for a Yes/No column.</li>
-<li><b>OptionSet</b>: Object. Options for the boolean column where each option is a key:value pair.</li></ul>
+Privilege objects have the following properties to define the security privilege for access to a table:
 
-<p><b>Column definitions for the <i>enum</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
-<ul>
-<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+|Name|Type|Description|
+|---|---|---|
+|`CanBeBasic`|Boolean|Whether the privilege can be basic access level.|
+|`CanBeDeep`|Boolean|Whether the privilege can be deep access level.|
+|`CanBeEntityReference`|Boolean|Whether the privilege for an external party can be basic access level.|
+|`CanBeGlobal`|Boolean|Whether the privilege can be global access level.|
+|`CanBeLocal`|Boolean|Whether the privilege can be local access level.|
+|`CanBeParentEntityReference`|Boolean|Whether the privilege for an external party can be parent access level.|
+|`Name`|String|The name of the privilege.|
+|`PrivilegeId`|String|The ID of the privilege.|
+|`PrivilegeType`|Number|The type of privilege, which is one of the following:<br />0 : None<br />1 : Create<br />2 : Read<br />3 : Write<br />4 : Delete<br />5 : Assign<br />6 : Share<br />7 : Append<br />8 : AppendTo|
 
-<p><b>Column definitions for the <i>choices</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
-<ul>
-<li><b>DefaultFormValue</b>: Number. Default form value for the column.</li>
-<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+### Attribute objects
 
-<p><b>Column definitions for the <i>state</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
-<ul>
-<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
-<p>The object also contains the following methods:</p>
-<ul>
-<li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table definitions information of the table in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">table/entity reference</a>.</li>
-<li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for a table, see table definitions information of the table in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">table/entity reference</a>.</li></ul>
+The object returned depends on the type of column definitions.
 
-<p><b>Column definitions for the <i>status</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
-<ul>
-<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
-<p>The object also contains the following method:</p>
-<ul>
-<li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for a table, see table definitions information of the table in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">table/entity reference</a>.</li>
-</ul>
-</td>
-</tr>
-</table>
+#### Base (AttributeMetadata) columns
 
-### Related topics
+All column definitions have these shared properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`AttributeType`|Number|Type of a column. For a list of column type values, see [AttributeTypeCode Enum](xref:Microsoft.Xrm.Sdk.Metadata.AttributeTypeCode) |
+|`DisplayName`|String|Display name for the column|
+|`EntityLogicalName`|String|Logical name of the table that contains the column.|
+|`LogicalName`|String|Logical name for the column.|
+
+#### Yes/No (BooleanAttributeMetadata) columns
+
+Yes/No columns have these properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`DefaultFormValue`|Boolean|Default value for a Yes/No column.|
+|`OptionSet`|Object|Options for the boolean column where each option is a key:value pair.|
+
+#### Choice (PicklistAttributeMetadata) columns
+
+Choice columns have this property:
+
+|Name|Type|Description|
+|---|---|---|
+|`OptionSet`|Object|Options for the column where each option is a key:value pair.|
+
+#### Choices (MultiSelectPicklistAttributeMetadata ) columns
+
+Choices columns have these properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`DefaultFormValue`|Boolean|Default value for the column.|
+|`OptionSet`|Object|Options for the boolean column where each option is a key:value pair.|
+
+#### State (StateAttributeMetadata) columns
+
+State columns have this property:
+
+|Name|Type|Description|
+|---|---|---|
+|`OptionSet`|Object|Options for the column where each option is a key:value pair.|
+
+State columns also have these methods that accept the value of one of the `OptionSet` option values as the `arg` parameter.
+
+|Name|Return Type|Description|
+|---|---|---|
+|`getDefaultStatus(arg)`|Number|Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
+|`getStatusValuesForState(arg)`|Array of numbers|Returns possible status values (array of numbers) for a specified state value. For state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
+
+
+#### Status (StatusAttributeMetadata) columns
+
+Status columns have this property:
+
+|Name|Type|Description|
+|---|---|---|
+|`OptionSet`|Object|Options for the column where each option is a key:value pair.|
+
+Status columns also have this method that accepts the value of one of the `OptionSet` option values as the `arg` parameter.
+
+|Name|Return Type|Description|
+|---|---|---|
+|`getState(arg)`|Number|Returns the state value (number) for the specified status value (number). For default state and status values for a table, see table definitions information of the table in  [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
+
+
+
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

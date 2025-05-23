@@ -1,10 +1,9 @@
 ---
-title: setValue | Microsoft Docs
+title: setValue (Power Apps component framework API reference) | Microsoft Docs
 description: Set value for the column.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -18,7 +17,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
+Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -26,10 +25,10 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description         |
-| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+|Parameter Name |Type| Required | Description|
+|----|----|----|----|
+| `columnName`|`string`| Yes| The logical name of the column.|
+| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
 
@@ -37,9 +36,9 @@ Type: `Promise`
 
 ## Limitations
 
-Canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
+Canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

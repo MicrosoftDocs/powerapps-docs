@@ -1,25 +1,19 @@
 ---
-title: "Sample: Create and retrieve table relationships  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to create and retrieve table relationships." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Create and retrieve table relationships"
+description: This sample shows how to create and retrieve table relationships.
 ms.date: 04/03/2022
-author: NHelgren
-ms.author: nhelgren
-manager: sunilg
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
-# Create and retrieve table relationships
-
-
+# Sample: Create and retrieve table relationships
 
 This sample shows how to create and retrieve table relationships. The following methods are used to create and retrieve the relationships:
 
@@ -30,7 +24,8 @@ This sample shows how to create and retrieve table relationships. The following 
 - [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest)
 - [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateRetrieveEntityRelationships).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateRetrieveEntityRelationships)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -52,15 +47,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `CreateOneToManyRequest` method creates a new One-to-Many (1:N) relationship. 
+1. The `CreateOneToManyRequest` method creates a new One-to-Many (1:N) relationship.
 2. The `CreateManyToManyRequest` method creates a new Many-To-Many (N:N) relationship.
 3. The `EligibleCreateManyToManyRelationship` method verifies whether tables can participate in N:N relationship.
 4. The `RetrieveRelationshipRequest` method retrieves the two tables relationships previously created.
 
-
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

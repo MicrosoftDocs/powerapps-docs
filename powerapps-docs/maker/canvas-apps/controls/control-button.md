@@ -1,21 +1,19 @@
 ---
 title: Button control in Power Apps
 description: Learn about the details, properties and examples of the button control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
 ms.date: 05/23/2025
 ms.subservice: canvas-maker
-ms.author: chmoncay
-ms.reviewer: tapanm
+ms.author: yogupt
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Button control in Power Apps
 A control that the user can click or tap to interact with the app.
@@ -41,7 +39,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**ContentLanguage** - The language of the control's content, if different from the control's container. The value must be written as "en-US" for English or "fr-FR" for French, representing the desired language code.
+**ContentLanguage** -  The language of the control's content, if different from the control's container.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 

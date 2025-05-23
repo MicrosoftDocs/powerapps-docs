@@ -2,7 +2,7 @@
 title: Add pins to 3D objects in your canvas apps
 description: Add pins to 3D objects in canvas apps using Power Apps Studio.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mduelae
 ms.date: 3/3/2022
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -129,7 +127,7 @@ Next, add a button to append the user's data to the pin collection.
 3. Set the button's **Text** property to *Add pin*.
 4. Enter the following code in the button's **OnSelect** property, exactly as shown:
 
-    ```json
+    ```power-fx
     Collect( 
     PinsCollection,
       {
@@ -171,4 +169,3 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 - Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

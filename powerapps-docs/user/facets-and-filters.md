@@ -1,21 +1,18 @@
 ---
 title: "Filter rows with facets| MicrosoftDocs"
 description: How to filter rows by using facets.
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 2/8/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 ---
 
 # Configure facets and filters

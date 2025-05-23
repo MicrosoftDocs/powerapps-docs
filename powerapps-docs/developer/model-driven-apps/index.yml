@@ -6,13 +6,12 @@ summary: Model-driven apps are primarily a no-code or low-code component focused
 metadata:
   title: Model-driven apps developer documentation
   description: Provides access to highlighted areas within the model-driven apps documentation
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: mda-developer
   ms.topic: landing-page 
   ms.collection: collection
-  author: kumarvivek
-  ms.author: kvivek
+  author: JimDaly
+  ms.author: jdaly
   ms.date: 09/03/2019 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -31,7 +30,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Extend model-driven apps using code
-            url: /learn/paths/extend-power-platform-model-driven-app
+            url: /training/paths/extend-power-platform-model-driven-app
 
   # Card
   - title: Customize
@@ -93,7 +92,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Create components with Power Apps Component Framework
-            url: /learn/paths/use-power-apps-component-framework/
+            url: /training/paths/use-power-apps-component-framework/
 
 # Card
   - title: Reference

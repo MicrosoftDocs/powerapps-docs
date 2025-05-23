@@ -4,21 +4,21 @@ description: "This sample shows how to send an email" # 115-145 characters inclu
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Send an email
 
-This sample shows how to send an email using [SendEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SenEmail).
+This sample shows how to send an email using [SendEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Send an email sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SendEmail)
 
 ## How to run this sample
 
@@ -37,7 +37,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 1. The `Contact` method creates a contact to send an email to `(To: column)`.
 1. The `WhoAmIRequest` method gets the current user information to send the email `(From: column)`.
-1. The `ActivityParty`method creates  `To` and `From` activity party for the email.
+1. The `ActivityParty`method creates `To` and `From` activity party for the email.
 1. The `Email` method creates an email message.
 
 ### Demonstrate
@@ -47,6 +47,5 @@ The `SendEmailRequest` method sends an email message created in the [Setup](#set
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,24 +1,20 @@
 ---
-title: "Visualization data description schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart." # 115-145 characters including spaces. This abstract displays in the search result.
-author: mspilde
-ms.author: mspilde
-manager: lwelicki
+title: "Visualization data description schema (model-driven apps)"
+description: "The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart."
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 # Visualization data description schema
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/visualization-data-description-schema -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/visualization-data-description-schema -->
 
 The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart. For more information, see [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md). [!INCLUDE[schema_download](../../includes/schema-download.md)] and see the file `VisualizationDataDescription.xsd` in the folder.  
   
@@ -82,11 +78,13 @@ The following is the schema for the data description XML string for charts in vi
                 use='optional' />  
  </xs:complexType>  
 </xs:schema>  
-```  
-### See also  
- [Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
- [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
- [Sample Charts](sample-charts.md)   
- [Use FetchXML to construct a query](../data-platform/use-fetchxml-construct-query.md)
+```
+
+### See also
+
+[Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
+[Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
+[Sample Charts](sample-charts.md)   
+[Query data using FetchXml](../data-platform/fetchxml/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -4,15 +4,11 @@ description: "Use custom process actions when you want to automate a series of c
 ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: "matp"
-
-ms.topic: "conceptual"
-author: "msftman"
+ms.topic: article
+author: "Mattp123"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 ms.subservice: dataverse-maker
-ms.author: "deonhe"
-manager: "kvivek"
-search.app: 
-  - Flow
+ms.author: "matp"
 search.audienceType: 
   - flowmaker
   - enduser
@@ -23,7 +19,7 @@ search.audienceType:
 Use custom process actions when you want to automate a series of commands in the system. Custom process actions expand the vocabulary available for developers to express business processes. An custom process action uses core verbs provided by the system, such as Create, Update, Delete, and Assign, to create more expressive verbs like Approve, Escalate, Route, or Schedule. If the definition of a business process changes, someone who isn’t a developer can edit the custom process action so the code doesn’t need to be changed.  
 
 > [!NOTE]
-> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use Custom API instead. More information: [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use custom API instead. More information: [Compare Custom Process Action and custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
   
 <a name="create"></a>
 
@@ -156,7 +152,7 @@ Custom process actions have two relevant managed properties
 
 ### Is Customizable
 
-The **Is Customizabl**e managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
+The **Is Customizable** managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
 
 ### Is Custom Processing Step Allowed for Other Publishers
 

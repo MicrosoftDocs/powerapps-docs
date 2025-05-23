@@ -1,17 +1,13 @@
 ---
-title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addGlobalNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addGlobalNotification method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -25,48 +21,24 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>notification</td>
-<td>Object</td>
-<td>Yes</td>
-<td>The notification to add. The object contains the following values:
-<ul>
-<li><b>action</b>: (Optional) Object. Contains the following values:
-<ul>
-<li><b>actionLabel</b>: (Optional) String. The label for the action in the message.</li>
-<li><b>eventHandler</b>: (Optional) Function reference. The function to execute when the action label is clicked.</li>
-</ul>
-<li><b>level</b>: Number. Defines the level of notification. Valid values are:
-<ul><li>1: Success</li>
-<li>2: Error</li>
-<li>3: Warning</li>
-<li>4: Information</li></ul></li>
-<li><b>message</b>: String. The message to display in the notification.</li>
-<li><b>showCloseButton</b>: (Optional) Boolean. Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can't close or dismiss the notification by default.</li>
-<li><b>type</b>: Number. Defines the type of notification. Currently, only a value of 2 is supported, which displays a message bar at the top of the app.</li>
-</ul></td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when notification is displayed. A GUID value is passed to uniquely identify the notification. You can use the GUID value to close or dismiss the notification using the <a href="clearGlobalNotification.md">clearGlobalNotification</a> method.</p>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`notification`|Object|Yes|The notification to add. See [notification parameter](#notification-property)|
+|`successCallback`|Function|No|A function to call when notification is displayed. A GUID value is passed to uniquely identify the notification. You can use the GUID value to close or dismiss the notification using the [clearGlobalNotification method](clearGlobalNotification.md).|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
+
+### notification property
+
+The object contains the following properties:
+
+|Property|Type|Required|Description|
+|---|---|---|---|
+|`action`|Object|No|An object with the following properties: <br />- `actionLabel`(Optional) String. The label for the action in the message.<br />- `eventHandler`: (Optional) Function reference. The function to execute when the action label is clicked.|
+|`level`|Number|Yes|Defines the level of notification. Valid values are:<br />1: Success<br />2: Error<br />3: Warning<br />4: Information|
+|`message`|String|Yes|The message to display in the notification.|
+|`showCloseButton`|Bool|No|Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can't close or dismiss the notification by default.|
+|`type`|Number|Yes|Defines the type of notification. Currently, only a value of 2 is supported, which displays a message bar at the top of the app.|
+
 
 ## Return Value
 
@@ -137,7 +109,7 @@ var myAction =
 {
   actionLabel: "Learn more", 
   eventHandler: function () {
-        Xrm.Navigation.openUrl("https://docs.microsoft.com/powerapps/");
+        Xrm.Navigation.openUrl("https://learn.microsoft.com/powerapps/");
         // perform other operations as required on clicking
     }
 }
@@ -167,7 +139,7 @@ This is how the information notification will appear in the app:
 
 ![Example information notification.](media/add-global-information.png "Example information notification")
 
-### See also
+### Related articles
 
 [clearGlobalNotification](clearGlobalnotification.md)
 

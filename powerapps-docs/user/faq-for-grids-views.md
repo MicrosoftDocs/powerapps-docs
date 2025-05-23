@@ -1,21 +1,17 @@
 ---
 title: Frequently asked questions and known issues about grids and views
 description: Frequently asked questions and known issues about grids and views in Power Apps.
-author: mduelae
-manager: kvivek
+author: smurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 03/09/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # FAQs and known issues about grids and views
@@ -47,6 +43,10 @@ You can add up to 10 levels of related table conditions using the filter editor 
 - The advanced filter option on the Queues table doesn't work and displays this error message: *We are unable to display the filter conditions for this view.*
 
 - Public views that include **Contains data** or **Does not contain data** filters don't appear in the list of saved views in legacy advanced find.
+
+- When you open the **Edit filters** panel on certain Activity tables, you will see a condition filtering tables that are not valid for Unified Client. These conditions may not be a part of the FetchXML of the view.
+
+- When you choose the **Search for rows in a table using advanced filters** option or the **Advanced find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") when working in a  **Dynamics 365 - Custom** app with a [modern, advanced find experience](/power-platform/admin/settings-features) enabled, you might see a loading spinner appear indefinitely.
 
 ## See also
 

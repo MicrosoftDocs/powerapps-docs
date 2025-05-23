@@ -3,18 +3,16 @@ title: Show a list of items in canvas apps
 description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Show a list of items in canvas apps
@@ -26,7 +24,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 - Learn how to [add and configure a control](add-configure-controls.md) in Power Apps.
 
 - Set up the sample data:
-    1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+    1. Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
@@ -89,7 +87,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Sort
         (If
             (IsBlank(TextSearchBox1.Text),

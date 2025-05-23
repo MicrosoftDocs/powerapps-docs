@@ -2,16 +2,12 @@
 title: "Create a custom table using code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Shows how to programmatically create a custom table in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "NHelgren" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.reviewer: pehecke
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -21,13 +17,12 @@ contributors:
 # Create a custom table using code
 
 
-
 This topic shows how to programmatically create a custom user-owned table (entity) called **Bank Account** and add four different types of columns (attributes) to it.  
   
 You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
 > [!NOTE]
-> You won’t be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
+> You won't be able to see the custom table in the application navigation unless the table properties are edited to set the **Areas that display this entity** are set.  
   
 <a name="BKMK_CreateCustomEntity"></a>   
 
@@ -35,7 +30,7 @@ You can also create organization-owned custom tables. More information: [Table o
 
  The following code sample uses the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> to create the table (entity) and the <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata><xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute>.  
   
- The `_customEntityName` value is “new_bankaccount”.  
+ The `_customEntityName` value is "new_bankaccount".  
   
 ```csharp
 CreateEntityRequest createrequest = new CreateEntityRequest
@@ -187,15 +182,12 @@ CreateOneToManyRequest req = new CreateOneToManyRequest()
 _serviceProxy.Execute(req);
 ```
   
-### See also  
- [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)  
- <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>   
- [Customize table definitions](../customize-entity-metadata.md)   
- [Which tables are customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
- [Retrieve, update, and delete table rows](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
- [Create and update a table row than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
- [Create a custom activity](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   
- [Change table icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
- [Change table messages](/dynamics365/customer-engagement/developer/modify-messages-entity)
+### See also
+
+
+<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest><br />
+[Customize table definitions](../customize-entity-metadata.md)<br />
+[Work with table definitions using code](../metadata-services.md)
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

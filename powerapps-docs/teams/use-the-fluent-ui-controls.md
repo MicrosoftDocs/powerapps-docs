@@ -1,16 +1,15 @@
 ---
 title: Use the Fluent UI controls in Power Apps app in Microsoft Teams | Microsoft Docs
 description: Learn about the new Fluent UI Framework controls in Power Apps.
-author: chmoncay
-
-ms.topic: conceptual
+author: clromano
+ms.author: clromano
+ms.topic: article
 ms.custom: 
 ms.date: 05/20/2021
 ms.subservice: teams
-ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Use Fluent UI controls
@@ -66,9 +65,7 @@ search and multiple selections.
 
 ### Description
 
-A **Combo box** control allows a user to search for items to select. The search
-is done server-side on the *SearchField* property, so performance isn't
-affected by large data sources.
+A **Combo box** control allows a user to search for items to select.
 
 Single-select or multiple-select mode is configured via the *SelectMultiple* property.
 
@@ -81,6 +78,12 @@ Single-select or multiple-select mode is configured via the *SelectMultiple* pro
 *SelectMultiple* – Whether the user can select a single item or multiple items.
 
 *IsSearchable* – Whether the user can search for items before selecting.
+
+### Limitations
+
+1. The list of Options doesn't support Data Paging. It's limited to show the first 500 records.
+
+1. Filtering the list of Options by typing in the Text Box area of the Control works inside the browser, not on the Server. This, coupled with the previous limitation, means that Filtering will not match any Option(s) beyond the first 500 entries, even when the Text matches.
 
 ## Date picker
 

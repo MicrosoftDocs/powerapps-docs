@@ -1,37 +1,31 @@
 ---
-title: Customize sample apps installed from teams store | Microsoft Docs
-description: Learn how to customize sample apps installed from teams store.
+title: Customize sample app templates  | Microsoft Docs
+description: Learn how to customize sample app templates.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 12/14/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ---
 
-# Customize sample apps installed from Teams store
+# Customize sample app templates 
 
-In this article, you'll learn about customizing sample apps installed from the Teams store. For example, you may need to change the company logo, update the data inside the sample apps to fit your business requirement, add or remove controls on the screens to extend the app.
+In this article, you'll learn about customizing sample app templates. For example, you may need to change the company logo, update the data inside the sample app templates to fit your business requirement, add or remove controls on the screens to extend the app.
 
 ## Prerequisites
 
-Before using this app:
-
-1. Find the app in the Microsoft Teams store.
-1. Install the app.
-1. Set up the app for the first use.
-
-For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
+Install a sample app template. More details: [Use sample app templates in Microsoft Teams](use-sample-apps.md).
 
 > [!NOTE]
-> - Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
-> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample apps to understand the impact of new releases to the sample app versions.
+> - Sections of this article uses one of the available sample app templates as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Read [Sample app template updates](use-sample-apps.md#sample-app-template-updates) before you customize sample app templates to understand the impact of new releases to the sample app template versions.
 
-## Open the sample app in Power Apps Studio
+## Open the sample app templates in Power Apps Studio
 
-To start with customizing the sample apps, the first step is to open the app inside Power Apps Studio.
+To start with customizing the sample app templates, the first step is to open the app inside Power Apps Studio.
 
 1. Sign in to Teams.
 
@@ -43,11 +37,11 @@ To start with customizing the sample apps, the first step is to open the app ins
 
 1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
-1. Select the team environment where you installed the sample app.
+1. Select the team environment where you installed the sample app template.
 
 1. Select **Installed apps**.
 
-1. Select the sample app that you installed.
+1. Select the sample app template that you installed.
 
 1. If prompted, select the location.
 
@@ -55,19 +49,11 @@ More information: [Edit an app in Power Apps Studio](manage-your-apps.md#edit-an
 
 ## Remove sample data
 
-When you install sample apps, the tables are pre-populated with sample data. The following table lists the sample apps and the list of tables with the sample data to be removed:
+When you install sample app templates, the tables might be pre-populated with sample data. The following table lists the sample app templates and the list of tables with the sample data to be removed:
 
-| Sample app | Tables |
-| - | - |
-| [Bulletins](bulletins.md) | Bulletins <br> Bulletin Bookmarks <br> Bulletin Categories <br> Bulletin Contacts <br> Bulletin FAQs <br> Bulletin FAQ Categories <br> Bulletin Links <br> Bulletin Link Categories <br> Bulletin Read Receipts
-| [Employee ideas](employee-ideas.md) | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
-| [Inspection](inspection.md) |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
-| [Issue reporting](issue-reporting.md) | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
-| [Milestones](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
+To remove data from the sample app templates:
 
-To remove data from the sample apps:
-
-1. Open the sample app (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -85,7 +71,7 @@ To remove data from the sample apps:
 
 ## Add your logo to the loading screen
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -113,13 +99,13 @@ To remove data from the sample apps:
 > The Inspection app welcome screen greeting text uses a formula containing global
 variables to correctly display the desired terminology for inspections and items being inspected. Use caution when changing this formula.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select the text label control with the greeting text **Glad to have you here**.
 
     The formula for the greeting text is in this format:
 
-    ```powerapps-dot
+    ```power-fx
     "Glad to have you here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
     Left(
         Lower(areaLabel),
@@ -145,7 +131,7 @@ variables to correctly display the desired terminology for inspections and items
 
 1. Update the greeting text, such as **We are happy that you are here**.
 
-    ```powerapps-dot
+    ```power-fx
     "We are happy that you are here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
     Left(
         Lower(areaLabel),
@@ -173,7 +159,7 @@ variables to correctly display the desired terminology for inspections and items
 > The Inspection app leverages global theme variables to ensure consistent
 user experience. If you modify a screen fill, the modified screen will no longer use the standard app theme.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -192,9 +178,9 @@ user experience. If you modify a screen fill, the modified screen will no longer
 If you want to quickly edit the data in the app, you can open the table and modify or delete data.
 
 > [!CAUTION]
-> Sample apps uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
+> Sample app templates uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -219,7 +205,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 ### Add Store Name text column to the Location table
 
-1. Open the **Manage inspections** app in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the **Manage inspections** app in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -297,13 +283,13 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. At the end of the 17th line, add a comma and this formula:
 
-    ```powerapps-dot
+    ```power-fx
     'Store Name':Microsoft_CoreControls_TextBox1.Value
     ```
 
     This section of the formula should now look like the following:
 
-    ```powerapps-dot
+    ```power-fx
     {
     	msft_name: txtArea_EditTitle.Text,
     	'Location Type': cmbAreaDetails_AreaType.Selected,
@@ -322,7 +308,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblEditLocation,250,200)
     ```    
 
@@ -334,7 +320,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblEditLocation,282,232)
     ```    
 
@@ -346,7 +332,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Change the formula to: 
 
-    ```powerapps-dot
+    ```power-fx
     If(gblViewInspection, false, true)
     ```
 
@@ -366,19 +352,5 @@ To save and publish the changes to the sample app:
 To add published version of an app to a new tab in a different channel, Select ![Add a tab.](media/publish-app-9.png) (Add a tab) for the channel you want, and then select **Save + close**.
 
 More information: [Publish and add an app to Teams](publish-and-share-apps.md)
-
-### See also
-
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

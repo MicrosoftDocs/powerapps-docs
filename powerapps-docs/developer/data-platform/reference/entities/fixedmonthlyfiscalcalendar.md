@@ -1,55 +1,49 @@
 ---
-title: "FixedMonthlyFiscalCalendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the FixedMonthlyFiscalCalendar table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# FixedMonthlyFiscalCalendar table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar) table/entity reference (Microsoft Dataverse)
 
 Fixed monthly fiscal calendar of an organization. A span of time during which the financial activities of an organization are calculated.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /fixedmonthlyfiscalcalendars<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /fixedmonthlyfiscalcalendars<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: False |`PATCH` /fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|FixedMonthlyFiscalCalendars|
-|DisplayCollectionName|Fixed Monthly Fiscal Calendars|
-|DisplayName|Fixed Monthly Fiscal Calendar|
-|EntitySetName|fixedmonthlyfiscalcalendars|
-|IsBPFEntity|False|
-|LogicalCollectionName|fixedmonthlyfiscalcalendars|
-|LogicalName|fixedmonthlyfiscalcalendar|
-|OwnershipType|None|
-|PrimaryIdAttribute|userfiscalcalendarid|
-|PrimaryNameAttribute||
-|SchemaName|FixedMonthlyFiscalCalendar|
+The following table lists selected properties for the Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Fixed Monthly Fiscal Calendar** |
+| **DisplayCollectionName** | **Fixed Monthly Fiscal Calendars** |
+| **SchemaName** | `FixedMonthlyFiscalCalendar` |
+| **CollectionSchemaName** | `FixedMonthlyFiscalCalendars` |
+| **EntitySetName** | `fixedmonthlyfiscalcalendars`|
+| **LogicalName** | `fixedmonthlyfiscalcalendar` |
+| **LogicalCollectionName** | `fixedmonthlyfiscalcalendars` |
+| **PrimaryIdAttribute** | `userfiscalcalendarid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -75,343 +69,337 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UserFiscalCalendarId](#BKMK_UserFiscalCalendarId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_EffectiveOn"></a> EffectiveOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the fixed monthly fiscal calendar sales quota takes effect.|
+|---|---|
+|Description|**Date and time when the fixed monthly fiscal calendar sales quota takes effect.**|
 |DisplayName||
-|Format|DateOnly|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|effectiveon|
+|LogicalName|`effectiveon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_Period1"></a> Period1
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the first period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the first period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period1|
+|LogicalName|`period1`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period10"></a> Period10
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the tenth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the tenth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period10|
+|LogicalName|`period10`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period11"></a> Period11
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the eleventh period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the eleventh period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period11|
+|LogicalName|`period11`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period12"></a> Period12
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the twelfth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the twelfth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period12|
+|LogicalName|`period12`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period13"></a> Period13
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the thirteenth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the thirteenth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period13|
+|LogicalName|`period13`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period2"></a> Period2
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the second period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the second period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period2|
+|LogicalName|`period2`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period3"></a> Period3
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the third period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the third period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period3|
+|LogicalName|`period3`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period4"></a> Period4
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the fourth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the fourth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period4|
+|LogicalName|`period4`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period5"></a> Period5
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the fifth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the fifth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period5|
+|LogicalName|`period5`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period6"></a> Period6
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the sixth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the sixth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period6|
+|LogicalName|`period6`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period7"></a> Period7
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the seventh period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the seventh period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period7|
+|LogicalName|`period7`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period8"></a> Period8
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the eighth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the eighth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period8|
+|LogicalName|`period8`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period9"></a> Period9
 
 |Property|Value|
-|--------|-----|
-|Description|Sales quota for the ninth period in the fiscal year.|
+|---|---|
+|Description|**Sales quota for the ninth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|period9|
+|LogicalName|`period9`|
+|RequiredLevel|SystemRequired|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|False|
 |MaxValue|100000000000|
 |MinValue|0|
 |Precision|2|
-|PrecisionSource|2|
-|RequiredLevel|SystemRequired|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_SalesPersonId"></a> SalesPersonId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated salesperson.|
+|---|---|
+|Description|**Unique identifier of the associated salesperson.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|salespersonid|
+|LogicalName|`salespersonid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
+|---|---|
+|Description|**For internal use only.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the currency associated with the fixed monthly fiscal calendar.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Unique identifier of the currency associated with the fixed monthly fiscal calendar.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_UserFiscalCalendarId"></a> UserFiscalCalendarId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user of the fiscal calendar.|
+|---|---|
+|Description|**Unique identifier of the user of the fiscal calendar.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|userfiscalcalendarid|
+|LogicalName|`userfiscalcalendarid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [BusinessUnitId](#BKMK_BusinessUnitId)
-- [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [FiscalPeriodType](#BKMK_FiscalPeriodType)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [Period1_Base](#BKMK_Period1_Base)
 - [Period10_Base](#BKMK_Period10_Base)
 - [Period11_Base](#BKMK_Period11_Base)
@@ -425,634 +413,496 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [Period7_Base](#BKMK_Period7_Base)
 - [Period8_Base](#BKMK_Period8_Base)
 - [Period9_Base](#BKMK_Period9_Base)
-- [SalesPersonIdName](#BKMK_SalesPersonIdName)
-- [SalesPersonIdYomiName](#BKMK_SalesPersonIdYomiName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
-
 
 ### <a name="BKMK_BusinessUnitId"></a> BusinessUnitId
 
 |Property|Value|
-|--------|-----|
-|Description|Business unit responsible for the quota associated with this calendar.|
-|DisplayName|Business Unit|
+|---|---|
+|Description|**Business unit responsible for the quota associated with this calendar.**|
+|DisplayName|**Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|businessunitid|
+|LogicalName|`businessunitid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_BusinessUnitIdName"></a> BusinessUnitIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|businessunitidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the fiscal calendar.|
+|---|---|
+|Description|**Unique identifier of the user who created the fiscal calendar.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the quota for the fixed monthly fiscal calendar was created.|
+|---|---|
+|Description|**Date and time when the quota for the fixed monthly fiscal calendar was created.**|
 |DisplayName||
-|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the fixedmonthlyfiscalcalendar.|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the fixedmonthlyfiscalcalendar.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the fixed monthly fiscal calendar with respect to the base currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Exchange rate for the currency associated with the fixed monthly fiscal calendar with respect to the base currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_FiscalPeriodType"></a> FiscalPeriodType
 
 |Property|Value|
-|--------|-----|
-|Description|Type of fiscal period used in the fixed monthly fiscal calendar sales quota.|
+|---|---|
+|Description|**Type of fiscal period used in the fixed monthly fiscal calendar sales quota.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|fiscalperiodtype|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`fiscalperiodtype`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the fixed monthly fiscal calendar.|
+|---|---|
+|Description|**Unique identifier of the user who last modified the fixed monthly fiscal calendar.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the fixed monthly fiscal calendar was last modified.|
+|---|---|
+|Description|**Date and time when the fixed monthly fiscal calendar was last modified.**|
 |DisplayName||
-|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the fixedmonthlyfiscalcalendar.|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the fixedmonthlyfiscalcalendar.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_Period1_Base"></a> Period1_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the first period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the first period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period1_base|
+|LogicalName|`period1_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period10_Base"></a> Period10_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the tenth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the tenth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period10_base|
+|LogicalName|`period10_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period11_Base"></a> Period11_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the eleventh period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the eleventh period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period11_base|
+|LogicalName|`period11_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period12_Base"></a> Period12_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the twelfth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the twelfth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period12_base|
+|LogicalName|`period12_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period13_Base"></a> Period13_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the thirteenth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the thirteenth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period13_base|
+|LogicalName|`period13_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period2_Base"></a> Period2_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the second period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the second period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period2_base|
+|LogicalName|`period2_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period3_Base"></a> Period3_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the third period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the third period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period3_base|
+|LogicalName|`period3_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period4_Base"></a> Period4_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the fourth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the fourth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period4_base|
+|LogicalName|`period4_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period5_Base"></a> Period5_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the fifth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the fifth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period5_base|
+|LogicalName|`period5_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period6_Base"></a> Period6_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the sixth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the sixth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period6_base|
+|LogicalName|`period6_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period7_Base"></a> Period7_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the seventh period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the seventh period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period7_base|
+|LogicalName|`period7_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period8_Base"></a> Period8_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the eighth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the eighth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period8_base|
+|LogicalName|`period8_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
-
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
 ### <a name="BKMK_Period9_Base"></a> Period9_Base
 
 |Property|Value|
-|--------|-----|
-|Description|Base currency equivalent of the sales quota for the ninth period in the fiscal year.|
+|---|---|
+|Description|**Base currency equivalent of the sales quota for the ninth period in the fiscal year.**|
 |DisplayName||
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|period9_base|
+|LogicalName|`period9_base`|
+|RequiredLevel|None|
+|Type|Money|
+|ImeMode|Disabled|
+|IsBaseCurrency|True|
 |MaxValue|922337203685477|
 |MinValue|-922337203685477|
 |Precision|4|
-|PrecisionSource|2|
-|RequiredLevel|None|
-|Type|Money|
+|PrecisionSource|2 (TransactionCurrency.CurrencyPrecision)|
 
+## Many-to-One relationships
 
-### <a name="BKMK_SalesPersonIdName"></a> SalesPersonIdName
+These relationships are many-to-one. Listed by **SchemaName**.
 
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|salespersonidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
+- [lk_fixedmonthlyfiscalcalendar_createdby](#BKMK_lk_fixedmonthlyfiscalcalendar_createdby)
+- [lk_fixedmonthlyfiscalcalendar_createdonbehalfby](#BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby)
+- [lk_fixedmonthlyfiscalcalendar_modifiedby](#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby)
+- [lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby](#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby)
+- [lk_fixedmonthlyfiscalcalendar_salespersonid](#BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid)
+- [transactioncurrency_fixedmonthlyfiscalcalendar](#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
 
+### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_createdby"></a> lk_fixedmonthlyfiscalcalendar_createdby
 
-### <a name="BKMK_SalesPersonIdYomiName"></a> SalesPersonIdYomiName
+One-To-Many Relationship: [systemuser lk_fixedmonthlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_createdby)
 
 |Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|salespersonidyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby"></a> lk_fixedmonthlyfiscalcalendar_createdonbehalfby
 
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
+One-To-Many Relationship: [systemuser lk_fixedmonthlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby)
 
 |Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-<a name="onetomany"></a>
+### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby"></a> lk_fixedmonthlyfiscalcalendar_modifiedby
 
-## One-To-Many Relationships
+One-To-Many Relationship: [systemuser lk_fixedmonthlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby)
 
-Listed by **SchemaName**.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby"></a> lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid"></a> lk_fixedmonthlyfiscalcalendar_salespersonid
+
+One-To-Many Relationship: [systemuser lk_fixedmonthlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`salespersonid`|
+|ReferencingEntityNavigationPropertyName|`salespersonid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_transactioncurrency_fixedmonthlyfiscalcalendar"></a> transactioncurrency_fixedmonthlyfiscalcalendar
+
+One-To-Many Relationship: [transactioncurrency transactioncurrency_fixedmonthlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
 
 - [FixedMonthlyFiscalCalendar_AsyncOperations](#BKMK_FixedMonthlyFiscalCalendar_AsyncOperations)
 - [FixedMonthlyFiscalCalendar_BulkDeleteFailures](#BKMK_FixedMonthlyFiscalCalendar_BulkDeleteFailures)
 
-
 ### <a name="BKMK_FixedMonthlyFiscalCalendar_AsyncOperations"></a> FixedMonthlyFiscalCalendar_AsyncOperations
 
-Same as the [FixedMonthlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_FixedMonthlyFiscalCalendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Many-To-One Relationship: [asyncoperation FixedMonthlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_FixedMonthlyFiscalCalendar_AsyncOperations)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|FixedMonthlyFiscalCalendar_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`FixedMonthlyFiscalCalendar_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_FixedMonthlyFiscalCalendar_BulkDeleteFailures"></a> FixedMonthlyFiscalCalendar_BulkDeleteFailures
 
-Same as the [FixedMonthlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_FixedMonthlyFiscalCalendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Many-To-One Relationship: [bulkdeletefailure FixedMonthlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_FixedMonthlyFiscalCalendar_BulkDeleteFailures)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|FixedMonthlyFiscalCalendar_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [transactioncurrency_fixedmonthlyfiscalcalendar](#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar)
-- [lk_fixedmonthlyfiscalcalendar_salespersonid](#BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid)
-- [lk_fixedmonthlyfiscalcalendar_modifiedby](#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby)
-- [lk_fixedmonthlyfiscalcalendar_createdby](#BKMK_lk_fixedmonthlyfiscalcalendar_createdby)
-- [lk_fixedmonthlyfiscalcalendar_createdonbehalfby](#BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby)
-- [lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby](#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby)
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`FixedMonthlyFiscalCalendar_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
-### <a name="BKMK_transactioncurrency_fixedmonthlyfiscalcalendar"></a> transactioncurrency_fixedmonthlyfiscalcalendar
-
-See the [transactioncurrency_fixedmonthlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_fixedmonthlyfiscalcalendar) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid"></a> lk_fixedmonthlyfiscalcalendar_salespersonid
-
-See the [lk_fixedmonthlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_salespersonid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby"></a> lk_fixedmonthlyfiscalcalendar_modifiedby
-
-See the [lk_fixedmonthlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_createdby"></a> lk_fixedmonthlyfiscalcalendar_createdby
-
-See the [lk_fixedmonthlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby"></a> lk_fixedmonthlyfiscalcalendar_createdonbehalfby
-
-See the [lk_fixedmonthlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby"></a> lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby
-
-See the [lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar?text=fixedmonthlyfiscalcalendar EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar?displayProperty=fullName>

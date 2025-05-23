@@ -1,10 +1,9 @@
 ---
-title: hasEntityPrivilege | Microsoft Docs
+title: hasEntityPrivilege (Power Apps component framework API reference) | Microsoft Docs
 description: Returns if the user has privilege for specific table.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+author: anuitz
+ms.author: anuitz
+ms.date: 06/25/2024
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -36,7 +35,16 @@ Model-driven apps
 
 **Type**: `boolean`
 
-### Related topics
+## Remarks
+
+This function might return false if the table metadata isn't locally cached. To ensure the table metadata is available in the local cache, call and await on [getEntityMetadata](getentitymetadata.md) before calling `hasEntityPrivilege`.
+
+```TypeScript
+await context.utils.getEntityMetadata(entityTypeName);
+context.utils.hasEntityPrivilege(entityTypeName, privilegeType, privilegeDepth);
+```
+
+### Related articles
 
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

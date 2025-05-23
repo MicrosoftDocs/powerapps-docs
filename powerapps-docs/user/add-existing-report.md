@@ -1,22 +1,17 @@
 ---
 title: Add a report from outside Power Apps| Microsoft Docs
-description: Add a report from outside Power Apps
-author: mduelae
-manager: kvivek
-
+description: Add a report from outside Power Apps.
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 06/27/2019
+ms.topic: how-to
+ms.date: 09/07/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a report from outside Power Apps
 
@@ -25,7 +20,7 @@ If you’ve created a custom report outside of the system, you can easily add it
 For information about how to create a custom report, see [Reporting and Analytics Guide](/dynamics365/customer-engagement/analytics/get-started-writing-reports).
 
 1. From the left navigation pane, select the reports area. 
-2. On the command bar select **New**.
+2. On the command bar, select **New**.
   
    **Add a file created in another application**  
   
@@ -36,8 +31,11 @@ For information about how to create a custom report, see [Reporting and Analytic
   
    2. In the **File Location** box, enter the path and file name of the file to add, or choose **Browse** to locate the file. 
    
-      You can can upload many other file types such as an excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
+      You can upload many other file types such as an Excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
   
+      > [!NOTE]
+      > The maximum size of the report file is determined by the **Maximum file size for attachments** setting in the [Email settings environment setting](/power-platform/admin/settings-email). However, a report definition file (.RDL) can’t be more than 4 MB in size, even if the maximum file size for attachments setting is larger than 4 MB.
+      
       -OR  
   
    **Add a link to a webpage**  

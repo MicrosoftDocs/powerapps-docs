@@ -1,19 +1,14 @@
 ---
 title: "Calendar tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can store data for customer service calendars and holiday schedules using calendar tables." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 05/04/2021
-ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.reviewer: pehecke
+ms.topic: article
 author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Calendar tables
 
@@ -33,10 +28,10 @@ A calendar describes the availability of a service or a resource. Calendars are 
   
  A calendar can be a complex tree of rules and nested calendars that represent a high-level abstraction of the work schedule. The calendar table supports the <xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest> message to convert to a simple view, which is an array of time blocks that determine availability over specific ranges.  
   
-### See also  
- [Types of calendars](types-calendars.md)  
-  
- [Calendar table](/reference/entities/calendar.md)  
+### See also
+
+[Types of calendars](types-calendars.md)<br />
+[Calendar table/entity reference](reference/entities/calendar.md)
 
 
 

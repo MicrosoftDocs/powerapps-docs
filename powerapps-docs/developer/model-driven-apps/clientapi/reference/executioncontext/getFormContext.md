@@ -1,18 +1,14 @@
 ---
-title: "getFormContext (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getFormContext (Client API reference) in model-driven apps"
 description: "Learn about the getFormContext method that returns a reference to the form or an item on the form depending on where the method was called." 
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -47,7 +43,7 @@ function commonEventHandler(executionContext) {
     var telephoneField = telephoneAttr.controls.get(0);
 
     if (!isNumberWithCountryCode) {
-        telephoneField.setNotification('Please include the country code beginning with ‘+’.', 'countryCodeNotification');
+        telephoneField.setNotification('Please include the country code beginning with '+'.', 'countryCodeNotification');
     }
     else {
         telephoneField.clearNotification('countryCodeNotification');
@@ -56,15 +52,9 @@ function commonEventHandler(executionContext) {
 ```
 
 
-### Related topics
-[Execution context](../execution-context.md)
+### Related articles
 
+[Execution context](../execution-context.md)   
 [Form context](../../clientapi-form-context.md)
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

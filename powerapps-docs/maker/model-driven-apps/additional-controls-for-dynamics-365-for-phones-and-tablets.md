@@ -2,7 +2,7 @@
 title: "List of controls available for model-driven apps | MicrosoftDocs"
 description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
-ms.date: 06/24/2022
+ms.date: 08/08/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,32 +18,29 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # List of controls available for model-driven apps
 
 Controls allow app users to visualize data within table columns in addition to enabling interaction with them.
 
-Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.  
+Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.
+
+Most controls are configured for a table column, but some controls, like the grid controls can be configured for the table.
 
 ## Using controls in the form designer
 
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu and select **tables**
+1. Select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
-   
-1. Select the **section** you would like to add the control to.  
- 
-1. Select **+ Component** to display the available controls, and then select the control required.  
+1. Select the column or section where you want to add the control.
+
+1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
-    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.  
-    >  Some controls are only available in the classic forms editor interface.  To access these you must **switch to classic** from the menu at the top.
+    >  Different controls are available depending on the column or grid type. For example, star rating controls are only available for whole number columns.
   
 1. Select the devices (web, tablet, and phone) you want the control to appear on.  
   
@@ -55,14 +52,30 @@ Following are descriptions for each control you can use on forms.
 
 ## Grid controls
 
+Grid controls can be configured at the following levels: 
+- Table. When a grid control is configured for a table, all views for the table will use the grid control. More information: [Configure a grid control for a table](#configure-a-grid-control-for-a-table)
+- Form. Subgrids added to a form use a grid control to control the behavior of the subgrid.
+
 ### Subgrid
 
-A subgrid allows you to present a view of data related to the current record.  
-By default it is simply a view, however it can be made editable by configuring the control. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+The read-only subgrid allows you to present a view of data related to the current record where users can view and open the record from within the grid. More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
 
 ### Editable grid
 
-With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+With editable grids, users can do rich in-line editing of records directly from views and subgrids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
+
+### Power Apps grid control
+
+The Power Apps grid control represents the next evolution of the Power Apps grid control, allowing users to view, open, and edit records from views and subgrids. By default, the Power Apps grid control is read-only but you can configure it to be editable.
+
+More information: [Power Apps grid control](the-power-apps-grid-control.md)
+
+### Configure a grid control for a table
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, and then select the table you want, such as the account table.
+1. Select the **Controls** tab, and then select the grid you want for the table.
+1. Depending on the grid control, specify the values you want, **Save** and then **Publish** the customization.
 
 ## Display controls
 
@@ -134,17 +147,6 @@ Provide a timeline of recent, relevant news articles and Twitter tweets for an a
 Let's the user to choose between binary values by checking or clearing a check box. It can be configured with yes/no choice columns.
 :::image type="content" source="media/checkbox-control.png" alt-text="Checkbox control at runtime on a main form.":::
 
-### Number input
-
-Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
-
-:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app.":::
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-|Column|Shows the column the control is mapped to.|  
-
 ### Option set
 
  The option set control presents a set of choices for your users to choose from when entering data. It is made available by default when introducing a choice column into a form.
@@ -168,19 +170,6 @@ Use the pen input control to capture written input such as signatures. The pen i
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. It can be configured with text columns. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
 
-### Star rating
-
-Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
-
-:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
-  
-> [!NOTE]
->  Be sure to select the **Hide on web** option for this control.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Select the maximum number of stars for the control from the dropdown list.|  
-
 ### Toggle
 
 The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. It can be configured with yes/no choice columns.
@@ -193,27 +182,54 @@ The toggle control allows users to choose between binary values, such as on/off 
 
 Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
 
+## Power BI
+
+### Power BI report
+
+Embed a Power BI report in a model-driven app dashboard. More information: [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
+
 ## More components controls
 
 Some components aren't displayed in the default **Components** list in the form designer but can be added to the list by selecting [Get more components](add-move-configure-or-delete-components-on-form.md#get-more-components).
-
-### Input mask
-
-With the input mask control, you set the formatting for a column like phone number or credit card to prevent entering invalid data. For example, if you want users to enter a United States phone number in the format +1-222-555-1011, use the input mask +1-000-000-0000.  
-
-> [!NOTE]
->  This only sets formatting to a single line text column.  It does not contain virtual actions like phone calling.  If these actions are required, continue to use the default control.
-
-|Property|Description|  
-|--------------|-----------------|  
-|Mask|Enter the mask to use for validating data as users enter it. You can use a combination of the following characters for the mask:<br /><br /> 0 – Digit<br /><br /> 9 – Digit or space<br /><br /> # – Digit, sign, or space<br /><br /> L – Letter<br /><br /> I – Letter or space<br /><br /> A – Alphanumeric<br /><br /> A – Alphanumeric or space<br /><br /> < – Converts characters that follow to lower case<br /><br /> > – Converts characters that follow to upper case<br /><br /> &#124; – Disables case conversion<br /><br /> \ – Escapes any character, turning it into a literal<br /><br /> All others – Literals|  
-|Column|Shows the column the control is mapped to.|  
 
 ### Form component
 
 The form component control lets users edit information of a related table record directly from another table’s form. For example, here's the form component on a separate tab on the main account form, which lets the user edit a contact record without leaving the account form. More information: [Edit related table records directly from another table’s main form](form-component-control.md)
 
+### Collaboration controls
+
+Collaboration controls give you the power to simplify your user’s workflow collaboration. Build model-driven apps that allow users to work with approvals, files, meetings, notes, and tasks from Microsoft 365 and Microsoft Teams without switching the context from app to app. More information: [Collaboration controls](/microsoftteams/platform/samples/collaboration-control)
+
 ## Legacy controls
+
+### Timer control
+
+The timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
+
+### News control
+
+Only available in classic.
+
+Gain valuable insights from the latest news about your customers, competitors, and contacts. The news control delivers relevant news from Bing News. More information: [Set up and use the news control](stay-current-with-news-control.md)
+
+
+## Deprecated controls
+
+### Arc knob
+
+Only available in classic.
+
+The arc knob provides a way for users to enter data by sliding the knob, and shows up on the screen as an arc. The arc knob control provides whole number input and display only. Use this control for any numerical and money columns. You can use touch to change the value, you can also focus on the number and edit it using the keypad.  
+  
+> [!IMPORTANT]
+> - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
+  
+|Property|Description|  
+|--------------|-----------------|  
+|Max|Set the maximum value to display on the gauge.|  
+|Min|Set the minimum value to display on the gauge.|  
+|Value|Get or set the value to display on the gauge.|  
+|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
 
 ### Auto-complete
 
@@ -233,6 +249,22 @@ The auto-complete control filters an item list as you type and lets you select a
 
 The flip switch is like an on/off switch, providing a choice between two values.
   
+### Linear gauge
+
+Only available in classic.
+
+The linear gauge lets your users input numerical values by dragging a slider instead of typing in the exact quantity. The slider provides whole number input and display only. Use this control for any numerical and money columns.  
+  
+> [!IMPORTANT]
+> This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+
+|Property|Description|  
+|--------------|-----------------|  
+|Max|Set the maximum value to display on the gauge.|  
+|Min|Set the minimum value to display on the gauge.|  
+|Value|Get or set the value to display on the gauge.|  
+|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
+
 ### Multimedia  
 
 Only available in classic.
@@ -259,51 +291,36 @@ You can embed videos to provide a richer customer experience for sales and peopl
 |Property|Description|  
 |--------------|-----------------|  
 |Media|Enter the URL of the media to play in this control.|  
+
+### Number input
+
+Use the number input control to help users enter data quickly. Users only have to tap the plus and minus buttons to change a numeric value in increments you set. Use this control for any numerical or money column. Users can also type a number directly into the column. This column is only supported in edit mode.  
+
+:::image type="content" source="media/number-input-control-example.png" alt-text="Example of the number input control in a model-driven app.":::
   
-### Linear gauge
-
-Only available in classic.
-
-The linear gauge lets your users input numerical values by dragging a slider instead of typing in the exact quantity. The slider provides whole number input and display only. Use this control for any numerical and money columns.  
-  
-> [!IMPORTANT]
-> This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
-
 |Property|Description|  
 |--------------|-----------------|  
-|Max|Set the maximum value to display on the gauge.|  
-|Min|Set the minimum value to display on the gauge.|  
-|Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-  
-### Arc knob
+|Column|Shows the column the control is mapped to.|  
 
-Only available in classic.
 
-The arc knob provides a way for users to enter data by sliding the knob, and shows up on the screen as an arc. The arc knob control provides whole number input and display only. Use this control for any numerical and money columns. You can use touch to change the value, you can also focus on the number and edit it using the keypad.  
-  
-> [!IMPORTANT]
+  ### Star rating
+
+Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
+
+:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
+
+  > [!IMPORTANT]
 > - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
-> - This control isn’t supported on Android 4.2 and 4.3 devices. It impacts the scrolling experience on those versions.  
+> - Be sure to select the **Hide on web** option for this control.  
   
 |Property|Description|  
 |--------------|-----------------|  
-|Max|Set the maximum value to display on the gauge.|  
-|Min|Set the minimum value to display on the gauge.|  
-|Value|Get or set the value to display on the gauge.|  
-|Step|Set the amount to add or subtract from the current value when entering data with this control.|  
+|Max|Select the maximum number of stars for the control from the dropdown list.| 
 
-### Timer control
-
-The timer control shows your users how much time is available to complete an action in the resolution of an active row or how much time has passed since the time to complete the action has passed. More information: [Model-driven app timer control overview](timer-control-legacy.md)
-
-### News control
-
-Only available in classic.
-
-Gain valuable insights from the latest news about your customers, competitors, and contacts. The news control delivers relevant news from Bing News. More information: [Set up and use the news control](stay-current-with-news-control.md)
 
 ## Next steps
+
 [Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
 
 

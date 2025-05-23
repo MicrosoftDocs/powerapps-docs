@@ -1,28 +1,23 @@
 ---
 title: "Visualize your data in a view quickly with Power BI service| MicrosoftDocs"
 description: Visualize your data in a view quickly with Power BI service.
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 11/15/2021
+ms.topic: how-to
+ms.date: 10/19/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- RichdiMSFT 
 ---
 
-# Visualize data in a view with Power BI service (preview)
-
-
-[This topic is pre-release documentation and is subject to change.]
+# Visualize data in a view with Power BI service
 
 Create reports in the Power BI service using the data that's in a view of your model-driven app. Power BI automatically generates the visuals for you, so you can start exploring the data with just a few clicks.
 
@@ -31,7 +26,7 @@ If you're new to Power BI reports and need more information, see [Reports in Po
 If you're using Power BI Desktop, you can also [create a report using data from Dataverse in Power BI Desktop](/powerapps/maker/data-platform/data-platform-powerbi-connector).
 
 > [!NOTE]
-> Your administrator needs to turn on the **Enable Power BI quick report visualization on a table (Preview)** feature setting, to use the capabilities that are covered in this topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
+> Your administrator needs to turn on the **Enable Power BI quick report visualization on a table** feature setting, to use the capabilities that are covered in this topic. For more information, see [Manage feature settings](/power-platform/admin/settings-features).
 
    > [!div class="mx-imgBorder"]
    > ![Enabled Power BI report visualization on a table](media/powerbi-image1.png)
@@ -61,8 +56,10 @@ Anyone can use the **Visualize this view** feature to explore the data in a vie
 
 ## Known issues and limitations
 
-1. The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
+- The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
 
-2. Columns are indicated by their logical names rather than the display name. We're working on updating this experience, so the columns' display names are in the Power BI report.
+- This feature isn't supported for the **Activities** table due to a limitation in generating charts.
 
-3. This feature isn't supported for guest users in a tenant.
+- This feature isn't supported for guest users in a tenant.
+
+- If you're building your app for mobile, Power BI dashboards aren't a recommended choice to visualize data. Power BI dashboards are suited for larger screens, and the small screens and form factor of mobile devices can cause usability issues with scroll bars, filters, and more.

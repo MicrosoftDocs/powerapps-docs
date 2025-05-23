@@ -1,59 +1,55 @@
 ---
-title: "ApplicationUser table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the ApplicationUser table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "ApplicationUser table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the ApplicationUser table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# ApplicationUser table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# ApplicationUser table/entity reference (Microsoft Dataverse)
 
 Application User that has non-interactive access to the CDS system
 
-**Added by**: ApplicationUserSolution Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/applicationusers<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/applicationusers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/applicationusers(*applicationuserid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the ApplicationUser table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /applicationusers<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /applicationusers(*applicationuserid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `Retrieve`<br />Event: True |`GET` /applicationusers(*applicationuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /applicationusers<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /applicationusers(*applicationuserid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /applicationusers(*applicationuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /applicationusers(*applicationuserid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ApplicationUsers|
-|DisplayCollectionName|ApplicationUsers|
-|DisplayName|ApplicationUser|
-|EntitySetName|applicationusers|
-|IsBPFEntity|False|
-|LogicalCollectionName|applicationusers|
-|LogicalName|applicationuser|
-|OwnershipType|BusinessOwned|
-|PrimaryIdAttribute|applicationuserid|
-|PrimaryNameAttribute|applicationname|
-|SchemaName|ApplicationUser|
+The following table lists selected properties for the ApplicationUser table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **ApplicationUser** |
+| **DisplayCollectionName** | **ApplicationUsers** |
+| **SchemaName** | `ApplicationUser` |
+| **CollectionSchemaName** | `ApplicationUsers` |
+| **EntitySetName** | `applicationusers`|
+| **LogicalName** | `applicationuser` |
+| **LogicalCollectionName** | `applicationusers` |
+| **PrimaryIdAttribute** | `applicationuserid` |
+| **PrimaryNameAttribute** |`applicationname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `BusinessOwned` |
 
 ## Writable columns/attributes
 
@@ -73,896 +69,645 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ApplicationId"></a> ApplicationId
 
 |Property|Value|
-|--------|-----|
-|Description|Application Id|
-|DisplayName|applicationId|
+|---|---|
+|Description|**Application Id**|
+|DisplayName|**applicationId**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|applicationid|
+|LogicalName|`applicationid`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ApplicationName"></a> ApplicationName
 
 |Property|Value|
-|--------|-----|
-|Description|Application Name of the application user|
-|DisplayName|Application name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Application Name of the application user**|
+|DisplayName|**Application name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|applicationname|
-|MaxLength|100|
+|LogicalName|`applicationname`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ApplicationType"></a> ApplicationType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|ApplicationType|
+|DisplayName|**ApplicationType**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|applicationtype|
+|LogicalName|`applicationtype`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`applicationuser_applicationtype`|
 
 #### ApplicationType Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|First party applications||
-|1|Platform applications||
-|2|External applications||
-
-
+|Value|Label|
+|---|---|
+|0|**First party applications**|
+|1|**Platform applications**|
+|2|**External applications**|
 
 ### <a name="BKMK_ApplicationUserId"></a> ApplicationUserId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Application User|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Application User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|applicationuserid|
+|LogicalName|`applicationuserid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_BusinessUnitId"></a> BusinessUnitId
 
 |Property|Value|
-|--------|-----|
-|Description|Business Unit Id|
-|DisplayName|Business Unit Id|
+|---|---|
+|Description|**Business Unit Id**|
+|DisplayName|**Business Unit Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|businessunitid|
+|LogicalName|`businessunitid`|
 |RequiredLevel|SystemRequired|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_CanImpersonateAsSystemUser"></a> CanImpersonateAsSystemUser
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the application user can impersonate system user|
-|DisplayName|Can Impersonate As SystemUser|
+|---|---|
+|Description|**Indicates whether the application user can impersonate system user**|
+|DisplayName|**Can Impersonate As SystemUser**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|canimpersonateassystemuser|
+|LogicalName|`canimpersonateassystemuser`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanImpersonateAsSystemUser Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`applicationuser_canimpersonateassystemuser`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the ApplicationUser|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the ApplicationUser**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`applicationuser_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the ApplicationUser|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the ApplicationUser**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`applicationuser_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
-### <a name="BKMK_BusinessUnitIdName"></a> BusinessUnitIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|businessunitidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [applicationuser_SyncErrors](#BKMK_applicationuser_SyncErrors)
-- [applicationuser_DuplicateMatchingRecord](#BKMK_applicationuser_DuplicateMatchingRecord)
-- [applicationuser_DuplicateBaseRecord](#BKMK_applicationuser_DuplicateBaseRecord)
-- [applicationuser_AsyncOperations](#BKMK_applicationuser_AsyncOperations)
-- [applicationuser_MailboxTrackingFolders](#BKMK_applicationuser_MailboxTrackingFolders)
-- [applicationuser_ProcessSession](#BKMK_applicationuser_ProcessSession)
-- [applicationuser_BulkDeleteFailures](#BKMK_applicationuser_BulkDeleteFailures)
-- [applicationuser_PrincipalObjectAttributeAccesses](#BKMK_applicationuser_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_applicationuser_SyncErrors"></a> applicationuser_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_SyncErrors](syncerror.md#BKMK_applicationuser_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_DuplicateMatchingRecord"></a> applicationuser_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_DuplicateMatchingRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_DuplicateBaseRecord"></a> applicationuser_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_DuplicateBaseRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_AsyncOperations"></a> applicationuser_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_AsyncOperations](asyncoperation.md#BKMK_applicationuser_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_MailboxTrackingFolders"></a> applicationuser_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_applicationuser_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_ProcessSession"></a> applicationuser_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_ProcessSession](processsession.md#BKMK_applicationuser_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_BulkDeleteFailures"></a> applicationuser_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_applicationuser_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_applicationuser_PrincipalObjectAttributeAccesses"></a> applicationuser_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [applicationuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_applicationuser_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|applicationuser_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_applicationuser](#BKMK_business_unit_applicationuser)
 - [lk_applicationuser_createdby](#BKMK_lk_applicationuser_createdby)
 - [lk_applicationuser_createdonbehalfby](#BKMK_lk_applicationuser_createdonbehalfby)
 - [lk_applicationuser_modifiedby](#BKMK_lk_applicationuser_modifiedby)
 - [lk_applicationuser_modifiedonbehalfby](#BKMK_lk_applicationuser_modifiedonbehalfby)
-- [business_unit_applicationuser](#BKMK_business_unit_applicationuser)
-
-
-### <a name="BKMK_lk_applicationuser_createdby"></a> lk_applicationuser_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_applicationuser_createdby](systemuser.md#BKMK_lk_applicationuser_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_applicationuser_createdonbehalfby"></a> lk_applicationuser_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_applicationuser_createdonbehalfby](systemuser.md#BKMK_lk_applicationuser_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_applicationuser_modifiedby"></a> lk_applicationuser_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_applicationuser_modifiedby](systemuser.md#BKMK_lk_applicationuser_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_applicationuser_modifiedonbehalfby"></a> lk_applicationuser_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_applicationuser_modifiedonbehalfby](systemuser.md#BKMK_lk_applicationuser_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_applicationuser"></a> business_unit_applicationuser
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_applicationuser](businessunit.md#BKMK_business_unit_applicationuser)
 
-See the [business_unit_applicationuser](businessunit.md#BKMK_business_unit_applicationuser) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
-<a name="manytomany"></a>
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`businessunitid`|
+|ReferencingEntityNavigationPropertyName|`businessunitid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-## Many-To-Many Relationships
+### <a name="BKMK_lk_applicationuser_createdby"></a> lk_applicationuser_createdby
 
-Relationship details provided where the ApplicationUser table is the first table in the relationship. Listed by **SchemaName**.
+One-To-Many Relationship: [systemuser lk_applicationuser_createdby](systemuser.md#BKMK_lk_applicationuser_createdby)
 
-- [applicationuserrole](#BKMK_applicationuserrole)
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_applicationuser_createdonbehalfby"></a> lk_applicationuser_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_applicationuser_createdonbehalfby](systemuser.md#BKMK_lk_applicationuser_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_applicationuser_modifiedby"></a> lk_applicationuser_modifiedby
+
+One-To-Many Relationship: [systemuser lk_applicationuser_modifiedby](systemuser.md#BKMK_lk_applicationuser_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_applicationuser_modifiedonbehalfby"></a> lk_applicationuser_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_applicationuser_modifiedonbehalfby](systemuser.md#BKMK_lk_applicationuser_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [applicationuser_AsyncOperations](#BKMK_applicationuser_AsyncOperations)
+- [applicationuser_BulkDeleteFailures](#BKMK_applicationuser_BulkDeleteFailures)
+- [applicationuser_DuplicateBaseRecord](#BKMK_applicationuser_DuplicateBaseRecord)
+- [applicationuser_DuplicateMatchingRecord](#BKMK_applicationuser_DuplicateMatchingRecord)
+- [applicationuser_MailboxTrackingFolders](#BKMK_applicationuser_MailboxTrackingFolders)
+- [applicationuser_PrincipalObjectAttributeAccesses](#BKMK_applicationuser_PrincipalObjectAttributeAccesses)
+- [applicationuser_ProcessSession](#BKMK_applicationuser_ProcessSession)
+- [applicationuser_SyncErrors](#BKMK_applicationuser_SyncErrors)
+
+### <a name="BKMK_applicationuser_AsyncOperations"></a> applicationuser_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation applicationuser_AsyncOperations](asyncoperation.md#BKMK_applicationuser_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_BulkDeleteFailures"></a> applicationuser_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure applicationuser_BulkDeleteFailures](bulkdeletefailure.md#BKMK_applicationuser_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_DuplicateBaseRecord"></a> applicationuser_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord applicationuser_DuplicateBaseRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_DuplicateMatchingRecord"></a> applicationuser_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord applicationuser_DuplicateMatchingRecord](duplicaterecord.md#BKMK_applicationuser_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_MailboxTrackingFolders"></a> applicationuser_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder applicationuser_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_applicationuser_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_PrincipalObjectAttributeAccesses"></a> applicationuser_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess applicationuser_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_applicationuser_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_ProcessSession"></a> applicationuser_ProcessSession
+
+Many-To-One Relationship: [processsession applicationuser_ProcessSession](processsession.md#BKMK_applicationuser_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_applicationuser_SyncErrors"></a> applicationuser_SyncErrors
+
+Many-To-One Relationship: [syncerror applicationuser_SyncErrors](syncerror.md#BKMK_applicationuser_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`applicationuser_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
+
 - [applicationuserprofile](#BKMK_applicationuserprofile)
-
-
-### <a name="BKMK_applicationuserrole"></a> applicationuserrole
-
-IntersectEntityName: applicationuserrole<br />
-#### Table 1
-
-|Property|Value|
-|--------|-----|
-|IntersectAttribute|applicationuserid|
-|IsCustomizable|False|
-|LogicalName|applicationuser|
-|NavigationPropertyName|applicationuserrole|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-
-#### Table 2
-
-|Property|Value|
-|--------|-----|
-|LogicalName|role|
-|IntersectAttribute|roleid|
-|NavigationPropertyName|applicationuserrole|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-
+- [applicationuserrole](#BKMK_applicationuserrole)
 
 ### <a name="BKMK_applicationuserprofile"></a> applicationuserprofile
 
-IntersectEntityName: applicationuserprofile<br />
-#### Table 1
+See [fieldsecurityprofile applicationuserprofile Many-To-Many Relationship](fieldsecurityprofile.md#BKMK_applicationuserprofile)
 
 |Property|Value|
-|--------|-----|
-|IntersectAttribute|applicationuserid|
+|---|---|
+|IntersectEntityName|`applicationuserprofile`|
 |IsCustomizable|False|
-|LogicalName|applicationuser|
-|NavigationPropertyName|applicationuserprofile|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|SchemaName|`applicationuserprofile`|
+|IntersectAttribute|`applicationuserid`|
+|NavigationPropertyName|`applicationuserprofile`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-#### Table 2
+### <a name="BKMK_applicationuserrole"></a> applicationuserrole
+
+See [role applicationuserrole Many-To-Many Relationship](role.md#BKMK_applicationuserrole)
 
 |Property|Value|
-|--------|-----|
-|LogicalName|fieldsecurityprofile|
-|IntersectAttribute|fieldsecurityprofileid|
-|NavigationPropertyName|applicationuserprofile|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|---|---|
+|IntersectEntityName|`applicationuserrole`|
+|IsCustomizable|False|
+|SchemaName|`applicationuserrole`|
+|IntersectAttribute|`applicationuserid`|
+|NavigationPropertyName|`applicationuserrole`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.applicationuser?text=applicationuser EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.applicationuser?displayProperty=fullName>

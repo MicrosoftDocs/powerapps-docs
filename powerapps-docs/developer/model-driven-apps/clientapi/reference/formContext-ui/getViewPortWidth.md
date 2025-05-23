@@ -1,18 +1,14 @@
 ---
-title: "getViewPortWidth (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getViewPortWidth (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getViewPortWidth method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -35,12 +31,10 @@ The viewport is the area of the page containing form data. It corresponds to the
 **Description**: The viewport width in pixels. 
 
 
-### Related topics
+### Related articles
 
-[getViewPortHeight](getViewPortHeight.md)
-
-[formContext.ui](../formContext-ui.md)
-
+[getViewPortHeight](getViewPortHeight.md)   
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
 
 

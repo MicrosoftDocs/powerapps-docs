@@ -4,25 +4,23 @@ description: "This sample shows how to send an email message by using a template
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Send an email using a template
 
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email-template -->
 
+This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message.
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email-template -->
-
-This sample shows how to send an email message by using a template using the [SendEmailFromTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailfromtemplaterequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SendEmailUsingTemp).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Send an email using a template sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SendEmailUsingTemp)
 
 ## How to run this sample
 
@@ -43,7 +41,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `ActivityParty` creates the `From:`  and `To:` activity party for the email.
+1. The `ActivityParty` creates the `From:` and `To:` activity party for the email.
 2. Creates an email message.
 3. The `QueryExpression` queries to get one of the email template of type `Contact`.
 4. The `SendEmailFromTemplateRequest` sends an email message by using a template.
@@ -51,6 +49,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

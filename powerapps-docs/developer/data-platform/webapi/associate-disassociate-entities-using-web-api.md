@@ -1,16 +1,12 @@
 ---
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Read how to add a reference to a collection-valued navigation property, remove a reference, and change an existing reference using the Web API"
-ms.date: 04/06/2022
-author: divka78
-ms.author: dikamath
+description: "How to relate and unrelate records using the Web API"
+ms.date: 08/15/2022
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -19,182 +15,249 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are several methods you can use to associate and disassociate tables (entities). Which method you apply depends on whether you’re creating or updating the tables and whether you’re operating in the context of the referenced table or the referencing table.  
+You can associate individual records in table rows with other records using relationships that exist between the table definitions. In OData, the relationships are expressed as navigation properties.
 
-<a name="bkmk_Addareferencetoacollection"></a>
+You can discover which navigation properties exist in the $metadata service document. See [Web API Navigation Properties](web-api-navigation-properties.md). For existing Dataverse tables, see the [Web API EntityType Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex), for each entity type, see the listed single-valued and collection-valued navigation properties.
 
-## Add a reference to a collection-valued navigation property
+The following table describes the three types of relationships between tables in Dataverse.
 
- The following example shows how to associate an existing opportunity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
-  
-**Request**  
-```http  
-POST [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref HTTP/1.1   
-Content-Type: application/json   
-Accept: application/json   
-OData-MaxVersion: 4.0   
-OData-Version: 4.0  
-  
-{  
-"@odata.id":"[Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001)"  
-}  
-```  
-  
-**Response**  
-```http 
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-```  
-  
+|Type|Description|Example|
+|---------|---------|---------|
+|One-to-Many|One record can have many records associated with it.|An <xref:Microsoft.Dynamics.CRM.account?text=account> record can have many <xref:Microsoft.Dynamics.CRM.contact?text=contact> records in the `contact_customer_accounts` *collection-valued navigation property*.|
+|Many-to-One|Many records can be associated with one record.<br/><br/>Many-to-One is the mirror image of a One-to-Many relationship. There's just one relationship.|Multiple <xref:Microsoft.Dynamics.CRM.contact?text=contact> records can be associated to a single <xref:Microsoft.Dynamics.CRM.account?text=account> record using the `parentcustomerid_account` *single-valued navigation property*.|
+|Many-to-Many|Many records can be associated with many records.|Each <xref:Microsoft.Dynamics.CRM.role?text=security role (role)> might include references to the definition of a <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser>.<br />Both of these tables have a `systemuserroles_association` *collection-valued navigation property*.|
 
+## Using single-valued navigation properties
 
-<a name="bkmk_Changethereferenceinasingle"></a>
- 
-## Change the reference in a single-valued navigation property
+For existing records on the *many* side of a one-to-many or many-to-one relationship, you can associate the record by setting a Uri reference to the other record. The easiest and most common way to do this is to append the `@odata.bind` annotation to the name of the single-valued navigation property and then setting the value as the Uri to the other record in a `PATCH` request.
 
- You can associate rows by setting the value of a single-valued navigation property using PUT request with the following pattern.  
-  
- **Request**
+### Associate with a single-valued navigation property
 
-```http 
-PUT [Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref HTTP/1.1  
-Content-Type: application/json  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-  
-{  
- "@odata.id":"accounts(00000000-0000-0000-0000-000000000002)"  
-}  
-```  
-  
- **Response**  
+For example, to associate a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to an <xref:Microsoft.Dynamics.CRM.account?text=account> using the `parentcustomerid_account` single-valued navigation property:
 
-```http 
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-```  
+**Request:**
 
+```http
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
+If-Match: *
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 
-<a name="bkmk_Removeareferencetoarow"></a>
-
-## Remove a reference to a table row
-
- Use a DELETE request to remove a reference to a row. The way you do it is different depending on whether you’re referring to a collection-valued navigation property or a single-valued navigation property.  
-  
- **Request**  
- For a collection-valued navigation property, use the following.  
-  
-```http  
-DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001) HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
- Or, use this.  
-  
-```http 
-DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts(00000000-0000-0000-0000-000000000001)/$ref HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
- **Request**  
- For a single-valued navigation property, remove the `$id` query string parameter.  
-  
-```http 
-DELETE [Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
- **Response**  
- Either way, a successful response has status 204.  
-  
-```http 
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
+{
+  "parentcustomerid_account@odata.bind": "accounts(ce9eaaef-f718-ed11-b83e-00224837179f)"
+}
 ```
 
-<a name="bkmk_Associaterowsoncreate"></a>
+**Response:**
 
-## Associate table rows on create
-
-As described in [Associate rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can associate the new row to existing rows by setting the navigation properties using the `@odata.bind` annotation.
-
-As described in [Create related tables in one operation](create-entity-web-api.md#bkmk_CreateRelated), new tables can be created with relationships using *deep insert*.  
-  
-## Associate and disassociate table rows on update
-
-You can set the value of single-valued navigation properties using `PATCH` to associate or disassociate rows.
-
-<a name="bkmk_Associaterowsonupdate"></a>
-
-### Associate table rows on update
-
- You can associate rows on update using the same message described in [Basic update](update-delete-entities-using-web-api.md#bkmk_update) but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity using the `customerid_account` single-valued navigation property.  
-  
- **Request**
-
-```http 
-PATCH [Organization URI]/api/data/v9.0/opportunities(00000000-0000-0000-0000-000000000001) HTTP/1.1  
-Content-Type: application/json  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-  
-{  
- "customerid_account@odata.bind":"accounts(00000000-0000-0000-0000-000000000002)"  
-}  
-```  
-  
- **Response**  
-
-```http 
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-```  
-
-### Disassociate table rows on update
-
-You can remove a reference to a single-valued navigation property when updating by setting the value to `null`. This method allows you to disassociate multiple references in a single operation.
-There are two ways to do this:
-
-You can set the value to `null` using the `@odata.bind` annotation:
-
-```http  
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
+```http
+HTTP/1.1 204 NoContent
 OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+```
+
+As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), new records can also be associated with existing records in the same way.
+
+### Disassociate with a single-valued navigation property
+
+If you want to disassociate, you can simply set the value to null.
+
+**Request:**
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
+If-Match: *
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 
 {
-	"parentaccountid@odata.bind":  null,
-	"primarycontactid@odata.bind": null
+  "parentcustomerid_account@odata.bind": null
 }
+```
 
+**Response:**
 
-```  
-  
- Or, just use the name of the single-valued navigation property. 
-  
-```http 
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+```
+
+When disassociating in this manner, you don't need to include the `@odata.bind` annotation. You can simply use the name of the single-valued navigation property:
+
+**Request:**
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
+If-Match: *
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 
 {
-    "parentaccountid":  null,
-    "primarycontactid": null
+  "parentcustomerid_account": null
 }
+```
 
-``` 
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+```
 
 More information: [Basic update](update-delete-entities-using-web-api.md#basic-update)
+
+### Other methods
+
+There are other ways to achieve the same results described previously with single-valued navigation properties.
+
+You can use the following `PUT` request to set the value of the `parentcustomerid_account` single-valued navigation property:
+
+**Request:**
+
+```http
+PUT [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/parentcustomerid_account/$ref HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "@odata.id": "[Organization URI]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+> [!NOTE]
+> Note: You must use an absolute URL when setting the value for `@odata.id`.
+
+To remove the reference, you can also use this `DELETE` request:
+
+**Request:**
+
+```http
+DELETE [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/parentcustomerid_account/$ref HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+## Using collection-valued navigation properties
+
+With OData, both sides of a many-to-many relationship have collection-valued navigation properties. For one-to-many and many-to-one relationships, the table one the 'One' side has a collection-valued navigation property. There's no difference how you work with any of these types of relationships while using collection-valued navigation properties. This section describes how to work with collection-valued navigation properties with any type of relationship.
+
+## Add a record to a collection
+
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection, which is part of a one-to-many relationship.
+
+**Request:**
+
+```http
+POST [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "@odata.id": "[Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+The following example shows how to add a <xref:Microsoft.Dynamics.CRM.role?text=role> record to the <xref:Microsoft.Dynamics.CRM.systemuser?text=systemuser> `systemuserroles_association` collection, which is a many-to-many relationship.
+
+**Request:**
+
+```http
+POST [Organization Uri]/api/data/v9.2/systemusers(34dcbaf5-f718-ed11-b83e-00224837179f)/systemuserroles_association/$ref HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "@odata.id": "[Organization URI]/api/data/v9.2/roles(886b280c-6396-4d56-a0a3-2c1b0a50ceb0)"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+## Remove a record from a collection
+
+The following example shows how to remove a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection where the contact `contactid` value is `00aa00aa-bb11-cc22-dd33-44ee44ee44ee`.
+
+**Request:**
+
+```http
+DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/$ref HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+The following request also works:
+
+**Request:**
+
+```http
+DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref?$id=[Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+<!-- 
+
+The code snippet in the following section doesn't work, so removing this section until the correct request can be added.
 
 <a name="bkmk_Associaterowsonupdate_multi"></a>
 
@@ -203,54 +266,54 @@ More information: [Basic update](update-delete-entities-using-web-api.md#basic-u
 The following example shows how to associate multiple existing [ActivityParty](../reference/entities/activityparty.md) with an [Email](../reference/entities/email.md) using collection-valued navigation property `email_activity_parties`.
 
 > [!NOTE]
-> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType />.
+> Associating multiple tables with a table on update is a special scenario that is possible only with <xref:Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType>.
 
-**Request**
+**Request:**
 
 ```HTTP
-PUT [Organization URI]/api/data/v9.0/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
+PUT [Organization URI]/api/data/v9.2/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
 Content-Type: application/json  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
 
 {
-	"value": [
-		{
-			"partyid_contact@odata.bind":"contacts(a30d4045-fc46-e711-8115-e0071b66df51)",
-			"participationtypemask":3
-			
-		},
-		{
-			"partyid_contact@odata.bind":"contacts(1dcdda07-3a39-e711-8145-e0071b6a2001)",
-			"participationtypemask":2
-			
-		}
-		]
+   "value": [
+      {
+         "partyid_contact@odata.bind":"contacts(a30d4045-fc46-e711-8115-e0071b66df51)",
+         "participationtypemask":3
+         
+      },
+      {
+         "partyid_contact@odata.bind":"contacts(1dcdda07-3a39-e711-8145-e0071b6a2001)",
+         "participationtypemask":2
+         
+      }
+      ]
 }
 ```
 
-**Response**
+**Response:**
 
 ```HTTP
 HTTP/1.1 204 No Content  
 OData-Version: 4.0 
-```
+``` -->
 
 ### See also
 
- [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)   
- [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)   
- [Perform operations using the Web API](perform-operations-web-api.md)   
- [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)   
- [Query Data using the Web API](query-data-web-api.md)   
- [Create a table using the Web API](create-entity-web-api.md)   
- [Retrieve a table using the Web API](retrieve-entity-using-web-api.md)   
- [Update and delete tables using the Web API](update-delete-entities-using-web-api.md)   
- [Use Web API functions](use-web-api-functions.md)   
- [Use Web API actions](use-web-api-actions.md)   
- [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
- [Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
- [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
+ [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
+ [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
+ [Perform operations using the Web API](perform-operations-web-api.md)<br />
+ [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
+ [Query Data using the Web API](query/overview.md)<br />
+ [Create a table row using the Web API](create-entity-web-api.md)<br />
+ [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+ [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+ [Use Web API functions](use-web-api-functions.md)<br />
+ [Use Web API actions](use-web-api-actions.md)<br />
+ [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
+ [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
+ [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

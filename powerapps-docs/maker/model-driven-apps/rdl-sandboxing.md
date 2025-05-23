@@ -7,7 +7,7 @@ ms.reviewer:
 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: conceptual
+ms.topic: article
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 8ec72014-9f0c-4964-ac67-24419b054e91
@@ -15,13 +15,10 @@ caps.latest.revision: 13
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: annbe
 tags: 
   - MigrationHO
 search.audienceType: 
   - customizer
-search.app: 
-  - D365CE
 ---
 # RDL sandboxing 
 
@@ -32,7 +29,7 @@ The current RDL Sandboxing configuration settings in Dataverse are described in 
 <a name="BKMK_Max"></a>   
 ## Limits of the array result length and string result length
 
-The maximum number of items allowed in an array return value for an RDL expression is increased from 250 to 102400. The maximum number of items allowed in a string return value for an RDL expression is also increased from 250 to 102400. This enables you to include images and logos with sizes up to 75 KB, which will be stored in a database with Base64 encoding.  
+The maximum number of items allowed in an array return value for an RDL expression is 2048000. The maximum number of items allowed in a string return value for an RDL expression is 2048000. This enables you to include images and logos with sizes up to 1500 KB, which will be stored in a database with Base64 encoding.  
   
  The MaxResourceSize is set to 2000. This lets you include external images in a report up to 1500 KB in size. More information: [TechNet: Add an External Image (Report Builder and SSRS)](/sql/reporting-services/report-design/add-an-external-image-report-builder-and-ssrs)  
   
@@ -104,6 +101,9 @@ The maximum number of items allowed in an array return value for an RDL expressi
 |`System.TimeZone`|Finalize|  
 ||GetType|  
 ||MemberwiseClone|  
+|||  
+|`System.TimeZoneInfo`|FromSerializedString|  
+||ToSerializedString|
 |||  
 |`System.Uri`|Unescape|  
 ||Parse|  

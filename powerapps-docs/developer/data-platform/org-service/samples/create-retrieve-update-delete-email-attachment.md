@@ -4,21 +4,16 @@ description: "This sample shows how to perform CRUD operations on email atachmen
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Create, retrieve, update, and delete an email attachment
-
-
 
 This sample shows how to create, retrieve, update, and delete email attachments using the following methods:
 
@@ -27,7 +22,8 @@ This sample shows how to create, retrieve, update, and delete email attachments 
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDEmailAttachements).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create, retrieve, update, and delete an email attachment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDEmailAttachments)
 
 ## How to run this sample
 
@@ -48,16 +44,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `ActivityMimeAttachment` method creates three email attachments. 
+1. The `ActivityMimeAttachment` method creates three email attachments.
 1. The `Retrieve` method retrieves an attachment including its id, subject, filename and body.
 1. The `Update` method updates the filename of the existing attachment.
-
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

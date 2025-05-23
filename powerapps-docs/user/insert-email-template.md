@@ -1,21 +1,17 @@
 ---
 title: "Insert email template while composing an email in model-driven apps | MicrosoftDocs"
 description: "Insert a preformatted email message while composing an email."
-ms.custom: ""
 author: sbmjais
-manager: shujoshi
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 04/04/2022
+ms.topic: how-to
+ms.date: 04/05/2023
 ms.subservice: end-user
 ms.author: shjais
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+ms.custom: bap-template
 ---
 
 # Insert an email template
@@ -40,36 +36,54 @@ After you select **Insert Template**, a window appears displaying a list of exis
 >
 >   ![Message when both Recipient and Regarding field are present.](media\email-template-select-record.png "Message when both Recipient and Regarding fields are present")
 >
-> The selection of one of these fields determines which template types are shown to a user in the template selection window:
+> This window doesn't appear if your administrator has set **Skip Select Record dialog** in **Advanced Settings** to **Yes**. The selection of one of these fields determines which template types are shown to a user in the template selection window:
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
+>
+
 
 ### Enhanced email template selection dialog
 
-> [!NOTE]
-> The enhanced email template selection dialog is available only in Dynamics 365 Customer Service.
-
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the enhanced email template selection window:
 
- - Switch between list, tile, and grid views.
- - Search for templates based on their title, subject, description, or content of the template.  
- - Filter templates based on standard and custom attributes.
+ - Switch between email template views.
+ - Switch among list, tile, and grid views.
+ - Search for templates based on their title, subject, description, or content of the template. 
+ - By default, you can filter templates based on standard and custom attributes, and language, if your Administrator has enabled **Language** in the **Template Gallery Filter Form**. See: [Add the language filter in the email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#add-the-language-filter-in-the-email-template-selection-view) 
+ - Additionally, if your administrator has set **Enable Email Template views** in **Advanced Settings** to **Yes**, you can filter templates based on the email template view filters. 
  - Zoom in to view templates on a full screen. The application provides an option to navigate between templates.
- - Admins can add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids, and Template Gallery Properties Form to extend the template details section.
-
-![Enhanced email template selection window.](media\config_enhance_email_template.png "New Email template selection window")
+ 
+![Enhanced email template selection window.](media\enh-email-selection-dialog.png "New Email template selection window")
 
 **Legend**
   
 1. **Search**. Use search to find a template. You can search for templates based on name, subject, description, or content. Search doesn't support regular expressions.
-2. **All templates**. Choose and browse from the templates based on TO or Regarding that are displayed in this window. You can change the view to display the templates in a grid, list, or tile view. Hover over the template tile to see the zoom option. Select the tile to open the template on a full screen.
+2. **All templates**. Choose and browse from the templates displayed based on TO or Regarding, the filters applied, or a combination of both. You can change the view to display the templates in a grid, list, or tile view. Hover over the template tile to see the zoom option. Select the tile to open the template on a full screen.
 3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the email editor.
 4. **Filter**. You can filter templates based on standard or custom attributes.
-5. **View**. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
+5. **View**. Use the view to switch between email template views. Copilot can recommend the relevant email template for your email. The **Copilot recommended templates** view displays five relevant email templates with prompts that Copilot recommends.
+1. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
+1. **Record**. Specify the **Field Name** and **Record**. The template types shown to a user is based on what you've selected for these fields.
+     - Recipient (TO): user (global) and contact templates are displayed.
+     - Regarding: User (global) and templates for the regarding entity are shown. By default, **Field Name** is set to **Regarding**.
  
 > [!Note] 
-> If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
-  
+> - Bookable Resource Booking isn't supported.
+> - You can see the **Record** tab and switch between email template views only if your administrator has enabled the **Enable Email Template views** and **Skip Select Record dialog**. More information: [Customize the enhanced email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#customize-the-enhanced-email-template-selection-view)
+> - The enhanced email template selection view might vary based on the customizations your administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
+> - If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template only.
+
+### Customize your email template selector filters
+
+With the enhanced email template selector dialog, you can switch between multiple email template views. The filters set for the email template views are available on the template selector, and lets you to view only the relevant email templates. You can modify the filters set for the view, but you can't save the modified filter conditions.
+
+For example, you have a custom view, Agent email template view, with filters set to display only the templates that have "case" in the title.
+
+When you access the enhanced email template selector and choose Agent email template view, the application displays only the templates with "case" in the title.
+
+> [!Note]
+> The email templates that are displayed are filtered based on the specified email template view filters and record. 
+
 ### Email template selection dialog
 
 You can perform the following actions on the email template selection window:
@@ -90,7 +104,7 @@ You can perform the following actions on the email template selection window:
 
 > [!Note] 
 > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
-      
+
 ### See also
 
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>

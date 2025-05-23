@@ -5,17 +5,12 @@ Keywords: object checker, checker, solution checker, solution issue
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
-ms.date: 08/24/2021
-
+ms.date: 11/13/2024
 ms.topic: how-to
+ms.subservice: dataverse-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Use object checker to diagnose a solution component (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
@@ -27,17 +22,9 @@ Object checker runs real-time diagnostics on component objects within your solut
 - Active layer hiding customizations.
 - Malformed or corrupted metadata.
 
-## Prerequisite
-
-To use the object checker, you must enable the solution preview.
-
-1. Go to the **Solutions** area.
-1. On the command bar, turn **Solutions preview on**.
-
-   :::image type="content" source="media/enable-solution-preview.png" alt-text="Turn solution preview on":::
-
 ## Run object checker and view the results
 
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a solution that contains the problematic object. You can run object checker within either managed and unmanaged solutions.
 1. Select a single object, such as a model-driven app or a site map.
 1. On the command bar, select **...** > **Object checker** > **Run**.
@@ -51,10 +38,17 @@ To use the object checker, you must enable the solution preview.
 
 ## Current limitations
 
-Object checker currently only works with model-driven app and site map components. <!-- This is a framework that will grow to support other object types and additional rules over time. -->
+- Object checker currently only works with model-driven app and site map components.
+
+- Object Checker rules might fail if customizations haven't been published. When this condition occurs, the following exception can be observed in the '**Multiple sitemaps detection rule**':
+
+    ```text
+    Exception encountered while executing rule: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The value passed for ConditionOperator.In is empty.
+    ```
 
 ### See also
 
-[Tools available to diagnose solutions](diagnose-solutions.md)
+[Tools available to diagnose solutions](diagnose-solutions.md)  
+[Use object checker to diagnose a solution component (video)](https://youtu.be/h_OwFRgj1U8?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

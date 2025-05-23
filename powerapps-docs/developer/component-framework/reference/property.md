@@ -1,9 +1,8 @@
 ---
-title: Property | Microsoft Docs
+title: Property (Power Apps component framework API reference) | Microsoft Docs
 description: Interface for context.parameters.<property_key>
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: anuitz
+author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -38,7 +37,7 @@ The error message associated with the last encountered error, if applicable.
 
 The formatted string value of this field. 
 
-This is only set if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+Only set if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
 
 **Type**: `string`
 
@@ -67,7 +66,7 @@ This is only set when the corresponding manifest [property element](../manifest-
 **Type**:  `FieldPropertyMetadata`
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

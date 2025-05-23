@@ -1,26 +1,23 @@
 ---
 title: Create a canvas app from Figma (preview)
 description: Learn about how to create canvas apps from Figma.
-author: tapanm-msft
-ms.topic: article
+author: mduelae
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 06/01/2022
+ms.reviewer: mkaur
+ms.date: 03/10/2025
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
-# Create a canvas app from Figma (preview)
+# Create a canvas app from Figma
 
-[This article is pre-release documentation and is subject to change.]
 
-In this article, you'll learn about creating canvas apps using your existing Figma design. [Figma](https://www.figma.com/) is a graphics editor and a design tool that you can use to create prototypes for your intended software design. After the design has been finalized, use the **Figma to app** feature to generate apps directly from the layout and design that you defined in your Figma file.
+In this article, you learn about creating canvas apps using your existing Figma design. [Figma](https://www.figma.com/) is a graphics editor and a design tool that you can use to create prototypes for your intended software design. After the design is finalized, use the **Figma to app** feature to generate apps directly from the layout and design that you defined in your Figma file.
 
 ## Prerequisites
 
@@ -33,11 +30,11 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 ## Create an app
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Under **Start from**, select **Figma (preview)**.
-
-    :::image type="content" source="media/maker-figma.png" alt-text="Select Figma preview from available options.":::
+On the home screen, select **Start with a page design**.
+ 
+1. Select **An image or Figma file** > **Start from Figma** > **Next**.
 
 1. Enter an app name.
 
@@ -45,16 +42,13 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 1. Enter the Figma personal access token. More information: [Create a new personal access token](https://help.figma.com/hc/articles/360052378433-Bubble-and-Figma#In_Figma)
 
-    :::image type="content" source="media/create-app.png" alt-text="Create app dialog box with app name, Figma URL and personal access token created.":::
-
     > [!NOTE]
     > Power Apps uses your personal access token to connect to your Figma page or frame with **Can view** (read-only) access, and doesn't make any changes inside Figma.
 
-1. Select **Create**.
+1. Select **Create app**.
 
-    Once the app is created, your new app will open up in Power Apps Studio so you can continue building and customizing your app.
+Once the app is created, your new app opens in [Power Apps Studio](../power-apps-studio.md) so you can continue building and customizing your app.
 
-    :::image type="content" source="media/studio.png" alt-text="Created app opened inside Power Apps Studio.":::
 
 1. Extend this app by [connecting to data](../add-data-connection.md), [adding app logic](../working-with-formulas.md), and adding more [screens](../add-screen-context-variables.md) and [controls](../add-configure-controls.md) as necessary.
 
@@ -63,4 +57,4 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 ### See also
 
 - [Troubleshoot common errors](common-errors.md)
-- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Components supported by the UI Kit](supported-components.md)

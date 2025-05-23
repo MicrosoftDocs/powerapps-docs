@@ -3,18 +3,16 @@ title: Understand canvas-app forms
 description: Learn about how to add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 04/27/2016
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand canvas-app forms
@@ -338,7 +336,7 @@ The **[UpdateContext](functions/function-updatecontext.md)** function creates th
 
 The formula for the **[Items](controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
-```powerapps-dot
+```power-fx
 Sort( 
 	If( IsBlank(TextSearchBox1.Text),
 		Assets,

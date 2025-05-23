@@ -2,25 +2,20 @@
 title: Use custom connectors with the timeline in Power Apps | MicrosoftDocs
 description: "Learn how to use custom connectors to bring your own data, such as records, to the timeline in Power Apps."
 ms.custom: ""
-ms.date: 04/04/2022
+ms.date: 01/13/2023
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - lalexms
 ---
-
-
 # Use custom connectors with the timeline control
 
 The custom connectors feature provides a way for developers to surface information such as Dataverse table rows, external data sources, and so forth, as records entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
@@ -48,6 +43,22 @@ The IRecordSource is then initialized (init), with a request for pages of record
 
 The response from requesting records is persisted to minimize the number of record requests that occur within multi-session scenarios.
 
+## Configure the custom connector for the timeline control
+
+You can add or edit your custom connector for the timeline control by configuring it in the maker experience.
+
+1. On the timeline control, select the form for which you want to add or edit the custom connector.
+1. Complete one of the following options:
+    - To add a new custom connector, in the **Properties** pane for the timeline table, in **Custom connectors**, select **Add connector**. The **New custom connector** pane is displayed.
+
+      :::image type="content" source="media/add-custom-connector.png" alt-text="Add a custom connector.":::
+    
+    - To edit an existing custom connector you've already uploaded, in the **Properties** pane for the timeline entity, select the custom connector, and then select **Edit**. The **Edit custom connector pane** is displayed.
+
+      :::image type="content" source="media/edit-custom-connector.png" alt-text="Edit the custom connector properties.":::
+    
+1. Edit the page, and then select **Save**.
+    
 ## Filter support
 
 Custom connector filter support includes the following abilities.
@@ -67,7 +78,7 @@ The custom connectors feature is supported within single-session and multi-sessi
 The following functionality isn't available for the custom connectors feature:
 - Offline and offline-by-default scenarios
 - Dashboards
-- Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, portals, custom pages, and so forth)
+- Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, Power Pages, custom pages, and so forth)
 
 ## Known limitations
 

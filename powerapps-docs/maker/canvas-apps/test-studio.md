@@ -1,24 +1,21 @@
 ---
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: maustinjones
+author: mduelae
 
 ms.topic: conceptual
-ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.reviewer: mkaur
+ms.date: 05/21/2025
 ms.subservice: canvas-maker
-ms.author: austinj
+ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - mattgon
+  - mduelae
+  - ChrisBal-MSFT
   - maustinjones
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 
 # Test Studio
@@ -34,6 +31,10 @@ Increased app changes can result in longer testing cycles. Eventually, regressio
 Power Apps Test Studio is a low-code solution to write, organize, and automate tests for canvas apps. In Test Studio, you can write tests using Power Apps expressions or use a recorder to save app interaction to automatically generate the expressions. You can play written tests back within the Test Studio to validate app functionality, and also run the tests in a web browser and build the automated tests into your app deployment process.
 
 ![Test Studio.](./media/test-studio/test-studio.png "Test Studio")
+
+## Prerequisites
+
+You must be creator or co-owner of an app to test the app with Test Studio.
 
 ## Test Studio terminology
 
@@ -89,7 +90,7 @@ When testing canvas apps using Test Studio, consider the following best practice
 
 ## Known limitations
 
-While work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
+While we work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
 
 - Components.
 - Code components written in the Power Apps Component Framework.
@@ -98,6 +99,7 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Formula-level error management experimental feature needs to be turned on for the app.
 - Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
 - Person-type columns.
+- Test Studio is not compatible with the experimental [Git version control feature](git-version-control.md), and will not work properly if that feature is enabled.
 
 ## Next steps
 

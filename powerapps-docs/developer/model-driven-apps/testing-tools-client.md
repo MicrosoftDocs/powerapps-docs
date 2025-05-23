@@ -1,17 +1,14 @@
 ---
-title: "Testing tools for client-side development (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about testing frameworks for client-side development." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Testing tools for client-side development (Microsoft Dataverse)"
+description: "Learn about testing frameworks for client-side development."
 ms.date: 04/01/2022
-ms.topic: article
-author: aengusheaney # GitHub ID
+ms.topic: concept-article
+author: pvillads
+ms.author: pvillads
 ms.subservice: mda-developer
-ms.author: AHEANEY # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Testing tools for client-side development
 
@@ -21,7 +18,7 @@ Easy Repro provides a set of classes and methods to work with various pages in m
 
 ## Benefits of unit testing
 
-Unit testing is strongly recommended but not required. When you are just getting started or if the amount of code in your solution is relatively small, you may feel that you spend more time writing tests than the functionality included in your solution.
+Unit testing is recommended but not required. When you're just getting started or if the amount of code in your solution is relatively small, you might feel that you spend more time writing tests than the functionality included in your solution.
 
 The benefits of unit testing begin to accrue when your solution becomes larger and more complex. For client-side development, an automated UI framework for testing can help you detect issues initiated by user actions.  
 
@@ -29,9 +26,9 @@ When a solution is developed with unit testing, developers report greater produc
 
 ### See also
 
-[Testing tools for server-side development](../data-platform/testing-tools-server.md)<br />
-[Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
-[Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
+[Testing tools for server-side development](../data-platform/testing-tools-server.md)   
+[Video: Creating and running UI test](https://youtu.be/ryWgK34Akt0)   
+[Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)   
 [Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)
 
 

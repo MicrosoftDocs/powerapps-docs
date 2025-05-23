@@ -1,10 +1,9 @@
 ---
-title: "Delete or deactivate a model-driven app view in Power Apps | MicrosoftDocs"
+title: "Delete or turn off a model-driven app view in Power Apps"
 description: "Learn how to delete or deactivate a view"
 ms.custom: ""
-ms.date: 03/30/2020
+ms.date: 10/08/2024
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,54 +16,50 @@ ms.assetid: 60865f78-7482-42da-8960-adbd3c155028
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-# Delete or deactivate a model-driven app view
+# Delete or turn off a model-driven app view
 
+Views allow the data in Microsoft Dataverse tables to be presented in a way that meets a business need at a given time.
 
-
-Views allow the data in tables to be presented in a way that meets a business need at a given time.
-
-## Why we need to maintain table views
-
-The views that are required in an organization may change over time, and it is good practice to maintain them in order to keep your app as simple as possible to use and maintain.
+The views that are required in an organization might change over time. It's good practice to maintain views in order to keep your model-driven apps as simple as possible to use and maintain.
 
 ## System views versus public views
 
-Depending on the type of view, you can either delete it or deactivate it. Deactivated views can be reactivated, while the deletion of a view is permanent.
+Depending on the type of view, you can either turn it off or delete it. Turned off views can be turned on again, while the deletion of a view is permanent.
 
-- Custom public views can both be deleted and deactivated, including public views that the system created.
-- [System views](create-edit-views.md#system-views) can't be  deleted or deactivated. This includes public views created by the system.
+- Custom table public views can both be deleted and turned off/on. Public views that are standard with Dataverse, such as the active accounts and inactive accounts standard public views can be turned off/on.
+- [System views](create-edit-views.md#system-views) can't be  deleted or turned off/on. This includes public views created by the system.
+
+## Turn on or turn off views
+
+Custom public views can be turned off and these turned off views can be turned on. While a view is turned off, the view isn't available in the associated model-driven apps for users to select. Public views set as the default view for the table can't be turned off.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane, and then open the unmanaged solution you want.  
+1. Open the table you want, and then select the **Views** area under **Data experiences**.
+1. Select the view you want to turn on or off, and then select either **Turn off** or **Turn on** on the command bar.
 
 ## Delete a view
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+Deleting a view permanently removes it from the environment.
 
-2. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** area.
-
-3. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Delete view**. You can also select **Delete view** on the menu bar.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the environment you want, select **Solutions** on the left navigation pane, and then open the unmanaged solution you want.  
+1. Open the table you want, and then select the **Views** area under **Data experiences**.
+1. Select the view you want to remove, and then select **Remove** > **Delete from this environment** on the command bar.
 
 > [!NOTE]
-> Where a model-driven app specifies a view this creates a dependency between the app and the view.  If this is the case the view will need to first be removed from the app using the app designer.
+>
+> - Where a model-driven app specifies a view this creates a dependency between the app and the view.  If this is the case the view will need to first be removed from the app using the app designer.
+> - If the view has been added to more than one solution, you can select **Remove** > **Remove from this solution** to remove from the solution but keep available in the environment.
 
-## Deactivate or activate views  
+## Delete or activate and deactivate views in classic solution explorer
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+### Delete a view in classic solution explorer  
 
-2. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** area.
-
-3. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select either **Deactivate** or **Activate**. You can also select **Deactivate** or **Activate** on the menu bar.
-
-## Delete a view in solution explorer  
-
-You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view will be permanently deleted.  
+You can delete any custom public view. Use the steps in [Access view definitions](accessing-view-definitions.md) to find the view you want to delete and use the ![Delete button.](media/delete.gif "Delete button")**Delete** command. Once you verify that you really want to delete it, the view is permanently deleted.  
   
-## Deactivate or activate views in solution explorer
+### Deactivate or activate views in classic solution explorer
 
 1. Navigate to **System Views** as described in [Access view definitions](accessing-view-definitions.md).  
   

@@ -1,19 +1,15 @@
 ---
-title: "Use Webhooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to send data about events that occur on the server to a web application using Webhooks." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "jaredha" # GitHub ID
+title: Use Webhooks to create external handlers for server events
+description: Learn how to send data about events that occur on the server to a web application using Webhooks.
+ms.collection: get-started
+ms.date: 08/28/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: swylezol
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: swylezol
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -22,7 +18,7 @@ contributors:
 
 With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
-Webhooks enable developers and ISV’s to integrate Dataverse data with their own custom code hosted on external services. By using the WebHook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
+Webhooks enable developers and ISV's to integrate Dataverse data with their own custom code hosted on external services. By using the WebHook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
 When deciding between the WebHook model and the Azure Service Bus integration, here are some items to keep in mind:
 
@@ -99,7 +95,7 @@ The following is an example of the serialized JSON data passed for a step regist
 |**Primary Entity**|contact|
 |**Secondary Entity**|none|
 |**Filtering Attributes**|firstname,lastname|
-|**Run in User’s Context**|Calling User|
+|**Run in User's Context**|Calling User|
 |**Execution Order**|1|
 |**Event Pipeline Stage of Execution**|PostOperation|
 |**Execution Mode**|Asynchronous|
@@ -107,9 +103,9 @@ The following is an example of the serialized JSON data passed for a step regist
 ```json
 {
     "BusinessUnitId": "e2b9dd85-e89e-e711-8122-000d3aa2331c",
-    "CorrelationId": "b374239d-4233-41a9-8b17-a86cb4f737b5",
+    "CorrelationId": "aaaa0000-bb11-2222-33cc-444444dddddd",
     "Depth": 1,
-    "InitiatingUserId": "75c2dd85-e89e-e711-8122-000d3aa2331c",
+    "InitiatingUserId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
     "InputParameters": [{
         "key": "Target",
         "value": {
@@ -133,7 +129,7 @@ The following is an example of the serialized JSON data passed for a step regist
                 "key": "modifiedby",
                 "value": {
                     "__type": "EntityReference:http:\/\/schemas.microsoft.com\/xrm\/2011\/Contracts",
-                    "Id": "75c2dd85-e89e-e711-8122-000d3aa2331c",
+                    "Id": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
                     "KeyAttributes": [],
                     "LogicalName": "systemuser",
                     "Name": null,
@@ -160,7 +156,7 @@ The following is an example of the serialized JSON data passed for a step regist
     "Mode": 1,
     "OperationCreatedOn": "\/Date(1506409448000-0700)\/",
     "OperationId": "4af10637-4ea2-e711-8122-000d3aa2331c",
-    "OrganizationId": "4ef5b371-e89e-e711-8122-000d3aa2331c",
+    "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
     "OrganizationName": "OrgName",
     "OutputParameters": [],
     "OwningExtension": {
@@ -172,9 +168,9 @@ The following is an example of the serialized JSON data passed for a step regist
     },
     "ParentContext": {
         "BusinessUnitId": "e2b9dd85-e89e-e711-8122-000d3aa2331c",
-        "CorrelationId": "b374239d-4233-41a9-8b17-a86cb4f737b5",
+        "CorrelationId": "aaaa0000-bb11-2222-33cc-444444dddddd",
         "Depth": 1,
-        "InitiatingUserId": "75c2dd85-e89e-e711-8122-000d3aa2331c",
+        "InitiatingUserId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
         "InputParameters": [{
             "key": "Target",
             "value": {
@@ -206,7 +202,7 @@ The following is an example of the serialized JSON data passed for a step regist
         "Mode": 1,
         "OperationCreatedOn": "\/Date(1506409448000-0700)\/",
         "OperationId": "4af10637-4ea2-e711-8122-000d3aa2331c",
-        "OrganizationId": "4ef5b371-e89e-e711-8122-000d3aa2331c",
+        "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
         "OrganizationName": "OneFarm",
         "OutputParameters": [],
         "OwningExtension": {
@@ -284,7 +280,7 @@ The following is an example of the serialized JSON data passed for a step regist
             }]
         }],
         "Stage": 30,
-        "UserId": "75c2dd85-e89e-e711-8122-000d3aa2331c"
+        "UserId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
     },
     "PostEntityImages": [{
         "key": "AsynchronousStepPrimaryName",
@@ -312,7 +308,7 @@ The following is an example of the serialized JSON data passed for a step regist
     "SecondaryEntityName": "none",
     "SharedVariables": [],
     "Stage": 40,
-    "UserId": "75c2dd85-e89e-e711-8122-000d3aa2331c"
+    "UserId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
 }
 ```
 > [!IMPORTANT]
@@ -352,6 +348,9 @@ If your web hook is registered to run asynchronously, you can examine the System
 ### Synchronous Webhooks
 
 [!INCLUDE [synchronous-WebHook-error](includes/synchronous-WebHook-error.md)]
+
+> [!NOTE]
+> Any webhook registered for a synchronous step will send the execution context data to the configured endpoint immediately. If an error occurs after the request was sent, the data operation will rollback but the request sent to the configured endpoint cannot be recalled.
 
 ## Next steps
 [Register a WebHook](register-web-hook.md)<br />

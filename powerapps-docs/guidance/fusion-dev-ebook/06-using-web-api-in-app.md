@@ -3,12 +3,12 @@ title: "6: Using the Web API in the app  | Microsoft Docs"
 description: "Learn about how to use the Web API that you created in Azure in your app"
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
@@ -18,9 +18,9 @@ Maria and Kiana are ready to combine the app with the Web API. However, before p
 
 ## Understanding the IT operations management requirements for the Web API
 
-Preeti is concerned that the app and the Web API must be secure because they provide access to sensitive data stored in the various databases. She wants assurances that she will be able to include authentication and authorization, to prevent unwarranted access to information. Preeti is also aware that the company is rapidly expanding, and the volume of data involved in managing customers, appointments, parts, and the knowledge base is likely to increase exponentially in the near term. Consequently, she wants the solution to be scalable.
+Preeti is concerned that the app and the Web API must be secure because they provide access to sensitive data stored in the various databases. Preeti wants assurances that the authentication and authorization will be included to prevent unwarranted access to information. Preeti is also aware that the company is rapidly expanding, and the volume of data involved in managing customers, appointments, parts, and the knowledge base is likely to increase exponentially in the near term. Consequently, the solution needs to be scalable.
 
-Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Azure Active Directory because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
+Kiana explains to Preeti that the Web API is currently implemented with Azure App Service. This service supports a number of authentication providers, which Preeti can configure using the Azure portal. Preeti is especially interested in Microsoft Entra ID because VanArsdel are looking to roll out this form of authentication to many of their other corporate systems in the near future.
 
 ![App Service authentication configuration.](media/image100.png)
 
@@ -28,11 +28,11 @@ App Service also provides horizontal and vertical scalability. If needed, Preeti
 
 ![App Service scale up.](media/image101.png)
 
-She can also arrange for the system to scale out by configuring autoscaling. App Service enables an operations manager to define autoscale rules that determine the conditions under which the system should scale out across more instances when the load increases, or back in again as demand drops. She can also configure pre-emptive autoscaling to occur according to a schedule:
+Preeti can also arrange for the system to scale out by configuring autoscaling. App Service enables an operations manager to define autoscale rules that determine the conditions under which the system should scale out across more instances when the load increases, or back in again as demand drops. Preeti can also configure pre-emptive autoscaling to occur according to a schedule:
 
 ![App Service scale out.](media/image102.png)
 
-A key part of the role of an IT Operations Manager is to have an eye for how systems might evolve, and to ensure that the underlying support structures will handle future expansion and changes. Preeti knows that the Web API developed by Kiana might be extended, and reused by other VanArsdel systems in the future. She needs to be able to manage and control the way in which developers request use of the Web API, protect it as a valuable resource, and monitor its use. Therefore Preeti decides to protect the Web API behind the Azure API Management service.
+A key part of the role of an IT Operations Manager is to have an eye for how systems might evolve, and to ensure that the underlying support structures will handle future expansion and changes. Preeti knows that the Web API developed by Kiana might be extended, and reused by other VanArsdel systems in the future. Preeti needs to be able to manage and control the way in which developers request use of the Web API, protect it as a valuable resource, and monitor its use. Therefore Preeti decides to protect the Web API behind the Azure API Management service.
 
 API Management provides an extra layer of security to a Web API, as well as enabling detailed monitoring and control over which clients can access which operations. Using API Management, Preeti can manage resource utilization, and throttle the performance of low priority clients to ensure that critical higher priority apps are serviced more quickly.
 
@@ -74,7 +74,7 @@ Preeti created the API Management service through the Azure portal, using the fo
 
 ## Publishing the Web API through API Management
 
-After the API Management service was created, Preeti published the Web API to make it accessible to other services and applications. She used the following steps:
+After the API Management service was created, Preeti published the Web API to make it accessible to other services and applications using the following steps:
 
 1.  In the Azure portal, go to the API Management service.
 
@@ -172,7 +172,7 @@ The prototype app used Excel workbooks for the data sources. Now that the custom
 
 ## Updating the app to use the connector: Field inventory management
 
-Now that the connection has been added to the app, Maria can modify the screens to use it to replace the Excel workbooks. This involves working through each screen methodically and changing the data source. No other changes should be necessary. She starts with the **BrowseParts** and **PartDetails** screens, as follows:
+Now that the connection has been added to the app, Maria can modify the screens to use it to replace the Excel workbooks. This involves working through each screen methodically and changing the data source. No other changes should be necessary. Maria starts with the **BrowseParts** and **PartDetails** screens, as follows:
 
 1.  On the **Home** screen of the app, select the **Parts** button. Set the **OnSelect** action property to the following formula.
 
@@ -462,7 +462,7 @@ Working with Kiana, Preeti configures a new instance of the Azure Cognitive Sear
 
 ## Creating the custom connector for the Azure Cognitive Search service
 
-Kiana can now create a custom connector that Power Apps uses to send search requests to the search service. She does this using Power Apps Studio, as follows:
+Kiana can now create a custom connector that Power Apps uses to send search requests to the search service. Kiana does this using Power Apps Studio, as follows:
 
 1.  Sign in to [Power Apps](http://make.powerapps.com).
 
@@ -537,7 +537,7 @@ The connector should be created without reporting any errors or warnings.
 
 ## Updating the app to use Azure Cognitive Search: Field Knowledgebase
 
-Maria can now use the custom connector in the app. But first, she requires a key that grants her the privileges required to connect to the Azure Cognitive Search service. Preeti obtains the key from the **Keys** page for the service in the Azure portal, and gives it to Maria.
+Maria can now use the custom connector in the app. But first, a key is required that grants Maria the privileges required to connect to the Azure Cognitive Search service. Preeti obtains the key from the **Keys** page for the service in the Azure portal, and gives it to Maria.
 
 ![Search Service key in the Azure portal.](media/image154.png)
 

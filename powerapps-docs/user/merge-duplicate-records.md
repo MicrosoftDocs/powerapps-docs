@@ -1,22 +1,20 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
-author: mduelae
-manager: kvivek
+author: smurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 02/10/2020
+ms.topic: how-to
+ms.date: 11/27/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- fafuxa-ms
 ---
 # Merge duplicate rows 
 
@@ -45,10 +43,13 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
+
+> [!NOTE]
+>  To modify the columns that are visible for the current record in the duplicate detection dialog, administrators can modify the **Advanced Find View** for that entity. 
   
 ### How to merge duplicate rows
 > [!NOTE]
->  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
+>  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
   
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
@@ -72,10 +73,10 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >   - The control does not have a class property.
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
->   - The column's metadata `ValidForUpdate` is False. 
 >   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
 >   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
->   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
+>   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed.
+>   - The column is of type `Owner` (example: `ownerid`).
 
 
 

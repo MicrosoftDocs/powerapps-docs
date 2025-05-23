@@ -1,15 +1,15 @@
 ---
-title: Have a conversation about your business data in a Teams app. (contains video)
-description: Learn how to enable conversations about your business from within your Power App in Teams.
+title: Have a conversation about your business data in a Teams app.
+description: Learn how to enable conversations about your business from within your Power Apps in Teams.
 author: joel-lindstrom
-
-ms.topic: conceptual
+ms.subservice: teams
+ms.topic: how-to
 ms.custom: 
 ms.date: 10/06/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-    - tapanm-msft
+    - mduelae
     - msftsamperl
     - joel-lindstrom
 ---
@@ -18,14 +18,14 @@ contributors:
 
 Apps in Microsoft Teams drive collaboration by enabling users to do work where they communicate and collaborate. One way to make your apps collaborative is by adding the ability to have a conversation about your app or the data in your app. Teams is your go-to place to have such conversations.
 
-For example, in the [Profile+ sample app](profile-app.md) for Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Teams.
+For example, in the [Profile+ sample app template](profile-app.md) for Teams, when you select one or more profile cards in the app, you can start a chat with the selected people directly in Teams.
 
 You might also want to use this capability for your apps. For example, if you're building a sales opportunity tracker for the sales manager to review upcoming deals, you might want to add a button for the user to chat with the sales person about the opportunity.
 
 This way, Power Apps in Teams can use deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to facilitate conversations.
 
 Watch this video to learn how to configure having conversations about business data in Teams app:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMLrD]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=aeacd56d-232b-4187-83f0-e15dc4103f43]
 
 ## Prerequisites
 
@@ -212,7 +212,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
 
 1. Copy the following formula in the **OnSelect** event of the button.
 
-    ```powerapps-dot
+    ```power-fx
     Patch(Conversations,Defaults(Conversations),{ID:MicrosoftTeams.PostMessageToChannelV3(team_ComboBox.Selected.id,channel_ComboBox.Selected.id,{content:message_TextBox.Value,contentType: "text"},{subject:"New conversation"}).id,Team:team_ComboBox.Selected.id,'Team Channel':channel_ComboBox.Selected.id, 'Team Name':team_ComboBox.Selected.displayName,'Channel Name':channel_ComboBox.Selected.displayName, Company: TemplateGalleryList1.Selected}); Set(enterMessage,false); Reset(team_ComboBox);Reset(channel_ComboBox);Reset(message_TextBox)
     ```
 
@@ -238,7 +238,7 @@ Now, we'll add a new screen where the app user can start or join a conversation.
 
 1. Copy the following formula in the **OnSelect** event of the button.
 
-    ```powerapps-dot
+    ```power-fx
     Launch(Concatenate("msteams://teams.microsoft.com/l/message/",Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel',"/",Gallery1.Selected.etag,"?tenantId=",Param("tenandId"),"&groupId=",Last(Sort(Conversations, 'Created On', Ascending)).Team,"&parentMessageId=",LookUp(MicrosoftTeams.GetMessagesFromChannel(Last(Sort(Conversations, 'Created On', Ascending)).Team,Last(Sort(Conversations, 'Created On', Ascending)).'Team Channel').value,id = Last(Sort(Conversations, 'Created On', Ascending)).Team).etag,"&teamName=",Last(Sort(Conversations, 'Created  On', Ascending)).'Team Name',"&channelName=",Last(Sort(Conversations, 'Created On', Ascending)).'Channel Name'),{},LaunchTarget.New)
     ```
 
@@ -287,18 +287,5 @@ Run the app in preview mode or go to the team in which the app is created.
 
     ![Testing the app](media/have-a-conversation-about-your-business-data/testing-the-app-1.png "Testing the app")
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -8,18 +8,16 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
+
 # Sample: Export and import a data map
 
+This sample shows how to create an import map (data map) in Microsoft Dataverse, export it as an XML formatted data, import modified mappings, and create a new import map for Dataverse based on the imported mappings.
 
-
-This sample shows how to create an import map (data map) in Microsoft Dataverse, export it as an XML formatted data, import modified mappings, and create a new import map for Dataverse based on the imported mappings. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportImportDataMap).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Export and import a data map sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExportImportDataMap)
 
 ## How to run this sample
 
@@ -35,7 +33,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org. 
+1. Checks for the current version of the org.
 2. The `CreateImportMapping` method creates the import mapping record.
 3. The `RetrieveMappingXML` method exports the mapping (Xml) that is created.
 4. The `ChangeMappingName` method parses the Xml to change the name column.
@@ -44,7 +42,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 ### See Also
 
@@ -56,6 +53,5 @@ Display an option to delete the sample data that is created in [Setup](#setup). 
 [Run data import](../../run-data-import.md)<br />
 [Data import tables](../../data-import-entities.md)<br />
 [Sample: Import data using complex data map](import-data-complex-data-map.md)<br />
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,9 +1,8 @@
 ---
-title: Filtering | Microsoft Docs
+title: Filtering (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods for filtering in a dataset.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,7 +27,7 @@ Model-driven and canvas apps
 | [getFilter](filtering/getfilter.md)     | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]     |
 | [setFilter](filtering/setfilter.md)     | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]     |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

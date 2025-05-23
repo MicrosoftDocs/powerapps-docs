@@ -1,9 +1,8 @@
 ---
-title: FilterExpression | Microsoft Docs
+title: FilterExpression (Power Apps component framework API reference) | Microsoft Docs
 description: An expression used to represent a filter.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -47,7 +46,7 @@ Any child filters that should be evaluated after evaluating this filter.
 
 **Type**: [FilterExpression](filterexpression.md)[]<br />
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

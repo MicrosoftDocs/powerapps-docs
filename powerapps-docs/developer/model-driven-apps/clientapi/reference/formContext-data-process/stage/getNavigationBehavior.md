@@ -1,18 +1,14 @@
 ---
-title: "getNavigationBehavior (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getNavigationBehavior (Client API reference) in model-driven apps"
 description: Returns a navigation behavior object for stage that can be used to define whether the create button is available for users.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,6 +26,7 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
     return true|false;
 }
 ```
+
 [!INCLUDE[cc-terminology](../../../../../data-platform/includes/cc-terminology.md)]
 
 ## Returns
@@ -62,10 +59,8 @@ function sampleFunction(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

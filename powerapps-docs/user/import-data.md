@@ -1,30 +1,29 @@
 ---
-title: "Import data in model-driven apps| MicrosoftDocs"
-description: How to import data
-ms.custom: ""
-author: mduelae
-manager: kvivek
-
+title: Import data in model-driven apps
+description: Discover how to import data into your model-driven app, ensuring correct column mapping and file formats.
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 01/03/2022
+ms.topic: how-to
+ms.date: 05/08/2024
 ms.subservice: end-user
-ms.author: mkaur
-ms.reviewer: ""
-ms.assetid: 
-search.audienceType: 
+ms.author: smurkute
+ms.reviewer: smurkute
+ms.assetid:
+search.audienceType:
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:05/08/2024
 ---
+
 # How to import data
 
-Import data that's stored somewhere else into your model-driven app using the import feature in Power Apps. 
+Import data stored somewhere else into your model-driven app using the import feature in Power Apps. 
 
-Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
+Every table requires columns that must exist in your input file. You should download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
-Before you import a file make sure the column headings match the column names in your app. During the import process, the system will try to map the column names from your input file to the column names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
+Before you import a file, make sure the column headings match the column names in your app. During the import process, the system tries to map the column names from your input file to the column names in the app. If they don't match, then you have to manually map the fields or you might run into issues during the import process.
 
 If you're an advanced user and know the required columns for a given Dataverse table, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
 
@@ -36,7 +35,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 ## Download an Excel template
 
-To avoid mapping issues, it's recommended that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
+To avoid mapping issues, you should use an Excel template that you can download from your app. Once the template is downloaded, add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
 
 1. Open your app and from the left nav select a table.
 
@@ -103,15 +102,15 @@ When you import a file, it's important to review the column headings and verify 
 
 Legend:
 
-1. **Primary Fields**: Shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns will be automatically mapped. 
+1. **Primary Fields**: Shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns are automatically mapped. 
 
-2. **Mapped columns**: Correctly mapped columns will be shown with a green check mark.
+2. **Mapped columns**: Correctly mapped columns are shown with a green check mark.
 
-3. **Optional Fields**: These are optional column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists. 
+3. **Optional Fields**: These are optional column headings in your source file. If the column headings match the column display names, the columns are automatically selected in the corresponding drop-down lists. 
 
-4. **Unmatched columns**: If the column headings don't match, the unmapped columns will be shown with a red exclamation point. To map the column correctly, select a column to map to the unmapped column heading of your file. 
+4. **Unmatched columns**: If the column headings don't match, the unmapped columns are shown with a red exclamation point. To map the column correctly, select a column to map to the unmapped column heading of your file. 
 
-5. **Ignore** (For **Optional Fields** only): Choose **Ignore** from the drop-down list. Data from ignored columns won't be imported into your app.
+5. **Ignore** (For **Optional Fields** only): Choose **Ignore** from the drop-down list. Data from ignored columns aren't imported into your app.
 
 ### Option set
 
@@ -129,7 +128,7 @@ The option values drop-down list combines the values available in the incoming f
 - **Values already in your app**: Cold, Warm, Hot
 - **Resulting target values**: Cold, Warm, Hot, Low, High
  
-After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It does not create "Low" as a target value in your app because you didn't map any source to this target value.
+After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It doesn't create "Low" as a target value in your app because you didn't map any source to this target value.
 
 >[!NOTE]
 >You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in your app, new values won't be created in your app.
@@ -153,10 +152,63 @@ To save the mapping settings for next time, enter a name in the **Name your data
 > [!div class="mx-imgBorder"]
 > ![Name your data map here.](media/import-save-settings.png "Name your data map here")
 
+## Open the import log
+
+After you initiate an import, you can monitor the status of the import job and view results in the import log. 
+
+In the last step of the import wizard, select **Track Progress** to view the progress of the import job.
+
+:::image type="content" source="media/track-progress.png" alt-text="Screenshot of the last step in the import wizard.":::
+
+If you missed this step, append the following code to your app URL: `&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
+
+For example, if your app URL is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444`, then the URL to view the import log is `https://org12345.crm.dynamics.com/main.aspx?appid=00001111-aaaa-2222-bbbb-3333cccc4444&newWindow=true&pagetype=entitylist&etn=importfile&viewid=a2927069-e4dc-4e8f-8fb1-d2f6c40c427e&viewType=1039`.
+
+
+### View the status of an import, and correct errors
+
+After the import is complete, you can view the records that were successfully imported, failed to import, or were partially imported.
+
+1. [Open the import log](#open-the-import-log).
+
+1. On the **My Imports** page, monitor the progress of the import.
+
+   The **Status** column shows the status of the import. The status progresses through these values:
+
+   - **Submitted**
+   - **Parsing**  
+   - **Transforming**
+   - **Importing**
+   - **Completed**
+
+1. After the import is complete, the **Success**, **Failures**, and **Partial Failures** columns show the number of records that were successfully imported, failed to import, or were partially imported.
+
+1. Select an import job to view the records that didn't import or were partially imported.
+   :::image type="content" source="media/import-data-log.svg" alt-text="Screenshot of the import record with the **Success**, **Failures**, and **Partial Failures** columns.":::
+
+1. Select appropriate tabs to see information about failures, success, or partial failure of records during import.
+
+1. On the **Failures** tab, export rows that failed to import to a new file. Select **Export Error Rows**.
+1. Correct the errors in this file, and then import it.
+
+### Delete imported records
+
+You can delete the import file and imported records if you want to reimport the data or you don't need the data for some reason.
+
+1. [Open the import log](#open-the-import-log).
+
+2. Select the import file that you want to delete, followed by one of the following actions:
+
+    - **Delete import source file**. This option deletes the import log file and its details.
+
+    - **Delete imported records**. This option deletes all records that were imported from the selected file.
+
+    - **Delete All**. This option deletes the import file along with the records that were imported from the import file.
+
+### Limitations
+
+- Excel Import isn't supported with [Virtual tables](../maker/data-platform/limits-tshoot-virtual-tables.md#general-limitations) or [Elastic tables](../maker/data-platform/create-edit-elastic-tables.md#features-currently-not-supported-with-elastic-tables)
 
 ### See also
+
 [Download a template for data import](/power-platform/admin/download-template-data-import)
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

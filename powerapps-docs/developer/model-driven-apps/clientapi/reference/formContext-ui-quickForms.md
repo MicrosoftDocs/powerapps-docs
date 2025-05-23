@@ -1,19 +1,15 @@
 ---
-title: "formContext.ui.quickForms (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.quickForms (Client API reference) in model-driven apps"
 description: "Provides methods to access all the quick view controls and its constituent controls on the model-driven apps forms when using the new form rendering engine "
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -48,7 +44,7 @@ You can retrieve a quick view control in the **quickForms** collection by using 
 |[setVisible](formcontext-ui-quickForms/setVisible.md)|[!INCLUDE[formcontext-ui-quickForms/includes/setVisible-description.md](formcontext-ui-quickForms/includes/setVisible-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [formContext.ui](formContext-ui.md)
 

@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 5a9ec120-9ddc-4d92-b48c-0fee8c57d3c3
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 10
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Validate and publish a model-driven app using the app designer

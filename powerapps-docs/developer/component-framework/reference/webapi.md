@@ -1,9 +1,8 @@
 ---
-title: WebAPI | Microsoft Docs
+title: WebAPI (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to use Web API to create and manage records.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -18,7 +17,7 @@ contributors:
 
 ## Available for 
 
-Model-driven apps, canvas apps, & portals.
+Model-driven apps & portals.
 
 ## Methods
 
@@ -34,7 +33,7 @@ Model-driven apps, canvas apps, & portals.
 
 To learn more about how to implement the web API methods, see [Web API component](../sample-controls/webapi-control.md)
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

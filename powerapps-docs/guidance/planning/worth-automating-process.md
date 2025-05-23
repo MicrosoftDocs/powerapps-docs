@@ -3,7 +3,7 @@ title: Is it worth automating this process? | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, consider the effort it will take to build the solution and decide whether it's justified by business value.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -47,11 +47,11 @@ when we talked to our colleagues:
     >   52 weeks &times; \$12,600 = \$655,200 a year
 
 - Nick isn't reviewing or approving the expense reports; that's all falling
-    to Abhay and his team to complete. Because he's not regularly monitoring the
-    team's expenses, Nick is missing an important opportunity to sanity-check the
-    expenses, watch for fraud, and optimize his team's spending habits.
+    to Abhay and the team to complete. Because Nick's not regularly monitoring the
+    team's expenses, an important opportunity to sanity-check the
+    expenses, watch for fraud, and optimize the team's spending habits is being missed.
 
-- Abhay shared with us that his team spends roughly 15 minutes per expense
+- Abhay shared with us that the team spends roughly 15 minutes per expense
     report, receives on average 140 reports a week, and sends back 25&nbsp;percent of those
     due to missing information.
 
@@ -82,7 +82,7 @@ when we talked to our colleagues:
         \$111,384/year
 
 - Charlotte would like to review the budget each week, but isn't able to get
-    her report until Thursday, after Abhay has completed his review and
+    the report until Thursday, after Abhay has completed the review and
     gotten back the reports that had missing information. (Although this
     isn't a monetary cost, it does have an impact on the business.)
 

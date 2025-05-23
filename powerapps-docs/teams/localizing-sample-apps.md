@@ -1,29 +1,28 @@
 ---
-title: Localize sample apps (contains video)
+title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
-# Localize sample apps
+# Localize sample app templates
 
-The sample apps for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
+The sample app templates for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
 
 For example, consider that you use the Russian language. Russian isn't a language included in the standard localization; however, you can still use the app in Russian&mdash;if you add that language and localize the app labels.
 
-This article covers the approach used for localization of the sample apps for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
+This article covers the approach used for localization of the sample app templates for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
-Watch this video to learn how to localize sample apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6N]
+Watch this video to learn how to localize sample app templates:
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2b55d792-7cde-4948-9072-5d38d33e844f]
 
 ## Prerequisites
 
@@ -37,7 +36,7 @@ For example, Milestones app contains an Excel data source called **StaticLocaliz
 
 -   **OOBTextID** is the identifier of the text that is to be localized.
 
--   **LanguageTag** is the identifier of the language in which the text is to be localized. Language tag is a standard abbreviated text defining a language and the country its being used in (for example, "en-US" means "English-United States").
+-   **LanguageTag** is the identifier of the language in which the text is to be localized. Language tag is a standard abbreviated text defining a language and the country/region its being used in (for example, "en-US" means "English-United States").
 
 -   **LocalizedText** is the text in the appropriate language that needs to be displayed.
 
@@ -128,10 +127,10 @@ To add Russian, you would first add Russian translation to the spreadsheet for e
 
 1. Update the app OnStart function **gblUserLanguage** to include the language that you added to the Excel file. In the example below we've added Russian:
 
-    ```powerapps-dot
+    ```power-fx
     //user language
     Set(gblUserLanguage,Switch(Left(Language(),2),"de","de-DE","en","en-US","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","nl","nl-NL",
-    "pt","pt-BR",“ru-RU”,
+    "pt","pt-BR","ru-RU",
     //default
     "en-US"));
     //build localization collection, with user's language
@@ -155,7 +154,7 @@ Let us add a label to the Loading screen:
 
     ![Welcome to app](media/localizing-sample-apps/welcome-to-the-app.png "Welcome to app")
 
-    For now, we'll set the text to “Welcome to the app” until it's ready for localization.
+    For now, we'll set the text to "Welcome to the app" until it's ready for localization.
 
 1. Open the Excel file to add rows for this text.
 
@@ -171,7 +170,7 @@ Let us add a label to the Loading screen:
     | nl-NL |
     | pt-BR |
 
-1. For the third column&mdash;**LocalizedText**, translate the text “Welcome to the app” in the 8 different languages:
+1. For the third column&mdash;**LocalizedText**, translate the text "Welcome to the app" in the 8 different languages:
 
     - en-US (US English)
     - de-DE (German)
@@ -198,29 +197,17 @@ Let us add a label to the Loading screen:
 
 1. Readd the spreadsheet as a connector, and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
 
-1. Select the label with the text “Welcome to the app”.
+1. Select the label with the text "Welcome to the app".
 
 1. Open the **Text** property of the label and paste the following formula:
 
-   ```powerapps-dot
-   With({varDefault: "Welcome to the app";varOOBTextId: "lblLoadingText_Welcome_locText"};With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId;LocalizedText)};Coalesce(varLocalizedText;varDefault)))
+   ```power-fx
+   With({varDefault: "Welcome to the app", varOOBTextId: "lblLoadingText_Welcome_locText"}, With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId, LocalizedText)}, Coalesce(varLocalizedText;varDefault)))
    ```
 
 1. To test the localization of the label we created, change the language of our user in Teams to one of the languages that is in our localization Excel spreadsheet. You can change your Teams language by selecting your photo in the upper-right corner, and then selecting settings.
 
 1. Select Milestones to open the app and the **Welcome to the app** label has been localized to the language that was selected in the previous step. You can verify the same by going to the specific Team channel where the app was installed and playing the published app.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

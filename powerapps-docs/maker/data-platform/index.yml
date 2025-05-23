@@ -7,13 +7,12 @@ metadata:
   title: Dataverse documentation
   description: Provides access to highlighted areas within the Dataverse documentation
   services: service
-  
-  ms.subservice: subservice
+  ms.subservice: dataverse-maker
   ms.topic: landing-page 
   ms.collection: collection
   author: Mattp123
   ms.author: matp
-  ms.date: 09/08/2020 
+  ms.date: 08/05/2024 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -28,10 +27,12 @@ landingContent:
             url: data-platform-intro.md
           - text: Why choose Dataverse?
             url: why-dataverse-overview.md
+          - text: Improve Copilot responses
+            url: data-platform-copilot.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: /learn/modules/introduction-common-data-service
+            url: /training/modules/introduction-common-data-service
 
   # Card
   - title: Define data
@@ -54,10 +55,10 @@ landingContent:
     linkLists:
        - linkListType: how-to-guide
          links:
+          - text: Create an app 
+            url: ../canvas-apps/data-platform-create-app.md
           - text: Create a custom table
             url: data-platform-create-entity.md
-          - text: Import or export data
-            url: data-platform-import-export.md
           - text: Create a relationship between tables
             url: data-platform-entity-lookup.md
           - text: Create and edit columns
@@ -72,6 +73,8 @@ landingContent:
         links:
           - text: Business rules 
             url: data-platform-create-business-rule.md
+          - text: Plug-ins
+            url: low-code-plug-ins.md
           - text: Real-time workflows
             url: overview-realtime-workflows.md
           - text: Actions
@@ -80,33 +83,38 @@ landingContent:
             url: processes.md
 
   # Card
-  - title: Work with dataflows
+  - title: Get insights from your data
     linkLists:
       - linkListType: concept
         links:
-          - text: Self-service data prep
-            url: self-service-data-prep-with-dataflows.md
+          - text: Overview 
+            url: data-get-insights-overview.md
+          - text: Transition to Dataverse insights
+            url: azure-synapse-link-transition-from-FnO.md
       - linkListType: how-to-guide
         links:
-          - text: Create and use dataflows
-            url: create-and-use-dataflows.md
-          - text: Connect Azure Data Lake Storage Gen2
-            url: /power-query/dataflows/connect-azure-data-lake-storage-for-dataflow
+          - text: Azure Synapse Link for Dataverse
+            url: export-to-data-lake.md
+          - text: Link to Microsoft Fabric
+            url: azure-synapse-link-view-in-fabric.md
+          - text: Quick view and Power BI integration
+            url: use-powerbi-dataverse.md
 
   # Card
   - title: Integrate with external data
     linkLists:
       - linkListType: concept
         links:
-          - text: Use Power BI 
-            url: use-powerbi-dataverse.md
+          - text: Import or export data
+            url: import-export-data.md
+          - text: Self-service data prep with dataflows
+            url: self-service-data-prep-with-dataflows.md
           - text: Use SharePoint, OneNote, and OneDrive
             url: sharepoint-onedrive-onenote-intro.md
       - linkListType: how-to-guide
         links:
-          - text: Create a Power BI report
-            url: data-platform-powerbi-connector.md
-
+         - text: Create virtual tables to connect to other data sources
+           url: create-virtual-tables-using-connectors.md
 
   # Card
   - title: Use solutions for ALM
@@ -121,6 +129,8 @@ landingContent:
            url: create-solution.md
          - text: Export solutions
            url: export-solutions.md
+         - text: Validate solutions
+           url: use-powerapps-checker.md
          - text: More > 
            url: solution-layers.md
 

@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -15,14 +15,10 @@ applies_to:
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Add and configure a quick view component on a form  

@@ -1,18 +1,14 @@
 ---
-title: "openSearchResult (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "openSearchResult (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openSearchResult method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -35,8 +31,8 @@ var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|resultNumber|Number|Yes|Numerical value specifying the result number to be opened. Result number starts from 1.|
-|mode|String|No|Specify "Inline" or "Popout". If you do not specify a value for the argument, the default ("Inline") option is used.<br/><br/>The "Inline" mode opens the result inline either in the reading pane of the control or in a reference panel tab in case of reference panel. The "Popout" mode opens the result in a pop-out window.|
+|`resultNumber`|Number|Yes|Numerical value specifying the result number to be opened. Result number starts from 1.|
+|`mode`|String|No|Specify "Inline" or "Popout". If you do not specify a value for the argument, the default ("Inline") option is used.<br/><br/>The "Inline" mode opens the result inline either in the reading pane of the control or in a reference panel tab in case of reference panel. The "Popout" mode opens the result in a pop-out window.|
 
 ## Return Value
 

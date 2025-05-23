@@ -1,19 +1,15 @@
 ---
-title: "setRequiredLevel (Client API reference)| MicrosoftDocs"
+title: "setRequiredLevel (Client API reference)"
 description: Includes description and supported parameters for the setRequiredLevel method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,17 +30,17 @@ All
 
 ## Parameters
 
-**Type**: String. 
+**Type**: String.
 
 **Description**: Set the level to one of the following values:
-- none
-- required
-- recommended
 
-### Related topic
+- `none`
+- `required`
+- `recommended`
+
+### Related article
+
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

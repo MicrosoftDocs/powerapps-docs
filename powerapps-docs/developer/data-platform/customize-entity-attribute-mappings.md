@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Customize table and column mappings
 
@@ -36,7 +32,7 @@ You can map columns between tables that have a relationship. This lets you set d
 
 ### Using Web API
 
-When working with the Web API, you can use <xref href="Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function" /> to create new records in the context of existing records where a mapping exists between the tables. 
+When working with the Web API, you can use <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> to create new records in the context of existing records where a mapping exists between the tables. 
 
 The response received from InitializeFrom request consists of values of mapped columns between the source table and target table and the GUID of parent record. The column mapping between tables that have a relationship is different for different table sets and is customizable, so the response from InitializeFrom function request may vary for different tables and organizations. When this response is passed in the body of create request of the new record, these column values are replicated in the new record. The values of custom mapped columns also get set in the new record during the process.
 
@@ -45,7 +41,7 @@ The response received from InitializeFrom request consists of values of mapped c
 
 For more information see [Create a new record from another record](webapi/create-entity-web-api.md#bkmk_initializefrom).
 
-### Using Organization Service
+### Using SDK for .NET
 
  When creating new records in the context of an existing record where a mapping exists between the tables, you can use the 
  <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest> message to define a new record that contains the values specified in the mapping. You can then use the 
@@ -70,7 +66,7 @@ For more information see [Create a new record from another record](webapi/create
  You can edit column mappings between table for relationships that support mapping. 
 
  In addition to creating each column map manually, you can use the 
- `AutoMapEntity` message(<xref href="Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action" /> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of column mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate column mappings](../../maker/data-platform/map-entity-fields.md#automatically-generate-column-mappings)). This message maps all the columns between the two related tables where the column names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all column mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements.
+ `AutoMapEntity` message(<xref:Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of column mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate column mappings](../../maker/data-platform/map-entity-fields.md#automatically-generate-column-mappings)). This message maps all the columns between the two related tables where the column names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all column mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements.
 
 > [!NOTE]
 > Automatically generating mappings in this manner will remove any previously defined column mappings and may include mappings that you do not want.  
@@ -79,7 +75,7 @@ For more information see [Create a new record from another record](webapi/create
 
 ## Retrieve the table and column mappings
 
- An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Use FetchXML to query data](use-fetchxml-construct-query.md).
+ An easy way to see the mappings that have been created is to use the following FetchXML query. For more information on how to run this query, see [Query data using FetchXml](fetchxml/overview.md).
 
 ```xml
 

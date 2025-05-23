@@ -4,25 +4,19 @@ description: "Learn how to configure real-time workflow steps"
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 author: "Mattp123"
 ms.assetid: 0b47dfd5-76db-464f-90c0-c64a0173dcdd
 caps.latest.revision: 18
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser
 ---
 # Configure real-time workflow stages and steps
-
-
 
 When you design workflows, you have the option to contain the logic you want to perform in stages and steps.  
   
@@ -76,7 +70,7 @@ The actions that you will apply often depend on conditions. Real-time workflow p
 |**Check Condition**|A logical "if \<condition> then" statement.<br /><br /> You can check the current values for the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps. Based on these values, you can define additional steps when the condition is true.<br /><br /> In the "if \<condition> then" statement, you can use the following operators: **Equals**, **Does Not Equal**, **Contains Data**, **Does Not Contain Data**, **Under** and **Not Under**. <br /><br />**Note:**  The **Under** and **Not Under** are hierarchical operators. They can only be used on the tables that have a hierarchical relationship defined. If you’re trying to use these operators on the tables that don’t have the hierarchical relationship defined, you’ll see the error message: “You’re using a hierarchical operator on a table that doesn’t have a hierarchical relationship defined. Either make the table hierarchical (by marking a relationship as hierarchical) or use a different operator.” <br /><br />For more information about hierarchical relationships, go to [Define and query hierarchically related data](./define-query-hierarchical-data.md). A screenshot that follows the table is an example of the definition of the real-time workflow process that uses the **Under** and **Not Under** hierarchical operators.|  
 |**Conditional Branch**|A logical "else-if-then" statement, the editor uses the text “Otherwise, if \<condition> then:”<br /><br /> Select a check condition you have previously defined and you can add a conditional branch to define additional steps when the check condition returns false.|  
 |**Default Action**|A logical "else" statement. The editor uses the text “Otherwise:”<br /><br /> Select a check condition, conditional branch, wait condition, or parallel wait branch that you have previously defined and you can use a default action to define steps for all cases that do not match the criteria defined in condition or branch elements.|  
-|**Wait Condition**|Enables a real-time workflow to pause itself until the criteria defined by the condition have been met. The real-time workflow starts again automatically when the criteria in the wait condition have been met.<br /><br /> Real-time workflows cannot use wait conditions.|  
+|**Wait Condition**|Real-time workflows can't use wait conditions. However, wait conditions can be used with background workflows. More information: [Setting conditions for background workflow actions](/power-automate/configure-workflow-steps#setting-conditions-for-background-workflow-actions) |
 |**Parallel Wait Branch**|Defines an alternative wait condition for a real-time workflow with a corresponding set of additional steps that are performed only when the initial criterion is met. You can use parallel wait branches to create time limits in your real-time workflow logic. They help prevent the real-time workflow from waiting indefinitely until the criteria defined in a wait condition have been met.|  
 |**Custom Step**|Developers can create custom real-time workflow steps that define conditions. There are no custom steps available by default.|  
   
@@ -115,21 +109,18 @@ You can change a real-time workflow into a background workflow by choosing **Con
   
 You can change a background workflow into a real-time workflow by choosing **Convert to a real-time workflow** on the toolbar. If the background workflow uses a wait condition, it will become invalid and you won’t be able to activate it until you remove the wait condition.  
   
-
-### Initiating real-time workflows before or after status changes  
+### Initiating real-time workflows before or after status changes
 
 When you configure **Options for Automatic Processes** for real-time workflows, the **Start When** options for the status changes event let you select **After** or **Before** for when status changes. The default option is **After**.  
   
 When you select **Before**, you are saying that you want the logic in the real-time workflow to be applied before data changing the status is saved. This provides you with the ability to check the values before other logic has been applied after the operation and prevents further logic from being performed. For example, you might have additional logic in a plug-in or custom real-time workflow action that could initiate actions on another system. By stopping further processing you can avoid cases where external systems are affected. Applying real-time workflows before this event also means that other real-time workflow or plug-in actions that might have saved data don’t need to be “rolled back” when the operation is canceled.  
   
-
 ### Using the Stop Workflow action with real-time workflows  
 
 When you apply a **Stop Workflow** action in a real-time workflow, you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
   
-## Next steps  
-<!-- [Create custom business logic with processes](./guide-staff-through-common-tasks-processes.md)   
-[Workflow processes overview](workflow-processes.md)    -->
+## Next steps
+
 [Monitor and manage real-time workflow processes](monitor-manage-processes.md)   
 [Best practices for real-time workflow processes](best-practices-workflow-processes.md)
 

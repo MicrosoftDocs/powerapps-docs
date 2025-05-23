@@ -4,24 +4,21 @@ description: "This sample showcases how to create a new record from existing rec
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Initialize a record from existing record
 
+This sample shows how to use the [IOrganizationService.InitializeFromRequest](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) message to create new records from an existing record.
 
-
-This sample shows how to use the [IOrganizationService.InitializeFromRequest](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) message to create new records from an existing record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InitializeRecordFromExisting).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Initialize a record from existing record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/InitializeRecordFromExisting)
 
 ## How to run this sample
 
@@ -40,17 +37,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. The `CreateRequiredRecords` method creates any records that this sample requires.
 
-
 ### Demonstrate
 
-1. The `InitializeFromRequest` method creates the request and set properties for the request object. 
-2. The `InitializeFromResponse`  method executes the request.
-
+1. The `InitializeFromRequest` method creates the request and set properties for the request object.
+2. The `InitializeFromResponse` method executes the request.
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

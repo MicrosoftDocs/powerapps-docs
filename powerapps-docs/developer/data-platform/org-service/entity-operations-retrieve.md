@@ -1,24 +1,19 @@
 ---
-title: "Retrieve a table row using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "divka78" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.date: 05/18/2023
+ms.reviewer: pehecke
+ms.topic: how-to
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
 ---
 
-# Retrieve a table row using the Organization Service
+# Retrieve a table row using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -31,7 +26,7 @@ You have some options to define the data returned when you retrieve a row. You w
 
 
 > [!IMPORTANT]
-> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve all table columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
+> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](../best-practices/work-with-data/retrieve-specific-columns-entity-via-query-apis.md)
 
 If you need to return related rows you can include a query with your retrieve request to define which related rows to return.
 
@@ -46,7 +41,7 @@ Entity entity = svc.Retrieve("account", accountid, new ColumnSet("name"));
 Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 ```csharp
 RetrieveRequest request = new RetrieveRequest()
@@ -126,7 +121,7 @@ Tasks:
 Primary Contact Fullname: Scott Konersmann (sample)
 ```
 
-More information: [Query data using the Organization service](entity-operations-query-data.md)
+More information: [Query data using the SDK for .NET](entity-operations-query-data.md)
 
 
 ## Retrieve with an alternate key
@@ -168,21 +163,21 @@ Console.WriteLine(entity["name"]);
 > [!NOTE]
 > Alternate keys are usually used only for data integration scenarios
 
-## Retrieve documents in storage partitions
+## Retrieve records from elastic tables
 
-If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Access Formatted values
 
-The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 <!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

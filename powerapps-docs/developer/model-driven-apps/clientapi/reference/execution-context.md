@@ -1,19 +1,15 @@
 ---
-title: "Execution context (Client API reference)| MicrosoftDocs"
+title: "Execution context (Client API reference)"
 description: Includes description and supported parameters for the executionContext method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -32,14 +28,10 @@ The execution context object provides the following methods.
 |[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
 |[setSharedVariable](executioncontext/setSharedVariable.md)|Sets the value of a variable to be used by a handler after the current handler completes.|
 
-### Related topics
+### Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
-[Save event arguments](save-event-arguments.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
+[Save event arguments](save-event-arguments.md)   
 [Understand Client API object model](../understand-clientapi-object-model.md) 
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

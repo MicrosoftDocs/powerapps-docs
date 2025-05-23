@@ -1,18 +1,14 @@
 ---
-title: "gridContext.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "gridContext.addOnLoad (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the gridContext.addOnLoad method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -31,9 +27,9 @@ Read-only and editable grids
 
 ## Parameter
 
-| Name       | Type               | Required | Description                                                                                                                                                                                                                                                                                              |
-| ---------- | ------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| myFunction | function reference | Yes      | The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information. |
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`myFunction`| function reference | Yes| The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information. |
 
 ## Remarks
 
@@ -52,7 +48,7 @@ function myFunction(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
 
 [removeOnLoad](removeOnLoad.md)
 

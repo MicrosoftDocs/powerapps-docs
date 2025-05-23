@@ -1,8 +1,8 @@
 ---
 title: How to check license designation for an app
 description: Explains how to check license designation for the selected canvas app.
-author: tapanm-msft
-ms.topic: conceptual
+author: mduelae
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.subservice: canvas-maker
@@ -10,11 +10,9 @@ ms.date: 02/23/2022
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - alaug
-  - tapanm-msft
+  - mduelae
 ---
 
 # How to check license designation for an app
@@ -32,7 +30,7 @@ The following table outlines the designations and which license an end user must
 |-|-|
 | Standard​ | An app that only uses standard connectors. An end user must have a Power Apps for Office 365 plan, per app plan, or a per user plan to access this app.
 | Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
-| Premium​ | An app that uses at least one premium connector, a custom connector, or an on-premise gateway. An end user must have a per app plan or per user plan to access.
+| Premium​ | An app that uses at least one premium connector, a custom connector, or an on-premises gateway. An end user must have a per app plan or per user plan to access.
 
 > [!NOTE]
 > Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams, or use custom connectors have **Premium** license designation.

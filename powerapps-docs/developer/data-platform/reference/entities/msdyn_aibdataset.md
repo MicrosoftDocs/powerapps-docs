@@ -1,65 +1,61 @@
 ---
-title: "msdyn_AIBDataset table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_AIBDataset table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "AI Builder Dataset (msdyn_AIBDataset) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the AI Builder Dataset (msdyn_AIBDataset) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# msdyn_AIBDataset table/entity reference
+# AI Builder Dataset (msdyn_AIBDataset) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: AI Solution default templates Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_aibdatasets<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_aibdatasets<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the AI Builder Dataset (msdyn_AIBDataset) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /msdyn_aibdatasets<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /msdyn_aibdatasets<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /msdyn_aibdatasets(*msdyn_aibdatasetid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|msdyn_AIBDatasets|
-|DisplayCollectionName|AI Builder Datasets|
-|DisplayName|AI Builder Dataset|
-|EntitySetName|msdyn_aibdatasets|
-|IsBPFEntity|False|
-|LogicalCollectionName|msdyn_aibdatasets|
-|LogicalName|msdyn_aibdataset|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|msdyn_aibdatasetid|
-|PrimaryNameAttribute|msdyn_name|
-|SchemaName|msdyn_AIBDataset|
+The following table lists selected properties for the AI Builder Dataset (msdyn_AIBDataset) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **AI Builder Dataset** |
+| **DisplayCollectionName** | **AI Builder Datasets** |
+| **SchemaName** | `msdyn_AIBDataset` |
+| **CollectionSchemaName** | `msdyn_AIBDatasets` |
+| **EntitySetName** | `msdyn_aibdatasets`|
+| **LogicalName** | `msdyn_aibdataset` |
+| **LogicalCollectionName** | `msdyn_aibdatasets` |
+| **PrimaryIdAttribute** | `msdyn_aibdatasetid` |
+| **PrimaryNameAttribute** |`msdyn_name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -78,854 +74,653 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_msdyn_AIBDatasetId"></a> msdyn_AIBDatasetId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|AI Builder Dataset|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**AI Builder Dataset**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_aibdatasetid|
+|LogicalName|`msdyn_aibdatasetid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_msdyn_AIBDatasetsContainerId"></a> msdyn_AIBDatasetsContainerId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|AI Builder Datasets Container|
+|DisplayName|**AI Builder Datasets Container**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_aibdatasetscontainerid|
+|LogicalName|`msdyn_aibdatasetscontainerid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|msdyn_aibdatasetscontainer|
 |Type|Lookup|
-
+|Targets|msdyn_aibdatasetscontainer|
 
 ### <a name="BKMK_msdyn_Metadata"></a> msdyn_Metadata
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Metadata|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Metadata**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_metadata|
-|MaxLength|1048576|
+|LogicalName|`msdyn_metadata`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
 |Property|Value|
-|--------|-----|
-|Description|Required name field|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Required name field**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_name|
-|MaxLength|100|
+|LogicalName|`msdyn_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the AI Builder Dataset|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the AI Builder Dataset**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`msdyn_aibdataset_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the AI Builder Dataset|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the AI Builder Dataset**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`msdyn_aibdataset_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_AIBDatasetsContainerIdName](#BKMK_msdyn_AIBDatasetsContainerIdName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_AIBDatasetsContainerIdName"></a> msdyn_AIBDatasetsContainerIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_aibdatasetscontaineridname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [msdyn_aibdataset_SyncErrors](#BKMK_msdyn_aibdataset_SyncErrors)
-- [msdyn_aibdataset_DuplicateMatchingRecord](#BKMK_msdyn_aibdataset_DuplicateMatchingRecord)
-- [msdyn_aibdataset_DuplicateBaseRecord](#BKMK_msdyn_aibdataset_DuplicateBaseRecord)
-- [msdyn_aibdataset_AsyncOperations](#BKMK_msdyn_aibdataset_AsyncOperations)
-- [msdyn_aibdataset_MailboxTrackingFolders](#BKMK_msdyn_aibdataset_MailboxTrackingFolders)
-- [msdyn_aibdataset_ProcessSession](#BKMK_msdyn_aibdataset_ProcessSession)
-- [msdyn_aibdataset_BulkDeleteFailures](#BKMK_msdyn_aibdataset_BulkDeleteFailures)
-- [msdyn_aibdataset_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses)
-- [msdyn_AIBDatasetFile_msdyn_AIBDatas](#BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas)
-- [msdyn_AIBDatasetRecord_msdyn_AIBDataset](#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset)
-
-
-### <a name="BKMK_msdyn_aibdataset_SyncErrors"></a> msdyn_aibdataset_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_SyncErrors](syncerror.md#BKMK_msdyn_aibdataset_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_DuplicateMatchingRecord"></a> msdyn_aibdataset_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibdataset_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_DuplicateBaseRecord"></a> msdyn_aibdataset_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibdataset_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_AsyncOperations"></a> msdyn_aibdataset_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibdataset_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_MailboxTrackingFolders"></a> msdyn_aibdataset_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibdataset_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_ProcessSession"></a> msdyn_aibdataset_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_ProcessSession](processsession.md#BKMK_msdyn_aibdataset_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_BulkDeleteFailures"></a> msdyn_aibdataset_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibdataset_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses"></a> msdyn_aibdataset_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [msdyn_aibdataset_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_aibdataset_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas"></a> msdyn_AIBDatasetFile_msdyn_AIBDatas
-
-Same as the [msdyn_AIBDatasetFile_msdyn_AIBDatas](msdyn_aibdatasetfile.md#BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas) many-to-one relationship for the [msdyn_aibdatasetfile](msdyn_aibdatasetfile.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aibdatasetfile|
-|ReferencingAttribute|msdyn_aibdatasetid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_AIBDatasetFile_msdyn_AIBDatas|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset"></a> msdyn_AIBDatasetRecord_msdyn_AIBDataset
-
-Same as the [msdyn_AIBDatasetRecord_msdyn_AIBDataset](msdyn_aibdatasetrecord.md#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset) many-to-one relationship for the [msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aibdatasetrecord|
-|ReferencingAttribute|msdyn_aibdatasetsid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_AIBDatasetRecord_msdyn_AIBDataset|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_msdyn_aibdataset](#BKMK_business_unit_msdyn_aibdataset)
 - [lk_msdyn_aibdataset_createdby](#BKMK_lk_msdyn_aibdataset_createdby)
 - [lk_msdyn_aibdataset_createdonbehalfby](#BKMK_lk_msdyn_aibdataset_createdonbehalfby)
 - [lk_msdyn_aibdataset_modifiedby](#BKMK_lk_msdyn_aibdataset_modifiedby)
 - [lk_msdyn_aibdataset_modifiedonbehalfby](#BKMK_lk_msdyn_aibdataset_modifiedonbehalfby)
-- [user_msdyn_aibdataset](#BKMK_user_msdyn_aibdataset)
-- [team_msdyn_aibdataset](#BKMK_team_msdyn_aibdataset)
-- [business_unit_msdyn_aibdataset](#BKMK_business_unit_msdyn_aibdataset)
 - [msdyn_AIBDataset_msdyn_AIBDatasetsContain](#BKMK_msdyn_AIBDataset_msdyn_AIBDatasetsContain)
-
-
-### <a name="BKMK_lk_msdyn_aibdataset_createdby"></a> lk_msdyn_aibdataset_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_aibdataset_createdby](systemuser.md#BKMK_lk_msdyn_aibdataset_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_msdyn_aibdataset_createdonbehalfby"></a> lk_msdyn_aibdataset_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_aibdataset_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdataset_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_msdyn_aibdataset_modifiedby"></a> lk_msdyn_aibdataset_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_aibdataset_modifiedby](systemuser.md#BKMK_lk_msdyn_aibdataset_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_msdyn_aibdataset_modifiedonbehalfby"></a> lk_msdyn_aibdataset_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_msdyn_aibdataset_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdataset_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_msdyn_aibdataset"></a> user_msdyn_aibdataset
-
-**Added by**: System Solution Solution
-
-See the [user_msdyn_aibdataset](systemuser.md#BKMK_user_msdyn_aibdataset) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_msdyn_aibdataset"></a> team_msdyn_aibdataset
-
-**Added by**: System Solution Solution
-
-See the [team_msdyn_aibdataset](team.md#BKMK_team_msdyn_aibdataset) one-to-many relationship for the [team](team.md) table/entity.
+- [owner_msdyn_aibdataset](#BKMK_owner_msdyn_aibdataset)
+- [team_msdyn_aibdataset](#BKMK_team_msdyn_aibdataset)
+- [user_msdyn_aibdataset](#BKMK_user_msdyn_aibdataset)
 
 ### <a name="BKMK_business_unit_msdyn_aibdataset"></a> business_unit_msdyn_aibdataset
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_msdyn_aibdataset](businessunit.md#BKMK_business_unit_msdyn_aibdataset)
 
-See the [business_unit_msdyn_aibdataset](businessunit.md#BKMK_business_unit_msdyn_aibdataset) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_msdyn_aibdataset_createdby"></a> lk_msdyn_aibdataset_createdby
+
+One-To-Many Relationship: [systemuser lk_msdyn_aibdataset_createdby](systemuser.md#BKMK_lk_msdyn_aibdataset_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_msdyn_aibdataset_createdonbehalfby"></a> lk_msdyn_aibdataset_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_msdyn_aibdataset_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdataset_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_msdyn_aibdataset_modifiedby"></a> lk_msdyn_aibdataset_modifiedby
+
+One-To-Many Relationship: [systemuser lk_msdyn_aibdataset_modifiedby](systemuser.md#BKMK_lk_msdyn_aibdataset_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_msdyn_aibdataset_modifiedonbehalfby"></a> lk_msdyn_aibdataset_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_msdyn_aibdataset_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_aibdataset_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_AIBDataset_msdyn_AIBDatasetsContain"></a> msdyn_AIBDataset_msdyn_AIBDatasetsContain
 
-See the [msdyn_AIBDataset_msdyn_AIBDatasetsContain](msdyn_aibdatasetscontainer.md#BKMK_msdyn_AIBDataset_msdyn_AIBDatasetsContain) one-to-many relationship for the [msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md) table/entity.
+One-To-Many Relationship: [msdyn_aibdatasetscontainer msdyn_AIBDataset_msdyn_AIBDatasetsContain](msdyn_aibdatasetscontainer.md#BKMK_msdyn_AIBDataset_msdyn_AIBDatasetsContain)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aibdatasetscontainer`|
+|ReferencedAttribute|`msdyn_aibdatasetscontainerid`|
+|ReferencingAttribute|`msdyn_aibdatasetscontainerid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_AIBDatasetsContainerId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_owner_msdyn_aibdataset"></a> owner_msdyn_aibdataset
+
+One-To-Many Relationship: [owner owner_msdyn_aibdataset](owner.md#BKMK_owner_msdyn_aibdataset)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_msdyn_aibdataset"></a> team_msdyn_aibdataset
+
+One-To-Many Relationship: [team team_msdyn_aibdataset](team.md#BKMK_team_msdyn_aibdataset)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_msdyn_aibdataset"></a> user_msdyn_aibdataset
+
+One-To-Many Relationship: [systemuser user_msdyn_aibdataset](systemuser.md#BKMK_user_msdyn_aibdataset)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [msdyn_aibdataset_AsyncOperations](#BKMK_msdyn_aibdataset_AsyncOperations)
+- [msdyn_aibdataset_BulkDeleteFailures](#BKMK_msdyn_aibdataset_BulkDeleteFailures)
+- [msdyn_aibdataset_DuplicateBaseRecord](#BKMK_msdyn_aibdataset_DuplicateBaseRecord)
+- [msdyn_aibdataset_DuplicateMatchingRecord](#BKMK_msdyn_aibdataset_DuplicateMatchingRecord)
+- [msdyn_aibdataset_MailboxTrackingFolders](#BKMK_msdyn_aibdataset_MailboxTrackingFolders)
+- [msdyn_aibdataset_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses)
+- [msdyn_aibdataset_ProcessSession](#BKMK_msdyn_aibdataset_ProcessSession)
+- [msdyn_aibdataset_SyncErrors](#BKMK_msdyn_aibdataset_SyncErrors)
+- [msdyn_AIBDatasetFile_msdyn_AIBDatas](#BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas)
+- [msdyn_AIBDatasetRecord_msdyn_AIBDataset](#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset)
+
+### <a name="BKMK_msdyn_aibdataset_AsyncOperations"></a> msdyn_aibdataset_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation msdyn_aibdataset_AsyncOperations](asyncoperation.md#BKMK_msdyn_aibdataset_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_BulkDeleteFailures"></a> msdyn_aibdataset_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure msdyn_aibdataset_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_aibdataset_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_DuplicateBaseRecord"></a> msdyn_aibdataset_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord msdyn_aibdataset_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_aibdataset_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_DuplicateMatchingRecord"></a> msdyn_aibdataset_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord msdyn_aibdataset_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_aibdataset_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_MailboxTrackingFolders"></a> msdyn_aibdataset_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder msdyn_aibdataset_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_aibdataset_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses"></a> msdyn_aibdataset_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess msdyn_aibdataset_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_aibdataset_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_ProcessSession"></a> msdyn_aibdataset_ProcessSession
+
+Many-To-One Relationship: [processsession msdyn_aibdataset_ProcessSession](processsession.md#BKMK_msdyn_aibdataset_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_aibdataset_SyncErrors"></a> msdyn_aibdataset_SyncErrors
+
+Many-To-One Relationship: [syncerror msdyn_aibdataset_SyncErrors](syncerror.md#BKMK_msdyn_aibdataset_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_aibdataset_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas"></a> msdyn_AIBDatasetFile_msdyn_AIBDatas
+
+Many-To-One Relationship: [msdyn_aibdatasetfile msdyn_AIBDatasetFile_msdyn_AIBDatas](msdyn_aibdatasetfile.md#BKMK_msdyn_AIBDatasetFile_msdyn_AIBDatas)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aibdatasetfile`|
+|ReferencingAttribute|`msdyn_aibdatasetid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_AIBDatasetFile_msdyn_AIBDatas`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset"></a> msdyn_AIBDatasetRecord_msdyn_AIBDataset
+
+Many-To-One Relationship: [msdyn_aibdatasetrecord msdyn_AIBDatasetRecord_msdyn_AIBDataset](msdyn_aibdatasetrecord.md#BKMK_msdyn_AIBDatasetRecord_msdyn_AIBDataset)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aibdatasetrecord`|
+|ReferencingAttribute|`msdyn_aibdatasetsid`|
+|ReferencedEntityNavigationPropertyName|`msdyn_AIBDatasetRecord_msdyn_AIBDataset`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.msdyn_aibdataset?text=msdyn_aibdataset EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.msdyn_aibdataset?displayProperty=fullName>

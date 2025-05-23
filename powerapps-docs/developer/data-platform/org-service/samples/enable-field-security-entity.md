@@ -4,27 +4,27 @@ description: "This sample shows how to enable field security for a table" # 115-
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Enable field security for a table
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to enable field security for a table.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
+This sample shows how to enable field security for a table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Enable field security for a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FieldSecurity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
+This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below.
 
 **First Name**: Samantha<br/>
 **Last Name**: Smith<br/>
@@ -43,9 +43,9 @@ In order to simulate the scenario described above, the sample will do the follow
 
 1. Checks for the current version of the org.
 2. Gets the user that you have created manually in **Microsoft 365**.
-3. Retrieve the security role needed to assign to the user. 
+3. Retrieve the security role needed to assign to the user.
 4. Retrieve the default business unit needed to create the team.
-5. Instantiate a team record and set its property values. 
+5. Instantiate a team record and set its property values.
 
 ### Demonstrate
 
@@ -56,6 +56,5 @@ In order to simulate the scenario described above, the sample will do the follow
 ### Clean up
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

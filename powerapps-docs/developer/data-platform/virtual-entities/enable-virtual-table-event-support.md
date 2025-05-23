@@ -1,19 +1,15 @@
 ---
 title: "Enable Virtual Tables to support Dataverse events (Microsoft Dataverse) | Microsoft Docs"
-description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector When a row is added, modified or deleted trigger."
+description: "You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector 'When a row is added, modified or deleted' trigger."
 ms.date: 04/04/2022
-author: NHelgren
-ms.author: nhelgren
+author: mkannapiran
+ms.author: kamanick
 ms.reviewer: jdaly
-manager: sunilg
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -22,15 +18,15 @@ contributors:
 
 You can allow Virtual entities to participate in asynchronous Dataverse Event Framework pipeline events and in the PowerAutomate Dataverse connector [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger. This capability is enabled as part of Dataverse business events. More information: [Microsoft Dataverse business events](../business-events.md)
  
-Without any of the configuration described in this topic, most virtual entities do not participate in the Event Framework pipeline like other entities. This means you cannot register plug-in steps against Create, Update, and Delete (CUD) events that occur, and although CUD events appear for these entities in the Power Automate Dataverse connector, an error is thrown when people try to save a flow that uses them.
+Without the configuration described in this article, most virtual entities don't participate in the Event Framework pipeline like other entities. Because virtual entities don't participate in the event pipeline, you can't register plug-in steps against Create, Update, and Delete (CUD) events that occur, and although CUD events appear for these entities in the Power Automate Dataverse connector, an error is thrown when people try to save a flow that uses them.
 
 This is because virtual entities represent data stored in an external source. Dataverse has access to that data source as a client, but other systems can update that data at any time without passing through the Dataverse event framework.
 
 There are two steps to enable this:
 
-1. Configuring data in a table called **Virtual Entity Metadata**. When data in this table is configured to enable them, a set of new APIs provide the means for the external system to notify Dataverse when CUD events occur. 
+1. Configuring data in a table called **Virtual Entity Metadata**. When data in this table is configured to enable them, a set of new APIs provide the means for the external system to notify Dataverse when CUD events occur.
     
-    When there is a Virtual Entity Metadata row associated with the [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata).[Metadataid](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) for a Virtual table, the following three settings can control whether your virtual table can support being notified by an external source.
+    When there's a Virtual Entity Metadata row associated with the [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata).[Metadataid](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) for a Virtual table, the following three settings can control whether an external source can notify your virtual table.
 
     When individually enabled using the Virtual Entity Metadata `IsOnExternalCreatedEnabled`, `IsOnExternalDeletedEnabled`, and `IsOnExternalUpdatedEnabled` boolean properties, the following bound Actions become available to be called by external services.
 
@@ -40,7 +36,7 @@ There are two steps to enable this:
     |`OnExternalUpdated`|Contains data about a record that was updated in an external system exposed as a virtual table in Dataverse.|
     |`OnExternalDeleted`|Contains data about a record that was deleted in an external system exposed as a virtual table in Dataverse.|
 
-1. The external system which controls the data must send an authenticated http request to Dataverse using the APIs that were enabled by data in Virtual Entity Metadata. This is typically performed by a call using an authenticated service principal account. More information: [Build web applications using server-to-server (S2S) authentication](../build-web-applications-server-server-s2s-authentication.md) 
+1. The external system which controls the data must send an authenticated HTTP request to Dataverse using the APIs that have data in Virtual Entity Metadata. An authenticated service principal account typically performs this call. More information: [Build web applications using server-to-server (S2S) authentication](../build-web-applications-server-server-s2s-authentication.md)
 
     But any application or user that can perform a call to Dataverse can send the http request needed to notify Dataverse that the event occurred.
 
@@ -61,27 +57,27 @@ Let's say we have a Person Virtual Table with these properties, the **Name** pro
 
     :::image type="content" source="../media/add-new-virtualentitymetadata-solution.png" alt-text="Add a new virtualentitymetadata to your solution.":::
 
-    This will open the following form:
+    This opens the following form:
 
     :::image type="content" source="../media/virtualentitymetadata-form.png" alt-text="virtualentitymetadata form.":::
 
-1. Complete the form, setting the **Extension Entity Id** value to the name of your virtual table. You are not required to enable all three messages. You can set one or more of them and come back to enable the rest later.
+1. Complete the form, setting the **Extension Entity Id** value to the name of your virtual table. You aren't required to enable all three messages. You can set one or more of them and come back to enable the rest later.
 
 When you have enabled these messages, you can observe and confirm what was added using the steps in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table).
 
 #### Set managed properties using the maker portal
 
-If you do not want people who install your managed solution to change the Virtual Entity Metadata behaviors, you should set the managed property to prevent it using the following steps.
+If you don't want people who install your managed solution to change the Virtual Entity Metadata behaviors, you should set the managed property to prevent it using the following steps.
 
-1. In your solution, select the Virtual Entity Metadata and click the ellipsis (...) and then select **Managed Properties**.
+1. In your solution, select the Virtual Entity Metadata and select the ellipsis (...) and then select **Managed Properties**.
 
     :::image type="content" source="../media/virtualentitymetadata-managed-properties.png" alt-text="Navigate to Managed Properties.":::
 
-1. In the Managed Properties pane, de-select **Allow Customizations** and press **Done**.
+1. In the Managed Properties pane, deselect **Allow Customizations** and press **Done**.
 
-    :::image type="content" source="../media/virtualentitymetadata-managed-properties-pane.png" alt-text="De-select Allow Customizations.":::
+    :::image type="content" source="../media/virtualentitymetadata-managed-properties-pane.png" alt-text="Deselect Allow Customizations.":::
 
-    This setting will not do anything until the Virtual Entity Metadata record is included in a managed solution.
+    This setting won't do anything until the Virtual Entity Metadata record is included in a managed solution.
 
 ### Enable with code
 
@@ -93,22 +89,22 @@ The `VirtualEntityMetadata` table has the following columns that you can set:
 |---|---|---|---|
 |`ExtensionOfRecordId`<br />`extensionofrecordid`|Virtual Entity|Lookup|The name of the virtual entity that these settings are for.|
 |`IsCustomizable`<br />`iscustomiable`|Is Customizable|ManagedProperty|Controls whether the virtual entity metadata can be changed or deleted when included in a managed solution.|
-|`IsOnExternalCreatedEnabled`<br />`isonexternalcreatedenabled`|Enable external create message|Boolean|Will enable a message to send information about new records created in the external data source.|
-|`IsOnExternalDeletedEnabled`<br />`isonexternaldeletedenabled`|Enable external delete message|Boolean|Will enable a message to send information about deleted records in the external data source.|
-|`IsOnExternalUpdatedEnabled`<br />`isonexternalupdatedenabled`|Enable external update message|Boolean|Will enable a message to send information about updated records in the external data source.|
+|`IsOnExternalCreatedEnabled`<br />`isonexternalcreatedenabled`|Enable external create message|Boolean|Enables a message to send information about new records created in the external data source.|
+|`IsOnExternalDeletedEnabled`<br />`isonexternaldeletedenabled`|Enable external delete message|Boolean|Enables a message to send information about deleted records in the external data source.|
+|`IsOnExternalUpdatedEnabled`<br />`isonexternalupdatedenabled`|Enable external update message|Boolean|Enables a message to send information about updated records in the external data source.|
 |`Name`<br />`name`|Name|String|The name of the settings.|
 |`VirtualEntityMetadataId`<br />`virtualentitymetadataid`|VirtualEntityMetadata|Uniqueidentifier|Unique identifier for entity instances|
 
 When creating these types of solution components, we recommend that you set the **IsCustomizable** managed property to be `false` unless you want to allow people who install your managed solution to be able to change these settings.
 
-We also recommend that you add the Virtual Entity Metadata** record to a specific solution when you create it. In both examples below, you will see how the `Solution.UniqueName` is passed with the request that creates the record.
+We also recommend that you add the Virtual Entity Metadata** record to a specific solution when you create it. In both examples below, you'll see how the `Solution.UniqueName` is passed with the request that creates the record.
 
 
 #### Using Web API
 
-When using Web API, the first task is to get the `MetadataId` of the virtual table. The following example returns the `MetadataId` for a virtual entity named `new_people`.
+When you use the Web API, the first task is to get the `MetadataId` of the virtual table. The following example returns the `MetadataId` for a virtual entity named `new_people`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.1/EntityDefinitions(LogicalName='new_people')?$select=MetadataId HTTP/1.1
@@ -118,7 +114,7 @@ Accept: application/json
 Authorization: Bearer [REDACTED]
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -131,9 +127,9 @@ HTTP/1.1 200 OK
 
 Then, create the virtual entity metadata record while associating it to the `Entity` entitytype using the `MetadataId` retrieved in the first step.
 
-Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](/webapi/compose-http-requests-handle-errors#http-headers)
+Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This adds the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](../webapi/compose-http-requests-handle-errors.md#http-headers)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.1/virtualentitymetadatas HTTP/1.1
@@ -159,18 +155,19 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-#### Using Organization Service
+#### Using SDK for .NET
 
-Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).
+Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient). Alternately, the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class can be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var retrieveEntityRequest = new RetrieveEntityRequest
 {
@@ -185,7 +182,7 @@ var entityId = retrieveEntityResponse.EntityMetadata.MetadataId;
 
 **Using early-bound types**
 
-With early-bound types you can use the `VirtualEntityMetadata` class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
+With early-bound types, you can use the `VirtualEntityMetadata` class generated using [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build). More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
 
 ```csharp
 var virtualEntityMetadata = new VirtualEntityMetadata
@@ -231,7 +228,7 @@ Or:
 
 **Creating the record**
 
-When creating the record, use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` additional parameter which will add the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
+When creating the record, use the [CreateRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest) rather than the [IOrganizationService.Create method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) so you can include the `SolutionUniqueName` optional parameter which adds the record to your solution when you create it. More information: [Passing optional parameters with a request](../org-service/use-messages.md#passing-optional-parameters-with-a-request)
 
 ```csharp
 var createRequest = new CreateRequest
@@ -262,7 +259,7 @@ This is a large XML document, but you can search for '`OnExternalCreated`' and f
 ```
 
 You can see that this is an OData Action bound to the `new_people` entityset.
-You will find similar actions for `OnExternalDeleted`, and `OnExternalUpdated`:
+You'll find similar actions for `OnExternalDeleted`, and `OnExternalUpdated`:
 
 ```xml
 <Action Name="OnExternalDeleted" IsBound="true">
@@ -278,23 +275,23 @@ You will find similar actions for `OnExternalDeleted`, and `OnExternalUpdated`:
 
 ### View the messages using the plug-in registration tool
 
-When you register a plug-in step using the plug-in registration tool, you will find these messages.
+When you register a plug-in step using the plug-in registration tool, you'll find these messages.
 
 :::image type="content" source="../media/virtualentitymetadata-register-onexternalcreated-step.png" alt-text="Registering a plugin step on the OnExternalCreated message for the new_people entity.":::
 
 
 ## Use the messages to notify Dataverse of changes
 
-To notify Dataverse of changes you must call the appropriate API. You can use either the Dataverse Web API or the Organization Service using the SDK assemblies.
+To notify Dataverse of changes, you must call the appropriate API. You can use either the Dataverse Web API or the SDK for .NET.
 
 Before using these messages, you may want to use the procedure describe in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table) to confirm that they exist.
 
 ### Using the Web API
 
-Because these are OData actions bound to an table collection, you can follow the pattern documented here: [Use Web API actions> Bound actions> Actions bound to a table collection](../webapi/use-web-api-actions.md#actions-bound-to-a-table-collection). The following are some examples showing the use of the `new_people` virtual table.
+Because these APIs are OData actions bound to an table collection, you can follow the pattern documented here: [Use Web API actions> Bound actions> Actions bound to a table collection](../webapi/use-web-api-actions.md#actions-bound-to-a-table-collection). The following are some examples showing the use of the `new_people` virtual table.
 
-If the  Id value is known by the calling system, it should always be included.
-The entity instance passed using the **Target** Parameter must have the appropriate `@odata.type` annotation property set to define the type of entity. If this is not included an error will be returned.
+If the  ID value is known by the calling system, it should always be included.
+The entity instance passed using the **Target** Parameter must have the appropriate `@odata.type` annotation property set to define the type of entity. If this isn't included, an error is returned.
 
 These calls should always return `204: No Content`.
 
@@ -321,7 +318,7 @@ Content-Type: application/json
 
 #### OnExternalUpdated
 
-For this action, only those properties which have changed should be included.
+For this action, only those properties that have changed should be included.
 
 ```http
 POST [Organization Uri]/api/data/v9.1/new_peoples/Microsoft.Dynamics.CRM.OnExternalUpdated HTTP/1.1
@@ -354,16 +351,17 @@ Content-Type: application/json
 }
 ```
 
-### Using the Organization Service
+### Using the SDK for .NET
 
-When using the Organization Service, you can use either early or late binding types. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
+When using the SDK for .NET, you can use either early or late binding types. More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
 
 #### Early-bound types
 
-This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types, though <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> could also be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 //OnExternalCreated
 var createPerson = new new_people
@@ -412,10 +410,11 @@ var deleteRequest = new OnExternalDeletedRequest
 
 #### Late-bound types
 
-This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types, though <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> could also be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
   //OnExternalCreated
   Entity createPerson = new Entity("new_people");

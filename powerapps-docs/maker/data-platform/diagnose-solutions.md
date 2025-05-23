@@ -4,15 +4,11 @@ description: "Use tools to run analysis of potential issues with solutions and s
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 07/08/2021
-
+ms.subservice: dataverse-maker
 ms.topic: overview
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Tools available to diagnose solutions

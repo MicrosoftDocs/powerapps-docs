@@ -1,18 +1,14 @@
 ---
-title: "Pass data from a page as a parameter to Ribbon actions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The topic describes options for using the <CrmParameter> element to retrieve these values. " # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+title: "Pass data from a page as a parameter to Ribbon actions (model-driven apps)"
+description: "The topic describes options for using the <CrmParameter> element to retrieve these values. "
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -79,51 +75,48 @@ function mySampleFunction(primaryControl) {
 ```
 
   
-## Grid values  
- The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` parameter enumeration options, you can easily isolate items by:  
+## Grid values
+
+The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` parameter enumeration options, you can easily isolate items by:  
   
 - **Selected items**  
   
-    -   SelectedControlSelectedItemCount  
-  
-    -   SelectedControlSelectedItemIds  
-  
-    -   SelectedControlSelectedItemReferences  
+    -   `SelectedControlSelectedItemCount`  
+    -   `SelectedControlSelectedItemIds`  
+    -   `SelectedControlSelectedItemReferences`  
   
 - **All items**  
   
-    -   SelectedControlAllItemCount  
-  
-    -   SelectedControlAllItemIds  
-  
-    -   SelectedControlAllItemReferences  
+    -   `SelectedControlAllItemCount`  
+    -   `SelectedControlAllItemIds`  
+    -   `SelectedControlAllItemReferences`  
   
 - **Unselected items**  
   
-    -   SelectedControlUnselectedItemCount  
-  
-    -   SelectedControlUnselectedItemIds  
-  
-    -   SelectedControlUnselectedItemReferences  
+    -   `SelectedControlUnselectedItemCount`  
+    -   `SelectedControlUnselectedItemIds`  
+    -   `SelectedControlUnselectedItemReferences`  
   
   For each of these groupings, you can gather the number of items and the GUID identifier. If you are passing the values to a URL, you can also retrieve `EntityReference` objects that contain all the information that you need to uniquely identify the objects in the grid. These parameters apply whether the page viewed is the main grid (`HomepageGrid`) or a sub grid located in a form. When used together with the `SelectedEntityTypeName` parameter, you have all the information that you must have to pass to another application.  
   
  
   
-## Other context information  
+## Other context information
+
  In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
  
  For a `<Url>` action, you can also use the `PassParams` to include contextual information.  
   
  The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for a table record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
   
-### See also  
- [Customize the ribbon](customize-commands-ribbon.md)   
- [Passing parameters to a URL using the ribbon](pass-parameters-url-by-using-ribbon.md)    
- [Define ribbon actions](define-ribbon-actions.md)   
- [Define custom actions to modify the ribbon](define-custom-actions-modify-ribbon.md)<br>
- [Client API form context](clientapi/clientapi-form-context.md)<br>
- [Client API grid context](clientapi/clientapi-grid-context.md)<br>
+### See also
+
+[Customize the ribbon](customize-commands-ribbon.md)   
+[Passing parameters to a URL using the ribbon](pass-parameters-url-by-using-ribbon.md)    
+[Define ribbon actions](define-ribbon-actions.md)   
+[Define custom actions to modify the ribbon](define-custom-actions-modify-ribbon.md)   
+[Client API form context](clientapi/clientapi-form-context.md)   
+[Client API grid context](clientapi/clientapi-grid-context.md)
  
 
 

@@ -67,11 +67,14 @@
       "path_to_root": "PowerApps-Samples",
       "url": "https://github.com/microsoft/PowerApps-Samples",
       "branch": "master",
-      "branch_mapping": {
-        "master": "master",
-        "live": "master"
-      }
-    }
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "shared-content",
+      "url": "https://github.com/MicrosoftDocs/powerapps-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    }   
   ],
   "branch_target_mapping": {
     "live": [

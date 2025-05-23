@@ -1,321 +1,165 @@
 ---
-title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about File columns that store file data within the application, supporting columns, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+title: "Work with file column definitions using code | Microsoft Docs"
+description: "Learn about how to create, retrieve, update and delete file column definitions using code."
+ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: NHelgren # GitHub ID
+ms.topic: how-to
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
-# File columns
+# Work with file column definitions using code
 
-A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file column is `EntityFile`, the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> is `entityfile`.
+Use file columns to store file data up to a specified maximum size. File columns are optimized for storing binary data. Dataverse doesn't save this data in the relational data store, which improves performance and reduces the capacity usage. [Learn more about storage capacity](/power-platform/admin/whats-new-storage)
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
-|Web API| SDK for .NET|
-|-------| -------|
-|<xref:Microsoft.Dynamics.CRM.FileAttributeMetadata>|<xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>|
+## Create file columns
 
-For information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
+The recommended way to create file columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [File columns](../../maker/data-platform/types-of-fields.md#file-columns).
+
+> [!NOTE]
+> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, the requests must be 'chunked'. The size limit to send a single request is 128 MB. When a client application attempts to send a file larger than 128 MB in a single request, an error will be thrown. [Learn to upload files](file-column-data.md#upload-files).
+>
+> The `MaxSizeInKB` value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
+> You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
+
+You can also create file columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
+
+#### [SDK for .NET](#tab/sdk)
+
+Use the [FileAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata) with the [CreateAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest) to create a file column.
+
+
+```csharp
+public static void CreateFileColumn(
+   IOrganizationService service, 
+   string entityLogicalName, 
+   string fileColumnSchemaName) 
+{
+
+    FileAttributeMetadata fileColumn = new()
+    {
+        SchemaName = fileColumnSchemaName,
+        DisplayName = new Label("Sample File Column", 1033),
+        RequiredLevel = new AttributeRequiredLevelManagedProperty(
+                AttributeRequiredLevel.None),
+        Description = new Label("Sample File Column for FileOperation samples", 1033),
+        MaxSizeInKB = 30 * 1024 // 30 MB
+
+    };
+
+    CreateAttributeRequest createfileColumnRequest = new() {
+        EntityName = entityLogicalName,
+        Attribute = fileColumn                   
+    };
+
+    service.Execute(createfileColumnRequest);
+
+}
+```
+
+Use the [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB) property to set the maximum size.
+
+More information:
+
+- [What is the SDK for .NET](org-service/overview.md)
+- [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
+
+#### [Web API](#tab/webapi)
+
+POST a [FileAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.FileAttributeMetadata) to the `Attributes` collection for the table.
+
+**Request:**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.FileAttributeMetadata",
+  "AttributeTypeName": {
+    "Value": "FileType"
+  },
+  "SchemaName": "sample_FileColumn",
+  "MaxSizeInKB": 30720,
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample File Column for FileOperation samples",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample File Column",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ]
+  }
+}
+```
+
+Use the `FileAttributeMetadata.MaxSizeInKB` property to set the maximum size.
+
+**Response:**
+
+```http
+HTTP/1.1 204 NoContent
+Location: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+```
+
+More information:
+
+- [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
+- [Web API table schema operations sample (C#)](webapi/samples/webapiservice-metadata-operations.md)
+
+---
+
+## Blocked file types
+
+You can control which types of files aren't allowed to be saved in file columns based on the file extension and mime type.
+
+More information:
+
+- [Block files by extension](files-images-overview.md#block-files-by-extension)
+- [Block or allow certain mime types](files-images-overview.md#block-or-allow-certain-mime-types)
+
+## Restrictions with self-managed key (BYOK)
 
 > [!IMPORTANT]
-> Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
-> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
-> limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob
-> storage.
+> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If [self-managed key (BYOK)](/power-platform/admin/manage-encryption-key) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of BYOK in order to make use of these data-types.
+>
+> All BYOK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within BYOK organizations are
+> limited to a maximum size of 128MB per file. All files and images within BYOK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:
 >  - User Delegation SAS Downloads are not supported
 >  - Chunking uploads and downloads are limited to a single chunk
->  
->  File columns are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater. File columns are supported in Power Apps portals only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
 
 
-<!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
-  
-## Supporting columns
-
-When a file column is added to a table some additional columns are created to support it.
-  
-### MaxValue column
-
-The `MaxValue` column represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
- 
- > [!NOTE]
- > `MaxValue` is set when the File column is added to a table. This cannot be changed after it is set.
-  
-## Retrieve file data
-
-You cannot use the `Retrieve` and `RetrieveMultiple` messages to download file data.
-
-To retrieve file column data use the following APIs.
-
-|Web API|SDK for .NET|
-------- | -------
- none  | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest>
-GET /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>/$value   | <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest>
-
-File data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. File data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is received in a separate API call until all file data has been received. It is your responsibility to join the downloaded data blocks to form the complete data file by combining the data blocks in the same sequence as the blocks were received.
-
-### Example: Download with chunking
-
-#### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute/$value
-Headers:
-Range: bytes=0-1023/8192
-```
-
-**Response**
-
-```http
-206 Partial Content
-
-Body:
-byte[]
-
-Response Headers:
-Content-Disposition: attachment; filename="sample.txt"
-x-ms-file-name: "sample.txt"
-x-ms-file-size: 8192
-Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken
-```
-
-Chunking is decided based on the `Range` header existence in the request. The Range header value format is: startByte-endByte/total bytes. The full file will be downloaded (up to 16 MB) in one request if no `Range` header is included. For chunking, the `Location` response header contains the query-able parameter `FileContinuationToken`. Use the provided location header value in the next GET request to retrieve the next block of data in the sequence.
-
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-static async Task ChunkedDownloadAsync(
-    Uri urlPrefix,
-    string customEntitySetName,
-    string entityId,
-    string entityFileOrAttributeAttributeLogicalName,
-    string fileRootPath,
-    string downloadFileName,
-    string token)
-{
-    var url = new Uri(urlPrefix, $"{customEntitySetName}({entityId})/{entityFileOrAttributeAttributeLogicalName}/$value?size=full");
-    var increment = 4194304;
-    var from = 0;
-    var fileSize = 0;
-    byte[] downloaded = null;
-    do
-    {
-        using (var request = new HttpRequestMessage(HttpMethod.Get, url))
-        {
-            request.Headers.Range = new System.Net.Http.Headers.RangeHeaderValue(from, from + increment - 1);
-            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-            using (var response = await Client.SendAsync(request))
-            {
-                if (downloaded == null)
-                {
-                    fileSize = int.Parse(response.Headers.GetValues("x-ms-file-size").First());
-                    downloaded = new byte[fileSize];
-                }
-
-                var responseContent = await response.Content.ReadAsByteArrayAsync();
-                responseContent.CopyTo(downloaded, from);
-            }
-        }
-
-        from += increment;
-    } while (from < fileSize);
-
-    await File.WriteAllBytesAsync(Path.Combine(fileRootPath, downloadFileName), downloaded);
-}
-```
-
----
-
-<a name="BKMK_UploadingFiles"></a>
-
-## Upload file data
-
-You cannot use the `Create` and `Update` messages to upload file data.
-
-To upload file column data, use the following APIs.
-
-|Web API|SDK for .NET|
-|-------|-------|
-|none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>|
-|PATCH /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>|
-|none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>|
-
-You can upload files either in full, up to the maximum size configured, or in chunks.
-
-> [!NOTE]
-> As of this article's publication date, the restriction of using chunked upload for files greater than 16 MB has been removed.
-> The chunking APIs will continue to be available to maintain backwards compatibility with existing solutions.
-
-### Example: .NET C# code for full file upload using Web API
-
-```csharp
-static async Task FullFileUploadAsync(
-    Uri urlPrefix,
-    string customEntitySetName,
-    string entityId,
-    string entityFileOrAttributeAttributeLogicalName,
-    string fileRootPath,
-    string uploadFileName,
-    string accessToken)
-{
-    var filePath = Path.Combine(fileRootPath, uploadFileName);
-    var fileStream = File.OpenRead(filePath);
-    var url = new Uri(urlPrefix, $"{customEntitySetName}({entityId})/{entityFileOrAttributeAttributeLogicalName}");
-
-    using (var request = new HttpRequestMessage(new HttpMethod("PATCH"), url))
-    {
-        request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-                        request.Content = new StreamContent(fileStream);
-        request.Content.Headers.Add("Content-Type", "application/octet-stream");
-        request.Content.Headers.Add("x-ms-file-name", uploadFileName);
-                        
-        using (var response = await Client.SendAsync(request))
-        {
-            response.EnsureSuccessStatusCode();
-        }
-    }
-}
-```
-
-### Example: Upload with chunking
-
-The following is the legacy method of uploading a data file of 16 MB or more by dividing file data blocks of 4 MB or less. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
-
-#### [Web API](#tab/webapi)
-
-##### First request
-
-**Request**
-
-```http
-PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute 
-
-Headers: 
-x-ms-transfer-mode: chunked 
-x-ms-file-name: sample.png
-```
-
-**Request** (alternate form)
-
-This form of the request uses a query string parameter and supports non-ASCII language file names. If the file name is specified in both the header and as a query string parameter, the header value has precedence.
-
-```http
-PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?x-ms-file-name=测试.txt
-
-Headers: 
-x-ms-transfer-mode: chunked
-```
-
-**Response**
-
-```http
-200 OK 
-
-Response Headers: 
-x-ms-chunk-size: 4096 
-Accept-Ranges: bytes 
-Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
-```
-
-##### Next request
-
-**Request**
-
-```http
-PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
-
-Headers: 
-Content-Range: bytes 0-4095/8192 
-Content-Type: application/octet-stream
-x-ms-file-name: sample.png
-
-Body:
-byte[]
-```
-
-**Response**
-
-```http
-206 Partial Content
-```
-
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-static async Task ChunkedUploadAsync(
-    Uri urlPrefix,
-    string customEntitySetName,
-    string entityId,
-    string entityFileOrAttributeAttributeLogicalName,
-    string fileRootPath,
-    string uploadFileName,
-    string accessToken)
-{
-    var filePath = Path.Combine(fileRootPath, uploadFileName);
-    var fileBytes = await File.ReadAllBytesAsync(filePath);
-    var url = new Uri(urlPrefix, $"{customEntitySetName}({entityId})/{entityFileOrAttributeAttributeLogicalName}");
-
-    var chunkSize = 0;
-    using (var request = new HttpRequestMessage(HttpMethod.Patch, url))
-    {
-        request.Headers.Add("x-ms-transfer-mode", "chunked");
-        request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-        request.Headers.Add("x-ms-file-name", uploadFileName);
-        using (var response = await Client.SendAsync(request))
-        {
-            response.EnsureSuccessStatusCode();
-            url = response.Headers.Location;
-            chunkSize = int.Parse(response.Headers.GetValues("x-ms-chunk-size").First());
-        }
-    }
-
-    for (var offset = 0; offset < fileBytes.Length; offset += chunkSize)
-    {
-        var count = (offset + chunkSize) > fileBytes.Length ? fileBytes.Length % chunkSize : chunkSize;
-        using (var content = new ByteArrayContent(fileBytes, offset, count))
-        using (var request = new HttpRequestMessage(HttpMethod.Patch, url))
-        {
-            content.Headers.Add("Content-Type", "application/octet-stream");
-            content.Headers.ContentRange = new System.Net.Http.Headers.ContentRangeHeaderValue(offset, offset + (count - 1), fileBytes.Length);
-            request.Headers.Add("x-ms-file-name", uploadFileName);
-            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-            request.Content = content;
-            using (var response = await Client.SendAsync(request))
-            {
-                response.EnsureSuccessStatusCode();
-            }
-        }
-    }
-}
-```
----
-
-<a name="BKMK_DeletingFiles"></a>
-
-## Delete file data
-
-To delete the file column data from storage, use the following APIs.
-
-Web API (REST) | .NET API (SOAP)
-------- | -------
-DELETE /api/data/v9.1/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
+<!-- File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table. -->
 
 ### See Also
 
-[Image columns](image-attributes.md)  
+[Use file column data](file-column-data.md)<br />
+[Work with image column definitions using code](image-attributes.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

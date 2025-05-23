@@ -2,26 +2,24 @@
 title: Create a business rule in Microsoft Dataverse | Microsoft Docs
 description: Step-by-step instructions for how to create a business rule in Microsoft Dataverse.
 author: lancedMicrosoft
-manager: kvivek
 ms.component: cds
 ms.topic: how-to
-ms.date: 04/05/2022
+ms.date: 10/22/2024
 ms.subservice: dataverse-maker
 ms.author: lanced
 ms.reviewer: matp
+contributors: abhijananddv
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Create a business rule for a table
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
 > Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+>
+> In a model-driven app, not all business rule actions are available for [editable grids](../model-driven-apps/the-power-apps-grid-control.md).  For [table based view pages](../model-driven-apps/create-remove-pages.md), recommendations can't be created. Editable [subgrids](../model-driven-apps/form-designer-add-configure-subgrid.md) don't support business rules. Business rules won't work with other types of dataset controls.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
@@ -37,7 +35,7 @@ By combining conditions and actions, you can do any of the following with busine
   
 ## Differences between canvas and model-driven apps
 
-Model driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
+Forms in model-driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on canvas apps:
 
 * Show or hide columns  
 * Enable or disable columns  
@@ -53,22 +51,18 @@ Business rules work with most column types including text, number, choice, date,
 
 ## Create a business rule
   
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
-
-2. In the list that appears, select **Tables**.
-  
-3. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
-
-4. Select **Add business rule**.  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane, and select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
+1. Select **Add business rule**.  
   
     The business rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
 
     > [!TIP]
     > If you want to modify an existing business rule, you must deactivate it before you can modify it.  
   
-5. Add a description, if you want, in the description box in the upper-left corner of the window.
+1. Add a description, if you want, in the description box in the upper-left corner of the window.
   
-6. Set the scope, according to the following:  
+1. Set the scope, according to the following:  
   
     |**If you select this item...**|**The scope is set to...**|  
     |-|-|  
@@ -79,7 +73,7 @@ Business rules work with most column types including text, number, choice, date,
     > [!TIP]
     > If you're building a Canvas app, you must use table as the scope.
   
-7. **Add conditions.** To add more conditions to your business rule:  
+1. **Add conditions.** To add more conditions to your business rule:  
   
     1. Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  
   
@@ -93,7 +87,7 @@ Business rules work with most column types including text, number, choice, date,
   
     4. When you're done setting properties for the condition, select **Apply**.  
   
-8. **Add actions.** To add an action:  
+1. **Add actions.** To add an action:  
   
     1. Drag one of the action components from the **Components** tab to a plus sign next to **Condition** component. Drag the action to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.
   
@@ -103,7 +97,7 @@ Business rules work with most column types including text, number, choice, date,
   
     3. When you're done setting properties, select **Apply**.  
   
-9. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
+1. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
   
     1. Drag the **Recommendation** component from the **Components** tab to a plus sign next to a **Condition** component. Drag the **Recommendation** component to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.  
   
@@ -116,10 +110,10 @@ Business rules work with most column types including text, number, choice, date,
   
     4. When you're done setting properties, select **Apply**.  
   
-10. To validate the business rule, select **Validate** on the action bar.  
+1. To validate the business rule, select **Validate** on the action bar.  
   
-11. To save the business rule, select **Save** on the action bar.  
-12. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
+1. To save the business rule, select **Save** on the action bar.  
+1. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
   
     > [!TIP]
     >  Here are a few tips to keep in mind as you work on business rules in the designer window:  
@@ -132,8 +126,7 @@ Business rules work with most column types including text, number, choice, date,
 
  This business rule example creates a condition that triggers a message in the task description field when a task is more than 30 days old.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
-1. In the list that appears, select **Tables**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the **Task** table, and then select the **Business rules** area.
 1. Select **Add business rule**.
 1. Select **New Condition** on the business process flow canvas, and enter or select the following properties:
@@ -159,31 +152,41 @@ Business rules work with most column types including text, number, choice, date,
 
 ## Localize error messages used in business rules
 
- If you've more than one language provisioned for your organization, you'll want to localize any error messages that you have set. Each time you set a message, a label is generated by the system. If you export the translations in your organization, you can add localized versions of your messages and then import those labels back into the Dataverse, so that people using languages other than your base language can view the translated messages.
+ If you have more than one language provisioned for your organization, you'll want to localize any error messages that you have set. Each time you set a message, a label is generated by the system. If you export the translations in your organization, you can add localized versions of your messages and then import those labels back into the Dataverse, so that people using languages other than your base language can view the translated messages.
 
 ## Common issues
 
-This section describes common issues that may occur when you use business rules.
+This section describes common issues that might occur when you use business rules.
 
 ### Composite attributes not supported with Unified Interface apps
 
-Actions or conditions that use [Composite attributes](../../developer/model-driven-apps/clientapi/reference/composite-attributes.md) aren't supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
+Actions or conditions that use [Composite attributes](/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)) aren't supported in apps based on the Unified Interface. Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
+
+### A large number of business rules on a single table impacts performance
+
+New or existing business rules on a table can cause performance degradation when the rules are activated. Power Platform today supports up to 150 business rules for a single table. Beyond 150 business rules, performance degradation can be experienced. This limit includes both client side (JavaScript) and server side (XAML generated as synchronous plugins) business rules. To avoid performance issues with Dataverse, we recommend that you don't create more than 150 business rules for a single table.
 
 ### Is your business rule not firing for a form?
 
-A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
-1.	Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
-2.	Open the form that you want and then on the form designer ribbon select **Business Rules**. 
-3.	In the form designer, open the business rule. 
-4.	In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
+A business rule might not execute because the field referenced in the business rule isn't included with the form. 
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
+1. Open the form that you want and then on the form designer ribbon select **Business Rules**. 
+1. In the form designer, open the business rule. 
+1. In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
 
-     > [!div class="mx-imgBorder"] 
-     > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
+   > [!div class="mx-imgBorder"] 
+   > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
 
- 5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
+1. Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
+   > [!div class="mx-imgBorder"] 
+   > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
+
+### UTC time zone for DateOnly columns
+
+When you configure business rules with `DateOnly` columns, the dates are in the UTC time zone by default, irrespective of the user's set time zone. This can lead to unexpected results if you're expecting `DateOnly` values to align with local time settings.
+
+**Suggested Handling:** Time Zone Independent setting - To make the `DateOnly` columns independent of time zones and display dates in parity with what was configured in the business rule, UTC for example, you can enable the Time Zone Independent setting. For more information about configuring date handling settings, go to [Specify the behavior of a date and time column](../../developer/data-platform/behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
 
 ## Frequently asked questions (FAQ)
 

@@ -5,17 +5,13 @@ keywords: ""
 ms.date: 09/07/2021
 
 ms.custom: 
-ms.topic: article
-author: phecke
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: pehecke
-manager: kvivek
+ms.author: sriknair
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View developer resources

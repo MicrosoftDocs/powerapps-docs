@@ -1,54 +1,48 @@
 ---
-title: "Follow (PostFollow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Follow (PostFollow)  table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Follow (PostFollow) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Follow (PostFollow) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Follow (PostFollow)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Follow (PostFollow) table/entity reference (Microsoft Dataverse)
 
 Represents a user following the activity feed of an object.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/postfollows<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/postfollows(*postfollowid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/postfollows<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Follow (PostFollow) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /postfollows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /postfollows(*postfollowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /postfollows(*postfollowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /postfollows<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|PostFollows|
-|DisplayCollectionName|Follows|
-|DisplayName|Follow|
-|EntitySetName|postfollows|
-|IsBPFEntity|False|
-|LogicalCollectionName|postfollows|
-|LogicalName|postfollow|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|postfollowid|
-|PrimaryNameAttribute|regardingobjectidname|
-|SchemaName|PostFollow|
+The following table lists selected properties for the Follow (PostFollow) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Follow** |
+| **DisplayCollectionName** | **Follows** |
+| **SchemaName** | `PostFollow` |
+| **CollectionSchemaName** | `PostFollows` |
+| **EntitySetName** | `postfollows`|
+| **LogicalName** | `postfollow` |
+| **LogicalCollectionName** | `postfollows` |
+| **PrimaryIdAttribute** | `postfollowid` |
+| **PrimaryNameAttribute** |`regardingobjectidname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -62,559 +56,553 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PostFollowId"></a> PostFollowId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the post follow.|
-|DisplayName|PostFollow|
+|---|---|
+|Description|**Shows the ID of the post follow.**|
+|DisplayName|**PostFollow**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|postfollowid|
+|LogicalName|`postfollowid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the parent record for the followed post to identify the customer, opportunity, case, or other record type that the post most closely relates to.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Choose the parent record for the followed post to identify the customer, opportunity, case, or other record type that the post most closely relates to.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|SystemRequired|
-|Targets|account,appointment,contact,knowledgearticle,phonecall,processsession,queue,recurringappointmentmaster,systemuser,task|
 |Type|Lookup|
-
+|Targets|account, appointment, contact, knowledgearticle, phonecall, processsession, queue, recurringappointmentmaster, systemuser, task|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Type of the RegardingObject|
-|DisplayName|RegardingObjectTypeCode|
+|---|---|
+|Description|**Type of the RegardingObject**|
+|DisplayName|**RegardingObjectTypeCode**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PostToYammer](#BKMK_PostToYammer)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
-- [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
 - [YammerPostState](#BKMK_YammerPostState)
 - [YammerRetryCount](#BKMK_YammerRetryCount)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team who owns the follow.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team who owns the follow.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user who owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user who owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_PostToYammer"></a> PostToYammer
 
 |Property|Value|
-|--------|-----|
-|Description|Internal Use Only|
-|DisplayName|Internal Use Only|
+|---|---|
+|Description|**Internal Use Only**|
+|DisplayName|**Internal Use Only**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|posttoyammer|
+|LogicalName|`posttoyammer`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### PostToYammer Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Display name of the type of entity that the user followed.|
-|DisplayName|Regarding Entity Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|GlobalChoiceName|`postfollow_posttoyammer`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of post follow.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of post follow.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_YammerPostState"></a> YammerPostState
 
 |Property|Value|
-|--------|-----|
-|Description|Internal Use Only|
-|DisplayName|Internal Use Only|
-|Format|None|
+|---|---|
+|Description|**Internal Use Only**|
+|DisplayName|**Internal Use Only**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|yammerpoststate|
-|MaxValue|5|
-|MinValue|0|
+|LogicalName|`yammerpoststate`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|5|
+|MinValue|0|
 
 ### <a name="BKMK_YammerRetryCount"></a> YammerRetryCount
 
 |Property|Value|
-|--------|-----|
-|Description|Internal Use Only|
-|DisplayName|Internal Use Only|
-|Format|None|
+|---|---|
+|Description|**Internal Use Only**|
+|DisplayName|**Internal Use Only**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|yammerretrycount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`yammerretrycount`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
+- [account_PostFollows](#BKMK_account_PostFollows)
+- [appointment_PostFollows](#BKMK_appointment_PostFollows)
+- [business_unit_postfollows](#BKMK_business_unit_postfollows)
+- [contact_PostFollows](#BKMK_contact_PostFollows)
+- [knowledgearticle_PostFollows](#BKMK_knowledgearticle_PostFollows)
+- [lk_PostFollow_createdby](#BKMK_lk_PostFollow_createdby)
+- [lk_postfollow_createdonbehalfby](#BKMK_lk_postfollow_createdonbehalfby)
+- [owner_postfollows](#BKMK_owner_postfollows)
+- [OwningTeam_postfollows](#BKMK_OwningTeam_postfollows)
+- [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
+- [processsession_PostFollows](#BKMK_processsession_PostFollows)
+- [queue_PostFollows](#BKMK_queue_PostFollows)
+- [recurringappointmentmaster_PostFollows](#BKMK_recurringappointmentmaster_PostFollows)
+- [systemuser_PostFollows](#BKMK_systemuser_PostFollows)
+- [task_PostFollows](#BKMK_task_PostFollows)
+- [user_owner_postfollows](#BKMK_user_owner_postfollows)
+
+### <a name="BKMK_account_PostFollows"></a> account_PostFollows
+
+One-To-Many Relationship: [account account_PostFollows](account.md#BKMK_account_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`account`|
+|ReferencedAttribute|`accountid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_account`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_appointment_PostFollows"></a> appointment_PostFollows
+
+One-To-Many Relationship: [appointment appointment_PostFollows](appointment.md#BKMK_appointment_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`appointment`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_appointment`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_business_unit_postfollows"></a> business_unit_postfollows
+
+One-To-Many Relationship: [businessunit business_unit_postfollows](businessunit.md#BKMK_business_unit_postfollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_contact_PostFollows"></a> contact_PostFollows
+
+One-To-Many Relationship: [contact contact_PostFollows](contact.md#BKMK_contact_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_contact`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
+
+One-To-Many Relationship: [knowledgearticle knowledgearticle_PostFollows](knowledgearticle.md#BKMK_knowledgearticle_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_knowledgearticle`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_PostFollow_createdby"></a> lk_PostFollow_createdby
+
+One-To-Many Relationship: [systemuser lk_PostFollow_createdby](systemuser.md#BKMK_lk_PostFollow_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_postfollow_createdonbehalfby"></a> lk_postfollow_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_postfollow_createdonbehalfby](systemuser.md#BKMK_lk_postfollow_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_postfollows"></a> owner_postfollows
+
+One-To-Many Relationship: [owner owner_postfollows](owner.md#BKMK_owner_postfollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_OwningTeam_postfollows"></a> OwningTeam_postfollows
+
+One-To-Many Relationship: [team OwningTeam_postfollows](team.md#BKMK_OwningTeam_postfollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
+
+One-To-Many Relationship: [phonecall phonecall_PostFollows](phonecall.md#BKMK_phonecall_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`phonecall`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_processsession_PostFollows"></a> processsession_PostFollows
+
+One-To-Many Relationship: [processsession processsession_PostFollows](processsession.md#BKMK_processsession_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processsession`|
+|ReferencedAttribute|`processsessionid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_processsession`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_queue_PostFollows"></a> queue_PostFollows
+
+One-To-Many Relationship: [queue queue_PostFollows](queue.md#BKMK_queue_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`queue`|
+|ReferencedAttribute|`queueid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_queue`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_recurringappointmentmaster_PostFollows"></a> recurringappointmentmaster_PostFollows
+
+One-To-Many Relationship: [recurringappointmentmaster recurringappointmentmaster_PostFollows](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`recurringappointmentmaster`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_recurringappointmentmaster`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_systemuser_PostFollows"></a> systemuser_PostFollows
+
+One-To-Many Relationship: [systemuser systemuser_PostFollows](systemuser.md#BKMK_systemuser_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_systemuser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_task_PostFollows"></a> task_PostFollows
+
+One-To-Many Relationship: [task task_PostFollows](task.md#BKMK_task_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`task`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_task`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_owner_postfollows"></a> user_owner_postfollows
+
+One-To-Many Relationship: [systemuser user_owner_postfollows](systemuser.md#BKMK_user_owner_postfollows)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
 
 - [PostFollow_AsyncOperations](#BKMK_PostFollow_AsyncOperations)
 - [PostFollow_SyncErrors](#BKMK_PostFollow_SyncErrors)
 
-
 ### <a name="BKMK_PostFollow_AsyncOperations"></a> PostFollow_AsyncOperations
 
-Same as the [PostFollow_AsyncOperations](asyncoperation.md#BKMK_PostFollow_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Many-To-One Relationship: [asyncoperation PostFollow_AsyncOperations](asyncoperation.md#BKMK_PostFollow_AsyncOperations)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PostFollow_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PostFollow_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_PostFollow_SyncErrors"></a> PostFollow_SyncErrors
 
-Same as the [PostFollow_SyncErrors](syncerror.md#BKMK_PostFollow_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Many-To-One Relationship: [syncerror PostFollow_SyncErrors](syncerror.md#BKMK_PostFollow_SyncErrors)
 
 |Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|PostFollow_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [task_PostFollows](#BKMK_task_PostFollows)
-- [appointment_PostFollows](#BKMK_appointment_PostFollows)
-- [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
-- [recurringappointmentmaster_PostFollows](#BKMK_recurringappointmentmaster_PostFollows)
-- [lk_PostFollow_createdby](#BKMK_lk_PostFollow_createdby)
-- [account_PostFollows](#BKMK_account_PostFollows)
-- [contact_PostFollows](#BKMK_contact_PostFollows)
-- [systemuser_PostFollows](#BKMK_systemuser_PostFollows)
-- [business_unit_postfollows](#BKMK_business_unit_postfollows)
-- [OwningTeam_postfollows](#BKMK_OwningTeam_postfollows)
-- [user_owner_postfollows](#BKMK_user_owner_postfollows)
-- [lk_postfollow_createdonbehalfby](#BKMK_lk_postfollow_createdonbehalfby)
-- [processsession_PostFollows](#BKMK_processsession_PostFollows)
-- [queue_PostFollows](#BKMK_queue_PostFollows)
-- [knowledgearticle_PostFollows](#BKMK_knowledgearticle_PostFollows)
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PostFollow_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
-### <a name="BKMK_task_PostFollows"></a> task_PostFollows
-
-See the [task_PostFollows](task.md#BKMK_task_PostFollows) one-to-many relationship for the [task](task.md) table/entity.
-
-### <a name="BKMK_appointment_PostFollows"></a> appointment_PostFollows
-
-See the [appointment_PostFollows](appointment.md#BKMK_appointment_PostFollows) one-to-many relationship for the [appointment](appointment.md) table/entity.
-
-### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
-
-See the [phonecall_PostFollows](phonecall.md#BKMK_phonecall_PostFollows) one-to-many relationship for the [phonecall](phonecall.md) table/entity.
-
-### <a name="BKMK_recurringappointmentmaster_PostFollows"></a> recurringappointmentmaster_PostFollows
-
-See the [recurringappointmentmaster_PostFollows](recurringappointmentmaster.md#BKMK_recurringappointmentmaster_PostFollows) one-to-many relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
-
-### <a name="BKMK_lk_PostFollow_createdby"></a> lk_PostFollow_createdby
-
-See the [lk_PostFollow_createdby](systemuser.md#BKMK_lk_PostFollow_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_account_PostFollows"></a> account_PostFollows
-
-See the [account_PostFollows](account.md#BKMK_account_PostFollows) one-to-many relationship for the [account](account.md) table/entity.
-
-### <a name="BKMK_contact_PostFollows"></a> contact_PostFollows
-
-See the [contact_PostFollows](contact.md#BKMK_contact_PostFollows) one-to-many relationship for the [contact](contact.md) table/entity.
-
-### <a name="BKMK_systemuser_PostFollows"></a> systemuser_PostFollows
-
-See the [systemuser_PostFollows](systemuser.md#BKMK_systemuser_PostFollows) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_business_unit_postfollows"></a> business_unit_postfollows
-
-See the [business_unit_postfollows](businessunit.md#BKMK_business_unit_postfollows) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
-
-### <a name="BKMK_OwningTeam_postfollows"></a> OwningTeam_postfollows
-
-See the [OwningTeam_postfollows](team.md#BKMK_OwningTeam_postfollows) one-to-many relationship for the [team](team.md) table/entity.
-
-### <a name="BKMK_user_owner_postfollows"></a> user_owner_postfollows
-
-See the [user_owner_postfollows](systemuser.md#BKMK_user_owner_postfollows) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_postfollow_createdonbehalfby"></a> lk_postfollow_createdonbehalfby
-
-See the [lk_postfollow_createdonbehalfby](systemuser.md#BKMK_lk_postfollow_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_processsession_PostFollows"></a> processsession_PostFollows
-
-See the [processsession_PostFollows](processsession.md#BKMK_processsession_PostFollows) one-to-many relationship for the [processsession](processsession.md) table/entity.
-
-### <a name="BKMK_queue_PostFollows"></a> queue_PostFollows
-
-See the [queue_PostFollows](queue.md#BKMK_queue_PostFollows) one-to-many relationship for the [queue](queue.md) table/entity.
-
-### <a name="BKMK_knowledgearticle_PostFollows"></a> knowledgearticle_PostFollows
-
-See the [knowledgearticle_PostFollows](knowledgearticle.md#BKMK_knowledgearticle_PostFollows) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.postfollow?text=postfollow EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.postfollow?displayProperty=fullName>

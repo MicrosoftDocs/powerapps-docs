@@ -3,7 +3,7 @@ title: Planning - Defining the project's business value | Microsoft Docs
 description: Business value falls into one of four categories - Revenue, Efficiency, Volume, Other. Define the business value for your Power Apps project.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -100,9 +100,9 @@ report app.
 
     >   (140 expense reports a week &times; 20 minutes) &times; \$90/hr = \$4,158 a week = \$216,216 a year
 
-- Nick will be reviewing the expense reports of his team (roughly 100
+- Nick will be reviewing the expense reports of the team (roughly 100
     salespeople) and estimated that it will take roughly 5 minutes to review
-    each expense report. His review is limited to the type of expenses being
+    each expense report. Nick's review is limited to the type of expenses being
     submitted, recognizing that the need for receipts&mdash;and the need to
     include the names of guests at meals and distribute hotel expenses into the
     appropriate categories&mdash;will be controlled by the app.
@@ -112,21 +112,21 @@ report app.
 - Other managers will review and approve the expense reports from their
     departments going forward, so the remaining 40 expense reports will cost \$15,600 a year.
 
-- The work for Abhay and his team has now shifted to spot checking reports. They shouldn't need
+- The work for Abhay and their team has now shifted to spot checking reports. They shouldn't need
     to do any rework; in fact, Abhay's team might be able to be
     tasked with other activities due to the reduction in effort needed for
     reviewing expense reports.
 
 - We optimized the process to associate the correct general ledger accounting code to each
-    of the expense categories. Now Abhay and his team can extract the data to
+    of the expense categories. Now Abhay and their team can extract the data to
     create the payment journal, reducing the 40.3 (16.5 for coding + 23.8 for
     posting) hours a week down to a few minutes, saving \$188,604 (\$77,220 for
-    coding and \$111,384 for posting) a year. Abhay might be able to task some of his
-    team with other, more important, work in his department.
+    coding and \$111,384 for posting) a year. Abhay might be able to task some of their
+    team with other, more important, work in their department.
 
-- With the new process, Abhay and his team can consider posting the
+- With the new process, Abhay and their team can consider posting the
     expense reports every day, which will provide Charlotte with an updated view of the
-    budget each day and allow her to respond more quickly as budget constraints
+    budget each day. This will also allow Charlotte to respond more quickly as budget constraints
     approach.
 
 - The new cost to the company using the automated app is roughly:

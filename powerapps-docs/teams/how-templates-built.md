@@ -1,22 +1,21 @@
 ---
-title: How to build apps for Microsoft Teams (contains video)
+title: How to build apps for Microsoft Teams
 description: Learn the process in which Microsoft built the template apps for Microsoft Teams, and how you can use similar techniques when designing and building your own apps.
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # How to build apps for Microsoft Teams
 
-The [sample apps](use-sample-apps-from-teams-store.md) for Microsoft Teams are designed, and built with the following goals:
+The [sample app templates](use-sample-apps.md) for Microsoft Teams are designed, and built with the following goals:
 
 - Provide fully functional apps for Teams that have relevance across multiple industries.
 - Provide examples of deeper integration of line-of-business data from Power Apps into collaborative elements of Teams to drive better more productive workloads.
@@ -29,7 +28,7 @@ In this article, we'll review the process that we used to build these apps, and 
 > This article highlights some of the approaches taken when designing the Teams template apps. For additional resources on bet practices for building Power Apps, please refer to [Power Apps guidance documentation](/powerapps/guidance/planning/introduction) section of the Power Apps docs.
 
 Watch this video to learn how the Power Apps templates for Microsoft Teams were made:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DQ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a16dd643-8d23-4c54-a619-a4fe0d38c07d]
 
 ## Define
 
@@ -43,7 +42,7 @@ Many teams tend to dive into solutioning before they've fully understood the use
 
 ![Jobs to be done framework](media/how-templates-are-built/personas.png "Jobs To Be Done framework")
 
-The above example shows personas and jobs to be done for Inspection sample app for store walk scenario.
+The above example shows personas and jobs to be done for Inspection sample app template for store walk scenario.
 
 ## Design
 
@@ -128,22 +127,8 @@ To share an app for broad distribution, follow these steps:
 
 1. Select **Save**.
 
-Users will now be able to find your app in the Teams store in the **Built for[company name]** section.
-
 > [!NOTE]
 > You'll need to set table permissions for the Microsoft Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [Set permission and share apps with colleagues](set-perms-and-share.md).
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

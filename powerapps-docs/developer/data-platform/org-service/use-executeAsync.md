@@ -2,16 +2,12 @@
 title: "Use ExecuteAsync to execute messages asynchronously  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the ExecuteAsync message to import solutions asynchronously." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -36,7 +32,7 @@ Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class to e
   
 You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> request class to queue multiple solutions to be imported asynchronously. To do this, add one or more `ExecuteAsync` message requests to an `ExecuteMultiple` message request. Due to throttling restrictions that improve overall system performance, only one message running asynchronously is allowed to execute at a time for each organization.
 
-For more information about the `ExecuteMultiple` message, see [Execute multiple requests using the Organization service](execute-multiple-requests.md).  
+For more information about the `ExecuteMultiple` message, see [Execute multiple requests using the SDK for .NET](execute-multiple-requests.md).  
 
 ## Example
 
@@ -66,8 +62,8 @@ You can then poll the [AsyncOperation](../reference/entities/asyncoperation.md) 
 
 ### See Also
 
-[Use messages with the Organization service](use-messages.md)<br />
+[Use messages with the SDK for .NET](use-messages.md)<br />
 [Use ExecuteTransaction](use-executetransaction.md)<br />
-[Execute multiple requests using the Organization service](execute-multiple-requests.md)
+[Execute multiple requests using the SDK for .NET](execute-multiple-requests.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

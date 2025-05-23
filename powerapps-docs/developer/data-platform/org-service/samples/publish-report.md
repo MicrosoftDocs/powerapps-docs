@@ -4,22 +4,21 @@ description: "This sample shows how to publish reports." # 115-145 characters in
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Publish reports
 
+This sample shows how to publish a report by creating a **Report** record and the related records that make it visible.
 
-This sample shows how to publish a report by creating a **Report** record and the related records that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PublishReport).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Publish reports sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/PublishReport)
 
 ## How to run this sample
 
@@ -43,6 +42,5 @@ Checks for the current version of the org.
 ### Clean up
 
 No clean up is required for this sample.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

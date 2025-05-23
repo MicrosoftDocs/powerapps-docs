@@ -2,8 +2,7 @@
 title: "Create a card form with Power Apps | MicrosoftDocs"
 description: "Learn how to create and use card forms in Power Apps"
 keywords: ""
-ms.date: 03/05/2019
-
+ms.date: 12/01/2022
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -14,16 +13,12 @@ ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a card form
 
@@ -32,12 +27,12 @@ Card forms are used in views for model-driven apps. Card forms are designed to p
 > [!div class="mx-imgBorder"]
 > ![Account card form for my active accounts view.](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
 
-Although card forms can be created and edited in the same way as other form types, card forms are added to apps differently. Instead of adding a form as an app component, custom card forms are added to views by using the **Read Only Grid** control.
+Although card forms can be created and edited in the same way as other form types, card forms are added to apps differently. Instead of adding a form as an app component, custom card forms are added to views by using the **Read-only Grid** control.
 
 ## Create a card form
 
 1. To create a card form, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** area.
+2. Select **Tables**, select the table you want, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
 
    :::image type="content" source="../../maker/model-driven-apps/media/create-card-form.png" alt-text="Create card form":::
@@ -47,8 +42,11 @@ Although card forms can be created and edited in the same way as other form type
 
 ## Add a card form to a view
 
+> [!IMPORTANT]
+> To add a custom card form to a view requires the deprecated **Read-only Grid** control. The **Read-only Grid** has been deprecated so it is no longer the default grid control for tables in Dataverse. However, while the control remains available you can select it for a table to use to create a card form view. More information: [Configure a grid control for a table](additional-controls-for-dynamics-365-for-phones-and-tablets.md#configure-a-grid-control-for-a-table)
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Expand **Data**, select the table you want, and then select the **Views** area.
+2. Select **Tables**, select the table you want, and then select the **Views** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. Select the view that you want, and then on the view designer toolbar, select **Switch to classic**.
 4. Select **Custom Controls** from the **Common Tasks** pane.
 

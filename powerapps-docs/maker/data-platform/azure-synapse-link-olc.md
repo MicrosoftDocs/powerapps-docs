@@ -4,22 +4,17 @@ description: "Learn how to manage your Azure Synapse Link for Dataverse profiles
 ms.custom: ""
 ms.date: 11/01/2021
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: "sama-zaki"
 ---
 

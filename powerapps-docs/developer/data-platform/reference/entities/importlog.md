@@ -1,52 +1,45 @@
 ---
-title: "ImportLog table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the ImportLog table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Import Log (ImportLog) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Import Log (ImportLog) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# ImportLog table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Import Log (ImportLog) table/entity reference (Microsoft Dataverse)
 
 Failure reason and other detailed information for a record that failed to import.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/importlogs(*importlogid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importlogs<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Import Log (ImportLog) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /importlogs(*importlogid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /importlogs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ImportLogs|
-|DisplayCollectionName|ImportLogs|
-|DisplayName|Import Log|
-|EntitySetName|importlogs|
-|IsBPFEntity|False|
-|LogicalCollectionName|importlogs|
-|LogicalName|importlog|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|importlogid|
-|PrimaryNameAttribute||
-|SchemaName|ImportLog|
+The following table lists selected properties for the Import Log (ImportLog) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Import Log** |
+| **DisplayCollectionName** | **ImportLogs** |
+| **SchemaName** | `ImportLog` |
+| **CollectionSchemaName** | `ImportLogs` |
+| **EntitySetName** | `importlogs`|
+| **LogicalName** | `importlog` |
+| **LogicalCollectionName** | `importlogs` |
+| **PrimaryIdAttribute** | `importlogid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -66,708 +59,601 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [StatusCode](#BKMK_StatusCode)
 
-
 ### <a name="BKMK_AdditionalInfo"></a> AdditionalInfo
 
 |Property|Value|
-|--------|-----|
-|Description|Additional information related to the error.|
-|DisplayName|More Information|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Additional information related to the error.**|
+|DisplayName|**More Information**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|additionalinfo|
-|MaxLength|5000|
+|LogicalName|`additionalinfo`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5000|
 
 ### <a name="BKMK_ColumnValue"></a> ColumnValue
 
 |Property|Value|
-|--------|-----|
-|Description|Value in the column.|
-|DisplayName|Column Value|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Value in the column.**|
+|DisplayName|**Column Value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|columnvalue|
-|MaxLength|160|
+|LogicalName|`columnvalue`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|160|
 
 ### <a name="BKMK_ErrorDescription"></a> ErrorDescription
 
 |Property|Value|
-|--------|-----|
-|Description|Description of an error.|
-|DisplayName|Description|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Description of an error.**|
+|DisplayName|**Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|errordescription|
-|MaxLength|512|
+|LogicalName|`errordescription`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|512|
 
 ### <a name="BKMK_ErrorNumber"></a> ErrorNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Error code of an error.|
-|DisplayName|Error Code|
-|Format|None|
+|---|---|
+|Description|**Error code of an error.**|
+|DisplayName|**Error Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|errornumber|
-|MaxValue|10000000|
-|MinValue|0|
+|LogicalName|`errornumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|10000000|
+|MinValue|0|
 
 ### <a name="BKMK_HeaderColumn"></a> HeaderColumn
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the column heading.|
-|DisplayName|Column Heading|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the column heading.**|
+|DisplayName|**Column Heading**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|headercolumn|
-|MaxLength|1073741823|
+|LogicalName|`headercolumn`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_ImportDataId"></a> ImportDataId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the import data for this import log.|
-|DisplayName|Source Row|
+|---|---|
+|Description|**Unique identifier of the import data for this import log.**|
+|DisplayName|**Source Row**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|importdataid|
+|LogicalName|`importdataid`|
 |RequiredLevel|None|
-|Targets|importdata|
 |Type|Lookup|
-
+|Targets|importdata|
 
 ### <a name="BKMK_ImportFileId"></a> ImportFileId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the import file for this import log.|
-|DisplayName|Import File Id|
+|---|---|
+|Description|**Unique identifier of the import file for this import log.**|
+|DisplayName|**Import File Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|importfileid|
+|LogicalName|`importfileid`|
 |RequiredLevel|None|
-|Targets|importfile|
 |Type|Lookup|
-
+|Targets|importfile|
 
 ### <a name="BKMK_ImportLogId"></a> ImportLogId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the import log.|
+|---|---|
+|Description|**Unique identifier of the import log.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importlogid|
+|LogicalName|`importlogid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_LineNumber"></a> LineNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Original line number of the data used in this log.|
-|DisplayName|Original Row Number|
-|Format|None|
+|---|---|
+|Description|**Original line number of the data used in this log.**|
+|DisplayName|**Original Row Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|linenumber|
-|MaxValue|10000000|
-|MinValue|0|
+|LogicalName|`linenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|10000000|
+|MinValue|0|
 
 ### <a name="BKMK_LogPhaseCode"></a> LogPhaseCode
 
 |Property|Value|
-|--------|-----|
-|Description|Phase for which the log is recorded.|
-|DisplayName|Log Phase|
+|---|---|
+|Description|**Phase for which the log is recorded.**|
+|DisplayName|**Log Phase**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|logphasecode|
+|LogicalName|`logphasecode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`importlog_logphasecode`|
 
 #### LogPhaseCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Parse||
-|1|Transform||
-|2|Import Create||
-|3|Import Update||
-
-
+|Value|Label|
+|---|---|
+|0|**Parse**|
+|1|**Transform**|
+|2|**Import Create**|
+|3|**Import Update**|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the import log.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the import log.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the import log.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the import log.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|SystemRequired|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`importlog_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|0|Active|0|
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />State:0<br />TransitionData: None|
 
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [ImportDataIdName](#BKMK_ImportDataIdName)
-- [ImportFileIdName](#BKMK_ImportFileIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SequenceNumber](#BKMK_SequenceNumber)
 - [StateCode](#BKMK_StateCode)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the import log.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the import log.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the import log was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the import log was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the importlog.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the importlog.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ImportDataIdName"></a> ImportDataIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Name of the import data.|
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|importdataidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_ImportFileIdName"></a> ImportFileIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Name of the import file.|
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|importfileidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the import log.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the import log.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the import log was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the import log was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the importlog.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the importlog.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Business unit that owns the import log.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Business unit that owns the import log.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team who owns the import log.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team who owns the import log.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the import log.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns the import log.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_SequenceNumber"></a> SequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the error in this log.|
-|DisplayName|Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the error in this log.**|
+|DisplayName|**Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sequencenumber|
-|MaxValue|10000000|
-|MinValue|0|
+|LogicalName|`sequencenumber`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|10000000|
+|MinValue|0|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the import log.|
-|DisplayName|Status|
+|---|---|
+|Description|**Status of the import log.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`importlog_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|0|Active|
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 0<br />InvariantName: `Active`|
 
+## Many-to-One relationships
 
-<a name="onetomany"></a>
+These relationships are many-to-one. Listed by **SchemaName**.
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [ImportLog_BulkDeleteFailures](#BKMK_ImportLog_BulkDeleteFailures)
-- [ImportLog_AsyncOperations](#BKMK_ImportLog_AsyncOperations)
-
-
-### <a name="BKMK_ImportLog_BulkDeleteFailures"></a> ImportLog_BulkDeleteFailures
-
-Same as the [ImportLog_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportLog_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ImportLog_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_ImportLog_AsyncOperations"></a> ImportLog_AsyncOperations
-
-Same as the [ImportLog_AsyncOperations](asyncoperation.md#BKMK_ImportLog_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|ImportLog_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_importlog_createdonbehalfby](#BKMK_lk_importlog_createdonbehalfby)
 - [BusinessUnit_ImportLogs](#BKMK_BusinessUnit_ImportLogs)
-- [SystemUser_ImportLogs](#BKMK_SystemUser_ImportLogs)
-- [lk_importlogbase_modifiedby](#BKMK_lk_importlogbase_modifiedby)
-- [lk_importlogbase_createdby](#BKMK_lk_importlogbase_createdby)
+- [ImportLog_ImportData](#BKMK_ImportLog_ImportData)
 - [ImportLog_ImportFile](#BKMK_ImportLog_ImportFile)
-- [team_ImportLogs](#BKMK_team_ImportLogs)
+- [lk_importlog_createdonbehalfby](#BKMK_lk_importlog_createdonbehalfby)
 - [lk_importlog_modifiedonbehalfby](#BKMK_lk_importlog_modifiedonbehalfby)
-
-
-### <a name="BKMK_lk_importlog_createdonbehalfby"></a> lk_importlog_createdonbehalfby
-
-See the [lk_importlog_createdonbehalfby](systemuser.md#BKMK_lk_importlog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [lk_importlogbase_createdby](#BKMK_lk_importlogbase_createdby)
+- [lk_importlogbase_modifiedby](#BKMK_lk_importlogbase_modifiedby)
+- [owner_importlogs](#BKMK_owner_importlogs)
+- [SystemUser_ImportLogs](#BKMK_SystemUser_ImportLogs)
+- [team_ImportLogs](#BKMK_team_ImportLogs)
 
 ### <a name="BKMK_BusinessUnit_ImportLogs"></a> BusinessUnit_ImportLogs
 
-See the [BusinessUnit_ImportLogs](businessunit.md#BKMK_BusinessUnit_ImportLogs) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit BusinessUnit_ImportLogs](businessunit.md#BKMK_BusinessUnit_ImportLogs)
 
-### <a name="BKMK_SystemUser_ImportLogs"></a> SystemUser_ImportLogs
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [SystemUser_ImportLogs](systemuser.md#BKMK_SystemUser_ImportLogs) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+### <a name="BKMK_ImportLog_ImportData"></a> ImportLog_ImportData
 
-### <a name="BKMK_lk_importlogbase_modifiedby"></a> lk_importlogbase_modifiedby
+One-To-Many Relationship: [importdata ImportLog_ImportData](importdata.md#BKMK_ImportLog_ImportData)
 
-See the [lk_importlogbase_modifiedby](systemuser.md#BKMK_lk_importlogbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_importlogbase_createdby"></a> lk_importlogbase_createdby
-
-See the [lk_importlogbase_createdby](systemuser.md#BKMK_lk_importlogbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`importdata`|
+|ReferencedAttribute|`importdataid`|
+|ReferencingAttribute|`importdataid`|
+|ReferencingEntityNavigationPropertyName|`importdataid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_ImportLog_ImportFile"></a> ImportLog_ImportFile
 
-See the [ImportLog_ImportFile](importfile.md#BKMK_ImportLog_ImportFile) one-to-many relationship for the [importfile](importfile.md) table/entity.
+One-To-Many Relationship: [importfile ImportLog_ImportFile](importfile.md#BKMK_ImportLog_ImportFile)
 
-### <a name="BKMK_team_ImportLogs"></a> team_ImportLogs
+|Property|Value|
+|---|---|
+|ReferencedEntity|`importfile`|
+|ReferencedAttribute|`importfileid`|
+|ReferencingAttribute|`importfileid`|
+|ReferencingEntityNavigationPropertyName|`importfileid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [team_ImportLogs](team.md#BKMK_team_ImportLogs) one-to-many relationship for the [team](team.md) table/entity.
+### <a name="BKMK_lk_importlog_createdonbehalfby"></a> lk_importlog_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_importlog_createdonbehalfby](systemuser.md#BKMK_lk_importlog_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_importlog_modifiedonbehalfby"></a> lk_importlog_modifiedonbehalfby
 
-See the [lk_importlog_modifiedonbehalfby](systemuser.md#BKMK_lk_importlog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_importlog_modifiedonbehalfby](systemuser.md#BKMK_lk_importlog_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_importlogbase_createdby"></a> lk_importlogbase_createdby
+
+One-To-Many Relationship: [systemuser lk_importlogbase_createdby](systemuser.md#BKMK_lk_importlogbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_importlogbase_modifiedby"></a> lk_importlogbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_importlogbase_modifiedby](systemuser.md#BKMK_lk_importlogbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_importlogs"></a> owner_importlogs
+
+One-To-Many Relationship: [owner owner_importlogs](owner.md#BKMK_owner_importlogs)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_SystemUser_ImportLogs"></a> SystemUser_ImportLogs
+
+One-To-Many Relationship: [systemuser SystemUser_ImportLogs](systemuser.md#BKMK_SystemUser_ImportLogs)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_ImportLogs"></a> team_ImportLogs
+
+One-To-Many Relationship: [team team_ImportLogs](team.md#BKMK_team_ImportLogs)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [ImportLog_AsyncOperations](#BKMK_ImportLog_AsyncOperations)
+- [ImportLog_BulkDeleteFailures](#BKMK_ImportLog_BulkDeleteFailures)
+
+### <a name="BKMK_ImportLog_AsyncOperations"></a> ImportLog_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation ImportLog_AsyncOperations](asyncoperation.md#BKMK_ImportLog_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ImportLog_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ImportLog_BulkDeleteFailures"></a> ImportLog_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure ImportLog_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportLog_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ImportLog_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.importlog?text=importlog EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.importlog?displayProperty=fullName>

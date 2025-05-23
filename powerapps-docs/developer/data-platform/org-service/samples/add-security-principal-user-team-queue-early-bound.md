@@ -4,23 +4,21 @@ description: "Add a security principal to a queue" # 115-145 characters includin
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
-# Sample: Add a security principal (user or team) to a queue 
 
+# Sample: Add a security principal (user or team) to a queue
 
+This sample showcases how to give a user or a team access to a queue. The [AddPrincipalToQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.addprincipaltoqueuerequest) adds the specified principal to the list of queue members. If the passed-in security principal is a team each member of the team is added to the queue.
 
-This sample showcases how to give a user or a team access to a queue. The [AddPrincipalToQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.addprincipaltoqueuerequest) adds the specified principal to the list of queue members. If the passed-in security principal is a team each member of the team is added to the queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AddSecurityPrincipalToQueue).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Add a security principal (user or team) to a queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AddSecurityPrincipalToQueue)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -52,6 +50,5 @@ The `AddPrincipalToQueueRequest` method adds the team to the queue.
 ### Clean up
 
 Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

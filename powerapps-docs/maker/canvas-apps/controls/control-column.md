@@ -1,21 +1,19 @@
 ---
 title: Column control in Power Apps
 description: Learn about the details, properties and examples of the column control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/05/2017
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Column control in Power Apps
 Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.

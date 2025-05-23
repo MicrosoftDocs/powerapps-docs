@@ -1,24 +1,18 @@
 ---
-title: "getCurrentAppName (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getCurrentAppName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getCurrentAppName method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getCurrentAppName (Client API reference)
-
-
 
 Returns the name of the current business app in model-driven apps.
 
@@ -33,20 +27,16 @@ globalContext.getCurrentAppName().then(successCallback, errorCallback);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|successCallback |Function |Yes |A function to call when the business app name is returned.  |
-|errorCallback |Function |Yes |A function to call when the operation fails.  |
+|`successCallback` |Function |Yes |A function to call when the business app name is returned.  |
+|`errorCallback` |Function |Yes |A function to call when the operation fails.  |
 
 ## Return Value
 
 If this method is called in the context of a business app, returns the name of the business app. Otherwise, it fails with an error.
 
-### Related topics
+### Related articles
 
-[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
-
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

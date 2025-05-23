@@ -1,0 +1,1 @@
+The record is owned by a user or teams that the user is a member of. 

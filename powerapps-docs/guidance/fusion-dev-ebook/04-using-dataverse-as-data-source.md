@@ -3,18 +3,18 @@ title: "4: Using Microsoft Dataverse as the data source | Microsoft Docs"
 description: "Learn about the benefits of using Microsoft Dataverse as the data source."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 05/07/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
 # Chapter 4: Using Microsoft Dataverse as the data source
 
-Maria has built a prototype app by using test data held in Excel workbooks. She can now consider how to connect the app to data sources that will provide real-world data. She has heard about Microsoft Dataverse as an option for doing this, and wants to know more about it.
+Maria has built a prototype app by using test data held in Excel workbooks. The next step is to connect the app to data sources that will provide real-world data. Maria has heard about Microsoft Dataverse as an option for doing this, and wants to know more about it.
 
 ## What is Dataverse?
 
@@ -62,7 +62,7 @@ A view provides access to specified columns and rows in one or more related tabl
 
 ![Defining a view in Dataverse.](media/image79.png)
 
-You use business rules to define validations and automate the flow of control when data is added, modified, or deleted in an entity. A business rule comprises a condition that can test for certain conditions in the affected entity, such as whether the data in a column matches or breaks a given rule. The business rules designer in Power Apps Studio provides a graphical user interface for defining business rules, as shown in the the following image.
+You use business rules to define validations and automate the flow of control when data is added, modified, or deleted in an entity. A business rule comprises a condition that can test for certain conditions in the affected entity, such as whether the data in a column matches or breaks a given rule. The business rules designer in Power Apps Studio provides a graphical user interface for defining business rules, as shown in the following image.
 
 ![Defining business rules in Dataverse.](media/image80.png)
 
@@ -97,13 +97,13 @@ In addition to storing the data structure and logic associated with a business e
 
 Dataverse is an excellent choice of repository for many situations. You should seriously consider it for Power Apps development based on new systems and services and adding new functionality to existing applications, especially if you're creating model-driven apps.
 
-However, in the application that Maria is building, the data already exists in a legacy database. A web API exists that connects to that database to retrieve and modify data and it's deployed in Azure App Service. Those legacy solutions are proven to work and Kiana and her high-code development team are very comfortable supporting those solutions going forward.
+However, in the application that Maria is building, the data already exists in a legacy database. A web API exists that connects to that database to retrieve and modify data and it's deployed in Azure App Service. Those legacy solutions are proven to work and Kiana and the high-code development team are very comfortable supporting those solutions going forward.
 
 An advantage of fusion development teams and Dataverse is fusion development teams allow members to be their most productive in tools that they already know and are most comfortable with. A team does not need to migrate their existing data to Dataverse immediately to build an app using Power Apps. Likewise, when a team is building an application that requires new data, Dataverse makes a ton of sense as an option. It is not uncommon to see an app built using Power Apps to use a combination of legacy data sources and data in Dataverse.
 
-When Maria starts to add new functionality to her app, for example having the field technicians add customer visit notes, she expects to use Dataverse to store that data.
+When a new functionality is added to the app, for example having the field technicians add customer visit notes, Maria expects to use Dataverse to store that data.
 
-So, for the time being Maria will connect the web API Kiana's team has already developed to her app to obtain the data needed. The following chapters will walk through that process.
+So, for the time being Maria will connect the web API Kiana's team has already developed to the app to obtain the data needed. The following chapters will walk through that process.
 
 > [!div class="step-by-step"]
 > [Previous](03-building-low-code-prototype.md)

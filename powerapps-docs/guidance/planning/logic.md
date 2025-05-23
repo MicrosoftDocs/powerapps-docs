@@ -2,8 +2,7 @@
 title: Power Apps architectural design - Where to place logic | Microsoft Docs
 description: "Considerations for deciding where to place the logic in your system: canvas apps, model-driven apps, Microsoft Dataverse, or Power Automate flows?"
 author: taiki-yoshida
-
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -102,8 +101,7 @@ makes the logic independent of the apps and flows to ensure that data is used in
 particular way.
 
 For example, if you want to require that an address is entered for all apps
-and flows that use the Account entity, you should set this logic in Common Data
-Service rather than in each app and flow.
+and flows that use the Account entity, you should set this logic in Dataverse rather than in each app and flow.
 
 There are several ways of applying logic to Dataverse. Using low code,
 you can set up things such as auto-numbering fields, calculated fields, and

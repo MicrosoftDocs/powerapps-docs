@@ -30,7 +30,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse for developers
-            url: /learn/modules/intro-cds-developers-power-platform/
+            url: /training/modules/intro-cds-developers-power-platform/
          
           
   # Card
@@ -42,10 +42,10 @@ landingContent:
             url: work-with-data.md
           - text: Types and operations (Web API)
             url: ./webapi/web-api-types-operations.md
-          - text: Entity operations (Organization service)
+          - text: Entity operations (SDK for .NET)
             url: ./org-service/entity-operations.md
-          - text: Use FetchXML to query data
-            url: ./use-fetchxml-construct-query.md
+          - text: Query data using FetchXml
+            url: ./fetchxml/overview.md
           - text: Use SQL to query data
             url: ./dataverse-sql-query.md
 
@@ -100,7 +100,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Publish your app on AppSource
-            url: ./publish-app-appsource.md
+            url: /power-platform/developer/appsource/publish-app
 
     # Card
   - title: Create client applications
@@ -117,7 +117,7 @@ landingContent:
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
        - linkListType: tutorial
          links:  
-          - text: Register an app with Azure Active Directory
+          - text: Register an app with Microsoft Entra ID
             url: walkthrough-register-app-azure-active-directory.md
 
   # Card

@@ -1,19 +1,14 @@
 ---
-title: "Use IFRAME and web resource controls on a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.author: jdaly
-author: HemantGaur
-manager: lwelicki
+title: "Use IFRAME and web resource controls on a form (model-driven apps)"
+description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  "
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 06/10/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -51,7 +46,7 @@ Displaying a form within an IFrame embedded in another form is not supported.
 |        Parameter        |        Description      |
 |-------------------------|--------------------------|
 | `security="restricted"` | This parameter is no longer supported. |
-|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [WC3 Sandbox parameter](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
+|      `sandbox=""`       | For browsers that support this parameter, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This parameter is defined by W3C and is supported by the following browsers:<br /><br /> - Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox parameter see:<br /><br /> -   [How to safeguard your site with HTML5 sandbox](/previous-versions/msdn10/hh563496(v=msdn.10))<br />-   [Sandbox](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673561(v=vs.85)) |
 
 <a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>   
 
@@ -133,10 +128,10 @@ var newTarget = "";
 //Set the target based on the value of the option set  
 switch (value) {  
     case 100000001:  
-        newTarget = https://myServer/test/pageOne.aspx;  
+        newTarget = "https://myServer/test/pageOne.aspx";  
         break;  
     default:  
-        newTarget = https://myServer/test/pageTwo.aspx;  
+        newTarget = "https://myServer/test/pageTwo.aspx";  
         break;  
 }  
 //Get the default URL for the IFRAME, which includes the   

@@ -1,27 +1,21 @@
 ---
 title: "Model-driven-designers | MicrosoftDocs"
 description: "Model-driven app designers"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
     - "powerapps"
 author: "matp"
 ms.assetid: 
 caps.latest.revision: 1
-ms.subservice: 
+ms.subservice: mda-maker
 ms.author: "matp"
-manager: ""
-tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-
 ---
 # Meet the model-driven app designers
 

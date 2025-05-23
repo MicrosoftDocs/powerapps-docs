@@ -1,22 +1,18 @@
 ---
 title: Work with reports | Microsoft Docs
 description: Work with reports in Power Apps
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 06/27/2019
+ms.topic: how-to
+ms.date: 02/27/2024
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Work with reports
 
@@ -83,9 +79,9 @@ The reporting features need to be enabled for your model-driven app for you to s
 The RDL file contains the fetchXML that the report is based on.
 5. Open the report once the download is complete.
 
+### Known issue
 
-
-
+Reports rely on a hybrid experience called out in [Enable hybrid experience](/power-platform/admin/enable-hybrid-experience) which are not supported in mobile or Teams.
 
 ### See Also
 

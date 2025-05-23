@@ -1,24 +1,18 @@
 ---
-title: "ViewSelector methods (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "ViewSelector methods (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the ViewSelector method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # ViewSelector methods (Client API reference)
-
-
 
 Provides methods to get or set information about the view selector of the subgrid control. If the subgrid control is not configured to display the view selector, calling the **ViewSelector** methods will throw an error.
 
@@ -37,13 +31,9 @@ Methods
 |[setCurrentView](viewselector/setCurrentView.md)|[!INCLUDE[viewselector/includes/setCurrentView-description.md](viewselector/includes/setCurrentView-description.md)]|Read-only grid|
 
 
-### Related topics
+### Related articles
 
-[gridContext](../grids.md#bkmk_gridcontext)
-
+[gridContext](../grids.md#bkmk_gridcontext)   
 [Grids and subgrids in model-driven apps](../grids.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

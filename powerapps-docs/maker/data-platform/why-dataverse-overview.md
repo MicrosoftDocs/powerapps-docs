@@ -1,22 +1,12 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.date: 06/16/2020
+ms.date: 04/11/2023
 ms.reviewer: "Mattp123"
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: overview
-applies_to: 
-  - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "kvivek"
-manager: "kvivek"
-search.audienceType: 
-  - maker
-search.app: 
-  - PowerApps
-  - D365CE
+ms.author: "matp"
 ---
 
 # Why choose Microsoft Dataverse?
@@ -61,7 +51,7 @@ For organizations that want to integrate Dataverse data into existing apps or wr
 
 You can also use Dataverse in bot-based apps that deliver intuitive,
 interactive dialogues with employees, partners, and customers. Whether they're embedded within Power Apps or custom code, bots can be built quickly
-by using Power Virtual Agents and powered by Dataverse data.
+by using Microsoft Copilot Studio and powered by Dataverse data.
 
 The goal of Dataverse working with any app means it should also work with the tools that knowledge workers and professional developers use. To help them be even more productive, Dataverse is integrated into popular tools such as Excel, Outlook, Dynamics 365 customer engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data Export Service, and SQL Server Management Studio. More information: [Work with any type of app](work-with-any-type-app.md)
 
@@ -84,7 +74,7 @@ and integrated AI and BI.
 
 ## Security
 
-Dataverse uses Azure Active Directory identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
+Dataverse uses Microsoft Entra identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
 
 Dataverse uses role-based security to group together a collection of privileges. These security roles can be associated directly with users, or they can be associated with Dataverse teams and business units.
 
@@ -124,7 +114,7 @@ At a high level, the following constitute Microsoft Power Platform requests:
 
 - **Power Automate**: All Power Automate step actions.
 
-- **Common Data Service**: All create, update, delete (CRUD) operations, in addition to special operations like "share" or "assign." These can come from any client or app, using any SOAP or REST endpoint. These include&mdash;but aren't limited to&mdash;plug-ins, asynchronous workflows, and custom controls making the abovementioned operations.
+- **Dataverse**: All create, update, delete (CRUD) operations, in addition to special operations like "share" or "assign." These can come from any client or app, using any SOAP or REST endpoint. These include&mdash;but aren't limited to&mdash;plug-ins, asynchronous workflows, and custom controls making the abovementioned operations.
 
 The specific number of allowed requests that a user can make in a 24-hour period is governed by the user's license.
 

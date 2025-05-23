@@ -1,18 +1,14 @@
 ---
-title: "Define custom actions to modify the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about defining custom actions to modify the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+title: "Define custom actions to modify the ribbon (model-driven apps)"
+description: "Learn about defining custom actions to modify the ribbon."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -22,7 +18,7 @@ contributors:
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-The default, an application command bar or ribbon is defined by Microsoft Dataverse metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
+The default, an application command bar or ribbon is defined by Microsoft Dataverse metadata. This default data can't be changed, but you can include definitions of specific actions that will override the default ribbon.  
   
 ## Types of custom actions
 
@@ -49,7 +45,7 @@ The default, an application command bar or ribbon is defined by Microsoft Datave
   
 ### Hide custom actions  
 
- A `<HideCustomAction>` is a statement that you use when you want to remove an existing ribbon element so that it is not rendered. This does not hide the ribbon element, it actually removes the ribbon element at runtime so that it doesn’t exist in the ribbon.  
+ A `<HideCustomAction>` is a statement that you use when you want to remove an existing ribbon element so that it is not rendered. This does not hide the ribbon element, it actually removes the ribbon element at runtime so that it doesn't exist in the ribbon.  
 
 The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** parameter must match the Id of the ribbon element you want to remove.  
   

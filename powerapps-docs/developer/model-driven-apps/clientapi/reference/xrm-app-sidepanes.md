@@ -1,17 +1,13 @@
 ---
-title: "sidePanes (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "sidePanes (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the sidePanes method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 04/04/2022
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 08/16/2023
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -19,11 +15,13 @@ contributors:
 
 Provides methods for managing side panes.
 
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
+
 ## Methods
 
 |Methods|Description|
 |--------|----------|
-|[createPane](Xrm-App/Xrm-App-sidePanes/createPane.md)|Add empty pane to sidePanes collection. Need to call `pane.navigateTo()` to load the page.|
+|[createPane](Xrm-App/Xrm-App-sidePanes/createPane.md)|Add empty pane to sidePanes collection. Need to call `pane.navigate()` to load the page.|
 |[getAllPanes](Xrm-App/Xrm-App-sidePanes/getAllPanes.md)|Returns a collection containing all active panes.|
 |[getSelectedPane](Xrm-App/Xrm-App-sidePanes/getSelectedPane.md)|Returns the current selected pane.|
 |[getPane](Xrm-App/Xrm-App-sidePanes/getPane.md)|Returns the pane corresponding to the input ID. If pane doesn't exist, undefined is returned.|
@@ -32,9 +30,9 @@ Provides methods for managing side panes.
 
 |Parameter Name|Description|
 |--------------|-----------|
-|state|Returns whether the selected pane is collapsed or expanded.|
+|`state`|Returns whether the selected pane is collapsed or expanded.|
 
-### Related topics
+### Related articles
 
 [Creating side panes using client API](../create-app-side-panes.md)
 

@@ -1,9 +1,8 @@
 ---
-title: requestRender | Microsoft Docs
+title: requestRender (Power Apps component framework API reference) | Microsoft Docs
 description: Requests re-rendering of the component with the updated data.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -24,7 +23,7 @@ contributors:
 
 Model-driven and canvas apps
 
-### Related topics
+### Related articles
 
 [Factory](../factory.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

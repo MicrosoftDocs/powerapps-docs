@@ -1,23 +1,18 @@
 ---
-title: "setActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setActiveProcess (Client API reference) in model-driven apps"
 description: Sets a process as the active process.
-ms.author: jdaly
-author: adrianorth
+author: matthidinger
+ms.author: mahiding
 ms.date: 06/28/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # setActiveProcess (Client API reference)
-
-
 
 [!INCLUDE[./includes/setActiveProcess-description.md](./includes/setActiveProcess-description.md)]
 
@@ -39,19 +34,14 @@ If multiple instances of the process exist, one of these will be chosen as per t
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|processId|String|Yes|The Id of the process to set as the active process.|
-|callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **success**: The operation succeeded.<br/>- **invalid**: The processId isn't valid or the process isn't enabled.|
+|`processId`|String|Yes|The Id of the process to set as the active process.|
+|`callbackFunction`|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **`success`**: The operation succeeded.<br/>- **`invalid`**: The processId isn't valid or the process isn't enabled.|
 
-### Related topics
+### Related articles
 
-[getActiveProcess](getActiveProcess.md)
-
-[setActiveProcessInstance](../setActiveProcessInstance.md)
-
+[getActiveProcess](getActiveProcess.md)   
+[setActiveProcessInstance](../setActiveProcessInstance.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

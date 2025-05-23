@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Customize a gallery in Power Apps"
 description: Learn about how to customize data that appears in gallery and other elements of canvas apps generated automatically.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: tutorial
 ms.custom: canvas
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
 ---
 # Tutorial: Customize a gallery in Power Apps
@@ -144,13 +142,5 @@ If your users might have neither touch screens nor mouse wheels, configure the g
 ## Next steps
 
 In this tutorial, you've customized the gallery and made other changes to the default screen for browsing records in a generated app. You can also customize the default screens for displaying details and creating or updating accounts. As the browse screen contains a gallery, the other two screens in the app contain forms. You can change, for example, which types of data the forms show and in which order.
-
-> [!div class="nextstepaction"]
-> [Customize forms](customize-forms-sharepoint.md)
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,9 +1,9 @@
 ---
 title: Customize forms in canvas apps
 description: Learn about how to specify which data to show in a canvas app form, in which order to show them, and in which controls.
-author: tapanm-msft
+author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2020
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
 ---
 # Customize forms in canvas apps
@@ -122,10 +120,5 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
 - [Save and publish](save-publish-app.md) your app.
 - [Customize a card](customize-card.md) in your app.
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

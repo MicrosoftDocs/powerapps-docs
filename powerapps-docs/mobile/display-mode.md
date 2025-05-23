@@ -1,21 +1,18 @@
 ---
 title: Set appearance to light mode, dark mode, or use the system default| Microsoft Docs
 description: Set appearance to light mode, dark mode, or use the system default for Power Apps mobile.
-author: mduelae
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 08/04/2021
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -34,7 +31,7 @@ The default display mode for Power Apps mobile is set to **Light**.
 | ![Power Apps mobile in light mode](media/light-mode.png "Profile picture")  | ![Power Apps mobile in dark mode](media/dark-mode.png "Dark mode") |
 
 
-1. To change the display, open Power App mobile and sign in.
+1. To change the display, open Power Apps mobile and sign in.
 2. From the **Home** screen, select your profile picture.
 
    > [!div class="mx-imgBorder"]

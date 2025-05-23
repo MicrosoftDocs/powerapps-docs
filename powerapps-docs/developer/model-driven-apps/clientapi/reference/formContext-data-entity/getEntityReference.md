@@ -1,18 +1,14 @@
 ---
 title: entity.getEntityReference (Client API reference)
 description: Returns a lookup value that references a record.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -32,12 +28,9 @@ contributors:
 
 **Description**: The returned object has following three parameters:
 
-- **entityType**: String. Logical name of the table record. For example, "account".
-- **id**: String. GUID value of the table record.
-- **name**: (Optional) String. Name of the table record. 
-
-
-
+- **`entityType`**: String. Logical name of the table record. For example, "account".
+- **`id`**: String. GUID value of the table record.
+- **`name`**: (Optional) String. Name of the table record. 
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

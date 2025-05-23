@@ -1,18 +1,14 @@
 ---
 title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about choices columns that allow storing multiple choices in a single column." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+ms.date: 01/09/2023
 ms.reviewer: jdaly
-ms.topic: "article"
-author: NHelgren # GitHub ID
+ms.topic: article
+author: mkannapiran
+ms.author: kamanick
 ms.subservice: dataverse-developer
-ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -20,11 +16,14 @@ contributors:
 
 Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options?text=OptionSetMetadata.Options> property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
 
+> [!NOTE]
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they are unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
+
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 With the Web API, this column is defined using the <xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType>.
 
-Just like choices columns, there is technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value cannot be set.
+Just like choices columns, there's technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value can't be set.
 
 ## Setting choices values
 
@@ -34,7 +33,7 @@ The following examples show how to set choices values for a column named `sample
 
 With the Web API, you set the values by passing a string containing comma separated number values:
 
-**Request**
+**Request:**
 
 ```http
 POST [organization uri]/api/data/v9.0/contacts HTTP/1.1
@@ -51,12 +50,12 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [organization uri]/api/data/v9.0/contacts(0c67748a-b78d-e711-811c-000d3a75bdf1)
+OData-EntityId: [organization uri]/api/data/v9.0/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ### [SDK for .NET](#tab/sdk)
@@ -76,6 +75,7 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 OptionSetValueCollection activities = new OptionSetValueCollection();
 activities.Add(new OptionSetValue(1)); //Swimming
@@ -150,7 +150,7 @@ The following examples show using the `ContainValues` and `DoesNotContainValues`
 This example shows the use of the <xref:Microsoft.Dynamics.CRM.ContainValues> query function to return all the contacts who like hiking. Notice how the text of the options is returned as annotations due to the `odata.include-annotations="OData.Community.Display.V1.FormattedValue"` preference applied.
 
 
-**Request**
+**Request:**
 
 ```http
 GET [organization uri]/api/data/v9.0/contacts?$select=fullname,sample_outdooractivities&$filter=Microsoft.Dynamics.CRM.ContainValues(PropertyName='sample_outdooractivities',PropertyValues=%5B'2'%5D) HTTP/1.1
@@ -161,7 +161,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -265,7 +265,7 @@ This example shows the use of the `not-contain-values` operator in the following
 </fetch>
 ```
 
-**Request**
+**Request:**
 
 ```http
 GET [organization uri]/api/data/v9.0/contacts?fetchXml=%253Cfetch%2520distinct%253D'false'%2520no-lock%253D'false'%2520mapping%253D'logical'%253E%253Centity%2520name%253D'contact'%253E%253Cattribute%2520name%253D'fullname'%2520%252F%253E%253Cattribute%2520name%253D'sample_outdooractivities'%2520%252F%253E%253Cfilter%2520type%253D'and'%253E%253Ccondition%2520attribute%253D'sample_outdooractivities'%2520operator%253D'not-contain-values'%253E%253Cvalue%253E2%253C%252Fvalue%253E%253C%252Fcondition%253E%253C%252Ffilter%253E%253C%252Fentity%253E%253C%252Ffetch%253E HTTP/1.1
@@ -276,7 +276,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -360,7 +360,7 @@ foreach (Contact contact in nonHikers.Entities)
 
 The easiest way to create choices is to use the column editor in the customization tools. More information: [How to create and edit columns](../../maker/data-platform/create-edit-fields.md)
 
-But if you need to automate creation of this kind of column you can use C# code like the following with the SDK for .NET which creates choices to allow choices of outdoor activities to the `contact` table. More information: [Create columns](org-service/metadata-attributemetadata.md#create-columns)
+But if you need to automate creation of this kind of column you can use C# code like the following with the SDK for .NET that creates choices to allow choices of outdoor activities to the `contact` table. More information: [Create columns](org-service/metadata-attributemetadata.md#create-columns)
 
 ```csharp
 private const int _languageCode = 1033; //English
@@ -402,11 +402,11 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 ### See also
 
 [Column definitions](entity-attribute-metadata.md)<br />
-[Create a table using the Web API](webapi/create-entity-web-api.md)<br />
-[Query Data using the Web API](webapi/query-data-web-api.md)<br />
-[Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
-[Sample: Work with column definitions](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
-[Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
+[Create a table row using the Web API](webapi/create-entity-web-api.md)<br />
+[Query Data using the Web API](webapi/query/overview.md)<br />
+[Work with column definitions](org-service/metadata-attributemetadata.md)<br />
+[Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
+[Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

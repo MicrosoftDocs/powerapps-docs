@@ -1,9 +1,8 @@
 ---
-title: Popup | Microsoft Docs
+title: Popup (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to get all the information about the popup.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -73,7 +72,7 @@ The `type` value is an enum with the following possible values
 
 Should be only one `Root` Popup for each set of Popups.
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

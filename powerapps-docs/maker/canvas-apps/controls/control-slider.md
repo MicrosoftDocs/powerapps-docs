@@ -1,21 +1,19 @@
 ---
 title: Slider control in Power Apps
 description: Learn about the details, properties and examples of the Slider control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Slider control in Power Apps
 A control with which the user can specify a value by dragging a handle.

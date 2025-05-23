@@ -2,29 +2,27 @@
 title: "Sample: Use duplicate detection when creating and updating records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to invoke duplicate detection for creating and updating table records" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Use duplicate detection when creating and updating records
 
+This sample shows how to invoke duplicate detection for creating and updating table records.
 
-This sample shows how to invoke duplicate detection for creating and updating table records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseDuplicatedetectionforCRUD).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use duplicate detection when creating and updating records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/UseDuplicatedetectionforCRUD)
 
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
-
 
 ## What this sample does
 
@@ -37,19 +35,19 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates an account record. 
+1. The `Account` method creates an account record.
 1. The `DuplicateRule` method creates a duplicate detection rule.
 1. The `DuplicateRuleCondition` method creates a duplicate detection rule conditions.
 1. The `PublishDuplicateRuleRequest` method publishes the duplicate detection rule created earlier. You need to wait for publishing operation to complete, so we keep polling the state of the rule until it becomes `Published`.
 
 ### Demonstrate
-1. The `Account` method creates an account record. 
+
+1. The `Account` method creates an account record.
 1. The `CreateRequest` method creates operation by suppressing duplicate detection.
 1. The `UpdateRequest` method updates the retrieved account record with new account number.
 
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

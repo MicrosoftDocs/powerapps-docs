@@ -1,9 +1,8 @@
 ---
-title: EntityMetadata in Microsoft Dataverse| Microsoft Docs
+title: EntityMetadata (Power Apps component framework API reference)| Microsoft Docs
 description: Information about methods and properties for table definitions.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -36,7 +35,7 @@ Model-driven apps
 |privilegesByType|Dictionary<[securityPrivilegeMetadata](securityprivilegesmetadata.md)>|The privileges for the table indexed by type.|
 ||||
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

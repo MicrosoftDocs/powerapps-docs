@@ -1,24 +1,18 @@
 ---
-title: "setActiveProcessInstance (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setActiveProcessInstance (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setActiveProcessInstance method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # setActiveProcessInstance (Client API reference)
-
-
 
 [!INCLUDE[./includes/setActiveProcessInstance-description.md](./includes/setActiveProcessInstance-description.md)]
 
@@ -30,17 +24,12 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|processInstanceId|String|Yes|The Id of the process instance to set as the active instance.|
-|callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **success**: The operation succeeded.<br/>- **invalid**: The processInstanceId isn’t valid or the process isn’t enabled.|
+|`processInstanceId`|String|Yes|The Id of the process instance to set as the active instance.|
+|`callbackFunction`|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **`success`**: The operation succeeded.<br/>- **`invalid`**: The processInstanceId isn't valid or the process isn't enabled.|
 
-### Related topics
+### Related articles
 
-[getProcessInstances](getProcessInstances.md)
-
+[getProcessInstances](getProcessInstances.md)   
 [formContext.data.process](../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

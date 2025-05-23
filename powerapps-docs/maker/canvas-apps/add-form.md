@@ -3,18 +3,16 @@ title: Show, edit, or add a record in a canvas app
 description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 04/22/2020
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Show, edit, or add a record in a canvas app
@@ -24,7 +22,7 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 ## Prerequisites
 
 - Learn how to [add and configure a control](add-configure-controls.md) in Power Apps.
-- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+- Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 - Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 - Create or open an app for phones, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 

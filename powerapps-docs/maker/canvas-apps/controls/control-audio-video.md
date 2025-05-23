@@ -1,21 +1,18 @@
 ---
 title: Audio and Video controls in Power Apps
 description: Learn about the details, properties and examples of the audio and video controls in Power Apps.
-author: chmoncay
-
+author: yogeshgupta698 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/31/2022
+ms.date: 4/3/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
-ms.reviewer: tapanm
+ms.author: yogupt
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.
@@ -23,12 +20,27 @@ A control that plays an audio file, a video file, or a video on YouTube.
 ## Description
 An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file.
 
-A **Video** control plays a video clip from a file or from YouTube or Azure Media Services.  Closed captions can optionally be shown when specified.
+A **Video** control plays a video clip from a file or from YouTube or any external source.  Closed captions can optionally be shown when specified.
+
+> [!IMPORTANT]
+> Videos on Azure Media services are no longer supported. For more information, see [Retirement of the service](/azure/media-services/latest/azure-media-services-retirement). 
+
+## Limitations
+
+The audio and video control has these limitations:
+
+- Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
+    - You can play videos in multiple **Video** controls at the same time on all platforms except iPhone devices.
+    - You can record audio with multiple **Microphone** controls at the same time on all platforms except the web player.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
 **Media** – An identifier for the clip that an audio or video control plays.
+
+> [!NOTE]
+> - Use HTTPS for all external videos to ensure compatibility with modern browsers.
+> - External videos must be accessible anonymously (without any authentication).
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
@@ -110,12 +122,6 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
 3. Press Esc to return to the default workspace.
 
-### Play a video from Azure Media Services
-1. After the videos are published on AMS, copy the manifest URL. Start the streaming endpoint of your service, if not already.
-1. Add a **Video** control, and set its **Media** property to the URL of the AMS video, enclosed in double quotation marks.
-2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
-3. Press Esc to return to the default workspace.
-
 
 ## Accessibility guidelines
 ### Audio and video alternatives
@@ -143,6 +149,5 @@ Provide closed captions and/or transcript if the video content has color contras
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

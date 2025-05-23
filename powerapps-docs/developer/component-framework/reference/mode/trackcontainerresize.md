@@ -1,9 +1,8 @@
 ---
-title: TrackContainerResize | Microsoft Docs
+title: TrackContainerResize (Power Apps component framework API reference) | Microsoft Docs
 description: Determines the container sizing if the component needs to react.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -42,7 +41,7 @@ The following table shows the strategies that you can use to control the height 
 | Canvas apps       | `dataset` & `field`                    | `height: allocatedWidth`                                     | `width: allocatedHeight` |
 | Canvas apps       | `dataset` & `field` (full screen mode) | `height: "100%"`                                             | `width: "100%"`          |
 
-If the  of `allocatedWidth` and `allocatedHeight` change after the first `updateView` is called, then a subsequent `updateView` is called with "layout" added to the `context.updatedProperties`. More information: [UpdatedProperties](..\updatedproperties.md).
+If the values of `allocatedWidth` and `allocatedHeight` change after the first `updateView` is called, then a subsequent `updateView` is called with "layout" added to the `context.updatedProperties`. More information: [UpdatedProperties](..\updatedproperties.md).
 
 ## Available for 
 

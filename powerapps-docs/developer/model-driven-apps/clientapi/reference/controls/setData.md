@@ -1,18 +1,14 @@
 ---
-title: "setData (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "setData (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setData method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -32,9 +28,9 @@ webresource
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|string|String|Yes|The data value to pass to the Silverlight web resource.|
+|`string`|String|Yes|The data value to pass to the Silverlight web resource.|
 
-## Related topics
+## Related articles
 
 [getData](getData.md)
 

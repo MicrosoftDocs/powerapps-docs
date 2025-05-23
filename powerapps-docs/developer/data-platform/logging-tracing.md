@@ -1,18 +1,14 @@
 ---
 title: "Logging and tracing (Microsoft Dataverse) | Microsoft Docs"
 description: "Use the plugin trace log to store plug-in execution information to aid in plug-in debugging."
-ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+ms.date: 04/22/2024
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: concept-article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -48,9 +44,11 @@ Recording of run-time tracing information for Microsoft Dataverse is provided by
 
 ## Enable trace logging
 
-Whether trace logs will be written depends on the value of the [Organization](./reference/entities/organization.md) table [PluginTraceLogSetting](./reference/entities/organization.md#BKMK_PluginTraceLogSetting) column value.
+Whether trace logs will be written depends on the value of the [Organization](./reference/entities/organization.md) table [PluginTraceLogSetting](./reference/entities/organization.md#BKMK_PluginTraceLogSetting) column value. You can enable trace logging by programmatically updating the `PluginTraceLogSetting` value.
 
-To enable trace logging you can programmatically update this value or in the web application navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options.  
+A second method to enable trace logging is through the legacy web application. Navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options. More information: [Settings in Unified Interface apps](/power-platform/admin/admin-settings#settings-in-unified-interface-apps), [Settings in legacy web client apps](/power-platform/admin/admin-settings#settings-in-legacy-web-client-apps)
+
+A third option can be found in the Plug-in Registration tool. After connecting the tool to your organization (environment), select **Settings** > **Logging to Plug-in Trace Log** and then select one of the available options.
   
 |Value|Option|Description|  
 |------------|-----------------|-----------------|  
@@ -64,7 +62,6 @@ If the trace logging setting is set to **Exception** and your custom code return
 
 Before writing to the tracing service, you must first extract the tracing service object from the passed execution context. Afterwards, simply add <xref:Microsoft.Xrm.Sdk.ITracingService.Trace(System.String,System.Object[])> calls to your custom code where appropriate passing any relevant diagnostic information in that method call.  
 
-  
  ```csharp
 //Extract the tracing service for use in debugging plug-ins.
  ITracingService tracingService =
@@ -86,7 +83,7 @@ The <xref:Microsoft.Xrm.Sdk.ITracingService> batches the information provided to
 
 Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/entities/plugintracelog.md) [MessageBlock](reference/entities/plugintracelog.md#BKMK_MessageBlock) column. Only 10kb of text can be written. Older trace lines will be removed to meet this limit so that only the most recent lines will be saved.
   
-[PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation. 
+[PluginTraceLog](reference/entities/plugintracelog.md) records have a finite lifetime. A bulk deletion background job runs once per day to delete records that are older than 24 hours from creation.
 
 > [!CAUTION]
 > While this job can be disabled or the frequency in which it occurs can be adjusted, failure to set it back to the original setting is frequently discovered to be the cause of performance issues later on.
@@ -98,7 +95,7 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 **Plug-in Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Community tools for Dataverse](community-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Microsoft and does not extend support to the community tools. 
+> The community tools are not a product of Microsoft and does not extend support to the community tools.
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).  
 
 ### See also
@@ -106,8 +103,7 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 [Plug-ins](plug-ins.md)  
 [Debug a plug-in](debug-plug-in.md#use-tracing)  
 [View trace logs](tutorial-write-plug-in.md#view-trace-logs)  
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)  
+[Tracing service](write-plug-in.md#tracing-service)  
 [PluginTraceLog Table](reference/entities/plugintracelog.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

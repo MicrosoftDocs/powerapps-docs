@@ -1,21 +1,19 @@
 ---
 title: Microphone control in Power Apps
 description: Learn about the details, properties and examples of the Microphone control in Power Apps.
-author: chmoncay
+author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/07/2021
+ms.reviewer: mkaur
+ms.date: 03/25/2024
 ms.subservice: canvas-maker
-ms.author: chmoncay
+ms.author: yogupt
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - chmoncay
+  - mduelae
+  - yogeshgupta698
 ---
 # Microphone control in Power Apps
 
@@ -42,6 +40,14 @@ Captured media is referenced by a text string URI. For more information, read th
 
 > [!NOTE]
 > The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
+
+## Limitations
+
+The microphone control has these limitations:
+
+- Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
+    - You can play videos in multiple **Video** controls at the same time on all platforms except iPhone devices.
+    - You can record audio with multiple **Microphone** controls at the same time on all platforms except the web player.
 
 ## Key properties
 
@@ -124,7 +130,7 @@ In this example, we'll directly connect a **Microphone** control with an **Audio
 1. Add an **Audio** control to your app.
 1. Set the **Audio** control's **Media** property to the formula:
 
-    ```powerapps-dot
+    ```power-fx
     Microphone1.Audio
     ```
 
@@ -145,7 +151,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its **OnStop** property to this formula using the [Collect](../functions/function-clear-collect-clearcollect.md) function:
 
-    ```powerapps-dot
+    ```power-fx
     Collect( MySounds, MyMic.Audio )
     ```
 
@@ -153,7 +159,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the [Items](properties-core.md) property for the gallery to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     MySounds
     ```
 
@@ -161,7 +167,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set the audio control's **Media** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     ThisItem.Url
     ```
 
@@ -177,7 +183,7 @@ In this example, we'll create a gallery of audio clips stored in a collection th
 
 1. Set its [OnSelect](properties-core.md) property to the formula:
 
-    ```powerapps-dot
+    ```power-fx
     Remove( MySounds, ThisItem )
     ```
 

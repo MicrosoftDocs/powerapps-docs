@@ -1,18 +1,15 @@
 ---
-title: "Publish customizations (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Publishing customizations makes the Web application aware of changes to the data that affects the user interface." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Publish customizations (model-driven apps)"
+description: "Publishing customizations makes the Web application aware of changes to the data that affects the user interface."
 author: caburk
 ms.author: caburk
-manager: evlew
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -30,7 +27,7 @@ Customizations are automatically published when new items are created or existin
 When you perform customizations that will appear in Dynamics 365 for tablets, you should always explicitly publish your customizations to make sure that every item is synchronized with the Dynamics 365 for tablets application.  
   
 > [!NOTE]
-> Publishing customizations can interfere with normal system operation. In a production environment, we recommend that you schedule publishing customizations when it’s least disruptive to users.  
+> Publishing customizations can interfere with normal system operation. In a production environment, we recommend that you schedule publishing customizations when it's least disruptive to users.  
   
 ## Publishing programmatically  
 

@@ -1,24 +1,18 @@
 ---
-title: "GridRowData (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "GridRowData (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the GridRowData method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # GridRowData (Client API reference)
-
-
 
 GridRowData is returned by the [GridRow](gridrow.md).[getData](gridrow/getData.md) method.
 
@@ -34,7 +28,7 @@ var gridRowData = myRow.data;
 
 |Name|Description|Available for|
 |--|--|--|
-|entity|Returns the [GridEntity](gridentity.md) for the GridRowData.|Read-only and editable grids|
+|`entity`|Returns the [GridEntity](gridentity.md) for the GridRowData.|Read-only and editable grids|
 
 
 ## Methods
@@ -42,8 +36,6 @@ var gridRowData = myRow.data;
 |Name|Description|Available for|
 |--|--|--|
 |[getEntity](gridrowdata/getEntity.md)|[!INCLUDE[gridrowdata/includes/getEntity-description.md](gridrowdata/includes/getEntity-description.md)]|Read-only and editable grids|
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

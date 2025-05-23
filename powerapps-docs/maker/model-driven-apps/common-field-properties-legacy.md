@@ -5,10 +5,8 @@ Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 02/25/2020
-
-ms.topic: conceptual
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -16,9 +14,6 @@ applies_to:
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app common column properties
 
@@ -30,10 +25,10 @@ In addition to configuring aspects of the Dataverse column, such as its type and
 
 ## Common column properties in Power Apps portal
 
-1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**, and then select the table that has the columns you want to view.
+1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables**, and then select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-> [!note]
-> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
+   > [!NOTE]
+   > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
 
 2. Select the column that you want to view.
 
@@ -65,7 +60,7 @@ In addition to using Power Apps (make.powerapps.com), columns can also be review
 To update the column, follow these steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-1. On the left navigation pane, expand **Data**, and then select **Tables**.
+1. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
     > [!Note]
     > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a column within a solution, open your **Solution**, and then open the **Table**.
 
@@ -110,7 +105,7 @@ The following table describes properties that all columns have. Certain types of
 In some scenarios, it is desirable to render a data column within a form field in one form in a way that differs in the way it is presented in another. This allows the user experience to be tailored to the individual using the form.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand **Data**, and then select **Tables**.
+2. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    > [!Note]
    > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a form within a solution, first navigate to your **Solution**, open the **Table**, and then select the **Forms** area.
 

@@ -9,16 +9,11 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
-ms.date: 03/17/2020
-
-ms.topic: conceptual
+ms.date: 09/26/2022
+ms.topic: article
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Subgrid properties for model-driven app main forms (classic)
 
@@ -53,7 +48,8 @@ These are the properties available to configure when using a subgrid component o
 ||**Display Chart Selection**|If **Show Chart Only** is selected, allow people to choose different charts.|  
 ||**Availability**|Specify whether the section should be available on phone.|
 |**Formatting**|**Layout**|**Select the number of columns the control occupies**.<br /><br /> When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.|  
-||**Record Layout**|**Number of Records** will determine how many records are shown on a page of a subgrid.<br /><br /> If **Automatically expand to use available space** is chosen the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Number of Records**, people can navigate to additional pages to view the records.<br /><br /> If **Automatically expand to use available space** is not chosen the form will provide space for the number of records defined by **Number of Records** and people can navigate to additional pages to view any additional records.|  
+||**Number of rows**| Determines how many records are shown on a page of a subgrid.|  
+||**Use available space**| Note: This property only works with the legacy web client. It has no effect on Unified Interface. <br/><br/> If **Automatically expand to use available space** is chosen, the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Number of Records**, users can navigate to additional pages to view the records.<br /><br /> If **Automatically expand to use available space** is not chosen, the form will provide space for the number of records defined by **Number of rows** and users can navigate to additional pages to view any additional records.|  
 |**Controls**|**Controls**|Choose to add controls and select the radio button to have them for Web, Phone, or Tablet.|
   
  In forms using the [classic forms](main-form-presentations.md#classic-forms), actions performed on a subgrid were available in the ribbon. Developers can customize the behavior of these actions or add additional actions by customizing the ribbon.  

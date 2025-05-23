@@ -1,19 +1,16 @@
 ---
-title: "getContentWindow (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getContentWindow (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getContentWindow method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/15/2024
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
+  - tahoon-ms
 ---
 # getContentWindow (Client API reference)
 
@@ -38,8 +35,8 @@ formContext.getControl(arg).getContentWindow().then(successCallback, errorCallba
 
 |Name |Type|Required|Description|
 |---|---|---|---|
-|successCallback|Function|No|A function to call when operation is executed successfully. A content window instance representing the IFRAME or web resource is passed to the function.|
-|errorCallback|Function|No|A function to call when the operation fails.|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. A content window instance representing the IFRAME or web resource is passed to the function.|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
 
 
 ## Return Value
@@ -48,19 +45,14 @@ On success, returns a promise that contains a content window instance representi
 
 ## Example
 
-The following example shows how you can use this method with a HTML Web resource (new_myWebResource.htm).
+The following example shows how you can use this method with an HTML Web resource (new_myWebResource.htm).
 
 First, add the following code in your HTML web resource:
 
 ```javascript
 // This script should be in the HTML web resource.
-// No usage of Xrm or formContext should happen until this method is called.
-function setClientApiContext(xrm, formContext) {
-    // Optionally set Xrm and formContext as global variables on the page.
-    window.Xrm = xrm;
-    window._formContext = formContext;
-     
-    // Add script logic here that uses xrm or the formContext.
+function doStuff() {
+    // Add desired script logic that executes on form load.
 }
 ```
 
@@ -71,18 +63,18 @@ Next, add the following code in the form OnLoad event handler:
 // form_onload is a handler for the form onload event.
 function form_onload(executionContext) {
     var formContext = executionContext.getFormContext();
-    var wrControl = formContext.getControl("new_myWebResource.htm");
+    var wrControl = formContext.getControl("WebResource_CustomName");
     if (wrControl) {
         wrControl.getContentWindow().then(
             function (contentWindow) {
-                contentWindow.setClientApiContext(Xrm, formContext);
+                contentWindow.doStuff();
             }
         )
     }
 }
 ```
 
-Similar initialization code should be added to a TabStateChange event handler if such initialization is necessary. Any initialization code should be idempotent if it is re-used. For performance reasons, the form may destroy and re-initialize the control during tab navigations.
+Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it's reused. For performance reasons, the form  might destroy and reinitialize the control during tab navigation.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

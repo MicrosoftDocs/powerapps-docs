@@ -1,9 +1,8 @@
 ---
-title: setControlState | Microsoft Docs
+title: setControlState (Power Apps component framework API reference) | Microsoft Docs
 description: Set component state so that it will be stored in one session.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -38,7 +37,7 @@ Sample control: [Implementing control state API component](../../sample-controls
 
 Type: `boolean`
 
-### Related topics
+### Related articles
 
 [Mode](../mode.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

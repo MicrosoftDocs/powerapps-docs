@@ -4,22 +4,20 @@ description: "This sample shows how to roll up goal data for a custom period aga
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
+
 # Sample: Rollup goal data for a custom period against the target revenue
 
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-custom-period-target-revenue -->
 
+This sample shows how to roll up goal data for a custom period against the target revenue.
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-custom-period-target-revenue -->
-
-This sample shows how to roll up goal data for a custom period against the target revenue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RollupGoalData).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Rollup goal data for a custom period against the target revenue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RollupGoalData)
 
 This sample requires additional three users that are not in your system. Create the three required users **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the organization name.
 
@@ -54,7 +52,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the version of the org.
 2. Retrieves the sales manager and 2 sales representatives created manually in **Microsoft 365**.
-3. Creates a sample unit group and retrieve the default unit id. 
+3. Creates a sample unit group and retrieve the default unit id.
 4. Creates few products and new discount list.
 5. The `PriceLevel` creates the price list.
 6. The `ProductPriceLevel` creates a price list item for the first product and apply volume discount.
@@ -67,13 +65,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Creates Metric, and setting the Amount Data type to `Money`.
 2. Creates a Rollup fields which targets the estimated values and actual values.
-3. The `GoalRollupQuery` creates the goal rollup queries, locating the opportunities in the sales representative's area. 
+3. The `GoalRollupQuery` creates the goal rollup queries, locating the opportunities in the sales representative's area.
 4. Creates three goals, one parent goal and two child goals.
-5. The `RecalculateRequest` calculates the rollup for goals. 
+5. The `RecalculateRequest` calculates the rollup for goals.
 
 ### Clean up
 
 Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

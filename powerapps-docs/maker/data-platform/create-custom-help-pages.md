@@ -1,8 +1,8 @@
 ---
-title: "Create custom help pages | MicrosoftDocs"
-description: "Create custom help pages on UCI"
+title: "Create custom help pages for model-driven apps"
+description: "Create custom help pages with model-driven apps in Power Apps"
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 04/17/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,60 +11,53 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.assetid: 
-caps.latest.revision:
 author: "matthewbolanos"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Create guided help for your Unified Interface app
+# Create guided help for your model-driven app
 
 Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
 > [!IMPORTANT]
+>
 > - Custom help panes replace the previous learning path guided help feature used with legacy web client apps.
 > - Custom help panes don’t work with Unified Interface apps running on a mobile device, such as Android and iOS tablets and smartphones.
 
 ## Custom help panes and learning path
 
-The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application. However, custom help panes are optimized for the most common guided help scenarios.   
+The new guided help implementation of custom help panes differs from the previous learning path guided help feature. Both features let you create custom help for your application. However, custom help panes are optimized for the most common guided help scenarios.
 
-Custom help panes provide the following key features that are not available with learning path: 
+Custom help panes provide the following key features that are not available with learning path:
+
 - Free-form rich text, including bullets and numbering.
 - Visibly linked coach marks and help balloons.
 - More options for video sources, including private sources.
 - Storage of help content in Microsoft Dataverse as part of your solution. 
 
-Custom help panes don't provide the following key features that are available with learning path: 
+Custom help panes don't provide the following key features that are available with learning path:
+
 - Sequential help balloons.
 - Help pages per role.
 - Help pages for per-device form factor, such as smartphones. 
 
 ## Prerequisites
 
-To use the custom help panes feature, your environment needs the following: 
-- Be version 9.1.0.10300 or later.
-- [Must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
+To use the custom help panes feature, your environment needs the [custom help panes environment setting enabled.](#enable-custom-help-panes-for-your-environment) 
 
 ### Enable custom help panes for your environment
-1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
-2. Go to **Settings** > **System** > **Administration**.  
-3. On the **Administration** page, select **System Settings**.
-4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Custom Help Panes and Guided Tasks**, and then select **OK**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Enable custom help panes.](media/enable-custom-help-panes.png "Enable custom help panes")
+1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
+1. In **Settings** for the selected environment, select **Product** > **Features**.
+1. Under **Help features** turn **Enable Custom Help Panes** to **On**.
 
 > [!IMPORTANT]
-> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
-> - Some environments may require that you also set **Enable Learning Path** to **Yes**.
+>
+> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
+> - Some environments might require that you also set **Enable Learning Path** to **Yes**.
 
 ## Privileges required
 
@@ -75,7 +68,8 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 ## Context-sensitive custom help
 
-Each help pane is unique for these contexts: 
+Each help pane is unique for these contexts:
+
 - Application 
 - Table
 - Form 
@@ -120,7 +114,8 @@ You can insert videos and static images into your help pane. Videos and images a
 > Remember to copy the link URL for the video or image you want so you can paste it into your help pane. 
 
 Custom help panes support the following video sources:
-- Microsoft Stream (use for private content) 
+
+- Microsoft Stream (Classic) (use for private content) 
 - YouTube
 - Facebook
 - Vimeo
@@ -144,6 +139,7 @@ Author needs to define the target through drag and drop capability in the proper
 ![Drag and drop](media/drag-drop.png)
 
 > [!NOTE]
+>
 > - Balloons and coach marks don't work well with custom components. This feature only applies to default Unified Interface UI components.
 > - Sequential help balloons and coachmarks are not supported yet. 
 
@@ -152,12 +148,14 @@ Author needs to define the target through drag and drop capability in the proper
 All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
+
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. On the left navigation pane, select **Solutions** and then open the unmanaged solution you want.
-3. Select **Add Existing** on the command bar, and then select **Help Page**.
-4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged solution you want.
+1. Select **Add Existing** on the command bar, and then select **Help Page**.
+1. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
 
@@ -351,7 +349,7 @@ Link to another help page:
 ```
 
 #### Definition and usage
-The `<a>` tag defines a link, which allows the user to navigate from a help page to a website, or to another help page.
+The [`<a>` tag](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) defines a link, which allows the user to navigate from a help page to a website, or to another help page.
 
 #### Attributes
 

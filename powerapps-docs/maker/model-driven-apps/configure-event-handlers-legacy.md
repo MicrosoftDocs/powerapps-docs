@@ -4,16 +4,12 @@ description: Understand how to configure event handlers
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 02/22/2021
 
 ms.topic: how-to
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure model-driven app form event handlers
 

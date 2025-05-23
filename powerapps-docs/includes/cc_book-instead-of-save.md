@@ -1,0 +1,2 @@
+> [!NOTE]
+> The `OnSave` event for appointment, recurring appointment, or service activity records will cancel the save operation and use the `Book` message to persist the change rather than `Create` or `Update`. Because of this, `OnSave` and `PostSave` event handlers for these tables will not work.

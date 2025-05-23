@@ -1,9 +1,8 @@
 ---
-title: updatedProperties | Microsoft Docs
+title: updatedProperties (Power Apps component framework API reference) | Microsoft Docs
 description: Provides updatesProperties related methods.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -57,7 +56,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): void
 }
 ```
 
-### Related topics
+### Related articles
 
 [Dataset loading attribute](../reference/dataset.md#loading)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

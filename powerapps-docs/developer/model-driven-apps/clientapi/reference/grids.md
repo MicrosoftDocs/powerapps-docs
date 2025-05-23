@@ -1,19 +1,15 @@
 ---
-title: "Grids and subgrids in model-driven apps for Dynamics 365| MicrosoftDocs"
+title: "Grids and subgrids in model-driven apps for Dynamics 365"
 description: "Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: clromano
+ms.author: clromano
 ms.date: 03/24/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -43,7 +39,7 @@ Grid context is the grid or subgrid instance on a form against which you want to
 |[Subgrid OnLoad Event](events/subgrid-onload.md)|Occurs every time the subgrid refreshes. This includes when users sort values in subgrid by clicking the column headings.|Read-only grid|
 |[Grid OnChange](events/grid-onchange.md)|Occurs when a value is changed in a cell in the editable grid and the cell loses focus|Editable grid|
 |[Grid OnRecordSelect](events/grid-onrecordselect.md)|Occurs when a single row (record) is selected in the editable grid|Editable grid|
-|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation using the editable grid’s save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
+|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation using the editable grid's save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
 
 >[!NOTE]
 >You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for a table or a read-only grid.
@@ -66,14 +62,11 @@ Use the following objects to interact with grids. These objects form a hierarchy
 |[ViewSelector](grids/viewselector.md)|Provides methods to get or set information about the view selector of the subgrid control.|Read-only grid|
 
 
-### Related topics
+### Related articles
 
-[Client API grid context](../clientapi-grid-context.md)
-
-[Use editable grids](../../use-editable-grids.md)
-
-[Client API Reference for model-driven apps](../reference.md)
-
+[Client API grid context](../clientapi-grid-context.md)   
+[Use editable grids](../../use-editable-grids.md)   
+[Client API Reference for model-driven apps](../reference.md)   
 [Model-driven apps Developer Overview](../../overview.md)
 
 

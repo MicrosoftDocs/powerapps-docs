@@ -1,21 +1,19 @@
 ---
-title: Canvas component overview (contains video)
+title: Canvas component overview
 description: Learn about how to create reusable components for canvas apps.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
-ms.date: 06/10/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.topic: how-to
+ms.date: 07/22/2022
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
   - gregli-msft
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Canvas component overview
@@ -29,7 +27,7 @@ Components are reusable building blocks for canvas apps so that app makers can c
 Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. Components also reduce duplication of efforts by eliminating the need to copy/paste controls and improve performance. Components also help create collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
 
 Watch this video to learn how to use components in canvas apps:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLlkO]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7ec063b0-df8e-4cf8-b407-72ce6132115f]
 
 ## Components in canvas apps
 
@@ -53,6 +51,9 @@ Components available inside the app are listed under the **Custom** category in 
 ## Custom properties
 
 A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand [formulas](formula-reference.md) and binding contracts.
+
+> [!NOTE]
+> An experimental feature for enhanced component properties provides even more options for properties, including functions and behavior functions. For more information, see [Canvas component properties (experimental)](./component-properties.md)
 
 **Input property** is how a component receives data to be used in the component. Input properties appear in the **Properties** tab of the right-hand pane if an instance of the component is selected. You can configure input properties with expressions or formulas, just as you configure standard properties in other controls. Other controls have input properties, such as the **Default** property of a **Text input** control.
 
@@ -105,7 +106,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. Set the component's **Items** property to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Table({Item:"SampleText"})
     ```
 
@@ -115,7 +116,7 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. Make sure that the property list shows the **Items** property (as it does by default). And then set the value of that property to this expression:
 
-    ```powerapps-dot
+    ```power-fx
     MenuComponent.Items
     ```
 
@@ -139,7 +140,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. Set the **Items** property of **MenuComponent_1** to this formula:
 
-    ```powerapps-dot
+    ```power-fx
     Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
@@ -163,7 +164,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the **Advanced** tab, set the value of the **Selected** property to this expression, adjusting the numeral in the gallery name if necessary:
 
-    ```powerapps-dot
+    ```power-fx
     Gallery1.Selected.Item
     ```
 
@@ -171,7 +172,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the default screen of the app, add a label, and set its **Text** property to this expression, adjusting the numeral in the component name if necessary:
 
-    ```powerapps-dot
+    ```power-fx
     MenuComponent_1.Selected
     ```
 
@@ -272,7 +273,7 @@ Once you save the app, you can reuse the components of this app using the same m
 
 - A custom input property can't be configured to a custom output property value across same or different instances when you have two or more instances of same component in an app. This action will result in a circular reference warning message. To work around this limitation, you can create a copy of the component inside your app.
 - Adding and running Power Automate flows in component libraries is not supported.
-- You can't save data sources, forms, and data tables with components.
+- You can't save data sources or controls that include data from those data sources (such as forms, fluid grids, or data tables) with components.
 - You can't insert a component into a gallery or a form (including SharePoint form).
 - Components don't support the [**UpdateContext**](./functions/function-updatecontext.md) function, but you can create and update variables in a component by using the [**Set**](functions/function-set.md) function. The scope of these variables is limited to the component, but you can access them from outside the component through custom output properties.
 

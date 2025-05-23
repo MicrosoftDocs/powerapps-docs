@@ -1,56 +1,50 @@
 ---
-title: "SiteMap table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the SiteMap table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Site Map (SiteMap) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Site Map (SiteMap) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# SiteMap table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Site Map (SiteMap) table/entity reference (Microsoft Dataverse)
 
 XML data used to control the application navigation pane.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/sitemaps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sitemaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/sitemaps(*sitemapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Site Map (SiteMap) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /sitemaps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /sitemaps(*sitemapid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /sitemaps(*sitemapid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /sitemaps<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrieveUnpublishedMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
+| `Update`<br />Event: False |`PATCH` /sitemaps(*sitemapid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /sitemaps(*sitemapid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|SiteMaps|
-|DisplayCollectionName|Site Maps|
-|DisplayName|Site Map|
-|EntitySetName|sitemaps|
-|IsBPFEntity|False|
-|LogicalCollectionName|sitemaps|
-|LogicalName|sitemap|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|sitemapid|
-|PrimaryNameAttribute||
-|SchemaName|SiteMap|
+The following table lists selected properties for the Site Map (SiteMap) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Site Map** |
+| **DisplayCollectionName** | **Site Maps** |
+| **SchemaName** | `SiteMap` |
+| **CollectionSchemaName** | `SiteMaps` |
+| **EntitySetName** | `sitemaps`|
+| **LogicalName** | `sitemap` |
+| **LogicalCollectionName** | `sitemaps` |
+| **PrimaryIdAttribute** | `sitemapid` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -65,199 +59,150 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SiteMapNameUnique](#BKMK_SiteMapNameUnique)
 - [SiteMapXml](#BKMK_SiteMapXml)
 
-
 ### <a name="BKMK_EnableCollapsibleGroups"></a> EnableCollapsibleGroups
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Enable to allow sitemap groups to be collapsed.|
-|DisplayName|Enable Collapsible Groups|
+|---|---|
+|Description|**Enable to allow sitemap groups to be collapsed.**|
+|DisplayName|**Enable Collapsible Groups**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|enablecollapsiblegroups|
+|LogicalName|`enablecollapsiblegroups`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### EnableCollapsibleGroups Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`sitemap_enablecollapsiblegroups`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsAppAware"></a> IsAppAware
 
 |Property|Value|
-|--------|-----|
-|Description|Information about whether the site map is associated with app module.|
-|DisplayName|IsAppAware|
+|---|---|
+|Description|**Information about whether the site map is associated with app module.**|
+|DisplayName|**IsAppAware**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isappaware|
+|LogicalName|`isappaware`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsAppAware Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`sitemap_isappaware`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ShowHome"></a> ShowHome
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Enable to show the home button in the sitemap.|
-|DisplayName|Show Home|
+|---|---|
+|Description|**Enable to show the home button in the sitemap.**|
+|DisplayName|**Show Home**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|showhome|
+|LogicalName|`showhome`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### ShowHome Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`sitemap_showhome`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ShowPinned"></a> ShowPinned
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Enable to show the pinned dropdown in the sitemap.|
-|DisplayName|Show Pinned|
+|---|---|
+|Description|**Enable to show the pinned dropdown in the sitemap.**|
+|DisplayName|**Show Pinned**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|showpinned|
+|LogicalName|`showpinned`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### ShowPinned Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`sitemap_showpinned`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ShowRecents"></a> ShowRecents
 
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Enable to show the recents dropdown in the sitemap.|
-|DisplayName|Show Recents|
+|---|---|
+|Description|**Enable to show the recents dropdown in the sitemap.**|
+|DisplayName|**Show Recents**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|showrecents|
+|LogicalName|`showrecents`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### ShowRecents Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`sitemap_showrecents`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_SiteMapName"></a> SiteMapName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|True|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitemapname|
-|MaxLength|200|
+|LogicalName|`sitemapname`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|True|
+|MaxLength|200|
 
 ### <a name="BKMK_SiteMapNameUnique"></a> SiteMapNameUnique
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|sitemapnameunique|
-|MaxLength|200|
+|LogicalName|`sitemapnameunique`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_SiteMapXml"></a> SiteMapXml
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitemapxml|
-|MaxLength|1073741823|
+|LogicalName|`sitemapxml`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SiteMapId](#BKMK_SiteMapId)
@@ -267,381 +212,319 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Component State|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalfÂ of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalfÂ of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
+|Targets|organization|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
+|---|---|
 |Description||
 |DisplayName||
-|Format|DateOnly|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SiteMapId"></a> SiteMapId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitemapid|
+|LogicalName|`sitemapid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SiteMapIdUnique"></a> SiteMapIdUnique
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitemapidunique|
+|LogicalName|`sitemapidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SiteMapXmlManaged"></a> SiteMapXmlManaged
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitemapxmlmanaged|
-|MaxLength|1073741823|
+|LogicalName|`sitemapxmlmanaged`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="manytoone"></a>
+## Many-to-One relationships
 
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_SiteMap_createdby](#BKMK_lk_SiteMap_createdby)
-- [lk_SiteMap_modifiedby](#BKMK_lk_SiteMap_modifiedby)
-- [organization_sitemap](#BKMK_organization_sitemap)
 - [lk_SiteMap_createdonbehalfby](#BKMK_lk_SiteMap_createdonbehalfby)
+- [lk_SiteMap_modifiedby](#BKMK_lk_SiteMap_modifiedby)
 - [lk_SiteMap_modifiedonbehalfby](#BKMK_lk_SiteMap_modifiedonbehalfby)
-
+- [organization_sitemap](#BKMK_organization_sitemap)
 
 ### <a name="BKMK_lk_SiteMap_createdby"></a> lk_SiteMap_createdby
 
-See the [lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby)
 
-### <a name="BKMK_lk_SiteMap_modifiedby"></a> lk_SiteMap_modifiedby
-
-See the [lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_sitemap"></a> organization_sitemap
-
-See the [organization_sitemap](organization.md#BKMK_organization_sitemap) one-to-many relationship for the [organization](organization.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`SiteMap_createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_SiteMap_createdonbehalfby"></a> lk_SiteMap_createdonbehalfby
 
-See the [lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`SiteMap_createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_SiteMap_modifiedby"></a> lk_SiteMap_modifiedby
+
+One-To-Many Relationship: [systemuser lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`SiteMap_modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_SiteMap_modifiedonbehalfby"></a> lk_SiteMap_modifiedonbehalfby
 
-See the [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`SiteMap_modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_sitemap"></a> organization_sitemap
+
+One-To-Many Relationship: [organization organization_sitemap](organization.md#BKMK_organization_sitemap)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.sitemap?text=sitemap EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.sitemap?displayProperty=fullName>

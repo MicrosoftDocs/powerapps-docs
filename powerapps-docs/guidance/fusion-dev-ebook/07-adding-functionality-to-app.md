@@ -3,18 +3,18 @@ title: "7: Adding functionality to the app  | Microsoft Docs"
 description: "Learn about adding functionality to the app."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
 ms.author: shboyer
-ms.reviewer: kvivek
+ms.reviewer: tapanm
 
 ---
 
 # Chapter 7: Adding functionality to the app
 
-Kiana and Maria are excited to show the inventory management app to Caleb, the field technician. He likes it, but suggests adding some extra user interface functionality to make it easier to use. Specifically, Caleb would like to be able to:
+Kiana and Maria are excited to show the inventory management app to Caleb, the field technician. Caleb likes it, but suggests adding some extra user interface functionality to make it easier to use. Specifically, Caleb would like to be able to:
 
 -   Add a photograph of the work done on a boiler or air conditioning unit, and add it to the appointment details on the **Edit Appointment** screen. This image could prove useful as documentary evidence of repairs performed. The **Edit Appointment** screen currently enables the user to add an image to the appointment, but the image isn't saved as this feature hasn't been fully implemented yet. The reason for this omission is that Kiana and Preeti need to determine the best place to store image data. Caleb would like this functionality added as soon as possible.
 
@@ -26,7 +26,7 @@ Additionally, the image control on the **Part Details** screen displays the imag
 
 ## Adding a photograph to an appointment
 
-Photographs need to be stored somewhere accessible by the app. For performance and security reasons, Preeti doesn't want photographs to be saved in OneDrive or in Azure SQL Database. Instead, she and Kiana decide to use Azure Blob Storage. Blob Storage is optimized for holding large binary objects, and is robust, with built-in security. Power Apps has a connector that allows access to Blob Storage. Maria suggests adding a new picture-taking screen, improving the user experience for Caleb.
+Photographs need to be stored somewhere accessible by the app. For performance and security reasons, Preeti doesn't want photographs to be saved in OneDrive or in Azure SQL Database. Instead, they decide to use Azure Blob Storage. Blob Storage is optimized for holding large binary objects, and is robust, with built-in security. Power Apps has a connector that allows access to Blob Storage. Maria suggests adding a new picture-taking screen, improving the user experience for Caleb.
 
 More information: [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
 
@@ -84,7 +84,7 @@ Preeti gives the storage account name and key to Kiana, who uses this informatio
 
 5.  Wait while the new connection is created. It should appear on the list of connections.
 
-Maria can use this connection to Blob Storage in the app to save and retrieve photographic images. Her first task is to add the connection to the app by following these steps:
+Maria can use this connection to Blob Storage in the app to save and retrieve photographic images. Maria's first task is to add the connection to the app by following these steps:
 
 1.  Open the **VanArsdelApp** app for editing in Power Apps Studio.
 
@@ -96,7 +96,7 @@ Maria can use this connection to Blob Storage in the app to save and retrieve ph
 
     ![Add a Blob Storage connection.](media/image170.png)
 
-Maria's next task is to add a screen that enables a technician or engineer to save a photograph. Maria decides to add a new screen with a Picture control. When the app is run on a mobile device, this control can integrate with the camera to enable the technician to take a photograph. On other devices, this control prompts the user to upload an image file instead. She adds a link to this new screen from the **EditAppointment** screen by following these steps:
+Maria's next task is to add a screen that enables a technician or engineer to save a photograph. Maria decides to add a new screen with a Picture control. When the app is run on a mobile device, this control can integrate with the camera to enable the technician to take a photograph. On other devices, this control prompts the user to upload an image file instead. Maria adds a link to this new screen from the **EditAppointment** screen by following these steps:
 
 1.  On the **Insert** menu, select **New screen**, and then select the **Scrollable** template.
 
@@ -290,7 +290,7 @@ Maria creates the custom component as follows:
 
     ![Add a Rectangle control.](media/image184.png)
 
-Maria is familiar with adding controls to screens and building apps with Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, she must add some additional custom input properties. Kiana also explained that Maria needs to provide example data for these properties, to allow her to reference the data fields in the controls in her component, as follows:
+Maria is familiar with adding controls to screens and building apps with Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, some additional custom input properties must be added. Kiana also explained that Maria needs to provide example data for these properties to reference the data fields in the controls in the component, as follows:
 
 1.  On the **Tree view** pane, select **DateHistoryComponent**. On the right pane, on the **Properties** tab, select **New custom property**.
 
@@ -952,7 +952,7 @@ To create the custom connector that Power Apps can use to trigger the logic app,
 
     ![Power Apps custom connectors.](media/image226.png)
 
-Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. She adds an **Order** button to the **PartDetails** screen, as follows:
+Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. Maria adds an **Order** button to the **PartDetails** screen, as follows:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com) (if not already signed in).
 

@@ -2,17 +2,13 @@
 title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-in when it is executed." 
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: concept-article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -99,7 +95,7 @@ Use the <xref:Microsoft.Xrm.Sdk.Messages> and <xref:Microsoft.Crm.Sdk.Messages> 
 
 The `InputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest>.<xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that represents the operation coming in from the web services.
 
-As described in [Use messages with the Organization service](org-service/use-messages.md), all operations that occur in the system are ultimately instances of the `OrganizationRequest` class being processed by the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+As described in [Use messages with the SDK for .NET](org-service/use-messages.md), all operations that occur in the system are ultimately instances of the `OrganizationRequest` class being processed by the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 As described in [Event Framework](event-framework.md), operations go through a series of stages and you can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
 
@@ -186,16 +182,11 @@ public class PostOperation : IPlugin
 
 ### Passing a Shared Variable from the API
 
-If you need to introduce a shared variable when you call an API, use the keyword `tag` from either the Web API or the Organization service to pass a string value.
+If you need to introduce a shared variable when you call an API, use the keyword `tag` from either the Web API or the SDK for .NET to pass a string value.
 
 This value will be accessible in the Shared Variable collection using the `tag` key. Once set, this value cannot be changed, it is immutable.
 
-For information about how to set this see the following topics:
-
-- [Add a Shared Variable from the Web API](webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
-- [Add a Shared Variable from the Organization Service](org-service/use-messages.md#add-a-shared-variable-from-the-organization-service)
-
-
+More information: [Add a shared variable to the plugin execution context](optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context).
 
 ## Entity images
 

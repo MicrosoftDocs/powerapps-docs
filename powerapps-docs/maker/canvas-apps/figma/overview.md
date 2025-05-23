@@ -1,22 +1,20 @@
 ---
-title: Overview of creating app from Figma (preview)
+title: Overview of creating app from Figma
 description: An overview about creating app from Figma feature in Power Apps.
-author: tapanm-msft
-ms.topic: article
+author: mduelae
+ms.topic: concept-article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/24/2022
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
-# Overview of creating apps from Figma (preview)
+# Overview of creating apps from Figma
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -53,15 +51,12 @@ Designers can create designs in Figma using the [Create Apps from Figma UI Kit](
    :::column-end:::
 :::row-end:::
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Design your app in Figma
 
 [Design](design-using-kit.md) your app in Figma using the [Create Apps from Figma UI Kit](https://go.microsoft.com/fwlink/?linkid=2193981). Use the Power Apps components [supported](supported-components.md) in the kit when designing your app.
 
-:::image type="content" source="media/cover.png" alt-text="Create Apps from Figma UI Kit (Preview)." border="false":::
+:::image type="content" source="media/cover.png" alt-text="Create Apps from Figma UI Kit." border="false":::
 
 ## Create an app from your design
 
@@ -72,10 +67,10 @@ After you've finalized the app design, follow the quick and easy steps to [creat
 Continue building your app in Power Apps Studio by adding more [screens](../add-screen-context-variables.md) and [controls](../add-configure-controls.md). You can also extend your app by connecting it to [data](../add-data-connection.md), or customize it further by [adding app logic](../working-with-formulas.md).
 
 > [!div class="nextstepaction"]
-> [Next step: Design your app using the UI kit (preview) ](design-using-kit.md)
+> [Next step: Design your app using the UI kit ](design-using-kit.md)
 
 ### See also
 
-- [Create a canvas app from Figma (preview)](create-app-from-figma.md)
-- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Create a canvas app from Figma](create-app-from-figma.md)
+- [Components supported by the UI Kit](supported-components.md)
 - [Troubleshoot common errors](common-errors.md)

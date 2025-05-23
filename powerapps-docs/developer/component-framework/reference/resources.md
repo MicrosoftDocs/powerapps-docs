@@ -1,9 +1,8 @@
 ---
-title: Resources | Microsoft Docs
+title: Resources (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to the methods to get all the information about the resource files defined in the manifest.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+ms.author: anuitz
+author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,7 +27,7 @@ Model-driven apps, canvas apps, & portals.
 |[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|Model-driven and canvas apps|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

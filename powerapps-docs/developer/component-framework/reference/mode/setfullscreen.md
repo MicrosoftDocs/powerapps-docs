@@ -1,9 +1,8 @@
 ---
-title: setFullScreen | Microsoft Docs
+title: setFullScreen (Power Apps component framework API reference) | Microsoft Docs
 description: Make the component full screen.
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -31,7 +30,7 @@ Model-driven apps, canvas apps, & portals.
 |value|`Boolean`|Yes|`True` if component needs to auto size to full screen. `False` if component needs to auto size to allocated width.|
 
 
-### Related topics
+### Related articles
 
 [Mode](../mode.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

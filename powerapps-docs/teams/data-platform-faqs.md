@@ -3,15 +3,15 @@ title: FAQs for Dataverse for Teams | Microsoft Docs
 description: Frequent asked questions (FAQs) for Dataverse for Teams.
 author: mmercuri
 
-ms.topic: conceptual
+ms.topic: faq
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
-ms.author: kvivek
-ms.reviewer: kvivek
+ms.author: mkaur
+ms.reviewer: mkaur
 contributors:
-  - kvivek
-  - tapanm-msft
+  - mkaur
+  - mduelae
 ---
 # FAQs for Dataverse for Teams 
 

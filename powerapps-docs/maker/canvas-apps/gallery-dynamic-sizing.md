@@ -3,18 +3,16 @@ title: Show items of different heights in canvas apps gallery
 description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery.
 author: fikaradz
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - fikaradz
 ---
 # Show items of different heights in canvas apps gallery
@@ -32,7 +30,7 @@ In this tutorial, you show data about flooring products in a **Flexible height**
 If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
 
 ## Add data to a blank app
-1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.
+1. Download [this Excel file](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.
 
     ![Flooring products.](./media/gallery-dynamic-sizing/flooring-products.png)
 

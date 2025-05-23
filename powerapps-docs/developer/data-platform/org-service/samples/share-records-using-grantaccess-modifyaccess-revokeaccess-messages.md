@@ -4,18 +4,15 @@ description: "This sample shows how to share a record using grant, modify and re
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
 
 This sample shows how to share a record using the following messages:
@@ -26,7 +23,8 @@ This sample shows how to share a record using the following messages:
 
 [RevokeAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.revokeaccessrequest)
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GrantModifyRevokeAccess).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Share records using GrantAccess, ModifyAccess and RevokeAccess messages sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/GrantModifyRevokeAccess)
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create 2 user profiles **as is** shown below. Replace `yourorg` with the organization name.
 
@@ -59,13 +57,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 3. Retrieves the user created manually in **Microsoft 365** for this sample.
 4. Retrieves the root business unit for creating the team for the sample.
 5. The `WhoAMIRequest` gets the current user information.
-6. Creates the team and adds the users to the team. 
+6. Creates the team and adds the users to the team.
 7. Creates an account record and also creates a task, letter to associate to the account.
 
 ### Demonstrate
 
 1. Retrieves and displays the access that the calling user has to the created account.
-2. Retrieves and displays the access that the first user has to the created account. 
+2. Retrieves and displays the access that the first user has to the created account.
 3. The `GrantAccessRequest` method grants the first user `read` access to the created account.
 4. The `ModifyAccessRequest` method grants the first user `delete` access to the created account.
 5. The `RevokeAccessRequest` method grants the first user `revoke` access to the created account.
@@ -73,6 +71,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

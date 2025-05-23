@@ -1,25 +1,19 @@
 ---
-title: "getRequiredLevel (Client API reference)| MicrosoftDocs"
+title: "getRequiredLevel (Client API reference)"
 description: Includes description and supported parameters for the getRequiredLevel method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: clromano
+ms.author: clromano
+ms.date: 02/14/2024
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getRequiredLevel (Client API reference)
-
-
 
 Returns a string value indicating whether a value for the column is required or recommended. 
 
@@ -36,11 +30,13 @@ All
 **Type**: String. 
 
 **Description**: Returns one of the following values:
-- none
-- required
-- recommended
 
-### Related topic
+- `none`
+- `required`
+- `recommended`
+
+### Related article
+
 [setRequiredLevel (Client API reference)](setRequiredLevel.md)
 
 

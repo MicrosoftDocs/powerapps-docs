@@ -1,22 +1,18 @@
 ---
 title: Add an app to Microsoft Teams | Microsoft Docs
 description: Learn how to add an app to a Microsoft Teams channel so that people you've shared the app with can open it in that channel.
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 09/15/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Add an app to Microsoft Teams

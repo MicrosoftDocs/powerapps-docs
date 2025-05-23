@@ -3,18 +3,16 @@ title: Create responsive layouts in canvas apps
 description: Learn about configuring Height, Width, X, and Y properties of controls in canvas apps.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: tapanm-msft
-ms.date: 05/24/2021
+ms.reviewer: mkaur-msft
+ms.date: 02/11/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Create responsive layouts in canvas apps
@@ -173,11 +171,11 @@ Having written these formulas, you can adjust the size or position of the **Head
 
 ## Auto-layout container controls
 
-You can use an experimental feature, the **Auto-layout** container controls to automatically lay out the child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components. More information: [Auto-layout container controls](build-responsive-apps.md#auto-layout-containers)
+You can use an feature, the **Auto-layout** container controls to automatically lay out the child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components. More information: [Auto-layout container controls](build-responsive-apps.md#auto-layout-containers)
 
 ### Components
 
-If you use another experimental feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Container** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md).
+If you use another feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Container** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md).
 
 ## Adapting layout for device size and orientation
 
@@ -235,7 +233,7 @@ You can adjust your layout based on the size of the device. The screen's **Size*
 
 Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
 
-```powerapps-dot
+```power-fx
 Parent.Size >= ScreenSize.Medium
 ```
 
@@ -243,7 +241,7 @@ This formula evaluates to **true** when the size is medium or larger and **false
 
 If you want a control to occupy a different fraction of the screen width based on the screen size, set the control's **Width** property to this formula:
 
-```powerapps-dot
+```power-fx
 Parent.Width *
 Switch(
     Parent.Size,

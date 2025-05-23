@@ -1,12 +1,16 @@
 ---
-title: " Table component| Microsoft Docs" 
+title: "Table component| Microsoft Docs" 
 description: "This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API." 
-ms.author: jdaly
-author: noazarur-microsoft
-manager: kvivek
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 
 # Implementing table component
@@ -39,7 +43,7 @@ This method returns a `Promise` object, representing the completion or failure o
 
 The callback method injects this information as HTML into a div rendered on the code component to showcase the selected results to the user. If the `Promise` is rejected, the error callback method is invoked where your component can handle the error scenario accordingly.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

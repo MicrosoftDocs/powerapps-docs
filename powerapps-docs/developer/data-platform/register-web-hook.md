@@ -1,45 +1,42 @@
 ---
-title: "Register a WebHook (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to register a WebHook using the Plug-in Registration tool." 
+title: Register a WebHook
+description: Learn how to register a WebHook using the Plug-in Registration tool.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "jaredha" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: how-to
+author: swylezol
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: swylezol
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
+  - JimDaly
 ---
 # Register a WebHook
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Registration tool, see [Download tools from NuGet](download-tools-nuget.md).
+Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Registration tool, see [Dataverse development tools](download-tools-nuget.md).
 
-In the Plug-in Registration tool there is a new **Register New WebHook** option to select.
+In the Plug-in Registration tool, select the **Register New WebHook** option.
 
 ![Shows the menu option to register a new web hook. The keyboard shortcut is Ctrl+W.](media/register-new-web-hook.PNG)
 
-When you register a WebHook you must provide three items of information:
+When you register a WebHook, you must provide three items of information:
 
 
 |Item  |Description  |
 |---------|---------|
 |**Name**|A unique name describing the WebHook.|
 |**Endpoint URL**|The URL to post execution context information to.|
-|**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that will identify the request as legitimate.|
+|**Authentication**|One of three authentication options. For any type of authentication, you must provide the keys that identifies the request as legitimate.|
 
 Registered WebHooks support only port 80 for HTTP and port 443 for HTTPS. 
 
 ## Authentication options
 
-The correct WebHook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the three authentication options described below:
+The correct WebHook registration authentication option and values to use depends on what the endpoint expects. The owner of the endpoint must tell you what to use. To use Webhooks with Microsoft Dataverse, the endpoint must allow one of the following authentication options:
 
 |Type  |Description  |
 |---------|---------|
@@ -50,7 +47,7 @@ The correct WebHook registration authentication option and values to use depend 
 > [!NOTE]
 > The **WebhookKey** option is useful with [Azure Functions](https://azure.microsoft.com/services/functions/) because the authentication query string is expected to have a key name of `code`.
 
-Any request to the endpoint configured should fail when the authentication options passed in the request do not match. This is the responsibility of the endpoint.
+Any request to the endpoint configured should fail when the authentication options passed in the request don't match. The endpoint is responsible for this.
 
 <a name="query-WebHook-registrations"></a>
 
@@ -64,7 +61,7 @@ You can find details about the registered Webhooks by querying the **ServiceEndp
 
 `GET [organization URI]/api/data/v9.0/serviceendpoints?$filter=contract eq 8&$select= serviceendpointid,name,authtype,url`
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 **FetchXml:**
 
@@ -82,28 +79,29 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch> 
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
-Details about the authentication values set are in the [AuthValue](reference/entities/serviceendpoint.md#BKMK_AuthValue) property and cannot be retrieved.
+Details about the authentication values set are in the [AuthValue](reference/entities/serviceendpoint.md#BKMK_AuthValue) property and can't be retrieved.
 
 ## Register a step for a WebHook
 
-Registering a step for a WebHook is like registering a step for a plug-in. The main difference is that you cannot specify any configuration information.
+Registering a step for a WebHook is like registering a step for a plug-in. The main difference is that you can't specify any configuration information.
 
 Just like a plug-in, you specify the message, and information about tables when appropriate. You can also specify where in the event pipeline to execute the WebHook, the execution mode and whether to delete any **AsyncOperation** when the operation succeeds. 
 
 ![Plug-in registration dialog to register a new WebHook step.](media/Plugin-registration-register-WebHook-step.PNG)
 
-Information about the **Step Name**, and **Description** will be auto-populated based on the options you choose, but you can change them. If you do not set some **Filtering Attributes** for a message that supports them, you will be prompted to do so as a performance best practices.
+Information about the **Step Name**, and **Description** is autopopulated based on the options you choose, but you can change them. If you don't set some **Filtering Attributes** for a message that supports them, you're prompted to do so as a performance best practices.
 
 ### Execution mode and debugging your WebHook registration
 
-Your choice in registering the WebHook changes the experience you will have when debugging if things don’t work.
+Your choice in registering the WebHook changes the experience you have when debugging if things don't work.
 
 #### Asynchronous mode
-When you use asynchronous execution mode a System Job (asyncoperation) will be created to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds will save you database space.
 
-Any errors that occur will be recorded in System Jobs. In the web application you can go to **Settings > System > System Jobs** to review the status of any Webhooks. There will be a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
+When you use asynchronous execution mode a System Job (asyncoperation) is created to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds saves database space.
+
+Any errors that occur are recorded in System Jobs. In the web application you can go to **Settings > System > System Jobs** to review the status of any Webhooks. There's a **Status Reason** value of **Failed**. Open the failed System Job to find details that describe why the job failed.
 
 <a name="query-failed-asynchronous-jobs-for-a-given-step"></a>
 
@@ -118,7 +116,7 @@ When you know the **sdkmessageprocessingstepid** of a given step, you can query 
 
 `GET [organization URI]/api/data/v9.0/asyncoperations?$orderby=completedon desc&$filter=statuscode eq 31 and _owningextensionid_value eq @stepid&$select=name,friendlymessage,errorcode,message,completedon?@stepid=<stepid>`
 
-More information: [Query data using the Web API](webapi/query-data-web-api.md)
+More information: [Query data using the Web API](webapi/query/overview.md)
 
 **FetchXML:**
 
@@ -138,7 +136,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 </fetch>
 ```
 
-More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+More information: [Use FetchXml to retrieve data](fetchxml/retrieve-data.md)
 
 #### Synchronous mode
 
@@ -169,7 +167,7 @@ GET [organization URI]/api/data/v9.0/sdkmessageprocessingsteps(@id)?$select=name
 
 **FetchXML:**
 
-You can use this FetchXML to get the same information in one query where *&lt;serviceendpointid&gt;* is the id of the WebHook:
+You can use this FetchXML to get the same information in one query where *&lt;serviceendpointid&gt;* is the ID of the WebHook:
 
 ```xml
 <fetch>

@@ -1,67 +1,67 @@
 ---
-title: "Feedback table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Feedback table/entity."
-ms.date: 06/30/2022
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+title: "Feedback table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Feedback table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Feedback table/entity reference
+# Feedback table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-Container for feedback and ratings for knowledge articles.
-
+Feedback and rating.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
-|-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/feedback(*feedbackid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/feedback<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/feedback(*feedbackid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/feedback(*feedbackid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/feedback<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/feedback(*feedbackid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/feedback(*feedbackid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Feedback table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /feedback(*feedbackid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /feedback<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /feedback(*feedbackid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /feedback(*feedbackid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /feedback<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /feedback(*feedbackid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /feedback(*feedbackid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /feedback(*feedbackid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|Feedback|
-|DisplayCollectionName|Feedback|
-|DisplayName|Feedback|
-|EntitySetName|feedback|
-|IsBPFEntity|False|
-|LogicalCollectionName|feedback|
-|LogicalName|feedback|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|feedbackid|
-|PrimaryNameAttribute|title|
-|SchemaName|Feedback|
+The following table lists selected properties for the Feedback table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Feedback** |
+| **DisplayCollectionName** | **Feedback** |
+| **SchemaName** | `Feedback` |
+| **CollectionSchemaName** | `Feedback` |
+| **EntitySetName** | `feedback`|
+| **LogicalName** | `feedback` |
+| **LogicalCollectionName** | `feedback` |
+| **PrimaryIdAttribute** | `feedbackid` |
+| **PrimaryNameAttribute** |`title` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [adx_approved](#BKMK_adx_approved)
+- [adx_authorurl](#BKMK_adx_authorurl)
+- [Adx_ContactEmail](#BKMK_Adx_ContactEmail)
+- [Adx_ContactUsername](#BKMK_Adx_ContactUsername)
+- [Adx_CreatedByContact](#BKMK_Adx_CreatedByContact)
 - [Comments](#BKMK_Comments)
 - [CreatedByContact](#BKMK_CreatedByContact)
 - [CreatedOnBehalfByContact](#BKMK_CreatedOnBehalfByContact)
@@ -83,1074 +83,923 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Title](#BKMK_Title)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 
+### <a name="BKMK_adx_approved"></a> adx_approved
+
+|Property|Value|
+|---|---|
+|Description|**Shows whether the feedback is approved for display.**|
+|DisplayName|**Published To Web**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`adx_approved`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`adx_approved`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_adx_authorurl"></a> adx_authorurl
+
+|Property|Value|
+|---|---|
+|Description|**The URL of the author’s home page/blog.**|
+|DisplayName|**Author URL**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`adx_authorurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_Adx_ContactEmail"></a> Adx_ContactEmail
+
+|Property|Value|
+|---|---|
+|Description|**Email of the contact who created the record.**|
+|DisplayName|**Email**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`adx_contactemail`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_Adx_ContactUsername"></a> Adx_ContactUsername
+
+|Property|Value|
+|---|---|
+|Description|**Username of the contact who created the record.**|
+|DisplayName|**Username**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`adx_contactusername`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
+
+### <a name="BKMK_Adx_CreatedByContact"></a> Adx_CreatedByContact
+
+|Property|Value|
+|---|---|
+|Description|**Name of the contact who created the record.**|
+|DisplayName|**Created By Name (Contact)**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`adx_createdbycontact`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_Comments"></a> Comments
 
 |Property|Value|
-|--------|-----|
-|Description|Type the feedback comments.|
-|DisplayName|Comments|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the feedback comments.**|
+|DisplayName|**Comments**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|comments|
-|MaxLength|2000|
+|LogicalName|`comments`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_CreatedByContact"></a> CreatedByContact
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the contact who created the record.|
-|DisplayName|Created By (Contact)|
+|---|---|
+|Description|**Shows the contact who created the record.**|
+|DisplayName|**Created By (Contact)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdbycontact|
+|LogicalName|`createdbycontact`|
 |RequiredLevel|None|
-|Targets|contact|
 |Type|Lookup|
-
+|Targets|contact|
 
 ### <a name="BKMK_CreatedOnBehalfByContact"></a> CreatedOnBehalfByContact
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the contact who created the record on behalf of another user.|
-|DisplayName|Created OnBelhalfBy (Contact)|
+|---|---|
+|Description|**Shows the contact who created the record on behalf of another user.**|
+|DisplayName|**Created OnBelhalfBy (Contact)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfbycontact|
+|LogicalName|`createdonbehalfbycontact`|
 |RequiredLevel|None|
-|Targets|contact|
 |Type|Lookup|
-
+|Targets|contact|
 
 ### <a name="BKMK_FeedbackId"></a> FeedbackId
 
 |Property|Value|
-|--------|-----|
-|Description|FeedbackId|
-|DisplayName|Feedback|
+|---|---|
+|Description|**FeedbackId**|
+|DisplayName|**Feedback**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|feedbackid|
+|LogicalName|`feedbackid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_MaxRating"></a> MaxRating
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the maximum rating value.|
-|DisplayName|Maximum Rating|
-|Format|None|
+|---|---|
+|Description|**Enter the maximum rating value.**|
+|DisplayName|**Maximum Rating**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|maxrating|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`maxrating`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_MinRating"></a> MinRating
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the minimum rating value.|
-|DisplayName|Minimum Rating|
-|Format|None|
+|---|---|
+|Description|**Enter the minimum rating value.**|
+|DisplayName|**Minimum Rating**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|minrating|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`minrating`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_msdyn_ContextObjectId"></a> msdyn_ContextObjectId
 
-**Added by**: Knowledge Management Patch Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Shows the record in context of which feedback rating is being provided.|
-|DisplayName|Context|
+|---|---|
+|Description|**Shows the record in context of which feedback rating is being provided.**|
+|DisplayName|**Context**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|msdyn_contextobjectid|
+|LogicalName|`msdyn_contextobjectid`|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
 |Type|Lookup|
-
+|Targets|knowledgearticle|
 
 ### <a name="BKMK_msdyn_ContextObjectIdType"></a> msdyn_ContextObjectIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|msdyn_contextobjectidtype|
+|LogicalName|`msdyn_contextobjectidtype`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the knowledge article views.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the knowledge article views.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Rating"></a> Rating
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies how helpful the related record was.|
-|DisplayName|Rating|
-|Format|None|
+|---|---|
+|Description|**Specifies how helpful the related record was.**|
+|DisplayName|**Rating**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|rating|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`rating`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the record that the feedback is associated with.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Shows the record that the feedback is associated with.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
-|Targets|contact,feedback,knowledgearticle|
 |Type|Lookup|
-
+|Targets|contact, feedback, knowledgearticle|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Source"></a> Source
 
 |Property|Value|
-|--------|-----|
-|Description|Shows where the feedback was submitted from.|
-|DisplayName|Source|
+|---|---|
+|Description|**Shows where the feedback was submitted from.**|
+|DisplayName|**Source**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|source|
+|LogicalName|`source`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`feedback_source`|
 
 #### Source Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Internal||
-|1|Portal||
-
-
+|Value|Label|
+|---|---|
+|0|**Internal**|
+|1|**Portal**|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the feedback is open, rejected or closed.|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the feedback is open, rejected or closed.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`feedback_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Open|1|Open|
-|1|Closed|3|Closed|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Open**<br />DefaultStatus: 1<br />InvariantName: `Open`|
+|1|Label: **Closed**<br />DefaultStatus: 3<br />InvariantName: `Closed`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the feedback's status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the feedback's status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|SystemRequired|
 |Type|Status|
+|DefaultFormValue|1|
+|GlobalChoiceName|`feedback_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Proposed|0|
-|2|Accepted|0|
-|3|Closed|1|
-|4|Rejected|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Proposed**<br />State:0<br />TransitionData: None|
+|2|Label: **Accepted**<br />State:0<br />TransitionData: None|
+|3|Label: **Closed**<br />State:1<br />TransitionData: None|
+|4|Label: **Rejected**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
-|--------|-----|
-|Description|Type a title for the feedback.|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a title for the feedback.**|
+|DisplayName|**Title**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|155|
+|LogicalName|`title`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|155|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the local currency for the record to make sure budgets are reported in the correct currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Choose the local currency for the record to make sure budgets are reported in the correct currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
+|Targets|transactioncurrency|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ClosedBy](#BKMK_ClosedBy)
-- [ClosedByName](#BKMK_ClosedByName)
-- [ClosedByYomiName](#BKMK_ClosedByYomiName)
 - [ClosedOn](#BKMK_ClosedOn)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByContactName](#BKMK_CreatedByContactName)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByContactName](#BKMK_CreatedOnBehalfByContactName)
-- [CreatedOnBehalfByContactYomiName](#BKMK_CreatedOnBehalfByContactYomiName)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_ContextObjectIdName](#BKMK_msdyn_ContextObjectIdName)
-- [msdyn_ContextObjectIdYomiName](#BKMK_msdyn_ContextObjectIdYomiName)
 - [NormalizedRating](#BKMK_NormalizedRating)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
-- [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_ClosedBy"></a> ClosedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who closed the record.|
-|DisplayName|Closed By|
+|---|---|
+|Description|**Shows who closed the record.**|
+|DisplayName|**Closed By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|closedby|
+|LogicalName|`closedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ClosedByName"></a> ClosedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|closedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ClosedByYomiName"></a> ClosedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|closedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ClosedOn"></a> ClosedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was closed. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Closed On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was closed. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Closed On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|closedon|
+|LogicalName|`closedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByContactName"></a> CreatedByContactName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbycontactname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByContactName"></a> CreatedOnBehalfByContactName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbycontactname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByContactYomiName"></a> CreatedOnBehalfByContactYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbycontactyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ContextObjectIdName"></a> msdyn_ContextObjectIdName
-
-**Added by**: Knowledge Management Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_contextobjectidname|
-|MaxLength|1000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_ContextObjectIdYomiName"></a> msdyn_ContextObjectIdYomiName
-
-**Added by**: Knowledge Management Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_contextobjectidyominame|
-|MaxLength|1000|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_NormalizedRating"></a> NormalizedRating
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the rating scaled to a value between 0 and 1 based on minimum and maximum ratings.|
-|DisplayName|Normalized Rating|
+|---|---|
+|Description|**Shows the rating scaled to a value between 0 and 1 based on minimum and maximum ratings.**|
+|DisplayName|**Normalized Rating**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|normalizedrating|
+|LogicalName|`normalizedrating`|
+|RequiredLevel|None|
+|Type|Decimal|
+|ImeMode|Auto|
 |MaxValue|1000000000|
 |MinValue|-100000000000|
 |Precision|2|
-|RequiredLevel|None|
-|Type|Decimal|
-
+|SourceTypeMask|1|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the knowledge article views.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the knowledge article views.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team that owns the feedback.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team that owns the feedback.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns this feedback.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns this feedback.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the feedback.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the feedback.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [Feedback_SyncErrors](#BKMK_Feedback_SyncErrors)
-- [feedback_feedback](#BKMK_feedback_feedback)
-- [feedback_principalobjectattributeaccess](#BKMK_feedback_principalobjectattributeaccess)
-- [feedback_DuplicateBaseRecord](#BKMK_feedback_DuplicateBaseRecord)
-- [feedback_DuplicateMatchingRecord](#BKMK_feedback_DuplicateMatchingRecord)
-
-
-### <a name="BKMK_Feedback_SyncErrors"></a> Feedback_SyncErrors
-
-Same as the [Feedback_SyncErrors](syncerror.md#BKMK_Feedback_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|Feedback_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_feedback_feedback"></a> feedback_feedback
-
-Same as the [feedback_feedback](feedback.md#BKMK_feedback_feedback) many-to-one relationship for the [feedback](feedback.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|feedback|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|feedback_feedback|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 150|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_feedback_principalobjectattributeaccess"></a> feedback_principalobjectattributeaccess
-
-Same as the [feedback_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_feedback_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|feedback_principalobjectattributeaccess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_feedback_DuplicateBaseRecord"></a> feedback_DuplicateBaseRecord
-
-Same as the [feedback_DuplicateBaseRecord](duplicaterecord.md#BKMK_feedback_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|feedback_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_feedback_DuplicateMatchingRecord"></a> feedback_DuplicateMatchingRecord
-
-Same as the [feedback_DuplicateMatchingRecord](duplicaterecord.md#BKMK_feedback_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|feedback_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_feedback_modifiedby](#BKMK_lk_feedback_modifiedby)
-- [Contact_Feedback](#BKMK_Contact_Feedback)
-- [lk_feedback_closedby](#BKMK_lk_feedback_closedby)
-- [feedback_feedback](#BKMK_feedback_feedback)
-- [lk_feedback_createdonbehalfby](#BKMK_lk_feedback_createdonbehalfby)
-- [KnowledgeArticle_Feedback](#BKMK_KnowledgeArticle_Feedback)
-- [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
-- [lk_feedback_modifiedonbehalfby](#BKMK_lk_feedback_modifiedonbehalfby)
 - [business_unit_feedback](#BKMK_business_unit_feedback)
-- [lk_contact_feedback_createdonbehalfby](#BKMK_lk_contact_feedback_createdonbehalfby)
+- [Contact_Feedback](#BKMK_Contact_Feedback)
+- [feedback_feedback](#BKMK_feedback_feedback-many-to-one)
+- [KnowledgeArticle_Feedback](#BKMK_KnowledgeArticle_Feedback)
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
+- [lk_contact_feedback_createdonbehalfby](#BKMK_lk_contact_feedback_createdonbehalfby)
+- [lk_feedback_closedby](#BKMK_lk_feedback_closedby)
 - [lk_feedback_createdby](#BKMK_lk_feedback_createdby)
+- [lk_feedback_createdonbehalfby](#BKMK_lk_feedback_createdonbehalfby)
+- [lk_feedback_modifiedby](#BKMK_lk_feedback_modifiedby)
+- [lk_feedback_modifiedonbehalfby](#BKMK_lk_feedback_modifiedonbehalfby)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
-
-
-### <a name="BKMK_lk_feedback_modifiedby"></a> lk_feedback_modifiedby
-
-See the [lk_feedback_modifiedby](systemuser.md#BKMK_lk_feedback_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_Contact_Feedback"></a> Contact_Feedback
-
-See the [Contact_Feedback](contact.md#BKMK_Contact_Feedback) one-to-many relationship for the [contact](contact.md) table/entity.
-
-### <a name="BKMK_lk_feedback_closedby"></a> lk_feedback_closedby
-
-See the [lk_feedback_closedby](systemuser.md#BKMK_lk_feedback_closedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_feedback_feedback"></a> feedback_feedback
-
-See the [feedback_feedback](feedback.md#BKMK_feedback_feedback) one-to-many relationship for the [feedback](feedback.md) table/entity.
-
-### <a name="BKMK_lk_feedback_createdonbehalfby"></a> lk_feedback_createdonbehalfby
-
-See the [lk_feedback_createdonbehalfby](systemuser.md#BKMK_lk_feedback_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
-
-See the [KnowledgeArticle_Feedback](knowledgearticle.md#BKMK_KnowledgeArticle_Feedback) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-### <a name="BKMK_transactioncurrency_feedback"></a> transactioncurrency_feedback
-
-See the [transactioncurrency_feedback](transactioncurrency.md#BKMK_transactioncurrency_feedback) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_lk_feedback_modifiedonbehalfby"></a> lk_feedback_modifiedonbehalfby
-
-See the [lk_feedback_modifiedonbehalfby](systemuser.md#BKMK_lk_feedback_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [owner_feedback](#BKMK_owner_feedback)
+- [transactioncurrency_feedback](#BKMK_transactioncurrency_feedback)
 
 ### <a name="BKMK_business_unit_feedback"></a> business_unit_feedback
 
-See the [business_unit_feedback](businessunit.md#BKMK_business_unit_feedback) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit business_unit_feedback](businessunit.md#BKMK_business_unit_feedback)
 
-### <a name="BKMK_lk_contact_feedback_createdonbehalfby"></a> lk_contact_feedback_createdonbehalfby
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [lk_contact_feedback_createdonbehalfby](contact.md#BKMK_lk_contact_feedback_createdonbehalfby) one-to-many relationship for the [contact](contact.md) table/entity.
+### <a name="BKMK_Contact_Feedback"></a> Contact_Feedback
+
+One-To-Many Relationship: [contact Contact_Feedback](contact.md#BKMK_Contact_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`ContactId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_feedback_feedback-many-to-one"></a> feedback_feedback
+
+One-To-Many Relationship: [feedback feedback_feedback](#BKMK_feedback_feedback-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`feedback`|
+|ReferencedAttribute|`feedbackid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`FeedbackId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_KnowledgeArticle_Feedback"></a> KnowledgeArticle_Feedback
+
+One-To-Many Relationship: [knowledgearticle KnowledgeArticle_Feedback](knowledgearticle.md#BKMK_KnowledgeArticle_Feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`KnowledgeArticleId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_contact_feedback_createdby"></a> lk_contact_feedback_createdby
 
-See the [lk_contact_feedback_createdby](contact.md#BKMK_lk_contact_feedback_createdby) one-to-many relationship for the [contact](contact.md) table/entity.
+One-To-Many Relationship: [contact lk_contact_feedback_createdby](contact.md#BKMK_lk_contact_feedback_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`createdbycontact`|
+|ReferencingEntityNavigationPropertyName|`CreatedByContact`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_contact_feedback_createdonbehalfby"></a> lk_contact_feedback_createdonbehalfby
+
+One-To-Many Relationship: [contact lk_contact_feedback_createdonbehalfby](contact.md#BKMK_lk_contact_feedback_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`createdonbehalfbycontact`|
+|ReferencingEntityNavigationPropertyName|`CreatedOnBehalfByContact`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_feedback_closedby"></a> lk_feedback_closedby
+
+One-To-Many Relationship: [systemuser lk_feedback_closedby](systemuser.md#BKMK_lk_feedback_closedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`closedby`|
+|ReferencingEntityNavigationPropertyName|`closedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_feedback_createdby"></a> lk_feedback_createdby
 
-See the [lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_feedback_createdonbehalfby"></a> lk_feedback_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_feedback_createdonbehalfby](systemuser.md#BKMK_lk_feedback_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_feedback_modifiedby"></a> lk_feedback_modifiedby
+
+One-To-Many Relationship: [systemuser lk_feedback_modifiedby](systemuser.md#BKMK_lk_feedback_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_feedback_modifiedonbehalfby"></a> lk_feedback_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_feedback_modifiedonbehalfby](systemuser.md#BKMK_lk_feedback_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`ModifiedOnBehalfBy`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
 
-See the [msdyn_knowledgearticle_feedback_context](knowledgearticle.md#BKMK_msdyn_knowledgearticle_feedback_context) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+One-To-Many Relationship: [knowledgearticle msdyn_knowledgearticle_feedback_context](knowledgearticle.md#BKMK_msdyn_knowledgearticle_feedback_context)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`msdyn_contextobjectid`|
+|ReferencingEntityNavigationPropertyName|`msdyn_ContextObjectId_knowledgearticle`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_feedback"></a> owner_feedback
+
+One-To-Many Relationship: [owner owner_feedback](owner.md#BKMK_owner_feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_transactioncurrency_feedback"></a> transactioncurrency_feedback
+
+One-To-Many Relationship: [transactioncurrency transactioncurrency_feedback](transactioncurrency.md#BKMK_transactioncurrency_feedback)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [feedback_DuplicateBaseRecord](#BKMK_feedback_DuplicateBaseRecord)
+- [feedback_DuplicateMatchingRecord](#BKMK_feedback_DuplicateMatchingRecord)
+- [feedback_feedback](#BKMK_feedback_feedback-one-to-many)
+- [feedback_principalobjectattributeaccess](#BKMK_feedback_principalobjectattributeaccess)
+- [Feedback_SyncErrors](#BKMK_Feedback_SyncErrors)
+
+### <a name="BKMK_feedback_DuplicateBaseRecord"></a> feedback_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord feedback_DuplicateBaseRecord](duplicaterecord.md#BKMK_feedback_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`feedback_DuplicateBaseRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_feedback_DuplicateMatchingRecord"></a> feedback_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord feedback_DuplicateMatchingRecord](duplicaterecord.md#BKMK_feedback_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`feedback_DuplicateMatchingRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_feedback_feedback-one-to-many"></a> feedback_feedback
+
+Many-To-One Relationship: [feedback feedback_feedback](#BKMK_feedback_feedback-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`feedback`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`feedback_feedback`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 150<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_feedback_principalobjectattributeaccess"></a> feedback_principalobjectattributeaccess
+
+Many-To-One Relationship: [principalobjectattributeaccess feedback_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_feedback_principalobjectattributeaccess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`feedback_principalobjectattributeaccess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_Feedback_SyncErrors"></a> Feedback_SyncErrors
+
+Many-To-One Relationship: [syncerror Feedback_SyncErrors](syncerror.md#BKMK_Feedback_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`Feedback_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
-<xref href="Microsoft.Dynamics.CRM.feedback?text=feedback EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.feedback?displayProperty=fullName>

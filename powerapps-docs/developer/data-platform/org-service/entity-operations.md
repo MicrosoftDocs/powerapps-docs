@@ -1,27 +1,23 @@
 ---
-title: "Entity class operations using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the Entity class used for data operations using the Microsoft Dataverse organization service" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divka78" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 09/16/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
 ---
 
-# Entity class operations using the Organization service
+# Entity class operations using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with Microsoft Dataverse data using the organization service you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
+When you work with Microsoft Dataverse data using the SDK for .NET you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
 
 This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
 
@@ -86,7 +82,7 @@ Attribute types can be any of the following. This is a partial list.
 |Type|Description|
 |--|--|
 |<xref:Microsoft.Xrm.Sdk.EntityReference>|A **Lookup** attribute. A link to another entity record.|
-|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as the [WebResource table/entity reference](../reference/entities/webresource.md). More information: [Use managed properties](/power-platform/alm/use-managed-properties)|
+|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as [WebResource](../reference/entities/webresource.md). More information: [Use managed properties](/power-platform/alm/use-managed-properties)|
 |<xref:Microsoft.Xrm.Sdk.Money>|A **Currency** attribute.|
 |<xref:Microsoft.Xrm.Sdk.OptionSetValue>|An **Option Set** attribute. **State** and **Status** attributes also use this type. |
 |<xref:System.Boolean>|A **Two Option** attribute.|
@@ -96,7 +92,10 @@ Attribute types can be any of the following. This is a partial list.
 |<xref:System.Double>|A **Floating Point Number** attribute.|
 |<xref:System.Guid>|Usually used as the unique identifier for the entity. |
 |<xref:System.Int32>|A **Whole Number** attribute.|
-|<xref:System.String>|**Multiple Lines of Text** and **Single Line of Text** attributes use this type.|
+|<xref:System.String>|**Multiple Lines of Text** and **Single Line of Text** attributes use this type. Another less common type that uses string are `EntityName` columns, which store a string value representing the logical name of a table. |
+
+> [!NOTE]
+> File columns are not available directly from the entity. You need to use a series of requests to upload or download data from file columns. More information: [Use file column data](../file-column-data.md).
 
 There are three different ways to interact with entity attributes using the late-bound style:
 - Use the indexer on the `Entity` class
@@ -172,7 +171,7 @@ var formattedRevenueString1 = account.FormattedValues["revenue"];
 var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 ```
 
-More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 ## Entity.RelatedEntities
 
@@ -202,7 +201,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 These topics will explain more about working with Dataverse entities (table rows).
 
-[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)
+[Quick Start: SDK for .NET sample (C#)](quick-start-org-service-console-app.md)<br />
 [Query data](entity-operations-query-data.md)<br />
 [Create table rows](entity-operations-create.md)<br />
 [Retrieve a table row](entity-operations-retrieve.md)<br />

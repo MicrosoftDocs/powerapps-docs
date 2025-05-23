@@ -1,22 +1,18 @@
 ---
 title: "Create a row quickly| MicrosoftDocs"
 description: How to create a row
-author: mduelae
-manager: kvivek
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/10/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create a new row
 
@@ -39,6 +35,8 @@ The **New** command or **Quick create** makes it fast and easy to enter almost a
 > An asterisk ![Required column button.](media/required-field-button.png "Required column button") next to the column on the screen means the column is required. If you select **Save and Close** before entering required columns an error message will be displayed or if you have entered information and select **Cancel** a warning will be displayed.
 >   
 > A plus sign ![Recommended column button.](media/recommended-field-button.png "Recommended column button") next to the column on the screen means your organization recommends that you fill in the column.  
+>   
+> A lock sign ![Read-only column button.](media/readonly-field-button.png "Read-only column button") next to the column on the screen means this field is read-only and cannot be edited.  
 
 
 ## Create a new row using the New button 

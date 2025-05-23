@@ -2,8 +2,7 @@
 title: "Specify read only grid properties | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
-ms.date: 06/03/2019
-
+ms.date: 04/19/2023
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -14,7 +13,6 @@ author: "Mattp123"
 ms.assetid: 3ecea4a7-0d18-4ccd-9609-3a62179e9e1b
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +20,6 @@ caps.latest.revision: 0
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Specify read only grid properties
@@ -47,7 +42,8 @@ Configure the following features after you add the Read Only Grid control to a t
 
 1. Go to [Power Apps](https://make.powerapps.com)
 
-1. Select **Dataverse** on the left navigation pane, and then select **Tables** .  Alternatively, select **Solutions**, open the [solution](model-driven-app-glossary.md#solution), and then open the table, such as **Account**.
+1. Select **Tables** on the left navigation pane. Alternatively, select **Solutions**, and then open the [solution](model-driven-app-glossary.md#solution). [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table, such as **Account**.
 
 1. Select the **Forms** area, and select the form that you want to edit.
 1. Select **Switch to classic**. The classic form editor opens as a new tab in your browser. (You may need to select **...** before selecting **Switch to classic**.)
@@ -102,6 +98,11 @@ Configure the following features after you add the Read Only Grid control to a t
 ## Conditional image
 
 You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../data-platform/display-custom-icons-instead.md).
+
+### Known issue
+
+If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Read-only grid control.
+
 
 ## Next steps
 

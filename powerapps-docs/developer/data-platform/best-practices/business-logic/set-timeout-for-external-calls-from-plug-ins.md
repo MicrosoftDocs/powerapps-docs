@@ -2,18 +2,14 @@
 title: "Set Timeout when making external calls in a plug-in | MicrosoftDocs"
 description: "Limit the time period that external calls will expect a response within plug-ins"
 ms.date: 04/03/2022
-author: divka78
-ms.author: dikamath
-manager: sunilg
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 suite: powerapps
-ms.topic: article
+ms.topic: how-to
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -45,7 +41,7 @@ If a plug-in makes external web requests that fail to respond quickly, the plug-
 
 The default timeout value for .Net Http clients is 100 seconds, just 20 seconds short of the time available for the plug-in to complete. It is best to establish an expected baseline time that a calling service will respond. The longer it exceeds this normal response time, the higher the probability it will ultimately fail. As a performance best practice, it is best to fail quickly rather than allow the default timeout period to expire. You should control the period that your call to the external service will wait.
 
-The timeout value you should set will depend on the service. For example, if you can monitor the performance of the service you may determine a duration where 99.999% of requests succeed and set your timeout period to that duration with a few seconds buffer. This will prevent the the occasional outliers from having an inordinate impact on the performance of your plug-in.
+The timeout value you should set will depend on the service. For example, if you can monitor the performance of the service you may determine a duration where 99.999% of requests succeed and set your timeout period to that duration with a few seconds buffer. This will prevent the occasional outliers from having an inordinate impact on the performance of your plug-in.
 
 If you are using [System.Net.Http.HttpClient Class](/dotnet/api/system.net.http.httpclient), you can set the `Timeout` value explicitly, as shown in this example setting the timeout to 15 seconds.
 

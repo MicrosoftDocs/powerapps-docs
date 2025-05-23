@@ -1,19 +1,15 @@
 ---
-title: "Xrm.Navigation (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.Navigation (Client API reference) in model-driven apps"
 description: "Xrm.Navigation provides navigation-related methods. "
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,12 +30,8 @@ Provides navigation-related methods.
 |[openUrl](xrm-navigation/openUrl.md)|[!INCLUDE[xrm-navigation/includes/openUrl-description.md](xrm-navigation/includes/openUrl-description.md)]|
 |[openWebResource](xrm-navigation/openWebResource.md)|[!INCLUDE[xrm-navigation/includes/openWebResource-description.md](xrm-navigation/includes/openWebResource-description.md)]|
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

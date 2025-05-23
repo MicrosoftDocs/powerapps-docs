@@ -3,7 +3,7 @@ title: Planning - Data-driven decisions (business rules) | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, determine what decisions are being made based on the data and what business rules need to be followed.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance
@@ -74,7 +74,7 @@ report, an alert needs to be sent to Nick to review and approve the expense
 report.
 
 We know that Nick is a busy manager, so we should consider escalation for
-expense reports that wait for his approval longer than five days. We can consider
+expense reports that wait for Nick's approval longer than five days. We can consider
 several escalation methods:
 
 - We can send another alert to Nick&mdash;perhaps rather than email, we consider

@@ -2,16 +2,12 @@
 title: "Page large result sets with LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can page the results of a large .NET Language-Integrated Query (LINQ) query by using the Take and Skip operators." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
-manager: pemikkel
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -43,7 +39,8 @@ foreach (var a in accountsByPage.Skip(2 * pageSize).Take(pageSize))
 ```
   
 ### See also  
- [Build queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
+
+ [Build queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)
  [LINQ query examples](linq-query-examples.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

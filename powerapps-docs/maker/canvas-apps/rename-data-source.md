@@ -3,19 +3,17 @@ title: Rename Power Apps action-based data sources
 description: Learn about how to rename Power Apps action-based data sources.
 author: lancedMicrosoft
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/29/2021
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
-  - tapanm-msft
+  - mduelae
 ---
 
 # Rename Power Apps action-based data sources

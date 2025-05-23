@@ -1,19 +1,15 @@
 ---
 title: "Use XRM tooling to retrieve data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from Microsoft Dataverse"
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
@@ -22,14 +18,20 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
+There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.
+
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
   
 ## GetEntityDataById  
 
-This method searches for a table by the specified ID. In this sample, we specify null for the field list value to fetch all the columns of the specified table record (account), and then display the name of the retrieved account record.  
+This method searches for a table by the specified ID. In this sample, we specify null for the field list value to fetch all the columns of the specified table record (account), and then display the name of the retrieved account record.
+
+When using the `ServiceClient` class you can find the Get method here: <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.QueryExtensions.GetEntityDataById%2A?displayProperty=nameWithType>
   
 ```csharp  
-CrmServiceClient svc = new CrmServiceClient(connectionstring);  
+CrmServiceClient svc = new CrmServiceClient(connectionstring); 
+// ServiceClient svc = new ServiceClient(connectionstring); 
   
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
@@ -60,10 +62,13 @@ else
   
 ## GetEntityDataByFetchSearchEC  
 
-This method searches for the table based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
+This method searches for the table based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.
+
+When using the `ServiceClient` class, the query method can be found here: <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.QueryExtensions.GetEntityDataByFetchSearch%2A?displayProperty=nameWithType>
   
 ```csharp  
-CrmServiceClient svc = new CrmServiceClient(connectionstring);  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);
+// ServiceClient svc = new ServiceClient(connectionstring);  
   
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
@@ -96,9 +101,7 @@ else
   
 ### See also  
 
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

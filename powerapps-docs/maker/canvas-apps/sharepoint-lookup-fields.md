@@ -1,105 +1,100 @@
 ---
-title: How to link lists from Microsoft Lists using a lookup column in Power Apps
-description: Learn about how to link lists from Microsoft Lists using lookup columns in Power Apps.
+title: Link lists using a lookup column in Power Apps
+description: Learn about linking lists and using lookup columns in Microsoft Power Apps.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 3/1/2025
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ---
-# How to link lists from Microsoft Lists using a lookup column in Power Apps
 
-This tutorial shows how you can connect two lists with a lookup column in a canvas app.
+# Link lists using a lookup column in Power Apps
 
-## Overview
+This tutorial shows you how to connect two lists with a lookup column in a canvas app in Power Apps.
 
-SharePoint provides two types of lookup column:
+SharePoint provides two types of lookup columns:
 
-* **Lookup**: links to another list: for example an *Orders* list may have a lookup column that links to customers in a *Customer* list;
-* **Choice**: clicking or tapping the column displays a small menu of items that you choose from.
+- **Lookup**: Links to another list. For example, an **Orders** list might have a lookup column that links to customers in a **Customer** list.
+- **Choice**: Selecting a column displays a menu of items you can choose.
 
-In this tutorial, you build an app that uses these kinds of lookup column.
+> [!NOTE]
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Microsoft Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
 
-### Why use a lookup column
+## Prerequisites
 
-Data in an enterprise is large and complex. Data in one list often relates to data in another list. Lookup column are the primary way such business data comes together.
+- A [SharePoint license](https://www.microsoft.com/en-us/microsoft-365/sharepoint/compare-sharepoint-plans?msockid=142399bb7d966f5511fe8cc47c2c6ec1) or a [Microsoft 365 license](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?msockid=142399bb7d966f5511fe8cc47c2c6ec1)
+- A SharePoint site
 
-For example, you might have an **Orders** list which has a lookup column that links to a **Customers** list, to show which customer placed the order. The lookup column in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup column to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
+  To create a SharePoint site, see [Guided walkthrough: Creating an organization site](/sharepoint/guided-walkthrough-creating-organization-site).
 
-### What are Choice column used for?
+## Why use a lookup column?
 
-**Choice** column are used for very short lists, but instead of actually creating a separate list, you include the list values in a small menu, which appears when you select **Choice** column, and you select one of the values.
+Data in an enterprise is large and complex. Data in one list often relates to data in another list. Lookup columns are the primary way such business data comes together.
 
-Examples include data like Customer Status Code, Product Availability, State Codes; basically any fixed list that is relatively short. This data could in fact be implemented as separate lists, and then you would use a **Lookup** column to link to them, but it is usually easier and quicker to implement them as **Choice** column.
+For example, you might have an **Orders** list which has a lookup column that links to a **Customers** list, to show which customer placed the order. The lookup column in the **Orders** list lets you get other data from the **Customers** list as well.
 
->[!TIP]
-> For more SharePoint and Power Apps integration tutorials, go to [SharePoint integration scenarios](sharepoint/scenarios-intro.md).
+You might also use a lookup column to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, or manufacturer details.
 
-## Create the lists in SharePoint
+## What are choice columns used for?
 
-In this tutorial, you link two lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
+**Choice** columns are used for short lists. Instead of  creating a separate list, you include the list values in a small menu. This menu appears when you select a **Choice** column, and then you can select one of the values from the menu.
+
+Examples include data like Customer Status Code, Product Availability, State Codes—any fixed, relatively short list.
+
+The choice data can stay as a separate list, if you use a **Lookup** column to link them. However, a **Choice** column implementation is easier and quicker than a **Lookup** column implementation.
+
+Learn more in [Integrate SharePoint Online into Power Apps overview](sharepoint-list-integration-overview.md).
+
+## Create the lists
+
+In this tutorial, you link two lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware breaks from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
 ### The lookup column used in this example
 
-The **RepairShop** list uses the *ContactEmail* column to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
+The **RepairShop** list uses the *ContactEmail* column to identify the shop. This list is defined first so that each row in the **Assets** list points to something.
 
-The **Assets** list has two lookup column:
+The **Assets** list has two lookup columns:
 
-* one called *RepairShop*, of type **Lookup**, which uses email addresses to point to entries in the **RepairShop** list;
-* one called *AssetType*, of type **Choice**, which lists the kinds of hardware that this asset might be.
+- *RepairShop*, of type **Lookup**, uses email addresses to point to entries in the **RepairShop** list.
+- *AssetType*, of type **Choice**, lists the asset types for hardware.
 
-You most likely would define additional columns, depending on the information you need to track.
+You can define more columns, depending on the information you need to track.
 
 ### Define the RepairShop list and add data
 
-You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose from the *Assets.RepairShop* lookup column.
+Create this list first, so when you add data to the **Assets** list, **RepairShop** entries are available from the *Assets.RepairShop* lookup column.
 
-1. On your SharePoint site, create a new **RepairShop** list from blank.
+1. On any SharePoint site, create a new **RepairShop** list from a **Blank list** template.
 
-    ![New list.](./media/sharepoint-lookup-fields/new-list.png)
+    :::image type="content" source="./media/sharepoint-lookup-fields/new-list.png" alt-text="Screenshot of the location of a List option in the New menu of a SharePoint site.":::
+1. Select **Add a column** of type **Text** and name it *ContactEmail*, then choose **Save**.
+1. Select **+ Add new item** to enter at least three rows with different *ContactEmail* sample values. When an asset needs to be repaired, you choose one of these repair shops.
 
-2. Add a *ContactEmail* column of type **Single line of text**.
-
-    ![Add email column.](./media/sharepoint-lookup-fields/add-email-field.png)
-
-3. Add any other columns you need.
-
-4. Select **+ New** to enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these. You can also use **Edit in grid view** to quickly enter text in grid.
-
-    ![Add repair shops.](./media/sharepoint-lookup-fields/add-repair-shops.png)
+    :::image type="content" source="./media/sharepoint-lookup-fields/add-repair-shops.png" alt-text="Screenshot of the location of the Add new item button on a SharePoint site page.":::
 
 ### Define the Assets list
 
-1. On your SharePoint site, create a new **Assets** list from blank.
+1. On the same SharePoint site, create a new **Assets** list from a **Blank list** template.
+1. Select **+ Add column** and choose the **Choice** column type. Select **Next** and name it *AssetType*. Fill in the *Choice* values under the **Choices** section with sample assets such as *Desktop*, *Laptop*, *Android phone*, *iPhone*, and *Windows tablet*.
 
-1. Add an *AssetType* column of type **Choice**, and fill in the values you want to appear in the choice menu as choices. Then select **Save**.
+    :::image type="content" source="./media/sharepoint-lookup-fields/define-choice-column.png" alt-text="Screenshot showing where you can define the column choices when you create a column.":::
+1. Select **Save**.
+1. Select **+ Add column** and choose the **Lookup** column type, then select **Next**.
+1. In the **Create a column** pane, add RepairShop to the **Name** field. Go to **Select a list as a source** and choose **RepairShop**. Go to **Select a column from the list above** and choose **ContactEmail**.
+1. Select **Save**.
 
-    ![Define choice column.](./media/sharepoint-lookup-fields/define-choice-column.png)
+   You see the column *RepairShop* has a two-arrows icon that indicates it's a lookup type column.
 
-1. Select **+ Add column** > **More**.
-
-1. Enter column name as *RepairShop*. And column type as **Lookup**.
-
-    ![Setup lookup column.](./media/sharepoint-lookup-fields/setup-lookup-column.png)
-
-1. In additional column settings, select **RepairShop** as the list to get the information from, and the column for the lookup as **ContactEmail**.
-
-    ![Lookup column.](./media/sharepoint-lookup-fields/lookup-column.png)
-
-1. Select **Ok**.
-
-1. Add any additional column you want.
+   :::image type="content" source="./media/sharepoint-lookup-fields/repair-shop-lookup-column.png" alt-text="Screenshot showing the RepairShop column in the Assets list.":::
 
 ## Create an app from the Assets list
 
@@ -107,40 +102,35 @@ Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the
 
 ## Add data to the Assets list
 
-Now you can run the app and see how the view details screen looks for the lookup columns.
+Let's [preview the app](preview-app.md) and add items to your **Assets** list.
 
 1. Press F5 or select Preview ( ![Preview icon.](./media/sharepoint-lookup-fields/preview.png) ).
 
-2. Select the **+** symbol in the upper right corner to add an entry.
+2. Select the **+** symbol in the upper right corner of your app to add an entry.
 
-3. Enter a **Title** for this asset.
+3. Enter a **Title** for this asset, for example *Micah's Laptop*.
 
-4. Select the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
+4. Select the **AssetType** dropdown arrow. The values displayed are values you entered when you created this column. Choose one of the entries.
 
-    ![Fill asset type.](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
+   :::image type="content" source="./media/sharepoint-lookup-fields/fill-asset-type-3.png" alt-text="Screenshot that shows the AssetType list when you select the dropdown arrow.":::
 
 5. Select the **RepairShop** dropdown arrow. Choose one of the entries.
 
-    ![Fill repair shop.](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
+   :::image type="content" source="./media/sharepoint-lookup-fields/fill-repair-shop-3.png" alt-text="Scrrenshot that shows the RepairShop list when you select the dropdown arrow.":::
 
-6. In the upper-right corner, select the check mark to save the new entry.
+6. Select the check mark to save the new entry.
 
-7. (optional) Repeat this procedure to add as many items to the list as you want.
+7. (Optional) Add more items to the list.
 
-8. Press Esc to return to the default workspace.
+8. Press `Esc` to return to the default workspace.
 
 9. [Save and publish](save-publish-app.md) the app.
 
-## Next steps
+## Related information
 
-* [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/blog/support-for-lookups/)
-* [Performance, Refresh button, ForAll, and multiple column lookups](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
-* [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
-* [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
+- Configure [Drop down control in Power Apps](controls/control-drop-down.md) in your list.
+- [Generate an app by using a Microsoft Dataverse database](data-platform-create-app.md)
+- [Create an app from scratch using a Dataverse database](data-platform-create-app-scratch.md)
+- [Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

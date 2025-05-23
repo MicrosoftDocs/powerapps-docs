@@ -5,7 +5,7 @@ summary: Create powerful apps with easy to use tools that run across the spectru
 
 metadata:
   title: Power Apps model-driven apps documentation
-  description: Provides access to highlighted areas within the Power Apps model-driven apps documentation
+  description: Provides access to highlighted areas within the Power Apps model-driven apps documentation.
   services: service
   
   ms.subservice: subservice
@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: Mattp123
   ms.author: matp
-  ms.date: 09/08/2020 
+  ms.date: 01/16/2025 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -30,8 +30,6 @@ landingContent:
             url: app-value-proposition.md
           - text: Meet the app editors
             url: model-driven-designers.md
-          - text: Sample model-driven apps
-            url: overview-model-driven-samples.md
           - text: Licensing guide
             url: /power-platform/admin/pricing-billing-skus
          
@@ -52,7 +50,7 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Model driven App components
+          - text: Model-driven app components
             url: model-driven-app-components.md
           - text: Data modelling
             url: model-driven-app-glossary.md#data-model
@@ -142,8 +140,8 @@ landingContent:
             url: model-driven-app-glossary.md    
           - text: Share an app
             url: share-model-driven-app.md
-          - text: Microsoft Learn
-            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
+          - text: Learn module
+            url: /training/modules/get-started-with-model-driven-apps-in-powerapps/
       - linkListType: concept
         links:
           - text: Environments

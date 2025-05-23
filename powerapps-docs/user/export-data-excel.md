@@ -1,23 +1,18 @@
 ---
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
-description: How to export data to Excel
-author: mduelae
-manager: kvivek
+description: How to export data from your model-driven app to Excel
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 03/12/2021
+ms.topic: how-to
+ms.date: 10/22/2024
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-lead
@@ -62,7 +57,7 @@ The data is exported in the same format that you see in your app. Text will rema
 |            Text, Ticker Symbol, Phone, Options set, and Look Up            |                                                       Shows as Text and option set becomes drop-down list                                                       |
 |                                 Email, URL                                 |                                                                        Shows as General                                                                         |
 |                                   Number                                   |                                                             Shows as Number without group separator                                                             |
-|                                  Currency                                  |                                                         Shows as Number and does not include dollar sign ($)                                                         |
+|                                  Currency                                  |                                                         Shows as Number and doesn't include dollar sign ($)                                                         |
 |                          Date only, Date and Time                          |                                                                       Shows as Date only                                                                        |
 |                       Calculated and Roll-up columns                        | Editable in Excel but can’t be imported back to Power Apps |
 |                               Secured columns                               | Editable in Excel but can’t be imported back to Power Apps |
@@ -75,7 +70,7 @@ There are other export options such as Excel Online, Static Worksheet, Dynamics 
 > ![Export to excel options.](media/export_to_excel_options.png "Select export to Excel options")
 
 
-The table below summerizes the different options. Pick the one that works best for you.
+The following table summarizes the different options. Pick the one that works best for you.
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
