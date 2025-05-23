@@ -1,10 +1,10 @@
 ---
-title: Use Plan designer to Create AI-Powered Business Solutions with Copilot
+title: Use Plan designer to create AI-Powered business solutions with Copilot
 description: Learn how to use Plan designer, an AI-powered tool in Power Platform, to create comprehensive business solutions.
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 05/19/2025
+ms.date: 05/23/2025
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
@@ -26,7 +26,12 @@ Plan designer is a copilot-first development tool that helps you create comprehe
 
 Include a Dataverse database in your environment. Learn more in [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
 
-If your environment doesn't meet the prerequisites, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+If your environment doesn't meet the prerequisites, and you have access to developer environments, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+
+
+If your environment doesn't meet the prerequisites, and you have access to developer environments, you are routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
+
+If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you won't be able to create plans in your current environment. In this situation, you can switch to an environment where you have the necessary permissions to create tables and start building your plan there.
 
 ## Availability
 
