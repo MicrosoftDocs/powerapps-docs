@@ -35,7 +35,7 @@ If your environment doesn't meet the prerequisites and you don't have access to 
 
 ## Availability
 
-Plan designer is generally available and is still rolling out so it might not be available in your region yet. If you don't have access to the feature yet, you can access it in a preview environment, www.make.preview.powerapps.com.
+Plan designer is generally available and is still rolling out so it might not be available in your region yet. If you don't have access to the feature yet, you can access it in [preview](././powerapps-preview-program).
 
 Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport). 
 
