@@ -147,7 +147,7 @@ No, you need to turn on [New look](#whats-included-with-the-modern-refreshed-loo
 
 #### How do I enable the Header and navigation refresh for existing apps? 
 
-The feature is available as an opt-in capability for existing apps. You can enable it through the [app setting](##header-and-navigation-refresh). 
+The feature is available as an opt-in capability for existing apps. You can enable it through the [app setting](#header-and-navigation-refresh). 
 
 #### Why do I not see the Help icon in the global command bar in the app header? 
 
