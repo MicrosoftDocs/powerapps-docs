@@ -46,8 +46,6 @@ Creating a canvas app using templates in Power Apps is a streamlined and efficie
 
 1. Select a template from the list of **other app templates**.
 
-
-
 1. Update the **App name**, then select **Next**.
 
 1. Select **Make my own app** to connect the app to data storage, such as OneDrive.
