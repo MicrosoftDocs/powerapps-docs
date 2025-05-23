@@ -14,7 +14,7 @@ contributors:
   - mkaur
 ---
 
-# Wrap wizard: your step-by-step guide to building your native mobile apps package
+# Wrap wizard: your step-by-step guide to build your native mobile apps package
 
 Use this step-by-step Wrap wizard guide to convert one or more canvas apps into a single custom-branded app package that can be deployed on Google Play and the iOS App Store.
 
