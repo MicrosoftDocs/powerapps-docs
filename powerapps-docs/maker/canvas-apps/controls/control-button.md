@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/28/2021
+ms.date: 05/23/2025
 ms.subservice: canvas-maker
 ms.author: chmoncay
 ms.reviewer: tapanm
@@ -41,7 +41,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**ContentLanguage** -  The language of the control's content, if different from the control's container.
+**ContentLanguage** - The language of the control's content, if different from the control's container. The value must be written as "en-US" for English or "fr-FR" for French, representing the desired language code.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
