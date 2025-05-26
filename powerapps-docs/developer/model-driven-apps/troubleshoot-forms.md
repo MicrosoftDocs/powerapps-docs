@@ -3,10 +3,10 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps)"
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: MitiJ
 ms.author: mijosh
-ms.date: 09/24/2024
+ms.date: 04/02/2025
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
-ms.topic: article
+ms.topic: troubleshooting-general
 search.audienceType: 
   - developer
 contributors: 
@@ -20,6 +20,7 @@ contributors:
 This article has information to help fix some of the common issues you might encounter while working with model-driven app forms.
 
 > [!IMPORTANT]
+>
 > - The tools described in this article are designed for troubleshooting purposes; they aren't meant to be used in day-to-day production scenarios, even though you can use them for troubleshooting issues in production environments.
 > - These troubleshooting tools only affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
 > - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
@@ -66,9 +67,9 @@ When you're troubleshooting issues with forms, you need to use the URL parameter
       Disables all the event handlers within the given range by specifying `startIndex` and `endIndex` values (both are included). For example, `DisableFormHandlers=true_0_2` disables all the event handlers of index 0, 1, and 2. `DisableFormHandlers=onload_2_5` disables the [OnLoad](./clientapi/reference/events/form-onload.md) event handler of index 2, 3, 4, and 5. If you have more event handlers, you can use this approach to narrow down problematic handlers quickly.  
   
     > [!NOTE]
-    > Business rules are authored in the business rule designer, compiled into the client-side script, and registered in multiple form events, such as `OnLoad`, `OnSave`, and `OnChange`. The way to disable business rules are very similar to other form events. However, there're a few key differences:  
-    > - When you use `DisableFormHandlers=true`, `businessrule`, `businessrule_*index*`, or `businessrule_*startIndex_endIndex*`, you're disabling the business rule(s) in all the form events they're registered to.  
-    > - For example, the following image shows instructions on refreshing business rule(s) in the backend. You only need to do it once in your organization, and you can revert your changes after troubleshooting.  
+    > Business rules are authored in the business rule designer, compiled into the client-side script, and registered in multiple form events, such as `OnLoad`, `OnSave`, and `OnChange`. The way to disable business rules are similar to other form events. However, there are a few key differences:  
+    > - When you use `DisableFormHandlers=true`, `businessrule`, `businessrule_*index*`, or `businessrule_*startIndex_endIndex*`, you're disabling all business rules in all the form events they're registered to.  
+    > - For example, the following image shows instructions on refreshing business rules in the backend. You only need to do it once in your organization, and you can revert your changes after troubleshooting.  
     > ![Refresh business rules](media/businessrule-need-refresh.png "Refresh business rules")
     > - After you perform the above action and refresh the form, you'll see different message with additional information, as shown in the following image:  
     > ![Business rules individual control](media/businessrule-individual-control.png "Business rules individual control")
@@ -120,7 +121,7 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 
 > [!NOTE]
 > The difference between **DisableFormHandlers** and **DisableFormLibraries** are:
-> - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries. In contrast, the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified JavaScript web resource files are not loaded.
+> - The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries. In contrast, the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries. Simply put, **DisableFormLibraries** makes sure the specified JavaScript web resource files aren't loaded.
 > - The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded. Thus it doesn't stop the JavaScript code present in the library but not registered as an event handler from being executed. For example, if a form library `new_myscript.js` is written in the following way (not recommended practice):  
 > - You should start with **DisableFormHandlers** to see if the issue goes away, and if not, you can try **DisableFormLibraries**. Disabling any script always involves some risks of potentially breaking your form scenarios. However, the latter tend to have more side effects because of the disablement of the entire JavaScript files.
 > ![Difference between DisableFormHandlers and DisableFormLibraries](media/difference-between-disableformhandlers-disableformlibraries.png "Difference between DisableFormHandlers and DisableFormLibraries")
@@ -200,7 +201,7 @@ Using [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), you can 
 > ![Unsupported Client API](media/unsupported-client-api-method.png "Unsupported Client API")
 
 > [!NOTE]
-> The call stack has been modified for illustration purposes. The call stack shows details like web resource, function, and the line causing the error.
+> The call stack is modified for illustration purposes. The call stack shows details like web resource, function, and the line causing the error.
 
 Follow up with the script owner to further troubleshoot the issue.
 
@@ -247,7 +248,7 @@ This issue occurs if a business rule or custom script that used to work in the l
 One of the reasons that the business rule or script isn't working in Unified Interface is that the controls that are part of them don't exist in Unified Interface.
 Composite controls exist in the web client, but in Unified Interface composite control is broken down into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script, columns `firstname`, `middlename`, or `lastname` should be used instead.
 
-Once you launch form checker, you are able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
+Once you launch form checker, you're able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
@@ -477,7 +478,7 @@ Finally, if the control passes all the above checks, the record state determines
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form, whether it's during form load, in OnChange or OnSave events after the form is loaded.
 
 > [!IMPORTANT]
-> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it will be the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation. 
+> A control's disabled and hidden state can change multiple times when a form is first loaded. To know the reason why a control is hidden or disabled, make sure to check the **last** operation logged in the monitor. For example, if there are no `ControlStateChange.visible/ControlStateChange.hidden` operations for the control being investigated, the value and reasoning will be in the `FormControls` operation. Otherwise, it is the value and reason in the **last** `ControlStateChange.visible/ControlStateChange.hidden` operation. You can order logs by timestamp to search for the last operation. 
 
 ## Why a control has a certain value on form load
 
@@ -500,7 +501,7 @@ There are scenarios where columns are populated based on a relationship column m
 > [!div class="mx-imgBorder"]
 > ![Control value after](media/control-default-value-update-sequence.png "Control value after")
 
-Verify where the value is coming from and take action based on the below table:
+Verify where the value is coming from and take action based on the following table:
 
 | Source | How to fix |
 |--|--|
@@ -601,25 +602,32 @@ The following screenshot shows the root cause of the issue. You can see that the
 > ![Unsaved changes error](media/unsaved-changes-error.png "Unsaved changes error")
 
 > [!NOTE]
-> If the user has manually made the changes on the form, a call stack will not be provided.
+> If the user has manually made the changes on the form, a call stack won't be provided.
 
 Verify where the change is coming from and if the behavior is expected or not. If a script causes the change, the original web resource can be traced back in the call stack. In most cases, it's a script. Make a decision based on the web resource itself.
 
+## Business required column doesn't block saving
 
-## Business required column validation doesn't behave as expected
+Business required columns are a usability feature that help prevent users from saving a record with an empty value in that column. In model-driven apps and Power Pages, the following scenarios don't block saving a record when a required column has an empty value:
 
-Business required columns by default block the form save operation if the value is empty. However, in many by-design scenarios, a business-required column might not block the save operation when the value is empty or block the save when you don't believe it should.
+- The column is hidden from the form, either because of [column properties](../../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form) or a client-side script using the [control.setVisible Client API](clientapi/reference/controls/setVisible.md) .
+- The column is on a hidden form tab or section.
+- A client-side script changes the column's required level using the [setRequiredLevel Client API](clientapi/reference/attributes/setRequiredLevel.md).
+- The user isn't using model-driven apps or Power Pages to create the record. Client applications using Dataverse APIs aren't blocked from saving records when column [AttributeMetadata.RequirementLevel](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.requiredlevel) is set to [AttributeRequiredLevel.ApplicationRequired](/dotnet/api/microsoft.xrm.sdk.metadata.attributerequiredlevel). [Learn more about column requirement level](../data-platform/entity-attribute-metadata.md#column-requirement-level)
+
+When you need to enforce data integrity, you should use [entity business rules](../../maker/data-platform/data-platform-create-business-rule.md) and other server-side validation instead, such as [synchronous plug-ins](../data-platform/plug-ins.md).
+
 
 ### How to troubleshoot
 
-The `RequiredFieldValidation` operation is logged when a save is attempted, regardless of whether save is successful or not. This operation explains why each business-required column blocks or doesn't block the save operation.
+The `RequiredFieldValidation` operation is logged when a save is attempted, regardless of whether save is successful or not. This operation explains why each business required column blocks or doesn't block the save operation.
 
 The following image is an example of this operation. The message explains how to read the detailed reports of each required column. In this example, `fax` column is bound to one control, and the control of the same name is read-only. Therefore it won't trigger required column validation.
 
 > [!div class="mx-imgBorder"]
 > ![Column validation](media/required-field-validation.png "Column validation")
 
-The following image is another example that `jobtitle` is a business-required column on the business process flow but not on the form, and the column isn't modified. Thus it doesn't block the save operation even when it's empty.
+The following image is another example that `jobtitle` is a business required column on the business process flow but not on the form, and the column isn't modified. Thus it doesn't block the save operation even when it's empty.
 
 > [!div class="mx-imgBorder"]
 > ![Required column validation](media/required-field-validation-bpf-only-field.png "Required column validation")
@@ -630,6 +638,20 @@ Most times, the behavior is by design, and the `RequiredFieldValidation` operati
 
 This might lead to another troubleshooting scenario such as [Why a control is disabled/enabled or visible/hidden](#why-a-control-is-disabledenabled-or-visiblehidden).
 
+## Can't create a record because of insufficient permissions to a secured field, even though that field isn't in the form
+
+This might happen when users create a record (row) from a different form. They get the error message **The user does not have create permissions to a secured field** even though they haven't entered a value for that field (column), or that field isn't on the form.
+
+When table **A** has a lookup field to table **B**, creating a record **A** from record **B** automatically sets lookup fields on it to **B**, even if those fields aren't on the form.
+
+For example:
+
+1. Account table has a lookup field, `primarycontactid`, to the contact table.
+1. User opens a contact form for **Robin Danielsen**.
+1. User opens the lookup field, `parentaccountid`, on the form and selects the button to create a new account.
+1. New account form opens, with the `primarycontactid` field automatically set to **Robin Danielsen**.
+
+If the `primarycontactid` field is [secured](/power-platform/admin/field-level-security) and the user doesn't have permissions to edit it, they'll get an error when they try to save the new account. They can clear the field before saving it. However, if that field isn't on the form, they can't clear it. A workaround is to create the account from the account page instead of from a contact form.
 
 ## Some columns aren't displayed on the merge dialog
 

@@ -3,7 +3,7 @@ title: "deleteRecord (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the deleteRecord method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/12/2022
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -27,7 +27,7 @@ contributors:
 |`entityLogicalName`|String|Yes|The table logical name of the record you want to delete. For example: `account`.|
 |`id`|String|Yes|GUID of the table record you want to delete.|
 |`successCallback`|Function|No|A function to call when a record is deleted. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 ## Return Value
 

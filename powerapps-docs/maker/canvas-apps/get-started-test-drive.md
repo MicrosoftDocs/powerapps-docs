@@ -3,7 +3,7 @@ title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
@@ -45,8 +45,6 @@ Creating a canvas app using templates in Power Apps is a streamlined and efficie
 1. On the home screen, select the **Start from template** tile.
 
 1. Select a template from the list of **other app templates**.
-
-
 
 1. Update the **App name**, then select **Next**.
 

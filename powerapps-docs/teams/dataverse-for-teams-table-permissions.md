@@ -2,9 +2,8 @@
 title: Granting permission to tables in Dataverse for Microsoft Teams | Microsoft Docs
 description: Learn about managing table permissions in Dataverse for Teams while building apps.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/19/2021
 ms.author: saperlmu
 ms.reviewer: mkaur-msft

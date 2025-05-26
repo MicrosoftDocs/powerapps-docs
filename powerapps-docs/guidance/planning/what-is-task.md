@@ -3,7 +3,7 @@ title: Documenting the tasks in a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document all the tasks needed to perform the business process from start to finish.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 10/12/2021
 ms.subservice: guidance

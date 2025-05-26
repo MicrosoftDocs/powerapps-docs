@@ -187,6 +187,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |16|**Knowledge Source**|
 |17|**External Trigger**|
 |18|**Copilot Settings**|
+|19|**Test Case**|
 
 ### <a name="BKMK_Content"></a> Content
 
@@ -343,6 +344,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1081|**Hindi**|
 |2052|**Chinese (Simplified)**|
 |2057|**English (United Kingdom)**|
+|2070|**Portuguese (Portugal)**|
 |3081|**English (Australia)**|
 |3084|**French (Canada)**|
 |21514|**Spanish (United States)**|

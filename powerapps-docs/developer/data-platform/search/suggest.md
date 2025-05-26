@@ -4,8 +4,8 @@ description: "Use Dataverse search suggest to provide suggestions as users enter
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: seanwat-msft
+ms.author: seanwat
 search.audienceType: 
   - developer
 search.app: 
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - jeromeblouinms
 ---
 # Dataverse Search suggest
 

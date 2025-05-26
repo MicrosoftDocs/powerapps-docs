@@ -2,7 +2,7 @@
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about how to use the wrap wizard to package canvas apps into a native mobile app package.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 02/04/2025
@@ -14,7 +14,7 @@ contributors:
   - mkaur
 ---
 
-# Wrap wizard: your step-by-step guide to building your native mobile apps package
+# Wrap wizard: your step-by-step guide to build your native mobile apps package
 
 Use this step-by-step Wrap wizard guide to convert one or more canvas apps into a single custom-branded app package that can be deployed on Google Play and the iOS App Store.
 
@@ -77,12 +77,12 @@ Enter the Azure blob storage access key in **Secret value** field.
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
-   - [Manual code sign for iOS](code-sign-ios.md)
-   - [Manual code sign for Android](code-sign-android.md) 
+   - [Code sign for iOS](code-sign-ios.md)
+   - [Code sign for Android](code-sign-android.md) 
    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 > [!NOTE]
-> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform. If you sign in through the manual process, you don't need to create an Azure key vault.
+> Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform.
 
 6.  Select **Next**.
 
@@ -121,7 +121,8 @@ Once you complete the preceding steps the registration screen look like the foll
 
 #### API permissions
 
-When you register the app, Azure admin also needs to grant access to API permissions for the app. Refer to the following screenshot for instructions on granting access and the reasons why API permissions are required.
+When you register the app, the Azure admin grants API permissions for the app. 
+More information about granting access and the reasons why API permissions are required: [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
 
  :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
@@ -167,9 +168,14 @@ After a successful build, you'll see your mobile app in the **azure blob storage
 
 :::image type="content" source="media/how-to-v2/view-build.png" alt-text="Screenshot that shows how to view builds." lightbox="media/how-to-v2/view-build.png":::
 
+> [!NOTE]
+> To manually code sign an iOS app, unzip the IPA file created using a Mac device only.
+
 ## Test and distribute mobile app package
 
 Test and distribute your application. If you face any issue while testing, [check troubleshoot page.](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
+
+> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
 
   
 ## Register your app on Azure portal manually (optional)

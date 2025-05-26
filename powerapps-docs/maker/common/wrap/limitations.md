@@ -50,6 +50,12 @@ Wrap offers several benefits, effectively addressing challenges like increasing 
 
 1. **Sovereign cloud**: Wrap is currently not supported in the sovereign cloud.
 
+1. **Full Image View**: Offline-enabled Wrap apps support viewing images as thumbnails but don't currently support viewing images in full view. 
+
+1. **VPN**: If you're connected to VPN, the wrap wizard currently doesn't support creating a wrapped app. We're working on alternatives and will update you shortly. 
+
+1. **Intune**: If you use Intune to download the IPA, the wrapped application currently doesn't work. We're fixing the bug and will release the update soon.
+
 ### See also
 
 - [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)

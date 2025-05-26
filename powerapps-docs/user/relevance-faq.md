@@ -3,8 +3,8 @@ title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 03/13/2025
+ms.topic: faq
+ms.date: 05/06/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -24,7 +24,7 @@ contributors:
 
 ## What is the scope of content searched by Dataverse search?
 
-Your administrator defines the scope of content that's searched. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
+Any file or Dataverse knowledge added to Agents or model-driven apps defines the scope of content that's searched.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
@@ -36,7 +36,6 @@ The **Find Columns** on a **Quick Find View** define the searchable fields in th
 
 If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if it has been removed you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
-
 ## Can I configure quick actions to show or hide certain commands?
 Yes, you can with version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. They can be configured using ribbon rules
 For more information on how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
@@ -47,23 +46,7 @@ Suggestions are quick results based on a search performed on the primary column 
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results.
 
-## Why are certain fields not showing in the suggestions?
-
-Retrieve suggestions for a field if it's searchable and its analyzer is set to either the default standard lucene analyzer or a language-specific analyzer. More information: [Inline suggestions](relevance-search.md#inline-suggestions)
-
-Certain fields aren't eligible for suggestions, including:
-
-- File fields
-- Fields exceeding 4,000 characters
-
-The following tables and attributes have custom analyzers set by default, making them ineligible for inline suggestions:
-
-- Contact: firstname, lastname
-- Lead: firstname, lastname, companyname
-- All fields formatted as phone numbers
-
-
-## Can I configure the order of tables appearing in search results page?
+## Can I configure the order of tables appearing in the search results page?
 
 The order of tables in the **Top results** tab and in the horizontal list of tabs is based on the ranking and relevance of search results for that search term. You can make results from a particular table appear at the top by including the table name in the search term. For example, searching for **account fabrikam** would, in most cases, rank result records that have the term **fabrikam** of type **account** higher than result records that have the term **fabrikam** of type other than **account**.
 
@@ -86,6 +69,10 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 ## Why does searching on the OwnerID attribute not work when search is enabled on it?
 
 Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
+
+## Why doesn't search on the RegardingObjectId attribute work when search is enabled on it?
+
+Search isn't supported on polymorphic lookup attributes. The RegardingObjectId attribute in activity tables like email and task is a polymorphic lookup attribute.
 
 ## How is the Dataverse search API throttled?
 
@@ -125,17 +112,12 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - State
 - Status
 
-## Why can't I see search results for virtual tables?
-
-Search functionality isn't supported for virtual tables because they don't persist data. More information: [Virtual Table limitations](../developer/data-platform/virtual-entities/get-started-ve.md)
-
-## Can I export search results?
-
-Currently, we don't have an export function for global search results. Alternatively, you can programmatically access the results using the search API.
-
 ## How can I use the search API?
 
 [Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
+
+## Does Dataverse search support US Government clouds?
+Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It's available in US Government Community Cloud (GCC), US GCC High and Department of Defense (DoD).
 
 ### See also
 
@@ -144,4 +126,3 @@ Currently, we don't have an export function for global search results. Alternati
 [Configure facets and filters](facets-and-filters.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

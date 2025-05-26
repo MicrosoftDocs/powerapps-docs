@@ -1,8 +1,8 @@
 ---
 title: "Configure a row summary for a model-driven app main form"
 description: "Learn how to configure a row summary for a model-driven app main form that uses AI to let your users view key information on a form."
-ms.date: 11/25/2024
-ms.subservice: mda-maker
+ms.date: 05/23/2025
+ms.subservice: dataverse-maker
 ms.topic: how-to
 author: Mattp123
 ms.author: damialajogun
@@ -37,7 +37,9 @@ To enable and use this feature, the following criterion is required:
 Row summaries can be configured for table main forms. 
 
 > [!NOTE]
-> When you configure the row summary, it applies to all main forms for the table.
+>
+> - When you configure the row summary, it applies to all main forms for the table.
+> - The case table, which is available with some Dynamics 365 apps like Dynamics 365 Customer Service, doesn't support the row summary feature. This is to prevent conflicts with the [manage case and custom record summary](/en-us/dynamics365/customer-service/administer/copilot-map-custom-fields) feature.
 
 1. Sign in to Power Apps (make.powerapps.com) select **Tables** on the left navigation pane, and then open the table where you want to configure a row summary. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Under **Customizations**, select **Row summary**.

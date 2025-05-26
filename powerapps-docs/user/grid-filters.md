@@ -3,7 +3,7 @@ title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
 author: fikaradz 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/28/2024
 ms.subservice: end-user
 ms.author: fikaradz
@@ -192,7 +192,7 @@ When configured, the dropdown column headers surface a **Group by** option. This
 
 > [!NOTE]
 > Grouping criteria isn't saved to a view.
-> Grouping is not supported when paging on the grid is allowed.
+> Grouping is not supported on nested grids or when paging on the grid is allowed.
 
 ### Aggregation
 

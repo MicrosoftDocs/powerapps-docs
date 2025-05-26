@@ -4,7 +4,7 @@ description: "Members of classes that implement IPlugin are exposed to potential
 suite: powerapps
 author: jowells
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 ms.date: 9/05/2019
 ms.subservice: dataverse-developer
 ms.author: jowells

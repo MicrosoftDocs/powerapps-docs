@@ -2,7 +2,7 @@
 title: Monitor your canvas apps performance (preview)
 description: Get valuable insights and recommendations for your canvas app using Monitor.
 author: dalajogun
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 11/18/2024

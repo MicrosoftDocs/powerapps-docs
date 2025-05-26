@@ -2,9 +2,10 @@
 title: Set a data retention policy for a table
 description: Explains how to set a data retention policy for a Microsoft Dataverse table. 
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to 
 ms.date: 05/10/2024
 ms.custom: template-how-to

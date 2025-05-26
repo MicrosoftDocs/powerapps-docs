@@ -4,7 +4,7 @@ description: How to sse Power Automate to automate processes
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 5/22/2019
 ms.subservice: end-user
 ms.author: smurkute

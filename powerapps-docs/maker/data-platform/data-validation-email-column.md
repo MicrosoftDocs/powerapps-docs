@@ -4,11 +4,15 @@ description: Explains address validation for email columns with Microsoft Datave
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 08/22/2024
+ms.date: 05/20/2025
 ms.custom: template-how-to
 ---
 # Email address validation for email columns (preview)
+
+> [!IMPORTANT]
+> This feature is deprioritized and will not be delivered.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -20,7 +24,7 @@ Traditionally, the existing email column type had only basic email validation. W
 >
 > - This is a preview feature.
 > - During preview, these regions will have email address validation feature available: Asia (East, Southeast), Australia (East, Southeast), Canada (Central, East), Europe (North, West), France (Central, South), India (Central, South), Japan (East, West), South America – Brazil (South), Switzerland (North, West), UAE (North), UK (South, West), US (East, West).
-> - Smart email validation currently only works for model-driven apps.
+> - Smart email validation only works for model-driven apps.
 > - Smart email validation shows validation issues but won't block users from saving their record.
 
 Email address validation detects the following issues:
@@ -58,7 +62,7 @@ Notice that the notification message **The domain is unknown** appears under the
 - The **Enable Smart Email Address Validation Control** app setting can be enabled even though the **Data Validation** Power Platform admin center environment setting is off. In this situation, email address validation won't work.
 - When the form containing the control is set to read-only mode, the email column still allows editing of the value.
 - The email column doesn't import values when using a quick create form. For example, when you create a new parent contact record from a lead record.
-
+- While using the setValue() method the value being defined for the control doesn't render in the app.
 ## Next steps
 
 [Create and edit columns in Dataverse using Power Apps](create-edit-field-portal.md)

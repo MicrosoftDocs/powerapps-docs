@@ -2,7 +2,7 @@
 title: Code sign for Android
 description: Learn how to code sign for Android for Power Apps wrap.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 03/12/2025
@@ -26,7 +26,7 @@ In this article, you'll learn about how to manually code sign for Android (APK).
 You need the following information to get started:
 
 - Set up [Android Studio](https://developer.android.com/studio)
-- Set up [OpenSSL](https://www.openssl.org/)
+- Set up [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
 - Set up [apksigner tool](https://developer.android.com/studio/command-line/apksigner)
 
 ## Prerequisites
@@ -41,7 +41,19 @@ You need the following information to get started:
 
 We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
-To generate a key, open a command prompt and run the following command:
+If you don't have environment variables, open a command prompt and run the following command to generate a key:
+
+1. Download Android Studio, openssl
+2. Add keytool and openssl as environment variable. Add C:\Program Files\Android\Android Studio\jbr\bin as env variable. Add path of openssl.exe in environment variable (C:\Program Files\OpenSSL-Win64\bin)
+3. Run this command---keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
+Generate Keys
+4. Run this command in cmd - keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
+Generate Signature Hash
+
+:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown above." lightbox="media/code-sign-android/codeSignIn3.png":::
+
+
+If you have environment variables, open a command prompt and run the following command to generate a key:
 
 `keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000`
 
@@ -56,19 +68,15 @@ Parameters:
 - **validity** - validity of the key in number of days.
 
 Example:
-
-
-
 - If preparing Key Vault, PATH_TO_KEYSTORE should have .pfx extension.
 
   `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
 
 - If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
 
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.jks -keysize 2048 -validity 10000`
 
-
-:::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
+:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the above example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
 ## Generate signature hash
 
@@ -105,10 +113,10 @@ When this error appears, try to generate the signature hash using the following 
 
 ## Manual sign the APK package
 
-To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
-
 > [!Note]
-> These steps are required if you haven't wrapped the app using automatic sign-in. To avoid repeating this step, we recommend using automatic sign-in.
+> These steps are required if you haven't wrapped the app using automatic sign-in or are trying to upload an AAB file for Play Store. To avoid repeating this step, we recommend using automatic sign-in.
+
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
@@ -118,6 +126,8 @@ To sign the APK package, we'll use the [apksigner tool](https://developer.androi
     If using iOS, check the apksigner file from the **buildTools Version** directory:
 
     Go to **SDK** directory > **build-tools** > **buildToolsVersion** > **lib**, and check the **apksigner.jar** file 
+
+:::image type="content" source="media/code-sign-android/codeSignIn2.png" alt-text="A screenshot with apksigner location information." lightbox="media/code-sign-android/codeSignIn2.png":::
 
 ### Use the apksigner file
 

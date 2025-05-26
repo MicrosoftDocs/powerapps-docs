@@ -3,8 +3,8 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 1/15/2024
-ms.topic: conceptual
+ms.date: 4/16/2025
+ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.collection:

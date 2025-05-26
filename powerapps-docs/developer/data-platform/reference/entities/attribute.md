@@ -311,6 +311,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [attribute_dvfilesearchattribute](#BKMK_attribute_dvfilesearchattribute)
 - [attribute_dvtablesearchattribute](#BKMK_attribute_dvtablesearchattribute)
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
+- [emailaddressconfiguration_attribute_AttributeId](#BKMK_emailaddressconfiguration_attribute_AttributeId)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 
@@ -349,6 +350,18 @@ Many-To-One Relationship: [solutioncomponentattributeconfiguration attribute_sol
 |ReferencedEntityNavigationPropertyName|`attribute_solutioncomponentattrconfig`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_emailaddressconfiguration_attribute_AttributeId"></a> emailaddressconfiguration_attribute_AttributeId
+
+Many-To-One Relationship: [emailaddressconfiguration emailaddressconfiguration_attribute_AttributeId](emailaddressconfiguration.md#BKMK_emailaddressconfiguration_attribute_AttributeId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailaddressconfiguration`|
+|ReferencingAttribute|`attributeid`|
+|ReferencedEntityNavigationPropertyName|`emailaddressconfiguration_attribute_AttributeId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_referencedattribute_relationshipattribute"></a> referencedattribute_relationshipattribute
 

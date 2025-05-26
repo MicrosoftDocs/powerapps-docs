@@ -376,6 +376,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
+- [generalizationlogs](#BKMK_generalizationlogs)
+- [generalizationlogs_Name](#BKMK_generalizationlogs_Name)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
@@ -467,6 +469,36 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_generalizationlogs"></a> generalizationlogs
+
+|Property|Value|
+|---|---|
+|Description|**File containing logs of image generalization process to help debug provisioning errors.**|
+|DisplayName|**Generalization logs**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`generalizationlogs`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|32768|
+
+### <a name="BKMK_generalizationlogs_Name"></a> generalizationlogs_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`generalizationlogs_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
@@ -587,7 +619,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -660,6 +692,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
+- [FileAttachment_flowmachineimageversion_generalizationlogs](#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
 - [flowmachineimage_flowmachineimageversion](#BKMK_flowmachineimage_flowmachineimageversion)
 - [flowmachineimageversion_flowmachine](#BKMK_flowmachineimageversion_flowmachine)
 - [lk_flowmachineimageversion_createdby](#BKMK_lk_flowmachineimageversion_createdby)
@@ -682,6 +715,19 @@ One-To-Many Relationship: [businessunit business_unit_flowmachineimageversion](b
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_FileAttachment_flowmachineimageversion_generalizationlogs"></a> FileAttachment_flowmachineimageversion_generalizationlogs
+
+One-To-Many Relationship: [fileattachment FileAttachment_flowmachineimageversion_generalizationlogs](fileattachment.md#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`generalizationlogs`|
+|ReferencingEntityNavigationPropertyName|`generalizationlogs`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_flowmachineimage_flowmachineimageversion"></a> flowmachineimage_flowmachineimageversion
 
@@ -810,6 +856,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowmachineimageversion_BulkDeleteFailures](#BKMK_flowmachineimageversion_BulkDeleteFailures)
 - [flowmachineimageversion_DuplicateBaseRecord](#BKMK_flowmachineimageversion_DuplicateBaseRecord)
 - [flowmachineimageversion_DuplicateMatchingRecord](#BKMK_flowmachineimageversion_DuplicateMatchingRecord)
+- [flowmachineimageversion_FileAttachments](#BKMK_flowmachineimageversion_FileAttachments)
 - [flowmachineimageversion_MailboxTrackingFolders](#BKMK_flowmachineimageversion_MailboxTrackingFolders)
 - [flowmachineimageversion_PrincipalObjectAttributeAccesses](#BKMK_flowmachineimageversion_PrincipalObjectAttributeAccesses)
 - [flowmachineimageversion_ProcessSession](#BKMK_flowmachineimageversion_ProcessSession)
@@ -872,6 +919,18 @@ Many-To-One Relationship: [duplicaterecord flowmachineimageversion_DuplicateMatc
 |ReferencingEntity|`duplicaterecord`|
 |ReferencingAttribute|`duplicaterecordid`|
 |ReferencedEntityNavigationPropertyName|`flowmachineimageversion_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_flowmachineimageversion_FileAttachments"></a> flowmachineimageversion_FileAttachments
+
+Many-To-One Relationship: [fileattachment flowmachineimageversion_FileAttachments](fileattachment.md#BKMK_flowmachineimageversion_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`flowmachineimageversion_FileAttachments`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 

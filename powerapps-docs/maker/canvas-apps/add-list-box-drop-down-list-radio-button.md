@@ -3,7 +3,7 @@ title: Add a list box, a drop-down list, or radio buttons to a canvas app | Micr
 description: In Power Apps, create or configure multi-select options in a canvas app
 author: chmoncay
 ms.author: chmoncay
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/24/2022

@@ -3,13 +3,13 @@ title: Copilot in Power Apps overview (preview)
 description: Learn how Copilot in Microsoft Power Apps makes it easy to build apps by providing insights and actions in response to natural language requests.
 author: mduelae
 ms.author: tapanm
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
   - canvas
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 01/24/2025
+  - ai-seo-date: 4/16/2025
 ai-usage: ai-assisted
 ms.reviewer: 
 ms.date: 12/20/2024
