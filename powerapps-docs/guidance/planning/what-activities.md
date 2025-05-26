@@ -3,7 +3,7 @@ title: Document the activities in a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document the activities  currently performed in each step of the business process you want to automate.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 10/12/2021
 ms.subservice: guidance

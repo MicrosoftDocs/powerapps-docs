@@ -3,7 +3,7 @@ title: Introduction to Planning a Power Apps project | Microsoft Docs
 description: In these articles, regardless of your background or experience level, you'll learn about the steps to convert your ideas into a working solution by using Power Apps.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: guidance
 ms.date: 08/10/2020
 ms.subservice: guidance

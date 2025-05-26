@@ -4,7 +4,7 @@ description: Learn about how to get a session ID or a canvas-app ID for troubles
 author: mduelae
 
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 11/09/2021

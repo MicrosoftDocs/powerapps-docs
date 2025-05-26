@@ -3,7 +3,7 @@ title: Build an app in Teams using Power Apps and Dataverse for Teams to retriev
 description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
 author: msftsamperl
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams

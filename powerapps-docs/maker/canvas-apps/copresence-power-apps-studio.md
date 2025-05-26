@@ -4,7 +4,7 @@ description: Learn how to use copresence and coauthoring to view who's working o
 author: mkaur
 ms.author: szlo
 ms.date: 10/29/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 search.audienceType: 
@@ -82,7 +82,7 @@ To use coauthoring, you need to turn it on for each app. If you turn on coauthor
 
 - The maximum number of coauthors is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any other coauthors or tabs beyond 10 are in [copresence](#use-copresence-to-view-whos-working-on-the-same-app) and can't edit the app or view real-time updates.
 
-- The app language is locked to the locale of the first maker who opens the app for editing.
+- The app language is locked to the locale of the first maker who opens the app for editing. Opening the same app in a different locale may lead to errors in formulas.
 
 - Cut isn't available.
 

@@ -3,7 +3,7 @@ title: Power Apps preview program
 description: Get early access to features with Power Apps Preview Program.
 author: shwetamurkute
 ms.subservice: common
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
   - canvas
 ms.date: 05/14/2024

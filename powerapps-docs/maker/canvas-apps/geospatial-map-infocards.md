@@ -3,7 +3,7 @@ title: Display information about map pins
 description: Add cards that display information about pinned locations in your canvas apps.
 author: anuitz
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022

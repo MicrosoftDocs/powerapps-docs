@@ -3,7 +3,7 @@ title: "Insert email template while composing an email in model-driven apps | Mi
 description: "Insert a preformatted email message while composing an email."
 author: sbmjais
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 04/05/2023
 ms.subservice: end-user
 ms.author: shjais

@@ -6,7 +6,7 @@ ms.author: srihas
 ms.date: 01/27/2023
 ms.reviewer: jdaly
 ms.subservice: mda-developer
-ms.topic: "article"
+ms.topic: concept-article
 search.audienceType: 
   - maker
   - developer

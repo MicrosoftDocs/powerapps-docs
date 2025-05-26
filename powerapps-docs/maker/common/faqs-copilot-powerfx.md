@@ -4,7 +4,7 @@ description: FAQ that discusses Copilot and Power Fx
 ms.date: 7/15/2024
 ms.custom:
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: jorisde
 ms.author: jorisde
 ms.reviewer: mduelae

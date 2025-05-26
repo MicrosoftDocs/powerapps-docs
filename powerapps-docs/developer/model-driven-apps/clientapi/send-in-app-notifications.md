@@ -5,7 +5,7 @@ ms.date: 06/23/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
-ms.topic: article
+ms.topic: how-to
 author: sriharibs-msft
 ms.author: srihas
 search.audienceType: 

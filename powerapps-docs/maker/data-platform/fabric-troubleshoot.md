@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/15/2025
+ms.date: 05/13/2025
 ms.custom: template-how-to
 ---
 # Troubleshooting common issues with link to Fabric
@@ -28,7 +28,7 @@ If you experience an error message when using link to Fabric with Microsoft Data
 | Error message "A back end error occurred. The Fabric to Dataverse connection ID ... is not valid for this user. Please check that you have access to this connection, and that the connection is connected to this organization, with URL ... You can try again, if this issue persists please contact support. | This error message indicates that the user selecting the **Refresh Fabric tables** option in the Azure Synapse Link page doesn't have the required permissions. This error might be shown even when the user has access to the tables in Dataverse and is a system administrator. <br> The link to Fabric wizard in Power Apps creates a data connection at the time of creating the link to Fabric. This data connection uses credentials of the user, it's possible that: <br> - The password of the user who created the connection has changed or has expired. <br> - The user account of the user who created the Fabric link is inactive. <br> - The user performing the **Refresh Fabric tables** option doesn't have access to the data connection. More information: [Share the data connection with other users](fabric-link-to-data-platform.md#share-the-data-connection-with-other-users) |
 |All tables from Dataverse show as **Unidentified** in Fabric Lakehouse. | You might see this error message while your data is being initialized for the first time. If this issue persists for more than several hours, go to **Synapse Link** in Power Apps (make.powerapps.com), choose the Microsoft OneLake or the Azure Synapse Link profile and select **Refresh Fabric Links**. This refreshes the table metadata in Fabric Lakehouse. | 
 | Tables from Dynamics 365 finance and operations apps are missing. | System auto selects nonsystem tables with **Change tracking** property set to **Yes** when creating a Fabric Link. To select more tables, open **Microsoft OneLake** profile in **Synapse Link** and select **Manage Tables**. If you have a finance and operations environment linked to this Power Platform environment, you can also select tables from finance and operations apps. Finance and operations apps tables aren't autoselected with Fabric Link. <br> More information: [Add Finance and Operations tables](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#add-finance-and-operations-tables-in-azure-synapse-link) |
-| There are {.. #tables} tables enabled for change tracking in your environment. Addition of more than one thousand tables isn't supported. | Fabric link feature currently can't be enabled on environments with more than 1,000 change tracking enabled tables. <br> As a workaround, select **Synapse Link** in Power Apps (make.powerapps.com) and create multiple profiles with less than 1,000 tables each. |
+| There are {.. #tables} tables enabled for change tracking in your environment. Addition of more than 2,000 tables isn't supported. | Fabric link feature currently can't be enabled on environments with more than 2,000 change tracking enabled tables. <br> If your environment contains more that 2,000 active Dataverse tables or you want to enable more than 2,000 tables in a link to Fabric, you can [contact support](/power-platform/admin/get-help-support). |
 
 ## See also
 

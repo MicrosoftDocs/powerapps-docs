@@ -4,7 +4,7 @@ description: "Learn how to access Microsoft Dataverse data in a single tenant fr
 ms.custom: ""
 ms.date: 04/06/2023
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: how-to
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only

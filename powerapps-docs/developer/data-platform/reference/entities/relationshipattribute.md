@@ -145,6 +145,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
+- [versionnumber](#BKMK_versionnumber)
 
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
@@ -250,6 +251,20 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_versionnumber"></a> versionnumber
+
+|Property|Value|
+|---|---|
+|Description|**Version number of Image descriptor.**|
+|DisplayName|**Version Number**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`versionnumber`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ## Many-to-One relationships
 

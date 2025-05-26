@@ -5,7 +5,7 @@ author: jasongre
 ms.author: jasongre
 ms.date: 03/13/2025
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

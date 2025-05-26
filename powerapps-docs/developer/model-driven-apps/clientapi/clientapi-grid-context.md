@@ -5,7 +5,7 @@ author: clromano
 ms.author: clromano
 ms.date: 08/15/2024
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

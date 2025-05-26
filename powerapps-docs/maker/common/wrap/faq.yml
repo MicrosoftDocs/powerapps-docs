@@ -179,6 +179,16 @@ sections:
         answer: |
           - Connect with your azure tenant admin to create a key vault for you or ask to share the permission with you.
 
+      - question: | 
+          How can Entra B2B guest users access the wrapped apps? 
+        answer: |
+          - To let guest users to access the app, follow these steps:
+            1. Add users from outside the home tenant as guests in Azure. More information: [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal#invite-an-external-guest-user).
+            2. Include these guests in the Azure Conditional Access process. Share the app with these guest IDs in Power Apps. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md).
+            3. Replace the app ID and the user account in the following link: `ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantID>`
+            4. Share the link with your client.
+            5. Install the APK on Android and the IPA on iOS.
+            6. Open the weblink and enter the external ids to sign in.
 
       - question: |
           See also

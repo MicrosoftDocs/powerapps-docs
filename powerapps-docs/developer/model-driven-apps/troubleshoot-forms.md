@@ -6,7 +6,7 @@ ms.author: mijosh
 ms.date: 04/02/2025
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
-ms.topic: article
+ms.topic: troubleshooting-general
 search.audienceType: 
   - developer
 contributors: 

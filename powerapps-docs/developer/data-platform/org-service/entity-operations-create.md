@@ -3,7 +3,7 @@ title: "Create table rows using the SDK for .NET"
 description: "Learn how to create table rows using the SDK for .NET."
 ms.date: 12/16/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.author: sriknair
 search.audienceType: 

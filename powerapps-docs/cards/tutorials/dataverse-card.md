@@ -3,7 +3,7 @@ title: Create a card with data from Dataverse
 description: Learn how to use Dataverse connectors in a card.
 keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
 ms.reviewer: 
