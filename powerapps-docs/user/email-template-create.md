@@ -5,7 +5,7 @@ author: paulliew
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 05/21/2025
+ms.date: 05/26/2025
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -87,7 +87,7 @@ You can use the email template editor to to create a new email template or edit 
 - **Attachments** tab: Add attachments to your template if needed.
 
   > [!NOTE]
-  > Any existing templates created using the enhanced email template editor will now open in the modern rich text editor. If you any see any formatting issues, we recommend that you update or recreate the template using the modern rich text editor.
+  > Any existing templates created using the enhanced email template editor will open in the modern rich text editor. If you face formatting issues, we recommend that you update or recreate the template using the modern rich text editor.
 
 ### See also
 
