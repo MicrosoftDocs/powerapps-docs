@@ -20,9 +20,9 @@ contributors:
 # What are canvas apps?
 
 
-Canvas apps in Power Apps let you create business apps without coding. Power Apps provides a blank canvas where you can drag and drop components to design a user interface in any layout you prefer. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so users can run it in a browser or on a mobile device, and embed your app so they can run it in SharePoint, Power BI, or Teams.
+Canvas apps in Power Apps let you build business apps without coding. Power Apps gives you a blank canvas where you drag components to design a user interface in any layout you want. Use Excel-like expressions to specify logic and work with data. Build apps that use business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so users run it in a browser or on a mobile device, and embed your app so they run it in SharePoint, Power BI, or Teams.
 
-You can also create apps with Copilot in Power Apps by describing what you want the app to do using natural language, and AI handles the rest.
+Create apps with Copilot in Power Apps by describing what you want the app to do in natural language, and AI handles the rest.
 
 
 ## Build an app
@@ -43,26 +43,31 @@ You can also automatically generate an app from one of these sources:
 
 For more information on where makers can create apps, see [Get started with Power Apps](intro-maker-portal.md).
 
-After generating an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
+After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 
-After gaining some experience generating an app automatically and customizing it, you can create an app from scratch based on [Dataverse](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), or another data source. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
+After you generate and customize an app automatically, create an app from scratch based on [Dataverse](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), or another data source. By working from the ground up, you get flexibility in app design, flow, and controls, and you can use a larger variety of data sources.
 
-If you're new to Power Apps and want to learn how to convert your ideas into a fully working solution, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
+If you're new to Power Apps and want to turn your ideas into a working solution, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
+
+> [!NOTE]
+> - If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+> - If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 
 ## Share and run an app
-When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.
+When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app, and whether they can also customize and share it with more people in the organization.
 
-Run your own apps (and any apps shared with you) on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/mobile/run-powerapps-on-mobile).
+Run your own apps, and any apps shared with you, on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/mobile/run-powerapps-on-mobile).
 
 ## Learn more
-- Ready to convert your ideas into an app? Start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
-- Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
-- Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to help you leverage the features and functions of Power Apps.
+- Want to turn your ideas into an app? Start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
+- Explore step-by-step, conceptual, and reference articles in the navigation pane on the left.
+- Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to learn how to use Power Apps features and functions.
+
 
 ## Share your experience
-* Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question for others to answer. Before you post a question, search the community to see whether your question has already been answered.
-* Submit an idea for how we can improve Power Apps in [Power Apps Ideas Forum](https://ideas.powerapps.com/).
-* If you're a Power Apps administrator for your organization, you can open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
+* Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question for others to answer. Before you post a question, search the community to see if your question is already answered.
+* Submit an idea to improve Power Apps in the [Power Apps Ideas Forum](https://ideas.powerapps.com/).
+* If you're a Power Apps admin for your organization, open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
 
 
 
