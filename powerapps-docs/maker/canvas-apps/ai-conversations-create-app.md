@@ -44,13 +44,15 @@ To show you how Copilot works, let's create an app to track housekeeping tasks f
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
+1. On the left navigatoin pane, select **Create** > **Start with Copilot**.
+
 1. Type your prompt in the text box such as the example prompt shown below.
 
     ```copilot-prompt
     Hotel housekeeping
     ```
-   :::image type="content" source="media/artificial-intelligence/create-app-using-ai-1.png" alt-text="Screenshot of the Power Apps home page, with the Copilot input text box highlighted." lightbox="media/artificial-intelligence/create-app-using-ai-1.png":::
-
+1. Select table options, like multiple tables or one table, then seelct **Generate**.
+ 
 Copilot creates one or more Dataverse tables with data that includes typical hotel housekeeping tasks.
 
 > [!IMPORTANT]
@@ -68,7 +70,7 @@ Copilot shows you the tables and relationships that it generated based on your d
 
 Legend:
 
-1. **Edit**: Edit or create more tables in your canvas. Learn more in [Create and edit tables](../data-platform/create-edit-entities-portal.md).
+1. **Edit**: Edit or create more tables. Learn more in [Create and edit tables](../data-platform/create-edit-entities-portal.md).
 
 1. **Copilot text box**: [Ask Copilot to modify the table](#use-copilot-to-make-changes) or create more tables for you.
 
