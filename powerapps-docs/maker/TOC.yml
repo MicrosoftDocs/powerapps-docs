@@ -1793,7 +1793,7 @@
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Add agents to your app
+      - name: Add agents to your app (preview)
         href: ./model-driven-apps/add-agents-to-app.md  
       - name: Customize Copilot chat (preview)
         href:
