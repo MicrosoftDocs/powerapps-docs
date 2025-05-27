@@ -46,9 +46,8 @@ Autonomous agents can be added to model-driven apps to assist users with task co
 1. In the **In your environment** dropdown, locate the agent you want to add.
 1. Select **...** (more options) next to the agent, and then select **Add to app**.
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
-1. To view or edit the agent in Copilot Studio, select **View in Microsoft Copilot Studio**.
-<!--The screenshot below seems out of place. You've called out the properties but the step mentions the "View in Microsoft Copilot Studio." The UI has "Edit in Microsoft Copilot Studio." If the "Edit" UI is what you want then that should be framed with the red box.-->
-:::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
+1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
+   :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
 
 > [!IMPORTANT]
 > Use the **Create agent** button to open Copilot Studio for agent creation. Note that even if the agent is created through a link inside the app designer, the maker must ensure it meets all requirements to be added to the app.
@@ -85,7 +84,7 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 
    A new browser tab for **Copilot Studio** is opened with the new agent.
    > [!NOTE]
-   > Pop-ups need to be enabled in your web browser to allow editing the created agent.<!--Do you mean web browser pop-ups here? -->
+   > Pop-ups need to be enabled in your web browser to allow editing the created agent.
 1. Select refresh in pane header after popup to show the created agent.
    > :::image type="content" source="media/add-agents-to-app/app-designer-interactive-agent-created.png" alt-text="Interactive agent with created agent":::
 1. Switch to the **Copilot Studio** browser tab to add topics, knowledge, and so on, to the agent.
