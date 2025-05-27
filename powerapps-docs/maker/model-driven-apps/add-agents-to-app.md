@@ -76,7 +76,7 @@ The interactive agent makes a model-driven app more intelligent and relevant for
 
 When an interactive agent is created, it's named as **Copilot in Power Apps - \<app name\>**. The created agent is associated with the app when saved and published.
 
-1. Open the **Agents** pane.
+1. In the app designer, select the **Agents** pane.
 1. Expand **In your app** > **AI capabilities**.
 1. On **Interactive agent**, select **...** > **Configure**.
 1. Select **Configure in Copilot Studio** to create the agent.
