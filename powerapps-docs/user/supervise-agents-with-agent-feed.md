@@ -2,15 +2,15 @@
 title: "Supervise agents in model-driven apps with agent feed" 
 description: Learn how to supervise agents with agent feed in your model-driven app.
 ms.date: 05/22/2025
-ms.reviewer: ""
-ms.topic: ""
+ms.reviewer: "smurkute"
+ms.topic: "overview"
 author: "jacobwilkinson"
-ms.subservice: 
-ms.author: ""
+ms.subservice: end-user
+ms.author: "jacwilkinson"
 contributors: 
 ms.service: "powerapps"
 search.audienceType: 
-  - 
+  - enduser
 ---
 # Supervise agents in model-driven apps with agent feed (preview)
 
@@ -61,6 +61,7 @@ Selecting an action opens a detailed view that includes:
 The activity map begins with the trigger that initiated the action and continues through each step taken by the agent. These steps may include tools, connectors, topics, or knowledge sources configured by the agent’s creator. This view is similar to the Activity view in Copilot Studio and provides a clear visualization of the agent’s logic and behavior. 
 
 You can filter the feed by agent or by status. Available status filters include: 
+
 |Filter|Description|
 |-----|------|
 |**Needs assistance**|The action failed, completed with errors, or is waiting for user input.|
@@ -90,4 +91,4 @@ For actions that use a Dataverse tool, users will be provided with a direct link
 ## Related information
 
 [Add agents to an app](/maker/model-driven-apps/add-agents-to-app.md)<br/>
-[Customize Copilot Chat](customize-copilot-chat.md)
+[Customize Copilot Chat](/maker/model-driven-apps/customize-copilot-chat.md)
