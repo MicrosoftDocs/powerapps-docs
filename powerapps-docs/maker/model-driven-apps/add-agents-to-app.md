@@ -80,7 +80,7 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 1. Expand **In your app** > **AI capabilities**.
 1. On **Interactive agent**, select **...** > **Configure**.
 1. Select **Configure in Copilot Studio** to create the agent.
-1. While the agent is being created **Setting up your app's copilot** is shown in the popup.
+1. While the agent is being created, **Setting up your app's copilot** is shown in the popup.
 
    A new browser tab for **Copilot Studio** is opened with the new agent.
    > [!NOTE]
