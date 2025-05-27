@@ -90,5 +90,5 @@ For actions that use a Dataverse tool, users will be provided with a direct link
 
 ## Related information
 
-[Add agents to an app](/maker/model-driven-apps/add-agents-to-app.md)<br/>
-[Customize Copilot Chat](/maker/model-driven-apps/customize-copilot-chat.md)
+[Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)<br/>
+[Customize Copilot Chat](../maker/model-driven-apps/customize-copilot-chat.md)
