@@ -97,9 +97,10 @@ You can take the these actions on activity in the feed:
 > All actions can be performed either from the main screen in the feed or from the details page of a specific action. 
 
 ## Navigation
+
 For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
 
-    :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+:::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
 
 ## Related information
 

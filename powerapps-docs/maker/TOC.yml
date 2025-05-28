@@ -52,7 +52,7 @@
     - name: Unified Interface
       href: ../user/unified-interface.md
     - name: Supervise agents using agent feed
-      href: ../user/supervise-agents.md
+      href: ../user/supervise-agents-with-agent-feed.md
     - name: Copilot features
       items:
       - name: Use form fill assistance
