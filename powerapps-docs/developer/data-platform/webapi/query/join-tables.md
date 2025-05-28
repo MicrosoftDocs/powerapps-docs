@@ -2,8 +2,8 @@
 title: Join tables using OData
 description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 10/30/2024
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 

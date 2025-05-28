@@ -2,8 +2,8 @@
 title: Page results using OData
 description: Learn how to use OData to page results when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 07/11/2024
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
