@@ -51,7 +51,7 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Supervise agents using agent feed
+    - name: Supervise agents using agent feed (preview)
       href: ../user/supervise-agents-with-agent-feed.md
     - name: Copilot features
       items:
