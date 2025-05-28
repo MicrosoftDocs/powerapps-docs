@@ -2,6 +2,7 @@
 title: Use OData to query data
 description: Learn to compose a query using OData with Microsoft Dataverse Web API
 ms.date: 07/11/2024
+ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly

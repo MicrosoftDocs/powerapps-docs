@@ -2,6 +2,7 @@
 title: Filter rows using OData
 description: Learn how to use OData to filter rows when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 05/28/2025
+ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
