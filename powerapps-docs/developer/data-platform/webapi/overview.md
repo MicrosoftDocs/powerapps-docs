@@ -30,7 +30,7 @@ The Web API allows you to do the same operations as the SDK for .NET but present
 
 ## Getting started
 
-You can use the Web API with any languages that allows you to sent authenticated HTTP requests. We prepared a few getting started experiences for four common scenarios:
+You can use the Web API with any language that allows you to send authenticated HTTP requests. We prepared a few getting started experiences for four common scenarios:
 
 ### HTTP request tools
 
