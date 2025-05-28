@@ -17,27 +17,27 @@ contributors:
 
 You can use the Web API or [SDK for .NET](../org-service/overview.md) to work with data, as well as table and column definitions in Dataverse.
 
-The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
+The Dataverse Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this OASIS standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
 
 
 Because the Web API is built on open standards, we don't provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [https://www.odata.org/libraries/](https://www.odata.org/libraries/).  
 
 ## Web API and the Organization service
 
-It is valuable to recognize that the organization service is what defines the platform. The Web API provides a RESTful programming experience but ultimately all data operations go through the underlying organization service. The organization service defines the supported operations as messages. Each message has a name. These names are bound to the events used in the event framework to evaluate what registered extensions should be initiated. More information: [Event Framework](../event-framework.md)
+It's valuable to recognize that the organization service is what defines the platform. The Web API provides a RESTful programming experience but ultimately all data operations go through the underlying organization service. The organization service defines the supported operations as messages. Each message has a name. These names are bound to the events used in the event framework to evaluate what registered extensions should be initiated. More information: [Event Framework](../event-framework.md)
 
-The Web API allows you to do the same operations as the SDK for .NET but presents them in an RESTful style. OData v4 provides for named operations via *functions* or *actions*. Most messages available in the organization service are exposed as a corresponding named function or action. Those messages that correspond to CRUD operations are not available in the Web API because as a RESTful service they have implementations using `GET`, `POST`, `PATCH`, and `DELETE` HTTP methods, but within the platform the *retrieve*, *create*, *update*, and *delete* messages are invoked just as they are when the corresponding operations are performed using the .NET Framework assemblies.
+The Web API allows you to do the same operations as the SDK for .NET but presents them in an RESTful style. OData v4 provides for named operations via *functions* or *actions*. Most messages available in the organization service are exposed as a corresponding named function or action. Those messages that correspond to CRUD operations aren't available in the Web API because as a RESTful service they have implementations using `GET`, `POST`, `PATCH`, and `DELETE` HTTP methods, but within the platform the *retrieve*, *create*, *update*, and *delete* messages are invoked in the same way the corresponding operations are performed using the SDK for .NET assemblies.
 
 ## Getting started
 
-You can use the Web API with any languages that allows you to sent authenticated HTTP requests. We have prepared a few getting started experiences for four common scenarios:
+You can use the Web API with any languages that allows you to sent authenticated HTTP requests. We prepared a few getting started experiences for four common scenarios:
 
-### HTTP Request tools
+### HTTP request tools
 
-An application that allows you to compose and send authenticated HTTP requests is an essential first step. There are many available, such as [Postman](https://www.postman.com/), [Bruno](https://www.usebruno.com/) or [curl](https://curl.se/). Choose and use whichever you like best. We provide some steps to use [Insomnia](https://insomnia.rest/) because it has a graphic user interface, a relatively easy installation, and provides an option to opt out of creating an account. [Learn how to use Insomnia with Dataverse Web API](insomnia.md)
+An application that allows you to compose and send authenticated HTTP requests is an essential first step. There are many available, such as [Postman](https://www.postman.com/), [Bruno](https://www.usebruno.com/), or [curl](https://curl.se/). Choose and use whichever you like best. We provide some steps to use [Insomnia](https://insomnia.rest/) because it has a graphic user interface, a relatively easy installation, and provides an option to opt out of creating an account. [Learn how to use Insomnia with Dataverse Web API](insomnia.md)
 
 > [!TIP]
-> You might find that using PowerShell with Visual Studio Code is easier to get started than using these HTTP request tools, and allows for powerful scripting capabilities as well.
+> Unless you already have a favorite HTTP request tool, you might find that using PowerShell with Visual Studio Code is as easy to get started and allows for powerful scripting capabilities as well.
 
 
 ### PowerShell developers
@@ -63,7 +63,7 @@ Finally, Power Pages exposes a [Portals Web API](/power-pages/configure/web-api-
 
 ### .NET developers
 
-.NET developers can use either the [Dataverse SDK for .NET](../org-service/overview.md) or the Web API. You may want to use the Web API when you don't want to take a dependency on a specific NuGet package or the requirements of your project don't require the strongly typed classes provided by the SDK for .NET.
+.NET developers can use either the [Dataverse SDK for .NET](../org-service/overview.md) or the Web API. You might want to use the Web API when you don't want to take a dependency on a specific NuGet package or the requirements of your project don't require the strongly-typed classes provided by the SDK for .NET.
 
 To use Web API with C#, see these quick start articles:
 
