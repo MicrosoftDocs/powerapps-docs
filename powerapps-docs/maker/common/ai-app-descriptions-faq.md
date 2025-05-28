@@ -1,7 +1,7 @@
 ---
 title: FAQ for generate app descriptions with Copilot 
 description: FAQ that discusses generating app descriptions with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 05/06/2025
+ms.date: 05/28/2025
 ms.custom: 
   - transparency-note
 ms.topic: faq

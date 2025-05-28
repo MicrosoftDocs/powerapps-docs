@@ -1,7 +1,7 @@
 ---
 title: FAQs about using Copilot with Power Fx
 description: FAQ that discusses Copilot and Power Fx
-ms.date: 7/15/2024
+ms.date: 5/28/2025
 ms.custom:
   - transparency-note
 ms.topic: faq

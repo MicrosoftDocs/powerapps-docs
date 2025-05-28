@@ -1,7 +1,7 @@
 ---
 title: FAQ for rename controls in canvas apps with Copilot 
 description: FAQ that discusses renaming canvas apps controls with Copilot.
-ms.date: 11/13/2024
+ms.date: 5/25/2025
 ms.custom: 
   - transparency-note
 ms.topic: faq
