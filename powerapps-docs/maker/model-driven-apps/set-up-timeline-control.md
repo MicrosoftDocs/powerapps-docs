@@ -588,6 +588,8 @@ Power platform administrators can restrict the file size of attachments users ca
 Enable the timeline highlights widget to help users quickly get up to speed with the most important activities on a record. The widget uses Copilot to generate a list of significant activities on a record, summarized from notes, emails, tasks, appointments, phone calls, and conversations.
 
 > [!IMPORTANT]
+> This feature is only available for CRM organizations.
+> 
 > Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](../common/faq-timeline-highlights-with-copilot.md).
 
 ### Prerequisites
