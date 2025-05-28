@@ -473,6 +473,9 @@ You can copy the timeline highlights by selecting **Copy**.
 
 ![Timeline highlights view.](media\view-timeline-highlights.png "Timeline highlights view")
 
+> [!IMPORTANT]
+> This feature is only available for CRM organizations.
+
 ## View a conversation transcript
 
 In the timeline, you can view the transcripts of completed chats you had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
