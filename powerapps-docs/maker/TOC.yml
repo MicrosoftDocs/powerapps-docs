@@ -51,6 +51,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Supervise agents using agent feed
+      href: ../user/supervise-agents.md
     - name: Copilot features
       items:
       - name: Use form fill assistance
