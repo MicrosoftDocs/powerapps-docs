@@ -82,10 +82,15 @@ View agent feed in a side pane to support multitasking or expand it to full scre
 You can take the these actions on activity in the feed:
 
 - **Mark as complete**: Move an action from the **To-do** section to **Other** after completing the task the agent could not finish.
+
    :::image type="content" source="media/agent-supervision/agent-feed-mark-complete.png" alt-text="Agent feed mark as complete button":::
+
 - **Dismiss**: Remove an action from the **To-do** section if it's no longer relevant. You see this option only when you hover over an agent action in the feed.
+
    :::image type="content" source="media/agent-supervision/agent-feed-dismiss.png" alt-text="Agent feed dismiss button":::
+
 - **Undo**: Revert a previous mark-as-complete or dismiss action if you did it by mistake. You see this option only when you hover over an agent action in the feed.
+
    :::image type="content" source="media/agent-supervision/agent-feed-undo.png" alt-text="Agent feed undo button":::
 
 > [!NOTE]
@@ -93,6 +98,7 @@ You can take the these actions on activity in the feed:
 
 ## Navigation
 For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
+
     :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
 
 ## Related information
