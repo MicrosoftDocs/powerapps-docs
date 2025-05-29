@@ -4,7 +4,7 @@ description: Find out how to get more precise and relevant answers from copilots
 author: mattp123
 ms.topic: overview
 ms.collection: bap-ai-copilot
-ms.date: 11/20/2024
+ms.date: 05/29/2025
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
