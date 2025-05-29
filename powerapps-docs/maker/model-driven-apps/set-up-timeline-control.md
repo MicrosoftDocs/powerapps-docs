@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 03/20/2025
+ms.date: 05/29/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -588,7 +588,7 @@ Power platform administrators can restrict the file size of attachments users ca
 Enable the timeline highlights widget to help users quickly get up to speed with the most important activities on a record. The widget uses Copilot to generate a list of significant activities on a record, summarized from notes, emails, tasks, appointments, phone calls, and conversations.
 
 > [!IMPORTANT]
-> This feature is only available for CRM organizations.
+> This feature is only available for Power Platform environments with Dataverse that have the **Enable Dynamics 365 apps** setting enabled.
 > 
 > Before you set up copilot in your environment, review [the FAQ about using AI responsibly in Power Apps](../common/faq-timeline-highlights-with-copilot.md).
 
