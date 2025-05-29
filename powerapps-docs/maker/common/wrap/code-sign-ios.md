@@ -196,7 +196,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
-1. Install the **.ipa** file in the registered devices using the **Finder** app. You can also host it on a distribution service such as Azure blob storage. To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+1. Install the **.ipa** file in the registered devices using the **Finder** app. To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 ### See also
 
