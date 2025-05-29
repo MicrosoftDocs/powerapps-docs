@@ -50,7 +50,7 @@ sections:
       - question: |
           How do I distribute my mobile app?
         answer: |
-          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
+          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
 
       - question: |
           How do I configure my mobile app for distribution through Microsoft Intune?
