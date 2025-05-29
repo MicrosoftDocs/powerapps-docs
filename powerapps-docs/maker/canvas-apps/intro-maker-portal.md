@@ -29,8 +29,6 @@ Select the appropriate tab below to know more.
 :::image type="content" source="media/intro-maker-portal/homepage-new-look.png" alt-text="Screenshot of Power Apps home page." lightbox="media/intro-maker-portal/homepage-new-look.png"::::::
 
 
-
-
 Legend:
 
 1. [Left navigation pane](#1--left-navigation-pane)
@@ -45,7 +43,7 @@ Legend:
 
 Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
-:::image type="content" source="media/media/intro-maker-portal/default-nav-1.png" alt-text="Screenshot of Power Apps home page." lightbox="media/media/intro-maker-portal/default-nav-1.png":::
+:::image type="content" source="media/intro-maker-portal/default-nav-1.png" alt-text="Screenshot of Power Apps home page navigation pane." lightbox="media/intro-maker-portal/default-nav-1.png":::
 
 Legend:
 
