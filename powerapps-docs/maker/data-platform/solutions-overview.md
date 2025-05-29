@@ -62,7 +62,7 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **Publish all customizations**: Publish all active customizations in your environment.
 - **Set preferred solution**: Set your [preferred solution](preferred-solution.md) where all solution components are created in.
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
-- **Connect to Git**: Source control integration allows development teams to sync solutions and solution objects across one or more Dataverse environments using an Azure DevOps Git repository. More information: [Overview of Git integration in Power Platform](/power-platform/alm/git-integration-overview)
+- **Connect to Git**: Source control integration allows development teams to sync solutions and solution objects across one or more Dataverse environments using an Azure DevOps Git repository. More information: [Overview of Git integration in Power Platform](/power-platform/alm/git-integration/overview)
 - **Switch to classic**: Open the classic solution explorer.
 
 When you select a solution, additional tasks become available in the command bar. These tasks include:
@@ -70,7 +70,7 @@ When you select a solution, additional tasks become available in the command bar
 - **Edit**: Edit the solution properties, such as adding or removing solution components.
 - **Delete**. Delete the selected solution.
 - **Create a plan**. Use Plan designer to create a plan for your existing solution. Plan designer generates a detailed document that describes your solution. The plan covers the business problem, user requirements like user roles and stories, the data model, and technologies like apps. This feature saves time when you're trying to understand a solution's content and helps makers improve an existing solution. More information: [Create a plan from a solution](../plan-designer/create-plan-from-solution.md)
-- **Export solution**: Export the solution to a file that can be imported into another environment. More information: [Export solutions](import-update-export-solutions.md#export-a-solution)
+- **Export solution**: Export the solution to a file that can be imported into another environment. More information: [Export solutions](export-solutions.md)
 - **Deploy**. Use pipelines in Power Platform to deploy solutions to test and production environments. More information: [Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
 - **Solution checker**: Appears when you select a solution. Run or review results of [solution checker](use-powerapps-checker.md) for this solution.
 - **Show dependencies**: Appears when you select a solution. [View solution dependencies](view-component-dependencies.md) for solutions that would block uninstall of this solution.
