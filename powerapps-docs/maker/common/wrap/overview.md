@@ -17,7 +17,7 @@ contributors:
 # Overview of wrap
 
 
-The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute such wrapped native mobile apps to the end users through [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute such wrapped native mobile apps to the end users through [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
@@ -81,19 +81,7 @@ Branding customization options are available when you're building your wrap proj
 
 ## Understanding wrap terminology
 
-Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
-
-### App center location
-
-Container in App Center to store the built packages for mobile app distribution. Build output types differ depending on the target platform you select.
-
-| Platform                                         |  OS | Build Output file type |
-|-------------------------------------------------------------|---------------------------|-------------------------------|
-| **iOS** (for distribution using Apple Store)                                                         | Custom                    |  \*.zip                       |
-| **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
-
-> [!NOTE]
-> App Center will be discontinued from 31st March 2025. Going forward, the app binaries will be stored in your tenant's Azure Blob Storage from which you can access and distribute them through your preferred channels. The details of linking Azure Blob Storage with wrap process will be updated soon. In the interim, back up your latest APK/IPA files (if needed) and keep your Azure Blob Storage details and target location for app binaries handy.
+Wrap involves multiple components across Power Apps, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
 
 ### Azure blob storage 
 
@@ -123,7 +111,7 @@ Intended platforms for the app that you want to go through the build process for
    
 ### Build the wrap project
 
-Building a wrap project is a process that creates the build packages for the mobile app distribution across different platforms. This process uses the app that you registered on Microsoft identity platform and creates the builds on the given App Center location depending on the platforms you choose. The built packages include the primary and optional secondary apps packaged into one mobile app package for each platform type.
+Building a wrap project is a process that creates the build packages for the mobile app distribution across different platforms. This process uses the app that you registered on Microsoft identity platform and creates the builds on the given Azure blob storage location depending on the platforms you choose. The built packages include the primary and optional secondary apps packaged into one mobile app package for each platform type.
 
 ### Bundle ID
 
