@@ -7,7 +7,7 @@ ms.collection:
   - bap-ai-copilot
   - get started
 ms.reviewer: mkaur
-ms.date: 5/28/2025
+ms.date: 5/29/2025
 ms.subservice: canvas-maker
 ms.author: mamali
 search.audienceType:
@@ -62,8 +62,8 @@ When you rename a control like the **Button** control, Copilot suggests names fo
 
 1. Select **Rename**, type a new name for the control, and then press Enter.
 
-          > [!NOTE]
-     > When you manually rename a control, Copilot only appears if there are other controls on the same screen that can be renamed.
+    > [!NOTE]
+    > When you manually rename a control, Copilot only appears if there are other controls on the same screen that can be renamed.
 
 1. Copilot appears with suggestions to rename other controls of the same type.
 
@@ -75,7 +75,7 @@ When you rename a control like the **Button** control, Copilot suggests names fo
 
 1. When you're done, select **Rename** to apply the changes. <br>If a formula references a control, the control name is automatically updated in the formula.
 
-    :::image type="content" source="media/rename-controls/rename-control-copilot-suggestions.png" alt-text="Screenshot of suggested names from Copilot.":
+    :::image type="content" source="media/rename-controls/rename-control-copilot-suggestions.png" alt-text="Screenshot of suggested names from Copilot.":::
 
 
 ## Best practices and recommendations
