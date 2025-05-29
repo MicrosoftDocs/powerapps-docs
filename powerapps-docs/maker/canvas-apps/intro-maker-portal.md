@@ -7,7 +7,7 @@ ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
 ms.subservice: common
-ms.author: "mkaur"
+ms.author: "mkaur"+
 search.audienceType: 
   - maker, admin
 contributors:
@@ -26,7 +26,7 @@ If your organization has AI enabled then it also includes the new [Copilot](ai-o
 
 Select the appropriate tab below to know more.
 
-:::image type="content" source="media/intro-maker-portal/homepage-new-look.png" alt-text="Screenshot of Power Apps home page." lightbox="media/intro-maker-portal/homepage-new-look.png"::::::
+:::image type="content" source="media/intro-maker-portal/homepage-new-look.png" alt-text="Screenshot of Power Apps home page." lightbox="media/intro-maker-portal/homepage-new-look.png":::
 
 
 Legend:
