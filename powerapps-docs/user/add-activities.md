@@ -4,7 +4,7 @@ description: Timeline Overview for Users
 author: dsierman
 ms.component: pa-user
 ms.topic: overview
-ms.date: 04/16/2024
+ms.date: 05/29/2025
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -474,7 +474,7 @@ You can copy the timeline highlights by selecting **Copy**.
 ![Timeline highlights view.](media\view-timeline-highlights.png "Timeline highlights view")
 
 > [!IMPORTANT]
-> This feature is only available for CRM organizations.
+> This feature is only available with Power Platform environments with Dataverse that have the **Enable Dynamics 365 apps** setting enabled.
 
 ## View a conversation transcript
 
