@@ -503,6 +503,13 @@ To resolve this issue, make sure the [format of the column is set to **Rich text
 
 The database stores the entire HTML formatting, not just the characters, which takes up extra space.
 
+### Why am I not seeing the Modern Rich Text Editor?
+
+The Modern RTE is part of the New Look experience and won’t show up unless it's turned on. Without it, you may see an older version of the editor.
+
+![image](https://github.com/user-attachments/assets/b581c347-7341-42a7-9971-4c49afb7f99c)
+
+
 ### Related information
 
 - [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
