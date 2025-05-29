@@ -65,7 +65,7 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
 - **Connect to Git**: Source control integration allows development teams to sync solutions and solution objects across one or more Dataverse environments using an Azure DevOps Git repository. More information: [Overview of Git integration in Power Platform](/power-platform/alm/git-integration/overview)
 - **Switch to classic**: Open the classic solution explorer.
 
-When you select a solution, additional tasks become available in the command bar. These tasks include:
+When you select a solution, additional tasks become available on the command bar. These tasks include:
 
 - **Edit**: Edit the solution properties, such as adding or removing solution components.
 - **Delete**. Delete the selected solution.
@@ -79,7 +79,7 @@ When you select a solution, additional tasks become available in the command bar
 - **Publish to Catalog**: Publishes the solution to the catalog, making it available for other makers in your organization to use. This is useful for sharing solutions that you want others to be able to import and use in their environments. More information: [Catalog in Power Platform](catalog-overview.md)
 - **Apply Upgrade**: Appears when you select a solution. [Apply a pending upgrade](update-solutions.md#apply-the-upgrade-or-update-in-the-target-environment) that has been initiated for a managed solution.
 
-From the **Solutions** area, select a solution to view all of its objects.
+From the **Solutions** area, open a solution to view all of its objects.
 
 :::image type="content" source="media/solution-all-items-list.png" alt-text="Example solution with all objects.":::
 
