@@ -51,6 +51,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Supervise agents using agent feed (preview)
+      href: ../user/supervise-agents-with-agent-feed.md
     - name: Copilot features
       items:
       - name: Use form fill assistance
@@ -1793,6 +1795,8 @@
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
+      - name: Add agents to your app (preview)
+        href: ./model-driven-apps/add-agents-to-app.md  
       - name: Customize Copilot chat (preview)
         href:
         items:
