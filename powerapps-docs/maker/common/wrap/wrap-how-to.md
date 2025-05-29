@@ -18,7 +18,7 @@ contributors:
 
 Use this step-by-step Wrap wizard guide to convert one or more canvas apps into a single custom-branded app package that can be deployed on Google Play and the iOS App Store.
 
-The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps (IPA, APK, AAB packages). You can distribute these *wrapped* native mobile apps to end users through [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458), [Apple Business Manager](https://developer.apple.com/custom-apps/), or other native distribution methods.
+The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps (IPA, APK, AAB packages). You can distribute these *wrapped* native mobile apps to end users through [Google Play](https://support.google.com/googleplay/work/answer/6138458), [Apple Business Manager](https://developer.apple.com/custom-apps/), or other native distribution methods.
 
 The wrap feature wraps your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
@@ -229,44 +229,9 @@ The following API permissions are required when manually configure API permissio
 >     ```
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
-  
-## Create an app center location for your mobile app manually (optional)
-
-You can manually create an app center location for your mobile app directly in app center. More information: [App center location](overview.md#app-center-location)
-
-> [!TIP]
-> For more information about app center, go to [Visual Studio app center documentation](/appcenter/).
-
-1. Go to [app center](https://appcenter.ms/).
-1. Sign in with your work or school account.
-1. If you don't have any existing organization, select **Add new** &gt; **Add new organization** to create a new organization.
-1. Select the organization from the list on the left-pane.
-1. Select **Apps** &gt; **Add app**.
-1. Enter app name.
-1. Select app release type.
-1. Select **Custom** OS for iOS apps, or **Android** OS for Android apps.
-
-    > [!NOTE]
-    > You must create separate app center containers for each platform.
-
-1. For **Android** OS, select **Platform** as **React Native**.
-
-    > [!NOTE]
-    > **Platform** must be **React Native** for all apps in app center.
-
-    :::image type="content" source="media/wrap-canvas-app/app-center-app.png" alt-text="App center app configuration.":::
-
-1. Select **Add new app**.
-
-1. Copy the app's app center URL. You'll need it later, to configure the wrap project in Power Apps.
-
-    For example, `https://appcenter.ms/orgs/Contoso-sales/apps/Sample-canvas-app-for-Android-OS/`
-
-    :::image type="content" source="media/wrap-canvas-app/app-center-url.png" alt-text="App center URL.":::
-
- 
 
 ## Sign your mobile app package manually (optional)
+
 You can automatically sign your mobile app package during wrap process in **Step 2**, but you can also do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Manual code sign for iOS](code-sign-ios.md)
