@@ -2,7 +2,7 @@
 title: "Create, edit, or configure forms using the model-driven form designer | MicrosoftDocs"
 description: Learn how to create and edit model-driven app forms
 ms.custom: ""
-ms.date: 10/22/2024
+ms.date: 05/29/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -48,12 +48,11 @@ Use the form designer to create, edit, or configure forms for model-driven apps.
 1. Open a table, such as the account table, and then select the **Forms** area.
 1. Select the form that you want, and then on the command bar, select **Edit**.
 1. Make changes such as adding columns or [configuring properties](#form-properties).
-1. When you're done making changes to the form, select **Save and Publish** > **Save only** to save the form, or select **Save and Publish** to save and have your changes available to app users.
+1. When you're done making changes to the form, select **Save only** to save the form, or select **Save and Publish** to save and have your changes available to app users.
 
 ## Column suggestions by Copilot
 
 Use column suggestions by Copilot to select the best columns to display in your model-driven app form. Instead of using the default fields that Power Apps selects, makers can view suggestions from Copilot. The column suggestions are based on the form name and description. Makers review the suggestions and make adjustments as needed, saving time and improving the quality of the app.
-
 
 ### Prerequisites
 

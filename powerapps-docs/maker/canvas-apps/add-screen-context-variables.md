@@ -3,7 +3,7 @@ title: Add and navigate screens in canvas apps
 description: Learn how to add screens to your canvas app, use arrows to navigate between them, reorder the screens, and set the start screen in Microsoft Power Apps.
 author: emcoope-msft
 ms.author: emcoope
-ms.date: 10/29/2024
+ms.date: 5/29/2025
 ms.topic: how-to
 ms.subservice: canvas-maker
 search.audienceType: 

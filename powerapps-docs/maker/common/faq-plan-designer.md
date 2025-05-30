@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 5/23/2025
+ms.date: 5/28/2025
 ms.author: norliu
 ms.reviewer: mkaur
 ms.collection: 

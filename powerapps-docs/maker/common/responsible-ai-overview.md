@@ -6,7 +6,7 @@ ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
   - ai-gen-desc
-  - ai-seo-date:12/16/2024
+  - ai-seo-date:5/28/2025
   - bap-template
 ms.topic: overview
 author: mduelae
@@ -49,6 +49,6 @@ ms.collection:
 - [FAQ about agent builder in canvas apps](faq-agent-builder.md)
 - [Build an agent to automate your business process (preview)](../canvas-apps/agent-builder.md)
 - [FAQ for the Plan designer](faq-plan-designer.md)
-- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+- [Overview of Plan designer](../plan-designer/plan-designer.md)
 - [FAQ for rename controls in canvas apps with Copilot ](faq-rename-control.md)
 - [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
