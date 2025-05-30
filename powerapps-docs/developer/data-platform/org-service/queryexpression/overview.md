@@ -4,9 +4,9 @@ description: Learn to compose a query using QueryExpression, an object model tha
 ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:

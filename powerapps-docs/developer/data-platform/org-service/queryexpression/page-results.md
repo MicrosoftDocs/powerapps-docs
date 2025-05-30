@@ -4,9 +4,9 @@ description: Learn how to use QueryExpression to page results when you retrieve 
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
