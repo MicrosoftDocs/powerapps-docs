@@ -35,7 +35,7 @@ Legend:
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
 1. [Create a plan](#4---create-a-plan)
-1. [Plans](#5--your-plans)
+1. [Plans](#6--build-apps)
 1. [Build Apps](#6--build-apps)
 
 
@@ -75,12 +75,8 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all
 
-To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**.
+To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**. To keep it pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
-> [!div class="mx-imgBorder"]
-> ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
-
-Select **Discover all** to see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
 ### Move up or move down
 
@@ -140,7 +136,7 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 
 ### Help
 
-In the header, select the question mark icon to find more information about either canvas apps or model-driven apps.
+In the header, select the question mark icon to find more information about [Power Apps](../../index.yml)
 
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
@@ -152,24 +148,26 @@ Find links to documentation, Power Apps training on Microsoft Learn, the Power A
 
 Use Plan designer to create user roles, data tables, and apps that address your business needs. Learn more in [Create a plan using Plan designer](../plan-designer/create-plan.md).
 
+## 5 – View and edit your plans
 
-## 5 – Your plans
+Use the **Plans** menu in the left navigation pane to [access and edit your plans](../plan-designer/create-plan.md#view-and-edit-plans).
 
 ## 6 – Build apps
 
 Build apps that provide rich business logic and workflow capabilities to transform manual business operations into digital, automated processes.
 
-To create an app, select from the following options:
+To create an app, select **Create** and then choose from the following options:
 
-Start with Copilot: [Build apps through conversation](ai-conversations-create-app.md).
-   
+- **Start with Copilot**: [Build apps through conversation](ai-conversations-create-app.md)
+- **Start with data**: [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md) or [Create a canvas app based on Excel data](get-started-create-from-blank.md)
+- **Start with a blank app**: [Create a blank canvas app from scratch](create-blank-app.md)
 - **Start with a page design**: Select the type of app you want to create. Use the **Filter** option in the top-right to narrow templates by app type or features like offline use, responsive design, or embedding into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md).
 - **Start with an app template**: Choose from app templates, including data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md).
 
   > [!NOTE]
   >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
-- **Your apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play** or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
+- **Apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play** or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
 
 ### Permissions for Dataverse
 
