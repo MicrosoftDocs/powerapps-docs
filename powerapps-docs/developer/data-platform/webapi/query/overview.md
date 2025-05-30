@@ -196,7 +196,7 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the `$top` OData query option. Without this limit, standard tables return up to 5,000 rows and elastic tables return up to 500 rows.
+To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 standard table rows, 500 elastic table rows.
 
 Alternatively, specify a number of records to return using paging. Don't use `$top` when you request pages of data. [Learn how to request paged results](page-results.md)
 

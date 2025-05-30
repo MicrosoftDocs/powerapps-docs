@@ -4,9 +4,9 @@ description: Learn how to use QueryExpression to page results when you retrieve 
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
@@ -16,7 +16,7 @@ contributors:
 
 You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
 
-The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 rows for standard tables, 500 for elastic. If you don't set a page size, Dataverse will return up to the maximum page size rows of data at a time. To get more rows, you must send additional requests.
 
 > [!NOTE]
 >
@@ -98,7 +98,7 @@ After each request, the method checks the [EntityCollection.MoreRecords property
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
 /// <param name="query">The QueryExpression query</param>
-/// <param name="page">The page size to use. Defaults to 5000</param>
+/// <param name="page">The page size to use. Defaults to 5,000</param>
 /// <returns>All the records that match the criteria</returns>
 static EntityCollection RetrieveAll(IOrganizationService service, 
 QueryExpression query,

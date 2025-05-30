@@ -68,7 +68,7 @@ OData-Version: 4.0
 
 Submit an asynchronous duplicate detection job that runs in the background. The duplicates are detected according to the published duplicate rules for the table type. The detected duplicates are stored as `DuplicateRecord` records in Dynamics 365. 
 
-A maximum of 5000 duplicates are returned by the duplicate detection job.
+A maximum of 5,000 duplicates are returned by the duplicate detection job.
 
 ### Options
 
