@@ -1,7 +1,7 @@
 ---
 title: FAQ for Copilot in canvas apps   
 description: FAQ for Copilot in canvas apps.
-ms.date: 8/17/2023
+ms.date: 5/28/2025
 ms.custom: 
   - transparency-note
 ms.topic: faq

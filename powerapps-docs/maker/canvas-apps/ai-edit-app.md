@@ -7,7 +7,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 4/16/2025
+ms.date: 5/27/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 

@@ -5,7 +5,7 @@ author: alaug
 ms.topic: how-to
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 1/24/2025
+ms.date: 5/29/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
