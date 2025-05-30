@@ -87,7 +87,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
-```power-fx
+   ```power-fx
     Sort(
         Filter(
 			FlooringEstimates,
