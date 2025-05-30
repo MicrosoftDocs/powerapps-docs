@@ -4,7 +4,7 @@ description: Introduction to Microsoft Dataverse, tables, server-side logic, sec
 author: mattp123
 ms.topic: overview
 ms.collection: get-started
-ms.date: 06/13/2024
+ms.date: 05/29/2025
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
@@ -73,6 +73,7 @@ Building an app typically involves data from more than one source. Although this
 For more information about integrating data into the Dataverse, go to [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query).
 
 ## Interacting with tables
+
 When you develop an app, you can use standard tables, custom tables, or both. Dataverse provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
 For a full list of tables, see the [entity reference](../../developer/data-platform/reference/about-entity-reference.md).
@@ -95,9 +96,11 @@ Tables within Dataverse can take advantage of rich server-side logic and validat
 Dataverse has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Power Platform environment. More information: [Security in Dataverse](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
+
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Dataverse includes features for developers to programmatically access metadata and data to create tables and business logic, in addition to interacting with data. More information: [Dataverse Developer Overview](../../developer/data-platform/overview.md)
 
 ## Next steps
+
 To get started using Dataverse:
 - [Create a canvas app using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md).
 - [Create a custom table](create-custom-entity.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
@@ -105,6 +108,7 @@ To get started using Dataverse:
 - [Use Power Query](/power-query/dataflows/add-data-power-query) to connect to an online or on-premises data source and import the data directly into Dataverse.
 
 ### See also
+
 [Dataverse for Teams](/power-apps/teams/overview-data-platform)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

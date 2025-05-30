@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: yogupt
 ms.reviewer: matp
-ms.date: 04/14/2025
+ms.date: 05/29/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
