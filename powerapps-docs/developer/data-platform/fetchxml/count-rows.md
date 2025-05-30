@@ -18,7 +18,7 @@ contributors:
 ---
 # Count rows using FetchXml
 
-Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` attribute to specify that the result include a count of all the records that meet the filter criteria, up to 5,000 for standard tables, 500 for elastic tables. Use this when retrieving paged results to estimate the total number of pages to display.
+Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` attribute to specify that the result include a count of all the records that meet the filter criteria, up to 5,000. Use this when retrieving paged results to estimate the total number of pages to display.
 
 You can't apply the [fetch element](reference/fetch.md) `top` attribute together with `returntotalrecordcount`.
 
@@ -61,7 +61,7 @@ The following annotations will be returned:
 
 The (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) value is useful when you need to calculate how many more paged requests you need to send to get all the results when (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals the maximum page size for the type of table you are working with.
 
-If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than maximum, you can calculate how many more paged requests you must send to get all the records.
+If your page size is less than the maximum and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) is equal to or less than the maximum, you can calculate how many more paged requests you must send to get all the records.
 
 When (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded> or `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`) is `true` and (<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> or `@Microsoft.Dynamics.CRM.totalrecordcount`) equals the maximum, you can't perform this calculation.
 

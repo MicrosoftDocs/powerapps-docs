@@ -320,7 +320,7 @@ If you use only single-level `$expand`, no paging is applied to the expanded row
 
 Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that represents the [filtered collection](overview.md#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
-Because no paging is applied to the expanded records, up to 5,000 related standard table records (or 500 elastic table records) can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
+Because no paging is applied to the expanded records, up to 5,000 related table records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
 The following example includes a single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in the first page.
 
