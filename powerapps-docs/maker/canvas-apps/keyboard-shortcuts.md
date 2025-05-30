@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/12/2020
+ms.date: 05/30/2025
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -48,9 +48,8 @@ contributors:
 | Ctrl+V | Paste |
 | Ctrl+Z | Undo command |
 | Ctrl+Y | Redo command |
-| Ctrl+M | Add a screen |
-| Ctrl+= or Ctrl+Shift+= | Zoom in |
-| Ctrl+- or Ctrl+Shift+- | Zoom out |
+| Ctrl+= or Ctrl+Shift+= or Ctrl+Mouse wheel up | Zoom in |
+| Ctrl+- or Ctrl+Shift+- or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
 | Shift+Enter | Break a line in a formula |
 
