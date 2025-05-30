@@ -17,7 +17,7 @@ contributors:
 # Keyboard shortcuts for canvas apps
 
 > [!NOTE]
-> Shortcuts might vary based on keyboard layout.
+> Shortcuts can vary based on keyboard layout.
 
 ## File
 
@@ -35,7 +35,7 @@ contributors:
 | Shortcut | Action |
 |--|--|
 | Enter | Run the selected command |
-| Tab | Move between commands on the selected tab and then to the next tab |
+| Tab | Move between commands on the selected tab, then to the next tab |
 | Alt+I | Select the **Insert** tab |
 
 ## Editing
@@ -46,20 +46,19 @@ contributors:
 | Ctrl+X | Cut |
 | Ctrl+C | Copy |
 | Ctrl+V | Paste |
-| Ctrl+Z | Undo command |
-| Ctrl+Y | Redo command |
-| Ctrl+= or Ctrl+Shift+= or Ctrl+Mouse wheel up | Zoom in |
-| Ctrl+- or Ctrl+Shift+- or Ctrl+Mouse wheel down | Zoom out |
+| Ctrl+Z | Undo |
+| Ctrl+Y | Redo |
+| Ctrl+=, Ctrl+Shift+=, or Ctrl+Mouse wheel up | Zoom in |
+| Ctrl+-, Ctrl+Shift+-, or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
-| Shift+Enter | Break a line in a formula |
-|Enter or Shift+Enter | Select the suggestion in a formula without adding a new line|
 | <kbd>Shift</kbd>+<kbd>Enter</kbd> | Break a line in a formula |
-| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select the suggestion in a formula without adding a new line |
-| <kbd>Enter</kbd> | Select the suggestion in a formula and create a new line |
-| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Create a new line in a formula but doesn't keep the suggestion |
+| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select a suggestion in a formula without adding a new line |
+| <kbd>Enter</kbd> | Select a suggestion in a formula and create a new line |
+| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Create a new line in a formula without keeping the suggestion |
 
 > [!IMPORTANT]
-> To use keyboard shortcuts for the formula bar, turn on **Enhanced formula bar shortcuts** in Power Apps. In Power Apps go to [**Settings**](intro-maker-portal.md#settings) and then select **Power App settings**. On the **Editing** tab, turn on **Enhanced formula bar shortcuts**..
+> To use keyboard shortcuts for the formula bar, turn on **Enhanced formula bar shortcuts**. In Power Apps, go to [**Settings**](intro-maker-portal.md#settings), and then select **Power App settings**. On the **Editing** tab, turn on **Enhanced formula bar shortcuts**.
+
 
 ## Preview
 
@@ -72,24 +71,24 @@ contributors:
 
 | Shortcut | Action |
 |--|--|
-| Tab | Select the next control |
-| Shift + F11 | Sets focus to the inline action bar |
-| Ctrl+Click or Shift+Click | Select multiple objects at once |
-| Right arrow | Nudge the selected control to the right |
-| Left arrow | Nudge the selected control to the left |
-| Up arrow | Nudge the selected control up |
-| Down arrow | Nudge the selected control down |
+| <kbd>Tab</kbd> | Select the next control |
+| <kbd>Shift</kbd>+<kbd>F11</kbd> | Set focus to the inline action bar |
+| Hold down <kbd>Ctrl</kbd> while selecting or hold down <kbd>Shift</kbd> while selecting | Select multiple objects at once |
+| <kbd>Right arrow</kbd> | Move the selected control to the right |
+| <kbd>Left arrow</kbd> | Move the selected control to the left |
+| <kbd>Up arrow</kbd> | Move the selected control up |
+| <kbd>Down arrow</kbd> | Move the selected control down |
 
 ## Tree view
 
 > [!NOTE]
-> These shortcuts require the **Tree view** pane to have focus.
+> These shortcuts work when the **Tree view** pane has focus.
 
 | Shortcut | Action |
 |--|--|
 | F2 | Rename a control |
 | Esc | Cancel renaming a control |
-| Ctrl+G | Group/ungroup controls |
+| Ctrl+G | Group or ungroup controls |
 | Ctrl+] | Bring a control forward |
 | Ctrl+[ | Send a control backward |
 | Ctrl+Shift+] | Bring to front |
@@ -113,7 +112,7 @@ contributors:
 | Shortcut | Action |
 |--|--|
 | Ctrl+B  | Cycle through levels of bold |
-| Ctrl+I | Turn italic on or off |
+| Ctrl+I | Turn italics on or off |
 | Ctrl+U | Add or remove underline |
 
 ## Alternate behavior
@@ -122,26 +121,26 @@ contributors:
 |--|--|
 | Alt or Ctrl+Shift | 1. Before selecting a control, hide design elements so that you can interact with the controls as the app's user would.<br>2. After initiating a resize or reposition of a control, holding down these keys overrides any snap points. |
 
-Like an Excel spreadsheet, canvas apps are live and operating even when they're being edited. There's no need to change to preview mode in order to exercise your app, making the editing and test cycles much faster. But this poses a problem: How do we differentiate selecting a button control so that it can be resized from selecting a button control to exercise the logic in our app?
+Like an Excel spreadsheet, canvas apps are live and running even when you're editing them. You don't need to switch to preview mode to test your app, so editing and testing are much faster. But this creates a challenge: How do you select a button control to resize it instead of selecting it to run the app logic?
 
-When in design mode, by default, selecting an object is for editing—moving, resizing, changing properties, and otherwise configuring the object. This default can be overridden by holding down the Alt or Ctrl+Shift keys *before* initiating the selection, which treats the selection as if a user of the app had done it.  
+When you're in design mode, selecting an object lets you edit it—move, resize, change properties, and configure the object. To override this default, hold down the Alt or Ctrl+Shift keys *before* you select the object. This treats the selection as if a user of the app selected it.
 
-In the following animation, a button control is first selected for editing.  Adorners appear around the control and the formula bar shows the **OnSelect** property, ready to be edited.  The button is then released.  *With the Alt key first depressed*, the button control is again selected, but this time the **OnSelect** property is evaluated and the notification is displayed, just as if the button was selected in a running app.  
+In the following animation, a button control is first selected for editing. Adorners appear around the control, and the formula bar shows the **OnSelect** property, ready to edit. After you release the button, hold down the Alt key and select the button control again. This time, the **OnSelect** property runs, and the notification appears, just like when a user selects the button in a running app.
 
-![Animation showing the effect of starting by holding down the alt key select a button control.](media/keyboard-shortcuts/alt-select.gif)
+![Animation that shows holding down the Alt key before selecting a button control, which triggers the OnSelect property and displays a notification.](media/keyboard-shortcuts/alt-select.gif)
 
-The Alt key can also be used *after* a control has been selected to override snap points for moving and resizing.  The next animation shows the resize of a data card within an [**Edit form**](controls/control-form-detail.md) control.  Initially, the resizing is restricted to specific snap points.  Later, *without releasing the mouses button*, the Alt key is depressed along with the mouse button. The addition of the Alt key overrides the snap points and any width can be obtained with the mouse. 
+You can also use the Alt key *after* you select a control to override snap points when moving or resizing. The next animation shows how to resize a data card in an [**Edit form**](controls/control-form-detail.md) control. At first, resizing is limited to specific snap points. Later, *without releasing the mouse button*, hold down the Alt key. This overrides the snap points, so you can set any width with the mouse.
 
-![Animation showing the effect of adding the alt key to the resize of a data card.](media/keyboard-shortcuts/alt-fine-control.gif)
+![Animation that shows holding down the Alt key while resizing a data card in an Edit form control to override snap points.](media/keyboard-shortcuts/alt-fine-control.gif)
 
 ## Other
 
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation |
-| Ctrl+F6 | Navigate to the next landmark |
-| Ctrl+Shift+F6 | Navigate to the previous landmark |
-| Shift+F10 | Open a shortcut menu in, for example, **Tree view** |
+| Ctrl+F6 | Go to the next landmark |
+| Ctrl+Shift+F6 | Go to the previous landmark |
+| Shift+F10 | Open a shortcut menu, for example, in **Tree view** |
 
 
  
