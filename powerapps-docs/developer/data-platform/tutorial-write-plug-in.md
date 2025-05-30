@@ -1,9 +1,9 @@
 ---
 title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write plug-in code and then register the compiled assembly and step with Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/20/2024
+ms.date: 02/14/2025
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: tutorial
 author: MicroSri
 ms.subservice: dataverse-developer
 ms.author: sriknair
@@ -65,8 +65,8 @@ Another alternative is to use the Power Platform Tools extension as described he
 
     > [!NOTE]
     > Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
-    > 
-    > Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present on the server and compatible with your code.
+    >
+    > Ensure only assemblies referenced directly by your project or through NuGet dependency chains are located in your build folder. You cannot include other assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present on the server and compatible with your code.
 
 1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
 

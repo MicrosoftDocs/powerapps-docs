@@ -4,8 +4,8 @@ description: "Use Dataverse search suggest to provide suggestions as users enter
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: seanwat-msft
+ms.author: seanwat
 search.audienceType: 
   - developer
 search.app: 
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - jeromeblouinms
 ---
 # Dataverse Search suggest
 
@@ -127,7 +128,7 @@ The following examples show how to use the suggest operation. Each of these exam
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method returns the top three suggestions for any search term.
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method returns the top three suggestions for any search term.
 
 ```csharp
 /// <summary>
@@ -269,7 +270,7 @@ This class is the same `QueryContext` class used for the [query example](query.m
 
 Use the [searchsuggest action](xref:Microsoft.Dynamics.CRM.searchsuggest) to receive a [searchsuggestResponse complex type](xref:Microsoft.Dynamics.CRM.searchsuggestResponse).
 
-This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/Search) on GitHub.
 
 **Request**
 

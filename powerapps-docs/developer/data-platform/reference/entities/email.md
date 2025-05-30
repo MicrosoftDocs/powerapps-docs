@@ -1,16 +1,14 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Email table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Email table/entity reference
+# Email table/entity reference (Microsoft Dataverse)
 
 Activity that is delivered using email protocols.
 
@@ -22,6 +20,7 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `BackgroundSendEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.BackgroundSendEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
 | `CheckIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
 | `CheckPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
@@ -30,6 +29,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `DeliverImmediatePromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
 | `DeliverIncomingEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
 | `DeliverPromoteEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeliverPromoteEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GetDecryptionKey`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.GetDecryptionKeyRequest>|
 | `GetTrackingTokenEmail`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
@@ -39,10 +39,10 @@ Messages represent operations that can be performed on the table. They may also 
 | `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 | `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 | `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-| `SendTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
 | `SendEmail`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendEmail?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendEmailRequest>|
-| `SendFax`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
 | `SendEmailFromTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendEmailFromTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendEmailFromTemplateRequest>|
+| `SendFax`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
+| `SendTemplate`<br />Event: True |<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
 | `SetState`<br />Event: True |`PATCH` /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: True |`PATCH` /emails(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `Upsert`<br />Event: False |`PATCH` /emails(*activityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
@@ -125,6 +125,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [Sender](#BKMK_Sender)
+- [SensitivityLabelId](#BKMK_SensitivityLabelId)
+- [SensitivityLabelInfo](#BKMK_SensitivityLabelInfo)
 - [SLAId](#BKMK_SLAId)
 - [SortDate](#BKMK_SortDate)
 - [StageId](#BKMK_StageId)
@@ -1000,6 +1002,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|250|
 
+### <a name="BKMK_SensitivityLabelId"></a> SensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**The sensitivity label assigned to the Email.**|
+|DisplayName|**Sensitivity Label**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|sensitivitylabel|
+
+### <a name="BKMK_SensitivityLabelInfo"></a> SensitivityLabelInfo
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Sensitivity Label Info**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelinfo`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_SLAId"></a> SLAId
 
 |Property|Value|
@@ -1294,6 +1326,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [ParentSensitivityLabelId](#BKMK_ParentSensitivityLabelId)
 - [PostponeEmailProcessingUntil](#BKMK_PostponeEmailProcessingUntil)
 - [ReplyCount](#BKMK_ReplyCount)
 - [SafeDescription](#BKMK_SafeDescription)
@@ -1752,6 +1785,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_ParentSensitivityLabelId"></a> ParentSensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Parent Sensitivity Label Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`parentsensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_PostponeEmailProcessingUntil"></a> PostponeEmailProcessingUntil
 
 |Property|Value|
@@ -1933,6 +1978,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [owner_emails](#BKMK_owner_emails)
 - [processstage_emails](#BKMK_processstage_emails)
 - [Queue_Email_EmailSender](#BKMK_Queue_Email_EmailSender)
+- [sensitivitylabel_email_SensitivityLabelId](#BKMK_sensitivitylabel_email_SensitivityLabelId)
 - [sla_email](#BKMK_sla_email)
 - [SystemUser_Email_EmailSender](#BKMK_SystemUser_Email_EmailSender)
 - [team_email](#BKMK_team_email)
@@ -2368,6 +2414,19 @@ One-To-Many Relationship: [queue Queue_Email_EmailSender](queue.md#BKMK_Queue_Em
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_sensitivitylabel_email_SensitivityLabelId"></a> sensitivitylabel_email_SensitivityLabelId
+
+One-To-Many Relationship: [sensitivitylabel sensitivitylabel_email_SensitivityLabelId](sensitivitylabel.md#BKMK_sensitivitylabel_email_SensitivityLabelId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sensitivitylabel`|
+|ReferencedAttribute|`sensitivitylabelid`|
+|ReferencingAttribute|`sensitivitylabelid`|
+|ReferencingEntityNavigationPropertyName|`SensitivityLabelId_Email`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_sla_email"></a> sla_email
 
 One-To-Many Relationship: [sla sla_email](sla.md#BKMK_sla_email)
@@ -2677,6 +2736,6 @@ Many-To-One Relationship: [slakpiinstance slakpiinstance_email](slakpiinstance.m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.email?displayProperty=fullName>

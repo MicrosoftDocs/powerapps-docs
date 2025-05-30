@@ -1,16 +1,17 @@
 ---
 title: Aggregate data using QueryExpression
 description: Learn how to use QueryExpression to retrieve aggregated data from Microsoft Dataverse.
-ms.date: 05/12/2024
+ms.date: 04/11/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
+ - daryllabar
 ---
 # Aggregate data using QueryExpression
 
@@ -56,6 +57,7 @@ The types of aggregation you can do are members of the [XrmAggregateType enum](x
 Note the following points:
 
 - Null values aren't considered when calculating aggregate values.
+- Aggregated data is returned as an [AliasedValue](xref:Microsoft.Xrm.Sdk.AliasedValue).
 - You can use data from tables joined using the [LinkEntity class](xref:Microsoft.Xrm.Sdk.Query.LinkEntity).
 - You can apply filters to limit the results as with any query.
 
@@ -65,7 +67,7 @@ Let's say you have 10 account records with the following data:
 
 |Number of Employees|Name|Address 1 City|Created On|
 |---------|---------|---------|---------|
-|NULL|Example Account|NULL|8/25/2023|
+|NULL|Example Account|NULL|8/27/2023|
 |1,500|Contoso Pharmaceuticals (sample)|Redmond|3/25/2023|
 |2,700|Fabrikam, Inc. (sample)|Lynnwood|3/25/2023|
 |2,900|Blue Yonder Airlines (sample)|Los Angeles|3/25/2023|
@@ -141,6 +143,8 @@ The results are a single row:
 Group the results of an aggregate query by adding an [XrmAttributeExpression](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression) with the [HasGroupBy property](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression.HasGroupBy) [AggregateType](xref:Microsoft.Xrm.Sdk.Query.XrmAttributeExpression.AggregateType) set to [XrmAggregateType](xref:Microsoft.Xrm.Sdk.Query.XrmAggregateType)`.None`.
 
 When grouping, you should specify a [QueryExpression.Orders](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Orders) with an [OrderExpression](xref:Microsoft.Xrm.Sdk.Query.OrderExpression) that has the [Alias property](xref:Microsoft.Xrm.Sdk.Query.OrderExpression.Alias) set to the alias of the group.
+
+If a grouped by value is null, it doesn't appear in the results.
 
 
 For example the following query returns the sum of employees, and count by city:

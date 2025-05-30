@@ -3,7 +3,7 @@ title: "Insert email template while composing an email in model-driven apps | Mi
 description: "Insert a preformatted email message while composing an email."
 author: sbmjais
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 04/05/2023
 ms.subservice: end-user
 ms.author: shjais
@@ -39,6 +39,8 @@ After you select **Insert Template**, a window appears displaying a list of exis
 > This window doesn't appear if your administrator has set **Skip Select Record dialog** in **Advanced Settings** to **Yes**. The selection of one of these fields determines which template types are shown to a user in the template selection window:
 > - Recipient (TO): user (global) and contact templates are displayed.
 > - Regarding: user (global) and templates for the regarding entity are shown.
+>
+
 
 ### Enhanced email template selection dialog
 
@@ -59,13 +61,14 @@ The application displays the enhanced email template selection window only if yo
 2. **All templates**. Choose and browse from the templates displayed based on TO or Regarding, the filters applied, or a combination of both. You can change the view to display the templates in a grid, list, or tile view. Hover over the template tile to see the zoom option. Select the tile to open the template on a full screen.
 3. **Preview**. When you select an email template, a preview of the template is displayed here. The preview shows you the content so you can pick the template that best meets your needs. After inserting an email template, you can modify the content as needed in the email editor.
 4. **Filter**. You can filter templates based on standard or custom attributes.
-5. **View**. Use the view to switch between email template views. 
+5. **View**. Use the view to switch between email template views. Copilot can recommend the relevant email template for your email. The **Copilot recommended templates** view displays five relevant email templates with prompts that Copilot recommends.
 1. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
 1. **Record**. Specify the **Field Name** and **Record**. The template types shown to a user is based on what you've selected for these fields.
      - Recipient (TO): user (global) and contact templates are displayed.
      - Regarding: User (global) and templates for the regarding entity are shown. By default, **Field Name** is set to **Regarding**.
  
 > [!Note] 
+> - Bookable Resource Booking isn't supported.
 > - You can see the **Record** tab and switch between email template views only if your administrator has enabled the **Enable Email Template views** and **Skip Select Record dialog**. More information: [Customize the enhanced email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#customize-the-enhanced-email-template-selection-view)
 > - The enhanced email template selection view might vary based on the customizations your administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
 > - If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template only.

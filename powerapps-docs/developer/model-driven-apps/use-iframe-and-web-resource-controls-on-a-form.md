@@ -1,11 +1,11 @@
 ---
 title: "Use IFRAME and web resource controls on a form (model-driven apps)"
 description: "Learn how to work with IFRAME and web resources in model-driven apps using JavaScript.  "
-author: sriharibs-msft
-ms.author: srihas
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 06/10/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -128,10 +128,10 @@ var newTarget = "";
 //Set the target based on the value of the option set  
 switch (value) {  
     case 100000001:  
-        newTarget = https://myServer/test/pageOne.aspx;  
+        newTarget = "https://myServer/test/pageOne.aspx";  
         break;  
     default:  
-        newTarget = https://myServer/test/pageTwo.aspx;  
+        newTarget = "https://myServer/test/pageTwo.aspx";  
         break;  
 }  
 //Get the default URL for the IFRAME, which includes the   

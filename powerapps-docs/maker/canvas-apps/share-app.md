@@ -2,10 +2,10 @@
 title: Share a canvas app with your organization
 description: Learn about how to share canvas apps by giving other users in your organization the permissions to run or modify it.
 author: jessicaszelo
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/31/2024
+ms.date: 5/29/2025
 ms.subservice: canvas-maker
 ms.author: szlo
 search.audienceType: 
@@ -93,8 +93,10 @@ You can still use the classic app sharing experience by selecting the classic sh
     :::image type="content" source="media/share-app/individual-user.png " alt-text="Screenshot that shows what happens when you search for a name in the search field on an app page.":::
 
    > [!NOTE]
-   > - You can't share an app with a distribution group in your organization or with a group outside your organization.
-   > - To ensure efficient management experiences, use a security group when sharing the app with over 100 users.
+   > You can't share an app with a distribution group in your organization or with a group outside your organization.
+
+   > [!IMPORTANT]
+   > To avoid degraded experiences, use a security group when sharing the app with over 100 users.
 
 1. If your app contains premium components, such as a map or address input, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses**, which submits the request to your admin.
 

@@ -1,16 +1,14 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Entity table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Entity table/entity reference
+# Entity table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,6 +19,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RetrieveMultiple`<br />Event: False |`GET` /entities<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
@@ -445,7 +445,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [catalogassignment_entity](#BKMK_catalogassignment_entity)
 - [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
-- [entity_aiskillconfig_Entity](#BKMK_entity_aiskillconfig_Entity)
+- [emailaddressconfiguration_entity_EntityId](#BKMK_emailaddressconfiguration_entity_EntityId)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
@@ -453,6 +453,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [entity_solutioncomponentbatchconfiguration_PrimaryEntity](#BKMK_entity_solutioncomponentbatchconfiguration_PrimaryEntity)
 - [entity_solutioncomponentbatchconfiguration_RelatedEntity](#BKMK_entity_solutioncomponentbatchconfiguration_RelatedEntity)
 - [entity_solutioncomponentconfiguration](#BKMK_entity_solutioncomponentconfiguration)
+- [entityclusterconfig_extensionofrecordid](#BKMK_entityclusterconfig_extensionofrecordid)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_entity_msdyn_entitylinkchatconfiguration](#BKMK_msdyn_entity_msdyn_entitylinkchatconfiguration)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
@@ -509,17 +510,17 @@ Many-To-One Relationship: [dvtablesearchentity DVTableSearchEntity_Entity_Entity
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-### <a name="BKMK_entity_aiskillconfig_Entity"></a> entity_aiskillconfig_Entity
+### <a name="BKMK_emailaddressconfiguration_entity_EntityId"></a> emailaddressconfiguration_entity_EntityId
 
-Many-To-One Relationship: [aiskillconfig entity_aiskillconfig_Entity](aiskillconfig.md#BKMK_entity_aiskillconfig_Entity)
+Many-To-One Relationship: [emailaddressconfiguration emailaddressconfiguration_entity_EntityId](emailaddressconfiguration.md#BKMK_emailaddressconfiguration_entity_EntityId)
 
 |Property|Value|
 |---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`entity`|
-|ReferencedEntityNavigationPropertyName|`entity_aiskillconfig_Entity`|
+|ReferencingEntity|`emailaddressconfiguration`|
+|ReferencingAttribute|`entityid`|
+|ReferencedEntityNavigationPropertyName|`emailaddressconfiguration_entity_EntityId`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_entity_appaction_ContextEntity"></a> entity_appaction_ContextEntity
 
@@ -604,6 +605,18 @@ Many-To-One Relationship: [solutioncomponentconfiguration entity_solutioncompone
 |ReferencedEntityNavigationPropertyName|`entity_solutioncomponentconfiguration`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_entityclusterconfig_extensionofrecordid"></a> entityclusterconfig_extensionofrecordid
+
+Many-To-One Relationship: [entityclusterconfig entityclusterconfig_extensionofrecordid](entityclusterconfig.md#BKMK_entityclusterconfig_extensionofrecordid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`entityclusterconfig`|
+|ReferencingAttribute|`extensionofrecordid`|
+|ReferencedEntityNavigationPropertyName|`entityclusterconfig_extensionofrecordid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_metadataforarchival_extensionofrecordid"></a> metadataforarchival_extensionofrecordid
 
@@ -711,6 +724,6 @@ See [card card_entity_connections Many-To-Many Relationship](card.md#BKMK_card_e
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.entity?displayProperty=fullName>

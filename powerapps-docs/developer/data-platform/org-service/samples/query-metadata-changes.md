@@ -15,7 +15,7 @@ contributors:
 
 # Query schema definitions and detect changes
 
-This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can view the sample at [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
+This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can view the sample at [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/Schema/RetrieveMetadataChanges)
 
 See these topics for explaination of functionality:
 
@@ -26,7 +26,7 @@ See these topics for explaination of functionality:
 
 ## How to run this sample
 
-See the instructions here: [Schema samples instructions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/Schema/README.md#instructions)
+See the instructions here: [Schema samples instructions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/Schema/README.md#instructions)
 
 ## Demonstrates
 

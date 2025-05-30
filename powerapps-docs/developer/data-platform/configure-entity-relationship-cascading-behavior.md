@@ -5,7 +5,7 @@ suite: powerapps
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.date: 09/05/2023
 ms.subservice: dataverse-developer
 search.audienceType: 

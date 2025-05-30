@@ -1,16 +1,14 @@
 ---
 title: "AI Model (msdyn_AIModel) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Model (msdyn_AIModel) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# AI Model (msdyn_AIModel) table/entity reference
+# AI Model (msdyn_AIModel) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -23,10 +21,12 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `AddToFeedbackLoop`<br />Event: False |<xref:Microsoft.Dynamics.CRM.AddToFeedbackLoop?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Assign`<br />Event: True |`PATCH` /msdyn_aimodels(*msdyn_aimodelid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `BatchPrediction`<br />Event: False |<xref:Microsoft.Dynamics.CRM.BatchPrediction?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Create`<br />Event: False |`POST` /msdyn_aimodels<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /msdyn_aimodels(*msdyn_aimodelid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_ActiveRunConfigurationId](#BKMK_msdyn_ActiveRunConfigurationId)
+- [msdyn_AIModelCatalog](#BKMK_msdyn_AIModelCatalog)
 - [msdyn_AIModelId](#BKMK_msdyn_AIModelId)
 - [msdyn_ModelCreationContext](#BKMK_msdyn_ModelCreationContext)
 - [msdyn_Name](#BKMK_msdyn_Name)
@@ -143,6 +144,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets||
+
+### <a name="BKMK_msdyn_AIModelCatalog"></a> msdyn_AIModelCatalog
+
+|Property|Value|
+|---|---|
+|Description|**Lookup to AI Model Catalog**|
+|DisplayName|**AI Model Catalog**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_aimodelcatalog`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|msdyn_aimodelcatalog|
 
 ### <a name="BKMK_msdyn_AIModelId"></a> msdyn_AIModelId
 
@@ -812,7 +826,6 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [msdyn_AIBDatasetsContainer_msdyn_AIModelI](#BKMK_msdyn_AIBDatasetsContainer_msdyn_AIModelI)
 - [msdyn_AIBFeedbackLoop_msdyn_AIModel](#BKMK_msdyn_AIBFeedbackLoop_msdyn_AIModel)
-- [msdyn_aimodel_aiskillconfig_AIModel](#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aimodel_AsyncOperations](#BKMK_msdyn_aimodel_AsyncOperations)
 - [msdyn_aimodel_BulkDeleteFailures](#BKMK_msdyn_aimodel_BulkDeleteFailures)
@@ -846,18 +859,6 @@ Many-To-One Relationship: [msdyn_aibfeedbackloop msdyn_AIBFeedbackLoop_msdyn_AIM
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_AIBFeedbackLoop_msdyn_AIModel`|
 |IsCustomizable|`False`|
-|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
-
-### <a name="BKMK_msdyn_aimodel_aiskillconfig_AIModel"></a> msdyn_aimodel_aiskillconfig_AIModel
-
-Many-To-One Relationship: [aiskillconfig msdyn_aimodel_aiskillconfig_AIModel](aiskillconfig.md#BKMK_msdyn_aimodel_aiskillconfig_AIModel)
-
-|Property|Value|
-|---|---|
-|ReferencingEntity|`aiskillconfig`|
-|ReferencingAttribute|`aimodel`|
-|ReferencedEntityNavigationPropertyName|`msdyn_aimodel_aiskillconfig_AIModel`|
-|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
@@ -917,7 +918,7 @@ Many-To-One Relationship: [msdyn_aiconfiguration msdyn_aimodel_msdyn_aiconfigura
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_aimodelid`|
 |ReferencedEntityNavigationPropertyName|`msdyn_aimodel_msdyn_aiconfiguration`|
-|IsCustomizable|`False`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_aimodel_msdyn_aievent"></a> msdyn_aimodel_msdyn_aievent
@@ -1002,6 +1003,6 @@ See [botcomponent botcomponent_msdyn_aimodel Many-To-Many Relationship](botcompo
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_aimodel?displayProperty=fullName>

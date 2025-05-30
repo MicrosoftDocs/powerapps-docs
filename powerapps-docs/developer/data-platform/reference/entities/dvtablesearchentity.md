@@ -1,16 +1,14 @@
 ---
 title: "DVTableSearchEntity table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DVTableSearchEntity table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# DVTableSearchEntity table/entity reference
+# DVTableSearchEntity table/entity reference (Microsoft Dataverse)
 
 DVTableSearchEntities component
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /dvtablesearchentities(*dvtablesearchentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /dvtablesearchentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /dvtablesearchentities(*dvtablesearchentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [unstructuredfilesearchentityId](#BKMK_unstructuredfilesearchentityId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 ### <a name="BKMK_DVTableSearch"></a> DVTableSearch
@@ -271,6 +272,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|-1|
+
+### <a name="BKMK_unstructuredfilesearchentityId"></a> unstructuredfilesearchentityId
+
+|Property|Value|
+|---|---|
+|Description|**Contains reference from DVTableSearch to UnstructuredFileSearchEntity**|
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`unstructuredfilesearchentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|unstructuredfilesearchentity|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
@@ -582,6 +596,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [business_unit_dvtablesearchentity](#BKMK_business_unit_dvtablesearchentity)
 - [DVTableSearch_DVTableSearch_DVTableSearch](#BKMK_DVTableSearch_DVTableSearch_DVTableSearch)
 - [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
+- [dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId](#BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId)
 - [lk_dvtablesearchentity_createdby](#BKMK_lk_dvtablesearchentity_createdby)
 - [lk_dvtablesearchentity_createdonbehalfby](#BKMK_lk_dvtablesearchentity_createdonbehalfby)
 - [lk_dvtablesearchentity_modifiedby](#BKMK_lk_dvtablesearchentity_modifiedby)
@@ -626,6 +641,19 @@ One-To-Many Relationship: [entity DVTableSearchEntity_Entity_Entity](entity.md#B
 |ReferencedAttribute|`entityid`|
 |ReferencingAttribute|`entity`|
 |ReferencingEntityNavigationPropertyName|`Entity`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId"></a> dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId
+
+One-To-Many Relationship: [unstructuredfilesearchentity dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId](unstructuredfilesearchentity.md#BKMK_dvtablesearchentity_unstructuredfilesearchentity_unstructuredfilesearchentityId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`unstructuredfilesearchentity`|
+|ReferencedAttribute|`unstructuredfilesearchentityid`|
+|ReferencingAttribute|`unstructuredfilesearchentityid`|
+|ReferencingEntityNavigationPropertyName|`unstructuredfilesearchentityId`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -834,6 +862,6 @@ Many-To-One Relationship: [syncerror dvtablesearchentity_SyncErrors](syncerror.m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.dvtablesearchentity?displayProperty=fullName>

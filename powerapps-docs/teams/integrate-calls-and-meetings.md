@@ -2,9 +2,8 @@
 title: Integrate your Teams app with calls and meetings
 description: Learn how to use Teams calls and meetings with your Power Apps in Teams.
 author: joel-lindstrom
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/25/2021
 ms.author: saperlmu
 ms.reviewer: mkaur
@@ -20,7 +19,7 @@ Apps in Microsoft Teams drive collaboration by enabling users to do work where t
 Power Apps in Teams can leverage deep integration with other Teams capabilities to make apps collaborative. In this article, we'll learn how we can integrate Power Apps with Teams to make calls or schedule meetings with other users within the organization.
 
 Watch this video to learn how to integrate Power Apps with calls and meetings:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=022e5ad1-7a6d-49bb-99de-93dd4041bebd]
 
 ## Prerequisites
 

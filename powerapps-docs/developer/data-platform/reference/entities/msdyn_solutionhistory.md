@@ -1,16 +1,14 @@
 ---
 title: "Solution History (msdyn_solutionhistory) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution History (msdyn_solutionhistory) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Solution History (msdyn_solutionhistory) table/entity reference
+# Solution History (msdyn_solutionhistory) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -69,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_publishername](#BKMK_msdyn_publishername)
 - [msdyn_result](#BKMK_msdyn_result)
 - [msdyn_retrycount](#BKMK_msdyn_retrycount)
+- [msdyn_solutionhistorydescription](#BKMK_msdyn_solutionhistorydescription)
 - [msdyn_solutionhistoryId](#BKMK_msdyn_solutionhistoryId)
 - [msdyn_solutionid](#BKMK_msdyn_solutionid)
 - [msdyn_solutionversion](#BKMK_msdyn_solutionversion)
@@ -385,6 +384,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|0|
 
+### <a name="BKMK_msdyn_solutionhistorydescription"></a> msdyn_solutionhistorydescription
+
+|Property|Value|
+|---|---|
+|Description|**Comments associated with solution installation**|
+|DisplayName|**Description**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_solutionhistorydescription`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_msdyn_solutionhistoryId"></a> msdyn_solutionhistoryId
 
 |Property|Value|
@@ -512,6 +528,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_solutionhistory?displayProperty=fullName>

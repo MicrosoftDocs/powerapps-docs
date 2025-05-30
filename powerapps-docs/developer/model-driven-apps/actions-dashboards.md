@@ -27,7 +27,7 @@ To perform the following actions on an organization-owned dashboard (`SystemForm
   > [!IMPORTANT]
   > Using the methods available in the Dataverse Web Services, it is possible to set two dashboards as the default. Make sure that no other dashboard is the default dashboard for the organization before updating this setting programmatically.
 
-  After you update an organization-owned dashboard, you must publish the metadata changes to make it visible across the organization. You can use the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message or <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message to publish the changes made for an organization-owned dashboard. For a sample code that demonstrates this, see [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard).
+  After you update an organization-owned dashboard, you must publish the metadata changes to make it visible across the organization. You can use the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message or <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message to publish the changes made for an organization-owned dashboard. For a sample code that demonstrates this, see [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboard).
 
   For a list of supported messages on the organization-owned dashboard table, see [SystemForm table](../data-platform/reference/entities/systemform.md).
 
@@ -50,7 +50,7 @@ You can perform the following actions on a user-owned dashboard (`UserForm`):
  [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)  
  [Create a dashboard](create-dashboard.md)  
  [Sample dashboards](sample-dashboards.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard)  
- [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignUserOwnedDashboardToAnother)
+ [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboard)  
+ [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignUserOwnedDashboardToAnother)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

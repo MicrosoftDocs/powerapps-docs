@@ -1,16 +1,14 @@
 ---
 title: "Flow Machine Network (flowmachinenetwork) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Network (flowmachinenetwork) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Flow Machine Network (flowmachinenetwork) table/entity reference
+# Flow Machine Network (flowmachinenetwork) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,10 +20,12 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /flowmachinenetworks(*flowmachinenetworkid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /flowmachinenetworks<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateFlowMachineNetwork`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateFlowMachineNetwork?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /flowmachinenetworks(*flowmachinenetworkid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -65,12 +65,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [CredentialId](#BKMK_CredentialId)
 - [description](#BKMK_description)
+- [DomainName](#BKMK_DomainName)
 - [DomainPassword](#BKMK_DomainPassword)
 - [DomainUsername](#BKMK_DomainUsername)
 - [flowmachinenetworkId](#BKMK_flowmachinenetworkId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
+- [NetworkMetadata](#BKMK_NetworkMetadata)
+- [OrganizationalUnit](#BKMK_OrganizationalUnit)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -113,6 +116,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|2000|
+
+### <a name="BKMK_DomainName"></a> DomainName
+
+|Property|Value|
+|---|---|
+|Description|**Deprecated.**|
+|DisplayName|**AD domain name (Deprecated)**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`domainname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|64|
 
 ### <a name="BKMK_DomainPassword"></a> DomainPassword
 
@@ -194,6 +214,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_NetworkMetadata"></a> NetworkMetadata
+
+|Property|Value|
+|---|---|
+|Description|**Internal Use Only.**|
+|DisplayName|**Network Metadata**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`networkmetadata`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|25000|
+
+### <a name="BKMK_OrganizationalUnit"></a> OrganizationalUnit
+
+|Property|Value|
+|---|---|
+|Description|**Deprecated.**|
+|DisplayName|**Organizational unit (Deprecated)**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`organizationalunit`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|260|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -996,6 +1050,6 @@ Many-To-One Relationship: [syncerror flowmachinenetwork_SyncErrors](syncerror.md
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.flowmachinenetwork?displayProperty=fullName>

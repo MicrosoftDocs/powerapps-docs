@@ -1,16 +1,14 @@
 ---
 title: "Site Setting (mspp_sitesetting) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Site Setting (mspp_sitesetting) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Site Setting (mspp_sitesetting) table/entity reference
+# Site Setting (mspp_sitesetting) table/entity reference (Microsoft Dataverse)
 
 Site specific settings or variables refferenced by the web site code files.
 
@@ -21,9 +19,11 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /mspp_sitesettings<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /mspp_sitesettings(*mspp_sitesettingid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /mspp_sitesettings(*mspp_sitesettingid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 | `RetrieveMultiple`<br />Event: True |`GET` /mspp_sitesettings<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -71,10 +71,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_createdby](#BKMK_mspp_createdby)
 - [mspp_createdon](#BKMK_mspp_createdon)
 - [mspp_description](#BKMK_mspp_description)
+- [mspp_environmentvariable](#BKMK_mspp_environmentvariable)
+- [mspp_envvar_schema](#BKMK_mspp_envvar_schema)
 - [mspp_modifiedby](#BKMK_mspp_modifiedby)
 - [mspp_modifiedon](#BKMK_mspp_modifiedon)
 - [mspp_name](#BKMK_mspp_name)
 - [mspp_sitesettingId](#BKMK_mspp_sitesettingId)
+- [mspp_source](#BKMK_mspp_source)
 - [mspp_value](#BKMK_mspp_value)
 - [mspp_websiteid](#BKMK_mspp_websiteid)
 - [statecode](#BKMK_statecode)
@@ -126,6 +129,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|4096|
+
+### <a name="BKMK_mspp_environmentvariable"></a> mspp_environmentvariable
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Environment Variable**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`mspp_environmentvariable`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|environmentvariabledefinition|
+
+### <a name="BKMK_mspp_envvar_schema"></a> mspp_envvar_schema
+
+|Property|Value|
+|---|---|
+|Description|**Environment Variable Schema Name**|
+|DisplayName|**Environment Variable Schema Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`mspp_envvar_schema`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|4000|
 
 ### <a name="BKMK_mspp_modifiedby"></a> mspp_modifiedby
 
@@ -185,6 +218,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`mspp_sitesettingid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_mspp_source"></a> mspp_source
+
+|Property|Value|
+|---|---|
+|Description|**Source from value is taken**|
+|DisplayName|**Source**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`mspp_source`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mspp_mspp_sitesetting_mspp_source`|
+
+#### mspp_source Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Table**|
+|1|**Environment Variable**|
 
 ### <a name="BKMK_mspp_value"></a> mspp_value
 
@@ -263,9 +317,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
+- [mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
 - [mspp_systemuser_mspp_sitesetting_createdby](#BKMK_mspp_systemuser_mspp_sitesetting_createdby)
 - [mspp_systemuser_mspp_sitesetting_modifiedby](#BKMK_mspp_systemuser_mspp_sitesetting_modifiedby)
 - [mspp_website_sitesetting](#BKMK_mspp_website_sitesetting)
+
+### <a name="BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable"></a> mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable
+
+One-To-Many Relationship: [environmentvariabledefinition mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](environmentvariabledefinition.md#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`environmentvariabledefinition`|
+|ReferencedAttribute|`environmentvariabledefinitionid`|
+|ReferencingAttribute|`mspp_environmentvariable`|
+|ReferencingEntityNavigationPropertyName|`EnvironmentValue`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_systemuser_mspp_sitesetting_createdby"></a> mspp_systemuser_mspp_sitesetting_createdby
 
@@ -310,6 +378,6 @@ One-To-Many Relationship: [mspp_website mspp_website_sitesetting](mspp_website.m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mspp_sitesetting?displayProperty=fullName>

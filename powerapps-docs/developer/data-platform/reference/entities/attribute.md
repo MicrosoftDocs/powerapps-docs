@@ -1,16 +1,14 @@
 ---
 title: "Attribute table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Attribute table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Attribute table/entity reference
+# Attribute table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,6 +19,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `RetrieveMultiple`<br />Event: False |`GET` /attributes<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
@@ -311,6 +311,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [attribute_dvfilesearchattribute](#BKMK_attribute_dvfilesearchattribute)
 - [attribute_dvtablesearchattribute](#BKMK_attribute_dvtablesearchattribute)
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
+- [emailaddressconfiguration_attribute_AttributeId](#BKMK_emailaddressconfiguration_attribute_AttributeId)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 
@@ -350,6 +351,18 @@ Many-To-One Relationship: [solutioncomponentattributeconfiguration attribute_sol
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_emailaddressconfiguration_attribute_AttributeId"></a> emailaddressconfiguration_attribute_AttributeId
+
+Many-To-One Relationship: [emailaddressconfiguration emailaddressconfiguration_attribute_AttributeId](emailaddressconfiguration.md#BKMK_emailaddressconfiguration_attribute_AttributeId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailaddressconfiguration`|
+|ReferencingAttribute|`attributeid`|
+|ReferencedEntityNavigationPropertyName|`emailaddressconfiguration_attribute_AttributeId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_referencedattribute_relationshipattribute"></a> referencedattribute_relationshipattribute
 
 Many-To-One Relationship: [relationshipattribute referencedattribute_relationshipattribute](relationshipattribute.md#BKMK_referencedattribute_relationshipattribute)
@@ -378,6 +391,6 @@ Many-To-One Relationship: [relationshipattribute referencingattribute_relationsh
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.attribute?displayProperty=fullName>

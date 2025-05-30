@@ -6,9 +6,9 @@ ms.date: 11/13/2024
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "troubleshooting"
+ms.topic: troubleshooting-general
 author: "kunalks2003"
-ms.subservice: troubleshoot
+ms.subservice: mda-maker
 ms.author: "hemantg"
 tags: 
 search.audienceType: 

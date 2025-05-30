@@ -1,16 +1,14 @@
 ---
 title: "Service Endpoint (ServiceEndpoint) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Service Endpoint (ServiceEndpoint) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Service Endpoint (ServiceEndpoint) table/entity reference
+# Service Endpoint (ServiceEndpoint) table/entity reference (Microsoft Dataverse)
 
 Service endpoint that can be contacted.
 
@@ -21,8 +19,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /serviceendpoints<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /serviceendpoints(*serviceendpointid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /serviceendpoints(*serviceendpointid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /serviceendpoints<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `TriggerServiceEndpointCheck`<br />Event: True |<xref:Microsoft.Dynamics.CRM.TriggerServiceEndpointCheck?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.TriggerServiceEndpointCheckRequest>|
@@ -59,6 +59,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [KeyVaultReferenceId](#BKMK_KeyVaultReferenceId)
+- [ManagedIdentityId](#BKMK_ManagedIdentityId)
 - [MessageCharset](#BKMK_MessageCharset)
 - [MessageFormat](#BKMK_MessageFormat)
 - [Name](#BKMK_Name)
@@ -94,6 +95,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
+|0|**Not Specified**|
 |1|**ACS**|
 |2|**SAS Key**|
 |3|**SAS Token**|
@@ -102,6 +104,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|**Http Query String**|
 |7|**Connection String**|
 |8|**Access Key**|
+|9|**Managed Identity**|
 
 ### <a name="BKMK_AuthValue"></a> AuthValue
 
@@ -169,6 +172,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |8|**Webhook**|
 |9|**Event Grid**|
 |10|**Managed Data Lake**|
+|11|**Container Storage**|
 
 ### <a name="BKMK_Description"></a> Description
 
@@ -229,6 +233,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 |Targets|keyvaultreference|
 
+### <a name="BKMK_ManagedIdentityId"></a> ManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for managed identity associated with serviceendpoint.**|
+|DisplayName|**ManagedIdentityId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`managedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
 ### <a name="BKMK_MessageCharset"></a> MessageCharset
 
 |Property|Value|
@@ -249,6 +266,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Default**|
 |1|**UTF8**|
+|2|**Windows1252**|
 
 ### <a name="BKMK_MessageFormat"></a> MessageFormat
 
@@ -786,6 +804,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [keyvaultreference_ServiceEndpoint](#BKMK_keyvaultreference_ServiceEndpoint)
 - [lk_serviceendpointbase_createdonbehalfby](#BKMK_lk_serviceendpointbase_createdonbehalfby)
 - [lk_serviceendpointbase_modifiedonbehalfby](#BKMK_lk_serviceendpointbase_modifiedonbehalfby)
+- [managedidentity_ServiceEndpoint](#BKMK_managedidentity_ServiceEndpoint)
 - [modifiedby_serviceendpoint](#BKMK_modifiedby_serviceendpoint)
 - [organization_serviceendpoint](#BKMK_organization_serviceendpoint)
 
@@ -841,6 +860,19 @@ One-To-Many Relationship: [systemuser lk_serviceendpointbase_modifiedonbehalfby]
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_managedidentity_ServiceEndpoint"></a> managedidentity_ServiceEndpoint
+
+One-To-Many Relationship: [managedidentity managedidentity_ServiceEndpoint](managedidentity.md#BKMK_managedidentity_ServiceEndpoint)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencingEntityNavigationPropertyName|`managedidentityid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_modifiedby_serviceendpoint"></a> modifiedby_serviceendpoint
 
 One-To-Many Relationship: [systemuser modifiedby_serviceendpoint](systemuser.md#BKMK_modifiedby_serviceendpoint)
@@ -888,6 +920,6 @@ Many-To-One Relationship: [sdkmessageprocessingstep serviceendpoint_sdkmessagepr
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.serviceendpoint?displayProperty=fullName>

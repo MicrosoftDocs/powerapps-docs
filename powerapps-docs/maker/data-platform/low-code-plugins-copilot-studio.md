@@ -5,6 +5,7 @@ author: mikefactorial
 ms.author: sriknair
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 04/26/2024
 ms.custom: template-how-to
@@ -17,6 +18,8 @@ ms.collection: bap-ai-copilot
 Copilot actions are a way to extend the capabilities of your copilot bots. With Copilot generative AI actions, you create custom actions that are triggered by your copilot bot. These actions are used to perform a wide range of tasks, such as sending emails, creating records in Microsoft Dataverse, or calling external APIs. In this article, you create a basic low-code plug-in that adds two integers together and a more complex plug-in that can be used to send a notification either of which can be used to create an action in Microsoft Copilot Studio.
 
 > [!IMPORTANT]
+>
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 

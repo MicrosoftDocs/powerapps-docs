@@ -3,7 +3,7 @@ title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK for .NET assemblies."
 ms.date: 05/03/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.author: sriknair
 search.audienceType: 

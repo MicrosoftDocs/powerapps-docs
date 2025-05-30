@@ -1,16 +1,14 @@
 ---
 title: "Synapse Link External Table State (synapselinkexternaltablestate) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Synapse Link External Table State (synapselinkexternaltablestate) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Synapse Link External Table State (synapselinkexternaltablestate) table/entity reference
+# Synapse Link External Table State (synapselinkexternaltablestate) table/entity reference (Microsoft Dataverse)
 
 Synapse Link external table states
 
@@ -21,9 +19,11 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /synapselinkexternaltablestates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: True |`GET` /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /synapselinkexternaltablestates<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -63,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncState](#BKMK_LastSyncState)
 - [MaxRecordVersion](#BKMK_MaxRecordVersion)
 - [MetadataVersion](#BKMK_MetadataVersion)
+- [MinSyncedDataVersion](#BKMK_MinSyncedDataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [RecordCount](#BKMK_RecordCount)
@@ -216,6 +217,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|32|
+
+### <a name="BKMK_MinSyncedDataVersion"></a> MinSyncedDataVersion
+
+|Property|Value|
+|---|---|
+|Description|**Last Synced Minimum Data Version**|
+|DisplayName|**MinSyncVersion**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`minsynceddataversion`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_name"></a> name
 
@@ -776,6 +791,6 @@ Many-To-One Relationship: [syncerror synapselinkexternaltablestate_SyncErrors](s
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.synapselinkexternaltablestate?displayProperty=fullName>

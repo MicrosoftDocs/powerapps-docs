@@ -1,8 +1,8 @@
 ---
-title: "Create a model-driven app site map in Power Apps | MicrosoftDocs"
+title: "Create a model-driven app site map in Power Apps"
 description: "Learn how to create a site map for your app"
 keywords: ""
-ms.date: 05/29/2018
+ms.date: 01/23/2025
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
@@ -21,9 +21,9 @@ topic-status: Drafting
 search.audienceType: 
   - maker
 ---
-# Create a model-driven app site map using the site map designer
+# Create a model-driven app site map using the legacy site map designer
 
-## Site maps overview
+This article describes how to use the classic site map designer. For information about how to create site mapping in the modern app designer, go to [App navigation in model-driven apps](app-navigation.md).
 
 Site maps define the manner by which users move between tables in a model-driven app. This is called **navigation**. App navigation is a fundamental aspect of the user experience when performing tasks within the app.
 
@@ -31,9 +31,9 @@ To understand site maps it helps to introduce some concepts, so that you can und
 
 The screenshot below illustrates a number of features.
 
-1. An **Area**.  Model-driven apps can have multiple areas. Users toggle between these to access different groups.
-2. A **Group**.  Areas can have multiple groups. Essentially these allow you to group tables, custom pages, and other components, in a logical fashion.
-3. A **Table (or entity)**.  This allows users to see views of the tables that have been selected in the app designer.
+1. An **Area**. Model-driven apps can have multiple areas. Users toggle between these to access different groups.
+2. A **Group**. Areas can have multiple groups. Essentially these allow you to group tables, custom pages, and other components, in a logical fashion.
+3. A **Table (or entity)**. This allows users to see views of the tables that have been selected in the app designer.
 
    :::image type="content" source="media/default-sitemap.png" alt-text="simple model-driven app navigation":::
 
@@ -41,7 +41,7 @@ This hierarchical structure is important to enable a good user experience, and t
 
 ## Viewing an app from within the app designer
 
-The same app viewed from within the site map designer shows the corresponding areas, groups and tables.  In this case you're viewing tables within the accounts **Group** and groups within the accounts **Area**.  You can also notice there's another area called **Tasks** that also exists within the app designer.
+The same app viewed from within the site map designer shows the corresponding areas, groups, and tables. In this case you're viewing tables within the accounts **Group** and groups within the accounts **Area**. You can also notice there's another area called **Tasks** that also exists within the app designer.
 
 :::image type="content" source="media/site-map-designer-demo.png" alt-text="Viewing an app from withing the site map designer":::
 
@@ -65,7 +65,7 @@ A default site map is created automatically as part of the model-driven app crea
   
 ## Create a site map for an app  
   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Solutions**, open the solution you want.
 1. Select **New** - **App** - **Model-driven app**.
 1. From the two options available select **Classic App Designer**.
@@ -78,16 +78,13 @@ A default site map is created automatically as part of the model-driven app crea
     > [!NOTE]
     >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button.](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
 
-1.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
-  
-1.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
-  
-1. [Add a subarea to a group in the site map](create-site-map-app.md#bkmk_AddSubarea).  
-  
+1. [Add an area to the site map](#add-an-area-to-the-site-map).  
+1. [Add a group to the site map](#add-a-group-to-the-site-map).  
+1. [Add a subarea to a group in the site map](#add-a-subarea-to-a-group-in-the-site-map).  
 1. Select **Save**.  
   
     > [!NOTE]
-    >  The new site map is associated with the app when returning to the app designer and select **Save**. When a site map is configured, **Configured** appears on the site map tile; otherwise **Not Configured** appears on the tile.  If you open the site map designer from the app designer and configure a new site map, but close the browser before associating the site map with the app, the site map will be automatically associated with the app the next time the app designer is opened, based on the app unique name.  
+    >  The new site map is associated with the app when returning to the app designer and select **Save**. When a site map is configured, **Configured** appears on the site map tile; otherwise **Not Configured** appears on the tile. If you open the site map designer from the app designer and configure a new site map, but close the browser before associating the site map with the app, the site map will be automatically associated with the app the next time the app designer is opened, based on the app unique name.  
   
 1. Select **Publish**.  
   
@@ -97,7 +94,6 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
 
 :::image type="content" source="media/site-map-play-updated-app.gif" alt-text="Play updated model-driven app":::
 
-<a name="bkmk_AddArea"></a>   
 ## Add an area to the site map  
   
 1.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Area**.  
@@ -116,7 +112,7 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
   
     - **Icon**: A default application icon is selected. Select a different icon for the area from the list of web resources available in the solution. The icon only applies to the deprecated web client site map and not the modern model-driven app site map.  
   
-    - **ID**: A unique ID is automatically generated, but different one can be entered if necessary. It's best practice to use the provided ID because if the ID entered isn't unique, users might get an error when they're using the app, or app designers may get an error when importing a solution that contains this site map.  
+    - **ID**: A unique ID is automatically generated, but different one can be entered if necessary. It's best practice to use the provided ID because if the ID entered isn't unique, users might get an error when they're using the app, or app designers might get an error when importing a solution that contains this site map.  
   
     - **Show Groups**: Select this check box to show groups of subareas in the navigation pane.  
   
@@ -132,7 +128,6 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
 
 The following sections provide instructions describing how to work with Groups, Subareas, and Areas in addition to reviewing their properties.
 
-<a name="bkmk_AddGroup"></a>   
 ## Add a group to the site map  
   
 1.  On the site map designer canvas, select the area you want to add the group to.  
@@ -162,7 +157,6 @@ The following sections provide instructions describing how to work with Groups, 
 
     - **Set as Profile**: Select this check box to indicate whether this group represents a user-selectable profile for the workplace. The group set as a user-selectable profile is made available as options in your personal options. This only applies for groups within the **Workplace** area.  
   
-<a name="bkmk_AddSubarea"></a>   
 ## Add a subarea to a group in the site map  
   
 1.  Select **Add** ![Add button on the designer.](media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the site map designer canvas, and then select **Subarea**.  
@@ -211,7 +205,7 @@ The following sections provide instructions describing how to work with Groups, 
     - **Outlook Shortcut**: Select the icon to display in Dynamics 365 for Outlook.  
   
     - **Offline Availability**: Select this check box to make this subarea available to users when they're offline in Dynamics 365 for Outlook.  
-<a name="bkmk_OrganizeSite"></a>  
+
 ## Organize areas, groups, and subareas
 
  Organize areas, groups, and subareas by dragging them to new positions. A container box appears where you can drop the tiles. Here are some options:  
@@ -241,16 +235,16 @@ The following sections provide instructions describing how to work with Groups, 
 5.  Double-click to select the site map added that has the display name **Site Map** and is in a **Managed** state. The site map can be selected, and then on the toolbar, select **Edit**.  
   
      The site map opens in the site map designer.  
-6.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
-7.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
-8.  [Add a subarea to a group in the site map](create-site-map-app.md#bkmk_AddSubarea).
-9.  [Rearrange your areas, groups and subareas as required](create-site-map-app.md#bkmk_OrganizeSite).
+6. [Add an area to the site map](#add-an-area-to-the-site-map).  
+7. [Add a group to the site map](#add-a-group-to-the-site-map).  
+8. [Add a subarea to a group in the site map](#add-a-subarea-to-a-group-in-the-site-map).  
+9. [Organize areas, groups, and subareas](#organize-areas-groups-and-subareas).
 10. Select **Save**.  
 11. Select **Publish**.
 12. Select **Save and Close**.
 
 ## Clone a component in a site map  
- To make a copy of an existing component, select the component, and then on the toolbar, select **Clone**.  All details of the cloned component are same as the base component except the ID and title. The ID is generated randomly.
+ To make a copy of an existing component, select the component, and then on the toolbar, select **Clone**. All details of the cloned component are same as the base component except the ID and title. The ID is generated randomly.
   
  When an area is cloned, the cloned area is added to the right of the currently selected area. When a group is cloned, the cloned group is added to the right of the currently selected group. When a subarea is cloned, the cloned subarea is added below the currently selected subarea.  
   
@@ -271,7 +265,7 @@ The following table explains the clients supported for different site maps.
 
 During the transition from web client to Unified Interface, a legacy app was provided which uses the web client site map. With the web client removed, we're deprecating the legacy app. Subsequently, makers might want to provide a replacement model-driven app for users. In a future release, the legacy app will be removed.
 
-By default, the legacy app name is "Dynamics 365 - custom", but could have been renamed within the environment.
+By default, the legacy app name is "Dynamics 365 - custom," but could have been renamed within the environment.
 
 > [!div class="mx-imgBorder"]
 > ![Legacy app in app switcher](media/create-site-map-app/legacy-app-in-app-switcher.png "Legacy app in app switcher")
@@ -293,7 +287,7 @@ To create a model-driven app with the same site map items as the legacy app, the
      > [!div class="mx-imgBorder"]
      > ![Switch to classic](media/create-site-map-app/solution-explorer-app-threeDots.png "Switch to classic")
 
-1. From the left pane select **Model-driven Apps** > **New** .
+1. From the left pane, select **Model-driven Apps** > **New** .
 
 1. In the **Create a New App** dialog:
    - Enter the app name. The unique name and description can also be provided but aren't required.
@@ -315,9 +309,9 @@ To create a model-driven app with the same site map items as the legacy app, the
 
 1. Add people and assign security roles to allow them to use the app.
 
-After the new model-driven app is available, the "Dynamics 365 - custom" app should be hidden for non-admins in all environments.
+After the new model-driven app is available, the "Dynamics 365 - custom" app should be hidden for nonadmins in all environments.
 
-1. Open [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and select the environment to hide the legacy app.
+1. Open [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and open the environment to hide the legacy app.
 
 1. Select **Settings > Product > Behavior**.
 

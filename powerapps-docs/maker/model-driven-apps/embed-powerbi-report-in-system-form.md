@@ -1,12 +1,13 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.date: 08/08/2024
+ms.date: 01/21/2025
 ms.topic: "how-to"
 author: "sriharibs-msft"
 ms.subservice: mda-maker
 ms.author: "srihas"
 ms.reviewer: "matp"
+contributors: jasongre
 search.audienceType: 
   - maker
 ---
@@ -18,7 +19,7 @@ You can use Power BI reports in Power Apps model-driven apps to bring rich repor
 
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
-This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing managed solution.
+This feature requires exporting a solution, modifying it to replace the XML snippet, and then importing back into the environment. Be sure to import the changes on your development environment via an unmanaged solution only. Go to [Import, update, and export solutions](../data-platform/import-update-export-solutions.md) for guidance on installing an update to an existing unmanaged solution.
 
 ## Embed without contextual filtering
 
@@ -27,52 +28,45 @@ You can use Power BI reports by embedding them, and get the exact same report. T
 > [!div class="mx-imgBorder"] 
 > ![Embedded  Power BI report without contextual filtering.](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embedded  Power BI report without contextual filtering")
 
-You can customize a main form XML `sections` node so that it can host an embedded Power BI report and tile by following these steps:
+You can customize a main form XML `controls` node so that it can host an embedded Power BI report and tile by following these steps:
 
-1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display.
+1. In your development environment, create a solution and add the table that contains the main form where you want the embedded Power BI report to display. Choose the **Select components** option when you add the table to the solution. Then, add just the table's main form.
 
-   - If the table already exists in the target environment where you import the solution, choose the **Select components** option when you add the table to the solution. Then, add just the table’s main form.
-   - If the table doesn’t exist in the target environment where you import the solution, choose **Include all components** when you add the table to the solution.
-1. Export the solution as managed.
-2. Extract all files in the solution package zip file. Then, edit the customizations.xml file and add the XML code provided below inside the `<sections>` block that is inside the `<forms type="main">` node in the customizations.xml file.
+2. Edit the table's main form in your solution and add a placeholder subgrid where you want to embed your Power BI report.
 
-```xml
-<section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
+    - Update the label and name of your subgrid in the form designer.
+
+    > :::image type="content" source="media/embed-powerbi/embed-powerbi-report-placeholder.png" alt-text="Power BI embed placeholder" lightbox="media/embed-powerbi/embed-powerbi-report-placeholder.png":::
+
+3. Export the solution as unmanaged and extract all files in the solution package zip file. Then, edit the customizations.xml file and find the name of your subgrid. Replace the XML code provided inside the `<control>` block in the customizations.xml file. The `rowspan` in the parent `cell` node can be adjusted to change the size of the embedded Power BI report.
+
+    ```xml
+    <cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
 	<labels>
-		<label languagecode="1033" description="Unfiltered Power BI embedding demo"/>
+		<label languagecode="1033" description="Accounts (Parent Account)"/>
 	</labels>
-	<rows>
-		<row>
-			<cell id="{7d18b61c-c588-136c-aee7-03e5e74a09a1}" showlabel="true" rowspan="20" colspan="1" auto="false" solutionaction="Added">
-				<labels>
-					<label languagecode="1033" description="Accounts (Parent Account)"/>
-				</labels>
-				<control id="unfilteredreport" classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}">
-					<parameters>
-						<PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
-						<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
-						<TileUrl>https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
-					</parameters>
-				</control>
-			</cell>
-		</row>
-		<row/>
-	</rows>
-</section>
-```
-   > [!IMPORTANT]
-   > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
+	<control id="unfilteredreport" classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}">
+		<parameters>
+			<PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
+			<PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
+			<TileUrl>https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
+		</parameters>
+	</control>
+    </cell>
+    ```
+    > [!IMPORTANT]
+    > Be sure to use the control `classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}"` as indicated in the XML sample.
 
-3. Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
+    - Make the following changes to the form XML that you copied into the customizations.xml file for your Power BI report. This table describes the values you need to change to the elements in the previous XML sample.
+   </br>
 
-| Property              | Description                        |
-|-------------------------|-----------------------------------|
-|  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in My workspace,** then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
-|   **PowerBIReportId**       |    The Power BI report ID. Replace this with the report that you want to embed. You can find the ID of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
-|   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report ID (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
-| **solutionaction="Added"** | If the table already exists in the target environment, leave the `solutionaction=Added` parameter for the cell element as provided in the XML sample. If the table doesn’t exist in the target environment, remove the `solutionaction=Added` parameter. |
+    | Property              | Description                        |
+    |-------------------------|-----------------------------------|
+    |  **PowerBIGroupId**          |     The Power BI workspace ID. If your report is in **My workspace**, then the workspace ID is 00000000-0000-0000-0000-000000000000. Otherwise, add the workspace ID. You can find the ID of the workspace in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids).                 |
+    |   **PowerBIReportId**       |    The Power BI report ID. Replace this with the report that you want to embed. You can find the ID of your report in the Power BI service URL. More information: [Find the Power BI workspace and report Ids](#find-the-power-bi-workspace-and-report-ids)    |
+    |   **TileUrl**            |    The Power BI report URL that you want to embed. Be sure to use the correct Power BI subdomain name (you might need to replace app.powerbi.com with your own) and report ID (replace *reportId=544c4162-6773-4944-900c-abfd075f6081* with your own). For example, `https://app.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081`. |
 
-4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the target environment.
+4. Create a zip file out of all the solution files previously extracted. Then, import the solution into the development environment.
 
 ## Embed with contextual filtering
 
@@ -123,11 +117,7 @@ This table describes any additional properties used in the previous XML sample.
 
 The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the Power Apps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account table, whose value will be passed here. 
 
-You can create more complex filter expressions by looking at examples from [Constructing Filters](/javascript/api/overview/powerbi/control-report-filters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *\"*, so that the JSON is generated correctly.
-
-## Remove unmodified attribute before import
-
-Before you import the solution into the target environment, make sure the unmodified attribute isn’t included in formXml section of the customizations.xml file. If the unmodified attribute is present in the XML that includes the Power BI control XML, remove the attribute before you import the solution into the target environment. For example, replace `<systemform unmodified="1">` with `<systemform>`.
+You can create more complex filter expressions by looking at examples from [Constructing Filters](/javascript/api/overview/powerbi/control-report-filters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *"*, so that the JSON is generated correctly.
 
 ## Find the Power BI workspace and report Ids
 
@@ -143,12 +133,12 @@ Before you import the solution into the target environment, make sure the unmodi
 
    > [!div class="mx-imgBorder"] 
    > ![Power BI sign in prompt.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-1.png "Power BI sign in prompt")
-
-    No data will display if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
-
+   
+    No data displays if an incorrect account is used to log into Power BI. To sign in with the correct credentials, sign out, and then sign in again.
+  
    > [!div class="mx-imgBorder"] 
    > ![Sign in to Power BI service.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-2.png "Sign in to Power BI service")
-
+   
    > [!div class="mx-imgBorder"] 
    > ![User that is signed in doesn't have appropriate permission.](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "User that is signed in doesn't have appropriate permission")
 

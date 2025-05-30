@@ -1,12 +1,12 @@
 ---
 title: "Debug JavaScript code for model-driven apps"
 description: "Explains how to debug JavaScript code for model-driven apps"
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 08/07/2024
+ms.date: 01/31/2025
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -16,7 +16,7 @@ contributors:
 ---
 # Debug JavaScript code for model-driven apps
 
-Custom logic using JavaScript in model-driven apps are contained within JavaScript web resources. JavaScript web resources provide the libraries that define functions developers register as event handlers.
+Custom logic using JavaScript in model-driven apps is contained within JavaScript web resources. JavaScript web resources provide the libraries that define functions developers register as event handlers.
 
 In a model-driven app viewed within a web browser, you can use developer tools that all modern browsers provide. With these tools you can locate the JavaScript libraries loaded in the model-driven application, set break points, and debug your code using common methods.
 

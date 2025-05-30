@@ -1,8 +1,8 @@
 ---
-title: "Power Apps grid control | MicrosoftDocs"
-description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid."
+title: "Power Apps grid control in Power Apps"
+description: "A control for use with Power Apps that lets users view, open, and edit records from a view or subgrid in model-driven apps."
 ms.custom: ""
-ms.date: 11/14/2024
+ms.date: 05/12/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,10 +28,16 @@ The Power Apps grid control represents the next evolution of the classic Power A
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
-> [!NOTE]
-> The Power Apps grid control can only be added to a table or form using the legacy solution explorer.
+## Add the Power Apps grid control using form designer
 
-## Add the Power Apps grid control to views for a table
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Table** within the solution, and then select the **Forms** area. Open the **Main Form** that contains the subgrid for editing.
+1. In the form designer, select **Components** on the left navigation pane, expand **Grid**, and then select **Power Apps grid control**. If the component isn't listed, select the subgrid on the form canvas, expand **Components** on the right property pane, select **+ Component**, and then select **Power Apps grid control** from the **Add component** page.
+1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
+1. Select **Done**.
+1. **Save and publish** the form to save and make it available to app users.
+
+## Add the Power Apps grid control to views using classic solution explorer
 
 When you configure the Power Apps grid control for a table, all views for that table display using that grid.
 
@@ -40,8 +46,9 @@ When you configure the Power Apps grid control for a table, all views for that t
 1. In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
 1. [Configure the Power Apps grid control](#configure-the-power-apps-grid-control)
+1. After configuring the Power Apps grid control to meet your needs, select Save on the command bar to save your changes. When you're ready to make the changes available to app users, select Publish on the command bar.
 
-## Add the Power Apps grid control to a subgrid on a form
+## Add the Power Apps grid control to a subgrid using classic solution explorer
 
 1. Open the [solution explorer](advanced-navigation.md#solution-explorer).
 1. Expand **Entities**, expand the table you want, and then select **Forms**.
@@ -51,11 +58,11 @@ When you configure the Power Apps grid control for a table, all views for that t
 1. To configure the control, go to [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 1. Select **OK** to close the **Set properties** dialog box.
 1. To save and make available to apps, select **Save**, and then select **Publish**.
+1. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
 ## Configure the Power Apps grid control
 
-1.	In the **Power Apps grid control** row, select the app types you want to apply the grid to. This makes the control the default control for the selected clients. 
-    :::image type="content" source="media/configure-the-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
+1.	Select the **Power Apps grid control** components. More infomation: [Configure components on a form](add-move-configure-or-delete-components-on-form.md#configure-components-on-a-form)
 1.	There are several properties included with the control to let you tailor the grid experience for that table. To modify any of these properties, select **Edit** in the corresponding row, and then change the value using the dropdown list under **Bind to static options**. 
     - The **Enable editing** property determines whether the grid is read-only or editable. The default value is **No**. Select **Yes** to make the grid editable. Editable grids have subtle visual differences to read-only grids including boolean columns showing toggle switches and dropdown and date fields displaying chevrons and date picker icons on hover or focus.
     - The **Enable filtering** property determines if filtering options are available to users in the grid column header dropdowns. The default value is **Yes**.
@@ -74,11 +81,11 @@ When you configure the Power Apps grid control for a table, all views for that t
     - The **Navigation types allowed** property determines which lookup controls in the grid render as hyperlinks. The default value is **All**. Select **Primary only** to suppress hyperlinks on all lookup fields except the primary column for the selected entity, or **None** to suppress all hyperlinks in the grid.
     - The **Reflow behavior** property determines whether the grid components render always in a tabular fashion (**Grid only**), always as a list (**List only**), or switches between tabular and list depending on the available width (**Reflow**). The default value is **Reflow**.
     - The **Child  items** property is used to configure the nested grid capability, which allows users to expand rows to see related records in a subgrid. To set this up, you specify the **Entity** where the related records come from and the **View** that defines the filters, sorts, and columns to show in the subgrid. The default value is no nested grid configured.
-        - The **Child items parent ID** property is also needed to configure a nested grid and specifies the field (and relationship) to use to link the parent and child entities together.
+        - The **Child items parent ID** property is also needed to configure a nested grid and specifies the column (and relationship) to use to link the parent and child tables together.
         - The **Disable editing in child items grid** property provides some control over the editability of the nested grid. By default, the nested grid inherits the editability of the parent grid, but this property can be used to suppress editing in the nested grid when the parent grid is editable. The default value is **No**.  
     -  The **Customizer control** property allows the maker to link to a single customizer Power Apps component framework control with definitions for changing the visuals or interactions for one or more columns in the grid or the empty grid visual.
+    -  The **Use first column for lookup edits** property allows makers to select the column used for editing lookup cells. When set to **Yes** the cell shows and filters by the first column of the target table's lookup view. When set to **No** the cell shows and filters by the primary column. The default value is **No**.
 
-3. After configuring the Power Apps grid control to meet your needs, select **Save** on the command bar to save your changes. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
 ## Customization
 

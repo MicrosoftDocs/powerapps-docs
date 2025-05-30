@@ -4,7 +4,7 @@ description: Frequently Asked Questions about Activities and the Timeline Wall
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 06/22/2021
 ms.subservice: end-user
 ms.author: smurkute

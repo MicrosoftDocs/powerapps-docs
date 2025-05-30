@@ -1,8 +1,8 @@
 ---
-title: "Overview of the model-driven app designer | MicrosoftDocs"
-description: Learn about the app designer for model-driven apps.
+title: "Overview of the model-driven app designer"
+description: Learn about the app designer for model-driven apps in Power Apps.
 ms.custom: ""
-ms.date: 04/13/2023
+ms.date: 01/27/2025
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

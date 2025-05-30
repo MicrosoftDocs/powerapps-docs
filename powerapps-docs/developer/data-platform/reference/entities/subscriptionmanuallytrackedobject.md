@@ -1,18 +1,26 @@
 ---
 title: "Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject) table/entity reference
+# Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject) table/entity reference (Microsoft Dataverse)
 
 For internal use only.
+
+## Messages
+
+The following table lists the messages for the Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 
 ## Properties
 
@@ -128,6 +136,6 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.subscriptionmanuallytrackedobject?displayProperty=fullName>

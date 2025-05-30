@@ -13,6 +13,8 @@ ms.collection:
 
 # Requirements for cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 This article contains information about requirements for cards to show up and work as expected.
 
 ## Environment requirements

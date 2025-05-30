@@ -1,10 +1,10 @@
 ---
-title: Canvas component properties (experimental)
+title: Canvas component properties (preview)
 description: Using properties in canvas components.
 author: jorisdg
 ms.subservice: canvas-developer
-ms.topic: article
-ms.date: 04/04/2023
+ms.topic: how-to
+ms.date: 01/07/2025
 ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
@@ -14,15 +14,21 @@ search.app:
 contributors:
   - jorisdg
 ---
-# Canvas component properties (experimental)
+# Canvas component properties (preview)
 
 [Canvas components](./create-component.md) allow makers to create different types of properties to relay values or logic between the component and the app that is hosting the component. Properties are an essential part of creating interactive and reusable components.
 
 > [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Experimental and preview features](working-with-experimental-preview.md)
-> - The behavior that this article describes is available only when the _Enhanced component properties_ experimental feature in [Settings > Upcoming features > Experimental](./working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
-> - Your feedback is very valuable to us - please let us know what you think in the [Power Apps experimental features community forum](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+
+## Prerequisites
+
+Before you can use this feature, it needs to be turned on in your app settings.
+
+1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
+
+1. On the **Preview** tab, find and turn on the **Enhanced component properties** settings.
 
 ## Types of properties
 
@@ -86,6 +92,6 @@ There are many common **Event**-type properties, effectively input behavior func
 
 ## Default values for properties or arguments
 
-Default values can provide a default value for an argument or property in case none is set. This does not makes sense for some types of properties. However, in some cases they can be used to provide an expected schema for a record. By providing a default record, a record type is established as the expected schema.
+Default values can provide a default value for an argument or property in case none is set. This doesn't makes sense for some types of properties. However, in some cases they can be used to provide an expected schema for a record. By providing a default record, a record type is established as the expected schema.
 
 For example, an **Action** property named `AddRecord` accepts a record to be added to a local collection. To provide the schema of the expected record, a maker has to add a default value for this `AddRecord` property's argument.

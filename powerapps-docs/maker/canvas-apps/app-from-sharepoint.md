@@ -1,13 +1,13 @@
 ---
-title: Create a canvas app with data from Microsoft Lists
-description: In Power Apps, automatically create a canvas app to manage data in a list created using Microsoft Lists.
+title: Create a canvas app with data from a list
+description: Create a Power Apps canvas app to manage data in Microsoft Lists or SharePoint Online.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 3/1/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -18,96 +18,70 @@ contributors:
   - navjotm
   - emcoope-msft
 ---
-# Create a canvas app with data from Microsoft Lists
 
-In this topic, you'll use Power Apps to create a canvas app based on items in a list created using Microsoft Lists. You can create the app from within Power Apps or SharePoint Online. From within Power Apps, you can create the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
+# Create a canvas app with data from a list
 
-The app that you create will contain three screens:
+In this article, you can create a canvas app in Power Apps from Lists or SharePoint. You can create the app from within Power Apps or SharePoint. Alternatively, you can create the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
-- In the browse screen, you can scroll through all items in the list.
-- In the details screen, you can show all information about a single item in the list.
-- In the edit screen, you can create an item or update information about an existing item.
+The app you create contains three screens:
 
-You can apply the concepts and techniques in this topic to any list in SharePoint. To follow the steps exactly:
+- **Browse screen**: scroll through all items in the list.
+- **Details screen**: show all information about a single item in the list.
+- **Edit screen**: create an item or update information about an existing item.
 
-1. In a SharePoint Online site, create a list named **SimpleApp**.
-2. In a column named **Title**, create entries for **Vanilla**, **Chocolate**, and **Strawberry**.
+> [!NOTE]
+> When you create or view a list in SharePoint, you're automatically redirected to Microsoft Lists. The list can always be found in both Lists and SharePoint. Learn more in [What is a list in Microsoft 365?](https://support.microsoft.com/en-us/office/what-is-a-list-in-microsoft-365-93262a88-20ad-4edc-8410-b6909b2f59a5)
 
-The principles of generating an app won't change even if you create a list that's far more complex, with many columns of various types such as text, dates, numbers, and currency.
+## Prerequisites
 
-> [!IMPORTANT]
-> Power Apps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+You need access to SharePoint and Power Apps through a [subscription](https://www.microsoft.com/licensing/terms/productoffering) to [Microsoft 365](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/all) and [Microsoft Power Platform](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftPowerPlatform/all).
+
+## Create a list
+
+1. [Create a list](https://support.microsoft.com/office/create-a-list-0d397414-d95f-41eb-addd-5e6eff41b083) in Sharepoint or Lists named **SimpleList**.
+1. In the list's **Title** column, add items for **Vanilla**, **Chocolate**, and **Strawberry**.
 
 Watch this video to learn how to create a canvas app from a list:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3n]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de3b0fbc-f5b6-4958-855e-109f9c3692ac]
 
+## Create an app in Power Apps
 
-## Create an app from within Power Apps
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Depending on how you want to create your app, from the home screen, select one of the following options:
-   - To create a single-page gallery app with a responsive layout, choose either:
-      - **Start with data** > **Create with SharePoint List**.
-      - **Start with a page design** > **Gallery connected to external data** > **From SharePoint**.
-   - To create a three screen mobile app, select **Start with an app template** > **From SharePoint**.
-1. If you don't have a SharePoint connection already created, you'll be prompted to. To select a different connection, select on the **...** button to switch account or create a new connection. 
+1. To create a single-page gallery app select **Start with a page design** > **Gallery connected to external data** > **From SharePoint**.
+1. To create a three screen mobile app, select **Start with an app template** > **From SharePoint**.
+
+   You see a SharePoint connection appear or are prompted to create a connection. To select a different connection, select on the **...** option to switch accounts or create a new connection.
 1. Enter the SharePoint URL and then select **Connect**. Or, select a recent site.
 1. Select a list and then select, **Create app**.
 
-Your app opens in Power Apps Studio where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
+   Your app opens in Power Apps Studio where you can design, build, and manage your app. Learn more in [Understand Power Apps Studio](power-apps-studio.md).
 
-You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far by selecting the save icon on the upper-right corner before you proceed. Give your app a name, and then select **Save**.
+1. Save your work by selecting the **Save** icon in the upper-right corner. Give your app a name, and then select **Save**.
 
+## Create an app from a list
 
-## Create an app from within SharePoint Online
+If you create an app from a list in SharePoint or Microsoft Lists, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
 
-If you create an app of a list from the SharePoint Online command bar, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
+1. Sign in to SharePoint: `https://yourorganizationname.sharepoint.com`
 
-1. In SharePoint Online, open a list, and then select **Integrate** > **Power Apps** > **Create an app**.
+1. Open a list in either SharePoint or Microsoft Lists. If you open the list from SharePoint, you're taken to Lists to view the list.
+1. Select **Integrate** > **Power Apps** > **Create an app**.
 
-    ![Create an app.](./media/app-from-sharepoint/generate-new-app.png)
+   :::image type="content" source="./media/app-from-sharepoint/generate-new-app.png" alt-text="Screenshot that shows the Integrate menu in Lists that lets you create an app in Power Apps.":::
 
-1. In the panel that appears, type a name for your app, and then select **Create**.
+   You're taken to Power Apps Studio and can see your list in an app as a vertical gallery on the **BrowseScreen1** screen.
 
-   A new tab appears in your web browser that shows the app that you created based on your list. The app appears in [Power Apps Studio](intro-maker-portal.md), where you can customize it.
+1. Select the **Save** icon in the upper-right menu bar and name your app **SimpleApp**. Select **Save**.
 
+## Manage your app
 
-1. (optional) Refresh the browser tab for your list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
+Once you create an app, you can play it, save, share, and publish it.
 
-    - To run the app (in a separate browser tab), select **Open**.
-    - To let others in your organization run the app, select **Make this view public**.
+Learn more about these [App actions](power-apps-studio.md#2--app-actions) in the Power Apps Studio interface.
 
-        To let others edit your app, [share it](share-app.md) with **Can edit** permissions.
+## Related information
 
-    - To remove the view from SharePoint, select **Remove this view**.
-
-        To remove the app from Power Apps, [delete the app](delete-app.md).
-
-> [!NOTE]
-> Apps created from the list currently do not show in the Power Apps Mobile.
-
-## Use Sharepoint or SQL on-premises
-
- Follow these steps if you're using an external on-premises data source such as SharePoint or SQL on-premises to create an app.
- 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. On the left navigation, select **Create**.
-3. Depending on the type of data source that you're connecting to, select **SharePoint** or **SQL**.
-4. Select **New connection** and then select **SharePoint** or **SQL**. 
-5. Select **Connect using on-premises data gateway** and enter the required information and then select **Create**. <br> When your connection is ready, select it and then you'll see a list of tables available for the database connection.
-6. Select a table and then select **Connect**.
-
- 
-
-## Next steps
-In this topic, you created an app to manage data in a list. As a next step, create an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.
-
-> [!div class="nextstepaction"]
-> [Customize a default browse screen](customize-layout-sharepoint.md)
-
-### See also
-
-- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-
+[Move SharePoint Custom Forms with Power Apps (white paper)](https://go.microsoft.com/fwlink/?linkid=2263521)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

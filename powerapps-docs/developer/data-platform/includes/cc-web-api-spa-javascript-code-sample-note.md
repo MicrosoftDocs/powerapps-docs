@@ -1,0 +1,2 @@
+> [!NOTE]
+> This code is for a Single Page Application (SPA) and doesn't represent the pattern to use with model-driven apps, Power Apps components framework (PCF) components, or Power pages. Use the [Xrm.WebApi (Client API)](../../model-driven-apps/clientapi/reference/xrm-webapi.md), [Code components WebAPI](../../component-framework/reference/webapi.md), and [Power Pages Portals Web API](/power-pages/configure/web-api-overview) for these scenarios.

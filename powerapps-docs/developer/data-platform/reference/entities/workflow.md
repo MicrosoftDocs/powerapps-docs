@@ -1,16 +1,14 @@
 ---
 title: "Process (Workflow) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Process (Workflow) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Process (Workflow) table/entity reference
+# Process (Workflow) table/entity reference (Microsoft Dataverse)
 
 Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed.
 
@@ -23,14 +21,17 @@ Messages represent operations that can be performed on the table. They may also 
 | ---- | ----- |----- |
 | `AddRequiredDesktopFlowComponentsToSolutions`<br />Event: False |<xref:Microsoft.Dynamics.CRM.AddRequiredDesktopFlowComponentsToSolutions?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Assign`<br />Event: False |`PATCH` /workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `CancelAllCloudFlowRuns`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CancelAllCloudFlowRuns?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Create`<br />Event: False |`POST` /workflows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateWorkflowFromTemplate`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateWorkflowFromTemplate?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CreateWorkflowFromTemplateRequest>|
 | `Delete`<br />Event: False |`DELETE` /workflows(*workflowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `ExecuteWorkflow`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ExecuteWorkflow?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ExecuteWorkflowRequest>|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `InitializeModernFlowFromAsyncWorkflow`<br />Event: False |<xref:Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.InitializeModernFlowFromAsyncWorkflowRequest>|
 | `install`<br />Event: False |<xref:Microsoft.Dynamics.CRM.install?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ListChildDesktopFlows`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListChildDesktopFlows?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ListConnectionReferences`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ListConnectionReferences?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -72,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BillingContext](#BKMK_BillingContext)
 - [BusinessProcessType](#BKMK_BusinessProcessType)
 - [Category](#BKMK_Category)
+- [Claims](#BKMK_Claims)
 - [ClientData](#BKMK_ClientData)
 - [ConnectionReferences](#BKMK_ConnectionReferences)
 - [CreateMetadata](#BKMK_CreateMetadata)
@@ -92,9 +94,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomProcessingStepAllowedForOtherPublishers](#BKMK_IsCustomProcessingStepAllowedForOtherPublishers)
 - [IsTransacted](#BKMK_IsTransacted)
 - [LanguageCode](#BKMK_LanguageCode)
+- [Licensee](#BKMK_Licensee)
 - [LicenseEntitledBy](#BKMK_LicenseEntitledBy)
 - [Metadata](#BKMK_Metadata)
 - [Mode](#BKMK_Mode)
+- [ModernFlowType](#BKMK_ModernFlowType)
 - [ModifyMetadata](#BKMK_ModifyMetadata)
 - [Name](#BKMK_Name)
 - [OnDemand](#BKMK_OnDemand)
@@ -211,6 +215,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|**Desktop Flow**|
 |7|**AI Flow**|
 
+### <a name="BKMK_Claims"></a> Claims
+
+|Property|Value|
+|---|---|
+|Description|**Claims related to this workflow.**|
+|DisplayName|**Claims**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`claims`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
+
 ### <a name="BKMK_ClientData"></a> ClientData
 
 |Property|Value|
@@ -315,7 +336,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|1048576|
+|MaxLength|16777216|
 
 ### <a name="BKMK_DeleteStage"></a> DeleteStage
 
@@ -540,6 +561,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|0|
 
+### <a name="BKMK_Licensee"></a> Licensee
+
+|Property|Value|
+|---|---|
+|Description|**The user object that should be used to establish the license the flow should operate under.**|
+|DisplayName|**Licensee**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`licensee`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|systemuser|
+
 ### <a name="BKMK_LicenseEntitledBy"></a> LicenseEntitledBy
 
 |Property|Value|
@@ -590,6 +624,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Background**|
 |1|**Real-time**|
+
+### <a name="BKMK_ModernFlowType"></a> ModernFlowType
+
+|Property|Value|
+|---|---|
+|Description|**Type of the Modern Flow.**|
+|DisplayName|**Modern Flow Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`modernflowtype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workflow_modernflowtype`|
+
+#### ModernFlowType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**PowerAutomateFlow**|
+|1|**CopilotStudioFlow**|
 
 ### <a name="BKMK_ModifyMetadata"></a> ModifyMetadata
 
@@ -995,7 +1050,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`throttlingbehavior`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`workflow_throttlingbehaviortype`|
 
 #### ThrottlingBehavior Choices/Options
@@ -1004,6 +1059,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**TenantPool**|
+|2|**CopilotStudio**|
 
 ### <a name="BKMK_TriggerOnCreate"></a> TriggerOnCreate
 
@@ -1097,6 +1153,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**Windows recorder (V1)**|
 |1|**Selenium IDE**|
 |2|**Power Automate Desktop**|
+|3|**Test**|
 |101|**Recording**|
 
 ### <a name="BKMK_UniqueName"></a> UniqueName
@@ -1637,6 +1694,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [workflow_active_workflow](#BKMK_workflow_active_workflow-many-to-one)
 - [workflow_createdby](#BKMK_workflow_createdby)
 - [workflow_createdonbehalfby](#BKMK_workflow_createdonbehalfby)
+- [Workflow_licensee](#BKMK_Workflow_licensee)
 - [Workflow_licenseentitledby](#BKMK_Workflow_licenseentitledby-many-to-one)
 - [workflow_modifiedby](#BKMK_workflow_modifiedby)
 - [workflow_modifiedonbehalfby](#BKMK_workflow_modifiedonbehalfby)
@@ -1733,6 +1791,19 @@ One-To-Many Relationship: [systemuser workflow_createdonbehalfby](systemuser.md#
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_Workflow_licensee"></a> Workflow_licensee
+
+One-To-Many Relationship: [systemuser Workflow_licensee](systemuser.md#BKMK_Workflow_licensee)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`licensee`|
+|ReferencingEntityNavigationPropertyName|`licensee_systemuserid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_Workflow_licenseentitledby-many-to-one"></a> Workflow_licenseentitledby
 
 One-To-Many Relationship: [workflow Workflow_licenseentitledby](#BKMK_Workflow_licenseentitledby-one-to-many)
@@ -1809,13 +1880,17 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [process_processstage](#BKMK_process_processstage)
 - [process_processtrigger](#BKMK_process_processtrigger)
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
+- [savingrule_workflow](#BKMK_savingrule_workflow)
 - [slabase_workflowid](#BKMK_slabase_workflowid)
 - [slaitembase_workflowid](#BKMK_slaitembase_workflowid)
+- [taggedprocess_Process_workflow](#BKMK_taggedprocess_Process_workflow)
 - [workflow_active_workflow](#BKMK_workflow_active_workflow-one-to-many)
 - [Workflow_Annotation](#BKMK_Workflow_Annotation)
+- [workflow_businessprocess](#BKMK_workflow_businessprocess)
 - [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
 - [workflow_componentversions](#BKMK_workflow_componentversions)
 - [workflow_desktopflowbinary_Process](#BKMK_workflow_desktopflowbinary_Process)
+- [workflow_flowaggregation_workflowid](#BKMK_workflow_flowaggregation_workflowid)
 - [workflow_flowlog_cloudflowid](#BKMK_workflow_flowlog_cloudflowid)
 - [workflow_flowlog_desktopflowid](#BKMK_workflow_flowlog_desktopflowid)
 - [workflow_flowrun_Workflow](#BKMK_workflow_flowrun_Workflow)
@@ -1823,6 +1898,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [workflow_parent_workflow](#BKMK_workflow_parent_workflow-one-to-many)
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
+- [workflowmetadata_WorkflowId_workflow](#BKMK_workflowmetadata_WorkflowId_workflow)
 
 ### <a name="BKMK_adx_invitation_redemptionworkflow"></a> adx_invitation_redemptionworkflow
 
@@ -2052,6 +2128,18 @@ Many-To-One Relationship: [flowsession regardingobjectid_process](flowsession.md
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_savingrule_workflow"></a> savingrule_workflow
+
+Many-To-One Relationship: [savingrule savingrule_workflow](savingrule.md#BKMK_savingrule_workflow)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`savingrule`|
+|ReferencingAttribute|`workflowid`|
+|ReferencedEntityNavigationPropertyName|`savingrule_Workflow`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_slabase_workflowid"></a> slabase_workflowid
 
 Many-To-One Relationship: [sla slabase_workflowid](sla.md#BKMK_slabase_workflowid)
@@ -2076,6 +2164,18 @@ Many-To-One Relationship: [slaitem slaitembase_workflowid](slaitem.md#BKMK_slait
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_taggedprocess_Process_workflow"></a> taggedprocess_Process_workflow
+
+Many-To-One Relationship: [taggedprocess taggedprocess_Process_workflow](taggedprocess.md#BKMK_taggedprocess_Process_workflow)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`taggedprocess`|
+|ReferencingAttribute|`process`|
+|ReferencedEntityNavigationPropertyName|`taggedprocess_Process_workflow`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_workflow_active_workflow-one-to-many"></a> workflow_active_workflow
 
 Many-To-One Relationship: [workflow workflow_active_workflow](#BKMK_workflow_active_workflow-many-to-one)
@@ -2099,6 +2199,18 @@ Many-To-One Relationship: [annotation Workflow_Annotation](annotation.md#BKMK_Wo
 |ReferencedEntityNavigationPropertyName|`Workflow_Annotation`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workflow_businessprocess"></a> workflow_businessprocess
+
+Many-To-One Relationship: [businessprocess workflow_businessprocess](businessprocess.md#BKMK_workflow_businessprocess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`businessprocess`|
+|ReferencingAttribute|`rootworkflowid`|
+|ReferencedEntityNavigationPropertyName|`workflow_businessprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: Root Process<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_workflow_componentversionnrddatasourceset"></a> workflow_componentversionnrddatasourceset
 
@@ -2135,6 +2247,18 @@ Many-To-One Relationship: [desktopflowbinary workflow_desktopflowbinary_Process]
 |ReferencedEntityNavigationPropertyName|`workflow_desktopflowbinary_Process`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_workflow_flowaggregation_workflowid"></a> workflow_flowaggregation_workflowid
+
+Many-To-One Relationship: [flowaggregation workflow_flowaggregation_workflowid](flowaggregation.md#BKMK_workflow_flowaggregation_workflowid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowaggregation`|
+|ReferencingAttribute|`workflowid`|
+|ReferencedEntityNavigationPropertyName|`workflow_flowaggregation_workflowid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_workflow_flowlog_cloudflowid"></a> workflow_flowlog_cloudflowid
 
@@ -2220,6 +2344,18 @@ Many-To-One Relationship: [workflowbinary workflow_workflowbinary_Process](workf
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_workflowmetadata_WorkflowId_workflow"></a> workflowmetadata_WorkflowId_workflow
+
+Many-To-One Relationship: [workflowmetadata workflowmetadata_WorkflowId_workflow](workflowmetadata.md#BKMK_workflowmetadata_WorkflowId_workflow)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`workflowmetadata`|
+|ReferencingAttribute|`workflowid`|
+|ReferencedEntityNavigationPropertyName|`workflowmetadata_WorkflowId_workflow`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 ## Many-to-Many relationships
 
@@ -2258,6 +2394,6 @@ See [card workflow_card_connections Many-To-Many Relationship](card.md#BKMK_work
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.workflow?displayProperty=fullName>

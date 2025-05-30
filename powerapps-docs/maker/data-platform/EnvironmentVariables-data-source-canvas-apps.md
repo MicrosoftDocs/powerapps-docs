@@ -6,8 +6,8 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/11/2023
-ms.topic: conceptual
+ms.date: 01/31/2025
+ms.topic: how-to
 search.audienceType: 
   - maker
 contributors:
@@ -22,13 +22,14 @@ In this article, you'll learn about using data source environment variables in c
 
 Environment variables can be reused across other apps and even different types of resources like cloud flows. You might wish to first create them within your solution and later use them while authoring canvas apps and cloud flows.
 
-1. Follow the steps to [create an environment variable in a solution](EnvironmentVariables.md#create-an-environment-variable-in-a-solution).
+1. Follow the steps to [manually create an environment variable in a solution](EnvironmentVariables.md#manually-create-an-environment-variable-in-a-solution).
 1. Edit or create a canvas app from your solution.
 1. Add a **new** data source for SharePoint online.
 1. Select the **Advanced** tab. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when you select the SharePoint site, you'll see a list of all data source environment variables with **Connector** as **SharePoint** and **Parameter type** as **Site**. The same is true when selecting SharePoint lists for a given site. 
 1. Select the desired environment variable(s), and then select **Connect.**
 
 > [!IMPORTANT]
+>
 > - If an environment variable from a different solution is selected, a dependency will exist on the solution containing the environment variable. Therefore, be sure to either: 
 > - Add the environment variable to your current solution prior to exporting. 
 > - Ensure the solution containing the environment variable is imported to the destination environment before your current solution is imported.

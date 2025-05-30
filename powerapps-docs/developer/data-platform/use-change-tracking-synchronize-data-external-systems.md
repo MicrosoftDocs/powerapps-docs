@@ -3,7 +3,7 @@ title: "Use change tracking to synchronize data with external systems (Microsoft
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized."
 ms.date: 06/23/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: paulliew
 ms.subservice: dataverse-developer
 ms.author: paulliew 
@@ -194,7 +194,7 @@ You should be aware of the following constraints when retrieving changes for a t
 
 ### .NET SDK Sample code
 
-The following code snippet shows how the `RetrieveEntityChanges` message is used to retrieve the changes for a table. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Changetracking).
+The following code snippet shows how the `RetrieveEntityChanges` message is used to retrieve the changes for a table. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Changetracking).
 
 ```csharp
 string token;

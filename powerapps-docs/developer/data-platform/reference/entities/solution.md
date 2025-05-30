@@ -1,16 +1,14 @@
 ---
 title: "Solution table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Solution table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Solution table/entity reference
+# Solution table/entity reference (Microsoft Dataverse)
 
 A solution which contains CRM customizations.
 
@@ -21,13 +19,15 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `CloneAsPatch`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CloneAsPatch?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CloneAsPatchRequest>|
 | `CloneAsSolution`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CloneAsSolution?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.CloneAsSolutionRequest>|
 | `Create`<br />Event: False |`POST` /solutions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
-| `Delete`<br />Event: True |`DELETE` /solutions(*solutionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Delete`<br />Event: False |`DELETE` /solutions(*solutionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeleteAndPromote`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteAndPromote?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>|
-| `Retrieve`<br />Event: True |`GET` /solutions(*solutionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
-| `RetrieveMultiple`<br />Event: True |`GET` /solutions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /solutions(*solutionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /solutions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: False |`PATCH` /solutions(*solutionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `Upsert`<br />Event: False |`PATCH` /solutions(*solutionid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
@@ -964,6 +964,6 @@ See [package package_solution Many-To-Many Relationship](package.md#BKMK_package
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.solution?displayProperty=fullName>

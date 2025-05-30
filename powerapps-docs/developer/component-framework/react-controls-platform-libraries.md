@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
   - miglisic
@@ -117,6 +117,7 @@ Platform libraries are made available both at the build and runtime to the contr
 | ------ | --------------------------- | ---------------------- | -------------- |
 | React  | react                       | 16.14.0                | 17.0.2 (Model), 16.14.0 (Canvas) |
 | Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
+| Fluent | @fluentui/react             | 8.121.1                | 8.121.1        |
 | Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.46.2         |
 
 > [!NOTE]

@@ -2,7 +2,7 @@
 title: Create a canvas app with the barcode reader control
 description: Learn how to make a canvas app that uses the barcode reader control.
 author: joel-lindstrom
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2022
@@ -29,7 +29,7 @@ Some of the common uses of barcode reader control in a canvas app are:
 In this article, we'll create a canvas app with barcode reader and display scanned items in a gallery.
 
 Watch this video to learn how to create an app with barcode reader:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAk8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=8714cb52-ce37-452c-bc47-1af24b1f6b93]
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Create a [blank canvas app](../create-blank-app.md).
     ```power-fx
     Collect(
         colScannedItems,
-        {ScannedItem: First(BarcodeReader1.Barcodes).Value, ScannedTime: Now()}
+        {ScannedItem: First(BarcodeScanner1.Barcodes).Value, ScannedTime: Now()}
     )
     ```
 

@@ -5,7 +5,7 @@ ms.date: 12/04/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: quickstart
 search.audienceType: 
   - developer
 contributors:
@@ -24,7 +24,7 @@ Your application will call the [IOrganizationService.Execute method](xref:Micros
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
 
-You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/README.md) for more details.
+You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/README.md) for more details.
 
 ## Prerequisites
 

@@ -5,8 +5,9 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 11/14/2024
-ms.topic: conceptual
+ms.date: 03/11/2025
+ms.topic: how-to
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
@@ -51,13 +52,11 @@ Once you are in the app designer, use the command designer to customize your com
 
 #### Open the command designer to edit a command bar
 
-1. Select any table from the **Pages** area in the app designer.
-
-1. Select **...**, and then select **Edit command bar**.
+1. Next to any table view from the **Pages** area in the app designer, select **...**, and then select **Edit command bar**.
     > [!div class="mx-imgBorder"]
     > ![App Designer entry point](media/commanddesigner-app-designer-entry-point.png "App Designer entry point")
  
-1. Select the location of the command bar you want, and then select **Edit**. More information: [Command bar locations](command-designer-overview.md#command-bar-locations)
+1. Select the location of the command bar you want, such as main grid (view) or main form, and then select **Edit**. More information: [Command bar locations](command-designer-overview.md#command-bar-locations)
     > [!div class="mx-imgBorder"]
     > ![Select location](media/commanddesigner-command-bar-location-selection.png "Select location")
   

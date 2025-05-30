@@ -1,16 +1,14 @@
 ---
 title: "Source Control Component (SourceControlComponent) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Source Control Component (SourceControlComponent) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Source Control Component (SourceControlComponent) table/entity reference
+# Source Control Component (SourceControlComponent) table/entity reference (Microsoft Dataverse)
 
 Stores the Source Control Components associated with the organization or solution
 
@@ -21,10 +19,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /sourcecontrolcomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /sourcecontrolcomponents(*sourcecontrolcomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeleteMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /sourcecontrolcomponents(*sourcecontrolcomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveEntityChanges`<br />Event: False | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 | `RetrieveMultiple`<br />Event: False |`GET` /sourcecontrolcomponents<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -82,7 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`action`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_action`|
@@ -111,7 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|4000|
 
 ### <a name="BKMK_ComponentId"></a> ComponentId
 
@@ -196,7 +196,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`iscommitted`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|ApplicationRequired|
 |Type|Boolean|
 |GlobalChoiceName|`sourcecontrolcomponent_iscommitted`|
 |DefaultValue|False|
@@ -218,7 +218,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|100|
+|MaxLength|4000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -263,7 +263,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`solutioncomponentstate`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_solutioncomponentstate`|
@@ -341,7 +341,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`useraction`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Picklist|
 |DefaultFormValue|0|
 |GlobalChoiceName|`sourcecontrolcomponent_useraction`|
@@ -546,6 +546,6 @@ One-To-Many Relationship: [sourcecontrolcomponentpayload sourcecontrolcomponentp
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.sourcecontrolcomponent?displayProperty=fullName>

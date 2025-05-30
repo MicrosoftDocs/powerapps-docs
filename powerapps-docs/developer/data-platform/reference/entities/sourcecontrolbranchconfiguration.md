@@ -1,16 +1,14 @@
 ---
 title: "Source Control Branch Configuration (SourceControlBranchConfiguration) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Source Control Branch Configuration (SourceControlBranchConfiguration) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Source Control Branch Configuration (SourceControlBranchConfiguration) table/entity reference
+# Source Control Branch Configuration (SourceControlBranchConfiguration) table/entity reference (Microsoft Dataverse)
 
 Stores the source control branch configuration associated with the organization or solution
 
@@ -21,10 +19,12 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /sourcecontrolbranchconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /sourcecontrolbranchconfigurations(*sourcecontrolbranchconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeleteMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /sourcecontrolbranchconfigurations(*sourcecontrolbranchconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveEntityChanges`<br />Event: False | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 | `RetrieveMultiple`<br />Event: False |`GET` /sourcecontrolbranchconfigurations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -66,6 +66,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SourceControlBranchConfigurationId](#BKMK_SourceControlBranchConfigurationId)
 - [SourceControlConfigurationId](#BKMK_SourceControlConfigurationId)
 - [SourceControlConfigurationIdPId](#BKMK_SourceControlConfigurationIdPId)
+- [StatusCode](#BKMK_StatusCode)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 - [UpstreamBranchName](#BKMK_UpstreamBranchName)
 - [UpstreamBranchSyncedCommitId](#BKMK_UpstreamBranchSyncedCommitId)
@@ -245,6 +246,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_StatusCode"></a> StatusCode
+
+|Property|Value|
+|---|---|
+|Description|**Describes solution git connection status.**|
+|DisplayName|**StatusCode**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`statuscode`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`sourcecontrolbranchbonfiguration_statuscode`|
+
+#### StatusCode Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Connected**|
+|1|**Disconnect**|
+|2|**DisconnectInprogress**|
+|3|**DisconnectFailed**|
 
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 
@@ -503,6 +527,6 @@ One-To-Many Relationship: [sourcecontrolconfiguration sourcecontrolconfiguration
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
-
+<xref:Microsoft.Dynamics.CRM.sourcecontrolbranchconfiguration?displayProperty=fullName>

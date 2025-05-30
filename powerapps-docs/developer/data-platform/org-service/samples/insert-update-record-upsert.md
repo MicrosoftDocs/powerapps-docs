@@ -18,7 +18,7 @@ contributors:
 This sample code shows how to insert or update records by using the [UpsertRequest](/dotnet/api/microsoft.xrm.sdk.messages.upsertrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Insert or update a record using Upsert sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InsertRecordUsingUpsert)
+> [SDK for .NET: Insert or update a record using Upsert sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/InsertRecordUsingUpsert)
 
 ## How to run this sample
 

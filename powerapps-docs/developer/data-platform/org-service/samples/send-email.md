@@ -18,7 +18,7 @@ contributors:
 This sample shows how to send an email using [SendEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Send an email sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SendEmail)
+> [SDK for .NET: Send an email sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/SendEmail)
 
 ## How to run this sample
 

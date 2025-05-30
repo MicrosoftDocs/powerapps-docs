@@ -1,16 +1,14 @@
 ---
 title: "mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the mobileofflineprofileitemfilter table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# mobileofflineprofileitemfilter table/entity reference
+# mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse)
 
 
 
@@ -21,9 +19,11 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /mobileofflineprofileitemfilters<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /mobileofflineprofileitemfilters(*mobileofflineprofileitemfilterid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: True |`GET` /mobileofflineprofileitemfilters(*mobileofflineprofileitemfilterid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /mobileofflineprofileitemfilters<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -235,14 +235,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**CUD_IN**|
-|1|**RELATED_CUD_IN**|
-|2|**SHARED_IN**|
-|3|**RELATED_SHARED_IN**|
-|4|**CUD_OUT**|
-|5|**FULL_SYNC**|
-|6|**RELATED_ENTITIES**|
-|7|**RELATED_INTERSECT_ENTITIES**|
+|0|**CUD\_IN**|
+|1|**RELATED\_CUD\_IN**|
+|2|**SHARED\_IN**|
+|3|**RELATED\_SHARED\_IN**|
+|4|**CUD\_OUT**|
+|5|**FULL\_SYNC**|
+|6|**RELATED\_ENTITIES**|
+|7|**RELATED\_INTERSECT\_ENTITIES**|
 
 ### <a name="BKMK_type"></a> type
 
@@ -262,11 +262,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**DELTA_IN**|
-|1|**DELTA_OUT**|
-|2|**FULL_SYNC**|
-|3|**TOP_1**|
-|4|**RELATED_ENTITIES**|
+|0|**DELTA\_IN**|
+|1|**DELTA\_OUT**|
+|2|**FULL\_SYNC**|
+|3|**TOP\_1**|
+|4|**RELATED\_ENTITIES**|
 
 
 ## Read-only columns/attributes
@@ -360,6 +360,6 @@ One-To-Many Relationship: [mobileofflineprofile mobileofflineprofile_mobileoffli
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mobileofflineprofileitemfilter?displayProperty=fullName>

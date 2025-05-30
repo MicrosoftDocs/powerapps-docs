@@ -1,18 +1,14 @@
 ---
-title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps | MicrosoftDocs"
+title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
-ms.custom: ""
-ms.date: 05/06/2024
+ms.date: 04/29/2025
 ms.reviewer: "Mattp123"
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sabinn-msft"
-ms.assetid: 
+author: MilindaV2
 ms.subservice: dataverse-maker
-ms.author: "matp"
+ms.author: "milindav"
 search.audienceType: 
   - maker
 contributors:
@@ -40,6 +36,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account must be created in the same Microsoft Entra tenant as your Power Apps tenant.
 > - To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access from selected IP addresses, you must create an Azure Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities set up, you must enable public network access for Azure resources for both initial setup and delta sync.)
+> - We strongly recommend that you enable the [soft delete feature](/azure/storage/blobs/soft-delete-container-enable?tabs=azure-portal) on the storage account selected for this purpose. Enabling soft delete enables you to recover from accidental data deletes faster.
 > - You must have **Reader** role access to the resource group with the storage account.  
 > - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
@@ -55,7 +52,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     > [!NOTE]
     > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
-1. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
+1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the **Track changes** property can be exported. More information: [Advanced options for tables](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
 
    ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
@@ -142,8 +139,8 @@ Here's an example of an Account.csv partitioned file and snapshot folder in the 
 Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes.
 
 > [!NOTE]
-> A new snapshot file is created only if there is a data update.
-> Only the latest five snapshot files will be retained. Stagnant data will be automatically removed from your Azure Data Lake Storage Gen 2 account.
+> A new snapshot file is created only if there's a data update.
+> Only the latest five snapshot files are retained. Stagnant data is automatically removed from your Azure Data Lake Storage Gen 2 account.
 
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
 

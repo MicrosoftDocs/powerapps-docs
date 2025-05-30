@@ -2,7 +2,7 @@
 title: Limitations of controls in canvas apps
 description: Learn about the limitations of controls in canvas apps.
 author: navjotm
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 06/01/2022
@@ -55,7 +55,7 @@ Apps made with Power Apps in a Dataverse for Teams environment can't be opened o
 
 - [Barcode control](controls/control-barcodereader.md) - the barcode reader control isn't supported in Teams Mobile.
 
-- [Camera control](controls/control-camera.md) - the Camera control isn't supported in Teams Mobile. If you're creating a Power Apps app for use inside Teams, use the [Add picture](controls/control-add-picture.md) control instead.
+- [Camera control](controls/control-camera.md) - the Camera control isn't supported in Teams Mobile. If you're creating a app for use inside Teams, use the [Add picture](controls/control-add-picture.md) control instead.
 
 - [Microphone control](controls/control-microphone.md) - the following conditions apply when using the Microphone control in apps created using Power Apps on Teams Mobile:
 

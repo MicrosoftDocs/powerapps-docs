@@ -6,7 +6,7 @@ author: jasongre
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 11/13/2024
+ms.date: 04/04/2024
 ms.subservice: canvas-maker
 ms.author: jasongre
 
@@ -24,7 +24,7 @@ Modern themes streamline the customization process and enable creators to effort
 
 ## Prerequisites
 
-Enable the modern themes feature in the settings of Power Apps app:
+Enable the modern themes feature in the settings of an app:
 
 1. Open your app or create a new app.
 1. From your app, open **Settings** from the app authoring menu or [modern command bar](../../power-apps-studio.md#1--power-apps-studio-modern-command-bar).
@@ -60,11 +60,13 @@ There are several out-of-the-box themes available to style your app. You can als
    | Font | Choose your default font used by the controls in the app. |
    | Torsion | Impacts the tint, shade, or tone of the palette. Torsion isn't applicable if you choose **Lock primary color**. |
    | Vibrancy | Impacts the muteness or brightness of the palette. Vibrancy isn't applicable if you choose **Lock primary color**. |
-   | Preview | Optionally, look at the static preview of your new theme. You can interact with the sample controls to see how your theme is applied to the rest state and various interaction states. :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. "::: |
+   | Palette overrides | Override the color used for one or more slots in the palette by selecting a slot and choosing a new color. You can select **Reset** to return to the generated value for that slot.  |
+   
+   You can also look at a static preview of your new theme. Interact with the sample controls to see how your theme is applied to the rest state and various interaction states.
+  
+   :::image type="content" source="media/preview-option.png" alt-text="Screenshot showing the Preview section of the pane when you create or edit a theme. "::: 
 
-1. Select **Create**.
-
-Your new theme is created and applied to your app.
+1. Select **Create**. Your new theme is created and applied to your app.
 
 ## Apply modern theme
 
@@ -123,6 +125,7 @@ Using the theme brand ramp, you can manually style a classic control based on th
 
 > [!NOTE]
 > To provide feedback, see: [Provide your feedback to Microsoft](overview-modern-controls.md#provide-feedback-to-microsoft).
+> 
 
 ## See also
 

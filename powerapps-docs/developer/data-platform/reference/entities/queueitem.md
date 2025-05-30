@@ -1,16 +1,14 @@
 ---
 title: "Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Queue Item (QueueItem) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Queue Item (QueueItem) table/entity reference
+# Queue Item (QueueItem) table/entity reference (Microsoft Dataverse)
 
 A specific item in a queue, such as a case record or an activity record.
 
@@ -22,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `AddToQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.AddToQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /queueitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /queueitems(*queueitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `PickFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.PickFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.PickFromQueueRequest>|
 | `ReleaseToQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ReleaseToQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ReleaseToQueueRequest>|
 | `RemoveFromQueue`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RemoveFromQueue?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RemoveFromQueueRequest>|
@@ -528,10 +528,10 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |4216|**Social Activity**|
 |4251|**Recurring Appointment**|
 |9953|**Knowledge Article**|
-|10197|**Teams chat**|
-|10213|**Knowledge Article Template**|
-|10331|**Invite Redemption**|
-|10332|**Portal Comment**|
+|10209|**Teams chat**|
+|10225|**Knowledge Article Template**|
+|10349|**Invite Redemption**|
+|10350|**Portal Comment**|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
@@ -1030,6 +1030,6 @@ Many-To-One Relationship: [syncerror QueueItem_SyncErrors](syncerror.md#BKMK_Que
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.queueitem?displayProperty=fullName>

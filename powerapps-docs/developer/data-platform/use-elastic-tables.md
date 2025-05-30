@@ -2,7 +2,7 @@
 title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 12/09/2024
+ms.date: 12/16/2024
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -132,6 +132,7 @@ Here's an example:
 ```
 
 ---
+
 ### Using the partitionId parameter
 
 Currently, you can use a `partitionId` parameter to specify the value of the `partitionid` column only for `Retrieve` and `Delete` operations. For more information, go to [Known issue: The partitionId optional parameter isn't available for all messages](elastic-tables.md#the-partitionid-optional-parameter-isnt-available-for-all-messages).
@@ -280,6 +281,8 @@ Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken
 ### Setting the primary key value
 
 If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
+
+Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
 
 Elastic tables don't return an error when you create a record with a primary key value that isn't unique. By setting the primary key values with elastic tables, you can create records with that have the same primary key values and different `partitionid` values. However, this pattern isn't compatible with Power Apps. Don't create records with duplicate primary key values when people need to use this data in canvas or model-driven apps.
 

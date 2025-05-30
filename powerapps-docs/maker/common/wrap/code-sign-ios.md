@@ -1,6 +1,6 @@
 ---
-title: Code sign for iOS
-description: Learn about how to code sign for iOS for Power Apps wrap.
+title: Manual code sign for iOS
+description: Learn how to manually code sign for iOS for Power Apps wrap.
 author: komala2019
 ms.topic: article
 ms.custom: canvas
@@ -14,9 +14,9 @@ contributors:
   - mduelae
 ---
 
-# Code sign for iOS
+# Manual code sign for iOS
 
-In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
+In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-custom-branded-native-power-apps-for-ios-and-android-using-the-wrap-wizard).
 
  > [!Important]
  > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
@@ -170,7 +170,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Sign the iOS Archive
 
-1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
+1. Download and unzip the **iOS-Archive.zip** file from Azure blob storage. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
 
 1. If signing with enterprise certificate, open the file **Distribution-exportOptions.plist** with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
@@ -196,9 +196,12 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
-1. Install the **.ipa** file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](wrap-how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+1. Install the **.ipa** file in the registered devices using the **Finder** app. To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 ### See also
 
 - [Wrap overview](overview.md)
-- [Code sign on Android](code-sign-android.md)
+- [Manual code sign on Android](code-sign-android.md)  
+- [Frequently asked questions for wrap](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
+

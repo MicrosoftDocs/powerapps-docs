@@ -1,9 +1,8 @@
 ---
 title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
-
-ms.topic: conceptual
-ms.custom: 
+ms.topic: how-to
+ms.subservice: teams 
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
@@ -23,7 +22,7 @@ For example, consider that you use the Russian language. Russian isn't a languag
 This article covers the approach used for localization of the sample app templates for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
 Watch this video to learn how to localize sample app templates:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6N]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2b55d792-7cde-4948-9072-5d38d33e844f]
 
 ## Prerequisites
 

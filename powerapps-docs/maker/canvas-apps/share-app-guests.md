@@ -2,7 +2,7 @@
 title: Share a canvas app with guest users
 description: Learn about how to share canvas app with guest users.
 author: alaug
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 8/22/2023
@@ -20,7 +20,7 @@ contributors:
 Canvas apps can be shared with guest users of a Microsoft Entra tenant. You can invite external business partners, contractors, and third parties to run your company's canvas apps.
 
 Watch this video to learn how to share an app with guests:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=84cd1908-2ca9-415b-a819-3ffb61e55eca]
 
 ## Prerequisites
 

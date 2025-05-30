@@ -1,16 +1,14 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Organization table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Organization table/entity reference
+# Organization table/entity reference (Microsoft Dataverse)
 
 Top level of the Microsoft Dynamics 365 business hierarchy. The organization can be a specific business, holding company, or corporation.
 
@@ -21,6 +19,8 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /organizations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -92,6 +92,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AppointmentRichEditorExperience](#BKMK_AppointmentRichEditorExperience)
 - [AppointmentWithTeamsMeeting](#BKMK_AppointmentWithTeamsMeeting)
 - [AppointmentWithTeamsMeetingV2](#BKMK_AppointmentWithTeamsMeetingV2)
+- [AreAutomationCenterPreviewFeaturesEnabled](#BKMK_AreAutomationCenterPreviewFeaturesEnabled)
+- [AreProcessInsightsPreviewFeaturesEnabled](#BKMK_AreProcessInsightsPreviewFeaturesEnabled)
 - [AuditRetentionPeriod](#BKMK_AuditRetentionPeriod)
 - [AuditRetentionPeriodV2](#BKMK_AuditRetentionPeriodV2)
 - [AuditSettings](#BKMK_AuditSettings)
@@ -101,9 +103,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AzureSchedulerJobCollectionName](#BKMK_AzureSchedulerJobCollectionName)
 - [BaseCurrencyId](#BKMK_BaseCurrencyId)
 - [BingMapsApiKey](#BKMK_BingMapsApiKey)
+- [BlockAccessToSessionTranscriptsForCopilotStudio](#BKMK_BlockAccessToSessionTranscriptsForCopilotStudio)
+- [BlockCopilotAuthorAuthentication](#BKMK_BlockCopilotAuthorAuthentication)
 - [BlockedApplicationsForDVAccess](#BKMK_BlockedApplicationsForDVAccess)
 - [BlockedAttachments](#BKMK_BlockedAttachments)
 - [BlockedMimeTypes](#BKMK_BlockedMimeTypes)
+- [BlockTranscriptRecordingForCopilotStudio](#BKMK_BlockTranscriptRecordingForCopilotStudio)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
 - [BulkOperationPrefix](#BKMK_BulkOperationPrefix)
 - [BusinessCardOptions](#BKMK_BusinessCardOptions)
@@ -153,6 +158,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DelegatedAdminUserId](#BKMK_DelegatedAdminUserId)
 - [DesktopFlowQueueLogsTtlInMinutes](#BKMK_DesktopFlowQueueLogsTtlInMinutes)
 - [DesktopFlowRunActionLogsStatus](#BKMK_DesktopFlowRunActionLogsStatus)
+- [DesktopFlowRunActionLogVerbosity](#BKMK_DesktopFlowRunActionLogVerbosity)
 - [DesktopFlowRunActionLogVersion](#BKMK_DesktopFlowRunActionLogVersion)
 - [DisableSocialCare](#BKMK_DisableSocialCare)
 - [DisableSystemLabelsCacheSharing](#BKMK_DisableSystemLabelsCacheSharing)
@@ -164,6 +170,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableAsyncMergeAPIForUCI](#BKMK_EnableAsyncMergeAPIForUCI)
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
+- [EnableCopilotStudioCrossGeoShareDataWithVivaInsights](#BKMK_EnableCopilotStudioCrossGeoShareDataWithVivaInsights)
+- [EnableCopilotStudioShareDataWithVI](#BKMK_EnableCopilotStudioShareDataWithVI)
+- [EnableCopilotStudioShareDataWithVivaInsights](#BKMK_EnableCopilotStudioShareDataWithVivaInsights)
+- [EnableEnvironmentSettingsApp](#BKMK_EnableEnvironmentSettingsApp)
 - [EnableFlowsInSolutionByDefault](#BKMK_EnableFlowsInSolutionByDefault)
 - [EnableFlowsInSolutionByDefaultGracePeriod](#BKMK_EnableFlowsInSolutionByDefaultGracePeriod)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
@@ -282,6 +292,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsMobileClientOnDemandSyncEnabled](#BKMK_IsMobileClientOnDemandSyncEnabled)
 - [IsMobileOfflineEnabled](#BKMK_IsMobileOfflineEnabled)
 - [IsModelDrivenAppsInMSTeamsEnabled](#BKMK_IsModelDrivenAppsInMSTeamsEnabled)
+- [IsMoneySavingsAllowed](#BKMK_IsMoneySavingsAllowed)
 - [IsMSTeamsCollaborationEnabled](#BKMK_IsMSTeamsCollaborationEnabled)
 - [IsMSTeamsEnabled](#BKMK_IsMSTeamsEnabled)
 - [IsMSTeamsSettingChangedByUser](#BKMK_IsMSTeamsSettingChangedByUser)
@@ -421,6 +432,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RiErrorStatus](#BKMK_RiErrorStatus)
 - [SameSiteModeForSessionCookie](#BKMK_SameSiteModeForSessionCookie)
 - [SampleDataImportId](#BKMK_SampleDataImportId)
+- [SavingEventsTTLInMinutes](#BKMK_SavingEventsTTLInMinutes)
 - [SchemaNamePrefix](#BKMK_SchemaNamePrefix)
 - [SendBulkEmailInUCI](#BKMK_SendBulkEmailInUCI)
 - [ServeStaticResourcesFromAzureCDN](#BKMK_ServeStaticResourcesFromAzureCDN)
@@ -1217,6 +1229,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |True Label|Yes|
 |False Label|No|
 
+### <a name="BKMK_AreAutomationCenterPreviewFeaturesEnabled"></a> AreAutomationCenterPreviewFeaturesEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Power Automate Automation Center preview features will be available for all users in this organization.**|
+|DisplayName|**Enable Power Automate Automation Center preview features for all users in this organization.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`areautomationcenterpreviewfeaturesenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_AreProcessInsightsPreviewFeaturesEnabled"></a> AreProcessInsightsPreviewFeaturesEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether Process Insights Preview features are enabled in this organization.**|
+|DisplayName|**Enable Process Insights Preview features for this organization**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`areprocessinsightspreviewfeaturesenabled`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_AuditRetentionPeriod"></a> AuditRetentionPeriod
 
 |Property|Value|
@@ -1357,6 +1401,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1024|
 
+### <a name="BKMK_BlockAccessToSessionTranscriptsForCopilotStudio"></a> BlockAccessToSessionTranscriptsForCopilotStudio
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to prevent makers from accessing and downloading session transcripts**|
+|DisplayName|**Block access to session transcripts for Copilot Studio**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blockaccesstosessiontranscriptsforcopilotstudio`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_BlockCopilotAuthorAuthentication"></a> BlockCopilotAuthorAuthentication
+
+|Property|Value|
+|---|---|
+|Description|**Prevent makers from allowing end-users to use their credentials during authentication to use connectors, actions, flows, and triggers that are connected to an agent**|
+|DisplayName|**Block makers from allowing end-users to use their credentials during authentication to use connectors, actions, flows, and triggers that are connected to an agent**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blockcopilotauthorauthentication`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
 ### <a name="BKMK_BlockedApplicationsForDVAccess"></a> BlockedApplicationsForDVAccess
 
 |Property|Value|
@@ -1407,6 +1483,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1073741823|
+
+### <a name="BKMK_BlockTranscriptRecordingForCopilotStudio"></a> BlockTranscriptRecordingForCopilotStudio
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to block access to session transcripts and conversational transcripts from being written to Dataverse for an individual environment**|
+|DisplayName|**Block access to session transcripts and conversational transcript recording for Copilot Studio**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`blocktranscriptrecordingforcopilotstudio`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_BoundDashboardDefaultCardExpanded"></a> BoundDashboardDefaultCardExpanded
 
@@ -2189,6 +2281,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|**OnFailure**|
 |2|**Disabled**|
 
+### <a name="BKMK_DesktopFlowRunActionLogVerbosity"></a> DesktopFlowRunActionLogVerbosity
+
+|Property|Value|
+|---|---|
+|Description|**What verbosity level the Power Automate Desktop Flow Run Action Logs allow.**|
+|DisplayName|**Desktop Flow Run Action Log Verbosity**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`desktopflowrunactionlogverbosity`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`organization_desktopflowrunactionlogverbosity`|
+
+#### DesktopFlowRunActionLogVerbosity Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Full**|
+|1|**Debug**|
+|2|**Custom**|
+|3|**Warning**|
+|4|**Error**|
+
 ### <a name="BKMK_DesktopFlowRunActionLogVersion"></a> DesktopFlowRunActionLogVersion
 
 |Property|Value|
@@ -2373,6 +2489,70 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|`enablecanvasappsinsolutionsbydefault`|
 |RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_EnableCopilotStudioCrossGeoShareDataWithVivaInsights"></a> EnableCopilotStudioCrossGeoShareDataWithVivaInsights
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to allow cross-geo boundary sharing of aggregated analytics data if your preferred data location for Viva Insights is different than the location of your environment**|
+|DisplayName|**Allow cross-geo boundary sharing of aggregated analytics data if your preferred data location for Viva Insights is different than the location of your environment**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecopilotstudiocrossgeosharedatawithvivainsights`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_EnableCopilotStudioShareDataWithVI"></a> EnableCopilotStudioShareDataWithVI
+
+|Property|Value|
+|---|---|
+|Description|**(Deprecated) Enable this feature to allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights for an individual environment**|
+|DisplayName|**(Deprecated) Allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecopilotstudiosharedatawithvi`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_EnableCopilotStudioShareDataWithVivaInsights"></a> EnableCopilotStudioShareDataWithVivaInsights
+
+|Property|Value|
+|---|---|
+|Description|**Enable this feature to allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights for an individual environment**|
+|DisplayName|**Allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`enablecopilotstudiosharedatawithvivainsights`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_EnableEnvironmentSettingsApp"></a> EnableEnvironmentSettingsApp
+
+|Property|Value|
+|---|---|
+|Description|**Enables the Environment Settings App**|
+|DisplayName|**Enable Environment Settings App**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`enableenvironmentsettingsapp`|
+|RequiredLevel|None|
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
@@ -2816,12 +2996,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|1|**Quarter {0}**|
-|2|**Q{0}**|
-|3|**P{0}**|
-|4|**Month {0}**|
-|5|**M{0}**|
-|6|**Semester {0}**|
+|1|**Quarter \{0\}**|
+|2|**Q\{0\}**|
+|3|**P\{0\}**|
+|4|**Month \{0\}**|
+|5|**M\{0\}**|
+|6|**Semester \{0\}**|
 |7|**Month Name**|
 
 ### <a name="BKMK_FiscalPeriodType"></a> FiscalPeriodType
@@ -3896,7 +4076,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Indicates whether Windows Vanilla Image will be readly available for Desktop Flow users in this organization.**|
+|Description|**Indicates whether Windows Vanilla Image will be available for Desktop Flow users in this organization.**|
 |DisplayName|**Enable Sharing the Windows Vanilla Image with every Desktop Flow user in this organization.**|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -4289,6 +4469,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 |GlobalChoiceName|`organization_featureenabled`|
 |DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_IsMoneySavingsAllowed"></a> IsMoneySavingsAllowed
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether the maker can create Power Automate money based saving rules.**|
+|DisplayName|**Enable the ability to makers to create Power Automate money savings rule**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`ismoneysavingsallowed`|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+|GlobalChoiceName|`organization_featureenabled`|
+|DefaultValue|True|
 |True Label|Yes|
 |False Label|No|
 
@@ -6494,6 +6690,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
+### <a name="BKMK_SavingEventsTTLInMinutes"></a> SavingEventsTTLInMinutes
+
+|Property|Value|
+|---|---|
+|Description|**Default time to live in minutes for new Power Automate savings events records in flow aggregation.**|
+|DisplayName|**The TTL in minutes for new Power Automate savings events records in flow aggregation.**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`savingeventsttlinminutes`|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+|MaxValue|52560000|
+|MinValue|0|
+
 ### <a name="BKMK_SchemaNamePrefix"></a> SchemaNamePrefix
 
 |Property|Value|
@@ -8254,6 +8464,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_appconfig](#BKMK_organization_appconfig)
 - [organization_appconfiginstance](#BKMK_organization_appconfiginstance)
 - [organization_appconfigmaster](#BKMK_organization_appconfigmaster)
+- [organization_application](#BKMK_organization_application)
 - [organization_appmodule](#BKMK_organization_appmodule)
 - [Organization_AsyncOperations](#BKMK_Organization_AsyncOperations)
 - [Organization_BulkDeleteFailures](#BKMK_Organization_BulkDeleteFailures)
@@ -8270,8 +8481,10 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
 - [organization_dataprocessingconfiguration](#BKMK_organization_dataprocessingconfiguration)
 - [organization_delegatedauthorization](#BKMK_organization_delegatedauthorization)
+- [organization_emailaddressconfiguration](#BKMK_organization_emailaddressconfiguration)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
+- [organization_entityclusterconfig](#BKMK_organization_entityclusterconfig)
 - [organization_entitydataprovider](#BKMK_organization_entitydataprovider)
 - [organization_entityrecordfilter](#BKMK_organization_entityrecordfilter)
 - [organization_expiredprocess](#BKMK_organization_expiredprocess)
@@ -8338,6 +8551,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 - [organization_serviceendpoint](#BKMK_organization_serviceendpoint)
 - [organization_sharedlinksetting](#BKMK_organization_sharedlinksetting)
+- [organization_sharepointmanagedidentity](#BKMK_organization_sharepointmanagedidentity)
 - [organization_similarityrule](#BKMK_organization_similarityrule)
 - [organization_sitemap](#BKMK_organization_sitemap)
 - [organization_solution](#BKMK_organization_solution)
@@ -8357,6 +8571,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
 - [organization_teams](#BKMK_organization_teams)
 - [organization_territories](#BKMK_organization_territories)
+- [organization_textanalyticsentitymapping](#BKMK_organization_textanalyticsentitymapping)
 - [organization_theme](#BKMK_organization_theme)
 - [organization_tracelog](#BKMK_organization_tracelog)
 - [organization_transactioncurrencies](#BKMK_organization_transactioncurrencies)
@@ -8633,6 +8848,18 @@ Many-To-One Relationship: [appconfigmaster organization_appconfigmaster](appconf
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_application"></a> organization_application
+
+Many-To-One Relationship: [application organization_application](application.md#BKMK_organization_application)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`application`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_application`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_appmodule"></a> organization_appmodule
 
 Many-To-One Relationship: [appmodule organization_appmodule](appmodule.md#BKMK_organization_appmodule)
@@ -8825,6 +9052,18 @@ Many-To-One Relationship: [delegatedauthorization organization_delegatedauthoriz
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_emailaddressconfiguration"></a> organization_emailaddressconfiguration
+
+Many-To-One Relationship: [emailaddressconfiguration organization_emailaddressconfiguration](emailaddressconfiguration.md#BKMK_organization_emailaddressconfiguration)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailaddressconfiguration`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_emailaddressconfiguration`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_emailserverprofile"></a> organization_emailserverprofile
 
 Many-To-One Relationship: [emailserverprofile organization_emailserverprofile](emailserverprofile.md#BKMK_organization_emailserverprofile)
@@ -8848,6 +9087,18 @@ Many-To-One Relationship: [entityanalyticsconfig organization_entityanalyticscon
 |ReferencedEntityNavigationPropertyName|`organization_entityanalyticsconfig`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_organization_entityclusterconfig"></a> organization_entityclusterconfig
+
+Many-To-One Relationship: [entityclusterconfig organization_entityclusterconfig](entityclusterconfig.md#BKMK_organization_entityclusterconfig)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`entityclusterconfig`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_entityclusterconfig`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_organization_entitydataprovider"></a> organization_entitydataprovider
 
@@ -9641,6 +9892,18 @@ Many-To-One Relationship: [sharedlinksetting organization_sharedlinksetting](sha
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_sharepointmanagedidentity"></a> organization_sharepointmanagedidentity
+
+Many-To-One Relationship: [sharepointmanagedidentity organization_sharepointmanagedidentity](sharepointmanagedidentity.md#BKMK_organization_sharepointmanagedidentity)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`sharepointmanagedidentity`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_sharepointmanagedidentity`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_similarityrule"></a> organization_similarityrule
 
 Many-To-One Relationship: [similarityrule organization_similarityrule](similarityrule.md#BKMK_organization_similarityrule)
@@ -9869,6 +10132,18 @@ Many-To-One Relationship: [territory organization_territories](territory.md#BKMK
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_organization_textanalyticsentitymapping"></a> organization_textanalyticsentitymapping
+
+Many-To-One Relationship: [textanalyticsentitymapping organization_textanalyticsentitymapping](textanalyticsentitymapping.md#BKMK_organization_textanalyticsentitymapping)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`textanalyticsentitymapping`|
+|ReferencingAttribute|`organizationid`|
+|ReferencedEntityNavigationPropertyName|`organization_textanalyticsentitymapping`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_organization_theme"></a> organization_theme
 
 Many-To-One Relationship: [theme organization_theme](theme.md#BKMK_organization_theme)
@@ -10005,6 +10280,6 @@ Many-To-One Relationship: [webresource webresource_organization](webresource.md#
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.organization?displayProperty=fullName>

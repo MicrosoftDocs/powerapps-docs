@@ -4,9 +4,9 @@ description: Learn how to turn on Copilot chat in model-driven apps to help app 
 author: Mattp123
 ms.service: powerapps
 ms.subservice: mda-maker
-ms.author: mijosh
+ms.author: yogupt
 ms.reviewer: matp
-ms.date: 09/16/2024
+ms.date: 05/29/2025
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -25,12 +25,11 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > This feature is generally available in Dynamics 365 apps and is available as a preview feature in Power Apps.
 >
-> - To use this capability, your environment must have its language set to English.
 > - You must allow data movement across regions for Generative AI features as a prerequisite for using Copilot in Power Apps. This step is especially important if your organization and your environment are in different regions. Learn more in [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability may be subject to usage limits or capacity throttling.
+> - This capability might be subject to usage limits or capacity throttling.
 
 When enabled, Copilot chat can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot chat pane can be opened or minimized as desired.
 
@@ -49,18 +48,16 @@ Power Platform administrators enable the Copilot chat feature in model-driven ap
 
 1. Sign in to the Power Platform admin center at [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
 
-1. In the navigation pane, go to **Environments** and select the environment where you want to enable Copilot chat for app users in model-driven apps. Select **Settings** for this environment on the command bar.
+1. In the navigation pane, go to **Manage** > **Environments** and select the environment where you want to enable Copilot chat for app users in model-driven apps. On the command bar, select **Settings**.
 
 1. In **Settings** for the selected environment, select **Product** > **Features**.
-
-   :::image type="content" source="media/Environment_features.png" alt-text="Screenshot that shows where to set environment features.":::
 
 1. In the **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to the setting that's appropriate for your environment.
 
    - **Default**. Copilot chat is *disabled for a Power Apps licensed environment and enabled for a Dynamics 365 licensed environment*.
    - **On**. Copilot chat is enabled for the environment regardless of the environment licensing type.
    - **Off**. Copilot chat is disabled for the environment regardless of environment licensing type.
-   :::image type="content" source="media/copilot_for_apps_users_on.png" alt-text="Screenshot that shows how to turn on Copilot in an environment.":::
+   :::image type="content" source="media/copilot-for-apps-users-on.png" alt-text="Screenshot that shows how to turn on Copilot in an environment.":::
 
 1. **Save** your changes.
 
@@ -91,15 +88,32 @@ To provide feedback to help us improve Copilot's responses, app users can select
 1. Set the column to **No**, and then **Save** the table.
    :::image type="content" source="media/disable-mda-copilot-feedback2.png" alt-text="Screenshot that shows where to set the Allow users to provide feedback for App Copilot column to No.":::
 
+## Region availability and language supported
+
+Copilot chat for model-driven apps in Power Apps is available in the regions and languages listed here.
+
+| Regions       | Language |
+|---------------|----------|
+| Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Qatar, Singapore, South Africa, Sweden, Switzerland, United Arab Emirates, United Kingdom, United States | Czech, Danish, German, Greek, Finnish, French, Italian, Japanese, Korean, Dutch, Norwegian (Bokmål), Polish, Portuguese (Brazil), Russian, Swedish, Thai, Turkish, Chinese (Simplified), Spanish (Spain), Arabic, Hebrew  |
+
+Copilot takes into account the user's preferred UI language and localizes responses based on that. Depending on the user's preferred UI language, environment base language, and languages supported for a specific Copilot feature, the responses are localized accordingly. This table summarizes the expected behavior in different scenarios.
+
+| Base language of the environment | Preferred UI language of the user | Expected behavior                                                                 |
+|--------------------------|-----------------------------------|-----------------------------------------------------------------------------------|
+| English                  | English                           | Output in English                                                                 |
+| English or non-English   | One of the supported non-English languages | Output in the preferred UI language of the user.                                                |
+| English or non-English   | An unsupported language     | Output is unpredictable as the language is unsupported. The responses are mixed with English and the user language. We recommend using one of the supported Copilot languages in such cases. |
+
 ### Known limitations
 
 1. **Copilot for app users** allows users to retrieve information from Dataverse through read-only operations. This means that users can only view data that matches their queries and can't make any changes to the data.
 1. Create, update, or other generic actions such as enable or disable Copilot and create a memo aren't supported.
 1. [Summarization](/dynamics365/sales/copilot-overview#record-summarization) skill feature is available in [Dynamics 365 Sales copilot](/dynamics365/sales/copilot-overview) and not in **Copilot for app user**.
-1. **Copilot for app users** is not supported with the Power Apps mobile app.
+1. **Copilot for app users** isn't supported with the Power Apps mobile app.
 
 ## Related information
 
+- [Customize Copilot chat in model-driven apps](../model-driven-apps/customize-copilot-chat.md)
 - [FAQ for Copilot chat in model-driven apps](../common/faqs-copilot-model-driven-app.md)
 - [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)

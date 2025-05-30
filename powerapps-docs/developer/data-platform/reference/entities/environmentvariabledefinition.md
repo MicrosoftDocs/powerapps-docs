@@ -1,16 +1,14 @@
 ---
 title: "Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Environment Variable Definition (EnvironmentVariableDefinition) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference
+# Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)
 
 Contains information about the settable variable: its type, default value, and etc.
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /environmentvariabledefinitions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -73,9 +73,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinitionId)
 - [Hint](#BKMK_Hint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InputControlConfig](#BKMK_InputControlConfig)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsRequired](#BKMK_IsRequired)
+- [LearnMoreUrl](#BKMK_LearnMoreUrl)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -214,6 +216,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-2147483648|
 
+### <a name="BKMK_InputControlConfig"></a> InputControlConfig
+
+|Property|Value|
+|---|---|
+|Description|**A JSON object describing the options for the input control that should be presented to the user for setting the current value of the Environment variable.**|
+|DisplayName|**Input Control Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`inputcontrolconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
+
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
@@ -258,6 +277,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DefaultValue|False|
 |True Label|Yes|
 |False Label|No|
+
+### <a name="BKMK_LearnMoreUrl"></a> LearnMoreUrl
+
+|Property|Value|
+|---|---|
+|Description|**Clicking on this url will take the user to a webpage which further explains the environment variable being populated.**|
+|DisplayName|**Learn More Url**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`learnmoreurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -926,6 +962,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId)
 - [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
 - [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
+- [mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
 
 ### <a name="BKMK_envdefinition_envdefinition-one-to-many"></a> envdefinition_envdefinition
 
@@ -1167,6 +1204,18 @@ Many-To-One Relationship: [powerbimashupparameter envvardefinition_powerbimashup
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable"></a> mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable
+
+Many-To-One Relationship: [mspp_sitesetting mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](mspp_sitesetting.md#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_sitesetting`|
+|ReferencingAttribute|`mspp_environmentvariable`|
+|ReferencedEntityNavigationPropertyName|`mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 ## Many-to-Many relationships
 
@@ -1219,6 +1268,6 @@ See [msdyn_connectordatasource msdyn_connectordatasource_environmentvariable Man
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.environmentvariabledefinition?displayProperty=fullName>

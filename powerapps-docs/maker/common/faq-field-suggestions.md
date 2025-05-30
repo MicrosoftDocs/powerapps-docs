@@ -1,10 +1,10 @@
 ---
 title: FAQs for field suggestions by Copilot
 description: These FAQs provide information about the AI technology that uses to get field suggestions by Copilot, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 9/04/2024
+ms.date: 5/28/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: norliu
 ms.author: norliu
 ms.reviewer: mkaur

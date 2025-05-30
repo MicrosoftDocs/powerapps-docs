@@ -1,16 +1,14 @@
 ---
 title: "Environment Variable Value (EnvironmentVariableValue) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Environment Variable Value (EnvironmentVariableValue) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Environment Variable Value (EnvironmentVariableValue) table/entity reference
+# Environment Variable Value (EnvironmentVariableValue) table/entity reference (Microsoft Dataverse)
 
 Holds the value for the associated EnvironmentVariableDefinition entity.
 
@@ -21,18 +19,14 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
-| `Assign`<br />Event: True |`PATCH` /environmentvariablevalues(*environmentvariablevalueid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /environmentvariablevalues<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /environmentvariablevalues(*environmentvariablevalueid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
-| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /environmentvariablevalues(*environmentvariablevalueid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /environmentvariablevalues<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
-| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 | `SetState`<br />Event: True |`PATCH` /environmentvariablevalues(*environmentvariablevalueid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 | `Update`<br />Event: True |`PATCH` /environmentvariablevalues(*environmentvariablevalueid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 | `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
@@ -55,7 +49,7 @@ The following table lists selected properties for the Environment Variable Value
 | **PrimaryIdAttribute** | `environmentvariablevalueid` |
 | **PrimaryNameAttribute** |`schemaname` |
 | **TableType** | `Standard` |
-| **OwnershipType** | `UserOwned` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -67,8 +61,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [OwnerId](#BKMK_OwnerId)
-- [OwnerIdType](#BKMK_OwnerIdType)
 - [SchemaName](#BKMK_SchemaName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -85,7 +77,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`environmentvariabledefinitionid`|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|SystemRequired|
 |Type|Lookup|
 |Targets|environmentvariabledefinition|
 
@@ -160,31 +152,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Format|DateOnly|
 |ImeMode|Inactive|
 |SourceTypeMask|0|
-
-### <a name="BKMK_OwnerId"></a> OwnerId
-
-|Property|Value|
-|---|---|
-|Description|**Owner Id**|
-|DisplayName|**Owner**|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|`ownerid`|
-|RequiredLevel|SystemRequired|
-|Type|Owner|
-|Targets|systemuser, team|
-
-### <a name="BKMK_OwnerIdType"></a> OwnerIdType
-
-|Property|Value|
-|---|---|
-|Description|**Owner Id Type**|
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|`owneridtype`|
-|RequiredLevel|SystemRequired|
-|Type|EntityName|
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
 
@@ -305,8 +272,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [OverwriteTime](#BKMK_OverwriteTime)
-- [OwnerIdName](#BKMK_OwnerIdName)
-- [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
@@ -468,39 +435,30 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |ImeMode|Inactive|
 |SourceTypeMask|0|
 
-### <a name="BKMK_OwnerIdName"></a> OwnerIdName
+### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
 |---|---|
-|Description|**Name of the owner**|
-|DisplayName||
-|IsValidForForm|False|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|`owneridname`|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
+|Type|Owner|
+|Targets|systemuser, team|
 
-### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
 |---|---|
-|Description|**Yomi name of the owner**|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|`owneridyominame`|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
-|Type|String|
-|Format|Text|
-|FormatName|Text|
-|ImeMode|Auto|
-|IsLocalizable|False|
-|MaxLength|100|
+|Type|EntityName|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
@@ -583,28 +541,11 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 These relationships are many-to-one. Listed by **SchemaName**.
 
-- [business_unit_environmentvariablevalue](#BKMK_business_unit_environmentvariablevalue)
 - [environmentvariabledefinition_environmentvariablevalue](#BKMK_environmentvariabledefinition_environmentvariablevalue)
 - [lk_environmentvariablevalue_createdby](#BKMK_lk_environmentvariablevalue_createdby)
 - [lk_environmentvariablevalue_createdonbehalfby](#BKMK_lk_environmentvariablevalue_createdonbehalfby)
 - [lk_environmentvariablevalue_modifiedby](#BKMK_lk_environmentvariablevalue_modifiedby)
 - [lk_environmentvariablevalue_modifiedonbehalfby](#BKMK_lk_environmentvariablevalue_modifiedonbehalfby)
-- [owner_environmentvariablevalue](#BKMK_owner_environmentvariablevalue)
-- [team_environmentvariablevalue](#BKMK_team_environmentvariablevalue)
-- [user_environmentvariablevalue](#BKMK_user_environmentvariablevalue)
-
-### <a name="BKMK_business_unit_environmentvariablevalue"></a> business_unit_environmentvariablevalue
-
-One-To-Many Relationship: [businessunit business_unit_environmentvariablevalue](businessunit.md#BKMK_business_unit_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`businessunit`|
-|ReferencedAttribute|`businessunitid`|
-|ReferencingAttribute|`owningbusinessunit`|
-|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_environmentvariabledefinition_environmentvariablevalue"></a> environmentvariabledefinition_environmentvariablevalue
 
@@ -617,7 +558,7 @@ One-To-Many Relationship: [environmentvariabledefinition environmentvariabledefi
 |ReferencingAttribute|`environmentvariabledefinitionid`|
 |ReferencingEntityNavigationPropertyName|`EnvironmentVariableDefinitionId`|
 |IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_environmentvariablevalue_createdby"></a> lk_environmentvariablevalue_createdby
 
@@ -668,45 +609,6 @@ One-To-Many Relationship: [systemuser lk_environmentvariablevalue_modifiedonbeha
 |ReferencedAttribute|`systemuserid`|
 |ReferencingAttribute|`modifiedonbehalfby`|
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_owner_environmentvariablevalue"></a> owner_environmentvariablevalue
-
-One-To-Many Relationship: [owner owner_environmentvariablevalue](owner.md#BKMK_owner_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`owner`|
-|ReferencedAttribute|`ownerid`|
-|ReferencingAttribute|`ownerid`|
-|ReferencingEntityNavigationPropertyName|`ownerid`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_team_environmentvariablevalue"></a> team_environmentvariablevalue
-
-One-To-Many Relationship: [team team_environmentvariablevalue](team.md#BKMK_team_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`team`|
-|ReferencedAttribute|`teamid`|
-|ReferencingAttribute|`owningteam`|
-|ReferencingEntityNavigationPropertyName|`owningteam`|
-|IsHierarchical||
-|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
-
-### <a name="BKMK_user_environmentvariablevalue"></a> user_environmentvariablevalue
-
-One-To-Many Relationship: [systemuser user_environmentvariablevalue](systemuser.md#BKMK_user_environmentvariablevalue)
-
-|Property|Value|
-|---|---|
-|ReferencedEntity|`systemuser`|
-|ReferencedAttribute|`systemuserid`|
-|ReferencingAttribute|`owninguser`|
-|ReferencingEntityNavigationPropertyName|`owninguser`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -824,6 +726,6 @@ Many-To-One Relationship: [syncerror environmentvariablevalue_SyncErrors](syncer
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.environmentvariablevalue?displayProperty=fullName>

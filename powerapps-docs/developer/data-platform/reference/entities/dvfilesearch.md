@@ -1,16 +1,14 @@
 ---
 title: "DVFileSearch table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the DVFileSearch table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# DVFileSearch table/entity reference
+# DVFileSearch table/entity reference (Microsoft Dataverse)
 
 DVFileSearches Component
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /dvfilesearchs(*dvfilesearchid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /dvfilesearchs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /dvfilesearchs(*dvfilesearchid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -62,6 +62,7 @@ The following table lists selected properties for the DVFileSearch table.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DVFileSearchId](#BKMK_DVFileSearchId)
+- [DVTableSearch](#BKMK_DVTableSearch)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
@@ -84,6 +85,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`dvfilesearchid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_DVTableSearch"></a> DVTableSearch
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**DVTableSearch**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`dvtablesearch`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|dvtablesearch|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -534,6 +548,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_dvfilesearch](#BKMK_business_unit_dvfilesearch)
+- [DVTableSearch_DVFileSearch](#BKMK_DVTableSearch_DVFileSearch)
 - [lk_dvfilesearch_createdby](#BKMK_lk_dvfilesearch_createdby)
 - [lk_dvfilesearch_createdonbehalfby](#BKMK_lk_dvfilesearch_createdonbehalfby)
 - [lk_dvfilesearch_modifiedby](#BKMK_lk_dvfilesearch_modifiedby)
@@ -554,6 +569,19 @@ One-To-Many Relationship: [businessunit business_unit_dvfilesearch](businessunit
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_DVTableSearch_DVFileSearch"></a> DVTableSearch_DVFileSearch
+
+One-To-Many Relationship: [dvtablesearch DVTableSearch_DVFileSearch](dvtablesearch.md#BKMK_DVTableSearch_DVFileSearch)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`dvtablesearch`|
+|ReferencedAttribute|`dvtablesearchid`|
+|ReferencingAttribute|`dvtablesearch`|
+|ReferencingEntityNavigationPropertyName|`DVTableSearch`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_lk_dvfilesearch_createdby"></a> lk_dvfilesearch_createdby
 
@@ -778,6 +806,6 @@ See [powerpagesite powerpagesite_dvfilesearch Many-To-Many Relationship](powerpa
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.dvfilesearch?displayProperty=fullName>

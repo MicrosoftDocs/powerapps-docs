@@ -21,7 +21,7 @@ This sample shows how to create and update a record and related records in one c
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and update records with related records (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateRecordsWithRelatedRecords)
+> [SDK for .NET: Create and update records with related records (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateRecordsWithRelatedRecords)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

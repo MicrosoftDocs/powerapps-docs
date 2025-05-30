@@ -3,7 +3,7 @@ title: Preview your canvas apps
 description: Preview your app in Power Apps Studio to see how the app will look for your app users.
 author: tashaev
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/18/2023
@@ -37,7 +37,7 @@ If you're developing a responsive app, the content within the app adjusts to fit
 
 Watch this video to learn how the device picker helps you confirm that your app is adjusting correctly.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW14Dfz]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=6fb4ee34-2393-4bf2-b3b9-749b8a7cd257]
 
 ## Display settings
 
@@ -54,4 +54,3 @@ The way your app behaves with each preview option is determined by app type and 
 - If **Scale To Fit** setting is on and **Lock Aspect Ratio** is off, your preview won't be accurate. This configuration isn't recommended. More information: [Change screen size and orientation of canvas apps](set-aspect-ratio-portrait-landscape.md)  
 
 - If **Scale to Fit** is off and you resize your browser window while in preview mode, the preview won't be accurate. To address the issue, close and reopen the preview once your browser window is in the desired size. 
-

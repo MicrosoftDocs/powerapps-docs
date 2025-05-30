@@ -4,8 +4,8 @@ description: How to use charts in Power Apps.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 01/17/2024
+ms.topic: how-to
+ms.date: 01/16/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -45,7 +45,8 @@ Legend:
 2. **System Dashboards**: Created by your administrator. By default, these dashboards are visible to all users.
 
 > [!NOTE]
-> When a personal dashboard is shared, the owner of the personal dashboard needs to explicitly share any contained, personal charts or personal views because they have separate permissions. 
+> -  When a personal dashboard is shared, the owner of the personal dashboard needs to explicitly share any contained, personal charts or personal views because they have separate permissions.
+> -  When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigation to dashboards will take the user to the default dashboard, which may be a different dashboard than the named dashboard the user selected.   
 
 ## Expand, refresh, and view rows
 
@@ -120,8 +121,8 @@ When you add a chart on a dashboard, you can edit the chart properties and modif
 
 Legend:
 
- 1. View title with **View Selector** turned off. You cannot toggle between different views. You only see the title.
- 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the table. You only see the title.
+ 1. View title with **View Selector** turned off. You can't toggle between different views. You only see the title.
+ 2. Chart title with **Display Chart Selection** turned off. You can't toggle between different charts for the table. You only see the title.
  
  
  
@@ -145,7 +146,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 
 3. On the **Set Properties** dialog box, select a **View Selector** option. 
 
-	- **Off**: Do not show view selector, show the view title only.
+	- **Off**: Don't show view selector, show the view title only.
 	- **Show All Views**: Show the view selector on chart and display all views in the view selector.
 	- **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
  
@@ -170,9 +171,9 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 
 You can drill down into a segment on a chart and filter the data for that segment. For example, you can drill down on one segment of a chart and change the chart type as you drill down.
 
-The chart drill-down feature is only available on the browser. It is not available on the mobile app for phones or tablets.
+The chart drill-down feature is only available on the browser. It isn't available on the mobile app for phones or tablets.
 
-In the example below, let's further drill down into the chart.
+In the following example, let's further drill-down into the chart.
 
 1. Select a data point on the chart to open the **Drill down by** dialog box.
 
@@ -202,15 +203,15 @@ You can continue drilling further into the chart data. As you drill down deeper,
 ## Known issues  
 
 
-- In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
+- In the chart designer, adding an order on certain calculated columns isn't supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
 
-- Chart displays zero values when there is no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there is no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
+- Chart displays zero values when there's no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there's no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
 
 - By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
 
-- Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
+- Chart drill-down functionality isn't available on charts in a subgrid or an associated grid.
 
-- When you add a list control to a dashboard and switch the control to the **Power Apps Read-Only grid** control, you will see a blank tile on the dashboard because the **Power Apps Read-Only grid** control is not supported on dashboards. We recommend that you use **Power Apps grid** control.
+- When you add a list control to a dashboard and switch the control to the **Power Apps Read-Only grid** control, you'll see a blank tile on the dashboard because the **Power Apps Read-Only grid** control isn't supported on dashboards. We recommend that you use **Power Apps grid** control.
 
 
 

@@ -18,7 +18,7 @@ contributors:
 This sample shows how to make a report available or unavailable to an organization.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Make a report available or unavailable to organization sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MakeReportAvailableToOrganization)
+> [SDK for .NET: Make a report available or unavailable to organization sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/MakeReportAvailableToOrganization)
 
 ## How to run this sample
 

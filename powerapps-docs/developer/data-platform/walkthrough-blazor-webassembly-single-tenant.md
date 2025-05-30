@@ -2,7 +2,7 @@
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse | Microsoft Docs"
 description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
 ms.date: 09/11/2024
-ms.topic: article
+ms.topic: tutorial
 author: JimDaly
 ms.subservice: dataverse-developer
 ms.author: jdaly
@@ -488,7 +488,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 ### See also
 
-[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)  
+[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Microsoft Entra ID](walkthrough-register-app-azure-active-directory.md)<br />

@@ -2,7 +2,7 @@
 title: Add a Copilot control to a canvas app (preview)
 description: Learn how to add a Copilot control, an AI assistant, to your canvas apps in Microsoft Power Apps.
 author: mduelae
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom:
   - canvas
   - ai-gen-diyeditor
@@ -10,7 +10,7 @@ ms.collection:
     - bap-ai-copilot
     - get started
 ms.reviewer: 
-ms.date: 11/13/2024
+ms.date: 5/25/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -39,78 +39,80 @@ The Copilot control is an AI assistant that you can add to your canvas apps. Cop
 
 Ensure you meet the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 
-Copilot doesn't work in environments that have a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
+Copilot doesn't work in environments that use a customer-managed key or [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview).
 
 ### Set up Copilot for your environment
 
-Before app users can use the Copilot chat experience in a canvas app, a Power Platform administrator must enable **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home). Learn more in [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
+To let app users, use the Copilot chat experience in a canvas app, a Power Platform admin enables **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home). Learn more in [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 :::image type="content" source="media/copilot/copilot-for-app-users-on.png" alt-text="Screenshot of the Power Platform admin center environment settings, showing Copilot features.":::
 
 ### Set up Copilot for your canvas app
 
-Before you can add a Copilot control to your canvas app, you need to turn on **Copilot component** and **Edit in Copilot Studio** in the app settings in [Power Apps](https://make.powerapps.com/).
+To add a Copilot control to your canvas app, turn on **Copilot component** and **Edit in Copilot Studio** in the app settings in [Power Apps](https://make.powerapps.com/).
 
-**Copilot component**: Turns on the Copilot feature in your canvas app so that you can add the Copilot control to your app and connect it to a copilot.
+**Copilot component**: Turns on the Copilot feature in your canvas app so you can add the Copilot control and connect it to a copilot.
 
-**Edit in Copilot Studio**: Lets you customize the copilot using Copilot Studio. If you leave this option off, only the default copilot is available in your app.
+**Edit in Copilot Studio**: Lets you customize the copilot using Copilot Studio. If you leave this option off, only the default copilot is available.
 
 1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
 
-1. On the **Preview** tab, find and turn on the **Copilot component** and **Edit in Copilot Studio** settings.
+1. On the **Preview** tab, turn on the **Copilot component** and **Edit in Copilot Studio** settings.
 
    :::image type="content" source="media/copilot/copilot-component-edit-in-copilot-studio.png" alt-text="Screenshot of app settings in Power Apps Studio, with the Copilot component and Edit in Copilot Studio options highlighted.":::
 
 ## Add the Copilot control to your canvas app
 
-Now that all settings are configured, with your [canvas app open for editing](edit-app.md):
+With your [canvas app open for editing](edit-app.md), and all settings configured:
 
-1. In the app [authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Insert**, and then select **Copilot (preview)**.
+1. In the app [authoring menu](power-apps-studio.md#5--app-authoring-menu), select **Insert**, then select **Copilot (preview)**.
 
-1. You're prompted to add a data source to Copilot. Select a Dataverse table as the data source.
+1. When prompted to add a data source to Copilot, select a Dataverse table as the data source.
 
-:::image type="content" source="media/copilot/add-data-to-copilot.png" alt-text="Screenshot of the Copilot control properties pane, with the Create new copilot button highlighted.":::
+:::image type="content" source="media/copilot/add-data-to-copilot.png" alt-text="Screenshot of the Copilot control properties pane. The Create new copilot button is highlighted.":::
 
 > [!NOTE]
 > The Copilot control only supports Dataverse tables for the data source.
 
 ## Customize the copilot using Copilot Studio
 
-Copilot Studio is an app that lets you create and edit copilots for your apps. You can define your copilot's topics, actions, and other features. For example, you can make your copilot respond to specific questions about your app's data or perform actions like opening a screen or sending an email.
+Copilot Studio is an app that lets you create and edit copilots for your apps. Define your copilot's articles, actions, and other features. For example, make your copilot respond to specific questions about your app's data or perform actions like opening a screen or sending an email.
 
-You can customize your newly connected copilot in Power Apps through the properties menu in Power Apps.
+Customize your newly connected copilot in Power Apps through the properties menu.
 
-1. With the Copilot control on your canvas selected, choose **Edit** next to the **Customize copilot** field in **Properties**.
+1. With the Copilot control on your canvas selected, select **Edit** next to the **Customize copilot** field in **Properties**.
 
-1. If you don't have a copilot created already, select **Create new copilot** in the **Customize Copilot** pane. A Copilot control in Power Apps Studio does not support enabling an existing Copilot from Copilot Studio.
+1. If you don't have a copilot created already, select **Create new copilot** in the **Customize Copilot** pane. The Copilot control in Power Apps Studio doesn't support enabling an existing Copilot from Copilot Studio.
 
-   :::image type="content" source="media/copilot/edit-in-copilot-studio.png" alt-text="Screenshot of the Copilot control properties pane, with the Edit and Edit in Copilot Studio buttons highlighted." lightbox="media/copilot/edit-in-copilot-studio.png":::
+   :::image type="content" source="media/copilot/edit-in-copilot-studio.png" alt-text="Screenshot of the Copilot control properties pane. The Edit and Edit in Copilot Studio buttons are highlighted." lightbox="media/copilot/edit-in-copilot-studio.png":::
 
-   [Copilot Studio](https://web.powerva.microsoft.com/) opens in a new tab. Any modifications made in Copilot Studio appear in your connected copilot in your Power Apps app.
+   [Copilot Studio](https://web.powerva.microsoft.com/) opens in a new tab. Any changes you make in Copilot Studio appear in your connected copilot in your canvas app.
 
 Learn more in [Quickstart: Create and deploy a copilot](/microsoft-copilot-studio/fundamentals-get-started).
 
 ## Collect feedback from app users
 
-Makers and app users can provide feedback on how satisfied they are with the copilot's responses by selecting the **Like** (thumbs up) or **Dislike** (thumbs down) button for each response. They can enter detailed feedback in the text box and then select **Submit**.
+Makers and app users provide feedback on copilot responses by selecting the **Like** (thumbs up) or **Dislike** (thumbs down) button for each response. Enter detailed feedback in the text box, and then select **Submit**.
 
-Their feedback is sent to Microsoft to help us improve the Copilot control.
+Feedback goes to Microsoft to help improve the Copilot control.
 
 ## Disallow feedback from app users
 
 If you don't want your app users to provide feedback to Microsoft, turn off the feedback option.
 
-1. Sign in to [Power Apps](https://make.powerapps.com) and select **Tables** from the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane).
+1. Sign in to [Power Apps](https://make.powerapps.com), and select **Tables** from the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane).
+
 
 1. Select the **Organization** table from the list.
 
 1. In the **Organization columns and data** section, select the column headers list. The **Show existing column** popup appears.
 
-1. Search for **Allow users to provide feedback for App Copilot** and make sure the check box in unchecked.
+1. Search for **Allow users to provide feedback for App Copilot**, and make sure the check box is unchecked.
+
 
 1. Select **Save**.
 
-:::image type="content" source="media/copilot/allow-users-feedback-setting.png" alt-text="Screenshot that shows how to get to the Show existing column popup." lightbox="media/copilot/allow-users-feedback-setting.png":::
+:::image type="content" source="media/copilot/allow-users-feedback-setting.png" alt-text="Screenshot of the Show existing column popup in Power Apps, highlighting the Allow users to provide feedback for App Copilot setting." lightbox="media/copilot/allow-users-feedback-setting.png":::
 
 ## Related information
 

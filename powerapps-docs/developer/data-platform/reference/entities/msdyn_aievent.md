@@ -1,16 +1,14 @@
 ---
 title: "AI Event (msdyn_AIEvent) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the AI Event (msdyn_AIEvent) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# AI Event (msdyn_AIEvent) table/entity reference
+# AI Event (msdyn_AIEvent) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /msdyn_aievents(*msdyn_aieventid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /msdyn_aievents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /msdyn_aievents(*msdyn_aieventid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -71,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_CreditConsumed](#BKMK_msdyn_CreditConsumed)
 - [msdyn_DataInfo](#BKMK_msdyn_DataInfo)
 - [msdyn_DataType](#BKMK_msdyn_DataType)
+- [msdyn_EventData](#BKMK_msdyn_EventData)
 - [msdyn_Name](#BKMK_msdyn_Name)
 - [msdyn_Output](#BKMK_msdyn_Output)
 - [msdyn_PartnerSource](#BKMK_msdyn_PartnerSource)
@@ -196,6 +197,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|**PowerAutomation**|
 |1|**PowerApps**|
 |2|**API**|
+|3|**MCS**|
 
 ### <a name="BKMK_msdyn_CreditConsumed"></a> msdyn_CreditConsumed
 
@@ -244,6 +246,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_msdyn_EventData"></a> msdyn_EventData
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName|**Event Data**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_eventdata`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_msdyn_Name"></a> msdyn_Name
 
@@ -899,6 +918,6 @@ Many-To-One Relationship: [syncerror msdyn_aievent_SyncErrors](syncerror.md#BKMK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_aievent?displayProperty=fullName>

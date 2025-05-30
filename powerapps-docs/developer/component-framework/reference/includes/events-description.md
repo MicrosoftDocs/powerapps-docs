@@ -1,1 +1,1 @@
-Provides methods to call maker-defined Power Fx events that are configured in Power Apps Studio.
+Provides methods to call events defined in a PCF. For canvas apps, makers configure these events using Power Fx. For model-driven apps, developers describe the events using JavaScript

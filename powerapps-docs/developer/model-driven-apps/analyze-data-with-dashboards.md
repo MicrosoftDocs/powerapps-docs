@@ -41,8 +41,8 @@ A user-owned dashboard is represented by the `UserForm` table, can be assigned a
  [Actions on dashboards](actions-dashboards.md)  
  [Create a dashboard](create-dashboard.md)  
  [Sample dashboards](sample-dashboards.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard)  
- [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignUserOwnedDashboardToAnother)  
+ [Sample: Create, retrieve, update, and delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsDashboard)  
+ [Sample: Assign a user-owned dashboard to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignUserOwnedDashboardToAnother)  
  [Visualization data description schema](visualization-data-description-schema.md)  
  [Customize visualizations and dashboards](customize-visualizations-dashboards.md)
 

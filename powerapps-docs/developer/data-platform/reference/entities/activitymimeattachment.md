@@ -1,16 +1,14 @@
 ---
 title: "Attachment (ActivityMimeAttachment) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Attachment (ActivityMimeAttachment) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Attachment (ActivityMimeAttachment) table/entity reference
+# Attachment (ActivityMimeAttachment) table/entity reference (Microsoft Dataverse)
 
 MIME attachment for an activity.
 
@@ -21,8 +19,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /activitymimeattachments<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /activitymimeattachments<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /activitymimeattachments(*activitymimeattachmentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -382,7 +382,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Unique identifier of the user or team who owns the activity_mime_attachment.**|
+|Description|**Unique identifier of the user or team who owns the activity\_mime\_attachment.**|
 |DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -608,6 +608,6 @@ Many-To-One Relationship: [syncerror ActivityMimeAttachment_SyncErrors](syncerro
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.activitymimeattachment?displayProperty=fullName>

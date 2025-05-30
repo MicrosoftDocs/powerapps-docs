@@ -6,8 +6,8 @@ author: alcerri
 ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
-ms.date: 12/02/2020
-ms.topic: troubleshooting
+ms.date: 01/27/2025
+ms.topic: faq
 applies_to: 
   - "powerapps"
 search.audienceType: 
@@ -25,9 +25,8 @@ To share the app, select the app, and then on the command bar select **...** > *
 
 !["Sharing a model driven app"](media/share-model-driven-app/share-app.png "Sharing a model driven app")
 
-You can find the app URL using the process below.
+You can find the app URL by going to the **Apps** section Power Apps, select the app, and then select **Details** on the command bar. More information: [Sharing the app](app-building-steps.md#sharing-the-app)
 
-!["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
 To play the app, open the URL in your browser.
 
 For more information, see [sharing model-driven apps](share-model-driven-app.md)

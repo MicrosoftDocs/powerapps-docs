@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to write a `Azure Service Bus` Listener for a `REST` endpoint contract.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: REST listener sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RESTListener)
+> [SDK for .NET: REST listener sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RESTListener)
 
 This sample registers a remote service plug-in that executes whenever a message is posted to a `REST` endpoint on the service bus. When the plug-in executes, it prints to the console the contents of the execution context contained in the message.
 

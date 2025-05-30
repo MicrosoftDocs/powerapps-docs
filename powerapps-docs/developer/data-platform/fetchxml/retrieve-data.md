@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to retrieve data
 description: Learn how to use the Dataverse SDK for .NET or Web API to send a request to retrieve data using FetchXml
-ms.date: 07/16/2024
+ms.date: 01/26/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -18,7 +18,7 @@ contributors:
 ---
 # Use FetchXml to retrieve data
 
-You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
+You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). With PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
 
 You may also want to use [Community tools](overview.md#community-tools), like the [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
 

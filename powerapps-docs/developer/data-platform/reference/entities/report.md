@@ -1,16 +1,14 @@
 ---
 title: "Report table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Report table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Report table/entity reference
+# Report table/entity reference (Microsoft Dataverse)
 
 Data summary in an easy-to-read layout.
 
@@ -22,15 +20,17 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: False |`PATCH` /reports(*reportid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /reports<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /reports(*reportid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `DownloadReportDefinition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DownloadReportDefinition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.DownloadReportDefinitionRequest>|
 | `GetReportHistoryLimit`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GetReportHistoryLimit?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GetReportHistoryLimitRequest>|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-| `MakeAvailableToOrganizationTemplate`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest>|
 | `MakeAvailableToOrganizationReport`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationReportRequest>|
-| `MakeUnavailableToOrganizationTemplate`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeUnavailableToOrganizationTemplateRequest>|
+| `MakeAvailableToOrganizationTemplate`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest>|
 | `MakeUnavailableToOrganizationReport`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeUnavailableToOrganizationReportRequest>|
+| `MakeUnavailableToOrganizationTemplate`<br />Event: False | |<xref:Microsoft.Crm.Sdk.Messages.MakeUnavailableToOrganizationTemplateRequest>|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /reports(*reportid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /reports<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -1406,6 +1406,6 @@ Many-To-One Relationship: [syncerror Report_SyncErrors](syncerror.md#BKMK_Report
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.report?displayProperty=fullName>

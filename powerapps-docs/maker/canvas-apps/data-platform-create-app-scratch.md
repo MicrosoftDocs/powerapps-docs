@@ -1,12 +1,12 @@
 ---
-title: Create a canvas app from scratch using Microsoft Dataverse
+title: Create a canvas app using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 05/16/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -15,35 +15,55 @@ contributors:
   - mduelae
   - lancedmicrosoft
 ---
-# Create a canvas app from scratch using Microsoft Dataverse
+# Create a canvas app using Microsoft Dataverse
 
-Build a canvas app to manage data that's stored in Dataverse, using standard tables (which are built in), custom tables (which your organization creates), or both.
+Create a canvas app to manage data stored in Dataverse, using either built-in standard tables, custom tables created by your organization, or both.
 
-When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the tables that you want to show or manage in the app.
+When building an app from Dataverse, you don't need to create a connection from Power Apps, unlike with data sources such as SharePoint, Dynamics 365, or Excel. All you need to do is specify the tables you want to display or manage in the app.
 
 ## Prerequisites
 
-- Before you create an app from scratch, familiarize yourself with Power Apps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
-- [Switch to an environment](intro-maker-portal.md#choose-an-environment) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
-- To create an app, you must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
+- [Switch to an environment](intro-maker-portal.md#choose-an-environment) where a database is created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
+- Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
 
-## Open a blank app
+## Create an app
 
-To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** format.
 
-## Specify a table
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen, choose one of the following options based on how you want to create your app using Dataverse:
 
-1. In the middle of the screen, select **connect to data**.
+    |Create options using Dataverse  |Benefits  |Navigation  |
+    |---------|---------|---------|
+    |A single-page gallery app   |   Use your existing business data in Dataverse and create a lightweight responsive app.   |1. Choose one of the following options:   <br><br>  - **Start with data** > **Select an existing table**.  <br> <br>  - **Start with a page design** > **Gallery connected to table**.<br><br> 2. Select a table and select **Create app**.   |
+    |Three screen mobile app     |   Utilize your existing data in Dataverse and create an app using a template with three screens, offering options to browse, view details, create, and edit.     | **Start with an app template** > **From Dataverse**. Then, select a table > **Create app**.    |
+    |Blank app that uses data from Dataverse     |      Use your existing business data in Dataverse to tailor your app with flexibility, free from the limitations of predesigned templates.   |        In the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.  |
 
-1. In the app authoring menu, select **Data**. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
-1. Select **Add data** and in the search box enter, **Accounts** > **Connect**.
+1. The app is created and [Power Apps Studio](power-apps-studio.md) opens, where you continue building the app.
 
-1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
-## Add a list screen
+## Add a Dataverse table in a blank app
 
-1. On the command bar, select **New screen** > **Templates** tab > **List**.
+To help you understand how to create an app with data from Dataverse, let's start by creating a blank app and then adding data from Dataverse.
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+
+1. In the left navigation pane, select **Create** > **Start with blank canvas** > **Phone size**.
+
+1. When Power App Studio opens, go to the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) and select **Data**.
+
+   > [!NOTE]
+   > If this is your first time connecting to Dataverse, you'll be prompted to create a connection. Select **Create** to establish the connection.
+
+1. Select **Add data** and enter **Accounts** in the search box, and select it.
+
+1. Close the **Data** pane by selecting the close icon in the upper right corner.
+
+    :::image type="content" source="media/data-platform-create-app-scratch/close-data.png" alt-text="Screenshot of the close data pane.":::
+
+### Add a list screen
+
+1. On the command bar, select **New screen** > **List**.
 
 1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
 
@@ -53,13 +73,14 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
    - The gallery should show data from the **Accounts** table.
    - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
-   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
+   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list shows only those accounts for which the **name** field contains the characters that the user specified.
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
      ![Set the gallery's Items property.](./media/data-platform-create-app-scratch/gallery-items.png)
 
-1. Set the gallery's layout to show only the name of each account, and configure the title bar to show the word **Browse**, as [Customize a gallery](customize-layout-sharepoint.md) describes.
+1. In the gallery's **Properties** pane, set the **Layout** to **Title**.
+1. Edit the **Title** text property and rename it to **Browse**. More information: [Customize a gallery](customize-layout-sharepoint.md)
 
     ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
 
@@ -71,15 +92,15 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
     ![Rename Browse screen, gallery.](./media/data-platform-create-app-scratch/rename-browse.png)
 
-## Add a form screen
+### Add a form screen
 
 1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
 
-1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
+1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected** as the **Advanced** tab of the right-hand pane shows.
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
-1. Select **Add field**, and then select the check boxes for these fields:
+1. Select **Add field**, and then select the checkboxes for these fields:
 
     - **Account Name**
     - **Address 1: Street 1**
@@ -101,7 +122,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 1. Rename this screen **FormScreen**.
 
-## Configure icons
+### Configure icons
 
 1. On the **BrowseScreen**, set the **OnSelect** property of the circular icon near the top of the screen to this formula:
 
@@ -141,18 +162,13 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
     ![Trash icon.](./media/data-platform-create-app-scratch/trash-icon.png)
 
-## Test the app
+### Test the app
 
-1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
+1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [Preview an app](preview-app.md)
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
+1. Add an account, edit the account that you added, start to update the account, but cancel your changes, and then delete the account.
 
-1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
-
-## Next steps
-
-- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
-- [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

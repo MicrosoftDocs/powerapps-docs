@@ -1,16 +1,14 @@
 ---
 title: "Knowledge Management Setting (msdyn_knowledgemanagementsetting) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Knowledge Management Setting (msdyn_knowledgemanagementsetting) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Knowledge Management Setting (msdyn_knowledgemanagementsetting) table/entity reference
+# Knowledge Management Setting (msdyn_knowledgemanagementsetting) table/entity reference (Microsoft Dataverse)
 
 Setup knowledge management for your organization.
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /msdyn_knowledgemanagementsettings(*msdyn_knowledgemanagementsettingid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /msdyn_knowledgemanagementsettings<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /msdyn_knowledgemanagementsettings(*msdyn_knowledgemanagementsettingid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -111,7 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_actionlist**|
+|DisplayName|**msdyn\_actionlist**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_actionlist`|
@@ -134,7 +134,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_autosuggestionfield**|
+|DisplayName|**msdyn\_autosuggestionfield**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_autosuggestionfield`|
@@ -151,7 +151,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_defaultemailrecipient**|
+|DisplayName|**msdyn\_defaultemailrecipient**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_defaultemailrecipient`|
@@ -168,7 +168,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**Logical Name of the Entity for which Knowledge Management is being enabled.**|
-|DisplayName|**msdyn_entityname**|
+|DisplayName|**msdyn\_entityname**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_entityname`|
@@ -185,7 +185,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_isautosuggestionsenabled**|
+|DisplayName|**msdyn\_isautosuggestionsenabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_isautosuggestionsenabled`|
@@ -213,7 +213,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_showcontextualactions**|
+|DisplayName|**msdyn\_showcontextualactions**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_showcontextualactions`|
@@ -229,7 +229,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msdyn_status**|
+|DisplayName|**msdyn\_status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_status`|
@@ -894,6 +894,6 @@ Many-To-One Relationship: [syncerror msdyn_knowledgemanagementsetting_SyncErrors
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_knowledgemanagementsetting?displayProperty=fullName>

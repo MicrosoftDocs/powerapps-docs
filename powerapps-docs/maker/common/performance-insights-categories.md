@@ -80,7 +80,7 @@ Insight ID: Perf.Environment.Device.MimimumRequirements
 
 #### Motivation 
 
-This insight checks whether the user’s environment meets minimum system requirements. You can check the [web application requirements](/en-us/power-platform/admin/web-application-requirements) to see what are the minimum system requirements depending on the app type.  
+This insight checks whether the user's environment meets minimum system requirements. You can check the [web application requirements](/en-us/power-platform/admin/web-application-requirements) to see what are the minimum system requirements depending on the app type.  
 
 In general, some activities like rendering, scripting, and downloading contents happen on the client side. Meeting the minimum system requirements is necessary for such activities.  
 
@@ -98,7 +98,7 @@ Power Apps platform supports HTTP/2. However, if your app is using the HTTP/1.1 
 
 #### How to improve
 
-If this insight identified some users who are using the HTTP/1.1 protocol, we strongly recommend that these user’s client support the HTTP/2 protocol.  
+If this insight identified some users who are using the HTTP/1.1 protocol, we strongly recommend that these user's client support the HTTP/2 protocol.  
 
 Several configurations and network infrastructure can block the HTTP/2 protocol, such as a VPN network, proxy server, or device internet option settings.  
 
@@ -108,7 +108,7 @@ Users can check what protocol has been used from a development tool included wit
 
 If the network protocol trace indicates HTTP/1.1, it might be because of the following:
 - Internet settings: The Windows Internet Option **Advanced** tab in Control Panel **Use HTTP2** and **Use TLS 1.2** options aren't enabled.
-- VPN and proxy: Although the Windows Internet Option is set to use HTTP2 and TLS 1.2, the browser might fall back when a VPN or Proxy doesn’t support the more recent protocols.
+- VPN and proxy: Although the Windows Internet Option is set to use HTTP2 and TLS 1.2, the browser might fall back when a VPN or Proxy doesn't support the more recent protocols.
 
 ## Usage pattern
 
@@ -167,8 +167,8 @@ This insight checks the performance of the external endpoints and detects plug-i
 
 #### How to improve
 
--	[Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
--	[Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-   [Set KeepAlive to false when interacting with external hosts in a plug-in](/powerapps/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
+-   [Set Timeout explicitly when making external calls in a plug-in](/developer/data-platform/best-practices/business-logic/set-keepalive-false-interacting-external-hosts-plugin).
 
  More information: [Access external web services (Microsoft Dataverse) - Power Apps | Microsoft Docs](/powerapps/developer/data-platform/access-web-services).
 
@@ -234,16 +234,16 @@ Slow dominant plug-ins affect performance. These plug-ins should be investigated
   
 Investigate slow performing plug-ins. Check out the [best practices regarding plug-in and workflow development](/powerapps/developer/data-platform/best-practices/business-logic/).
 
-To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. However, don't forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
 
 Investigate slow performing plug-ins. Some of the reasons for slow plug-ins are described here:
 
 - Associated SQL queries performed slow, hence the plug-in execution time increased.
-- Follow the single responsibility principle for your plug-in and don’t make transactions with significant transaction boundaries.
+- Follow the single responsibility principle for your plug-in and don't make transactions with significant transaction boundaries.
 - Plug-in might be making some external calls, which are slow.
 - Plug-in logic isn't optimized for multi-threading environments. Check your code.
 
-To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don’t forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
+To further investigate the slow plug-in, you can set the **Plug-in trace log** settings to **All** in your development or test environment and determine where the delay is. Don't forget to disable the setting before going to production. More information: [Tracing and logging](/powerapps/developer/data-platform/logging-tracing)
   
 ### Saved query with leading wildcard
 
@@ -251,7 +251,7 @@ Insight ID: Perf.ModelDriven.Customization.SavedQuery.LeadingWildCard
 
 Leading wildcards are *like* or *not like* conditions that use a wildcard (%) at the start of a search string. An example of a poorly written request is: 
 ```xml
-<fetch version="1.0" output-format="xml-platform" mapping="logical"> 
+<fetch> 
     <entity name="account"> 
         <attribute name="accountid" /> 
         <attribute name="accountnumber" /> 
@@ -268,7 +268,7 @@ A leading wildcard character (%) in a saved query can cause the query to timeout
 
 #### How to improve
 
-Avoid using leading wildcards. In the search key, these are translated to “contains” in SQL Server, which won’t take the advantage of index seek but will do a scan. If it is necessary to use a leading wildcard, limit the scope of search by including other conditions. Note that it is ok to use trailing wildcards (%) at the end of search strings. 
+Avoid using leading wildcards. In the search key, these are translated to "contains" in SQL Server, which won't take the advantage of index seek but will do a scan. If it is necessary to use a leading wildcard, limit the scope of search by including other conditions. Note that it is ok to use trailing wildcards (%) at the end of search strings. 
 
 ## Configuration
 
@@ -294,7 +294,7 @@ To change the setting, go to **Settings** > **Administration** > **System Settin
 
 ### Network performance
 
-Network latency and throughput are important factors that affect end user’s experience.
+Network latency and throughput are important factors that affect end user's experience.
 Users with high latency and low throughput will more likely experience slow performance while accessing Unified Interface. This insight tells us how many users are on a poor performing network and what their performance was like.
 
 #### Motivation

@@ -5,7 +5,7 @@ ms.date: 09/13/2024
 ms.author: trdehove
 author: trdehove
 ms.reviewer: smurkute
-ms.topic: conceptual
+ms.topic: article
 ms.service: powerapps
 ms.custom: bap-template
 applies_to: Dynamics 365 apps
@@ -67,20 +67,13 @@ The status can be **Not available** due to an error during the first sync or if 
 
 You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress in the  **Files available** section.
 
-### Offline sync settings (Preview)
-[This section is prerelease documentation and is subject to change.]
+### Offline sync settings
 
-If your admin [activated sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile-preview) for the app, you can control when offline synchronizations are triggered.
+If your admin [activated sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile) for the app, you can control when offline synchronizations are triggered.
 
 - Set the **Wifi only** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Turn on this setting to reduce cellular data and battery usage, especially in low-network areas.
 
 - If you want to sync less frequently, change the sync interval value from the **Auto sync** setting. You can keep the default value, as defined by your admin, by selecting **Auto** or you can pick a longer interval that meets your needs. If you choose **Manual**, the sync only happens when you select the **Check for updates** button in the **Device Status** page.
-
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
 
 ### Online mode (Preview)
 [This section is prerelease documentation and is subject to change.]

@@ -3,10 +3,10 @@ title: Show text, dates, and times in canvas apps
 description: Learn about how to show text, dates, and times in a canvas app.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/17/2021
+ms.date: 02/11/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -42,7 +42,7 @@ Here are some examples.
     If your computer is set to a locale such as "fr-fr", the current date and time appears in this format:
     <br>*dd/mm/yyyy hh:mm AM/PM*
 2. Set the **[Text](controls/properties-core.md)** property of **ShowText** to this formula:
-   <br>**DateDiff(Today(), DateValue("01/01/2020"))**
+   <br>**DateDiff(Today(), DateValue("01/01/2025"))**
    
    
     The control shows the number of days between today and January 1, 2020, by using these functions:

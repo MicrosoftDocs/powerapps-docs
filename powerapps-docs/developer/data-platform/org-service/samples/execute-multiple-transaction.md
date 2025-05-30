@@ -20,7 +20,7 @@ This sample shows how to use a single web method call to execute all message req
 You can execute two or more requests in a single database transaction using the [ExecuteTransactionRequest](/dotnet/api/microsoft.xrm.sdk.messages.executetransactionrequest) message request.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Execute multiple requests in transaction sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecuteMultipleInTransaction)
+> [SDK for .NET: Execute multiple requests in transaction sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ExecuteMultipleInTransaction)
 
 ## How to run this sample
 

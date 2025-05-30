@@ -1,16 +1,14 @@
 ---
 title: "Note (Annotation) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Note (Annotation) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Note (Annotation) table/entity reference
+# Note (Annotation) table/entity reference (Microsoft Dataverse)
 
 Note that is attached to one or more objects, including other notes.
 
@@ -22,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /annotations(*annotationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /annotations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /annotations(*annotationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: True |`GET` /annotations(*annotationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -212,7 +212,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
+|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, approvalprocess, approvalstageapproval, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -637,6 +637,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [adx_portalcomment_Annotations](#BKMK_adx_portalcomment_Annotations)
 - [annotation_owning_user](#BKMK_annotation_owning_user)
 - [Appointment_Annotation](#BKMK_Appointment_Annotation)
+- [approvalprocess_Annotations](#BKMK_approvalprocess_Annotations)
+- [approvalstageapproval_Annotations](#BKMK_approvalstageapproval_Annotations)
 - [business_unit_annotations](#BKMK_business_unit_annotations)
 - [Calendar_Annotation](#BKMK_Calendar_Annotation)
 - [chat_Annotations](#BKMK_chat_Annotations)
@@ -744,6 +746,32 @@ One-To-Many Relationship: [appointment Appointment_Annotation](appointment.md#BK
 |ReferencedAttribute|`activityid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_appointment`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_approvalprocess_Annotations"></a> approvalprocess_Annotations
+
+One-To-Many Relationship: [approvalprocess approvalprocess_Annotations](approvalprocess.md#BKMK_approvalprocess_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalprocess`|
+|ReferencedAttribute|`approvalprocessid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_approvalstageapproval_Annotations"></a> approvalstageapproval_Annotations
+
+One-To-Many Relationship: [approvalstageapproval approvalstageapproval_Annotations](approvalstageapproval.md#BKMK_approvalstageapproval_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageapproval`|
+|ReferencedAttribute|`approvalstageapprovalid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalstageapproval`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
@@ -1212,6 +1240,6 @@ Many-To-One Relationship: [syncerror Annotation_SyncErrors](syncerror.md#BKMK_An
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.annotation?displayProperty=fullName>

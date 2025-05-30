@@ -1,9 +1,8 @@
 ---
 title: "Sample: Import files as web resources(model-driven apps)"
 description: "The sample provides a simplified example of importing files as web resources."
-author: JimDaly
-ms.author: jdaly
-
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -14,11 +13,11 @@ search.audienceType:
 
 # Sample: Import files as web resources
 
-When you develop a large number of files to use as Web resources you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven apps and then imported.
+When you develop a large number of files to use as Web resources, you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven apps and then imported.
 
 This sample provides a simplified example of this process.
 
-Download the sample: [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources).
+Download the sample: [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ImportWebResources).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -31,7 +30,7 @@ Download the sample: [Import files as web resources](https://github.com/microsof
 The sample code included in the SDK download package includes the following files required by this sample:
 
 **ImportJob.xml**  
- This file provides data about the Web Resource records that will be created. For each file it contains the following data:
+ This file provides data about the Web Resource records that will be created. For each file, it contains the following data:
 
 - **path:** The path to each file from the FilesToImport folder.
 - **displayName:** The display name for the Web resource.
@@ -41,7 +40,7 @@ The sample code included in the SDK download package includes the following file
   > [!NOTE]
   >
   > - Each of these names begin with an underscore character. The customization prefix of the solution publisher will be prepended to the name when the Web resource is created. Rather than hard-coding a specific customization prefix, this sample will detect the current customization prefix for a publisher record that may already exist in the organization.
-  >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash “/” characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.
+  >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash "/" characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.
 
 - **type:** Specifies the type of Web Resource to create using the integer values found in [Web Resource Types](web-resources.md#BKMK_WebResourceTypes).
 
@@ -73,7 +72,7 @@ The sample code included in the SDK download package includes the following file
 
 ### Creating Web Resources in the Context of a Solution
 
-Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.
+Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample shows how to use the `SolutionUniqueName` [optional parameter](../data-platform/optional-parameters.md#associate-a-solution-component-with-a-solution) to associate a Web resource with a specific solution when it's created. Using an optional parameter requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.
 
 ### Uploading Files from Disk
 
@@ -102,7 +101,7 @@ The ImportJob.xml file demonstrates how the data about the files being imported 
 
 The following portion of the ImportWebResources.cs file expects the following variables:
 
-- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.
+- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of "sample".
 - `_ImportWebResourcesSolutionUniqueName` : The unique name of the **Import Web Resources Sample Solution** created in this sample. The value is `ImportWebResourcesSample`.
 
 ```C#

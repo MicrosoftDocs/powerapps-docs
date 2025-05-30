@@ -1,16 +1,14 @@
 ---
 title: "Privilege Checker Log (PrivilegeCheckerLog) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Privilege Checker Log (PrivilegeCheckerLog) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Privilege Checker Log (PrivilegeCheckerLog) table/entity reference
+# Privilege Checker Log (PrivilegeCheckerLog) table/entity reference (Microsoft Dataverse)
 
 Holds information about privilege checks for the user who started (created) a privilege checker tool run (Privilege Checker Run's child entity)
 
@@ -21,8 +19,10 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /privilegecheckerlogs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: True |`DELETE` /privilegecheckerlogs(*privilegecheckerlogid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /privilegecheckerlogs(*privilegecheckerlogid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /privilegecheckerlogs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: True |`PATCH` /privilegecheckerlogs(*privilegecheckerlogid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
@@ -81,6 +81,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
+- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [PrivilegeCheckerLogId](#BKMK_PrivilegeCheckerLogId)
 - [PrivilegeDepth](#BKMK_PrivilegeDepth)
 - [Request](#BKMK_Request)
@@ -284,6 +287,44 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Format|DateOnly|
 |ImeMode|Inactive|
 |SourceTypeMask|0|
+
+### <a name="BKMK_OwnerId"></a> OwnerId
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`ownerid`|
+|RequiredLevel|SystemRequired|
+|Type|Owner|
+|Targets|systemuser, team|
+
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id Type**|
+|DisplayName|**Owner Id Type**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owneridtype`|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
+
+### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owningbusinessunit`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|businessunit|
 
 ### <a name="BKMK_PrivilegeCheckerLogId"></a> PrivilegeCheckerLogId
 
@@ -655,6 +696,6 @@ Many-To-One Relationship: [syncerror privilegecheckerlog_SyncErrors](syncerror.m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.privilegecheckerlog?displayProperty=fullName>

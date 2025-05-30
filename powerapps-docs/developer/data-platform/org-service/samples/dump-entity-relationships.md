@@ -15,7 +15,7 @@ search.audienceType:
 This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Dump table relationships information to a file sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpEntityRelationShips)
+> [SDK for .NET: Dump table relationships information to a file sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/DumpEntityRelationShips)
 
 The following sample creates a new file at `\DumpEntityRelationShips\bin\Debug\RelationshipInfo.xml`. You can open this file in **Office Excel** to see a tabular report.
 

@@ -1,16 +1,14 @@
 ---
 title: "Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity reference
+# Synapse Link Profile Entity State (synapselinkprofileentitystate) table/entity reference (Microsoft Dataverse)
 
 Runtime state of the Synapse Link entity
 
@@ -21,9 +19,11 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /synapselinkprofileentitystates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /synapselinkprofileentitystates(*synapselinkprofileentitystateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `Retrieve`<br />Event: True |`GET` /synapselinkprofileentitystates(*synapselinkprofileentitystateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: True |`GET` /synapselinkprofileentitystates<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LastSyncedMetadataTime](#BKMK_LastSyncedMetadataTime)
 - [LastSyncedMetadataVersion](#BKMK_LastSyncedMetadataVersion)
 - [MetadataState](#BKMK_MetadataState)
+- [MinSyncedDataVersion](#BKMK_MinSyncedDataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [profile](#BKMK_profile)
@@ -148,7 +149,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|64|
+|MaxLength|128|
 
 ### <a name="BKMK_EntitySource"></a> EntitySource
 
@@ -406,6 +407,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|**RelationshipCreating**|
 |8|**Created**|
 |16|**Failure**|
+
+### <a name="BKMK_MinSyncedDataVersion"></a> MinSyncedDataVersion
+
+|Property|Value|
+|---|---|
+|Description|**Last Synced Minimum Data Version**|
+|DisplayName|**MinSyncVersion**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`minsynceddataversion`|
+|RequiredLevel|None|
+|Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_name"></a> name
 
@@ -943,6 +958,6 @@ Many-To-One Relationship: [syncerror synapselinkprofileentitystate_SyncErrors](s
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.synapselinkprofileentitystate?displayProperty=fullName>

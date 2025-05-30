@@ -1079,7 +1079,7 @@ More information:
 
 ### .NET HttpRequestMessage to HttpMessageContent example
 
-In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
 
 ```csharp
 /// <summary>
@@ -1120,7 +1120,7 @@ private HttpMessageContent ToMessageContent(HttpRequestMessage request)
 
 ### .NET Parse batch response example
 
-The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
+The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
 
 ```csharp
 /// <summary>

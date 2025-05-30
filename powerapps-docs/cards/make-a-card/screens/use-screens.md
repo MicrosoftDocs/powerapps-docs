@@ -12,6 +12,8 @@ ms.collection:
 
 # Add screens to a card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Cards can have multiple screens, each presenting a different interface for a specific scenario or purpose. For example, a polling card might have a screen to collect user responses and a screen to show the current aggregated poll results. Use buttons to let users switch between screens or use Power Fx formulas for more complex scenarios. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 ## Prerequisites

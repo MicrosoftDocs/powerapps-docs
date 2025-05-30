@@ -18,7 +18,7 @@ contributors:
 This sample shows how to use the [IOrganizationService.InitializeFromRequest](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) message to create new records from an existing record.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Initialize a record from existing record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InitializeRecordFromExisting)
+> [SDK for .NET: Initialize a record from existing record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/InitializeRecordFromExisting)
 
 ## How to run this sample
 

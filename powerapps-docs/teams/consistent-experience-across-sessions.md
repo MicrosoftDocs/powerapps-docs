@@ -2,8 +2,8 @@
 title: Enable consistent experience across sessions using LoadData and SaveData functions.
 description: Learn how to make your Teams-based Power Apps store session data so that the users don't lose their work when leaving the app tab.
 author: joel-lindstrom
-
-ms.topic: conceptual
+ms.subservice: teams
+ms.topic: how-to
 ms.custom: 
 ms.date: 08/18/2021
 ms.author: saperlmu
@@ -25,7 +25,7 @@ While using an app, if we switch a tab in Teams to look at Wiki or Planner, or e
 In this article, we'll learn how to use the [LoadData() and SaveData() functions](../maker/canvas-apps/functions/function-savedata-loaddata.md) to store the session data within the app to avoid any loss of work because of switching tabs in Teams.
 
 Watch this video to learn how to enable consistent experience across sessions:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL0DT]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e669c7fe-3f11-43ad-8233-0dbbb374bec5]
 
 ## Prerequisites
 

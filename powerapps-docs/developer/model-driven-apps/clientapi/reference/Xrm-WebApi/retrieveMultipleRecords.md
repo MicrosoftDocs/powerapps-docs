@@ -3,7 +3,7 @@ title: "retrieveMultipleRecords (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 01/11/2023
+ms.date: 04/29/2025
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -29,7 +29,7 @@ contributors:
 |`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
 |`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5,000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5,000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
 |`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 ### Options
 
@@ -436,7 +436,7 @@ function retrievePage(entityName, fetchXml, pageNumber, count, pagingCookie) {
 
 var count = 3;
 var fetchXml =
-  '<fetch mapping="logical"><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
+  '<fetch><entity name="account"><attribute name="accountid"/><attribute name="name"/></entity></fetch>';
 
 retrieveAllRecords("account", fetchXml, null, count, null).then(
   function success(result) {

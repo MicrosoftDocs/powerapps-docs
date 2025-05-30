@@ -13,6 +13,8 @@ ms.collection:
 
 # Delete a card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 To delete a card, you need to be the app owner. An admin can't delete a card.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).

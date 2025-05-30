@@ -1,16 +1,14 @@
 ---
 title: "Entity Analytics Config (EntityAnalyticsConfig) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Entity Analytics Config (EntityAnalyticsConfig) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Entity Analytics Config (EntityAnalyticsConfig) table/entity reference
+# Entity Analytics Config (EntityAnalyticsConfig) table/entity reference (Microsoft Dataverse)
 
 This entity contains information about which entities are enabled for Azure Data Lake Services integration
 
@@ -21,12 +19,17 @@ Messages represent operations that can be performed on the table. They may also 
 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: False |`POST` /entityanalyticsconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: False |`DELETE` /entityanalyticsconfigs(*entityanalyticsconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: False |`GET` /entityanalyticsconfigs(*entityanalyticsconfigid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveMultiple`<br />Event: False |`GET` /entityanalyticsconfigs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 | `Update`<br />Event: False |`PATCH` /entityanalyticsconfigs(*entityanalyticsconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 | `Upsert`<br />Event: False |`PATCH` /entityanalyticsconfigs(*entityanalyticsconfigid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
@@ -51,6 +54,7 @@ The following table lists selected properties for the Entity Analytics Config (E
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [EntityAnalyticsConfigId](#BKMK_EntityAnalyticsConfigId)
+- [EntityDataSource](#BKMK_EntityDataSource)
 - [IsEnabledForADLS](#BKMK_IsEnabledForADLS)
 - [IsEnabledForTimeSeries](#BKMK_IsEnabledForTimeSeries)
 - [ParentEntityId](#BKMK_ParentEntityId)
@@ -67,6 +71,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`entityanalyticsconfigid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+### <a name="BKMK_EntityDataSource"></a> EntityDataSource
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Entity Data Source**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`entitydatasource`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`entityanalyticsconfig_entitydatasourcee`|
+
+#### EntityDataSource Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**None**|
+|1|**Dataverse**|
+|2|**FnOTables**|
 
 ### <a name="BKMK_IsEnabledForADLS"></a> IsEnabledForADLS
 
@@ -407,6 +433,6 @@ Many-To-One Relationship: [syncerror entityanalyticsconfig_SyncErrors](syncerror
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.entityanalyticsconfig?displayProperty=fullName>

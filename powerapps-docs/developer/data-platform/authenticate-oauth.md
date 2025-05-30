@@ -4,7 +4,7 @@ description: "Learn how to authenticate applications with Microsoft Dataverse us
 ms.custom: has-adal-ref
 ms.date: 12/04/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only
@@ -73,7 +73,7 @@ Use one of the Microsoft-supported Microsoft Entra ID authentication client libr
 > [!NOTE]
 > Azure Active Directory Authentication Library (ADAL) is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for projects.
 
-For a code sample that demonstrates use of MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart).
+For a code sample that demonstrates use of MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/QuickStart).
 
 ### .NET client libraries
 
@@ -90,7 +90,7 @@ The point of using the authentication libraries is to get an access token that y
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web API request, but it isn't the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) sample.
+The following is the minimum amount of code needed to execute a single Web API request, but it isn't the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/QuickStart) sample.
 
 ```csharp
 string resource = "https://contoso.api.crm.dynamics.com";
@@ -132,7 +132,7 @@ This simple approach does not represent a good pattern to follow because the `to
 
 The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that the access token will be refreshed by the `AcquireToken*` method calls with each request sent by the Http client.
 
-The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/EnhancedQuickStart) sample which uses the MSAL authentication library.
+The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/EnhancedQuickStart) sample which uses the MSAL authentication library.
 
 ```csharp
 class OAuthMessageHandler : DelegatingHandler
@@ -273,7 +273,7 @@ public static HttpClient GetHttpClient(string connectionString, string clientId,
 }
 ```
 
-See the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/EnhancedQuickStart) sample for the complete code.
+See the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/EnhancedQuickStart) sample for the complete code.
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 

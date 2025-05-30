@@ -1,16 +1,14 @@
 ---
 title: "Flow Machine Image Version (flowmachineimageversion) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Machine Image Version (flowmachineimageversion) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Flow Machine Image Version (flowmachineimageversion) table/entity reference
+# Flow Machine Image Version (flowmachineimageversion) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /flowmachineimageversions(*flowmachineimageversionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /flowmachineimageversions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /flowmachineimageversions(*flowmachineimageversionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -376,6 +376,8 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
+- [generalizationlogs](#BKMK_generalizationlogs)
+- [generalizationlogs_Name](#BKMK_generalizationlogs_Name)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
@@ -467,6 +469,36 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |RequiredLevel|None|
 |Type|Lookup|
 |Targets|systemuser|
+
+### <a name="BKMK_generalizationlogs"></a> generalizationlogs
+
+|Property|Value|
+|---|---|
+|Description|**File containing logs of image generalization process to help debug provisioning errors.**|
+|DisplayName|**Generalization logs**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`generalizationlogs`|
+|RequiredLevel|None|
+|Type|File|
+|MaxSizeInKB|32768|
+
+### <a name="BKMK_generalizationlogs_Name"></a> generalizationlogs_Name
+
+|Property|Value|
+|---|---|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`generalizationlogs_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
@@ -587,7 +619,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -660,6 +692,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 These relationships are many-to-one. Listed by **SchemaName**.
 
 - [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
+- [FileAttachment_flowmachineimageversion_generalizationlogs](#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
 - [flowmachineimage_flowmachineimageversion](#BKMK_flowmachineimage_flowmachineimageversion)
 - [flowmachineimageversion_flowmachine](#BKMK_flowmachineimageversion_flowmachine)
 - [lk_flowmachineimageversion_createdby](#BKMK_lk_flowmachineimageversion_createdby)
@@ -682,6 +715,19 @@ One-To-Many Relationship: [businessunit business_unit_flowmachineimageversion](b
 |ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_FileAttachment_flowmachineimageversion_generalizationlogs"></a> FileAttachment_flowmachineimageversion_generalizationlogs
+
+One-To-Many Relationship: [fileattachment FileAttachment_flowmachineimageversion_generalizationlogs](fileattachment.md#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`generalizationlogs`|
+|ReferencingEntityNavigationPropertyName|`generalizationlogs`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_flowmachineimage_flowmachineimageversion"></a> flowmachineimage_flowmachineimageversion
 
@@ -810,6 +856,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowmachineimageversion_BulkDeleteFailures](#BKMK_flowmachineimageversion_BulkDeleteFailures)
 - [flowmachineimageversion_DuplicateBaseRecord](#BKMK_flowmachineimageversion_DuplicateBaseRecord)
 - [flowmachineimageversion_DuplicateMatchingRecord](#BKMK_flowmachineimageversion_DuplicateMatchingRecord)
+- [flowmachineimageversion_FileAttachments](#BKMK_flowmachineimageversion_FileAttachments)
 - [flowmachineimageversion_MailboxTrackingFolders](#BKMK_flowmachineimageversion_MailboxTrackingFolders)
 - [flowmachineimageversion_PrincipalObjectAttributeAccesses](#BKMK_flowmachineimageversion_PrincipalObjectAttributeAccesses)
 - [flowmachineimageversion_ProcessSession](#BKMK_flowmachineimageversion_ProcessSession)
@@ -875,6 +922,18 @@ Many-To-One Relationship: [duplicaterecord flowmachineimageversion_DuplicateMatc
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_flowmachineimageversion_FileAttachments"></a> flowmachineimageversion_FileAttachments
+
+Many-To-One Relationship: [fileattachment flowmachineimageversion_FileAttachments](fileattachment.md#BKMK_flowmachineimageversion_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`flowmachineimageversion_FileAttachments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_flowmachineimageversion_MailboxTrackingFolders"></a> flowmachineimageversion_MailboxTrackingFolders
 
 Many-To-One Relationship: [mailboxtrackingfolder flowmachineimageversion_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowmachineimageversion_MailboxTrackingFolders)
@@ -927,6 +986,6 @@ Many-To-One Relationship: [syncerror flowmachineimageversion_SyncErrors](syncerr
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.flowmachineimageversion?displayProperty=fullName>

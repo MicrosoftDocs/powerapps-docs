@@ -3,10 +3,10 @@ title: Common canvas apps performance issues and resolutions
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: JinManAhn-MSFT
 
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 06/16/2022
+ms.date: 03/21/2025
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
@@ -63,7 +63,7 @@ Ensure that required service URLs haven't been blocked or that they've been adde
 
 *Delegable functions* delegate the processing of data to the data source, minimizing the overhead at the client side. When delegation isn't possible, you can restrict the data row limit for non-delegable queries so that the number of rows returned from a server-based connection remain optimal.
 
-The use of non-delegable functions and inappropriate [data row limits for non-delegable queries](delegation-overview.md#non-delegable-limits) add extra overhead to data transfer. This overhead results in manipulation of the received data to the [JS heap](#memory-pressure-at-the-client-side) at the client side. Be sure to use delegable functions for the app whenever available, and use the optimum data row limit for non-delegable queries.
+The use of non-delegable functions and inappropriate [data row limits for non-delegable queries](delegation-overview.md#nondelegable-limits) add extra overhead to data transfer. This overhead results in manipulation of the received data to the [JS heap](#memory-pressure-at-the-client-side) at the client side. Be sure to use delegable functions for the app whenever available, and use the optimum data row limit for non-delegable queries.
 
 More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
 

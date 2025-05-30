@@ -20,7 +20,7 @@ contributors:
 This sample shows how to query connections for a particular record. It creates connections between a contact and two accounts, and then searches for the contact’s connections.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Query connections by a record (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryByRecord)
+> [SDK for .NET: Query connections by a record (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/QueryByRecord)
 
 ## How to run this sample
 

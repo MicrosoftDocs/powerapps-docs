@@ -1,16 +1,14 @@
 ---
 title: "Mobile App (msdyn_mobileapp) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mobile App (msdyn_mobileapp) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Mobile App (msdyn_mobileapp) table/entity reference
+# Mobile App (msdyn_mobileapp) table/entity reference (Microsoft Dataverse)
 
 Mobile App
 
@@ -22,9 +20,11 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /msdyn_mobileapps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 | `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
@@ -85,6 +85,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_appCenterAppIdAab](#BKMK_msdyn_appCenterAppIdAab)
 - [msdyn_appCenterAppIdApk](#BKMK_msdyn_appCenterAppIdApk)
 - [msdyn_appCenterAppIdIpa](#BKMK_msdyn_appCenterAppIdIpa)
+- [msdyn_azureBlobStorageAccountName](#BKMK_msdyn_azureBlobStorageAccountName)
+- [msdyn_azureBlobStorageContainerName](#BKMK_msdyn_azureBlobStorageContainerName)
 - [msdyn_branch](#BKMK_msdyn_branch)
 - [msdyn_buildDetails](#BKMK_msdyn_buildDetails)
 - [msdyn_bundleIdentifier](#BKMK_msdyn_bundleIdentifier)
@@ -97,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_IOSAppCenterAPIToken](#BKMK_msdyn_IOSAppCenterAPIToken)
 - [msdyn_IOSAppCenterAPITokenSaved](#BKMK_msdyn_IOSAppCenterAPITokenSaved)
 - [msdyn_iosEnterpriseSigningEnabled](#BKMK_msdyn_iosEnterpriseSigningEnabled)
+- [msdyn_isAppSigningEnabled](#BKMK_msdyn_isAppSigningEnabled)
 - [msdyn_keyVaultUri](#BKMK_msdyn_keyVaultUri)
 - [msdyn_mobileappId](#BKMK_msdyn_mobileappId)
 - [msdyn_orgName](#BKMK_msdyn_orgName)
@@ -108,6 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_secondaryApps](#BKMK_msdyn_secondaryApps)
 - [msdyn_secondaryPublishedAppNames](#BKMK_msdyn_secondaryPublishedAppNames)
 - [msdyn_statusBarContentColorMode](#BKMK_msdyn_statusBarContentColorMode)
+- [msdyn_storageTypeForUpload](#BKMK_msdyn_storageTypeForUpload)
 - [msdyn_UniqueName](#BKMK_msdyn_UniqueName)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -279,6 +283,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_msdyn_azureBlobStorageAccountName"></a> msdyn_azureBlobStorageAccountName
+
+|Property|Value|
+|---|---|
+|Description|**Account Name of the Azure Blob Storage where the builds will be uploaded.**|
+|DisplayName|**Azure Blob Storage Account Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_azureblobstorageaccountname`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5000|
+
+### <a name="BKMK_msdyn_azureBlobStorageContainerName"></a> msdyn_azureBlobStorageContainerName
+
+|Property|Value|
+|---|---|
+|Description|**Container Name of the Azure Blob Storage where the builds will be uploaded.**|
+|DisplayName|**Azure Blob Storage Container Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_azureblobstoragecontainername`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5000|
 
 ### <a name="BKMK_msdyn_branch"></a> msdyn_branch
 
@@ -484,6 +522,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|5000|
 
+### <a name="BKMK_msdyn_isAppSigningEnabled"></a> msdyn_isAppSigningEnabled
+
+|Property|Value|
+|---|---|
+|Description|**Is App Signing Enabled.**|
+|DisplayName|**Is App Signing Enabled**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_isappsigningenabled`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5000|
+
 ### <a name="BKMK_msdyn_keyVaultUri"></a> msdyn_keyVaultUri
 
 |Property|Value|
@@ -662,6 +717,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1048576|
 
+### <a name="BKMK_msdyn_storageTypeForUpload"></a> msdyn_storageTypeForUpload
+
+|Property|Value|
+|---|---|
+|Description|**Storage type where the builds will be uploaded.**|
+|DisplayName|**Storage Type For Upload**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`msdyn_storagetypeforupload`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|5000|
+
 ### <a name="BKMK_msdyn_UniqueName"></a> msdyn_UniqueName
 
 |Property|Value|
@@ -763,7 +835,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Reason for the status of the msdyn_mobileapp**|
+|Description|**Reason for the status of the msdyn\_mobileapp**|
 |DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -2183,6 +2255,6 @@ Many-To-One Relationship: [syncerror msdyn_mobileapp_SyncErrors](syncerror.md#BK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.msdyn_mobileapp?displayProperty=fullName>

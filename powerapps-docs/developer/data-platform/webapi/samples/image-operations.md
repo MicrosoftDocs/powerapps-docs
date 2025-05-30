@@ -1,11 +1,10 @@
 ---
-title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Image Operations using Dataverse Web API (Microsoft Dataverse) | Microsoft Learn"
+description: "This sample demonstrates how to perform operations with image columns using the Dataverse Web API."
 ms.date: 01/11/2023
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 contributors:
@@ -122,9 +121,9 @@ Sample completed.
 
 ## Demonstrates
 
-The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ImageOperations/Program.cs) file.
+The code for this sample is in the [Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/ImageOperations/Program.cs) file.
 
-The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ImageOperations/Utility.cs) file.
+The project uses a `Utility` class to perform operations involving creating or retrieving schema data. This class is in the [Utility.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/ImageOperations/Utility.cs) file.
 
 This project performs these operations:
 

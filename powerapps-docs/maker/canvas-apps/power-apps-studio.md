@@ -2,10 +2,10 @@
 title: Understand Power Apps Studio
 description:  Learn the components inside Power Apps Studio.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 9/11/2024
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -39,7 +39,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [Properties pane](#8--properties-pane): Properties list for the selected object in Tree view.
 
-1. [Settings and virtual agent](#9--settings-and-virtual-agent): Configure your app in settings or get help building your app with a virtual agent.
+1. [Settings](#9--settings): Configure your app in settings.
 
 1. [Screen selector](#10--screen-selector): Switch between different screens in your app. Tree view selections display here.
 
@@ -86,6 +86,9 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 - **Undo**: Undo the last action.
 - **Redo**: Repeat the last action.
+
+ > [!NOTE]
+ > You can't undo or redo data operations, such as insert or delete a datasource.
 
 #### Cut, copy, and paste
 
@@ -321,7 +324,7 @@ Select the tree view to show the screens available in the app.
 
 Switch to the **Components** tab of **Tree view** to work with component library features. You can add new components or reuse ones from the published component libraries. For more information, see [Component library](component-library.md).
 
-:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screeshot showing the Components tab of the Tree view pane.":::
+:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screenshot showing the Components tab of the Tree view pane.":::
 
 For more information on adding components by selecting **+ New component**, see the [Insert](#insert) section.
 
@@ -392,13 +395,10 @@ The properties pane shows properties and options available for the currently sel
 
 :::image type="content" source="media/studio/pa-studio-prop-pane.png" alt-text="Screenshot that shows the properties pane that appears when you select an object in your canvas. You see two tabs in this pane: **Display** and **Advanced**.":::
 
-### 9 – Settings and virtual agent
+### 9 – Settings
 
 You can access [Settings](#settings) at the bottom of the app authoring menu or from the command bar as previously described.
 
-You can ask a virtual agent to answer questions in real time about common scenarios. For more information, see [Get help building your app from a virtual agent](../common/virtual-agent.md).
-
-:::image type="content" source="media/studio/settings-virtual-agent.png" alt-text="Screenshot that shows the location of the settings and virtual agent icons from the authoring menu.":::
 
 ### 10 – Screen selector
 

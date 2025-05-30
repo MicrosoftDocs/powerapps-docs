@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page # Required
   author: tapanm-msft #Required; your GitHub user alias, with correct capitalization.
   ms.author: tapanm #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/07/2024 #Required; mm/dd/yyyy format.
+  ms.date: 05/29/2025 #Required; mm/dd/yyyy format.
   ms.custom: bap-template
   hide_bc: true
 
@@ -52,12 +52,12 @@ additionalContent:
           links:
             - text: Choose an app type
               url: maker/index.md
+            - text: Use the Plan designer 
+              url: maker/plan-designer/plan-designer.md
             - text: Create a canvas app
               url: maker/canvas-apps/index.yml
             - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
-            - text: Create a card
-              url: cards/overview.md
         - title: AI copilot capabilities
           links:
             - text: Get started with AI copilot (preview)

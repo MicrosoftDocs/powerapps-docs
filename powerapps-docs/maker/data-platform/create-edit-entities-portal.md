@@ -2,12 +2,13 @@
 title: "Create and edit tables using Power Apps"
 description: "Understand how to create and edit tables using Power Apps."
 author: "Mattp123"
-ms.date: 11/22/2024
+ms.date: 05/27/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 ms.collection: bap-ai-copilot
+contributors: paulliew
 ---
 # Create and edit tables using Power Apps
 
@@ -18,7 +19,9 @@ Tables are used to model and manage business data. When you develop an app, you 
 To create and edit tables in Dataverse, you need the following:
 
 - A Power Platform environment with Dataverse.
-- The system customizer security role or equivalent privileges in the environment. Users with the system customizer security role can create tables and have access to view and edit standard and custom tables. Apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database)
+- Appropriate permission that includes *both* of the following privileges: 
+  - The system customizer security role in the environment. Note that, apart from self-created table records, the system customizer role doesn’t have the privileges to access table records that aren’t shared with them. More information: [Environments with a Dataverse database](/power-platform/admin/database-security#environments-with-a-dataverse-database).
+  - A system or custom security role that has Create, Read, and Write privileges to the [Entity](/power-apps/developer/data-platform/reference/about-entity-reference) table. These privileges allow the user to create and edit tables in Dataverse. Note that a Power Platform admin must grant the user data access to edit the rows of these tables.
 
 ## View tables
 
@@ -47,23 +50,21 @@ There are several ways to create a new table:
 
 ### Create new tables
 
-Use the table visual designer experience where you create tables, configure table relationships, and can view a diagram of your data.
+Use the data workspace experience where you create tables, configure table relationships, and can view a diagram of your data.
 
 :::image type="content" source="media/table-visual-designer.png" alt-text="Visual table designer in Power Apps" lightbox="media/table-visual-designer.png":::
-
-> [!NOTE]
-> The table visual designer currently only supports creating new tables. You can't edit existing tables using the experience.
 
 1. Command bar:
 
    - **Back**. Takes you back where you were in Power Apps.
    - **New table**. Create a new table using any of the methods described in this article.
+   - **Existing table**. Add one more more existing tables and visualize them in the designer.
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Create relationships**. Creates a table relationship between two tables. Select a table on the canvas and CTRL + click another table, then select **Create relationships**. More information: [Types of table relationships](create-edit-entity-relationships.md#types-of-table-relationships)
       (NOTE: many-to-many relationships aren't supported)
-   - **Delete**. Deletes the table and all associated table rows.
-2. Table visual designer canvas. On the table visual designer canvas, you can drag tables around the canvas to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
-3. Table visual designer canvas actions:
+   - **Remove**. Deletes the table and all associated table rows when *a new table* is selected. Remove doesn't delete the table and associated rows when an existing table is selected.
+2. Data workspace canvas. On the data workspace canvas, you can drag tables around the data workspace to relocate them and select ... to invoke the table actions menu, and view a diagram of your data.
+3. Data workspace actions:
    - **+**. Zoom in to increase the size of the table objects on the canvas.
    - **-**. Zoom out to decrease the size of the table objects on the canvas.
    - **Fit view**. Resize to fit within the available space in the browser tab.
@@ -72,11 +73,13 @@ Use the table visual designer experience where you create tables, configure tabl
    - **Hide data** or **View data**. Closes or displays the table row editor.
    - **Row ownership**. Select the ownership type as either user or team, or organization. 
    - **Properties**. Edit the table display name, plural name, description, and schema name.
-   - **Delete**. Delete the table and all associated rows.
+   - **Remove**. Remove the table and all associated rows. If the tables is a new table, all data is deleted. For existing tables, that table is only removed from the table designer and no data is removed.
 5. Table row editor. In this area, create new, edit, or delete rows, create new columns, change the table ownership type, and edit table properties.
+6. Show more or less column. You can select and clear the columns to be displayed in the table card. Also displays or hides the relationship for lookup columns that connect to another table currently in the designer.
+7. Add new relationship handle. Drag the handle and create a new relationship by pointing it towards another table. Some relationship types are currently not supported. More information: [Limitations using the data workspace](#limitations-using-the-data-workspace)
 
 > [!TIP]
-> Can't find the tables you created on the canvas? Select **Fit view** on the table visual designer canvas actions menu.
+> Can't find the tables you created on the canvas? Select **Fit view** on the data workspace actions menu.
 
 Create a table with the visual table designer by using any of the following methods:
 
@@ -93,21 +96,35 @@ Describe your data in natural language and Copilot generates tables along with r
 > To use this feature, note the following requirements:
 >
 > - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
-> - This feature is available in English. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+> - This feature is available in 20 languages including Danish, Dutch, English (United States), French, German, Italian, Japanese, Portuguese (Brazil), Spanish, Chinese (Simplified), Czech, Finnish, Greek, Korean, Norwegian (Bokmål), Polish, Russian, Swedish, Thai, and Turkish. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Choose an option to create tables** page, select **Start with Copilot**.
 2. Describe the tables you'd like to create with the assistance of Copilot. You can also specify the number of tables to create, size of table, and whether to include relationship by configuring the **Table options** menu.
 3. Keep iterating with Copilot in the Copilot panel until you're satisfied with your data. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#review-the-table)
 4. When you're finished, select **Save and exit**.
 
-#### Limitations using the table visual designer
+#### Limitations using the data workspace
 
-The following data types aren't currently supported when you create a column in the table visual designer:
+The following data types aren't currently supported when you create a column in the data workspace:
 
 - Rich text
 - Customer
 - Autonumber
 - Formula
+
+Some relationship configurations are currently not supported.
+
+| Starting table | Targeting table | Relationship type | Status        |
+|----------------|-----------------|-------------------|---------------|
+| New            | New             | One-to-many       | Supported     |
+| New            | New             | Many-to-one       | Supported     |
+| New            | New             | Many-to-many      | Not supported |
+| Existing       | New             | One-to-many       | Supported     |
+| Existing       | New             | Many-to-one       | Not supported |
+| Existing       | New             | Many-to-many      | Not supported |
+| Existing       | Existing        | One-to-many       | Not supported |
+| Existing       | Existing        | Many-to-one       | Not supported |
+| Existing       | Existing        | Many-to-many      | Not supported |
 
 ### Set advanced properties
 
@@ -138,7 +155,7 @@ Select **Advanced options** to display additional properties that are optional f
 
 |Property |Description|
 |--|--|
-| **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
+| **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved. |
 |**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can't be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements. |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
@@ -161,14 +178,15 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network. |
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
-Select **Save** to continue. This action closes the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+Select **Save** to continue. This action closes the **New table** panel and displays the [table hub](#edit-table-components-using-the-table-hub).
 
 ### Create with external data
 
 Use an Excel file/CSV file or SharePoint list to populate a table with your data, which uses copilot to assist with the table generation.
 
 > [!NOTE]
-> [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
+> - [Generally available](/power-platform/admin/general-availability-deployment) copilot features are enabled by default and can't be turned off. To disable them, a tenant admin must [contact support](/power-platform/admin/get-help-support).
+> - When you use create with external data, such as data from Excel or SharePoint, Power Apps initially displays only the first 20 rows of your dataset as a preview. The full dataset is ingested and made available after you save the table.
 
 1. From the **Tables** area, on the command bar select **New table** > **Create with external data**, and then select either **File (Excel, .CSV)** or **SharePoint list**.
    # [File (Excel, .CSV)](#tab/excel)

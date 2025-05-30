@@ -5,7 +5,7 @@ ms.date: 03/15/2024
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -169,7 +169,7 @@ The Common Schema Definition Language (CSDL) $metadata document is the source of
 
 1. Edit the URL by appending `$metadata?annotations=true` after the `_.webapiurl` variable. The URL should be:
    
-   `GET _.webapiurl $metadata?annotations=true`
+   `GET _.webapiurl$metadata?annotations=true`
 
 1. Select **Send**.
 

@@ -1,18 +1,26 @@
 ---
 title: "FileAttachment table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the FileAttachment table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# FileAttachment table/entity reference
+# FileAttachment table/entity reference (Microsoft Dataverse)
 
 File Attachment
+
+## Messages
+
+The following table lists the messages for the FileAttachment table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 
 ## Properties
 
@@ -101,7 +109,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|activityfileattachment, activitypointer, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_analysisjob, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, webresource, workflowbinary, workflowlog|
+|Targets|activityfileattachment, activitypointer, approvalprocess, asyncoperation, botcomponent, canvasapp, cascadegrantrevokeaccessrecordstracker, deleteditemreference, desktopflowbinary, desktopflowmodule, email, exportedexcel, exportsolutionupload, flowmachineimageversion, flowsession, imagedescriptor, knowledgearticle, mailbox, msdyn_aibfeedbackloop, msdyn_aibfile, msdyn_aiconfiguration, msdyn_aidataprocessingevent, msdyn_aitestcasedocument, msdyn_analysisjob, msdyn_dataworkspace, msdyn_fileupload, msdyn_integratedsearchprovider, msdyn_kbattachment, msdyn_knowledgearticleimage, msdyn_mobileapp, msdyn_plan, msdyn_planartifact, msdyn_planattachment, msdyn_pminferredtask, msdyn_richtextfile, mspcat_catalogsubmissionfiles, mspcat_packagestore, package, packagehistory, pluginpackage, powerbidataset, powerbireport, powerpagecomponent, powerpagesitepublished, powerpagesscanreport, report, retaineddataexcel, revokeinheritedaccessrecordstracker, ribbonclientmetadata, searchcustomanalyzer, solution, stagesolutionupload, unstructuredfilesearchrecord, webresource, workflowbinary, workflowlog, workflowmetadata|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -293,6 +301,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 
 - [activityfileattachment_FileAttachments](#BKMK_activityfileattachment_FileAttachments)
 - [activitypointer_FileAttachments](#BKMK_activitypointer_FileAttachments)
+- [approvalprocess_FileAttachments](#BKMK_approvalprocess_FileAttachments)
 - [asyncoperation_FileAttachments](#BKMK_asyncoperation_FileAttachments)
 - [botcomponent_FileAttachments](#BKMK_botcomponent_FileAttachments)
 - [canvasapp_FileAttachments](#BKMK_canvasapp_FileAttachments)
@@ -302,12 +311,15 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [exportedexcel_FileAttachments](#BKMK_exportedexcel_FileAttachments)
 - [exportsolutionupload_FileAttachments](#BKMK_exportsolutionupload_FileAttachments)
 - [FileAttachment_Solution](#BKMK_FileAttachment_Solution)
+- [flowmachineimageversion_FileAttachments](#BKMK_flowmachineimageversion_FileAttachments)
 - [flowsession_FileAttachments](#BKMK_flowsession_FileAttachments)
 - [knowledgearticle_FileAttachments](#BKMK_knowledgearticle_FileAttachments)
 - [mailbox_FileAttachments](#BKMK_mailbox_FileAttachments)
 - [msdyn_aibfeedbackloop_FileAttachments](#BKMK_msdyn_aibfeedbackloop_FileAttachments)
 - [msdyn_aibfile_FileAttachments](#BKMK_msdyn_aibfile_FileAttachments)
 - [msdyn_aiconfiguration_FileAttachments](#BKMK_msdyn_aiconfiguration_FileAttachments)
+- [msdyn_aidataprocessingevent_FileAttachments](#BKMK_msdyn_aidataprocessingevent_FileAttachments)
+- [msdyn_aitestcasedocument_FileAttachments](#BKMK_msdyn_aitestcasedocument_FileAttachments)
 - [msdyn_analysisjob_FileAttachments](#BKMK_msdyn_analysisjob_FileAttachments)
 - [msdyn_fileupload_FileAttachments](#BKMK_msdyn_fileupload_FileAttachments)
 - [msdyn_integratedsearchprovider_FileAttachments](#BKMK_msdyn_integratedsearchprovider_FileAttachments)
@@ -330,9 +342,11 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [retaineddataexcel_FileAttachments](#BKMK_retaineddataexcel_FileAttachments)
 - [searchcustomanalyzer_FileAttachments](#BKMK_searchcustomanalyzer_FileAttachments)
 - [stagesolutionupload_FileAttachments](#BKMK_stagesolutionupload_FileAttachments)
+- [unstructuredfilesearchrecord_FileAttachments](#BKMK_unstructuredfilesearchrecord_FileAttachments)
 - [webresource_FileAttachments](#BKMK_webresource_FileAttachments)
 - [workflowbinary_FileAttachments](#BKMK_workflowbinary_FileAttachments)
 - [workflowlog_FileAttachments](#BKMK_workflowlog_FileAttachments)
+- [workflowmetadata_FileAttachments](#BKMK_workflowmetadata_FileAttachments)
 
 ### <a name="BKMK_activityfileattachment_FileAttachments"></a> activityfileattachment_FileAttachments
 
@@ -357,6 +371,19 @@ One-To-Many Relationship: [activitypointer activitypointer_FileAttachments](acti
 |ReferencedAttribute|`activityid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_activitypointer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_approvalprocess_FileAttachments"></a> approvalprocess_FileAttachments
+
+One-To-Many Relationship: [approvalprocess approvalprocess_FileAttachments](approvalprocess.md#BKMK_approvalprocess_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalprocess`|
+|ReferencedAttribute|`approvalprocessid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalprocess`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -477,6 +504,19 @@ One-To-Many Relationship: [solution FileAttachment_Solution](solution.md#BKMK_Fi
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_flowmachineimageversion_FileAttachments"></a> flowmachineimageversion_FileAttachments
+
+One-To-Many Relationship: [flowmachineimageversion flowmachineimageversion_FileAttachments](flowmachineimageversion.md#BKMK_flowmachineimageversion_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowmachineimageversion`|
+|ReferencedAttribute|`flowmachineimageversionid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_flowmachineimageversion`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_flowsession_FileAttachments"></a> flowsession_FileAttachments
 
 One-To-Many Relationship: [flowsession flowsession_FileAttachments](flowsession.md#BKMK_flowsession_FileAttachments)
@@ -552,6 +592,32 @@ One-To-Many Relationship: [msdyn_aiconfiguration msdyn_aiconfiguration_FileAttac
 |ReferencedAttribute|`msdyn_aiconfigurationid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_msdyn_aiconfiguration`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aidataprocessingevent_FileAttachments"></a> msdyn_aidataprocessingevent_FileAttachments
+
+One-To-Many Relationship: [msdyn_aidataprocessingevent msdyn_aidataprocessingevent_FileAttachments](msdyn_aidataprocessingevent.md#BKMK_msdyn_aidataprocessingevent_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aidataprocessingevent`|
+|ReferencedAttribute|`msdyn_aidataprocessingeventid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aidataprocessingevent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_msdyn_aitestcasedocument_FileAttachments"></a> msdyn_aitestcasedocument_FileAttachments
+
+One-To-Many Relationship: [msdyn_aitestcasedocument msdyn_aitestcasedocument_FileAttachments](msdyn_aitestcasedocument.md#BKMK_msdyn_aitestcasedocument_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_aitestcasedocument`|
+|ReferencedAttribute|`msdyn_aitestcasedocumentid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_msdyn_aitestcasedocument`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
@@ -841,6 +907,19 @@ One-To-Many Relationship: [stagesolutionupload stagesolutionupload_FileAttachmen
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_unstructuredfilesearchrecord_FileAttachments"></a> unstructuredfilesearchrecord_FileAttachments
+
+One-To-Many Relationship: [unstructuredfilesearchrecord unstructuredfilesearchrecord_FileAttachments](unstructuredfilesearchrecord.md#BKMK_unstructuredfilesearchrecord_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`unstructuredfilesearchrecord`|
+|ReferencedAttribute|`unstructuredfilesearchrecordid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_unstructuredfilesearchrecord`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 ### <a name="BKMK_webresource_FileAttachments"></a> webresource_FileAttachments
 
 One-To-Many Relationship: [webresource webresource_FileAttachments](webresource.md#BKMK_webresource_FileAttachments)
@@ -880,6 +959,19 @@ One-To-Many Relationship: [workflowlog workflowlog_FileAttachments](workflowlog.
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
+### <a name="BKMK_workflowmetadata_FileAttachments"></a> workflowmetadata_FileAttachments
+
+One-To-Many Relationship: [workflowmetadata workflowmetadata_FileAttachments](workflowmetadata.md#BKMK_workflowmetadata_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workflowmetadata`|
+|ReferencedAttribute|`workflowmetadataid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_workflowmetadata`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
 
 ## One-to-Many relationships
 
@@ -887,6 +979,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 
 - [FileAttachment_activityfileattachment_FileContent](#BKMK_FileAttachment_activityfileattachment_FileContent)
 - [FileAttachment_ActivityPointer_DescriptionBlobId](#BKMK_FileAttachment_ActivityPointer_DescriptionBlobId)
+- [FileAttachment_approvalprocess_Inputs](#BKMK_FileAttachment_approvalprocess_Inputs)
+- [FileAttachment_approvalprocess_Stages](#BKMK_FileAttachment_approvalprocess_Stages)
 - [FileAttachment_AsyncOperation_DataBlobId](#BKMK_FileAttachment_AsyncOperation_DataBlobId)
 - [FileAttachment_botcomponent_FileData](#BKMK_FileAttachment_botcomponent_FileData)
 - [FileAttachment_CanvasApp_Assets](#BKMK_FileAttachment_CanvasApp_Assets)
@@ -902,6 +996,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_Email_DescriptionBlobId](#BKMK_FileAttachment_Email_DescriptionBlobId)
 - [FileAttachment_exportedexcel_ExcelContent](#BKMK_FileAttachment_exportedexcel_ExcelContent)
 - [FileAttachment_ExportSolutionUpload_SolutionFile](#BKMK_FileAttachment_ExportSolutionUpload_SolutionFile)
+- [FileAttachment_flowmachineimageversion_generalizationlogs](#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
 - [FileAttachment_FlowSession_AdditionalContext](#BKMK_FileAttachment_FlowSession_AdditionalContext)
 - [FileAttachment_FlowSession_Inputs](#BKMK_FileAttachment_FlowSession_Inputs)
 - [FileAttachment_FlowSession_Outputs](#BKMK_FileAttachment_FlowSession_Outputs)
@@ -911,6 +1006,8 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionResult](#BKMK_FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionResult)
 - [FileAttachment_msdyn_AIBFile_msdyn_File](#BKMK_FileAttachment_msdyn_AIBFile_msdyn_File)
 - [FileAttachment_msdyn_AIConfiguration_msdyn_Model](#BKMK_FileAttachment_msdyn_AIConfiguration_msdyn_Model)
+- [FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData](#BKMK_FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData)
+- [FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile](#BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile)
 - [FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport](#BKMK_FileAttachment_msdyn_analysisjob_msdyn_AnalysisJobsReport)
 - [FileAttachment_msdyn_FileUpload_msdyn_ErrorLog](#BKMK_FileAttachment_msdyn_FileUpload_msdyn_ErrorLog)
 - [FileAttachment_msdyn_FileUpload_msdyn_FileContent](#BKMK_FileAttachment_msdyn_FileUpload_msdyn_FileContent)
@@ -955,11 +1052,13 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [fileattachment_solution_fileid](#BKMK_fileattachment_solution_fileid)
 - [FileAttachment_StageSolutionUpload_SolutionFile](#BKMK_FileAttachment_StageSolutionUpload_SolutionFile)
 - [FileAttachment_SyncErrors](#BKMK_FileAttachment_SyncErrors)
+- [FileAttachment_unstructuredfilesearchrecord_Filedata](#BKMK_FileAttachment_unstructuredfilesearchrecord_Filedata)
 - [FileAttachment_WebResource_ContentFileRef](#BKMK_FileAttachment_WebResource_ContentFileRef)
 - [FileAttachment_WebResource_ContentJsonFileRef](#BKMK_FileAttachment_WebResource_ContentJsonFileRef)
 - [FileAttachment_workflowbinary_Data](#BKMK_FileAttachment_workflowbinary_Data)
 - [FileAttachment_WorkflowLog_Inputs](#BKMK_FileAttachment_WorkflowLog_Inputs)
 - [FileAttachment_WorkflowLog_Outputs](#BKMK_FileAttachment_WorkflowLog_Outputs)
+- [FileAttachment_WorkflowMetadata_FileValue](#BKMK_FileAttachment_WorkflowMetadata_FileValue)
 
 ### <a name="BKMK_FileAttachment_activityfileattachment_FileContent"></a> FileAttachment_activityfileattachment_FileContent
 
@@ -982,6 +1081,30 @@ Many-To-One Relationship: [activitypointer FileAttachment_ActivityPointer_Descri
 |ReferencingEntity|`activitypointer`|
 |ReferencingAttribute|`descriptionblobid`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_ActivityPointer_DescriptionBlobId`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_approvalprocess_Inputs"></a> FileAttachment_approvalprocess_Inputs
+
+Many-To-One Relationship: [approvalprocess FileAttachment_approvalprocess_Inputs](approvalprocess.md#BKMK_FileAttachment_approvalprocess_Inputs)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalprocess`|
+|ReferencingAttribute|`inputs`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_approvalprocess_Inputs`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_approvalprocess_Stages"></a> FileAttachment_approvalprocess_Stages
+
+Many-To-One Relationship: [approvalprocess FileAttachment_approvalprocess_Stages](approvalprocess.md#BKMK_FileAttachment_approvalprocess_Stages)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`approvalprocess`|
+|ReferencingAttribute|`stages`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_approvalprocess_Stages`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1165,6 +1288,18 @@ Many-To-One Relationship: [exportsolutionupload FileAttachment_ExportSolutionUpl
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_FileAttachment_flowmachineimageversion_generalizationlogs"></a> FileAttachment_flowmachineimageversion_generalizationlogs
+
+Many-To-One Relationship: [flowmachineimageversion FileAttachment_flowmachineimageversion_generalizationlogs](flowmachineimageversion.md#BKMK_FileAttachment_flowmachineimageversion_generalizationlogs)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachineimageversion`|
+|ReferencingAttribute|`generalizationlogs`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_flowmachineimageversion_generalizationlogs`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_FileAttachment_FlowSession_AdditionalContext"></a> FileAttachment_FlowSession_AdditionalContext
 
 Many-To-One Relationship: [flowsession FileAttachment_FlowSession_AdditionalContext](flowsession.md#BKMK_FileAttachment_FlowSession_AdditionalContext)
@@ -1270,6 +1405,30 @@ Many-To-One Relationship: [msdyn_aiconfiguration FileAttachment_msdyn_AIConfigur
 |ReferencingEntity|`msdyn_aiconfiguration`|
 |ReferencingAttribute|`msdyn_model`|
 |ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIConfiguration_msdyn_Model`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData"></a> FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData
+
+Many-To-One Relationship: [msdyn_aidataprocessingevent FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData](msdyn_aidataprocessingevent.md#BKMK_FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aidataprocessingevent`|
+|ReferencingAttribute|`msdyn_inputdata`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AIDataProcessingEvent_msdyn_InputData`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile"></a> FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile
+
+Many-To-One Relationship: [msdyn_aitestcasedocument FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile](msdyn_aitestcasedocument.md#BKMK_FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`msdyn_aitestcasedocument`|
+|ReferencingAttribute|`msdyn_inputfile`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_msdyn_AITestCaseDocument_msdyn_InputFile`|
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
@@ -1801,6 +1960,18 @@ Many-To-One Relationship: [syncerror FileAttachment_SyncErrors](syncerror.md#BKM
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_FileAttachment_unstructuredfilesearchrecord_Filedata"></a> FileAttachment_unstructuredfilesearchrecord_Filedata
+
+Many-To-One Relationship: [unstructuredfilesearchrecord FileAttachment_unstructuredfilesearchrecord_Filedata](unstructuredfilesearchrecord.md#BKMK_FileAttachment_unstructuredfilesearchrecord_Filedata)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`unstructuredfilesearchrecord`|
+|ReferencingAttribute|`filedata`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_unstructuredfilesearchrecord_Filedata`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_FileAttachment_WebResource_ContentFileRef"></a> FileAttachment_WebResource_ContentFileRef
 
 Many-To-One Relationship: [webresource FileAttachment_WebResource_ContentFileRef](webresource.md#BKMK_FileAttachment_WebResource_ContentFileRef)
@@ -1861,10 +2032,22 @@ Many-To-One Relationship: [workflowlog FileAttachment_WorkflowLog_Outputs](workf
 |IsCustomizable|`False`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_FileAttachment_WorkflowMetadata_FileValue"></a> FileAttachment_WorkflowMetadata_FileValue
+
+Many-To-One Relationship: [workflowmetadata FileAttachment_WorkflowMetadata_FileValue](workflowmetadata.md#BKMK_FileAttachment_WorkflowMetadata_FileValue)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`workflowmetadata`|
+|ReferencingAttribute|`filevalue`|
+|ReferencedEntityNavigationPropertyName|`FileAttachment_WorkflowMetadata_FileValue`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.fileattachment?displayProperty=fullName>

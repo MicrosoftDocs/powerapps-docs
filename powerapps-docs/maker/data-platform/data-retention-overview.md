@@ -2,12 +2,13 @@
 title: Dataverse long term data retention overview
 description: Overview of long term retention for data in Microsoft Dataverse 
 ms.service: powerapps
+ms.subservice: dataverse-maker
 author: pnghub
-ms.author: gned
+ms.author: matp
 ms.reviewer: matp
 contributors: neerajatmsft
 ms.topic: overview
-ms.date: 10/22/2024
+ms.date: 04/08/2025
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -20,7 +21,7 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 > Customers who don't meet this requirement can continue to create data retention policies, but the policies are disabled.
 
 Watch this video to learn about Dataverse long term data retention.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c34fea68-46b2-4486-b9c1-a3ef9d01b4f9]
 
 ## Business application data lifecycle
 
@@ -81,7 +82,7 @@ With Dataverse long term retention, data is never moved out of Dataverse. The re
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
 
-   <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Service.
+   <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Customer Service.
 
 - File capacity details reported:
   - If there are associated file attachments retained long term, the file capacity reflects the sum of the live and retained data. There will be no reduction or savings observed with file capacity after running a retention policy, which involved file attachments.  

@@ -18,7 +18,7 @@ contributors:
 This sample shows how to import files as web resources.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Import files as web resources sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources)
+> [SDK for .NET: Import files as web resources sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/ImportWebResources)
 
 ## How to run this sample
 

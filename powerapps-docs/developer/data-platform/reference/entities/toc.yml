@@ -7,93 +7,111 @@ items:
 - name: "ACIViewMapper"
   displayName: "ACIViewMapper entity"
   href: aciviewmapper.md
-- name: "Action Approval Model (msdyn_flow_actionapprovalmodel)"
+- name: "Action Approval Model"
   displayName: "msdyn_flow_actionapprovalmodel entity"
   href: msdyn_flow_actionapprovalmodel.md
-- name: "Action Card (ActionCard)"
+- name: "Action Card"
   displayName: "ActionCard entity"
   href: actioncard.md
 - name: "ActionCardUserState"
   displayName: "ActionCardUserState entity"
   href: actioncarduserstate.md
-- name: "Activity (ActivityPointer)"
+- name: "Activity"
   displayName: "ActivityPointer entity"
   href: activitypointer.md
-- name: "Activity File Attachment (activityfileattachment)"
+- name: "Activity File Attachment"
   displayName: "activityfileattachment entity"
   href: activityfileattachment.md
-- name: "Activity Party (ActivityParty)"
+- name: "Activity Party"
   displayName: "ActivityParty entity"
   href: activityparty.md
-- name: "Ad Placement (mspp_adplacement)"
+- name: "Ad Placement"
   displayName: "mspp_adplacement entity"
   href: mspp_adplacement.md
-- name: "Address (CustomerAddress)"
+- name: "Address"
   displayName: "CustomerAddress entity"
   href: customeraddress.md
-- name: "AI Builder Dataset (msdyn_AIBDataset)"
+- name: "AI Builder Dataset"
   displayName: "msdyn_AIBDataset entity"
   href: msdyn_aibdataset.md
-- name: "AI Builder Dataset File (msdyn_AIBDatasetFile)"
+- name: "AI Builder Dataset File"
   displayName: "msdyn_AIBDatasetFile entity"
   href: msdyn_aibdatasetfile.md
-- name: "AI Builder Dataset Record (msdyn_AIBDatasetRecord)"
+- name: "AI Builder Dataset Record"
   displayName: "msdyn_AIBDatasetRecord entity"
   href: msdyn_aibdatasetrecord.md
-- name: "AI Builder Datasets Container (msdyn_AIBDatasetsContainer)"
+- name: "AI Builder Datasets Container"
   displayName: "msdyn_AIBDatasetsContainer entity"
   href: msdyn_aibdatasetscontainer.md
-- name: "AI Builder Feedback Loop (msdyn_AIBFeedbackLoop)"
+- name: "AI Builder Feedback Loop"
   displayName: "msdyn_AIBFeedbackLoop entity"
   href: msdyn_aibfeedbackloop.md
-- name: "AI Builder File (msdyn_AIBFile)"
+- name: "AI Builder File"
   displayName: "msdyn_AIBFile entity"
   href: msdyn_aibfile.md
-- name: "AI Builder File Attached Data (msdyn_AIBFileAttachedData)"
+- name: "AI Builder File Attached Data"
   displayName: "msdyn_AIBFileAttachedData entity"
   href: msdyn_aibfileattacheddata.md
-- name: "AI Configuration (msdyn_AIConfiguration)"
+- name: "AI Configuration"
   displayName: "msdyn_AIConfiguration entity"
   href: msdyn_aiconfiguration.md
-- name: "AI Event (msdyn_AIEvent)"
+- name: "AI Evaluation Configuration"
+  displayName: "msdyn_AIEvaluationConfiguration entity"
+  href: msdyn_aievaluationconfiguration.md
+- name: "AI Evaluation Run"
+  displayName: "msdyn_AIEvaluationRun entity"
+  href: msdyn_aievaluationrun.md
+- name: "AI Event"
   displayName: "msdyn_AIEvent entity"
   href: msdyn_aievent.md
-- name: "AI Form Processing Document (msdyn_AIFpTrainingDocument)"
+- name: "AI Form Processing Document"
   displayName: "msdyn_AIFpTrainingDocument entity"
   href: msdyn_aifptrainingdocument.md
-- name: "AI Model (msdyn_AIModel)"
+- name: "AI Model"
   displayName: "msdyn_AIModel entity"
   href: msdyn_aimodel.md
-- name: "AI Object Detection Bounding Box (msdyn_AIOdTrainingBoundingBox)"
+- name: "AI Object Detection Bounding Box"
   displayName: "msdyn_AIOdTrainingBoundingBox entity"
   href: msdyn_aiodtrainingboundingbox.md
-- name: "AI Object Detection Image (msdyn_AIOdImage)"
+- name: "AI Object Detection Image"
   displayName: "msdyn_AIOdImage entity"
   href: msdyn_aiodimage.md
-- name: "AI Object Detection Image Mapping (msdyn_AIOdTrainingImage)"
+- name: "AI Object Detection Image Mapping"
   displayName: "msdyn_AIOdTrainingImage entity"
   href: msdyn_aiodtrainingimage.md
-- name: "AI Object Detection Label (msdyn_AIOdLabel)"
+- name: "AI Object Detection Label"
   displayName: "msdyn_AIOdLabel entity"
   href: msdyn_aiodlabel.md
-- name: "AI Plugin Conversation Starter (AIPluginConversationStarter)"
+- name: "AI Plugin Conversation Starter"
   displayName: "AIPluginConversationStarter entity"
   href: aipluginconversationstarter.md
-- name: "AI Plugin Conversation Starter Mapping (AIPluginConversationStarterMapping)"
+- name: "AI Plugin Conversation Starter Mapping"
   displayName: "AIPluginConversationStarterMapping entity"
   href: aipluginconversationstartermapping.md
-- name: "AI Plugin Governance (AIPluginGovernance)"
+- name: "AI Plugin Governance"
   displayName: "AIPluginGovernance entity"
   href: aiplugingovernance.md
-- name: "AI Plugin Governance Extended (AIPluginGovernanceExt)"
+- name: "AI Plugin Governance Extended"
   displayName: "AIPluginGovernanceExt entity"
   href: aiplugingovernanceext.md
-- name: "AI Skill Config (aiskillconfig)"
-  displayName: "aiskillconfig entity"
-  href: aiskillconfig.md
-- name: "AI Template (msdyn_AITemplate)"
+- name: "AI Template"
   displayName: "msdyn_AITemplate entity"
   href: msdyn_aitemplate.md
+- name: "AI Test Case"
+  displayName: "msdyn_AITestCase entity"
+  href: msdyn_aitestcase.md
+- name: "AI Test Case Document"
+  displayName: "msdyn_AITestCaseDocument entity"
+  href: msdyn_aitestcasedocument.md
+- name: "AI Test Case Input"
+  displayName: "msdyn_AITestCaseInput entity"
+  href: msdyn_aitestcaseinput.md
+- name: "AI Test Run"
+  displayName: "msdyn_AITestRun entity"
+  href: msdyn_aitestrun.md
+- name: "AI Test Run Batch"
+  displayName: "msdyn_AITestRunBatch entity"
+  href: msdyn_aitestrunbatch.md
 - name: "AICopilot"
   displayName: "AICopilot entity"
   href: aicopilot.md
@@ -130,58 +148,52 @@ items:
 - name: "AIPluginUserSetting"
   displayName: "AIPluginUserSetting entity"
   href: aipluginusersetting.md
-- name: "Analysis Component (msdyn_analysiscomponent)"
+- name: "Analysis Component"
   displayName: "msdyn_analysiscomponent entity"
   href: msdyn_analysiscomponent.md
-- name: "Analysis Job (msdyn_analysisjob)"
+- name: "Analysis Job"
   displayName: "msdyn_analysisjob entity"
   href: msdyn_analysisjob.md
-- name: "Analysis Override (msdyn_analysisoverride)"
+- name: "Analysis Override"
   displayName: "msdyn_analysisoverride entity"
   href: msdyn_analysisoverride.md
-- name: "Analysis Result (msdyn_analysisresult)"
+- name: "Analysis Result"
   displayName: "msdyn_analysisresult entity"
   href: msdyn_analysisresult.md
-- name: "Analysis Result Detail (msdyn_analysisresultdetail)"
+- name: "Analysis Result Detail"
   displayName: "msdyn_analysisresultdetail entity"
   href: msdyn_analysisresultdetail.md
-- name: "Announcement (BusinessUnitNewsArticle)"
+- name: "Announcement"
   displayName: "BusinessUnitNewsArticle entity"
   href: businessunitnewsarticle.md
-- name: "Annual Fiscal Calendar (AnnualFiscalCalendar)"
+- name: "Annual Fiscal Calendar"
   displayName: "AnnualFiscalCalendar entity"
   href: annualfiscalcalendar.md
-- name: "API Request Cache (msdyn_APIRequestCache)"
-  displayName: "msdyn_APIRequestCache entity"
-  href: msdyn_apirequestcache.md
-- name: "API Request Folder (msdyn_APIRequestFolder)"
-  displayName: "msdyn_APIRequestFolder entity"
-  href: msdyn_apirequestfolder.md
-- name: "App Action (appaction)"
+- name: "App Action"
   displayName: "appaction entity"
   href: appaction.md
-- name: "App Action Migration (appactionmigration)"
+- name: "App Action Migration"
   displayName: "appactionmigration entity"
   href: appactionmigration.md
-- name: "App Action Rule (appactionrule)"
+- name: "App Action Rule"
   displayName: "appactionrule entity"
   href: appactionrule.md
-- name: "App Config Master (AppConfigMaster)"
+- name: "App Config Master"
   displayName: "AppConfigMaster entity"
   href: appconfigmaster.md
-- name: "App Configuration (AppConfig)"
+- name: "App Configuration"
   displayName: "AppConfig entity"
   href: appconfig.md
-- name: "App Configuration Instance (AppConfigInstance)"
+- name: "App Configuration Instance"
   displayName: "AppConfigInstance entity"
   href: appconfiginstance.md
-- name: "App Insights Metadata (msdyn_appinsightsmetadata)"
+- name: "App Insights Metadata"
   displayName: "msdyn_appinsightsmetadata entity"
   href: msdyn_appinsightsmetadata.md
-- name: "App Module Component (AppModuleComponent)"
+- name: "App Module Component"
   displayName: "AppModuleComponent entity"
   href: appmodulecomponent.md
-- name: "App Module Roles (AppModuleRoles)"
+- name: "App Module Roles"
   displayName: "AppModuleRoles entity"
   href: appmoduleroles.md
 - name: "appaction_appactionrule_classicrules"
@@ -208,25 +220,37 @@ items:
 - name: "Appointment"
   displayName: "Appointment entity"
   href: appointment.md
-- name: "Approval (msdyn_flow_approval)"
+- name: "Approval"
   displayName: "msdyn_flow_approval entity"
   href: msdyn_flow_approval.md
-- name: "Approval Request (msdyn_flow_approvalrequest)"
+- name: "Approval Process"
+  displayName: "approvalprocess entity"
+  href: approvalprocess.md
+- name: "Approval Request"
   displayName: "msdyn_flow_approvalrequest entity"
   href: msdyn_flow_approvalrequest.md
-- name: "Approval Response (msdyn_flow_approvalresponse)"
+- name: "Approval Response"
   displayName: "msdyn_flow_approvalresponse entity"
   href: msdyn_flow_approvalresponse.md
-- name: "Approval Step (msdyn_flow_approvalstep)"
+- name: "Approval Stage Approval"
+  displayName: "approvalstageapproval entity"
+  href: approvalstageapproval.md
+- name: "Approval Stage Condition"
+  displayName: "approvalstagecondition entity"
+  href: approvalstagecondition.md
+- name: "Approval Stage Order"
+  displayName: "approvalstageorder entity"
+  href: approvalstageorder.md
+- name: "Approval Step"
   displayName: "msdyn_flow_approvalstep entity"
   href: msdyn_flow_approvalstep.md
-- name: "Article (KbArticle)"
+- name: "Article"
   displayName: "KbArticle entity"
   href: kbarticle.md
-- name: "Article Comment (KbArticleComment)"
+- name: "Article Comment"
   displayName: "KbArticleComment entity"
   href: kbarticlecomment.md
-- name: "Article Template (KbArticleTemplate)"
+- name: "Article Template"
   displayName: "KbArticleTemplate entity"
   href: kbarticletemplate.md
 - name: "Attachment"
@@ -238,25 +262,25 @@ items:
 - name: "Attribute"
   displayName: "Attribute entity"
   href: attribute.md
-- name: "Auditing (Audit)"
+- name: "Auditing"
   displayName: "Audit entity"
   href: audit.md
-- name: "Await All Action Approval Model (msdyn_flow_awaitallactionapprovalmodel)"
+- name: "Await All Action Approval Model"
   displayName: "msdyn_flow_awaitallactionapprovalmodel entity"
   href: msdyn_flow_awaitallactionapprovalmodel.md
-- name: "Await All Approval Model (msdyn_flow_awaitallapprovalmodel)"
+- name: "Await All Approval Model"
   displayName: "msdyn_flow_awaitallapprovalmodel entity"
   href: msdyn_flow_awaitallapprovalmodel.md
-- name: "Background Operation (backgroundoperation)"
+- name: "Background Operation"
   displayName: "backgroundoperation entity"
   href: backgroundoperation.md
-- name: "Basic Approval Model Data (msdyn_flow_basicapprovalmodel)"
+- name: "Basic Approval Model Data"
   displayName: "msdyn_flow_basicapprovalmodel entity"
   href: msdyn_flow_basicapprovalmodel.md
-- name: "Basic Form (mspp_entityform)"
+- name: "Basic Form"
   displayName: "mspp_entityform entity"
   href: mspp_entityform.md
-- name: "Basic Form Metadata (mspp_entityformmetadata)"
+- name: "Basic Form Metadata"
   displayName: "mspp_entityformmetadata entity"
   href: mspp_entityformmetadata.md
 - name: "bot_botcomponent"
@@ -289,34 +313,37 @@ items:
 - name: "botcomponent_workflow"
   displayName: "botcomponent_workflow entity"
   href: botcomponent_workflow.md
-- name: "BotContent (msdynce_botcontent)"
+- name: "BotContent"
   displayName: "msdynce_botcontent entity"
   href: msdynce_botcontent.md
-- name: "Bulk Delete Failure (BulkDeleteFailure)"
+- name: "Bulk Delete Failure"
   displayName: "BulkDeleteFailure entity"
   href: bulkdeletefailure.md
-- name: "Bulk Delete Operation (BulkDeleteOperation)"
+- name: "Bulk Delete Operation"
   displayName: "BulkDeleteOperation entity"
   href: bulkdeleteoperation.md
-- name: "Business Unit (BusinessUnit)"
+- name: "Business Process"
+  displayName: "businessprocess entity"
+  href: businessprocess.md
+- name: "Business Unit"
   displayName: "BusinessUnit entity"
   href: businessunit.md
 - name: "Calendar"
   displayName: "Calendar entity"
   href: calendar.md
-- name: "Calendar Rule (CalendarRule)"
+- name: "Calendar Rule"
   displayName: "CalendarRule entity"
   href: calendarrule.md
-- name: "Callback Registration (CallbackRegistration)"
+- name: "Callback Registration"
   displayName: "CallbackRegistration entity"
   href: callbackregistration.md
-- name: "Canvas App (CanvasApp)"
+- name: "Canvas App"
   displayName: "CanvasApp entity"
   href: canvasapp.md
-- name: "card"
+- name: "Card"
   displayName: "card entity"
   href: card.md
-- name: "Card State Item (cardstateitem)"
+- name: "Card State Item"
   displayName: "cardstateitem entity"
   href: cardstateitem.md
 - name: "cardentityconnections"
@@ -325,10 +352,10 @@ items:
 - name: "Catalog"
   displayName: "Catalog entity"
   href: catalog.md
-- name: "Catalog Assignment (CatalogAssignment)"
+- name: "Catalog Assignment"
   displayName: "CatalogAssignment entity"
   href: catalogassignment.md
-- name: "Catalog Submission Files (mspcat_CatalogSubmissionFiles)"
+- name: "Catalog Submission Files"
   displayName: "mspcat_CatalogSubmissionFiles entity"
   href: mspcat_catalogsubmissionfiles.md
 - name: "Category"
@@ -337,69 +364,72 @@ items:
 - name: "CertificateCredential"
   displayName: "CertificateCredential entity"
   href: certificatecredential.md
-- name: "Column Mapping (ColumnMapping)"
+- name: "Column Mapping"
   displayName: "ColumnMapping entity"
   href: columnmapping.md
-- name: "Column Permission (mspp_columnpermission)"
+- name: "Column Permission"
   displayName: "mspp_columnpermission entity"
   href: mspp_columnpermission.md
-- name: "Column Permission Profile (mspp_columnpermissionprofile)"
+- name: "Column Permission Profile"
   displayName: "mspp_columnpermissionprofile entity"
   href: mspp_columnpermissionprofile.md
-- name: "Comment (PostComment)"
+- name: "Comment"
   displayName: "PostComment entity"
   href: postcomment.md
-- name: "Component Layer (msdyn_componentlayer)"
+- name: "Component Layer"
   displayName: "msdyn_componentlayer entity"
   href: msdyn_componentlayer.md
-- name: "Component Layer Data Source (msdyn_componentlayerdatasource)"
+- name: "Component Layer Data Source"
   displayName: "msdyn_componentlayerdatasource entity"
   href: msdyn_componentlayerdatasource.md
-- name: "Component Version (componentversion)"
+- name: "Component Version"
   displayName: "componentversion entity"
   href: componentversion.md
-- name: "Component Version (Internal) (componentversionnrddatasource)"
+- name: "Component Version (Internal)"
   displayName: "componentversionnrddatasource entity"
   href: componentversionnrddatasource.md
-- name: "Component Version Data Source (componentversiondatasource)"
+- name: "Component Version Data Source"
   displayName: "componentversiondatasource entity"
   href: componentversiondatasource.md
 - name: "Connection"
   displayName: "Connection entity"
   href: connection.md
-- name: "Connection Instance (ConnectionInstance)"
+- name: "Connection Instance"
   displayName: "ConnectionInstance entity"
   href: connectioninstance.md
-- name: "Connection Reference (connectionreference)"
+- name: "Connection Reference"
   displayName: "connectionreference entity"
   href: connectionreference.md
-- name: "Connection Role (ConnectionRole)"
+- name: "Connection Role"
   displayName: "ConnectionRole entity"
   href: connectionrole.md
 - name: "ConnectionRoleAssociation"
   displayName: "ConnectionRoleAssociation entity"
   href: connectionroleassociation.md
-- name: "connector"
+- name: "Connector"
   displayName: "connector entity"
   href: connector.md
 - name: "Contact"
   displayName: "Contact entity"
   href: contact.md
-- name: "Content Snippet (mspp_contentsnippet)"
+- name: "Content Snippet"
   displayName: "mspp_contentsnippet entity"
   href: mspp_contentsnippet.md
-- name: "conversationtranscript"
+- name: "ConversationTranscript"
   displayName: "conversationtranscript entity"
   href: conversationtranscript.md
-- name: "Copilot (bot)"
+- name: "Copilot"
   displayName: "bot entity"
   href: bot.md
-- name: "Copilot component (botcomponent)"
+- name: "Copilot component"
   displayName: "botcomponent entity"
   href: botcomponent.md
-- name: "Copilot component collection (botcomponentcollection)"
+- name: "Copilot component collection"
   displayName: "botcomponentcollection entity"
   href: botcomponentcollection.md
+- name: "Copilot Interactions"
+  displayName: "msdyn_CopilotInteractions entity"
+  href: msdyn_copilotinteractions.md
 - name: "CopilotExampleQuestion"
   displayName: "CopilotExampleQuestion entity"
   href: copilotexamplequestion.md
@@ -409,76 +439,79 @@ items:
 - name: "CopilotSynonyms"
   displayName: "CopilotSynonyms entity"
   href: copilotsynonyms.md
-- name: "credential"
+- name: "Credential"
   displayName: "credential entity"
   href: credential.md
-- name: "Currency (TransactionCurrency)"
+- name: "Currency"
   displayName: "TransactionCurrency entity"
   href: transactioncurrency.md
-- name: "Custom API (CustomAPI)"
+- name: "Custom API"
   displayName: "CustomAPI entity"
   href: customapi.md
-- name: "Custom API Request Parameter (CustomAPIRequestParameter)"
+- name: "Custom API Request Parameter"
   displayName: "CustomAPIRequestParameter entity"
   href: customapirequestparameter.md
-- name: "Custom API Response Property (CustomAPIResponseProperty)"
+- name: "Custom API Response Property"
   displayName: "CustomAPIResponseProperty entity"
   href: customapiresponseproperty.md
-- name: "Custom Control (CustomControl)"
+- name: "Custom Control"
   displayName: "CustomControl entity"
   href: customcontrol.md
-- name: "Custom Control Default Config (CustomControlDefaultConfig)"
+- name: "Custom Control Default Config"
   displayName: "CustomControlDefaultConfig entity"
   href: customcontroldefaultconfig.md
-- name: "Custom Control Extended Setting (msdyn_customcontrolextendedsettings)"
+- name: "Custom Control Extended Setting"
   displayName: "msdyn_customcontrolextendedsettings entity"
   href: msdyn_customcontrolextendedsettings.md
-- name: "Custom Control Resource (CustomControlResource)"
+- name: "Custom Control Resource"
   displayName: "CustomControlResource entity"
   href: customcontrolresource.md
-- name: "Data Import (Import)"
+- name: "Data Import"
   displayName: "Import entity"
   href: import.md
-- name: "Data Lake Folder (datalakefolder)"
+- name: "Data Lake Folder"
   displayName: "datalakefolder entity"
   href: datalakefolder.md
-- name: "Data Lake Folder Permission (datalakefolderpermission)"
+- name: "Data Lake Folder Permission"
   displayName: "datalakefolderpermission entity"
   href: datalakefolderpermission.md
-- name: "Data Lake Workspace (datalakeworkspace)"
+- name: "Data Lake Workspace"
   displayName: "datalakeworkspace entity"
   href: datalakeworkspace.md
-- name: "Data Lake Workspace Permission (datalakeworkspacepermission)"
+- name: "Data Lake Workspace Permission"
   displayName: "datalakeworkspacepermission entity"
   href: datalakeworkspacepermission.md
-- name: "Data Map (ImportMap)"
+- name: "Data Map"
   displayName: "ImportMap entity"
   href: importmap.md
-- name: "Data Movement Service Request (msdyn_dmsrequest)"
+- name: "Data Movement Service Request"
   displayName: "msdyn_dmsrequest entity"
   href: msdyn_dmsrequest.md
-- name: "Data Movement Service Request Status (msdyn_dmsrequeststatus)"
+- name: "Data Movement Service Request Status"
   displayName: "msdyn_dmsrequeststatus entity"
   href: msdyn_dmsrequeststatus.md
-- name: "Data Performance Dashboard (DataPerformance)"
+- name: "Data Performance Dashboard"
   displayName: "DataPerformance entity"
   href: dataperformance.md
-- name: "Data Processing configuration (DataProcessingConfiguration)"
+- name: "Data Processing configuration"
   displayName: "DataProcessingConfiguration entity"
   href: dataprocessingconfiguration.md
-- name: "Dataflow (msdyn_dataflow)"
+- name: "Data Processing Event"
+  displayName: "msdyn_AIDataProcessingEvent entity"
+  href: msdyn_aidataprocessingevent.md
+- name: "Dataflow"
   displayName: "msdyn_dataflow entity"
   href: msdyn_dataflow.md
-- name: "Dataflow Connection Reference (msdyn_DataflowConnectionReference)"
+- name: "Dataflow Connection Reference"
   displayName: "msdyn_DataflowConnectionReference entity"
   href: msdyn_dataflowconnectionreference.md
-- name: "Dataflow DatalakeFolder (msdyn_dataflow_datalakefolder)"
+- name: "Dataflow DatalakeFolder"
   displayName: "msdyn_dataflow_datalakefolder entity"
   href: msdyn_dataflow_datalakefolder.md
-- name: "Dataflow Template (msdyn_DataflowTemplate)"
+- name: "Dataflow Template"
   displayName: "msdyn_DataflowTemplate entity"
   href: msdyn_dataflowtemplate.md
-- name: "DataflowRefreshHistory (msdyn_dataflowrefreshhistory)"
+- name: "DataflowRefreshHistory"
   displayName: "msdyn_dataflowrefreshhistory entity"
   href: msdyn_dataflowrefreshhistory.md
 - name: "DelegatedAuthorization"
@@ -487,37 +520,37 @@ items:
 - name: "Dependency"
   displayName: "Dependency entity"
   href: dependency.md
-- name: "Desktop Flow Binary (desktopflowbinary)"
+- name: "Desktop Flow Binary"
   displayName: "desktopflowbinary entity"
   href: desktopflowbinary.md
-- name: "Desktop Flow Module (desktopflowmodule)"
+- name: "Desktop Flow Module"
   displayName: "desktopflowmodule entity"
   href: desktopflowmodule.md
-- name: "Display String (DisplayString)"
+- name: "Display String"
   displayName: "DisplayString entity"
   href: displaystring.md
-- name: "DMS Sync Request (msdyn_dmssyncrequest)"
+- name: "DMS Sync Request"
   displayName: "msdyn_dmssyncrequest entity"
   href: msdyn_dmssyncrequest.md
-- name: "DMS Sync Status (msdyn_dmssyncstatus)"
+- name: "DMS Sync Status"
   displayName: "msdyn_dmssyncstatus entity"
   href: msdyn_dmssyncstatus.md
-- name: "Document Location (SharePointDocumentLocation)"
+- name: "Document Location"
   displayName: "SharePointDocumentLocation entity"
   href: sharepointdocumentlocation.md
-- name: "Document Suggestions (RecommendedDocument)"
+- name: "Document Suggestions"
   displayName: "RecommendedDocument entity"
   href: recommendeddocument.md
-- name: "Document Template (DocumentTemplate)"
+- name: "Document Template"
   displayName: "DocumentTemplate entity"
   href: documenttemplate.md
-- name: "Duplicate Detection Rule (DuplicateRule)"
+- name: "Duplicate Detection Rule"
   displayName: "DuplicateRule entity"
   href: duplicaterule.md
-- name: "Duplicate Record (DuplicateRecord)"
+- name: "Duplicate Record"
   displayName: "DuplicateRecord entity"
   href: duplicaterecord.md
-- name: "Duplicate Rule Condition (DuplicateRuleCondition)"
+- name: "Duplicate Rule Condition"
   displayName: "DuplicateRuleCondition entity"
   href: duplicaterulecondition.md
 - name: "DVFileSearch"
@@ -544,73 +577,79 @@ items:
 - name: "Email"
   displayName: "Email entity"
   href: email.md
-- name: "Email Server Profile (EmailServerProfile)"
+- name: "Email Address Configuration"
+  displayName: "EmailAddressConfiguration entity"
+  href: emailaddressconfiguration.md
+- name: "Email Server Profile"
   displayName: "EmailServerProfile entity"
   href: emailserverprofile.md
-- name: "Email Template (Template)"
+- name: "Email Template"
   displayName: "Template entity"
   href: template.md
 - name: "Entity"
   displayName: "Entity entity"
   href: entity.md
-- name: "Entity Analytics Config (EntityAnalyticsConfig)"
+- name: "Entity Analytics Config"
   displayName: "EntityAnalyticsConfig entity"
   href: entityanalyticsconfig.md
-- name: "Entity Image Configuration (EntityImageConfig)"
+- name: "Entity Cluster Configuration"
+  displayName: "EntityClusterConfig entity"
+  href: entityclusterconfig.md
+- name: "Entity Image Configuration"
   displayName: "EntityImageConfig entity"
   href: entityimageconfig.md
-- name: "Entity Index (EntityIndex)"
+- name: "Entity Index"
   displayName: "EntityIndex entity"
   href: entityindex.md
-- name: "Entity Key (EntityKey)"
+- name: "Entity Key"
   displayName: "EntityKey entity"
   href: entitykey.md
-- name: "Entity link chat configuration (msdyn_entitylinkchatconfiguration)"
+- name: "Entity link chat configuration"
   displayName: "msdyn_entitylinkchatconfiguration entity"
   href: msdyn_entitylinkchatconfiguration.md
-- name: "Entity Relationship (EntityRelationship)"
+- name: "Entity Relationship"
   displayName: "EntityRelationship entity"
   href: entityrelationship.md
 - name: "EntityRecordFilter"
   displayName: "EntityRecordFilter entity"
   href: entityrecordfilter.md
-- name: "EntityRefreshHistory (msdyn_entityrefreshhistory)"
+- name: "EntityRefreshHistory"
   displayName: "msdyn_entityrefreshhistory entity"
   href: msdyn_entityrefreshhistory.md
-- name: "Environment Variable Definition (EnvironmentVariableDefinition)"
+- name: "Environment Variable Definition"
   displayName: "EnvironmentVariableDefinition entity"
   href: environmentvariabledefinition.md
-- name: "Environment Variable Value (EnvironmentVariableValue)"
+- name: "Environment Variable Value"
   displayName: "EnvironmentVariableValue entity"
   href: environmentvariablevalue.md
-- name: "Event Expander Breadcrumb (EventExpanderBreadcrumb)"
+- name: "Event Expander Breadcrumb"
   displayName: "EventExpanderBreadcrumb entity"
   href: eventexpanderbreadcrumb.md
-- name: "Exchange Sync Id Mapping (ExchangeSyncIdMapping)"
+- name: "Exchange Sync Id Mapping"
   displayName: "ExchangeSyncIdMapping entity"
   href: exchangesyncidmapping.md
-- name: "Expired Process (ExpiredProcess)"
+- name: "Expired Process"
   displayName: "ExpiredProcess entity"
   href: expiredprocess.md
-- name: "Exported Excel (exportedexcel)"
+- name: "Exported Excel"
   displayName: "exportedexcel entity"
   href: exportedexcel.md
 - name: "ExportSolutionUpload"
   displayName: "ExportSolutionUpload entity"
   href: exportsolutionupload.md
-- name: "External Identity (adx_externalidentity)"
+- name: "External Identity"
   displayName: "adx_externalidentity entity"
   href: adx_externalidentity.md
-- name: "Fabric AISkill (fabricaiskill)"
+- name: "Fabric AISkill"
   displayName: "fabricaiskill entity"
   href: fabricaiskill.md
-- name: "Favorite knowledge article (msdyn_favoriteknowledgearticle)"
+- name: "Favorite knowledge article"
   displayName: "msdyn_favoriteknowledgearticle entity"
   href: msdyn_favoriteknowledgearticle.md
 - name: "Fax"
   displayName: "Fax entity"
   href: fax.md
-- name: "featurecontrolsetting"
+- name: "FeatureControlSetting"
   displayName: "featurecontrolsetting entity"
   href: featurecontrolsetting.md
 - name: "FederatedKnowledgeConfiguration"
@@ -622,427 +661,430 @@ items:
 - name: "Feedback"
   displayName: "Feedback entity"
   href: feedback.md
-- name: "Field Permission (FieldPermission)"
+- name: "Field Permission"
   displayName: "FieldPermission entity"
   href: fieldpermission.md
-- name: "Field Security Profile (FieldSecurityProfile)"
+- name: "Field Security Profile"
   displayName: "FieldSecurityProfile entity"
   href: fieldsecurityprofile.md
-- name: "Field Sharing (PrincipalObjectAttributeAccess)"
+- name: "Field Sharing"
   displayName: "PrincipalObjectAttributeAccess entity"
   href: principalobjectattributeaccess.md
-- name: "File Upload (msdyn_FileUpload)"
+- name: "File Upload"
   displayName: "msdyn_FileUpload entity"
   href: msdyn_fileupload.md
 - name: "FileAttachment"
   displayName: "FileAttachment entity"
   href: fileattachment.md
-- name: "Fixed Monthly Fiscal Calendar (FixedMonthlyFiscalCalendar)"
+- name: "Fixed Monthly Fiscal Calendar"
   displayName: "FixedMonthlyFiscalCalendar entity"
   href: fixedmonthlyfiscalcalendar.md
-- name: "Flow Approval (msdyn_flow_flowapproval)"
+- name: "Flow Aggregation"
+  displayName: "flowaggregation entity"
+  href: flowaggregation.md
+- name: "Flow Approval"
   displayName: "msdyn_flow_flowapproval entity"
   href: msdyn_flow_flowapproval.md
-- name: "Flow Capacity Assignment (flowcapacityassignment)"
+- name: "Flow Capacity Assignment"
   displayName: "flowcapacityassignment entity"
   href: flowcapacityassignment.md
-- name: "Flow Credential Application (flowcredentialapplication)"
+- name: "Flow Credential Application"
   displayName: "flowcredentialapplication entity"
   href: flowcredentialapplication.md
-- name: "Flow Event (flowevent)"
+- name: "Flow Event"
   displayName: "flowevent entity"
   href: flowevent.md
-- name: "Flow Log (flowlog)"
+- name: "Flow Log"
   displayName: "flowlog entity"
   href: flowlog.md
-- name: "Flow Machine (flowmachine)"
+- name: "Flow Machine"
   displayName: "flowmachine entity"
   href: flowmachine.md
-- name: "Flow Machine Group (flowmachinegroup)"
+- name: "Flow Machine Group"
   displayName: "flowmachinegroup entity"
   href: flowmachinegroup.md
-- name: "Flow Machine Image (flowmachineimage)"
+- name: "Flow Machine Image"
   displayName: "flowmachineimage entity"
   href: flowmachineimage.md
-- name: "Flow Machine Image Version (flowmachineimageversion)"
+- name: "Flow Machine Image Version"
   displayName: "flowmachineimageversion entity"
   href: flowmachineimageversion.md
-- name: "Flow Machine Network (flowmachinenetwork)"
+- name: "Flow Machine Network"
   displayName: "flowmachinenetwork entity"
   href: flowmachinenetwork.md
-- name: "Flow Run (flowrun)"
+- name: "Flow Run"
   displayName: "flowrun entity"
   href: flowrun.md
-- name: "Flow Session (flowsession)"
+- name: "Flow Session"
   displayName: "flowsession entity"
   href: flowsession.md
-- name: "Follow (PostFollow)"
+- name: "Follow"
   displayName: "PostFollow entity"
   href: postfollow.md
-- name: "Form Mapping (msdyn_FormMapping)"
+- name: "Form Mapping"
   displayName: "msdyn_FormMapping entity"
   href: msdyn_formmapping.md
-- name: "Form Step (mspp_webformstep)"
+- name: "Form Step"
   displayName: "mspp_webformstep entity"
   href: mspp_webformstep.md
-- name: "fxexpression"
+- name: "Function"
+  displayName: "msdyn_function entity"
+  href: msdyn_function.md
+- name: "FxExpression"
   displayName: "fxexpression entity"
   href: fxexpression.md
-- name: "Git Branch (GitBranch)"
+- name: "Git Branch"
   displayName: "GitBranch entity"
   href: gitbranch.md
-- name: "Git Configuration Retrieval Data Source (GitConfigurationRetrievalDataSource)"
+- name: "Git Configuration Retrieval Data Source"
   displayName: "GitConfigurationRetrievalDataSource entity"
   href: gitconfigurationretrievaldatasource.md
-- name: "Git Organization (GitOrganization)"
+- name: "Git Organization"
   displayName: "GitOrganization entity"
   href: gitorganization.md
-- name: "Git Project (GitProject)"
+- name: "Git Project"
   displayName: "GitProject entity"
   href: gitproject.md
-- name: "Git Repository (GitRepository)"
+- name: "Git Repository"
   displayName: "GitRepository entity"
   href: gitrepository.md
 - name: "Goal"
   displayName: "Goal entity"
   href: goal.md
-- name: "Goal Metric (Metric)"
+- name: "Goal Metric"
   displayName: "Metric entity"
   href: metric.md
-- name: "Governance Configuration (GovernanceConfiguration)"
+- name: "Governance Configuration"
   displayName: "GovernanceConfiguration entity"
   href: governanceconfiguration.md
-- name: "Help Page (msdyn_helppage)"
+- name: "Help Page"
   displayName: "msdyn_helppage entity"
   href: msdyn_helppage.md
-- name: "Image Attribute Configuration (AttributeImageConfig)"
+- name: "Image Attribute Configuration"
   displayName: "AttributeImageConfig entity"
   href: attributeimageconfig.md
-- name: "Import Data (ImportData)"
+- name: "Import Data"
   displayName: "ImportData entity"
   href: importdata.md
-- name: "Import Entity Mapping (ImportEntityMapping)"
+- name: "Import Entity Mapping"
   displayName: "ImportEntityMapping entity"
   href: importentitymapping.md
-- name: "Import Job (ImportJob)"
+- name: "Import Job"
   displayName: "ImportJob entity"
   href: importjob.md
-- name: "Import Log (ImportLog)"
+- name: "Import Log"
   displayName: "ImportLog entity"
   href: importlog.md
-- name: "Import Source File (ImportFile)"
+- name: "Import Source File"
   displayName: "ImportFile entity"
   href: importfile.md
-- name: "Index Attribute (IndexAttributes)"
+- name: "Index Attribute"
   displayName: "IndexAttributes entity"
   href: indexattributes.md
-- name: "Insights Store Data Source (msdyn_datalakeds)"
+- name: "indexedtrait"
+  displayName: "indexedtrait entity"
+  href: indexedtrait.md
+- name: "Insights Store Data Source"
   displayName: "msdyn_datalakeds entity"
   href: msdyn_datalakeds.md
-- name: "Insights Store Virtual Entity (msdyn_InsightsStoreVirtualEntity)"
+- name: "Insights Store Virtual Entity"
   displayName: "msdyn_InsightsStoreVirtualEntity entity"
   href: msdyn_insightsstorevirtualentity.md
-- name: "Integrated search provider (msdyn_integratedsearchprovider)"
+- name: "Integrated search provider"
   displayName: "msdyn_integratedsearchprovider entity"
   href: msdyn_integratedsearchprovider.md
-- name: "Interaction for Email (InteractionForEmail)"
+- name: "Interaction for Email"
   displayName: "InteractionForEmail entity"
   href: interactionforemail.md
-- name: "Invalid Dependency (InvalidDependency)"
+- name: "Invalid Dependency"
   displayName: "InvalidDependency entity"
   href: invaliddependency.md
-- name: "Invitation (adx_invitation)"
+- name: "Invitation"
   displayName: "adx_invitation entity"
   href: adx_invitation.md
-- name: "Invite Redemption (adx_inviteredemption)"
+- name: "Invite Redemption"
   displayName: "adx_inviteredemption entity"
   href: adx_inviteredemption.md
-- name: "Key Vault Reference (KeyVaultReference)"
+- name: "Key Vault Reference"
   displayName: "KeyVaultReference entity"
   href: keyvaultreference.md
-- name: "Knowledge Article (KnowledgeArticle)"
+- name: "Knowledge Article"
   displayName: "KnowledgeArticle entity"
   href: knowledgearticle.md
-- name: "Knowledge Article Attachment (msdyn_kbattachment)"
+- name: "Knowledge Article Attachment"
   displayName: "msdyn_kbattachment entity"
   href: msdyn_kbattachment.md
-- name: "Knowledge Article Image (msdyn_knowledgearticleimage)"
+- name: "Knowledge Article Image"
   displayName: "msdyn_knowledgearticleimage entity"
   href: msdyn_knowledgearticleimage.md
-- name: "Knowledge article language setting (msdyn_kalanguagesetting)"
+- name: "Knowledge article language setting"
   displayName: "msdyn_kalanguagesetting entity"
   href: msdyn_kalanguagesetting.md
-- name: "Knowledge Article Template (msdyn_knowledgearticletemplate)"
+- name: "Knowledge Article Template"
   displayName: "msdyn_knowledgearticletemplate entity"
   href: msdyn_knowledgearticletemplate.md
-- name: "Knowledge Article Views (KnowledgeArticleViews)"
+- name: "Knowledge Article Views"
   displayName: "KnowledgeArticleViews entity"
   href: knowledgearticleviews.md
-- name: "Knowledge Asset Configuration (msdyn_knowledgeassetconfiguration)"
+- name: "Knowledge Asset Configuration"
   displayName: "msdyn_knowledgeassetconfiguration entity"
   href: msdyn_knowledgeassetconfiguration.md
-- name: "Knowledge Base Record (KnowledgeBaseRecord)"
+- name: "Knowledge Base Record"
   displayName: "KnowledgeBaseRecord entity"
   href: knowledgebaserecord.md
-- name: "Knowledge Configuration (msdyn_knowledgeconfiguration)"
+- name: "Knowledge Configuration"
   displayName: "msdyn_knowledgeconfiguration entity"
   href: msdyn_knowledgeconfiguration.md
-- name: "Knowledge Federated Article (msdyn_federatedarticle)"
+- name: "Knowledge Federated Article"
   displayName: "msdyn_federatedarticle entity"
   href: msdyn_federatedarticle.md
-- name: "Knowledge Federated Article Incident (msdyn_federatedarticleincident)"
+- name: "Knowledge Federated Article Incident"
   displayName: "msdyn_federatedarticleincident entity"
   href: msdyn_federatedarticleincident.md
-- name: "Knowledge Harvest Job Record (msdyn_knowledgeharvestjobrecord)"
-  displayName: "msdyn_knowledgeharvestjobrecord entity"
-  href: msdyn_knowledgeharvestjobrecord.md
-- name: "Knowledge Interaction Insight (msdyn_knowledgeinteractioninsight)"
+- name: "Knowledge Interaction Insight"
   displayName: "msdyn_knowledgeinteractioninsight entity"
   href: msdyn_knowledgeinteractioninsight.md
-- name: "Knowledge Management Setting (msdyn_knowledgemanagementsetting)"
+- name: "Knowledge Management Setting"
   displayName: "msdyn_knowledgemanagementsetting entity"
   href: msdyn_knowledgemanagementsetting.md
-- name: "Knowledge personalization (msdyn_kmpersonalizationsetting)"
+- name: "Knowledge personalization"
   displayName: "msdyn_kmpersonalizationsetting entity"
   href: msdyn_kmpersonalizationsetting.md
-- name: "Knowledge search filter (msdyn_knowledgesearchfilter)"
+- name: "Knowledge search filter"
   displayName: "msdyn_knowledgesearchfilter entity"
   href: msdyn_knowledgesearchfilter.md
-- name: "Knowledge Search Insight (msdyn_knowledgesearchinsight)"
+- name: "Knowledge Search Insight"
   displayName: "msdyn_knowledgesearchinsight entity"
   href: msdyn_knowledgesearchinsight.md
-- name: "Knowledge search personal filter config (msdyn_knowledgepersonalfilter)"
+- name: "Knowledge search personal filter config"
   displayName: "msdyn_knowledgepersonalfilter entity"
   href: msdyn_knowledgepersonalfilter.md
-- name: "Language (LanguageLocale)"
+- name: "Language"
   displayName: "LanguageLocale entity"
   href: languagelocale.md
-- name: "Language Provisioning State (LanguageProvisioningState)"
+- name: "Language Provisioning State"
   displayName: "LanguageProvisioningState entity"
   href: languageprovisioningstate.md
 - name: "Letter"
   displayName: "Letter entity"
   href: letter.md
-- name: "Like (PostLike)"
+- name: "Like"
   displayName: "PostLike entity"
   href: postlike.md
-- name: "List (mspp_entitylist)"
+- name: "List"
   displayName: "mspp_entitylist entity"
   href: mspp_entitylist.md
-- name: "List Value Mapping (PickListMapping)"
+- name: "List Value Mapping"
   displayName: "PickListMapping entity"
   href: picklistmapping.md
-- name: "Lookup Mapping (LookUpMapping)"
+- name: "Lookup Mapping"
   displayName: "LookUpMapping entity"
   href: lookupmapping.md
-- name: "Mail Merge Template (MailMergeTemplate)"
+- name: "Mail Merge Template"
   displayName: "MailMergeTemplate entity"
   href: mailmergetemplate.md
 - name: "Mailbox"
   displayName: "Mailbox entity"
   href: mailbox.md
-- name: "Mailbox Auto Tracking Folder (MailboxTrackingFolder)"
+- name: "Mailbox Auto Tracking Folder"
   displayName: "MailboxTrackingFolder entity"
   href: mailboxtrackingfolder.md
-- name: "mainfewshot"
+- name: "MainFewShot"
   displayName: "mainfewshot entity"
   href: mainfewshot.md
-- name: "makerfewshot"
+- name: "MakerFewShot"
   displayName: "makerfewshot entity"
   href: makerfewshot.md
-- name: "Managed Identity (ManagedIdentity)"
+- name: "Managed Identity"
   displayName: "ManagedIdentity entity"
   href: managedidentity.md
-- name: "Managed Property (ManagedProperty)"
+- name: "Managed Property"
   displayName: "ManagedProperty entity"
   href: managedproperty.md
 - name: "MetadataForArchival"
   displayName: "MetadataForArchival entity"
   href: metadataforarchival.md
-- name: "Microsoft Entra ID (aaduser)"
+- name: "Microsoft Entra ID"
   displayName: "aaduser entity"
   href: aaduser.md
-- name: "Mobile App (msdyn_mobileapp)"
+- name: "Mobile App"
   displayName: "msdyn_mobileapp entity"
   href: msdyn_mobileapp.md
-- name: "Mobile Offline Profile (MobileOfflineProfile)"
+- name: "Mobile Offline Profile"
   displayName: "MobileOfflineProfile entity"
   href: mobileofflineprofile.md
-- name: "Mobile Offline Profile Item (MobileOfflineProfileItem)"
+- name: "Mobile Offline Profile Item"
   displayName: "MobileOfflineProfileItem entity"
   href: mobileofflineprofileitem.md
-- name: "Mobile Offline Profile Item Association (MobileOfflineProfileItemAssociation)"
+- name: "Mobile Offline Profile Item Association"
   displayName: "MobileOfflineProfileItemAssociation entity"
   href: mobileofflineprofileitemassociation.md
-- name: "mobileofflineprofileextension"
+- name: "MobileOfflineProfileExtension"
   displayName: "mobileofflineprofileextension entity"
   href: mobileofflineprofileextension.md
-- name: "mobileofflineprofileitemfilter"
+- name: "MobileOfflineProfileItemFilter"
   displayName: "mobileofflineprofileitemfilter entity"
   href: mobileofflineprofileitemfilter.md
-- name: "Model-driven App (AppModule)"
+- name: "Model-driven App"
   displayName: "AppModule entity"
   href: appmodule.md
-- name: "Module Run Detail (msdyn_modulerundetail)"
+- name: "Module Run Detail"
   displayName: "msdyn_modulerundetail entity"
   href: msdyn_modulerundetail.md
-- name: "Monthly Fiscal Calendar (MonthlyFiscalCalendar)"
+- name: "Monthly Fiscal Calendar"
   displayName: "MonthlyFiscalCalendar entity"
   href: monthlyfiscalcalendar.md
-- name: "Ms Graph Resource To Subscription (MsGraphResourceToSubscription)"
+- name: "Ms Graph Resource To Subscription"
   displayName: "MsGraphResourceToSubscription entity"
   href: msgraphresourcetosubscription.md
-- name: "msdyn_historicalcaseharvestbatch"
-  displayName: "msdyn_historicalcaseharvestbatch entity"
-  href: msdyn_historicalcaseharvestbatch.md
-- name: "msdyn_historicalcaseharvestrun"
-  displayName: "msdyn_historicalcaseharvestrun entity"
-  href: msdyn_historicalcaseharvestrun.md
-- name: "Multistep Form (mspp_webform)"
+- name: "Multistep Form"
   displayName: "mspp_webform entity"
   href: mspp_webform.md
-- name: "Multistep Form Metadata (mspp_webformmetadata)"
+- name: "Multistep Form Metadata"
   displayName: "mspp_webformmetadata entity"
   href: mspp_webformmetadata.md
-- name: "Multistep Form Session (adx_webformsession)"
+- name: "Multistep Form Session"
   displayName: "adx_webformsession entity"
   href: adx_webformsession.md
-- name: "Navigation Setting (NavigationSetting)"
+- name: "Navigation Setting"
   displayName: "NavigationSetting entity"
   href: navigationsetting.md
-- name: "New Process (NewProcess)"
+- name: "New Process"
   displayName: "NewProcess entity"
   href: newprocess.md
-- name: "NL2SQ Registration Information (nlsqregistration)"
+- name: "NL2SQ Registration Information"
   displayName: "nlsqregistration entity"
   href: nlsqregistration.md
-- name: "NonRelational Data Source (msdyn_nonrelationalds)"
+- name: "NonRelational Data Source"
   displayName: "msdyn_nonrelationalds entity"
   href: msdyn_nonrelationalds.md
-- name: "Note (Annotation)"
+- name: "Note"
   displayName: "Annotation entity"
   href: annotation.md
-- name: "Notification (appnotification)"
+- name: "Notification"
   displayName: "appnotification entity"
   href: appnotification.md
-- name: "OData v4 Data Source (msdyn_odatav4ds)"
+- name: "OData v4 Data Source"
   displayName: "msdyn_odatav4ds entity"
   href: msdyn_odatav4ds.md
-- name: "Office Graph Document (OfficeGraphDocument)"
+- name: "Office Graph Document"
   displayName: "OfficeGraphDocument entity"
   href: officegraphdocument.md
+- name: "Option Set Value"
+  displayName: "AttributePicklistValue entity"
+  href: attributepicklistvalue.md
 - name: "OptionSet"
   displayName: "OptionSet entity"
   href: optionset.md
 - name: "Organization"
   displayName: "Organization entity"
   href: organization.md
-- name: "organizationdatasyncfnostate"
+- name: "OrganizationDataSyncFnoState"
   displayName: "organizationdatasyncfnostate entity"
   href: organizationdatasyncfnostate.md
-- name: "organizationdatasyncstate"
+- name: "OrganizationDataSyncState"
   displayName: "organizationdatasyncstate entity"
   href: organizationdatasyncstate.md
-- name: "organizationdatasyncsubscription"
+- name: "OrganizationDataSyncSubscription"
   displayName: "organizationdatasyncsubscription entity"
   href: organizationdatasyncsubscription.md
-- name: "organizationdatasyncsubscriptionentity"
+- name: "OrganizationDataSyncSubscriptionEntity"
   displayName: "organizationdatasyncsubscriptionentity entity"
   href: organizationdatasyncsubscriptionentity.md
-- name: "organizationdatasyncsubscriptionfnotable"
+- name: "OrganizationDataSyncSubscriptionFnoTable"
   displayName: "organizationdatasyncsubscriptionfnotable entity"
   href: organizationdatasyncsubscriptionfnotable.md
 - name: "Owner"
   displayName: "Owner entity"
   href: owner.md
-- name: "Owner Mapping (OwnerMapping)"
+- name: "Owner Mapping"
   displayName: "OwnerMapping entity"
   href: ownermapping.md
-- name: "package"
+- name: "Package"
   displayName: "package entity"
   href: package.md
-- name: "Package History (packagehistory)"
+- name: "Package History"
   displayName: "packagehistory entity"
   href: packagehistory.md
-- name: "Package Submission Store (mspcat_PackageStore)"
+- name: "Package Submission Store"
   displayName: "mspcat_PackageStore entity"
   href: mspcat_packagestore.md
-- name: "Page Template (mspp_pagetemplate)"
+- name: "Page Template"
   displayName: "mspp_pagetemplate entity"
   href: mspp_pagetemplate.md
-- name: "Personal Document Template (PersonalDocumentTemplate)"
+- name: "Personal Document Template"
   displayName: "PersonalDocumentTemplate entity"
   href: personaldocumenttemplate.md
-- name: "Phone Call (PhoneCall)"
+- name: "Phone Call"
   displayName: "PhoneCall entity"
   href: phonecall.md
-- name: "Planner Business Scenario (plannerbusinessscenario)"
+- name: "Planner Business Scenario"
   displayName: "plannerbusinessscenario entity"
   href: plannerbusinessscenario.md
-- name: "Planner Sync Action (PlannerSyncAction)"
+- name: "Planner Sync Action"
   displayName: "PlannerSyncAction entity"
   href: plannersyncaction.md
-- name: "Plug-in (plugin)"
+- name: "Plug-in"
   displayName: "plugin entity"
   href: plugin.md
-- name: "Plug-in Assembly (PluginAssembly)"
+- name: "Plug-in Assembly"
   displayName: "PluginAssembly entity"
   href: pluginassembly.md
-- name: "Plug-in Trace Log (PluginTraceLog)"
+- name: "Plug-in Trace Log"
   displayName: "PluginTraceLog entity"
   href: plugintracelog.md
-- name: "Plug-in Type (PluginType)"
+- name: "Plug-in Type"
   displayName: "PluginType entity"
   href: plugintype.md
-- name: "Plug-in Type Statistic (PluginTypeStatistic)"
+- name: "Plug-in Type Statistic"
   displayName: "PluginTypeStatistic entity"
   href: plugintypestatistic.md
-- name: "Plugin Package (PluginPackage)"
+- name: "Plugin Package"
   displayName: "PluginPackage entity"
   href: pluginpackage.md
-- name: "PM Analysis History (msdyn_pmanalysishistory)"
+- name: "PM Analysis History"
   displayName: "msdyn_pmanalysishistory entity"
   href: msdyn_pmanalysishistory.md
-- name: "PM Business Rule Automation Config (msdyn_pmbusinessruleautomationconfig)"
+- name: "PM Business Rule Automation Config"
   displayName: "msdyn_pmbusinessruleautomationconfig entity"
   href: msdyn_pmbusinessruleautomationconfig.md
-- name: "PM Calendar (msdyn_pmcalendar)"
+- name: "PM Calendar"
   displayName: "msdyn_pmcalendar entity"
   href: msdyn_pmcalendar.md
-- name: "PM Calendar Version (msdyn_pmcalendarversion)"
+- name: "PM Calendar Version"
   displayName: "msdyn_pmcalendarversion entity"
   href: msdyn_pmcalendarversion.md
-- name: "PM Inferred Task (msdyn_pminferredtask)"
+- name: "PM Inferred Task"
   displayName: "msdyn_pminferredtask entity"
   href: msdyn_pminferredtask.md
-- name: "PM Process Extended Metadata Version (msdyn_pmprocessextendedmetadataversion)"
+- name: "PM Process Extended Metadata Version"
   displayName: "msdyn_pmprocessextendedmetadataversion entity"
   href: msdyn_pmprocessextendedmetadataversion.md
-- name: "PM Process Template (msdyn_pmprocesstemplate)"
+- name: "PM Process Template"
   displayName: "msdyn_pmprocesstemplate entity"
   href: msdyn_pmprocesstemplate.md
-- name: "PM Process User Settings (msdyn_pmprocessusersettings)"
+- name: "PM Process User Settings"
   displayName: "msdyn_pmprocessusersettings entity"
   href: msdyn_pmprocessusersettings.md
-- name: "PM Process Version (msdyn_pmprocessversion)"
+- name: "PM Process Version"
   displayName: "msdyn_pmprocessversion entity"
   href: msdyn_pmprocessversion.md
-- name: "PM Recording (msdyn_pmrecording)"
+- name: "PM Recording"
   displayName: "msdyn_pmrecording entity"
   href: msdyn_pmrecording.md
-- name: "PM Simulation (msdyn_pmsimulation)"
+- name: "PM Simulation"
   displayName: "msdyn_pmsimulation entity"
   href: msdyn_pmsimulation.md
-- name: "PM Template (msdyn_pmtemplate)"
+- name: "PM Template"
   displayName: "msdyn_pmtemplate entity"
   href: msdyn_pmtemplate.md
-- name: "PM View (msdyn_pmview)"
+- name: "PM View"
   displayName: "msdyn_pmview entity"
   href: msdyn_pmview.md
-- name: "Poll Placement (mspp_pollplacement)"
+- name: "Poll Placement"
   displayName: "mspp_pollplacement entity"
   href: mspp_pollplacement.md
-- name: "Portal Comment (adx_portalcomment)"
+- name: "Portal Comment"
   displayName: "adx_portalcomment entity"
   href: adx_portalcomment.md
 - name: "Position"
@@ -1051,31 +1093,31 @@ items:
 - name: "Post"
   displayName: "Post entity"
   href: post.md
-- name: "Post Regarding (PostRegarding)"
+- name: "Post Regarding"
   displayName: "PostRegarding entity"
   href: postregarding.md
-- name: "Power BI Dataset (powerbidataset)"
+- name: "Power BI Dataset"
   displayName: "powerbidataset entity"
   href: powerbidataset.md
-- name: "Power BI Mashup Parameter (powerbimashupparameter)"
+- name: "Power BI Mashup Parameter"
   displayName: "powerbimashupparameter entity"
   href: powerbimashupparameter.md
-- name: "Power BI Report (powerbireport)"
+- name: "Power BI Report"
   displayName: "powerbireport entity"
   href: powerbireport.md
-- name: "Power Pages Core Entity DS (mspp_powerpagescoreentityds)"
+- name: "Power Pages Core Entity DS"
   displayName: "mspp_powerpagescoreentityds entity"
   href: mspp_powerpagescoreentityds.md
-- name: "Power Pages Log (PowerPagesLog)"
+- name: "Power Pages Log"
   displayName: "PowerPagesLog entity"
   href: powerpageslog.md
-- name: "Power Pages Scan Report (PowerPagesScanReport)"
+- name: "Power Pages Scan Report"
   displayName: "PowerPagesScanReport entity"
   href: powerpagesscanreport.md
-- name: "Power Pages Site AI Feedback (PowerPagesSiteAIFeedback)"
+- name: "Power Pages Site AI Feedback"
   displayName: "PowerPagesSiteAIFeedback entity"
   href: powerpagessiteaifeedback.md
-- name: "Power Pages Site Published (powerpagesitepublished)"
+- name: "Power Pages Site Published"
   displayName: "powerpagesitepublished entity"
   href: powerpagesitepublished.md
 - name: "powerbidatasetapdx"
@@ -1084,7 +1126,7 @@ items:
 - name: "powerbireportapdx"
   displayName: "powerbireportapdx entity"
   href: powerbireportapdx.md
-- name: "powerfxrule"
+- name: "PowerfxRule"
   displayName: "powerfxrule entity"
   href: powerfxrule.md
 - name: "powerpagecomponent_powerpagecomponent"
@@ -1105,34 +1147,34 @@ items:
 - name: "Privilege"
   displayName: "Privilege entity"
   href: privilege.md
-- name: "Privilege Checker Log (PrivilegeCheckerLog)"
+- name: "Privilege Checker Log"
   displayName: "PrivilegeCheckerLog entity"
   href: privilegecheckerlog.md
-- name: "Privilege Checker Run (PrivilegeCheckerRun)"
+- name: "Privilege Checker Run"
   displayName: "PrivilegeCheckerRun entity"
   href: privilegecheckerrun.md
-- name: "Privileges Removal Setting (PrivilegesRemovalSetting)"
+- name: "Privileges Removal Setting"
   displayName: "PrivilegesRemovalSetting entity"
   href: privilegesremovalsetting.md
-- name: "Process (Workflow)"
+- name: "Process"
   displayName: "Workflow entity"
   href: workflow.md
-- name: "Process Configuration (ComplexControl)"
+- name: "Process Configuration"
   displayName: "ComplexControl entity"
   href: complexcontrol.md
-- name: "Process Log (WorkflowLog)"
+- name: "Process Log"
   displayName: "WorkflowLog entity"
   href: workflowlog.md
-- name: "Process Session (ProcessSession)"
+- name: "Process Session"
   displayName: "ProcessSession entity"
   href: processsession.md
-- name: "Process Stage (ProcessStage)"
+- name: "Process Stage"
   displayName: "ProcessStage entity"
   href: processstage.md
-- name: "Process Trigger (ProcessTrigger)"
+- name: "Process Trigger"
   displayName: "ProcessTrigger entity"
   href: processtrigger.md
-- name: "processstageparameter"
+- name: "ProcessStageParameter"
   displayName: "processstageparameter entity"
   href: processstageparameter.md
 - name: "ProvisionLanguageForUser"
@@ -1141,82 +1183,85 @@ items:
 - name: "Publisher"
   displayName: "Publisher entity"
   href: publisher.md
-- name: "Publisher Address (PublisherAddress)"
+- name: "Publisher Address"
   displayName: "PublisherAddress entity"
   href: publisheraddress.md
-- name: "Publishing State (mspp_publishingstate)"
+- name: "Publishing State"
   displayName: "mspp_publishingstate entity"
   href: mspp_publishingstate.md
-- name: "Publishing State Transition Rule (mspp_publishingstatetransitionrule)"
+- name: "Publishing State Transition Rule"
   displayName: "mspp_publishingstatetransitionrule entity"
   href: mspp_publishingstatetransitionrule.md
-- name: "Quarterly Fiscal Calendar (QuarterlyFiscalCalendar)"
+- name: "QnA"
+  displayName: "msdyn_qna entity"
+  href: msdyn_qna.md
+- name: "Quarterly Fiscal Calendar"
   displayName: "QuarterlyFiscalCalendar entity"
   href: quarterlyfiscalcalendar.md
 - name: "Queue"
   displayName: "Queue entity"
   href: queue.md
-- name: "Queue Item (QueueItem)"
+- name: "Queue Item"
   displayName: "QueueItem entity"
   href: queueitem.md
-- name: "Recently Used (recentlyused)"
+- name: "Recently Used"
   displayName: "recentlyused entity"
   href: recentlyused.md
-- name: "Record Filter (RecordFilter)"
+- name: "Record Filter"
   displayName: "RecordFilter entity"
   href: recordfilter.md
-- name: "Recurrence Rule (RecurrenceRule)"
+- name: "Recurrence Rule"
   displayName: "RecurrenceRule entity"
   href: recurrencerule.md
-- name: "Recurring Appointment (RecurringAppointmentMaster)"
+- name: "Recurring Appointment"
   displayName: "RecurringAppointmentMaster entity"
   href: recurringappointmentmaster.md
-- name: "Redirect (mspp_redirect)"
+- name: "Redirect"
   displayName: "mspp_redirect entity"
   href: mspp_redirect.md
-- name: "Relationship Attribute (RelationshipAttribute)"
+- name: "Relationship Attribute"
   displayName: "RelationshipAttribute entity"
   href: relationshipattribute.md
-- name: "Relationship Entity (Relationship)"
+- name: "Relationship Entity"
   displayName: "Relationship entity"
   href: relationship.md
 - name: "Report"
   displayName: "Report entity"
   href: report.md
-- name: "Report Parameter (ReportParameter)"
+- name: "Report Parameter"
   displayName: "ReportParameter entity"
   href: reportparameter.md
-- name: "Report Related Category (ReportCategory)"
+- name: "Report Related Category"
   displayName: "ReportCategory entity"
   href: reportcategory.md
-- name: "Restore Deleted Records Configuration (RecycleBinConfig)"
+- name: "Restore Deleted Records Configuration"
   displayName: "RecycleBinConfig entity"
   href: recyclebinconfig.md
-- name: "RetainedData Excel (retaineddataexcel)"
+- name: "RetainedData Excel"
   displayName: "retaineddataexcel entity"
   href: retaineddataexcel.md
-- name: "retentionconfig"
+- name: "RetentionConfig"
   displayName: "retentionconfig entity"
   href: retentionconfig.md
-- name: "retentionfailuredetail"
+- name: "RetentionFailureDetail"
   displayName: "retentionfailuredetail entity"
   href: retentionfailuredetail.md
-- name: "retentionoperation"
+- name: "RetentionOperation"
   displayName: "retentionoperation entity"
   href: retentionoperation.md
-- name: "retentionoperationdetail"
+- name: "RetentionOperationDetail"
   displayName: "retentionoperationdetail entity"
   href: retentionoperationdetail.md
-- name: "retentionsuccessdetail"
+- name: "RetentionSuccessDetail"
   displayName: "retentionsuccessdetail entity"
   href: retentionsuccessdetail.md
-- name: "Ribbon Metadata To Process (RibbonMetadataToProcess)"
+- name: "Ribbon Metadata To Process"
   displayName: "RibbonMetadataToProcess entity"
   href: ribbonmetadatatoprocess.md
-- name: "Rich Text Attachment (msdyn_richtextfile)"
+- name: "Rich Text Attachment"
   displayName: "msdyn_richtextfile entity"
   href: msdyn_richtextfile.md
-- name: "Role Template (RoleTemplate)"
+- name: "Role Template"
   displayName: "RoleTemplate entity"
   href: roletemplate.md
 - name: "RoleEditorLayout"
@@ -1228,408 +1273,450 @@ items:
 - name: "RoleTemplatePrivileges"
   displayName: "RoleTemplatePrivileges entity"
   href: roletemplateprivileges.md
-- name: "Rollup Field (RollupField)"
+- name: "Rollup Field"
   displayName: "RollupField entity"
   href: rollupfield.md
-- name: "Rollup Query (GoalRollupQuery)"
+- name: "Rollup Query"
   displayName: "GoalRollupQuery entity"
   href: goalrollupquery.md
 - name: "RuntimeDependency"
   displayName: "RuntimeDependency entity"
   href: runtimedependency.md
-- name: "Salesforce Structured Object (msdyn_salesforcestructuredobject)"
+- name: "Salesforce Structured Object"
   displayName: "msdyn_salesforcestructuredobject entity"
   href: msdyn_salesforcestructuredobject.md
-- name: "Salesforce Structured QnA Config (msdyn_salesforcestructuredqnaconfig)"
+- name: "Salesforce Structured QnA Config"
   displayName: "msdyn_salesforcestructuredqnaconfig entity"
   href: msdyn_salesforcestructuredqnaconfig.md
-- name: "Saved View (UserQuery)"
+- name: "Saved View"
   displayName: "UserQuery entity"
   href: userquery.md
-- name: "Schedule (msdyn_schedule)"
+- name: "Saving Rule"
+  displayName: "savingrule entity"
+  href: savingrule.md
+- name: "Schedule"
   displayName: "msdyn_schedule entity"
   href: msdyn_schedule.md
-- name: "Sdk Message (SdkMessage)"
+- name: "Sdk Message"
   displayName: "SdkMessage entity"
   href: sdkmessage.md
-- name: "Sdk Message Filter (SdkMessageFilter)"
+- name: "Sdk Message Filter"
   displayName: "SdkMessageFilter entity"
   href: sdkmessagefilter.md
-- name: "Sdk Message Processing Step (SdkMessageProcessingStep)"
+- name: "Sdk Message Processing Step"
   displayName: "SdkMessageProcessingStep entity"
   href: sdkmessageprocessingstep.md
-- name: "Sdk Message Processing Step Image (SdkMessageProcessingStepImage)"
+- name: "Sdk Message Processing Step Image"
   displayName: "SdkMessageProcessingStepImage entity"
   href: sdkmessageprocessingstepimage.md
-- name: "Sdk Message Processing Step Secure Configuration (SdkMessageProcessingStepSecureConfig)"
+- name: "Sdk Message Processing Step Secure Configuration"
   displayName: "SdkMessageProcessingStepSecureConfig entity"
   href: sdkmessageprocessingstepsecureconfig.md
-- name: "Search provider (msdyn_kmfederatedsearchconfig)"
+- name: "Search provider"
   displayName: "msdyn_kmfederatedsearchconfig entity"
   href: msdyn_kmfederatedsearchconfig.md
-- name: "Search Telemetry (searchtelemetry)"
+- name: "Search Telemetry"
   displayName: "searchtelemetry entity"
   href: searchtelemetry.md
-- name: "searchattributesettings"
+- name: "SearchAttributeSettings"
   displayName: "searchattributesettings entity"
   href: searchattributesettings.md
-- name: "searchcustomanalyzer"
+- name: "SearchCustomAnalyzer"
   displayName: "searchcustomanalyzer entity"
   href: searchcustomanalyzer.md
-- name: "searchrelationshipsettings"
+- name: "SearchRelationshipSettings"
   displayName: "searchrelationshipsettings entity"
   href: searchrelationshipsettings.md
 - name: "SearchResultsCache"
   displayName: "SearchResultsCache entity"
   href: searchresultscache.md
-- name: "Secured Masking Column (AttributeMaskingRule)"
+- name: "Secured Masking Column"
   displayName: "AttributeMaskingRule entity"
   href: attributemaskingrule.md
-- name: "Secured Masking Rule (MaskingRule)"
+- name: "Secured Masking Rule"
   displayName: "MaskingRule entity"
   href: maskingrule.md
-- name: "Security Role (Role)"
+- name: "Security Role"
   displayName: "Role entity"
   href: role.md
-- name: "Semiannual Fiscal Calendar (SemiAnnualFiscalCalendar)"
+- name: "Semiannual Fiscal Calendar"
   displayName: "SemiAnnualFiscalCalendar entity"
   href: semiannualfiscalcalendar.md
-- name: "Service Configuration (msdyn_serviceconfiguration)"
+- name: "Sensitivity Label"
+  displayName: "sensitivitylabel entity"
+  href: sensitivitylabel.md
+- name: "Service Configuration"
   displayName: "msdyn_serviceconfiguration entity"
   href: msdyn_serviceconfiguration.md
-- name: "Service Endpoint (ServiceEndpoint)"
+- name: "Service Endpoint"
   displayName: "ServiceEndpoint entity"
   href: serviceendpoint.md
-- name: "Service Plan (ServicePlan)"
+- name: "Service Plan"
   displayName: "ServicePlan entity"
   href: serviceplan.md
-- name: "Service Plan Mapping (ServicePlanMapping)"
+- name: "Service Plan Mapping"
   displayName: "ServicePlanMapping entity"
   href: serviceplanmapping.md
 - name: "ServicePlanAppModules"
   displayName: "ServicePlanAppModules entity"
   href: serviceplanappmodules.md
-- name: "Setting (adx_setting)"
+- name: "Setting"
   displayName: "adx_setting entity"
   href: adx_setting.md
-- name: "Shared Link Setting (SharedLinkSetting)"
+- name: "Shared Link Setting"
   displayName: "SharedLinkSetting entity"
   href: sharedlinksetting.md
-- name: "Shared Object (sharedobject)"
+- name: "Shared Object"
   displayName: "sharedobject entity"
   href: sharedobject.md
-- name: "Shared Workspace (sharedworkspace)"
+- name: "Shared Workspace"
   displayName: "sharedworkspace entity"
   href: sharedworkspace.md
-- name: "Shared Workspace Access Token (sharedworkspaceaccesstoken2)"
+- name: "Shared Workspace Access Token"
   displayName: "sharedworkspaceaccesstoken2 entity"
   href: sharedworkspaceaccesstoken2.md
-- name: "Shared Workspace Pool (sharedworkspacepool)"
+- name: "Shared Workspace Pool"
   displayName: "sharedworkspacepool entity"
   href: sharedworkspacepool.md
-- name: "SharePoint Site (SharePointSite)"
+- name: "SharePoint Managed Identity"
+  displayName: "SharePointManagedIdentity entity"
+  href: sharepointmanagedidentity.md
+- name: "SharePoint Site"
   displayName: "SharePointSite entity"
   href: sharepointsite.md
-- name: "Shortcut (mspp_shortcut)"
+- name: "Shortcut"
   displayName: "mspp_shortcut entity"
   href: mspp_shortcut.md
-- name: "sideloadedaiplugin"
+- name: "SideloadedAIPlugin"
   displayName: "sideloadedaiplugin entity"
   href: sideloadedaiplugin.md
-- name: "Similarity Rule (SimilarityRule)"
+- name: "signal"
+  displayName: "signal entity"
+  href: signal.md
+- name: "Similarity Rule"
   displayName: "SimilarityRule entity"
   href: similarityrule.md
-- name: "Site (powerpagesite)"
+- name: "Site"
   displayName: "powerpagesite entity"
   href: powerpagesite.md
-- name: "Site Component (powerpagecomponent)"
+- name: "Site Component"
   displayName: "powerpagecomponent entity"
   href: powerpagecomponent.md
-- name: "Site Language (powerpagesitelanguage)"
+- name: "Site Language"
   displayName: "powerpagesitelanguage entity"
   href: powerpagesitelanguage.md
-- name: "Site Map (SiteMap)"
+- name: "Site Map"
   displayName: "SiteMap entity"
   href: sitemap.md
-- name: "Site Marker (mspp_sitemarker)"
+- name: "Site Marker"
   displayName: "mspp_sitemarker entity"
   href: mspp_sitemarker.md
-- name: "Site Setting (mspp_sitesetting)"
+- name: "Site Setting"
   displayName: "mspp_sitesetting entity"
   href: mspp_sitesetting.md
 - name: "SLA"
   displayName: "SLA entity"
   href: sla.md
-- name: "SLA Item (SLAItem)"
+- name: "SLA Item"
   displayName: "SLAItem entity"
   href: slaitem.md
-- name: "SLA KPI (msdyn_slakpi)"
+- name: "SLA KPI"
   displayName: "msdyn_slakpi entity"
   href: msdyn_slakpi.md
-- name: "SLA KPI Instance (SLAKPIInstance)"
+- name: "SLA KPI Instance"
   displayName: "SLAKPIInstance entity"
   href: slakpiinstance.md
-- name: "Social Activity (SocialActivity)"
+- name: "Social Activity"
   displayName: "SocialActivity entity"
   href: socialactivity.md
-- name: "Social Profile (SocialProfile)"
+- name: "Social Profile"
   displayName: "SocialProfile entity"
   href: socialprofile.md
 - name: "Solution"
   displayName: "Solution entity"
   href: solution.md
-- name: "Solution Component (SolutionComponent)"
+- name: "Solution Component"
   displayName: "SolutionComponent entity"
   href: solutioncomponent.md
-- name: "Solution Component Attribute Configuration (solutioncomponentattributeconfiguration)"
+- name: "Solution Component Attribute Configuration"
   displayName: "solutioncomponentattributeconfiguration entity"
   href: solutioncomponentattributeconfiguration.md
-- name: "Solution Component Batch Configuration (solutioncomponentbatchconfiguration)"
+- name: "Solution Component Batch Configuration"
   displayName: "solutioncomponentbatchconfiguration entity"
   href: solutioncomponentbatchconfiguration.md
-- name: "Solution Component Configuration (solutioncomponentconfiguration)"
+- name: "Solution Component Configuration"
   displayName: "solutioncomponentconfiguration entity"
   href: solutioncomponentconfiguration.md
-- name: "Solution Component Relationship Configuration (solutioncomponentrelationshipconfiguration)"
+- name: "Solution Component Relationship Configuration"
   displayName: "solutioncomponentrelationshipconfiguration entity"
   href: solutioncomponentrelationshipconfiguration.md
-- name: "Solution Health Rule (msdyn_solutionhealthrule)"
+- name: "Solution Health Rule"
   displayName: "msdyn_solutionhealthrule entity"
   href: msdyn_solutionhealthrule.md
-- name: "Solution Health Rule Argument (msdyn_solutionhealthruleargument)"
+- name: "Solution Health Rule Argument"
   displayName: "msdyn_solutionhealthruleargument entity"
   href: msdyn_solutionhealthruleargument.md
-- name: "Solution Health Rule Set (msdyn_solutionhealthruleset)"
+- name: "Solution Health Rule Set"
   displayName: "msdyn_solutionhealthruleset entity"
   href: msdyn_solutionhealthruleset.md
-- name: "Solution History (msdyn_solutionhistory)"
+- name: "Solution History"
   displayName: "msdyn_solutionhistory entity"
   href: msdyn_solutionhistory.md
-- name: "Solution History Data Source (msdyn_solutionhistorydatasource)"
+- name: "Solution History Data Source"
   displayName: "msdyn_solutionhistorydatasource entity"
   href: msdyn_solutionhistorydatasource.md
 - name: "SolutionHistoryData"
   displayName: "SolutionHistoryData entity"
   href: solutionhistorydata.md
-- name: "Source Control Branch Configuration (SourceControlBranchConfiguration)"
+- name: "Source Control Branch Configuration"
   displayName: "SourceControlBranchConfiguration entity"
   href: sourcecontrolbranchconfiguration.md
-- name: "Source Control Component (SourceControlComponent)"
+- name: "Source Control Component"
   displayName: "SourceControlComponent entity"
   href: sourcecontrolcomponent.md
-- name: "Source Control Component Payload (SourceControlComponentPayload)"
+- name: "Source Control Component Payload"
   displayName: "SourceControlComponentPayload entity"
   href: sourcecontrolcomponentpayload.md
-- name: "Source Control Configuration (SourceControlConfiguration)"
+- name: "Source Control Configuration"
   displayName: "SourceControlConfiguration entity"
   href: sourcecontrolconfiguration.md
-- name: "Staged Entity (StagedEntity)"
+- name: "Staged Entity"
   displayName: "StagedEntity entity"
   href: stagedentity.md
-- name: "Staged Entity Attribute (StagedEntityAttribute)"
+- name: "Staged Entity Attribute"
   displayName: "StagedEntityAttribute entity"
   href: stagedentityattribute.md
-- name: "Staged Metadata Async Operation (StagedMetadataAsyncOperation)"
+- name: "Staged Metadata Async Operation"
   displayName: "StagedMetadataAsyncOperation entity"
   href: stagedmetadataasyncoperation.md
+- name: "Staged Source Control Component"
+  displayName: "StagedSourceControlComponent entity"
+  href: stagedsourcecontrolcomponent.md
 - name: "StageSolutionUpload"
   displayName: "StageSolutionUpload entity"
   href: stagesolutionupload.md
 - name: "Subject"
   displayName: "Subject entity"
   href: subject.md
-- name: "Subscription Manually Tracked Object (SubscriptionManuallyTrackedObject)"
+- name: "Subscription Manually Tracked Object"
   displayName: "SubscriptionManuallyTrackedObject entity"
   href: subscriptionmanuallytrackedobject.md
-- name: "Subscription Statistic Offline (SubscriptionStatisticsOffline)"
+- name: "Subscription Statistic Offline"
   displayName: "SubscriptionStatisticsOffline entity"
   href: subscriptionstatisticsoffline.md
-- name: "Subscription Statistic Outlook (SubscriptionStatisticsOutlook)"
+- name: "Subscription Statistic Outlook"
   displayName: "SubscriptionStatisticsOutlook entity"
   href: subscriptionstatisticsoutlook.md
-- name: "Subscription Sync Entry Offline (SubscriptionSyncEntryOffline)"
+- name: "Subscription Sync Entry Offline"
   displayName: "SubscriptionSyncEntryOffline entity"
   href: subscriptionsyncentryoffline.md
-- name: "Subscription Sync Entry Outlook (SubscriptionSyncEntryOutlook)"
+- name: "Subscription Sync Entry Outlook"
   displayName: "SubscriptionSyncEntryOutlook entity"
   href: subscriptionsyncentryoutlook.md
-- name: "supportusertable"
+- name: "SupportUserTable"
   displayName: "supportusertable entity"
   href: supportusertable.md
-- name: "Synapse Database (synapsedatabase)"
+- name: "Synapse Database"
   displayName: "synapsedatabase entity"
   href: synapsedatabase.md
-- name: "Synapse Link External Table State (synapselinkexternaltablestate)"
+- name: "Synapse Link External Table State"
   displayName: "synapselinkexternaltablestate entity"
   href: synapselinkexternaltablestate.md
-- name: "Synapse Link Profile (synapselinkprofile)"
+- name: "Synapse Link Profile"
   displayName: "synapselinkprofile entity"
   href: synapselinkprofile.md
-- name: "Synapse Link Profile Entity (synapselinkprofileentity)"
+- name: "Synapse Link Profile Entity"
   displayName: "synapselinkprofileentity entity"
   href: synapselinkprofileentity.md
-- name: "Synapse Link Profile Entity State (synapselinkprofileentitystate)"
+- name: "Synapse Link Profile Entity State"
   displayName: "synapselinkprofileentitystate entity"
   href: synapselinkprofileentitystate.md
-- name: "Synapse Link Schedule (synapselinkschedule)"
+- name: "Synapse Link Schedule"
   displayName: "synapselinkschedule entity"
   href: synapselinkschedule.md
-- name: "Sync Error (SyncError)"
+- name: "Sync Error"
   displayName: "SyncError entity"
   href: syncerror.md
-- name: "System Chart (SavedQueryVisualization)"
+- name: "System Chart"
   displayName: "SavedQueryVisualization entity"
   href: savedqueryvisualization.md
-- name: "System Form (SystemForm)"
+- name: "System Form"
   displayName: "SystemForm entity"
   href: systemform.md
-- name: "System Job (AsyncOperation)"
+- name: "System Job"
   displayName: "AsyncOperation entity"
   href: asyncoperation.md
 - name: "SystemUserAuthorizationChangeTracker"
   displayName: "SystemUserAuthorizationChangeTracker entity"
   href: systemuserauthorizationchangetracker.md
-- name: "Table Permission (mspp_entitypermission)"
+- name: "Table Permission"
   displayName: "mspp_entitypermission entity"
   href: mspp_entitypermission.md
+- name: "Tag"
+  displayName: "tag entity"
+  href: tag.md
+- name: "Tagged Flow Session"
+  displayName: "taggedflowsession entity"
+  href: taggedflowsession.md
+- name: "Tagged Process"
+  displayName: "taggedprocess entity"
+  href: taggedprocess.md
 - name: "Task"
   displayName: "Task entity"
   href: task.md
 - name: "Team"
   displayName: "Team entity"
   href: team.md
-- name: "Team template (TeamTemplate)"
+- name: "Team template"
   displayName: "TeamTemplate entity"
   href: teamtemplate.md
-- name: "teammobileofflineprofilemembership"
+- name: "TeamMobileOfflineProfileMembership"
   displayName: "teammobileofflineprofilemembership entity"
   href: teammobileofflineprofilemembership.md
-- name: "Teams chat (chat)"
+- name: "Teams chat"
   displayName: "chat entity"
   href: chat.md
 - name: "Territory"
   displayName: "Territory entity"
   href: territory.md
+- name: "Text Analytics Entity Mapping"
+  displayName: "TextAnalyticsEntityMapping entity"
+  href: textanalyticsentitymapping.md
+- name: "TextDataRecordsIndexingStatus"
+  displayName: "textdatarecordsindexingstatus entity"
+  href: textdatarecordsindexingstatus.md
 - name: "Theme"
   displayName: "Theme entity"
   href: theme.md
-- name: "Time Stamp Date Mapping (TimeStampDateMapping)"
+- name: "Time Stamp Date Mapping"
   displayName: "TimeStampDateMapping entity"
   href: timestampdatemapping.md
-- name: "Time Zone Definition (TimeZoneDefinition)"
+- name: "Time Zone Definition"
   displayName: "TimeZoneDefinition entity"
   href: timezonedefinition.md
-- name: "Time Zone Localized Name (TimeZoneLocalizedName)"
+- name: "Time Zone Localized Name"
   displayName: "TimeZoneLocalizedName entity"
   href: timezonelocalizedname.md
-- name: "Time Zone Rule (TimeZoneRule)"
+- name: "Time Zone Rule"
   displayName: "TimeZoneRule entity"
   href: timezonerule.md
-- name: "Timeline Pin (msdyn_timelinepin)"
+- name: "Timeline Pin"
   displayName: "msdyn_timelinepin entity"
   href: msdyn_timelinepin.md
-- name: "Tour (msdyn_tour)"
+- name: "Tour"
   displayName: "msdyn_tour entity"
   href: msdyn_tour.md
-- name: "Trace (TraceLog)"
+- name: "Trace"
   displayName: "TraceLog entity"
   href: tracelog.md
-- name: "Transformation Mapping (TransformationMapping)"
+- name: "trait"
+  displayName: "trait entity"
+  href: trait.md
+- name: "Transformation Mapping"
   displayName: "TransformationMapping entity"
   href: transformationmapping.md
-- name: "Transformation Parameter Mapping (TransformationParameterMapping)"
+- name: "Transformation Parameter Mapping"
   displayName: "TransformationParameterMapping entity"
   href: transformationparametermapping.md
-- name: "Translation Process (TranslationProcess)"
+- name: "Translation Process"
   displayName: "TranslationProcess entity"
   href: translationprocess.md
-- name: "User (SystemUser)"
+- name: "UnstructuredFileSearchEntity"
+  displayName: "unstructuredfilesearchentity entity"
+  href: unstructuredfilesearchentity.md
+- name: "UnstructuredFileSearchRecord"
+  displayName: "unstructuredfilesearchrecord entity"
+  href: unstructuredfilesearchrecord.md
+- name: "User"
   displayName: "SystemUser entity"
   href: systemuser.md
-- name: "User Chart (UserQueryVisualization)"
+- name: "User Chart"
   displayName: "UserQueryVisualization entity"
   href: userqueryvisualization.md
-- name: "User Dashboard (UserForm)"
+- name: "User Dashboard"
   displayName: "UserForm entity"
   href: userform.md
-- name: "User Mapping (UserMapping)"
+- name: "User Mapping"
   displayName: "UserMapping entity"
   href: usermapping.md
-- name: "User Rating (userrating)"
+- name: "User Rating"
   displayName: "userrating entity"
   href: userrating.md
-- name: "User Settings (UserSettings)"
+- name: "User Settings"
   displayName: "UserSettings entity"
   href: usersettings.md
-- name: "usermobileofflineprofilemembership"
+- name: "UserMobileOfflineProfileMembership"
   displayName: "usermobileofflineprofilemembership entity"
   href: usermobileofflineprofilemembership.md
-- name: "View (SavedQuery)"
+- name: "View"
   displayName: "SavedQuery entity"
   href: savedquery.md
-- name: "viewasexamplequestion"
+- name: "ViewAsExampleQuestion"
   displayName: "viewasexamplequestion entity"
   href: viewasexamplequestion.md
-- name: "Virtual Connector Data Source (msdyn_connectordatasource)"
+- name: "Virtual Connector Data Source"
   displayName: "msdyn_connectordatasource entity"
   href: msdyn_connectordatasource.md
-- name: "Virtual Entity  Metadata (VirtualEntityMetadata)"
+- name: "Virtual Entity  Metadata"
   displayName: "VirtualEntityMetadata entity"
   href: virtualentitymetadata.md
-- name: "Virtual Entity Data Provider (EntityDataProvider)"
+- name: "Virtual Entity Data Provider"
   displayName: "EntityDataProvider entity"
   href: entitydataprovider.md
-- name: "Virtual Table Column Candidate (msdyn_virtualtablecolumncandidate)"
+- name: "Virtual Table Column Candidate"
   displayName: "msdyn_virtualtablecolumncandidate entity"
   href: msdyn_virtualtablecolumncandidate.md
-- name: "Web File (mspp_webfile)"
+- name: "Web File"
   displayName: "mspp_webfile entity"
   href: mspp_webfile.md
-- name: "Web Link (mspp_weblink)"
+- name: "Web Link"
   displayName: "mspp_weblink entity"
   href: mspp_weblink.md
-- name: "Web Link Set (mspp_weblinkset)"
+- name: "Web Link Set"
   displayName: "mspp_weblinkset entity"
   href: mspp_weblinkset.md
-- name: "Web Page (mspp_webpage)"
+- name: "Web Page"
   displayName: "mspp_webpage entity"
   href: mspp_webpage.md
-- name: "Web Page Access Control Rule (mspp_webpageaccesscontrolrule)"
+- name: "Web Page Access Control Rule"
   displayName: "mspp_webpageaccesscontrolrule entity"
   href: mspp_webpageaccesscontrolrule.md
-- name: "Web Resource (WebResource)"
+- name: "Web Resource"
   displayName: "WebResource entity"
   href: webresource.md
-- name: "Web Role (mspp_webrole)"
+- name: "Web Role"
   displayName: "mspp_webrole entity"
   href: mspp_webrole.md
-- name: "Web Template (mspp_webtemplate)"
+- name: "Web Template"
   displayName: "mspp_webtemplate entity"
   href: mspp_webtemplate.md
-- name: "Web Wizard (WebWizard)"
+- name: "Web Wizard"
   displayName: "WebWizard entity"
   href: webwizard.md
-- name: "Website (mspp_website)"
+- name: "Website"
   displayName: "mspp_website entity"
   href: mspp_website.md
-- name: "Website Access (mspp_websiteaccess)"
+- name: "Website Access"
   displayName: "mspp_websiteaccess entity"
   href: mspp_websiteaccess.md
-- name: "Website Language (mspp_websitelanguage)"
+- name: "Website Language"
   displayName: "mspp_websitelanguage entity"
   href: mspp_websitelanguage.md
-- name: "Work Queue (workqueue)"
+- name: "Work Queue"
   displayName: "workqueue entity"
   href: workqueue.md
-- name: "Work Queue Item (workqueueitem)"
+- name: "Work Queue Item"
   displayName: "workqueueitem entity"
   href: workqueueitem.md
-- name: "Workflow Action Status (msdyn_workflowactionstatus)"
+- name: "Workflow Action Status"
   displayName: "msdyn_workflowactionstatus entity"
   href: msdyn_workflowactionstatus.md
-- name: "Workflow Binary (workflowbinary)"
+- name: "Workflow Binary"
   displayName: "workflowbinary entity"
   href: workflowbinary.md
+- name: "Workflow Metadata"
+  displayName: "WorkflowMetadata entity"
+  href: workflowmetadata.md
 - name: "workflowcardconnections"
   displayName: "workflowcardconnections entity"
   href: workflowcardconnections.md

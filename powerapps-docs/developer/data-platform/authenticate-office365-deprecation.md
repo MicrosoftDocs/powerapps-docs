@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 12/04/2024
 ms.reviewer: "pehecke"
 
-ms.topic: "article"
+ms.topic: how-to
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
@@ -61,7 +61,7 @@ the recommended connection interface for authentication with Dataverse.
 
   If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a method, replace all occurrences of the type `OrganizationServiceProxy` with the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. This interface exposes all the core methods used to communicate with Dataverse.
 
-  When invoking the constructor, it is recommend to replace all use of `OrganizationServiceProxy` class constructors with `CrmServiceClient` or `ServiceClient` class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` and `ServiceClient` support connection strings in addition to complex constructors and the ability to provide external authentication handlers. The service client classes implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of service client calsses in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23) repository.
+  When invoking the constructor, it is recommend to replace all use of `OrganizationServiceProxy` class constructors with `CrmServiceClient` or `ServiceClient` class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` and `ServiceClient` support connection strings in addition to complex constructors and the ability to provide external authentication handlers. The service client classes implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of service client calsses in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp) repository.
 
 - If your code is using <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>, or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> classes with the “Office365” authentication type:
 

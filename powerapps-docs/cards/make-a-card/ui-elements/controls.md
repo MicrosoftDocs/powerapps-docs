@@ -12,6 +12,8 @@ ms.collection:
 
 # Add controls to a card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Controls are the building blocks of your card's interface and functionality. They add text, images, and other elements to create a rich cards experience. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 There are three categories of controls that you can add to your card:

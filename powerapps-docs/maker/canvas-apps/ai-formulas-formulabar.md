@@ -3,8 +3,8 @@ title: Use Copilot to create and edit Power Fx formulas in Power Apps
 description: Learn how to use Copilot, an AI feature in Power Apps, to create and edit Power Fx formulas in the formula bar from natural language or code comments.
 author: warrenbryant-msft
 ms.author: warrenbryant
-ms.date: 11/13/2024
-ms.topic: conceptual
+ms.date: 5/27/2025
+ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.collection:
@@ -25,31 +25,27 @@ ms.custom:
 
 Copilot is an AI feature in Power Apps Studio that helps you create and modify Power Fx formulas quickly. You can use Copilot in the formula bar to explain Power Fx formulas in natural language or generate Power Fx formulas from natural language or code comments.
 
-
 ## Prerequisites
 
 Copilot must be enabled for your environment and tenant. For more information, see [Enable or disable Copilot (preview) in Power Apps](ai-overview.md#disable-copilot-in-power-apps).
-
- 
-> [!NOTE]
-> By default, the new formula bar is enabled. If the **Copilot functionality menu** isn't visible, check the following app settings in Power Apps Studio:
-> 1. On the command bar, select **Settings** > **Updates**.
-> 1. From the **Retired** tab, turn off the **Legacy formula bar** toggle.
-
 
 ## Explain a formula
 
 Use Copilot in the formula bar to understand what a formula is doing in plain language.
 
-1. Select a control and its corresponding property.
+1. Select a control and its corresponding property. For example, a label control with its **Text** property.
 
-1. On the formula bar, select the **Copilot functionality menu** > **Explain this formula**, or select a subset of a formula and then select the **Copilot functionality menu** > **Explain this Selection** to explain only that part.
+1. On the formula bar, select the dropdown near the **fx** field label to see and choose **Explain this formula**.
 
-    :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
+   :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Explain this formula item.":::
 
-    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app. When explaining a selection, Copilot may also provide additional context if it is important for the explanation.
+   Alternatively, you can select a subset of a formula and then select the dropdown near the **fx** field label and choose **Explain this selection** to explain only that part.
 
-    :::image type="content" source="media/copilot/ufb-explanation-copilot.png" alt-text="Screenshot of Copilot's explanation of a formula.":::
+   :::image type="content" source="media/copilot/copilot-explain-section.png" alt-text="Screenshot of Copilot's option to Explain this section, showing part of the formula highlighted by the user." lightbox="media/copilot/copilot-explain-section.png":::
+
+    Copilot provides an explanation of the formula that you can copy and insert as a code comment or share with other makers who are working on the same app. When Copilot explains a selection, it might add context if that's important for the explanation.
+
+    :::image type="content" source="media/copilot/copilot-explanation.png" alt-text="Screenshot of Copilot's explanation of a formula.":::
 
 ### Known limitations of explaining formulas
 
@@ -60,7 +56,7 @@ Use Copilot in the formula bar to understand what a formula is doing in plain la
 > [!NOTE]
 > AI generated content may be inaccurate and should be checked for accuracy.
 
-## Generate formulas from code comments 
+## Generate formulas from code comments
 
 Copilot can generate Power Fx formulas from code comments in the formula bar. You can accept the suggestion or type the formula yourself. Formula code comments can also serve as documentation for your formulas, just like regular code comments.
 
@@ -68,9 +64,9 @@ Copilot can generate Power Fx formulas from code comments in the formula bar. Yo
 
     :::image type="content" source="media/copilot/ufb-comment-copilot.png" alt-text="Screenshot of a comment typed in the Copilot formula bar." lightbox="media/copilot/ufb-comment-copilot.png":::
 
-    Wait a few seconds for Copilot to generate a formula suggestion or press Enter to generate it immediately.
+    Wait a few seconds for Copilot to generate a formula suggestion or press `Enter` to generate it immediately.
 
-1. Press Tab on the keyboard to accept and use the suggested formula. You can also type through the suggestion.
+1. Press `Tab` on the keyboard to accept and use the suggested formula. You can also type through the suggestion.
 
     :::image type="content" source="media/copilot/ufb-commentfx-copilot.png" alt-text="Screenshot of a comment with a suggested formula." lightbox="media/copilot/ufb-commentfx-copilot.png":::
 
@@ -85,7 +81,7 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 
 ### Known limitations of generating formulas from code comments
 
-- Copilot works on that singular control and property, and it won't make changes to other controls or properties to achieve the desired outcome.
+- Copilot works on a singular control and property, and it doesn't make changes to other controls or properties to achieve the desired outcome.
 - Copilot doesn't take existing formula text into account.
 - Copilot only recognizes default properties in Power Apps.
 - Copilot doesn't recognize user-defined functions.
@@ -93,42 +89,34 @@ You can keep the comments used for generating Power Fx formulas in the formula b
 - The advanced panel doesn't trigger suggestions.
 - Existing formulas for the property aren't included in the suggestion.
 
-
 ## Create a formula (preview)
 
 [This section is prerelease documentation and is subject to change.]
 
-From the Copilot button in the formula bar, you can now generate a formula from natural language from a discrete request.
+From the Copilot dropdown menu in the formula bar, you can now generate a formula using natural language to make a discrete request.
 
-### Prerequisites
-
-Before you can use Copilot to create a formula from a discrete request in your canvas app, you need to turn on **Copilot for formula** in the app settings in [Power Apps](https://make.powerapps.com/).
-
-1. Open your [canvas app for editing](edit-app.md) in Power Apps Studio. On the command bar, select **Settings** > **Updates**.
-1. On the **Preview** tab, find and turn on the **Copilot for formulas** setting.
+> [!NOTE]
+> The **Copilot for formulas** feature is turned on by default. To turn it off, you can find the setting with your app open. Go to Settings/Updates/Preview and find the **Copilot for formulas** toggle. Turning the setting off makes the **Create a formula (preview)** menu option disappear from the Copilot dropdown menu of the formula bar.
 
 ### Use Copilot to create a formula from a discrete request
 
-1. Select a control and its corresponding property.
+1. Select a control, like a **Text label**, and its corresponding property, such as **Text**.
 
 1. On the formula bar, select the **Copilot functionality menu** > **Create a formula**.
 
-    :::image type="content" source="media/copilot/ufb-copilot-dropdown.png" alt-text="Screenshot of the Copilot functionality menu showing the Create a formula item.":::
-
-    The Copilot menu opens inline when the formula bar is expanded, or below the formula bar if it's collapsed.
-
+    :::image type="content" source="media/copilot/ufb-create-input.png" alt-text="Screenshot of the Create a Formula functionality showing a sample input." lightbox="media/copilot/ufb-create-input.png":::
 1. In the Copilot text box, type your request, such as *show today's day of the week*.
+1. Select the **Create** arrow to submit your request.
+1. Copilot attempts to create a formula. Select **Apply** to insert the formula in the same position as the Copilot interface, or update and resumbit your request.
 
-    :::image type="content" source="media/copilot/ufb-create-input.png" alt-text="Screenshot of the Ceate a Formula functionality showing a sample input.":::
+    :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Create a Formula functionality showing recommended formula." lightbox="media/copilot/ufb-create-formula.png":::
 
-1. Copilot will attempt to create a formula. Select **Accept** to insert the formula in the same position as the Copilot interface, or update and resumbit your request.
+    You see the result after you apply the formula.
 
-    :::image type="content" source="media/copilot/ufb-create-formula.png" alt-text="Screenshot of the Ceate a Formula functionality showing recommended formula.":::
+    :::image type="content" source="media/copilot/copilot-request-result.png" alt-text="Screenshot that shows the day of the week in a text label.":::
 
   > [!NOTE]
   > The same limitations apply for creating a formulas from a discrete request as [generating formulas from code comments](ai-formulas-formulabar.md#known-limitations-of-generating-formulas-from-code-comments).
-
-
 
 ## Responsible AI
 

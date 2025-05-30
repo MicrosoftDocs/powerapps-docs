@@ -1,16 +1,14 @@
 ---
 title: "Flow Run (flowrun) table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Flow Run (flowrun) table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Flow Run (flowrun) table/entity reference
+# Flow Run (flowrun) table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,10 +20,12 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: True |`PATCH` /flowruns(*flowrunid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /flowruns<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /flowruns(*flowrunid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
 | `DeleteMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `Retrieve`<br />Event: True |`GET` /flowruns(*flowrunid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
 | `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 | `RetrieveMultiple`<br />Event: True |`GET` /flowruns<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
@@ -57,6 +57,10 @@ The following table lists selected properties for the Flow Run (flowrun) table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CallingProductResourceId](#BKMK_CallingProductResourceId)
+- [CallingProductRunId](#BKMK_CallingProductRunId)
+- [CallingProductType](#BKMK_CallingProductType)
+- [ConversationId](#BKMK_ConversationId)
 - [DurationInMs](#BKMK_DurationInMs)
 - [EndTime](#BKMK_EndTime)
 - [ErrorCode](#BKMK_ErrorCode)
@@ -64,6 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [flowrunId](#BKMK_flowrunId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsPrimary](#BKMK_IsPrimary)
+- [ModernFlowType](#BKMK_ModernFlowType)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -79,6 +84,74 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [Workflow](#BKMK_Workflow)
 - [WorkflowId](#BKMK_WorkflowId)
+
+### <a name="BKMK_CallingProductResourceId"></a> CallingProductResourceId
+
+|Property|Value|
+|---|---|
+|Description|**The resource id of the caller**|
+|DisplayName|**Calling product resource id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproductresourceid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_CallingProductRunId"></a> CallingProductRunId
+
+|Property|Value|
+|---|---|
+|Description|**The run id of the caller**|
+|DisplayName|**Calling product run id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproductrunid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_CallingProductType"></a> CallingProductType
+
+|Property|Value|
+|---|---|
+|Description|**The type of the product that triggered the run**|
+|DisplayName|**Calling product type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`callingproducttype`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
+
+### <a name="BKMK_ConversationId"></a> ConversationId
+
+|Property|Value|
+|---|---|
+|Description|**Copilot Studio Conversation id**|
+|DisplayName|**Conversation id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`conversationid`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_DurationInMs"></a> DurationInMs
 
@@ -191,6 +264,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**false**|
 |1|**true**|
+
+### <a name="BKMK_ModernFlowType"></a> ModernFlowType
+
+|Property|Value|
+|---|---|
+|Description|**Type of the Power Automate Cloud Flow.**|
+|DisplayName|**Power Automate Cloud Flow Type**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`modernflowtype`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`flowrun_modernflowtype`|
+
+#### ModernFlowType Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**PowerAutomateFlow**|
+|1|**CopilotStudioFlow**|
 
 ### <a name="BKMK_name"></a> name
 
@@ -768,6 +862,6 @@ Many-To-One Relationship: [flowlog flowrun_flowlog_cloudflowrunid](flowlog.md#BK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.flowrun?displayProperty=fullName>

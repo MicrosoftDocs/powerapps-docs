@@ -1,16 +1,14 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse)"
 description: "Includes schema information and supported messages for the Mailbox table/entity with Microsoft Dataverse."
-ms.date: 11/09/2024
-ms.service: powerapps
-ms.topic: reference
+ms.topic: generated-reference
 author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Mailbox table/entity reference
+# Mailbox table/entity reference (Microsoft Dataverse)
 
 
 
@@ -22,8 +20,10 @@ Messages represent operations that can be performed on the table. They may also 
 | Name <br />Is Event? |Web API Operation |SDK for .NET |
 | ---- | ----- |----- |
 | `Assign`<br />Event: False |`PATCH` /mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `Create`<br />Event: True |`POST` /mailboxes<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `Delete`<br />Event: False |`DELETE` /mailboxes(*mailboxid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
 | `GrantAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 | `ModifyAccess`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 | `Retrieve`<br />Event: False |`GET` /mailboxes(*mailboxid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
@@ -57,6 +57,9 @@ The following table lists selected properties for the Mailbox table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ACSEnabledForOutgoingEmail](#BKMK_ACSEnabledForOutgoingEmail)
+- [ACSMailFromCreated](#BKMK_ACSMailFromCreated)
+- [ACSOutgoingEmailStatus](#BKMK_ACSOutgoingEmailStatus)
 - [ACTDeliveryMethod](#BKMK_ACTDeliveryMethod)
 - [ACTStatus](#BKMK_ACTStatus)
 - [AllowEmailConnectorToUseCredentials](#BKMK_AllowEmailConnectorToUseCredentials)
@@ -78,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ItemsFailedForLastSync](#BKMK_ItemsFailedForLastSync)
 - [ItemsProcessedForLastSync](#BKMK_ItemsProcessedForLastSync)
 - [LastAutoDiscoveredOn](#BKMK_LastAutoDiscoveredOn)
+- [LastIncomingEmailsRequestedFromEmailServerOn](#BKMK_LastIncomingEmailsRequestedFromEmailServerOn)
 - [LastMessageId](#BKMK_LastMessageId)
 - [LastSuccessfulSyncCompletedOn](#BKMK_LastSuccessfulSyncCompletedOn)
 - [LastSyncError](#BKMK_LastSyncError)
@@ -120,6 +124,60 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Username](#BKMK_Username)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [VerboseLoggingEnabled](#BKMK_VerboseLoggingEnabled)
+
+### <a name="BKMK_ACSEnabledForOutgoingEmail"></a> ACSEnabledForOutgoingEmail
+
+|Property|Value|
+|---|---|
+|Description|**Determines if ACS integration should be enabled for outgoing email synchronization.**|
+|DisplayName|**ACS Enabled for Outgoing Email**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsenabledforoutgoingemail`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsenabledforoutgoingemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSMailFromCreated"></a> ACSMailFromCreated
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**ACS MailFrom Created**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsmailfromcreated`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsmailfromcreated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSOutgoingEmailStatus"></a> ACSOutgoingEmailStatus
+
+|Property|Value|
+|---|---|
+|Description|**The status of ACS outgoing email synchronization.**|
+|DisplayName|**ACS Outgoing Email Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsoutgoingemailstatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_acsoutgoingemailstatus`|
+
+#### ACSOutgoingEmailStatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_ACTDeliveryMethod"></a> ACTDeliveryMethod
 
@@ -383,7 +441,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`incomingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`mailbox_incomingemaildeliverymethod`|
 
 #### IncomingEmailDeliveryMethod Choices/Options
@@ -392,7 +450,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**Microsoft Dynamics 365 for Outlook**|
-|2|**Server-Side Synchronization or Email Router**|
+|2|**Server-Side Synchronization**|
 |3|**Forward Mailbox**|
 
 ### <a name="BKMK_IncomingEmailStatus"></a> IncomingEmailStatus
@@ -492,6 +550,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |DateTimeBehavior|UserLocal|
 |Format|DateAndTime|
 |ImeMode|Auto|
+|SourceTypeMask|0|
+
+### <a name="BKMK_LastIncomingEmailsRequestedFromEmailServerOn"></a> LastIncomingEmailsRequestedFromEmailServerOn
+
+|Property|Value|
+|---|---|
+|Description|**The timestamp when last set of incoming emails were requested from external email server. For internal use only.**|
+|DisplayName|**Last Incoming Emails Requested From Email Server On**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`lastincomingemailsrequestedfromemailserveron`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
 |SourceTypeMask|0|
 
 ### <a name="BKMK_LastMessageId"></a> LastMessageId
@@ -818,7 +893,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`outgoingemaildeliverymethod`|
 |RequiredLevel|None|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`mailbox_outgoingemaildeliverymethod`|
 
 #### OutgoingEmailDeliveryMethod Choices/Options
@@ -827,7 +902,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**None**|
 |1|**Microsoft Dynamics 365 for Outlook**|
-|2|**Server-Side Synchronization or Email Router**|
+|2|**Server-Side Synchronization**|
 
 ### <a name="BKMK_OutgoingEmailStatus"></a> OutgoingEmailStatus
 
@@ -2409,6 +2484,6 @@ Many-To-One Relationship: [tracelog tracelog_Mailbox](tracelog.md#BKMK_tracelog_
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
 [Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
 <xref:Microsoft.Dynamics.CRM.mailbox?displayProperty=fullName>

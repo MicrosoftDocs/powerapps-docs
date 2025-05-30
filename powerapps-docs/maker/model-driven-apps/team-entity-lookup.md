@@ -1,8 +1,8 @@
 ---
-title: "Add the team table as a lookup option in your app | MicrosoftDocs"
-description: "Learn how to add the team table as a lookup option in your app"
+title: "Add the team table as a lookup option in your app"
+description: "Learn how to add the team table as a lookup option in your app with Power Apps"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 03/04/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,17 +21,24 @@ search.audienceType:
 ---
 # Add a table as a lookup option in your app
 
-With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
+This article describes a feature that uses the classic app designer.
+
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer is no longer available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+>
+> We recommend that you transition to use the modern designers to create and edit your model-driven apps and components.
+
+With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team. Both of these tables have a relationship with the contacts table.
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with both users and teams available.](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
 
-However, if the **User** table is included in the app but the **Team** table is not, only user rows will appear in a lookup.
+However, if the **User** table is included in the app but the **Team** table isn't, only user rows appear in a lookup.
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with users only.](media/entity-lookup-user-only.png "Entity lookup with users only")
 
-This can be resolved by adding the **Team** table to the app using the [App Designer](model-driven-app-glossary.md#app-designer).
+This can be resolved by adding the **Team** table to the app using the app designer.
 
 ## Add a related table to an app to enable the lookup
 
