@@ -1,13 +1,13 @@
 ---
-title: "Get started with Power Apps| MicrosoftDocs"
+title: Get started with Power Apps| MicrosoftDocs
 description: How to navigate the Power Apps home page. 
-ms.custom: ""
+ms.custom: 
 ms.date: 5/29/2025
-ms.reviewer: "mkaur"
+ms.reviewer: mkaur
 ms.topic: overview
-author: "mkaur"
+author: "mduelae"
 ms.subservice: common
-ms.author: "mkaur"+
+ms.author: mkaur
 search.audienceType: 
   - maker, admin
 contributors:
