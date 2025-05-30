@@ -97,7 +97,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
     ![A screenshot of the map control with custom icons and different colors.](./media/geospatial/pins-map.png)
 
  >[!NOTE]
- > Each map control can display up to 5,000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
+ > Each map control can display up to 5000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
  >
  > When both latitude or longitude and an address is given for a single pin, the map control will prioritize using the latitude or longitude to avoid geocoding the address.
 

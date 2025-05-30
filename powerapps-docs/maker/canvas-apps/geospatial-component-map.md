@@ -65,7 +65,7 @@ To display these as labeled pins on the map:
 You can see how to do [display pins from an Excel sheet](geospatial-map-excel.md) or [build an app](how-to/mobile-apps-address-map.md) that uses the address input control to populate pins on the map control as additional examples.
 
  >[!NOTE]
- > - Each map control can display up to 5,000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
+ > - Each map control can display up to 5000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
  > - When both latitude or longitude and an address is given for a single pin, the map control will prioritize using the latitude or longitude to avoid geocoding the address.
  > - The maximum number of shapes that can be drawn in a map control is limited to 500.
 
