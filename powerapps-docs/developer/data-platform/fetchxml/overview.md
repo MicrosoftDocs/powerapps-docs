@@ -39,7 +39,7 @@ This query returns the [Name column](../reference/entities/account.md#BKMK_Name)
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 rows.
+To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. Without the `top` attribute, Dataverse returns up to 5,000 standard tables rows, 500 elastic tables rows.
 
 Alternatively, specify a number of records to return using *paging*. Don't use the `top` attribute when you request pages of data. [Learn how to request paged results](page-results.md)
 

@@ -21,7 +21,7 @@ contributors:
 
 You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
 
-The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 for standard tables, 500 for elastic tables. If you don't set a page size, Dataverse will return either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send additional requests.
 
 > [!NOTE]
 >

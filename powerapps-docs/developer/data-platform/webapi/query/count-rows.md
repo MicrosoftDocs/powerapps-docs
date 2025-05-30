@@ -15,7 +15,7 @@ contributors:
 ---
 # Count rows using OData
 
-Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000 for standard tables, 500 for elastic.  
+Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000 for standard tables, 500 for elastic.
 
 **Request:**
 
@@ -48,7 +48,7 @@ OData-Version: 4.0
 The response `@odata.count` annotation contains the number of rows, up to 5,000 for standard tables, 500 for elastic tables, that matches the filter criteria irrespective of the page size requested.
   
 > [!NOTE]
-> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount). 
+> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000 for standard tables, 500 for elastic tables, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount).
   
 
 If the count value is equal to the limit for the type of table you are using, and you want to know whether the count is exactly at that number or greater than that number, you can add the [Prefer request header](https://www.rfc-editor.org/rfc/rfc7240) to send the [odata.include-annotations preference](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793628) for these annotations:

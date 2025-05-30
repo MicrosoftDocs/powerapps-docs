@@ -40,7 +40,7 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 
 Setting the `returntotalrecordcount` attribute value to `true` has the same result as setting the OData `$count` query option. You can append `&$count=true` to your FetchXml query to get the same results. [Learn more about the OData $count query option](../webapi/query/count-rows.md).
 
-When you set the `returntotalrecordcount` attribute (or use the `$count` query option) the data returned includes the `@odata.count` annotation with the total number of records that match the filter criteria, up to 5,000.
+When you set the `returntotalrecordcount` attribute (or use the `$count` query option) the data returned includes the `@odata.count` annotation with the total number of records that match the filter criteria, up to 5,000 for standard tables, 500 for elastic tables.
 
 If you include either of these request headers:
 
