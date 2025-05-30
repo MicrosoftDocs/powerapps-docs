@@ -52,6 +52,9 @@ contributors:
 | Ctrl+- or Ctrl+Shift+- or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
 | Shift+Enter | Break a line in a formula |
+|Enter or Shift+Enter | Select the suggestion in a formula without adding a new line|
+| Enter | Select the suggestion in a formula and create a new line (turn on Enhanced formula bar shortcuts settings from Settings>Power Apps Settings)|
+| Shift+Enter | Create a new line in a formula but won't keep the suggestion (turn on Enhanced formula bar shortcuts settings from Settings>Power Apps Settings)|
 
 ## Preview
 
