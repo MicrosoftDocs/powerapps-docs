@@ -56,8 +56,7 @@ To use the custom help panes feature, your environment needs the [custom help pa
 
 > [!IMPORTANT]
 >
-> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
-> - Some environments might require that you also set **Enable Learning Path** to **Yes**.
+> You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
 
 ## Privileges required
 
@@ -70,10 +69,11 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 Each help pane is unique for these contexts:
 
-- Application 
 - Table
-- Form 
-- Language   
+- Form
+- Dashboard
+- Language
+- Application 
 
 ## Help pane navigation
 
