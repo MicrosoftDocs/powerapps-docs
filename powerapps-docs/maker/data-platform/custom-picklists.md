@@ -24,10 +24,10 @@ Choices are either global or local. You can define a choice to use a set of opti
 
 ## Create a global choice within a solution
 
-1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. On the command bar, select **New** > **Choice**.
 1. Enter the following properties:
-   - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+   - **Display name**. Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
    - In the **Label** field, enter the label you want displayed for the choice option.
    - The **Value** number represents a unique value for the option and isn't displayed in the choice column in an app. Notice there's a number generated for each **Value** automatically. We recommend that you not change this. Having a unique **Value** helps ensure that the value will be different from other option values that might be defined in other solutions and imported into your environment.
    - Select the color picker to the left of the **Label** if you want a color to appear for the option in model-driven app charts.
@@ -36,7 +36,7 @@ Choices are either global or local. You can define a choice to use a set of opti
       - **External value**. This value is used for virtual tables to map a value in an external data source with this option.
       - **Hidden**. Hide the option from the choice column at runtime in apps. For more information about the limitations of this property, go to [Choice hidden property limitations](#choice-hidden-property-limitations).
       > [!CAUTION]
-      > The Hidden property should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to app components such as forms and views but don't have an effect on a user's data privileges. When a column is hidden, users can still access column data in other ways, such as by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
+      > The Hidden property should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to app components such as model-driven app forms and views but don't have an effect on a user's data privileges. When a column is hidden, users can still access column data in other ways, such as by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 1. Select **New choice** to create another option for the choice.
 1. Repeat the previous step to until you have the options you want for the choice.
 1. Expand **Advanced options** to display additional properties: 
@@ -52,7 +52,7 @@ Choices are either global or local. You can define a choice to use a set of opti
 
 Create a local choice column for a table that can be used in forms and views within a solution.
 
-1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Open the table where you want to create the local choice, and then on the command bar, select **New** > **Choice**.
 
@@ -60,7 +60,7 @@ Create a local choice column for a table that can be used in forms and views wit
 
 ### Configure properties for a local choice
 
-- **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
+- **Display name**. Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
 - **Description**. Enter an optional description of the choice column.
 - **Data type**. Select **Choice** > **Choice**. Select **Choice** > **Yes/No** if you want a two option single select choice field.
 - **Behavior**. Select calculated to enable the column to be included in calculated columns to automate manual calculations.
