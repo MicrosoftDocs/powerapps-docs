@@ -7,12 +7,13 @@ ms.subservice: troubleshoot
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/09/2021
+ms.date: 06/02/2025
 ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
   - mduelae
+  - vamseedillimsft
 ---
 # Get session and app ID details
 
