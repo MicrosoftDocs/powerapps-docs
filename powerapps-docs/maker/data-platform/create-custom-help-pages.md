@@ -2,7 +2,7 @@
 title: "Create custom help pages for model-driven apps"
 description: "Create custom help pages with model-driven apps in Power Apps"
 ms.custom: ""
-ms.date: 04/17/2025
+ms.date: 06/02/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
