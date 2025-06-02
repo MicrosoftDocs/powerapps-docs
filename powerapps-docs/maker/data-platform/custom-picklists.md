@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to create a choice in Power Apps.
 author: lancedMicrosoft
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/07/2025
+ms.date: 06/02/2025
 ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
@@ -34,8 +34,9 @@ Choices are either global or local. You can define a choice to use a set of opti
    - **Additional properties**.
       - **Description**. Add a description for the option.
       - **External value**. This value is used for virtual tables to map a value in an external data source with this option.
-      - **Hidden**. Hide the option from the choice column at runtime in apps.
-
+      - **Hidden**. Hide the option from the choice column at runtime in apps. For more information about the limitations of this property, go to [Choice hidden property limitations](#choice-hidden-property-limitations).
+      > [!CAUTION]
+      > The Hidden property should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to app components such as forms and views but don't have an effect on a user's data privileges. When a column is hidden, users can still access column data in other ways, such as by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 1. Select **New choice** to create another option for the choice.
 1. Repeat the previous step to until you have the options you want for the choice.
 1. Expand **Advanced options** to display additional properties: 
@@ -88,42 +89,13 @@ Now the local choice column appears in the form and view designers to add for th
 ## Create and edit global choices using solution explorer
 
 For information about how to create and edit global choices using the classic solution explorer, go to [Create or edit a global option set (on-premises)](/dynamics365/customerengagement/on-premises/customize/create-edit-global-option-sets).
-<!-- Solution explorer provides one way to create and edit global choices for Dataverse.
 
-> [!NOTE]
-> [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) is the best way to create and edit choice columns.
+## Choice hidden property limitations
 
-### Open solution explorer
+- The choice column hidden property is only applicable for model-driven apps. Other components that use Microsoft Dataverse tables, such as canvas apps, don't use the choice column hidden property.
+- The choice column hidden property only works for app with the [modern, refreshed look for model-driven apps enabled](../../user/modern-fluent-design.md).
+- The choice column hidden property isn't currently supported for multi-select choices even when the **Selecting multiple choices is allowed** option is selected.
+- The hidden property *only hides the option label and value when displayed in a model-driven app*. Even when hidden, choice labels and values can be viewed and set by accessing the Dataverse table directly, such as from make.powerapps.com. Hidden options can also be set using the [`setValue` client API method](../../developer/model-driven-apps/clientapi/reference/attributes/setValue.md).
 
-Part of the name of any global choice  you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this global choice . More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
-
-### View global choices
-
-With solution explorer open, under **Components** select **Option Sets**.
-
-![View global choices.](media/view-global-option-sets-solution-explorer.png)
-
-> [!NOTE]
-> Some system global choices are not customizable. These options may change with updates or new versions so we recommend you don’t use them unless you are certain that your requirements align with the way that Dataverse uses these values.
-
-### Create a global choice 
-
-> [!NOTE]
-> You do not need to create a global choice  before you use it within a custom column. When you create a new choice  column you have the option to create a new global choice  or use an existing one. See [Choice column options](create-edit-field-solution-explorer.md#choice-column-options)
-
-While viewing global choices, click **New** to open a form to define the global choice .
-
-![Create global choice .](media/create-global-option-set-solution-explorer.png)
-
-Type a **Display name** that will be visible to people with the system administrator or customizer role who will choose this global choice  when defining new columns that use it. This name will not be visible to people using your apps.
-
-A **Name** column value will be generated for you based on the **Display name** you enter. It will include the customization prefix for the Solution publisher in the context of the solution you are working in. You can change the generated portion of the **Name** column value before you save.
-
-Type a **Description** for the global choice . 
-
-> [!TIP]
-> Use the **Description** to explain the purpose of this global choice . This value is not visible to users of the application, it is for other people with the system administrator or customizer role who may want to know why this particular global choice  was created. -->
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
