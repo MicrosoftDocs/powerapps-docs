@@ -5,7 +5,7 @@ author: paulliew
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 05/26/2025
+ms.date: 06/03/2025
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -18,7 +18,11 @@ search.audienceType:
 # Create email templates
 
 > [!IMPORTANT]
-> The enhanced email template and legacy rich text editor will no longer be available as of May 23, 2025. The drag and drop functionality will no longer be available. The modern rich text editor supports HTML formatting.
+> - As of May 23, 2025, the following functionalities will no longer be available:
+>     - The enhanced email template and legacy rich text editor. 
+>     - The drag and drop functionality of the enhanced email template editor.
+> - The modern rich text editor supports HTML formatting. Any existing templates created using the enhanced email template editor will now open in the modern rich text editor. If you any see any formatting issues, we recommend that you update or recreate the template using the modern rich text editor.
+
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. 
 
@@ -85,9 +89,6 @@ You can use the email template editor to to create a new email template or edit 
 - **HTML** tab: Use this tab to view and edit the HTML code of your email template. You can add HTML code to customize your templates with elements such as layouts, images, and buttons.
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
-
-  > [!NOTE]
-  > Any existing templates created using the enhanced email template editor will open in the modern rich text editor. If you face formatting issues, we recommend that you update or recreate the template using the modern rich text editor.
 
 ### See also
 
