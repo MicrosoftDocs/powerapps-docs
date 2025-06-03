@@ -76,13 +76,19 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 ### When running a model-driven app on a phone or a tablet
 
 1. In the upper left corner, select the hamburger icon (the three lines).
-    :::image type="content" source="media/get-sessionid/navigation-option.png" alt-text="Hamburger icon at the top left corner with Enabled users list":::
+
+  :::image type="content" source="media/get-sessionid/navigation-option.png" alt-text="Hamburger icon at the top left corner with Enabled users list":::
+
 1. Select the settings icon (gear) in the lower left corner of the screen.
-    :::image type="content" source="media/get-sessionid/setting-option.png" alt-text="Navigation pane showing different options icons along with settings icon":::
+
+  :::image type="content" source="media/get-sessionid/setting-option.png" alt-text="Navigation pane showing different options icons along with settings icon":::
 1. Select **Session Details** at the bottom of the screen.
-    :::image type="content" source="media/get-sessionid/setting-screen.png" alt-text="Setting screen showing session details option":::
+
+  :::image type="content" source="media/get-sessionid/setting-screen.png" alt-text="Setting screen showing session details option":::
+
 1. Review the session details.
-    :::image type="content" source="media/get-sessionid/session-details-screen.png" alt-text="Session details":::
+
+  :::image type="content" source="media/get-sessionid/session-details-screen.png" alt-text="Session details":::
 
 ## Get the session ID for Power Apps (make.powerapps.com)
 
