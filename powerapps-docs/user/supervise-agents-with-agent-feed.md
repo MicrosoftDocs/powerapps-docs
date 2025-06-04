@@ -20,8 +20,8 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 
 ## Prerequisites
 
-- Agent feed is available in model-driven apps when the modern, refreshed look is enabled.
 - The agent feed shows when at least one agent is supervised in the app.
+- Learn how to [Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)
 - Generative agents must be enabled in the environment.
 
 > [!IMPORTANT]
@@ -63,7 +63,7 @@ Select an action to open a detailed view that includes:
 1. A step-by-step activity map of the agent's execution
    :::image type="content" source="media/agent-supervision/agent-feed-details-pane-map.png" alt-text="Agent feed details map":::
 
-The activity map starts with the trigger that initiates the action and continues through each step the agent takes. These steps can include tools, connectors, topics, or knowledge sources set up by the agent’s creator. This view is similar to the Activity view in Copilot Studio and gives a clear visualization of the agent’s logic and behavior.
+The activity map starts with the trigger that initiates the action and continues through each step the agent takes. These steps can include tools, connectors, articles, or knowledge sources set up by the agent’s creator. This view is similar to the Activity view in Copilot Studio and gives a clear visualization of the agent’s logic and behavior.
 
 You can filter the feed by agent or by status. Available status filters include:
 
@@ -79,9 +79,12 @@ View agent feed in a side pane to support multitasking or expand it to full scre
 
 ## Take action on agent activity
 
-You can take the these actions on activity in the feed:
+> [!NOTE]
+> The actions you take on agent actions only change their status. You need to manually take over the agent action and fix it as needed. We're developing more robust human-in-the-loop capabilities.
 
-- **Mark as complete**: Move an action from the **To-do** section to **Other** after completing the task the agent could not finish.
+You can take these actions on activity in the feed:
+
+- **Mark as complete**: Move an action from the **To-do** section to **Other** after completing the task the agent couldn't finish.
 
    :::image type="content" source="media/agent-supervision/agent-feed-mark-complete.png" alt-text="Agent feed mark as complete button":::
 
@@ -101,6 +104,9 @@ You can take the these actions on activity in the feed:
 For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
 
 :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+
+> [!NOTE]
+> Direct links aren't currently supported for non-Dataverse tools.
 
 ## Related information
 
