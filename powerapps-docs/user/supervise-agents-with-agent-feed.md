@@ -20,8 +20,8 @@ Agent feed in Power Apps lets business users easily manage and work with agents 
 
 ## Prerequisites
 
-- Agent feed is available in model-driven apps when the modern, refreshed look is enabled.
 - The agent feed shows when at least one agent is supervised in the app.
+  - Learn how to [Add agents to an app](../maker/model-driven-apps/add-agents-to-app.md)
 - Generative agents must be enabled in the environment.
 
 > [!IMPORTANT]
@@ -79,6 +79,9 @@ View agent feed in a side pane to support multitasking or expand it to full scre
 
 ## Take action on agent activity
 
+> [!NOTE]
+> The actions you can take on agent actions only change their status. You must manually takeover the agent action and resolve it as you see fit. More robust human-in-the-loop capabilities are in development.
+
 You can take the these actions on activity in the feed:
 
 - **Mark as complete**: Move an action from the **To-do** section to **Other** after completing the task the agent could not finish.
@@ -101,6 +104,9 @@ You can take the these actions on activity in the feed:
 For actions that use a Dataverse tool, users will be provided with a direct link to either the Dataverse record or entity associated with that action depending on which is more relevant to that action. This enables seamless for further review or follow-up. 
 
 :::image type="content" source="media/agent-supervision/agent-feed-navigate-to-record.png" alt-text="Agent feed record navigation button":::
+
+> [!NOTE]
+> Direct links are not currently supported for non-Dataverse tools.
 
 ## Related information
 
