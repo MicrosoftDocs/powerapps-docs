@@ -33,7 +33,7 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 
 Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows.
 
-[Learn more about how to supervise agents](../user/supervise-agents-with-agent-feed.md)
+[Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
 > Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app.
