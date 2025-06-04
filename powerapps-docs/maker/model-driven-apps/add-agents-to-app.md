@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 05/22/2025
+ms.date: 06/04/2025
 ms.reviewer: "matp"
 ms.topic: "how-to"
 author: "adrianorth"
@@ -29,11 +29,11 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 > - This is a preview feature.
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
 > - This feature is being gradually rolled out across regions and might not be available yet in your region.
-> - To access the feature, you must use an [early release cycle environment](https://learn.microsoft.com/en-us/power-platform/admin/early-release#create-early-release-cycle-environments) and use [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/)
+> - To access the feature, you must use an [early release cycle environment](/power-platform/admin/early-release#create-early-release-cycle-environments) and use [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/)
 
 Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows.
 
-Learn more about how to supervise agents.
+Learn more about how to supervise agents. <!--Is this supposed to be a link?-->
 
 > [!IMPORTANT]
 > Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent history with other users is a top priority and is in development.
