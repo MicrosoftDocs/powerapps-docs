@@ -33,10 +33,10 @@ Model-driven apps support the use of agents to enhance user productivity and aut
 
 Autonomous agents can be added to model-driven apps to assist users with task completion. When added to an app, these agents can be supervised by users, allowing them to validate completed tasks, intervene when errors occur, and complete tasks that the agent was unable to finish—all within the context of their regular workflows.
 
-Learn more about how to supervise agents. <!--Is this supposed to be a link?-->
+[Learn more about how to supervise agents](../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app. Support for sharing agent history with other users is a top priority and is in development.
+> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app.
 
 ## Add an autonomous agent to an app
 
@@ -48,11 +48,10 @@ You can add an agent to any model-driven app of your choosing. We recommend addi
 
 1. Sign in to Power Apps, select **Apps**, and then select **Edit** for the app you want to modify.
 1. In the app designer, go to the **Agents** tab.
-1. In the **In your environment** dropdown, locate the agent you want to add.
-   - You will see all agents in your environment.
+1. In the **In your environment** dropdown list all agents in your environment are displayed. Locate the agent you want to add.
 1. Select **...** (more options) next to the agent, and then select **Add to app**.
     :::image type="content" source="media/add-agents-to-app/app-designer-add-agent-to-app.png" alt-text="App designer add agent to app":::
-1. Verify agent feed has been added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer is not currently supported.
+1. Verify agent feed has been added to your app with all added agents by saving, publishing, and playing your app. Previewing agent feed in the app designer isn't currently supported.
 1. To view or edit the agent in Copilot Studio, select **Edit in Microsoft Copilot Studio**.
    :::image type="content" source="media/add-agents-to-app/app-designer-edit-in-copilot-studio.png" alt-text="App Designer edit in Copilot Studio":::
 
