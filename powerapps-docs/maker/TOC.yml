@@ -1286,7 +1286,7 @@
           href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
-        - name: Canvas component properties (preview)
+        - name: Canvas component properties
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
