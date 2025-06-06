@@ -45,6 +45,8 @@ When the schema provided by your connector changes, you can refresh the connecto
 
 ## Types of connectors
 
-Only connections to Dataverse are currently available. You can connect to Dataverse tables to create, read, update, and delete records. [Learn how to create a card with data from Dataverse](../../tutorials/dataverse-card.md).
+- Dataverse - You can connect to Dataverse tables to create, read, update, and delete records. [Learn how to create a card with data from Dataverse](../../tutorials/dataverse-card.md).
+- Office 365 Outlook
+- Office 365 Users
 
 We are working on support for other connectors.
