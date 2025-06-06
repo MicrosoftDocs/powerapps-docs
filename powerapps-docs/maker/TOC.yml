@@ -1790,13 +1790,13 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
+    - name: Add agents to your app (preview)
+      href: ./model-driven-apps/add-agents-to-app.md  
     - name: Copilot chat for apps
       href:
       items:
       - name: Add Copilot chat to your app
         href: ./model-driven-apps/add-ai-copilot.md
-      - name: Add agents to your app (preview)
-        href: ./model-driven-apps/add-agents-to-app.md  
       - name: Customize Copilot chat (preview)
         href:
         items:
