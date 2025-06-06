@@ -61,6 +61,6 @@ The greatest memory improvements to decrease app restarts can be made by app mak
 ## Best practices for building performant apps
 
 - [Build large and complex apps](../maker/canvas-apps/working-with-large-apps.md)
-- [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md)
+- [Troubleshoot Power Apps canvas app performance issues](/troubleshoot/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-tabled)
 - [Tips and best practices to improve performance of canvas apps](../maker/canvas-apps/performance-tips.md)
 - [Power Apps coding guidelines - Code optimization](/power-apps/guidance/coding-guidelines/code-optimization)

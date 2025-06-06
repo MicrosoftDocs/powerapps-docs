@@ -190,7 +190,7 @@ But it works, doesn't it? Kind of. That's why this is a warning and not a red, w
 
 ### See also
 
-[Impact of using non-delegable functions and inappropriate data row limits on performance](common-performance-issue-resolutions.md#use-of-non-delegable-functions-and-inappropriate-data-row-limits-for-non-delegable-queries) <br>
+- [Troubleshoot Power Apps canvas app performance issues](/troubleshoot/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-tabled) <br>
 [Performance tips and best practice to use delegation](performance-tips.md#use-delegation)
 
 
