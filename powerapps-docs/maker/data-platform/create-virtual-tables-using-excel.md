@@ -12,13 +12,14 @@ search.audienceType:
 ---
 # Create a virtual table using Excel in Microsoft Dataverse
 
-Create a virtual table to integrate data from an Excel file located in OneDrive to use as an external data source that seamlessly represents that data as tables in Microsoft Dataverse. Virtual tables allow you to view, create, and edit this data without data replicating the data in Dataverse.
+Create a virtual table to integrate data from an Excel file located in OneDrive to use as an external data source that seamlessly represents that data as tables in Microsoft Dataverse. Virtual tables allow you to view, create, and edit external data without replicating that data in Dataverse.
 
 ## Prerequisites
 
-- The Excel file must be stored in OneDrive.
-- Files must contain data formatted as a table.
-- Files must contain a GUID column. More information: [Create the connection for the Excel virtual connector provider](#create-the-connection-for-the-excel-virtual-connector-provider)
+- A Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
+- The Excel file you use as the data source must be stored in OneDrive.
+- The Excel file must contain data formatted as a table.
+- The Excel file must contain a GUID column. More information: [Create the connection for the Excel virtual connector provider](#create-the-connection-for-the-excel-virtual-connector-provider)
 
 ## Download and install the virtual connector provider for Excel
 

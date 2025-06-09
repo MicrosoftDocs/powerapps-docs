@@ -22,7 +22,7 @@ This document covers the new  experience using Power Apps (make.powerapps.com) t
 
 - SQL Server
 - Microsoft SharePoint
-- Microsoft Fabric. More information: [Build apps and automations drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
+- Microsoft Fabric (preview)
 - Salesforce (preview)
 - Oracle (preview)
 - Snowflake (preview)
@@ -137,6 +137,8 @@ Watch a short video showing how to create a virtual table with the virtual conne
 - Select a Microsoft Fabric workspace from the available list of workspaces. All workspace where you have access are available in the list.
 - Choose a Microsoft Fabric Lakehouse from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose. 
 - Follow the instructions on your screen. More information: [Build apps and automations drive action with insights from Microsoft Fabric (preview)](azure-synapse-link-build-apps-with-fabric.md)
+
+More information: [Build apps and automations drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
 
 # [Salesforce (preview)](#tab/salesforce)
 
