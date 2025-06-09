@@ -2012,8 +2012,10 @@
       items:
       - name: Virtual table OData v4 data provider
         href: ./data-platform/virtual-entity-odata-provider-requirements.md
-      - name: Create a virtual table using a virtual connector provider
+      - name: Create a virtual table using a common data source
         href: ./data-platform/create-virtual-tables-using-connectors.md
+      - name: Create a virtual table using Excel
+        href: ./data-platform/create-virtual-tables-using-excel.md  
       - name: Set up virtual table relationships
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
