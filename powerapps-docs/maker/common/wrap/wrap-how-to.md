@@ -129,6 +129,15 @@ More information about granting access and the reasons why API permissions are r
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
 
+
+#### Add Redirect URIs:
+
+1. Navigate to **Azure Portal** > **Your App Registration Name** > **Authentication**.
+2. Click **"Add a platform"** and select either **iOS** or **Android** based on the App type.
+3. * For **iOS**: Enter the **Bundle ID**.
+   * For **Android**: Enter the **Bundle ID** and the **Signature Hash Key**.
+
+
 ### Step 4: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
