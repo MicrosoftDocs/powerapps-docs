@@ -14,6 +14,7 @@ search.audienceType:
 contributors:
   - mduelae
   - lancedMicrosoft
+  - jelopezf
 ---
 
 # Use Microsoft SQL Server securely with Power Apps
