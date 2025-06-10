@@ -6,7 +6,7 @@ author: lancedMicrosoft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/21/2025
+ms.date: 06/10/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -44,8 +44,8 @@ The following four connection authentication types can be used with SQL Server f
 | SQL Server Authentication | Implicit / Secure Implicit                     |
 | Windows Authentication              | Implicit / Secure Implicit                    |
 | Windows Authentication (Non Shared) | Explicit                     |
-| Service principal (Microsoft Entra ID application) | Implicit / Secure Implicit |
-| Client Certificate Auth | Implicit / Secure Implicit
+| Service Principal (Microsoft Entra ID application) | Implicit / Secure Implicit |
+| Client Certificate Auth | Implicit / Secure Implicit |
 
 > [!IMPORTANT]
 > Prior to **May 2025**, **Service principal** connections were considered explicit and non-shareable. For any connections added to apps before **May 2025**, it is necessary to remove and re-add the **Service principal** connections to enable sharing.
