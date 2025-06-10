@@ -22,7 +22,7 @@ Plug-ins and custom workflow activities can access the network through the HTTP 
 - Access to localhost (loopback) isn't permitted.
 - IP addresses can't be used. You must use a named web address that requires DNS name resolution.
 - Anonymous authentication is supported and recommended. There's no provision for prompting the logged on user for credentials, or saving those credentials.
-- Your server must allow connections from Power Platform and Dynamics 365 services [IP address values](/power-platform/admin/online-requirements#ip-addresses-required) specified under the PowerPlatformPlex service tag.
+- Your server must allow connections from Power Platform and Dynamics 365 services [IP address values](/power-platform/admin/online-requirements#ip-addresses-required) specified under the `PowerPlatformPlex` service tag.
 
 Other methods of accessing web services include the use of Webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided in the next sections for more information on those topics.
 
