@@ -137,7 +137,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - On mobile, the timeline control doesn't currently appear in the form component control.
 
-- For subgrids, the **See all records** and **See associated records** command buttons won't be available if they're rendered inside a form component.
+- For subgrids, the **See associated records** command button won't be available if the subgrid is rendered inside a form component.
 
 - Form component controls aren't supported in bulk edit dialogs. They won't appear in the form in the bulk edit dialog by default and any changes made to related table records with them won't be saved.
 
