@@ -21,9 +21,9 @@ ms.custom:
 
 The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-You can customize the editor's appearance, features, and behavior. The control's modern text experience is shown in the following screenshot.
+You can customize the editor's appearance, features, and behavior.
 
-:::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
+:::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app." lightbox="./media/rich-text-control.png":::
 
 ## Modern text editor enhancements
 
@@ -64,7 +64,7 @@ The modern rich text editor is enabled by default, but if you're using the class
 
 1. Select **Done**. The rich text column is added to the form.
 
-    :::image type="content" source="media/rich-text-column-on-form.png" alt-text="Screenshot of the rich text editor control on a model-driven app form.":::
+    :::image type="content" source="media/rich-text-column-on-form.png" alt-text="Screenshot of the rich text editor control on a model-driven app form." lightbox="media/rich-text-column-on-form.png":::
 1. Select **Save and publish** to apply your changes to the form.
 
 ### Add the rich text editor control to a text column
@@ -461,14 +461,14 @@ The following formatting tools are available in the rich text editor when it's o
  
 - In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the correct permissions to `msdyn_richtextfiles`.
 
-## Modern rich text editor limitations
+## Rich text editor limitations
 
-When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+When using the rich text editor, consider the limitations listed in this section. For questions about feature availability, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
 
 > [!IMPORTANT]
 > The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
 
-Limitations of the modern rich text editor include:
+Limitations of the rich text editor include:
 
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
 - The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
