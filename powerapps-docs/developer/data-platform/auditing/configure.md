@@ -31,6 +31,7 @@ The following table describes the organization table columns that control auditi
 |`AuditRetentionPeriodV2`<br/>`auditretentionperiodv2`<br/>**Audit Retention Period Settings**|Integer|The number of days to retain audit log records<br/>The default value is 30. Valid values are between 1 and 365,000 days (~1,000 years). If the value is set to -1, the records are retained forever.<br/>[Administrator's guide: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
 |`IsUserAccessAuditEnabled`<br/>`isuseraccessauditenabled`<br/>**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled<br/>Auditing for the environment must be enabled for user access logging to be enabled.|
 |`UserAccessAuditingInterval`<br/>`useraccessauditinginterval`<br/>**User Authentication Auditing Interval**|Integer|How often user access is logged, in hours<br/>The default value is 4.|
+|`AuditSettings`<br/>`auditsettings`<br/>**Audit Settings**|String|Json format string, holds audit feature related settings|
 
 ### Retrieve organization settings
 
@@ -129,6 +130,67 @@ You can use Web API or Dataverse SDK for .NET to change your organization settin
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 - [Update and delete table rows using the SDK for .NET](../org-service/entity-operations-update-delete.md)
+
+### Change AuditSettings
+
+Organization entity has attribute 'auditsettings', which uses a json string format to store the settings specified below. These settings are used to enable different functionalities.
+Some audit settings are self-serve and can be enabled by doing an update on the organization record. The table below specifies what audit settings exist and what they're used for, as well as if they can be enabled by organization user.
+
+| setting  | Description  | Self-serve  |
+|-----------|-----------|-----------|
+| StoreLabelNameforPicklistAudits  | For picklist type audits, audit both option value and option name, as opposed to auditing option value only | Yes  |
+| IsSqlAuditWriteDisabled  | If NoSql audits are enabled, stop writing data to sql audit table  | No, will fail  |
+| ApplyRetentionToExistingLogs  | Apply new retention policy to existing audit records  | No, will not be applied  |
+
+Use the following queries to set your organization settings, you will need organization id, see "Retrieve organization settings" section for how to obtain it.
+
+#### [Web API](#tab/webapi)
+
+**Request:**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/organizations([Organization ID]) HTTP/1.1
+
+Accept: application/json
+Content-Type: application/json
+Body:
+{
+        "auditsettings": "{\"StoreLabelNameforPicklistAudits\":true}"
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No content
+```
+Learn more about:
+
+- [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+/// <summary>
+/// Sets audit settings
+/// </summary>
+/// <param name="svc">The IOrganizationService instance to use.</param>
+static void SetAuditSettings(IOrganizationService svc)
+{
+    WhoAmIResponse whoAmIResponse = 
+        (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
+
+    var organization = new Entity("organization", whoAmIResponse.OrganizationId);
+    organization["auditsettings"] = "{\"StoreLabelNameforPicklistAudits\":true}";
+    svc.Update(organization);
+}
+```
+
+Learn more about:
+
+- [Update and delete table rows using the SDK for .NET](../org-service/entity-operations-update-delete.md)
+
+---
 
 ## Configure tables and columns
 
