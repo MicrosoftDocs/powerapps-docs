@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 05/29/2025
+ms.date: 06/10/2025
 ms.topic: how-to
 ms.author: saperlmu
 author: Mattp123
@@ -21,9 +21,6 @@ ms.custom:
 
 The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-> [!Note]
-> The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact Microsoft Support.
-
 You can customize the editor's appearance, features, and behavior. The control's modern text experience is shown in the following screenshot.
 
 :::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
@@ -32,7 +29,11 @@ You can customize the editor's appearance, features, and behavior. The control's
 
 The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new Copilot feature to enhance your text editing capabilities.
 
-### Enable the modern rich text editor experience from the classic experience
+> [!NOTE]
+> The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+
+<!-- No longer needed
+ ### Enable the modern rich text editor experience from the classic experience
 
 The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
@@ -44,58 +45,41 @@ The modern rich text editor is enabled by default, but if you're using the class
    - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
    - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
 1. Select **Save**.
-1. In the App Designer, select **Publish**.
+1. In the App Designer, select **Publish**. -->
 
-### Modern rich text editor limitations
-
-When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
-
-> [!Important]
-> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
-
-Notes:
-- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
- 
-Knowledge management: 
-- A preview tab isn't currently available.
-
-Email templates and signatures: 
-- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
-
-## Add the rich text editor control to a text column
-
-The following configuration is available in the classic rich text editor experience.
-
-When you format a text column as rich text, the default rich text editor control is added automatically.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableColumnFormatUpdate=true&powerappsEntities.enableModernColumn=true).
-1. In the left navigation pane, select **Solutions**.
-1. Open a solution and a table in the solution.
-1. In the **Columns and data** area, select a text column.
-
-    If the table doesn't contain a text column, select **+** (**New column)** and enter a name for the column.
-
-1. In **Data type**, select **>** to the right of **Text**, and then select the appropriate **Rich text** option based on whether the column contains a single line of text or multiple lines.
-1. Save the column, and then add it to a form.
-
-## Add the rich text editor control to a text column in a form
-
-The following configuration is available in the classic rich text editor experience.
+## Add the rich text editor control to a text column on a form
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation pane, select **Solutions**.
-1. Open a solution and a table in the solution.
-1. In the **Data experiences** area, select **Forms**, and then find the form that contains the text column you want to add the rich text editor to.
-1. Select **&vellip;** > **Edit** > **Edit in new tab**.
-1. On the form designer canvas, select, add, or create a text column.
-1. In the column properties pane, expand the **Components** list, select **+ Component**, and then select **Rich Text Editor Control**.
+1. Open a solution and then open a table in the solution.
+1. In the **Data experiences** area, select **Forms**, and then open the form that contains the text column you want to add the rich text editor to.
+1. On the form designer canvas, select an existing text column. Alternatively, select **New table column** to create a new text column, enter a **Display name**, select **Text** > **Rich text** for the **Data type**, and then select **Save**.
+   :::image type="content" source="media/rich-text-column.png" alt-text="Rich text column":::
+   > [!NOTE]
+   > If you want to add the rich text editor control to a column that already exists, you must first change the column's data type to **Text** (if not already a text column) and then select the **Format** using the **Rich text** option.
+1. In the column **Properties** pane, expand the **Components** list, select **+ Component**, and then select **Rich Text Editor Control**.
 1. In the **Add Rich Text Editor Control** pane, select **Web**, **Phone**, and **Tablet** to allow apps running on any device to use the editor.
 
     If you want to [customize the editor](#customize-the-rich-text-editor-control), enter the relative URL of its configuration file, a JavaScript web resource that contains the properties you want to change, in the **Static value** box. If you leave this field empty, the editor uses its default configuration.
 
-1. Select **Done**.
+1. Select **Done**. The rich text column is added to the form.
+
+    :::image type="content" source="media/rich-text-column-on-form.png" alt-text="Screenshot of the rich text editor control on a model-driven app form.":::
 1. Select **Save and publish** to apply your changes to the form.
+
+### Add the rich text editor control to a text column
+
+You can also create a column for a table that uses the rich text editor control. The following steps show you how to create a text column that can later be added to a form for a model-driven app.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. In the left navigation pane, select **Solutions**.
+1. Open a solution and a table in the solution.
+1. In the **Schema** area, select **Columns**, and then open a text column.
+
+    If the table doesn't contain a text column, select **New column** and enter a name for the column.
+
+1. In the right pane, select **Format**, and then select **Rich text**.
+1. **Save** the column.
 
 ## Customize the rich text editor control
 
@@ -143,7 +127,7 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
       We provided a few [example configurations](#example-configurations) for you, but you can define others to suit your needs.
 
 4. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
-5. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
+5. [Add the rich text editor control to a text column on a form](#add-the-rich-text-editor-control-to-a-text-column-on-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
       Although you can enter the absolute URL of the web resource, we recommend that you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
@@ -449,7 +433,7 @@ The following table describes the formatting tools that are available in the ric
 | ![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar | | When the window is too narrow to show the entire toolbar, select to expand the toolbar to a second row. |
 | | | | |
 
-> [!Tip]
+> [!TIP]
 > To use your browser's built-in spell checker, press the Ctrl key as you right-click the text you want to check. Otherwise, the right-click (context) menu provides contextual formatting for the element you select.  
 > An alternative to your browser's built-in spell checker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spell-check capabilities.
 
@@ -476,6 +460,26 @@ The following formatting tools are available in the rich text editor when it's o
 - If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have privileges to create, read, and write on the `msdyn_customcontrolextendedsettings` table for the user personalization plug-in to work.
  
 - In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the correct permissions to `msdyn_richtextfiles`.
+
+## Modern rich text editor limitations
+
+When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+
+> [!IMPORTANT]
+> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
+
+Limitations of the modern rich text editor include:
+
+- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
+- The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
+
+Knowledge management:
+
+- A preview tab isn't currently available.
+
+Email templates and signatures:
+
+- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
 
 ## Frequently asked questions
 
