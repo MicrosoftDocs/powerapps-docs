@@ -3,7 +3,7 @@ title: Link lists using a lookup column in Power Apps
 description: Learn about linking lists and using lookup columns in Microsoft Power Apps.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 3/1/2025

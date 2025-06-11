@@ -1,10 +1,10 @@
 ---
 title: FAQ for building apps and tables through conversation
 description: FAQ that discusses building apps through conversation and the key considerations for making use of this technology responsibly.
-ms.date: 9/24/2024
+ms.date: 5/28/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: franklanmsft
 ms.author: franklan
 ms.reviewer: mduelae

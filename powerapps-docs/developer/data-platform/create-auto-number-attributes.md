@@ -4,7 +4,7 @@ description: "Learn about creating autonumber column in the same way you create 
 keywords: "Autonumber columns"
 ms.date: 06/15/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

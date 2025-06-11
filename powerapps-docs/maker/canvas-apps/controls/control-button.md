@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 01/28/2021
+ms.date: 05/23/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -38,6 +38,8 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
+
+**ContentLanguage** -  The language of the control's content, if different from the control's container.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 

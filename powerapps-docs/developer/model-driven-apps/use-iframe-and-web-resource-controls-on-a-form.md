@@ -5,7 +5,7 @@ author: anushikhas96
 ms.author: anushisharma
 ms.date: 06/10/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

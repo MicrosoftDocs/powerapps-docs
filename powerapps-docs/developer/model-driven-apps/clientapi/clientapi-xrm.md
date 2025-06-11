@@ -5,7 +5,7 @@ author: sriharibs-msft
 ms.author: srihas
 ms.date: 05/05/2025
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: article
 applies_to:
   - "Dynamics 365 (online)"
 ms.subservice: mda-developer

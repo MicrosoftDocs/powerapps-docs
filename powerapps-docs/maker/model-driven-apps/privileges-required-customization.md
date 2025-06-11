@@ -4,7 +4,7 @@ description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
 ms.date: 04/14/2025
 ms.reviewer: "matp"
-ms.topic: "conceptual"
+ms.topic: article
 ms.subservice: mda-maker
 ms.author: "matp"
 author: "Mattp123"

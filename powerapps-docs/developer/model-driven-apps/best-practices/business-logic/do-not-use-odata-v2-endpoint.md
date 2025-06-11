@@ -74,7 +74,7 @@ The Organization Data Service supports both JSON and ATOM, an XML-based format u
 
 The Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
+The Web API allows you to set a max page size and will return up to 5,000 records. More information: [Page results](../../../data-platform/webapi/query/page-results.md)
 
 ### Legacy documentation
 

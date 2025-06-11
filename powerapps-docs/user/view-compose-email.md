@@ -4,7 +4,7 @@ description: How to view, compose and respond to email.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 05/10/2024
 ms.subservice: end-user
 ms.author: smurkute

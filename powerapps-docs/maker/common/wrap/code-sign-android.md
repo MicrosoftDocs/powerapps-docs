@@ -2,7 +2,7 @@
 title: Code sign for Android
 description: Learn how to code sign for Android for Power Apps wrap.
 author: komala2019
-ms.topic: article
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 03/12/2025
@@ -146,7 +146,7 @@ More information: [Android Studio command line tools: **apksigner**](https://dev
 
 ## Distribute the app
 
-You can host the package on a distribution service such as [App Center](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional). To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 
 ### See also

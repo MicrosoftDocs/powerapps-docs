@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 ms.date: 07/17/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: mda-maker
 search.audienceType: 
   - maker

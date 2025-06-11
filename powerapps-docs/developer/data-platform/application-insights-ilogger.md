@@ -5,7 +5,7 @@ ms.date: 03/10/2023
 author: MicroSri
 ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

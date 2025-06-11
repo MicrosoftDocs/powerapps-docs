@@ -81,6 +81,9 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [OwnerId](#BKMK_OwnerId)
+- [OwnerIdType](#BKMK_OwnerIdType)
+- [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [PrivilegeCheckerLogId](#BKMK_PrivilegeCheckerLogId)
 - [PrivilegeDepth](#BKMK_PrivilegeDepth)
 - [Request](#BKMK_Request)
@@ -284,6 +287,44 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Format|DateOnly|
 |ImeMode|Inactive|
 |SourceTypeMask|0|
+
+### <a name="BKMK_OwnerId"></a> OwnerId
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`ownerid`|
+|RequiredLevel|SystemRequired|
+|Type|Owner|
+|Targets|systemuser, team|
+
+### <a name="BKMK_OwnerIdType"></a> OwnerIdType
+
+|Property|Value|
+|---|---|
+|Description|**Owner Id Type**|
+|DisplayName|**Owner Id Type**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owneridtype`|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
+
+### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`owningbusinessunit`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|businessunit|
 
 ### <a name="BKMK_PrivilegeCheckerLogId"></a> PrivilegeCheckerLogId
 

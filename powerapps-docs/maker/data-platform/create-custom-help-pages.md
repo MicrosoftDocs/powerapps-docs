@@ -2,7 +2,7 @@
 title: "Create custom help pages for model-driven apps"
 description: "Create custom help pages with model-driven apps in Power Apps"
 ms.custom: ""
-ms.date: 04/17/2025
+ms.date: 06/02/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -56,8 +56,7 @@ To use the custom help panes feature, your environment needs the [custom help pa
 
 > [!IMPORTANT]
 >
-> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
-> - Some environments might require that you also set **Enable Learning Path** to **Yes**.
+> You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use help for customizable entities** is set to **No**.  
 
 ## Privileges required
 
@@ -70,10 +69,11 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 Each help pane is unique for these contexts:
 
-- Application 
 - Table
-- Form 
-- Language   
+- Form
+- Dashboard
+- Language
+- Application 
 
 ## Help pane navigation
 

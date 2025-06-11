@@ -6,7 +6,7 @@ ms.date: 09/27/2021
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
     - "powerapps"
 author: "matp"

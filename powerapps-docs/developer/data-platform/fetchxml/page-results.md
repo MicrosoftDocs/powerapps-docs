@@ -4,9 +4,9 @@ description: Learn how to use FetchXml to page results when you retrieve data fr
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
@@ -21,7 +21,7 @@ contributors:
 
 You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
 
-The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 for standard tables, 500 for elastic tables. If you don't set a page size, Dataverse will return either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send additional requests.
 
 > [!NOTE]
 >
@@ -110,7 +110,7 @@ After each request, the method checks the [EntityCollection.MoreRecords property
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
 /// <param name="fetchXml">The fetchXml Query string</param>
-/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <param name="pageSize">The page size to use. Default is 5,000</param>
 /// <returns>All the records that match the criteria</returns>
 static EntityCollection RetrieveAll(IOrganizationService service, string fetchXml, int pageSize = 5000)
 {
@@ -424,7 +424,7 @@ When using C# with [HttpClient](xref:System.Net.Http.HttpClient), the following 
 /// <param name="client">The authenticated HttpClient instance.</param>
 /// <param name="entitySetName">The EntitySetName for the table used in the fetchXml</param>
 /// <param name="fetchXml">The FetchXml query string</param>
-/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <param name="pageSize">The page size to use. Default is 5,000</param>
 /// <returns>All the records that match the criteria</returns>
 /// <exception cref="Exception"></exception>
 static async Task<List<JsonObject>> RetrieveAll(HttpClient client, 

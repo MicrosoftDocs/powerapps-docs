@@ -58,6 +58,12 @@ The following table lists selected properties for the Email Server Profile (Emai
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AadResourceId](#BKMK_AadResourceId)
+- [ACSEmailServiceName](#BKMK_ACSEmailServiceName)
+- [ACSEnabledForOutgoingEmail](#BKMK_ACSEnabledForOutgoingEmail)
+- [ACSEndpointUrl](#BKMK_ACSEndpointUrl)
+- [ACSManagedIdentityId](#BKMK_ACSManagedIdentityId)
+- [ACSResourceGroupName](#BKMK_ACSResourceGroupName)
+- [ACSSubscriptionId](#BKMK_ACSSubscriptionId)
 - [DefaultServerLocation](#BKMK_DefaultServerLocation)
 - [Description](#BKMK_Description)
 - [EmailServerProfileId](#BKMK_EmailServerProfileId)
@@ -131,6 +137,98 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1024|
+
+### <a name="BKMK_ACSEmailServiceName"></a> ACSEmailServiceName
+
+|Property|Value|
+|---|---|
+|Description|**The name of the email service resource associated with the Azure Communication Service.**|
+|DisplayName|**ACS Email Service Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsemailservicename`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_ACSEnabledForOutgoingEmail"></a> ACSEnabledForOutgoingEmail
+
+|Property|Value|
+|---|---|
+|Description|**Determines if ACS integration should be enabled for outgoing email synchronization.**|
+|DisplayName|**ACS Enabled for Outgoing Email**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsenabledforoutgoingemail`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`emailserverprofile_acsenabledforoutgoingemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSEndpointUrl"></a> ACSEndpointUrl
+
+|Property|Value|
+|---|---|
+|Description|**ACS Endpoint Url**|
+|DisplayName|**ACS Endpoint Url**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsendpointurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|300|
+
+### <a name="BKMK_ACSManagedIdentityId"></a> ACSManagedIdentityId
+
+|Property|Value|
+|---|---|
+|Description|**Unique identifier for managed identity associated with emailserverprofile for ACS integration.**|
+|DisplayName|**ACS Managed Identity**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsmanagedidentityid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|managedidentity|
+
+### <a name="BKMK_ACSResourceGroupName"></a> ACSResourceGroupName
+
+|Property|Value|
+|---|---|
+|Description|**The name of the resource group associated with the Email Communication Service. The name is case insensitive.**|
+|DisplayName|**ACS Resource Group Name**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsresourcegroupname`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
+
+### <a name="BKMK_ACSSubscriptionId"></a> ACSSubscriptionId
+
+|Property|Value|
+|---|---|
+|Description|**The ID of the target Azure subscription associated with the Email Communication Service.**|
+|DisplayName|**ACS SubscriptionId**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acssubscriptionid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 ### <a name="BKMK_DefaultServerLocation"></a> DefaultServerLocation
 
@@ -926,7 +1024,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|
 |---|---|
-|0|**Public (+GCC) (https://login.microsoftonline.com)**|
+|0|**Public (\+GCC) (https://login.microsoftonline.com)**|
 |1|**US Government (GCC High and DoD) (https://login.microsoftonline.us)**|
 |2|**China (21Vianet) (https://login.chinacloudapi.cn)**|
 |3|**Automatic (determined by Dynamics 365 cloud)**|
@@ -1461,6 +1559,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [lk_emailserverprofile_createdonbehalfby](#BKMK_lk_emailserverprofile_createdonbehalfby)
 - [lk_emailserverprofile_modifiedby](#BKMK_lk_emailserverprofile_modifiedby)
 - [lk_emailserverprofile_modifiedonbehalfby](#BKMK_lk_emailserverprofile_modifiedonbehalfby)
+- [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
 - [organization_emailserverprofile](#BKMK_organization_emailserverprofile)
 - [owner_emailserverprofile](#BKMK_owner_emailserverprofile)
@@ -1543,6 +1642,19 @@ One-To-Many Relationship: [systemuser lk_emailserverprofile_modifiedonbehalfby](
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_managedidentity_emailserverprofile_acsmanagedidentityid"></a> managedidentity_emailserverprofile_acsmanagedidentityid
+
+One-To-Many Relationship: [managedidentity managedidentity_emailserverprofile_acsmanagedidentityid](managedidentity.md#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`acsmanagedidentityid`|
+|ReferencingEntityNavigationPropertyName|`acsmanagedidentityid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_managedidentity_emailserverprofile_managedidentityid"></a> managedidentity_emailserverprofile_managedidentityid
 

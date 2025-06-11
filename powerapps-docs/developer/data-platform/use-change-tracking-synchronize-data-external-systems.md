@@ -3,7 +3,7 @@ title: "Use change tracking to synchronize data with external systems (Microsoft
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized."
 ms.date: 06/23/2023
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: paulliew
 ms.subservice: dataverse-developer
 ms.author: paulliew 
@@ -188,8 +188,8 @@ You should be aware of the following constraints when retrieving changes for a t
 - Only one table is tracked in retrieve changes. If `RetrieveEntityChanges` is executed with no version / or token, the server treats it as the system minimum version, returning all of the records as new. Deleted objects are not returned.
 - Changes are returned if the last token is within a default value of 7 days. This duration is controlled by the value of the [Organization table ExpireChangeTrackingInDays column](reference/entities/organization.md#BKMK_ExpireChangeTrackingInDays) and can be changed. If there are unprocessed changes older than the configured value, the system throws an exception.
 - If a client has a set of changes for a table, say version 1, a record is created and deleted before the next query for changes, they'll get the deleted item even if they didn't have the item to begin with.
-- Records are retrieved in the order determined by server side logic. Usually, the caller will get all new or updated records first (sorted by version number) followed by deleted records. If there are 3,000 records created or updated and 2,000 records deleted, Dataverse returns a collection of 5,000 records, which have the first 3,000 entries comprised of new or updated records and the last 2,000 entries for deleted records.
-- If the new or updated item collection is greater than 5000, the user can page through the collection.
+- Records are retrieved in the order determined by server side logic. Usually, the caller will get all new or updated records first (sorted by version number) followed by deleted records. If there are 3,000 records created or updated and 2,000 records deleted, Dataverse returns a collection of 5,000 records for standard tables, which have the first 3,000 entries comprised of new or updated records and the last 2,000 entries for deleted records.
+- If the new or updated item collection is greater than 5,000, the user can page through the collection.
 - The calling user must have organization level read access to the table. If the user has limited read access, the system throws a privilege check error.
 
 ### .NET SDK Sample code

@@ -6,7 +6,7 @@ author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
 ms.date: 02/25/2020
-ms.topic: conceptual
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

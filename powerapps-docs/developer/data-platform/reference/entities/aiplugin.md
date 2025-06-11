@@ -493,7 +493,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |---|---|
-|Description|**Swagger value that is upserted to generated plugin definition, used to provide override for properties not exposed as table/columns.Example:{  "info": {      "x-ms-keywords": [ "sales", "support" ]   }}Adds x-ms-keywords in info property.**|
+|Description|**Swagger value that is upserted to generated plugin definition, used to provide override for properties not exposed as table/columns.Example:\{  "info": \{      "x-ms-keywords": \[ "sales", "support" \]   \}\}Adds x-ms-keywords in info property.**|
 |DisplayName|**UpsertSwagger**|
 |IsValidForForm|True|
 |IsValidForRead|True|

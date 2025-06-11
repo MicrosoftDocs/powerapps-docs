@@ -125,6 +125,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [Sender](#BKMK_Sender)
+- [SensitivityLabelId](#BKMK_SensitivityLabelId)
+- [SensitivityLabelInfo](#BKMK_SensitivityLabelInfo)
 - [SLAId](#BKMK_SLAId)
 - [SortDate](#BKMK_SortDate)
 - [StageId](#BKMK_StageId)
@@ -1000,6 +1002,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|250|
 
+### <a name="BKMK_SensitivityLabelId"></a> SensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**The sensitivity label assigned to the Email.**|
+|DisplayName|**Sensitivity Label**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|sensitivitylabel|
+
+### <a name="BKMK_SensitivityLabelInfo"></a> SensitivityLabelInfo
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Sensitivity Label Info**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`sensitivitylabelinfo`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
+
 ### <a name="BKMK_SLAId"></a> SLAId
 
 |Property|Value|
@@ -1294,6 +1326,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [ParentSensitivityLabelId](#BKMK_ParentSensitivityLabelId)
 - [PostponeEmailProcessingUntil](#BKMK_PostponeEmailProcessingUntil)
 - [ReplyCount](#BKMK_ReplyCount)
 - [SafeDescription](#BKMK_SafeDescription)
@@ -1752,6 +1785,18 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Type|Lookup|
 |Targets|systemuser|
 
+### <a name="BKMK_ParentSensitivityLabelId"></a> ParentSensitivityLabelId
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Parent Sensitivity Label Id**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`parentsensitivitylabelid`|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 ### <a name="BKMK_PostponeEmailProcessingUntil"></a> PostponeEmailProcessingUntil
 
 |Property|Value|
@@ -1933,6 +1978,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [owner_emails](#BKMK_owner_emails)
 - [processstage_emails](#BKMK_processstage_emails)
 - [Queue_Email_EmailSender](#BKMK_Queue_Email_EmailSender)
+- [sensitivitylabel_email_SensitivityLabelId](#BKMK_sensitivitylabel_email_SensitivityLabelId)
 - [sla_email](#BKMK_sla_email)
 - [SystemUser_Email_EmailSender](#BKMK_SystemUser_Email_EmailSender)
 - [team_email](#BKMK_team_email)
@@ -2367,6 +2413,19 @@ One-To-Many Relationship: [queue Queue_Email_EmailSender](queue.md#BKMK_Queue_Em
 |ReferencingEntityNavigationPropertyName|`emailsender_queue`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sensitivitylabel_email_SensitivityLabelId"></a> sensitivitylabel_email_SensitivityLabelId
+
+One-To-Many Relationship: [sensitivitylabel sensitivitylabel_email_SensitivityLabelId](sensitivitylabel.md#BKMK_sensitivitylabel_email_SensitivityLabelId)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sensitivitylabel`|
+|ReferencedAttribute|`sensitivitylabelid`|
+|ReferencingAttribute|`sensitivitylabelid`|
+|ReferencingEntityNavigationPropertyName|`SensitivityLabelId_Email`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_sla_email"></a> sla_email
 

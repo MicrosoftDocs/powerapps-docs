@@ -786,6 +786,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [CopilotGlossaryTerm_DVTableSearch](#BKMK_CopilotGlossaryTerm_DVTableSearch)
 - [dvtablesearch_AsyncOperations](#BKMK_dvtablesearch_AsyncOperations)
 - [dvtablesearch_BulkDeleteFailures](#BKMK_dvtablesearch_BulkDeleteFailures)
+- [DVTableSearch_DVFileSearch](#BKMK_DVTableSearch_DVFileSearch)
 - [DVTableSearch_DVTableSearch_DVTableSearch](#BKMK_DVTableSearch_DVTableSearch_DVTableSearch)
 - [dvtablesearch_MailboxTrackingFolders](#BKMK_dvtablesearch_MailboxTrackingFolders)
 - [dvtablesearch_PrincipalObjectAttributeAccesses](#BKMK_dvtablesearch_PrincipalObjectAttributeAccesses)
@@ -851,6 +852,18 @@ Many-To-One Relationship: [bulkdeletefailure dvtablesearch_BulkDeleteFailures](b
 |ReferencedEntityNavigationPropertyName|`dvtablesearch_BulkDeleteFailures`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_DVTableSearch_DVFileSearch"></a> DVTableSearch_DVFileSearch
+
+Many-To-One Relationship: [dvfilesearch DVTableSearch_DVFileSearch](dvfilesearch.md#BKMK_DVTableSearch_DVFileSearch)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`dvfilesearch`|
+|ReferencingAttribute|`dvtablesearch`|
+|ReferencedEntityNavigationPropertyName|`DVTableSearch_DVFileSearch`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_DVTableSearch_DVTableSearch_DVTableSearch"></a> DVTableSearch_DVTableSearch_DVTableSearch
 

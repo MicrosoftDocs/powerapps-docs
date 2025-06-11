@@ -2,7 +2,7 @@
 title: Overview of creating app from Figma
 description: An overview about creating app from Figma feature in Power Apps.
 author: mduelae
-ms.topic: article
+ms.topic: concept-article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 05/24/2022

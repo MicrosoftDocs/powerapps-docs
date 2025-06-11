@@ -1,10 +1,10 @@
 ---
 title: FAQ for edit your app with Copilot 
 description: FAQ that discusses continuing to edit your app with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 10/10/2024
+ms.date: 5/28/2025
 ms.custom: 
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: norliu 
 ms.author: norliu
 ms.reviewer: mduelae
