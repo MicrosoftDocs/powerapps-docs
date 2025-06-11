@@ -165,16 +165,6 @@ sections:
           Yes. See [Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/#pricing).
 
       - question: |
-          Can you have cross tenant azure blob storage location?
-        answer: |
-          No.
-
-      - question: |
-          Which subscription ID should I choose when creating a new one, given multiple options?
-        answer: |
-          Select the default subscription.
-
-      - question: |
           What should I do if I don't have access to the resource group while creating the key vault?
         answer: |
           Contact your Azure tenant admin to create a key vault for you or request permission.
