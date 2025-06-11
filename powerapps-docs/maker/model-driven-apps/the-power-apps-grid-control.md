@@ -26,7 +26,7 @@ The Power Apps grid control represents the next evolution of the classic Power A
 - **Aggregation**: Users can surface meaningful insights from their data by enabling aggregation on one or more numeric columns in a grid. For each column, users can choose to see the total, minimum value, maximum value, or average of values from that column. If grouping is applied, this aggregate value is also displayed for each group.
 - **Customizable**: Makers have the ability to modify various experiences inside the grid component. 
 
-:::image type="content" source="media/power-apps-grid-control-editing.png" alt-text="Editing data with the Power Apps grid control" lightbox="media/power-apps-grid-control-editing.png":::
+:::image type="content" source="media/power-apps-grid-control-editing.png" alt-text="The Power Apps grid control with inline editing enabled." lightbox="media/power-apps-grid-control-editing.png":::
 
 ## Add the Power Apps grid control using form designer
 
