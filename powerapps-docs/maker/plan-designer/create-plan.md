@@ -165,8 +165,7 @@ Use the export to PDF feature to share plans with your stakeholders and present 
 
 To export a plan to PDF, select **Export this plan as a PDF** in the top right.
 
-:::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the Export a plan to PDF icon in the top right corner.":::
-
+:::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the Export to PDF icon on the top right":::
 
 ## View and edit plans
 
