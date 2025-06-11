@@ -4,7 +4,7 @@ description: Use Plan designer to create business solutions with AI-powered expe
 author: mduelae
 contributors:
 ms.topic: how-to
-ms.date: 5/19/2025
+ms.date: 6/13/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -155,13 +155,17 @@ To create objects such as apps, flows, sites, and agents, you need to save your 
 
     The plan is stored in a solution. This action enables the **Objects** view in Plan designer, so you can switch between the plan and the solution view without leaving Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
+> [!NOTE]
+> The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
+
+
 1. You’re now ready to [build your solutions](build-solution.md).
 
     :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot showing the 'Ready to build your solution' message.":::
 
 ## Export your plan to a PDF
 
-Use the export to PDF feature to share plans with your stakeholders and present ideas and requirements. It includes all details from the document side of the plan except for diagrams. This feature helps you share user requirements, data models, and proposed data tables with leadership who might not have access Power Apps.
+The export to PDF feature allows you to share plans with your stakeholders. It includes all the content from the document side of the plan, but not the diagram side. This feature helps you share user requirements, data models, and proposed data tables with leadership who might not have access to Power Apps.
 
 To export a plan to PDF, select **Export this plan as a PDF** in the top right.
 
