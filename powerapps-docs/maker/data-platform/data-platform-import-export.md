@@ -51,6 +51,20 @@ Copy data from your Excel or CSV file into the template that you created in the 
    :::image type="content" source="media/data-platform-import-export/import-mapping-successful.png" alt-text="Import mapping successful":::
   After the import finishes successfully, you'll see the total number of inserts and updates.  
 
+#### Preview: Import from Excel
+
+> [!NOTE]
+>
+> This feature is currently in public preview and may change before general availability.
+> The new import experience allows users to import data directly from Excel into existing Dataverse tables using a unified UI. This supports both new record creation and updates to existing records using alternate keys.
+
+Steps to use the preview feature:
+1. Enable the feature in PPAC.
+2. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
+3. Upload your Excel file.
+4. Map columns to table fields. Primary key is required for updates.
+5. Review the summary and click Import.
+
 ### Option 2: Import by bringing your own source file
 
 If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file. Follow the steps in [Import the file](#import-the-file).
