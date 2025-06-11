@@ -129,38 +129,33 @@ Learn more about:
 
 ### Change organization settings
 
-Change the column values in the organization table to change how auditing works for the environment. You must have the System Administrator or System Customizer role to change these settings.
+Change the column values in the organization table to change how auditing works for the environment. You must have the System Administrator or System Customizer role to change these settings. [Learn more about reading and updating environment settings](../organization-table.md)
 
-You can use Web API or Dataverse SDK for .NET to change your organization settings:
+#### Change AuditSettings
 
-- [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
-- [Update and delete table rows using the SDK for .NET](../org-service/entity-operations-update-delete.md)
-
-### Change AuditSettings
-
-[Organization.AuditSettings](../reference/entities/organization.md#BKMK_AuditSettings) contains a json string to store settings to enable different capabilities.
-You can enable some capabilities by updating the `auditsettings` column of the organization record. The following table specifies what audit settings exist, what they're used for, and whether they can be changed.
+[Organization.AuditSettings](../reference/entities/organization.md#BKMK_AuditSettings) contains a json string to store settings to enable different capabilities. You can enable some capabilities by updating the `auditsettings` column of the organization record. The following table specifies what audit settings exist, what they're used for, and whether they can be changed.
 
 | Setting  | Description  | Updatable  |
 |-----------|-----------|-----------|
-| `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only option value. | Yes  |
+| `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only the option value. | Yes  |
 | `IsSqlAuditWriteDisabled`  | If NoSql audits are enabled, stop writing data to sql audit table  | No, throws an error.  |
 | `ApplyRetentionToExistingLogs`  | Apply new retention policy to existing audit records  | No, is ignored. |
 
 Use the following examples to set your organization settings. You'll need the `organizationid` value. See [Retrieve organization settings](#retrieve-organization-settings) for how to obtain it.
 
-#### [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 **Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.2/organizations([Organization ID]) HTTP/1.1
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-Match: *
 
-Accept: application/json
-Content-Type: application/json
-Body:
 {
-        "auditsettings": "{\"StoreLabelNameforPicklistAudits\":true}"
+   "auditsettings": "{\"StoreLabelNameforPicklistAudits\":true}"
 }
 ```
 
@@ -174,7 +169,7 @@ Learn more about:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 
-#### [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
