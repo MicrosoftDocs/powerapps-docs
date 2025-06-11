@@ -4,7 +4,7 @@ description: Learn how to use Plan designer, an AI-powered tool in Power Platfor
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 05/23/2025
+ms.date: 06/11/2025
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
@@ -32,9 +32,7 @@ If your environment doesn't meet the prerequisites and you don't have access to 
 
 ## Availability
 
-Plan designer is generally available and is still rolling out, so it might not be available in your region yet. If you don't have access to the feature, you can use it in [preview](../powerapps-preview-program.md).
-
-Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plan designer is generally available. Check if this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
 
 ### Turn on preview features for Plan designer
 

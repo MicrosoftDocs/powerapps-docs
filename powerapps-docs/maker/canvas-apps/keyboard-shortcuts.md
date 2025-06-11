@@ -51,7 +51,7 @@ contributors:
 | Ctrl+=, Ctrl+Shift+=, or Ctrl+Mouse wheel up | Zoom in |
 | Ctrl+-, Ctrl+Shift+-, or Ctrl+Mouse wheel down | Zoom out |
 | Ctrl+0 | Fit canvas to page |
-| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select a suggestion in a formula without adding a new line (Enhanced formula bar is turned off) |
+| <kbd>Enter</kbd> or <kbd>Shift</kbd>+<kbd>Enter</kbd> | Select a suggestion in a formula without adding a new line (Enhanced formula bar shortcuts is turned off) |
 | <kbd>Enter</kbd> | Select a suggestion in a formula and create a new line (Enhanced formula bar shortcuts must be turned on)|
 | <kbd>Shift</kbd>+<kbd>Enter</kbd> | Create a new line in a formula without keeping the suggestion (Enhanced formula bar shortcuts must be turned on)| |
 
