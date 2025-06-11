@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Copilot (Client API reference) in model-driven apps"
+title: "Xrm.Copilot (Client API reference) in model-driven apps (preview)"
 description: Provides methods to execute registered Microsoft Copilot Studio Topics..
 author: adrianorth
 ms.author: aorth
@@ -14,7 +14,9 @@ contributors:
   - JimDaly
 ---
 
-# Xrm.Copilot (Client API reference)
+# Xrm.Copilot (Client API reference) (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE [xrm-copilot-description](Xrm-Copilot/includes/xrm-copilot-description.md)]
 

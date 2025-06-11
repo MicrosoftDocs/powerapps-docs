@@ -1,5 +1,5 @@
 ---
-title: "Bring intelligence into your components using Agent APIs"
+title: "Bring intelligence into your components using Agent APIs (preview)"
 description: "Learn about how you can integrate Copilot studio topics into your custom components using Agent APIs"
 author: adrianorth
 ms.author: aorth
@@ -13,7 +13,9 @@ contributors:
   - JimDaly
 ---
 
-# Bring intelligence into your component using Agent Xrm APIs
+# Bring intelligence into your component using Agent Xrm APIs (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow components to interact with Topics created in Microsoft Copilot Studio. These APIs are available in two forms:
 

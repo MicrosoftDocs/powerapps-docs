@@ -1,5 +1,5 @@
 ---
-title: Copilot (Power Apps component framework API reference) | Microsoft Docs
+title: Copilot (Power Apps component framework API reference) (preview)
 description: Provides methods to execute registered Microsoft Copilot Studio Topics.
 author: aorth
 ms.author: aorth
@@ -11,7 +11,9 @@ contributors:
  - JimDaly
 ---
 
-# Copilot (Power Apps component framework API reference)
+# Copilot (Power Apps component framework API reference) (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE [copilot-description](includes/copilot-description.md)]
 

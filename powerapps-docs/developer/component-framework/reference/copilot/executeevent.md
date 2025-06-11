@@ -1,5 +1,5 @@
 ---
-title: executeEvent (Power Apps component framework API reference) | Microsoft Docs
+title: executeEvent (Power Apps component framework API reference) (preview)
 description: Executes a Microsoft Copilot Studio topic based on the registered Event Name. 
 author: adrianorth
 ms.author: aorth
@@ -11,7 +11,9 @@ contributors:
  - JimDaly
 ---
 
-# executeEvent
+# executeEvent (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE[./includes/executeevent-description.md](./includes/executeevent-description.md)]
 

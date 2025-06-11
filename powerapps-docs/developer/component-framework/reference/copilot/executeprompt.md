@@ -1,5 +1,5 @@
 ---
-title: executePrompt (Power Apps component framework API reference) | Microsoft Docs
+title: executePrompt (Power Apps component framework API reference) (preview)
 description: Executes a Microsoft Copilot Studio topic based on the trigger queries registered in the topic.
 author: adrianorth
 ms.author: aorth
@@ -11,7 +11,9 @@ contributors:
  - JimDaly
 ---
 
-# executePrompt
+# executePrompt (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE[./includes/executeprompt-description.md](./includes/executeprompt-description.md)]
 

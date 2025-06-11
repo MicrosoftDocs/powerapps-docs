@@ -1,5 +1,5 @@
 ---
-title: "executePrompt (Client API reference) in model-driven apps"
+title: "executePrompt (Client API reference) in model-driven apps (preview)"
 description: Includes description and supported parameters for the executePrompt method.
 author: adrianorth
 ms.author: aorth
@@ -13,7 +13,9 @@ contributors:
   - JimDaly
 ---
 
-# executePrompt (Client API reference)
+# executePrompt (Client API reference) (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE[./includes/executeprompt-description.md](./includes/executeprompt-description.md)]
 

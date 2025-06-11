@@ -1,5 +1,5 @@
 ---
-title: "MCSResponse Interface (Power Apps component framework API reference)"
+title: "MCSResponse Interface (Power Apps component framework API reference) (preview)"
 description: The interface that describes the properties of contains data returned by the context.executeEvent and context.executePrompt methods.
 author: adrianorth
 ms.author: aorth
@@ -13,7 +13,9 @@ contributors:
   - JimDaly
 ---
 
-# MCSResponse Interface (Power Apps component framework API reference)
+# MCSResponse Interface (Power Apps component framework API reference) (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 An interface that describes the data returned by the [executeEvent](executeevent.md) and [executePrompt](executeprompt.md) methods.
 

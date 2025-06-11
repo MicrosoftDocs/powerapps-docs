@@ -1,5 +1,5 @@
 ---
-title: "executeEvent (Client API reference) in model-driven apps"
+title: "executeEvent (Client API reference) in model-driven apps (preview)"
 description: Includes description and supported parameters for the executeEvent method.
 author: adrianorth
 ms.author: aorth
@@ -13,7 +13,9 @@ contributors:
   - JimDaly
 ---
 
-# executeEvent (Client API reference)
+# executeEvent (Client API reference)  (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 [!INCLUDE[./includes/executeevent-description.md](./includes/executeevent-description.md)]
 

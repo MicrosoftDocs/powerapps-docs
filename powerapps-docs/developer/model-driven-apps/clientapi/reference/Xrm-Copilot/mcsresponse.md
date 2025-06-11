@@ -1,5 +1,5 @@
 ---
-title: MCSResponse Interface (Client API reference) | Microsoft Docs
+title: MCSResponse Interface (Client API reference) (preview)
 description: The interface that describes the properties of contains data returned by the Xrm.Copilot.executeEvent and Xrm.Copilot.executePrompt methods.
 author: adrianorth
 ms.author: aorth
@@ -11,7 +11,9 @@ contributors:
   - JimDaly
 ---
 
-# MCSResponse Interface (Client API reference)
+# MCSResponse Interface (Client API reference) (preview)
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 An interface that describes the data returned by the [executeEvent](executeevent.md) and [executePrompt](executeprompt.md) methods.
 
