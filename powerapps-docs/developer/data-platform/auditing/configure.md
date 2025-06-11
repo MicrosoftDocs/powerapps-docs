@@ -87,13 +87,13 @@ Learn more about:
 /// <summary>
 /// Shows Auditing Configuration properties
 /// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-static void ShowAuditingConfig(IOrganizationService svc)
+/// <param name="service">The IOrganizationService instance to use.</param>
+static void ShowAuditingConfig(IOrganizationService service)
 {
     WhoAmIResponse whoAmIResponse = 
-        (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
+        (WhoAmIResponse)service.Execute(new WhoAmIRequest());
 
-    Entity organization = svc.Retrieve(
+    Entity organization = service.Retrieve(
         entityName: "organization",
         id: whoAmIResponse.OrganizationId,
         columnSet: new ColumnSet(
@@ -184,7 +184,7 @@ Learn more about:
 static void SetAuditSettings(IOrganizationService service)
 {
     WhoAmIResponse whoAmIResponse = 
-        (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
+        (WhoAmIResponse)service.Execute(new WhoAmIRequest());
 
     var organization = new Entity("organization", whoAmIResponse.OrganizationId);
     organization["auditsettings"] = "{\"StoreLabelNameforPicklistAudits\":true}";
@@ -283,8 +283,8 @@ Learn more about:
 /// Lists the tables that can be enabled for auditing and 
 /// the tables that cannot be enabled for auditing.
 /// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-static void ShowTableAuditConfigurations(IOrganizationService svc)
+/// <param name="service">The IOrganizationService instance to use.</param>
+static void ShowTableAuditConfigurations(IOrganizationService service)
 {
     //Define properties to return
     MetadataPropertiesExpression EntityProperties =
@@ -315,7 +315,7 @@ static void ShowTableAuditConfigurations(IOrganizationService svc)
         };
 
     RetrieveMetadataChangesResponse response =
-        (RetrieveMetadataChangesResponse)svc.Execute(request);
+        (RetrieveMetadataChangesResponse)service.Execute(request);
 
     Console.WriteLine("These tables can be enabled for auditing:");
     response.EntityMetadata.ToList().ForEach(x =>
@@ -393,10 +393,10 @@ Learn more about: [Query table definitions using the Web API](../webapi/query-me
 /// Lists the columns of a table that can be enabled for auditing and 
 /// the columns that cannot be enabled for auditing.
 /// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
+/// <param name="service">The IOrganizationService instance to use.</param>
 /// <param name="tableLogicalName">The logical name of the table.</param>
 static void ShowColumnAuditConfigurations(
-IOrganizationService svc,
+IOrganizationService service,
 string tableLogicalName)
 {
 
@@ -447,7 +447,7 @@ RetrieveMetadataChangesRequest request =
     };
 
 RetrieveMetadataChangesResponse response =
-    (RetrieveMetadataChangesResponse)svc.Execute(request);
+    (RetrieveMetadataChangesResponse)service.Execute(request);
 
 response.EntityMetadata.ToList().ForEach(x =>
 {
@@ -540,7 +540,7 @@ PublishXmlRequest request = new PublishXmlRequest()
                         </entities>
                     </importexportxml>"
 };
-svc.Execute(request);
+service.Execute(request);
 ```
 
 Learn more about:
