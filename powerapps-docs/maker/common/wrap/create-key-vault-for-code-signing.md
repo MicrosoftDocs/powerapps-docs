@@ -33,13 +33,13 @@ This article explains how to use an existing Azure Key Vault or create a new one
 > [!IMPORTANT]
 > Before configuring the Key Vault URI, you need to create an Azure Key Vault. Follow the steps in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
-1. **Create a service principal for Wrap Key Vault Access App**
+1. **Create a service principal for Your App**
 
    Sign in to your tenant as an admin and run the following PowerShell commands:
 
    ```
    Connect-AzureAD -TenantId <your tenant ID>
-   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   New-AzureADServicePrincipal -AppId <AppId> -DisplayName <YourAppDisplayName>
    ```
 
    > [!NOTE]
