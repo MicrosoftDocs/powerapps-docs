@@ -1,7 +1,7 @@
 ---
 title: Configure auditing
 description: Learn how to programmatically configure auditing settings for the organization, tables, and columns in Microsoft Dataverse.
-ms.date: 06/02/2023
+ms.date: 06/10/2025
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -21,7 +21,7 @@ Microsoft Dataverse auditing uses settings in the [Organization table](../refere
 
 ## Configure organization settings
 
-Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column is the primary key. Query the row directly to get the key value, or execute the `WhoAmI` message and take the value of the `WhoAmIResponse.OrganizationId` property.
+Five properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column is the primary key. Query the row directly to get the key value, or execute the `WhoAmI` message and take the value of the `WhoAmIResponse.OrganizationId` property.
 
 The following table describes the organization table columns that control auditing behavior.
 
@@ -31,7 +31,7 @@ The following table describes the organization table columns that control auditi
 |`AuditRetentionPeriodV2`<br/>`auditretentionperiodv2`<br/>**Audit Retention Period Settings**|Integer|The number of days to retain audit log records<br/>The default value is 30. Valid values are between 1 and 365,000 days (~1,000 years). If the value is set to -1, the records are retained forever.<br/>[Administrator's guide: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
 |`IsUserAccessAuditEnabled`<br/>`isuseraccessauditenabled`<br/>**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled<br/>Auditing for the environment must be enabled for user access logging to be enabled.|
 |`UserAccessAuditingInterval`<br/>`useraccessauditinginterval`<br/>**User Authentication Auditing Interval**|Integer|How often user access is logged, in hours<br/>The default value is 4.|
-|`AuditSettings`<br/>`auditsettings`<br/>**Audit Settings**|String|Json format string, holds audit feature related settings|
+|`AuditSettings`<br/>`auditsettings`<br/>**Audit Settings**|String|Json format string. Contains audit feature related settings.|
 
 ### Retrieve organization settings
 
@@ -43,6 +43,7 @@ Use the following queries to retrieve your organization settings.
 
 ```http
 GET [Organization URI]/api/data/v9.2/organizations?$select=
+auditsettings,
 isauditenabled,
 auditretentionperiodv2,
 isuseraccessauditenabled,
@@ -60,10 +61,11 @@ If-None-Match: null
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(auditsettings,isauditenabled,auditretentionperiodv2,isuseraccessauditenabled,useraccessauditinginterval)",
     "value": [
         {
             "@odata.etag": "W/\"67404512\"",
+            "auditsettings": "{\"IsSqlAuditWriteDisabled\":true}",
             "isauditenabled": true,
             "auditretentionperiodv2": 30,
             "isuseraccessauditenabled": true,
@@ -95,6 +97,7 @@ static void ShowAuditingConfig(IOrganizationService svc)
         entityName: "organization",
         id: whoAmIResponse.OrganizationId,
         columnSet: new ColumnSet(
+        "auditsettings",
         "isauditenabled",
         "auditretentionperiodv2",
         "isuseraccessauditenabled",
@@ -102,6 +105,8 @@ static void ShowAuditingConfig(IOrganizationService svc)
         )
     );
 
+    Console.WriteLine($"auditsettings: " +
+        $"{organization["auditsettings"]}");
     Console.WriteLine($"isauditenabled: " +
         $"{organization["isauditenabled"]}");
     Console.WriteLine($"auditretentionperiodv2: " +
@@ -133,16 +138,16 @@ You can use Web API or Dataverse SDK for .NET to change your organization settin
 
 ### Change AuditSettings
 
-Organization entity has attribute 'auditsettings', which uses a json string format to store the settings specified below. These settings are used to enable different functionalities.
-Some audit settings are self-serve and can be enabled by doing an update on the organization record. The table below specifies what audit settings exist and what they're used for, as well as if they can be enabled by organization user.
+[Organization.AuditSettings](../reference/entities/organization.md#BKMK_AuditSettings) contains a json string to store settings to enable different capabilities.
+You can enable some capabilities by updating the `auditsettings` column of the organization record. The following table specifies what audit settings exist, what they're used for, and whether they can be changed.
 
-| setting  | Description  | Self-serve  |
+| Setting  | Description  | Updatable  |
 |-----------|-----------|-----------|
-| StoreLabelNameforPicklistAudits  | For picklist type audits, audit both option value and option name, as opposed to auditing option value only | Yes  |
-| IsSqlAuditWriteDisabled  | If NoSql audits are enabled, stop writing data to sql audit table  | No, will fail  |
-| ApplyRetentionToExistingLogs  | Apply new retention policy to existing audit records  | No, will not be applied  |
+| `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only option value. | Yes  |
+| `IsSqlAuditWriteDisabled`  | If NoSql audits are enabled, stop writing data to sql audit table  | No, throws an error.  |
+| `ApplyRetentionToExistingLogs`  | Apply new retention policy to existing audit records  | No, is ignored. |
 
-Use the following queries to set your organization settings, you will need organization id, see "Retrieve organization settings" section for how to obtain it.
+Use the following examples to set your organization settings. You'll need the `organizationid` value. See [Retrieve organization settings](#retrieve-organization-settings) for how to obtain it.
 
 #### [Web API](#tab/webapi)
 
@@ -164,6 +169,7 @@ Body:
 ```http
 HTTP/1.1 204 No content
 ```
+
 Learn more about:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
@@ -174,15 +180,15 @@ Learn more about:
 /// <summary>
 /// Sets audit settings
 /// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-static void SetAuditSettings(IOrganizationService svc)
+/// <param name="service">The IOrganizationService instance to use.</param>
+static void SetAuditSettings(IOrganizationService service)
 {
     WhoAmIResponse whoAmIResponse = 
         (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
 
     var organization = new Entity("organization", whoAmIResponse.OrganizationId);
     organization["auditsettings"] = "{\"StoreLabelNameforPicklistAudits\":true}";
-    svc.Update(organization);
+    service.Update(organization);
 }
 ```
 
