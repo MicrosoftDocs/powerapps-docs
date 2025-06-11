@@ -165,9 +165,9 @@ To create objects such as apps, flows, sites, and agents, you need to save your 
 
 ## Export your plan to a PDF
 
-The export to PDF feature allows you to share plans with your stakeholders. It includes all the content from the document side of the plan, but not the diagram side. This feature helps you share user requirements, data models, and proposed data tables with leadership who might not have access to Power Apps.
+The export to PDF feature lets you share plans with stakeholders. It includes all content from the document side of the plan, but not the diagram side. Use this feature to share user requirements, data models, and proposed data tables with leaders who don't have access to Power Apps.
 
-To export a plan to PDF, select **Export this plan as a PDF** in the top right.
+To export a plan to PDF, select **Export this plan as a PDF** in the top right corner.
 
 :::image type="content" source="media/create-a-plan/export-plan-to-pdf.png" alt-text="Screenshot of the Export to PDF icon on the top right":::
 
