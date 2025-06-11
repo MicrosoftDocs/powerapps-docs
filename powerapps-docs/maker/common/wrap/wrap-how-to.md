@@ -24,6 +24,8 @@ When you update and republish your app, the wrapped app is automatically updated
 
 ## Steps to create a custom-branded native app using the Wrap wizard
 
+> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
+
 ### 1. Sign in and start a wrap project
 
 1. Go to the [Power Apps maker portal](https://make.powerapps.com).
@@ -178,7 +180,6 @@ On the **Wrap up** screen, review your app details and select **Build**. After a
 
 Test your app and distribute it as needed. If you encounter issues, see the [troubleshooting page](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
-> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
 
 ---
 
@@ -222,12 +223,12 @@ Required API permissions:
 > - Missing *Azure API Connections* permission: 
 >     ```powershell
 >     Connect-MgGraph -TenantId <your tenant ID>
->     New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+>     New-MgServicePrincipal -AppId <AppId> -DisplayName "Azure API Connections"
 >     ```
 > - Missing *PowerApps Service* permission:
 >     ```powershell
 >     Connect-MgGraph -TenantId <your tenant ID>
->     New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+>     New-MgServicePrincipal -AppId <AppId> -DisplayName "PowerApps Service"
 >     ```
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
