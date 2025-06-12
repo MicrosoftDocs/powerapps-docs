@@ -21,47 +21,79 @@ This article explains how to manually code sign your Android (APK) app for Power
 > [!IMPORTANT]
 > If you want to sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
-## Prepare your PC
+---
 
-Before you begin, make sure you have the following installed and set up:
+## Before you begin
+
+### Required software
+
+Before you begin, install and set up the following:
 
 - [Android Studio](https://developer.android.com/studio)
 - [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
-- [apksigner tool](https://developer.android.com/studio/command-line/apksigner)
+- [apksigner tool](https://developer.android.com/studio/command-line/apksigner) (included with Android Studio)
 
-## Prerequisites
+### Prerequisites
 
+You need:
 - Application name for creating the hash key
 - Latest APK file for signing
 
-## Generate keys
+> [!NOTE]
+> Use `.jks` extension for manual signing and `.pfx` extension for automatic signing.
+
+---
+
+## Generate key and signature hash
 
 > [!NOTE]
-> Skip to [sign the APK package](#manual-sign-the-apk-package) if you have already generated keys and the signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
+> Skip to [Manual signing](#manual-signing-of-apk-package) if you have already generated keys and the signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
 
-Use **keytool.exe** (installed with Android Studio, usually at `Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe`) to create a certificate for signing the application package.
+### Set up environment variables
 
-If you don't have environment variables set, follow these steps:
+If you don't have environment variables set:
 
 1. Download and install Android Studio and OpenSSL.
-2. Add keytool and openssl to your environment variables:  
+2. Add keytool and openssl to your PATH environment variable:  
    - Add `C:\Program Files\Android\Android Studio\jbr\bin` to your PATH.  
-   - Add the path of openssl.exe (e.g., `C:\Program Files\OpenSSL-Win64\bin`) to your PATH.
+   - Add the path of openssl.exe (for example, `C:\Program Files\OpenSSL-Win64\bin`) to your PATH.
 
-> [!NOTE] For manual signing process use .jks whereas for automatic signing process use .pfx extension
+### Generate keystore and key
 
-4. Run this command to generate a key:  
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
-4. Run this command to generate the signature hash:  
-   `keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64`
+Run this command to generate a key:
+
+```
+keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
+```
+
+When prompted:
+1. Enter a password for your keystore.
+2. Provide your name, organization, location, and other required details.
+3. Confirm the information when asked.
+
+:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the above example." lightbox="media/code-sign-android/codeSignIn1.png":::
+
+### Generate signature hash
+
+Run this command to generate the signature hash:
+
+```
+keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
+```
+
+When prompted, enter the keystore password you created earlier.
 
 :::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown above." lightbox="media/code-sign-android/codeSignIn3.png":::
 
-If you have environment variables set, you can run:
+### Alternative command format
 
-`keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000`
+If you have environment variables set, you can use the generic format:
 
-**Parameters:**
+```
+keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000
+```
+
+**Parameters explained:**
 
 - **genkey**: Command to generate a key
 - **alias**: Alias for the keystore entry
@@ -71,23 +103,28 @@ If you have environment variables set, you can run:
 - **validity**: Validity of the key in days
 
 **Examples:**
-- For Key Vault, use a `.pfx` extension:  
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
+- For Key Vault (automatic signing), use a `.pfx` extension:  
+  ```
+  keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
+  ```
 - For manual signing, use a `.jks` extension:  
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.jks -keysize 2048 -validity 10000`
+  ```
+  keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.jks -keysize 2048 -validity 10000
+  ```
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the above example." lightbox="media/code-sign-android/codeSignIn1.png":::
+---
 
-## Generate signature hash
+## Export certificate and generate signature hash
 
-> [!NOTE]
-> Skip to [sign the APK package](#manual-sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
+After generating the key, export the keystore certificate using the **exportcert** command:
 
-After generating the key, use the **exportcert** command in **keytool** to export the keystore certificate:
+```
+keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
+```
 
-`keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64`
+When prompted, enter the keystore password.
 
-**Parameters:**
+**Parameters explained:**
 
 - **exportcert**: Reads the certificate from the keystore
 - **alias**: Alias used when generating keys
@@ -96,58 +133,81 @@ After generating the key, use the **exportcert** command in **keytool** to expor
 
 Add the generated signature hash in the **Redirect URI** when [registering the app](wrap-how-to.md#step-3-register-app).
 
-### Convert SHA1 hex to Base64-encoded signature hash manually
+### Convert SHA1 hex to Base64-encoded signature hash
 
-If you see the error "The signature hash must be base64-encoded SHA1" in the Azure portal, follow these steps:
+If you see the error "The signature hash must be base64-encoded SHA1" in the Azure portal:
 
 1. Run:  
-   `keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE`
-2. Copy the **SHA1** value from the **Certificate fingerprints** section.  
+   ```
+   keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE
+   ```
+2. When prompted, enter the keystore password.
+3. Copy the **SHA1** value from the **Certificate fingerprints** section.  
    - Example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
-3. Use a "Hexadecimal to Base64" converter to convert the SHA1 value to Base64.  
+4. Use a "Hexadecimal to Base64" converter to convert the SHA1 value to Base64.  
    - Example: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
-4. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#step-3-register-app).
+5. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#step-3-register-app).
 
-## Manual sign the APK package - Skip for Automatic signing process
+---
+
+## Manual signing of APK package
 
 > [!NOTE]
-> These steps are required if you haven't wrapped the app using automatic sign-in or are trying to upload an AAB file for Play Store. To avoid repeating this step, we recommend using automatic sign-in.
+> These steps are required if you haven't used automatic sign-in during wrap or are trying to upload an AAB file for Play Store. To avoid repeating this process, we recommend using automatic sign-in when possible.
 
-To sign the APK package, use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner).
+### Locate the apksigner tool
 
-### Find your apksigner
-
-1. Check the Android SDK path in Android Studio.
-2. Go to **Tools** > **SDK Manager** > **Android SDK Location**.
-
-   If you are using iOS, check the apksigner file from the **build-tools version** directory:
-
-   Go to the **SDK** directory > **build-tools** > **buildToolsVersion** > **lib**, and check for the **apksigner.jar** file.
+1. Open Android Studio.
+2. Go to **Tools** > **SDK Manager** > **Android SDK Location** to find your SDK path.
+3. In the SDK directory, navigate to:
+   - **build-tools** > **[version number]** > find **apksigner.bat** (Windows) or **apksigner** (Mac/Linux)
+   - Or: **build-tools** > **[version number]** > **lib** > find **apksigner.jar**
 
 :::image type="content" source="media/code-sign-android/codeSignIn2.png" alt-text="A screenshot with apksigner location information." lightbox="media/code-sign-android/codeSignIn2.png":::
 
-### Use the apksigner tool
+### Sign the APK file
 
-Run the following command to sign the package:
+Run this command to sign your APK:
 
-`apksigner.bat sign --ks PATH_TO_KEYSTORE --ks-key-alias KEY_ALIAS PATH_TO_APK`
+```
+apksigner.bat sign --ks PATH_TO_KEYSTORE --ks-key-alias KEY_ALIAS PATH_TO_APK
+```
 
-**Parameters:**
+**Parameters explained:**
 
-- **ks**: Path to the keystore
-- **ks-key-alias**: Key alias
-- **PATH_TO_APK**: Path to the APK file
+- **ks**: Path to your keystore file (for example, `C:\Users\name\Desktop\powerappswrap.jks`)
+- **ks-key-alias**: The alias you used when generating the key (for example, `powerappswrap`)
+- **PATH_TO_APK**: Full path to your APK file (for example, `C:\Users\name\Downloads\MyApp.apk`)
 
-When prompted, enter the password.
+When prompted, enter the keystore password.
+
+**Example:**
+```
+apksigner.bat sign --ks C:\Users\name\Desktop\powerappswrap.jks --ks-key-alias powerappswrap C:\Users\name\Desktop\MyApp.apk
+```
+
+### Verify the signature
+
+After signing, verify the APK signature with:
+```
+apksigner.bat verify --verbose PATH_TO_APK
+```
 
 For more information, see [Android Studio command line tools: apksigner](https://developer.android.com/studio/command-line/apksigner).
 
+---
+
 ## Distribute the app
 
-To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android).  
+### Distribution options
+
+To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android).
+
 To give an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
-### See also
+---
+
+## See also
 
 - [Wrap overview](overview.md)
 - [Manually Signing the APK - Xamarin](/xamarin/android/deploy-test/signing/manually-signing-the-apk)
