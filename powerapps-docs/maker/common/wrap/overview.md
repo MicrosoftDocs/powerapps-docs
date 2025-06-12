@@ -2,7 +2,7 @@
 title: Overview of wrap
 description: Learn about the wrap functionality in Power Apps.
 author: komala2019
-ms.topic: article
+ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 02/04/2025
@@ -20,6 +20,8 @@ The **wrap** feature in Power Apps enables you to package your canvas apps as cu
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
+---
+
 ## Key capabilities
 
 With wrap, you can:
@@ -32,18 +34,45 @@ With wrap, you can:
 > [!NOTE]
 > All published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your wrapped mobile apps.
 
+---
+
 ## Benefits of wrap
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps:
 
-- **No-code mobile app development** — create mobile apps with no previous experience
-- **Managed mobile app builds** — we generate the app for you
-- **Seamless end-to-end branding** — use your own logo and color palette
-- **Multiple canvas apps support** — bundle multiple apps in a single mobile app
-- **Enterprise governance with Microsoft Intune** — protect your data with app management
+| Benefit | Description |
+|---------|-------------|
+| **No-code mobile app development** | Create mobile apps with no previous experience |
+| **Managed mobile app builds** | We generate the app for you |
+| **Seamless end-to-end branding** | Use your own logo and color palette |
+| **Multiple canvas apps support** | Bundle multiple apps in a single mobile app |
+| **Enterprise governance with Microsoft Intune** | Protect your data with app management |
   
 > [!NOTE]
 > **Wrap** is intended for distributing mobile apps to existing Power Apps users, not for public distribution.
+
+---
+
+## Software and device requirements
+
+### Platforms supported
+
+- **iOS**: Version 14.0 and later
+- **Android**: Version 8.0 (API level 26) and later
+
+### Device requirements
+
+- **iOS**: iPhone 6S or later, iPad 5th generation or later
+- **Android**: Any device running Android 8.0 or later
+
+### Developer requirements
+
+- Microsoft Power Apps account with appropriate licenses
+- Access to Microsoft Entra ID (formerly Azure AD) for app registration
+- Azure subscription (for Azure Key Vault and Blob Storage)
+- For manual code signing:
+  - iOS: macOS device with Xcode installed
+  - Android: Windows PC with Android Studio installed
 
 ---
 
@@ -112,7 +141,7 @@ Wrap involves multiple components across Power Apps and third-party platforms su
 
 Azure Blob Storage containers store built packages for mobile app distribution. Build output types differ depending on the target platform you select. More details about this feature will be available before March 31, 2025.
 
-#### Required inputs:
+#### Required inputs
 
 - [Account Name](#account-name) and [Container Name](#container-name)
 
@@ -159,6 +188,27 @@ More information: [Redirect URI](/azure/active-directory/develop/reply-url)
 ### Secondary app
 
 Secondary apps are optional canvas apps that you wrap in the same build for mobile app distribution along with the [primary app](#primary-app).
+
+---
+
+## Common issues and limitations
+
+### Known limitations
+
+- Wrap is intended for distributing apps using MDMs
+- Internet connectivity is required for users to use wrapped apps
+- The wrap feature only supports canvas apps (not model-driven apps)
+- All canvas apps in a wrap project must be from the same environment
+- Users must have a Power Apps license to use wrapped apps
+
+### Common issues
+
+- **Bundle ID conflicts**: Ensure your bundle ID is unique across your organization
+- **Image format issues**: All images must be in PNG format
+- **Signing certificate problems**: Verify certificate validity and expiration dates
+- **Azure Key Vault access**: Make sure proper permissions are configured
+
+For troubleshooting details, see [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
 ---
 
