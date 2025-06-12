@@ -95,12 +95,14 @@ keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -k
 
 **Parameters explained:**
 
-- **genkey**: Command to generate a key
-- **alias**: Alias for the keystore entry
-- **keyalg**: Key algorithm name
-- **keystore**: Name of the keystore
-- **keysize**: Size of each key
-- **validity**: Validity of the key in days
+| Parameter | Description |
+|-----------|-------------|
+| **genkey** | Command to generate a key |
+| **alias** | Alias for the keystore entry |
+| **keyalg** | Key algorithm name |
+| **keystore** | Name of the keystore |
+| **keysize** | Size of each key |
+| **validity** | Validity of the key in days |
 
 **Examples:**
 - For Key Vault (automatic signing), use a `.pfx` extension:  
@@ -126,10 +128,12 @@ When prompted, enter the keystore password.
 
 **Parameters explained:**
 
-- **exportcert**: Reads the certificate from the keystore
-- **alias**: Alias used when generating keys
-- **keystore**: Name of the keystore
-- **openssl**: Generates SHA1 key for Android
+| Parameter | Description |
+|-----------|-------------|
+| **exportcert** | Reads the certificate from the keystore |
+| **alias** | Alias used when generating keys |
+| **keystore** | Name of the keystore |
+| **openssl** | Generates SHA1 key for Android |
 
 Add the generated signature hash in the **Redirect URI** when [registering the app](wrap-how-to.md#step-3-register-app).
 
@@ -141,11 +145,15 @@ If you see the error "The signature hash must be base64-encoded SHA1" in the Azu
    ```
    keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE
    ```
+
 2. When prompted, enter the keystore password.
+
 3. Copy the **SHA1** value from the **Certificate fingerprints** section.  
    - Example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
+
 4. Use a "Hexadecimal to Base64" converter to convert the SHA1 value to Base64.  
    - Example: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
+
 5. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#step-3-register-app).
 
 ---
@@ -175,9 +183,11 @@ apksigner.bat sign --ks PATH_TO_KEYSTORE --ks-key-alias KEY_ALIAS PATH_TO_APK
 
 **Parameters explained:**
 
-- **ks**: Path to your keystore file (for example, `C:\Users\name\Desktop\powerappswrap.jks`)
-- **ks-key-alias**: The alias you used when generating the key (for example, `powerappswrap`)
-- **PATH_TO_APK**: Full path to your APK file (for example, `C:\Users\name\Downloads\MyApp.apk`)
+| Parameter | Description |
+|-----------|-------------|
+| **ks** | Path to your keystore file (for example, `C:\Users\name\Desktop\powerappswrap.jks`) |
+| **ks-key-alias** | The alias you used when generating the key (for example, `powerappswrap`) |
+| **PATH_TO_APK** | Full path to your APK file (for example, `C:\Users\name\Downloads\MyApp.apk`) |
 
 When prompted, enter the keystore password.
 
@@ -193,17 +203,23 @@ After signing, verify the APK signature with:
 apksigner.bat verify --verbose PATH_TO_APK
 ```
 
+A successful verification confirms your APK is properly signed and ready for distribution.
+
 For more information, see [Android Studio command line tools: apksigner](https://developer.android.com/studio/command-line/apksigner).
 
 ---
 
 ## Distribute the app
 
+After signing your app, you can distribute it using several methods:
+
 ### Distribution options
 
-To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android).
+- **Microsoft Intune**: To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android).
 
-To give an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+- **Intune app protection**: To give your app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+
+- **Direct distribution**: You can also distribute the signed APK directly to users for manual installation.
 
 ---
 
