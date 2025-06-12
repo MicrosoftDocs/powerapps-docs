@@ -102,7 +102,11 @@ On the **Register your app** screen, register your application in Azure to estab
     > If the signature hash key already exists, you can reuse it.
 
     :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
+- Configure the App to be multi-tenant by following the below steps:
+  - In the azure portal as an App admin, go to App registrations and select your app.
+  - In the Essentials section, locate Supported account types. Select the account type, set it to Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant).
 
+Save your changes.
 #### Configure admin allowed third-party apps
 
 The wrap wizard configures required API permissions automatically. You can also configure API permissions manually if needed. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
