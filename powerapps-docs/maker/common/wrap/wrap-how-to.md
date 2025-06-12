@@ -14,7 +14,7 @@ contributors:
   - mkaur
 ---
 
-# Wrap wizard: Step-by-step guide to building your native mobile app
+# Wrap wizard: step-by-step guide to building your native mobile app
 
 Use this guide to convert one or more canvas apps into a single custom-branded app package that you can deploy on Google Play and the iOS App Store.
 
@@ -79,19 +79,17 @@ When you update and republish your app, the wrapped app is automatically updated
 7. Set the **Sign my app** toggle to **On** or **Off**.
    - If you switch the toggle to On, follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md).
    - If you leave it Off, click **Next** and perform manual signing using the links below.
+    - [Code sign for iOS](code-sign-ios.md)  
+    - [Code sign for Android](code-sign-android.md)  
+    - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 **Advantages of automatic signing for iOS and Android (APK):**
-1. The maker does not need to wait for the app developer to complete the process, which can be time-consuming.
-2. The maker does not need to have Android Studio set up or remember passwords from the initial setup process.
-3. The maker does not need a Mac device to complete the process for iOS.
-4. Once the initial setup for signing is complete, the maker does not need to repeat the signing process during rewrapping, saving time and reducing the need for developer intervention.
+1. Once the initial setup for signing is complete, the maker does not need to repeat the signing process during rewrapping, saving time and reducing the need for developer intervention.
+2. The maker does not need to wait for the app developer to complete the process, which can be time-consuming.
+3. The maker does not need to have Android Studio set up or remember passwords from the initial setup process.
+4. The maker does not need a Mac device to complete the wrap process for iOS.
 
-    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
-
-You can also code sign your mobile app package manually instead of using automatic code signing. For more information, see:  
-- [Code sign for iOS](code-sign-ios.md)  
-- [Code sign for Android](code-sign-android.md)  
-- [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+:::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
 > [!NOTE]
 > The wrap wizard provides an automatic sign-in process. Developers can also manually sign for Android or iOS using platform-specific methods. You must manually sign AAB files regardless of the signing option selected in the wizard.
@@ -110,6 +108,9 @@ On the **Register your app** screen, register your application in Azure to estab
     > [!NOTE]
     > The Android hash key is a 28-character alphanumeric string (for example: –ga0RGNYHvNM5d0SLGQfpQWAPGJ8=).  
     > If the signature hash key already exists, you can reuse it.
+  - After registering, select an account type containing **Any Microsoft Entra directory - Multitenant** in the azure portal 
+   - Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)
+   - Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts such as Skype or Xbox
 
     :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
 
@@ -158,7 +159,7 @@ Run these PowerShell commands as an Azure admin:
 > [!NOTE]
 > If only the **Application name** field is visible, continue to the next steps and select **Android** as a target platform to display the signature hash field.
 
-#### Add Redirect URIs as an admin of the Azure App 
+#### Add Redirect URIs as an an App admin 
 
 1. In Azure Portal, go to your app registration > **Authentication**.
 2. Select **Add a platform** and choose **iOS** or **Android**.
@@ -166,7 +167,7 @@ Run these PowerShell commands as an Azure admin:
 
 ### 5. Configure branding
 
-On the **Configure Branding** step, set the following options for your app:
+1. On the **Configure Branding** step, set the following options for your app:
 
 > [!NOTE]
 > All images must be in .png format. A default image is used if no custom images are selected.
@@ -180,7 +181,7 @@ On the **Configure Branding** step, set the following options for your app:
 | **Button fill color** | Color for buttons | Hexadecimal color code |
 | **Status bar text theme** | Color for the status bar text | Light or Dark |
 
-Select **Next**.
+2. Select **Next**.
 
 ### 6. Manage output
 
