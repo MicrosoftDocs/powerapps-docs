@@ -16,7 +16,7 @@ contributors:
 
 # Overview of wrap
 
-The **wrap** feature in Power Apps enables you to package your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute these wrapped native mobile apps to end users through [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+The **wrap** feature in Power Apps enables you to package your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute these wrapped native mobile apps to end users through [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/) or Microsoft Intune.
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
@@ -30,6 +30,7 @@ With wrap, you can:
 - Customize your mobile app startup experience to match your organization's branding
 - Specify app icon, splash screen image, welcome screen image, and color palette
 - Update wrapped mobile apps by publishing changes to the included canvas app(s) through the [Power Apps](https://make.powerapps.com) maker portal
+- Allows distribution using MDM
 
 > [!NOTE]
 > All published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your wrapped mobile apps.
@@ -48,9 +49,6 @@ With wrap, you can:
 | **Multiple canvas apps support** | Bundle multiple apps in a single mobile app |
 | **Enterprise governance with Microsoft Intune** | Protect your data with app management |
   
-> [!NOTE]
-> **Wrap** is intended for distributing mobile apps to existing Power Apps users, not for public distribution.
-
 ---
 
 ## Software and device requirements
@@ -137,22 +135,6 @@ Branding customization options are available when building your wrap project. Mo
 
 Wrap involves multiple components across Power Apps and third-party platforms such as iOS and Android. Understanding these components is important when working with the wrap functionality.
 
-### Azure blob storage
-
-Azure Blob Storage containers store built packages for mobile app distribution. Build output types differ depending on the target platform you select. More details about this feature will be available before March 31, 2025.
-
-#### Required inputs
-
-- [Account Name](#account-name) and [Container Name](#container-name)
-
-#### Account Name
-
-The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account.
-
-#### Container Name
-
-The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account.
-
 ### App platform(s)
 
 Target platforms for your app during the build process. You can create builds for:
@@ -160,10 +142,6 @@ Target platforms for your app during the build process. You can create builds fo
 - **iOS** — creates IPA package
 - **Android** — creates APK package
 - **Google Play Store** — creates AAB package for distribution
-
-### Build the wrap project
-
-Building a wrap project creates build packages for mobile app distribution across different platforms. This process uses the app registered on Microsoft identity platform and creates builds in the specified Azure blob storage location. The built packages include the primary and optional secondary apps packaged into one mobile app package for each platform type.
 
 ### Bundle ID
 
@@ -179,15 +157,13 @@ Code signing completes a mobile app before distribution to end users. A code-sig
 
 A primary app is the entry point or home app for the mobile app experience when wrapping multiple canvas apps together. If only one canvas app is wrapped, it's considered the primary app.
 
-### Redirect URI
-
-A redirect URI (reply URL) is the location where the authorization server sends the user after successful app authorization and access token grant. The authorization server sends the code or token to the redirect URI, so registering the correct location during app registration is important.
-
-More information: [Redirect URI](/azure/active-directory/develop/reply-url)
-
 ### Secondary app
 
 Secondary apps are optional canvas apps that you wrap in the same build for mobile app distribution along with the [primary app](#primary-app).
+
+### Redirect URI
+
+A redirect URI (reply URL) is the location where the authorization server sends the user after successful app authorization and access token grant. The authorization server sends the code or token to the redirect URI, so registering the correct location during app registration is important. More information: [Redirect URI](/azure/active-directory/develop/reply-url)
 
 ---
 
@@ -195,8 +171,6 @@ Secondary apps are optional canvas apps that you wrap in the same build for mobi
 
 ### Known limitations
 
-- Wrap is intended for distributing apps using MDMs
-- Internet connectivity is required for users to use wrapped apps
 - The wrap feature only supports canvas apps (not model-driven apps)
 - All canvas apps in a wrap project must be from the same environment
 - Users must have a Power Apps license to use wrapped apps
