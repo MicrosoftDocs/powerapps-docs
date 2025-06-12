@@ -16,111 +16,151 @@ contributors:
 
 # Overview of wrap
 
-The **wrap** feature in Power Apps allows you to package your canvas apps as custom-branded Android and iOS apps for native mobile distribution. You can distribute these wrapped apps to users through the [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+The **wrap** feature in Power Apps enables you to package your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute these wrapped native mobile apps to end users through [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
-With wrap, you can include one or more Power Apps canvas apps in a single native mobile app package. The wrap feature lets you customize the startup experience to match your organization's branding, including app icon, splash screen, welcome (sign-in) screen, and color palette.
+## Key capabilities
 
-You can update your wrapped mobile apps by publishing changes to the canvas app(s) included in the package using the [Power Apps](https://make.powerapps.com) maker portal.
+With wrap, you can:
+
+- Package a single or multiple Power Apps canvas apps in the same native mobile app package
+- Customize your mobile app startup experience to match your organization's branding
+- Specify app icon, splash screen image, welcome screen image, and color palette
+- Update wrapped mobile apps by publishing changes to the included canvas app(s) through the [Power Apps](https://make.powerapps.com) maker portal
 
 > [!NOTE]
-> All published changes to the included canvas app(s) are automatically downloaded by existing, released versions of your wrapped mobile apps.
+> All published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your wrapped mobile apps.
 
-**Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps, including:
+## Benefits of wrap
 
-- **No-code mobile app development**: Build mobile apps without prior experience.
-- **Managed mobile app builds**: The platform generates the app package for you.
-- **Seamless end-to-end branding**: Use your own logo and color palette.
-- **Multiple canvas apps support**: Bundle several apps in a single mobile app.
-- **Enterprise governance with Microsoft Intune**: Protect your data with app management.
+**Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps:
 
+- **No-code mobile app development** — create mobile apps with no previous experience
+- **Managed mobile app builds** — we generate the app for you
+- **Seamless end-to-end branding** — use your own logo and color palette
+- **Multiple canvas apps support** — bundle multiple apps in a single mobile app
+- **Enterprise governance with Microsoft Intune** — protect your data with app management
+  
 > [!NOTE]
 > **Wrap** is intended for distributing mobile apps to existing Power Apps users, not for public distribution.
 
-## Understand the wrap process
+---
 
-The wrap feature packages your canvas apps in a native mobile app shell and produces a mobile package. You can digitally sign and distribute this package as your custom-branded Android and iOS app through native channels like [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+## Wrap process overview
 
-The main steps in the wrap process are:
+The **wrap** feature packages your canvas apps in a native mobile app shell and produces a mobile package. You can digitally sign and distribute this mobile package as your custom-branded Android and iOS apps through native distribution channels like [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
-1. Select your **primary canvas app** and start the wrap wizard. The primary app is the initial experience for users. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](prerequisites.md#add-canvas-app-to-solution).
+### Step-by-step process
+
+1. Select your **primary canvas app** and start the wrap wizard. A primary canvas app provides the initial experience users see when launching your mobile app. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](prerequisites.md#add-canvas-app-to-solution).
+
 2. Optionally, add **secondary canvas apps** to your mobile app in the wrap wizard. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together).
-3. Select the **target platforms** (iOS and Android) for your mobile app. Optionally, choose to **automatically code sign** your app package.
+
+3. Select the **target platforms** (iOS and Android) for your mobile app. Optionally, select **automatically code sign** your mobile app package.
+
 4. Register your app. Use an existing **app registration** or create a new one in the wrap wizard.
-5. Customize **app branding** with icons, images, and color palette.
-6. Add your **Azure blob storage account name and container name**. Use an existing Azure blob storage or create a new one.
+
+5. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
+
+6. Add **Azure blob storage account name and container name**. Use an existing **Azure blob storage** or create a new one.
+
 7. Start the build process in the **Wrap up** step to generate your custom-branded mobile app.
+
 8. Download your mobile app from the **App blob storage location**.
-9. If you did not choose automatic code signing, **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+
+9. If you didn't choose **automatically code sign** in the wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+
 10. Test the app package.
-11. Distribute the app package to your mobile users.
+
+11. Distribute the app package to mobile users.
+
+---
 
 ## Wrap multiple canvas apps together
 
-You can include more than one canvas app in a single mobile app package. The package requires a home app, called the primary app, which serves as the entry point. Other included apps are secondary apps.
+You can wrap more than one canvas app into a single mobile app package. The mobile app package needs a home app, called the primary app. This app becomes the entry point for all other canvas apps included in the mobile app package, which are called secondary apps.
 
-Secondary apps are optional. If you wrap only one canvas app, it is the primary app and there are no secondary apps.
+Secondary apps are optional. When you wrap only one canvas app, that app is considered the primary app, and the mobile app package has no secondary apps.
 
-As shown below, a primary app can link to multiple secondary apps. Navigation between primary and secondary apps can be managed with the [Launch()](../../canvas-apps/functions/function-param.md) function.
+As shown in the illustration below, a primary app can have links to multiple secondary apps. You can manage navigation between primary and secondary apps using the [Launch()](../../canvas-apps/functions/function-param.md) function.
 
 :::image type="content" source="media/wrap-intro/primary-secondary-apps.png" alt-text="Primary and secondary apps wrapped together." border="false":::
 
+---
+
 ## Brand your mobile app
 
-Wrap supports customizing the mobile app's startup experience to match your organization's branding. You can specify the app icon, splash screen image, welcome (sign-in) screen image, and color palette for the native app experience.
+Wrap supports customization of the mobile app bootstrap experience to match your organization's branding requirements. You can specify:
+
+- App icon
+- Splash screen image
+- Welcome (sign in) screen image
+- Color palette for native experiences
 
 :::image type="content" source="media/wrap-intro/wrap-branding.png" alt-text="Branding in wrap." border="false":::
 
 Branding customization options are available when building your wrap project. More information: [Configure branding](wrap-how-to.md#step-4-configure-branding)
 
-## Understanding wrap terminology
+---
 
-Wrap involves several components across Power Apps and third-party platforms such as iOS and Android. Understanding these components is important when working with wrap functionality.
+## Wrap terminology
+
+Wrap involves multiple components across Power Apps and third-party platforms such as iOS and Android. Understanding these components is important when working with the wrap functionality.
 
 ### Azure blob storage
 
-Azure Blob Storage containers store built packages for mobile app distribution. Build output types differ depending on the target platform.
+Azure Blob Storage containers store built packages for mobile app distribution. Build output types differ depending on the target platform you select. More details about this feature will be available before March 31, 2025.
 
-- **Account Name**: Unique identifier for your Azure Storage account, used to construct the base URI.
-- **Container Name**: Unique identifier within a storage account that groups a set of blobs.
+#### Required inputs:
+
+- [Account Name](#account-name) and [Container Name](#container-name)
+
+#### Account Name
+
+The account name is a unique identifier for your Azure Storage account. It's used to construct the base URI for accessing the storage account.
+
+#### Container Name
+
+The container name is a unique identifier within a storage account that groups a set of blobs. Containers provide a way to organize blobs within a storage account.
 
 ### App platform(s)
 
-The platforms you want to build for: iOS, Android, or Google Play Store.
+Target platforms for your app during the build process. You can create builds for:
 
-- **iOS**: Creates an IPA package.
-- **Android**: Creates an APK package.
-- **Google Play Store**: Creates an AAB package for distribution.
+- **iOS** — creates IPA package
+- **Android** — creates APK package
+- **Google Play Store** — creates AAB package for distribution
 
 ### Build the wrap project
 
-Building a wrap project creates the build packages for mobile app distribution across different platforms. This uses the app registered on Microsoft identity platform and creates builds in your Azure blob storage location.
+Building a wrap project creates build packages for mobile app distribution across different platforms. This process uses the app registered on Microsoft identity platform and creates builds in the specified Azure blob storage location. The built packages include the primary and optional secondary apps packaged into one mobile app package for each platform type.
 
 ### Bundle ID
 
-A unique identifier for your app, following a reverse domain name pattern (e.g., `com.contoso.myapp`). The bundle ID is used during [Azure key vault creation](create-key-vault-for-code-signing.md) and in [Step 2: Target platform](wrap-how-to.md#step-2-target-platform).
-Format of the bundle ID: alphanumeric with atleast a dot(.) and no other special characters. 
-It must match exactly what is defined in your app’s Xcode project and what you register in developer portals (e.g., Apple Developer, Azure, Firebase, etc.).
-For Android: When configuring Android apps in Azure AD, the Bundle ID = Package name. Along with the Signature Hash Key, it is used for authentication setup.
+The bundle ID is a unique identifier for your app that follows a reverse domain name pattern. It must contain one period (.) and no spaces. Example: `com.contoso.myapp`.
+
+This bundle ID is used when [creating the Azure key vault for wrap](create-key-vault-for-code-signing.md) after iOS or Android certificates are created and uploaded. If you've already created the Azure key vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com). Use this same bundle ID in [Step 2: Target platform](wrap-how-to.md#step-2-target-platform).
 
 ### Code signing
 
-Code signing completes a mobile app before distribution, assuring users that the app comes from a trusted source and hasn't been altered.
+Code signing completes a mobile app before distribution to end users. A code-signed app assures users it comes from a known source and the app code hasn't changed since it was last signed by the trusted source.
 
 ### Primary app
 
-The entry point or home app for the mobile experience when wrapping multiple canvas apps. If only one app is wrapped, it is the primary app.
+A primary app is the entry point or home app for the mobile app experience when wrapping multiple canvas apps together. If only one canvas app is wrapped, it's considered the primary app.
 
 ### Redirect URI
 
-A redirect URI (reply URL) is where the authorization server sends the user after successful authorization. Register the correct URI during app registration.
+A redirect URI (reply URL) is the location where the authorization server sends the user after successful app authorization and access token grant. The authorization server sends the code or token to the redirect URI, so registering the correct location during app registration is important.
 
 More information: [Redirect URI](/azure/active-directory/develop/reply-url)
 
 ### Secondary app
 
-Optional additional canvas apps included in the same build for distribution with the [primary app](#primary-app).
+Secondary apps are optional canvas apps that you wrap in the same build for mobile app distribution along with the [primary app](#primary-app).
+
+---
 
 ## Next steps
 
@@ -128,11 +168,11 @@ Optional additional canvas apps included in the same build for distribution with
 
 ### See also
 
-- [Use the wrap wizard to build your mobile app](wrap-how-to.md)
+- [Use the wrap wizard to build your mobile app](wrap-how-to.md) 
 - [Manual code sign on iOS](code-sign-ios.md)
 - [Manual code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
-- [Frequently Asked Questions](faq.yml)
-- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
+- [Frequently Asked Questions](faq.yml)  
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)  
 - [Benefits and limitations of Wrap](limitations.md)
