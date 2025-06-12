@@ -14,7 +14,7 @@ contributors:
   - mkaur
 ---
 
-# Wrap wizard: Step-by-step guide to building your native mobile app package
+# Wrap wizard: Step-by-step guide to building your native mobile app
 
 Use this guide to convert one or more canvas apps into a single custom-branded app package that you can deploy on Google Play and the iOS App Store.
 
@@ -22,7 +22,9 @@ The wrap feature in Power Apps enables you to create native mobile versions of y
 
 When you update and republish your app, the wrapped app is automatically updated for users.
 
-## Steps to create a custom-branded native app using the Wrap wizard
+---
+
+## Steps to create a custom-branded native app using the wrap wizard
 
 > [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
 
@@ -55,7 +57,7 @@ When you update and republish your app, the wrapped app is automatically updated
     > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platform(s)**, select all the mobile platforms your users need.
-3. Select the **Azure Key Vault URI** from the list and select **Next**.  
+3. Select the **Azure Key Vault URI** from the list.  
    If you do not see any entries, [create an Azure key vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
 4. Create an Azure blob storage account and container if you have not already. More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).  
@@ -98,7 +100,7 @@ Select **Next**.
 
 ### 4. Register your app
 
-On the **Register your app** screen, register your application in Azure to establish trust with the Microsoft identity platform. More information: [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
+On the **Register your app** screen, register your application in Azure to establish trust with the Microsoft identity platform. More information: [Registering your app on Azure portal manually](#register-your-app-on-azure-portal-manually-optional).
 
 - If you have already registered, find your registration in the owned registration field.
 - If you do not see your registered app name in the **Owned registrations** dropdown:
@@ -113,11 +115,11 @@ On the **Register your app** screen, register your application in Azure to estab
 
 #### Configure admin allowed third-party apps as an azure tenant admin
 
-The wrap wizard configures required API permissions automatically. You can also configure API permissions manually if needed. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+The wrap wizard configures required API permissions automatically. You can also configure API permissions manually if needed. More information: [Configure the API permissions for your app manually](#configure-api-permissions-manually-optional).
 
 To grant admin access:
-- Open Windows PowerShell as administrator.
-- Run:
+1. Open Windows PowerShell as administrator.
+2. Run these commands:
     ```powershell
     Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
@@ -125,7 +127,7 @@ To grant admin access:
     Add-AdminAllowedThirdPartyApps
     Get-AdminAllowedThirdPartyApps
     ```
-- Provide the App ID when prompted.
+3. Provide the App ID when prompted.
 
 After completing these steps, the registration screen will look like this:
 
@@ -138,16 +140,16 @@ Azure admin grants API permissions during registration. More information: [Grant
  :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 Run these PowerShell commands as an Azure admin:
-- Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
+1. Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
     ```powershell
     Install-Module -Name Microsoft.Graph
     ```
-- Grant *Azure API Connections* permission: 
+2. Grant *Azure API Connections* permission: 
     ```powershell
     Connect-MgGraph -TenantId <your tenant ID>
     New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
     ```
-- Grant *PowerApps Service* permission:
+3. Grant *PowerApps Service* permission:
     ```powershell
     Connect-MgGraph -TenantId <your tenant ID>
     New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
@@ -169,12 +171,14 @@ On the **Configure Branding** step, set the following options for your app:
 > [!NOTE]
 > All images must be in .png format. A default image is used if no custom images are selected.
 
-- **App icons**: Recommended size for iOS: 1024x1024 px or larger. For Android: 432x432 px or larger.
-- **Splash screen image**: Image shown while the app loads.
-- **Welcome screen image**: Image shown on the sign-in screen.
-- **Background fill color**: Hex color code for the welcome screen background.
-- **Button fill color**: Hex color code for button color.
-- **Status bar text theme**: Color for the status bar text.
+| Setting | Description | Requirements |
+|---------|-------------|--------------|
+| **App icons** | Icons for your app | iOS: 1024x1024 px or larger<br>Android: 432x432 px or larger |
+| **Splash screen image** | Image shown while the app loads | .png format |
+| **Welcome screen image** | Image shown on the sign-in screen | .png format |
+| **Background fill color** | Color for welcome screen background | Hexadecimal color code |
+| **Button fill color** | Color for buttons | Hexadecimal color code |
+| **Status bar text theme** | Color for the status bar text | Light or Dark |
 
 Select **Next**.
 
@@ -213,7 +217,10 @@ You can create your app registration automatically in the wizard or manually in 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
 
-When registering, select an account type containing **Any Microsoft Entra directory - Multitenant**.
+When registering, select an account type containing **Any Microsoft Entra directory - Multitenant**:
+
+- Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)
+- Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts such as Skype or Xbox
 
 :::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
 
@@ -227,15 +234,31 @@ When registering, select an account type containing **Any Microsoft Entra direct
 
 If you encounter errors, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
 
-Required API permissions:
+### Required API permissions
 
-- **Microsoft APIs**
-    - Dynamics CRM
-- **APIs my organization uses**
-    - Azure API Connections
-    - PowerApps Service
-    - Power BI (if your app uses Power BI data)
-    - Microsoft Mobile Application Management (for [Intune](/mem/intune/fundamentals/what-is-intune) distribution)
+| API Type | Specific APIs |
+|----------|--------------|
+| **Microsoft APIs** | - Dynamics CRM |
+| **APIs my organization uses** | - Azure API Connections<br>- PowerApps Service<br>- Power BI (if your app uses Power BI data)<br>- Microsoft Mobile Application Management (for [Intune](/mem/intune/fundamentals/what-is-intune) distribution) |
+
+If you don't see permissions under **APIs my organization uses**, run these PowerShell commands as needed:
+
+1. Install the Microsoft Graph module if necessary:
+   ```powershell
+   Install-Module -Name Microsoft.Graph
+   ```
+
+2. For missing *Azure API Connections* permission:
+   ```powershell
+   Connect-MgGraph -TenantId <your tenant ID>
+   New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+   ```
+
+3. For missing *PowerApps Service* permission:
+   ```powershell
+   Connect-MgGraph -TenantId <your tenant ID>
+   New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+   ```
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
@@ -245,19 +268,20 @@ For detailed steps, see [Request the permissions in the app registration portal]
 
 You can sign your app automatically in **Step 2** or manually after building. [Code signing](overview.md#code-signing) is different for Android and iOS.
 
-- [Manual code sign for iOS](code-sign-ios.md)
-- [Manual code sign for Android](code-sign-android.md)
-- [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+| Platform | Signing Method |
+|----------|---------------|
+| iOS | [Manual code sign for iOS](code-sign-ios.md) |
+| Android | [Manual code sign for Android](code-sign-android.md) |
+| Google Play Store | [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing) |
 
 ---
 
 ## See also
 
-- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
 - [Wrap overview](overview.md)
 - [Manual code sign for iOS](code-sign-ios.md)
 - [Manual code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Create your Azure Key Vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)
-- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)
