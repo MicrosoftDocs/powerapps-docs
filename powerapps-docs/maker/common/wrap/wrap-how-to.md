@@ -129,8 +129,25 @@ Azure admin grants API permissions during registration. More information: [Grant
 
  :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
+Run these PowerShell commands as an azure admin:
+- Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
+    ```powershell
+     Install-Module -Name Microsoft.Graph
+     ```
+- Grant *Azure API Connections* permission: 
+     ```powershell
+     Connect-MgGraph -TenantId <your tenant ID>
+     New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+     ```
+- Grant *PowerApps Service* permission:
+     ```powershell
+     Connect-MgGraph -TenantId <your tenant ID>
+     New-MgServicePrincipal -AppId <AppId> 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+     ```
+
 > [!NOTE]
 > If only the **Application name** field is visible, continue to the next steps and select **Android** as a target platform to display the signature hash field.
+
 
 #### Add Redirect URIs
 
@@ -214,22 +231,6 @@ Required API permissions:
     - Power BI (if your app uses Power BI data)
     - Microsoft Mobile Application Management (for [Intune](/mem/intune/fundamentals/what-is-intune) distribution)
 
-> [!NOTE]
-> If permissions are missing, run these PowerShell commands:
-> - Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
->     ```powershell
->     Install-Module -Name Microsoft.Graph
->     ```
-> - Missing *Azure API Connections* permission: 
->     ```powershell
->     Connect-MgGraph -TenantId <your tenant ID>
->     New-MgServicePrincipal -AppId <AppId> -DisplayName "Azure API Connections"
->     ```
-> - Missing *PowerApps Service* permission:
->     ```powershell
->     Connect-MgGraph -TenantId <your tenant ID>
->     New-MgServicePrincipal -AppId <AppId> -DisplayName "PowerApps Service"
->     ```
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
