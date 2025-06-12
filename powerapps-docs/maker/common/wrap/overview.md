@@ -100,6 +100,9 @@ Building a wrap project creates the build packages for mobile app distribution a
 ### Bundle ID
 
 A unique identifier for your app, following a reverse domain name pattern (e.g., `com.contoso.myapp`). The bundle ID is used during [Azure key vault creation](create-key-vault-for-code-signing.md) and in [Step 2: Target platform](wrap-how-to.md#step-2-target-platform).
+Format of the bundle ID: alphanumeric with atleast a dot(.) and no other special characters. 
+It must match exactly what is defined in your app’s Xcode project and what you register in developer portals (e.g., Apple Developer, Azure, Firebase, etc.).
+For Android: When configuring Android apps in Azure AD, the Bundle ID = Package name. Along with the Signature Hash Key, it is used for authentication setup.
 
 ### Code signing
 
