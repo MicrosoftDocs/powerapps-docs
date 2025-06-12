@@ -115,12 +115,14 @@ On the **Register your app** screen, register your application in Azure to estab
   2. Provide:
      - **Application name**: The customer-facing name of your app
      - **Android signature hash** (if targeting Android): A 28-character alphanumeric string
+  3. In the Microsoft Entra admin center, go to App registrations and select your app. In the Essentials section, locate Supported account types, set it to Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant).
+  4. Save your changes.
 
      > [!NOTE]
      > If the signature hash key already exists, you can reuse it.
 
      :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
-
+     
 #### Configure admin allowed third-party apps as an azure tenant admin
 
 The wrap wizard configures required API permissions automatically. To grant admin access:
@@ -177,7 +179,7 @@ Run these PowerShell commands as an Azure admin:
 
 ### 5. Configure branding
 
-On the **Configure Branding** step, set the following options for your app:
+1. On the **Configure Branding** step, set the following options for your app:
 
 > [!NOTE]
 > All images must be in .png format. Default images will be used if no custom images are selected.
@@ -191,7 +193,7 @@ On the **Configure Branding** step, set the following options for your app:
 | **Button fill color** | Color for buttons | Hexadecimal color code |
 | **Status bar text theme** | Color for the status bar text | Light or Dark |
 
-Select **Next**.
+2. Select **Next**.
 
 ### 6. Manage output
 
