@@ -52,3 +52,6 @@ ms.collection:
 - [Overview of Plan designer](../plan-designer/plan-designer.md)
 - [FAQ for rename controls in canvas apps with Copilot ](faq-rename-control.md)
 - [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
+- [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
+- [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
+- [FAQ for Agent APIs](faq-agent-api-component.md)
