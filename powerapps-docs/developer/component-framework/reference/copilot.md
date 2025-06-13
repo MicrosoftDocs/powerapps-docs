@@ -3,7 +3,7 @@ title: Copilot (Power Apps component framework API reference) (preview)
 description: Provides methods to execute registered Microsoft Copilot Studio Topics.
 author: aorth
 ms.author: aorth
-ms.date: 05/16/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -32,10 +32,6 @@ Model-driven apps
 | [executeEvent](copilot/executeevent.md) | [!INCLUDE [executeevent-description](copilot/includes/executeevent-description.md)] |
 | [executePrompt](copilot/executeprompt.md) | [!INCLUDE [executeprompt-description](copilot/includes/executeprompt-description.md)] |
 
-
-## Sample controls
-
-TBD
 
 ### Related articles
 
