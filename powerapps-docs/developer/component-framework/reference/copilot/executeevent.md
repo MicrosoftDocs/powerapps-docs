@@ -25,6 +25,15 @@ Model-driven apps
 
 `context.copilot.executeEvent(eventName, eventParameters).then(successCallback, errorCallback);`
 
+## Parameters
+
+| Parameter Name| Type| Required | Description|
+| --- | --- | --- | --- |
+| `eventName` | string | Yes | Event Name registered in the MCS topic  |
+| `eventParameters` | Unknown  | Yes | Parameters needed for the event execution. These depend on what the topic does.|
+| `successCallback` | Function | Yes | A function to call when the operation succeeds.|
+| `errorCallback`   | Function | Yes | A function to call when the operation fails.|
+
 ## Return Value
 
 Type: `Promise<`[MCSResponse](mcsresponse.md)`>`

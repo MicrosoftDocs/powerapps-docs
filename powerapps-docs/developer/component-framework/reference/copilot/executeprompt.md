@@ -25,6 +25,14 @@ Model-driven apps
 
 `context.copilot.executeEvent(promptText).then(successCallback, errorCallback);`
 
+## Parameters
+
+| Parameter Name| Type| Required | Description|
+| --- | --- | --- | --- |
+| `promptText` | string | Yes | The text that is registered as a trigger query in the MCS topic.  |
+| `successCallback` | Function | Yes | A function to call when the operation succeeds.|
+| `errorCallback`   | Function | Yes | A function to call when the operation fails.|
+
 ## Return Value
 
 Type: `Promise<`[MCSResponse](mcsresponse.md)`>`
