@@ -16,9 +16,6 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-The agent response component enables displaying the response from the Copilot Studio agent associated with the model-driven apps.
-
-
 Agent Response component can be added to a model-driven app form which can directly call an Microsoft Copilot Studio (MCS) topic and display the response to the user. This builds on the [Code Component Agent API executeEvent](developer/component-framework/bring-intelligence-using-agent-apis) and simplifies usage by not requiring a new custom component.  The implicit context of the app, page, and record are available in MCS.
 
 This component supports the following responses from MCS:
@@ -62,6 +59,8 @@ The following component properties are currently not supported:
 - Component width
 - Component height
 - Bind to table column
+
+The component is not supported for mobile or tablets.
 
 ## See more
 
