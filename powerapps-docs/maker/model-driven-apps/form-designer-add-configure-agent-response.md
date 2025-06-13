@@ -12,7 +12,7 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Add agents response use the form designer (Preview)
+# Add agents response use the form designer (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
