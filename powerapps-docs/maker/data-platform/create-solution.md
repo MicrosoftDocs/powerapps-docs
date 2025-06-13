@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 10/15/2024
+ms.date: 06/11/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -28,7 +28,7 @@ To create a solution:
     |Field|Description|  
     |-----------|-----------------|  
     |**Display Name**|The name shown in the list of solutions. You can change this later.|  
-    |**Name**|The unique name of the solution. This is generated using the value you enter in the Display Name column. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
+    |**Name**|The unique name of the solution. Must only contain letters, numbers, and underscores. The name is generated from the allowed characters from the value you enter in the **Display Name** column. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
     |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments where you'll use the solution. See [Solution publisher](#solution-publisher) later in this article. |  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number is included in the file name when you export the solution.|  
   
