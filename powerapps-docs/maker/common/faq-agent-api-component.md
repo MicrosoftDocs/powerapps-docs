@@ -1,5 +1,5 @@
 ---
-title: FAQ for Agent APIs in model-driven apps
+title: FAQ for Agent APIs and Agent Response component in model-driven apps
 description: This FAQ provides information about the AI technology used in model-driven apps, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 06/16/2025
 ms.custom: 
@@ -10,37 +10,42 @@ ms.author: aorth
 ms.reviewer: jdaly
 ---
 
-# FAQ for Agent APIs
+# FAQ for Agent APIs and Agent Response component
 
 These frequently asked questions (FAQ) describe the AI impact of Agent APIs feature in model-driven apps.
 
-## What is Agent APIs?
+## What is Agent APIs and Agent Response component?
 
-[Describe the system in plain English. What type of system or feature is this? What does it do? At a high level, what does the system or feature take as input? What kind of outputs does the system or feature produce?]
+Microsoft Power Apps has introduced APIs and code components designed to interface with the Topics created within Microsoft Copilot Studio (MCS) from model-driven apps. These APIs are available as XRM and PCF. The code component is available in the Form Designer to be added to forms.
 
-## What are capabilities of the Agent APIs?
+## What are capabilities of the Agent APIs and Agent Response component?
 
-[Building on the previous question, provide semi-technical, high-level information on how the system or feature offers functionality for various uses.]
+The new APIs can either call a specific Topic in MCS or send a prompt to be orchestrated by MCS. The response from both APIs is a JSON structure which the caller can use within their model driven app. The APIs are available for use in the Xrm events of model driven apps and also use within custom PCF control.
 
-## What is the intended use of the Agent APIs?
+The Agent Response component provides a simplified component to call the Agent API with a Topic for MCS. The component renders the results of the MCS response in the form.
 
-[Explain intended use(s), as identified in your Impact Assessment.]
+## What is the intended use of the Agent APIs and Agent Response component?
 
-## How was Agent APIs evaluated? What metrics are used to measure performance?
+The APIs are intended to allow customization of model driven apps to include application calls to MCS and allow the results to be integrated into the app. It provided a simplified process to call MCS than what currently exists today.
 
-[Provide evidence of system or feature accuracy and performance, and, when applicable, a description of the extent to which these results are generalizable across use cases that were not part of the evaluation.]
+## How was Agent APIs and Agent Response component evaluated? What metrics are used to measure performance?
 
-## What are the limitations of Agent APIs? How can users minimize the impact of the Agent APIs limitations when using the system?
+In our evaluations, we look at how accurately the response is from MCS. MCS responses are evaluated for satisfying Microsoft’s responsible AI principles.
 
-[See Impact Assessment. Describe the known limitations of the system or feature including uses for which the system was not designed or evaluated. Discuss steps that the user can take to minimize errors and the impact of trade-offs for the user.]
+## What are the limitations of Agent APIs and Agent Response component? How can users minimize the impact of the Agent APIs limitations when using the system?
+
+The APIs and component are optional for makers to use and makers need to consider how best to use the APIs and component within their customizations.
 
 ## What operational factors and settings allow for effective and responsible use of the feature?
 
-[Describe the operational factors and ranges within which the system is expected to perform reliably and safely. List the choices that end users can make (e.g., customization, settings, etc.), with a description of how those choices may impact system behavior in the real world.]
+Makers are required to ensure that the MCS Topics are returning accurate and appropriate responses. When using the API, makers are responsible to handle the response as part of their customization.
+
+In addition, maker are strongly encouraged to indicate to users where AI has been used in the user experience. This is like how Microsoft shows “AI-generated content may be incorrect”.
 
 ## See also
 
 - [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 - [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
+- [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
