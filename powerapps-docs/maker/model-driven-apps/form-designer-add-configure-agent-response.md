@@ -41,7 +41,7 @@ This component supports the following responses from MCS:
 1. Drag the **Agent Response** onto the form preview.
 
 > [!div class="mx-imgBorder"]
-> ![Agent Response in components pane](media/form-designer-components-agent-response.png "Agent Response in components pane")
+> ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png "Agent Response in components pane")
 
 > [!NOTE]
 > Form preview will display a warning message "Agent Response is only available when you play the app" since live preview is not yet supported. Save and publish the form and validate the component in a running app.
