@@ -30,7 +30,7 @@ The APIs are intended to allow customization of model driven apps to include app
 
 ## How was Agent APIs and Agent Response component evaluated? What metrics are used to measure performance?
 
-In our evaluations, we look at how accurately the response is from MCS. MCS responses are evaluated for satisfying Microsoft’s responsible AI principles.
+In our evaluations, we look at how accurately the response is from MCS. MCS responses are evaluated for satisfying Microsoft's responsible AI principles.
 
 ## What are the limitations of Agent APIs and Agent Response component? How can users minimize the impact of the Agent APIs limitations when using the system?
 
@@ -40,12 +40,14 @@ The APIs and component are optional for makers to use and makers need to conside
 
 Makers are required to ensure that the MCS Topics are returning accurate and appropriate responses. When using the API, makers are responsible to handle the response as part of their customization.
 
-In addition, maker are strongly encouraged to indicate to users where AI has been used in the user experience. This is like how Microsoft shows “AI-generated content may be incorrect”.
+In addition, maker are strongly encouraged to indicate to users where AI has been used in the user experience. This is like how Microsoft shows "AI-generated content may be incorrect".
 
 ## See also
 
 - [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 - [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
-- [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md)
+<!-- TODO: Remove comment after PR 11197 is merged
+- [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md) 
+-->
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
