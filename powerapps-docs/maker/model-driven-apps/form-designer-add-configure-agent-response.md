@@ -35,7 +35,7 @@ This component supports the following responses from MCS:
 
 ## Add a agent response component using drag and drop
 
-1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms#create-a-form) or [Edit a form](create-and-edit-forms#edit-a-form)
+1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 1. In the form designer, select **Component** on the command bar.
 1. In the Components pane, expand **Artificial Intelligence**
 1. Drag the **Agent Response** onto the form preview.
