@@ -1,6 +1,6 @@
 ---
 title: "Bring intelligence into your app using Agent Xrm APIs (preview)"
-description: "Learn about how you can integrate Copilot Studio topics into your model-driven apps using Xrm.Apis"
+description: "Learn about how you can integrate Copilot Studio topics into your model-driven apps using Agent Xrm APIs."
 author: adrianorth
 ms.author: aorth
 ms.date: 06/16/2025
@@ -17,9 +17,9 @@ contributors:
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
-Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow model-driven apps to interact with Topics created in Microsoft Copilot Studio. These APIs are available in two forms:
+Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow model-driven apps to interact with topics created in Microsoft Copilot Studio. These APIs are available in two forms:
 
-- Xrm.Copilot namespace used for client scripts in model-driven apps. This is the subject of this article.
+- `Xrm.Copilot` namespace used for client scripts in model-driven apps. This article describes these APIs.
 - [PCF (for use in custom controls)](../../component-framework/bring-intelligence-using-agent-apis.md).
 
 These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences.
@@ -37,7 +37,7 @@ Topic needs to be created with the model-driven apps primary agent.
 
 ## Capabilities of Agent APIs
 
-Agent APIs enable developers to either call a specific Topic in MCS or send a custom prompt to be processed by MCS. The response from either method is returned in a structured JSON format, which can then be used within the app for further processing or display. These APIs can be integrated into XRM events or embedded within custom PCF controls.
+Agent APIs enable developers to either call a specific topic in MCS or send a custom prompt for MCS to process. The response from either method is returned in a structured JSON format, which can then be used within the app for further processing or display. These APIs can be integrated into XRM events or embedded within custom PCF controls.
 
 ## Intended Usage
 
@@ -53,7 +53,7 @@ While Agent APIs offer powerful capabilities, their use is optional. Makers shou
 
 ## Responsible and Effective Use
 
-To ensure responsible use, makers must handle MCS responses appropriately within their customizations. This includes validating the accuracy and relevance of the AI-generated content. Additionally, it is strongly recommended to clearly indicate to users when AI is involved, similar to Microsoft's practice of displaying messages like "AI-generated content may be incorrect."
+To ensure responsible use, makers must handle MCS responses appropriately within their customizations. This includes validating the accuracy and relevance of the AI-generated content. You should clearly indicate to users when AI is involved, similar to Microsoft's practice of displaying messages like "AI-generated content may be incorrect."
 
 ### Related articles
 

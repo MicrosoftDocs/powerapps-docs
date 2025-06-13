@@ -27,7 +27,7 @@ contributors:
 
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
-| `eventName` | string | Yes | Event Name registered in the MCS topic  |
+| `eventName` | string | Yes | Event Name registered in the Microsoft Copilot Studio (MCS) topic  |
 | `eventParameters` | Unknown  | Yes | Parameters needed for the event execution. These depend on what the topic does.|
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
@@ -38,7 +38,7 @@ An array of [MCSResponse](mcsresponse.md)
 
 ## Example
 
-In Microsoft Copilot Studio, a custom topic has been registered that accepts id (entity record id) as input parameter. Based on the input, it fetches the related activities of that entity record and returns the results as an MCS event activity.
+In Microsoft Copilot Studio, a custom topic is registered that accepts ID (entity record ID) as input parameter. Based on the input, it fetches the related activities of that entity record and returns the results as an MCS event activity.
 
 ```javascript
 const response = await Xrm.Copilot.executeEvent(
