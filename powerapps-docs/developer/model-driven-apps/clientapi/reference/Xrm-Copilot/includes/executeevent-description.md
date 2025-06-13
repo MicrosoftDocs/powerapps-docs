@@ -1,1 +1,1 @@
-Executes a Microsoft Copilot studio topic based on the registered Event Name. Returns an array of type [MCSResponse](../mcsresponse.md). 
+Executes a Microsoft Copilot Studio topic based on the registered Event Name. Returns an array of type [MCSResponse](../mcsresponse.md). 

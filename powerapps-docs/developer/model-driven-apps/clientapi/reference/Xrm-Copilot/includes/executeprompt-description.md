@@ -1,1 +1,1 @@
-Executes a Microsoft Copilot studio topic based on the trigger queries registered in the topic. Returns the array of type [MCSResponse](../mcsresponse.md). 
+Executes a Microsoft Copilot Studio topic based on the trigger queries registered in the topic. Returns the array of type [MCSResponse](../mcsresponse.md). 
