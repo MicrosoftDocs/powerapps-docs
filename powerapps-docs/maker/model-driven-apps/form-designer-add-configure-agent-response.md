@@ -50,6 +50,19 @@ This component supports the following responses from MCS:
 > [!NOTE]
 > Form preview will display a warning message "Agent Response is only available when you play the app" since live preview is not yet supported. Save and publish the form and validate the component in a running app.
 
+## Limitations
+
+The following component properties are currently not supported:
+
+- Label
+- Hide label
+- Hide on phone
+- Lock
+- Read-only
+- Component width
+- Component height
+- Bind to table column
+
 ## See more
 
 [Overview of the model-driven form designer](form-designer-overview.md)<br/>
