@@ -3,7 +3,7 @@ title: "Xrm.Copilot (Client API reference) in model-driven apps (preview)"
 description: Provides methods to execute registered Microsoft Copilot Studio Topics..
 author: adrianorth
 ms.author: aorth
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"

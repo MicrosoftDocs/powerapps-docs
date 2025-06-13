@@ -3,7 +3,7 @@ title: "Bring intelligence into your components using Agent APIs (preview)"
 description: "Learn about how you can integrate Copilot Studio topics into your custom components using Agent APIs"
 author: adrianorth
 ms.author: aorth
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: conceptual
 ms.subservice: pcf

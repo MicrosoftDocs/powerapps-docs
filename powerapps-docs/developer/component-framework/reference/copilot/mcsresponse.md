@@ -3,7 +3,7 @@ title: "MCSResponse Interface (Power Apps component framework API reference) (pr
 description: The interface that describes the properties of contains data returned by the context.executeEvent and context.executePrompt methods.
 author: adrianorth
 ms.author: aorth
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"

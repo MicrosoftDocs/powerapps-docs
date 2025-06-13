@@ -3,7 +3,7 @@ title: "executePrompt (Client API reference) in model-driven apps (preview)"
 description: Includes description and supported parameters for the executePrompt method.
 author: adrianorth
 ms.author: aorth
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"

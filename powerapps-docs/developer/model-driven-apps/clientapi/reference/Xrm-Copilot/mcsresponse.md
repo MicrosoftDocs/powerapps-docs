@@ -3,7 +3,7 @@ title: MCSResponse Interface (Client API reference) (preview)
 description: The interface that describes the properties of contains data returned by the Xrm.Copilot.executeEvent and Xrm.Copilot.executePrompt methods.
 author: adrianorth
 ms.author: aorth
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf

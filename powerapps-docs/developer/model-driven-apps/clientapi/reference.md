@@ -1,7 +1,7 @@
 ---
 title: "Client API Reference for model-driven apps "
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 05/05/2025
+ms.date: 06/16/2025
 author: sriharibs-msft
 ms.author: srihas
 ms.reviewer: jdaly
