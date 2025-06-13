@@ -1,14 +1,12 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.custom: ""
-ms.date: 05/22/2025
-ms.reviewer: ""
-ms.topic: "how-to"
-author: "Mattp123"
-ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
+ms.date: 06/16/2025
+ms.reviewer: matp
+ms.topic: how-to
+author: adrianorth
 ms.subservice: mda-maker
-ms.author: "matp"
+ms.author: aorth
 search.audienceType: 
   - maker
 ---
@@ -16,7 +14,13 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Agent Response component can be added to a model-driven app form which can directly call an Microsoft Copilot Studio (MCS) topic and display the response to the user. This builds on the [Code Component Agent API executeEvent](developer/component-framework/bring-intelligence-using-agent-apis) and simplifies usage by not requiring a new custom component.  The implicit context of the app, page, and record are available in MCS.
+Agent Response component can be added to a model-driven app form which can directly call an Microsoft Copilot Studio (MCS) topic and display the response to the user. This builds on the Code Component Agent API executeEvent and simplifies usage by not requiring a new custom component.  The implicit context of the app, page, and record are available in MCS. 
+
+<!-- TODO Replace the previous paragraph with the following after PR 11054 is merged. The link won't work.
+
+Agent Response component can be added to a model-driven app form which can directly call an Microsoft Copilot Studio (MCS) topic and display the response to the user. This builds on the [Code Component Agent API executeEvent](developer/component-framework/bring-intelligence-using-agent-apis) and simplifies usage by not requiring a new custom component.  The implicit context of the app, page, and record are available in MCS. 
+
+-->
 
 This component supports the following responses from MCS:
 
