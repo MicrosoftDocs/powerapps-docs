@@ -39,16 +39,16 @@ This component supports the following responses from MCS:
 1. In the form designer, select **Component** on the command bar.
 1. In the Components pane, expand **Artificial Intelligence**
 1. Drag the **Agent Response** onto the form preview.
-
-> [!div class="mx-imgBorder"]
-> ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png "Agent Response in components pane")
+   > [!div class="mx-imgBorder"]
+   > ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png "Agent Response in components pane")
+1. In the **Add Agent Response** dialog, enter the Event Name from the MCS Topic.
+   > [!div class="mx-imgBorder"]
+   > ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure Agent Response Event Name")
+1. Select **Save and publish** on the command bar.
+1. Open the form in a model-driven app to test the component. 
 
 > [!NOTE]
 > Form preview will display a warning message "Agent Response is only available when you play the app" since live preview is not yet supported. Save and publish the form and validate the component in a running app.
-
-## Configure agent response on a form
-
-These are the properties available to configure an agent response when you create or edit a form using the form designer.
 
 ## See more
 
