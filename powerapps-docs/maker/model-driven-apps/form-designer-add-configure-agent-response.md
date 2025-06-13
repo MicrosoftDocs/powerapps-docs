@@ -40,7 +40,7 @@ This component supports the following responses from MCS:
    > ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png "Agent Response in components pane")
 1. In the **Add Agent Response** dialog, enter the Event Name from the MCS Topic.
    > [!div class="mx-imgBorder"]
-   > ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure Agent Response Event Name")
+   > ![Configure Agent Response Event Name](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure Agent Response Event Name")
 1. Select **Save and publish** on the command bar.
 1. Open the form in a model-driven app to test the component. 
 
