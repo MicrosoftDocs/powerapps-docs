@@ -1599,6 +1599,8 @@
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
+          - name: Add response component
+            href: ./model-driven-apps/form-designer-add-configure-agent-response.md
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
