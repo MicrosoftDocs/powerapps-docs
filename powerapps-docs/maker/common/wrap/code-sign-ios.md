@@ -16,12 +16,11 @@ contributors:
 
 # Manual code sign for iOS
 
-This article explains how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-custom-branded-native-power-apps-for-ios-and-android-using-the-wrap-wizard).
+This article explains how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#steps-to-create-a-custom-branded-native-app-using-the-wrap-wizard).
 
 > [!IMPORTANT]
 > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
 
----
 
 ## Before you begin
 
@@ -40,7 +39,6 @@ Before you start, make sure you have:
 3. Enroll in the [Apple Developer Program](https://developer.apple.com/programs/)
 4. For organization distribution, sign up for the [Apple Enterprise Developer Program](https://developer.apple.com/programs/enterprise/)
 
----
 
 ## Create App ID
 
@@ -66,7 +64,7 @@ Before you start, make sure you have:
 
     - **Description** - Name of your app.
     - **Bundle ID** - Select **Explicit Bundle ID**.
-    - Enter the bundle ID that you used while [creating the wrap project](wrap-how-to.md#step-2-target-platform). More information: [Bundle ID](overview.md#bundle-id)
+    - Enter the bundle ID that you used while [creating the wrap project](wrap-how-to.md#3-choose-target-platform). More information: [Bundle ID](overview.md#bundle-id)
     - Enable these capabilities:
         - Associated Domains
         - iCloud
@@ -75,8 +73,6 @@ Before you start, make sure you have:
     - Select **Continue**.
 
 7. Review and register the App ID.
-
----
 
 ## Create distribution certificate
 
@@ -120,7 +116,6 @@ Before you start, make sure you have:
 
 8. Make note of the **Name** of the certificate (usually formatted as **iPhone Distribution: Name (Team ID)**). This value is the code signing identity needed for signing.
 
----
 
 ## Register devices for testing
 
@@ -142,7 +137,6 @@ Before you start, make sure you have:
     > [!TIP]
     > You can register multiple devices at once by uploading a list of UDIDs.
 
----
 
 ## Create iOS Provisioning Profile
 
@@ -177,11 +171,9 @@ Before you start, make sure you have:
 
 10. Double-click the downloaded file (*.mobileprovision) to register it with Xcode.
 
----
-
 ## Sign the iOS Archive
 
-1. Download and unzip the **iOS-Archive.zip** file from your Azure blob storage. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
+1. Download and unzip the **iOS-Archive.zip** file from your Azure blob storage. This creates a folder named after the [Bundle ID](wrap-how-to.md#3-choose-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
 
 2. For enterprise signing only: Open the file **Distribution-exportOptions.plist** with Xcode and change the value for the **method** field to **enterprise**.
 
@@ -212,7 +204,7 @@ Before you start, make sure you have:
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
----
+
 
 ## Distribute the app
 
@@ -222,7 +214,7 @@ For enterprise distribution with Microsoft Intune:
 - [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios) 
 - [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional)
 
----
+
 
 ## See also
 

@@ -16,7 +16,7 @@ contributors:
 
 # Code sign for Android
 
-This article explains how to manually code sign your Android (APK) app for Power Apps wrap. You must sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) when creating and building your [wrap project](wrap-how-to.md#create-custom-branded-native-power-apps-for-ios-and-android-using-the-wrap-wizard).
+This article explains how to manually code sign your Android (APK) app for Power Apps wrap. You must sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) when creating and building your [wrap project](wrap-how-to.md#steps-to-create-a-custom-branded-native-app-using-the-wrap-wizard).
 
 > [!IMPORTANT]
 > If you want to sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
@@ -47,7 +47,7 @@ You need:
 ## Generate key and signature hash
 
 > [!NOTE]
-> Skip to [Manual signing](#manual-signing-of-apk-package) if you have already generated keys and the signature hash while creating the [app registration](wrap-how-to.md#step-3-register-app).
+> Skip to [Manual signing](#manual-signing-of-apk-package) if you have already generated keys and the signature hash while creating the [app registration](wrap-how-to.md#4-register-your-app).
 
 ### Set up environment variables
 
@@ -135,7 +135,7 @@ When prompted, enter the keystore password.
 | **keystore** | Name of the keystore |
 | **openssl** | Generates SHA1 key for Android |
 
-Add the generated signature hash in the **Redirect URI** when [registering the app](wrap-how-to.md#step-3-register-app).
+Add the generated signature hash in the **Redirect URI** when [registering the app](wrap-how-to.md#4-register-your-app).
 
 ### Convert SHA1 hex to Base64-encoded signature hash
 
@@ -154,7 +154,7 @@ If you see the error "The signature hash must be base64-encoded SHA1" in the Azu
 4. Use a "Hexadecimal to Base64" converter to convert the SHA1 value to Base64.  
    - Example: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
 
-5. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#step-3-register-app).
+5. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#4-register-your-app).
 
 ---
 

@@ -26,7 +26,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
 - Your subscription ID must be the default one. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - An [Apple account](https://developer.apple.com) enrolled in the Apple Developer Program or Apple Enterprise Developer Program.
-- Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
+- Create a [distribution certificate](code-sign-ios.md#create-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-ios-provisioning-profile) or enterprise provisioning profile.
 
 ## Configure key vault URI
 
@@ -79,7 +79,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
 
    - **Android**
 
-     Generate the .pfx file and upload it to the certificate section of the Key Vault. More information: [Generate keys](code-sign-android.md#generate-keys)
+     Generate the .pfx file and upload it to the certificate section of the Key Vault. More information: [Generate keys](code-sign-android.md#generate-key-and-signature-hash)
 
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
 
@@ -88,10 +88,10 @@ This article explains how to use an existing Azure Key Vault or create a new one
 
    - **iOS**
 
-     1. Install the .cer file using Keychain Access. See [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate).
+     1. Install the .cer file using Keychain Access. See [Create the distribution certificate](code-sign-ios.md#create-distribution-certificate).
      2. Export the certificate as a .p12 file, then rename the extension to **.pfx** (required by Key Vault).
      3. When uploading to Key Vault, provide the password set for the .p12 file.
-     4. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and encode it to base64:
+     4. [Create the provisioning profile](code-sign-ios.md#create-ios-provisioning-profile) and encode it to base64:
         - Mac: `base64 -i example.mobileprovision`
         - Windows: `certutil -encode data.txt tmp.b64`
      5. Upload the base64 string as a Key Vault secret, then upload the .pfx file as a Key Vault certificate.
@@ -100,7 +100,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
 
 6. **Add tags for certificates**
 
-   After uploading iOS or Android certificates, add three tags with the name as the bundle ID and the value as the uploaded certificate name(s). Use the same bundle ID as in the [wrap wizard](wrap-how-to.md#step-2-target-platform).
+   After uploading iOS or Android certificates, add three tags with the name as the bundle ID and the value as the uploaded certificate name(s). Use the same bundle ID as in the [wrap wizard](wrap-how-to.md#3-choose-target-platform).
 
    :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
 
