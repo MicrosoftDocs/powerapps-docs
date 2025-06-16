@@ -429,6 +429,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Recording**|
 |1|**DataLake**|
+|2|**ObjectCentric**|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
@@ -1008,6 +1009,7 @@ One-To-Many Relationship: [systemuser user_msdyn_pminferredtask](systemuser.md#B
 
 These relationships are one-to-many. Listed by **SchemaName**.
 
+- [flowcapacityassignment_msdyn_pminferredtask](#BKMK_flowcapacityassignment_msdyn_pminferredtask)
 - [msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask)
 - [msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId)
 - [msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid)
@@ -1024,6 +1026,18 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [msdyn_pminferredtask_ProcessSession](#BKMK_msdyn_pminferredtask_ProcessSession)
 - [msdyn_pminferredtask_SyncErrors](#BKMK_msdyn_pminferredtask_SyncErrors)
 - [msdyn_pmsimulation_pminferredtaskid_msdyn_pminferredtask](#BKMK_msdyn_pmsimulation_pminferredtaskid_msdyn_pminferredtask)
+
+### <a name="BKMK_flowcapacityassignment_msdyn_pminferredtask"></a> flowcapacityassignment_msdyn_pminferredtask
+
+Many-To-One Relationship: [flowcapacityassignment flowcapacityassignment_msdyn_pminferredtask](flowcapacityassignment.md#BKMK_flowcapacityassignment_msdyn_pminferredtask)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowcapacityassignment`|
+|ReferencingAttribute|`regarding`|
+|ReferencedEntityNavigationPropertyName|`flowcapacityassignment_msdyn_pminferredtask`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask"></a> msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask
 

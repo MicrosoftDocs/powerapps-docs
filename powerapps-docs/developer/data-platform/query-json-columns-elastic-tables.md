@@ -1,7 +1,7 @@
 ---
 title: Query JSON columns in elastic tables
 description: Learn how to query data stored in JSON columns with Dataverse elastic tables with code.
-ms.topic: article
+ms.topic: how-to
 ms.date: 12/04/2023
 author: pnghub
 ms.author: gned

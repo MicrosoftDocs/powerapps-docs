@@ -110,7 +110,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |FormatName|Text|
 |ImeMode|Auto|
 |IsLocalizable|False|
-|MaxLength|20000|
+|MaxLength|600000|
 
 ### <a name="BKMK_Enabled"></a> Enabled
 

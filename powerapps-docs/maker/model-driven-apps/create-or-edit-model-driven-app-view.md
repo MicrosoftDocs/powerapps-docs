@@ -1,7 +1,7 @@
 ---
 title: "Create and edit public model-driven app views | MicrosoftDocs"
 description: "Learn how to create or edit public or system model-driven app views."
-ms.date: 08/26/2024
+ms.date: 05/29/2025
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: jasongre
@@ -29,7 +29,7 @@ Public views are available for users to display table records. App makers can cr
 1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a table, such as the account table, and then select the **Views** area.
 1. Select **New view** on the command bar, and then enter a **View name**, and optionally enter a **Description**.
-1. If you want to have suggestions from Copilot for the columns to create for the form based on the **View name** and **Description** values, select **Get AI generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](create-and-edit-forms.md#column-suggestions-by-copilot).
+1. If you want to have suggestions from Copilot for the columns to create for the form based on the **View name** and **Description** values, select **Get AI-generated column suggestions**. For more information about using this AI feature, go to [Column suggestions by Copilot](create-and-edit-forms.md#column-suggestions-by-copilot).
 1. Select **Create**.
 
 > [!NOTE]
@@ -42,7 +42,7 @@ In the solution that you opened earlier, create a new table or find an existing 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select an [environment](model-driven-app-glossary.md#environment)
 1. On the left navigation pane, select **Solutions**, and open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open a table, such as the account table, and then select the **Views** area, and then open the view you that want to edit.
-1. In the view designer, select **+ View column** to add additional columns needed within the view. Or, select **Table columns** in the left navigation and drag the table columns into your view.
+1. In the view designer, select **+ View column** to add additional columns needed within the view. Or, in the **Table columns** left navigation pane drag the table columns onto your view.
 
     > [!TIP]
     > Only include the specific columns you need for the view, as larger numbers of columns in a view can cause degradation of grid performance.  
@@ -64,7 +64,7 @@ In the solution that you opened earlier, create a new table or find an existing 
 
    > [!TIP]
    > It is also possible to change column order by selecting the column header and then selecting **Move Right** or **Move Left**.
-1. Select **Publish** to save the view and make it available for other users in your organization.
+1. Select **Save and publish** to save the view and make it available for other users in your organization.
 
 ### Next steps
 

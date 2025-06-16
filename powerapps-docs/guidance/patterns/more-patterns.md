@@ -3,7 +3,7 @@ title: "Power Apps patterns: Real-world stories | Microsoft Docs"
 description: See real-world examples of how customers have used Power Apps in a wide variety of common scenarios.
 author: kathyos
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 09/24/2024
 ms.subservice: guidance

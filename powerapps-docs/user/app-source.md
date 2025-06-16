@@ -4,7 +4,7 @@ description: Discover the apps shared with your organization via AppSource.
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 11/16/2018
 ms.subservice: end-user
 ms.author: smurkute

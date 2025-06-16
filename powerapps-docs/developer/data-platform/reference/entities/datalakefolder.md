@@ -63,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AccessType](#BKMK_AccessType)
 - [CDMPath](#BKMK_CDMPath)
+- [ComplianceLakeLocation](#BKMK_ComplianceLakeLocation)
 - [containerendpoint](#BKMK_containerendpoint)
 - [ContributorSecurityGroupId](#BKMK_ContributorSecurityGroupId)
 - [datalakefolder_UniqueName](#BKMK_datalakefolder_UniqueName)
@@ -129,6 +130,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_ComplianceLakeLocation"></a> ComplianceLakeLocation
+
+|Property|Value|
+|---|---|
+|Description|**Azure location where the compliance lake should be created.**|
+|DisplayName|**Compliance Lake Location**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`compliancelakelocation`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_containerendpoint"></a> containerendpoint
 

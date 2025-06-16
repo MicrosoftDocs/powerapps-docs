@@ -43,10 +43,6 @@
       href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams 
       href: ../user/open-app-embedded-in-teams.md
-    - name: Copilot features
-      items:
-      - name: Draft well-written, input text (preview)
-        href: ../user/well-written-input-text-copilot.md
   - name: Use model-driven apps
     items:
     - name: Overview
@@ -55,6 +51,8 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
+    - name: Supervise agents using agent feed (preview)
+      href: ../user/supervise-agents-with-agent-feed.md
     - name: Copilot features
       items:
       - name: Use form fill assistance
@@ -135,8 +133,6 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
-        - name: Customize an email template using the template editor
-          href: ../user/cs-template-options.md
         - name: Personalize emails with dynamic text
           href: ../user/email-dynamic-text.md
         - name: Insert an email template
@@ -237,8 +233,20 @@
     href: search.md      
   - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
-- name: Use the Plan designer (preview)
-  href: ./plan-designer/plan-designer.md  
+- name: Plan designer 
+  items:
+  - name: Overview
+    href: ./plan-designer/plan-designer.md  
+  - name: Create a plan
+    href: ./plan-designer/create-plan.md 
+  - name: Generate process diagrams (preview)
+    href: ./plan-designer/process-diagram.md
+  - name: Build a solution
+    href: ./plan-designer/build-solution.md
+  - name: Manage a solution
+    href: ./plan-designer/manage-solution.md  
+  - name: Create a plan from a solution  
+    href: ./plan-designer/create-plan-from-solution.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1198,14 +1206,8 @@
             href: ./canvas-apps/test-studio-classic-pipeline-editor.md
           - name: Configure pipeline using YAML
             href: ./canvas-apps/test-studio-yaml-pipeline.md
-      - name: Test an app with Test Engine (preview)
-        items:
-        - name: Test Engine Overview
-          href: ../developer/test-engine/overview.md
-        - name: Test Engine Yaml format
-          href: ../developer/test-engine/yaml.md
-        - name: Test Engine Power Fx functions
-          href: ../developer/test-engine/powerfx.md
+      - name: "Test Canvas apps with Test Engine (preview)"
+        href: /power-platform/test-engine/canvas-application
   - name: How-to guides
     items:
     - name: Create a canvas app connected to Dataverse from scratch
@@ -1284,7 +1286,7 @@
           href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
-        - name: Canvas component properties (preview)
+        - name: Canvas component properties
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
@@ -1655,7 +1657,7 @@
             href: ./model-driven-apps/quick-view-control-properties-legacy.md
           - name: Timer control overview
             href: ./model-driven-apps/timer-control-legacy.md
-          - name: Add the calendar control to entities
+          - name: Add the calendar control to a table view
             href: ./model-driven-apps/add-calendar-control.md
           - name: Add the rich text editor control
             href: ./model-driven-apps/rich-text-editor-control.md
@@ -1788,6 +1790,8 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
+    - name: Add agents to your app (preview)
+      href: ./model-driven-apps/add-agents-to-app.md  
     - name: Copilot chat for apps
       href:
       items:
@@ -1834,6 +1838,8 @@
       href: ./model-driven-apps/delete-model-driven-app.md
     - name: Run an app
       href: ./model-driven-apps/run-model-driven-app.md
+  - name: Test an app using Test Engine
+    href: /power-platform/test-engine/model-driven-application
   - name: Teams integration
     items:
     - name: Embed a model-driven app as tab app
@@ -1855,8 +1861,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Configure the enhanced email template editor page
-      href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
     - name: Performance insights overview
@@ -2008,8 +2012,10 @@
       items:
       - name: Virtual table OData v4 data provider
         href: ./data-platform/virtual-entity-odata-provider-requirements.md
-      - name: Create a virtual table using a virtual connector provider
+      - name: Create a virtual table using a common data source
         href: ./data-platform/create-virtual-tables-using-connectors.md
+      - name: Create a virtual table using Excel
+        href: ./data-platform/create-virtual-tables-using-excel.md  
       - name: Set up virtual table relationships
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
@@ -2179,6 +2185,8 @@
           href: ./data-platform/configure-actions.md
         - name: Invoke custom process actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
+  - name: Test extensions with Test Engine
+    href: /power-platform/test-engine/dataverse
   - name: Work with solutions
     items:
       - name: Solutions overview
@@ -2193,7 +2201,7 @@
         href: ./data-platform/import-update-export-solutions.md
       - name: Set the preferred solution
         href: ./data-platform/preferred-solution.md
-      - name: View solution deployments (preview)
+      - name: View solution deployments
         href: ./data-platform/maker-deployment-area.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
@@ -2401,6 +2409,12 @@
           href: ./data-platform/azure-synapse-link-choice-labels.md
         - name: Access Dataverse choices with Power BI
           href: ./data-platform/azure-synapse-link-choices-powerbi.md      
+  - name: Connect to Dataverse with MCP (preview)
+    items:
+    - name: Connect to Dataverse with MCP overview
+      href: ./data-platform/data-platform-mcp.md
+    - name: Connect to Dataverse with MCP FAQ
+      href: ./data-platform/data-platform-mcp-faq.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2597,8 +2611,6 @@
     href: ./common/faqs-excel-to-table-app.md
   - name: FAQ for SharePoint list to table and app
     href: ./common/faqs-sharepoint-list-to-table-app.md
-  - name: FAQ for drafting well-written, input text with Copilot
-    href: ./common/faq-draft-with-copilot.md
   - name: FAQ about form fill assistance
     href: ./common/faq-from-filling-assistance.md
   - name: FAQ about using Copilot in timeline highlights

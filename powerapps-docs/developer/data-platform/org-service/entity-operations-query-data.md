@@ -3,7 +3,7 @@ title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK for .NET assemblies."
 ms.date: 05/03/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: MicroSri
 ms.author: sriknair
 search.audienceType: 
@@ -64,11 +64,11 @@ To avoid this problem when using the late-bound style, you can use two strategie
    > [!NOTE]
    > If the type specified with [Entity.GetAttributeValue&lt;T&gt;(System.String)](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)) is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
 
-## Each request can return up to 5000 records
+## Each request can return up to 5,000 records
 
 Interactive applications will typically limit the number of records displayed to a number that a human can interact with, and then provide the option to navigate pages of data. For example, model-driven apps depend on a [personal option](../../../user/set-personal-options.md) that allows people to choose a value from 25 to 250. This information is stored in the [UserSettings.PagingLimit](../reference/entities/usersettings.md#BKMK_PagingLimit) column.
 
-Applications that retrieve data from Dataverse without displaying data in an app don't need to specify a page size. The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+Applications that retrieve data from Dataverse without displaying data in an app don't need to specify a page size. The default and maximum page size is 5,000 rows for standard tables and 500 for elastic tables. If you don't set a page size, Dataverse will return up to the maximum number at a time. To get more rows, you must send additional requests.
 
 Paging works best when you use the paging cookie data that Dataverse returns with the [EntityCollection.PagingCookie](/dotnet/api/microsoft.xrm.sdk.entitycollection.pagingcookie) property, but it isn't required and some requests will not return a paging cookie value. Learn more:
 

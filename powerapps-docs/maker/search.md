@@ -4,7 +4,7 @@ description: Use unified search to find apps, flows, templates, and web content.
 author: Mattp123
 ms.reviewer: angieandrews
 ms.subservice: common
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 05/25/2023
 ms.author: matp
 search.audienceType: 

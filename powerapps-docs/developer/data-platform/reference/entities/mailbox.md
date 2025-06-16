@@ -57,6 +57,9 @@ The following table lists selected properties for the Mailbox table.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ACSEnabledForOutgoingEmail](#BKMK_ACSEnabledForOutgoingEmail)
+- [ACSMailFromCreated](#BKMK_ACSMailFromCreated)
+- [ACSOutgoingEmailStatus](#BKMK_ACSOutgoingEmailStatus)
 - [ACTDeliveryMethod](#BKMK_ACTDeliveryMethod)
 - [ACTStatus](#BKMK_ACTStatus)
 - [AllowEmailConnectorToUseCredentials](#BKMK_AllowEmailConnectorToUseCredentials)
@@ -121,6 +124,60 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Username](#BKMK_Username)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [VerboseLoggingEnabled](#BKMK_VerboseLoggingEnabled)
+
+### <a name="BKMK_ACSEnabledForOutgoingEmail"></a> ACSEnabledForOutgoingEmail
+
+|Property|Value|
+|---|---|
+|Description|**Determines if ACS integration should be enabled for outgoing email synchronization.**|
+|DisplayName|**ACS Enabled for Outgoing Email**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsenabledforoutgoingemail`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsenabledforoutgoingemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSMailFromCreated"></a> ACSMailFromCreated
+
+|Property|Value|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**ACS MailFrom Created**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsmailfromcreated`|
+|RequiredLevel|None|
+|Type|Boolean|
+|GlobalChoiceName|`mailbox_acsmailfromcreated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
+
+### <a name="BKMK_ACSOutgoingEmailStatus"></a> ACSOutgoingEmailStatus
+
+|Property|Value|
+|---|---|
+|Description|**The status of ACS outgoing email synchronization.**|
+|DisplayName|**ACS Outgoing Email Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`acsoutgoingemailstatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`mailbox_acsoutgoingemailstatus`|
+
+#### ACSOutgoingEmailStatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Not Run**|
+|1|**Success**|
+|2|**Failure**|
 
 ### <a name="BKMK_ACTDeliveryMethod"></a> ACTDeliveryMethod
 

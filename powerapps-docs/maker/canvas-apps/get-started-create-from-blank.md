@@ -2,7 +2,7 @@
 title: Create a canvas app based on Excel data
 description: Learn how to create a blank canvas app based on an Excel file.
 author: mduelae
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 

@@ -50,7 +50,7 @@ sections:
       - question: |
           How do I distribute my mobile app?
         answer: |
-          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
+          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
 
       - question: |
           How do I configure my mobile app for distribution through Microsoft Intune?
@@ -137,7 +137,7 @@ sections:
           2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
           3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
           4. Check [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes).
-          5. One common error code is 50194. During the app registration stage, the supported account type isn't configured for multi-tenant. Configure it to [support multi-tenant](/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant).
+          5. One common error code is 50194 (tag- 9n555). During the app registration stage, the supported account type isn't configured for multi-tenant. Configure it to [support multi-tenant](/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant).
   
       - question: | 
           When do you need to re-wrap?

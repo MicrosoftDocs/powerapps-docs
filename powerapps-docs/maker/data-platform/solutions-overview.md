@@ -1,7 +1,7 @@
 ---
 title: Solutions in Power Apps
 description: Provides an overview of solutions in Power Apps
-ms.date: 06/05/2024
+ms.date: 05/29/2025
 ms.reviewer: matp
 ms.topic: overview
 author: "Mattp123"
@@ -57,25 +57,29 @@ More information: [Managed properties in the Power Platform](/power-platform/alm
  Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can perform these solution tasks:
 
 - **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
-- **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
+- **Import solution**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
 - **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
 - **Publish all customizations**: Publish all active customizations in your environment.
 - **Set preferred solution**: Set your [preferred solution](preferred-solution.md) where all solution components are created in.
-- **Switch to classic**: Open the classic solution explorer. 
 - **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+- **Connect to Git**: Source control integration allows development teams to sync solutions and solution objects across one or more Dataverse environments using an Azure DevOps Git repository. More information: [Overview of Git integration in Power Platform](/power-platform/alm/git-integration/overview)
+- **Switch to classic**: Open the classic solution explorer.
+
+When you select a solution, additional tasks become available on the command bar. These tasks include:
+
+- **Edit**: Edit the solution properties, such as adding or removing solution components.
+- **Delete**. Delete the selected solution.
+- **Create a plan**. Use Plan designer to create a plan for your existing solution. Plan designer generates a detailed document that describes your solution. The plan covers the business problem, user requirements like user roles and stories, the data model, and technologies like apps. This feature saves time when you're trying to understand a solution's content and helps makers improve an existing solution. More information: [Create a plan from a solution](../plan-designer/create-plan-from-solution.md)
+- **Export solution**: Export the solution to a file that can be imported into another environment. More information: [Export solutions](export-solutions.md)
+- **Deploy**. Use pipelines in Power Platform to deploy solutions to test and production environments. More information: [Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
 - **Solution checker**: Run or review results of [solution checker](use-powerapps-checker.md) for this solution.
-- **Show dependencies**: [View solution dependencies](view-component-dependencies.md) for solutions that would block uninstall of this solution.
-- **Apply Upgrade**: [Apply a pending upgrade](update-solutions.md#apply-the-upgrade-or-update-in-the-target-environment) that has been initiated for a managed solution.
+- **Show dependencies**: View the solution components that have a dependency on another component. More information: [View solution dependencies](view-component-dependencies.md) for solutions that would block uninstall of this solution.
+- **Set preferred solution**. Use the selected solution as your preferred solution. The preferred solution is where, if not already working in the context of a solution, all your solution components are maintained. More information: [Preferred solution](preferred-solution.md)
+- **See history**. View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+- **Publish to Catalog**: Publishes the solution to the catalog, making it available for other makers in your organization to use. This is useful for sharing solutions that you want others to be able to import and use in their environments. More information: [Catalog in Power Platform](catalog-overview.md)
+- **Apply Upgrade**: Appears when you select a solution. [Apply a pending upgrade](update-solutions.md#apply-the-upgrade-or-update-in-the-target-environment) that has been initiated for a managed solution.
 
-Tasks available with no solution selected include: New solution, Import solution, Open AppSource, Publish all customizations, Set preferred solution.
-
-:::image type="content" source="media/solutions-area-tasks.png" alt-text="Commands available when a solution isn't selected." lightbox="media/solutions-area-tasks.png":::
-
-Tasks available with a solution selected include: New solution, Edit, Delete, Export solution, Solution checker, Show dependencies, Set preferred solution, See history, Clone, Apply Upgrade (when upgrade is available).
-
-:::image type="content" source="media/solutions-area-tasks-selected.png" alt-text="Commands available when solution is selected." lightbox="media/solutions-area-tasks-selected.png":::
-
-From the **Solutions** area, select a solution to view all of its objects. 
+From the **Solutions** area, open a solution to view all of its objects.
 
 :::image type="content" source="media/solution-all-items-list.png" alt-text="Example solution with all objects.":::
 

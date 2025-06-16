@@ -1,12 +1,12 @@
 ---
 title: FAQ about Copilot visualizations on a view (preview)
 description: This FAQ provides information about the AI technology used in visualizing data in a view with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 01/24/2025
+ms.date: 05/28/2025
 author: sriharibs-msft
 ms.author: srihas
 reviewer: shwetamurkute
 ms.reviewer: smurkute
-ms.topic: article
+ms.topic: faq
 ms.subservice: common
 ms.custom: transparency-note
  - responsible-ai-faqs

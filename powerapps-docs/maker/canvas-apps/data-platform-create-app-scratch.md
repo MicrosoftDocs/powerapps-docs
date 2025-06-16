@@ -3,10 +3,10 @@ title: Create a canvas app using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/13/2025
+ms.date: 05/16/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -24,7 +24,7 @@ When building an app from Dataverse, you don't need to create a connection from 
 ## Prerequisites
 
 - [Switch to an environment](intro-maker-portal.md#choose-an-environment) where a database is created with sample data. If you have an appropriate license, you can [create an environment](/power-platform/admin/create-environment) to meet this need.
-- You must be assigned to the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role.
+- Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
 
 ## Create an app
 

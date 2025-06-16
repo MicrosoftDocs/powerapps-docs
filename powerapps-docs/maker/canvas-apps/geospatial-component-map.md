@@ -2,7 +2,7 @@
 title: Use an interactive map control in Power Apps
 description: View an interactive map with customized pins, dynamic routing, and shapes with the geospatial controls in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.date: 3/3/2022
 ms.reviewer: mduelae

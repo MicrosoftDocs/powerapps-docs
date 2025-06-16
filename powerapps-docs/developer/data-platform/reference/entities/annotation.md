@@ -212,7 +212,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`objectid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
+|Targets|account, adx_invitation, adx_inviteredemption, adx_portalcomment, appointment, approvalprocess, approvalstageapproval, calendar, channelaccessprofile, channelaccessprofilerule, channelaccessprofileruleitem, chat, contact, convertrule, duplicaterule, email, emailserverprofile, fax, goal, kbarticle, knowledgearticle, knowledgebaserecord, letter, mailbox, msdyn_aifptrainingdocument, msdyn_aimodel, msdyn_aiodimage, msdyn_flow_approval, mspcat_catalogsubmissionfiles, phonecall, recurringappointmentmaster, routingrule, routingruleitem, sharepointdocument, sla, socialactivity, task, workflow|
 
 ### <a name="BKMK_ObjectIdTypeCode"></a> ObjectIdTypeCode
 
@@ -637,6 +637,8 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [adx_portalcomment_Annotations](#BKMK_adx_portalcomment_Annotations)
 - [annotation_owning_user](#BKMK_annotation_owning_user)
 - [Appointment_Annotation](#BKMK_Appointment_Annotation)
+- [approvalprocess_Annotations](#BKMK_approvalprocess_Annotations)
+- [approvalstageapproval_Annotations](#BKMK_approvalstageapproval_Annotations)
 - [business_unit_annotations](#BKMK_business_unit_annotations)
 - [Calendar_Annotation](#BKMK_Calendar_Annotation)
 - [chat_Annotations](#BKMK_chat_Annotations)
@@ -744,6 +746,32 @@ One-To-Many Relationship: [appointment Appointment_Annotation](appointment.md#BK
 |ReferencedAttribute|`activityid`|
 |ReferencingAttribute|`objectid`|
 |ReferencingEntityNavigationPropertyName|`objectid_appointment`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_approvalprocess_Annotations"></a> approvalprocess_Annotations
+
+One-To-Many Relationship: [approvalprocess approvalprocess_Annotations](approvalprocess.md#BKMK_approvalprocess_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalprocess`|
+|ReferencedAttribute|`approvalprocessid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalprocess`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_approvalstageapproval_Annotations"></a> approvalstageapproval_Annotations
+
+One-To-Many Relationship: [approvalstageapproval approvalstageapproval_Annotations](approvalstageapproval.md#BKMK_approvalstageapproval_Annotations)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`approvalstageapproval`|
+|ReferencedAttribute|`approvalstageapprovalid`|
+|ReferencingAttribute|`objectid`|
+|ReferencingEntityNavigationPropertyName|`objectid_approvalstageapproval`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 

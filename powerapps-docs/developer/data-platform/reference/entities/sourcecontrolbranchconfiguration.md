@@ -66,6 +66,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SourceControlBranchConfigurationId](#BKMK_SourceControlBranchConfigurationId)
 - [SourceControlConfigurationId](#BKMK_SourceControlConfigurationId)
 - [SourceControlConfigurationIdPId](#BKMK_SourceControlConfigurationIdPId)
+- [StatusCode](#BKMK_StatusCode)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 - [UpstreamBranchName](#BKMK_UpstreamBranchName)
 - [UpstreamBranchSyncedCommitId](#BKMK_UpstreamBranchSyncedCommitId)
@@ -245,6 +246,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|100|
+
+### <a name="BKMK_StatusCode"></a> StatusCode
+
+|Property|Value|
+|---|---|
+|Description|**Describes solution git connection status.**|
+|DisplayName|**StatusCode**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`statuscode`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`sourcecontrolbranchbonfiguration_statuscode`|
+
+#### StatusCode Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Connected**|
+|1|**Disconnect**|
+|2|**DisconnectInprogress**|
+|3|**DisconnectFailed**|
 
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 

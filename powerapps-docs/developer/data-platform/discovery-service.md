@@ -3,7 +3,7 @@ title: "Discover user organizations (Microsoft Dataverse) | Microsoft Docs" # In
 description: "Your client application may connect to multiple Dataverse environments. Use the Global Discovery Service to find which environments the user of your application can access."
 ms.date: 03/14/2024
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 author: ImadYanni # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: iyanni # MSFT alias of Microsoft employees only

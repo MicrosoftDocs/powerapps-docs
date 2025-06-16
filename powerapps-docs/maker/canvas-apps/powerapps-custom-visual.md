@@ -3,7 +3,7 @@ title: Power Apps visual for Power BI
 description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI. 
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/4/2025

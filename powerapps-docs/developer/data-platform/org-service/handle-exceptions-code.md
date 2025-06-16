@@ -4,7 +4,7 @@ description: "This article discusses the exceptions that are returned from a Mic
 ms.collection: get-started
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: how-to
 author: MicroSri
 ms.author: sriknair
 search.audienceType: 

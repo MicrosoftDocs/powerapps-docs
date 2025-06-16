@@ -2,7 +2,7 @@
 title: Take screenshots of 3D objects in mixed reality
 description: Take photos of 3D objects in the real world with augmented reality features in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.date: 03/4/2022
 ms.reviewer: mduelae

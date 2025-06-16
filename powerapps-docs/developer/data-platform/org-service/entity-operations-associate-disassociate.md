@@ -3,7 +3,7 @@ title: "Associate and disassociate table rows using the SDK for .NET (Microsoft 
 description: "Learn how to associate and disassociate table rows using the SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/13/2024
 ms.reviewer: "pehecke"
-ms.topic: "article"
+ms.topic: how-to
 author: MicroSri
 ms.author: sriknair
 search.audienceType: 

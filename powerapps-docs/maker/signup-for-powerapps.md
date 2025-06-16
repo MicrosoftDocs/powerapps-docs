@@ -3,10 +3,10 @@ title: Power Apps 30-day free trial
 description: Explore Power Apps for free with a 30-day trial. You are able to extend the capabilities of Office 365, create and run apps, manage environments, and more.
 author: alaug
 ms.subservice: common
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.collection: get-started
-ms.date: 04/16/2025
+ms.date: 05/22/2025
 ms.author: alaug
 ms.reviewer: mkaur
 contributors:
@@ -37,6 +37,8 @@ If you don't have a work or school account, create a free account with Microsoft
 
 If you want to evaluate Power Apps integrations with Microsoft 365, sign up for an [Office 365 trial](https://signup.microsoft.com/get-started/signup?products=ec920d3e-7e24-492d-ba28-79763d637b79) account. 
 
+> [!NOTE]
+> If you don't have an organization account or aren't part of a tenant or organization account, you can establish a developer's account through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 
 ## Identify your current license
 
