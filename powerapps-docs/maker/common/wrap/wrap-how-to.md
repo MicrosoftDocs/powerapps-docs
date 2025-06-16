@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 02/04/2025
+ms.date: 06/10/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -84,7 +84,7 @@ You can also code sign your mobile app package manually instead of using automat
 > [!NOTE]
 > Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform.
 
-6.  Select **Next**.
+8.  Select **Next**.
 
 ### Step 3: Register app
 
@@ -128,6 +128,14 @@ More information about granting access and the reasons why API permissions are r
 
 > [!NOTE]
 > In this step, sometimes for the new customers, only the **Application name** field is visible. The field to add the **Android signature hash** isn't displayed. To resolve this, continue to the next steps and select the **Target platform(s)** as **Android** in the **Target Platforms Step**.
+
+
+#### Add Redirect URIs:
+
+1. Go to **Azure Portal** > **Your App Registration Name** > **Authentication**.
+2. Select **Add a platform**, then choose **iOS** or **Android** based on your app type.
+3. For **iOS**, enter the **Bundle ID**.
+   For **Android**, enter the **Bundle ID** and the **Signature hash key**.
 
 ### Step 4: Configure branding
 
