@@ -84,7 +84,7 @@ You can also code sign your mobile app package manually instead of using automat
 > [!NOTE]
 > Wrap wizard provides an automatic sign-in process. However, developers familiar with mobile processes can manually sign in for their Android or iOS applications using different mechanisms for each platform.
 
-6.  Select **Next**.
+8.  Select **Next**.
 
 ### Step 3: Register app
 
