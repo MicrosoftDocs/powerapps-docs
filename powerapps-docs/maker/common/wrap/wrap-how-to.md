@@ -148,20 +148,20 @@ Azure admin grants API permissions during registration. More information: [Grant
 
 :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
-Run these PowerShell commands as an Azure admin:
+Run these PowerShell commands as an Azure admin If you don't see permissions under **APIs my organization uses**
 
 1. Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
    ```powershell
    Install-Module -Name Microsoft.Graph
    ```
 
-2. Grant *Azure API Connections* permission: 
+2. Grant *Azure API Connections* permission for the static AppId fe053c5f-3692-4f14-aef2-ee34fc081cae
    ```powershell
    Connect-MgGraph -TenantId <your tenant ID>
    New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
    ```
 
-3. Grant *PowerApps Service* permission:
+3. Grant *PowerApps Service* permission for the static AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4
    ```powershell
    Connect-MgGraph -TenantId <your tenant ID>
    New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
@@ -252,29 +252,17 @@ If you encounter errors, you can manually configure API permissions. More inform
 
 ### Required API permissions
 
-| API Type | Specific APIs |
-|----------|--------------|
-| **Microsoft APIs** | - Dynamics CRM |
-| **APIs my organization uses** | - Azure API Connections<br>- PowerApps Service<br>- Power BI (if your app uses Power BI data)<br>- Microsoft Mobile Application Management (for [Intune](/mem/intune/fundamentals/what-is-intune) distribution) |
+| API Type                    | Specific API                                             | Reason                                                                                                                       |
+|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Microsoft APIs**         | Dynamics CRM                                             | `user_impersonation` is needed in order for the application to call Dataverse on behalf of the user.                        |
+| **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
+| **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
+| **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | Required if you're distributing the app using Mobile Application Management policies.               |
 
-If you don't see permissions under **APIs my organization uses**, run these PowerShell commands as needed:
 
-1. Install the Microsoft Graph module if necessary:
-   ```powershell
-   Install-Module -Name Microsoft.Graph
-   ```
 
-2. For missing *Azure API Connections* permission:
-   ```powershell
-   Connect-MgGraph -TenantId <your tenant ID>
-   New-MgServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
-   ```
 
-3. For missing *PowerApps Service* permission:
-   ```powershell
-   Connect-MgGraph -TenantId <your tenant ID>
-   New-MgServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
-   ```
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
