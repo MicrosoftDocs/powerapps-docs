@@ -16,17 +16,17 @@ contributors:
 
 # Azure key vault for wrap using default subscription
 
-Azure Key Vault is a cloud-based service for securely storing secrets, such as certificates, passwords, keys, and other sensitive information. To learn more, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview). Setting up Azure Key Vault is required for creating Azure blob storage and for the automatic signing process in wrap.
+Azure key vault is a cloud-based service that securely stores secrets like certificates, passwords, keys, and other sensitive information. To learn more, see [Introduction to Azure key vault](/azure/key-vault/general/overview). Set up Azure key vault to create Azure blob storage and use the automatic signing process in wrap.
 
 This article explains how to use an existing Azure Key Vault or create a new one in the [Azure portal](https://portal.azure.com).
 
 ## Prerequisites
 
-- Microsoft Entra subscription to [create key vault](/azure/key-vault/general/quick-create-portal).
-- Your subscription ID must be the default one. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
+- Microsoft Entra subscription to [create a key vault](/azure/key-vault/general/quick-create-portal).
+- Make sure your subscription ID is set as the default. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - An [Apple account](https://developer.apple.com) enrolled in the Apple Developer Program or Apple Enterprise Developer Program.
-- Create a [distribution certificate](code-sign-ios.md#create-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-ios-provisioning-profile) or enterprise provisioning profile.
+- Create a [distribution certificate](code-sign-ios.md#create-distribution-certificate), [ad-hoc provisioning profile](code-sign-ios.md#create-ios-provisioning-profile), or enterprise provisioning profile.
 
 ## Configure key vault URI
 
