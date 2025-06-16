@@ -1244,6 +1244,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Code signing process for AAB file
+        href: ./common/wrap/code-sign-aab-file.md
       - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
