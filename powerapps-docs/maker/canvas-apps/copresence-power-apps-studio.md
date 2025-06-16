@@ -66,9 +66,12 @@ When multiple editors work on the app, their avatars show.
 
 To use coauthoring, you need to turn it on for each app. When you turn on coauthoring, it overrides the copresence feature.
 
-1. Open your app for editing in Power Apps Studio.
+1. [Open your app for editing](edit-app.md) in Power Apps Studio.
 1. Go to **Settings** > **Updates** > **New**.
+1. In the searh box, type **coauthor**.
 1. Turn on the **Coauthoring** toggle.
+
+   :::image type="content" source="media/copresence/coauthor-settings.png" alt-text="Screenshot of coauthoring settings":::
 
 ### Limitations of coauthoring
 
