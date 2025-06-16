@@ -83,7 +83,7 @@ To use coauthoring, you need to turn it on for each app. When you turn on coauth
   - Undo and redo
   - Switch authoring versions
 
-- The maximum number of coauthors is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any other coauthors or tabs beyond 10 are in [copresence](#use-copresence-to-view-whos-working-on-the-same-app) and can't edit the app or view real-time updates.
+- The maximum number of coauthors is 10, either in one session or across a total of 10 tabs, depending on which limit is reached first. Any other coauthors or tabs beyond 10 are in [copresence](copresence-power-apps-studio/md#use-copresence-to-see-whos-working-on-the-same-app) and can't edit the app or view real-time updates.
 
 - The app language is locked to the locale of the first maker who opens the app for editing. Opening the same app in a different locale can lead to errors in formulas.
 
