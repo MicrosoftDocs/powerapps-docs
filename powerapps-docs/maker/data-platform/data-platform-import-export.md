@@ -59,11 +59,15 @@ Copy data from your Excel or CSV file into the template that you created in the 
 > The new import experience allows users to import data directly from Excel into existing Dataverse tables using a unified UI. This supports both new record creation and updates to existing records using alternate keys.
 
 Steps to use the preview feature:
-1. Enable the feature in PPAC.
-2. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
-3. Upload your Excel file.
-4. Map columns to table fields. Primary key is required for updates.
-5. Review the summary and click Import.
+1. Enable the feature "Import Excel to existing table with assisted mapping" in Power Platform Admin Center Settings -> Products -> Features.
+1. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
+1. Upload your Excel file and select the sheet to import.
+![Select the sheet to import.](./media/data-platform-import-export/importv2-2-selectsheet.png)
+1. Map columns to table fields. Primary key is required for updates.
+![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
+1. Review the summary and click Import.
+1. Review the import status from notifications.
+![Success notification.](./media/data-platform-import-export/importv2-4-notification.png)
 
 ### Option 2: Import by bringing your own source file
 
