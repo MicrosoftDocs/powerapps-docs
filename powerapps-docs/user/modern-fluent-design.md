@@ -186,15 +186,15 @@ Learn more about turning off the modern, refreshed look, in [Manage model-driven
 Admins can turn off the **New look** setting across all apps in an organization by using the solution explorer to set the **New look for model driven apps** value to **No**. This hides the **New look** toggle and prevents the modern, refreshed look from taking effect.
 
 1. Open <https://make.powerapps.com/>
-2. Under Solutions open an existing solution with one or more model-driven apps:
+2. Under **Solutions** open an existing solution with one or more model-driven apps.
 3. Select **Add Existing** > **More** > **Setting**.
 4. Search for **New look**.
 5. Select **New look for model driven apps**.
 6. Select **Add** to add it to the solution.
 7. Select **New look for model driven apps** from the solution explorer.
 8. Update **Setting Environment Value** to **No**.
-9. Add the **apps to the solution** for which you want to turn off new look
-10. Update the **value of the apps** to **No**
+9. Add the **apps to the solution** for which you want to turn off new look.
+10. Update the **value of the apps** to **No**.
 11. Select **Save**.
 12. Publish all customizations.
 
