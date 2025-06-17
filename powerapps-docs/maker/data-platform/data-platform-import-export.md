@@ -73,10 +73,12 @@ Steps to use the preview feature:
     ![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
 1. Review the summary and click Import.
 1. Monitor the import status from notifications:
-    - In Progress: Ongoing import activity.
-    - Success: Data is processed or indexed.
+    - In Progress: Ongoing import activity.  
+    ![In-progress notification.](./media/data-platform-import-export/importv2-4-notification-inprogress.png)
+    - Success: Data is processed or indexed.  
+    ![Success notification.](./media/data-platform-import-export/importv2-4-notification-success.png)
     - Error: Includes a link to download logs for troubleshooting.  
-    ![Success notification.](./media/data-platform-import-export/importv2-4-notification.png)
+    ![Error log notification.](./media/data-platform-import-export/importv2-4-notification-errorlog.png)
 
 ### Option 2: Import by bringing your own source file
 
