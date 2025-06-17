@@ -56,17 +56,26 @@ Copy data from your Excel or CSV file into the template that you created in the 
 > [!NOTE]
 >
 > This feature is currently in public preview and may change before general availability.
-> The new import experience allows users to import data directly from Excel into existing Dataverse tables using a unified UI. This supports both new record creation and updates to existing records using alternate keys.
+
+The new import experience allows users to import data directly from Excel into existing Dataverse tables using a unified UI. This experience improves upon the legacy import methods by offering:
+- **Assisted mapping**: Uses vector-based search to provide more contextually relevant column mapping suggestions.
+- **Sheet selection**: Users can now choose which sheet to import from within a multi-sheet Excel file.
+- **Notifications**: Real-time feedback on import status, including success, in-progress, and error states.
+- **Error logs**: Downloadable logs to help users self-diagnose and resolve issues.
+- **Performance improvements**: Async ingestion offers better reliability and speed for large files.
 
 Steps to use the preview feature:
 1. Enable the feature **"Import Excel to existing table with assisted mapping"** in Power Platform Admin Center Settings -> Products -> Features.
 1. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
 1. Upload your Excel file and select the sheet to import.  
     ![Select the sheet to import.](./media/data-platform-import-export/importv2-2-selectsheet.png)
-1. Map columns to table fields. Primary key is required for updates.  
+1. Map columns to table fields. A primary key is required to if the user intends to update existing records in the table. If no primary key is selected ("None" option), then all records from the excel sheet will be added as new records.
     ![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
 1. Review the summary and click Import.
-1. Review the import status from notifications.  
+1. Monitor the import status from notifications:
+    - In Progress: Ongoing import activity.
+    - Success: Data is processed or indexed.
+    - Error: Includes a link to download logs for troubleshooting.
     ![Success notification.](./media/data-platform-import-export/importv2-4-notification.png)
 
 ### Option 2: Import by bringing your own source file
