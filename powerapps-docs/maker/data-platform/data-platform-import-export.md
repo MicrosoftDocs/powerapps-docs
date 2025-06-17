@@ -69,7 +69,7 @@ The new import experience lets users import data directly from an Excel file int
 
 ##### Prerequisites
 
-To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the enable the **"Import Excel to existing table with assisted mapping"** setting.
+To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the **"Import Excel to existing table with assisted mapping"** setting.
 
 ##### Import from Excel (preview) steps
 
@@ -81,9 +81,10 @@ To use the feature a Power Platform admin must enable the **"Import Excel to exi
 1. Review the summary and select **Import**.
 
 Monitor the import status from notifications:
-    - In progress: Ongoing import activity with the message **Your data is importing** displayed.  
-    - Success: Data was processed or indexed with the message **Upload completed** displayed.  
-    - Error: **Upload completed with some errors** displayed that includes a link to download logs for troubleshooting.
+
+- In progress: Ongoing import activity with the message **Your data is importing** displayed.  
+- Success: Data was processed or indexed with the message **Upload completed** displayed.  
+- Error: **Upload completed with some errors** displayed that includes a link to download logs for troubleshooting.
 
 ### Option 2: Import by bringing your own source file
 
