@@ -22,7 +22,7 @@ ms.custom:
 
 Collaborate on canvas apps in Power Apps Studio using copresence and coauthoring. These features let you work with other makers in real time, improving productivity and teamwork.
 
-- **Copresence** shows who else is working on the same app, but only one person can edit the app at a time.
+- **Copresence** shows who else is working on the same app, but only one person can edit the app at a time. The first person who opens the app gets editing control
 
 - **Coauthoring** lets multiple people edit the app at the same time and see each other's changes in real time.
 
