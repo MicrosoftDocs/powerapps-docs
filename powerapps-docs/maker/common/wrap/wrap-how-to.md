@@ -258,7 +258,7 @@ If you encounter errors, you can manually configure API permissions. More inform
 | **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
 | **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
 | **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
-| **APIs my organization uses** | Microsoft Mobile Application Management        | Required if you're distributing the app using Mobile Application Management policies.               |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | Required to call Intune API from the Power Platform        |
 
 
 
