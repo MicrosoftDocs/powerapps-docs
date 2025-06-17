@@ -65,7 +65,7 @@ The new import experience lets users import data directly from an Excel file int
 - **Error logs**: Downloadable logs to help users self-diagnose and resolve issues.
 - **Performance improvements**: Asynchronous ingestion offers better reliability and speed for large files.
 
-> - [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
 ##### Prerequisites
 
@@ -75,9 +75,9 @@ To use the feature a Power Platform admin must enable the **"Import Excel to exi
 
 1. Go to the table you want to import data to, and then on the command bar select **Import** > **Import from Excel (Preview)**.
 1. Upload your Excel file and select the sheet to import.  
-    ![Select the sheet to import.](./media/data-platform-import-export/importv2-2-selectsheet.png)
+   :::image type="content" source="./media/data-platform-import-export/import-v2-select-sheet.png" alt-text="Select the Excel sheet to import.":::
 1. Map columns. A primary key is required if you want to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file are added as new records.
-    ![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
+   :::image type="content" source="./media/data-platform-import-export/import-v2-mapping.png" alt-text="Map source columns to target attributes.":::
 1. Review the summary and select **Import**.
 
 Monitor the import status from notifications:
