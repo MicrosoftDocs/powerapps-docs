@@ -69,7 +69,7 @@ Steps to use the preview feature:
 1. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
 1. Upload your Excel file and select the sheet to import.  
     ![Select the sheet to import.](./media/data-platform-import-export/importv2-2-selectsheet.png)
-1. Map columns to table fields. A primary key is required to if the user intends to update existing records in the table. If no primary key is selected ("None" option), then all records from the excel sheet will be added as new records.
+1. Map columns. A primary key is required if the user intends to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file will be added as new records.
     ![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
 1. Review the summary and click Import.
 1. Monitor the import status from notifications:
