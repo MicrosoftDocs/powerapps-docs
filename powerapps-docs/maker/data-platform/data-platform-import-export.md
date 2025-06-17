@@ -4,9 +4,11 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 08/06/2024
+ms.date: 06/17/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
+ms.reviewer: matp
+contributor: dingbx
 search.audienceType: 
   - maker
 ---
@@ -51,34 +53,37 @@ Copy data from your Excel or CSV file into the template that you created in the 
    :::image type="content" source="media/data-platform-import-export/import-mapping-successful.png" alt-text="Import mapping successful":::
   After the import finishes successfully, you'll see the total number of inserts and updates.  
 
-#### New Import from Excel (Preview)
+#### New import from Excel (preview)
 
-> [!NOTE]
->
-> This feature is currently in public preview and may change before general availability.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The new import experience allows users to import data directly from Excel into existing Dataverse tables using a unified UI. This experience improves upon the legacy import methods by offering:
+The new import experience lets users import data directly from an Excel file into existing Dataverse tables using a unified UI. This experience improves upon the legacy import methods by offering:
+
 - **Assisted mapping**: Uses vector-based search to provide more contextually relevant column mapping suggestions.
-- **Sheet selection**: Users can now choose which sheet to import from within a multi-sheet Excel file.
+- **Sheet selection**: Users can choose which sheet to import from within a multi-sheet Excel file.
 - **Notifications**: Real-time feedback on import status, including success, in-progress, and error states.
 - **Error logs**: Downloadable logs to help users self-diagnose and resolve issues.
-- **Performance improvements**: Async ingestion offers better reliability and speed for large files.
+- **Performance improvements**: Asynchronous ingestion offers better reliability and speed for large files.
 
-Steps to use the preview feature:
-1. Enable the feature **"Import Excel to existing table with assisted mapping"** in Power Platform Admin Center Settings -> Products -> Features.
-1. Go to the table you want to import data to, then select **Import** > **Import from Excel (Preview)**.
+> - [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
+
+##### Prerequisites
+
+To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the enable the **"Import Excel to existing table with assisted mapping"** setting.
+
+##### Import from Excel (preview) steps
+
+1. Go to the table you want to import data to, and then on the command bar select **Import** > **Import from Excel (Preview)**.
 1. Upload your Excel file and select the sheet to import.  
     ![Select the sheet to import.](./media/data-platform-import-export/importv2-2-selectsheet.png)
-1. Map columns. A primary key is required if the user intends to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file will be added as new records.
+1. Map columns. A primary key is required if you want to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file are added as new records.
     ![Map source columns to target attribtues.](./media/data-platform-import-export/importv2-3-mapping.png)
-1. Review the summary and click Import.
-1. Monitor the import status from notifications:
-    - In Progress: Ongoing import activity.  
-    ![In-progress notification.](./media/data-platform-import-export/importv2-4-notification-inprogress.png)
-    - Success: Data was processed or indexed.  
-    ![Success notification.](./media/data-platform-import-export/importv2-4-notification-success.png)
-    - Error: Includes a link to download logs for troubleshooting.  
-    ![Error log notification.](./media/data-platform-import-export/importv2-4-notification-errorlog.png)
+1. Review the summary and select **Import**.
+
+Monitor the import status from notifications:
+    - In progress: Ongoing import activity with the message **Your data is importing** displayed.  
+    - Success: Data was processed or indexed with the message **Upload completed** displayed.  
+    - Error: **Upload completed with some errors** displayed that includes a link to download logs for troubleshooting.
 
 ### Option 2: Import by bringing your own source file
 
