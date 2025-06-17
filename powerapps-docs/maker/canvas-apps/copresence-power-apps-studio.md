@@ -68,7 +68,7 @@ To use coauthoring, you need to turn it on for each app. When you turn on coauth
 
 1. [Open your app for editing](edit-app.md) in Power Apps Studio.
 1. Go to **Settings** > **Updates** > **New**.
-1. In the searh box, type **coauthor**.
+1. In the search box, type **coauthor**.
 1. Turn on the **Coauthoring** toggle.
 
    :::image type="content" source="media/copresence/coauthor-settings.png" alt-text="Screenshot of coauthoring settings":::
