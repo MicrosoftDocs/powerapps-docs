@@ -75,7 +75,7 @@ Steps to use the preview feature:
 1. Monitor the import status from notifications:
     - In Progress: Ongoing import activity.  
     ![In-progress notification.](./media/data-platform-import-export/importv2-4-notification-inprogress.png)
-    - Success: Data is processed or indexed.  
+    - Success: Data was processed or indexed.  
     ![Success notification.](./media/data-platform-import-export/importv2-4-notification-success.png)
     - Error: Includes a link to download logs for troubleshooting.  
     ![Error log notification.](./media/data-platform-import-export/importv2-4-notification-errorlog.png)
