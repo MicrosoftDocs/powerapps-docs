@@ -69,9 +69,9 @@ When you update and republish your app, the wrapped app is automatically updated
    
    a. Go to **Secrets** to create a secret for your Azure blob storage access key.
       - More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
+          :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
       - To view and copy your access key: [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
-
-      :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
+          :::image type="content" source="media/how-to-v2/view-access-key.png" alt-text="Screenshot that shows access key" lightbox="media/how-to-v2/view-access-key.png":::
 
    b. Enter the Azure blob storage access key in the **Secret value** field.
 
