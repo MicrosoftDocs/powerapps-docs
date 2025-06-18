@@ -35,10 +35,9 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 1. In the form designer, select **Component** on the command bar.
 1. In the Components pane, expand **Artificial Intelligence**
 1. Drag **Agent Response** onto the form canvas.
-   > [!div class="mx-imgBorder"]
-   > ![Agent Response in components pane](media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png "Agent Response in components pane")
+   :::image type="content" source="media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png" alt-text="Agent response in components pane.":::
 1. In the **Add Agent Response** dialog, enter the **Event Name** from the topic in Copilot Studio. More information: [Find the event name for a topic in Copilot Studio](#find-the-event-name-for-a-topic-in-copilot-studio)
-   ![Configure Agent Response Event Name](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure Agent Response Event Name")
+   ![Configure agent response event name](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure agent response event name")
    > [!NOTE]
    > The **Bind to table column** option isn't supported for this component.
    [!div class="mx-imgBorder"]
