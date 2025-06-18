@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This builds on the [Agent API executeEvent](developer/component-framework/bring-intelligence-using-agent-apis) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
+Add the agent response component to a model-driven app form, which can directly call a Microsoft Copilot Studio topic and display the response to the user. This builds on the [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md) and simplifies usage by not requiring a new custom component. The implicit context of the app, page, and record are available in Copilot Studio.
 
 This component supports the following responses from Copilot Studio:
 
@@ -70,6 +70,11 @@ The component isn't supported for mobile or tablets.
 
 ## Related articles
 
+[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)
+
+[Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
+
 [Overview of the model-driven form designer](form-designer-overview.md)<br/>
-[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)<br/>
-[Using the tree view in the form designer](using-tree-view-on-form.md)
+[Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
