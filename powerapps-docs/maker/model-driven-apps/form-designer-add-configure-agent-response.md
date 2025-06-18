@@ -25,7 +25,7 @@ Agent Response component can be added to a model-driven app form which can direc
 This component supports the following responses from MCS:
 
 * Markdown
-* Adaptive card
+* Adaptive Card
 * Image
 * Video
 
