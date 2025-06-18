@@ -1,7 +1,7 @@
 ---
 title: FAQ about using AI responsibly in Power Apps
 description: Find FAQ about how to use copilot AI responsibly with Power Apps to build apps through conversation, generate app descriptions, edit apps, and more.
-ms.date: 05/06/2025
+ms.date: 06/18/2025
 ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
@@ -52,3 +52,6 @@ ms.collection:
 - [Overview of Plan designer](../plan-designer/plan-designer.md)
 - [FAQ for rename controls in canvas apps with Copilot ](faq-rename-control.md)
 - [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
+- [FAQ for Agent APIs](faq-agent-api-component.md)
+- [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
+- [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)

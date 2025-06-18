@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Encoding"
+title: "Xrm.Encoding (Client API reference) in model-driven apps"
 description: "Xrm.Encoding provides Client API methods to encode and decode strings."
 author: sriharibs-msft
 ms.author: srihas
