@@ -2631,3 +2631,5 @@
     href: ./common/faq-rename-control.md
   - name: FAQ about Copilot visualizations on a view
     href: ./common/faq-visualize-view.md
+  - name: FAQ for Agent APIs in model-driven apps
+    href: ./common/faq-agent-api-component.md
