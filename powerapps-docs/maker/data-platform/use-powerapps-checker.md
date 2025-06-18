@@ -184,17 +184,17 @@ The following table lists the component type, rule description, severity, and ca
 | Canvas App  | [app-include-accessible-label](https://www.w3.org/WAI/tutorials/forms/labels/)  | Use explicit labels to improve app accessibility. |  Medium  | Accessibility |
 | Canvas App  | [app-include-alternative-input](https://www.w3.org/WAI/tips/developing/#ensure-that-all-interactive-elements-are-keyboard-accessible)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  | Accessibility |
 | Canvas App  | [app-avoid-autostart](https://digital.gov/2014/06/30/508-accessible-videos-use-a-508-compliant-video-player/)  | Avoid using autostart on players within an app.  |  Medium  | Accessibility |
-| Desktop flow  | [desktopflow-avoid-unsafe-password](/power-automate/articles/desktop-flows/static-analysis#unsafe-password-security)  | Passwords are managed insecurely in the flow. |  High  | Security |
-| Desktop flow | [desktopflow-avoid-subflow-recursion](/power-automate/articles/desktop-flows/static-analysis#recursion-between-two-subflows)  | Recursive calls detected between subflows, potentially causing an infinite loop. |  Medium  | Design |
-| Desktop flow  | [desktopflow-avoid-infinite-loop](/power-automate/articles/desktop-flows/static-analysis#infinite-loop)  | Infinite loop detected in the flow, potentially causing it to run indefinitely. |  Medium  | Design |
-| Desktop flow  | [desktopflow-avoid-incomplete-if-branch](/power-automate/articles/desktop-flows/static-analysis#incomplete-if)  | Incomplete If action detected, lacking content or only containing actions in the Else branch. |  Low  | Design |
-| Desktop flow  | [desktopflow-avoid-excessive-nested-ifs](/power-automate/articles/desktop-flows/static-analysis#nested-if-clauses)  | Nested If clauses exceed five levels. |  Low  | Maintainability |
-| Desktop flow  | [desktopflow-avoid-empty-on-error-block](/power-automate/articles/desktop-flows/static-analysis#empty-on-block-error-action)  | "On block error" action is empty and not handling errors. |  Low  | Design |
-| Desktop flow  | [desktopflow-limit-argument-count](/power-automate/articles/desktop-flows/static-analysis#threshold-on-number-of-input-and-output-variables)  | Total input/output variables exceed the 25-variable limit. |  Low  | Maintainability |
-| Desktop flow  | [desktopflow-input-argument-default-value](/power-automate/articles/desktop-flows/static-analysis#input-variable-default-values)  | Input/output variables aren't using default values. |  Low  | Maintainability |
-| Desktop flow  | [desktopflow-limit-variable-name-length](/power-automate/articles/desktop-flows/static-analysis#variable-length-exceeded)  | Variable name exceeds the 25-character limit. |  Low  | Maintainability |
-| Desktop flow  | [desktopflow-avoid-excessive-wait-actions](/power-automate/articles/desktop-flows/static-analysis#misuse-of-wait-actions)  | Misuse of wait actions detected, with more than 10 wait actions causing potential bottlenecks. |  Low  | Performance |
-| Desktop flow  | [desktopflow-avoid-immense-wait-duration](/power-automate/articles/desktop-flows/static-analysis#immense-wait-time)  |  Immense wait time detected, exceeding the 600-second limit for hardcoded wait actions. |  Low  | Performance |
+| Desktop flow  | [desktopflow-avoid-unsafe-password](/power-automate/desktop-flows/static-analysis#unsafe-password-security)  | Passwords are managed insecurely in the flow. |  High  | Security |
+| Desktop flow | [desktopflow-avoid-subflow-recursion](/power-automate/desktop-flows/static-analysis#recursion-between-two-subflows)  | Recursive calls detected between subflows, potentially causing an infinite loop. |  Medium  | Design |
+| Desktop flow  | [desktopflow-avoid-infinite-loop](/power-automate/desktop-flows/static-analysis#infinite-loop)  | Infinite loop detected in the flow, potentially causing it to run indefinitely. |  Medium  | Design |
+| Desktop flow  | [desktopflow-avoid-incomplete-if-branch](/power-automate/desktop-flows/static-analysis#incomplete-if)  | Incomplete If action detected, lacking content or only containing actions in the Else branch. |  Low  | Design |
+| Desktop flow  | [desktopflow-avoid-excessive-nested-ifs](/power-automate/desktop-flows/static-analysis#nested-if-clauses)  | Nested If clauses exceed five levels. |  Low  | Maintainability |
+| Desktop flow  | [desktopflow-avoid-empty-on-error-block](/power-automate/desktop-flows/static-analysis#empty-on-block-error-action)  | "On block error" action is empty and not handling errors. |  Low  | Design |
+| Desktop flow  | [desktopflow-limit-argument-count](/power-automate/desktop-flows/static-analysis#threshold-on-number-of-input-and-output-variables)  | Total input/output variables exceed the 25-variable limit. |  Low  | Maintainability |
+| Desktop flow  | [desktopflow-input-argument-default-value](/power-automate/desktop-flows/static-analysis#input-variable-default-values)  | Input/output variables aren't using default values. |  Low  | Maintainability |
+| Desktop flow  | [desktopflow-limit-variable-name-length](/power-automate/desktop-flows/static-analysis#variable-length-exceeded)  | Variable name exceeds the 25-character limit. |  Low  | Maintainability |
+| Desktop flow  | [desktopflow-avoid-excessive-wait-actions](/power-automate/desktop-flows/static-analysis#misuse-of-wait-actions)  | Misuse of wait actions detected, with more than 10 wait actions causing potential bottlenecks. |  Low  | Performance |
+| Desktop flow  | [desktopflow-avoid-immense-wait-duration](/power-automate/desktop-flows/static-analysis#immense-wait-time)  |  Immense wait time detected, exceeding the 600-second limit for hardcoded wait actions. |  Low  | Performance |
 
 ### See also
 
