@@ -20,7 +20,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Resolve canvas apps performance issues
 
-Learn about most common performance issues that can make canvas apps run slow and how to improve performance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
+Learn about most common performance issues that can make canvas apps run slow and how to improve performance. More information: - [Troubleshoot Power Apps canvas app performance issues](/troubleshoot/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-table)
 
 ## Diagnose mobile apps with Monitor
 
@@ -121,7 +121,7 @@ When using the Dynamics 365 mobile app, you encounter the following message: **C
 
 To check for recently added apps, select Refresh. If you can’t find your app, change your search criteria and try again.**
 
- For more information go to, [Troubleshoot "We can’t find any apps for your role"  error message](https://support.microsoft.com/help/4486472/we-can-t-find-any-apps-for-your-role-message-in-dynamics-365-for-phone).
+ For more information go to, [Troubleshoot "We can’t find any apps for your role"  error message](/troubleshoot/power-platform/dataverse/environment-app-access/we-cannot-find-any-apps-your-role).
  
 ## The list of apps is empty
 
@@ -156,7 +156,7 @@ Access the **Active** users section in the admin center and verify you have a **
   
  **Cause 2**: See the following KB article:  
   
- An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](https://support.microsoft.com/kb/2899860).  
+ An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](/previous-versions/troubleshoot/dynamics/crm/error-occurs-child-business-units).  
   
  **Sample Trace Message for Cause 2**:  
   

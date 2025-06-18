@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 5/19/2025
+ms.date: 5/28/2025
 ms.author: norliu
 ms.reviewer: mkaur
 ms.collection: 
@@ -40,6 +40,7 @@ We evaluate the feature both qualitatively and quantitatively. To check quality,
 - This capability is rolling out and might not be available in your region yet.
 - This capability can be subject to usage limits or capacity throttling.
 - This feature lets you use a maximum input size of 4,000 tokens, including both text and images (about 3,000 words if your input only has text).
+- This feature is generally available and is still rolling out so it might not be available in your region yet. Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport). 
 
 
 ## What operational factors and settings allow for effective and responsible use of the Plan designer?

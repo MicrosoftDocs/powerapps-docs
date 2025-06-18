@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 4/16/2025
+ms.date: 5/29/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 

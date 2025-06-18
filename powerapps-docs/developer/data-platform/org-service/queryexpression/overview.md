@@ -4,9 +4,9 @@ description: Learn to compose a query using QueryExpression, an object model tha
 ms.date: 05/12/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
@@ -74,7 +74,7 @@ Examples in this documentation will use a combination of object initialization a
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount). Without setting the `TopCount` property, Dataverse returns up to 5,000 rows.
+To limit the number of rows returned, use the [QueryExpression.TopCount property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.TopCount). Without setting the `TopCount` property, Dataverse returns up to 5,000 rows for standard tables, 500 for elastic tables.
 
 Alternatively, specify a number of records to return using paging. Don't use the `TopCount` property when you request pages of data. [Learn how to request paged results](page-results.md)
 

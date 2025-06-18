@@ -3,8 +3,8 @@ title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
 ms.date: 12/16/2024
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -470,7 +470,8 @@ When you query the rows of an elastic table, you get the best performance if you
 > 
 > Specifying a filter on the `partitionid` value in the usual manner doesn't have the same performance benefits as specifying it through the `partitionId` parameter as shown in the following examples.
 
-These examples retrieve the first 5,000 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+These examples retrieve the first 500 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -535,6 +536,13 @@ OData-Version: 4.0
     ]
 }
 ```
+
+> [!NOTE]
+> The default page size for elastic tables is 500 rows. For standard tables, the default size is 5,000. Learn more about paging:
+> 
+> - [Page results using FetchXml](fetchxml/page-results.md)
+> - [Page results using QueryExpression](org-service/queryexpression/page-results.md)
+> - [Page results using OData](webapi/query/page-results.md)
 
 ---
 

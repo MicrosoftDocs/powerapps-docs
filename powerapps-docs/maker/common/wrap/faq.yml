@@ -16,21 +16,21 @@ summary: |
 
 sections:
   - name: General
-    questions:    
+    questions:
       - question: |
-          Can single tenant customers use wrap with Power Apps? 
+          Can single tenant customers use wrap with Power Apps?
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional) for directions on how to select a correct account type to prepare your app for wrap.
+          Yes. Both single tenant and multitenant customers can use wrap. When registering your app manually in Azure, ensure you select the correct account type. See [App registration](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional) for directions.
 
       - question: |
           Does the wrap feature in Power Apps support Customer-Managed Keys (CMK) or Lockbox capabilities?
         answer: |
-          No. The wrap feature in Power Apps doesn't  support Customer-Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps. Customer assets might be exposed in the build pipeline to Microsoft service operators. 
+          No. The wrap feature in Power Apps doesn't support Customer-Managed Keys (CMK) or Lockbox. Wrap uses Azure DevOps build pipelines, and customer assets might be exposed to Microsoft service operators during the build process.
 
       - question: |
           Can I create mobile apps with Power Apps?
         answer: |
-          Yes. More information: [Creating mobile apps with Power Apps](overview.md)
+          Yes. See [Creating mobile apps with Power Apps](overview.md).
 
       - question: |
           If I create a mobile app with Power Apps, does Microsoft release it for me?
@@ -40,8 +40,8 @@ sections:
       - question: |
           How do I digitally sign my mobile app?
         answer: |
-          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You'll need to [create and prepare your Azure Key Vault](create-key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
-          
+          You can automatically sign your mobile app package in Step 2 of the wrap wizard if you have set up [Azure Key Vault](create-key-vault-for-code-signing.md). For manual signing, see [Android](code-sign-android.md), [iOS](code-sign-ios.md), and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
+
       - question: |
           Can I use Xcode to digitally sign my mobile apps for iOS?
         answer: |
@@ -50,47 +50,47 @@ sections:
       - question: |
           How do I distribute my mobile app?
         answer: |
-          It depends on your business scenario. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/). 
+          You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Google Play](https://support.google.com/googleplay/work/answer/6138458), or [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
       - question: |
           How do I configure my mobile app for distribution through Microsoft Intune?
         answer: |
-          Wrap wizard automatically configures your app for distribution with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To troubleshoot, you can manually grant all the canvas app(s) that you intend to wrap *Microsoft Mobile Application Management* API permission manually. More information:    [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
+          Wrap wizard automatically configures your app for distribution with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To troubleshoot, you can manually grant all the canvas app(s) that you intend to wrap *Microsoft Mobile Application Management* API permission manually. More information:    [Configure the API permissions for your app manually](wrap-how-to.md#configure-api-permissions-manually-optional).
 
       - question: |
           Do I need to rewrap and redistribute my mobile app frequently?
         answer: |
-          Power Apps Mobile is [updated periodically](/power-platform/released-versions/powerapps#all-power-apps-studio-and-power-apps-mobile-versions). Hence, to ensure compatibility with the latest Power Apps release versions, benefit from bug-fixes and new platform features, we recommend that you rewrap and redistribute your mobile app to your end users at least on a monthly basis.
+          Power Apps Mobile is [updated periodically](/power-platform/released-versions/powerapps#all-power-apps-studio-and-power-apps-mobile-versions). To ensure compatibility and benefit from bug fixes and new features, we recommend that you rewrap and redistribute your mobile app at least monthly.
 
       - question: |
           Do I need to rewrap and redistribute my mobile app after making changes to the canvas app(s) included in the package?
         answer: |
-          No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you rewrap and redistribute your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-and-redistribute-my-mobile-app-frequently-) to benefit from platform bug fixes, updates and new features.
-          
+          No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you rewrap and redistribute your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-and-redistribute-my-mobile-app-frequently-) to benefit from platform bug fixes, updates, and new features.
+
       - question: |
-         How do I update the icons and colors in my mobile app?
+          How do I update the icons and colors in my mobile app?
         answer: |
-         You can update icons and colors in your mobile app by rewraping your apps with new icons and colors and redistributing the updated mobile app package.
-         
+          Update icons and colors by rewrapping your apps with new assets and redistributing the updated mobile app package.
+
       - question: |
-         How do I add or remove canvas apps in my wrapped mobile app?
+          How do I add or remove canvas apps in my wrapped mobile app?
         answer: |
-         You can add or remove canvas apps by rewraping your mobile app package with a new set of included apps and redistributing your mobile package.
-          
+          Add or remove canvas apps by rewrapping your mobile app package with the desired set of apps and redistributing your mobile package.
+
       - question: |
           What are Primary and Secondary apps in the context of wrap?
         answer: |
-          Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
+          The Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
 
       - question: |
           What are the advantages of including Secondary apps in the bundle, if I can still Launch() them without doing so?
         answer: |
-          Including Secondary apps in the bundle provides a better Launch time performance when opening them for the first time. However, it's entirely optional to bundle Secondary apps with the Primary app. If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the app bundle.
+          Including Secondary apps in the bundle provides better launch performance when opening them for the first time. However, it's optional. If you have many Secondary apps, you may choose not to bundle them to reduce the total app size.
 
       - question: |
           Can I add apps that use Power BI data to wrap?
         answer: |
-          Yes. Wrap wizard automatically configures your mobile app to be able to use Power BI. To troubleshoot, you can manually grant *Power BI* API permission to all your apps that use Power BI data. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional)
+          Yes. Wrap wizard automatically configures your mobile app to be able to use Power BI. To troubleshoot, you can manually grant *Power BI* API permission to all your apps that use Power BI data. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-api-permissions-manually-optional).
         
       - question: |
           Can I deep link into a wrapped mobile app?
@@ -98,19 +98,20 @@ sections:
           Yes. You can use ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>``` schema to deep link into your wrapped mobile apps. Refer to [Using deep links with wrapped mobile apps](wrap-deep-links.md) for more information.
           
       - question: |
-          Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message 
+          Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message
         answer: |
-         Your organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue, see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
-                
+          Your organization might have a **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue, see [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
+
       - question: |
           Can I create B2C mobile apps with Power Apps?
         answer: |
-          No. Power Apps is a platform for creating business applications and uses Microsoft Entra authentication. The wrap feature wraps existing canvas apps for the same set of end users.
+          No. Power Apps is a platform for business applications and uses Microsoft Entra authentication. The wrap feature wraps existing canvas apps for the same set of end users.
 
       - question: |
           Do I need a premium license to package the app?
         answer: |
           No, you don't need a premium license for wrap. However, if your APK uses certain connectors, you will need to pay according to the requirements of those connectors.
+
       - question: |
           Can I delete wrap projects?
         answer: |
@@ -119,34 +120,34 @@ sections:
       - question: |
           How can I ensure that customers outside the home tenant can't access the app even if I enable multitenant access during registration?
         answer: |
-          Users outside the home tenant can't access Wrap projects unless both the Azure admin and the maker explicitly share the app with the user.
-          The app ensures proper data separation across organizations by embedding the tenant identifier in the authentication token. 
-          This mechanism allows the app to verify the user's tenant and grant access only to data relevant to that tenant.
+          Users outside the home tenant can't access wrap projects unless both the Azure admin and the maker explicitly share the app with the user. The app ensures proper data separation across organizations by embedding the tenant identifier in the authentication token.
 
       - question: |
           Can we allow users from outside home tenant to access wrap projects?
         answer: |
-          The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must take additional steps:
+          The Wrap App supports multi-tenancy. To enable this feature, the Azure admin must:
           1. Add users from outside the home tenant as guests in Azure.
-          2. Include these guests in the Azure Conditional Access process. Additionally, the maker must share the app with these guest IDs within Power Apps.
+          2. Include these guests in the Azure Conditional Access process.
+          3. The maker must share the app with these guest IDs within Power Apps.
 
-      - question: | 
+      - question: |
           Why am I not able to Sign into my wrapped Application?
         answer: |
           1. Verify if the user has access to the PowerApps application. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md)
           2. If access is confirmed, check the app's Azure conditional policies. Admin access is required to review these policies. More information: [View applied Conditional Access details in the Microsoft Entra activity logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies#how-to-view-conditional-access-policies)
           3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
           4. Check [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes).
-          5. One common error code is 50194. During the app registration stage, the supported account type isn't configured for multi-tenant. Configure it to [support multi-tenant](/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant).
+          5. One common error code is 50194 (tag- 9n555). During the app registration stage, the supported account type isn't configured for multi-tenant. Configure it to [support multi-tenant](/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant).
   
       - question: | 
           When do you need to re-wrap?
         answer: |
+
           - If you're an existing customer who has already created and successfully distributed a wrapped app, you don't need to go through the wrapping process again. To ensure users receive the latest published changes, follow the steps mentioned in [Power Apps for Makers: Get App Versions](/connectors/powerappsforappmakers/#get-app-versions).
-          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#step-3-register-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
+          - For new customers, we recommend re-wrapping if you have completed all the registration steps mentioned in [Use the wrap wizard to build your mobile app: Register app](wrap-how-to.md#4-register-your-app) and have either manually or automatically completed the sign-in process mentioned in [Use the wrap wizard to build your mobile app: Sign your mobile app package manually](wrap-how-to.md#sign-your-mobile-app-package-manually-optional).
           - To ensure platform changes benefit end users, we recommend re-wrapping monthly and distributing the updated app to users. 
 
-      - question: | 
+      - question: |
           How to find your Azure admin?
         answer: |
           - Go to the Microsoft Entra roles and administration portal. More information: [Microsoft Entra admin center](https://entra.microsoft.com/#home)
@@ -154,44 +155,32 @@ sections:
           - Select the **Active assignments** tab.
           - Review the list of owners for the active assignments.
 
-      - question: | 
+      - question: |
           Why is Azure key vault a mandatory step?
         answer: |
-          - To access the Azure blob storage location, we need the access key, which is stored in the Azure key vault.
+          The Azure key vault securely stores the access key needed for Azure blob storage.
 
-      - question: | 
+      - question: |
           Do you need to pay for Azure key vault & Azure blob storage?
         answer: |
-          - Yes, more information: [Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/#pricing).
+          Yes. See [Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/#pricing).
 
-      - question: | 
-          Can you have cross tenant azure blob storage location?
-        answer: |
-          - No.
-
-      - question: | 
-          Which subscription ID should I choose when creating a new one, given multiple options?
-        answer: |
-          - Select the default subscription.
-
-      - question: | 
+      - question: |
           What should I do if I don't have access to the resource group while creating the key vault?
         answer: |
-          - Connect with your azure tenant admin to create a key vault for you or ask to share the permission with you.
+          Contact your Azure tenant admin to create a key vault for you or request permission.
 
-      - question: | 
-          How can Entra B2B guest users access the wrapped apps? 
+      - question: |
+          How can Entra B2B guest users access the wrapped apps?
         answer: |
-          - To let guest users to access the app, follow these steps:
-            1. Add users from outside the home tenant as guests in Azure. More information: [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal#invite-an-external-guest-user).
-            2. Include these guests in the Azure Conditional Access process. Share the app with these guest IDs in Power Apps. More information: [Share a canvas app with your organization](../../canvas-apps/share-app.md).
-            3. Replace the app ID and the user account in the following link: `ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantID>`
-            4. Share the link with your client.
-            5. Install the APK on Android and the IPA on iOS.
-            6. Open the weblink and enter the external ids to sign in.
+          1. Add users from outside the home tenant as guests in Azure. See [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal#invite-an-external-guest-user).
+          2. Include these guests in the Azure Conditional Access process. Share the app with these guest IDs in Power Apps. See [Share a canvas app with your organization](../../canvas-apps/share-app.md).
+          3. Replace the app ID and the user account in the following link: `ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantID>`
+          4. Share the link with your client.
+          5. Install the APK on Android and the IPA on iOS.
+          6. Open the weblink and enter the external IDs to sign in.
 
       - question: |
           See also
         answer: |
-          [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues) 
-
+          [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues)

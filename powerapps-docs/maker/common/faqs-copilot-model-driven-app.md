@@ -1,7 +1,7 @@
 ---
 title: FAQ for Copilot chat in model-driven apps 
 description: FAQ that discusses model-driven apps with Copilot chat and the key considerations for making use of this technology responsibly.
-ms.date: 9/16/2024
+ms.date: 5/28/2025
 ms.custom: 
   - transparency-note
 ms.topic: faq
