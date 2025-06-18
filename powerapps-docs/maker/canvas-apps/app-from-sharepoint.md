@@ -21,16 +21,16 @@ contributors:
 
 # Create a canvas app with data from a list
 
+This article explains how to create a canvas app using data from Microsoft Lists or SharePoint. By following this method, you can build an app from a list and customize it to efficiently manage your data.
 
-This article explains how to create a canvas app in Power Apps by using data from Microsoft Lists or SharePoint. Build an app from a list, customize it, and manage your data efficiently. You can also [connect to on-premises SharePoint lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
+You can also [connect to on-premises SharePoint lists](connections/connection-sharepoint-online.md#create-a-sharepoint-connection) through a data gateway.
 
+You can create an app by using a list in SharePoint or Lists in two ways:
 
-Create an app by using SharePoint or Lists in two ways:
+- [Sign in to Power Apps and then create an app by connecting to list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
+- [Create an app directly from a list in SharePoint or Lists.](app-from-sharepoint.md#create-an-app-directly-from-a-list-in-sharepoint-or-lists)
 
-- Create an app directly from a SharePoint or Lists.
-- Sign in to Power Apps and create an app by connecting to SharePoint from Power Apps.
-
-Next Power Apps Studio opens and shows an app with three screens:
+When the app is created, Power Apps Studio opens and shows an app with three screens:
 
 - **Browse screen**: Scroll through all items in the list.
 - **Details screen**: Show all information about a single item in the list.
@@ -51,7 +51,7 @@ Use SharePoint and Power Apps with a [subscription](https://www.microsoft.com/li
 
 Before you create an app from a list, you need to [create a list](https://support.microsoft.com/office/create-a-list-0d397414-d95f-41eb-addd-5e6eff41b083).
 
-In this example, lets create a list to track device orders for your company and include the following columns with sample data:
+For this example, lets create a list to track device orders for your company and include the following columns with sample data:
 
 1. Employee name
 1. Device type
@@ -62,9 +62,9 @@ In this example, lets create a list to track device orders for your company and 
 
     :::image type="content" source="media/app-from-sharepoint/sample-list.png" alt-text="Screenshot of a sample list in Microsoft Lists that tracks device orders." lightbox="media/app-from-sharepoint/sample-list.png":::
 
-## Use SharePoint or Lists to create an app
+## Use a list in SharePoint or Lists to create an app
 
-Now that you have a list, create an app from the list.
+Now lets use the list that we created to build an app from the list.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
@@ -74,17 +74,17 @@ Now that you have a list, create an app from the list.
 
 1. Enter the SharePoint URL, and then select **Connect**. Or, select a recent site.
  
-1. Select a list, and then select **Create app**.
+1. Select a list or select the [sample list](app-from-sharepoint.md#create-a-list) we created earlier, and then select **Create app**.
 
    The app opens in Power Apps Studio, where you design, build, and manage the app. Learn more in [Understand Power Apps Studio](power-apps-studio.md).
 
-1. Save your work by selecting the **Save** icon in the upper-right corner. Give your app a name, and then select **Save**.
+1. Select the **Preview the app** icon to see how the app works.
 
-1. Select the **Preview the app** icon to see how the app works. 
- 
+1. [Save and publish](save-publish-app.md) your app.
+
     When you add or edit information in the app, the information in SharePoint or Lists also updates.
 
-## Create an app from a SharePoint or Lists
+## Create an app directly from a list in SharePoint or Lists
 
  Before you create the app, make sure you [create a list](app-from-sharepoint.md#create-a-list).
 
@@ -95,10 +95,10 @@ Now that you have a list, create an app from the list.
 
     :::image type="content" source="./media/app-from-sharepoint/generate-new-app.png" alt-text="Screenshot of the Integrate menu in Lists, showing the option to create an app in Power Apps.":::
 
-1. Save your work by selecting the **Save** icon in the upper-right corner. Give your app a name, and then select **Save**.
+1. Select the **Preview the app** icon to see how the app works.
 
-1. Select the **Preview the app** icon to see how the app works. 
- 
+1. [Save and publish](save-publish-app.md) your app.
+
     When you add or edit information in the app, the information in SharePoint or Lists also updates.
 
 ## Manage your app
