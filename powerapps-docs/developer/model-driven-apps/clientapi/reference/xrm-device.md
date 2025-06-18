@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Device"
+title: "Xrm.Device (Client API reference) in model-driven apps"
 description: Provides methods to use native device capabilities via Xrm.Device.
 author: sriharibs-msft
 ms.author: srihas
