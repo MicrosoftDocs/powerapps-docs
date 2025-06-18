@@ -1,7 +1,7 @@
 ---
 title: FAQ for Agent APIs and Agent Response component in model-driven apps
 description: This FAQ provides information about the AI technology used in model-driven apps, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 06/16/2025
+ms.date: 06/18/2025
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
