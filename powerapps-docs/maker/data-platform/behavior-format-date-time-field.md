@@ -2,7 +2,7 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 05/28/2024
+ms.date: 06/18/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
