@@ -57,7 +57,7 @@ Copy data from your Excel or CSV file into the template that you created in the 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The new import experience lets users import data directly from an Excel file into existing Dataverse tables using a unified UI. This experience improves upon the legacy import methods by offering:
+The new import experience lets users import data directly from an Excel file into existing Dataverse tables using a unified UI. This experience improves upon the original import method by offering:
 
 - **Assisted mapping**: Uses vector-based search to provide more contextually relevant column mapping suggestions.
 - **Sheet selection**: Users can choose which sheet to import from within a multi-sheet Excel file.
