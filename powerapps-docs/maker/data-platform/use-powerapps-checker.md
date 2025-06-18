@@ -4,7 +4,7 @@ description: Use solution checker to analyze Microsoft Dataverse customizations 
 author: Mattp123
 ms.component: cds
 ms.topic: how-to
-ms.date: 07/30/2024
+ms.date: 06/18/2025
 ms.subservice: dataverse-maker
 ms.author: matp
 ai-usage: ai-assisted
