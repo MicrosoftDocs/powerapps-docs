@@ -3,7 +3,7 @@ title: Collaborate on canvas apps in Microsoft Power Apps Studio
 description: Learn how to use copresence and coauthoring to view who's working on the same canvas app as you and edit it together in real time.
 author: mkaur
 ms.author: szlo
-ms.date: 6/16/2025
+ms.date: 6/17/2025
 ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
@@ -18,13 +18,13 @@ ms.custom:
   - canvas
 ---
 
-# Collaborate on canvas apps in Power Apps Studio
+# Understand coauthoring and copresence in canvas apps
 
 Collaborate on canvas apps in Power Apps Studio using copresence and coauthoring. These features let you work with other makers in real time, improving productivity and teamwork.
 
-- **Copresence** shows who else is working on the same app, but only one person can edit the app at a time. The first person who opens the app gets editing control
+- **[Copresence](copresence-power-apps-studio.md#use-copresence-to-see-whos-working-on-the-same-app)** shows who else is working on the same app, but only one person can edit the app at a time. The first person who opens the app gets editing control
 
-- **Coauthoring** lets multiple people edit the app at the same time and see each other's changes in real time.
+- **[Coauthoring](copresence-power-apps-studio.md#use-coauthoring-to-edit-the-same-app-together)** lets multiple people edit the app at the same time and see each other's changes in real time.
 
 ## Use copresence to see who's working on the same app
 
@@ -62,7 +62,7 @@ When multiple editors work on the app, their avatars show.
 > [!IMPORTANT]
 > Multiple makers can select and edit a control at the same time. Be careful not to overwrite each other's changes.
 
-### Turn on coauthoring
+## Turn on coauthoring
 
 To use coauthoring, you need to turn it on for each app. When you turn on coauthoring, it overrides the copresence feature.
 
@@ -73,7 +73,7 @@ To use coauthoring, you need to turn it on for each app. When you turn on coauth
 
    :::image type="content" source="media/copresence/coauthor-settings.png" alt-text="Screenshot of coauthoring settings":::
 
-### Limitations of coauthoring
+## Limitations of coauthoring
 
 - When more than one maker edits an app, the following actions aren't available:
 
