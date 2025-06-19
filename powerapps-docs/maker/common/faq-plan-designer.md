@@ -51,7 +51,8 @@ We evaluate the feature both qualitatively and quantitatively. To check quality,
 
 ## How do I provide feedback on the Plan designer?
 
-- Select the Thumbs button in the Plan designer to give feedback. Add details to help us understand your feedback.
+- Select the thumbs up or thumbs down in the plan document to provide feedback on a specific section. 
+- Select the **Give feedback** icon in the command bar to provide general feedback on the Plan designer experience. 
 
 ### See also
 [Overview of Plan designer](../plan-designer/plan-designer.md)
