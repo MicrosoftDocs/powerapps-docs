@@ -36,7 +36,7 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 1. In the Components pane, expand **Artificial Intelligence**
 1. Drag **Agent Response** onto the form canvas.
    :::image type="content" source="media/form-designer-add-configure-agent-response/form-designer-components-agent-response.png" alt-text="Agent response in components pane.":::
-1. In the **Add Agent Response** dialog, enter the **Event Name** from the topic in Copilot Studio in the **Static value** box. More information: [Find the event name for a topic in Copilot Studio](#find-the-event-name-for-a-topic-in-copilot-studio)
+1. In the **Add Agent Response** dialog, enter the **Event name** from the topic in Copilot Studio in the **Static value** box. More information: [Find the event name for a topic in Copilot Studio](#find-the-event-name-for-a-topic-in-copilot-studio)
    ![Configure agent response event name](media/form-designer-add-configure-agent-response/form-designer-configure-agent-response.png "Configure agent response event name")
    > [!NOTE]
    > The **Bind to table column** option isn't supported for this component.
@@ -48,9 +48,12 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
 ## Find the event name for a topic in Copilot Studio
 
-1. Open the topic in Copilot Studio for editing.
-1. Below **Event received**, select **Edit**.
-1. Within the **Event name** property, enter a unique string to be passed from the agent response component. More information: [Change the trigger for a topic](/microsoft-copilot-studio/authoring-triggers)
+1. Open the topic in Copilot Studio and find the **Trigger** node.
+1. Verify the trigger type is **A custom client event occurs** or **Event received**.
+1. Within the **Trigger** node, select **Edit**.
+   :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event.png" alt-text="Copilot Studio Trigger custom client event.":::   
+1. Within the **On Event Activity properties** pane, copy the **Event name** property string value to be passed from the agent response component. More information: [Change the trigger for a topic](/microsoft-copilot-studio/authoring-triggers)
+   :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event-properties.png" alt-text="Copilot Studio Trigger On Event property pane.":::   
 
 ## Limitations
 
