@@ -32,7 +32,7 @@ These APIs are designed to enhance integration with Microsoft Copilot Studio (MC
 
 ### Related articles
 
-[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)  
+[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)<br />
 [Copilot](reference/copilot.md)  
 [executeEvent](reference/copilot/executeevent.md)  
 [executePrompt](reference/copilot/executeprompt.md)  
