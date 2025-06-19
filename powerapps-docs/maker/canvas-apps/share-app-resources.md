@@ -52,6 +52,9 @@ When you share an app that uses a connection that can be shared, the app connect
 
 If you select **Confirm** and share the chosen app with other users, the app connection is implicitly shared with those users along with the app.
 
+> [!NOTE]
+> To ensure proper functionality, the app sharer must have share permissions for all connections used by the app; otherwise, the shared user will be unable to access or utilize those connections correctly while playing the app. This requirement applies to all app-sharing operations, including app sharing, app publishing, and solution import.
+
 ## On-premises data gateways
 If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
 
