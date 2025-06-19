@@ -32,11 +32,12 @@ These APIs are designed to enhance integration with Microsoft Copilot Studio (MC
 
 ### Related articles
 
-[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)
+[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)  
 [Copilot](reference/copilot.md)  
 [executeEvent](reference/copilot/executeevent.md)  
 [executePrompt](reference/copilot/executeprompt.md)  
 [Power Apps component framework overview](overview.md)  
 [Create your first code component](implementing-controls-using-typescript.md)  
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)  
-[Xrm.Copilot (Client API reference)](../model-driven-apps/clientapi/reference/xrm-copilot.md)
+[Xrm.Copilot (Client API reference)](../model-driven-apps/clientapi/reference/xrm-copilot.md)  
+[Add agent response with the form designer (preview)](../../maker/model-driven-apps/form-designer-add-configure-agent-response.md)
