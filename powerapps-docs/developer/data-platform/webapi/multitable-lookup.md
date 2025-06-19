@@ -28,9 +28,6 @@ power to define any other multi-table lookups they might need.
 > At this time users can create and modify custom multi-table lookups via the SDK or Web APIs.
 > Interactive user interface support will be coming in a future release.
 
-> [!NOTE]
-> When using a Multi-table lookup on a form, only tables inside the Model-Driven App the lookup is currently in will show to the user, even if the lookup has more tables configured against it.
-
 ## Examples
 
 Let's say you're hosting media for users in a library. You have many different
