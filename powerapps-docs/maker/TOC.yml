@@ -1593,15 +1593,13 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
           - name: Configure header properties
             href: ./model-driven-apps/form-designer-header-properties.md
-          - name: Add the agent reponse component
-            href: ./model-driven-apps/form-designer-add-configure-agent-response.md
           - name: Add and configure subgrid component
             href: ./model-driven-apps/form-designer-add-configure-subgrid.md
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
-          - name: Add response component
+          - name: Add the agent response component
             href: ./model-driven-apps/form-designer-add-configure-agent-response.md
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
