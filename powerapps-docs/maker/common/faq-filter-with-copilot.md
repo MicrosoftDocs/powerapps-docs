@@ -1,13 +1,13 @@
 ---
 title: FAQ on filtering, sorting, and searching Power Apps galleries with Copilot 
 description: This FAQ outlines how AI filters, sorts, and searches Power Apps galleries with Copilot, addressing its usage, testing, evaluation, and limitations. 
-ms.date: 05/22/2024
+ms.date: 05/25/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: jordanchodak
 ms.author: jordanchodak
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.collection: 
     - bap-ai-copilot 
 ---

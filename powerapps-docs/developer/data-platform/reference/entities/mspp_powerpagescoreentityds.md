@@ -1,61 +1,66 @@
 ---
-title: "Power Pages Core Entity DS (mspp_powerpagescoreentityds)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Power Pages Core Entity DS (mspp_powerpagescoreentityds)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Power Pages Core Entity DS (mspp_powerpagescoreentityds) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Power Pages Core Entity DS (mspp_powerpagescoreentityds) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Power Pages Core Entity DS (mspp_powerpagescoreentityds)  table/entity reference
+# Power Pages Core Entity DS (mspp_powerpagescoreentityds) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Power Pages Apps Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Create|POST /mspp_powerpagescoreentitydses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retrieve|GET /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /mspp_powerpagescoreentitydses<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Update|PATCH /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+The following table lists the messages for the Power Pages Core Entity DS (mspp_powerpagescoreentityds) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Create`<br />Event: True |`POST` /mspp_powerpagescoreentitydses<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Retrieve`<br />Event: True |`GET` /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /mspp_powerpagescoreentitydses<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /mspp_powerpagescoreentitydses(*mspp_powerpagescoreentitydsid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+
+
+## Events
+
+The following table lists the events for the Power Pages Core Entity DS (mspp_powerpagescoreentityds) table.
+Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
+
+|Name|Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|mspp_powerpagescoreentitydses|
-|DisplayCollectionName|Power Pages Core Entity DSs|
-|DisplayName|Power Pages Core Entity DS|
-|EntitySetName|mspp_powerpagescoreentitydses|
-|IsBPFEntity|False|
-|LogicalCollectionName|mspp_powerpagescoreentitydses|
-|LogicalName|mspp_powerpagescoreentityds|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|mspp_powerpagescoreentitydsid|
-|PrimaryNameAttribute|mspp_name|
-|SchemaName|mspp_powerpagescoreentityds|
+The following table lists selected properties for the Power Pages Core Entity DS (mspp_powerpagescoreentityds) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Power Pages Core Entity DS** |
+| **DisplayCollectionName** | **Power Pages Core Entity DSs** |
+| **SchemaName** | `mspp_powerpagescoreentityds` |
+| **CollectionSchemaName** | `mspp_powerpagescoreentitydses` |
+| **EntitySetName** | `mspp_powerpagescoreentitydses`|
+| **LogicalName** | `mspp_powerpagescoreentityds` |
+| **LogicalCollectionName** | `mspp_powerpagescoreentitydses` |
+| **PrimaryIdAttribute** | `mspp_powerpagescoreentitydsid` |
+| **PrimaryNameAttribute** |`mspp_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -64,40 +69,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mspp_name](#BKMK_mspp_name)
 - [mspp_powerpagescoreentitydsId](#BKMK_mspp_powerpagescoreentitydsId)
 
-
 ### <a name="BKMK_mspp_name"></a> mspp_name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_name|
-|MaxLength|100|
+|LogicalName|`mspp_name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_mspp_powerpagescoreentitydsId"></a> mspp_powerpagescoreentitydsId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Power Pages Core Entity DS|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Power Pages Core Entity DS**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|mspp_powerpagescoreentitydsid|
+|LogicalName|`mspp_powerpagescoreentitydsid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
 
 
+
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.mspp_powerpagescoreentityds?text=mspp_powerpagescoreentityds EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.mspp_powerpagescoreentityds?displayProperty=fullName>

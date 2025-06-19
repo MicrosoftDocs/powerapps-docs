@@ -2,16 +2,16 @@
 title: Optimize for devices overview (preview)
 description: Learn how to make your canvas app screens optimized for devices. 
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.date: 05/01/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
 contributors:
-  - sericks
+  - smurkute
   - anuitz
   - gachasta
 ---

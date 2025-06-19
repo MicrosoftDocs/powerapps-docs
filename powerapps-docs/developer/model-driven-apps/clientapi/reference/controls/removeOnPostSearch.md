@@ -1,8 +1,8 @@
 ---
-title: "removeOnPostSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "removeOnPostSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the removeOnPostSearch method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # removeOnPostSearch (Client API reference)
-
-
 
 Removes an event handler from the [PostSearch](../events/postsearch.md) event. 
 
@@ -32,8 +30,8 @@ kbSearchControl.removeOnPostSearch(myFunction);
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
-|`myFunction` |Function |Yes|The function to remove from the **PostSearch** event.| 
+|----|----|----|----|
+|`myFunction`|Function |Yes|The function to remove from the **PostSearch** event.|
 
 ### Related articles
 

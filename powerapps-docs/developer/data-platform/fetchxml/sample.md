@@ -1,7 +1,7 @@
 ---
 title: FetchXml Sample code
 description: Try using FetchXML to retrieve Dataverse data using this sample code.
-ms.date: 02/29/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -268,6 +268,8 @@ You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-ser
         }
     ```
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
 ## [Web API](#tab/webapi)
 
@@ -537,8 +539,8 @@ When you run the program using the `OutputFetchRequest` method, the output shoul
 
 ### Related articles
 
-[Query data using FetchXml](overview.md)   
-[Use FetchXml to retrieve data](retrieve-data.md)   
-[Sample: Use FetchXML with a paging cookie](../org-service/samples/use-fetchxml-paging-cookie.md)   
-[Sample: Use aggregation in FetchXML](../org-service/samples/use-aggregation-fetchxml.md)   
+[Query data using FetchXml](overview.md)
+[Use FetchXml to retrieve data](retrieve-data.md)
+[Sample: Use FetchXML with a paging cookie](../org-service/samples/use-fetchxml-paging-cookie.md)
+[Sample: Use aggregation in FetchXML](../org-service/samples/use-aggregation-fetchxml.md)
 [Sample: Convert queries between FetchXML and QueryExpression](../org-service/samples/convert-queries-fetch-queryexpression.md)

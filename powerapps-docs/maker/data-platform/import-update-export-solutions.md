@@ -4,7 +4,7 @@ description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
 ms.date: 12/14/2023
 ms.reviewer: ""
-ms.topic: "article"
+ms.topic: how-to
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
@@ -74,10 +74,11 @@ When you import a Power Apps app that uses an on-premises data gateway ID, note 
 
 ### See also
 
-[Update solutions](update-solutions.md) <br />
-[Export solutions](export-solutions.md) <br />
-[Publish changes](create-solution.md#publish-changes) <br />
-[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Update solutions](update-solutions.md)
+- [Export solutions](export-solutions.md)
+- [Publish changes](create-solution.md#publish-changes)
+- [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+- [Import a solution (Power Automate)](/power-automate/import-flow-solution)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,12 +1,12 @@
 ---
-title: "Debug JavaScript code for model-driven apps| MicrosoftDocs"
+title: "Debug JavaScript code for model-driven apps"
 description: "Explains how to debug JavaScript code for model-driven apps"
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
-author: adrianorth
-ms.author: aorth
-ms.date: 01/31/2023
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 01/31/2025
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -16,13 +16,14 @@ contributors:
 ---
 # Debug JavaScript code for model-driven apps
 
-Custom logic using JavaScript in model-driven apps are contained within JavaScript web resources. JavaScript web resources provide the libraries that define functions developers register as event handlers.
+Custom logic using JavaScript in model-driven apps is contained within JavaScript web resources. JavaScript web resources provide the libraries that define functions developers register as event handlers.
 
-In a model-driven app viewed within a web browser, you can use developer tools that all modern browsers provide. With these tools you can locate the JavaScript libraries loaded in the model-driven application, set break points and debug your code using common methods.
+In a model-driven app viewed within a web browser, you can use developer tools that all modern browsers provide. With these tools you can locate the JavaScript libraries loaded in the model-driven application, set break points, and debug your code using common methods.
 
-Model-driven apps viewed using mobile apps on Android, or the Windows desktop app require some additional steps. See:
+Model-driven apps viewed using mobile apps on Android, or the Windows desktop app require some more steps. See:
 
 - [Debug JavaScript in mobile apps on Android](#debug-javascript-in-mobile-apps-on-android)
+- [Debug JavaScript in mobile apps on iOS](#debug-javascript-in-mobile-apps-on-ios)
 - [Debug JavaScript in the Windows desktop app](#debug-javascript-in-the-windows-desktop-app)
 
 > [!NOTE]
@@ -32,7 +33,7 @@ Model-driven apps viewed using mobile apps on Android, or the Windows desktop ap
 
 More information:
 
-- [mdn web docs: What are browser developer tools?](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools).
+- [Mdn web docs: What are browser developer tools?](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
    - [Microsoft Edge Sources](/microsoft-edge/devtools-guide-chromium/sources/)
    - [Google Chrome Sources](https://developer.chrome.com/docs/devtools/sources/)
@@ -45,12 +46,12 @@ When an event handler causes a script error in a model-driven app, the following
 
 :::image type="content" source="media/script-error-dialog.png" alt-text="Script error dialog":::
 
-If you click the **Show Details** link, you can find the details that include: event name, function name, web resource name, solution name, and publisher name.
+If you select the **Show Details** link, you can find the details that include: event name, function name, web resource name, solution name, and publisher name.
 
 ```
 Xrm.Navigation.openalertDialog is not a function
 Session Id: 53febd7c-3388-4ea5-a195-d84cf5883c30
-Correlation Id: d154420e-5999-4250-b140-081f04a8e264
+Correlation Id: aaaa0000-bb11-2222-33cc-444444dddddd
 Event Name: onsave
 Function Name: Example.formOnSave
 Web Resource Name: example_example-form-script
@@ -68,10 +69,7 @@ In this case, the name of the function was incorrect, `openalertDialog` should b
 
 While using JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected.
 
-> [!NOTE]
-> It is not currently possible to debug devices using iOS.
-
-To debug JavaScript in mobile apps, you must complete the three steps below:
+To debug JavaScript in mobile apps on Android, you must complete the following three steps:
 
 ### 1. Configure your device
 
@@ -88,12 +86,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
 1. In the mobile app, go to the list of Power Apps and select on the menu button.
 1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
-
-   :::image type="content" source="media/field-service-mobile-app-settings.png" alt-text="Field service mobile app settings":::
-
-1. When enabling this option, there's a confirmation dialog. Select **Confirm**.
-
-   :::image type="content" source="media/field-service-mobile-app-settings-confirm-remote-debugging.png" alt-text="Confirm remote debugging dialog":::
+1. There's a confirmation dialog when you enable this option. Select **Confirm**.
 
 ### 3. Debug from your development machine
 
@@ -103,9 +96,28 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
    :::image type="content" source="media/edge-inspect-devices.png" alt-text="Edge DevTools Devices screen":::
 
-1. Click on **inspect**.
+1. Select on **inspect**.
 
 More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-edge/devtools-guide-chromium/remote-debugging/)
+
+## Debug JavaScript in mobile apps on iOS
+
+You can use Safari on a Mac to debug JavaScript web resources on iOS.
+
+To debug JavaScript in mobile apps on iOS, you must complete the following two steps:
+
+### 1. Configure the mobile application
+
+1. In the mobile app, go to the list of Power Apps and select on the menu button.
+1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
+
+### 2. Debug from your Mac
+   
+1. Connect your iPhone or iPad to your Mac.
+1. Launch Safari on your Mac.
+1. In the **Develop** menu, find your connected iPhone or iPad, and then look for **Power Apps** or **Field Service**.
+
+More information: [Inspecting iOS and iPadOS | Apple Developer Documentation](https://developer.apple.com/documentation/safari-developer-tools/inspecting-ios)
 
 ## Debug JavaScript in the Windows desktop app
 
@@ -125,7 +137,7 @@ To debug JavaScript on Windows, you must first install the prerequisite applicat
 
    1. Open **Windows Settings** > **Privacy & security** > **For developers**.
    1. Enable **Device Portal**.
-   1. Click **Yes** to install Windows Developer Mode package when prompted.
+   1. Select **Yes** to install Windows Developer Mode package when prompted.
    1. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it's `https://localhost:50080`  
    1. For debugging Power Apps / Field Service Mobile locally, you can continue with **Restrict to loopback connections only** enabled and **Authentication** disabled (otherwise you need to set a user password)
 
@@ -150,7 +162,7 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deep l
 
    :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
 
-1. Click **inspect** and the DevTools will open.
+1. Select **inspect** and the DevTools opens.
 
 ### Related articles
 

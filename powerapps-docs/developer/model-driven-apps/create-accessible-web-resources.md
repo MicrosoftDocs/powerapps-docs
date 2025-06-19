@@ -1,8 +1,8 @@
 ---
-title: "Create accessible web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities." # 115-145 characters including spaces. This abstract displays in the search result."
-author: sriharibs-msft
-ms.author: srihas
+title: "Create accessible web resources (model-driven apps)"
+description: "The topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities."
+author: anushikhas96
+ms.author: anushisharma
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -44,7 +44,7 @@ It is important that you use the correct HTML elements for the types of interact
   
 However, semantic HTML can only go so far. Modern web applications typically include custom controls that are composed of many HTML elements working together. Page content that is frequently updated dynamically using asynchronous JavaScript is confusing for AT applications that rely only on semantic HTML. [Accessible Rich Internet Applications (ARIA)](/microsoft-edge/accessibility) technology provides a solution by extending HTML with additional attributes that communicate custom semantics.  
   
-ARIA provides a standard set of extended attributes that can be applied to HTML elements that are used in a control, or “widget.” These attributes describe the role that the HTML element plays in the control. ARIA also provides capabilities to improve the navigation experience and make the user aware of elements that may be updated dynamically. The recommended practice is to layer ARIA over semantic HTML.  
+ARIA provides a standard set of extended attributes that can be applied to HTML elements that are used in a control, or "widget." These attributes describe the role that the HTML element plays in the control. ARIA also provides capabilities to improve the navigation experience and make the user aware of elements that may be updated dynamically. The recommended practice is to layer ARIA over semantic HTML.  
   
 In addition to including support for AT, there are other requirements you have to consider. For example, how does the UI adjust when the user increases the text size? Does your UI require that the user be able to differentiate colors to perform tasks? Can all actions be performed by using a keyboard? For more information, see [Introduction to Web Accessibility](/previous-versions/windows/apps/hh452681(v=win.10)).
   

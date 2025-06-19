@@ -2,11 +2,11 @@
 title: "Manage invalid characters | Microsoft Docs"
 description: "Describes how to manage invalid characters with the Dataverse API. Only allowed characters can be used or an error is thrown."
 ms.date: 03/22/2022
-ms.reviewer: jdaly
 ms.topic: article
-author: divkamath
+author: MicroSri
+ms.author: sriknair
+ms.reviewer: jdaly
 ms.subservice: dataverse-developer
-ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:

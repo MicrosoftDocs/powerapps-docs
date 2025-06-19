@@ -2,17 +2,16 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 05/06/2024
+ms.date: 04/30/2025
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "sabinn-msft"
-ms.assetid: 
+author: "MilindaV2"
 ms.subservice: dataverse-maker
-ms.author: "matp"
+ms.author: "milindav"
 search.audienceType: 
   - maker
 contributors:
@@ -63,7 +62,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
     > [!NOTE]
     > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
-1. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
+1. Choose the tables you want to export either by selecting them one by one or by entering a comma separated list of tables in the search box, and then select **Save**. Only tables with the Track changes property enabled can be exported. More information: [Advanced options](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#advanced-options).
 
     ![Add tables.](media/add-tables.png "Add tables")
 
@@ -77,7 +76,7 @@ More information: [Configure Azure Storage firewalls and virtual networks]( /azu
 
 ## Manage table data to the Synapse workspace
 
-After you have set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
+After you set up the Azure Synapse Link, you can manage the tables that are exported in one of two ways:
 
 - In the Power Apps (make.powerapps.com) **Azure Synapse Link** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data.
@@ -86,7 +85,7 @@ After you have set up the Azure Synapse Link, you can manage the tables that are
 
 ## Monitor your Azure Synapse Link
 
-After you have set up the Azure Synapse Link, you can monitor the Azure Synapse Link under the **Tables** tab.
+After you set up the Azure Synapse Link, you can monitor the Azure Synapse Link on the **Tables** tab.
 
    ![Monitor an Azure Synapse Link](media/monitoring.png "Monitor an Azure Synapse Link")
 
@@ -104,6 +103,11 @@ After you have set up the Azure Synapse Link, you can monitor the Azure Synapse 
 3. To delete both the data lake file system as well as the Synapse Database, type the link name to confirm.
 
 4. Select **Yes**, and allow a few minutes for everything to be unlinked and deleted.
+
+> [!IMPORTANT]
+> The custom database objects you create within the Azure Synapse Link database are deleted once the unlink is completed.
+>
+> You need to implement your own version control for your custom database objects scripts to ensure you have a backup.
 
 ## Relinking an Azure Synapse Link
 

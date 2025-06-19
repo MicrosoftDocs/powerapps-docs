@@ -2,8 +2,8 @@
 title: "Authenticate to Microsoft Dataverse with the Web API (Dataverse)| Microsoft Docs"
 description: "Learn about the different ways to manage authentication when using the Web API"
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

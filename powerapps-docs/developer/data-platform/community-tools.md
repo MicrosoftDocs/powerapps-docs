@@ -4,24 +4,22 @@ description: "Read about the community built tools that help you perform various
 ms.date: 03/15/2021
 ms.reviewer: pehecke
 ms.topic: article
-author: phecke
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: pehecke
+ms.author: sriknair
 search.audienceType: 
   - developer
 ---
 # Community tools for Microsoft Dataverse
 
-
-The Power Apps community creates tools! 
+The Power Apps community creates tools!
 
 > [!IMPORTANT]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 ## XrmToolBox
 
-Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Dataverse, providing tools to ease customization, configuration, and operation tasks. It's shipped with more than 30 plugins to make administration, customization, or configuration tasks easier and less time consuming. 
-
+Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Dataverse, providing tools to ease customization, configuration, and operation tasks. It's shipped with more than 30 plugins to make administration, customization, or configuration tasks easier and less time consuming.
 
 The following list of selected community tools is distributed via the XrmToolBox that you can use with Dataverse.
 
@@ -59,6 +57,5 @@ The following is a selected list of community tools available for Visual Studio 
 |[Dataverse DevTools](https://marketplace.visualstudio.com/items?itemName=danish-naglekar.dataverse-devtools)|The all-in-one tool to develop code for Dataverse/Dynamics 365. Helps you connect to a Dataverse environment, generate TypeScript definitions for entities, create different type of Dataverse-specific projects, and much more.|
 |[Power Apps Portal Helper](https://marketplace.visualstudio.com/items?itemName=oleksandr-olashyn.portal-helper-vscode)|Set of commands that simplify working with Power Apps CLI for Portals|
 |[PCF Builder](https://marketplace.visualstudio.com/items?itemName=danish-naglekar.pcf-builder)|Helps with initializing, building and testing Power Apps Component Framework components|
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

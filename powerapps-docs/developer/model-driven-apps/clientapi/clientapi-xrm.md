@@ -1,12 +1,11 @@
 ---
-title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
-description: "Describes the client api Xrm object"
-author: adrianorth
-ms.author: aorth
-
-ms.date: 04/01/2022
+title: "Client API Xrm object for model-driven apps "
+description: "Describes the client API Xrm object"
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 06/16/2025
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: article
 applies_to:
   - "Dynamics 365 (online)"
 ms.subservice: mda-developer
@@ -27,10 +26,11 @@ The following illustration displays the Xrm object model:
 
 ![Xrm Object Model.](../media/ClientAPI-XrmModel.png)
 
-Here is the information about each of the namespaces in the Xrm object:
+Here's the information about each of the namespaces in the Xrm object:
 
 | Namespace| Description|
 | ---| ---|
+| [Xrm.Copilot](reference/xrm-copilot.md)| [!INCLUDE [xrm-copilot-description](reference/Xrm-Copilot/includes/xrm-copilot-description.md)]|
 | [Xrm.Device](reference/xrm-device.md)| Provides methods to use native device capabilities. |
 | [Xrm.Encoding](reference/xrm-encoding.md)     | Provides methods to encode strings.|
 | [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.|
@@ -40,7 +40,7 @@ Here is the information about each of the namespaces in the Xrm object:
 
 ## Client API global context
 
-Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method in forms to retrieve information specific to an organization, a user, or the client where script is run without going through the form execution context. This is a change from previous versions where you had to use the form context to retrieve global context by using **Xrm.Page.context**.
+Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method in forms to retrieve information specific to an organization, a user, or the client where script is run without going through the form execution context. Using the `getGlobalContext` method is a change from previous versions where you had to use the form context to retrieve global context by using **Xrm.Page.context**.
 
 > [!NOTE] 
 > **Xrm.Page.context** is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in the current release, and you should now use the new **Xrm.Utility.**[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method to get global context in your code targeting version 9.0 or later.

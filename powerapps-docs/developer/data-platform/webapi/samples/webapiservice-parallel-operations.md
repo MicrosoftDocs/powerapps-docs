@@ -2,8 +2,8 @@
 title: "Web API WebApiService Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates sending requests in parallel using the .NET Task Parallel Library (TPL)."
 ms.date: 09/02/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -29,7 +29,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Locate the [/dataverse/webapi/C#-NETx/ParallelOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/ParallelOperations) folder.
+1. Locate the [/dataverse/webapi/C#-NETx/ParallelOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/ParallelOperations) folder.
 1. Open the `ParallelOperations.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
@@ -44,7 +44,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Code
 
-The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/ParallelOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ParallelOperations/Program.cs)
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/ParallelOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/ParallelOperations/Program.cs)
 
 ## Demonstrates
 

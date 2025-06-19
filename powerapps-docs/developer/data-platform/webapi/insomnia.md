@@ -2,10 +2,10 @@
 title: "Use Insomnia with Dataverse Web API"
 description: "Learn how to set up and configure Insomnia local Scratch Pad with environments that connect with Microsoft Dataverse environments."
 ms.date: 03/15/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -169,7 +169,7 @@ The Common Schema Definition Language (CSDL) $metadata document is the source of
 
 1. Edit the URL by appending `$metadata?annotations=true` after the `_.webapiurl` variable. The URL should be:
    
-   `GET _.webapiurl $metadata?annotations=true`
+   `GET _.webapiurl$metadata?annotations=true`
 
 1. Select **Send**.
 
@@ -227,9 +227,9 @@ Now that you're authenticated, modify your request to invoke the [WhoAmI functio
    ```json
    {
       "@odata.context": "https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-      "BusinessUnitId": "77164db8-dbc7-ee11-907a-00224803d046",
-      "UserId": "e6b56e50-a3d5-ee11-9078-000d3a59a579",
-      "OrganizationId": "100462a3-76cb-ee11-9075-00224806e300"
+      "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+      "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+      "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
    }
    ```
 

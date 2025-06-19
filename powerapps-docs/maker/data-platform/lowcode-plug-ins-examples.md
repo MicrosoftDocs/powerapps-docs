@@ -4,6 +4,7 @@ description: Examples of Microsoft Dataverse low-code plug-ins
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 11/10/2023
 ms.custom: template-how-to
@@ -15,6 +16,8 @@ ms.custom: template-how-to
 The goal of these example plug-ins is to help you get started by integrating them into your apps. You'll understand the authoring experience includes authoring Microsoft Dataverse custom APIs backed by Power Fx expressions, which can trigger actions internal or external to Dataverse.
 
 > [!IMPORTANT]
+>
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
@@ -69,7 +72,7 @@ Implement server-side input validation, such as duplicate error detection that t
 
 ### Test the plug-in
 
-1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#specify-a-table)
+1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#add-a-dataverse-table-in-a-blank-app).
 1. Create a contact row.
 1. Create another contact with the same name as in the previous step.
 1. A message is displayed indicating duplicate records found. Select **Ignore and save** on the error message prompt.

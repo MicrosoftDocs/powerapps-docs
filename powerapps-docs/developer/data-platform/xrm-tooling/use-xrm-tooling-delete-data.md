@@ -1,11 +1,11 @@
 ---
 title: "Use XRM tooling to delete data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to delete data from Microsoft Dataverse"
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
@@ -21,6 +21,9 @@ contributors:
 There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.
 
 In the <xref:Microsoft.PowerPlatform.Dataverse.Client?displayProperty=fullName> namespace there are <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.DeleteEntity%2A?displayProperty=nameWithType> and <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.DeleteEntityAssociation%2A?displayProperty=nameWithType> methods.
+
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
   
 ## DeleteEntity  
 
@@ -86,6 +89,5 @@ else
 
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

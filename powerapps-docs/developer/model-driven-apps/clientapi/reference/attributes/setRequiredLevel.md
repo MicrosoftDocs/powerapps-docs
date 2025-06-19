@@ -1,8 +1,8 @@
 ---
-title: "setRequiredLevel (Client API reference)| MicrosoftDocs"
+title: "setRequiredLevel (Client API reference)"
 description: Includes description and supported parameters for the setRequiredLevel method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -33,15 +33,14 @@ All
 **Type**: String.
 
 **Description**: Set the level to one of the following values:
-- none
-- required
-- recommended
+
+- `none`
+- `required`
+- `recommended`
 
 ### Related article
 
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

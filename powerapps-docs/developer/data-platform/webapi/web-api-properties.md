@@ -1,10 +1,10 @@
 ---
 title: Web API Properties
 description: Learn about OData property elements that are defined for EntityTypes in the Microsoft Dataverse Web API.
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

@@ -3,10 +3,12 @@ title: "Use ITracingService in Plug-ins | MicrosoftDocs"
 description: "Debugging and/or troubleshooting plug-in issues or behaviors are complicated without rich and insightful logging or tracing."
 suite: powerapps
 author: jowells
+ms.author: jowells
+ms.reviewer: jdaly
 ms.topic: article
 ms.date: 12/12/2018
 ms.subservice: dataverse-developer
-ms.author: jowells
+
 search.audienceType: 
   - developer
 ---

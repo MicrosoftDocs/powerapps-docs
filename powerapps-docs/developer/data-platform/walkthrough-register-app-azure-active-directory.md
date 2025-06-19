@@ -2,8 +2,8 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 12/15/2023
-ms.topic: article
+ms.date: 02/24/2025
+ms.topic: tutorial
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -17,13 +17,16 @@ search.audienceType:
 
 This tutorial describes how to register an application (desktop, mobile, or Web) with Microsoft Entra ID. App registration is required before an application can authenticate with Microsoft Dataverse and access business data.
 
-The included instructions in this article are specific to app registration in Microsoft Entra ID for Dataverse access. For expanded Microsoft Entra ID app registration information, see [Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
-
 ## About app registration and authentication
 
-There are several authentication flows that Dataverse supports: username/password, client secret, and certificate. App registration and authentication is slightly different for each of these flows. This article covers the username/password and client secret authentication flows. Certificate flows are planned to be documented in a future article.
+There are several authentication flows that Dataverse supports: username/password, client secret, certificate, and managed identity. App registration and authentication is slightly different for each of these flows. This article covers the username/password and client secret authentication flows. Certificate flows are planned to be documented in a future article.
+
+Read the following important information about using username/password authentication in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
 
 For an app to authenticate with Dataverse and gain access to business data, you must first register the app in Microsoft Entra ID. That app registration is then used during the authentication process.
+
+The included instructions in this article are specific to app registration in Microsoft Entra ID for Dataverse access. For general Microsoft Entra ID app registration information, see [Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
 
 ### Public and confidential clients
 
@@ -61,7 +64,7 @@ To create an app registration for a username/password authentication flow, and f
 
 5. On the **Overview** page under **Essentials**, select the **Add a Redirect URI** link. Set the redirect URI by first selecting **Add a platform**, enter a URI value, and then select **Configure**.
 
-    You must supply a redirect URI value described as follows. For a .NET Framework built desktop or mobile app, use a URI value of "app://\<Application (client) ID>". This ID value is displayed on the **Overview** page of the registered app. For a .NET Core built desktop or mobile app that uses [MSAL](/entra/identity-platform/msal-overview) for authentication, use a URI value of "http://localhost". For a Web API app, use any valid web address though the address does not have to actually exist.
+    You must supply a redirect URI value described as follows. For a .NET Framework built desktop or mobile app, use a URI value of "app://\<Application (client) ID>". This ID value is displayed on the **Overview** page of the registered app. For a .NET Core built desktop or mobile app that uses [MSAL](/entra/identity-platform/msal-overview) for authentication, use a URI value of "<http://localhost>". For a Web API app, use any valid web address though the address does not have to actually exist.
 
 6. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the ID value. Record the value somewhere. You need to specify this value later in your application's authentication code or app.config file where appropriate.
 
@@ -72,10 +75,13 @@ To create an app registration for a username/password authentication flow, and f
 9. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option
 
 10. Select **Grant admin consent for \<name>** even though it looks like it is already checked. Next, on the popup, select **Yes** to grant consent. If you do not approve consent here, your app will receive a consent error at run-time.
+    > [!NOTE]
+    > If the **Grant admin consent for \<name>** is ghosted (non-selectable), you do not have permission to set this value.
+    > More information: [Admin consent button](/entra/identity-platform/quickstart-configure-app-access-web-apis#admin-consent-button), [User and admin consent in Microsoft Entra ID](/entra/identity/enterprise-apps/user-admin-consent-overview)
 
-11. Select **Add permissions**.
+12. Select **Add permissions**.
 
-12. (Optional) On the **Authentication** page under **Advanced settings** and **Allow public client flows**, select **Yes** and then **Save**. See the description in the next paragraphs for more information.
+13. (Optional) On the **Authentication** page under **Advanced settings** and **Allow public client flows**, select **Yes** and then **Save**. See the description in the next paragraphs for more information.
 
 During authentication, if the client app does not supply a password for a username/password flow, the app user will be prompted for logon credentials in a browser window.
 
@@ -133,9 +139,39 @@ Follow these steps to create an app user and bind it to your app registration.
 
 ## Use an app registration in code
 
-To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart) Web API sample.
+To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart) Web API sample.
 
-The sample code contains example public and confidential client connection strings for use with the `ServiceClient` class.
+Here is the confidential client code from the SDK samples. The client ID and secret are obtained from the Entra ID app registration once completed.
+
+```csharp
+class Program
+{
+    // TODO Enter your Dataverse environment's URL, ClientId, and Secret.
+    static string url = "https://<myorg>.crm.dynamics.com";
+
+    static string connectionString = $@"
+    AuthType = ClientSecret;
+    Url = {url};
+    ClientId = 66667777-aaaa-8888-bbbb-9999cccc0000;
+    Secret = aaaaaaaa-6b6b-7c7c-8d8d-999999999999";
+
+    static void Main()
+    {
+        // ServiceClient class implements IOrganizationService interface
+        IOrganizationService service = new ServiceClient(connectionString);
+
+        var response = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
+
+        Console.WriteLine($"Application ID is {response.UserId}.");
+
+        // Pause the console so it does not close.
+        Console.WriteLine("Press the <Enter> key to exit.");
+        Console.ReadLine();
+    }
+}
+```
+
+For the complete code sample, refer to the links mentioned previously.
 
 ### See also
 

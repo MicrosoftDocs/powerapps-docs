@@ -1,9 +1,10 @@
 ---
 title: Filter rows using OData
 description: Learn how to use OData to filter rows when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 07/11/2024
-author: divkamath
-ms.author: dikamath
+ms.date: 05/28/2025
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -23,7 +24,7 @@ The following table describes the operators and functions you can use in `$filte
 
 
 | |Description| More information|
-|---------|---------|---------|
+|---|---|---|
 |**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[Comparison operators](#comparison-operators)|
 |**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
 |**Grouping operators**|Use parentheses: `()`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
@@ -36,7 +37,7 @@ The following table describes the operators and functions you can use in `$filte
 The following table describes the operators you can use to compare a property and a value.
 
 |Operator|Description|Example|  
-|--------------|-----------------|-------------|
+|---|---|---|
 |`eq`|Equal|`$filter=revenue eq 100000`|  
 |`ne`|Not Equal|`$filter=revenue ne 100000`|  
 |`gt`|Greater than|`$filter=revenue gt 100000`|  
@@ -57,7 +58,7 @@ GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname
 The following table describes the logical operators you can use to create more complex expressions.
 
 |Operator|Description|Example|  
-|--------------|-----------------|-------------|
+|---|---|---|
 |`and`|Logical and|`$filter=revenue lt 100000 and revenue gt 2000`|  
 |`or`|Logical or|`$filter=contains(name,'(sample)') or contains(name,'test')`|  
 |`not`|Logical negation|`$filter=not contains(name,'sample')`|  
@@ -73,7 +74,7 @@ Use parentheses `()` with logical operators to specify the precedence to evaluat
 Use more than 60 specialized functions designed for business applications. These functions provide special capabilities, as described in the following table.
 
 |Group|Functions|
-|---------|---------|
+|---|---|
 |**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InFiscalYear>, <xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<br /><xref:Microsoft.Dynamics.CRM.Last7Days>, <xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.LastFiscalYear>, <xref:Microsoft.Dynamics.CRM.LastMonth>, <xref:Microsoft.Dynamics.CRM.LastWeek>, <xref:Microsoft.Dynamics.CRM.LastXDays>, <xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<br /><xref:Microsoft.Dynamics.CRM.LastXHours>, <xref:Microsoft.Dynamics.CRM.LastXMonths>, <xref:Microsoft.Dynamics.CRM.LastXWeeks>, <xref:Microsoft.Dynamics.CRM.LastXYears>, <xref:Microsoft.Dynamics.CRM.LastYear>, <xref:Microsoft.Dynamics.CRM.Next7Days>, <xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<br /><xref:Microsoft.Dynamics.CRM.NextMonth>, <xref:Microsoft.Dynamics.CRM.NextWeek>, <xref:Microsoft.Dynamics.CRM.NextXDays>, <xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.NextXFiscalYears>, <xref:Microsoft.Dynamics.CRM.NextXHours>, <xref:Microsoft.Dynamics.CRM.NextXMonths>,<br /><xref:Microsoft.Dynamics.CRM.NextXWeeks>, <xref:Microsoft.Dynamics.CRM.NextXYears>, <xref:Microsoft.Dynamics.CRM.NextYear>, <xref:Microsoft.Dynamics.CRM.OlderThanXDays>, <xref:Microsoft.Dynamics.CRM.OlderThanXHours>, <xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>, <xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<br /><xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>, <xref:Microsoft.Dynamics.CRM.OlderThanXYears>, <xref:Microsoft.Dynamics.CRM.On>, <xref:Microsoft.Dynamics.CRM.OnOrAfter>, <xref:Microsoft.Dynamics.CRM.OnOrBefore>, <xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.ThisFiscalYear>, <xref:Microsoft.Dynamics.CRM.ThisMonth>, <xref:Microsoft.Dynamics.CRM.ThisWeek>, <xref:Microsoft.Dynamics.CRM.ThisYear>, <xref:Microsoft.Dynamics.CRM.Today>, <xref:Microsoft.Dynamics.CRM.Tomorrow>, <xref:Microsoft.Dynamics.CRM.Yesterday>|
 |**Id Values**|<xref:Microsoft.Dynamics.CRM.EqualBusinessId>, <xref:Microsoft.Dynamics.CRM.EqualUserId>, <xref:Microsoft.Dynamics.CRM.NotEqualBusinessId>, <xref:Microsoft.Dynamics.CRM.NotEqualUserId>|
 |**Hierarchy**|<xref:Microsoft.Dynamics.CRM.Above>, <xref:Microsoft.Dynamics.CRM.AboveOrEqual>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchy>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchyAndTeams>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserTeams>, <br /><xref:Microsoft.Dynamics.CRM.EqualUserTeams>, <xref:Microsoft.Dynamics.CRM.NotUnder>, <xref:Microsoft.Dynamics.CRM.Under>, <xref:Microsoft.Dynamics.CRM.UnderOrEqual><br />More information: [Query hierarchical data](../../query-hierarchical-data.md)|
@@ -133,7 +134,7 @@ The following table shows the URL encoded values for common special characters.
 When composing filters using strings, you can apply the following wildcard characters:
 
 |Characters  |Description  |T-SQL documentation and examples  |
-|---------|---------|---------|
+|---|---|---|
 |`% ` |Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
 |`_`  |Use the underscore character to match any single character in a string comparison operation that involves pattern matching.|[_ (Wildcard - Match One Character) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
 |`[]` |Matches any single character within the specified range or set that is specified between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
@@ -157,7 +158,7 @@ endswith(name,'value%')
 The following table describes the OData query functions you can use to filter on string values:
 
 |Function|Example|  
-|--------------|-------------|  
+|---|---|  
 |`contains`|`$filter=contains(name,'(sample)')`|  
 |`endswith`|`$filter=endswith(name,'Inc.')`|  
 |`startswith`|`$filter=startswith(name,'a')`|
@@ -185,8 +186,6 @@ GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
 ```
 
 If you don't, you get an error like this: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
-
-
 
 ## Filter based on related data values
 

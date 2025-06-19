@@ -1,68 +1,75 @@
 ---
-title: "Site Component (powerpagecomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Site Component (powerpagecomponent)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Site Component (powerpagecomponent) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Site Component (powerpagecomponent) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Site Component (powerpagecomponent)  table/entity reference
+# Site Component (powerpagecomponent) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Power Pages Core Base Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /powerpagecomponents(*powerpagecomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Create|POST /powerpagecomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /powerpagecomponents(*powerpagecomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retrieve|GET /powerpagecomponents(*powerpagecomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /powerpagecomponents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|SetState|PATCH /powerpagecomponents(*powerpagecomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /powerpagecomponents(*powerpagecomponentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+The following table lists the messages for the Site Component (powerpagecomponent) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /powerpagecomponents(*powerpagecomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /powerpagecomponents<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /powerpagecomponents(*powerpagecomponentid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /powerpagecomponents(*powerpagecomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /powerpagecomponents<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /powerpagecomponents(*powerpagecomponentid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /powerpagecomponents(*powerpagecomponentid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /powerpagecomponents(*powerpagecomponentid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+
+
+## Events
+
+The following table lists the events for the Site Component (powerpagecomponent) table.
+Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
+
+|Name|Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|powerpagecomponents|
-|DisplayCollectionName|Site Components|
-|DisplayName|Site Component|
-|EntitySetName|powerpagecomponents|
-|IsBPFEntity|False|
-|LogicalCollectionName|powerpagecomponents|
-|LogicalName|powerpagecomponent|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|powerpagecomponentid|
-|PrimaryNameAttribute|name|
-|SchemaName|powerpagecomponent|
+The following table lists selected properties for the Site Component (powerpagecomponent) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Site Component** |
+| **DisplayCollectionName** | **Site Components** |
+| **SchemaName** | `powerpagecomponent` |
+| **CollectionSchemaName** | `powerpagecomponents` |
+| **EntitySetName** | `powerpagecomponents`|
+| **LogicalName** | `powerpagecomponent` |
+| **LogicalCollectionName** | `powerpagecomponents` |
+| **PrimaryIdAttribute** | `powerpagecomponentid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -85,1201 +92,968 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_content"></a> content
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Content|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Content**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|content|
-|MaxLength|1048576|
+|LogicalName|`content`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Customizable|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|400|
+|LogicalName|`name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|400|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_powerpagecomponentId"></a> powerpagecomponentId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Power Pages Component|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Power Pages Component**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|powerpagecomponentid|
+|LogicalName|`powerpagecomponentid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_powerpagecomponenttype"></a> powerpagecomponenttype
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Component Type|
+|DisplayName|**Component Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|powerpagecomponenttype|
+|LogicalName|`powerpagecomponenttype`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`powerpagecomponenttype`|
 
 #### powerpagecomponenttype Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Publishing State||
-|2|Web Page||
-|3|Web File||
-|4|Web Link Set||
-|5|Web Link||
-|6|Page Template||
-|7|Content Snippet||
-|8|Web Template||
-|9|Site Setting||
-|10|Web Page Access Control Rule||
-|11|Web Role||
-|12|Website Access||
-|13|Site Marker||
-|15|Basic Form||
-|16|Basic Form Metadata||
-|17|List||
-|18|Table Permission||
-|19|Advanced Form||
-|20|Advanced Form Step||
-|21|Advanced Form Metadata||
-|24|Poll Placement||
-|26|Ad Placement||
-|27|Bot Consumer||
-|28|Column Permission Profile||
-|29|Column Permission||
-|30|Redirect||
-|31|Publishing State Transition Rule||
-|32|Shortcut||
-|33|Cloud Flow||
-|34|UX Component||
-
-
+|Value|Label|
+|---|---|
+|1|**Publishing State**|
+|2|**Web Page**|
+|3|**Web File**|
+|4|**Web Link Set**|
+|5|**Web Link**|
+|6|**Page Template**|
+|7|**Content Snippet**|
+|8|**Web Template**|
+|9|**Site Setting**|
+|10|**Web Page Access Control Rule**|
+|11|**Web Role**|
+|12|**Website Access**|
+|13|**Site Marker**|
+|15|**Basic Form**|
+|16|**Basic Form Metadata**|
+|17|**List**|
+|18|**Table Permission**|
+|19|**Advanced Form**|
+|20|**Advanced Form Step**|
+|21|**Advanced Form Metadata**|
+|24|**Poll Placement**|
+|26|**Ad Placement**|
+|27|**Bot Consumer**|
+|28|**Column Permission Profile**|
+|29|**Column Permission**|
+|30|**Redirect**|
+|31|**Publishing State Transition Rule**|
+|32|**Shortcut**|
+|33|**Cloud Flow**|
+|34|**UX Component**|
 
 ### <a name="BKMK_powerpagesiteid"></a> powerpagesiteid
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Power Pages Site id|
+|DisplayName|**Power Pages Site id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|powerpagesiteid|
+|LogicalName|`powerpagesiteid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|powerpagesite|
 |Type|Lookup|
-
+|Targets|powerpagesite|
 
 ### <a name="BKMK_powerpagesitelanguageid"></a> powerpagesitelanguageid
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Power Pages Site Language Id|
+|DisplayName|**Power Pages Site Language Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|powerpagesitelanguageid|
+|LogicalName|`powerpagesitelanguageid`|
 |RequiredLevel|None|
-|Targets|powerpagesitelanguage|
 |Type|Lookup|
-
+|Targets|powerpagesitelanguage|
 
 ### <a name="BKMK_searchcontent"></a> searchcontent
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Search Content|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Search Content**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|searchcontent|
-|MaxLength|1048576|
+|LogicalName|`searchcontent`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Power Pages Component|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Power Pages Component**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`powerpagecomponent_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Power Pages Component|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Power Pages Component**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`powerpagecomponent_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [filecontent](#BKMK_filecontent)
 - [filecontent_Name](#BKMK_filecontent_Name)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [powerpagesiteidName](#BKMK_powerpagesiteidName)
-- [powerpagesitelanguageidName](#BKMK_powerpagesitelanguageidName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Row id unique|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Row id unique**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidunique|
+|LogicalName|`componentidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_filecontent"></a> filecontent
 
-**Added by**: Power Pages Core Extensions Solution
-
 |Property|Value|
-|--------|-----|
-|Description|File Content column contains portal web files e.g. png, css etc.|
-|DisplayName|File Content|
+|---|---|
+|Description|**File Content column contains portal web files e.g. png, css etc.**|
+|DisplayName|**File Content**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|filecontent|
+|LogicalName|`filecontent`|
 |RequiredLevel|None|
 |Type|File|
-
+|MaxSizeInKB|131072|
 
 ### <a name="BKMK_filecontent_Name"></a> filecontent_Name
 
-**Added by**: Power Pages Core Extensions Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|filecontent_name|
-|MaxLength|200|
+|LogicalName|`filecontent_name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_powerpagesiteidName"></a> powerpagesiteidName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|powerpagesiteidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_powerpagesitelanguageidName"></a> powerpagesitelanguageidName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|powerpagesitelanguageidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [powerpagecomponent_SyncErrors](#BKMK_powerpagecomponent_SyncErrors)
-- [powerpagecomponent_AsyncOperations](#BKMK_powerpagecomponent_AsyncOperations)
-- [powerpagecomponent_MailboxTrackingFolders](#BKMK_powerpagecomponent_MailboxTrackingFolders)
-- [powerpagecomponent_ProcessSession](#BKMK_powerpagecomponent_ProcessSession)
-- [powerpagecomponent_BulkDeleteFailures](#BKMK_powerpagecomponent_BulkDeleteFailures)
-- [powerpagecomponent_PrincipalObjectAttributeAccesses](#BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses)
-- [powerpagecomponent_mspp_webformid_adx_webformsession](#BKMK_powerpagecomponent_mspp_webformid_adx_webformsession)
-- [powerpagecomponent_mspp_webformstepid_adx_webformsession](#BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession)
-
-
-### <a name="BKMK_powerpagecomponent_SyncErrors"></a> powerpagecomponent_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_SyncErrors](syncerror.md#BKMK_powerpagecomponent_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_AsyncOperations"></a> powerpagecomponent_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_AsyncOperations](asyncoperation.md#BKMK_powerpagecomponent_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_MailboxTrackingFolders"></a> powerpagecomponent_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_powerpagecomponent_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_ProcessSession"></a> powerpagecomponent_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_ProcessSession](processsession.md#BKMK_powerpagecomponent_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_BulkDeleteFailures"></a> powerpagecomponent_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_powerpagecomponent_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses"></a> powerpagecomponent_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [powerpagecomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_powerpagecomponent_mspp_webformid_adx_webformsession"></a> powerpagecomponent_mspp_webformid_adx_webformsession
-
-**Added by**: Power Pages Runtime Extensions Solution
-
-Same as the [powerpagecomponent_mspp_webformid_adx_webformsession](adx_webformsession.md#BKMK_powerpagecomponent_mspp_webformid_adx_webformsession) many-to-one relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_webformsession|
-|ReferencingAttribute|mspp_webformid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_mspp_webformid_adx_webformsession|
-|AssociatedMenuConfiguration|Behavior: UseLabel<br />Group: Details<br />Label: Sessions<br />Order: 103000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession"></a> powerpagecomponent_mspp_webformstepid_adx_webformsession
-
-**Added by**: Power Pages Runtime Extensions Solution
-
-Same as the [powerpagecomponent_mspp_webformstepid_adx_webformsession](adx_webformsession.md#BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession) many-to-one relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_webformsession|
-|ReferencingAttribute|mspp_webformstepid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|powerpagecomponent_mspp_webformstepid_adx_webformsession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_powerpagecomponent](#BKMK_business_unit_powerpagecomponent)
+- [FileAttachment_powerpagecomponent_filecontent](#BKMK_FileAttachment_powerpagecomponent_filecontent)
 - [lk_powerpagecomponent_createdby](#BKMK_lk_powerpagecomponent_createdby)
 - [lk_powerpagecomponent_createdonbehalfby](#BKMK_lk_powerpagecomponent_createdonbehalfby)
 - [lk_powerpagecomponent_modifiedby](#BKMK_lk_powerpagecomponent_modifiedby)
 - [lk_powerpagecomponent_modifiedonbehalfby](#BKMK_lk_powerpagecomponent_modifiedonbehalfby)
-- [user_powerpagecomponent](#BKMK_user_powerpagecomponent)
-- [team_powerpagecomponent](#BKMK_team_powerpagecomponent)
-- [business_unit_powerpagecomponent](#BKMK_business_unit_powerpagecomponent)
+- [owner_powerpagecomponent](#BKMK_owner_powerpagecomponent)
 - [powerpagesite_powerpagecomponent_powerpagesiteid](#BKMK_powerpagesite_powerpagecomponent_powerpagesiteid)
 - [powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid](#BKMK_powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid)
-
-
-### <a name="BKMK_lk_powerpagecomponent_createdby"></a> lk_powerpagecomponent_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_powerpagecomponent_createdby](systemuser.md#BKMK_lk_powerpagecomponent_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_powerpagecomponent_createdonbehalfby"></a> lk_powerpagecomponent_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_powerpagecomponent_createdonbehalfby](systemuser.md#BKMK_lk_powerpagecomponent_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_powerpagecomponent_modifiedby"></a> lk_powerpagecomponent_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_powerpagecomponent_modifiedby](systemuser.md#BKMK_lk_powerpagecomponent_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_powerpagecomponent_modifiedonbehalfby"></a> lk_powerpagecomponent_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_powerpagecomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_powerpagecomponent_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_powerpagecomponent"></a> user_powerpagecomponent
-
-**Added by**: System Solution Solution
-
-See the [user_powerpagecomponent](systemuser.md#BKMK_user_powerpagecomponent) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_powerpagecomponent"></a> team_powerpagecomponent
-
-**Added by**: System Solution Solution
-
-See the [team_powerpagecomponent](team.md#BKMK_team_powerpagecomponent) one-to-many relationship for the [team](team.md) table/entity.
+- [team_powerpagecomponent](#BKMK_team_powerpagecomponent)
+- [user_powerpagecomponent](#BKMK_user_powerpagecomponent)
 
 ### <a name="BKMK_business_unit_powerpagecomponent"></a> business_unit_powerpagecomponent
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_powerpagecomponent](businessunit.md#BKMK_business_unit_powerpagecomponent)
 
-See the [business_unit_powerpagecomponent](businessunit.md#BKMK_business_unit_powerpagecomponent) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_FileAttachment_powerpagecomponent_filecontent"></a> FileAttachment_powerpagecomponent_filecontent
+
+One-To-Many Relationship: [fileattachment FileAttachment_powerpagecomponent_filecontent](fileattachment.md#BKMK_FileAttachment_powerpagecomponent_filecontent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`fileattachment`|
+|ReferencedAttribute|`fileattachmentid`|
+|ReferencingAttribute|`filecontent`|
+|ReferencingEntityNavigationPropertyName|`filecontent`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_powerpagecomponent_createdby"></a> lk_powerpagecomponent_createdby
+
+One-To-Many Relationship: [systemuser lk_powerpagecomponent_createdby](systemuser.md#BKMK_lk_powerpagecomponent_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_powerpagecomponent_createdonbehalfby"></a> lk_powerpagecomponent_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_powerpagecomponent_createdonbehalfby](systemuser.md#BKMK_lk_powerpagecomponent_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_powerpagecomponent_modifiedby"></a> lk_powerpagecomponent_modifiedby
+
+One-To-Many Relationship: [systemuser lk_powerpagecomponent_modifiedby](systemuser.md#BKMK_lk_powerpagecomponent_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_powerpagecomponent_modifiedonbehalfby"></a> lk_powerpagecomponent_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_powerpagecomponent_modifiedonbehalfby](systemuser.md#BKMK_lk_powerpagecomponent_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_powerpagecomponent"></a> owner_powerpagecomponent
+
+One-To-Many Relationship: [owner owner_powerpagecomponent](owner.md#BKMK_owner_powerpagecomponent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_powerpagesite_powerpagecomponent_powerpagesiteid"></a> powerpagesite_powerpagecomponent_powerpagesiteid
 
-See the [powerpagesite_powerpagecomponent_powerpagesiteid](powerpagesite.md#BKMK_powerpagesite_powerpagecomponent_powerpagesiteid) one-to-many relationship for the [powerpagesite](powerpagesite.md) table/entity.
+One-To-Many Relationship: [powerpagesite powerpagesite_powerpagecomponent_powerpagesiteid](powerpagesite.md#BKMK_powerpagesite_powerpagecomponent_powerpagesiteid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`powerpagesite`|
+|ReferencedAttribute|`powerpagesiteid`|
+|ReferencingAttribute|`powerpagesiteid`|
+|ReferencingEntityNavigationPropertyName|`powerpagesiteid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid"></a> powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid
 
-See the [powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid](powerpagesitelanguage.md#BKMK_powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid) one-to-many relationship for the [powerpagesitelanguage](powerpagesitelanguage.md) table/entity.
-<a name="manytomany"></a>
+One-To-Many Relationship: [powerpagesitelanguage powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid](powerpagesitelanguage.md#BKMK_powerpagesitelanguage_powerpagecomponent_powerpagesitelanguageid)
 
-## Many-To-Many Relationships
+|Property|Value|
+|---|---|
+|ReferencedEntity|`powerpagesitelanguage`|
+|ReferencedAttribute|`powerpagesitelanguageid`|
+|ReferencingAttribute|`powerpagesitelanguageid`|
+|ReferencingEntityNavigationPropertyName|`powerpagesitelanguageid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-Relationship details provided where the powerpagecomponent table is the first table in the relationship. Listed by **SchemaName**.
+### <a name="BKMK_team_powerpagecomponent"></a> team_powerpagecomponent
 
-- [powerpagecomponent_powerpagecomponent](#BKMK_powerpagecomponent_powerpagecomponent)
-- [powerpagecomponent_webrole_systemuser](#BKMK_powerpagecomponent_webrole_systemuser)
+One-To-Many Relationship: [team team_powerpagecomponent](team.md#BKMK_team_powerpagecomponent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_powerpagecomponent"></a> user_powerpagecomponent
+
+One-To-Many Relationship: [systemuser user_powerpagecomponent](systemuser.md#BKMK_user_powerpagecomponent)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [powerpagecomponent_AsyncOperations](#BKMK_powerpagecomponent_AsyncOperations)
+- [powerpagecomponent_BulkDeleteFailures](#BKMK_powerpagecomponent_BulkDeleteFailures)
+- [powerpagecomponent_FileAttachments](#BKMK_powerpagecomponent_FileAttachments)
+- [powerpagecomponent_MailboxTrackingFolders](#BKMK_powerpagecomponent_MailboxTrackingFolders)
+- [powerpagecomponent_mspp_webformid_adx_webformsession](#BKMK_powerpagecomponent_mspp_webformid_adx_webformsession)
+- [powerpagecomponent_mspp_webformstepid_adx_webformsession](#BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession)
+- [powerpagecomponent_PrincipalObjectAttributeAccesses](#BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses)
+- [powerpagecomponent_ProcessSession](#BKMK_powerpagecomponent_ProcessSession)
+- [powerpagecomponent_SyncErrors](#BKMK_powerpagecomponent_SyncErrors)
+
+### <a name="BKMK_powerpagecomponent_AsyncOperations"></a> powerpagecomponent_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation powerpagecomponent_AsyncOperations](asyncoperation.md#BKMK_powerpagecomponent_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_BulkDeleteFailures"></a> powerpagecomponent_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure powerpagecomponent_BulkDeleteFailures](bulkdeletefailure.md#BKMK_powerpagecomponent_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_FileAttachments"></a> powerpagecomponent_FileAttachments
+
+Many-To-One Relationship: [fileattachment powerpagecomponent_FileAttachments](fileattachment.md#BKMK_powerpagecomponent_FileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_FileAttachments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_MailboxTrackingFolders"></a> powerpagecomponent_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder powerpagecomponent_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_powerpagecomponent_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_mspp_webformid_adx_webformsession"></a> powerpagecomponent_mspp_webformid_adx_webformsession
+
+Many-To-One Relationship: [adx_webformsession powerpagecomponent_mspp_webformid_adx_webformsession](adx_webformsession.md#BKMK_powerpagecomponent_mspp_webformid_adx_webformsession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_webformsession`|
+|ReferencingAttribute|`mspp_webformid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_mspp_webformid_adx_webformsession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseLabel`<br />Group: `Details`<br />Label: Sessions<br />MenuId: null<br />Order: 103000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession"></a> powerpagecomponent_mspp_webformstepid_adx_webformsession
+
+Many-To-One Relationship: [adx_webformsession powerpagecomponent_mspp_webformstepid_adx_webformsession](adx_webformsession.md#BKMK_powerpagecomponent_mspp_webformstepid_adx_webformsession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_webformsession`|
+|ReferencingAttribute|`mspp_webformstepid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_mspp_webformstepid_adx_webformsession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses"></a> powerpagecomponent_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess powerpagecomponent_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_powerpagecomponent_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_ProcessSession"></a> powerpagecomponent_ProcessSession
+
+Many-To-One Relationship: [processsession powerpagecomponent_ProcessSession](processsession.md#BKMK_powerpagecomponent_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_SyncErrors"></a> powerpagecomponent_SyncErrors
+
+Many-To-One Relationship: [syncerror powerpagecomponent_SyncErrors](syncerror.md#BKMK_powerpagecomponent_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`powerpagecomponent_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
+
 - [adx_invitation_mspp_webrole_powerpagecomponent](#BKMK_adx_invitation_mspp_webrole_powerpagecomponent)
 - [powerpagecomponent_mspp_webrole_account](#BKMK_powerpagecomponent_mspp_webrole_account)
 - [powerpagecomponent_mspp_webrole_contact](#BKMK_powerpagecomponent_mspp_webrole_contact)
-
-
-### <a name="BKMK_powerpagecomponent_powerpagecomponent"></a> powerpagecomponent_powerpagecomponent
-
-IntersectEntityName: powerpagecomponent_powerpagecomponent<br />
-#### Table 1
-
-|Property|Value|
-|--------|-----|
-|IntersectAttribute|powerpagecomponentidone|
-|IsCustomizable|False|
-|LogicalName|powerpagecomponent|
-|NavigationPropertyName|powerpagecomponent_powerpagecomponent|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 20000|
-
-#### Table 2
-
-|Property|Value|
-|--------|-----|
-|LogicalName|powerpagecomponent|
-|IntersectAttribute|powerpagecomponentidtwo|
-|NavigationPropertyName|powerpagecomponent_powerpagecomponent|
-|AssociatedMenuConfiguration|Behavior: UseLabel<br />Group: Details<br />Label: Power Pages Component Power Pages Component<br />Order: 10000|
-
-
-### <a name="BKMK_powerpagecomponent_webrole_systemuser"></a> powerpagecomponent_webrole_systemuser
-
-IntersectEntityName: powerpagecomponent_webrole_systemuser<br />
-#### Table 1
-
-|Property|Value|
-|--------|-----|
-|IntersectAttribute|powerpagecomponentid|
-|IsCustomizable|False|
-|LogicalName|powerpagecomponent|
-|NavigationPropertyName|powerpagecomponent_webrole_systemuser|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 20000|
-
-#### Table 2
-
-|Property|Value|
-|--------|-----|
-|LogicalName|systemuser|
-|IntersectAttribute|systemuserid|
-|NavigationPropertyName|powerpagecomponent_webrole_systemuser|
-|AssociatedMenuConfiguration|Behavior: UseLabel<br />Group: Details<br />Label: <br />Order: 10000|
-
+- [powerpagecomponent_powerpagecomponent](#BKMK_powerpagecomponent_powerpagecomponent)
+- [powerpagecomponent_webrole_systemuser](#BKMK_powerpagecomponent_webrole_systemuser)
 
 ### <a name="BKMK_adx_invitation_mspp_webrole_powerpagecomponent"></a> adx_invitation_mspp_webrole_powerpagecomponent
 
-See the [adx_invitation_mspp_webrole_powerpagecomponent](adx_invitation.md#BKMK_adx_invitation_mspp_webrole_powerpagecomponent) many-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+See [adx_invitation adx_invitation_mspp_webrole_powerpagecomponent Many-To-Many Relationship](adx_invitation.md#BKMK_adx_invitation_mspp_webrole_powerpagecomponent)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`adx_invitation_mspp_webrole_powerpagecomponent`|
+|IsCustomizable|True|
+|SchemaName|`adx_invitation_mspp_webrole_powerpagecomponent`|
+|IntersectAttribute|`powerpagecomponentid`|
+|NavigationPropertyName|`adx_invitation_mspp_webrole_powerpagecomponent`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: Assign To Web Roles<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_powerpagecomponent_mspp_webrole_account"></a> powerpagecomponent_mspp_webrole_account
 
-IntersectEntityName: powerpagecomponent_mspp_webrole_account<br />
-#### Table 1
+See [account powerpagecomponent_mspp_webrole_account Many-To-Many Relationship](account.md#BKMK_powerpagecomponent_mspp_webrole_account)
 
 |Property|Value|
-|--------|-----|
-|IntersectAttribute|powerpagecomponentid|
+|---|---|
+|IntersectEntityName|`powerpagecomponent_mspp_webrole_account`|
 |IsCustomizable|True|
-|LogicalName|powerpagecomponent|
-|NavigationPropertyName|powerpagecomponent_mspp_webrole_account|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 100600|
-
-#### Table 2
-
-|Property|Value|
-|--------|-----|
-|LogicalName|account|
-|IntersectAttribute|accountid|
-|NavigationPropertyName|powerpagecomponent_mspp_webrole_account|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 100100|
-
+|SchemaName|`powerpagecomponent_mspp_webrole_account`|
+|IntersectAttribute|`powerpagecomponentid`|
+|NavigationPropertyName|`powerpagecomponent_mspp_webrole_account`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100600<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_powerpagecomponent_mspp_webrole_contact"></a> powerpagecomponent_mspp_webrole_contact
 
-IntersectEntityName: powerpagecomponent_mspp_webrole_contact<br />
-#### Table 1
+See [contact powerpagecomponent_mspp_webrole_contact Many-To-Many Relationship](contact.md#BKMK_powerpagecomponent_mspp_webrole_contact)
 
 |Property|Value|
-|--------|-----|
-|IntersectAttribute|powerpagecomponentid|
+|---|---|
+|IntersectEntityName|`powerpagecomponent_mspp_webrole_contact`|
 |IsCustomizable|True|
-|LogicalName|powerpagecomponent|
-|NavigationPropertyName|powerpagecomponent_mspp_webrole_contact|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 103100|
+|SchemaName|`powerpagecomponent_mspp_webrole_contact`|
+|IntersectAttribute|`powerpagecomponentid`|
+|NavigationPropertyName|`powerpagecomponent_mspp_webrole_contact`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 103100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
-#### Table 2
+### <a name="BKMK_powerpagecomponent_powerpagecomponent"></a> powerpagecomponent_powerpagecomponent
+
+This is a self-referencing many-to-many relationship.
 
 |Property|Value|
-|--------|-----|
-|LogicalName|contact|
-|IntersectAttribute|contactid|
-|NavigationPropertyName|powerpagecomponent_mspp_webrole_contact|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 100300|
+|---|---|
+|IntersectEntityName|`powerpagecomponent_powerpagecomponent`|
+|IsCustomizable|False|
+|SchemaName|`powerpagecomponent_powerpagecomponent`|
+|Entity1IntersectAttribute|`powerpagecomponentidone`|
+|Entity2IntersectAttribute|`powerpagecomponentidtwo`|
+|Entity1NavigationPropertyName|`powerpagecomponent_powerpagecomponent`|
+|Entity2NavigationPropertyName|`powerpagecomponent_powerpagecomponent`|
+|Entity1AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 20000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+|Entity2AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseLabel`<br />Group: `Details`<br />Label: Power Pages Component Power Pages Component<br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_powerpagecomponent_webrole_systemuser"></a> powerpagecomponent_webrole_systemuser
+
+See [systemuser powerpagecomponent_webrole_systemuser Many-To-Many Relationship](systemuser.md#BKMK_powerpagecomponent_webrole_systemuser)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`powerpagecomponent_webrole_systemuser`|
+|IsCustomizable|False|
+|SchemaName|`powerpagecomponent_webrole_systemuser`|
+|IntersectAttribute|`powerpagecomponentid`|
+|NavigationPropertyName|`powerpagecomponent_webrole_systemuser`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 20000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.powerpagecomponent?text=powerpagecomponent EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.powerpagecomponent?displayProperty=fullName>

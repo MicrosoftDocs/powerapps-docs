@@ -1,10 +1,10 @@
 ---
 title: Build and package plug-in code
 description: Learn about building and packaging plug-in code for Microsoft Dataverse, including assembly constraints and dependent assembly limitations.
-ms.date: 04/22/2024
-ms.topic: conceptual
-author: divkamath
-ms.author: dikamath
+ms.date: 04/04/2025
+ms.topic: how-to
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 ms.subservice: dataverse-developer
 search.audienceType:
@@ -30,6 +30,9 @@ When you build a plug-in project, keep the following output assembly constraints
 ### Use .NET Framework 4.6.2
 
 Plug-in and custom workflow activity assembly projects must target .NET Framework 4.6.2. Assemblies that are built using later versions of the .NET Framework should generally work. However, if the plug-in code uses any features introduced after 4.6.2, a runtime error occurs.
+
+> [!NOTE]
+> We are planning to introduce Dataverse plug-in support for the .NET Framework 4.8 runtime before official Microsoft support for .NET Framework 4.6.2 ends. 
 
 ### Limit assemblies to 16 MB
 
@@ -59,7 +62,7 @@ When you upload your NuGet package, any assemblies that contain classes that imp
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
 > [!IMPORTANT]
-> The name and version of the plug-in package cannot be changed once created. Attempting to do so using an API call results in an error.
+> The name and version of the plug-in package cannot be changed (on the server) once created. Attempting to do so using an API call results in an error.
 
 ### Signed assemblies are not required
 

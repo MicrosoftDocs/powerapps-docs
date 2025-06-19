@@ -589,7 +589,7 @@ Here's what to look for in the results:
 
 ### Queries for file storage
 
-When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `AsyncOperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
+Depending on the size of the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `AsyncOperation` table, the data in that column may be saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
 #### AsyncOperation file storage datablobid count
 
@@ -900,7 +900,7 @@ Whether the requested operation occurs depends on the state of the system job. F
 |Option|Valid StateCode values|Change|
 |--|--|--|
 |**Delete**|any|System Job is deleted|
-|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**)|
+|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**), or `StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `31` (**Failed**) |
 |**Resume**|`1` (**Suspended**)|StateCode changed to `0` (**Ready**)|
 |**Postpone**|`0` (**Ready**) <br />`2` (**Locked**)|Postpone Job dialog prompts user for datetime value to postpone the system job. [Learn to Postpone system jobs](#postpone-system-jobs)|
 |**Pause**|`2` (**Locked**)|StateCode changed to `1` (**Suspended**)|

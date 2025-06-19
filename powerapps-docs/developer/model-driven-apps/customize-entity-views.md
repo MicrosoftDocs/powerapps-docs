@@ -1,12 +1,12 @@
 ---
-title: "Customize views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about customizing the views." # 115-145 characters including spaces. This abstract displays in the search result."
-author: sriharibs-msft
-ms.author: srihas
+title: "Customize views (model-driven apps)"
+description: "Learn about customizing the views."
+author: clromano
+ms.author: clromano
+ms.reviewer: jdaly
 ms.date: 04/01/2022
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
-ms.reviewer: 
 search.audienceType: 
   - developer
 contributors: 
@@ -281,7 +281,7 @@ function displayIconTooltip(rowData, userLCID) {
     var coldata = str.opportunityratingcode_Value;  
     var imgName = "";  
     var tooltip = "";  
-    switch (coldata) {  
+    switch (parseInt(coldata,10)) {
         case 1:  
             imgName = "new_Hot";  
             switch (userLCID) {  

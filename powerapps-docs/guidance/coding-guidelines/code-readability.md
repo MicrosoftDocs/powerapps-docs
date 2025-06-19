@@ -1,8 +1,8 @@
-﻿---
+---
 title: Power Apps code readability
 description: Learn about how to optimize code readability in Power Apps.
 ms.date: 06/12/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: guidance
 ms.service: powerapps
 author: robstand
@@ -38,7 +38,7 @@ Here are some good examples:
 
 ![Screenshot that shows a list of screen names that follow the described pattern](media/image1.png)
 
-These example screen names are less underachaudhable:
+These example screen names are less understandable:
 
 - `Home`
 - `LoaderScreen`
@@ -172,7 +172,7 @@ PowerApps uses DataTables in Microsoft Excel to connect to data in Excel workshe
 
 ### Variable names
 
-Naming conventions for variables in canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your canvas app can make it easier for you and other collaborators to underachaudh, use, and manage the variables.
+Naming conventions for variables in canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your canvas app can make it easier for you and other collaborators to understand, use, and manage the variables.
 
 - Use camel case, where the first letter of each word is capitalized except for the first word.
 - Choose meaningful and descriptive names that clearly describe the purpose or content of the variable. Avoid overly generic names like temp or var1. Instead, use descriptive names like userEmail or totalAmount.
@@ -207,7 +207,7 @@ These examples follow standards and conventions:
 
 - **Scope variable:** `scpRadius`
 
-These examples don't follow the standards and are harder to underachaudh:
+These examples don't follow the standards and are harder to understand:
 
 - `dSub`
 - `rstFlds`

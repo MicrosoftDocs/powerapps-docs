@@ -1,8 +1,8 @@
 ---
-title: "formContext.ui.headerSection item (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui.headerSection item (Client API reference) in model-driven apps"
 description: "Learn about working with header sections in model-driven apps using client API."
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -29,7 +29,6 @@ Provides information on how to set the visibility of header section.
 |[setBodyVisible](formContext-ui-headerSection/setBodyVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setBodyVisible-description.md](formContext-ui-headerSection/includes/setBodyVisible-description.md)]|
 |[setCommandBarVisible](formContext-ui-headerSection/setCommandBarVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setCommandBarVisible-description.md](formContext-ui-headerSection/includes/setCommandBarVisible-description.md)]|
 |[setTabNavigatorVisible](formContext-ui-headerSection/setTabNavigatorVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md](formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md)]|
-|||
 
 ### Related articles
 

@@ -3,10 +3,10 @@ title: "Bypass Power Automate Flows"
 description: "Make data changes that don't trigger Power Automate flows." 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: divkamath
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

@@ -1,15 +1,16 @@
 ---
-title: "getContentWindow (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getContentWindow (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getContentWindow method.
-author: chmoncay
-ms.author: chmoncay
-ms.date: 03/12/2022
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
 contributors:
   - JimDaly
+  - tahoon-ms
 ---
 # getContentWindow (Client API reference)
 
@@ -50,13 +51,8 @@ First, add the following code in your HTML web resource:
 
 ```javascript
 // This script should be in the HTML web resource.
-// No usage of Xrm or formContext should happen until this method is called.
-function setClientApiContext(xrm, formContext) {
-    // Optionally set Xrm and formContext as global variables on the page.
-    window.Xrm = xrm;
-    window._formContext = formContext;
-     
-    // Add script logic here that uses xrm or the formContext.
+function doStuff() {
+    // Add desired script logic that executes on form load.
 }
 ```
 
@@ -71,14 +67,14 @@ function form_onload(executionContext) {
     if (wrControl) {
         wrControl.getContentWindow().then(
             function (contentWindow) {
-                contentWindow.setClientApiContext(Xrm, formContext);
+                contentWindow.doStuff();
             }
         )
     }
 }
 ```
 
-Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it's reused. For performance reasons, the form may destroy and reinitialize the control during tab navigation.
+Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it's reused. For performance reasons, the form  might destroy and reinitialize the control during tab navigation.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

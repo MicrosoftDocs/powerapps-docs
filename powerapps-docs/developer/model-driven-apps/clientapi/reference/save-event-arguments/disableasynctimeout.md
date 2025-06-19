@@ -1,8 +1,8 @@
 ---
-title: "disableAsyncTimeout  (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "disableAsyncTimeout  (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the disableAsyncTimeout method.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 01/16/2024
 ms.reviewer: jdaly
 ms.topic: reference

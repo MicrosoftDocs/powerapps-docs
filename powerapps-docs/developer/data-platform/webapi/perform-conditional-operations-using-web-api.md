@@ -2,8 +2,8 @@
 title: "Perform conditional operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.date: 04/06/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -45,7 +45,7 @@ The following example message pair returns data for an account record with the `
  **Request:**
 
 ```http  
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=accountcategorycode,accountnumber,creditonhold,createdon,numberofemployees,name,revenue   HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=accountcategorycode,accountnumber,creditonhold,createdon,numberofemployees,name,revenue   HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -67,7 +67,7 @@ The following sections describe limitations to using conditional retrievals.
 Check if an table has optimistic concurrency enabled using the following Web API request. Tables that have optimistic concurrency enabled have [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) property set to `true`.
 
 ```http
-GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
 ```
 
 ### Query must not include $expand
@@ -95,7 +95,7 @@ If you're updating data and there's some possibility that the record was deleted
  **Request:**
 
 ```http  
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+PATCH [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -137,7 +137,7 @@ If you're inserting data, there's some possibility that a record with the same `
  **Request:**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+PATCH [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -184,7 +184,7 @@ The following delete request for an account with `accountid` of`00000000-0000-00
  **Request:**
 
 ```http  
-DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+DELETE [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 If-Match: W/"470867"  
 Accept: application/json  
 OData-MaxVersion: 4.0  
@@ -214,7 +214,7 @@ The following update request for an account with `accountid` of `00000000-0000-0
  **Request:**
 
 ```http  
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+PATCH [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 If-Match: W/"470867"  
 Accept: application/json  
 OData-MaxVersion: 4.0  

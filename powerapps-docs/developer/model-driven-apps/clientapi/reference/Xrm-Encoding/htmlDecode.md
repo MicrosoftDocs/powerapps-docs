@@ -1,8 +1,8 @@
 ---
-title: "htmlDecode| MicrosoftDocs"
-description: "The Client API method converts a string that has been HTML-encoded into a decoded string."
-author: adrianorth
-ms.author: aorth
+title: "htmlDecode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the htmlDecode method.
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

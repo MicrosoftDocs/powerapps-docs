@@ -4,9 +4,9 @@ description: "Describes special behavior in plug-ins and workflows for update ev
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divkamath" # GitHub ID
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

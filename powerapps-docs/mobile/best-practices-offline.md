@@ -8,7 +8,7 @@ ms.date: 05/31/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -20,7 +20,7 @@ searchScope:
 This article provides recommendations for how to create the best experience for users of apps configured for offline use. 
 
 - If you configure a canvas app for offline use, you need to optimize how the app fetches data from the data source. Learn more: [How to create the best offline user experience in canvas apps](best-practices-offline.md#how-to-create-the-best-offline-user-experience-in-canvas-apps)
-- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time, setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to  plan the your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
+- To function offline, an app must initially download all necessary assets, including resources and data, to operate independently of a network connection. This process is a one-time setup task that occurs during the app’s first use. The speed of this initial download is influenced by the volume of data downloaded to the device, which is determined by the offline profile settings and the quantity of data available to the user within the app’s environment. For a seamless, initial experience, it’s advisable to plan your [offline app rollout](best-practices-offline.md#plan-your-offline-app-rollout).    
 
 ## How to create the best offline user experience in canvas apps
 
@@ -39,9 +39,9 @@ Monitor is a tool that offers makers a deep view of what an app does and how it 
 ## Plan your offline app rollout
 
 > [!IMPORTANT]
->If you're using an **auto-generated offline profile** (available for canvas apps only), and if the first synchronization is taking too much time, you should create a manual, offline profile by using the following best practices. 
+> If you're using an **auto-generated offline profile** (available for canvas apps only), and if the first synchronization is taking too much time, you should create a manual, offline profile by using the following best practices. 
 
-Develop and roll-out your offline app in three phases.
+Develop and roll out your offline app in three phases.
 
 :::image type="content" source="media/mobile-offline-guidelines/phases.png" alt-text="Illustration that shows Phase 1 for a maker, Phase 2 for testers, and Phase 3 for users.":::
 
@@ -49,17 +49,17 @@ Develop and roll-out your offline app in three phases.
 
 After you've [set up mobile offline for canvas apps](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) or [set up mobile offline for model-driven apps](setup-mobile-offline.md#set-up-a-mobile-offline-profile), it's time to start testing and tweaking. Use [Power Apps mobile](run-powerapps-on-mobile.md) or [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) to determine how the app behaves when it's offline. For Windows, you'll find the [Power Apps for Windows](windows-app-install.md) app in the Microsoft Store that allows iterating without the need for a mobile device.
 
-In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app, following the guidelines to [Optimize the offline profile](mobile-offline-guidelines.md)
+In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app, following the guidelines to [Optimize the offline profile](mobile-offline-guidelines.md).
 
 #### Outcome
 You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable. 
 
 > [!IMPORTANT]
-> The metadata for the model-driven app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
+> The metadata for the model-driven app is retrieved when the app starts. This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
 
 ### Phase 2: Test with users
 
-Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the **Device status** page (available out-of-the-box in model-driven apps) for each user. For more information, see [Using the Offline template and offline status icon](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon). Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
+Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the **Device status** page (available out of the box in model-driven apps) for each user. For more information, see [Using the Offline template and offline status icon](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon). Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
 
 :::image type="content" source="media/mobile-offline-guidelines/offline-status.png" alt-text="Screenshot of a mobile app's Offline Status page after a successful download.":::
 
@@ -79,11 +79,11 @@ Test whether your users have all the data they need. Compare the data available 
 
 ### Add related tables if your app needs them
 
-- **Business process flows:** If a form contains a business process flow, be sure to add the business process flow table. For more information, see [Supported capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported-capabilities).
+- **Business process flows**: If a form contains a business process flow, be sure to add the business process flow table. For more information, see [Supported capabilities](/dynamics365/mobile-app/mobile-offline-capabilities#supported-capabilities).
 
-- **Files and images:** If your offline profile contains files and images, add tables for them. For more information, see [Configure files and images in offline model-driven apps](offline-file-images.md) or [Configure files and images in offline canvas apps](files-images-offline-canvas-apps.md). Use custom filters to limit download of critical files.
+- **Files and images**: If your offline profile contains files and images, add tables for them. For more information, see [Configure files and images in offline model-driven apps](offline-file-images.md) or [Configure files and images in offline canvas apps](files-images-offline-canvas-apps.md). Use custom filters to limit the download of critical files.
 
-- **Timeline:** To make notes on the timeline control (for model-driven apps only) available offline, add the **Notes** table and the **Users** table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the **Notes** table to limit download times.
+- **Timeline**: To make notes on the timeline control (for model-driven apps only) available offline, add the **Notes** table and the **Users** table to the offline profile. Notes can be large if users upload images and videos, so apply custom filters to the **Notes** table to limit download times.
 
     > [!IMPORTANT]
     > Data downloads may be slower if users upload files larger than 4 MB to the timeline control. If users need to upload files larger than 4 MB, use the quick notes control in Field Service or **Files**/**Images** instead of the timeline to improve performance.

@@ -1,13 +1,13 @@
 ---
-title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how plug-ins execute in response to a data processing event to augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how plug-ins execute in response to a data processing event to augment or modify the default behavior of the platform."
 ms.collection: get-started
 ms.date: 01/24/2024
-ms.reviewer: "phecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -20,7 +20,7 @@ A *plug-in* is a custom event handler that executes in response to a specific ev
 
 > [!TIP]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)<br/><br/>
-> Use plug-ins when a declarative process doesn’t meet your requirement.
+> Use plug-ins when a declarative process doesn't meet your requirement.
 
 ## More details about plug-ins
 

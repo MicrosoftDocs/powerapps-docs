@@ -1,13 +1,16 @@
 ---
-author: sericks007
-ms.author: sericks
-ms.date: 06/24/2024
+author: shwetamurkute
+ms.author: smurkute
+ms.date: 10/02/2024
 ms.topic: include
 ms.contributors:
+- stevewi
 - ywanjari
 - deepabansal
 - traliil
 - mikebc
+contributors:
+- edupont04
 ---
 
 <!--Any changes to this article must be reviewed by RAI Champ Leads and CELA-->
@@ -18,13 +21,13 @@ Copilot is built on [Microsoft Azure OpenAI Service](/azure/cognitive-services/o
 
 Copilot features aren't available in all Azure geographies and languages. Depending on where your environment is hosted, you might need to allow data movement across geographies to use them. For more information, see the articles listed under [Data movement across geographies](#data-movement-across-geographies).
 
-## What happens to my data when I use Copilot? 
+## What happens to my data when I use Copilot?
 
 You are in control of your data. Microsoft doesn't share your data with a third party unless you've granted permission to do so. Further, we don't use your customer data to train Copilot or its AI features, unless you provide consent for us to do so. Copilot adheres to existing data permissions and policies, and its responses to you're based only on data that you personally can access. For more information about how you can control your data and how your data is handled, see the articles listed under [Copilot in Dynamics 365 apps and Power Platform](#copilot-in-dynamics-365-apps-and-power-platform).
 
 Copilot monitors for abusive or harmful uses of the service with transient processing. We don't store or conduct eyes-on review of Copilot inputs and outputs for abuse monitoring purposes.
 
-## How does Copilot use my data? 
+## How does Copilot use my data?
 
 Each service or feature uses Copilot based on the data that you provide or set up for Copilot to process.
 
@@ -34,11 +37,11 @@ Your prompts (inputs) and Copilot's responses (outputs or results):
 
 - Are NOT used to train or improve any third-party products or services (such as OpenAI models).
 
-- Are NOT used to train or improve Microsoft AI models, unless your tenant admin opts in to sharing data with us.
+- Are NOT used to train or improve Microsoft AI models, unless your tenant admin opts in to sharing data with us. Learn more at [FAQ for optional data sharing for Copilot AI features in Dynamics 365 and Power Platform](/power-platform/faqs-copilot-data-sharing).  
 
 [Learn more about Azure OpenAI Service data privacy and security](/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext). To learn more about how Microsoft protects and uses your data more generally, read our [Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
-## Where does my data go? 
+## Where does my data go?
 
 Microsoft runs on trust. We're committed to security, privacy, and compliance in everything we do, and our approach to AI is no different. Customer data, including Copilot inputs and outputs, is stored within the Microsoft Cloud trust boundary.
 
@@ -58,9 +61,9 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Copilot is powe
 
 - **Architected to protect your data at both the tenant and the environment level.** We know that data leakage is a concern for customers. Microsoft AI models are not trained on and don't learn from your tenant data or your prompts, unless your tenant admin has opted in to sharing data with us. Within your environments, you can control access through permissions that you set up. Authentication and authorization mechanisms segregate requests to the shared model among tenants. Copilot utilizes data that only you can access, using the same technology that we've been using for years to secure customer data.
 
-## Are Copilot's responses always factual? 
+## Are Copilot's responses always factual?
 
-As with any generative AI, Copilot responses aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, you should still use your judgment and review the output before you send it to others. Copilot provides helpful drafts and summaries to help you do more, but it's fully automatic. You always have a chance to review the AI-generated content.
+As with any generative AI, Copilot responses aren't 100% factual. While we continue to improve responses to fact-based inquiries, you should still use your judgment and review the output before you send it to others. Copilot provides helpful drafts and summaries to help you do more, but it's fully automatic. You always have a chance to review the AI-generated content.
 
 Our teams are working to proactively address issues such as misinformation and disinformation, content blocking, data safety, and promotion of harmful or discriminatory content, in line with our [responsible AI principles](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5).
 
@@ -80,18 +83,19 @@ Hate and fairness-related harms refer to any content that uses pejorative or dis
 
 [Learn more about Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython#harm-categories).
 
-## Does Copilot block prompt injections (jailbreak attacks)? 
+## Does Copilot block prompt injections (jailbreak attacks)?
 
 [Jailbreak attacks](/azure/ai-services/openai/whats-new#responsible-ai) are user prompts that are designed to provoke the generative AI model into behaving in ways it was trained not to or breaking the rules it's been told to follow. Services across Dynamics 365 and Power Platform are required to protect against prompt injections. [Learn more about jailbreak attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 ## Does Copilot block indirect prompt injections (indirect attacks)?
-Indirect attacks, also referred to as _indirect prompt attacks_ or _cross-domain prompt injection attacks_, are a potential vulnerability where third parties place malicious instructions inside of documents that the generative AI system can access and process. Services across Dynamics 365 and Power Platform are required to protect against indirect prompt injections. [Learn more about indirect attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
-## How does Microsoft test and validate Copilot quality, including prompt injection protection and grounded responses? 
+Indirect attacks, also referred to as *indirect prompt attacks* or *cross-domain prompt injection attacks*, are a potential vulnerability where third parties place malicious instructions inside of documents that the generative AI system can access and process. Services across Dynamics 365 and Power Platform are required to protect against indirect prompt injections. [Learn more about indirect attacks and how to use Azure AI Content Safety to detect them](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+
+## How does Microsoft test and validate Copilot quality, including prompt injection protection and grounded responses?
 
 Every new Copilot product and language model iteration must pass an internal responsible AI review before it can be launched. Before release, we use a process called "red teaming" (in which a team simulates an enemy attack, finding and exploiting weaknesses to help the organization improve its defenses) to assess potential risks in harmful content, jailbreak scenarios, and grounded responses. After release, we use automated testing and manual and automated evaluation tools to assess the quality of Copilot responses.
 
-## How does Microsoft enhance the foundation model and measure improvements in grounded responses? 
+## How does Microsoft enhance the foundation model and measure improvements in grounded responses?
 
 In the context of AI, especially AI that deals with language models like the one that Copilot is based on, *grounding* helps the AI generate responses that are more relevant and make sense in the real world. Grounding helps ensure that the AI's responses are based on reliable information and are as accurate and relevant as possible. Grounded response metrics assess how accurately the facts stated in the grounding content that's provided to the model are represented in the final response.
 
@@ -99,7 +103,7 @@ Foundation models like GPT-4 are enhanced by Retrieval Augmented Generation (RAG
 
 Another method for enhancing foundational models is known as *fine-tuning*. A large dataset of query-response pairs is shown to a foundational model to augment its original training with new samples that are targeted to a specific scenario. The model can then be deployed as a separate model—one that's fine-tuned for that scenario. While grounding is about making the AI's knowledge relevant to the real world, fine-tuning is about making the AI's knowledge more specific to a particular task or domain. Microsoft uses fine-tuning in multiple ways. For example, we use Power Automate flow creation from natural language descriptions provided by the user.
 
-## Does Copilot meet requirements for regulatory compliance? 
+## Does Copilot meet requirements for regulatory compliance?
 
 Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and meets the same requirements for regulatory compliance. For more information about the regulatory certifications of Microsoft services, go to [Service Trust Portal](https://servicetrust.microsoft.com/). Additionally, Copilot adheres to our commitment to responsible AI, which is put into action through our [Responsible AI Standard](https://www.microsoft.com/ai/responsible-ai). As regulation in AI evolves, Microsoft continues to adapt and respond to new requirements.
 
@@ -112,6 +116,10 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Product | Feature | Managed Environments required? | How to turn the feature off |
 |-------------------------|-------------------------|-------------------------|-------------------------|
 | AI Builder | [Scenarios in preview](/ai-builder/previewability-scenarios) | No | [Scenarios in preview](/ai-builder/previewability-scenarios) |
+| Copilot Studio | [AI general knowledge](/microsoft-copilot-studio/nlu-gpt-overview#ai-general-knowledge) | No | [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance) |
+| Copilot Studio | [Create and edit topics with Copilot](/microsoft-copilot-studio/nlu-authoring) | No | [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance) |
+| Copilot Studio | [Generative actions](/microsoft-copilot-studio/advanced-generative-actions) | No | [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance) |
+| Copilot Studio | [Generative answers](/microsoft-copilot-studio/nlu-gpt-overview#generative-answers) | No | [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance) |
 | Dynamics 365 Business Central | All (See the full list at [aka.ms/bcAI](https://aka.ms/bcAI).) | No | [Activate features](/dynamics365/business-central/enable-ai#activate-features) |
 | Dynamics 365 Customer Insights - Data | [Create segments with Copilot for Customer Insights - Data (preview)](/dynamics365/customer-insights/data/segments-copilot) | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent)  |
 | Dynamics 365 Customer Insights - Data | [Data prep report overview (preview)](/dynamics365/customer-insights/data/data-prep-overview) | No |  Customer Insights - Data has its own flag for all its Copilot features by Azure OpenAI. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Data](/dynamics365/customer-insights/data/copilot-global-consent)  |
@@ -125,6 +133,10 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Dynamics 365 Customer Insights - Journeys | [Target the right customers using query assist](/dynamics365/customer-insights/journeys/real-time-marketing-natural-language-segments)<br /></br></a> | No | Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
 | Dynamics 365 Customer Insights - Journeys | [Use AI to kickstart email creation](/dynamics365/customer-insights/journeys/content-ideas) | No | Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
 | Dynamics 365 Customer Insights - Journeys | [Use images in your content](/dynamics365/customer-insights/journeys/upload-images-files#use-images-in-your-content) | No |Customer Insights - Journeys has its own flags for Copilot features. <br><br>Learn more: [Give consent to use Copilot in Customer Insights - Journeys](/dynamics365/customer-insights/journeys/copilot-consent-journeys) |
+| Dynamics 365 Customer Service | [Compose an email](/dynamics365/customer-service/use/use-copilot-email?tabs=richtexteditor) | No | [Manage Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features) |
+| Dynamics 365 Customer Service | [Draft a chat response](/dynamics365/customer-service/use/use-copilot-features#draft-a-chat-response-preview) | No | [Manage Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features) |
+| Dynamics 365 Customer Service | [Respond to questions](/dynamics365/customer-service/use/use-copilot-features#ask-a-question) | No | [Manage Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features) |
+| Dynamics 365 Customer Service | [Summarize a case and conversation](/dynamics365/customer-service/use/copilot-use-summary) | No | [Manage Copilot features in Customer Service](/dynamics365/customer-service/administer/configure-copilot-features) |
 | Power Apps | [Build apps through conversation](/power-apps/maker/canvas-apps/ai-conversations-create-app) | No | [Manage feature settings](/power-platform/admin/settings-features) |
 | Power Apps | [Copilot assistance for form filling in model-driven apps](/power-apps/user/form-filling-assistance) | No | [Manage feature settings](/power-platform/admin/settings-features)  |
 | Power Apps | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) | No, premium user license | [Draft well-written, input text with Copilot](/power-apps/user/well-written-input-text-copilot) |
@@ -133,6 +145,7 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Power Automate | Copilot in cloud flows on the Home page and in the designer (See [Get started with Copilot in cloud flows](/power-automate/get-started-with-copilot) for details.) | No | Contact support to run a PowerShell script. |
 | Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details.) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
 
+Learn more at [FAQ for optional data sharing for Copilot AI features in Dynamics 365 and Power Platform](/power-platform/faqs-copilot-data-sharing).  
 
 ### Regional and language availability
 

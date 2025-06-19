@@ -3,10 +3,10 @@ title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write custom code to be executed in response to data processing events."
 ms.date: 03/26/2024
 ms.reviewer: pehecke
-ms.topic: article
-author: divkamath
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -238,7 +238,7 @@ public class MyPlugin : IPlugin
 
 ---
 
-You can review these two methods of plug-in implementations in our [FollowupPlugin](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin) code sample. For more information about handling exceptions in plug-ins see [Handle exceptions in plug-ins](handle-exceptions.md).
+You can review these two methods of plug-in implementations in our [FollowupPlugin](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/FollowupPlugin) code sample. For more information about handling exceptions in plug-ins see [Handle exceptions in plug-ins](handle-exceptions.md).
 
 ## Plug-in design impacts performance
 
@@ -246,7 +246,7 @@ When writing your plug-in, it's critical that it must execute efficiently and qu
 
 > [!IMPORTANT]
 > Plug-ins must adhere to an execution time limit and resource constraints.
-> More information: [Anaylyze plug-in performance](analyze-performance.md)
+> More information: [Analyze plug-in performance](analyze-performance.md)
 
 ## Using early-bound types in plug-in code
 

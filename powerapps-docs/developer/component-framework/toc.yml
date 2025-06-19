@@ -12,10 +12,14 @@ items:
     href: component-framework-for-canvas-apps.md
   - name: For Power Pages
     href: /power-pages/configure/component-framework
-  - name: "React controls & platform libraries (Preview)"
+  - name: "React controls & platform libraries"
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
+  - name: Dependent libraries (preview)
+    href: dependent-libraries.md
+  - name: Events  (preview)
+    href: events.md
   - name: Get tooling
     href: get-powerapps-cli.md
   - name: Limitations
@@ -30,6 +34,10 @@ items:
       href: tutorial-create-model-driven-app-dataset-component.md
     - name: Create a canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
+    - name: Define an event in a component
+      href: tutorial-define-event.md
+    - name: Use dependent libraries
+      href: tutorial-use-dependent-libraries.md
   - name: Online learning
     href: /training/paths/use-power-apps-component-framework
   - name: Code components ALM
@@ -54,6 +62,8 @@ items:
       href: publish-components-app-source.md
     - name: Customize the editable grid control
       href: customize-editable-grid-control.md
+    - name: Bring intelligence into your components using Agent APIs
+      href: bring-intelligence-using-agent-apis.md
   - name: Troubleshooting
     items:
     - name: Common issues and workarounds
@@ -146,6 +156,15 @@ items:
         href: reference/controlattributes.md
       - name: ControlAttributesType
         href: reference/controlattributestype.md
+      - name: Copilot
+        href: reference/copilot.md
+        items:
+        - name: executeEvent
+          href: reference/copilot/executeevent.md
+        - name: executePrompt
+          href: reference/copilot/executeprompt.md
+        - name: MCSResponse
+          href: reference/copilot/mcsresponse.md
       - name: DataProviderCapabilities
         href: reference/dataprovidercapabilities.md
       - name: DataSet
@@ -371,7 +390,7 @@ items:
         href: reference/position.md
       - name: Property
         href: reference/property.md
-      - name: ReactControl (Preview)
+      - name: ReactControl
         href: reference/react-control.md
         items:
         - name: destroy
@@ -452,6 +471,8 @@ items:
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: dependency
+        href: manifest-schema-reference/dependency.md
       - name: domain
         href: manifest-schema-reference/domain.md
       - name: external-service-usage
@@ -464,6 +485,8 @@ items:
         href: manifest-schema-reference/img.md
       - name: manifest
         href: manifest-schema-reference/manifest.md
+      - name: platform-action
+        href: manifest-schema-reference/platform-action.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
       - name: property-dependencies

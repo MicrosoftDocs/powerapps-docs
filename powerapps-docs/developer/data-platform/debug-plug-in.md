@@ -3,10 +3,10 @@ title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and prod
 description: "Learn how to debug plug-ins using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/10/2022
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

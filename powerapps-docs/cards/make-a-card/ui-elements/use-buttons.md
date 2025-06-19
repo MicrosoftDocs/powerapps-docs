@@ -12,6 +12,8 @@ ms.collection:
 
 # Add buttons to a card
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Buttons are a type of control that lets users perform actions in cards without entering any input aside from a click. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 Buttons can do one of four things:

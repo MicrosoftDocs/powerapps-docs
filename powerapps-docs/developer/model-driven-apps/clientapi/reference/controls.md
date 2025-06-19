@@ -1,8 +1,8 @@
 ---
-title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
+title: "Controls in model-driven apps for Dynamics 365"
 description: A control represents an HTML element present on the form.
-ms.author: hemantg
-author: HemantGaur
+author: MitiJ
+ms.author: mijosh
 ms.date: 01/06/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,7 +13,7 @@ contributors:
 ---
 # Controls (Client API reference)
 
-A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others may represent unbound controls such as an IFRAME, web resource, or a subgrid that has been added to the form. 
+A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others might represent unbound controls such as an IFRAME, web resource, or a subgrid added to the form.
 
 The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. You access controls using one of the following collections: 
 
@@ -29,307 +29,490 @@ This article provides information about the methods available per control type.
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
-## standard control type
+## Standard control type
 
 These are the methods available for a Standard control.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/addNotification.md" data-raw-source="[addNotification](controls/addNotification.md)">addNotification</a></li>
-<li><a href="controls/clearNotification.md" data-raw-source="[clearNotification](controls/clearNotification.md)">clearNotification</a></li>
-<li><a href="controls/getAttribute.md" data-raw-source="[getAttribute](controls/getAttribute.md)">getAttribute</a></a></li>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-<li><a href="controls/getoutputs.md" data-raw-source="[getOutputs](controls/getoutputs.md)">getOutputs</a></li>
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
+:::row:::
+   :::column:::
+      [addNotification](controls/addNotification.md)
+   :::column-end:::
+   :::column:::
+      [clearNotification](controls/clearNotification.md)
+   :::column-end:::
+   :::column:::
+      [getAttribute](controls/getAttribute.md)
+   :::column-end:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+   :::column:::
+      [getOutputs](controls/getoutputs.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setNotification](controls/setNotification.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+:::row-end:::
 
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
 
-The following methods for the Standard control are [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in this release: addOnKeyPress, fireOnKeyPress, and removeOnKeyPress.
+The following methods for the Standard control are [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in this release: `addOnKeyPress`, `fireOnKeyPress`, and `removeOnKeyPress`.
 
-## iframe control type
+## IFRAME control type
 
-These are the methods available for an IFRAME control.
+These methods are available for an IFRAME control.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/getContentWindow.md" data-raw-source="[getContentWindow](controls/getContentWindow.md)">getContentWindow</a></li>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getInitialUrl.md" data-raw-source="[getInitialUrl](controls/getInitialUrl.md)">getInitialUrl</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
+:::row:::
+   :::column:::
+      [getContentWindow](controls/getContentWindow.md)
+   :::column-end:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getInitialUrl](controls/getInitialUrl.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+   :::column:::
+      [getObject](controls/getObject.md)
+   :::column-end:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column:::
+      [getSrc](controls/getSrc.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setSrc](controls/setSrc.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+:::row-end:::
 
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>  
-<li><a href="controls/getObject.md" data-raw-source="[getObject](controls/getObject.md)">getObject</a></li>
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getSrc.md" data-raw-source="[getSrc](controls/getSrc.md)">getSrc</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
+## Kbsearch (Knowledge base search) control type
 
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setSrc.md" data-raw-source="[setSrc](controls/setSrc.md)">setSrc</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
+These methods are available for knowledge base search control.
 
-## kbsearch (Knowledge base search) control type
+:::row:::
+   :::column:::
+      [addOnPostSearch](controls/addOnPostSearch.md)
+   :::column-end:::
+   :::column:::
+      [addOnResultOpened](controls/addOnResultOpened.md)
+   :::column-end:::
+   :::column:::
+      [addOnSelection](controls/addOnSelection.md)
+   :::column-end:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column:::
+      [getSearchQuery](controls/getSearchQuery.md)
+   :::column-end:::
+   :::column:::
+      [getSelectedResults](controls/getSelectedResults.md)
+   :::column-end:::
+   :::column:::
+      [getTotalResultCount](controls/getTotalResultCount.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [openSearchResult](controls/openSearchResult.md)
+   :::column-end:::
+   :::column:::
+      [removeOnPostSearch](controls/removeOnPostSearch.md)
+   :::column-end:::
+   :::column:::
+      [removeOnResultOpened](controls/removeOnResultOpened.md)
+   :::column-end:::
+   :::column:::
+      [removeOnSelection](controls/removeOnSelection.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setSearchQuery](controls/setSearchQuery.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+:::row-end:::
 
-These are the methods available for knowledge base search control.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/addOnPostSearch.md" data-raw-source="[addOnPostSearch](controls/addOnPostSearch.md)">addOnPostSearch</a></li>
-<li><a href="controls/addOnResultOpened.md" data-raw-source="[addOnResultOpened](controls/addOnResultOpened.md)">addOnResultOpened</a></li>
-<li><a href="controls/addOnSelection.md" data-raw-source="[addOnSelection](controls/addOnSelection.md)">addOnSelection</a></li>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getSearchQuery.md" data-raw-source="[getSearchQuery](controls/getSearchQuery.md)">getSearchQuery</a></li>
-<li><a href="controls/getSelectedResults.md" data-raw-source="[getSelectedResults](controls/getSelectedResults.md)">getSelectedResults</a></li>
-<li><a href="controls/getTotalResultCount.md" data-raw-source="[getTotalResultCount](controls/getTotalResultCount.md)">getTotalResultCount</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/openSearchResult.md" data-raw-source="[openSearchResult](controls/openSearchResult.md)">openSearchResult</a></li>
-<li><a href="controls/removeOnPostSearch.md" data-raw-source="[removeOnPostSearch](controls/removeOnPostSearch.md)">removeOnPostSearch</a></li>
-
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/removeOnResultOpened.md" data-raw-source="[removeOnResultOpened](controls/removeOnResultOpened.md)">removeOnResultOpened</a></li>
-<li><a href="controls/removeOnSelection.md" data-raw-source="[removeOnSelection](controls/removeOnSelection.md)">removeOnSelection</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setSearchQuery.md" data-raw-source="[setSearchQuery](controls/setSearchQuery.md)">setSearchQuery</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can't be changed. 
+>When the knowledge base search control is added to the social pane, the name of the control will be `searchwidgetcontrol_notescontrol`. This name can't be changed. 
 
-## lookup control type
+## Lookup control type
 
-These are the methods available for a lookup control.
+These methods are available for a lookup control.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/addCustomFilter.md" data-raw-source="[addCustomFilter](controls/addCustomFilter.md)">addCustomFilter</a></li>
-<li><a href="controls/addCustomView.md" data-raw-source="[addCustomView](controls/addCustomView.md)">addCustomView</a></li>
-<li><a href="controls/addNotification.md" data-raw-source="[addNotification](controls/addNotification.md)">addNotification</a></li>
-<li><a href="controls/addOnLookupTagClick.md" data-raw-source="[addOnLookupTagClick](controls/addOnLookupTagClick.md)">addOnLookupTagClick</a></li>
-<li><a href="controls/addPreSearch.md" data-raw-source="[addPreSearch](controls/addPreSearch.md)">addPreSearch</a></li>
-<li><a href="controls/clearNotification.md" data-raw-source="[clearNotification](controls/clearNotification.md)">clearNotification</a></li>
-<li><a href="controls/getAttribute.md" data-raw-source="[getAttribute](controls/getAttribute.md)">getAttribute</a></a></li>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
+:::row:::
+   :::column:::
+      [addCustomFilter](controls/addCustomFilter.md)
+   :::column-end:::
+   :::column:::
+      [addCustomView](controls/addCustomView.md)
+   :::column-end:::
+   :::column:::
+      [addNotification](controls/addNotification.md)
+   :::column-end:::
+   :::column:::
+      [addOnLookupTagClick](controls/addOnLookupTagClick.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [addPreSearch](controls/addPreSearch.md)
+   :::column-end:::
+   :::column:::
+      [clearNotification](controls/clearNotification.md)
+   :::column-end:::
+   :::column:::
+      [getAttribute](controls/getAttribute.md)
+   :::column-end:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column:::
+      [getDefaultView](controls/getDefaultView.md)
+   :::column-end:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getEntityTypes](controls/getEntityTypes.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+   :::column:::
+      [removeOnLookupTagClick](controls/removeOnLookupTagClick.md)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column:::
+      [removePreSearch](controls/removePreSearch.md)
+   :::column-end:::
+   :::column:::
+      [setDefaultView](controls/setDefaultView.md)
+   :::column-end:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+   :::column:::
+      [setEntityTypes](controls/setEntityTypes.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setNotification](controls/setNotification.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+:::row-end:::
 
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/getDefaultView.md" data-raw-source="[getDefaultView](controls/getDefaultView.md)">getDefaultView</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getEntityTypes.md" data-raw-source="[getEntityTypes](controls/getEntityTypes.md)">getEntityTypes</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/removeOnLookupTagClick.md" data-raw-source="[removeOnLookupTagClick](controls/removeOnLookupTagClick.md)">removeOnLookupTagClick</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/removePreSearch.md" data-raw-source="[removePreSearch](controls/removePreSearch.md)">removePreSearch</a></li>
-<li><a href="controls/setDefaultView.md" data-raw-source="[setDefaultView](controls/setDefaultView.md)">setDefaultView</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-<li><a href="controls/setEntityTypes.md" data-raw-source="[setEntityTypes](controls/setEntityTypes.md)">setEntityTypes</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
 
-## choices and choice control types
+
+
+## Choices and choice control types
 
 Both choices and choice controls have the same set of methods available.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/addNotification.md" data-raw-source="[addNotification](controls/addNotification.md)">addNotification</a></li>
-<li><a href="controls/addOption.md" data-raw-source="[addOption](controls/addOption.md)">addOption</a></li>
-<li><a href="controls/clearNotification.md" data-raw-source="[clearNotification](controls/clearNotification.md)">clearNotification</a></li>
-<li><a href="controls/clearOptions.md" data-raw-source="[clearOptions](controls/clearOptions.md)">clearOptions</a></li>
-<li><a href="controls/getAttribute.md" data-raw-source="[getAttribute](controls/getAttribute.md)">getAttribute</a></a></li>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-<li><a href="controls/getOptions.md" data-raw-source="[getOptions](controls/getOptions.md)">getOptions</a></li>
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
+:::row:::
+   :::column:::
+      [addNotification](controls/addNotification.md)
+   :::column-end:::
+   :::column:::
+      [addOption](controls/addOption.md)
+   :::column-end:::
+   :::column:::
+      [clearNotification](controls/clearNotification.md)
+   :::column-end:::
+   :::column:::
+      [clearOptions](controls/clearOptions.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getAttribute](controls/getAttribute.md)
+   :::column-end:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+   :::column:::
+      [getOptions](controls/getOptions.md)
+   :::column-end:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [removeOption](controls/removeoption.md)
+   :::column-end:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setNotification](controls/setNotification.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+:::row-end:::
 
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/removeoption.md" data-raw-source="[removeOption](controls/removeoption.md)">removeOption</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
 
-</ul>
-</td>
-</tr>
-</table>
-
-## quickform control type
+## Quickform control type
 
 See [formContext.ui.quickForms](formcontext-ui-quickforms.md) for information about methods supported for this control type.
 
-## subgrid control type
+## Subgrid control type
 
 See [Grids and subgrids](grids.md) for information methods supported for this control type.
 
-## timelinewall control type
+## Timelinewall control type
 
-The timeline control presents the Posts, Activities, and Notes in a unified view. These are the methods available for this control type.
+The timeline control presents the Posts, Activities, and Notes in a unified view. These methods are available for this control type.
 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-</ul>
-</td>
-<td>
-<ul>
+:::row:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+   :::column:::
+      [refresh](controls/refresh.md)
+   :::column-end:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+   :::column:::
+      &nbsp;
+   :::column-end:::
+:::row-end:::
 
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/refresh.md" data-raw-source="[refresh](controls/refresh.md)">refresh</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
+## Timer control type
 
-## timer control type
+These methods are available for the timer control.
 
-These are the methods available for the timer control.
+:::row:::
+   :::column:::
+      [getControlType](controls/getControlType.md)
+   :::column-end:::
+   :::column:::
+      [getDisabled](controls/getDisabled.md)
+   :::column-end:::
+   :::column:::
+      [getLabel](controls/getLabel.md)
+   :::column-end:::
+   :::column:::
+      [getName](controls/getName.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [getParent](controls/getParent.md)
+   :::column-end:::
+   :::column:::
+      [getState](controls/getState.md)
+   :::column-end:::
+   :::column:::
+      [getVisible](controls/getVisible.md)
+   :::column-end:::
+   :::column:::
+      [refresh](controls/refresh.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      [setDisabled](controls/setDisabled.md)
+   :::column-end:::
+   :::column:::
+      [setFocus](controls/setFocus.md)
+   :::column-end:::
+   :::column:::
+      [setLabel](controls/setLabel.md)
+   :::column-end:::
+   :::column:::
+      [setVisible](controls/setVisible.md)
+   :::column-end:::
+:::row-end:::
 
-<table>
-<tr>
-<td>
-<ul>
 
-<li><a href="controls/getControlType.md" data-raw-source="[getControlType](controls/getControlType.md)">getControlType</a></li>
-<li><a href="controls/getDisabled.md" data-raw-source="[getDisabled](controls/getDisabled.md)">getDisabled</a></li>
-<li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
-<li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-</ul>
-</td>
-<td>
-<ul>
-
-<li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
-<li><a href="controls/getState.md" data-raw-source="[getState](controls/getState.md)">getState</a></li>
-<li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/refresh.md" data-raw-source="[refresh](controls/refresh.md)">refresh</a></li>
-
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
-<li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
-<li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
-<li><a href="controls/setVisible.md" data-raw-source="[setVisible](controls/setVisible.md)">setVisible</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
-## web resource control type
+## Web resource control type
 
 A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
 
-The Sliverlight web resource has these additional methods: 
-<table>
-<tr>
-<td>
-<ul>
-<li><a href="controls/getData.md" data-raw-source="[getData](controls/getData.md)">getData</a></li>
-<li><a href="controls/setData.md" data-raw-source="[setData](controls/setData.md)">setData</a></li>
-</ul>
-</td>
-</tr>
-</table>
+The Silverlight web resource has these extra methods: 
+
+- [getData](controls/getData.md)
+- [setData](controls/setData.md)
 
 > [!TIP]
 > If you want to modify all the controls bound to a column on a form, use the controls collection inside the column type. For example, to add notification to each control bound to the `name` column, you can do the following:

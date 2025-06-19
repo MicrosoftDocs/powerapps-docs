@@ -1,11 +1,11 @@
 ---
 title: "Use XRM tooling to create data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to create data on Microsoft Dataverse"
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
@@ -60,6 +60,9 @@ else
 }  
 ```
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
+
 In this example, we created a data payload object called `indata`. Next, we populated it using the general syntax `crmFieldName , new CrmDataTypeWrapper(data,CrmFieldType)`. After setting up the `indata` object to get the values to create, we called `CreateNewRecord` method providing the table logical name for the account and the data payload (`indata`).  
   
 > [!NOTE]
@@ -67,7 +70,7 @@ In this example, we created a data payload object called `indata`. Next, we popu
   
 ## CreateAnnotation
   
-This method is used to create and attach a note object to any table record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to a table, or to attach files that are stored in Dataverse to a table. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner table in Dataverse. This example continues from the prior example to create a note on the newly created account. 
+This method is used to create and attach a note object to any table record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to a table, or to attach files that are stored in Dataverse to a table. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner table in Dataverse. This example continues from the prior example to create a note on the newly created account.
 
 When using the `ServiceClient` class, you can find the `CreateAnnotation` method in the <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions> namespace.
   
@@ -101,6 +104,5 @@ else
 ### See also  
 
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

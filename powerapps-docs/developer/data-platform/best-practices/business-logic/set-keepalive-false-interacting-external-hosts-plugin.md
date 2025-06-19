@@ -3,10 +3,11 @@ title: "Set KeepAlive to false when interacting with external hosts in a plug-in
 description: "KeepAlive property set to true in the HTTP request header or not explicitly defined as false can cause increased execution times of plug-ins."
 suite: powerapps
 author: jowells
-ms.topic: article
+ms.author: jowells
+ms.reviewer: pehecke
+ms.topic: how-to
 ms.date: 8/21/2019
 ms.subservice: dataverse-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---

@@ -1,20 +1,27 @@
 ---
-title: "Scalable Customization Design: Auto-numbering example (Microsoft Dataverse) | Microsoft Docs" 
+title: "Scalable Customization Design: Autonumbering example (Microsoft Dataverse) | Microsoft Docs" 
 description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization."
-ms.date: 04/23/2024
+ms.date: 09/06/2024
 ms.reviewer: pehecke
 ms.topic: article
 author: rogergilchrist
-ms.author: jdaly # MSFT alias of Microsoft employees only
+ms.author: rogergil
 search.audienceType: 
   - developer
+contributors:
+ -JimDaly
 ---
-# Scalable Customization Design: Auto-numbering example
+# Scalable Customization Design: Autonumbering example
 
 
 
 > [!NOTE]
 > This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).
+>
+> Dataverse has an [Autonumber columns](../../../maker/data-platform/autonumber-fields.md) feature you should use if it meets your requirements.
+> 
+> This article describes how to manage transactions effectively to ensure a solution can handle growth, using the example of autonumbering. It outlines a process of trying, testing, and evaluating different approaches. While the third approach improves upon the first two, it might not be perfect for every situation. Therefore, it's crucial to thoroughly test any developed solution, as you are responsible for maintaining your own code.
+
 
 One scenario that illustrates the common misunderstanding of how transactions are handled within Dataverse is implementing an automatic numbering scheme.
 
@@ -37,12 +44,12 @@ The following sections describe different approaches that can be taken within Da
 
 ## Approach 1: Out of a transaction
 
-The simplest approach is to realize that any use of a commonly required resource would introduce the potential for blocking. Since this has an impact on scalability, you might decide you want to avoid a platform transaction when generating an auto number.
+The simplest approach is to realize that any use of a commonly required resource would introduce the potential for blocking. Since blocking has an impact on scalability, you might decide you want to avoid a platform transaction when generating an auto number.
 Let's consider the scenario for auto numbering generation outside of the pipeline transaction in a pre-validation plug-in.
 
 ![Approach 1: Out of a transaction.](media/autonumber-approach-1.png)
 
-When you run this in isolation it works fine. It doesn't, however, actually protect against concurrency errors. As the following diagram shows, if two requests in parallel both request the latest number and then both increment and update the value, you end up with duplicate numbers. Because there's no locking held against the retrieved number, it's possible for a race condition to occur and both threads to end up with the same value. 
+When you run this in isolation, it works fine. It doesn't, however, actually protect against concurrency errors. As the following diagram shows, if two requests in parallel both request the latest number and then both increment and update the value, you end up with duplicate numbers. Because there's no locking held against the retrieved number, it's possible for a race condition to occur and both threads to end up with the same value. 
 
 ![race condition.](media/autonumber-approach-1-a.png)
 
@@ -84,7 +91,7 @@ Normally, generation of the auto number would be done in a pre-event plug-in. Yo
 
 With the scalability implications in mind, if there's other complex processing in the account creation process, an alternative would be to move the auto number generation to a post create process, which still ensures a consistent update process. The benefit would be that it reduces the length of time within the transaction that the auto number record lock is held as the lock is only taken towards the end of the process. If the auto numbering table is the most highly contested resource and this approach is taken for all processes accessing it, this reduces the amount of contention overall.
 
-The tradeoff here would be the need to perform an additional update to account, while reducing the overall length of time blocking waiting for the auto numbering record.
+The tradeoff here would be the need to perform an another update to account, while reducing the overall length of time blocking waiting for the auto numbering record.
 
 ![move the auto number generation to a post create process.](media/autonumber-approach-3-b.png)
 

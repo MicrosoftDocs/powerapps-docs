@@ -1,50 +1,48 @@
 ---
-title: "Language (LanguageLocale)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Language (LanguageLocale)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Language (LanguageLocale) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Language (LanguageLocale) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Language (LanguageLocale)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Language (LanguageLocale) table/entity reference (Microsoft Dataverse)
 
 Language
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Retrieve|GET /languagelocale(*languagelocaleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /languagelocale<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /languagelocale(*languagelocaleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /languagelocale(*languagelocaleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Language (LanguageLocale) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /languagelocale(*languagelocaleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /languagelocale<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `SetState`<br />Event: True |`PATCH` /languagelocale(*languagelocaleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /languagelocale(*languagelocaleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|LanguageLocales|
-|DisplayCollectionName|Languages|
-|DisplayName|Language|
-|EntitySetName|languagelocale|
-|IsBPFEntity|False|
-|LogicalCollectionName|languagelocales|
-|LogicalName|languagelocale|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|languagelocaleid|
-|PrimaryNameAttribute|name|
-|SchemaName|LanguageLocale|
+The following table lists selected properties for the Language (LanguageLocale) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Language** |
+| **DisplayCollectionName** | **Languages** |
+| **SchemaName** | `LanguageLocale` |
+| **CollectionSchemaName** | `LanguageLocales` |
+| **EntitySetName** | `languagelocale`|
+| **LogicalName** | `languagelocale` |
+| **LogicalCollectionName** | `languagelocales` |
+| **PrimaryIdAttribute** | `languagelocaleid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -55,85 +53,78 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 
-
 ### <a name="BKMK_LanguageLocaleId"></a> LanguageLocaleId
 
 |Property|Value|
-|--------|-----|
-|Description|LanguageLocaleId|
+|---|---|
+|Description|**LanguageLocaleId**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|languagelocaleid|
+|LogicalName|`languagelocaleid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_LocaleId"></a> LocaleId
 
 |Property|Value|
-|--------|-----|
-|Description|Locale ID|
-|DisplayName|Locale ID|
-|Format|None|
+|---|---|
+|Description|**Locale ID**|
+|DisplayName|**Locale ID**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|localeid|
-|MaxValue|2147483647|
-|MinValue|1|
+|LogicalName|`localeid`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|1|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|State Code|
-|DisplayName|State Code|
-|IsValidForCreate|False|
+|---|---|
+|Description|**State Code**|
+|DisplayName|**State Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`languagelocale_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Language Status Code|
-|DisplayName|Language Status Code|
+|---|---|
+|Description|**Language Status Code**|
+|DisplayName|**Language Status Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`languagelocale_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [Code](#BKMK_Code)
 - [Language](#BKMK_Language)
@@ -142,133 +133,139 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [Region](#BKMK_Region)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_Code"></a> Code
 
 |Property|Value|
-|--------|-----|
-|Description|Code|
-|DisplayName|Code|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Code**|
+|DisplayName|**Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|code|
-|MaxLength|100|
+|LogicalName|`code`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_Language"></a> Language
 
 |Property|Value|
-|--------|-----|
-|Description|Language|
-|DisplayName|Language|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Language**|
+|DisplayName|**Language**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|language|
-|MaxLength|100|
+|LogicalName|`language`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name**|
+|DisplayName|**Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
+|LogicalName|`name`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the language locale.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the language locale.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
+|Targets|organization|
 
 ### <a name="BKMK_Region"></a> Region
 
 |Property|Value|
-|--------|-----|
-|Description|Region|
-|DisplayName|Region|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Region**|
+|DisplayName|**Region**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|region|
-|MaxLength|100|
+|LogicalName|`region`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_knowledgearticle_languagelocaleid"></a> knowledgearticle_languagelocaleid
-
-Same as the [knowledgearticle_languagelocaleid](knowledgearticle.md#BKMK_knowledgearticle_languagelocaleid) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|languagelocaleid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|knowledgearticle_languagelocaleid|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+These relationships are many-to-one. Listed by **SchemaName**.
 
 ### <a name="BKMK_languagelocale_organization"></a> languagelocale_organization
 
-See the [languagelocale_organization](organization.md#BKMK_languagelocale_organization) one-to-many relationship for the [organization](organization.md) table/entity.
+One-To-Many Relationship: [organization languagelocale_organization](organization.md#BKMK_languagelocale_organization)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_knowledgearticle_languagelocaleid"></a> knowledgearticle_languagelocaleid
+
+Many-To-One Relationship: [knowledgearticle knowledgearticle_languagelocaleid](knowledgearticle.md#BKMK_knowledgearticle_languagelocaleid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`languagelocaleid`|
+|ReferencedEntityNavigationPropertyName|`knowledgearticle_languagelocaleid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.languagelocale?text=languagelocale EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.languagelocale?displayProperty=fullName>

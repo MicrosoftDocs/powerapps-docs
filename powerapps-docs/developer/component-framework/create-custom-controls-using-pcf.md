@@ -2,11 +2,11 @@
 title: Create and build a code component| Microsoft Docs
 description: Start creating a component using the Power Apps component framework tooling.
 keywords: Power Apps component framework, code components, Component Framework
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 01/27/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly

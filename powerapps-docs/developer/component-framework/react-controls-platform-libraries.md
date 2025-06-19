@@ -1,34 +1,36 @@
 ---
-title: "React controls & platform libraries (preview) | Microsoft Docs"
+title: "React controls & platform libraries | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: hemantg
-author: HemantGaur
-ms.date: 06/18/2024
+author: anuitz
+ms.author: anuitz
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
   - miglisic
   - JimDaly
 ---
 
-# React controls & platform libraries (preview)
+# React controls & platform libraries
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent libraries individually for each control. All controls share a common library instance and version to provide a seamless and consistent experience.
+When you use React and platform libraries, you're using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent libraries individually for each control. All controls share a common library instance and version to provide a seamless and consistent experience.
 
 By reusing the existing platform React and Fluent libraries, you can expect the following benefits:
 
 - Reduced control bundle size
 - Optimized solution packaging
 - Faster runtime transfer, scripting, and control rendering
+- Design and theme alignment with the Power Apps Fluent design system  
 
 With the benefits available by reusing these component resources, we expect this approach will become the preferred way all Power Apps code components will be created after this feature reaches general availability.
+
+> [!NOTE]
+> With GA release, all existing virtual controls will continue to function. However, they should be rebuilt and deployed using the latest CLI version (>=1.37) to facilitate future platform React version upgrades.
 
 ## Prerequisites
 
@@ -67,7 +69,7 @@ After you build the control, you can package it inside solutions and use it for 
 
 ## Differences from standard components
 
-Thi section describes the differences between a React component and a standard component.
+This section describes the differences between a React component and a standard component.
 
 ### ControlManifest.Input.xml
 
@@ -81,7 +83,7 @@ Within the [resources element](manifest-schema-reference/resources.md), find two
 ```xml
 <resources>
   <code path="index.ts" order="1" />
-  <platform-library name="React" version="16.8.6" />
+  <platform-library name="React" version="16.14.0" />
   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```
@@ -100,7 +102,7 @@ React and Fluent libraries aren't included in the package because they're shared
 
 ## Sample controls
 
-You can find two new controls added to the samples as part of this preview. Functionally, they're the same as their standard version but have better performance.
+The following controls are included in the samples. They function the same as their standard versions but offer better performance since they are virtual controls.
 
 |Sample |Description|Link|
 |---------|---------|---------|
@@ -113,8 +115,9 @@ Platform libraries are made available both at the build and runtime to the contr
 
 | Name   | npm package name            | Allowed version range  | Version loaded |
 | ------ | --------------------------- | ---------------------- | -------------- |
-| React  | react                       | 16.8.6                 | 17.0.2 (Model), 16.14.0 (Canvas) |
+| React  | react                       | 16.14.0                | 17.0.2 (Model), 16.14.0 (Canvas) |
 | Fluent | @fluentui/react             | 8.29.0                 | 8.29.0         |
+| Fluent | @fluentui/react             | 8.121.1                | 8.121.1        |
 | Fluent | @fluentui/react-components  | >=9.4.0 <=9.46.2       | 9.46.2         |
 
 > [!NOTE]

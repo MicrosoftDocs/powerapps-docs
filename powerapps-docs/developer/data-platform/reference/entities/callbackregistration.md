@@ -1,51 +1,50 @@
 ---
-title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Callback Registration (CallbackRegistration) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Callback Registration (CallbackRegistration) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# CallbackRegistration table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Callback Registration (CallbackRegistration) table/entity reference (Microsoft Dataverse)
 
 Callback Registration that stores configuration.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /callbackregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /callbackregistrations(*callbackregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /callbackregistrations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Callback Registration (CallbackRegistration) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /callbackregistrations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /callbackregistrations(*callbackregistrationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /callbackregistrations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: False |`PATCH` /callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /callbackregistrations(*callbackregistrationid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|CallbackRegistrations|
-|DisplayCollectionName|Callback Registrations|
-|DisplayName|Callback Registration|
-|EntitySetName|callbackregistrations|
-|IsBPFEntity|False|
-|LogicalCollectionName|callbackregistrations|
-|LogicalName|callbackregistration|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|callbackregistrationid|
-|PrimaryNameAttribute|name|
-|SchemaName|CallbackRegistration|
+The following table lists selected properties for the Callback Registration (CallbackRegistration) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Callback Registration** |
+| **DisplayCollectionName** | **Callback Registrations** |
+| **SchemaName** | `CallbackRegistration` |
+| **CollectionSchemaName** | `CallbackRegistrations` |
+| **EntitySetName** | `callbackregistrations`|
+| **LogicalName** | `callbackregistration` |
+| **LogicalCollectionName** | `callbackregistrations` |
+| **PrimaryIdAttribute** | `callbackregistrationid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -70,661 +69,585 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Url](#BKMK_Url)
 - [Version](#BKMK_Version)
 
-
 ### <a name="BKMK_CallbackRegistrationId"></a> CallbackRegistrationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the callback registration.|
+|---|---|
+|Description|**Unique identifier of the callback registration.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|callbackregistrationid|
+|LogicalName|`callbackregistrationid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_EntityName"></a> EntityName
 
 |Property|Value|
-|--------|-----|
-|Description|Entity Name.|
-|DisplayName|Entity Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Entity Name.**|
+|DisplayName|**Entity Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|entityname|
-|MaxLength|255|
+|LogicalName|`entityname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|255|
 
 ### <a name="BKMK_FilterExpression"></a> FilterExpression
 
 |Property|Value|
-|--------|-----|
-|Description|condition represented with OData $filter syntax|
-|DisplayName|Filter Expression|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**condition represented with OData $filter syntax**|
+|DisplayName|**Filter Expression**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|filterexpression|
-|MaxLength|100000|
+|LogicalName|`filterexpression`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_FilteringAttributes"></a> FilteringAttributes
 
 |Property|Value|
-|--------|-----|
-|Description|Comma-separated list of attributes. If at least one of these attributes is modified, the callback url should be called.|
-|DisplayName|Filtering Attributes|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Comma-separated list of attributes. If at least one of these attributes is modified, the callback url should be called.**|
+|DisplayName|**Filtering Attributes**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|filteringattributes|
-|MaxLength|100000|
+|LogicalName|`filteringattributes`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_HardDelete"></a> HardDelete
 
-**Added by**: CallbackRegistrationApp Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only. Holds hard delete information.|
-|DisplayName|Hard Delete|
+|---|---|
+|Description|**For internal use only. Holds hard delete information.**|
+|DisplayName|**Hard Delete**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|harddelete|
+|LogicalName|`harddelete`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### HardDelete Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-
+|GlobalChoiceName|`_callbackregistration_harddelete`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_LogicAppsVersion"></a> LogicAppsVersion
 
-**Added by**: CallbackRegistrationApp Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only. Holds version of logic apps trigger.|
-|DisplayName|Logic Apps Version|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only. Holds version of logic apps trigger.**|
+|DisplayName|**Logic Apps Version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|logicappsversion|
-|MaxLength|100|
+|LogicalName|`logicappsversion`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_Message"></a> Message
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies the message type|
-|DisplayName|Specifies the message type|
+|---|---|
+|Description|**Specifies the message type**|
+|DisplayName|**Specifies the message type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|message|
+|LogicalName|`message`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`callbackregistration_message`|
 
 #### Message Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Added||
-|2|Deleted||
-|3|Modified||
-|4|Added or Modified||
-|5|Added or Deleted||
-|6|Modified or Deleted||
-|7|Added or Modified or Deleted||
-
-
+|Value|Label|
+|---|---|
+|1|**Added**|
+|2|**Deleted**|
+|3|**Modified**|
+|4|**Added or Modified**|
+|5|**Added or Deleted**|
+|6|**Modified or Deleted**|
+|7|**Added or Modified or Deleted**|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of callback registration.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of callback registration.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|256|
+|LogicalName|`name`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the callback registration.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the callback registration.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser|
 |Type|Owner|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PostponeUntil"></a> PostponeUntil
 
 |Property|Value|
-|--------|-----|
-|Description|delay represented with OData expression|
-|DisplayName|Postpone Until|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**delay represented with OData expression**|
+|DisplayName|**Postpone Until**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|postponeuntil|
-|MaxLength|100000|
+|LogicalName|`postponeuntil`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100000|
 
 ### <a name="BKMK_RunAs"></a> RunAs
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies the user context under which the callback will run|
-|DisplayName|RunAs|
+|---|---|
+|Description|**Specifies the user context under which the callback will run**|
+|DisplayName|**RunAs**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|runas|
+|LogicalName|`runas`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`callbackregistration_runas`|
 
 #### RunAs Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Modifying user||
-|2|Row owner||
-|3|Flow owner||
-
-
+|Value|Label|
+|---|---|
+|1|**Modifying user**|
+|2|**Row owner**|
+|3|**Flow owner**|
 
 ### <a name="BKMK_RuntimeIntegrationProperties"></a> RuntimeIntegrationProperties
 
-**Added by**: RuntimeIntegration Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only. Holds miscellaneous properties related to runtime integration.|
-|DisplayName|Runtime Integration Properties|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only. Holds miscellaneous properties related to runtime integration.**|
+|DisplayName|**Runtime Integration Properties**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|runtimeintegrationproperties|
-|MaxLength|512|
+|LogicalName|`runtimeintegrationproperties`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|512|
 
 ### <a name="BKMK_Scope"></a> Scope
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies the Scope|
-|DisplayName|Specifies the scope type|
+|---|---|
+|Description|**Specifies the Scope**|
+|DisplayName|**Specifies the scope type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|scope|
+|LogicalName|`scope`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue||
+|GlobalChoiceName|`callbackregistration_scope`|
 
 #### Scope Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|User||
-|2|BusinessUnit||
-|3|ParentChildBusinessUnit||
-|4|Organization||
-
-
+|Value|Label|
+|---|---|
+|1|**User**|
+|2|**BusinessUnit**|
+|3|**ParentChildBusinessUnit**|
+|4|**Organization**|
 
 ### <a name="BKMK_SdkMessageName"></a> SdkMessageName
 
-**Added by**: API messages extension solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the SDK message the subscriber is interested in|
-|DisplayName|SDK Message Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the SDK message the subscriber is interested in**|
+|DisplayName|**SDK Message Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|sdkmessagename|
-|MaxLength|256|
+|LogicalName|`sdkmessagename`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_SoftDeleteStatus"></a> SoftDeleteStatus
 
-**Added by**: CallbackRegistrationApp Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|For internal use only. Holds soft delete information.|
-|DisplayName|Soft Delete Status|
-|Format|None|
+|---|---|
+|Description|**For internal use only. Holds soft delete information.**|
+|DisplayName|**Soft Delete Status**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|softdeletestatus|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`softdeletestatus`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Url"></a> Url
 
 |Property|Value|
-|--------|-----|
-|Description|Full callback registration Url.|
-|DisplayName|Url Address|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Full callback registration Url.**|
+|DisplayName|**Url Address**|
 |IsValidForForm|True|
 |IsValidForRead|False|
-|LogicalName|url|
-|MaxLength|2000|
+|LogicalName|`url`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_Version"></a> Version
 
 |Property|Value|
-|--------|-----|
-|Description|Specifies the Callback registration version type|
-|DisplayName|Specifies the Callback registration version type|
+|---|---|
+|Description|**Specifies the Callback registration version type**|
+|DisplayName|**Specifies the Callback registration version type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|version|
+|LogicalName|`version`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`callbackregistration_version`|
 
 #### Version Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|V1||
-|2|V2||
-|3|V3||
+|Value|Label|
+|---|---|
+|1|**V1**|
+|2|**V2**|
+|3|**V3**|
 
-
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the callback registration was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the callback registration was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalfÂ of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalfÂ of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the callback registration was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the callback registration was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the callback registration.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the callback registration.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team who owns the callback registration.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team who owns the callback registration.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who owns the callback registration.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user who owns the callback registration.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: CallbackRegistrationApp Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version number of the callbackregistration.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the callbackregistration.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="manytoone"></a>
+## Many-to-One relationships
 
-## Many-To-One Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_callbackregistration_modifiedonbehalfby](#BKMK_lk_callbackregistration_modifiedonbehalfby)
-- [lk_callbackregistration_modifiedby](#BKMK_lk_callbackregistration_modifiedby)
-- [lk_callbackregistration_createdonbehalfby](#BKMK_lk_callbackregistration_createdonbehalfby)
-- [lk_callbackregistration_createdby](#BKMK_lk_callbackregistration_createdby)
 - [businessunit_callbackregistration](#BKMK_businessunit_callbackregistration)
-
-
-### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
-
-See the [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_callbackregistration_modifiedby"></a> lk_callbackregistration_modifiedby
-
-See the [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
-
-See the [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
-
-See the [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [lk_callbackregistration_createdby](#BKMK_lk_callbackregistration_createdby)
+- [lk_callbackregistration_createdonbehalfby](#BKMK_lk_callbackregistration_createdonbehalfby)
+- [lk_callbackregistration_modifiedby](#BKMK_lk_callbackregistration_modifiedby)
+- [lk_callbackregistration_modifiedonbehalfby](#BKMK_lk_callbackregistration_modifiedonbehalfby)
+- [owner_callbackregistration](#BKMK_owner_callbackregistration)
 
 ### <a name="BKMK_businessunit_callbackregistration"></a> businessunit_callbackregistration
 
-See the [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
+
+One-To-Many Relationship: [systemuser lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`callbackregistration_createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`callbackregistration_createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_callbackregistration_modifiedby"></a> lk_callbackregistration_modifiedby
+
+One-To-Many Relationship: [systemuser lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`callbackregistration_modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`callbackregistration_modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_callbackregistration"></a> owner_callbackregistration
+
+One-To-Many Relationship: [owner owner_callbackregistration](owner.md#BKMK_owner_callbackregistration)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.callbackregistration?displayProperty=fullName>

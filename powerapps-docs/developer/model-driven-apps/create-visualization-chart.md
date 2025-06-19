@@ -1,11 +1,11 @@
 ---
-title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
-author: sriharibs-msft
-ms.author: srihas
+title: "Create a visualization (chart) (model-driven apps)"
+description: "Learn how to create a chart visualization and a web resource visualization."
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 9dbed5ee-21a4-ab86-fc4c-08c3838e42f2
 ms.subservice: mda-developer
 search.audienceType:
@@ -39,7 +39,7 @@ Before creating a visualization, make sure that you are aware of the following:
 
 Charts require you to specify the underlying data for the charts and how the charts will look in the form of _data description_ and _presentation description_ XML strings. More information: [Specifying chart data](understand-charts-underlying-data-chart-representation.md) and [Sample Charts](sample-charts.md).
 
-For a complete sample on how to create an organization-owned chart, see [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart).
+For a complete sample on how to create an organization-owned chart, see [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsChart).
 
 ### Create a multi-series chart
 
@@ -92,10 +92,10 @@ For example, to create a _Sample Visualization_ that displays an existing Web re
 ### See also
 
 [Charts](view-data-with-visualizations-charts.md)  
- [Specifying chart data](understand-charts-underlying-data-chart-representation.md)  
- [Actions on chart](actions-visualizations-charts.md)  
- [Sample charts](sample-charts.md)  
- [Data visualization and analytics](customize-visualizations-dashboards.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart)
+[Specifying chart data](understand-charts-underlying-data-chart-representation.md)  
+[Actions on chart](actions-visualizations-charts.md)  
+[Sample charts](sample-charts.md)  
+[Data visualization and analytics](customize-visualizations-dashboards.md)  
+[Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsChart)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

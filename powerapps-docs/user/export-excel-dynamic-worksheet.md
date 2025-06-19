@@ -1,15 +1,15 @@
 ---
 title: "Export to an Excel dynamic worksheet in model-driven Power Apps| MicrosoftDocs"
 description: How to export to an Excel dynamic worksheet in model-driven Power Apps
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 3/12/2021
+ms.topic: how-to
+ms.date: 10/22/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

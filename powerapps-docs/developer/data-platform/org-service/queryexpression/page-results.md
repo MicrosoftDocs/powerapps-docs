@@ -1,12 +1,12 @@
 ---
 title: Page results using QueryExpression
 description: Learn how to use QueryExpression to page results when you retrieve data from Microsoft Dataverse.
-ms.date: 05/12/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: gned
 search.audienceType: 
   - developer
 contributors:
@@ -16,7 +16,7 @@ contributors:
 
 You can specify a limit on the number of rows retrieved for each request by setting a page size. Using paging, you can retrieve consecutive pages of data representing all the records that match the criteria of a query in a performant manner.
 
-The default and maximum page size is 5,000 rows. If you don't set a page size, Dataverse will return up to 5,000 rows of data at a time. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 rows for standard tables, 500 for elastic. If you don't set a page size, Dataverse will return up to the maximum page size rows of data at a time. To get more rows, you must send additional requests.
 
 > [!NOTE]
 >
@@ -98,14 +98,19 @@ After each request, the method checks the [EntityCollection.MoreRecords property
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance.</param>
 /// <param name="query">The QueryExpression query</param>
+/// <param name="page">The page size to use. Defaults to 5,000</param>
 /// <returns>All the records that match the criteria</returns>
-static EntityCollection RetrieveAll(IOrganizationService service, QueryExpression query)
+static EntityCollection RetrieveAll(IOrganizationService service, 
+QueryExpression query,
+int page = 5000)
 {
     // The records to return
     List<Entity> entities = new();
 
     // Set the page
     query.PageInfo.PageNumber = 1;
+    // Set the count
+    query.PageInfo.Count = page;
 
     while (true)
     {
@@ -150,10 +155,6 @@ static void Main(string[] args)
             QueryExpression query = new("contact")
             {
                 ColumnSet = new ColumnSet("fullname", "jobtitle", "annualincome"),
-                PageInfo = new PagingInfo() { 
-                  // Set the page size
-                     Count = 25;
-                },
                 Orders = {
                     { 
                         new OrderExpression(
@@ -184,6 +185,8 @@ static void Main(string[] args)
 > [!IMPORTANT]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../../includes/cc-connection-string.md)]
 
 <!-- ## Ordering and paging -->
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]

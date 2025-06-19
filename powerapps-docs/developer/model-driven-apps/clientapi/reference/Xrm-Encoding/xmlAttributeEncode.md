@@ -1,8 +1,8 @@
 ---
-title: "xmlAttributeEncode| MicrosoftDocs"
-description: "The Client API method Encodes the specified string so that it can be used in an XML."
-author: adrianorth
-ms.author: aorth
+title: "xmlAttributeEncode (Client API reference) in model-driven apps"
+description: Includes description and supported parameters for the xmlAttributeEncode method.
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

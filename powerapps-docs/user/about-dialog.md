@@ -1,13 +1,13 @@
 ---
 title: "About dialog for model-driven apps | MicrosoftDocs"
 description: Learn about the various parts of the About dialog for model-driven apps.
-author: sericks007
+author: shwetamurkute
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/06/2023
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

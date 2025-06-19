@@ -1,11 +1,11 @@
 ---
 title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
-ms.date: 04/01/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors: 
@@ -16,8 +16,10 @@ contributors:
 
 With Dataverse, XRM tooling enables you to connect to your Dataverse environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Dataverse connections at deployment time, and not hard code in your application to connect to your Dataverse environment.  
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
-<a name="Create"></a> 
+<a name="Create"></a>
 
 ## Create a connection string
 
@@ -47,7 +49,7 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 ```
   
 > [!NOTE]
-> You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
+> You'll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
  After creating a service client object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
   
@@ -59,7 +61,7 @@ ServiceClient svc = new ServiceClient(ConnectionString);
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
-|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Dataverse environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|   
+|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Dataverse environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
@@ -84,12 +86,12 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 <a name="Examples"></a>
 
 ## Connection string examples
- 
-The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
+
+The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect)
 
 ### Named account using Office365  
 
-Create a new connection to Dataverse using a UserName or Password via Office365. 
+Create a new connection to Dataverse using a UserName or Password via Office365.
 
 > [!NOTE]
 > This `AuthType` is deprecated and we recommend to use `OAuth` as the preferred authentication type. More information: [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse)
@@ -143,10 +145,10 @@ Create a new connection to Dataverse using the current logged in user via OAuth.
   LoginPrompt=Auto"/>  
 ```  
 
-
 ### Certificate based authentication
 
 Create a new connection to Dataverse using a Application or Client Id and a Certificate.
+
 ```xml
 <add name="MyCDSServer" 
   connectionString="
@@ -160,6 +162,7 @@ Create a new connection to Dataverse using a Application or Client Id and a Cert
 ### ClientId or Client Secret based authentication
 
 Create a new connection to Dataverse using a Application or Client Id and a Client Secret.
+
 ```xml
 <add name="MyCDSServer" 
   connectionString="
@@ -182,6 +185,5 @@ Create a new connection to Dataverse using a Application or Client Id and a Clie
 [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
 <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

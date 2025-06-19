@@ -1,8 +1,8 @@
 ---
 title: "StandardControl.updateView (Power Apps component framework API reference) | MicrosoftDocs"
 description: This method is called for a StandardControl when any value in the property bag changes. 
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 03/25/2024
 ms.reviewer: jdaly
 ms.topic: reference

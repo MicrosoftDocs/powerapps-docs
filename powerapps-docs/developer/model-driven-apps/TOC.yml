@@ -73,6 +73,8 @@
     href: clientapi/walkthrough-write-your-first-client-script.md
   - name: Debug JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
+  - name: Bring intelligence into your app using Agent Xrm APIs
+    href: clientapi/bring-intelligence-using-agent-apis.md
   - name: Troubleshoot form issues in Unified Interface
     href: troubleshoot-forms.md
   - name: Navigating to and from a custom page
@@ -248,6 +250,8 @@
         href: clientapi/reference/controls/addCustomFilter.md
       - name: addCustomView
         href: clientapi/reference/controls/addCustomView.md
+      - name: addEventHandler
+        href: clientapi/reference/controls/addeventhandler.md
       - name: addNotification
         href: clientapi/reference/controls/addNotification.md
       - name: addOnLookupTagClick
@@ -748,6 +752,15 @@
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getPane.md
         - name: getSelectedPane
           href: clientapi/reference/Xrm-App/Xrm-App-sidePanes/getSelectedPane.md
+    - name: Xrm.Copilot
+      href: clientapi/reference/xrm-copilot.md
+      items:
+      - name: executeEvent
+        href: clientapi/reference/Xrm-Copilot/executeevent.md
+      - name: executePrompt
+        href: clientapi/reference/Xrm-Copilot/executeprompt.md
+      - name: MCSResponse
+        href: clientapi/reference/Xrm-Copilot/mcsresponse.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:

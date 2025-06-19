@@ -3,10 +3,10 @@ title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs"
 description: "Use optional parameters to control operation behaviors" 
 ms.date: 07/01/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: divkamath
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -124,7 +124,7 @@ MSCRM.SolutionUniqueName: ExampleSolution
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/webresourceset(833aa051-05be-ed11-83ff-000d3a993550)
+OData-EntityId: [Organization URI]/api/data/v9.2/webresourceset(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 
 ```
 
@@ -430,4 +430,3 @@ More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

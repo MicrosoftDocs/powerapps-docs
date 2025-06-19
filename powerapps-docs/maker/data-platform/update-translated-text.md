@@ -6,7 +6,7 @@ ms.date: 10/09/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -39,7 +39,7 @@ For example, say you want to find the object ID for attribute `websiteurl`. Sear
 
 ```xml
 <row> 
-<cell id="{e6441984-4343-813a-aa7e-e2747ad35390}" showlabel="true" labelid="{67722747-e8af-40cf-a72a-2d8794c7c330}"> 
+<cell id="{e6441984-4343-813a-aa7e-e2747ad35390}" showlabel="true" labelid="{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}"> 
 <labels> 
 <label description="Website" languagecode="1033" /> 
 </labels> 
@@ -48,7 +48,7 @@ For example, say you want to find the object ID for attribute `websiteurl`. Sear
 </row>
 ```
 
-In the example, since the `labelid` property is defined, the object ID is *67722747-e8af-40cf-a72a-2d8794c7c330*.
+In the example, since the `labelid` property is defined, the object ID is *aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb*.
 
 Now that you have the object ID, you can follow the steps to export the translations file. Open the file, to locate the object ID to make your localized text updates for the tab, section, or column. For more information about how to translate the customized text into another language, go to [Translate customized table, form, and column text into other languages](export-customized-entity-field-text-translation.md).
 

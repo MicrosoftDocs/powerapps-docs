@@ -1,8 +1,8 @@
 ---
-title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "navigateTo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigateTo method.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -156,7 +156,7 @@ Xrm.Navigation.navigateTo(pageInput).then(
 var pageInput = {
     pageType: "entityrecord",
     entityName: "account",
-    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706" //replace with actual ID
+    entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" //replace with actual ID
 };
 var navigationOptions = {
     target: 2,

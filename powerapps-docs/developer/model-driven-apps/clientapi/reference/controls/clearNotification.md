@@ -1,8 +1,8 @@
 ---
-title: "control.clearNotification (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.clearNotification (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.clearNotification method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -32,13 +32,10 @@ All
 |--|--|--|--|
 |`uniqueId` |String |No|The ID to use to clear a specific message that was set using [setNotification](setNotification.md) or [addNotification](addNotification.md). If the `uniqueId` parameter isn't specified, the currently displayed notification will be cleared.|
 
-
 ## Return Value
 
-**Type**: Boolean 
+**Type**: Boolean
 
 **Description**: Indicates whether the method succeeded. 
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

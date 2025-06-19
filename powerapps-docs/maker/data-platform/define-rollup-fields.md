@@ -2,7 +2,7 @@
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns."
 ms.date: 04/30/2024
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -173,7 +173,7 @@ The following example shows how to calculate an average estimated revenue from r
 
 You should be aware of certain conditions and restrictions when working with rollup columns:  
   
-- You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. The current default values and previous maximum are 100 per environment and 10 per table. More information: [Define the maximum number of rollup columns in an environment or table](#define-the-maximum-number-of-rollup-columns-in-an-environment-or-table) 
+- By default, you can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. More information: [Define the maximum number of rollup columns in an environment or table](#define-the-maximum-number-of-rollup-columns-in-an-environment-or-table) 
 - A workflow can't be triggered by the rollup column updates.  
 - A workflow wait condition can't use a rollup column.  
 - A rollup over the rollup column isn't supported.  
@@ -187,9 +187,9 @@ You should be aware of certain conditions and restrictions when working with rol
 
 ### Define the maximum number of rollup columns in an environment or table
 
-You can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table. The current default values and previous maximums are 100 per environment and 10 per table.
+By default, you can define a maximum of 200 rollup columns for the environment and up to 50 rollup columns per table.
 
-To increase the maximums, follow these steps:
+To change the maximums, follow these steps:
 
 1. Go to Power Apps (make.powerapps.com), select **Table** on the left navigation pane, and then open the **Organization** table. 
 1. Select the *n* **more** list, and then type *maxr* in the **Search** box. Select the **MaxRollupFieldsPerOrg** and **MaxRollupFieldsPerEntity** columns, and then select **Save**.

@@ -2,8 +2,8 @@
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can use a predefined query to retrieve table data."
 ms.date: 09/27/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -54,19 +54,19 @@ Dataverse allows you to define, save, and execute two types of queries as listed
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
 ```http
-GET [Organization URI]/api/data/v9.0/savedqueries?$select=name,savedqueryid&$filter=name eq 'Active Accounts'
+GET [Organization URI]/api/data/v9.2/savedqueries?$select=name,savedqueryid&$filter=name eq 'Active Accounts'
 ```
 
 You can then use the `savedqueryid` value and pass it as the value to the savedQuery parameter to the accounts entity set.
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts?savedQuery=00000000-0000-0000-00aa-000010001002
+GET [Organization URI]/api/data/v9.2/accounts?savedQuery=00000000-0000-0000-00aa-000010001002
 ```
 
 Use the same approach to get the `userqueryid` and pass it as the value to the `userQuery` parameter to the entity set that matches the corresponding `returnedtypecode` of the saved query.
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts?userQuery=121c6fd8-1975-e511-80d4-00155d2a68d1
+GET [Organization URI]/api/data/v9.2/accounts?userQuery=121c6fd8-1975-e511-80d4-00155d2a68d1
 ```
 
 ### Apply a query to any collection of the appropriate type
@@ -74,7 +74,7 @@ GET [Organization URI]/api/data/v9.0/accounts?userQuery=121c6fd8-1975-e511-80d4-
 In addition to simply applying the saved query to the main entity set collection, you can also use a saved query or user query to apply the same filtering on any collection of the appropriate type of entities. For example, if you want to apply a query against just the entities related to a specific entity, you can apply the same pattern. For example, the following URL will apply the **Open Opportunities** query against the opportunities related to a specific account via the `opportunity_parent_account` collection-valued navigation property.
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(8f390c24-9c72-e511-80d4-00155d2a68d1)/opportunity_parent_account/?savedQuery=00000000-0000-0000-00aa-000010003001
+GET [Organization URI]/api/data/v9.2/accounts(8f390c24-9c72-e511-80d4-00155d2a68d1)/opportunity_parent_account/?savedQuery=00000000-0000-0000-00aa-000010003001
 ```
 ## See also
 

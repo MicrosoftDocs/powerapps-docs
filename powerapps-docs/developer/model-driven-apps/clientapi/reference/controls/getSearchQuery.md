@@ -1,8 +1,8 @@
 ---
-title: "getSearchQuery (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSearchQuery (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSearchQuery method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getSearchQuery (Client API reference)
-
-
 
 Gets the text used as the search criteria for the knowledge base management control. 
 
@@ -38,7 +36,5 @@ var searchQuery = kbSearchControl.getSearchQuery();
 ### Related articles
 
 [setSearchQuery](setSearchQuery.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

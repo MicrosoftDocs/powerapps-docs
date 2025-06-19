@@ -1,8 +1,8 @@
 ---
-title: "getText (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getText (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getText method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,8 +14,6 @@ contributors:
   - JimDaly
 ---
 # getText (Client API reference)
-
-
 
 Returns a string value of the text for the currently selected option for a **choice** or **choices** column. 
 
@@ -42,8 +40,6 @@ choice, choices
 [getOption (Client API reference)](getOption.md)   
 [getOptions (Client API reference)](getOptions.md)   
 [getSelectedOption (Client API reference)](getSelectedOption.md) 
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

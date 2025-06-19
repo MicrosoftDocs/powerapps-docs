@@ -1,6 +1,5 @@
 |Query option|SQL Server hint|
 |---------|---------|
-|`OptimizeForUnknown`|[Optimize for unknown](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown)|
 |`ForceOrder`|[Force Order](/sql/t-sql/queries/hints-transact-sql-query#force-order)|
 |`DisableRowGoal` |[Hint: `DISABLE_OPTIMIZER_ROWGOAL`](/sql/t-sql/queries/hints-transact-sql-query#use_hint)|
 |`EnableOptimizerHotfixes`|[Hint: `ENABLE_QUERY_OPTIMIZER_HOTFIXES`](/sql/t-sql/queries/hints-transact-sql-query#use_hint)|

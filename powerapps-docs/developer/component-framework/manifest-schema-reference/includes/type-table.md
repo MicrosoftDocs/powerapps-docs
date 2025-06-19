@@ -1,24 +1,24 @@
-|Value |Description |
-|--|--|
-|Currency|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column.|
-|DateAndTime.DateAndTime|Displays date and time.|
-|DateAndTime.DateOnly|Displays date only.|
-|Decimal|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column.|
-|Enum|Enumerated data type.|
-|FP|Up to five decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column.|
-|Lookup.Simple|Allows for a single reference to a specific table. All custom lookups are this type.|
-|Multiple|This column can contain up to 1,048,576 text characters.|
-|MultiSelectOptionSet|You can customize forms (main, quick create, and quick view) and email templates by adding choices columns. When you add choices column, you can specify multiple values that are available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.|
-|Object|Object data type. Can only be used with output properties. |
-|OptionSet|This column provides a set of options. Each option has a number value and label. When added to a form, this column displays a control for users to select only one option. |
-|SingleLine.Email|This stores the string time in the format valid for Emails. Out-of-the-box Unified Interface controls automatically make them clickable links.|
-|SingleLine.Phone|This stores the string time in the format valid for Phone. Out-of-the-box Unified Interface controls automatically make them clickable links.|
-|SingleLine.Text|This option simply displays text.|
-|SingleLine.TextArea|This format option can be used to display multiple lines of text. But with a limit of 4000 characters, the Multiple Lines of Text column is a better choice if large amounts of text are expected.|
-|SingleLine.Ticker|This stores the string time in the format valid for Ticker. Out-of-the-box Unified Interface controls automatically make them clickable links.|
-|SingleLine.URL|The text expected to provide a hyperlink to open the page specified. Out-of-the-box Unified Interface controls automatically prepend "https://" to input values that doesn't begin with a valid protocol. Only HTTP, HTTPS, FTP, FTPS, OneNote and TEL protocols are expected in this column. |
-|TwoOptions|This column provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as "Yes" and "No", "Hot" and "Cold", "On" and "Off" or any pair of labels you want to display.|
-|Whole.None|This option simply displays a number.|
+|Value |Description |Available for |
+|--|--|--|
+|Currency|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column.|Model-driven and canvas apps|
+|DateAndTime.DateAndTime|Displays date and time.|Model-driven and canvas apps|
+|DateAndTime.DateOnly|Displays date only.|Model-driven and canvas apps|
+|Decimal|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column.|Model-driven and canvas apps|
+|Enum|Enumerated data type.|Model-driven and canvas apps|
+|FP|Up to five decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column.|Model-driven and canvas apps|
+|Lookup.Simple|Allows for a single reference to a specific table. All custom lookups are this type.|Model-driven apps|
+|Multiple|This column can contain up to 1,048,576 text characters.|Model-driven and canvas apps|
+|MultiSelectOptionSet|You can customize forms (main, quick create, and quick view) and email templates by adding choices columns. When you add choices column, you can specify multiple values that are available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.|Model-driven and canvas apps|
+|Object|Object data type. Can only be used with output properties. |Model-driven and canvas apps|
+|OptionSet|This column provides a set of options. Each option has a number value and label. When added to a form, this column displays a control for users to select only one option. |Model-driven and canvas apps|
+|SingleLine.Email|This stores the string time in the format valid for Emails. Out-of-the-box Unified Interface controls automatically make them clickable links.|Model-driven and canvas apps|
+|SingleLine.Phone|This stores the string time in the format valid for Phone. Out-of-the-box Unified Interface controls automatically make them clickable links.|Model-driven and canvas apps|
+|SingleLine.Text|This option simply displays text.|Model-driven and canvas apps|
+|SingleLine.TextArea|This format option can be used to display multiple lines of text. But with a limit of 4000 characters, the Multiple Lines of Text column is a better choice if large amounts of text are expected.|Model-driven and canvas apps|
+|SingleLine.Ticker|This stores the string time in the format valid for Ticker. Out-of-the-box Unified Interface controls automatically make them clickable links.|Model-driven and canvas apps|
+|SingleLine.URL|The text expected to provide a hyperlink to open the page specified. Out-of-the-box Unified Interface controls automatically prepend "https://" to input values that doesn't begin with a valid protocol. Only HTTP, HTTPS, FTP, FTPS, OneNote and TEL protocols are expected in this column. |Model-driven and canvas apps|
+|TwoOptions|This column provides two options. Each option has a number value of 0 or 1 corresponding to a false or true value. Each option also has a label so that true or false values can be represented as "Yes" and "No", "Hot" and "Cold", "On" and "Off" or any pair of labels you want to display.|Model-driven and canvas apps|
+|Whole.None|This option simply displays a number.|Model-driven and canvas apps|
 
 > [!WARNING]
 > If the `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.

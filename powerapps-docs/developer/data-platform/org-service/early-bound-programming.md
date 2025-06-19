@@ -4,8 +4,8 @@ description: "Describes the different programming styles available when using th
 ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
@@ -28,7 +28,7 @@ Late binding allows you to work with custom tables (entities) or columns (attrib
 
 Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to table rows and columns (entities and attributes) using their `LogicalName` property values:
 
-- <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
+- <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName>
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
 Relationships don't have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
@@ -78,7 +78,7 @@ Early-bound programming requires that you first generate a set of classes based 
 
 After generating early-bound classes using the code generation tool, you'll enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 
-- <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName> 
+- <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>
 - <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName>
 
@@ -157,7 +157,6 @@ context.SaveChanges();
 
 If a custom attribute wasn't included in the generated classes, you can still use it.
 
-
 ```csharp
 var account = new Account();
 // set attribute values
@@ -172,6 +171,7 @@ Guid accountid = svc.Create(account);
 ```
 
 #### Assign an early bound instance to a late bound instance  
+
  The following sample shows how to assign an early bound instance to a late bound instance.  
   
 ```csharp

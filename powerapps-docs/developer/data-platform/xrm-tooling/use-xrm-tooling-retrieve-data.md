@@ -1,11 +1,11 @@
 ---
 title: "Use XRM tooling to retrieve data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from Microsoft Dataverse"
-ms.date: 10/24/2022
+ms.date: 12/04/2024
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
@@ -18,7 +18,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query. 
+There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.
+
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
   
 ## GetEntityDataById  
 

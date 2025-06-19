@@ -1,7 +1,8 @@
 ---
 title: Quick Start Web API with PowerShell and Visual Studio Code
 description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell with Visual Studio Code
-ms.date: 01/20/2024
+ms.topic: quickstart
+ms.date: 03/22/2025
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -48,8 +49,18 @@ Don't proceed without confirming each of the following prerequisites are met.
    if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
       Connect-AzAccount | Out-Null
    }
+
    # Get an access token
-   $token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+   $secureToken = (Get-AzAccessToken `
+      -ResourceUrl $environmentUrl `
+      -AsSecureString).Token
+
+   # Convert the secure token to a string
+   $token = ConvertFrom-SecureString `
+      -SecureString $secureToken `
+      -AsPlainText
+
+
    # Common headers
    $baseHeaders = @{
       'Authorization'    = 'Bearer ' + $token
@@ -76,9 +87,9 @@ Don't proceed without confirming each of the following prerequisites are met.
    ```json
    {
    "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-   "BusinessUnitId": "639dea3c-505c-4c3a-b8b5-d916cb507e1e",
-   "UserId": "d2159662-498a-406b-83cd-f515b7e561d6",
-   "OrganizationId": "83e197ed-ede1-4886-81f2-f41fe9395297"
+   "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+   "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",
+   "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
    }
    ```
 
@@ -99,34 +110,9 @@ When the `Get-AzTenant` command doesn't return anything, the script uses the [Co
 to open an interactive browser window where you can enter or select your credentials to sign in. [Learn more about signing into Azure PowerShell interactively](/powershell/azure/authenticate-interactive) or [noninteractively with a service principal](/powershell/azure/authenticate-noninteractive).
 
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
-[PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
+[PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a SecureString [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that you can convert into an access token you can use to authenticate with Dataverse.
 
 When you want to connect with a different set of credentials, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
-
-#### Authenticate using different shell environments
-
-[Azure PowerShell works using Windows PowerShell and PowerShell shell environments, but not Cmd and Bash shell environments](/cli/azure/choose-the-right-azure-command-line-tool#different-shell-environments). If you want to authenticate with Cmd or Bash shell environments, you can use the [Azure CLI](/cli/azure).
-
-This script uses Azure CLI commands to authenticate:
-
-```powershell
-$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
-## Login if not already logged in
-if ($null -eq (az account tenant list  --only-show-errors)) {
-   az login --allow-no-subscriptions | Out-Null
-}
-# Get token
-$token = az account get-access-token --resource=$environmentUrl --query accessToken --output tsv
-```
-
-This table shows the equivalent Az PowerShell and Azure CLI commands:
-
-|Az PowerShell|Azure CLI|Description |
-|---------|---------|---------|
-|[Get-AzTenant](/powershell/module/az.accounts/get-aztenant)|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|Try to retrieve a list of tenants to detect if you're already logged in|
-|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|[az login](/cli/azure/reference-index#az-login)|To log in to Azure|
-|[Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken)|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|To get an access token|
-|[Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount)|[az logout](/cli/azure/reference-index#az-logout)|Log out of Azure|
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 

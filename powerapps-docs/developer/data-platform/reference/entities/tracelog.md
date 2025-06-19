@@ -1,50 +1,48 @@
 ---
-title: "Trace (TraceLog)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Trace (TraceLog)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Trace (TraceLog) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Trace (TraceLog) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Trace (TraceLog)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Trace (TraceLog) table/entity reference (Microsoft Dataverse)
 
 A trace log.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /tracelogs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /tracelogs(*tracelogid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /tracelogs(*tracelogid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /tracelogs<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Trace (TraceLog) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /tracelogs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /tracelogs(*tracelogid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /tracelogs(*tracelogid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /tracelogs<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|TraceLogs|
-|DisplayCollectionName|Traces|
-|DisplayName|Trace|
-|EntitySetName|tracelogs|
-|IsBPFEntity|False|
-|LogicalCollectionName|tracelogs|
-|LogicalName|tracelog|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|tracelogid|
-|PrimaryNameAttribute|text|
-|SchemaName|TraceLog|
+The following table lists selected properties for the Trace (TraceLog) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Trace** |
+| **DisplayCollectionName** | **Traces** |
+| **SchemaName** | `TraceLog` |
+| **CollectionSchemaName** | `TraceLogs` |
+| **EntitySetName** | `tracelogs`|
+| **LogicalName** | `tracelog` |
+| **LogicalCollectionName** | `tracelogs` |
+| **PrimaryIdAttribute** | `tracelogid` |
+| **PrimaryNameAttribute** |`text` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -70,788 +68,621 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TraceStatus](#BKMK_TraceStatus)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_CanBeDeleted"></a> CanBeDeleted
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates if this trace log can be deleted.|
-|DisplayName|Trace CanBeDeleted Flag|
+|---|---|
+|Description|**Indicates if this trace log can be deleted.**|
+|DisplayName|**Trace CanBeDeleted Flag**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|canbedeleted|
+|LogicalName|`canbedeleted`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### CanBeDeleted Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`tracelog_canbedeleted`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_CollationLevel"></a> CollationLevel
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates the collation level|
-|DisplayName|Collation Level|
-|Format|None|
+|---|---|
+|Description|**Indicates the collation level**|
+|DisplayName|**Collation Level**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|collationlevel|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`collationlevel`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ErrorDetails"></a> ErrorDetails
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|errordetails|
-|MaxLength|2048|
+|LogicalName|`errordetails`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_ErrorTypeDisplay"></a> ErrorTypeDisplay
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Trace Error Details|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Trace Error Details**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|errortypedisplay|
-|MaxLength|320|
+|LogicalName|`errortypedisplay`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|320|
 
 ### <a name="BKMK_IsUnique"></a> IsUnique
 
 |Property|Value|
-|--------|-----|
-|Description|Tells if this traceLog is created uniquely(only one) for the associated entity.|
-|DisplayName|Is Unique Trace|
+|---|---|
+|Description|**Tells if this traceLog is created uniquely(only one) for the associated entity.**|
+|DisplayName|**Is Unique Trace**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|isunique|
+|LogicalName|`isunique`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsUnique Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`tracelog_isunique`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_Level"></a> Level
 
 |Property|Value|
-|--------|-----|
-|Description|Information about the trace level.|
-|DisplayName|Level|
+|---|---|
+|Description|**Information about the trace level.**|
+|DisplayName|**Level**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|level|
+|LogicalName|`level`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`tracelog_level`|
 
 #### Level Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Information||
-|2|Warning||
-|3|Error||
-
-
+|Value|Label|
+|---|---|
+|1|**Information**|
+|2|**Warning**|
+|3|**Error**|
 
 ### <a name="BKMK_MachineName"></a> MachineName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|machinename|
-|MaxLength|320|
+|LogicalName|`machinename`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|320|
 
 ### <a name="BKMK_ParentTraceLogId"></a> ParentTraceLogId
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates the parent ID of the trace log.|
-|DisplayName|Parent Id|
+|---|---|
+|Description|**Indicates the parent ID of the trace log.**|
+|DisplayName|**Parent Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|parenttracelogid|
+|LogicalName|`parenttracelogid`|
 |RequiredLevel|None|
-|Targets|tracelog|
 |Type|Lookup|
-
+|Targets|tracelog|
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Regarding mailbox or email server profile.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Regarding mailbox or email server profile.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|SystemRequired|
-|Targets|emailserverprofile,mailbox|
 |Type|Lookup|
-
+|Targets|emailserverprofile, mailbox|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Type of the regarding object.|
-|DisplayName|Regarding Object Type|
+|---|---|
+|Description|**Type of the regarding object.**|
+|DisplayName|**Regarding Object Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_Text"></a> Text
 
 |Property|Value|
-|--------|-----|
-|Description|Text of the trace.|
-|DisplayName|Text|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Text of the trace.**|
+|DisplayName|**Text**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|text|
-|MaxLength|2000|
+|LogicalName|`text`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_TraceActionXml"></a> TraceActionXml
 
 |Property|Value|
-|--------|-----|
-|Description|XML representation of the trace actions.|
-|DisplayName|Trace Actions XML|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**XML representation of the trace actions.**|
+|DisplayName|**Trace Actions XML**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|traceactionxml|
-|MaxLength|1073741823|
+|LogicalName|`traceactionxml`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_TraceCode"></a> TraceCode
 
 |Property|Value|
-|--------|-----|
-|Description|Error code.|
-|DisplayName|Error Code|
-|Format|None|
+|---|---|
+|Description|**Error code.**|
+|DisplayName|**Error Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|tracecode|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`tracecode`|
 |RequiredLevel|SystemRequired|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_TraceDetailXml"></a> TraceDetailXml
 
 |Property|Value|
-|--------|-----|
-|Description|XML representation of the trace details.|
-|DisplayName|Trace Detail XML|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**XML representation of the trace details.**|
+|DisplayName|**Trace Detail XML**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|tracedetailxml|
-|MaxLength|1073741823|
+|LogicalName|`tracedetailxml`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_TraceLogId"></a> TraceLogId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the trace.|
-|DisplayName|Trace|
+|---|---|
+|Description|**Unique identifier of the trace.**|
+|DisplayName|**Trace**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|tracelogid|
+|LogicalName|`tracelogid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TraceParameterXml"></a> TraceParameterXml
 
 |Property|Value|
-|--------|-----|
-|Description|XML representation of the trace parameters.|
-|DisplayName|Trace Parameter XML|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**XML representation of the trace parameters.**|
+|DisplayName|**Trace Parameter XML**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|traceparameterxml|
-|MaxLength|1073741823|
+|LogicalName|`traceparameterxml`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_TraceStatus"></a> TraceStatus
 
 |Property|Value|
-|--------|-----|
-|Description|Status about the trace.|
-|DisplayName|Trace Status|
+|---|---|
+|Description|**Status about the trace.**|
+|DisplayName|**Trace Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|tracestatus|
+|LogicalName|`tracestatus`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### TraceStatus Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Success||
-|0|Failure||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`tracelog_tracestatus`|
+|DefaultValue|False|
+|True Label|Success|
+|False Label|Failure|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the trace was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the trace was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
-- [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [RegardingObjectOwnerId](#BKMK_RegardingObjectOwnerId)
 - [RegardingObjectOwnerIdType](#BKMK_RegardingObjectOwnerIdType)
 - [RegardingObjectOwningBusinessUnit](#BKMK_RegardingObjectOwningBusinessUnit)
 - [TraceParameterHash](#BKMK_TraceParameterHash)
 - [TraceRegardingId](#BKMK_TraceRegardingId)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the trace.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the trace.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Time the error is created and logged.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Time the error is created and logged.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the trace.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the trace.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the trace.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the trace.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Time the error is updated and logged for the same regarding object.|
-|DisplayName|Last Update On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Time the error is updated and logged for the same regarding object.**|
+|DisplayName|**Last Update On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the trace.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the trace.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the organization associated with the trace.|
-|DisplayName|Organization|
+|---|---|
+|Description|**Unique identifier of the organization associated with the trace.**|
+|DisplayName|**Organization**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|SystemRequired|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|4000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_RegardingObjectOwnerId"></a> RegardingObjectOwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the regarding object.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the regarding object.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectownerid|
+|LogicalName|`regardingobjectownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_RegardingObjectOwnerIdType"></a> RegardingObjectOwnerIdType
 
 |Property|Value|
-|--------|-----|
-|Description|Owner type of the regarding object.|
-|DisplayName|Owner Type|
+|---|---|
+|Description|**Owner type of the regarding object.**|
+|DisplayName|**Owner Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectowneridtype|
+|LogicalName|`regardingobjectowneridtype`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_RegardingObjectOwningBusinessUnit"></a> RegardingObjectOwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the regarding object.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the regarding object.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjectowningbusinessunit|
+|LogicalName|`regardingobjectowningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_TraceParameterHash"></a> TraceParameterHash
 
 |Property|Value|
-|--------|-----|
-|Description|Stores the hash of the entity object associated with this tracelog. Hash is computed using the object type code and its id.|
-|DisplayName|Trace Parameter Hash|
-|Format|None|
+|---|---|
+|Description|**Stores the hash of the entity object associated with this tracelog. Hash is computed using the object type code and its id.**|
+|DisplayName|**Trace Parameter Hash**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|traceparameterhash|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`traceparameterhash`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_TraceRegardingId"></a> TraceRegardingId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Trace Regarding|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Trace Regarding**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|traceregardingid|
+|LogicalName|`traceregardingid`|
 |RequiredLevel|SystemRequired|
-|Targets|traceregarding|
 |Type|Lookup|
+|Targets|traceregarding|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_tracelog_parent_tracelog"></a> tracelog_parent_tracelog
-
-Same as the [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) many-to-one relationship for the [tracelog](tracelog.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|tracelog|
-|ReferencingAttribute|parenttracelogid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|tracelog_parent_tracelog|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [tracelog_EmailServerProfile](#BKMK_tracelog_EmailServerProfile)
-- [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
-- [organization_tracelog](#BKMK_organization_tracelog)
+- [lk_tracelog_createdby](#BKMK_lk_tracelog_createdby)
 - [lk_tracelog_createdonbehalfby](#BKMK_lk_tracelog_createdonbehalfby)
 - [lk_tracelog_modifiedby](#BKMK_lk_tracelog_modifiedby)
-- [lk_tracelog_createdby](#BKMK_lk_tracelog_createdby)
-- [tracelog_parent_tracelog](#BKMK_tracelog_parent_tracelog)
 - [lk_tracelog_modifiedonbehalfby](#BKMK_lk_tracelog_modifiedonbehalfby)
-
-
-### <a name="BKMK_tracelog_EmailServerProfile"></a> tracelog_EmailServerProfile
-
-See the [tracelog_EmailServerProfile](emailserverprofile.md#BKMK_tracelog_EmailServerProfile) one-to-many relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
-
-### <a name="BKMK_tracelog_Mailbox"></a> tracelog_Mailbox
-
-See the [tracelog_Mailbox](mailbox.md#BKMK_tracelog_Mailbox) one-to-many relationship for the [mailbox](mailbox.md) table/entity.
-
-### <a name="BKMK_organization_tracelog"></a> organization_tracelog
-
-See the [organization_tracelog](organization.md#BKMK_organization_tracelog) one-to-many relationship for the [organization](organization.md) table/entity.
-
-### <a name="BKMK_lk_tracelog_createdonbehalfby"></a> lk_tracelog_createdonbehalfby
-
-See the [lk_tracelog_createdonbehalfby](systemuser.md#BKMK_lk_tracelog_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_tracelog_modifiedby"></a> lk_tracelog_modifiedby
-
-See the [lk_tracelog_modifiedby](systemuser.md#BKMK_lk_tracelog_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [organization_tracelog](#BKMK_organization_tracelog)
+- [tracelog_EmailServerProfile](#BKMK_tracelog_EmailServerProfile)
+- [tracelog_Mailbox](#BKMK_tracelog_Mailbox)
+- [tracelog_parent_tracelog](#BKMK_tracelog_parent_tracelog-many-to-one)
 
 ### <a name="BKMK_lk_tracelog_createdby"></a> lk_tracelog_createdby
 
-See the [lk_tracelog_createdby](systemuser.md#BKMK_lk_tracelog_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_tracelog_createdby](systemuser.md#BKMK_lk_tracelog_createdby)
 
-### <a name="BKMK_tracelog_parent_tracelog"></a> tracelog_parent_tracelog
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-See the [tracelog_parent_tracelog](tracelog.md#BKMK_tracelog_parent_tracelog) one-to-many relationship for the [tracelog](tracelog.md) table/entity.
+### <a name="BKMK_lk_tracelog_createdonbehalfby"></a> lk_tracelog_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_tracelog_createdonbehalfby](systemuser.md#BKMK_lk_tracelog_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_tracelog_modifiedby"></a> lk_tracelog_modifiedby
+
+One-To-Many Relationship: [systemuser lk_tracelog_modifiedby](systemuser.md#BKMK_lk_tracelog_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_tracelog_modifiedonbehalfby"></a> lk_tracelog_modifiedonbehalfby
 
-See the [lk_tracelog_modifiedonbehalfby](systemuser.md#BKMK_lk_tracelog_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_tracelog_modifiedonbehalfby](systemuser.md#BKMK_lk_tracelog_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_organization_tracelog"></a> organization_tracelog
+
+One-To-Many Relationship: [organization organization_tracelog](organization.md#BKMK_organization_tracelog)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_tracelog_EmailServerProfile"></a> tracelog_EmailServerProfile
+
+One-To-Many Relationship: [emailserverprofile tracelog_EmailServerProfile](emailserverprofile.md#BKMK_tracelog_EmailServerProfile)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`emailserverprofile`|
+|ReferencedAttribute|`emailserverprofileid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_emailserverprofile`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_tracelog_Mailbox"></a> tracelog_Mailbox
+
+One-To-Many Relationship: [mailbox tracelog_Mailbox](mailbox.md#BKMK_tracelog_Mailbox)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mailbox`|
+|ReferencedAttribute|`mailboxid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mailbox`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_tracelog_parent_tracelog-many-to-one"></a> tracelog_parent_tracelog
+
+One-To-Many Relationship: [tracelog tracelog_parent_tracelog](#BKMK_tracelog_parent_tracelog-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`tracelog`|
+|ReferencedAttribute|`tracelogid`|
+|ReferencingAttribute|`parenttracelogid`|
+|ReferencingEntityNavigationPropertyName|`parenttracelogid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_tracelog_parent_tracelog-one-to-many"></a> tracelog_parent_tracelog
+
+Many-To-One Relationship: [tracelog tracelog_parent_tracelog](#BKMK_tracelog_parent_tracelog-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`tracelog`|
+|ReferencingAttribute|`parenttracelogid`|
+|ReferencedEntityNavigationPropertyName|`tracelog_parent_tracelog`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.tracelog?text=tracelog EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.tracelog?displayProperty=fullName>

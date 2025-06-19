@@ -17,6 +17,8 @@ contributors:
 
 # Send a card automatically with a flow 
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Use Power Automate to send cards for Power Apps from a flow. By setting up a flow that is triggered by an event, you can automate the process of sending cards in Teams. For instance, you can create a flow that requests the assigned individual to approve or reject an expense when a new record is added to Dataverse. Alternatively, you can create a flow that sends a daily status update in Teams every morning.
 
 You can use **Send from a flow** option in **Send** menu on the card's **Play** page to launch a Power Automate flow template for sending cards in Teams. You can modify and save this template as a new flow to post your card in Teams chat or channel or send it to a specific Teams user.
@@ -40,7 +42,7 @@ The **Cards for Power Apps** connector is used to create instances of cards to s
 
 ## Send a card for Power Apps in Teams chat or channel 
 
-Sending a card in Teams froma  flow requires a card instance. To crearte a card instance, use the **Cards for Power Apps** connector actions. The **Create card instance** action has `Card` dynamic content that can be used with the **Teams** connector **Post card in a chat or channel** action.
+Sending a card in Teams from a  flow requires a card instance. To create a card instance, use the **Cards for Power Apps** connector actions. The **Create card instance** action has `Card` dynamic content that can be used with the **Teams** connector **Post card in a chat or channel** action.
 
 1. Create or modify an existing flow, or use **Send** > **Send from a flow** on cards for Power Apps **Play** page to start with a template.
 1. Make sure the flow has a trigger. In the screenshot below, the trigger is when a new account record is created.

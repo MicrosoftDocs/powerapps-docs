@@ -18,7 +18,7 @@ contributors:
 This sample shows how to create an email activity instance from the specified email message in Microsoft Dataverse by using the [DeliverPromoteEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.deliverpromoteemailrequest) message
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Promote an email message sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/PromoteEmail)
+> [SDK for .NET: Promote an email message sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/PromoteEmail)
 
 ## How to run this sample
 

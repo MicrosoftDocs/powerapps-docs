@@ -2,9 +2,9 @@
 title: Compose HTTP requests and handle errors
 description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
 ms.topic: how-to
-ms.date: 09/26/2023
-author: divkamath
-ms.author: dikamath
+ms.date: 08/29/2024
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -50,6 +50,12 @@ Protocol + Environment Name + Region + Base URL + Web API path + Version + Resou
 ### Maximum URL length
 
 The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
+
+### Maximum OData segment length
+
+The maximum length of any individual segment in an OData request cannot be longer than 260 characters. If a single segment of the OData request is more than 260 characters in length, then this can result in `400 Bad Request - Invalid URL`. The segment is the 'Resource' part of the url as described above and includes all characters needed to describe the endpoint and any inline parameters.
+
+For example, if the request is  `api/data/v9.2/MyApi(MyParameter='longvalue')`, `MyApi(MyParameter='longvalue')` is the segment that cannot exceed 260 characters. We recommend that you always use parameter aliases with OData functions. For example, composing your function as `/api/data/v9.2/MyApi(MyParameter=@alias)?@alias='longvalue'` shortens the segment to just `MyApi(MyParameter=@alias)`. [Learn more about using parameter aliases with Web API functions](use-web-api-functions.md#passing-parameters-to-a-function)
 
 <a name="version_compatiblity"></a>
 
@@ -131,7 +137,7 @@ You can request different OData annotation data to be returned with the results 
 |---------|---------|
 |`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query/select-columns.md#formatted-values)|
 |`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query/select-columns.md#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5,000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5,000.  More information: [Count number of rows](query/count-rows.md) |
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5,000 standard table records records can be returned at a time. For elastic tables the page size limit is 500. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds the maximum page size limit for the type of table you are using.  More information: [Count number of rows](query/count-rows.md) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. The value changes when any schema change occurs, indicating that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide more details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
 
@@ -238,7 +244,7 @@ When this plug-in is registered on the Create message of an account entity, and 
 **Request:**
 
 ```http
-POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts HTTP/1.1
 Content-Type: application/json;
 Prefer: odata.include-annotations="*"
 {

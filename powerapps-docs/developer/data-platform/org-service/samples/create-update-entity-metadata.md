@@ -20,7 +20,7 @@ This topic shows how to programmatically create a custom user-owned table called
 You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customerengagement/on-premises/developer/introduction-entities#entity-ownership).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create and update table definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEntityMetadata)
+> [SDK for .NET: Create and update table definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CreateUpdateEntityMetadata)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

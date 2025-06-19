@@ -1,15 +1,15 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
-author: sericks
+author: smurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/27/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

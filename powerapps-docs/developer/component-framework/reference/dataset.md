@@ -1,8 +1,8 @@
 ---
 title: DataSet (Power Apps component framework API reference) | Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
-ms.author: hemantg
-author: HemantGaur
+author: clromano
+ms.author: clromano
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

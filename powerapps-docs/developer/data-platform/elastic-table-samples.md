@@ -24,7 +24,7 @@ The following sample applications on GitHub show how to use code to work with el
 - Use the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete elastic table records in bulk.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/ElasticTableOperations/README.md)
+> [SDK for .NET elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ElasticTableOperations/README.md)
 
 ## [Web API](#tab/webapi)
 
@@ -36,7 +36,7 @@ The following sample applications on GitHub show how to use code to work with el
 - Use the `DeleteMultiple` action to delete elastic table records in bulk.<!--TODO Add link -->
 
 > [!div class="nextstepaction"]
-> [Web API elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ElasticTableOperations/README.md)
+> [Web API elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/ElasticTableOperations/README.md)
 
 ---
 

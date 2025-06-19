@@ -1,47 +1,45 @@
 ---
-title: "OfficeGraphDocument table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the OfficeGraphDocument table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Office Graph Document (OfficeGraphDocument) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Office Graph Document (OfficeGraphDocument) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# OfficeGraphDocument table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Office Graph Document (OfficeGraphDocument) table/entity reference (Microsoft Dataverse)
 
 Office Graph Documents Description
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|RetrieveMultiple|GET /officegraphdocuments<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Office Graph Document (OfficeGraphDocument) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `RetrieveMultiple`<br />Event: True |`GET` /officegraphdocuments<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|OfficeGraphDocuments|
-|DisplayCollectionName|Office Graph Documents|
-|DisplayName|Office Graph Document|
-|EntitySetName|officegraphdocuments|
-|IsBPFEntity|False|
-|LogicalCollectionName|officegraphdocuments|
-|LogicalName|officegraphdocument|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|officegraphdocumentid|
-|PrimaryNameAttribute|title|
-|SchemaName|OfficeGraphDocument|
+The following table lists selected properties for the Office Graph Document (OfficeGraphDocument) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Office Graph Document** |
+| **DisplayCollectionName** | **Office Graph Documents** |
+| **SchemaName** | `OfficeGraphDocument` |
+| **CollectionSchemaName** | `OfficeGraphDocuments` |
+| **EntitySetName** | `officegraphdocuments`|
+| **LogicalName** | `officegraphdocument` |
+| **LogicalCollectionName** | `officegraphdocuments` |
+| **PrimaryIdAttribute** | `officegraphdocumentid` |
+| **PrimaryNameAttribute** |`title` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -54,109 +52,101 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_DocumentId"></a> DocumentId
 
 |Property|Value|
-|--------|-----|
-|Description|Document Id.|
-|DisplayName|Document Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Document Id.**|
+|DisplayName|**Document Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|documentid|
-|MaxLength|100|
+|LogicalName|`documentid`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OfficeGraphDocumentId"></a> OfficeGraphDocumentId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|OfficeGraphDocument|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**OfficeGraphDocument**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|officegraphdocumentid|
+|LogicalName|`officegraphdocumentid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
-|--------|-----|
-|Description|The title of the entity.|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The title of the entity.**|
+|DisplayName|**Title**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|100|
+|LogicalName|`title`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the Office Graph Document with respect to the base currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Exchange rate for the currency associated with the Office Graph Document with respect to the base currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AuthorNames](#BKMK_AuthorNames)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [CreatedTime](#BKMK_CreatedTime)
 - [DocumentLastModifiedBy](#BKMK_DocumentLastModifiedBy)
 - [DocumentLastModifiedOn](#BKMK_DocumentLastModifiedOn)
@@ -166,11 +156,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [FileType](#BKMK_FileType)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [ModifiedTime](#BKMK_ModifiedTime)
 - [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [PreviewImageUrl](#BKMK_PreviewImageUrl)
 - [QueryType](#BKMK_QueryType)
 - [Rank](#BKMK_Rank)
@@ -178,511 +165,459 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SecondaryFileExtension](#BKMK_SecondaryFileExtension)
 - [SiteTitle](#BKMK_SiteTitle)
 - [SiteUrl](#BKMK_SiteUrl)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 - [ViewCount](#BKMK_ViewCount)
 - [WebLocationUrl](#BKMK_WebLocationUrl)
 
-
 ### <a name="BKMK_AuthorNames"></a> AuthorNames
 
 |Property|Value|
-|--------|-----|
-|Description|Shows Author Names of Office Graph Document.|
-|DisplayName|Author Names|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows Author Names of Office Graph Document.**|
+|DisplayName|**Author Names**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|authornames|
-|MaxLength|2000|
+|LogicalName|`authornames`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows Created By of Office Graph Document.|
-|DisplayName|Created By|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows Created By of Office Graph Document.**|
+|DisplayName|**Created By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdby|
-|MaxLength|2000|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedTime"></a> CreatedTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdtime|
+|LogicalName|`createdtime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_DocumentLastModifiedBy"></a> DocumentLastModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Document Last Modified By|
-|DisplayName|Document Last Modified By|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Document Last Modified By**|
+|DisplayName|**Document Last Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|documentlastmodifiedby|
-|MaxLength|100|
+|LogicalName|`documentlastmodifiedby`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_DocumentLastModifiedOn"></a> DocumentLastModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Document Last Modified On|
-|DisplayName|Document Last Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Document Last Modified On**|
+|DisplayName|**Document Last Modified On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|documentlastmodifiedon|
+|LogicalName|`documentlastmodifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_DocumentPreviewMetadata"></a> DocumentPreviewMetadata
 
 |Property|Value|
-|--------|-----|
-|Description|document preview metadata|
-|DisplayName|document preview metadata|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**document preview metadata**|
+|DisplayName|**document preview metadata**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|documentpreviewmetadata|
-|MaxLength|100|
+|LogicalName|`documentpreviewmetadata`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Exchange rate for the currency associated with the Office Graph Document with respect to the base currency.|
-|DisplayName|ExchangeRate|
+|---|---|
+|Description|**Exchange rate for the currency associated with the Office Graph Document with respect to the base currency.**|
+|DisplayName|**ExchangeRate**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_FileExtension"></a> FileExtension
 
 |Property|Value|
-|--------|-----|
-|Description|File Extension of Office Graph Document.|
-|DisplayName|File Extension|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**File Extension of Office Graph Document.**|
+|DisplayName|**File Extension**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|fileextension|
-|MaxLength|2000|
+|LogicalName|`fileextension`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_FileType"></a> FileType
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the File Type of Office Graph Document.|
-|DisplayName|File Type|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the File Type of Office Graph Document.**|
+|DisplayName|**File Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|filetype|
-|MaxLength|2000|
+|LogicalName|`filetype`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows modified by of Office Graph Document.|
-|DisplayName|Modified By|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows modified by of Office Graph Document.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
-|MaxLength|2000|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedTime"></a> ModifiedTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedtime|
+|LogicalName|`modifiedtime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|---|---|
+|Description|**Unique identifier for the organization**|
+|DisplayName|**Organization Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|organizationid|
+|LogicalName|`organizationid`|
 |RequiredLevel|None|
-|Targets|organization|
 |Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|organization|
 
 ### <a name="BKMK_PreviewImageUrl"></a> PreviewImageUrl
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the Preview Image Url Office Graph Document.|
-|DisplayName|Preview Image Url|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the Preview Image Url Office Graph Document.**|
+|DisplayName|**Preview Image Url**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|previewimageurl|
-|MaxLength|2000|
+|LogicalName|`previewimageurl`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_QueryType"></a> QueryType
 
 |Property|Value|
-|--------|-----|
-|Description|Shows Query Type of child folders|
-|DisplayName|Query Type|
-|Format|None|
+|---|---|
+|Description|**Shows Query Type of child folders**|
+|DisplayName|**Query Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|querytype|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`querytype`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_Rank"></a> Rank
 
 |Property|Value|
-|--------|-----|
-|Description|The relevancy rank of the document retrieved|
-|DisplayName|Relevancy Rank of the Document|
-|Format|None|
+|---|---|
+|Description|**The relevancy rank of the document retrieved**|
+|DisplayName|**Relevancy Rank of the Document**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|rank|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`rank`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_ReadUrl"></a> ReadUrl
 
 |Property|Value|
-|--------|-----|
-|Description|The online read url|
-|DisplayName|Read Url|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The online read url**|
+|DisplayName|**Read Url**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|readurl|
-|MaxLength|100|
+|LogicalName|`readurl`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_SecondaryFileExtension"></a> SecondaryFileExtension
 
 |Property|Value|
-|--------|-----|
-|Description|Secondary File Extension of Office Graph Document.|
-|DisplayName|Secondary File Extension|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Secondary File Extension of Office Graph Document.**|
+|DisplayName|**Secondary File Extension**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|secondaryfileextension|
-|MaxLength|2000|
+|LogicalName|`secondaryfileextension`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_SiteTitle"></a> SiteTitle
 
 |Property|Value|
-|--------|-----|
-|Description|The title of the parent document site|
-|DisplayName|Parent Site Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The title of the parent document site**|
+|DisplayName|**Parent Site Title**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|sitetitle|
-|MaxLength|100|
+|LogicalName|`sitetitle`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_SiteUrl"></a> SiteUrl
 
 |Property|Value|
-|--------|-----|
-|Description|The site url for the parent document site|
-|DisplayName|Site Url|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The site url for the parent document site**|
+|DisplayName|**Site Url**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|siteurl|
-|MaxLength|100|
+|LogicalName|`siteurl`|
 |RequiredLevel|None|
 |Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
+|Format|Text|
 |FormatName|Text|
+|ImeMode|Auto|
 |IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
 |MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
-
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
 ### <a name="BKMK_ViewCount"></a> ViewCount
 
 |Property|Value|
-|--------|-----|
-|Description|Shows View Count of child folders.|
-|DisplayName|View Count|
-|Format|None|
+|---|---|
+|Description|**Shows View Count of child folders.**|
+|DisplayName|**View Count**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|viewcount|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`viewcount`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_WebLocationUrl"></a> WebLocationUrl
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the Web Location Url of Office Graph Document.|
-|DisplayName|Web Location Url|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Shows the Web Location Url of Office Graph Document.**|
+|DisplayName|**Web Location Url**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|weblocationurl|
-|MaxLength|2000|
+|LogicalName|`weblocationurl`|
 |RequiredLevel|None|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
-<a name="manytoone"></a>
+## Many-to-One relationships
 
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [lk_officegraphdocument_createdonbehalfby](#BKMK_lk_officegraphdocument_createdonbehalfby)
 - [lk_officegraphdocument_modifiedonbehalfby](#BKMK_lk_officegraphdocument_modifiedonbehalfby)
 - [organization_officegraphdocument](#BKMK_organization_officegraphdocument)
 - [TransactionCurrency_officegraphdocument](#BKMK_TransactionCurrency_officegraphdocument)
 
-
 ### <a name="BKMK_lk_officegraphdocument_createdonbehalfby"></a> lk_officegraphdocument_createdonbehalfby
 
-See the [lk_officegraphdocument_createdonbehalfby](systemuser.md#BKMK_lk_officegraphdocument_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_officegraphdocument_createdonbehalfby](systemuser.md#BKMK_lk_officegraphdocument_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_officegraphdocument_modifiedonbehalfby"></a> lk_officegraphdocument_modifiedonbehalfby
 
-See the [lk_officegraphdocument_modifiedonbehalfby](systemuser.md#BKMK_lk_officegraphdocument_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+One-To-Many Relationship: [systemuser lk_officegraphdocument_modifiedonbehalfby](systemuser.md#BKMK_lk_officegraphdocument_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_organization_officegraphdocument"></a> organization_officegraphdocument
 
-See the [organization_officegraphdocument](organization.md#BKMK_organization_officegraphdocument) one-to-many relationship for the [organization](organization.md) table/entity.
+One-To-Many Relationship: [organization organization_officegraphdocument](organization.md#BKMK_organization_officegraphdocument)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`organization`|
+|ReferencedAttribute|`organizationid`|
+|ReferencingAttribute|`organizationid`|
+|ReferencingEntityNavigationPropertyName|`organizationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_TransactionCurrency_officegraphdocument"></a> TransactionCurrency_officegraphdocument
 
-See the [TransactionCurrency_officegraphdocument](transactioncurrency.md#BKMK_TransactionCurrency_officegraphdocument) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
+One-To-Many Relationship: [transactioncurrency TransactionCurrency_officegraphdocument](transactioncurrency.md#BKMK_TransactionCurrency_officegraphdocument)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.officegraphdocument?text=officegraphdocument EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.officegraphdocument?displayProperty=fullName>

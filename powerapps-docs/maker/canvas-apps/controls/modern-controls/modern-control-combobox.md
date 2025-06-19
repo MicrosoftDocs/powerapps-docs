@@ -1,34 +1,35 @@
 ---
 title: Combobox modern control in Power Apps
 description: Learn about the details, properties, and examples of the combobox modern control in Power Apps.
-author: noazarur-microsoft
-
+author: clromano
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/15/2024
+ms.date: 1/15/2025
 ms.subservice: canvas-maker
-ms.author: noazarur
-
-
+ms.author: clromano
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - noazarur-microsoft
   
 ---
+
 # Combobox modern control in Power Apps
 
-A control that allows users to make selections from provided choices and supports search and multiple selections. 
+A control that lets users select from provided choices, supports search, and multiple selections. 
 
 ## Description
 
-A **Combobox** control allows you to search for items that you select. Single or multi-select mode is configured via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
+A **Combobox** control lets you present collections of items for users to select. Configure single or multi-select mode via the SelectMultiple property. Key properties for this control are Items, DefaultSelectedItems, SelectedItems, SelectMultiple, and IsSearchable.
 
 ## General
 
 **Items** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show. 
+Use the control's SearchText property within a PowerFX function to dynamically filter large datasets. 
+For example: `Items = Filter(<dataset>, StartsWith(<column name>, Combobox.SearchText))`
 
 **AccessibleLabel** – Label for screen readers.
 
@@ -36,11 +37,11 @@ A **Combobox** control allows you to search for items that you select. Single or
 
 ## Behavior
 
-**SelectMultiple** - Whether the user can select a single item or multiple items. 
+**SelectMultiple** - Lets the user select a single item or multiple items. 
 
-**IsSearchable** - Whether the user can search for items before selecting. 
+**IsSearchable** - Lets the user search for items before selecting. 
 
-**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
+**DisplayMode** – Specifies if the control allows user input (Edit), only displays data (View), or is disabled (Disabled). 
 
 ## Size and position 
 
@@ -72,14 +73,13 @@ A **Combobox** control allows you to search for items that you select. Single or
 
 ## Additional properties
 
-**OnChange** – Actions to perform when the user changes the value of a control.  
+**OnChange** – Actions performed when the user changes the value of a control.  
 
-**TextInputPlaceholder** - Instructional text shown to end users when no items are selected. 
+**TextInputPlaceholder** - Instructional text shown to users when no items are selected. 
 
 **MultiValueDelimiter** -  If a user selects multiple items, you can select what delimiter is added in-between items such as a comma.
 
-**ValidationState** - The control has two states, which are **Error** and **None**. When the error state is selected the control’s border is highlighted in red.
+**ValidationState** - The control has two states: **Error** and **None**. When the error state is selected, the control’s border is highlighted in red.
 
-**DefaultSelectedItems** - The initial value of a control before the user specifies a different value. 
-
+**DefaultSelectedItems** - The initial value of a control before the user selects a different value. 
 

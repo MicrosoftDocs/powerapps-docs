@@ -2,8 +2,8 @@
 title: "Sample: Convert queries between Fetch and QueryExpression"
 description: This sample shows how to convert queries between FetchXML and QueryExpression
 ms.date: 04/03/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -18,7 +18,7 @@ contributors:
 This sample shows how to convert queries between FetchXML and [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Convert queries between FetchXML and QueryExpression sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Convertqueriesfetchqueryexpressions)
+> [SDK for .NET: Convert queries between FetchXML and QueryExpression sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/Convertqueriesfetchqueryexpressions)
 
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]

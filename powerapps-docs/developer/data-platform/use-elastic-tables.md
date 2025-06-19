@@ -2,9 +2,9 @@
 title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
-ms.date: 02/22/2024
-author: pnghub
-ms.author: gned
+ms.date: 12/16/2024
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -132,6 +132,7 @@ Here's an example:
 ```
 
 ---
+
 ### Using the partitionId parameter
 
 Currently, you can use a `partitionId` parameter to specify the value of the `partitionid` column only for `Retrieve` and `Delete` operations. For more information, go to [Known issue: The partitionId optional parameter isn't available for all messages](elastic-tables.md#the-partitionid-optional-parameter-isnt-available-for-all-messages).
@@ -266,7 +267,7 @@ Accept: application/json
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: 240:8#144035050#7=-1
-OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
@@ -280,6 +281,8 @@ Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken
 ### Setting the primary key value
 
 If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
+
+Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
 
 Elastic tables don't return an error when you create a record with a primary key value that isn't unique. By setting the primary key values with elastic tables, you can create records with that have the same primary key values and different `partitionid` values. However, this pattern isn't compatible with Power Apps. Don't create records with duplicate primary key values when people need to use this data in canvas or model-driven apps.
 
@@ -360,7 +363,7 @@ If-Match: *
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=21d455f2-70f3-ed11-8848-000d3a993550,partitionid='deviceid-001')
+OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=11bb11bb-cc22-dd33-ee44-55ff55ff55ff,partitionid='deviceid-001')
 x-ms-session-token: 240:8#144035978#7=-1
 ```
 
@@ -467,7 +470,8 @@ When you query the rows of an elastic table, you get the best performance if you
 > 
 > Specifying a filter on the `partitionid` value in the usual manner doesn't have the same performance benefits as specifying it through the `partitionId` parameter as shown in the following examples.
 
-These examples retrieve the first 5,000 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+These examples retrieve the first 500 rows in the `contoso_SensorData` table that belong to the logical partition where `partitionid` = `'deviceid-001'`.
+
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -532,6 +536,13 @@ OData-Version: 4.0
     ]
 }
 ```
+
+> [!NOTE]
+> The default page size for elastic tables is 500 rows. For standard tables, the default size is 5,000. Learn more about paging:
+> 
+> - [Page results using FetchXml](fetchxml/page-results.md)
+> - [Page results using QueryExpression](org-service/queryexpression/page-results.md)
+> - [Page results using OData](webapi/query/page-results.md)
 
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: "Power Apps read-only grid control | MicrosoftDocs"
+title: "Power Apps read-only grid control"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 04/19/2023
+ms.date: 01/23/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,9 +22,17 @@ The Power Apps read-only grid control lets users view and open records from view
 > [!NOTE] 
 > As of April 2022, the Power Apps read-only grid control is the default control for all read-only views and subgrids.
 
+:::image type="content" source="media/read-only-grid.png" alt-text="Read-only grid control in a model-driven app form.":::
+
+## Add the Power Apps read-only grid as a subgrid on a form
+
+When you add a subgrid to a form, the subgrid only appears on that form and not other forms or views.
+
+More information: [Add and configure a subgrid component on a form](form-designer-add-configure-subgrid.md)
+
 ## Add the Power Apps read-only grid control to views for a table
 
-When you configure the Power Apps read-only grid control for a table, *all* views for that table will display using that grid.
+When you configure the Power Apps read-only grid control for a table, *all* views for that table display using that grid.
 
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
 1. Expand **Entities**, in the list of tables, open the table you want, select the **Controls** tab, and then select **Add Control**.
@@ -40,7 +48,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
    - **Reflow behavior**: Use this parameter to specify when the grid reflows into a list format or a grid format. Reflowing the control into a list is often better suited for small displays such as a mobile device. The default value is Reflow.
      - **Reflow**: Allows the grid to render into list mode when there’s not enough display space.
      - **Grid only**: Displays only as a grid even on smaller displays such as a  mobile device.
-     - **List only**: Displays only as a list even when there is enough space to display as grid.
+     - **List only**: Displays only as a list even when there's enough space to display as grid.
    - **Allow filtering**: Determines whether filtering options are available to users in the grid column header dropdowns. The default value is Enable.
      - **Enable**: Filtering options are available to users.
      - **Disable**: Filtering options aren’t available to users.
@@ -64,13 +72,13 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 
 ## Opt out of the Power Apps read-only grid control
 
-While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to this grid by following the steps below. 
+While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to this grid by following the steps here. 
 
-1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) > Environments > Features.
+1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) **Manage** > **Environments**. Select **Settings** on the command bar, and then select **Product** > **Features**.
 2. Turn off the **Enable the modern read-only grid experience** option in the **Grids and views** section.
 
 > [!NOTE]
-> As the legacy read-only grid is deprecated, this toggle to opt out of the automatic switch to the Power Apps read-only grid will eventually be removed.  
+> As the legacy read-only grid is deprecated, this toggle to opt out of the automatic switch to the Power Apps read-only grid is eventually be removed.  
 
 ## Known issues and limitations
 
@@ -78,14 +86,14 @@ While the Power Apps read-only grid control became the default grid experience i
 
 In general, grid performance can be increased by limiting the number of records fetched at once and limiting the number of columns in a view.
 
-If the page size is sufficiently large, the grid may take a long time to render. The current recommendation is to ensure the page size is not too large, ideally no more than 25 rows.
+If the page size is sufficiently large, the grid might take a long time to render. The current recommendation is to ensure the page size isn't too large, ideally no more than 25 rows.
 
 ### UI limitations and differences
 
 - The grid doesn't currently support any theme customizations
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
-- Reordering columns from the grid column headers is not supported. 
+- Reordering columns from the grid column headers isn't supported. 
 - If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps read-only grid.
 
 ### Limitations with card form lists
@@ -101,7 +109,8 @@ When a view or subgrid is narrow, it changes into a card list format that is bet
 
 #### The list view doesn’t display custom cards for the table
 
-To work around this, you can display a custom card by configuring the table to use the card form of the legacy read-only grid control.
+To work around this issue, display a custom card by configuring the table to use the card form of the legacy read-only grid control.
+
 1. Go to Power Apps (make.powerapps.com) > **Settings** > **Advanced Settings** > **Settings** > **Customizations** > **Customize the System** > expand **Entities** > select the entity you want to customize > **Controls** tab > **Add Control**.
 1. Select **Read Only Grid**, and then select **Add**. Choose to display that grid on one or more client form factors.
 

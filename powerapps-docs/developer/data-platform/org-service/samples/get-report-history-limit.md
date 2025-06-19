@@ -18,7 +18,7 @@ contributors:
 This sample shows how to get report history limits using the [GetReportHistoryLimitRequest](/dotnet/api/microsoft.crm.sdk.messages.getreporthistorylimitrequest) message.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Get report history limits sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GetReportHistoryLimit)
+> [SDK for .NET: Get report history limits sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/GetReportHistoryLimit)
 
 ## How to run this sample
 

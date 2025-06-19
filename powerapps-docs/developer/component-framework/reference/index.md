@@ -1,9 +1,9 @@
 ---
 title: "Power Apps component framework API reference | MicrosoftDocs"
 description: "The topic provides Power Apps component framework API reference."
-ms.author: hemantg
-author: HemantGaur
-ms.date: 05/27/2022
+ms.author: anuitz
+author: anuitz
+ms.date: 03/24/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -58,7 +58,7 @@ This section contains reference documentation for creating code components using
 |[PopupService](popupservice.md)|[!INCLUDE [popupservice-description](includes/popupservice-description.md)]|Model-driven and canvas apps|
 |[Position](position.md)|[!INCLUDE [position-description](includes/position-description.md)]|Model-driven and canvas apps|
 |[Property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|Model-driven and canvas apps|
-|[ReactControl (Preview)](react-control.md)|[!INCLUDE [react-control-description](includes/react-control-description.md)]|Model-driven and canvas apps|
+|[ReactControl](react-control.md)|[!INCLUDE [react-control-description](includes/react-control-description.md)]|Model-driven and canvas apps|
 |[Resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|Model-driven and canvas apps|
 |[RetrieveMultipleResponse](retrievemultipleresponse.md)|[!INCLUDE [retrievemultipleresponse-description](includes/retrievemultipleresponse-description.md)]|Model-driven apps|
 |[Security Values](securityvalues.md)|[!INCLUDE [securityvalues-description](includes/securityvalues-description.md)]|Model-driven apps|

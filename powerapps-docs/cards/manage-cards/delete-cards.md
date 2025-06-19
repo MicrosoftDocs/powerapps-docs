@@ -3,8 +3,8 @@ title: Delete a card
 description: This article helps you delete a card.
 ms.date: 11/17/2022
 ms.topic: overview
-author: sericks007
-ms.author: sericks
+author: mduelae
+ms.author: mkaur
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -12,6 +12,8 @@ ms.collection:
 ---
 
 # Delete a card
+
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
 
 To delete a card, you need to be the app owner. An admin can't delete a card.
 

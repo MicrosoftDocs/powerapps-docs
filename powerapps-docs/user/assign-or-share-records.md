@@ -1,15 +1,15 @@
 ---
 title: "Assign a row to someone else| MicrosoftDocs"
 description: How to reassign a row to someone else.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/10/2020
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -95,9 +95,6 @@ Use advanced find to search for rows and then reassign them to someone else. For
  4. From the list of users, select a user name to open the user's profile.
 
  5. On the command bar, select **REASSIGN ROWS**.
- 
-    > [!div class="mx-imgBorder"]
-    > ![Reassign all rows.](media/assign5.png "Reassign all rows")
    
  4. On the **Reassign Rows** dialog box choose how to want to reassign all the rows and then select **OK**.
  

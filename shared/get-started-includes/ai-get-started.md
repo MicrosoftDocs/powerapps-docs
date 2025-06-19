@@ -32,14 +32,14 @@ The following table provides an overview of tasks and resources.
 |Get an Azure subscription. Sign up for a paid plan, or start for free.| [azure.microsoft.com](https://azure.microsoft.com)| |
 |Request access to Azure OpenAI Service for your subscription. Currently, access to this service is granted only by applying for access. | [https://aka.ms/OAIapply](https://aka.ms/OAIapply) |[What is Azure OpenAI Service?](/azure/ai-services/openai/overview) |
 |Get permissions on your account to create Azure OpenAI resources and deploy models.|[Azure portal](https://portal.azure.com/)|[Role-based access control for Azure OpenAI Service](/azure/ai-services/openai/how-to/role-based-access-control)|
-|Create Azure OpenAI Service resource and deploy a model.|[Azure portal/](https://portal.azure.com/) and [Azure AI Studio](https://oai.azure.com/)|[Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource)|
+|Create Azure OpenAI Service resource and deploy a model.|[Azure portal/](https://portal.azure.com/) and [Azure AI Foundry portal](https://oai.azure.com/)|[Create and deploy an Azure OpenAI Service resource](/azure/ai-services/openai/how-to/create-resource)|
 
 After you complete this step, you can start to develop your Copilot experience, which requires the following information about the resource and deployed model:
 
 |What|Where to find it|
 |-|-|
 |Azure OpenAI API key and endpoint (URL)|**Keys and Endpoint** page for the resource in the Azure portal.|
-|Deployment name for the model|**Deployments** page in Azure AI Studio.|
+|Deployment name for the model|**Deployments** page in the Azure AI Foundry portal.|
 
 ## How much does this cost, and are there tools to predict and measure cost?
 

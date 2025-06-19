@@ -1,8 +1,8 @@
 ---
 title: "Localization API component| Microsoft Docs" 
 description: "This sample showcases how localization is done for code components." 
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/30/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -50,7 +50,7 @@ When this line of code is executed, the Power Apps component framework automatic
 |1033 |Increment |
 |1035 |lisäys | 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

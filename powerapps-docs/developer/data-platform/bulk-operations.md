@@ -1,9 +1,9 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 02/08/2024
-author: divkamath
-ms.author: dikamath
+ms.date: 01/31/2025
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -302,7 +302,7 @@ Whether a record is created or updated in this example depends on whether record
 
 #### SDK examples
 
-Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
+Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/BulkOperations/UpsertMultiple/README.md)
 
 ##### [Web API](#tab/webapi)
 
@@ -411,7 +411,7 @@ The behavior when errors occur depends on whether you're using standard tables o
 
 #### On Error behavior with standard tables
 
-Any error that occurs in a bulk operation with a standard table causes the entire operation to roll back. You should only use bulk operations on standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch` to allow the set of operations to fall back if the bulk operation fails. If the success rate for your initial attempts is low, this strategy results in worse performance. Only use this fallback strategy when you expect most operations to succeed.
+Any error that occurs in a bulk operation with a standard table causes the entire operation to roll back. You should only use bulk operations on standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch` to allow the set of operations to roll back if the bulk operation fails. If the success rate for your initial attempts is low, this strategy results in worse performance. Only use this fallback strategy when you expect most operations to succeed.
 
 #### On Error behavior with elastic tables
 

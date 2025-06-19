@@ -3,7 +3,7 @@ title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/18/2024
@@ -37,7 +37,7 @@ For Microsoft Dataverse-based canvas apps, you must use the offline capability b
 This section includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
 Watch this video to learn how to create offline enabled canvas apps which don't use Dataverse data:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLAka]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=60fd9b60-80a9-445b-bd4e-b7f4f068431e]
 
 ## Limitations
 
@@ -53,7 +53,7 @@ For updates on offline capabilities, return to this topic, and subscribe to the 
 
 When you design offline scenarios, you should first consider how your apps work with data. Apps in Power Apps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and Microsoft Dataverse. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![Power Apps app with connectors.](./media/offline-apps/online-app.png)
+![Power Apps with connectors.](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 

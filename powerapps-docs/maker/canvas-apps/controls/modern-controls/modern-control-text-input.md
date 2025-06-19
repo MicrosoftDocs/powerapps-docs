@@ -5,7 +5,7 @@ author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 3/23/2023
+ms.date: 1/16/2025
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -14,14 +14,13 @@ ms.reviewer: mkaur
 search.audienceType: 
   - maker
 contributors:
+  - clromano
   - mduelae
   - yogeshgupta698
   - noazarur-microsoft
   
 ---
-# Text input modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Text input modern control in Power Apps
 
 A box in which the user can type text, numbers, and other data.
 
@@ -43,6 +42,12 @@ The user can specify data by typing into a **Text input** control. Depending on 
 **Type** – The type of text that that is entered such as text, password, or search. 
 
 **DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+
+**TriggerOutput** - When the control updates its **Value** and triggers OnChange.
+
+- Delayed - Update the control's value when the user pauses typing.
+- FocusOut - Update the control's value when the user selects a different control or clicks outside the control.
+- Keypress - Update the control's value immediately on every character input.
 
 ## Size and position 
 

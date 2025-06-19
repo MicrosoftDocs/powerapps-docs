@@ -2,28 +2,24 @@
 title: "Catalog in Power Platform"
 description: "Use the catalog in Power Platform to managed shared components and templates so that administrators, application makers, and developers within an organization can reuse each other's work."
 author: derekkwanpm
-ms.author: derekkwan
-ms.subservice: 
-ms.date: 05/15/2024
+ms.author: matp
+ms.date: 09/10/2024
 ms.reviewer: matp
 ms.topic: overview
+ms.subservice: dataverse-maker
 contributors:
  - JimDaly
  - ChrisGarty
 ---
-# Catalog in Power Platform (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Catalog in Power Platform
 
 Building from scratch every time by recreating branding, layouts, links, complex connectors and flows, and more is painful and error-prone. Organizations where developers and makers build and share customized and reusable components and templates get more value from Power Platform. Successful organizations adopt a *fusion teams* model where pro-developers, makers, and admins all work together to deliver the best solutions for their users, and derive the highest value possible from Power Platform.
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - The catalog needs to be set up by an admin before you can use it, including permissions. More information [Administer the catalog](/power-platform/admin/administer-catalog#set-up-the-catalog).
 > - The catalog only works with Microsoft Dataverse environments. Environments without Dataverse aren't supported at this time.
-> - While not required for preview, when this feature is generally available, it'll require the use of Managed Environment capabilities. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
+> - You need a Managed Environment in order to submit solutions to the catalog. However, you can install catalog items from any environment. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
 
 In any organization, there might be many components and templates distributed among many environments. The catalog in Power Platform enables developers and makers to:
 
@@ -69,7 +65,15 @@ You can submit unmanaged solutions to the catalog for other makers to install an
 - A **template**: A copy of your unmanaged solution that other makers can edit however they choose. Updates to the original unmanaged solution won't update templates, as templates are no longer "connected" to the solution it came from. If you want other makers to have the ability to change the catalog components as they see fit, use a template.
 
    > [!NOTE]
-   > Currently, certain components aren't supported for use as templates.
+   > Currently, certain components aren't supported for use as templates. The supported components for templates are:
+   > - Table and its sub components like forms, saved queries, relationships, table maps.
+   > - Environment variables.
+   > - Canvas apps.
+   > - Modern workflows.
+   > - Security roles.
+   > - `AiModel` and its subcomponents like `AiConfig`.
+   > - Web resources.
+   > - Power Apps component framework components. This includes modern solution aware components created using the Power Apps component framework. For example custom API, `AiPlugin`, and `AIPlugin` operation.
 
 - A **managed item**: Managed items can be updated with more versions as the original solution is updated, but are generally restricted from editing. If you want makers to use your solution *as is* and you also want to keep copies updated with your changes in the future, use a managed item. Managed items are useful for a variety of scenarios for makers:
 

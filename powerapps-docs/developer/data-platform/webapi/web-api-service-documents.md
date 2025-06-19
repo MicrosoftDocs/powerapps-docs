@@ -2,8 +2,8 @@
 title: Web API Service Documents
 description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
 ms.date: 01/10/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 
@@ -37,8 +37,18 @@ $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
 if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
    Connect-AzAccount | Out-Null
 }
+
 # Get an access token
-$token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+$secureToken = (Get-AzAccessToken `
+   -ResourceUrl $environmentUrl `
+   -AsSecureString).Token
+
+# Convert the secure token to a string
+$token = ConvertFrom-SecureString `
+   -SecureString $secureToken `
+   -AsPlainText
+
+
 # Common headers
 $baseHeaders = @{
    'Authorization'    = 'Bearer ' + $token

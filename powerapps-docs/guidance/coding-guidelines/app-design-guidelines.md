@@ -1,8 +1,8 @@
-﻿---
+---
 title: Power Apps design guidelines
 description: Learn about guidelines for designing Power Apps
 ms.date: 06/12/2024
-ms.topic: conceptual
+ms.topic: best-practice
 ms.subservice: guidance
 ms.service: powerapps
 author: robstand
@@ -54,7 +54,7 @@ As the canvas app grows bigger in size to address more business scenarios, the n
 
 Containers function as empty spaces where you can insert and organize controls in relation to the top-left corner of the container. You have the flexibility to nest containers, allowing for the creation of more complex layouts and providing freedom in design.
 
-Containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users underachaudh the structure of the app.
+Containers are actual controls with their own properties like `Width` and `BorderColor`. Containers affect app layout and help screen reader users understand the structure of the app.
 
 While you can add any controls in a group, you should only add logically related controls in a container.
 

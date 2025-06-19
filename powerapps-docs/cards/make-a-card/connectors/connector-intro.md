@@ -5,12 +5,14 @@ ms.date: 01/19/2023
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-ms.reviewer: sericks
+ms.reviewer: mkaur
 ms.custom: 
 ms.collection: 
 ---
 
 # Add connectors to a card
+
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
 
 Connectors allow your card to connect to other apps, data sources, and devices in the cloud. Insert, modify, and remove them in the [card designer](../designer-overview.md). [Learn more about connectors in Power Platform](/connectors/connectors).
 

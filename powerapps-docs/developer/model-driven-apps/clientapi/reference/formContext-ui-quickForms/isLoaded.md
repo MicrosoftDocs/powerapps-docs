@@ -1,16 +1,16 @@
 ---
-title: "isLoaded (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isLoaded (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isLoaded method.
-author: HemantGaur
-ms.author: hemantg
-ms.date: 03/12/2022
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/15/2024
 ms.reviewer: jdaly
 ms.topic: reference
-applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
 contributors:
   - JimDaly
+  - tahoon-ms
 ---
 # isLoaded (Client API reference)
 
@@ -28,7 +28,7 @@ contributors:
 
 ## Remarks
 
-The data binding for the constituent controls in a quick view control may not be complete during the main form **OnLoad** event because the quick view form that the control is bound to may not have loaded completely. As a result, using the [getAttribute](../controls/getattribute.md) or any data-related methods on a constituent control might not work. The **isLoaded** method for the quick view control helps determine the data binding status for constituent controls in a quick view control.
+The data binding for the constituent controls in a quick view control might not be complete during the main form **OnLoad** event because the quick view form that the control is bound to might not be loaded. As a result, using the [getAttribute](../controls/getattribute.md) or any data-related methods on a constituent control might not work. The **isLoaded** method for the quick view control helps determine the data binding status for constituent controls in a quick view control.
 
 ## Example
 
@@ -44,15 +44,11 @@ function getAttributeValue(executionContext) {
             var myValue = quickViewControl.getControl(0).getAttribute().getValue();
             console.log(myValue);
             
-            // Search by a specific column present in the control       
+            // Search by a specific column present in the control
             var myValue2 =  quickViewControl.getControl().find(control => control.getName() == "<AttributeSchemaName>").getAttribute().getValue();
             console.log(myValue2);
             
             return;
-        }
-        else {
-            // Wait for some time and check again
-            setTimeout(getAttributeValue, 10, executionContext);
         }
     }
     else {

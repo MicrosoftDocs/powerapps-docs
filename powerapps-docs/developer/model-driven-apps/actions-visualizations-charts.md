@@ -1,8 +1,8 @@
 ---
-title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Using the Microsoft Dataverse web services, you can perform the following actions on the visualization tables." # 115-145 characters including spaces. This abstract displays in the search result."
-author: sriharibs-msft
-ms.author: srihas
+title: "Actions on visualizations (charts) (model-driven apps)"
+description: "Using the Microsoft Dataverse web services, you can perform the following actions on the visualization tables."
+author: jasongre
+ms.author: jasongre
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -26,7 +26,7 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   > [!NOTE]
   > After updating an organization-owned visualization, you must publish the table definitions changes to make it visible across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. Alternatively, whenever you publish a table, all the unpublished organization-owned visualizations that are attached to the table are published automatically.
 
-- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode`. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Tables Supported for visualizations](view-data-with-visualizations-charts.md). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to a table, see [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveChartsAttachedToEntity).
+- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode`. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Tables Supported for visualizations](view-data-with-visualizations-charts.md). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to a table, see [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveChartsAttachedToEntity).
 
   > [!NOTE]
   > You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` is not valid for the update action on the organization-owned visualization.
@@ -61,9 +61,9 @@ You can perform the following actions on a user-owned visualization (`UserQueryV
  [Understanding Charts: Underlying data and chart representation](understand-charts-underlying-data-chart-representation.md)  
  [Create a chart](create-visualization-chart.md)  
  [Sample charts](sample-charts.md)  
- [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart)  
- [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveChartsAttachedToEntity)  
- [Sample: Assign a chart to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignChartToAnotherUser)  
+ [Sample: Create, retrieve, update, and delete (CRUD) a chart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CRUDOperationsChart)  
+ [Sample: Retrieve all charts attached to a table](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveChartsAttachedToEntity)  
+ [Sample: Assign a chart to another user](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/AssignChartToAnotherUser)  
  [SavedQueryVisualization table](../data-platform/reference/entities/savedqueryvisualization.md)  
  [UserQueryVisualization table](../data-platform/reference/entities/userqueryvisualization.md)
 

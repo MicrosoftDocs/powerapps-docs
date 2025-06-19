@@ -3,7 +3,7 @@ title: "Use multi-table lookup columns"
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables."
 ms.date: 07/07/2021
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 search.audienceType: 
@@ -168,7 +168,7 @@ The following JSON is the body of the response from the HTTP `POST` request cont
 ```json
 {
     "@odata.context":
-      "http://<organization URL>/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
+      "http://<organization URL>/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
 
     "RelationshipIds":[
         "77d4c6e9-0397-eb11-a81c-000d3a6cfaba",
@@ -203,7 +203,7 @@ The following table lists the operations relevant for table and attribute data.
 The following example request that creates a new record with two rows.   
 
 ```http
-POST [OrganizationUrl]/api/data/v9.1/new_checkouts
+POST [OrganizationUrl]/api/data/v9.2/new_checkouts
 ```
 
 ```http

@@ -1,8 +1,8 @@
 ---
-title: "control.setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "control.setVisible (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.setVisible method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,7 +27,7 @@ All
 ## Parameter
 
 |Name|Type|Required|Description|
-|--|--|--|--|
+|----|----|----|----|
 |`bool`|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
 
 >[!NOTE]
@@ -39,9 +39,6 @@ All
 ### Related articles
 
 [getVisible](getVisible.md)
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

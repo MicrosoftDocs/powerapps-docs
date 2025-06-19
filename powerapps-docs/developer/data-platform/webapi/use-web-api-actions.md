@@ -2,8 +2,8 @@
 title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Actions are reusable operations that can be performed using the Web API. Actions are used with a POST request to modify data on Microsoft Dataverse."
 ms.date: 07/22/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -122,7 +122,7 @@ The following example shows using the <xref:Microsoft.Dynamics.CRM.AddToQueue> a
  **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.0/queues(56ae8258-4878-e511-80d4-00155d2a68d1)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1
+POST [Organization URI]/api/data/v9.2/queues(56ae8258-4878-e511-80d4-00155d2a68d1)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -145,7 +145,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
- "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",
  "QueueItemId": "5aae8258-4878-e511-80d4-00155d2a68d1"
 }
 ```
@@ -216,7 +216,7 @@ The following example shows using the <xref:Microsoft.Dynamics.CRM.ExportTransla
  **Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.1/solutions/Microsoft.Dynamics.CRM.ExportTranslation HTTP/1.1
+POST [Organization URI]/api/data/v9.2/solutions/Microsoft.Dynamics.CRM.ExportTranslation HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 OData-MaxVersion: 4.0
@@ -235,7 +235,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ExportTranslationResponse",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.ExportTranslationResponse",
     "ExportTranslationFile": "[Binary data Removed for brevity]"
 }
 ```

@@ -4,8 +4,8 @@ description: "Learn about using the Metadata Diagram tool to visually show entit
 ms.date: 01/04/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: phecke # GitHub ID
-ms.author: pehecke # MSFT alias of Microsoft employees only
+author: MicroSri # GitHub ID
+ms.author: sriknair # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -60,7 +60,7 @@ You can run the program at the command prompt. List the entities you wish to inc
 GenerateEntityDiagram.exe account new_safedepositbox
 ```
 
-The custom entity new_safedepositbox must exist in your environment for this to work. Otherwise, try any combination of entities that do exist - perhaps "account contact". 
+The custom entity new_safedepositbox must exist in your environment for this to work. Otherwise, try any combination of entities that do exist - perhaps "account contact".
 The name of the generated Visio file is account.vsd.
 
 > [!NOTE]

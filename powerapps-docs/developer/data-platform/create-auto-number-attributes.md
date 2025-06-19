@@ -4,7 +4,7 @@ description: "Learn about creating autonumber column in the same way you create 
 keywords: "Autonumber columns"
 ms.date: 06/15/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer
@@ -97,7 +97,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/Attributes(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 ```
 
 

@@ -1,13 +1,13 @@
 ---
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: ChrisBal-MSFT
+author: mduelae
 
 ms.topic: conceptual
 ms.reviewer: mkaur
-ms.date: 01/05/2022
+ms.date: 05/21/2025
 ms.subservice: canvas-maker
-ms.author: chrisbal
+ms.author: mkaur
 search.audienceType: 
   - maker
 contributors:
@@ -90,7 +90,7 @@ When testing canvas apps using Test Studio, consider the following best practice
 
 ## Known limitations
 
-While work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
+While we work to provide full control coverage in Power Apps Test Studio is in progress, the following functionality is currently unavailable:
 
 - Components.
 - Code components written in the Power Apps Component Framework.

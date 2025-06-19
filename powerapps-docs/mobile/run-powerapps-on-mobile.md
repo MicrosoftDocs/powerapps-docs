@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.date: 11/01/2023
 ms.subservice: mobile
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

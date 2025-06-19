@@ -1,8 +1,8 @@
 ---
-title: "setValue (Client API reference)| MicrosoftDocs"
+title: "setValue (Client API reference)"
 description: Sets the data value for a column.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/14/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -15,7 +15,7 @@ contributors:
 ---
 # setValue (Client API reference)
 
-Sets the data value for a column. 
+Sets the data value for a column.
 
 ## Column types supported
 

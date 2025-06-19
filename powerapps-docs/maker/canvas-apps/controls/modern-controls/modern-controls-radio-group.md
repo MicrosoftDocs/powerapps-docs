@@ -19,9 +19,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Radio group control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Radio group control in Power Apps
 
 An input control that shows multiple options, of which users can select only one at a time.
 

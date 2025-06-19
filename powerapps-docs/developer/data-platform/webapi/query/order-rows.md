@@ -2,8 +2,9 @@
 title: Order rows using OData
 description: Learn how to use OData to order rows when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 07/11/2024
-author: divkamath
-ms.author: dikamath
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 

@@ -1,8 +1,8 @@
 ---
-title: " Multi Select OptionSet component| Microsoft Docs" 
+title: "Multi Select OptionSet component| Microsoft Docs" 
 description: "This sample demonstrates how to leverage the multi select option set type on properties of field components." 
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -43,7 +43,7 @@ The `getOutputs` method simply returns the currently selected set of values back
 
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

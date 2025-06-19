@@ -3,10 +3,11 @@ title: "Include filtering attributes with plug-in registration | MicrosoftDocs"
 description: "If no filtering attributes are set for a plug-in registration step, then the plug-in executes every time an update message occurs for that event."
 suite: powerapps
 author: jowells
-ms.topic: article
-ms.date: 1/15/2019
-ms.subservice: dataverse-developer
 ms.author: jowells
+ms.reviewer: jdaly
+ms.topic: article
+ms.date: 11/26/2024
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 ---
@@ -34,7 +35,11 @@ Most plug-ins registered for an entity's update message don't need to execute on
 
 ## Additional information
 
-Filtering attributes are a list of entity attributes that, when changed, cause the plug-in to execute. These attributes can be set when registering the plug-in using the Plug-in Registration tool. If no attributes are set, then the plug-in executes every time an update message occurs. Updates can occur for various reasons. When auto-save is turned on in the environment, it can occur multiple times during the session of user when on an entity form. If filtering attributes aren't specified, then the plug-in executes for any attribute change to the designed entity.
+Filtering attributes are a list of entity column values that cause the plug-in to execute when included in the payload of the update request. Whether the values are actually changed isn't relevant. Only changed values should be included in the payload of update requests.
+
+Set filtering attributes when registering plug-ins using the Plug-in Registration tool. You can also set the **Select columns** parameter when you use the Microsoft Dataverse connector [When a row is added, modified or deleted](/connectors/commondataserviceforapps/#when-a-row-is-added,-modified-or-deleted) trigger. The sets the filtered attributes property for the event that triggers the flow.
+
+If no attributes are set, then the plug-in executes every time an update message occurs. Updates can occur for various reasons. When auto-save is turned on in the environment, it can occur multiple times during the session of user when on an entity form. If filtering attributes aren't specified, then the plug-in executes for any attribute change to the designed entity.
 
 <a name='seealso'></a>
 

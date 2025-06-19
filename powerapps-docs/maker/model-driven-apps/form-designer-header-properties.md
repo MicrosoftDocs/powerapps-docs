@@ -2,11 +2,11 @@
 title: "Configure header properties in the form designer | MicrosoftDocs"
 description: Learn how to configure form header properties for a model-driven app
 ms.custom: ""
-ms.date: 02/08/2023
+ms.date: 01/06/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
@@ -21,7 +21,7 @@ Makers can choose the columns displayed in the form header. Form headers have tw
 
 ## Form header
 
-The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, for example the star rating control. More information: [Controls that can be displayed on the form header](#controls-that-can-be-displayed-on-the-form-header)
+The form header is used to display common columns that are important for the table. Form headers can't display columns that use unsupported controls. More information: [Controls that can be displayed on the form header](#controls-that-can-be-displayed-on-the-form-header)
 
 Most controls that can't be displayed in form header can be displayed in the [form header flyout](#form-header-flyout).
 
@@ -57,7 +57,29 @@ To ensure that key information is always visible, the framework displays up to f
 
 ## Controls that can be displayed on the form header
 
-High-density headers limit what controls will render in the header body and are limited to a `checkbox`, `datetime`, `decimal`, `duration`, `emailaddress`, `float`, `integer`, `languagepicker`, `lookup`, `money`, `phonenumber`, `picklist`, `radio`, `regarding`, `textbox`, `ticker`, and `timezonepicklist`.  Any other type of control, including custom Power Apps control framework controls or web resources won't be displayed.  These controls can be displayed in the form header flyout, if enabled in the form header properties.
+Columns set to these controls can be displayed in the main body of a high-density header:
+- `checkbox`
+- `datetime`
+- `decimal`
+- `duration`
+- `emailaddress`
+- `float`
+- `integer`
+- `languagepicker`
+- `lookup`
+- `money`
+- `phonenumber`
+- `picklist`
+- `regarding`
+- `textbox`
+- `ticker`
+- `timezonepicklist`
+
+These controls are replaced with a simplified version in the header. Thus, not all control features are available. For example, for lookup controls, just a link is rendered and control options like **Use Main Form Dialog for Edit** aren't supported.
+
+Any other type of control, including custom Power Apps Component Framework controls or web resources, aren't displayed.
+
+To show these unsupported controls or have full functionality of controls, add them to the form header flyout instead of the form header.
 
 ## Form designer messages related to form headers
 

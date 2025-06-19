@@ -1,11 +1,11 @@
 ---
 title: "Code components application lifecycle management | MicrosoftDocs"
 description: "Learn about the considerations and strategies for working with specific aspects of ALM from the perspective of code components in Microsoft Dataverse."
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly

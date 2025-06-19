@@ -1,5 +1,5 @@
 ---
-title: "OnSelection event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "OnSelection event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the OnSelection event.
 author: sriharibs-msft
 ms.author: srihas
@@ -20,8 +20,9 @@ This event occurs when a knowledge base article is selected in the knowledge bas
 
 Use the [addOnSelection](../controls/addOnSelection.md) and [removeOnSelection](../controls/removeOnSelection.md) methods to add and remove event handlers respectively for this event. 
 
+### Related articles
 
-
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

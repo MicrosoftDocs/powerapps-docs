@@ -16,6 +16,8 @@ contributors:
 
 # Number input control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Allows a user to enter a number.
 
 ## Properties

@@ -3,10 +3,10 @@ title: Use Power Automate pane
 description: Learn how to use Power Automate pane to work with flows in Power Apps.
 author: TashasEv
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 07/21/2022
+ms.date: 12/17/2024
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -20,12 +20,18 @@ contributors:
 
 Create new flows or add and edit existing flows using the Power Automate pane within Power Apps Studio. The Power Automate pane is enabled by default.
 
+> [!IMPORTANT]
+> Arguments that pass from Power Apps to Power Automate are visible as network traffic and can be intercepted. Most traffic is likely harmless data that are irrelevant outside the application, for example arguments like "yes" or "Redmond".
+>
+> Evaluate the parameters passed to Power Automate and consider the consequences (if any) if they're changed by an exernal actor. To mitigate risks, validate the parameter values passed.  
+>
+> For example, if you send sensitive data to a person in your organization through email, for example `someuser@contoso.com`, validate the address in Power Automate. You can check the incoming arguments to confirm the organization, `@contoso.com`, and only allow the flow to proceed if the right organization is present.
 
 ## Create a new flow
 
 1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
 
-2. On the app authoring menu, select **Power Automate**. 
+2. On the app authoring menu, select **Power Automate**.
 
    :::image type="content" source="media/working-with-flows/power-automate-button.png" alt-text="A screenshot highlighting the Power Automate option in the left pane.":::
 
@@ -39,7 +45,7 @@ This action opens the **Create your flow** modal dialog within Power Apps Studio
 
 Power Automate provides several flow templates that you can choose from by default. This section explains how to create a flow using such available templates from within Power Apps Studio.
 
-1. From the list of available templates, select a template of your choice. For this example, we'll use **Click a button in Power Apps to send an email**.
+1. From the list of available templates, select a template of your choice. For this example, we use **Click a button in Power Apps to send an email**.
 
    :::image type="content" source="media/working-with-flows/selected-flow-template.png" alt-text="A screenshot showing Click a button in Power Apps to send an email template.":::
 
@@ -47,7 +53,7 @@ Power Automate provides several flow templates that you can choose from by defau
 
    :::image type="content" source="media/working-with-flows/connections.png" alt-text="A screenshot showing connections required by the flow.":::
 
-1. (Optional) If you want, you can use **Edit in advanced mode** to update the connection, and customize the flow template. When done, select **Save** to save the flow. Skip the next step since this completes your flow creation process.
+1. (Optional) You can use **Edit in advanced mode** to update the connection, and customize the flow template. When done, select **Save** to save the flow. Skip the next step since your flow creation process is now complete.
 
 1. Select **Next** > **Create** to create the flow.
 
@@ -75,7 +81,7 @@ Instead of using the available templates, you can create a flow from scratch, an
 
 ## Add an existing flow
 
-You may have access to the existing flows in the environment where you're creating your app. To add and use these flows in your app, select **Add a flow**, and then choose the flow from the **Add a flow from this environment** section.
+You might have access to the existing flows in the environment where you're creating your app. To add and use these flows in your app, select **Add a flow**, and then choose the flow from the **Add a flow from this environment** section.
 
 :::image type="content" source="media/working-with-flows/add-existing-flow.png" alt-text="A screenshot showing the option to add existing flows from the current environment.":::
 
@@ -84,9 +90,9 @@ You may have access to the existing flows in the environment where you're creati
 
 You must meet the following requirements to be able to add an existing flow to a canvas app:
 
-- You must have access to the flow.
-- If the canvas app is part of a solution, you'll only see the flows that are part of the same solution.
-- Flows must have a Power Apps trigger.
+- Have access to the flow
+- Have access to see the flows that are part of the same solution
+- Have a Power Apps trigger for your flows.
 
 After being added, the flow will appear under the **In your app** section inside the Power Automate pane.
 
@@ -98,11 +104,11 @@ To reference the added flow, update the formula bar for the control or component
 PowerAppsbutton.Run()
 ```
 
-:::image type="content" source="media/working-with-flows/reference-flow.png" alt-text="A screenshot showing flow added to OnSelect property of the button with the above formula.":::
+:::image type="content" source="media/working-with-flows/reference-flow.png" alt-text="A screenshot showing a flow added to the OnSelect property of the button with a formula.":::
 
 This behavior is different from how the reference to a flow works within Power Apps Studio if the Power Automate pane is disabled.
 
-When you add a flow with the Power Automate pane disabled, you must choose a behavior property of the control or the component that you want to associate with the flow. Adding a flow in this case clears any formula already associated with the chosen property (when the flow reference is added). This means that any existing formula would be removed, and you have to carefully make a copy of the existing formula before adding the flow in order to preserve it. You can then paste your copied formula back after the flow reference has been added.
+When you add a flow with the Power Automate pane disabled, you must choose a behavior property of the control or the component that you want to associate with the flow. Adding a flow, in this case, clears any formula already associated with the chosen property (when the flow reference is added). Any existing formula gets removed, and you must carefully make a copy of the existing formula before adding the flow in order to preserve it. You can then paste your copied formula back after the flow reference is added.
 
 For example, on a button's OnSelect property, adding the flow removes your existing formula, and you have to carefully make a copy of the existing formula before adding the flow. The following example shows the process with the Power Automate pane disabled. In this case, the formula added for the button property is removed to reference the added flow.
 
@@ -137,13 +143,13 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 
 ## Refresh a flow
 
-If any changes are made to the flow in [Power Automate](https://make.powerautomate.com) (instead of using Power Apps Studio) while you're editing the app, you'll need to refresh your flow to get the latest changes.
+If any changes are made to the flow in [Power Automate](https://make.powerautomate.com) (instead of using Power Apps Studio) while you're editing the app, refresh your flow to get the latest changes.
 
 To refresh the flow and pull the latest changes, select **...** (ellipsis) to the right of your flow, and then select **Refresh**.
 
 :::image type="content" source="media/working-with-flows/refresh-flow.png" alt-text="A screenshot showing the option to refresh the flow and pull in the latest changes.":::
 
-A loading spinner will appear, and the flow will be refreshed.
+A loading spinner appears, and the flow is refreshed.
 
 ## Remove a flow
 
@@ -155,7 +161,7 @@ This action only removes the flow from the app, while the flow remains intact in
 
 ## Classic Power Automate experience
 
-The Power Automate pane is now enabled by default. To use the classic Power Automate experience to [create a flow](using-logic-flows.md), you will need to switch back to the old experience manually.
+The Power Automate pane is now enabled by default. To use the classic Power Automate experience to [create a flow](using-logic-flows.md), switch back to the old experience manually.
 
 > [!IMPORTANT]
 > It’s recommended that you use the [Power Automate pane](working-with-flows.md) to create a flow. The classic Power Automate experience should only be used for troubleshooting. The classic experience will be retired soon and won't be available.

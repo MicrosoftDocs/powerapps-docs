@@ -18,7 +18,7 @@ contributors:
 This sample demonstrates how to create a custom activity using [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) and [CreateAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Create a custom activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CustomActivity)
+> [SDK for .NET: Create a custom activity sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/CustomActivity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

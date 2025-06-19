@@ -1,8 +1,8 @@
 ---
-title: "addOnChange (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOnChange (Client API reference) in model-driven apps"
 description: "Learn about the column addOnchange method to set a function to be called when the column value is changed." 
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

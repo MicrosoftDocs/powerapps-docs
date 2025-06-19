@@ -1,8 +1,8 @@
 ---
 title: "Image Upload component | Microsoft Docs"
 description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time."
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -52,7 +52,7 @@ The `device.pickFile` method opens a dialog box to select files for the upload. 
 > [!NOTE]
 > If the same form or table is used on the legacy web client, then the field will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together.
 
-### Related topics
+### Related articles
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
 [Device API component](./device-api-control.md)<br/>

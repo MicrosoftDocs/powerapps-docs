@@ -2,8 +2,8 @@
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
 ms.date: 07/22/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -38,7 +38,7 @@ This example updates an existing account record with the `accountid` value of 00
  **Request:**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+PATCH [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -78,7 +78,7 @@ This example updates an account entity and returns the requested data in the res
  **Request:**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1  
+PATCH [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Accept: application/json  
@@ -98,7 +98,7 @@ Preference-Applied: return=representation
 OData-Version: 4.0  
   
 {  
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",  
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",  
     "@odata.etag": "W/\"536537\"",  
     "accountid": "00000000-0000-0000-0000-000000000001",  
     "accountcategorycode": 1,  
@@ -134,7 +134,7 @@ The following example updates the `name` property of an existing `account` row w
  **Request:**  
 
 ```http
-PUT [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1  
+PUT [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -161,7 +161,7 @@ The following example deletes the value of the `description` property of an acco
  **Request:**
 
 ```http
-DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/description HTTP/1.1  
+DELETE [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/description HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -242,7 +242,7 @@ A delete operation is straightforward. Use the `DELETE` verb with the URI of the
  **Request:**
 
 ```http
-DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
+DELETE [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  

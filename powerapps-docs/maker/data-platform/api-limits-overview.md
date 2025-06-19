@@ -2,10 +2,10 @@
 title: "API limits overview (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the limits for Microsoft Dataverse API requests." 
 ms.date: 01/30/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: concept-article
 search.audienceType: 
   - developer
 contributors: 

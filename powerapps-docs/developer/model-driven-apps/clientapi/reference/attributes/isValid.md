@@ -1,8 +1,8 @@
 ---
-title: "attribute.isValid (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "attribute.isValid (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the attribute.isValid method.
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/21/2024
 ms.reviewer: jdaly
 ms.topic: reference
@@ -15,8 +15,6 @@ contributors:
   - ericregnier
 ---
 # attribute.isValid (Client API reference)
-
-
 
 Returns a boolean value to indicate whether the value of a column is valid. 
 

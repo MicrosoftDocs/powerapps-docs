@@ -1,51 +1,49 @@
 ---
-title: "ProcessStage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the ProcessStage table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Process Stage (ProcessStage) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Process Stage (ProcessStage) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# ProcessStage table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Process Stage (ProcessStage) table/entity reference (Microsoft Dataverse)
 
 Stage associated with a process.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /processstages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /processstages(*processstageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /processstages(*processstageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveActivePath|<xref:Microsoft.Dynamics.CRM.RetrieveActivePath?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveActivePathRequest>|
-|RetrieveMultiple|GET /processstages<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Process Stage (ProcessStage) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /processstages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: False |`DELETE` /processstages(*processstageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /processstages(*processstageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveActivePath`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveActivePath?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveActivePathRequest>|
+| `RetrieveMultiple`<br />Event: False |`GET` /processstages<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|ProcessStages|
-|DisplayCollectionName|Process Stages|
-|DisplayName|Process Stage|
-|EntitySetName|processstages|
-|IsBPFEntity|False|
-|LogicalCollectionName|processstages|
-|LogicalName|processstage|
-|OwnershipType|None|
-|PrimaryIdAttribute|processstageid|
-|PrimaryNameAttribute|stagename|
-|SchemaName|ProcessStage|
+The following table lists selected properties for the Process Stage (ProcessStage) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Process Stage** |
+| **DisplayCollectionName** | **Process Stages** |
+| **SchemaName** | `ProcessStage` |
+| **CollectionSchemaName** | `ProcessStages` |
+| **EntitySetName** | `processstages`|
+| **LogicalName** | `processstage` |
+| **LogicalCollectionName** | `processstages` |
+| **PrimaryIdAttribute** | `processstageid` |
+| **PrimaryNameAttribute** |`stagename` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -65,782 +63,672 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StageCategory](#BKMK_StageCategory)
 - [StageName](#BKMK_StageName)
 
-
 ### <a name="BKMK_Connector"></a> Connector
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The connector associated with the stage.|
-|DisplayName|Connector|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The connector associated with the stage.**|
+|DisplayName|**Connector**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|connector|
-|MaxLength|100|
+|LogicalName|`connector`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_IsTrigger"></a> IsTrigger
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Whether the stage is a trigger|
-|DisplayName|Is Trigger|
+|---|---|
+|Description|**Whether the stage is a trigger**|
+|DisplayName|**Is Trigger**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|istrigger|
+|LogicalName|`istrigger`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsTrigger Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`processstage_istrigger`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_OperationId"></a> OperationId
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The operation id of the stage|
-|DisplayName|Operation Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The operation id of the stage**|
+|DisplayName|**Operation Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|operationid|
-|MaxLength|100|
+|LogicalName|`operationid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OperationKind"></a> OperationKind
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The operation kind|
-|DisplayName|Operation Kind|
+|---|---|
+|Description|**The operation kind**|
+|DisplayName|**Operation Kind**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|operationkind|
+|LogicalName|`operationkind`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`processstage_operationkind`|
 
 #### OperationKind Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|473330000|Http||
-|473330001|PowerApp||
-|473330002|PowerAppV2||
-|473330003|Button||
-|473330004|ApiConnection||
-|473330005|Alert||
-|473330006|EventGrid||
-|473330007|CurrentTime||
-|473330008|ConvertTimeZone||
-|473330009|GetFutureTime||
-|473330010|GetPastTime||
-|473330011|AddToTime||
-|473330012|SubtractFromTime||
-|473330013|AzureMonitorAlert||
-|473330014|SecurityCenterAlert||
-|473330015|JsonToJson||
-|473330016|JsonToText||
-|473330017|XmlToJson||
-|473330018|XmlToText||
-|473330019|Geofence||
-|473330020|ODataOpenApiConnection||
-|473330021|IndexOf||
-|473330022|Substring||
-|473330023|VirtualAgent||
-|473330024|FormatNumber||
-|473330025|Skills||
-
-
+|Value|Label|
+|---|---|
+|473330000|**Http**|
+|473330001|**PowerApp**|
+|473330002|**PowerAppV2**|
+|473330003|**Button**|
+|473330004|**ApiConnection**|
+|473330005|**Alert**|
+|473330006|**EventGrid**|
+|473330007|**CurrentTime**|
+|473330008|**ConvertTimeZone**|
+|473330009|**GetFutureTime**|
+|473330010|**GetPastTime**|
+|473330011|**AddToTime**|
+|473330012|**SubtractFromTime**|
+|473330013|**AzureMonitorAlert**|
+|473330014|**SecurityCenterAlert**|
+|473330015|**JsonToJson**|
+|473330016|**JsonToText**|
+|473330017|**XmlToJson**|
+|473330018|**XmlToText**|
+|473330019|**Geofence**|
+|473330020|**ODataOpenApiConnection**|
+|473330021|**IndexOf**|
+|473330022|**Substring**|
+|473330023|**VirtualAgent**|
+|473330024|**FormatNumber**|
+|473330025|**Skills**|
+|473330026|**PowerPages**|
+|473330027|**TeamsWebhook**|
 
 ### <a name="BKMK_OperationType"></a> OperationType
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The type of the operation|
-|DisplayName|Operation Type|
+|---|---|
+|Description|**The type of the operation**|
+|DisplayName|**Operation Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|operationtype|
+|LogicalName|`operationtype`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`processstage_operationtype`|
 
 #### OperationType Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|473330000|Http||
-|473330001|ApiApp||
-|473330002|Recurrence||
-|473330003|Workflow||
-|473330004|Flow||
-|473330005|Wait||
-|473330006|ApiConnection||
-|473330007|OpenApiConnection||
-|473330008|Manual||
-|473330009|ApiConnectionWebhook||
-|473330010|OpenApiConnectionWebhook||
-|473330011|Response||
-|473330012|HttpWebhook||
-|473330013|Compose||
-|473330014|Query||
-|473330015|Function||
-|473330016|ApiManagement||
-|473330017|XmlValidation||
-|473330018|FlatFileEncoding||
-|473330019|Scope||
-|473330020|Request||
-|473330021|If||
-|473330022|Foreach||
-|473330023|Until||
-|473330024|Xslt||
-|473330025|FlatFileDecoding||
-|473330026|Terminate||
-|473330027|IntegrationAccountArtifactLookup||
-|473330028|Switch||
-|473330029|ParseJson||
-|473330030|Table||
-|473330031|Join||
-|473330032|Select||
-|473330033|InitializeVariable||
-|473330034|IncrementVariable||
-|473330035|DecrementVariable||
-|473330036|SetVariable||
-|473330037|AppendToArrayVariable||
-|473330038|AppendToStringVariable||
-|473330039|Batch||
-|473330040|SendToBatch||
-|473330041|SlidingWindow||
-|473330042|Expression||
-|473330043|Liquid||
-|473330044|JavascriptCode||
-|473330045|As2Decode||
-|473330046|As2Encode||
-|473330047|RosettaNetEncode||
-|473330048|RosettaNetDecode||
-|473330049|RosettaNetWaitForResponse||
-|473330050|ApiConnectionNotification||
-|473330051|Changeset||
-|473330052|SwiftEncode||
-
-
+|Value|Label|
+|---|---|
+|473330000|**Http**|
+|473330001|**ApiApp**|
+|473330002|**Recurrence**|
+|473330003|**Workflow**|
+|473330004|**Flow**|
+|473330005|**Wait**|
+|473330006|**ApiConnection**|
+|473330007|**OpenApiConnection**|
+|473330008|**Manual**|
+|473330009|**ApiConnectionWebhook**|
+|473330010|**OpenApiConnectionWebhook**|
+|473330011|**Response**|
+|473330012|**HttpWebhook**|
+|473330013|**Compose**|
+|473330014|**Query**|
+|473330015|**Function**|
+|473330016|**ApiManagement**|
+|473330017|**XmlValidation**|
+|473330018|**FlatFileEncoding**|
+|473330019|**Scope**|
+|473330020|**Request**|
+|473330021|**If**|
+|473330022|**Foreach**|
+|473330023|**Until**|
+|473330024|**Xslt**|
+|473330025|**FlatFileDecoding**|
+|473330026|**Terminate**|
+|473330027|**IntegrationAccountArtifactLookup**|
+|473330028|**Switch**|
+|473330029|**ParseJson**|
+|473330030|**Table**|
+|473330031|**Join**|
+|473330032|**Select**|
+|473330033|**InitializeVariable**|
+|473330034|**IncrementVariable**|
+|473330035|**DecrementVariable**|
+|473330036|**SetVariable**|
+|473330037|**AppendToArrayVariable**|
+|473330038|**AppendToStringVariable**|
+|473330039|**Batch**|
+|473330040|**SendToBatch**|
+|473330041|**SlidingWindow**|
+|473330042|**Expression**|
+|473330043|**Liquid**|
+|473330044|**JavascriptCode**|
+|473330045|**As2Decode**|
+|473330046|**As2Encode**|
+|473330047|**RosettaNetEncode**|
+|473330048|**RosettaNetDecode**|
+|473330049|**RosettaNetWaitForResponse**|
+|473330050|**ApiConnectionNotification**|
+|473330051|**Changeset**|
+|473330052|**SwiftEncode**|
 
 ### <a name="BKMK_ParameterName"></a> ParameterName
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The parameter name.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The parameter name.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parametername|
-|MaxLength|100|
+|LogicalName|`parametername`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ParameterValue"></a> ParameterValue
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The parameter value.|
-|DisplayName|Value|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The parameter value.**|
+|DisplayName|**Value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parametervalue|
-|MaxLength|2000|
+|LogicalName|`parametervalue`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_ParentProcessStageId"></a> ParentProcessStageId
 
-**Added by**: Power Automate Core Components Solution
-
 |Property|Value|
-|--------|-----|
-|Description|The parent stage for the parameter.|
-|DisplayName|Stage|
+|---|---|
+|Description|**The parent stage for the parameter.**|
+|DisplayName|**Stage**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parentprocessstageid|
+|LogicalName|`parentprocessstageid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|processstage|
 |Type|Lookup|
-
+|Targets|processstage|
 
 ### <a name="BKMK_PrimaryEntityTypeCode"></a> PrimaryEntityTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Primary entity associated with the stage.|
-|DisplayName|Primary Entity|
+|---|---|
+|Description|**Primary entity associated with the stage.**|
+|DisplayName|**Primary Entity**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|primaryentitytypecode|
+|LogicalName|`primaryentitytypecode`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_ProcessId"></a> ProcessId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the process.|
-|DisplayName|Process|
+|---|---|
+|Description|**Shows the ID of the process.**|
+|DisplayName|**Process**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|processid|
+|LogicalName|`processid`|
 |RequiredLevel|SystemRequired|
-|Targets|workflow|
 |Type|Lookup|
-
+|Targets|workflow|
 
 ### <a name="BKMK_ProcessStageId"></a> ProcessStageId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the process stage record.|
-|DisplayName|Process Stage|
+|---|---|
+|Description|**Shows the ID of the process stage record.**|
+|DisplayName|**Process Stage**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|processstageid|
+|LogicalName|`processstageid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_StageCategory"></a> StageCategory
 
 |Property|Value|
-|--------|-----|
-|Description|Select the category of the sales process.|
-|DisplayName|Stage Category|
+|---|---|
+|Description|**Select the category of the sales process.**|
+|DisplayName|**Stage Category**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|stagecategory|
+|LogicalName|`stagecategory`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`processstage_category`|
 
 #### StageCategory Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Qualify||
-|1|Develop||
-|2|Propose||
-|3|Close||
-|4|Identify||
-|5|Research||
-|6|Resolve||
-|7|Approval||
-
-
+|Value|Label|
+|---|---|
+|0|**Qualify**|
+|1|**Develop**|
+|2|**Propose**|
+|3|**Close**|
+|4|**Identify**|
+|5|**Research**|
+|6|**Resolve**|
+|7|**Approval**|
 
 ### <a name="BKMK_StageName"></a> StageName
 
 |Property|Value|
-|--------|-----|
-|Description|Type a name for the process stage.|
-|DisplayName|Process Stage Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a name for the process stage.**|
+|DisplayName|**Process Stage Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|stagename|
-|MaxLength|100|
+|LogicalName|`stagename`|
 |RequiredLevel|SystemRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ClientData](#BKMK_ClientData)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [ParentProcessStageIdName](#BKMK_ParentProcessStageIdName)
-- [ProcessIdName](#BKMK_ProcessIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_ClientData"></a> ClientData
 
 |Property|Value|
-|--------|-----|
-|Description|Step metadata for process stage|
-|DisplayName|Client Data|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**Step metadata for process stage**|
+|DisplayName|**Client Data**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|clientdata|
-|MaxLength|1073741823|
+|LogicalName|`clientdata`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Select the business unit that owns the record.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Select the business unit that owns the record.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|ApplicationRequired|
 |Type|Uniqueidentifier|
-
-
-### <a name="BKMK_ParentProcessStageIdName"></a> ParentProcessStageIdName
-
-**Added by**: Power Automate Core Components Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|parentprocessstageidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ProcessIdName"></a> ProcessIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|processidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the process stage.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the process stage.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [processstage_knowledgearticle](#BKMK_processstage_knowledgearticle)
-- [processstage_contact](#BKMK_processstage_contact)
-- [processstage_teams](#BKMK_processstage_teams)
-- [ProcessStage_SyncErrors](#BKMK_ProcessStage_SyncErrors)
-- [processstage_recurringappointmentmasters](#BKMK_processstage_recurringappointmentmasters)
-- [processstage_letters](#BKMK_processstage_letters)
-- [processstage_faxes](#BKMK_processstage_faxes)
-- [processstage_tasks](#BKMK_processstage_tasks)
-- [processstage_account](#BKMK_processstage_account)
-- [lk_translationprocess_activestageid](#BKMK_lk_translationprocess_activestageid)
-- [processstage_systemusers](#BKMK_processstage_systemusers)
-- [lk_newprocess_activestageid](#BKMK_lk_newprocess_activestageid)
-- [processstage_emails](#BKMK_processstage_emails)
-- [processstage_appointments](#BKMK_processstage_appointments)
-- [processstage_phonecalls](#BKMK_processstage_phonecalls)
-- [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
-- [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
-- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
-- [processstage_adx_portalcomment](#BKMK_processstage_adx_portalcomment)
-
-
-### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
-
-Same as the [processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|knowledgearticle|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_knowledgearticle|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_contact"></a> processstage_contact
-
-Same as the [processstage_contact](contact.md#BKMK_processstage_contact) many-to-one relationship for the [contact](contact.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|contact|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_contact|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_teams"></a> processstage_teams
-
-Same as the [processstage_teams](team.md#BKMK_processstage_teams) many-to-one relationship for the [team](team.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|team|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_teams|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_ProcessStage_SyncErrors"></a> ProcessStage_SyncErrors
-
-Same as the [ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|ProcessStage_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_processstage_recurringappointmentmasters"></a> processstage_recurringappointmentmasters
-
-Same as the [processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|recurringappointmentmaster|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_recurringappointmentmasters|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_letters"></a> processstage_letters
-
-Same as the [processstage_letters](letter.md#BKMK_processstage_letters) many-to-one relationship for the [letter](letter.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|letter|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_letters|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_faxes"></a> processstage_faxes
-
-Same as the [processstage_faxes](fax.md#BKMK_processstage_faxes) many-to-one relationship for the [fax](fax.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|fax|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_faxes|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_tasks"></a> processstage_tasks
-
-Same as the [processstage_tasks](task.md#BKMK_processstage_tasks) many-to-one relationship for the [task](task.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|task|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_tasks|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_account"></a> processstage_account
-
-Same as the [processstage_account](account.md#BKMK_processstage_account) many-to-one relationship for the [account](account.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|account|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_account|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_translationprocess_activestageid"></a> lk_translationprocess_activestageid
-
-Same as the [lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid) many-to-one relationship for the [translationprocess](translationprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|translationprocess|
-|ReferencingAttribute|activestageid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstage_translationprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_systemusers"></a> processstage_systemusers
-
-Same as the [processstage_systemusers](systemuser.md#BKMK_processstage_systemusers) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|systemuser|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_systemusers|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_newprocess_activestageid"></a> lk_newprocess_activestageid
-
-Same as the [lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid) many-to-one relationship for the [newprocess](newprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|newprocess|
-|ReferencingAttribute|activestageid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstage_newprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_emails"></a> processstage_emails
-
-Same as the [processstage_emails](email.md#BKMK_processstage_emails) many-to-one relationship for the [email](email.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_emails|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_appointments"></a> processstage_appointments
-
-Same as the [processstage_appointments](appointment.md#BKMK_processstage_appointments) many-to-one relationship for the [appointment](appointment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|appointment|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_appointments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
-
-Same as the [processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|phonecall|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_phonecalls|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
-
-Same as the [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid) many-to-one relationship for the [expiredprocess](expiredprocess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|expiredprocess|
-|ReferencingAttribute|activestageid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstage_expiredprocess|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) many-to-one relationship for the [processstageparameter](processstageparameter.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processstageparameter|
-|ReferencingAttribute|processstageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_processstageparameter|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_processstage_parentprocessstage"></a> processstage_parentprocessstage
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [processstage_parentprocessstage](processstage.md#BKMK_processstage_parentprocessstage) many-to-one relationship for the [processstage](processstage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processstage|
-|ReferencingAttribute|parentprocessstageid|
-|IsHierarchical|True|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_parentprocessstage|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_processstage_adx_portalcomment"></a> processstage_adx_portalcomment
-
-**Added by**: Active Solution Solution
-
-Same as the [processstage_adx_portalcomment](adx_portalcomment.md#BKMK_processstage_adx_portalcomment) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|adx_portalcomment|
-|ReferencingAttribute|stageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|processstage_adx_portalcomment|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [process_processstage](#BKMK_process_processstage)
-- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
-
+- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage-many-to-one)
 
 ### <a name="BKMK_process_processstage"></a> process_processstage
 
-See the [process_processstage](workflow.md#BKMK_process_processstage) one-to-many relationship for the [workflow](workflow.md) table/entity.
+One-To-Many Relationship: [workflow process_processstage](workflow.md#BKMK_process_processstage)
 
-### <a name="BKMK_processstage_parentprocessstage"></a> processstage_parentprocessstage
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workflow`|
+|ReferencedAttribute|`workflowid`|
+|ReferencingAttribute|`processid`|
+|ReferencingEntityNavigationPropertyName|`processid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
-See the [processstage_parentprocessstage](processstage.md#BKMK_processstage_parentprocessstage) one-to-many relationship for the [processstage](processstage.md) table/entity.
+### <a name="BKMK_processstage_parentprocessstage-many-to-one"></a> processstage_parentprocessstage
+
+One-To-Many Relationship: [processstage processstage_parentprocessstage](#BKMK_processstage_parentprocessstage-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processstage`|
+|ReferencedAttribute|`processstageid`|
+|ReferencingAttribute|`parentprocessstageid`|
+|ReferencingEntityNavigationPropertyName|`ParentProcessStageId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
+- [lk_newprocess_activestageid](#BKMK_lk_newprocess_activestageid)
+- [lk_translationprocess_activestageid](#BKMK_lk_translationprocess_activestageid)
+- [processstage_account](#BKMK_processstage_account)
+- [processstage_adx_portalcomment](#BKMK_processstage_adx_portalcomment)
+- [processstage_appointments](#BKMK_processstage_appointments)
+- [processstage_contact](#BKMK_processstage_contact)
+- [processstage_emails](#BKMK_processstage_emails)
+- [processstage_faxes](#BKMK_processstage_faxes)
+- [processstage_knowledgearticle](#BKMK_processstage_knowledgearticle)
+- [processstage_letters](#BKMK_processstage_letters)
+- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage-one-to-many)
+- [processstage_phonecalls](#BKMK_processstage_phonecalls)
+- [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
+- [processstage_recurringappointmentmasters](#BKMK_processstage_recurringappointmentmasters)
+- [ProcessStage_SyncErrors](#BKMK_ProcessStage_SyncErrors)
+- [processstage_systemusers](#BKMK_processstage_systemusers)
+- [processstage_tasks](#BKMK_processstage_tasks)
+- [processstage_teams](#BKMK_processstage_teams)
+
+### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
+
+Many-To-One Relationship: [expiredprocess lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredprocess_activestageid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`expiredprocess`|
+|ReferencingAttribute|`activestageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_expiredprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_newprocess_activestageid"></a> lk_newprocess_activestageid
+
+Many-To-One Relationship: [newprocess lk_newprocess_activestageid](newprocess.md#BKMK_lk_newprocess_activestageid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`newprocess`|
+|ReferencingAttribute|`activestageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_newprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_lk_translationprocess_activestageid"></a> lk_translationprocess_activestageid
+
+Many-To-One Relationship: [translationprocess lk_translationprocess_activestageid](translationprocess.md#BKMK_lk_translationprocess_activestageid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`translationprocess`|
+|ReferencingAttribute|`activestageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_translationprocess`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_account"></a> processstage_account
+
+Many-To-One Relationship: [account processstage_account](account.md#BKMK_processstage_account)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`account`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_account`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_adx_portalcomment"></a> processstage_adx_portalcomment
+
+Many-To-One Relationship: [adx_portalcomment processstage_adx_portalcomment](adx_portalcomment.md#BKMK_processstage_adx_portalcomment)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`adx_portalcomment`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_adx_portalcomment`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_appointments"></a> processstage_appointments
+
+Many-To-One Relationship: [appointment processstage_appointments](appointment.md#BKMK_processstage_appointments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`appointment`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_appointments`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_contact"></a> processstage_contact
+
+Many-To-One Relationship: [contact processstage_contact](contact.md#BKMK_processstage_contact)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`contact`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_contact`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_emails"></a> processstage_emails
+
+Many-To-One Relationship: [email processstage_emails](email.md#BKMK_processstage_emails)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`email`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_emails`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_faxes"></a> processstage_faxes
+
+Many-To-One Relationship: [fax processstage_faxes](fax.md#BKMK_processstage_faxes)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`fax`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_faxes`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
+
+Many-To-One Relationship: [knowledgearticle processstage_knowledgearticle](knowledgearticle.md#BKMK_processstage_knowledgearticle)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`knowledgearticle`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_knowledgearticle`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_letters"></a> processstage_letters
+
+Many-To-One Relationship: [letter processstage_letters](letter.md#BKMK_processstage_letters)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`letter`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_letters`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_parentprocessstage-one-to-many"></a> processstage_parentprocessstage
+
+Many-To-One Relationship: [processstage processstage_parentprocessstage](#BKMK_processstage_parentprocessstage-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processstage`|
+|ReferencingAttribute|`parentprocessstageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_parentprocessstage`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
+
+Many-To-One Relationship: [phonecall processstage_phonecalls](phonecall.md#BKMK_processstage_phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`phonecall`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_phonecalls`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
+
+Many-To-One Relationship: [processstageparameter processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processstageparameter`|
+|ReferencingAttribute|`processstageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_processstageparameter`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_recurringappointmentmasters"></a> processstage_recurringappointmentmasters
+
+Many-To-One Relationship: [recurringappointmentmaster processstage_recurringappointmentmasters](recurringappointmentmaster.md#BKMK_processstage_recurringappointmentmasters)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`recurringappointmentmaster`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_recurringappointmentmasters`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_ProcessStage_SyncErrors"></a> ProcessStage_SyncErrors
+
+Many-To-One Relationship: [syncerror ProcessStage_SyncErrors](syncerror.md#BKMK_ProcessStage_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`ProcessStage_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_systemusers"></a> processstage_systemusers
+
+Many-To-One Relationship: [systemuser processstage_systemusers](systemuser.md#BKMK_processstage_systemusers)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`systemuser`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_systemusers`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_tasks"></a> processstage_tasks
+
+Many-To-One Relationship: [task processstage_tasks](task.md#BKMK_processstage_tasks)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`task`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_tasks`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_processstage_teams"></a> processstage_teams
+
+Many-To-One Relationship: [team processstage_teams](team.md#BKMK_processstage_teams)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`team`|
+|ReferencingAttribute|`stageid`|
+|ReferencedEntityNavigationPropertyName|`processstage_teams`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.processstage?text=processstage EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.processstage?displayProperty=fullName>

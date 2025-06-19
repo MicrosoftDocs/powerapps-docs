@@ -1,15 +1,15 @@
 ---
 title: "Attach a file to email in model-driven apps | MicrosoftDocs"
 description: Learn how to attach a file to email.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 02/01/2024
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

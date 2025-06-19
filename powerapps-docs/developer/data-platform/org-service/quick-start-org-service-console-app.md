@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
-ms.date: 11/11/2023
-author: phecke
-ms.author: pehecke
+ms.date: 12/04/2024
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: quickstart
 search.audienceType: 
   - developer
 contributors:
@@ -24,7 +24,7 @@ Your application will call the [IOrganizationService.Execute method](xref:Micros
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
 
-You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted/README.md) for more details.
+You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/README.md) for more details.
 
 ## Prerequisites
 
@@ -33,6 +33,9 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
 - Logon credentials of a Dataverse system user account for the target environment
 - URL address of the Dataverse environment you want to connect with
 - Basic understanding of the Visual C# language
+
+Read the following important information about using a connection string or username/password authentication in application code.
+[!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
 
 ## Create Visual Studio project
 
@@ -54,7 +57,7 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
 ## Add application code
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
-   
+
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
    using Microsoft.PowerPlatform.Dataverse.Client;
@@ -95,7 +98,7 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
       }
    }
    ```
-   
+
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
     > [!NOTE]
@@ -110,7 +113,7 @@ You can obtain the complete code sample from GitHub [GetStarted](https://github.
 Press **F5** to run the program. The output should look something like this:
 
 ```console
-User ID is 969effb0-98ae-478c-b547-53a2968c2e75
+User ID is 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 Press any key to exit.
 ```
 
@@ -161,9 +164,9 @@ To see and understand the `IOrganizationService` interface a little better, try 
 1. Run the sample again and you should see something like:
 
    ```console
-   OrganizationId:883278f5-07af-45eb-a0bc-3fea67caa544
-   BusinessUnitId:38e0dbe4-131b-e111-ba7e-78e7d1620f5e
-   UserId:4026be43-6b69-e111-8f65-78e7d1620f5e
+   OrganizationId:00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+   BusinessUnitId:11bb11bb-cc22-dd33-ee44-55ff55ff55ff
+   UserId:22cc22cc-dd33-ee44-ff55-66aa66aa66aa
    Press the <Enter> key to exit.
    ```
 
@@ -206,7 +209,6 @@ The following articles explain how to work with business data in Dataverse table
 ### Explore our code samples
 
 You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc).
-
 
 ### Use ServiceClient extensions
 

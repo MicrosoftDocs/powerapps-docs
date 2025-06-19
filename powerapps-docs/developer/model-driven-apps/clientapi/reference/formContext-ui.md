@@ -1,8 +1,8 @@
 ---
-title: "formContext.ui (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.ui (Client API reference) in model-driven apps"
 description: "Provides properties and methods to retrieve information about the user interface (UI) as well as collections for several sub components of the form."
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 04/07/2022
 ms.reviewer: jdaly
 ms.topic: reference

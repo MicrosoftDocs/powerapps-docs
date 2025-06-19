@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 05/26/2022
 ms.reviewer: ""
 ms.subservice: mda-maker
-ms.topic: "article"
+ms.topic: how-to
 author: "mspilde"
 ms.author: "matp"
 search.audienceType: 

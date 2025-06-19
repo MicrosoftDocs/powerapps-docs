@@ -2,8 +2,8 @@
 title: "WebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API"
 ms.date: 08/29/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -33,13 +33,13 @@ This library demonstrates:
 
 This library doesn't:
 
-- **Manage authentication**. It depends on a function passed from an application that provides the access token to use. All Web API samples depend on a shared [App class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/App.cs) that manages authentication using the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview). MSAL supports several different types of authentication flows. These samples use the [Username/password (ROPC)](/azure/active-directory/develop/msal-authentication-flows) flow for simplicity but this flow isn't recommended. For your apps, you should use one of the other flows. More information: [Authentication flow support in the Microsoft Authentication Library](/azure/active-directory/develop/msal-authentication-flows).
+- **Manage authentication**. It depends on a function passed from an application that provides the access token to use. All Web API samples depend on a shared [App class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/App.cs) that manages authentication using the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview). MSAL supports several different types of authentication flows. These samples use the [Username/password (ROPC)](/azure/active-directory/develop/msal-authentication-flows) flow for simplicity but this flow isn't recommended. For your apps, you should use one of the other flows. More information: [Authentication flow support in the Microsoft Authentication Library](/azure/active-directory/develop/msal-authentication-flows).
 - **Provide for any code generation capabilities**. All classes used in the samples are written by hand. All business entity data uses the well-known [Json.NET JObject Class](https://www.newtonsoft.com/json/help/html/t_newtonsoft_json_linq_jobject.htm) rather than a class representing the entity type.
 - **Provide an object model for composing OData queries**. All queries show the OData query syntax as query parameters.
 
 ## Code
 
-You can find the `WebApiService` class library source code and Visual Studio solution at [PowerApps-Samples/dataverse/webapi/C#-NETx/WebAPIService](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/WebAPIService)
+You can find the `WebApiService` class library source code and Visual Studio solution at [PowerApps-Samples/dataverse/webapi/C#-NETx/WebAPIService](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/WebAPIService)
 
 ## Class list
 
@@ -189,8 +189,8 @@ Within an application, you might also create custom messages, for example repres
 
 For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
 
-- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
-- [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
 
 ### *Request classes
 
@@ -341,7 +341,7 @@ The following methods are included:
 
 Within a sample application using `WebAPIService`, when the operation doesn't represent an API found in Dataverse by default, the method is defined in the application rather than in the `WebAPIService`.
 
-For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
 
 ## Types
 

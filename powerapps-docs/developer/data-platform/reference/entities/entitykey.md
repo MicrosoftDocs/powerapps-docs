@@ -1,47 +1,43 @@
 ---
-title: "EntityKey table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the EntityKey table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Entity Key (EntityKey) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Entity Key (EntityKey) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# EntityKey table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
+# Entity Key (EntityKey) table/entity reference (Microsoft Dataverse)
 
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|RetrieveMultiple|GET /entitykeys<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Entity Key (EntityKey) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `RetrieveMultiple`<br />Event: False |`GET` /entitykeys<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|EntityKeys|
-|DisplayCollectionName|Entity Keys|
-|DisplayName|Entity Key|
-|EntitySetName|entitykeys|
-|IsBPFEntity|False|
-|LogicalCollectionName|entitykeys|
-|LogicalName|entitykey|
-|OwnershipType|None|
-|PrimaryIdAttribute|entitykeyid|
-|PrimaryNameAttribute|logicalname|
-|SchemaName|EntityKey|
+The following table lists selected properties for the Entity Key (EntityKey) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Entity Key** |
+| **DisplayCollectionName** | **Entity Keys** |
+| **SchemaName** | `EntityKey` |
+| **CollectionSchemaName** | `EntityKeys` |
+| **EntitySetName** | `entitykeys`|
+| **LogicalName** | `entitykey` |
+| **LogicalCollectionName** | `entitykeys` |
+| **PrimaryIdAttribute** | `entitykeyid` |
+| **PrimaryNameAttribute** |`logicalname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -51,131 +47,127 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LogicalName](#BKMK_LogicalName)
 - [Name](#BKMK_Name)
 
-
 ### <a name="BKMK_EntityKeyId"></a> EntityKeyId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the entity key.|
-|DisplayName|Entity Key|
+|---|---|
+|Description|**Unique identifier of the entity key.**|
+|DisplayName|**Entity Key**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|entitykeyid|
+|LogicalName|`entitykeyid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_LogicalName"></a> LogicalName
 
 |Property|Value|
-|--------|-----|
-|Description|The logical name of this Entity Key.|
-|DisplayName|Logical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The logical name of this Entity Key.**|
+|DisplayName|**Logical Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|logicalname|
-|MaxLength|128|
+|LogicalName|`logicalname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of this Entity Key.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of this Entity Key.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|128|
+|LogicalName|`name`|
 |RequiredLevel|SystemRequired|
 |Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|128|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [IsSecondaryKey](#BKMK_IsSecondaryKey)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_IsSecondaryKey"></a> IsSecondaryKey
 
-**Added by**: Metadata Extension Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Is the attribute secondary key.|
-|DisplayName|IsSecondaryKey|
+|---|---|
+|Description|**Is the attribute secondary key.**|
+|DisplayName|**IsSecondaryKey**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|issecondarykey|
+|LogicalName|`issecondarykey`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsSecondaryKey Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-
+|GlobalChoiceName|`_entitykey_issecondarykey`|
+|DefaultValue|False|
+|True Label||
+|False Label||
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
 
@@ -183,6 +175,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.entitykey?text=entitykey EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.entitykey?displayProperty=fullName>

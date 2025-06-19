@@ -1,12 +1,12 @@
 ---
 title: "Bypass custom Dataverse logic" 
 description: "Make data changes which bypass custom Dataverse logic." 
-ms.date: 07/01/2024
+ms.date: 12/04/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: divkamath
+ms.topic: how-to
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:
@@ -22,7 +22,6 @@ There are times when you want to be able to perform data operations without havi
 Without a way to tell Dataverse not to invoke the business logic, you need to locate and disable the individual custom plug-ins and workflows that contain the business logic. Disabling plug-ins and workflows means that the logic is disabled for all users while those plug-ins and workflows are disabled. It also means that you have to take care to only disable the right plug-ins and workflows and remember to re-enable them when you're done.
 
 Instead of this manual process, as a developer of a client application or plug-in, you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
-
 
 |Logic type|When to bypass|
 |---------|---------|
@@ -41,8 +40,6 @@ Use these optional parameters to control business logic executed in Dataverse:
 |[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)|Pass the values `CustomSync`, `CustomAsync`, or `CustomSync,CustomAsync` to this optional parameter to bypass synchronous logic, asynchronous logic or, both. |
 |[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|Pass a comma separated list of plug-in step registrations to bypass only the specified plug-in steps.|
 |[`BypassCustomPluginExecution`](#bypasscustompluginexecution)|Bypass only synchronous logic. This optional parameter is supported, but not recommended. Use `BypassBusinessLogicExecution` with the `CustomSync` value to get the same result.|
-
-
 
 ## `BypassBusinessLogicExecution`
 
@@ -114,6 +111,7 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 }
 
 ```
+
 ---
 
 ## `BypassBusinessLogicExecutionStepIds`
@@ -143,7 +141,6 @@ static void DemonstrateBypassBusinessLogicExecutionStepIds(IOrganizationService 
 }
 ```
 
-
 #### [Web API](#tab/webapi)
 
 The following Web API request creates a new account record using the `MSCRM.BypassBusinessLogicExecutionStepIds` request header:
@@ -155,7 +152,7 @@ OData-Version: 4.0
 OData-MaxVersion: 4.0
 Content-Type: application/json
 Accept: application/json
-MSCRM.BypassBusinessLogicExecutionStepIds: "45e0c603-0d0b-466e-a286-d7fc1cda8361, d5370603-e4b9-4b92-b765-5966492a4fd7"
+MSCRM.BypassBusinessLogicExecutionStepIds: 45e0c603-0d0b-466e-a286-d7fc1cda8361,d5370603-e4b9-4b92-b765-5966492a4fd7
 {
   "name":"Sample Account"
 }
@@ -227,7 +224,6 @@ In this case, there's only one: `4ab978b0-1d77-ec11-8d21-000d3a554d57`
 
 [Learn more about querying data using Web API](webapi/query/overview.md)
 
-
 #### Query your environment with FetchXml
 
 Use a query like the following to retrieve the set plug-in step registrations for a given table and message. The following example specifies `1` to represent the `account` table, using the [table object type code](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.objecttypecode).
@@ -286,7 +282,6 @@ Use this FetchXml query to return `step.sdkmessageprocessingstepid` values you c
 
 [Learn more about retrieving data using FetchXml](fetchxml/overview.md)
 
-
 ### Limit to the number of steps
 
 To ensure that the parameter size isn't too large, the default limit on the number of steps you can pass is three. The limit is controlled using data in the [Organization table OrgDbOrgSettings column](reference/entities/organization.md#BKMK_OrgDbOrgSettings). Use the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/topic/orgdborgsettings-tool-for-microsoft-dynamics-crm-20a10f46-2a24-a156-7144-365d49b842ba) or [OrgDbOrgSettings app](https://github.com/seanmcne/OrgDbOrgSettings?tab=readme-ov-file#where-to-find-the-releases) to change the `BypassBusinessLogicExecutionStepIdsLimit` value.
@@ -309,7 +304,6 @@ You can use this option with either the SDK for .NET or the Web API.
 #### [SDK for .NET](#tab/sdk)
 
 There are two ways to use this optional parameter with the SDK for .NET.
-
 
 ##### Set the value as an optional parameter
 
@@ -349,6 +343,9 @@ service.Create(account);
 
 Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
 
+Read the following important information about using a connection string in application code.
+[!INCLUDE [cc-connection-string](includes/cc-connection-string.md)]
+
 > [!NOTE]
 > This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
 
@@ -382,12 +379,11 @@ The optional parameters described in this article require privileges that are on
 
 To add the privilege to another security role, you need the ID of the privilege.
 
-
 |Name|ID|Optional Parameter(s)|
 |---------|---------|---------|
 |`prvBypassCustomBusinessLogic`|`0ea552b0-a491-4470-9a1b-82068deccf66`|[`BypassBusinessLogicExecution`](#bypassbusinesslogicexecution)<br />[`BypassBusinessLogicExecutionStepIds`](#bypassbusinesslogicexecutionstepids)|
 |`prvBypassCustomPlugins`|`148a9eaf-d0c4-4196-9852-c3a38e35f6a1`|[`BypassCustomPluginExecution`](#bypasscustompluginexecution)|
- 
+
  These ID values are the same for all Dataverse environments.
 
 ### [SDK for .NET](#tab/sdk)
@@ -445,8 +441,6 @@ OData-Version: 4.0
 
 ---
 
-
-
 ### Frequently asked questions for bypassing business logic (FAQ)
 
 Following are frequently asked questions about using the optional parameters to bypass synchronous business logic.
@@ -461,7 +455,7 @@ Yes, but only when the plug-in is running in the context of a user who has the r
 
 ### See also
 
-[Bypass Power Automate Flows](bypass-power-automate-flows.md)   
+[Bypass Power Automate Flows](bypass-power-automate-flows.md)
 [Use optional parameters](optional-parameters.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

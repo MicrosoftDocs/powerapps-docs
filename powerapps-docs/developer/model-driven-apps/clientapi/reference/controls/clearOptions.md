@@ -1,8 +1,8 @@
 ---
-title: "clearOptions (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "clearOptions (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the clearOptions method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -14,7 +14,7 @@ contributors:
 ---
 # clearOptions (Client API reference)
 
-Clears all options from a control. 
+Clears all options from a control.
 
 ## Control types supported
 

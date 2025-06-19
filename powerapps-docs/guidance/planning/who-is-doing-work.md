@@ -3,7 +3,7 @@ title: Understanding job roles and personas for your app project | Microsoft Doc
 description: As part of the planning phase of a Power Apps project, document who is doing the work, when, and where.
 author: TGrounds
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

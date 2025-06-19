@@ -1,14 +1,14 @@
 ---
 title: "Basic navigation in a model-driven app | MicrosoftDocs"
 description: This explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 05/02/2023
+ms.topic: article
+ms.date: 01/16/2025
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -28,9 +28,9 @@ A model-driven app is built out of applications (apps), areas, and tables.
 
 - *Apps* provide a collection of functionalities for accomplishing a specific class of activity, such as managing your accounts and contacts. Use the app-selector menu to navigate between the apps that are available to your organization.
 
-- A *work area* is a subdivision of an app, dedicated to a specific feature. Each work area provides a targeted collection of tables for working in that area. In some cases, the same table appears in more than one area (or even more than one app). The Contact and Account tables, for example, appear in a variety of apps and work areas. Use the work-area menu to navigate between work areas for your current app.
+- A *work area* is a subdivision of an app, dedicated to a specific feature. Each work area provides a targeted collection of tables for working in that area. In some cases, the same table appears in more than one area (or even more than one app). The Contact and Account tables, for example, appear in various apps and work areas. Use the work-area menu to navigate between work areas for your current app.
 
-- *Tables* represent a specific type of data, such as a contacts and accounts. Tables use a structured data format, which defines the collection of columns available to the table. Each table consists of a collection of individual rows. For example, for the Contact table, each row describes a single person, and each row includes a collection of columns such as first name, last name, and email address. Tables normally present two views: a list view, which is typically a table listing available rows; and a form view, which shows all available data and settings for a single row. Use the side navigator to move between tables in your current work area.
+- *Tables* represent a specific type of data, such as contacts or accounts. Tables use a structured data format, which defines the collection of columns available to the table. Each table consists of a collection of individual rows. For example, for the Contact table, each row describes a single person, and each row includes a collection of columns such as first name, last name, and email address. Tables normally present two views: a list view, which is typically a table listing available rows; and a form view, which shows all available data and settings for a single row. Use the side navigator to move between tables in your current work area.
 
 
 ### User info and sign out
@@ -46,7 +46,7 @@ Select the user menu to view your account information or sign out. Go to your ac
 Use the app-selector menu to switch between apps.
 
 1. Select the current app name.
-2. On the **Apps** page select an app. You will only see apps for your organization.
+2. On the Apps page, select an app. You'll only see apps for your organization.
 
    > [!div class="mx-imgBorder"] 
    > ![The app-selector menu.](media/app-selector2.png "The app-selector menu")   
@@ -66,17 +66,21 @@ Legend
 3. **Recent**: Expand this entry to view a list of rows you were recently using. Select a row here to open it. Select the push-pin icon next to a row listed here to add it to your pinned rows. This is limited to displaying the last 10 rows of pages most recently loaded across apps for the user within this organization.
 4. **Pinned**: Expand this entry to view and open your favorite pinned rows. Use the **Recent** list to add rows here. Select the remove-pin icon next to a row listed here to remove it from this list. The number of pinned rows displayed is limited to 25, but no more than 15 rows from a single table are displayed. 
 5.  **Page navigation**: This area lists each table and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that table.
-6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+
+    > [!NOTE]
+    > When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigation to dashboards will take the user to the default dashboard, which may be a different dashboard than the named dashboard the user selected.   
+
+6.  **Collapsible groups**: Your app maker can enable collapsible groups. For information on how to customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
-If your screen is zoomed in too much or is very narrow, then you won't see your current app name which lets you change apps. To access the change app button, select **Site map** > **Apps**. 
+If your screen is zoomed in too much or is narrow, then you won't see your current app name which lets you change apps. To access the change app button, select **Site map** > **Apps**. 
 
 ![Select the site map button to access the app switcher.](media/zoom-app.png "Select site map to access app switcher")
 
 
 ### Hide or show the Home, Pinned, Recent, and collapsible groups
 
-Your site map might look different if it's been customized. Your app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
+Your site map might look different if it's been customized. Your app maker can customize the navigation bar to show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For information on how to customize the navigation bar, see [Overview of the model-driven app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 
 ![This diagram shows how the site map looks with a app maker customizes it to hide or show the Home, Pinned, Recent, and collapsible groups.](media/hide-show-nav-bar-buttons.gif
@@ -109,11 +113,11 @@ Usually, when you first open a table, you'll see the list view, which shows a li
 Legend:
 
 1. **Go back**: Select to go back to the previous page.
-2. **Select rows**: Select one or more rows by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected rows at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to ten rows to send via email. 
+2. **Select rows**: Select one or more rows by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected rows at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to 10 rows to send via email. 
 3. **Open a row**: Select any row in the list to open its row view, which shows all the details about the row. Usually you select from the **Name** column to open a row from the current table. Some tables provide links to rows from related tables in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
 5. **Open advanced filtering panel**: See which filters are applied to the current view and add or modify view filters.
-6. **Command bar**: Use the commands in the command bar to operate on rows in the list and perform related actions. Some commands (such as **Delete**) require that you first select one or more target rows by placing a check mark in the leftmost column, while others operate on the entire list. You can export the list to an Excel workbook (possibly based on a template), open charts and dashboards, and more, depending on the type of rows you're working with.
+6. **Command bar**: Use the commands in the command bar to operate on rows in the list and do related actions. Some commands (such as **Delete**) require that you first select one or more target rows by placing a check mark in the leftmost column, while others operate on the entire list. You can export the list to an Excel workbook (possibly based on a template), open charts and dashboards, and more, depending on the type of rows you're working with.
 7. **Search the view**: Enter text in the search column above the list to show only those rows in the current view that contain your text.
 8. **Jump bar and paging**: Select a letter to show only those rows whose names start with that letter. If the list contains more rows than can be shown on one page, use the paging arrows at the bottom of the list to move forward and backward through the pages.
 
@@ -131,7 +135,7 @@ Legend:
 When you choose a table name from the **Related** drop-down list, a new tab named for that table opens, showing a list of all related rows of that type. The **Related** tab remains available, and you can still use it to find other types of rows that reference the current one.
 3. **Command bar**: Use the commands in the command bar to operate on the current row or perform a task related to the row. The available commands vary based on the row type, but you can typically use the command bar to save your changes, delete the row, refresh the page, email a link to the row, reassign the row owner, or export the row by using a Word template.
 4. **Heading bar**: Some row views display a few especially important columns in the heading bar, opposite the row name. These are typically columns that are fundamental to working with rows of the current type (such as a row name or row owner).
-5. **View and edit all column values**: In the main body of the row view, you'll find all of the columns related to the current tab, form view, and row type. Columns marked with a red asterisk are required, and you can't save the row without their having valid values. Columns marked with a blue plus sign are especially important or recommended, but aren't strictly required. Columns showing a lock icon are read-only and can't be edited.
+5. **View and edit all column values**: In the main body of the row view, you'll find all of the columns related to the current tab, form view, and row type. Columns marked with a red asterisk are required, and you can't save the row without their having valid values. Columns marked with a blue plus sign are especially important or recommended, but aren't strictly required. Columns showing a lock icon are read only and can't be edited.
 
 ## Row set navigation 
 
@@ -171,9 +175,9 @@ Legend:
 3. **Error notifications** ![Error notifications.](media/error_icon.png "Error notification icon"): The notification is an error. 
 
 
-### Multiple notification
+### Multiple notifications
 
-If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
+If there's only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
 
 ![Example of multiple notifications.](media/multiple_notification_1.png "Example of multiple notifications")
 

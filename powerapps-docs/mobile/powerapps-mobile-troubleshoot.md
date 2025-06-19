@@ -3,11 +3,11 @@ title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: trdehove
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 07/11/2024
+ms.topic: troubleshooting-general
+ms.date: 12/19/2024
 ms.subservice: mobile
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 contributors:
@@ -20,7 +20,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Resolve canvas apps performance issues
 
-Learn about most common performance issues that can make canvas apps run slow and how to improve performance. More information: [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md).
+Learn about most common performance issues that can make canvas apps run slow and how to improve performance. More information: - [Troubleshoot Power Apps canvas app performance issues](/troubleshoot/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-table)
 
 ## Diagnose mobile apps with Monitor
 
@@ -49,7 +49,7 @@ If you already have the Microsoft Authenticator app installed and you're having 
 
 If you get this error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
 
-Microsoft authentication apps are Authenticator and Company Portal. Your company may use a third-party authentication app. If you're not sure, ask your IT department or help desk which authentication app to use. Once you have the correct authentication app, then follow the steps below.
+Microsoft authentication apps are Authenticator and Company Portal. Your company might use a non-Microsoft authentication app. If you're not sure, ask your IT department or help desk which authentication app to use. Once you have the correct authentication app, then follow the steps below.
 
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
@@ -85,7 +85,7 @@ If the issue is still not fixed, then try these steps:
 
 ## App list is empty
 
-The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has downloaded. This can happen in any of the following scenarios:
+The app list in the Power Apps mobile app might appear empty when you lose internet connection before the app list has downloaded. This can happen in any of the following scenarios:
 
 - It's the first time you're signing in to the mobile app.
 - When you pull down to refresh the app list.
@@ -109,7 +109,7 @@ If you experience a reset while using a canvas app, contact your app developer, 
 
 ## Unable to download SharePoint attachment in the mobile app
 
-The Power Apps platform does not support accessing authenticated URLs, including SharePoint attachments. If you run a Power Apps application in a web browser and it tries to access a SharePoint attachment, it may work if you're signed-in to SharePoint in another tab. This is because web browsers support multiple signed-in users, and sign-ins are valid across browser tabs. However, the Power Apps mobile app isn't a web browser, so does not benefit from this browser-based behavior.
+The Power Apps platform doesn't support accessing authenticated URLs, including SharePoint attachments. If you run a Power Apps application in a web browser and it tries to access a SharePoint attachment, it might work if you're signed-in to SharePoint in another tab. This is because web browsers support multiple signed-in users, and sign-ins are valid across browser tabs. However, the Power Apps mobile app isn't a web browser, so doesn't benefit from this browser-based behavior.
 
 ## Flows created in a solution aren't supported on Power Apps mobile
 
@@ -121,7 +121,7 @@ When using the Dynamics 365 mobile app, you encounter the following message: **C
 
 To check for recently added apps, select Refresh. If you can’t find your app, change your search criteria and try again.**
 
- For more information see, [Troubleshoot "We can’t find any apps for your role"  error message](https://support.microsoft.com/help/4486472/we-can-t-find-any-apps-for-your-role-message-in-dynamics-365-for-phone).
+ For more information go to, [Troubleshoot "We can’t find any apps for your role"  error message](/troubleshoot/power-platform/dataverse/environment-app-access/we-cannot-find-any-apps-your-role).
  
 ## The list of apps is empty
 
@@ -144,9 +144,9 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
 
  **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Setup overview for mobile apps](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements).  
   
- **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user hasn't been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
+ **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user hasn't been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user might not have a  license assigned. 
  
- If the user has the Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you may notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
+ If the user has the Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you might notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
  
 Access the **Active** users section in the admin center and verify you have a **Dynamics 365 Customer Engagement Plan** license assigned to your user record.  
   
@@ -156,7 +156,7 @@ Access the **Active** users section in the admin center and verify you have a **
   
  **Cause 2**: See the following KB article:  
   
- An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](https://support.microsoft.com/kb/2899860).  
+ An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](/previous-versions/troubleshoot/dynamics/crm/error-occurs-child-business-units).  
   
  **Sample Trace Message for Cause 2**:  
   
@@ -197,7 +197,7 @@ Access the **Active** users section in the admin center and verify you have a **
   
 - **Android**: [How to force close Android apps](https://support.google.com/android/answer/9079646?hl=en#close_apps)  
   
-**Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
+**Cause 2**: You might be seeing a different form than the one you customized. If you have multiple forms for an entity, you see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
 
  ## Native Android or iOS links aren't supported
 The Dynamics 365 mobile app doesn't support universal links on iOS and Android app links on Android.
@@ -242,20 +242,17 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
 3. On the command bar, select **Set as Home**.  
   
-
-#### Or, you can create a personal dashboard through the web app and enable it for mobile:  
+#### Or, you can create a personal dashboard through the web app:  
   
 1. In the web app, go to **Sales > Dashboards**.  
   
-2. Select **New**.  
+1. Select **New**.  
   
-3. Select **Properties**.  
-
-4. Enter a name for your dashboard and select **Enable for mobile**.  
+1. Select **Properties**.  
   
-5. Add the components you want on your dashboard and select **Save**.  
+1. Add the components you want on your dashboard and select **Save**.  
   
-6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
+1. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
    
 
 ## Network requests fail when Power Apps mobile app is running in the background

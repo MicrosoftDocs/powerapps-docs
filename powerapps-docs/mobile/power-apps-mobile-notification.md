@@ -9,7 +9,7 @@ ms.date: 3/14/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -37,7 +37,7 @@ Create an app
 
 You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md#create-your-model-driven-app)
+- [Create a model-drive app](../maker/model-driven-apps/build-first-model-driven-app.md)
 - [Create a canvas app](../maker/canvas-apps/get-started-test-drive.md)
      
 ## Create a notification from a flow
@@ -112,8 +112,6 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
-	 
-     ![Enter the notification information.](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.

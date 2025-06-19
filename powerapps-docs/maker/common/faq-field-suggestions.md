@@ -1,13 +1,15 @@
 ---
 title: FAQs for field suggestions by Copilot
 description: These FAQs provide information about the AI technology that uses to get field suggestions by Copilot, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 5/15/2024
+ms.date: 5/28/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: faq
 author: norliu
 ms.author: norliu
 ms.reviewer: mkaur
+contributors:
+- Mattp123
 ms.collection: 
     - bap-ai-copilot 
 ---
@@ -16,27 +18,32 @@ ms.collection:
 
 These frequently asked questions (FAQs) describe the AI impact of field suggestions by Copilot in Power Apps.
 
-##  What is field suggestions by Copilot?
+## What is field suggestions by Copilot?
 
 In Power Apps Studio, when a maker connects a gallery or form to a data table, Power Apps automatically selects certain system-generated key columns, such as ID, created on, or modified on. These columns might not be relevant to the app users. Moreover, makers have to manually select each field, which can be a tedious process for large data tables. With field suggestions, Copilot can recommend relevant columns to the gallery or form when the developer binds it to data using the table’s metadata. This feature can save makers time in field configuration, thereby accelerating the app building process.
 
-## What are the system’s capabilities? 
+## What are the system’s capabilities?
 
 At the time, a maker first binds to or changes data source of a gallery or form to a data table, Copilot will automatically suggest up to 10 of the most relevant fields. A maker must approve the suggestions for it to take effect. Makers can adjust the results easily as they change fields today.
 
 Supported controls:
--	Gallery
--	Form (classic)
--	Form (modern)
--	Table (modern)
+
+- Gallery
+- Form (classic)
+- Form (modern)
+- Table (modern)
+- Supported views and forms (model-driven apps)
+- Quick view form
+- Quick create form
+- New view
 
 Supported data sources:
--	Dataverse
--	SQL
--	SharePoint list
 
+- Dataverse
+- SQL
+- SharePoint list
 
-## What is the system’s intended use? 
+## What is the system’s intended use?
 
 The system is intended to help makers save time in app editing by preloading and selecting the most relevant fields when data source change happens. 
 
@@ -54,15 +61,15 @@ We evaluate the feature both qualitatively and quantitatively. To assess the qua
 -	This feature doesn’t support non-English language input.
 -	This feature only supports limited controls and actions as listed in the [intended use](faq-field-suggestions.md#what-is-the-systems-intended-use) section. - Microsoft is actively working on expanding the scope of this feature and support more actions incrementally.
 
-
 ## What operational factors and settings allow for effective and responsible use of the system?
 
 Copilot will only read your table’s metadata (so table name, description, column name, description, column’s data type) to make recommendations and select fields. To yield the best quality, it’s strongly recommended that when you create your data source, use meaningful names and descriptions for both the table and the columns.
 
-
 ## See also
 
 [Use field suggestions by Copilot](../canvas-apps/ai-field-suggestions.md)
+
+[Column suggestions by Copilot](../model-driven-apps/create-and-edit-forms.md#column-suggestions-by-copilot)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,8 +1,8 @@
 ---
 title: Property Element | Microsoft Docs
 description: The property node defines a specific, configurable piece of data that the component expects from the Microsoft Dataverse.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -61,7 +61,7 @@ The `of-type` property value must be one of the following:
 description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

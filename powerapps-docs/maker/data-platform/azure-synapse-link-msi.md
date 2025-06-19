@@ -6,8 +6,9 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/06/2024
+ms.date: 09/24/2024
 ms.custom: template-how-to 
+ms.subservice: dataverse-maker
 ---
 # Use managed identities for Azure with your Azure data lake storage
 
@@ -123,7 +124,7 @@ With managed identities, access to your storage account is restricted to request
 
 ## Grant reader access to the enterprise policy via Azure
 
-Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
+Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, Azure Key vault admin membership is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
 
 Only the Dynamics 365 and Power Platform admins who were granted the reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
 
@@ -152,14 +153,14 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 1. Obtain the Dataverse environment ID.
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-   1. Select **Environments**, and then open your environment.
+   1. Select **Manage** > **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
    1. To link to the Dataverse environment, run this PowerShell script: `./NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
    1. Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
 1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-1. Select **Environments**, and then open the environment you specified earlier.
+1. Select **Manage** > **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
 ## Configure network access to the Azure Data Lake Storage Gen2
@@ -203,6 +204,7 @@ When you create the link, Azure Synapse Link for Dataverse gets details about th
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
 1. On the left navigation pane, select **Azure Synapse Link**, and then select **+ New link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Fill in the appropriate fields, according to the intended setup. Select the **Subscription**, **Resource group**, and **Storage account**. To connect Dataverse to Synapse workspace, select the **Connect to your Azure Synapse workspace** option. For Delta Lake data conversion select a Spark pool.
 1. Select **Select Enterprise Policy with Managed Service Identity**, and then select **Next**.
 1. Add the tables you want to export, and then select **Save**.
 

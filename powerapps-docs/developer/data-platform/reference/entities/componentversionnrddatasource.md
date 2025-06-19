@@ -1,58 +1,55 @@
 ---
-title: "Component Version (Internal) (componentversionnrddatasource)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Component Version (Internal) (componentversionnrddatasource)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Component Version (Internal) (componentversionnrddatasource) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Component Version (Internal) (componentversionnrddatasource) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Component Version (Internal) (componentversionnrddatasource)  table/entity reference
+# Component Version (Internal) (componentversionnrddatasource) table/entity reference (Microsoft Dataverse)
 
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
-
-
-
-**Added by**: Component Versioning Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Create|POST /componentversionnrddatasourceset<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /componentversionnrddatasourceset<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|Upsert||<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
-|UpsertMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+The following table lists the messages for the Component Version (Internal) (componentversionnrddatasource) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: False |`POST` /componentversionnrddatasourceset<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: False |`DELETE` /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `DeleteMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.DeleteMultiple?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: False | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: False |`GET` /componentversionnrddatasourceset<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: False |`PATCH` /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /componentversionnrddatasourceset(*componentversionnrddatasourceid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|componentversionnrddatasources|
-|DisplayCollectionName|Component Versions (Internal)|
-|DisplayName|Component Version (Internal)|
-|EntitySetName|componentversionnrddatasourceset|
-|IsBPFEntity|False|
-|LogicalCollectionName|componentversionnrddatasourceset|
-|LogicalName|componentversionnrddatasource|
-|OwnershipType|None|
-|PrimaryIdAttribute|componentversionnrddatasourceid|
-|PrimaryNameAttribute|componentversionname|
-|SchemaName|componentversionnrddatasource|
+The following table lists selected properties for the Component Version (Internal) (componentversionnrddatasource) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Component Version (Internal)** |
+| **DisplayCollectionName** | **Component Versions (Internal)** |
+| **SchemaName** | `componentversionnrddatasource` |
+| **CollectionSchemaName** | `componentversionnrddatasources` |
+| **EntitySetName** | `componentversionnrddatasourceset`|
+| **LogicalName** | `componentversionnrddatasource` |
+| **LogicalCollectionName** | `componentversionnrddatasourceset` |
+| **PrimaryIdAttribute** | `componentversionnrddatasourceid` |
+| **PrimaryNameAttribute** |`componentversionname` |
+| **TableType** | `Elastic` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -72,244 +69,221 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SystemChangeSummary](#BKMK_SystemChangeSummary)
 - [TTLInSeconds](#BKMK_TTLInSeconds)
 
-
 ### <a name="BKMK_ChangeSummary"></a> ChangeSummary
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Change Summary|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Change Summary**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|changesummary|
-|MaxLength|2048|
+|LogicalName|`changesummary`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2048|
 
 ### <a name="BKMK_Component"></a> Component
 
 |Property|Value|
-|--------|-----|
-|Description|Owning component.|
-|DisplayName|Component|
+|---|---|
+|Description|**Owning component.**|
+|DisplayName|**Component**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|component|
+|LogicalName|`component`|
 |RequiredLevel|ApplicationRequired|
-|Targets|workflow|
 |Type|Lookup|
-
+|Targets|workflow|
 
 ### <a name="BKMK_ComponentIdType"></a> ComponentIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentidtype|
+|LogicalName|`componentidtype`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_componentversionname"></a> componentversionname
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Version Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Version Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|componentversionname|
-|MaxLength|100|
+|LogicalName|`componentversionname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_componentversionnrddatasourceId"></a> componentversionnrddatasourceId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Component Version (Internal)|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Component Version (Internal)**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|componentversionnrddatasourceid|
+|LogicalName|`componentversionnrddatasourceid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_Operation"></a> Operation
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Operation|
+|DisplayName|**Operation**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|operation|
+|LogicalName|`operation`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentversionnrddatasource_operation`|
 
 #### Operation Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Create||
-|1|Update||
-|2|Publish||
-|3|Restore||
-|4|Solution Import||
-
-
+|Value|Label|
+|---|---|
+|0|**Create**|
+|1|**Update**|
+|2|**Publish**|
+|3|**Restore**|
+|4|**Solution Import**|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_PartitionId"></a> PartitionId
 
 |Property|Value|
-|--------|-----|
-|Description|Logical partition id. A logical partition consists of a set of records with same partition id.|
-|DisplayName|Partition Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Logical partition id. A logical partition consists of a set of records with same partition id.**|
+|DisplayName|**Partition Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|partitionid|
-|MaxLength|100|
+|LogicalName|`partitionid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_RestoredFromVersion"></a> RestoredFromVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Base version that was restored.|
-|DisplayName|Restored From Version|
+|---|---|
+|Description|**Base version that was restored.**|
+|DisplayName|**Restored From Version**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|restoredfromversion|
+|LogicalName|`restoredfromversion`|
 |RequiredLevel|None|
-|Targets|componentversionnrddatasource|
 |Type|Lookup|
-
+|Targets|componentversionnrddatasource|
 
 ### <a name="BKMK_restoredfromversionPId"></a> restoredfromversionPId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|restoredfromversionpid|
-|MaxLength|100|
+|LogicalName|`restoredfromversionpid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_SystemChangeSummary"></a> SystemChangeSummary
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|System Change Summary|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**System Change Summary**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|systemchangesummary|
-|MaxLength|1073741823|
+|LogicalName|`systemchangesummary`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_TTLInSeconds"></a> TTLInSeconds
 
 |Property|Value|
-|--------|-----|
-|Description|Time to live in seconds.|
-|DisplayName|Time to live|
-|Format|None|
+|---|---|
+|Description|**Time to live in seconds.**|
+|DisplayName|**Time to live**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ttlinseconds|
-|MaxValue|2147483647|
-|MinValue|1|
+|LogicalName|`ttlinseconds`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [ComponentName](#BKMK_ComponentName)
-- [ComponentYomiName](#BKMK_ComponentYomiName)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -317,518 +291,341 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningUser](#BKMK_OwningUser)
 - [Payload](#BKMK_Payload)
 - [Payload_Name](#BKMK_Payload_Name)
-- [restoredfromversionName](#BKMK_restoredfromversionName)
 - [VersionNumber](#BKMK_VersionNumber)
-
-
-### <a name="BKMK_ComponentName"></a> ComponentName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|componentname|
-|MaxLength|1000|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ComponentYomiName"></a> ComponentYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|componentyominame|
-|MaxLength|1000|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
 
-
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_Payload"></a> Payload
 
 |Property|Value|
-|--------|-----|
-|Description|Payload|
-|DisplayName|Payload|
+|---|---|
+|Description|**Payload**|
+|DisplayName|**Payload**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|payload|
+|LogicalName|`payload`|
 |RequiredLevel|None|
 |Type|File|
-
+|MaxSizeInKB|30720|
 
 ### <a name="BKMK_Payload_Name"></a> Payload_Name
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|payload_name|
+|LogicalName|`payload_name`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Disabled|
+|IsLocalizable|False|
 |MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_restoredfromversionName"></a> restoredfromversionName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|restoredfromversionname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [componentversionnrddatasource_ElasticFileAttachments](#BKMK_componentversionnrddatasource_ElasticFileAttachments)
-- [nrd_restoreversions](#BKMK_nrd_restoreversions)
-
-
-### <a name="BKMK_componentversionnrddatasource_ElasticFileAttachments"></a> componentversionnrddatasource_ElasticFileAttachments
-
-**Added by**: NonRelational Data Provider Custom Actions Solution
-
-Same as the [componentversionnrddatasource_ElasticFileAttachments](elasticfileattachment.md#BKMK_componentversionnrddatasource_ElasticFileAttachments) many-to-one relationship for the [elasticfileattachment](elasticfileattachment.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|elasticfileattachment|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|componentversionnrddatasource_ElasticFileAttachments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_nrd_restoreversions"></a> nrd_restoreversions
-
-Same as the [nrd_restoreversions](componentversionnrddatasource.md#BKMK_nrd_restoreversions) many-to-one relationship for the [componentversionnrddatasource](componentversionnrddatasource.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|componentversionnrddatasource|
-|ReferencingAttribute|restoredfromversion|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|restoredtoversions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
 - [lk_componentversionnrddatasource_createdby](#BKMK_lk_componentversionnrddatasource_createdby)
 - [lk_componentversionnrddatasource_createdonbehalfby](#BKMK_lk_componentversionnrddatasource_createdonbehalfby)
 - [lk_componentversionnrddatasource_modifiedby](#BKMK_lk_componentversionnrddatasource_modifiedby)
 - [lk_componentversionnrddatasource_modifiedonbehalfby](#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby)
-- [ElasticFileAttachment_componentversionnrddatasource_Payload](#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
-- [nrd_restoreversions](#BKMK_nrd_restoreversions)
+- [nrd_restoreversions](#BKMK_nrd_restoreversions-many-to-one)
 - [workflow_componentversionnrddatasourceset](#BKMK_workflow_componentversionnrddatasourceset)
-
-
-### <a name="BKMK_lk_componentversionnrddatasource_createdby"></a> lk_componentversionnrddatasource_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_componentversionnrddatasource_createdby](systemuser.md#BKMK_lk_componentversionnrddatasource_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_componentversionnrddatasource_createdonbehalfby"></a> lk_componentversionnrddatasource_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_componentversionnrddatasource_createdonbehalfby](systemuser.md#BKMK_lk_componentversionnrddatasource_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_componentversionnrddatasource_modifiedby"></a> lk_componentversionnrddatasource_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_componentversionnrddatasource_modifiedby](systemuser.md#BKMK_lk_componentversionnrddatasource_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_componentversionnrddatasource_modifiedonbehalfby"></a> lk_componentversionnrddatasource_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_componentversionnrddatasource_modifiedonbehalfby](systemuser.md#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload"></a> ElasticFileAttachment_componentversionnrddatasource_Payload
 
-**Added by**: NonRelational Data Provider Custom Actions Solution
+One-To-Many Relationship: [elasticfileattachment ElasticFileAttachment_componentversionnrddatasource_Payload](elasticfileattachment.md#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload)
 
-See the [ElasticFileAttachment_componentversionnrddatasource_Payload](elasticfileattachment.md#BKMK_ElasticFileAttachment_componentversionnrddatasource_Payload) one-to-many relationship for the [elasticfileattachment](elasticfileattachment.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`elasticfileattachment`|
+|ReferencedAttribute|`elasticfileattachmentid`|
+|ReferencingAttribute|`payload`|
+|ReferencingEntityNavigationPropertyName|`payload`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_nrd_restoreversions"></a> nrd_restoreversions
+### <a name="BKMK_lk_componentversionnrddatasource_createdby"></a> lk_componentversionnrddatasource_createdby
 
-See the [nrd_restoreversions](componentversionnrddatasource.md#BKMK_nrd_restoreversions) one-to-many relationship for the [componentversionnrddatasource](componentversionnrddatasource.md) table/entity.
+One-To-Many Relationship: [systemuser lk_componentversionnrddatasource_createdby](systemuser.md#BKMK_lk_componentversionnrddatasource_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_componentversionnrddatasource_createdonbehalfby"></a> lk_componentversionnrddatasource_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_componentversionnrddatasource_createdonbehalfby](systemuser.md#BKMK_lk_componentversionnrddatasource_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_componentversionnrddatasource_modifiedby"></a> lk_componentversionnrddatasource_modifiedby
+
+One-To-Many Relationship: [systemuser lk_componentversionnrddatasource_modifiedby](systemuser.md#BKMK_lk_componentversionnrddatasource_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_componentversionnrddatasource_modifiedonbehalfby"></a> lk_componentversionnrddatasource_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_componentversionnrddatasource_modifiedonbehalfby](systemuser.md#BKMK_lk_componentversionnrddatasource_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_nrd_restoreversions-many-to-one"></a> nrd_restoreversions
+
+One-To-Many Relationship: [componentversionnrddatasource nrd_restoreversions](#BKMK_nrd_restoreversions-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`componentversionnrddatasource`|
+|ReferencedAttribute|`componentversionnrddatasourceid`|
+|ReferencingAttribute|`restoredfromversion`|
+|ReferencingEntityNavigationPropertyName|`restoredfromversion`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_workflow_componentversionnrddatasourceset"></a> workflow_componentversionnrddatasourceset
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [workflow workflow_componentversionnrddatasourceset](workflow.md#BKMK_workflow_componentversionnrddatasourceset)
 
-See the [workflow_componentversionnrddatasourceset](workflow.md#BKMK_workflow_componentversionnrddatasourceset) one-to-many relationship for the [workflow](workflow.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`workflow`|
+|ReferencedAttribute|`workflowid`|
+|ReferencingAttribute|`component`|
+|ReferencingEntityNavigationPropertyName|`component_workflow`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `RemoveLink`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [componentversionnrddatasource_ElasticFileAttachments](#BKMK_componentversionnrddatasource_ElasticFileAttachments)
+- [nrd_restoreversions](#BKMK_nrd_restoreversions-one-to-many)
+
+### <a name="BKMK_componentversionnrddatasource_ElasticFileAttachments"></a> componentversionnrddatasource_ElasticFileAttachments
+
+Many-To-One Relationship: [elasticfileattachment componentversionnrddatasource_ElasticFileAttachments](elasticfileattachment.md#BKMK_componentversionnrddatasource_ElasticFileAttachments)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`elasticfileattachment`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`componentversionnrddatasource_ElasticFileAttachments`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_nrd_restoreversions-one-to-many"></a> nrd_restoreversions
+
+Many-To-One Relationship: [componentversionnrddatasource nrd_restoreversions](#BKMK_nrd_restoreversions-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`componentversionnrddatasource`|
+|ReferencingAttribute|`restoredfromversion`|
+|ReferencedEntityNavigationPropertyName|`restoredtoversions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.componentversionnrddatasource?text=componentversionnrddatasource EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.componentversionnrddatasource?displayProperty=fullName>

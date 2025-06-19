@@ -5,11 +5,12 @@ author: denise-msft
 ms.author: demora
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
 ms.date: 06/06/2024
 ms.custom: template-how-to
 contributors:
-- dikamath
+- sriknair
 ---
 
 # Explore and test Dataverse in the Web API playground (preview)
@@ -134,7 +135,7 @@ The tool uses the authentication token of the logged in user that is required to
 
 ### Is the API playground feature available in all environments?
 
-The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-the-dataverse-accelerator).
+The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-or-update-the-dataverse-accelerator).
 
 ## See also
 

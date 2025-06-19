@@ -2,9 +2,9 @@
 title: Use Web API functions
 description: Learn how to use functions, which are reusable operations used with a GET request to retrieve data from Microsoft Dataverse Web API.
 ms.topic: how-to
-ms.date: 04/26/2022
-author: divkamath
-ms.author: dikamath
+ms.date: 08/29/2024
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -26,20 +26,23 @@ Functions are reusable operations that you can perform using the Web API. There 
 
 ## Passing parameters to a function
   
-For those functions that require parameters, the best practice is to pass the values using parameters.
+For those functions that require parameters, the best practice is to pass the values using parameter aliases.
 
 For example, when you use the <xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName> function, you must include the `LocalizedStandardName` and `LocaleId` parameter values. You could use the following inline syntax:
   
 ```http
-GET [Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName='Pacific Standard Time',LocaleId=1033)  
+GET [Organization URI]/api/data/v9.2/GetTimeZoneCodeByLocalizedName(LocalizedStandardName='Pacific Standard Time',LocaleId=1033)  
 ```  
   
-However, there's an issue using DateTimeOffset values with the inline syntax, as explained in the following article: [DateTimeOffset as query parameter #204](https://github.com/OData/WebApi/issues/204).  
+However, there are a couple of issues that can cause requests to fail unless you send these requests using parameter aliases:
+
+- You can get a `400 Bad Request - Invalid URL` error if you exceed the [Maximum OData segment length](compose-http-requests-handle-errors.md#maximum-odata-segment-length)
+- There is an issue using DateTimeOffset values with the inline syntax, as explained in the following article: [DateTimeOffset as query parameter #204](https://github.com/OData/WebApi/issues/204).
   
-Avoid the `DateTimeOffset` issue by passing the values in as parameters, as shown in the following code sample:
+Avoid these issues by passing the values in with parameter aliases, as shown in the following code sample:
   
 ```http
-GET [Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific Standard Time'&@p2=1033  
+GET [Organization URI]/api/data/v9.2/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific Standard Time'&@p2=1033  
 ```  
   
 When a parameter value is used multiple times, [parameter aliases](query/overview.md#use-parameter-aliases-with-query-options) allow you to reuse it to reduce the length of the URL.
@@ -59,7 +62,7 @@ Certain functions require passing a reference to an existing record. For example
 When you pass a reference to an existing record, use the `@odata.id` annotation to the Uri for the record. For example if you're using the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function you can use the following Uri to specify retrieving access to a specific contact record:  
   
 ```http
-GET [Organization URI]/api/data/v9.0/systemusers(af9b3cf6-f654-4cd9-97a6-cf9526662797)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@tid)?@tid={'@odata.id':'contacts(9f3162f6-804a-e611-80d1-00155d4333fa)'}
+GET [Organization URI]/api/data/v9.2/systemusers(af9b3cf6-f654-4cd9-97a6-cf9526662797)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@tid)?@tid={'@odata.id':'contacts(aaaabbbb-0000-cccc-1111-dddd2222eeee)'}
 ```  
   
 The `@odata.id` annotation can be either the full URI or a relative URI.
@@ -164,7 +167,7 @@ When you invoke an unbound function, use just the function name, as shown in the
  **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.0/WhoAmI() HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/WhoAmI() HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -177,10 +180,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
 {  
- "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
- "BusinessUnitId": "ded5a64f-f06d-e511-80d0-00155db07cb1",  
- "UserId": "d96e9f55-f06d-e511-80d0-00155db07cb1",  
- "OrganizationId": "4faf1f34-f06d-e511-80d0-00155db07cb1"  
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
+ "BusinessUnitId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",  
+ "UserId": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa",  
+ "OrganizationId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"  
 }  
 ```  
   
@@ -210,7 +213,7 @@ Functions listed in the <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> are int
 The following example uses the <xref:Microsoft.Dynamics.CRM.LastXHours> query function to return all account entities modified in the past 12 hours:
   
 ```http
-GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)&@p1='modifiedon'&@p2=12  
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,accountnumber&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)&@p1='modifiedon'&@p2=12  
 ```  
 
 #### Limitations of query functions
@@ -220,25 +223,25 @@ One of the limitations of query functions is that you can't use the `not` operat
 For example, the following query, which uses <xref:Microsoft.Dynamics.CRM.EqualUserId>, fails with the error: `Not operator along with the Custom Named Condition operators is not allowed`.
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
+GET [Organization URI]/api/data/v9.2/systemusers?$select=fullname,systemuserid&$filter=not Microsoft.Dynamics.CRM.EqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
 
 Several query functions have a companion negated query function. For example, <xref:Microsoft.Dynamics.CRM.NotEqualUserId> negates <xref:Microsoft.Dynamics.CRM.EqualUserId>, so the following query returns the expected results:
 
 ```http
-GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
+GET [Organization URI]/api/data/v9.2/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
 
 Other query functions can be negated in different ways. For example, rather than trying to negate the <xref:Microsoft.Dynamics.CRM.Last7Days> query function like this (which fail with the same error as mentioned previously):
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
+GET [Organization URI]/api/data/v9.2/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
 ```
 
 Use the <xref:Microsoft.Dynamics.CRM.OlderThanXDays> query function like this:
 
 ```http
-GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
+GET [Organization URI]/api/data/v9.2/accounts?$select=name&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName=@p1,PropertyValue=@p2)&@p1='createdon'&@p2=7
 ```
 
 ### See also

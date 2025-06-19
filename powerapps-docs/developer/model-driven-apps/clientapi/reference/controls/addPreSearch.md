@@ -1,8 +1,8 @@
 ---
-title: "addPreSearch (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addPreSearch (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOnPreSearch method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 08/12/2023
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse | Microsoft Docs"
 description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
-ms.date: 08/22/2023
-ms.topic: article
+ms.date: 09/11/2024
+ms.topic: tutorial
 author: JimDaly
 ms.subservice: dataverse-developer
 ms.author: jdaly
@@ -71,9 +71,7 @@ It looks something like this: `https://yourorgname.api.crm.dynamics.com/api/data
 
 1. In the Microsoft Entra admin center, expand the **Applications** node in the left navigation pane and select **App registrations**.
 
-   :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Microsoft Entra App registrations page.":::
-
-This is where you will start step 2.
+   This is where you will start step 2.
 
 ## Step 2: Create a Blazor WebAssembly standalone app using Microsoft Entra ID for authentication
 
@@ -490,7 +488,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 ### See also
 
-[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)  
+[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Microsoft Entra ID](walkthrough-register-app-azure-active-directory.md)<br />

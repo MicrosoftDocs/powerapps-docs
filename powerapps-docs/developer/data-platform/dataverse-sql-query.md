@@ -1,12 +1,12 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2024
+ms.date: 05/27/2025
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "RichdiMSFT" # GitHub ID
+ms.topic: how-to
+author: "pnghub" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "richdi" # MSFT alias of Microsoft employees only
+ms.author: "gned" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
@@ -21,6 +21,8 @@ The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endp
 ## Prerequisites
 
 The **Enable TDS endpoint** setting must be enabled in your environment. That setting is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
+
+To prevent data exfiltration, turn on the [user level access control for TDS endpoint](/power-platform/admin/control-tds-settings#enable-user-level-control). Assign a least privilege security role with data access permission to only the tables that your users need to access, and grant the **Allow user to access TDS endpoint** miscellaneous privilege.
 
 ## Applications support
 
@@ -95,7 +97,7 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 > After making changes to labels for a choice column, the table needs to have customizations published.
 
 > [!NOTE]
-> Including a large number of choice labels in your query will have significant impact on performance. It is best to use less than 10 labels if possible. Because choice labels are localized, the localized string is more expensive to return.
+> Including a large number of choice labels in your query have significant impact on performance. It's best to use less than 10 labels if possible. Because choice labels are localized, the localized string is more expensive to return.
 
 ### Reported SQL version
 
@@ -128,6 +130,9 @@ The Dataverse TDS endpoint no longer has a hard maximum size limit. Instead, the
 > [!TIP]
 > To help keep the size of the returned data within acceptable limits, use as few multi-line text columns and choice columns as possible.
 
+> [!WARNING]
+> The five (5) minute timeout can be adjusted to two (2) minutes depending on the query complexity. For example, queries containing `SELECT *`, `NESTED FROMs and/or JOINs` automatically adjust the timeout limit to two (2) minutes as those queries put too much pressure on the server when left running for a long time. It's advised to avoid using these patterns in SQL for maximum performance.
+
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
 Querying data using SQL doesn't trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that are normally performed by such a plug-in don't take effect for a SQL query.
@@ -149,13 +154,13 @@ Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQ
 
 - Error returned when using **Microsoft Entra ID – Integrated** authentication.
 
-"Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
+"Sign-in failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2
 Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **SQL Server** authentication.
 
-"Login failed: Request is not authenticated.
+"Sign-in failed: Request is not authenticated.
 RequestId: TDS;918aa372-ccc4-438a-813e-91b086355343;1
 Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)"
 

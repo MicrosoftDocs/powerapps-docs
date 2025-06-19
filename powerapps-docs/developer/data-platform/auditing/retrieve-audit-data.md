@@ -3,7 +3,7 @@ title: Retrieve the history of audited data changes
 description: Learn how to programmatically retrieve the audit change history of records in Microsoft Dataverse.
 ms.date: 06/02/2023
 ms.reviewer: jdaly
-ms.topic: conceptual
+ms.topic: how-to
 author: paulliew
 ms.author: paulliew
 ms.subservice: dataverse-developer
@@ -393,7 +393,7 @@ You can use any of three messages to retrieve data changes that are audited.
 
 |Web API |SDK for .NET |Description|
 |---------|---------|---------|
-|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class>](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
+|[RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)|[RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)|Retrieve the full audit details from an audit record.|
 |[RetrieveAttributeChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory)|[RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest)|Retrieve the change history for a single column of an audited record.|
 |[RetrieveRecordChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory)|[RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)|Retrieve all audited data changes for a specific record.|
 
@@ -410,7 +410,7 @@ These messages provide more details that depend on the type of action. The detai
 |[RelationshipAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.RelationshipAuditDetail)|[RelationshipAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail)|Provides details when records are associated or disassociated using a many-to-many relationship. Provides the name of the relationship and a list of the records the operation changed.<br/>Returned by [many-to-many relationship events](#many-to-many-relationship-events).|
 |[RolePrivilegeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail)|[RolePrivilegeAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail)|Provides details when the definitions of [Security Role (Role)](../reference/entities/role.md) records change. Provides information about the old and new role privileges associated with the role.<br/>Returned by [security role change events](#security-role-change-events).|
 |[ShareAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.ShareAuditDetail)|[ShareAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.ShareAuditDetail)|Provides details when a record is shared or unshared or when the level of access to a shared record changes.<br/> Returned by [record sharing events](#record-sharing-events).|
-|[UserAccessAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail)|[UserAccessAuditDetail Class>](xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail)|Provides details to track user access auditing. Provides details on the interval and access time.<br/> Returned by [user access events](#user-access-events).|
+|[UserAccessAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.UserAccessAuditDetail)|[UserAccessAuditDetail Class](xref:Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail)|Provides details to track user access auditing. Provides details on the interval and access time.<br/> Returned by [user access events](#user-access-events).|
 
 > [!IMPORTANT]
 >

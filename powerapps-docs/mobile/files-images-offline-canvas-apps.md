@@ -4,12 +4,12 @@ title: Configure files and images in offline canvas apps
 description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
-ms.topic: article
-ms.date: 03/13/2024
+ms.topic: how-to
+ms.date: 04/09/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: ritwikganni
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -65,7 +65,7 @@ The remainder of this article helps you configure on sync.
 
 ### Prerequisites - mobile offline profile
 
-To configure the automatic download of files and images on sync, you need to [create a cusotm, mobile offline profile](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) in the Power Platform admin center.
+To configure the automatic download of files and images on sync, you need to [create a custom, mobile offline profile](canvas-mobile-offline-setup.md#create-a-custom-mobile-offline-profile-with-admin-rights) in the Power Platform admin center.
 
 ### Enable offline access to images and files
 

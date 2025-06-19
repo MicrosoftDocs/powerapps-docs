@@ -2,10 +2,10 @@
 title: Power Apps system requirements and limits
 description: Learn about device platform and web browser requirements, limits, and configuration values for Power Apps.
 author: lancedMicrosoft
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 04/04/2024
+ms.date: 5/21/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -97,24 +97,28 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azure-apim.net |https |API Hubs - Different subdomains for each locale |
 | \*.azure-apihub.net |https |API Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
+| \*.gateway.prod.island.powerapps.com | WSS | Required for communication with and startup of canvas apps. |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
-| \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
+| \*.azurefd.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.ces.microsoftcloud.com<br/>config.centro.core.microsoft<br/>admin.microsoft.com<br/>petrol.office.microsoft.com  | https  | Access to net promoter score (NPS) and surveys. |
 | \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You can [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
 | \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>Singapore: 20</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
-| eu-mobile.events.data.microsoft.com/Collector/3.0| https | European region telemetry endpoint for model-driven apps |
+| http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>Singapore: 20</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
 | browser.pipe.aria.microsoft.com | https | Rest of the World telemetry endpoint for model-driven apps |
+| *.events.data.microsoft.com | https | Telemetry endpoint for Power Apps|
 | localhost | http | Power Apps Mobile|
 | 127.0.0.1 | http <br><br>You might need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
-| augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
+| augloop.svc.cloud.microsoft<br>\*.augloop.svc.cloud.microsoft | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.powerplatform.com <br> *.api.powerplatformusercontent.com <br> *.powerplatformusercontent.com| https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 | ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
 | arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 | *.hubblecontent.osi.office.net<br>hubble.officeapps.live.com<br>res.cdn.office.net |https |Provides stock images to use in your app |
 | dc.services.visualstudio.com | https | [Application Insights](/azure/azure-monitor/app/app-insights-overview) endpoint used for [custom telemetry in canvas app](maker/canvas-apps/application-insights.md) |
+| *.ocv.microsoft.com | https | Allows users to provide Copilot feedback data in Power Apps |
+| js.monitor.azure.com | https | This is used by the office header for reporting telemetry |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used before July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used before July 2022. <br>
@@ -148,8 +152,9 @@ The following table shows some of the examples where embedding a canvas app is a
 | A canvas app used as a custom form in the SharePoint page.                                      | Web, for example,   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, for example.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, for example, Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
-| A canvas app is embedded in a third party client.                                                 | Third party web client that iframe's an app         | Third party native client via WebView            |
+| A canvas app is embedded in a third party client.                                                 | Third party websites in a browser         | Third party native applications            |
 |A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
+| A canvas app embedded in Power BI | Web, for example, app.powerbi.com | Power BI Desktop Client |
 
 ### Model-driven app embedding
 

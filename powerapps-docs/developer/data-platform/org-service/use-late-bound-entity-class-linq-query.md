@@ -2,10 +2,10 @@
 title: "Use late-bound Entity class with a LINQ query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -19,7 +19,7 @@ contributors:
 
 In Microsoft Dataverse, you can use late binding with .NET Language-Integrated Query (LINQ) queries. Late binding uses the attribute logical name, and is resolved at runtime.  
   
-<a name="usinglatebindingjoin"></a>   
+<a name="usinglatebindingjoin"></a>
 
 ## Using late binding in a JOIN clause  
 
@@ -162,8 +162,8 @@ using (OrganizationServiceContext orgSvcContext = new OrganizationServiceContext
   
 ### See also
 
- [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
- [Order results using table columns with LINQ](order-results-entity-attributes-linq.md)   
+ [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)
+ [Order results using table columns with LINQ](order-results-entity-attributes-linq.md)
 <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.CreateQuery%60%601>
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

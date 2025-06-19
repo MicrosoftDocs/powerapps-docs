@@ -1,8 +1,8 @@
 ---
-title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "openForm (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the openForm method.
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 12/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -81,7 +81,7 @@ The following sample code opens a contact form to display an existing contact re
 ```JavaScript
 var entityFormOptions = {};
 entityFormOptions["entityName"] = "contact";
-entityFormOptions["entityId"] = "8DA6E5B9-88DF-E311-B8E5-6C3BE5A8B200";
+entityFormOptions["entityId"] = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee";
 
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions).then(

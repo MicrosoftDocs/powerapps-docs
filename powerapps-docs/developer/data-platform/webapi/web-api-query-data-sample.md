@@ -1,10 +1,10 @@
 ---
 title: Web API query data sample
 description: Use this sample code to learn how to query data using the Dataverse Web API. These samples use C# and client-side JavaScript.
-ms.date: 04/14/2023
 ms.topic: sample
-author: divkamath
-ms.author: dikamath
+ms.date: 04/14/2023
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -1125,7 +1125,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ## Section 4: Limit and count results
 
-As a best practice, don't return more data than you need. To protect performance, the server returns a maximum of 5,000 table rows per request.
+As a best practice, don't return more data than you need. To protect performance, the server returns a maximum of 5,000 standard table rows per request, or 500 rows for elastic tables.
 
 To limit the number of results returned, [use the `$top` query option](query/overview.md#limit-the-number-of-rows) or add [`odata.maxpagesize`](#bkmk_filterPagination) in the request header. The `$top` query option returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows to return per page with an `@odata.nextLink` property to get the results of the next page. [Learn more about page results](query/page-results.md).
   
@@ -1238,7 +1238,7 @@ Contacts top 5 results:
 
 ### Collection count
 
-If you just want the number of records in a collection, append `/$count` to the collection URL. The maximum value is 5,000.
+If you just want the number of records in a collection, append `/$count` to the collection URL. The maximum value is 5,000 for standard tables, 500 for elastic tables.
 
 **Request:**
 
@@ -1269,7 +1269,7 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns 5,000 as the maximum count even if the result may have more.
+You can get [the count of rows](query/count-rows.md) from a collection-valued property or a count of matched table rows in a filter. The count tells you the number of possible rows in your result. However, Dataverse returns a maximum count even if the result may have more. For standard tables the maximum count is 5,000, 500 for elastic tables.
 
 In this example, we build a filter where `jobtitle` contains either `Senior` or `Manager` and we also request a `$count` of the result. The response contains the count in the `@odata.count` property along with the results of the query.
   
@@ -2783,7 +2783,7 @@ In this example, we query for all contacts where `fullname` matches `(sample)`, 
 This is the XML for the query:
   
 ```xml  
-<fetch mapping="logical" output-format="xml-platform" version="1.0" distinct="false">  
+<fetch distinct="false">  
   <entity name="contact">  
     <attribute name="fullname" />  
     <attribute name="jobtitle" />  
@@ -2973,10 +2973,7 @@ The way FetchXML handles paging is different from how a query filter handles it.
 The following operation requests page 2 from the previous FetchXML sample. Based on our sample data, we should have eight contacts in our result. Breaking down each page to four contacts per page, we should have two pages. Page 2 should contain only four contacts. If we then ask for page 3, the system returns zero results.
   
 ```xml  
-<fetch mapping="logical" 
-        output-format="xml-platform" 
-        version="1.0" 
-        distinct="false"
+<fetch  distinct="false"
         page="2"  
         count="4">  
   <entity name="contact">  
@@ -3215,7 +3212,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/userqueries(f76e86e2-a228-ed11-9db1-000d3a320482)
+OData-EntityId: [Organization Uri]/api/data/v9.2/userqueries(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 This user query asks for any contacts where `fullname` contains `(sample)`, `jobtitle` contains `manager`, and `annualincome` is greater than `55000`. Our sample data has two contacts that match the query.
@@ -3225,7 +3222,7 @@ In the sample code, the `userqueryid` value is returned with the request that cr
 **Request:**
   
 ```http
-GET https://[Organization URI]/api/data/v9.0/userqueries?$select=name,userqueryid,&$filter=name%20eq%20'My%20User%20Query' HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.2/userqueries?$select=name,userqueryid,&$filter=name%20eq%20'My%20User%20Query' HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -3241,12 +3238,12 @@ OData-Version: 4.0
 Content-Length: 246  
   
 {   
-   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#userqueries(name,userqueryid)",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.2/$metadata#userqueries(name,userqueryid)",  
    "value":[   
       {   
          "@odata.etag":"W/\"621698\"",  
          "name":"My User Query",  
-         "userqueryid":"f76e86e2-a228-ed11-9db1-000d3a320482"  
+         "userqueryid":"00aa00aa-bb11-cc22-dd33-44ee44ee44ee"  
       }  
    ]  
 }  
@@ -3257,7 +3254,7 @@ This example passes the GUID value with the `userQuery` parameter to get the use
 **Request:**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?userQuery=f76e86e2-a228-ed11-9db1-000d3a320482 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?userQuery=00aa00aa-bb11-cc22-dd33-44ee44ee44ee HTTP/1.1
 Prefer: odata.maxpagesize=3; odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -3416,7 +3413,7 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 Content-Length: 124
 
-DELETE /api/data/v9.2/userqueries(f76e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+DELETE /api/data/v9.2/userqueries(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 
 
 --batch_23ea682f-a60a-412a-b37d-7df10a976508--

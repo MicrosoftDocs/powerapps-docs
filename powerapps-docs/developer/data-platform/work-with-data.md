@@ -4,9 +4,9 @@ description: "Microsoft Dataverse provides web services and APIs that you can us
 ms.date: 05/20/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: divkamath # GitHub ID Temp owner
+author: MicroSri
 ms.subservice: dataverse-developer
-ms.author: dikamath # MSFT alias of Microsoft employees only
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

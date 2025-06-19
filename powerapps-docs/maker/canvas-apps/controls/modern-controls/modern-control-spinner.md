@@ -19,9 +19,7 @@ contributors:
   - noazarur-microsoft
   
 ---
-# Spinner modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Spinner modern control in Power Apps
 
 Displays state in motion such as loading a page or table.
 

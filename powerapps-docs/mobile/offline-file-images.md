@@ -8,7 +8,7 @@ ms.date: 05/29/2024
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -40,14 +40,22 @@ This article helps you configure a mobile offline profile that has a table with 
 
 Add the column where **Data Type** is set to **File** or **Image** to your mobile offline profile to make files and images available in offline mode.
 
-
 1. Sign in to [Power Apps](https://make.powerapps.com).
+
 1. In the left navigation pane, select **Apps**.
+
 1. Select a model-driven app and on the command bar select **Edit**. This opens your app in editing mode in [model-driven app designer](../maker/model-driven-apps/app-designer-overview.md). 
+
 1. Select **Settings** > **General**.
+
 1. Set the **Can be used offline** toggle to **On**.
+
 1. Under **Select offline mode and profile**, select **Edit selected profile** from the "...".
+
 1. Find the table that contains the file or image column to enable for offline, and then select **Edit** from the **More actions** button.
+
 1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image**  (the columns are grouped by **Files** or **Images**).
+
 1. Select **Save**.
+
 1. Save and publish the app.

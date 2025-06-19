@@ -2,19 +2,17 @@
 title: Create a relationship between tables by using a lookup column | Microsoft Docs
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
-
 ms.component: cds
 ms.topic: how-to
-ms.date: 02/09/2022
+ms.date: 09/19/2024
 ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
 ---
-
 # Create a relationship between tables
 
-Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
+Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher instructs the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
 
 ## Define a relationship
 
@@ -62,7 +60,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship.](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
-5. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they will default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
+5. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they'll default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
 
     > [!NOTE]
     > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, create a Many-to-one relationship.
@@ -80,14 +78,14 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 3. Select the **Relationships** area.
 
-4. Select  **Add relationship** and then select **Many-to-many**. This opens a panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
+4. Select  **Add relationship** and then select **Many-to-many**. This opens a panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop-down.
 
-5. After selecting a table, the names for the relationship and relationship table will appear. They will default with the names of the tables combined, but you can change them if needed.
+5. After selecting a table, the names for the relationship and relationship table will appear. They'll default with the names of the tables combined, but you can change them if needed.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to Many Relationship.](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
 
-6. Select **Done** to add the relationship to your table, and then click **Save table**.
+6. Select **Done** to add the relationship to your table, and then select **Save table**.
 
 ## Add advanced relationship behavior
 
@@ -95,15 +93,15 @@ While building a one-to-many or a many-to-one relationship, you can also set adv
 
 ![Advanced behavior.](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
-These options are also referred to as cascading behaviors because they cascade down the hierarchy of related tables. For example, it may be desirable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
+These options are also referred to as cascading behaviors because they cascade down the hierarchy of related tables. For example, it might be desirable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
 
-On the other hand, you may decide that you don't want  actions to cascade down the hierarchy. For example, in the teacher to class relationship you may decide that the child table (class) should *not* be deleted when a parent (teacher) is deleted. This is called a referential relationship.
+On the other hand, you might decide that you don't want  actions to cascade down the hierarchy. For example, in the teacher to class relationship you could decide that the child table (class) shouldn't* be deleted when a parent (teacher) is deleted. This is called a referential relationship.
 
 As you model your business data by creating custom tables or when using existing Common Data Model tables, consider the behavior you require and the implications for the entire hierarchy of related tables and choose between one of the following standard behaviors:
 
-* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related rows, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
+* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related rows, but actions taken on one won't affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
 
-* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row will not be applied to the child row, but the parent row cannot be deleted while the child row exists. This is useful if you do not want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
+* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row won't be applied to the child row, but the parent row can't be deleted while the child row exists. This is useful if you don't want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete.](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")

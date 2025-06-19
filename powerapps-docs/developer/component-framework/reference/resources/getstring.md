@@ -1,8 +1,8 @@
 ---
 title: getString (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the localized string for a given key associated with the specified resource (resx) defined in the manifest file.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 09/27/2023
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot problems with data not displaying in a report | Microsoft Docs
 description: Troubleshoot problems with data not displaying in a report
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.date: 06/27/2019
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -4,12 +4,11 @@ description: "Use custom process actions when you want to automate a series of c
 ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: "matp"
-
-ms.topic: "conceptual"
-author: "msftman"
+ms.topic: article
+author: "Mattp123"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
 ms.subservice: dataverse-maker
-ms.author: "deonhe"
+ms.author: "matp"
 search.audienceType: 
   - flowmaker
   - enduser
@@ -153,7 +152,7 @@ Custom process actions have two relevant managed properties
 
 ### Is Customizable
 
-The **Is Customizabl**e managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
+The **Is Customizable** managed property controls whether on not someone who installs a managed solution containing the custom process action can edit or delete it. If wish for the custom process action to be edited or deleted when included in a managed solution, you should set this property to true.
 
 ### Is Custom Processing Step Allowed for Other Publishers
 

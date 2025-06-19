@@ -2,8 +2,8 @@
 title: DataSet Grid component for canvas apps | Microsoft Docs
 description: This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation.
 keywords:
-author: HemantGaur
-ms.author: hemantg
+author: clromano
+ms.author: clromano
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -38,13 +38,13 @@ You can download the complete sample component from [here](https://github.com/mi
 
 In this sample, the column information is extracted using the  `context.parameters.[dataset_property_name].columns`. It's an array type. The ways to access them are the same for both canvas and model-driven apps.
 
-You can define multiple datasets in the manifest. The first dataset in the manifest is as the primary dataset. When configuring the multi dataset component, the primary dataset property always has name `Items`. All non-primary dataset properties will have a `_Items` suffix after the dataset name. 
+You can define multiple datasets in the manifest. The first dataset in the manifest is as the primary dataset. When you configure the multi dataset component, the primary dataset property always has name `Items`. All nonprimary dataset properties will have a `_Items` suffix after the dataset name. 
 
-Certain features in the authoring panel will only apply to the primary dataset properties, such as data source selector, field selector, and view selector. To configure a non-primary dataset property, the maker needs to first import the data source to the app, then set the property value to that secondary data source. Property-set should be used for accessing columns in a non-primary dataset property. 
+Certain features in the authoring panel only apply to the primary dataset properties, such as data source selector, field selector, and view selector. To configure a nonprimary dataset property, the maker needs to first import the data source to the app, then set the property value to that secondary data source. Property-set should be used for accessing columns in a nonprimary dataset property. 
 
 ### Record binding
 
-- The sorted record Ids information can be extracted using `context.parameters.[dataset_property_name].sortedRecordIds`.
+- The sorted record IDs information can be extracted using `context.parameters.[dataset_property_name].sortedRecordIds`.
 - Get all the records information using `context.parameters.[dataset_property_name].records`.
 - Get each record object using `context.parameters.[dataset_property_name].records[record_Id]`
 - Formatted value could be retrieved using `getFormattedValue` method.
@@ -55,14 +55,14 @@ The `context.parameters.[dataset_property_name].paging` method provides paging f
 
 ### Property sets
 
-Property-set is used to access individual column values for particular columns in the record. For example, map control can use the longitude and latitude in the data-set to show the location pings in the map. In this sample component, two property sets are defined in the manifest, `samplePropertySet` and `samplePropertySet2`. Users will see two empty columns when the component is added to canvas app before any column names is configured. For a property-set, the corresponding columns are added in the beginning and order will be 0. 
+Property-set is used to access individual column values for particular columns in the record. For example, map control can use the longitude and latitude in the data-set to show the location pings in the map. In this sample component, two property sets are defined in the manifest, `samplePropertySet` and `samplePropertySet2`. Users see two empty columns when the component is added to canvas app before any column names is configured. For a property-set, the corresponding columns are added in the beginning and order is 0. 
 
 > [!div class="mx-imgBorder"]
 > ![Property Set Configuration.](../media/property-set-configuration.png)
 
 ### Sizing
 
-This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` will be provided each time when the `updateView` is being called. If this method is not called initially, they don't have `allocatedWidth` and `allocatedHeight` values provided. If the `allocatedHeight` is –1, that means there is no limit on height. The component should adjust its height based on the provided width.
+This sample also showcases how the component listens to the container resize. The `trackContainerResize` method should be called within the `init` method so that the `mode.allocatedWidth` and `mode.allocatedHeight` is provided each time when the `updateView` is being called. If this method isn't called initially, they don't have `allocatedWidth` and `allocatedHeight` values provided. If the `allocatedHeight` is –1, that means there's no limit on height. The component should adjust its height based on the provided width.
 
 ## Dataset API methods that aren't supported in canvas apps
 
@@ -72,9 +72,9 @@ In this preview for canvas apps, only a limited set of [filtering](../reference/
 
 **View**
 
-In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It's up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Microsoft Dataverse as a source. Selecting a view applies the view's filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
+Views are applicable only when you choose Microsoft Dataverse as a source. In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It's up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. Selecting a view applies the view's filter to the source. The view name and view ID can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

@@ -4,7 +4,7 @@ description: Other performance considerations for Power Apps
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 12/01/2023
+ms.date: 12/10/2024
 ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType:
@@ -70,3 +70,22 @@ The Excel connector allows a canvas app to connect to a table in an Excel file. 
 **Note the limitations of Excel as a database.**  Excel isn’t a relational database system : Any changes from an app are managed by Excel in the same way as if a user were changing data in an Excel file directly. If the app has a high number of reads, but fewer update operations, it might perform well. However, if the app requires heavy transactions, it can adversely affect the performance of the app. There’s no specific threshold value for the number of transactions. It also depends on the data being manipulated. Several other aspects also affect the app’s performance, such as network overhead or the user’s device.
 
 **Consider the differences in geographic location**: The geographic location of the data and its distance from customer locations can be a performance issue. This issue can be amplified if a mobile client has limited bandwidth.
+
+## Enable Preload app for enhanced performance
+
+You can optionally preload your app to increase performance.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+2. On the left navigation pane, select **Apps**.
+
+3. Select the app and then select **Settings** on the command bar.
+
+4. In the **App settings** pance, set the **Preload app for enhanced performance** to **Yes**. The app will then pre-load.
+ 
+5. For the changes to take effect for apps embedded in Teams, remove and add your app into Teams again.
+
+    > [!NOTE]
+    > This makes the compiled app assets accessible via unauthenticated endpoints to enable loading them before authentication. However, users can still only use your app to access data via connectors only after authentication and authorization completes. This behavior ensures that the data an app retrieves from data sources won’t be available to unauthorized users. Compiled app assets include a collection of JavaScript files containing text authored in app controls (such as PCF controls), media assets (such as images), the app name, and the environment URL the app resides in.
+    > 
+    > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.

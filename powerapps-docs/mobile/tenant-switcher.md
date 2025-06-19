@@ -3,7 +3,7 @@ title: Switch to a different directory in the Power Apps mobile app
 description: Users can easily switch to a different directory in Power Apps mobile.
 author: trdehove
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.topic: how-to
 ms.date: 03/06/2023
 ms.custom: 

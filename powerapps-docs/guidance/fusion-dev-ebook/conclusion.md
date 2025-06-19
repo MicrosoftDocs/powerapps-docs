@@ -3,7 +3,7 @@ title: "Fusion development: Conclusion  | Microsoft Docs"
 description: "Conclusion of the ebook on the fusion development approach in Power Apps."
 author: spboyer
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: ebook
 ms.date: 04/26/2021
 ms.subservice: guidance
@@ -22,7 +22,7 @@ In this ebook, you've seen how the staff at VanArsdel followed a fusion developm
 
 The VanArsdel team has now experienced how fusion development teams work and is excited to keep collaborating on future projects.
 
-### Related topics
+### Related articles
 
 [Power Apps docs](/powerapps/)<br/>
 [Power Apps best practices guidance](/powerapps/guidance/)

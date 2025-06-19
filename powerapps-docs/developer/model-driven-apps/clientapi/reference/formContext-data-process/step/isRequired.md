@@ -1,8 +1,8 @@
 ---
-title: "isRequired (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isRequired (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the isRequired method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # isRequired (Client API reference)
-
-
 
 [!INCLUDE[./includes/isRequired-description.md](./includes/isRequired-description.md)]
 
@@ -31,7 +29,5 @@ contributors:
 ### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

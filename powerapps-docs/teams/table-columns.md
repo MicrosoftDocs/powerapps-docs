@@ -3,7 +3,7 @@ title: Work with Dataverse for Teams table columns | Microsoft Docs
 description: Explains how to create and use Dataverse for Teams table columns.
 author: NHelgren
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 06/01/2021
 ms.subservice: teams
@@ -18,7 +18,7 @@ contributors:
 With the exception of the Customer column, all column types in Dataverse are available in Dataverse for Teams as *columns*. This article covers the content you'll need for working with table columns in Dataverse for Teams.
 
 Watch this video for a quick overview about column data types in Dataverse for Teams:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWErxo]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=416d5037-a701-436d-bd77-e7fcb5329ead]
 
 Notice that the currency feature will always use the default currency for the country/region that was selected during Dataverse for Teams environment creation. This can't be changed, and additional transaction currencies or exchange rates can't be added. However, you can upgrade from Dataverse for Teams to Dataverse for full currency functionality.
 
@@ -33,7 +33,7 @@ For more information about the columns available, see these Dataverse articles:
 ## Create a column
 
 Watch this video to learn how to create columns in Dataverse for Teams:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWE7js]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=9a5cecc2-2fce-4ad5-adc9-0d68afb3426c]
 
 1. On the **Build** tab, select **See all**, and then expand **Tables**. 
 2. Select the table you want to add a column to, and then select **Add column** on the command bar.

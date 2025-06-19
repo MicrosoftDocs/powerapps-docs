@@ -1,8 +1,8 @@
 ---
-title: "getActivePath (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getActivePath (Client API reference) in model-driven apps"
 description: Gets a collection of stages currently in the active path with methods to interact with the stages displayed in the business process flow control.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -183,8 +183,4 @@ Status: inactive
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

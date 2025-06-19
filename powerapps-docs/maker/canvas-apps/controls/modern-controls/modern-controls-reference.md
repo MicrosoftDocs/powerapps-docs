@@ -27,17 +27,17 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Avatar (preview)](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
-**[Badge (preview)](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
+**[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
-**[Checkbox (preview)](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
+**[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
 **[Combobox](modern-control-combobox.md)** - A control that allows users to make selections from provided choices and supports search and multiple selections.
 
 **[Copilot answer (preview)](modern-control-copilot-answer.md)** - A control that makers can use to add predefined questions that end users can use to get generated answers.
 
-**[Date picker (preview)](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
+**[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown (preview)](modern-control-dropdown.md)** – Select a value from the list of items.
 
@@ -67,7 +67,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
-**[Toggle (preview)](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
+**[Toggle](modern-control-toggle.md)** – A control that the user can turn on or off by moving the handle.
 
 
 ### See also

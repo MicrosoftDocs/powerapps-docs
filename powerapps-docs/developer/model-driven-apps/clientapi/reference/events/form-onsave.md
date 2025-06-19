@@ -1,9 +1,9 @@
 ---
-title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Form OnSave event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the form OnSave event.
-author: HemantGaur
-ms.author: hemantg
-ms.date: 07/26/2023
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -54,11 +54,15 @@ In this scenario, since there are multiple async processes and both calls return
 For example:
 
 ```JavaScript
- function myHandler(context) {
-    return new Promise((resolve) => {
-       setTimeout( () => {
-          context.getEventArgs().preventDefault();
-       }, 1000);
+ function myHandler() {
+    return Promise.all([getWorkOrderPromise, getCustomerAssetPromise]).then((values) => {
+        var workOrder = values[0];
+        var customerAsset = values[1];
+        // Perform validation
+        if (isValid(workOrder, customerAsset)) {
+            return Promise.resolve();
+        }
+        return Promise.reject(new Error("Validation failed for the work order and customer asset"));
    });
  }
 ```
@@ -101,9 +105,11 @@ When [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) is ca
 
 This pattern should be used with caution as it might affect the performance of the form save.
 
-### Related article
+
+### Related articles
 
 [Grid OnSave Event](grid-onsave.md)   
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

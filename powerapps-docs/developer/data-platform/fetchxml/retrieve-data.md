@@ -1,7 +1,7 @@
 ---
 title: Use FetchXml to retrieve data
 description: Learn how to use the Dataverse SDK for .NET or Web API to send a request to retrieve data using FetchXml
-ms.date: 02/29/2024
+ms.date: 01/26/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -18,9 +18,9 @@ contributors:
 ---
 # Use FetchXml to retrieve data
 
-You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
+You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). With PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
 
-You may also want to use [Community tools](overview.md#community-tools) like the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/)
+You may also want to use [Community tools](overview.md#community-tools), like the [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
 
 How you retrieve data depends on whether you are using the [SDK for .NET](../org-service/overview.md) or [Dataverse Web API](../webapi/overview.md).
 
@@ -61,7 +61,7 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 Pass your FetchXml query as a URL-encoded string value to the entity set collection using the `fetchXml` query parameter.
 
 > [!NOTE]
-> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values.
+> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-are-not-returned)
 
 For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), you will compose a fetchXml query setting the [entity element](reference/entity.md) `name` parameter to the `account`.
 
@@ -79,7 +79,7 @@ Then, URL-encode the value.  Most programming languages include a function to UR
 - In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String))
 
 > [!TIP]
-> The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
+> The [XrmToolBox](../community-tools.md#xrmtoolbox) tool [FetchXML Builder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
 
 The URL-encoded string for the previous query example looks like this:
 
@@ -146,6 +146,12 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 [Use the Microsoft Dataverse Web API](../webapi/overview.md)
 
 ---
+
+## Null column values are not returned
+
+When a table column contains a null value, or if the column wasn't requested, the record returned won't include the value. There isn't a key to access it or a value to return. The absence of the attribute indicates that it's null. This is the behavior using the SDK for .NET. [Learn more about this behavior](../org-service/entity-operations-query-data.md#null-column-values-are-not-returned)
+
+Columns that are not valid for read always return null values. The definition of these columns have the [AttributeMetadata.IsValidForRead](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.isvalidforread) property set to false.
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: "Files and images overview (Microsoft Dataverse) | Microsoft Docs" # Inte
 description: "Learn about using file and image data in Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/26/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: concept-article
 author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
@@ -94,7 +94,7 @@ OData-Version: 4.0
         {
             "@odata.etag": "W/\"75142950\"",
             "blockedattachments": "ade;adp;app;asa;ashx;asmx;asp;bas;bat;cdx;cer;chm;class;cmd;com;config;cpl;crt;csh;dll;exe;fxp;hlp;hta;htr;htw;ida;idc;idq;inf;ins;isp;its;jar;js;jse;ksh;lnk;mad;maf;mag;mam;maq;mar;mas;mat;mau;mav;maw;mda;mdb;mde;mdt;mdw;mdz;msc;msh;msh1;msh1xml;msh2;msh2xml;mshxml;msi;msp;mst;ops;pcd;pif;prf;prg;printer;pst;reg;rem;scf;scr;sct;shb;shs;shtm;shtml;soap;stm;tmp;url;vb;vbe;vbs;vsmacros;vss;vst;vsw;ws;wsc;wsf;wsh;svg",
-            "organizationid": "883278f5-07af-45eb-a0bc-3fee67caa544"
+            "organizationid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
         }
     ]
 }
@@ -159,7 +159,7 @@ OData-Version: 4.0
             "@odata.etag": "W/\"4719801\"",
             "blockedmimetypes": "image/svg+xml",
             "allowedmimetypes": null,
-            "organizationid": "8daa44aa-e2f8-ed11-a66e-00224820c64b"
+            "organizationid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
         }
     ]
 }

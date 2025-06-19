@@ -1,8 +1,8 @@
 ---
-title: "formContext.getControl (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.getControl (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the formContext.getControl method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 04/15/2024
 ms.reviewer: jdaly
 ms.topic: reference
@@ -52,13 +52,8 @@ For example, to add notification to each control bound to the `name` column, you
 > formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
 > ```
 
-
 ### Related articles
 
 [formContext](../../clientapi-form-Context.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

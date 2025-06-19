@@ -2,8 +2,8 @@
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.date: 11/17/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -172,8 +172,8 @@ Content-Transfer-Encoding: binary
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(d31ba648-c592-ed11-aad1-000d3a993550)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d31ba648-c592-ed11-aad1-000d3a993550)
+Location: [Organization Uri]/api/data/v9.2/tasks(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 
 
 --batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
@@ -182,8 +182,8 @@ Content-Transfer-Encoding: binary
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(d41ba648-c592-ed11-aad1-000d3a993550)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d41ba648-c592-ed11-aad1-000d3a993550)
+Location: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 
 
 --batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
@@ -192,8 +192,8 @@ Content-Transfer-Encoding: binary
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(d51ba648-c592-ed11-aad1-000d3a993550)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d51ba648-c592-ed11-aad1-000d3a993550)
+Location: [Organization Uri]/api/data/v9.2/tasks(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
 
 
 --batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
@@ -210,17 +210,17 @@ OData-Version: 4.0
     {
       "@odata.etag": "W/\"77180907\"",
       "subject": "Task 1 in batch",
-      "activityid": "d31ba648-c592-ed11-aad1-000d3a993550"
+      "activityid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     },
     {
       "@odata.etag": "W/\"77180910\"",
       "subject": "Task 2 in batch",
-      "activityid": "d41ba648-c592-ed11-aad1-000d3a993550"
+      "activityid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
     },
     {
       "@odata.etag": "W/\"77180913\"",
       "subject": "Task 3 in batch",
-      "activityid": "d51ba648-c592-ed11-aad1-000d3a993550"
+      "activityid": "22cc22cc-dd33-ee44-ff55-66aa66aa66aa"
     }
   ]
 }
@@ -343,8 +343,8 @@ Content-ID: 1
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(e73ffc82-e292-ed11-aad1-000d3a9933c9)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e73ffc82-e292-ed11-aad1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/tasks(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
 
 
 --changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
@@ -354,8 +354,8 @@ Content-ID: 2
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(e83ffc82-e292-ed11-aad1-000d3a9933c9)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e83ffc82-e292-ed11-aad1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/tasks(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
 
 
 --changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
@@ -365,8 +365,8 @@ Content-ID: 3
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(e93ffc82-e292-ed11-aad1-000d3a9933c9)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e93ffc82-e292-ed11-aad1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/tasks(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
 
 
 --changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15--
@@ -384,17 +384,17 @@ OData-Version: 4.0
     {
       "@odata.etag": "W/\"77181173\"",
       "subject": "Task 1 in batch",
-      "activityid": "e73ffc82-e292-ed11-aad1-000d3a9933c9"
+      "activityid": "33dd33dd-ee44-ff55-aa66-77bb77bb77bb"
     },
     {
       "@odata.etag": "W/\"77181176\"",
       "subject": "Task 2 in batch",
-      "activityid": "e83ffc82-e292-ed11-aad1-000d3a9933c9"
+      "activityid": "44ee44ee-ff55-aa66-bb77-88cc88cc88cc"
     },
     {
       "@odata.etag": "W/\"77181179\"",
       "subject": "Task 3 in batch",
-      "activityid": "e93ffc82-e292-ed11-aad1-000d3a9933c9"
+      "activityid": "55ff55ff-aa66-bb77-cc88-99dd99dd99dd"
     }
   ]
 }
@@ -481,8 +481,8 @@ Content-ID: 1
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/leads(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
+OData-EntityId: [Organization URI]/api/data/v9.2/leads(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
 
 --changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
 Content-Type: application/http
@@ -491,8 +491,8 @@ Content-ID: 2
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+OData-EntityId: [Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 
 --changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
 Content-Type: application/http
@@ -501,8 +501,8 @@ Content-ID: 3
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 
 --changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc--
 --batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a--
@@ -569,8 +569,8 @@ Content-ID: 1
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.2/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.2/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
+Location:[Organization URI]/api/data/v9.2/contacts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
+OData-EntityId:[Organization URI]/api/data/v9.2/contacts(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
 
 
 --changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
@@ -652,8 +652,8 @@ Content-ID: 1
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.2/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.2/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
+Location:[Organization URI]/api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
+OData-EntityId:[Organization URI]/api/data/v9.2/accounts(33dd33dd-ee44-ff55-aa66-77bb77bb77bb)
 
 --changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
 Content-Type: application/http
@@ -662,8 +662,8 @@ Content-ID: 2
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.2/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.2/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
+Location:[Organization URI]/api/data/v9.2/contacts(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
+OData-EntityId:[Organization URI]/api/data/v9.2/contacts(44ee44ee-ff55-aa66-bb77-88cc88cc88cc)
 
 --changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
 Content-Type: application/http
@@ -746,8 +746,8 @@ Content-ID: 1
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
 
 --changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
 Content-Type: application/http
@@ -756,8 +756,8 @@ Content-ID: 2
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/contacts(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
+OData-EntityId: [Organization URI]/api/data/v9.2/contacts(66aa66aa-bb77-cc88-dd99-00ee00ee00ee)
 
 --changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
 Content-Type: application/http
@@ -766,8 +766,8 @@ Content-ID: 3
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+Location: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(55ff55ff-aa66-bb77-cc88-99dd99dd99dd)
 
 --changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c--
 --batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e--
@@ -986,8 +986,8 @@ Content-Transfer-Encoding: binary
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(aed2ae8b-3c94-ed11-aad1-000d3a9933c9)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(aed2ae8b-3c94-ed11-aad1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/tasks(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 
 
 --batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139
@@ -996,8 +996,8 @@ Content-Transfer-Encoding: binary
 
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-Location: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-000d3a9933c9)
-OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-000d3a9933c9)
+Location: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)
 
 
 --batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139--
@@ -1079,7 +1079,7 @@ More information:
 
 ### .NET HttpRequestMessage to HttpMessageContent example
 
-In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
 
 ```csharp
 /// <summary>
@@ -1120,7 +1120,7 @@ private HttpMessageContent ToMessageContent(HttpRequestMessage request)
 
 ### .NET Parse batch response example
 
-The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
+The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch response into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
 
 ```csharp
 /// <summary>

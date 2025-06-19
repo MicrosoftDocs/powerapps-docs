@@ -5,8 +5,8 @@ ms.collection: get-started
 ms.date: 04/14/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: phecke # GitHub ID
-ms.author: pehecke # MSFT alias of Microsoft employees only
+author: MicroSri # GitHub ID
+ms.author: sriknair # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

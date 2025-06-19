@@ -18,7 +18,7 @@ contributors:
 This sample shows how to delete records, in bulk, that match common criteria.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Bulk delete records that match common criteria sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BulkDeleteMatchCriteria)
+> [SDK for .NET: Bulk delete records that match common criteria sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/BulkDeleteMatchCriteria)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

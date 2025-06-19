@@ -134,7 +134,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)  
 ```  
   
 <a name="bkmk_CreateManyToMany"></a>
@@ -210,7 +210,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)    
 ```
 
 ## Create relationships to support a multi-table lookup

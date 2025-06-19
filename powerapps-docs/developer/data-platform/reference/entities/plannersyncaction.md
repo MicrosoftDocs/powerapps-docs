@@ -1,63 +1,61 @@
 ---
-title: "PlannerSyncAction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the PlannerSyncAction table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Planner Sync Action (PlannerSyncAction) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Planner Sync Action (PlannerSyncAction) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# PlannerSyncAction table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Planner Sync Action (PlannerSyncAction) table/entity reference (Microsoft Dataverse)
 
 The Planner Sync Action to be executed.
 
-**Added by**: PlannerSync_Extensions Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /plannersyncactions(*plannersyncactionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /plannersyncactions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /plannersyncactions(*plannersyncactionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /plannersyncactions(*plannersyncactionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /plannersyncactions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /plannersyncactions(*plannersyncactionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /plannersyncactions(*plannersyncactionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the Planner Sync Action (PlannerSyncAction) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /plannersyncactions(*plannersyncactionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /plannersyncactions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /plannersyncactions(*plannersyncactionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /plannersyncactions(*plannersyncactionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /plannersyncactions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /plannersyncactions(*plannersyncactionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /plannersyncactions(*plannersyncactionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /plannersyncactions(*plannersyncactionid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|PlannerSyncActions|
-|DisplayCollectionName|Planner Sync Actions|
-|DisplayName|Planner Sync Action|
-|EntitySetName|plannersyncactions|
-|IsBPFEntity|False|
-|LogicalCollectionName|plannersyncactions|
-|LogicalName|plannersyncaction|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|plannersyncactionid|
-|PrimaryNameAttribute|title|
-|SchemaName|PlannerSyncAction|
+The following table lists selected properties for the Planner Sync Action (PlannerSyncAction) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Planner Sync Action** |
+| **DisplayCollectionName** | **Planner Sync Actions** |
+| **SchemaName** | `PlannerSyncAction` |
+| **CollectionSchemaName** | `PlannerSyncActions` |
+| **EntitySetName** | `plannersyncactions`|
+| **LogicalName** | `plannersyncaction` |
+| **LogicalCollectionName** | `plannersyncactions` |
+| **PrimaryIdAttribute** | `plannersyncactionid` |
+| **PrimaryNameAttribute** |`title` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -90,725 +88,672 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Title](#BKMK_Title)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_Assignments"></a> Assignments
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Assignments|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Assignments**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|assignments|
-|MaxLength|1000|
+|LogicalName|`assignments`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1000|
 
 ### <a name="BKMK_DueDateTime"></a> DueDateTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|TimeZoneIndependent|
-|Description|Date and time when the planner task is due.|
-|DisplayName|Due Date Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the planner task is due.**|
+|DisplayName|**Due Date Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|duedatetime|
+|LogicalName|`duedatetime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|TimeZoneIndependent|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ExternalBucketId"></a> ExternalBucketId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|External Bucket Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**External Bucket Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|externalbucketid|
-|MaxLength|100|
+|LogicalName|`externalbucketid`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_ExternalReferences"></a> ExternalReferences
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|External References|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**External References**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|externalreferences|
-|MaxLength|2000|
+|LogicalName|`externalreferences`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_GroupId"></a> GroupId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Group Id|
+|DisplayName|**Group Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|groupid|
+|LogicalName|`groupid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_LastAttemptedOn"></a> LastAttemptedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|TimeZoneIndependent|
-|Description|For internal use only. Date and time when the action was last attempted.|
-|DisplayName|Last Attempted On|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only. Date and time when the action was last attempted.**|
+|DisplayName|**Last Attempted On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastattemptedon|
+|LogicalName|`lastattemptedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|TimeZoneIndependent|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LastSyncError"></a> LastSyncError
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Last Sync Error|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Last Sync Error**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|lastsyncerror|
-|MaxLength|2000|
+|LogicalName|`lastsyncerror`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_Notes"></a> Notes
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Notes|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Notes**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|notes|
-|MaxLength|2000|
+|LogicalName|`notes`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PendingAttempts"></a> PendingAttempts
 
 |Property|Value|
-|--------|-----|
-|Description|The attempts available for processing the planner sync action.|
-|DisplayName|Pending Attempts|
-|Format|None|
+|---|---|
+|Description|**The attempts available for processing the planner sync action.**|
+|DisplayName|**Pending Attempts**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|pendingattempts|
-|MaxValue|5|
-|MinValue|0|
+|LogicalName|`pendingattempts`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|5|
+|MinValue|0|
 
 ### <a name="BKMK_PercentComplete"></a> PercentComplete
 
 |Property|Value|
-|--------|-----|
-|Description|The percentage of completion for the planner task.|
-|DisplayName|Percent Complete|
-|Format|None|
+|---|---|
+|Description|**The percentage of completion for the planner task.**|
+|DisplayName|**Percent Complete**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|percentcomplete|
-|MaxValue|100|
-|MinValue|0|
+|LogicalName|`percentcomplete`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|100|
+|MinValue|0|
 
 ### <a name="BKMK_PlannerBusinessScenarioId"></a> PlannerBusinessScenarioId
 
 |Property|Value|
-|--------|-----|
-|Description|Id of the Business Scenario in Planner.|
-|DisplayName|Planner Business Scenario Id|
+|---|---|
+|Description|**Id of the Business Scenario in Planner.**|
+|DisplayName|**Planner Business Scenario Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|plannerbusinessscenarioid|
+|LogicalName|`plannerbusinessscenarioid`|
 |RequiredLevel|SystemRequired|
-|Targets|plannerbusinessscenario|
 |Type|Lookup|
-
+|Targets|plannerbusinessscenario|
 
 ### <a name="BKMK_PlannerSyncActionId"></a> PlannerSyncActionId
 
 |Property|Value|
-|--------|-----|
-|Description|Planner Sync Action Id|
-|DisplayName|Planner Sync Action Id|
+|---|---|
+|Description|**Planner Sync Action Id**|
+|DisplayName|**Planner Sync Action Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|plannersyncactionid|
+|LogicalName|`plannersyncactionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_Priority"></a> Priority
 
 |Property|Value|
-|--------|-----|
-|Description|The priority of the planner task.|
-|DisplayName|Priority|
-|Format|None|
+|---|---|
+|Description|**The priority of the planner task.**|
+|DisplayName|**Priority**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|priority|
-|MaxValue|10|
-|MinValue|0|
+|LogicalName|`priority`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|10|
+|MinValue|0|
 
 ### <a name="BKMK_QueuedOn"></a> QueuedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|TimeZoneIndependent|
-|Description|For internal use only. Date and time when the action was queued.|
-|DisplayName|Queued On|
-|Format|DateAndTime|
+|---|---|
+|Description|**For internal use only. Date and time when the action was queued.**|
+|DisplayName|**Queued On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|queuedon|
+|LogicalName|`queuedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|TimeZoneIndependent|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SourceRecordEntityLogicalName"></a> SourceRecordEntityLogicalName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Source Record Entity Logical Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Source Record Entity Logical Name**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|sourcerecordentitylogicalname|
-|MaxLength|50|
+|LogicalName|`sourcerecordentitylogicalname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|50|
 
 ### <a name="BKMK_SourceRecordId"></a> SourceRecordId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Source Record Id|
+|DisplayName|**Source Record Id**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|sourcerecordid|
+|LogicalName|`sourcerecordid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_StartDateTime"></a> StartDateTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|TimeZoneIndependent|
-|Description|Date and time when the planner task was started.|
-|DisplayName|Start Date Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the planner task was started.**|
+|DisplayName|**Start Date Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|startdatetime|
+|LogicalName|`startdatetime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|TimeZoneIndependent|
+|Format|DateAndTime|
+|ImeMode|Auto|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Planner Sync Action|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Planner Sync Action**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`plannersyncaction_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Planner Sync Action|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Planner Sync Action**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`plannersyncaction_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Title"></a> Title
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Title**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|200|
+|LogicalName|`title`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [plannerbusinessscenarioidName](#BKMK_plannerbusinessscenarioidName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
-|RequiredLevel|SystemRequired|
-|Targets|businessunit|
+|LogicalName|`owningbusinessunit`|
+|RequiredLevel|None|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_plannerbusinessscenarioidName"></a> plannerbusinessscenarioidName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|plannerbusinessscenarioidname|
-|MaxLength|50|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [plannersyncaction_SyncErrors](#BKMK_plannersyncaction_SyncErrors)
-- [plannersyncaction_AsyncOperations](#BKMK_plannersyncaction_AsyncOperations)
-- [plannersyncaction_MailboxTrackingFolders](#BKMK_plannersyncaction_MailboxTrackingFolders)
-- [plannersyncaction_ProcessSession](#BKMK_plannersyncaction_ProcessSession)
-- [plannersyncaction_BulkDeleteFailures](#BKMK_plannersyncaction_BulkDeleteFailures)
-- [plannersyncaction_PrincipalObjectAttributeAccesses](#BKMK_plannersyncaction_PrincipalObjectAttributeAccesses)
-
-
-### <a name="BKMK_plannersyncaction_SyncErrors"></a> plannersyncaction_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_SyncErrors](syncerror.md#BKMK_plannersyncaction_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_plannersyncaction_AsyncOperations"></a> plannersyncaction_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_AsyncOperations](asyncoperation.md#BKMK_plannersyncaction_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_plannersyncaction_MailboxTrackingFolders"></a> plannersyncaction_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_plannersyncaction_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_plannersyncaction_ProcessSession"></a> plannersyncaction_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_ProcessSession](processsession.md#BKMK_plannersyncaction_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_plannersyncaction_BulkDeleteFailures"></a> plannersyncaction_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_BulkDeleteFailures](bulkdeletefailure.md#BKMK_plannersyncaction_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_plannersyncaction_PrincipalObjectAttributeAccesses"></a> plannersyncaction_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [plannersyncaction_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_plannersyncaction_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|plannersyncaction_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [user_plannersyncaction](#BKMK_user_plannersyncaction)
-- [team_plannersyncaction](#BKMK_team_plannersyncaction)
 - [business_unit_plannersyncaction](#BKMK_business_unit_plannersyncaction)
+- [owner_plannersyncaction](#BKMK_owner_plannersyncaction)
 - [plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid](#BKMK_plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid)
-
-
-### <a name="BKMK_user_plannersyncaction"></a> user_plannersyncaction
-
-**Added by**: System Solution Solution
-
-See the [user_plannersyncaction](systemuser.md#BKMK_user_plannersyncaction) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_plannersyncaction"></a> team_plannersyncaction
-
-**Added by**: System Solution Solution
-
-See the [team_plannersyncaction](team.md#BKMK_team_plannersyncaction) one-to-many relationship for the [team](team.md) table/entity.
+- [team_plannersyncaction](#BKMK_team_plannersyncaction)
+- [user_plannersyncaction](#BKMK_user_plannersyncaction)
 
 ### <a name="BKMK_business_unit_plannersyncaction"></a> business_unit_plannersyncaction
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_plannersyncaction](businessunit.md#BKMK_business_unit_plannersyncaction)
 
-See the [business_unit_plannersyncaction](businessunit.md#BKMK_business_unit_plannersyncaction) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_plannersyncaction"></a> owner_plannersyncaction
+
+One-To-Many Relationship: [owner owner_plannersyncaction](owner.md#BKMK_owner_plannersyncaction)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid"></a> plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid
 
-See the [plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid](plannerbusinessscenario.md#BKMK_plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid) one-to-many relationship for the [plannerbusinessscenario](plannerbusinessscenario.md) table/entity.
+One-To-Many Relationship: [plannerbusinessscenario plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid](plannerbusinessscenario.md#BKMK_plannerbusinessscenario_plannersyncaction_plannerbusinessscenarioid)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`plannerbusinessscenario`|
+|ReferencedAttribute|`plannerbusinessscenarioid`|
+|ReferencingAttribute|`plannerbusinessscenarioid`|
+|ReferencingEntityNavigationPropertyName|`plannerbusinessscenarioid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_plannersyncaction"></a> team_plannersyncaction
+
+One-To-Many Relationship: [team team_plannersyncaction](team.md#BKMK_team_plannersyncaction)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_plannersyncaction"></a> user_plannersyncaction
+
+One-To-Many Relationship: [systemuser user_plannersyncaction](systemuser.md#BKMK_user_plannersyncaction)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [plannersyncaction_AsyncOperations](#BKMK_plannersyncaction_AsyncOperations)
+- [plannersyncaction_BulkDeleteFailures](#BKMK_plannersyncaction_BulkDeleteFailures)
+- [plannersyncaction_MailboxTrackingFolders](#BKMK_plannersyncaction_MailboxTrackingFolders)
+- [plannersyncaction_PrincipalObjectAttributeAccesses](#BKMK_plannersyncaction_PrincipalObjectAttributeAccesses)
+- [plannersyncaction_ProcessSession](#BKMK_plannersyncaction_ProcessSession)
+- [plannersyncaction_SyncErrors](#BKMK_plannersyncaction_SyncErrors)
+
+### <a name="BKMK_plannersyncaction_AsyncOperations"></a> plannersyncaction_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation plannersyncaction_AsyncOperations](asyncoperation.md#BKMK_plannersyncaction_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_plannersyncaction_BulkDeleteFailures"></a> plannersyncaction_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure plannersyncaction_BulkDeleteFailures](bulkdeletefailure.md#BKMK_plannersyncaction_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_plannersyncaction_MailboxTrackingFolders"></a> plannersyncaction_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder plannersyncaction_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_plannersyncaction_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_plannersyncaction_PrincipalObjectAttributeAccesses"></a> plannersyncaction_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess plannersyncaction_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_plannersyncaction_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_plannersyncaction_ProcessSession"></a> plannersyncaction_ProcessSession
+
+Many-To-One Relationship: [processsession plannersyncaction_ProcessSession](processsession.md#BKMK_plannersyncaction_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_plannersyncaction_SyncErrors"></a> plannersyncaction_SyncErrors
+
+Many-To-One Relationship: [syncerror plannersyncaction_SyncErrors](syncerror.md#BKMK_plannersyncaction_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`plannersyncaction_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.plannersyncaction?text=plannersyncaction EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.plannersyncaction?displayProperty=fullName>

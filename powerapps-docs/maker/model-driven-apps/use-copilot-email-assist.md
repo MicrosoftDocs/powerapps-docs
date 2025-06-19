@@ -3,9 +3,9 @@ title: Use Copilot in the email rich text editor
 description: Learn how to use Copilot in the rich text editor to make your customer emails clearer, shorter, and more compelling.
 author: udaykirang
 ms.author: udag
-ms.reviewer: shujoshi
+ms.reviewer: udag
 ms.topic: how-to
-ms.date: 04/17/2024
+ms.date: 04/30/2025
 ms.subservice: mda-maker
 ms.collection: bap-ai-copilot
 tags:
@@ -23,12 +23,11 @@ ms.custom:
 When you draft customer emails in the rich text editor in a model-driven app, Copilot can offer suggestions to make them clearer, more concise, and more compelling.
 
 > [!IMPORTANT]
->
 > By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
 
-The [generative AI feature in emails](/power-platform/admin/settings-features#ai-suggestions-for-email-content) must be turned on in the [canvas app feature settings](/power-platform/admin/settings-features).
+The [generative AI feature in emails](/power-platform/admin/settings-features#ai-suggestions-for-email-content) must be turned on in the [model-driven app feature settings](/power-platform/admin/settings-features).
 
 ## Draft and refine an email in the rich text editor
 

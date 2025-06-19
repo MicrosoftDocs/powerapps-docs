@@ -1,14 +1,14 @@
 ---
 title: Use deep links with the Power Apps mobile app
 description: How to configure deep links for Power Apps mobile.
-author: trdehove
+author: vamseedillimsft
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 06/14/2024
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: vamseedilli
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -17,6 +17,8 @@ searchScope:
 contributors:
 - anuitz
 - sitarampemmaraju
+- vamseedilli
+- smurkute
 ---
 
 # Use deep links with the Power Apps mobile app
@@ -39,7 +41,7 @@ Deep links for the Power Apps mobile app should start with the following:
 
 > [!IMPORTANT]
 > The org-url can't contain **https://**. The following is a example of a model-driven app deeplink: <br>
-> ms-apps://contoso.onmicrosoft.com_e6429eba-2204-40e8-b9dd-fc74791ff2c2?tenantId=219f9bd4-8c16-4dfa-b87e-f4a33764f1dd
+> ms-apps://contoso.onmicrosoft.com_e6429eba-2204-40e8-b9dd-fc74791ff2c2?tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee
 
 | **Parameter**        | **Description**                                                              | **Required**|
 |----------------------|------------------------------------------------------------------------------|-------------|
@@ -49,6 +51,7 @@ Deep links for the Power Apps mobile app should start with the following:
 | tenantId=&lt;tenand-id&gt;             | Connects to the correct tenant.                                               | Yes|
 |appType=AppModule     | Indicates that the targeted app is a model-driven app.                                                 | Yes|
 | restartApp=true      | Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No |
+| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 | forceOfflineDataSync=true | Ensures that data sync is triggered so that all the latest data is available. | No|
 
 
@@ -78,8 +81,8 @@ If the link goes to an `entitylist` view, add the following parameters:
 |----------------------|----------------------------------------------------------------------------------------------|-------------|
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 | Yes|
 | tenantId=&lt;tenantId&gt;     | Connects to the correct tenant.                                                               | Yes|
-| restartApp=true      |  Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No|
-| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. | No|
+| restartApp=true      |  Restarts the Canvas app. Required to ensure parameters are passed when the app is already open. | No|
+| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app. | No|
 
   ## Supported Urls parameters for a wrapped native mobile app
   
@@ -90,7 +93,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 | Yes|
 | tenantId=&lt;tenantId&gt;     | Connects to the correct tenant.                                                              | Yes|
 | restartApp=true      |  Restarts the model-driven app. Required to ensure parameters are passed when the app is already open. | No|
-| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. |   No|
+| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. <br><br>**Note**: This parameter will be ignored if a user is already signed into the app.|   No|
 
 ## Troubleshooting
 

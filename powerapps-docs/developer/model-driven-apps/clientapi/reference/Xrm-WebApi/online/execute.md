@@ -1,11 +1,10 @@
 ---
-title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-author: lancedMicrosoft
-ms.author: lanced
-ms.date: 12/08/2023
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/29/2025
 ms.reviewer: jdaly
-
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
@@ -30,7 +29,7 @@ contributors:
 |---|---|---|---|
 |`request`|Object|Yes|Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that lets you define the metadata for the action, function or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
 |`successCallback`|Function|No|A function to call when operation is executed successfully. See [Return Value](#return-value)|
-|`errorCallback`|Function|No|A function to call when the operation fails.|
+|`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](../includes/errorcallback-description.md)]|
 
 ### request.getMetadata method
 

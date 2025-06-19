@@ -1,8 +1,8 @@
 ---
-title: "Edit table records directly from another table’s main form | MicrosoftDocs"
-description: Learn how to design a main form that can be used to edit a related table record.
+title: "Edit table records directly from another table’s main form"
+description: Learn how to design a main form that can be used to edit a related table record with Power Apps.
 ms.custom: ""
-ms.date: 07/09/2024
+ms.date: 04/28/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,7 +11,7 @@ applies_to:
   - "PowerApps"
 author: "Mattp123"
 ms.subservice: mda-maker
-ms.author: "mspilde"
+ms.author: "mijosh"
 search.audienceType: 
   - maker
 ---
@@ -83,7 +83,7 @@ This section describes form component behavior when used in a model-driven app.
 
 ### Record selection
 
-In order for the form component control to show a form, the lookup column it's bound to needs to have a value. Otherwise, the control will show the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control will show a form with the data for the new lookup column value.
+In order for the form component control to show a form, the lookup column it's bound to needs to have a value. Otherwise, the control shows the message **Source record not selected**. One way to set the value is to add to the form a lookup control that is bound to the same lookup column as the form component control. When you use the lookup control to change the lookup column value, the form component control shows a form with the data for the new lookup column value.
 
 ### Column validation
 
@@ -97,15 +97,15 @@ Once the validation stage is passed, data is sent to Dataverse for each record. 
 
 ### Notifications
 
-Notifications on the form component are aggregated into the notifications of the main form. For instance, if there are invalid columns in the form component and you try to save, the invalid column notification will appear at the top of the main form rather than in the form component.
+Notifications on the form component are aggregated into the notifications of the main form. For instance, if there are invalid columns in the form component and you try to save, the invalid column notification appears at the top of the main form rather than in the form component.
 
 ### Error handling
 
-If there are multiple errors during save, only one error will be shown to the user. If the user can make changes to fix the first error, and saves the next error will be visible.  The user will need to continue saving until all errors have been resolved.
+If there are multiple errors during save, only one error is shown to the user. If the user can make changes to fix the first error, and saves the next error will be visible. The user needs to continue saving until all errors are resolved.
 
 ### Changing records with unsaved changes
 
-If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user will be alerted about this change.
+If there are unsaved changes in a form for a form component and a user tries to change the lookup column the form component is bound to, the user is alerted about this change.
 
 ### Client API
 
@@ -117,7 +117,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control only supports rendering main forms. Similarly, support for adding a form component control is only supported with main forms. Other form types, such as quick create, quick view, and card aren't supported.
 
-- Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you don't use a form component with a form that uses a business process flow.
+- Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you might encounter unexpected behavior. We recommend that you don't use a form component with a form that uses a business process flow.
 
 - The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control.
 
@@ -127,19 +127,23 @@ Note the following limitations when you add the form component control to a tabl
 
 - Using the same form for different form component controls on a single form isn't supported.
 
-- The form that you use with a form component must be [included in your app](add-edit-app-components.md#add-a-component). If it isn't, or if the current user doesn't have access to the form, it will fall back to the top-most main form that is included in the app and available to the user (based on form order).
+- The form that you use with a form component must be [included in your app](add-edit-app-components.md#add-a-component). If it isn't, or if the current user doesn't have access to the form, it falls back to the top-most main form that is included in the app and available to the user (based on form order).
 
 - All components used by the form in a form component must be [included in your app](add-edit-app-components.md#add-a-component). These components include related tables, views, and business process flows. If they aren't, they won't be available in the form or there might be unexpected behavior.
 
 - Form component controls have certain limitations when rendered in multi-session apps. Specifically, dynamically added handlers on the form component form such as `addOnSave` or `addOnChange` might not run after switching multisession tabs. 
 
-- You might notice that the timeline wall might not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
+- You might notice that the timeline wall might not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall updates as expected.
 
 - On mobile, the timeline control doesn't currently appear in the form component control.
 
-- For subgrids, the **See all records** and **See associated records** command buttons won't be available if they're rendered inside a form component.
+- For subgrids, the **See associated records** command button won't be available if the subgrid is rendered inside a form component.
 
 - Form component controls aren't supported in bulk edit dialogs. They won't appear in the form in the bulk edit dialog by default and any changes made to related table records with them won't be saved.
+
+- When duplicate records are detected when a form component control is saved, users might not be able to view the duplicates to resolve conflicts.
+
+- Form validation only happens for the required fields that are rendered. Validation isn't possible for required fields that aren't visible or not rendered or present on another tab.
 
 ### See also
 

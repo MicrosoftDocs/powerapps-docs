@@ -1,12 +1,12 @@
 ---
 title: Request Power Apps licenses for your app users
 description: Learn how to request Power Apps licenses for your users.
-author: sericks007
+author: shwetamurkute
 ms.subservice: common
 ms.topic: how-to
 ms.date: 05/08/2023
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.contributors: zadesa
 searchScope:
   - "Power Apps"

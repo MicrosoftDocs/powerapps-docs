@@ -3,8 +3,8 @@ title: "Dataverse search (legacy) (Microsoft Dataverse)| Microsoft Docs"
 description: "Dataverse legacy search remains available but we recommend you use Dataverse Search 2.0."
 ms.date: 10/20/2023
 ms.topic: article
-author: mspilde
-ms.author: mspilde
+author: seanwat-msft
+ms.author: seanwat
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -13,6 +13,7 @@ search.app:
   - D365CE
 contributors:
  - JimDaly
+ - jeromeblouinms
 ---
 
 # Dataverse search (legacy)
@@ -213,7 +214,7 @@ POST [Organization URI]/api/search/v1.0/query
                 ]
             },
             "@search.entityname": "contact",
-            "@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
+            "@search.objectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
             "ownerid": "bb2500d1-5e6d-4953-8389-bfedf57e3857",
             "owneridname": "Corey Gray",
             "@search.ownerid.logicalname": "systemuser",
@@ -402,7 +403,7 @@ POST [Organization URI]/api/search/v1.0/suggest
         {
             "text": "{crmhit}Mar{/crmhit}ia Sullivan",
             "document": {
-                "@search.objectid": "52a33850-8f0a-eb11-a813-000d3a8ab142",
+                "@search.objectid": "bbbbbbbb-1111-2222-3333-cccccccccccc",
                 "@search.entityname": "contact",
                 "@search.objecttypecode": 2,
                 "fullname": "Maria Sullivan",

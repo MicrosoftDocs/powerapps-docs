@@ -18,7 +18,7 @@ contributors:
 This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the table.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: Retrieve valid status transitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveValidTransitions)
+> [SDK for .NET: Retrieve valid status transitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/RetrieveValidTransitions)
 
 ## How to run this sample
 

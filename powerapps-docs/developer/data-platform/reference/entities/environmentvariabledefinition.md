@@ -1,67 +1,65 @@
 ---
-title: "EnvironmentVariableDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Environment Variable Definition (EnvironmentVariableDefinition) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# EnvironmentVariableDefinition table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Environment Variable Definition (EnvironmentVariableDefinition) table/entity reference (Microsoft Dataverse)
 
 Contains information about the settable variable: its type, default value, and etc.
 
-**Added by**: Environment Variables Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /environmentvariabledefinitions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAllCompositeDataSources|<xref:Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RetrieveAllCompositeDataSources|
-|RetrieveCompositeDataSource|<xref:Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RetrieveCompositeDataSource|
-|RetrieveEnvironmentVariables|<xref:Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RetrieveEnvironmentVariables|
-|RetrieveEnvironmentVariableValue|<xref:Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RetrieveEnvironmentVariableValue|
-|RetrieveMultiple|GET /environmentvariabledefinitions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+The following table lists the messages for the Environment Variable Definition (EnvironmentVariableDefinition) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /environmentvariabledefinitions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `IsValidStateTransition`<br />Event: False |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: False |`GET` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveAllCompositeDataSources`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RetrieveCompositeDataSource`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RetrieveEnvironmentVariables`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RetrieveEnvironmentVariableValue`<br />Event: False |<xref:Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RetrieveMultiple`<br />Event: False |`GET` /environmentvariabledefinitions<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|EnvironmentVariableDefinitions|
-|DisplayCollectionName|Environment Variable Definitions|
-|DisplayName|Environment Variable Definition|
-|EntitySetName|environmentvariabledefinitions|
-|IsBPFEntity|False|
-|LogicalCollectionName|environmentvariabledefinitions|
-|LogicalName|environmentvariabledefinition|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|environmentvariabledefinitionid|
-|PrimaryNameAttribute|schemaname|
-|SchemaName|EnvironmentVariableDefinition|
+The following table lists selected properties for the Environment Variable Definition (EnvironmentVariableDefinition) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Environment Variable Definition** |
+| **DisplayCollectionName** | **Environment Variable Definitions** |
+| **SchemaName** | `EnvironmentVariableDefinition` |
+| **CollectionSchemaName** | `EnvironmentVariableDefinitions` |
+| **EntitySetName** | `environmentvariabledefinitions`|
+| **LogicalName** | `environmentvariabledefinition` |
+| **LogicalCollectionName** | `environmentvariabledefinitions` |
+| **PrimaryIdAttribute** | `environmentvariabledefinitionid` |
+| **PrimaryNameAttribute** |`schemaname` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -75,9 +73,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinitionId)
 - [Hint](#BKMK_Hint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InputControlConfig](#BKMK_InputControlConfig)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsRequired](#BKMK_IsRequired)
+- [LearnMoreUrl](#BKMK_LearnMoreUrl)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -92,1299 +92,1182 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [ValueSchema](#BKMK_ValueSchema)
 
-
 ### <a name="BKMK_ApiId"></a> ApiId
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|API Id|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**API Id**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|apiid|
-|MaxLength|150|
+|LogicalName|`apiid`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|150|
 
 ### <a name="BKMK_ConnectionReferenceId"></a> ConnectionReferenceId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Connection Reference associated with Environment Variable Definition.|
-|DisplayName|Connection Reference|
+|---|---|
+|Description|**Unique identifier for Connection Reference associated with Environment Variable Definition.**|
+|DisplayName|**Connection Reference**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|connectionreferenceid|
+|LogicalName|`connectionreferenceid`|
 |RequiredLevel|None|
-|Targets||
 |Type|Lookup|
-
+|Targets||
 
 ### <a name="BKMK_DefaultValue"></a> DefaultValue
 
 |Property|Value|
-|--------|-----|
-|Description|Default variable value to be used if no associated EnvironmentVariableValue entities exist.|
-|DisplayName|Default Value|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Default variable value to be used if no associated EnvironmentVariableValue entities exist.**|
+|DisplayName|**Default Value**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|defaultvalue|
-|MaxLength|2000|
+|LogicalName|`defaultvalue`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_Description"></a> Description
 
 |Property|Value|
-|--------|-----|
-|Description|Description of the variable definition.|
-|DisplayName|Description|
-|Format|Text|
-|IsLocalizable|True|
+|---|---|
+|Description|**Description of the variable definition.**|
+|DisplayName|**Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|description|
-|MaxLength|2000|
+|LogicalName|`description`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|True|
+|MaxLength|2000|
 
 ### <a name="BKMK_DisplayName"></a> DisplayName
 
 |Property|Value|
-|--------|-----|
-|Description|Display Name of the variable definition.|
-|DisplayName|Display Name|
-|FormatName|Text|
-|IsLocalizable|True|
+|---|---|
+|Description|**Display Name of the variable definition.**|
+|DisplayName|**Display Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|displayname|
-|MaxLength|100|
+|LogicalName|`displayname`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|True|
+|MaxLength|100|
 
 ### <a name="BKMK_EnvironmentVariableDefinitionId"></a> EnvironmentVariableDefinitionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Environment Variable Definition|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Environment Variable Definition**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|environmentvariabledefinitionid|
+|LogicalName|`environmentvariabledefinitionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_Hint"></a> Hint
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Hint|
-|Format|Text|
-|IsLocalizable|True|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Hint**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|hint|
-|MaxLength|2000|
+|LogicalName|`hint`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|True|
+|MaxLength|2000|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
-**Added by**: Basic Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Sequence number of the import that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Sequence number of the import that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
+### <a name="BKMK_InputControlConfig"></a> InputControlConfig
+
+|Property|Value|
+|---|---|
+|Description|**A JSON object describing the options for the input control that should be presented to the user for setting the current value of the Environment variable.**|
+|DisplayName|**Input Control Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`inputcontrolconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
-|--------|-----|
-|Description|Version in which the form is introduced.|
-|DisplayName|Introduced Version|
-|FormatName|VersionNumber|
-|IsLocalizable|False|
+|---|---|
+|Description|**Version in which the form is introduced.**|
+|DisplayName|**Introduced Version**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|introducedversion|
-|MaxLength|48|
+|LogicalName|`introducedversion`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|VersionNumber|
+|FormatName|VersionNumber|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|48|
 
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 |Property|Value|
-|--------|-----|
-|Description|Tells whether the component can be customized.|
-|DisplayName|Customizable|
+|---|---|
+|Description|**Tells whether the component can be customized.**|
+|DisplayName|**Customizable**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iscustomizable|
+|LogicalName|`iscustomizable`|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
 
 ### <a name="BKMK_IsRequired"></a> IsRequired
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Is Required|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Is Required**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isrequired|
+|LogicalName|`isrequired`|
 |RequiredLevel|ApplicationRequired|
 |Type|Boolean|
+|GlobalChoiceName|`environmentvariabledefinition_isrequired`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
-#### IsRequired Choices/Options
+### <a name="BKMK_LearnMoreUrl"></a> LearnMoreUrl
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|Property|Value|
+|---|---|
+|Description|**Clicking on this url will take the user to a webpage which further explains the environment variable being populated.**|
+|DisplayName|**Learn More Url**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`learnmoreurl`|
+|RequiredLevel|None|
+|Type|String|
+|Format|Url|
+|FormatName|Url|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id|
-|DisplayName|Owner|
+|---|---|
+|Description|**Owner Id**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Owner Id Type|
+|---|---|
+|Description|**Owner Id Type**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_ParameterKey"></a> ParameterKey
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Parameter Key|
-|FormatName|Text|
-|IsLocalizable|False|
+|DisplayName|**Parameter Key**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parameterkey|
-|MaxLength|150|
+|LogicalName|`parameterkey`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|150|
 
 ### <a name="BKMK_ParentDefinitionId"></a> ParentDefinitionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Environment Variable Definition associated with Environment Variable Definition.|
-|DisplayName|Parent Definition|
+|---|---|
+|Description|**Unique identifier for Environment Variable Definition associated with Environment Variable Definition.**|
+|DisplayName|**Parent Definition**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|parentdefinitionid|
+|LogicalName|`parentdefinitionid`|
 |RequiredLevel|None|
-|Targets|environmentvariabledefinition|
 |Type|Lookup|
-
+|Targets|environmentvariabledefinition|
 
 ### <a name="BKMK_SchemaName"></a> SchemaName
 
 |Property|Value|
-|--------|-----|
-|Description|Unique entity name.|
-|DisplayName|Schema Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Unique entity name.**|
+|DisplayName|**Schema Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|schemaname|
-|MaxLength|100|
+|LogicalName|`schemaname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_SecretStore"></a> SecretStore
 
 |Property|Value|
-|--------|-----|
-|Description|Environment variable secret store.|
-|DisplayName|SecretStore|
+|---|---|
+|Description|**Environment variable secret store.**|
+|DisplayName|**SecretStore**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|secretstore|
+|LogicalName|`secretstore`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`environmentvariabledefinition_secretstore`|
 
 #### SecretStore Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Azure Key Vault||
-|1|Microsoft Dataverse||
-
-
+|Value|Label|
+|---|---|
+|0|**Azure Key Vault**|
+|1|**Microsoft Dataverse**|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Environment Variable Definition|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Environment Variable Definition**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`environmentvariabledefinition_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Environment Variable Definition|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Environment Variable Definition**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`environmentvariabledefinition_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_Type"></a> Type
 
 |Property|Value|
-|--------|-----|
-|Description|Environment variable value type.|
-|DisplayName|Type|
+|---|---|
+|Description|**Environment variable value type.**|
+|DisplayName|**Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|type|
+|LogicalName|`type`|
 |RequiredLevel|ApplicationRequired|
 |Type|Picklist|
+|DefaultFormValue|100000000|
+|GlobalChoiceName|`environmentvariabledefinition_type`|
 
 #### Type Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|100000000|String||
-|100000001|Number||
-|100000002|Boolean||
-|100000003|JSON||
-|100000004|Data Source||
-|100000005|Secret||
-
-
+|Value|Label|
+|---|---|
+|100000000|**String**|
+|100000001|**Number**|
+|100000002|**Boolean**|
+|100000003|**JSON**|
+|100000004|**Data Source**|
+|100000005|**Secret**|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_ValueSchema"></a> ValueSchema
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Value Schema|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Value Schema**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|valueschema|
-|MaxLength|2000|
+|LogicalName|`valueschema`|
 |RequiredLevel|None|
 |Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [EnvironmentVariableDefinitionIdUnique](#BKMK_EnvironmentVariableDefinitionIdUnique)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [ParentDefinitionIdName](#BKMK_ParentDefinitionIdName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Component State|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Component State**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|componentstate|
+|LogicalName|`componentstate`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`componentstate`|
 
 #### ComponentState Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Published||
-|1|Unpublished||
-|2|Deleted||
-|3|Deleted Unpublished||
-
-
+|Value|Label|
+|---|---|
+|0|**Published**|
+|1|**Unpublished**|
+|2|**Deleted**|
+|3|**Deleted Unpublished**|
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the record.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_EnvironmentVariableDefinitionIdUnique"></a> EnvironmentVariableDefinitionIdUnique
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
+|---|---|
+|Description|**For internal use only.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|environmentvariabledefinitionidunique|
+|LogicalName|`environmentvariabledefinitionidunique`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
-|--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
-|DisplayName|Is Managed|
+|---|---|
+|Description|**Indicates whether the solution component is part of a managed solution.**|
+|DisplayName|**Is Managed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ismanaged|
+|LogicalName|`ismanaged`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsManaged Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Managed||
-|0|Unmanaged||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`ismanaged`|
+|DefaultValue|False|
+|True Label|Managed|
+|False Label|Unmanaged|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who modified the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who modified the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Unique identifier of the delegate user who modified the record.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
-|DisplayName|Record Overwrite Time|
-|Format|DateOnly|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Record Overwrite Time**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|overwritetime|
+|LogicalName|`overwritetime`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Name of the owner|
+|---|---|
+|Description|**Name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Yomi name of the owner|
+|---|---|
+|Description|**Yomi name of the owner**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier for the business unit that owns the record**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the team that owns the record.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier for the team that owns the record.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for the user that owns the record.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier for the user that owns the record.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ParentDefinitionIdName"></a> ParentDefinitionIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|parentdefinitionidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the associated solution.|
-|DisplayName|Solution|
+|---|---|
+|Description|**Unique identifier of the associated solution.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|solutionid|
+|LogicalName|`solutionid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Solution|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Solution**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|LogicalName|supportingsolutionid|
+|LogicalName|`supportingsolutionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
-|--------|-----|
-|Description|Version Number|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version Number**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
-- [environmentvariabledefinition_DuplicateMatchingRecord](#BKMK_environmentvariabledefinition_DuplicateMatchingRecord)
-- [environmentvariabledefinition_DuplicateBaseRecord](#BKMK_environmentvariabledefinition_DuplicateBaseRecord)
-- [environmentvariabledefinition_AsyncOperations](#BKMK_environmentvariabledefinition_AsyncOperations)
-- [environmentvariabledefinition_MailboxTrackingFolders](#BKMK_environmentvariabledefinition_MailboxTrackingFolders)
-- [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
-- [environmentvariabledefinition_BulkDeleteFailures](#BKMK_environmentvariabledefinition_BulkDeleteFailures)
-- [environmentvariabledefinition_PrincipalObjectAttributeAccesses](#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
-- [environmentvariabledefinition_environmentvariablevalue](#BKMK_environmentvariabledefinition_environmentvariablevalue)
-- [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition)
-- [environmentvariabledefinition_credential_password](#BKMK_environmentvariabledefinition_credential_password)
-- [environmentvariabledefinition_credential_username](#BKMK_environmentvariabledefinition_credential_username)
-- [environmentvariabledefinition_credential_cyberarksafe](#BKMK_environmentvariabledefinition_credential_cyberarksafe)
-- [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
-- [environmentvariabledefinition_credential_cyberarkusername](#BKMK_environmentvariabledefinition_credential_cyberarkusername)
-- [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
-
-
-### <a name="BKMK_environmentvariabledefinition_SyncErrors"></a> environmentvariabledefinition_SyncErrors
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_SyncErrors](syncerror.md#BKMK_environmentvariabledefinition_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_DuplicateMatchingRecord"></a> environmentvariabledefinition_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_DuplicateMatchingRecord](duplicaterecord.md#BKMK_environmentvariabledefinition_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_DuplicateBaseRecord"></a> environmentvariabledefinition_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_DuplicateBaseRecord](duplicaterecord.md#BKMK_environmentvariabledefinition_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_AsyncOperations"></a> environmentvariabledefinition_AsyncOperations
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_AsyncOperations](asyncoperation.md#BKMK_environmentvariabledefinition_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_MailboxTrackingFolders"></a> environmentvariabledefinition_MailboxTrackingFolders
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_environmentvariabledefinition_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mailboxtrackingfolder|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_MailboxTrackingFolders|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_ProcessSession"></a> environmentvariabledefinition_ProcessSession
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_ProcessSession](processsession.md#BKMK_environmentvariabledefinition_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_ProcessSession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_BulkDeleteFailures"></a> environmentvariabledefinition_BulkDeleteFailures
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_BulkDeleteFailures](bulkdeletefailure.md#BKMK_environmentvariabledefinition_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses"></a> environmentvariabledefinition_PrincipalObjectAttributeAccesses
-
-**Added by**: System Solution Solution
-
-Same as the [environmentvariabledefinition_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_PrincipalObjectAttributeAccesses|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_environmentvariablevalue"></a> environmentvariabledefinition_environmentvariablevalue
-
-Same as the [environmentvariabledefinition_environmentvariablevalue](environmentvariablevalue.md#BKMK_environmentvariabledefinition_environmentvariablevalue) many-to-one relationship for the [environmentvariablevalue](environmentvariablevalue.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|environmentvariablevalue|
-|ReferencingAttribute|environmentvariabledefinitionid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_environmentvariablevalue|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_envdefinition_envdefinition"></a> envdefinition_envdefinition
-
-Same as the [envdefinition_envdefinition](environmentvariabledefinition.md#BKMK_envdefinition_envdefinition) many-to-one relationship for the [environmentvariabledefinition](environmentvariabledefinition.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
-|ReferencingAttribute|parentdefinitionid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|envdefinition_envdefinition|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_credential_password"></a> environmentvariabledefinition_credential_password
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [environmentvariabledefinition_credential_password](credential.md#BKMK_environmentvariabledefinition_credential_password) many-to-one relationship for the [credential](credential.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|credential|
-|ReferencingAttribute|password|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_password|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_credential_username"></a> environmentvariabledefinition_credential_username
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [environmentvariabledefinition_credential_username](credential.md#BKMK_environmentvariabledefinition_credential_username) many-to-one relationship for the [credential](credential.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|credential|
-|ReferencingAttribute|username|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_username|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_credential_cyberarksafe"></a> environmentvariabledefinition_credential_cyberarksafe
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [environmentvariabledefinition_credential_cyberarksafe](credential.md#BKMK_environmentvariabledefinition_credential_cyberarksafe) many-to-one relationship for the [credential](credential.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|credential|
-|ReferencingAttribute|cyberarksafe|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_cyberarksafe|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_credential_cyberarkobject"></a> environmentvariabledefinition_credential_cyberarkobject
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [environmentvariabledefinition_credential_cyberarkobject](credential.md#BKMK_environmentvariabledefinition_credential_cyberarkobject) many-to-one relationship for the [credential](credential.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|credential|
-|ReferencingAttribute|cyberarkobject|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_cyberarkobject|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_environmentvariabledefinition_credential_cyberarkusername"></a> environmentvariabledefinition_credential_cyberarkusername
-
-**Added by**: Power Automate Core Components Solution
-
-Same as the [environmentvariabledefinition_credential_cyberarkusername](credential.md#BKMK_environmentvariabledefinition_credential_cyberarkusername) many-to-one relationship for the [credential](credential.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|credential|
-|ReferencingAttribute|cyberarkusername|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|environmentvariabledefinition_credential_cyberarkusername|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_envvardefinition_powerbimashupparameter"></a> envvardefinition_powerbimashupparameter
-
-**Added by**: Power BI Entities Solution
-
-Same as the [envvardefinition_powerbimashupparameter](powerbimashupparameter.md#BKMK_envvardefinition_powerbimashupparameter) many-to-one relationship for the [powerbimashupparameter](powerbimashupparameter.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|powerbimashupparameter|
-|ReferencingAttribute|environmentvariableid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|envvardefinition_powerbimashupparameter|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
+- [business_unit_environmentvariabledefinition](#BKMK_business_unit_environmentvariabledefinition)
+- [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition-many-to-one)
 - [lk_environmentvariabledefinition_createdby](#BKMK_lk_environmentvariabledefinition_createdby)
 - [lk_environmentvariabledefinition_createdonbehalfby](#BKMK_lk_environmentvariabledefinition_createdonbehalfby)
 - [lk_environmentvariabledefinition_modifiedby](#BKMK_lk_environmentvariabledefinition_modifiedby)
 - [lk_environmentvariabledefinition_modifiedonbehalfby](#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby)
-- [user_environmentvariabledefinition](#BKMK_user_environmentvariabledefinition)
+- [owner_environmentvariabledefinition](#BKMK_owner_environmentvariabledefinition)
 - [team_environmentvariabledefinition](#BKMK_team_environmentvariabledefinition)
-- [business_unit_environmentvariabledefinition](#BKMK_business_unit_environmentvariabledefinition)
-- [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition)
-
-
-### <a name="BKMK_lk_environmentvariabledefinition_createdby"></a> lk_environmentvariabledefinition_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_environmentvariabledefinition_createdby](systemuser.md#BKMK_lk_environmentvariabledefinition_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_environmentvariabledefinition_createdonbehalfby"></a> lk_environmentvariabledefinition_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_environmentvariabledefinition_createdonbehalfby](systemuser.md#BKMK_lk_environmentvariabledefinition_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_environmentvariabledefinition_modifiedby"></a> lk_environmentvariabledefinition_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_environmentvariabledefinition_modifiedby](systemuser.md#BKMK_lk_environmentvariabledefinition_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_environmentvariabledefinition_modifiedonbehalfby"></a> lk_environmentvariabledefinition_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_environmentvariabledefinition_modifiedonbehalfby](systemuser.md#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_user_environmentvariabledefinition"></a> user_environmentvariabledefinition
-
-**Added by**: System Solution Solution
-
-See the [user_environmentvariabledefinition](systemuser.md#BKMK_user_environmentvariabledefinition) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_environmentvariabledefinition"></a> team_environmentvariabledefinition
-
-**Added by**: System Solution Solution
-
-See the [team_environmentvariabledefinition](team.md#BKMK_team_environmentvariabledefinition) one-to-many relationship for the [team](team.md) table/entity.
+- [user_environmentvariabledefinition](#BKMK_user_environmentvariabledefinition)
 
 ### <a name="BKMK_business_unit_environmentvariabledefinition"></a> business_unit_environmentvariabledefinition
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [businessunit business_unit_environmentvariabledefinition](businessunit.md#BKMK_business_unit_environmentvariabledefinition)
 
-See the [business_unit_environmentvariabledefinition](businessunit.md#BKMK_business_unit_environmentvariabledefinition) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Restrict`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
-### <a name="BKMK_envdefinition_envdefinition"></a> envdefinition_envdefinition
+### <a name="BKMK_envdefinition_envdefinition-many-to-one"></a> envdefinition_envdefinition
 
-See the [envdefinition_envdefinition](environmentvariabledefinition.md#BKMK_envdefinition_envdefinition) one-to-many relationship for the [environmentvariabledefinition](environmentvariabledefinition.md) table/entity.
-<a name="manytomany"></a>
+One-To-Many Relationship: [environmentvariabledefinition envdefinition_envdefinition](#BKMK_envdefinition_envdefinition-one-to-many)
 
-## Many-To-Many Relationships
+|Property|Value|
+|---|---|
+|ReferencedEntity|`environmentvariabledefinition`|
+|ReferencedAttribute|`environmentvariabledefinitionid`|
+|ReferencingAttribute|`parentdefinitionid`|
+|ReferencingEntityNavigationPropertyName|`ParentDefinitionId`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
-Relationship details provided where the EnvironmentVariableDefinition table is the first table in the relationship. Listed by **SchemaName**.
+### <a name="BKMK_lk_environmentvariabledefinition_createdby"></a> lk_environmentvariabledefinition_createdby
+
+One-To-Many Relationship: [systemuser lk_environmentvariabledefinition_createdby](systemuser.md#BKMK_lk_environmentvariabledefinition_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_environmentvariabledefinition_createdonbehalfby"></a> lk_environmentvariabledefinition_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_environmentvariabledefinition_createdonbehalfby](systemuser.md#BKMK_lk_environmentvariabledefinition_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_environmentvariabledefinition_modifiedby"></a> lk_environmentvariabledefinition_modifiedby
+
+One-To-Many Relationship: [systemuser lk_environmentvariabledefinition_modifiedby](systemuser.md#BKMK_lk_environmentvariabledefinition_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_environmentvariabledefinition_modifiedonbehalfby"></a> lk_environmentvariabledefinition_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_environmentvariabledefinition_modifiedonbehalfby](systemuser.md#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_environmentvariabledefinition"></a> owner_environmentvariabledefinition
+
+One-To-Many Relationship: [owner owner_environmentvariabledefinition](owner.md#BKMK_owner_environmentvariabledefinition)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_environmentvariabledefinition"></a> team_environmentvariabledefinition
+
+One-To-Many Relationship: [team team_environmentvariabledefinition](team.md#BKMK_team_environmentvariabledefinition)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_environmentvariabledefinition"></a> user_environmentvariabledefinition
+
+One-To-Many Relationship: [systemuser user_environmentvariabledefinition](systemuser.md#BKMK_user_environmentvariabledefinition)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [envdefinition_envdefinition](#BKMK_envdefinition_envdefinition-one-to-many)
+- [environmentvariabledefinition_AsyncOperations](#BKMK_environmentvariabledefinition_AsyncOperations)
+- [environmentvariabledefinition_BulkDeleteFailures](#BKMK_environmentvariabledefinition_BulkDeleteFailures)
+- [environmentvariabledefinition_credential_certificate](#BKMK_environmentvariabledefinition_credential_certificate)
+- [environmentvariabledefinition_credential_cyberarkobject](#BKMK_environmentvariabledefinition_credential_cyberarkobject)
+- [environmentvariabledefinition_credential_cyberarksafe](#BKMK_environmentvariabledefinition_credential_cyberarksafe)
+- [environmentvariabledefinition_credential_cyberarkusername](#BKMK_environmentvariabledefinition_credential_cyberarkusername)
+- [environmentvariabledefinition_credential_password](#BKMK_environmentvariabledefinition_credential_password)
+- [environmentvariabledefinition_credential_username](#BKMK_environmentvariabledefinition_credential_username)
+- [environmentvariabledefinition_DuplicateBaseRecord](#BKMK_environmentvariabledefinition_DuplicateBaseRecord)
+- [environmentvariabledefinition_DuplicateMatchingRecord](#BKMK_environmentvariabledefinition_DuplicateMatchingRecord)
+- [environmentvariabledefinition_environmentvariablevalue](#BKMK_environmentvariabledefinition_environmentvariablevalue)
+- [environmentvariabledefinition_flowmachinenetwork_domainpassword](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+- [environmentvariabledefinition_flowmachinenetwork_domainusername](#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
+- [environmentvariabledefinition_MailboxTrackingFolders](#BKMK_environmentvariabledefinition_MailboxTrackingFolders)
+- [environmentvariabledefinition_PrincipalObjectAttributeAccesses](#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
+- [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
+- [EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId](#BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId)
+- [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
+- [envvardefinition_powerbimashupparameter](#BKMK_envvardefinition_powerbimashupparameter)
+- [mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
+
+### <a name="BKMK_envdefinition_envdefinition-one-to-many"></a> envdefinition_envdefinition
+
+Many-To-One Relationship: [environmentvariabledefinition envdefinition_envdefinition](#BKMK_envdefinition_envdefinition-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`environmentvariabledefinition`|
+|ReferencingAttribute|`parentdefinitionid`|
+|ReferencedEntityNavigationPropertyName|`envdefinition_envdefinition`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_AsyncOperations"></a> environmentvariabledefinition_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation environmentvariabledefinition_AsyncOperations](asyncoperation.md#BKMK_environmentvariabledefinition_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_AsyncOperations`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_BulkDeleteFailures"></a> environmentvariabledefinition_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure environmentvariabledefinition_BulkDeleteFailures](bulkdeletefailure.md#BKMK_environmentvariabledefinition_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_BulkDeleteFailures`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_certificate"></a> environmentvariabledefinition_credential_certificate
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_certificate](credential.md#BKMK_environmentvariabledefinition_credential_certificate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`certificate`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_certificate`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_cyberarkobject"></a> environmentvariabledefinition_credential_cyberarkobject
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_cyberarkobject](credential.md#BKMK_environmentvariabledefinition_credential_cyberarkobject)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`cyberarkobject`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_cyberarkobject`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_cyberarksafe"></a> environmentvariabledefinition_credential_cyberarksafe
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_cyberarksafe](credential.md#BKMK_environmentvariabledefinition_credential_cyberarksafe)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`cyberarksafe`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_cyberarksafe`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_cyberarkusername"></a> environmentvariabledefinition_credential_cyberarkusername
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_cyberarkusername](credential.md#BKMK_environmentvariabledefinition_credential_cyberarkusername)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`cyberarkusername`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_cyberarkusername`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_password"></a> environmentvariabledefinition_credential_password
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_password](credential.md#BKMK_environmentvariabledefinition_credential_password)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`password`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_password`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_credential_username"></a> environmentvariabledefinition_credential_username
+
+Many-To-One Relationship: [credential environmentvariabledefinition_credential_username](credential.md#BKMK_environmentvariabledefinition_credential_username)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`credential`|
+|ReferencingAttribute|`username`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_username`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_DuplicateBaseRecord"></a> environmentvariabledefinition_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord environmentvariabledefinition_DuplicateBaseRecord](duplicaterecord.md#BKMK_environmentvariabledefinition_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_DuplicateBaseRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_DuplicateMatchingRecord"></a> environmentvariabledefinition_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord environmentvariabledefinition_DuplicateMatchingRecord](duplicaterecord.md#BKMK_environmentvariabledefinition_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_DuplicateMatchingRecord`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_environmentvariablevalue"></a> environmentvariabledefinition_environmentvariablevalue
+
+Many-To-One Relationship: [environmentvariablevalue environmentvariabledefinition_environmentvariablevalue](environmentvariablevalue.md#BKMK_environmentvariabledefinition_environmentvariablevalue)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`environmentvariablevalue`|
+|ReferencingAttribute|`environmentvariabledefinitionid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_environmentvariablevalue`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword"></a> environmentvariabledefinition_flowmachinenetwork_domainpassword
+
+Many-To-One Relationship: [flowmachinenetwork environmentvariabledefinition_flowmachinenetwork_domainpassword](flowmachinenetwork.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainpassword)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachinenetwork`|
+|ReferencingAttribute|`domainpassword`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_flowmachinenetwork_domainpassword`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername"></a> environmentvariabledefinition_flowmachinenetwork_domainusername
+
+Many-To-One Relationship: [flowmachinenetwork environmentvariabledefinition_flowmachinenetwork_domainusername](flowmachinenetwork.md#BKMK_environmentvariabledefinition_flowmachinenetwork_domainusername)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowmachinenetwork`|
+|ReferencingAttribute|`domainusername`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_credential_domainusername`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_MailboxTrackingFolders"></a> environmentvariabledefinition_MailboxTrackingFolders
+
+Many-To-One Relationship: [mailboxtrackingfolder environmentvariabledefinition_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_environmentvariabledefinition_MailboxTrackingFolders)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mailboxtrackingfolder`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_MailboxTrackingFolders`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses"></a> environmentvariabledefinition_PrincipalObjectAttributeAccesses
+
+Many-To-One Relationship: [principalobjectattributeaccess environmentvariabledefinition_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_PrincipalObjectAttributeAccesses`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_ProcessSession"></a> environmentvariabledefinition_ProcessSession
+
+Many-To-One Relationship: [processsession environmentvariabledefinition_ProcessSession](processsession.md#BKMK_environmentvariabledefinition_ProcessSession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_ProcessSession`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId"></a> EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId
+
+Many-To-One Relationship: [reportparameter EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId](reportparameter.md#BKMK_EnvironmentVariableDefinition_ReportParameter_EvironmentVariableDefinitionId)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`reportparameter`|
+|ReferencingAttribute|`environmentvariabledefinitionid`|
+|ReferencedEntityNavigationPropertyName|`EnvironmentVariableDefinition_ReportParameters`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_environmentvariabledefinition_SyncErrors"></a> environmentvariabledefinition_SyncErrors
+
+Many-To-One Relationship: [syncerror environmentvariabledefinition_SyncErrors](syncerror.md#BKMK_environmentvariabledefinition_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`environmentvariabledefinition_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_envvardefinition_powerbimashupparameter"></a> envvardefinition_powerbimashupparameter
+
+Many-To-One Relationship: [powerbimashupparameter envvardefinition_powerbimashupparameter](powerbimashupparameter.md#BKMK_envvardefinition_powerbimashupparameter)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`powerbimashupparameter`|
+|ReferencingAttribute|`environmentvariableid`|
+|ReferencedEntityNavigationPropertyName|`envvardefinition_powerbimashupparameter`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable"></a> mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable
+
+Many-To-One Relationship: [mspp_sitesetting mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable](mspp_sitesetting.md#BKMK_mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_sitesetting`|
+|ReferencingAttribute|`mspp_environmentvariable`|
+|ReferencedEntityNavigationPropertyName|`mspp_environmentvariabledefinition_mspp_sitesetting_environmentvariable`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
+## Many-to-Many relationships
+
+These relationships are many-to-many. Listed by **SchemaName**.
 
 - [bot_environmentvariabledefinition](#BKMK_bot_environmentvariabledefinition)
 - [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
-
+- [msdyn_connectordatasource_environmentvariable](#BKMK_msdyn_connectordatasource_environmentvariable)
 
 ### <a name="BKMK_bot_environmentvariabledefinition"></a> bot_environmentvariabledefinition
 
-See the [bot_environmentvariabledefinition](bot.md#BKMK_bot_environmentvariabledefinition) many-to-many relationship for the [bot](bot.md) table/entity.
+See [bot bot_environmentvariabledefinition Many-To-Many Relationship](bot.md#BKMK_bot_environmentvariabledefinition)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`bot_environmentvariabledefinition`|
+|IsCustomizable|False|
+|SchemaName|`bot_environmentvariabledefinition`|
+|IntersectAttribute|`environmentvariabledefinitionid`|
+|NavigationPropertyName|`bot_environmentvariabledefinition`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_botcomponent_environmentvariabledefinition"></a> botcomponent_environmentvariabledefinition
 
-See the [botcomponent_environmentvariabledefinition](botcomponent.md#BKMK_botcomponent_environmentvariabledefinition) many-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
+See [botcomponent botcomponent_environmentvariabledefinition Many-To-Many Relationship](botcomponent.md#BKMK_botcomponent_environmentvariabledefinition)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`botcomponent_environmentvariabledefinition`|
+|IsCustomizable|False|
+|SchemaName|`botcomponent_environmentvariabledefinition`|
+|IntersectAttribute|`environmentvariabledefinitionid`|
+|NavigationPropertyName|`botcomponent_environmentvariabledefinition`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_msdyn_connectordatasource_environmentvariable"></a> msdyn_connectordatasource_environmentvariable
+
+See [msdyn_connectordatasource msdyn_connectordatasource_environmentvariable Many-To-Many Relationship](msdyn_connectordatasource.md#BKMK_msdyn_connectordatasource_environmentvariable)
+
+|Property|Value|
+|---|---|
+|IntersectEntityName|`msdyn_connectordatasource_environmentva`|
+|IsCustomizable|True|
+|SchemaName|`msdyn_connectordatasource_environmentvariable`|
+|IntersectAttribute|`environmentvariabledefinitionid`|
+|NavigationPropertyName|`msdyn_connectordatasource_environmentvari`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.environmentvariabledefinition?text=environmentvariabledefinition EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.environmentvariabledefinition?displayProperty=fullName>

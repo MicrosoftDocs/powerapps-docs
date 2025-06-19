@@ -1,58 +1,57 @@
 ---
-title: "PhoneCall table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the PhoneCall table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Phone Call (PhoneCall) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Phone Call (PhoneCall) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# PhoneCall table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Phone Call (PhoneCall) table/entity reference (Microsoft Dataverse)
 
 Activity to track a telephone call.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Assign|PATCH /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST /phonecalls<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE /phonecalls(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET /phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /phonecalls<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH /phonecalls(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+The following table lists the messages for the Phone Call (PhoneCall) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Assign`<br />Event: True |`PATCH` /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /phonecalls<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `Delete`<br />Event: True |`DELETE` /phonecalls(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `GrantAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+| `ModifyAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+| `Retrieve`<br />Event: True |`GET` /phonecalls(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: True |`GET` /phonecalls<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `RetrievePrincipalAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+| `RetrieveSharedPrincipalsAndAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+| `RevokeAccess`<br />Event: True |<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType /> |<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+| `SetState`<br />Event: True |`PATCH` /phonecalls(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `statecode` and `statuscode` properties. |<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+| `Update`<br />Event: True |`PATCH` /phonecalls(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `Upsert`<br />Event: False |`PATCH` /phonecalls(*activityid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|PhoneCalls|
-|DisplayCollectionName|Phone Calls|
-|DisplayName|Phone Call|
-|EntitySetName|phonecalls|
-|IsBPFEntity|False|
-|LogicalCollectionName|phonecalls|
-|LogicalName|phonecall|
-|OwnershipType|UserOwned|
-|PrimaryIdAttribute|activityid|
-|PrimaryNameAttribute|subject|
-|SchemaName|PhoneCall|
+The following table lists selected properties for the Phone Call (PhoneCall) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Phone Call** |
+| **DisplayCollectionName** | **Phone Calls** |
+| **SchemaName** | `PhoneCall` |
+| **CollectionSchemaName** | `PhoneCalls` |
+| **EntitySetName** | `phonecalls`|
+| **LogicalName** | `phonecall` |
+| **LogicalCollectionName** | `phonecalls` |
+| **PrimaryIdAttribute** | `activityid` |
+| **PrimaryNameAttribute** |`subject` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `UserOwned` |
 
 ## Writable columns/attributes
 
@@ -96,1535 +95,1423 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TraversedPath](#BKMK_TraversedPath)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ActivityAdditionalParams"></a> ActivityAdditionalParams
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Additional Parameters|
-|Format|TextArea|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Additional Parameters**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|activityadditionalparams|
-|MaxLength|8192|
+|LogicalName|`activityadditionalparams`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|TextArea|
+|FormatName|TextArea|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|8192|
 
 ### <a name="BKMK_ActivityId"></a> ActivityId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the phone call activity.|
-|DisplayName|Phone Call|
+|---|---|
+|Description|**Unique identifier of the phone call activity.**|
+|DisplayName|**Phone Call**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|activityid|
+|LogicalName|`activityid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_ActualDurationMinutes"></a> ActualDurationMinutes
 
 |Property|Value|
-|--------|-----|
-|Description|Type the number of minutes spent on the phone call. The duration is used in reporting.|
-|DisplayName|Duration|
-|Format|Duration|
+|---|---|
+|Description|**Type the number of minutes spent on the phone call. The duration is used in reporting.**|
+|DisplayName|**Duration**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|actualdurationminutes|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`actualdurationminutes`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_ActualEnd"></a> ActualEnd
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Enter the actual end date and time of the phone call. By default, it displays the date and time when the activity was completed or canceled, but can be edited to capture the actual duration of the phone call.|
-|DisplayName|Actual End|
-|Format|DateOnly|
+|---|---|
+|Description|**Enter the actual end date and time of the phone call. By default, it displays the date and time when the activity was completed or canceled, but can be edited to capture the actual duration of the phone call.**|
+|DisplayName|**Actual End**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|actualend|
+|LogicalName|`actualend`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ActualStart"></a> ActualStart
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Enter the actual start date and time for the phone call. By default, it displays the date and time when the activity was created, but can be edited to capture the actual duration of the phone call.|
-|DisplayName|Actual Start|
-|Format|DateOnly|
+|---|---|
+|Description|**Enter the actual start date and time for the phone call. By default, it displays the date and time when the activity was created, but can be edited to capture the actual duration of the phone call.**|
+|DisplayName|**Actual Start**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|actualstart|
+|LogicalName|`actualstart`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_Category"></a> Category
 
 |Property|Value|
-|--------|-----|
-|Description|Type a category to identify the phone call type, such as lead gathering or customer follow-up, to tie the phone call to a business group or function.|
-|DisplayName|Category|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a category to identify the phone call type, such as lead gathering or customer follow-up, to tie the phone call to a business group or function.**|
+|DisplayName|**Category**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|category|
-|MaxLength|250|
+|LogicalName|`category`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_Description"></a> Description
 
 |Property|Value|
-|--------|-----|
-|Description|Type additional information to describe the phone call, such as the primary message or the products and services discussed.|
-|DisplayName|Description|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type additional information to describe the phone call, such as the primary message or the products and services discussed.**|
+|DisplayName|**Description**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|description|
-|MaxLength|2000|
+|LogicalName|`description`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|2000|
 
 ### <a name="BKMK_DirectionCode"></a> DirectionCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the direction of the phone call as incoming or outbound.|
-|DisplayName|Direction|
+|---|---|
+|Description|**Select the direction of the phone call as incoming or outbound.**|
+|DisplayName|**Direction**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|directioncode|
+|LogicalName|`directioncode`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### DirectionCode Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Outgoing||
-|0|Incoming||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`phonecall_directioncode`|
+|DefaultValue|True|
+|True Label|Outgoing|
+|False Label|Incoming|
 
 ### <a name="BKMK_from"></a> from
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the account, contact, lead, or user who made the phone call.|
-|DisplayName|Call From|
+|---|---|
+|Description|**Enter the account, contact, lead, or user who made the phone call.**|
+|DisplayName|**Call From**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|from|
+|LogicalName|`from`|
 |RequiredLevel|ApplicationRequired|
-|Targets|account,contact,systemuser|
 |Type|PartyList|
-
+|Targets|account, contact, systemuser|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the data import or data migration that created this record.|
-|DisplayName|Import Sequence Number|
-|Format|None|
+|---|---|
+|Description|**Unique identifier of the data import or data migration that created this record.**|
+|DisplayName|**Import Sequence Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|importsequencenumber|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`importsequencenumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_IsBilled"></a> IsBilled
 
 |Property|Value|
-|--------|-----|
-|Description|Information which specifies whether the phone call activity was billed as part of resolving a case.|
-|DisplayName|Is Billed|
+|---|---|
+|Description|**Information which specifies whether the phone call activity was billed as part of resolving a case.**|
+|DisplayName|**Is Billed**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isbilled|
+|LogicalName|`isbilled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsBilled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`phonecall_isbilled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_IsWorkflowCreated"></a> IsWorkflowCreated
 
 |Property|Value|
-|--------|-----|
-|Description|Indication which specifies if the phone call activity was created by a workflow rule.|
-|DisplayName|Is Workflow Created|
+|---|---|
+|Description|**Indication which specifies if the phone call activity was created by a workflow rule.**|
+|DisplayName|**Is Workflow Created**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isworkflowcreated|
+|LogicalName|`isworkflowcreated`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### IsWorkflowCreated Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`phonecall_isworkflowcreated`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_LastOnHoldTime"></a> LastOnHoldTime
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Contains the date and time stamp of the last on hold time.|
-|DisplayName|Last On Hold Time|
-|Format|DateAndTime|
+|---|---|
+|Description|**Contains the date and time stamp of the last on hold time.**|
+|DisplayName|**Last On Hold Time**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|lastonholdtime|
+|LogicalName|`lastonholdtime`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_LeftVoiceMail"></a> LeftVoiceMail
 
 |Property|Value|
-|--------|-----|
-|Description|Select whether a voice mail was left for the person.|
-|DisplayName|Left Voice Mail|
+|---|---|
+|Description|**Select whether a voice mail was left for the person.**|
+|DisplayName|**Left Voice Mail**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|leftvoicemail|
+|LogicalName|`leftvoicemail`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### LeftVoiceMail Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`phonecall_leftvoicemail`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
-|DisplayName|Record Created On|
-|Format|DateOnly|
+|---|---|
+|Description|**Date and time that the record was migrated.**|
+|DisplayName|**Record Created On**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|overriddencreatedon|
+|LogicalName|`overriddencreatedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateOnly|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.**|
+|DisplayName|**Owner**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_PhoneNumber"></a> PhoneNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Type the phone number.|
-|DisplayName|Phone Number|
-|FormatName|Phone|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type the phone number.**|
+|DisplayName|**Phone Number**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|phonenumber|
-|MaxLength|200|
+|LogicalName|`phonenumber`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Phone|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_PriorityCode"></a> PriorityCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the priority so that preferred customers or critical issues are handled quickly.|
-|DisplayName|Priority|
+|---|---|
+|Description|**Select the priority so that preferred customers or critical issues are handled quickly.**|
+|DisplayName|**Priority**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|prioritycode|
+|LogicalName|`prioritycode`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|1|
+|GlobalChoiceName|`phonecall_prioritycode`|
 
 #### PriorityCode Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|0|Low||
-|1|Normal||
-|2|High||
-
-
+|Value|Label|
+|---|---|
+|0|**Low**|
+|1|**Normal**|
+|2|**High**|
 
 ### <a name="BKMK_ProcessId"></a> ProcessId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the process.|
-|DisplayName|Process|
+|---|---|
+|Description|**Shows the ID of the process.**|
+|DisplayName|**Process**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processid|
+|LogicalName|`processid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the record that the phone call relates to.|
-|DisplayName|Regarding|
+|---|---|
+|Description|**Choose the record that the phone call relates to.**|
+|DisplayName|**Regarding**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|regardingobjectid|
+|LogicalName|`regardingobjectid`|
 |RequiredLevel|None|
-|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
-
+|Targets|account, adx_invitation, contact, knowledgearticle, knowledgebaserecord, mspp_adplacement, mspp_pollplacement, mspp_publishingstatetransitionrule, mspp_redirect, mspp_shortcut, mspp_website|
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|regardingobjecttypecode|
+|LogicalName|`regardingobjecttypecode`|
 |RequiredLevel|None|
 |Type|EntityName|
-
 
 ### <a name="BKMK_ScheduledEnd"></a> ScheduledEnd
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Enter the expected due date and time.|
-|DisplayName|Due|
-|Format|DateAndTime|
+|---|---|
+|Description|**Enter the expected due date and time.**|
+|DisplayName|**Due**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|scheduledend|
+|LogicalName|`scheduledend`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ScheduledStart"></a> ScheduledStart
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Enter the expected due date and time.|
-|DisplayName|Start Date|
-|Format|DateAndTime|
+|---|---|
+|Description|**Enter the expected due date and time.**|
+|DisplayName|**Start Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|scheduledstart|
+|LogicalName|`scheduledstart`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_SLAId"></a> SLAId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the service level agreement (SLA) that you want to apply to the Phone Call record.|
-|DisplayName|SLA|
+|---|---|
+|Description|**Choose the service level agreement (SLA) that you want to apply to the Phone Call record.**|
+|DisplayName|**SLA**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|slaid|
+|LogicalName|`slaid`|
 |RequiredLevel|None|
-|Targets|sla|
 |Type|Lookup|
-
+|Targets|sla|
 
 ### <a name="BKMK_SortDate"></a> SortDate
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time by which the activities are sorted.|
-|DisplayName|Sort Date|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time by which the activities are sorted.**|
+|DisplayName|**Sort Date**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|sortdate|
+|LogicalName|`sortdate`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_StageId"></a> StageId
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the ID of the stage.|
-|DisplayName|(Deprecated) Process Stage|
+|---|---|
+|Description|**Shows the ID of the stage.**|
+|DisplayName|**(Deprecated) Process Stage**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|stageid|
+|LogicalName|`stageid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows whether the phone call is open, completed, or canceled. Completed and canceled phone calls are read-only and can't be edited.|
-|DisplayName|Activity Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Shows whether the phone call is open, completed, or canceled. Completed and canceled phone calls are read-only and can't be edited.**|
+|DisplayName|**Activity Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`phonecall_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Open|1|Open|
-|1|Completed|2|Completed|
-|2|Canceled|3|Canceled|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Open**<br />DefaultStatus: 1<br />InvariantName: `Open`|
+|1|Label: **Completed**<br />DefaultStatus: 2<br />InvariantName: `Completed`|
+|2|Label: **Canceled**<br />DefaultStatus: 3<br />InvariantName: `Canceled`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Select the phone call's status.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Select the phone call's status.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`phonecall_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Open|0|
-|2|Made|1|
-|3|Canceled|2|
-|4|Received|1|
-
-
+|Value|Details|
+|---|---|
+|1|Label: **Open**<br />State:0<br />TransitionData: None|
+|2|Label: **Made**<br />State:1<br />TransitionData: None|
+|3|Label: **Canceled**<br />State:2<br />TransitionData: None|
+|4|Label: **Received**<br />State:1<br />TransitionData: None|
 
 ### <a name="BKMK_Subcategory"></a> Subcategory
 
 |Property|Value|
-|--------|-----|
-|Description|Type a subcategory to identify the phone call type and relate the activity to a specific product, sales region, business group, or other function.|
-|DisplayName|Sub-Category|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a subcategory to identify the phone call type and relate the activity to a specific product, sales region, business group, or other function.**|
+|DisplayName|**Sub-Category**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|subcategory|
-|MaxLength|250|
+|LogicalName|`subcategory`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|250|
 
 ### <a name="BKMK_Subject"></a> Subject
 
 |Property|Value|
-|--------|-----|
-|Description|Type a short description about the objective or primary topic of the phone call.|
-|DisplayName|Subject|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Type a short description about the objective or primary topic of the phone call.**|
+|DisplayName|**Subject**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|subject|
-|MaxLength|200|
+|LogicalName|`subject`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|200|
 
 ### <a name="BKMK_SubscriptionId"></a> SubscriptionId
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Subscription|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Subscription**|
 |IsValidForForm|False|
 |IsValidForRead|False|
-|IsValidForUpdate|False|
-|LogicalName|subscriptionid|
+|LogicalName|`subscriptionid`|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|Time Zone Rule Version Number|
-|Format|None|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**Time Zone Rule Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_to"></a> to
 
 |Property|Value|
-|--------|-----|
-|Description|Enter the account, contact, lead, or user recipients of the phone call.|
-|DisplayName|Call To|
+|---|---|
+|Description|**Enter the account, contact, lead, or user recipients of the phone call.**|
+|DisplayName|**Call To**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|to|
+|LogicalName|`to`|
 |RequiredLevel|ApplicationRequired|
-|Targets|account,contact,systemuser|
 |Type|PartyList|
-
+|Targets|account, contact, systemuser|
 
 ### <a name="BKMK_TransactionCurrencyId"></a> TransactionCurrencyId
 
 |Property|Value|
-|--------|-----|
-|Description|Choose the local currency for the record to make sure budgets are reported in the correct currency.|
-|DisplayName|Currency|
+|---|---|
+|Description|**Choose the local currency for the record to make sure budgets are reported in the correct currency.**|
+|DisplayName|**Currency**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|transactioncurrencyid|
+|LogicalName|`transactioncurrencyid`|
 |RequiredLevel|None|
-|Targets|transactioncurrency|
 |Type|Lookup|
-
+|Targets|transactioncurrency|
 
 ### <a name="BKMK_TraversedPath"></a> TraversedPath
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
-|DisplayName|(Deprecated) Traversed Path|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**For internal use only.**|
+|DisplayName|**(Deprecated) Traversed Path**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|traversedpath|
-|MaxLength|1250|
+|LogicalName|`traversedpath`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1250|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
-|DisplayName|UTC Conversion Time Zone Code|
-|Format|None|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
+|DisplayName|**UTC Conversion Time Zone Code**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivityTypeCode](#BKMK_ActivityTypeCode)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OnHoldTime](#BKMK_OnHoldTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
-- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
-- [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [ScheduledDurationMinutes](#BKMK_ScheduledDurationMinutes)
 - [SLAInvokedId](#BKMK_SLAInvokedId)
-- [SLAInvokedIdName](#BKMK_SLAInvokedIdName)
-- [SLAName](#BKMK_SLAName)
-- [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
-
 
 ### <a name="BKMK_ActivityTypeCode"></a> ActivityTypeCode
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the type of activity.|
-|DisplayName|Activity Type|
+|---|---|
+|Description|**Shows the type of activity.**|
+|DisplayName|**Activity Type**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|activitytypecode|
+|LogicalName|`activitytypecode`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record on behalf of another user.|
-|DisplayName|Created By (Delegate)|
+|---|---|
+|Description|**Shows who created the record on behalf of another user.**|
+|DisplayName|**Created By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
 
 |Property|Value|
-|--------|-----|
-|Description|Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.|
-|DisplayName|Exchange Rate|
+|---|---|
+|Description|**Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.**|
+|DisplayName|**Exchange Rate**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|exchangerate|
-|MaxValue|100000000000|
-|MinValue|0.000000000001|
-|Precision|12|
+|LogicalName|`exchangerate`|
 |RequiredLevel|None|
 |Type|Decimal|
-
+|ImeMode|Disabled|
+|MaxValue|100000000000|
+|MinValue|1E-12|
+|Precision|12|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_IsRegularActivity"></a> IsRegularActivity
 
 |Property|Value|
-|--------|-----|
-|Description|Information regarding whether the activity is a regular activity type or event type.|
-|DisplayName|Is Regular Activity|
+|---|---|
+|Description|**Information regarding whether the activity is a regular activity type or event type.**|
+|DisplayName|**Is Regular Activity**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|isregularactivity|
+|LogicalName|`isregularactivity`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsRegularActivity Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`activitypointer_isregularactivity`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record on behalf of another user.|
-|DisplayName|Modified By (Delegate)|
+|---|---|
+|Description|**Shows who last updated the record on behalf of another user.**|
+|DisplayName|**Modified By (Delegate)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_OnHoldTime"></a> OnHoldTime
 
 |Property|Value|
-|--------|-----|
-|Description|Shows how long, in minutes, that the record was on hold.|
-|DisplayName|On Hold Time (Minutes)|
-|Format|None|
+|---|---|
+|Description|**Shows how long, in minutes, that the record was on hold.**|
+|DisplayName|**On Hold Time (Minutes)**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|onholdtime|
-|MaxValue|2147483647|
-|MinValue|-2147483648|
+|LogicalName|`onholdtime`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-2147483648|
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridname|
-|MaxLength|100|
+|LogicalName|`owneridname`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridyominame|
-|MaxLength|100|
+|LogicalName|`owneridyominame`|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the business unit that owns the phone call activity.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Unique identifier of the business unit that owns the phone call activity.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
-
-### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|owningbusinessunitname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the team that owns the phone call activity.|
-|DisplayName|Owning Team|
+|---|---|
+|Description|**Unique identifier of the team that owns the phone call activity.**|
+|DisplayName|**Owning Team**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningteam|
+|LogicalName|`owningteam`|
 |RequiredLevel|None|
-|Targets|team|
 |Type|Lookup|
-
+|Targets|team|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user that owns the phone call activity.|
-|DisplayName|Owning User|
+|---|---|
+|Description|**Unique identifier of the user that owns the phone call activity.**|
+|DisplayName|**Owning User**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidname|
-|MaxLength|400|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|regardingobjectidyominame|
-|MaxLength|400|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ScheduledDurationMinutes"></a> ScheduledDurationMinutes
 
 |Property|Value|
-|--------|-----|
-|Description|Scheduled duration of the phone call activity, specified in minutes.|
-|DisplayName|Scheduled Duration|
-|Format|Duration|
+|---|---|
+|Description|**Scheduled duration of the phone call activity, specified in minutes.**|
+|DisplayName|**Scheduled Duration**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|scheduleddurationminutes|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`scheduleddurationminutes`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_SLAInvokedId"></a> SLAInvokedId
 
 |Property|Value|
-|--------|-----|
-|Description|Last SLA that was applied to this Phone Call. This field is for internal use only.|
-|DisplayName|Last SLA applied|
+|---|---|
+|Description|**Last SLA that was applied to this Phone Call. This field is for internal use only.**|
+|DisplayName|**Last SLA applied**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|slainvokedid|
+|LogicalName|`slainvokedid`|
 |RequiredLevel|None|
-|Targets|sla|
 |Type|Lookup|
-
-
-### <a name="BKMK_SLAInvokedIdName"></a> SLAInvokedIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|slainvokedidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_SLAName"></a> SLAName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|slaname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|transactioncurrencyidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|sla|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|Version number of the phone call activity.|
-|DisplayName|Version Number|
+|---|---|
+|Description|**Version number of the phone call activity.**|
+|DisplayName|**Version Number**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
+|LogicalName|`versionnumber`|
 |RequiredLevel|None|
 |Type|BigInt|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-- [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
-- [PhoneCall_AsyncOperations](#BKMK_PhoneCall_AsyncOperations)
-- [phonecall_connections2](#BKMK_phonecall_connections2)
-- [PhoneCall_SyncErrors](#BKMK_PhoneCall_SyncErrors)
-- [PhoneCall_ProcessSessions](#BKMK_PhoneCall_ProcessSessions)
-- [PhoneCall_DuplicateMatchingRecord](#BKMK_PhoneCall_DuplicateMatchingRecord)
-- [slakpiinstance_phonecall](#BKMK_slakpiinstance_phonecall)
-- [PhoneCall_DuplicateBaseRecord](#BKMK_PhoneCall_DuplicateBaseRecord)
-- [PhoneCall_Annotation](#BKMK_PhoneCall_Annotation)
-- [phonecall_actioncard](#BKMK_phonecall_actioncard)
-- [phonecall_connections1](#BKMK_phonecall_connections1)
-- [PhoneCall_BulkDeleteFailures](#BKMK_PhoneCall_BulkDeleteFailures)
-- [phonecall_activity_parties](#BKMK_phonecall_activity_parties)
-- [PhoneCall_QueueItem](#BKMK_PhoneCall_QueueItem)
-- [phonecall_principalobjectattributeaccess](#BKMK_phonecall_principalobjectattributeaccess)
-
-
-### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
-
-Same as the [phonecall_PostFollows](postfollow.md#BKMK_phonecall_PostFollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|postfollow|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|phonecall_PostFollows|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_AsyncOperations"></a> PhoneCall_AsyncOperations
-
-Same as the [PhoneCall_AsyncOperations](asyncoperation.md#BKMK_PhoneCall_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|asyncoperation|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PhoneCall_AsyncOperations|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_phonecall_connections2"></a> phonecall_connections2
-
-Same as the [phonecall_connections2](connection.md#BKMK_phonecall_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connection|
-|ReferencingAttribute|record2id|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|phonecall_connections2|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 100|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_SyncErrors"></a> PhoneCall_SyncErrors
-
-Same as the [PhoneCall_SyncErrors](syncerror.md#BKMK_PhoneCall_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|PhoneCall_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_PhoneCall_ProcessSessions"></a> PhoneCall_ProcessSessions
-
-Same as the [PhoneCall_ProcessSessions](processsession.md#BKMK_PhoneCall_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processsession|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PhoneCall_ProcessSessions|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 110|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_DuplicateMatchingRecord"></a> PhoneCall_DuplicateMatchingRecord
-
-Same as the [PhoneCall_DuplicateMatchingRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PhoneCall_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_slakpiinstance_phonecall"></a> slakpiinstance_phonecall
-
-Same as the [slakpiinstance_phonecall](slakpiinstance.md#BKMK_slakpiinstance_phonecall) many-to-one relationship for the [slakpiinstance](slakpiinstance.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slakpiinstance|
-|ReferencingAttribute|regarding|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|slakpiinstance_phonecall|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_DuplicateBaseRecord"></a> PhoneCall_DuplicateBaseRecord
-
-Same as the [PhoneCall_DuplicateBaseRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PhoneCall_DuplicateBaseRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_Annotation"></a> PhoneCall_Annotation
-
-Same as the [PhoneCall_Annotation](annotation.md#BKMK_PhoneCall_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|annotation|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|PhoneCall_Annotation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_phonecall_actioncard"></a> phonecall_actioncard
-
-Same as the [phonecall_actioncard](actioncard.md#BKMK_phonecall_actioncard) many-to-one relationship for the [actioncard](actioncard.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|actioncard|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|phonecall_actioncard|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_phonecall_connections1"></a> phonecall_connections1
-
-Same as the [phonecall_connections1](connection.md#BKMK_phonecall_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connection|
-|ReferencingAttribute|record1id|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|phonecall_connections1|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 100|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_BulkDeleteFailures"></a> PhoneCall_BulkDeleteFailures
-
-Same as the [PhoneCall_BulkDeleteFailures](bulkdeletefailure.md#BKMK_PhoneCall_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|PhoneCall_BulkDeleteFailures|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
-
-Same as the [phonecall_activity_parties](activityparty.md#BKMK_phonecall_activity_parties) many-to-one relationship for the [activityparty](activityparty.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|activityparty|
-|ReferencingAttribute|activityid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|phonecall_activity_parties|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_PhoneCall_QueueItem"></a> PhoneCall_QueueItem
-
-Same as the [PhoneCall_QueueItem](queueitem.md#BKMK_PhoneCall_QueueItem) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|queueitem|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|PhoneCall_QueueItem|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_phonecall_principalobjectattributeaccess"></a> phonecall_principalobjectattributeaccess
-
-Same as the [phonecall_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_phonecall_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|principalobjectattributeaccess|
-|ReferencingAttribute|objectid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|phonecall_principalobjectattributeaccess|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [KnowledgeBaseRecord_PhoneCalls](#BKMK_KnowledgeBaseRecord_PhoneCalls)
-- [lk_phonecall_modifiedonbehalfby](#BKMK_lk_phonecall_modifiedonbehalfby)
-- [lk_phonecall_createdonbehalfby](#BKMK_lk_phonecall_createdonbehalfby)
 - [Account_Phonecalls](#BKMK_Account_Phonecalls)
-- [lk_phonecall_modifiedby](#BKMK_lk_phonecall_modifiedby)
-- [Contact_Phonecalls](#BKMK_Contact_Phonecalls)
-- [manualsla_phonecall](#BKMK_manualsla_phonecall)
-- [sla_phonecall](#BKMK_sla_phonecall)
-- [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
-- [lk_phonecall_createdby](#BKMK_lk_phonecall_createdby)
-- [processstage_phonecalls](#BKMK_processstage_phonecalls)
-- [user_phonecall](#BKMK_user_phonecall)
 - [activity_pointer_phonecall](#BKMK_activity_pointer_phonecall)
-- [team_phonecall](#BKMK_team_phonecall)
-- [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
-- [business_unit_phone_call_activities](#BKMK_business_unit_phone_call_activities)
 - [adx_invitation_PhoneCalls](#BKMK_adx_invitation_PhoneCalls)
+- [business_unit_phone_call_activities](#BKMK_business_unit_phone_call_activities)
+- [Contact_Phonecalls](#BKMK_Contact_Phonecalls)
+- [KnowledgeArticle_Phonecalls](#BKMK_KnowledgeArticle_Phonecalls)
+- [KnowledgeBaseRecord_PhoneCalls](#BKMK_KnowledgeBaseRecord_PhoneCalls)
+- [lk_phonecall_createdby](#BKMK_lk_phonecall_createdby)
+- [lk_phonecall_createdonbehalfby](#BKMK_lk_phonecall_createdonbehalfby)
+- [lk_phonecall_modifiedby](#BKMK_lk_phonecall_modifiedby)
+- [lk_phonecall_modifiedonbehalfby](#BKMK_lk_phonecall_modifiedonbehalfby)
+- [manualsla_phonecall](#BKMK_manualsla_phonecall)
 - [mspp_adplacement_PhoneCalls](#BKMK_mspp_adplacement_PhoneCalls)
 - [mspp_pollplacement_PhoneCalls](#BKMK_mspp_pollplacement_PhoneCalls)
 - [mspp_publishingstatetransitionrule_PhoneCalls](#BKMK_mspp_publishingstatetransitionrule_PhoneCalls)
 - [mspp_redirect_PhoneCalls](#BKMK_mspp_redirect_PhoneCalls)
 - [mspp_shortcut_PhoneCalls](#BKMK_mspp_shortcut_PhoneCalls)
 - [mspp_website_PhoneCalls](#BKMK_mspp_website_PhoneCalls)
-
-
-### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
-
-See the [KnowledgeBaseRecord_PhoneCalls](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_PhoneCalls) one-to-many relationship for the [knowledgebaserecord](knowledgebaserecord.md) table/entity.
-
-### <a name="BKMK_lk_phonecall_modifiedonbehalfby"></a> lk_phonecall_modifiedonbehalfby
-
-See the [lk_phonecall_modifiedonbehalfby](systemuser.md#BKMK_lk_phonecall_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_phonecall_createdonbehalfby"></a> lk_phonecall_createdonbehalfby
-
-See the [lk_phonecall_createdonbehalfby](systemuser.md#BKMK_lk_phonecall_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [owner_phonecalls](#BKMK_owner_phonecalls)
+- [processstage_phonecalls](#BKMK_processstage_phonecalls)
+- [sla_phonecall](#BKMK_sla_phonecall)
+- [team_phonecall](#BKMK_team_phonecall)
+- [TransactionCurrency_PhoneCall](#BKMK_TransactionCurrency_PhoneCall)
+- [user_phonecall](#BKMK_user_phonecall)
 
 ### <a name="BKMK_Account_Phonecalls"></a> Account_Phonecalls
 
-See the [Account_Phonecalls](account.md#BKMK_Account_Phonecalls) one-to-many relationship for the [account](account.md) table/entity.
+One-To-Many Relationship: [account Account_Phonecalls](account.md#BKMK_Account_Phonecalls)
 
-### <a name="BKMK_lk_phonecall_modifiedby"></a> lk_phonecall_modifiedby
-
-See the [lk_phonecall_modifiedby](systemuser.md#BKMK_lk_phonecall_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_Contact_Phonecalls"></a> Contact_Phonecalls
-
-See the [Contact_Phonecalls](contact.md#BKMK_Contact_Phonecalls) one-to-many relationship for the [contact](contact.md) table/entity.
-
-### <a name="BKMK_manualsla_phonecall"></a> manualsla_phonecall
-
-See the [manualsla_phonecall](sla.md#BKMK_manualsla_phonecall) one-to-many relationship for the [sla](sla.md) table/entity.
-
-### <a name="BKMK_sla_phonecall"></a> sla_phonecall
-
-See the [sla_phonecall](sla.md#BKMK_sla_phonecall) one-to-many relationship for the [sla](sla.md) table/entity.
-
-### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
-
-See the [KnowledgeArticle_Phonecalls](knowledgearticle.md#BKMK_KnowledgeArticle_Phonecalls) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
-
-### <a name="BKMK_lk_phonecall_createdby"></a> lk_phonecall_createdby
-
-See the [lk_phonecall_createdby](systemuser.md#BKMK_lk_phonecall_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
-
-See the [processstage_phonecalls](processstage.md#BKMK_processstage_phonecalls) one-to-many relationship for the [processstage](processstage.md) table/entity.
-
-### <a name="BKMK_user_phonecall"></a> user_phonecall
-
-See the [user_phonecall](systemuser.md#BKMK_user_phonecall) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`account`|
+|ReferencedAttribute|`accountid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_account_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 
 ### <a name="BKMK_activity_pointer_phonecall"></a> activity_pointer_phonecall
 
-See the [activity_pointer_phonecall](activitypointer.md#BKMK_activity_pointer_phonecall) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
+One-To-Many Relationship: [activitypointer activity_pointer_phonecall](activitypointer.md#BKMK_activity_pointer_phonecall)
 
-### <a name="BKMK_team_phonecall"></a> team_phonecall
-
-See the [team_phonecall](team.md#BKMK_team_phonecall) one-to-many relationship for the [team](team.md) table/entity.
-
-### <a name="BKMK_TransactionCurrency_PhoneCall"></a> TransactionCurrency_PhoneCall
-
-See the [TransactionCurrency_PhoneCall](transactioncurrency.md#BKMK_TransactionCurrency_PhoneCall) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
-
-### <a name="BKMK_business_unit_phone_call_activities"></a> business_unit_phone_call_activities
-
-See the [business_unit_phone_call_activities](businessunit.md#BKMK_business_unit_phone_call_activities) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`activitypointer`|
+|ReferencedAttribute|`activityid`|
+|ReferencingAttribute|`activityid`|
+|ReferencingEntityNavigationPropertyName|`activityid_activitypointer`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_adx_invitation_PhoneCalls"></a> adx_invitation_PhoneCalls
 
-**Added by**: Power Pages Runtime Core Solution
+One-To-Many Relationship: [adx_invitation adx_invitation_PhoneCalls](adx_invitation.md#BKMK_adx_invitation_PhoneCalls)
 
-See the [adx_invitation_PhoneCalls](adx_invitation.md#BKMK_adx_invitation_PhoneCalls) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`adx_invitation`|
+|ReferencedAttribute|`adx_invitationid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_adx_invitation_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_business_unit_phone_call_activities"></a> business_unit_phone_call_activities
+
+One-To-Many Relationship: [businessunit business_unit_phone_call_activities](businessunit.md#BKMK_business_unit_phone_call_activities)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_Contact_Phonecalls"></a> Contact_Phonecalls
+
+One-To-Many Relationship: [contact Contact_Phonecalls](contact.md#BKMK_Contact_Phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`contact`|
+|ReferencedAttribute|`contactid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_contact_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_KnowledgeArticle_Phonecalls"></a> KnowledgeArticle_Phonecalls
+
+One-To-Many Relationship: [knowledgearticle KnowledgeArticle_Phonecalls](knowledgearticle.md#BKMK_KnowledgeArticle_Phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgearticle`|
+|ReferencedAttribute|`knowledgearticleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_knowledgearticle_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `Cascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_KnowledgeBaseRecord_PhoneCalls"></a> KnowledgeBaseRecord_PhoneCalls
+
+One-To-Many Relationship: [knowledgebaserecord KnowledgeBaseRecord_PhoneCalls](knowledgebaserecord.md#BKMK_KnowledgeBaseRecord_PhoneCalls)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`knowledgebaserecord`|
+|ReferencedAttribute|`knowledgebaserecordid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_knowledgebaserecord_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_phonecall_createdby"></a> lk_phonecall_createdby
+
+One-To-Many Relationship: [systemuser lk_phonecall_createdby](systemuser.md#BKMK_lk_phonecall_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_phonecall_createdonbehalfby"></a> lk_phonecall_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_phonecall_createdonbehalfby](systemuser.md#BKMK_lk_phonecall_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_phonecall_modifiedby"></a> lk_phonecall_modifiedby
+
+One-To-Many Relationship: [systemuser lk_phonecall_modifiedby](systemuser.md#BKMK_lk_phonecall_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_phonecall_modifiedonbehalfby"></a> lk_phonecall_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_phonecall_modifiedonbehalfby](systemuser.md#BKMK_lk_phonecall_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_manualsla_phonecall"></a> manualsla_phonecall
+
+One-To-Many Relationship: [sla manualsla_phonecall](sla.md#BKMK_manualsla_phonecall)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sla`|
+|ReferencedAttribute|`slaid`|
+|ReferencingAttribute|`slaid`|
+|ReferencingEntityNavigationPropertyName|`sla_phonecall_sla`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_adplacement_PhoneCalls"></a> mspp_adplacement_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_adplacement mspp_adplacement_PhoneCalls](mspp_adplacement.md#BKMK_mspp_adplacement_PhoneCalls)
 
-See the [mspp_adplacement_PhoneCalls](mspp_adplacement.md#BKMK_mspp_adplacement_PhoneCalls) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_adplacement`|
+|ReferencedAttribute|`mspp_adplacementid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_adplacement_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_pollplacement_PhoneCalls"></a> mspp_pollplacement_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_pollplacement mspp_pollplacement_PhoneCalls](mspp_pollplacement.md#BKMK_mspp_pollplacement_PhoneCalls)
 
-See the [mspp_pollplacement_PhoneCalls](mspp_pollplacement.md#BKMK_mspp_pollplacement_PhoneCalls) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_pollplacement`|
+|ReferencedAttribute|`mspp_pollplacementid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_pollplacement_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_publishingstatetransitionrule_PhoneCalls"></a> mspp_publishingstatetransitionrule_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_publishingstatetransitionrule mspp_publishingstatetransitionrule_PhoneCalls](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_PhoneCalls)
 
-See the [mspp_publishingstatetransitionrule_PhoneCalls](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_PhoneCalls) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_publishingstatetransitionrule`|
+|ReferencedAttribute|`mspp_publishingstatetransitionruleid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_publishingstatetransitionrule_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_redirect_PhoneCalls"></a> mspp_redirect_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_redirect mspp_redirect_PhoneCalls](mspp_redirect.md#BKMK_mspp_redirect_PhoneCalls)
 
-See the [mspp_redirect_PhoneCalls](mspp_redirect.md#BKMK_mspp_redirect_PhoneCalls) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_redirect`|
+|ReferencedAttribute|`mspp_redirectid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_redirect_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_shortcut_PhoneCalls"></a> mspp_shortcut_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_shortcut mspp_shortcut_PhoneCalls](mspp_shortcut.md#BKMK_mspp_shortcut_PhoneCalls)
 
-See the [mspp_shortcut_PhoneCalls](mspp_shortcut.md#BKMK_mspp_shortcut_PhoneCalls) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_shortcut`|
+|ReferencedAttribute|`mspp_shortcutid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_shortcut_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_website_PhoneCalls"></a> mspp_website_PhoneCalls
 
-**Added by**: Power Pages Apps Solution
+One-To-Many Relationship: [mspp_website mspp_website_PhoneCalls](mspp_website.md#BKMK_mspp_website_PhoneCalls)
 
-See the [mspp_website_PhoneCalls](mspp_website.md#BKMK_mspp_website_PhoneCalls) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_website`|
+|ReferencedAttribute|`mspp_websiteid`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencingEntityNavigationPropertyName|`regardingobjectid_mspp_website_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_owner_phonecalls"></a> owner_phonecalls
+
+One-To-Many Relationship: [owner owner_phonecalls](owner.md#BKMK_owner_phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`owner`|
+|ReferencedAttribute|`ownerid`|
+|ReferencingAttribute|`ownerid`|
+|ReferencingEntityNavigationPropertyName|`ownerid_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_processstage_phonecalls"></a> processstage_phonecalls
+
+One-To-Many Relationship: [processstage processstage_phonecalls](processstage.md#BKMK_processstage_phonecalls)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`processstage`|
+|ReferencedAttribute|`processstageid`|
+|ReferencingAttribute|`stageid`|
+|ReferencingEntityNavigationPropertyName|`stageid_processstage`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_sla_phonecall"></a> sla_phonecall
+
+One-To-Many Relationship: [sla sla_phonecall](sla.md#BKMK_sla_phonecall)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`sla`|
+|ReferencedAttribute|`slaid`|
+|ReferencingAttribute|`slainvokedid`|
+|ReferencingEntityNavigationPropertyName|`slainvokedid_phonecall_sla`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_team_phonecall"></a> team_phonecall
+
+One-To-Many Relationship: [team team_phonecall](team.md#BKMK_team_phonecall)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`team`|
+|ReferencedAttribute|`teamid`|
+|ReferencingAttribute|`owningteam`|
+|ReferencingEntityNavigationPropertyName|`owningteam_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_TransactionCurrency_PhoneCall"></a> TransactionCurrency_PhoneCall
+
+One-To-Many Relationship: [transactioncurrency TransactionCurrency_PhoneCall](transactioncurrency.md#BKMK_TransactionCurrency_PhoneCall)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`transactioncurrency`|
+|ReferencedAttribute|`transactioncurrencyid`|
+|ReferencingAttribute|`transactioncurrencyid`|
+|ReferencingEntityNavigationPropertyName|`transactioncurrencyid_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Restrict`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_user_phonecall"></a> user_phonecall
+
+One-To-Many Relationship: [systemuser user_phonecall](systemuser.md#BKMK_user_phonecall)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`owninguser`|
+|ReferencingEntityNavigationPropertyName|`owninguser_phonecall`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [phonecall_actioncard](#BKMK_phonecall_actioncard)
+- [phonecall_activity_parties](#BKMK_phonecall_activity_parties)
+- [PhoneCall_Annotation](#BKMK_PhoneCall_Annotation)
+- [PhoneCall_AsyncOperations](#BKMK_PhoneCall_AsyncOperations)
+- [PhoneCall_BulkDeleteFailures](#BKMK_PhoneCall_BulkDeleteFailures)
+- [phonecall_connections1](#BKMK_phonecall_connections1)
+- [phonecall_connections2](#BKMK_phonecall_connections2)
+- [PhoneCall_DuplicateBaseRecord](#BKMK_PhoneCall_DuplicateBaseRecord)
+- [PhoneCall_DuplicateMatchingRecord](#BKMK_PhoneCall_DuplicateMatchingRecord)
+- [phonecall_PostFollows](#BKMK_phonecall_PostFollows)
+- [phonecall_PostRegardings](#BKMK_phonecall_PostRegardings)
+- [phonecall_principalobjectattributeaccess](#BKMK_phonecall_principalobjectattributeaccess)
+- [PhoneCall_ProcessSessions](#BKMK_PhoneCall_ProcessSessions)
+- [PhoneCall_QueueItem](#BKMK_PhoneCall_QueueItem)
+- [PhoneCall_SyncErrors](#BKMK_PhoneCall_SyncErrors)
+- [slakpiinstance_phonecall](#BKMK_slakpiinstance_phonecall)
+
+### <a name="BKMK_phonecall_actioncard"></a> phonecall_actioncard
+
+Many-To-One Relationship: [actioncard phonecall_actioncard](actioncard.md#BKMK_phonecall_actioncard)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`actioncard`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`phonecall_actioncard`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_activity_parties"></a> phonecall_activity_parties
+
+Many-To-One Relationship: [activityparty phonecall_activity_parties](activityparty.md#BKMK_phonecall_activity_parties)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`activityparty`|
+|ReferencingAttribute|`activityid`|
+|ReferencedEntityNavigationPropertyName|`phonecall_activity_parties`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_Annotation"></a> PhoneCall_Annotation
+
+Many-To-One Relationship: [annotation PhoneCall_Annotation](annotation.md#BKMK_PhoneCall_Annotation)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`annotation`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_Annotation`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_AsyncOperations"></a> PhoneCall_AsyncOperations
+
+Many-To-One Relationship: [asyncoperation PhoneCall_AsyncOperations](asyncoperation.md#BKMK_PhoneCall_AsyncOperations)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`asyncoperation`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_AsyncOperations`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_BulkDeleteFailures"></a> PhoneCall_BulkDeleteFailures
+
+Many-To-One Relationship: [bulkdeletefailure PhoneCall_BulkDeleteFailures](bulkdeletefailure.md#BKMK_PhoneCall_BulkDeleteFailures)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_BulkDeleteFailures`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_connections1"></a> phonecall_connections1
+
+Many-To-One Relationship: [connection phonecall_connections1](connection.md#BKMK_phonecall_connections1)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`connection`|
+|ReferencingAttribute|`record1id`|
+|ReferencedEntityNavigationPropertyName|`phonecall_connections1`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_connections2"></a> phonecall_connections2
+
+Many-To-One Relationship: [connection phonecall_connections2](connection.md#BKMK_phonecall_connections2)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`connection`|
+|ReferencingAttribute|`record2id`|
+|ReferencedEntityNavigationPropertyName|`phonecall_connections2`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_DuplicateBaseRecord"></a> PhoneCall_DuplicateBaseRecord
+
+Many-To-One Relationship: [duplicaterecord PhoneCall_DuplicateBaseRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateBaseRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`baserecordid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_DuplicateBaseRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_DuplicateMatchingRecord"></a> PhoneCall_DuplicateMatchingRecord
+
+Many-To-One Relationship: [duplicaterecord PhoneCall_DuplicateMatchingRecord](duplicaterecord.md#BKMK_PhoneCall_DuplicateMatchingRecord)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`duplicaterecord`|
+|ReferencingAttribute|`duplicaterecordid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_DuplicateMatchingRecord`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_PostFollows"></a> phonecall_PostFollows
+
+Many-To-One Relationship: [postfollow phonecall_PostFollows](postfollow.md#BKMK_phonecall_PostFollows)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postfollow`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`phonecall_PostFollows`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_PostRegardings"></a> phonecall_PostRegardings
+
+Many-To-One Relationship: [postregarding phonecall_PostRegardings](postregarding.md#BKMK_phonecall_PostRegardings)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`postregarding`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`phonecall_PostRegardings`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_phonecall_principalobjectattributeaccess"></a> phonecall_principalobjectattributeaccess
+
+Many-To-One Relationship: [principalobjectattributeaccess phonecall_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_phonecall_principalobjectattributeaccess)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`principalobjectattributeaccess`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`phonecall_principalobjectattributeaccess`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_ProcessSessions"></a> PhoneCall_ProcessSessions
+
+Many-To-One Relationship: [processsession PhoneCall_ProcessSessions](processsession.md#BKMK_PhoneCall_ProcessSessions)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`processsession`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_ProcessSessions`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 110<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_QueueItem"></a> PhoneCall_QueueItem
+
+Many-To-One Relationship: [queueitem PhoneCall_QueueItem](queueitem.md#BKMK_PhoneCall_QueueItem)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`queueitem`|
+|ReferencingAttribute|`objectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_QueueItem`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_PhoneCall_SyncErrors"></a> PhoneCall_SyncErrors
+
+Many-To-One Relationship: [syncerror PhoneCall_SyncErrors](syncerror.md#BKMK_PhoneCall_SyncErrors)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`syncerror`|
+|ReferencingAttribute|`regardingobjectid`|
+|ReferencedEntityNavigationPropertyName|`PhoneCall_SyncErrors`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_slakpiinstance_phonecall"></a> slakpiinstance_phonecall
+
+Many-To-One Relationship: [slakpiinstance slakpiinstance_phonecall](slakpiinstance.md#BKMK_slakpiinstance_phonecall)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`slakpiinstance`|
+|ReferencingAttribute|`regarding`|
+|ReferencedEntityNavigationPropertyName|`slakpiinstance_phonecall`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.phonecall?text=phonecall EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.phonecall?displayProperty=fullName>

@@ -1,7 +1,7 @@
 ---
 title: Optimize performance using QueryExpression
 description: Learn how to optimize performance when you retrieve data from Microsoft Dataverse using QueryExpression.
-ms.date: 05/12/2024
+ms.date: 01/06/2025
 ms.reviewer: jdaly
 ms.topic: how-to
 author: pnghub
@@ -14,9 +14,7 @@ contributors:
 ---
 # Optimize performance using QueryExpression
 
-This article describes ways you can optimize performance when retrieving data using [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
-
-[!INCLUDE [cc-query-antipatterns](../../includes/cc-query-antipatterns.md)]
+For guidance about general things to avoid when composing Dataverse queries, see [Query anti-patterns](../../query-antipatterns.md). The following sections are specific to [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).
 
 ## Query Hints
 
@@ -118,6 +116,7 @@ linkToContact.EntityAlias = "co";
 [Filter rows using QueryExpression](filter-rows.md)  
 [Page results using QueryExpression](page-results.md)   
 [Aggregate data using QueryExpression](aggregate-data.md)   
-[Count rows using QueryExpression](count-rows.md)
+[Count rows using QueryExpression](count-rows.md)   
+[Query anti-patterns](../../query-antipatterns.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

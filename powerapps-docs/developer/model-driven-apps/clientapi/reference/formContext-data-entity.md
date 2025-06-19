@@ -1,8 +1,8 @@
 ---
-title: "formContext.data.entity (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "formContext.data.entity (Client API reference) in model-driven apps"
 description: Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included in the form.
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

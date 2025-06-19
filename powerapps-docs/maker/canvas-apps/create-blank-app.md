@@ -7,7 +7,7 @@ ms.topic: quickstart
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 01/27/2022
+ms.date: 05/16/2025
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -19,37 +19,26 @@ contributors:
 
 # Create a blank canvas app from scratch
 
-In Power Apps, create a blank canvas app that you can then use to customize further with data from another data source, or by using collections.
+In Power Apps, create a blank canvas app that you can customize further and add a data source. 
 
-If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
-
-Watch this short video that shows you how to create a blank canvas app.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YnKM]
 
 ## Prerequisites
 
-In order to proceed with this quickstart, you need to be assigned the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Dataverse team that belongs to the **AAD Security Group** category
-
+Ensure you have the [Environment Maker](/power-platform/admin/database-security#predefined-security-roles) security role, either directly or through a Microsoft Dataverse team that is part of the **AAD Security Group** category. Custom security roles are not currently supported for Canvas App maker scenarios.
 
 ## Create a blank canvas app
 
-1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. on left navigation pane select **Create** > **Blank app**.
+1. In the left navigation pane, select **Create** > **Start with a blank canvas**.
 
-1. From the available options, select **Create** under **Blank canvas app**.
+1. Choose an app size (format) such as responsive, tablet, or phone.
 
-1. Enter an app name.
+Once created, the app opens in [Power Apps Studio](power-apps-studio.md) where you can start building and customizing it.
 
-1. (Optional) Choose a different format for the app.
+## Next steps:
 
-1. Select **Create** to create the blank canvas app.
-
-Once created, the app opens in [Power Apps Studio](power-apps-studio.md) for you to start building the app.
-
-## Next steps
-
-In this quickstart, you created a blank canvas app. Next steps include configuring the app functionality, and depending on your business scenario, add the required connections, and data sources.
+Configure the app's functionality and, depending on your business scenario, add the necessary connections and data sources.
 
 - [Add a connection](add-data-connection.md)
 - [Add and configure controls](add-configure-controls.md)

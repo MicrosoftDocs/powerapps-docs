@@ -1,7 +1,7 @@
 ---
 title: Create elastic tables using code
 description: Learn how to create Dataverse elastic tables with code.
-ms.topic: article
+ms.topic: how-to
 ms.date: 02/22/2024
 author: pnghub
 ms.author: gned
@@ -171,10 +171,10 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) 
 ```
 
-In this case, `417129e1-207c-e511-80d2-00155d2a68d2` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
+In this case, `00aa00aa-bb11-cc22-dd33-44ee44ee44ee` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
 
 [Learn more about creating and updating table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md).
 
@@ -287,7 +287,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(11bb11bb-cc22-dd33-ee44-55ff55ff55ff)/Attributes(22cc22cc-dd33-ee44-ff55-66aa66aa66aa)
 ```
 
 [Learn more about creating columns using the Web API](webapi/create-update-column-definitions-using-web-api.md#create-columns).

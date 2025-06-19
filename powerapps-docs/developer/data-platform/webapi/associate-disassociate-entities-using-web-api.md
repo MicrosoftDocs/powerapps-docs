@@ -2,8 +2,8 @@
 title: "Associate and disassociate table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "How to relate and unrelate records using the Web API"
 ms.date: 08/15/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -38,7 +38,7 @@ For example, to associate a <xref:Microsoft.Dynamics.CRM.contact?text=contact> r
 **Request:**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 If-Match: *
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -55,7 +55,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), new records can also be associated with existing records in the same way.
@@ -67,7 +67,7 @@ If you want to disassociate, you can simply set the value to null.
 **Request:**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 If-Match: *
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -84,7 +84,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 When disassociating in this manner, you don't need to include the `@odata.bind` annotation. You can simply use the name of the single-valued navigation property:
@@ -92,7 +92,7 @@ When disassociating in this manner, you don't need to include the `@odata.bind` 
 **Request:**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 If-Match: *
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -109,7 +109,7 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)
+OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 More information: [Basic update](update-delete-entities-using-web-api.md#basic-update)
@@ -123,7 +123,7 @@ You can use the following `PUT` request to set the value of the `parentcustomeri
 **Request:**
 
 ```http
-PUT [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)/parentcustomerid_account/$ref HTTP/1.1
+PUT [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/parentcustomerid_account/$ref HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -149,7 +149,7 @@ To remove the reference, you can also use this `DELETE` request:
 **Request:**
 
 ```http
-DELETE [Organization Uri]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)/parentcustomerid_account/$ref HTTP/1.1
+DELETE [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/parentcustomerid_account/$ref HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -181,7 +181,7 @@ If-None-Match: null
 Accept: application/json
 
 {
-  "@odata.id": "[Organization URI]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f)"
+  "@odata.id": "[Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)"
 }
 ```
 
@@ -217,12 +217,12 @@ OData-Version: 4.0
 
 ## Remove a record from a collection
 
-The following example shows how to remove a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection where the contact `contactid` value is `cf9eaaef-f718-ed11-b83e-00224837179f`.
+The following example shows how to remove a <xref:Microsoft.Dynamics.CRM.contact?text=contact> record to the <xref:Microsoft.Dynamics.CRM.account?text=account> `contact_customer_accounts` collection where the contact `contactid` value is `00aa00aa-bb11-cc22-dd33-44ee44ee44ee`.
 
 **Request:**
 
 ```http
-DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts(cf9eaaef-f718-ed11-b83e-00224837179f)/$ref HTTP/1.1
+DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)/$ref HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -241,7 +241,7 @@ The following request also works:
 **Request:**
 
 ```http
-DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref?$id=[Organization URI]/api/data/v9.2/contacts(cf9eaaef-f718-ed11-b83e-00224837179f) HTTP/1.1
+DELETE [Organization Uri]/api/data/v9.2/accounts(ce9eaaef-f718-ed11-b83e-00224837179f)/contact_customer_accounts/$ref?$id=[Organization URI]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee) HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -271,7 +271,7 @@ The following example shows how to associate multiple existing [ActivityParty](.
 **Request:**
 
 ```HTTP
-PUT [Organization URI]/api/data/v9.0/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
+PUT [Organization URI]/api/data/v9.2/emails(2479d20d-3a39-e711-8145-e0071b6a2001)/email_activity_parties
 Content-Type: application/json  
 Accept: application/json  
 OData-MaxVersion: 4.0  

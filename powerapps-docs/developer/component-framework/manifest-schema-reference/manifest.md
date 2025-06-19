@@ -1,8 +1,8 @@
 ---
 title: Manifest Element | Microsoft Docs
 description: Manifest is the metadata file that defines a component.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/06/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -59,7 +59,7 @@ Model-driven and canvas apps
 </manifest>
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

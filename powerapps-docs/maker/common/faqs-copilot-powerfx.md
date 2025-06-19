@@ -1,10 +1,10 @@
 ---
 title: FAQs about using Copilot with Power Fx
 description: FAQ that discusses Copilot and Power Fx
-ms.date: 4/23/2024
+ms.date: 5/28/2025
 ms.custom:
   - transparency-note
-ms.topic: article
+ms.topic: faq
 author: jorisde
 ms.author: jorisde
 ms.reviewer: mduelae
@@ -24,12 +24,16 @@ Power Apps Studio has several features to help makers understand and write Power
 
 - Write a comment in the formula bar that describes a formula to receive a suggested Power Fx expression.
 - Receive an explanation for the current formula displayed in the formula bar.
-- From a supported control's inline action bar, open Copilot to describe a formula and receive a suggested formula and suggested property to apply it to.
+- Open Copilot from a supported control's inline action bar to describe a formula and receive a suggested formula and suggested property to apply it to.
 
 ## What is the system's intended use?
 
 - Generate a single Power Fx expression from an English description.
 - Generate an English description of the formula shown in the formula bar.
+
+## What languages are supported?
+
+Because Power Fx can be used across many different features, each generally available (GA) feature may have a different set of supported languages the meet Microsoft's responsible AI standards. For details on language support for specific features see, [Create Power Fx formulas with Copilot](../canvas-apps/ai-formulas-formulabar.md#language-support)
 
 ## How was Power Fx with Copilot evaluated? What metrics are used to measure performance?
 
@@ -39,9 +43,9 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 ## What are the limitations of Power Fx with Copilot? How can users minimize the impact of Power Fx Copilot limitations when using the system?
 
 - Named Formulas and User Defined Functions can't be generated with Copilot at this time.
-- Variables have to be in use (declared) already for Copilot to use them, it will not introduce new variables.
-- Preview features aren't meant for production use and might have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2173149). 
+- Variables have to be in use (declared) already for Copilot to use them, it doesn't introduce new variables.
+- Preview features aren't meant for production use and might restrict functionality. These features are available before an official release so that customers can get early access and provide feedback. 
+- More information available in [preview terms](https://go.microsoft.com/fwlink/?linkid=2173149). 
 - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
 - This capability is in process of rolling out, and might not be available in your region yet. 
 - This capability can be subject to usage limits or capacity throttling. 

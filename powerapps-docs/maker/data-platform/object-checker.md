@@ -5,8 +5,9 @@ Keywords: object checker, checker, solution checker, solution issue
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 04/25/2023
+ms.date: 11/13/2024
 ms.topic: how-to
+ms.subservice: dataverse-maker
 search.audienceType: 
   - maker
 ---
@@ -47,6 +48,7 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ### See also
 
-[Tools available to diagnose solutions](diagnose-solutions.md)
+[Tools available to diagnose solutions](diagnose-solutions.md)  
+[Use object checker to diagnose a solution component (video)](https://youtu.be/h_OwFRgj1U8?feature=shared)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

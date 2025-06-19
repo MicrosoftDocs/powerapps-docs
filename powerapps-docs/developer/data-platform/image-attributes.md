@@ -3,7 +3,7 @@ title: "Work with image column definitions using code"
 description: "Learn about how to create, retrieve, update and delete image column definitions using code." 
 ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer
@@ -112,7 +112,7 @@ Content-Length: 1393
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(9554c5f9-8c51-ed11-bba1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 More information:
@@ -254,7 +254,7 @@ OData-Version: 4.0
       "CanStoreFullImage": true,
       "MaxSizeInKB": 30720,
       "IsPrimaryImage": true,
-      "MetadataId": "53ba4b29-6a8c-ed11-81ad-000d3a9933c9"
+      "MetadataId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     }
   ]
 }

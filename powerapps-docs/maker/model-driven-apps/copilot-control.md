@@ -3,9 +3,9 @@ title: Add the Copilot control to the rich text editor
 description: Learn how to make the Copilot control available in the rich text editor by modifying the editor configuration file.
 author: udaykirang
 ms.author: udag
-ms.reviewer: shujoshi
+ms.reviewer: udag
 ms.topic: how-to
-ms.date: 04/17/2024
+ms.date: 04/30/2025
 ms.subservice: mda-maker
 tags:
 ms.collection: bap-ai-copilot

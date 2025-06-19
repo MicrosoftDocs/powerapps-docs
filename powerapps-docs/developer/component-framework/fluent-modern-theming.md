@@ -2,18 +2,17 @@
 title: "Style components with modern theming (preview) | Microsoft Docs"
 description: You can style your components based on the modern theme used in the app."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: hemantg
-author: HemantGaur
-ms.date: 11/15/2023
+author: jasongre
+ms.author: jasongre
+ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
   - HemantGaur
-  - noazarur-microsoft
   - JimDaly
 ---
 
@@ -32,13 +31,13 @@ There are four different ways to apply modern theming to your component.
 
 ## Fluent UI v9 controls
 
-Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries (preview)](react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
+Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries](react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
 
 ```xml
 <resources>
   <code path="index.ts" order="1"/>
   <!-- Dependency on React controls & platform libraries -->
-  <platform-library name="React" version="16.8.6" />
+  <platform-library name="React" version="16.14.0" />
   <platform-library name="Fluent" version="9.46.2" />
 </resources>
 ```

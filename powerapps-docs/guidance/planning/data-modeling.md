@@ -3,7 +3,7 @@ title: Designing your data structure | Microsoft Docs
 description: When you're storing or viewing data with your app, an important part of the design is the data structure. Learn key considerations for data modeling.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

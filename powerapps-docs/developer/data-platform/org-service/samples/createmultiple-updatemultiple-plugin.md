@@ -2,8 +2,8 @@
 title: "Sample: CreateMultiple and UpdateMultiple plug-ins (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to write plug-ins for the CreateMultiple and UpdateMultiple messages"
 ms.date: 06/01/2023
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -33,7 +33,7 @@ This sample on GitHub provides several Plug-in types that demonstrate how to wri
 See the README.md file in the sample for detailed instructions about how to run the sample and what it does.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23/xMultiplePluginSamples/README.md)
+> [SDK for .NET Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp/xMultiplePluginSamples/README.md)
 
 
 ### See Also

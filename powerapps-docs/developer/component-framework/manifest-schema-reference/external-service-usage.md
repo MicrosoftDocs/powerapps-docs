@@ -1,8 +1,8 @@
 ---
 title: external-service-usage element | Microsoft Docs
 description: Indicates whether this control is using external service or not.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 02/22/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -55,13 +55,13 @@ External usage enabled for multiple domains.
 
 ## Example 3
 
-External usage is not enabled.
+External usage isn't enabled.
 
 ```xml
 <external-service-usage enabled="false" />
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>

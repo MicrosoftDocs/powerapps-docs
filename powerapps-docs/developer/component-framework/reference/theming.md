@@ -1,8 +1,8 @@
 ---
 title: Theming (Power Apps component framework API reference) | Microsoft Docs
 description: Provides the API for platform-provided modern theming.
-ms.author: vilesyk
-author: lesyk
+author: jasongre
+ms.author: jasongre
 ms.date: 11/15/2023
 ms.reviewer: jdaly
 ms.topic: reference

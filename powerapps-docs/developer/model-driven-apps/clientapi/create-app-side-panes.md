@@ -1,12 +1,12 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
 description: Learn how to create side panes in model-driven apps by using a client API.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 01/27/2023
 ms.reviewer: jdaly
 ms.subservice: mda-developer
-ms.topic: "article"
+ms.topic: concept-article
 search.audienceType: 
   - maker
   - developer
@@ -84,7 +84,7 @@ Xrm.App.sidePanes.createPane({
     pane.navigate({
         pageType: "entityrecord",
         entityName: "sample_reservation",
-        entityId: "d4034340-4623-e811-a847-000d3a30c619",
+        entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
     })
 });
 ```

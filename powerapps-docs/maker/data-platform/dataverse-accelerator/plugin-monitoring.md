@@ -8,8 +8,9 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 05/13/2024
 ms.custom: template-how-to
+ms.subservice: dataverse-maker
 contributors:
-- dikamath
+- sriknair
 ---
 
 # Monitor and troubleshoot Dataverse plug-in runs (preview)
@@ -145,7 +146,7 @@ Yes, the trace log viewer provides filtering capabilities, allowing users to con
 
 ### Is the plug-in monitoring feature available in all environments?
 
-The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-the-dataverse-accelerator).
+The feature is delivered through the Dataverse accelerator and is available in all environments that have the app installed. The app is automatically installed in all new environments, but can also be installed in older environments by following the [install instructions](dataverse-accelerator.md#install-or-update-the-dataverse-accelerator).
 
 ### After I enabled logging, it still shows the "Logging is turned off" screen
 

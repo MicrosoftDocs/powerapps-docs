@@ -2,14 +2,14 @@
 title: "View the profile card for a contact or user | MicrosoftDocs"
 description: View a contact's or user profile card
 ms.custom: ""
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 09/14/2020
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: sericks
+ms.author: smurkute
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -7,7 +7,7 @@ ms.component: pa-user
 ms.subservice: mobile
 author: trdehove
 ms.author: devangpandya
-ms.reviewer: sericks
+ms.reviewer: smurkute
 search.audienceType: 
   - enduser
 searchScope:

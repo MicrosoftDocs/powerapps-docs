@@ -1,11 +1,11 @@
 ---
 title: Package a code component| Microsoft Docs
 description: This article describes how to import code components into model-driven apps in Microsoft Dataverse.
-ms.author: hemantg
-author: HemantGaur
-ms.date: 03/22/2023
+author: anuitz
+ms.author: anuitz
+ms.date: 12/04/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly
@@ -39,8 +39,18 @@ To create and import a solution file:
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the following command. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
 
    ```CLI
-   msbuild /t:build /restore
+   msbuild /t:restore
    ```
+   ```CLI
+   msbuild
+   ```
+
+   Or if you have installed the .NET SDK, version >= 6 :
+
+   ```CLI
+   dotnet build
+   ```
+
 
     > [!TIP]
     > - If msbuild 15.9.* is not in the path, open Developer Command Prompt for VS 2017 to run the `msbuild` commands.

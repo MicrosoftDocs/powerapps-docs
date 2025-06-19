@@ -3,8 +3,8 @@ title: Use open types with custom APIs
 description: Learn how to use open types with Microsoft Dataverse custom APIs.
 ms.date: 08/02/2023
 ms.topic: how-to
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType:

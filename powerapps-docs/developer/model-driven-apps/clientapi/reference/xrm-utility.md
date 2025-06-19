@@ -1,8 +1,8 @@
 ---
-title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
+title: "Xrm.Utility (Client API reference) in model-driven apps"
 description: Provides container for useful methods.
-author: adrianorth
-ms.author: aorth
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

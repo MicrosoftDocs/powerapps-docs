@@ -4,7 +4,8 @@ description: Configure cascading behaviors for a one-to-many relationship in Mic
 suite: powerapps
 author: mkannapiran
 ms.author: kamanick
-ms.topic: article
+ms.reviewer: jdaly
+ms.topic: how-to
 ms.date: 09/05/2023
 ms.subservice: dataverse-developer
 search.audienceType: 

@@ -1,7 +1,7 @@
 ---
 title: Long-term data retention
 description: Learn how to use retention policies to transfer data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient long-term storage.
-ms.date: 06/27/2024
+ms.date: 12/12/2024
 ms.topic: how-to
 author: pnghub
 ms.author: gned
@@ -37,7 +37,7 @@ With FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource`
 With [QueryExpression ](/dotnet/api/microsoft.xrm.sdk.query.queryexpression), set the [QueryExpression.DataSource property](/dotnet/api/microsoft.xrm.sdk.query.queryexpression.datasource) to `retained`.
 
 > [!NOTE]
-> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query/overview.md).
+> There is currently no way to retrieve retained data using [Dataverse Web API](webapi/query/overview.md) using an OData style query. [You can use FetchXml with the Dataverse Web API](fetchxml/retrieve-data.md)
   
 ## Set up a retention policy
 

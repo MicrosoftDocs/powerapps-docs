@@ -1,12 +1,11 @@
 ---
-title: "Use localized labels with ribbons (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using localized labels with ribbons." # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
-
+title: "Use localized labels with ribbons (model-driven apps)"
+description: "Learn about using localized labels with ribbons."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -55,11 +54,12 @@ ToolTipDescription="$LocLabels:MyISV.account.SendToOtherSystem.ToolTip"
   
  If the label text is very long without a space for the text to wrap, the width of the control expands to allow for the entire label to be displayed.  
   
-### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)   
- [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
- [Define Ribbon Commands](define-ribbon-commands.md)
+### See also
+
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)   
+[Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
+[Define Ribbon Commands](define-ribbon-commands.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

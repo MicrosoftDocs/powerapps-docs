@@ -3,7 +3,7 @@ title: Move customizations between environments | Microsoft Docs
 description: Explains how to transport customizations between Microsoft Dataverse for Teams environments or between Dataverse and Dataverse for Teams.
 author: wimcoor
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 ms.date: 06/16/2022
 ms.subservice: teams
@@ -11,7 +11,6 @@ ms.author: wimcoor
 ms.reviewer: matp
 contributors:
   - mattp123
-  - ProfessorKendrick
 ---
 # Move customizations between environments
 

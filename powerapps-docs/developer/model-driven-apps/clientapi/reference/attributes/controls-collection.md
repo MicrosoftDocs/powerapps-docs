@@ -1,8 +1,8 @@
 ---
-title: "Controls collection (Client API reference)| MicrosoftDocs"
+title: "Controls collection (Client API reference)"
 description: "Learn about how to access controls associated with columns."
-author: HemantGaur
-ms.author: hemantg
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -27,8 +27,5 @@ When performing actions on controls that are tied to a column, you should always
 ### Related articles
 
 [Columns (Client API reference)](../attributes.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

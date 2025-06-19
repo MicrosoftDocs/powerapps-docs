@@ -16,6 +16,8 @@ contributors:
 
 # Date picker control in cards
 
+[!INCLUDE[cards-deprecation-banner](~/includes/cards-deprecation-notice.md)]
+
 Allows the user to enter a date in mm/dd/yyyy format or select a date on the calendar. The value is stored as a date.
 
 ## Properties

@@ -1,11 +1,11 @@
 ---
-title: "Customize forms (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit forms. This topic will provide information necessary to create or edit forms programmatically." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
+title: "Customize forms (model-driven apps)"
+description: "Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit forms. This topic will provide information necessary to create or edit forms programmatically."
+author: MitiJ
+ms.author: mijosh
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -47,22 +47,22 @@ Forms are stored in the `SystemForm` table along with dashboards and visualizati
  The following table describes key `SystemForm` table columns and the corresponding data included in the XML elements exported with the solution.  
 
 
-|  SystemForm property  |                 FormXML element                 |                                                                                                              Description                                                                                                              |
-|-----------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   `AncestorFormId`    |                  `<ancestor>`                   |                      Unique identifier of the parent form. This is set when you create a new form by using **Save As** for an existing form or by using <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>.                      |
-|    `CanBeDeleted`     |                `<CanBeDeleted>`                 |                                    Information that specifies whether this component can be deleted.This managed property is only applied if the form was created by importing a managed solution.                                    |
-|     `Description`     |                `<Descriptions>`                 | `Description` is a string and `<Descriptions>` contains any localized labels for the description of the form.<br /><br /> The localized labels can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>. |
-| `FormActivationState` |             `<FormActivationState>`             |                                  Specifies the state of the form.<br /><br /> Only forms of type "main" can be deactivated.<br /><br /> Valid Values:<br /><br /> -   0: Inactive<br />-   1: Active                                  |
-|       `FormId`        |                   `<formid>`                    |                                                                                                     Unique identifier of the form                                                                                                     |
-|  `FormPresentation`   |              `<FormPresentation>`               |                                     Specifies whether this form is in the updated UI layout in Microsoft Dataverse.                                      |
-|       `FormXml`       |                    `<form>`                     |                                                                                                XML representation of the form layout.                                                                                                 |
-|  `IntroducedVersion`  |              `<IntroducedVersion>`              |                                                                                          Version of the solution that the form was added in.                                                                                          |
-|     `IsAIRMerged`     |                       N/A                       |                                           Specifies whether this form is merged with the updated UI layout in Dataverse.                                           |
-|   `IsCustomizable`    |               `<IsCustomizable>`                |                            Information that specifies whether this component can be customized.<br /><br /> This managed property is only applied if the form was created by importing a managed solution.                            |
-|      `IsDefault`      |                       N/A                       |                                                                          Information that specifies whether the form or the dashboard is the system default.                                                                          |
-|        `Name`         |               `<LocalizedNames>`                |       `Name` is a string and `<LocalizedNames>` contains any localized labels for the name of the form.<br /><br /> The localized labels can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.       |
-|   `ObjectTypeCode`    | The form is a decedent of the `Entity` element. |                                                                                        The `ObjectTypeCode` value is the table logical name.                                                                                         |
-|        `Type`         |       `<forms>` element `type` parameter        |                                                       Valid values for forms are:<br /><br /> -   2: `main`<br />-   5: `mobile`<br />-   6: `quick`<br />-   7: `quickCreate`                                                        |
+|SystemForm property|FormXML element|Description|
+|----|----|----|
+|`AncestorFormId`|`<ancestor>`|Unique identifier of the parent form. This is set when you create a new form by using **Save As** for an existing form or by using the SDK for .NET [CopySystemFormRequest class](xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest) or Web API [CopySystemForm action](xref:Microsoft.Dynamics.CRM.CopySystemForm).|
+|`CanBeDeleted`|`<CanBeDeleted>`|Information that specifies whether this component can be deleted.This managed property is only applied if the form was created by importing a managed solution.|
+|`Description`|`<Descriptions>`| `Description` is a string and `<Descriptions>` contains any localized labels for the description of the form.<br /><br /> The localized labels can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>. |
+| `FormActivationState` |`<FormActivationState>`|Specifies the state of the form.<br /><br /> Only forms of type "main" can be deactivated.<br /><br /> Valid Values:<br /><br /> -0: `Inactive`<br />-1: `Active`|
+|`FormId`|`<formid>`|Unique identifier of the form|
+|`FormPresentation`|`<FormPresentation>`|Specifies whether this form is in the updated UI layout in Microsoft Dataverse.|
+|`FormXml`|`<form>`|XML representation of the form layout.|
+|`IntroducedVersion`|`<IntroducedVersion>`|Version of the solution that the form was added in.|
+|`IsAIRMerged`|N/A|Specifies whether this form is merged with the updated UI layout in Dataverse.|
+|`IsCustomizable`|`<IsCustomizable>`|Information that specifies whether this component can be customized.<br /><br /> This managed property is only applied if the form was created by importing a managed solution.|
+|`IsDefault`|N/A|Information that specifies whether the form or the dashboard is the system default.|
+|`Name`|`<LocalizedNames>`|`Name` is a string and `<LocalizedNames>` contains any localized labels for the name of the form.<br /><br /> The localized labels can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.|
+|`ObjectTypeCode`| The form is a decedent of the `Entity` element. |The `ObjectTypeCode` value is the table logical name.|
+|`Type`|`<forms>` element `type` parameter|Valid values for forms are:<br /><br /> - 2: `main`<br />-5: `mobile`<br />-6: `quick`<br />-7: `quickCreate`|
 
 <a name="BKMK_CreateAndEditForms"></a>   
 
@@ -114,7 +114,7 @@ var pageInput = {
     pageType: "entityrecord",
     entityName: "account",
     formType: 2,
-    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706" //replace with actual ID
+    entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" //replace with actual ID
 };
 var navigationOptions = {
     target: 2,
@@ -175,10 +175,10 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
 ### See also  
 
- [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
- [SystemForm table](../data-platform/reference/entities/systemform.md)  
- [Form XML schema](form-xml-schema.md)<br/>
- [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
+[Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
+[SystemForm table](../data-platform/reference/entities/systemform.md)  
+[Form XML schema](form-xml-schema.md)<br/>
+[Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,10 +2,9 @@
 title: "Sample: Web API Use bulk operations" 
 description: "This sample shows how to perform bulk create and update operations using the Web API CreateMultiple and UpdateMultiple actions. The messages for these actions are optimized to provide the most performant way to create or update records with Dataverse."
 ms.date: 02/08/2024
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
-ms.topic: sample
 search.audienceType:
   - developer
 search.app:
@@ -27,7 +26,7 @@ This sample is a Visual Studio .NET 6.0 solution that contains:
 See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
 
 > [!div class="nextstepaction"]
-> [Web API Bulk Operations Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/BulkOperations/README.md)
+> [Web API Bulk Operations Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/CSharp-NETx/BulkOperations/README.md)
 
 ### See Also
 

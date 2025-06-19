@@ -1,5 +1,5 @@
 ---
-title: "IFRAME OnReadyStateComplete event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "IFRAME OnReadyStateComplete event (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the OnReadyStateComplete event.
 author: sriharibs-msft
 ms.author: srihas
@@ -17,7 +17,9 @@ contributors:
 The `OnReadyStateComplete` event indicates that the content of the IFRAME has loaded and can be accessed in code. Use this event when referencing IFRAME controls within your scripts. 
 
 
+### Related articles
 
-
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

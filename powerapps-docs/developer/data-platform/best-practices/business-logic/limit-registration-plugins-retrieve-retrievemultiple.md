@@ -3,10 +3,11 @@ title: "Limit the registration of plug-ins for Retrieve and RetrieveMultiple mes
 description: "Adding synchronous plug-in logic to the Retrieve and RetrieveMultiple message events can cause slowness."
 suite: powerapps
 author: jowells
+ms.author: jowells
+ms.reviewer: jdaly
 ms.topic: article
 ms.date: 1/15/2019
 ms.subservice: dataverse-developer
-ms.author: jowells
 search.audienceType: 
   - developer
 ---

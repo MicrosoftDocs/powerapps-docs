@@ -1,49 +1,47 @@
 ---
-title: "BulkDeleteOperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the BulkDeleteOperation table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Bulk Delete Operation (BulkDeleteOperation) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Bulk Delete Operation (BulkDeleteOperation) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# BulkDeleteOperation table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Bulk Delete Operation (BulkDeleteOperation) table/entity reference (Microsoft Dataverse)
 
 User-submitted bulk deletion job.
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|Delete|DELETE /bulkdeleteoperations(*bulkdeleteoperationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET /bulkdeleteoperations(*bulkdeleteoperationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET /bulkdeleteoperations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+The following table lists the messages for the Bulk Delete Operation (BulkDeleteOperation) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Delete`<br />Event: False |`DELETE` /bulkdeleteoperations(*bulkdeleteoperationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: False |`GET` /bulkdeleteoperations(*bulkdeleteoperationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveMultiple`<br />Event: False |`GET` /bulkdeleteoperations<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|BulkDeleteOperations|
-|DisplayCollectionName|Bulk Delete Operations|
-|DisplayName|Bulk Delete Operation|
-|EntitySetName|bulkdeleteoperations|
-|IsBPFEntity|False|
-|LogicalCollectionName|bulkdeleteoperations|
-|LogicalName|bulkdeleteoperation|
-|OwnershipType|None|
-|PrimaryIdAttribute|bulkdeleteoperationid|
-|PrimaryNameAttribute|name|
-|SchemaName|BulkDeleteOperation|
+The following table lists selected properties for the Bulk Delete Operation (BulkDeleteOperation) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Bulk Delete Operation** |
+| **DisplayCollectionName** | **Bulk Delete Operations** |
+| **SchemaName** | `BulkDeleteOperation` |
+| **CollectionSchemaName** | `BulkDeleteOperations` |
+| **EntitySetName** | `bulkdeleteoperations`|
+| **LogicalName** | `bulkdeleteoperation` |
+| **LogicalCollectionName** | `bulkdeleteoperations` |
+| **PrimaryIdAttribute** | `bulkdeleteoperationid` |
+| **PrimaryNameAttribute** |`name` |
+| **TableType** | `Standard` |
+| **OwnershipType** | `None` |
 
 ## Writable columns/attributes
 
@@ -52,62 +50,49 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
-|--------|-----|
-|Description|For internal use only.|
+|---|---|
+|Description|**For internal use only.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|timezoneruleversionnumber|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`timezoneruleversionnumber`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|-1|
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
-|--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|---|---|
+|Description|**Time zone code that was in use when the record was created.**|
 |DisplayName||
-|Format|None|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|utcconversiontimezonecode|
-|MaxValue|2147483647|
-|MinValue|-1|
+|LogicalName|`utcconversiontimezonecode`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|2147483647|
+|MinValue|-1|
 
-<a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns/attributes return false for both **IsValidForCreate** and **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AsyncOperationId](#BKMK_AsyncOperationId)
 - [BulkDeleteOperationId](#BKMK_BulkDeleteOperationId)
 - [CreatedBy](#BKMK_CreatedBy)
-- [CreatedByName](#BKMK_CreatedByName)
-- [CreatedByYomiName](#BKMK_CreatedByYomiName)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
-- [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
-- [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [FailureCount](#BKMK_FailureCount)
 - [IsRecurring](#BKMK_IsRecurring)
 - [ModifiedBy](#BKMK_ModifiedBy)
-- [ModifiedByName](#BKMK_ModifiedByName)
-- [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
 - [ModifiedOn](#BKMK_ModifiedOn)
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
-- [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
-- [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [Name](#BKMK_Name)
 - [NextRun](#BKMK_NextRun)
 - [OrderedQuerySetXml](#BKMK_OrderedQuerySetXml)
@@ -120,533 +105,439 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [StatusCode](#BKMK_StatusCode)
 - [SuccessCount](#BKMK_SuccessCount)
 
-
 ### <a name="BKMK_AsyncOperationId"></a> AsyncOperationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the system job that created this record|
-|DisplayName|System Job|
+|---|---|
+|Description|**Unique identifier of the system job that created this record**|
+|DisplayName|**System Job**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|asyncoperationid|
+|LogicalName|`asyncoperationid`|
 |RequiredLevel|None|
-|Targets|asyncoperation|
 |Type|Lookup|
-
+|Targets|asyncoperation|
 
 ### <a name="BKMK_BulkDeleteOperationId"></a> BulkDeleteOperationId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the bulk deletion job.|
-|DisplayName|Bulk Deletion Job|
+|---|---|
+|Description|**Unique identifier of the bulk deletion job.**|
+|DisplayName|**Bulk Deletion Job**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|bulkdeleteoperationid|
+|LogicalName|`bulkdeleteoperationid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who created the bulk deletion job.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Unique identifier of the user who created the bulk deletion job.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|createdby|
+|LogicalName|`createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the bulk deletion job was created.|
+|---|---|
+|Description|**Date and time when the bulk deletion job was created.**|
 |DisplayName||
-|Format|DateAndTime|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdon|
+|LogicalName|`createdon`|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who created the bulkdeleteoperation.|
+|---|---|
+|Description|**Unique identifier of the delegate user who created the bulkdeleteoperation.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|createdonbehalfby|
+|LogicalName|`createdonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|createdonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_FailureCount"></a> FailureCount
 
 |Property|Value|
-|--------|-----|
-|Description|Number of records that could not be deleted by the bulk deletion job.|
-|DisplayName|Failures|
-|Format|None|
+|---|---|
+|Description|**Number of records that could not be deleted by the bulk deletion job.**|
+|DisplayName|**Failures**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|failurecount|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`failurecount`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_IsRecurring"></a> IsRecurring
 
 |Property|Value|
-|--------|-----|
-|Description|Information about if recurrence is defined for the bulk deletion job.|
-|DisplayName|Is Recurring|
+|---|---|
+|Description|**Information about if recurrence is defined for the bulk deletion job.**|
+|DisplayName|**Is Recurring**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|isrecurring|
+|LogicalName|`isrecurring`|
 |RequiredLevel|SystemRequired|
 |Type|Boolean|
-
-#### IsRecurring Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`bulkdeleteoperation_isrecurring`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user who last modified the bulk deletion job.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Unique identifier of the user who last modified the bulk deletion job.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedby|
+|LogicalName|`modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Date and time when the bulk deletion job record was last modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Date and time when the bulk deletion job record was last modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|modifiedon|
+|LogicalName|`modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the delegate user who last modified the bulkdeleteoperation.|
+|---|---|
+|Description|**Unique identifier of the delegate user who last modified the bulkdeleteoperation.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|modifiedonbehalfby|
+|LogicalName|`modifiedonbehalfby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
-
-### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|modifiedonbehalfbyyominame|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
-|--------|-----|
-|Description|Name of the bulk deletion job.|
-|DisplayName|System Job Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Name of the bulk deletion job.**|
+|DisplayName|**System Job Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|256|
+|LogicalName|`name`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|256|
 
 ### <a name="BKMK_NextRun"></a> NextRun
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Next scheduled time for the bulk deletion job to run.|
-|DisplayName|Next Run|
-|Format|DateAndTime|
+|---|---|
+|Description|**Next scheduled time for the bulk deletion job to run.**|
+|DisplayName|**Next Run**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|nextrun|
+|LogicalName|`nextrun`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_OrderedQuerySetXml"></a> OrderedQuerySetXml
 
 |Property|Value|
-|--------|-----|
-|Description|Fetch XML of the ordered query set.|
+|---|---|
+|Description|**Fetch XML of the ordered query set.**|
 |DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|orderedquerysetxml|
-|MaxLength|1073741823|
+|LogicalName|`orderedquerysetxml`|
 |RequiredLevel|None|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1073741823|
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier of the user or team who owns the bulk delete operation.|
-|DisplayName|Owner|
+|---|---|
+|Description|**Unique identifier of the user or team who owns the bulk delete operation.**|
+|DisplayName|**Owner**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|ownerid|
+|LogicalName|`ownerid`|
 |RequiredLevel|SystemRequired|
-|Targets|systemuser,team|
 |Type|Owner|
-
+|Targets|systemuser, team|
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owneridtype|
+|LogicalName|`owneridtype`|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 |Property|Value|
-|--------|-----|
-|Description|Business unit that owns the bulk deletion job.|
-|DisplayName|Owning Business Unit|
+|---|---|
+|Description|**Business unit that owns the bulk deletion job.**|
+|DisplayName|**Owning Business Unit**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owningbusinessunit|
+|LogicalName|`owningbusinessunit`|
 |RequiredLevel|None|
-|Targets|businessunit|
 |Type|Lookup|
-
+|Targets|businessunit|
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 |Property|Value|
-|--------|-----|
-|Description|Business user what owns the bulk delete operation.|
+|---|---|
+|Description|**Business user what owns the bulk delete operation.**|
 |DisplayName||
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|owninguser|
+|LogicalName|`owninguser`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_ProcessingQEIndex"></a> ProcessingQEIndex
 
 |Property|Value|
-|--------|-----|
-|Description|Index of the ordered query expression that defines the deletion set.|
-|DisplayName|Query Index|
-|Format|None|
+|---|---|
+|Description|**Index of the ordered query expression that defines the deletion set.**|
+|DisplayName|**Query Index**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processingqeindex|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`processingqeindex`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|1000000000|
+|MinValue|0|
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the bulk deletion job.|
-|DisplayName|Status|
+|---|---|
+|Description|**Status of the bulk deletion job.**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue|0|
+|GlobalChoiceName|`bulkdeleteoperation_statecode`|
 
 #### StateCode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Ready|1|Ready|
-|1|Suspended|2|Suspended|
-|2|Locked|2|Locked|
-|3|Completed|2|Completed|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Ready**<br />DefaultStatus: 1<br />InvariantName: `Ready`|
+|1|Label: **Suspended**<br />DefaultStatus: 2<br />InvariantName: `Suspended`|
+|2|Label: **Locked**<br />DefaultStatus: 2<br />InvariantName: `Locked`|
+|3|Label: **Completed**<br />DefaultStatus: 2<br />InvariantName: `Completed`|
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the bulk deletion job.|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the bulk deletion job.**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue|-1|
+|GlobalChoiceName|`bulkdeleteoperation_statuscode`|
 
 #### StatusCode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|0|Waiting For Resources|0|
-|10|Waiting|1|
-|11|Retrying|1|
-|12|Paused|1|
-|20|In Progress|2|
-|21|Pausing|2|
-|22|Canceling|2|
-|30|Succeeded|3|
-|31|Failed|3|
-|32|Canceled|3|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Waiting For Resources**<br />State:0<br />TransitionData: None|
+|10|Label: **Waiting**<br />State:1<br />TransitionData: None|
+|11|Label: **Retrying**<br />State:1<br />TransitionData: None|
+|12|Label: **Paused**<br />State:1<br />TransitionData: None|
+|20|Label: **In Progress**<br />State:2<br />TransitionData: None|
+|21|Label: **Pausing**<br />State:2<br />TransitionData: None|
+|22|Label: **Canceling**<br />State:2<br />TransitionData: None|
+|30|Label: **Succeeded**<br />State:3<br />TransitionData: None|
+|31|Label: **Failed**<br />State:3<br />TransitionData: None|
+|32|Label: **Canceled**<br />State:3<br />TransitionData: None|
 
 ### <a name="BKMK_SuccessCount"></a> SuccessCount
 
 |Property|Value|
-|--------|-----|
-|Description|Number of records deleted by the bulk deletion job.|
-|DisplayName|Deleted|
-|Format|None|
+|---|---|
+|Description|**Number of records deleted by the bulk deletion job.**|
+|DisplayName|**Deleted**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|successcount|
-|MaxValue|1000000000|
-|MinValue|0|
+|LogicalName|`successcount`|
 |RequiredLevel|None|
 |Type|Integer|
+|MaxValue|1000000000|
+|MinValue|0|
 
-<a name="onetomany"></a>
+## Many-to-One relationships
 
-## One-To-Many Relationships
+These relationships are many-to-one. Listed by **SchemaName**.
 
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_BulkDeleteOperation_BulkDeleteFailure"></a> BulkDeleteOperation_BulkDeleteFailure
-
-Same as the [BulkDeleteOperation_BulkDeleteFailure](bulkdeletefailure.md#BKMK_BulkDeleteOperation_BulkDeleteFailure) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkdeletefailure|
-|ReferencingAttribute|bulkdeleteoperationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|BulkDeleteOperation_BulkDeleteFailure|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
-
-- [lk_bulkdeleteoperationbase_modifiedby](#BKMK_lk_bulkdeleteoperationbase_modifiedby)
 - [AsyncOperation_BulkDeleteOperation](#BKMK_AsyncOperation_BulkDeleteOperation)
+- [BulkDeleteOperation_BusinessUnit](#BKMK_BulkDeleteOperation_BusinessUnit)
 - [lk_bulkdeleteoperation_createdonbehalfby](#BKMK_lk_bulkdeleteoperation_createdonbehalfby)
 - [lk_bulkdeleteoperation_modifiedonbehalfby](#BKMK_lk_bulkdeleteoperation_modifiedonbehalfby)
 - [lk_bulkdeleteoperationbase_createdby](#BKMK_lk_bulkdeleteoperationbase_createdby)
-- [BulkDeleteOperation_BusinessUnit](#BKMK_BulkDeleteOperation_BusinessUnit)
-
-
-### <a name="BKMK_lk_bulkdeleteoperationbase_modifiedby"></a> lk_bulkdeleteoperationbase_modifiedby
-
-See the [lk_bulkdeleteoperationbase_modifiedby](systemuser.md#BKMK_lk_bulkdeleteoperationbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+- [lk_bulkdeleteoperationbase_modifiedby](#BKMK_lk_bulkdeleteoperationbase_modifiedby)
 
 ### <a name="BKMK_AsyncOperation_BulkDeleteOperation"></a> AsyncOperation_BulkDeleteOperation
 
-See the [AsyncOperation_BulkDeleteOperation](asyncoperation.md#BKMK_AsyncOperation_BulkDeleteOperation) one-to-many relationship for the [asyncoperation](asyncoperation.md) table/entity.
+One-To-Many Relationship: [asyncoperation AsyncOperation_BulkDeleteOperation](asyncoperation.md#BKMK_AsyncOperation_BulkDeleteOperation)
 
-### <a name="BKMK_lk_bulkdeleteoperation_createdonbehalfby"></a> lk_bulkdeleteoperation_createdonbehalfby
-
-See the [lk_bulkdeleteoperation_createdonbehalfby](systemuser.md#BKMK_lk_bulkdeleteoperation_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_bulkdeleteoperation_modifiedonbehalfby"></a> lk_bulkdeleteoperation_modifiedonbehalfby
-
-See the [lk_bulkdeleteoperation_modifiedonbehalfby](systemuser.md#BKMK_lk_bulkdeleteoperation_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_bulkdeleteoperationbase_createdby"></a> lk_bulkdeleteoperationbase_createdby
-
-See the [lk_bulkdeleteoperationbase_createdby](systemuser.md#BKMK_lk_bulkdeleteoperationbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`asyncoperation`|
+|ReferencedAttribute|`asyncoperationid`|
+|ReferencingAttribute|`asyncoperationid`|
+|ReferencingEntityNavigationPropertyName|`asyncoperationid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_BulkDeleteOperation_BusinessUnit"></a> BulkDeleteOperation_BusinessUnit
 
-See the [BulkDeleteOperation_BusinessUnit](businessunit.md#BKMK_BulkDeleteOperation_BusinessUnit) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+One-To-Many Relationship: [businessunit BulkDeleteOperation_BusinessUnit](businessunit.md#BKMK_BulkDeleteOperation_BusinessUnit)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`businessunit`|
+|ReferencedAttribute|`businessunitid`|
+|ReferencingAttribute|`owningbusinessunit`|
+|ReferencingEntityNavigationPropertyName|`owningbusinessunit`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_bulkdeleteoperation_createdonbehalfby"></a> lk_bulkdeleteoperation_createdonbehalfby
+
+One-To-Many Relationship: [systemuser lk_bulkdeleteoperation_createdonbehalfby](systemuser.md#BKMK_lk_bulkdeleteoperation_createdonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`createdonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_bulkdeleteoperation_modifiedonbehalfby"></a> lk_bulkdeleteoperation_modifiedonbehalfby
+
+One-To-Many Relationship: [systemuser lk_bulkdeleteoperation_modifiedonbehalfby](systemuser.md#BKMK_lk_bulkdeleteoperation_modifiedonbehalfby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedonbehalfby`|
+|ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_bulkdeleteoperationbase_createdby"></a> lk_bulkdeleteoperationbase_createdby
+
+One-To-Many Relationship: [systemuser lk_bulkdeleteoperationbase_createdby](systemuser.md#BKMK_lk_bulkdeleteoperationbase_createdby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`createdby`|
+|ReferencingEntityNavigationPropertyName|`createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_lk_bulkdeleteoperationbase_modifiedby"></a> lk_bulkdeleteoperationbase_modifiedby
+
+One-To-Many Relationship: [systemuser lk_bulkdeleteoperationbase_modifiedby](systemuser.md#BKMK_lk_bulkdeleteoperationbase_modifiedby)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`modifiedby`|
+|ReferencingEntityNavigationPropertyName|`modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+### <a name="BKMK_BulkDeleteOperation_BulkDeleteFailure"></a> BulkDeleteOperation_BulkDeleteFailure
+
+Many-To-One Relationship: [bulkdeletefailure BulkDeleteOperation_BulkDeleteFailure](bulkdeletefailure.md#BKMK_BulkDeleteOperation_BulkDeleteFailure)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`bulkdeletefailure`|
+|ReferencingAttribute|`bulkdeleteoperationid`|
+|ReferencedEntityNavigationPropertyName|`BulkDeleteOperation_BulkDeleteFailure`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.bulkdeleteoperation?text=bulkdeleteoperation EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.bulkdeleteoperation?displayProperty=fullName>

@@ -2,10 +2,10 @@
 title: "Use LINQ to construct a query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the .NET Language-Integrated Query (LINQ) query provider to construct a Microsoft Dataverse query." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: kkanakas
-ms.author: kartikka
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: how-to
 search.audienceType: 
   - developer
 contributors:
@@ -109,7 +109,6 @@ select new Contact
 
 The LINQ query provider supports a subset of the LINQ operators. Not all conditions that can be expressed in LINQ are supported. The following table shows some of the limitations of the basic LINQ operators.  
 
-
 |   LINQ Operator   |Limitations|
 |-------------------|-----------|
 |`join`|Represents an inner or outer join. Only left outer joins are supported.|
@@ -122,9 +121,9 @@ The LINQ query provider supports a subset of the LINQ operators. Not all conditi
 |`skip` and `take`|Supports `skip` and `take` using server-side paging. The `skip` value must be greater than or equal to the `take` value.       |
 |`aggregate`|  Not supported. FetchXML supports aggregation options that are not available with the LINQ query provider. More information: [Aggregate data using FetchXml](../fetchxml/aggregate-data.md)|
 
-<a name="filter"></a>   
+<a name="filter"></a>
 
-## Filter multiple tables 
+## Filter multiple tables
 
  You can create complex .NET Language Integrated Query(LINQ) queries in Dataverse. You use multiple `Join` clauses with filter clauses to create a result that is filtered on columns from several tables.  
 

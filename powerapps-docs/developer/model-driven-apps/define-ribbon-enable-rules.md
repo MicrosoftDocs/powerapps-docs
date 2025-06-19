@@ -1,11 +1,11 @@
 ---
-title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
+title: "Define ribbon enable rules (model-driven apps)"
+description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements."
+author: clromano
+ms.author: clromano
 ms.date: 05/24/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -21,7 +21,6 @@ contributors:
 When configuring ribbon elements, you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
 
 - Use the `/RuleDefinitions/EnableRules/EnableRule` element to define rules controlling when the ribbon element should be enabled.  
-
 - Use the `/CommandDefinitions/CommandDefinition/EnableRules/EnableRule` element to associate specific enable rules to a command definition.  
 
 ## What does enabled mean?  
@@ -39,6 +38,7 @@ Enable rules are intended to be reused. By defining them with rule definitions, 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ### Command Client Type Rule
+
  Uses the `<CommandClientTypeRule>` element. [!INCLUDE[ribbon_element_CommandClientTypeRule](../../includes/ribbon-element-commandclienttyperule.md)]  
 
  The `Type` values correspond to the following:  
@@ -51,11 +51,11 @@ Enable rules are intended to be reused. By defining them with rule definitions, 
 | `Legacy`  | The ribbon is presented in forms for tables that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
 
 ### Crm Client Type Rule
+
 Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending on the type of client used. Type options are as follows:  
 
--   `Web`  
-
--   `Outlook`  
+- `Web`  
+- `Outlook`  
 
 ### Crm Offline Access State Rule
 
@@ -65,9 +65,8 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 
  Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. Type options are as follows:  
 
--   `CrmForOutlook`  
-
--   `CrmForOutlookOfflineAccess`  
+- `CrmForOutlook`  
+- `CrmForOutlookOfflineAccess`  
 
 ### Custom Rule
 
@@ -132,43 +131,45 @@ function EnableRule() {
  The `EntityRule` also includes an optional context parameter to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` parameter can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
 ### Form State Rule
- Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a record. State options are as follows:  
 
--   `Create`  
+Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a record. State options are as follows:  
 
--   `Existing`  
-
--   `ReadOnly`  
-
--   `Disabled`  
-
--   `BulkEdit`  
+- `Create`  
+- `Existing`  
+- `ReadOnly`  
+- `Disabled`  
+- `BulkEdit`  
 
 ### Or Rule
+
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
+
  Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` parameter for this element to determine whether the record is being tracked in Power Apps.  
 
 ### Outlook Version Rule
+
  Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
 
--   `2003`  
-
--   `2007`  
-
--   `2010`  
+- `2003`  
+- `2007`  
+- `2010`  
 
 ### Page Rule
+
  Uses the `<PageRule>` element. This type of rule checks the URL of the page being displayed. It returns true if the `Address` matches.  
 
 ### Record Privilege Rule
+
  Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific record. These privileges differ from a table privilege because they can include privileges gained by another user sharing the record with the current user.  
 
 ### Selection Count Rule
+
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
 ### Value Rule
+
 Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
  > [!NOTE]
@@ -207,6 +208,7 @@ Uses the `<EnableRule>` element. Use this rule to make the command appear on the
   </Actions>
 </CommandDefinition>
 ```
+
 ### Show On Grid Rule
 
 Uses the `<EnableRule>` element. Use this rule to make the quick action command appear on the homepage grid only. In other words, you can use this command to hide an existing quick action.
@@ -225,9 +227,10 @@ Uses the `<EnableRule>` element. Use this rule to make the quick action command 
 ```
 
 ### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define ribbon commands](define-ribbon-commands.md)   
- [Define ribbon display rules](define-ribbon-display-rules.md)
+
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Define ribbon commands](define-ribbon-commands.md)   
+[Define ribbon display rules](define-ribbon-display-rules.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

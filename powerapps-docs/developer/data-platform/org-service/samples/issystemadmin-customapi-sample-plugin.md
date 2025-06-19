@@ -2,8 +2,8 @@
 title: "Sample: IsSystemAdmin custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a plug-in to support a custom API"
 ms.date: 09/27/2022
-author: divkamath
-ms.author: dikamath
+author: MicroSri
+ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -20,7 +20,7 @@ contributors:
 This sample shows how to write a plug-in that supports a custom API named `sample_IsSystemAdmin`.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET: IsSystemAdmin custom API sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/IsSystemAdminCustomAPI)
+> [SDK for .NET: IsSystemAdmin custom API sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp/IsSystemAdminCustomAPI)
 
 This sample creates a plug-in for the main operation of the `sample_IsSystemAdmin` custom API. This custom API will detect whether a user has the System Administrator security role.
 

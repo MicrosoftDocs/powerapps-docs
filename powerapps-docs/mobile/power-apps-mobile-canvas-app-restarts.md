@@ -3,12 +3,12 @@ title: Prevent canvas app restarts in the Power Apps mobile app
 description: Learn how to prevent canvas app restarts on Power Apps mobile
 author: anuitz
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 01/05/2023
+ms.topic: article
+ms.date: 10/11/2024
 ms.subservice: mobile
 ms.author: anuitz
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -61,7 +61,6 @@ The greatest memory improvements to decrease app restarts can be made by app mak
 ## Best practices for building performant apps
 
 - [Build large and complex apps](../maker/canvas-apps/working-with-large-apps.md)
-- [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md)
+- [Troubleshoot Power Apps canvas app performance issues](/troubleshoot/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-table)
 - [Tips and best practices to improve performance of canvas apps](../maker/canvas-apps/performance-tips.md)
-- [Power Apps canvas app coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
-- [Power Apps canvas app coding standards and guidelines whitepaper](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Be sure to review the section titled, **Optimizing for performance**.)
+- [Power Apps coding guidelines - Code optimization](/power-apps/guidance/coding-guidelines/code-optimization)

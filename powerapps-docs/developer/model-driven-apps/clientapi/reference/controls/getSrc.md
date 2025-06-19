@@ -1,8 +1,8 @@
 ---
-title: "getSrc (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getSrc (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getSrc method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getSrc (Client API reference)
-
-
 
 Returns the current URL being displayed in an IFRAME or web resource. 
 
@@ -35,7 +33,5 @@ iframe, webresource
 ### Related articles
 
 [setSrc](setSrc.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

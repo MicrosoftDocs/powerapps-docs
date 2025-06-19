@@ -1,9 +1,9 @@
 ---
 title: "Grant limited access to Dataverse files using shared access signatures" 
 description: "Learn how to create a shared access signature URL that enables anyone to download the file or image from Dataverse" 
-ms.date: 06/18/2024
+ms.date: 09/11/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: JimDaly
 ms.subservice: dataverse-developer
 ms.author: jdaly
@@ -17,6 +17,9 @@ contributors:
 For one hour, anyone can download a file stored in Dataverse using a url generated using the `GetFileSasUrl` message. This url provides anonymous access for anyone during this hour, starting when the url is generated. The person calling `GetFileSasUrl` to generate the url must have access to the record containing the file.
 
 Files can be attachments, notes, file columns, or image columns. [Some limitations apply](#limitations)
+
+> [!NOTE]
+> Administrators can configure the tenant to limit downloads based on the IP address of client applications using the [SAS IP restriction feature (preview)](/power-platform/admin/security/data-storage#storage-shared-access-signature-sas-ip-restriction). When this is enabled, users will get a 401 error when the IP address for their computer does't meet the restrictions set for the tenant and they try to download the file.
 
 ## Parameters
 
@@ -166,7 +169,7 @@ function Get-FileSasUrl {
 }
 ```
 
-The following examples demonstrate the rules for setting the `FileAttributeName` parameter. It is a required parameter, but it can contain an empty string for `annotations` and `activitymimeattachments` entity sets.
+The following examples demonstrate the rules for setting the `FileAttributeName` parameter. It's a required parameter, but it can contain an empty string for `annotations` and `activitymimeattachments` entity sets.
 
 ```http
 GET [Organization URI]/api/data/v9.2/GetFileSasUrl(Target=@p1,FileAttributeName='')?@p1={'@odata.id':'annotations(<annotationid>)'}

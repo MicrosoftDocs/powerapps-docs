@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.date: 06/13/2024
 ms.subservice: mobile
 ms.author: trdehove
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -44,7 +44,7 @@ The **Sync Error** table is a standard Dataverse table. We recommend that you cr
 If you run the model-driven app, you can see the sync errors by each user. If you select a sync error row, you can **Retry changes** from the command bar. 
 
 ### Sync error in the Device status page
-Sync errors natively show up in the **Device status** page. The **Device status** page is available [out-of-the-box in model-driven apps](offline-sync-icon.md), but must be set up in the canvas app. See [Using the Offline template and offline status icon](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) for more information. 
+Sync errors natively show up in the **Device status** page. The **Device status** page is available [out of the box in model-driven apps](offline-sync-icon.md), but must be set up in the canvas app. See [Using the Offline template and offline status icon](canvas-mobile-offline-setup.md#using-the-offline-template-and-offline-status-icon) for more information. 
 
 ### Use a cloud flow to take actions on sync errors
 You can create an [automated cloud flow](/power-automate/get-started-logic-flow) in Power Automate using the Dataverse trigger **when a row is added, modified, or deleted**. The flow can automatically [send an email](/power-automate/email-customization) or [send a notification](power-apps-mobile-notification.md) on the device.

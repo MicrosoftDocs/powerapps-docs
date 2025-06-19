@@ -1,8 +1,8 @@
 ---
 title: retrieveMultipleRecords (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves a collection of table records.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -55,7 +55,7 @@ Model-driven apps & portals.
 <td>maxPageSize</td>
 <td>Number</td>
 <td>No</td>
-<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the default value is passed as 5000.</p>
+<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the default value is passed as 5,000.</p>
 <p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value, <code>nextLink</code> column in the returned promise object will contain a link to retrieve the next set of tables. </td>
 </tr>
 <tr>

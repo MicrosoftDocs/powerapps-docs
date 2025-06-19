@@ -1,9 +1,9 @@
 ---
-title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "PostSave Event (Client API reference) in model-driven apps"
 description: Information about PostSave event methods.
-author: HemantGaur
-ms.author: hemantg
-ms.date: 09/15/2022
+author: MitiJ
+ms.author: mijosh
+ms.date: 08/20/2024
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -54,16 +54,16 @@ function displayOrgName(executionContext)
   var orgName = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
   var myuniqueId = "_myUniqueId";
   formContext.ui.setFormNotification(orgName, "INFO", myuniqueId);
-  window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 10000);
-  
 }
 
 ```
 
-## Relates articles
+### Related articles
 
-[getEntityReference](../save-event-arguments/getEntityReference.md)<br/>
-[getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md)<br/>
-[getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md)
+[getEntityReference](../save-event-arguments/getEntityReference.md)   
+[getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md)   
+[getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md)   
+[Events (Client API reference)](../events.md)   
+[Events in forms and grids in model-driven apps](../../events-forms-grids.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

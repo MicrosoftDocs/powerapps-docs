@@ -6,7 +6,8 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 ms.date: 05/26/2022
-ms.topic: conceptual
+ms.topic: how-to
+ms.subservice: mda-maker
 search.audienceType: 
   - maker
 ---
@@ -23,7 +24,7 @@ This sample demonstrates how you can build simple custom pages that open as dial
 
 First, you'll need to determine the table and command bar location to place the command.
 
-1. Open the app designer, and then add the desired table to your model-driven app. More information: [Create a model-driven app that has an account table page](create-a-model-driven-app.md)
+1. Open the app designer, and then add the desired table to your model-driven app. More information: [Build your first model-driven app](build-first-model-driven-app.md)
 1. Publish the app.
 1. Select the desired table from the **Pages** area in the app designer.
 1. Select **...** (ellipsis), and then select **Edit command bar**.

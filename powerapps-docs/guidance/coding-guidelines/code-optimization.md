@@ -1,16 +1,15 @@
-﻿---
+---
 title: Power Apps code optimization
 description: Learn about how to optimize code in Power Apps.
-ms.date: 06/12/2024
-ms.topic: conceptual
+ms.date: 06/25/2024
+ms.topic: concept-article
 ms.subservice: guidance
 ms.service: powerapps
 author: robstand
 ms.author: rachaudh
- 
 ---
 
-# Code Optimization
+# Code optimization
 
 As canvas apps evolve to meet diverse business requirements, the challenge of maintaining optimal performance becomes a critical consideration. The intricacies of data handling, user interface design, and functionality within canvas apps necessitate a nuanced approach to code optimization.
 
@@ -20,15 +19,22 @@ As canvas apps become more intricate, developers encounter challenges related to
 
 ### With function
 
-The `With` function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to underachaudh, and can be used in any declarative formula context. [Learn more](/power-platform/power-fx/reference/function-with) about the `With` function.
+The `With` function evaluates a formula for a single record. The formula can calculate a value and/or perform actions, such as modifying data or working with a connection. Use With to improve the readability of complex formulas by dividing it into smaller named sub-formulas. These named values act like simple local variables confined to the scope of the With. Using With is preferred over context or global variables as it is self contained, easy to understand, and can be used in any declarative formula context. [Learn more](/power-platform/power-fx/reference/function-with) about the `With` function.
 
 ![A screenshot of a Power Fx formula that uses the With function](media/image13.png)
 
 ### Concurrent function
 
-The `Concurrent` function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the `;` (semi-colon) operator, which evaluates each formula sequentially. With the `Concurrent` function, the app will evaluate all formulas within a property concurrently even after using the `;` operator. This concurrency helps users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. [Learn more](/power-platform/power-fx/reference/function-concurrent) about the `Concurrent` function
+The `Concurrent` function allows multiple formulas specified within the same property to be evaluated at the same time if they have connector or Dataverse calls. Normally, multiple formulas are evaluated by chaining them together with the `;` (semi-colon) operator, which evaluates each formula sequentially. With the `Concurrent` function, the app will evaluate all formulas within a property concurrently even after using the `;` operator. This concurrency helps users wait less for the same result. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. [Learn more](/power-platform/power-fx/reference/function-concurrent) about the `Concurrent` function.
 
-![A screenshot of a Power Fx formula that uses the Concurrent function](media/image14.png)
+```powerappsfl
+Concurrent(
+    ClearCollect(colAccounts1, Accounts),
+    ClearCollect(colUsers1, Users),
+    ClearCollect(colEnvDef1, 'Environment Variable Definitions'),
+    ClearCollect(colEnvVal1, 'Environment Variable Values')
+);
+```
 
 ### Coalesce Function
 
@@ -77,7 +83,7 @@ IsMatch(TextInput1\_2.Text, "(?!^\[0-9\]\\\*$)(?!^\[a-zA-Z\]\\\*$)(\[a-zA-Z0-9\]
 
 ## Optimize app OnStart
 
-The `OnStart` property for cavas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. Underachaudhing and effectively utilizing the `OnStart` property is essential for creating responsive and efficient canvas apps.
+The `OnStart` property for cavas apps plays a crucial role in defining actions that occur when the app is launched. This property allows app developers to execute global initialization tasks, set up variables, and perform actions that should happen only once during the app's startup process. understanding and effectively utilizing the `OnStart` property is essential for creating responsive and efficient canvas apps.
 
 A recommended approach is to streamline the `App.OnStart` function by migrating variable setups to named formulas. Named formulas, especially those configured early in the app lifecycle, prove to be advantageous. These formulas handle the initialization of variables based on data calls, providing a cleaner and more organized structure for your code. More details [Build large and complex canvas apps - Power Apps | Microsoft Learn](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas).
 
@@ -193,7 +199,11 @@ The code works as so:
 
 - `Formula` is the output of the function
 
-![A screenshot of the Power Fx window with a user-defined function in the fx box](media/image17.png)
+```powerappsfl
+// Function to calculate the area of a circle based on the radius
+calcAreaOfCircle(radius: Number): Number = 
+    IfError(Pi() * radius * radius, 0);
+```
 
 Use `IfError` to implement error handling within the defined function.
 

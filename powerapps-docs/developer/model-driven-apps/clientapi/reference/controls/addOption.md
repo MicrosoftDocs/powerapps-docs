@@ -1,8 +1,8 @@
 ---
-title: "addOption (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "addOption (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the addOption method.
-author: chmoncay
-ms.author: chmoncay
+author: MitiJ
+ms.author: mijosh
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -29,7 +29,7 @@ Choice, Choices
 ## Parameters
 
 |Name | Type | Required | Description|
-|--|--|--|--|
+|----|----|----|----|
 |`option` |Object |Yes|The option to add. The object contains the following:<br/>**- `text`**: String. The label for the option.<br/>**- `value`**: Number. The value for the option.|
 |`index` |Number |No|The index position to place the new option in. If not provided, the option will be added to the end.|
 

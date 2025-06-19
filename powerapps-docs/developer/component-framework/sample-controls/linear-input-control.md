@@ -1,8 +1,8 @@
 ---
-title: " Linear Input component| Microsoft Docs" 
+title: "Linear Input component| Microsoft Docs" 
 description: "This sample component changes the user experience of interacting with numeric types on the form."
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -61,7 +61,7 @@ public updateView(context: ComponentFramework.IPropBag<InputsOutputs.IInputBag>)
    } 
  ```
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

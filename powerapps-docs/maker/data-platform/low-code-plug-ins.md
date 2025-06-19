@@ -4,8 +4,9 @@ description: Guide to crafting low-code plug-ins in Microsoft Dataverse
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 01/22/2024
+ms.date: 11/13/2024
 ms.custom: template-how-to
 contributors:
 - denise-msft
@@ -17,6 +18,8 @@ contributors:
 Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers.
 
 > [!IMPORTANT]
+>
+> - Instant low-code plug-ins are deprioritized and aren't being delivered as a feature. Instant low-code plug-ins are replaced with functions. More information: [Functions in Microsoft Dataverse (preview)](functions-overview.md)
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
@@ -99,12 +102,6 @@ Unique properties:
 :::row-end:::
 
 ## Prerequisites for creating a low-code plug-in
-
-> [!NOTE]
-> We're rolling out a set of updates to enable the Dataverse low-code plugins. These low-code plugins use a user interface built on the Power Platform [custom pages feature](../model-driven-apps/model-app-page-overview.md). As part of these updates we're deploying into environments using system maintenance accounts. In some circumstances these accounts have had an unexpected side effect of presenting as a [break-glass account](/entra/identity/role-based-access-control/security-emergency-access). We're working to correct this behavior as quickly as possible. In the meantime the following apps might appear in the Power Platform admin center:
-> - Dataverse Accelerator app – &lt;model-driven app&gt;, created by a global admin account
-> - Dataverse Actions page - &lt;canvas app&gt; This is a Custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
-> - Overview page - &lt;canvas app&gt; This is a custom page on which the low-code plugin is built, created with the user name associated to the global admin account.
 
 > [!div class="checklist"]
 > * System administrator or system customizer security role membership in the Power Platform environment.
@@ -305,3 +302,7 @@ More information: [Create custom connectors in solutions: Known limitations](/co
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
 
 [Use a prebuilt prompt in a Dataverse low-code plug-in in Power Apps](/ai-builder/prebuilt-prompts-in-dataverse-plug-in-powerapps)
+
+[Create an automated low-code plug-in with Power Apps (video)](https://youtu.be/hwqVochKJJA?feature=shared)
+
+[Create an instant low-code plug-in with Power Apps (video)](https://youtu.be/2Bj57PiUr0E?feature=shared)

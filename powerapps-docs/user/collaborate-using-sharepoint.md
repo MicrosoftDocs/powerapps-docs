@@ -1,13 +1,13 @@
 ---
 title: Collaborate using SharePoint | Microsoft Docs
 description: Learn how to collaborate using SharePoint within a model-driven app
-author: sericks007
-ms.reviewer: sericks
-ms.topic: conceptual
+author: shwetamurkute
+ms.reviewer: smurkute
+ms.topic: how-to
 ms.component: model
 ms.date: 12/14/2020
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 search.audienceType: 
   - maker
 ---

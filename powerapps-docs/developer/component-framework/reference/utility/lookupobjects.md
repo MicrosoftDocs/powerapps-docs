@@ -1,8 +1,8 @@
 ---
 title: lookupObjects (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a lookup dialog allowing the user to select one or more items.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 03/01/2024
 ms.reviewer: jdaly
 ms.topic: reference

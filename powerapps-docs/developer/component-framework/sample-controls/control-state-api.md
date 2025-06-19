@@ -1,8 +1,8 @@
 ---
 title: Control State API  | Microsoft Docs
 description: The Power Apps component framework allows you to persist state of component across multiple renderings of the component within the same session.
-author: HemantGaur
-ms.author: hemantg
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
@@ -33,7 +33,7 @@ Model-driven and canvas apps
 You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ControlStateAPI).
 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

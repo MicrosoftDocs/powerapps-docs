@@ -1,9 +1,10 @@
 ---
 title: Use OData to query data
 description: Learn to compose a query using OData with Microsoft Dataverse Web API
-ms.date: 07/11/2024
-author: divkamath
-ms.author: dikamath
+ms.date: 05/28/2025
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -165,7 +166,7 @@ To apply multiple options, separate query options from the resource path with a 
 
 ### Use parameter aliases with query options
 
-You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow you to use the same value multiple times in a request. If the alias isn't assigned a value, it's assumed to be null.
+You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow you to use the same value multiple times in a request. If the alias isn't assigned a value, it is null.
 
 Without parameter aliases:
 
@@ -195,7 +196,7 @@ The length of a URL in a `GET` request [is limited to 32 KB (32,768 characters)]
 
 ## Limit the number of rows
 
-To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 rows.
+To limit the number of rows returned, use the `$top` OData query option. Without this limit, Dataverse returns up to 5,000 standard table rows, 500 elastic table rows.
 
 Alternatively, specify a number of records to return using paging. Don't use `$top` when you request pages of data. [Learn how to request paged results](page-results.md)
 
@@ -204,6 +205,7 @@ Alternatively, specify a number of records to return using paging. Don't use `$t
 There are some things that you can do using FetchXml that OData doesn't support.
 
 - You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables using navigation properties that are part of the relationships in the data model.
+- [You can't use nested $expand with N:N relationships](join-tables.md#nested-expand-with-nn-relationships).
 - [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations using OData:
 
   - [Get distinct number with CountColumn](aggregate-data.md#get-distinct-number-with-countcolumn)
@@ -220,7 +222,7 @@ There are some things that you can do using FetchXml that OData doesn't support.
 ## Community tools
 
 > [!NOTE]
-> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+> Tools created by the community aren't supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 The [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) is an open source project that provides a user interface that helps you do many things using the Dataverse Web API, including composing queries.
 
@@ -237,7 +239,7 @@ The Dataverse Web API is an OData version 4.0 service. These sections of the ODa
 This article and the other articles in this section describe the parts of the 4.0 OData specification implemented by the Dataverse Web API and how you can use it to retrieve business data from Dataverse.
 
 > [!NOTE]
-> The OData version 4.01 is the latest version. It include enhancements and additional features not available in version 4.0, and therefore not currently available in the Dataverse Web API.
+> The OData version 4.01 is the latest version. It includes enhancements and more features not available in version 4.0, and therefore not currently available in the Dataverse Web API.
 
 ## Next steps
 

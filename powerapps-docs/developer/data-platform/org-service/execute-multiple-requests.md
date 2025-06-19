@@ -3,9 +3,9 @@ title: "Execute multiple requests using the SDK for .NET (Microsoft Dataverse) |
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 02/28/2023
 ms.reviewer: pehecke
-ms.topic: article
-author: divkamath # GitHub ID
-ms.author: dikamath # MSFT alias of Microsoft employees only
+ms.topic: how-to
+author: MicroSri
+ms.author: sriknair
 search.audienceType: 
   - developer
 contributors:

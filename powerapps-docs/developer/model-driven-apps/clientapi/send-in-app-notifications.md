@@ -5,9 +5,9 @@ ms.date: 06/23/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
-ms.topic: article
-author: adrianorth
-ms.author: aorth 
+ms.topic: how-to
+author: sriharibs-msft
+ms.author: srihas
 search.audienceType: 
   - maker
   - developer
@@ -1114,17 +1114,20 @@ For more examples of client scripting using client API, see [Walkthrough: Write 
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
-In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending in-app notifications. It isn't required to receive notifications.
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. It isn't required for sending in-app notifications by directly creating `appnotification` entity records without executing the `SendAppNotification` message. It isn't required to receive notifications.
 
 |Usage|Required table privileges|
 |------------|----------------|
-|User has no in-app notification bell and receives no in-app notification |None: Read privilege on the app notification table. |
+|User has no in-app notification bell and receives no in-app notification |None |
 |User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
-|User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table, and Send In-App Notification privilege. |
-|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notification privilege. |
-| User can delete in-app notifications | Global: Delete privileges on the app notification table. |
+|User can send in-app notifications to self |Basic: Create privilege on the app notification table. Additionally, Send In-App Notification privilege is needed if using `SendAppNotification` message. |
+|User can send in-app notifications to others |Create privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit. Additionally, Send In-App Notification privilege is needed if using `SendAppNotification` message. |
+|User can delete in-app notifications |Global: Delete privileges on the app notification table. |
 
+The Send In-App Notification privilege can be added to a role using the Role Privilege Picker under the `Miscellaneous privileges` tab.
 
+> [!div class="mx-imgBorder"] 
+> ![Assigning Send In-App Notification privilege.](media/sendinappnotificationprivilegepicker.png "Assigning Send In-App Notification privilege")
 
 ## Notification storage
 

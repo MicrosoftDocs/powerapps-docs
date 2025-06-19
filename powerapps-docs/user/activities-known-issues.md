@@ -1,15 +1,15 @@
 ---
 title: "Email FAQs and known issues| MicrosoftDocs"
 description: Email FAQs and known issues.
-author: sericks007
+author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 06/30/2021
 ms.subservice: end-user
-ms.author: sericks
+ms.author: smurkute
 ms.custom: ""
-ms.reviewer: sericks
+ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -1,8 +1,8 @@
 ---
-title: "getProgress (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "getProgress (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the getProgress method.
-author: HemantGaur
-ms.author: hemantg
+author: matthidinger
+ms.author: mahiding
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -13,8 +13,6 @@ contributors:
   - JimDaly
 ---
 # getProgress (Client API reference)
-
-
 
 [!INCLUDE[./includes/getProgress-description.md](./includes/getProgress-description.md)]
 
@@ -45,8 +43,4 @@ This method is supported only for the action steps; not for the data steps. Acti
 [setProgress](setprogress.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

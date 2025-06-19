@@ -1,16 +1,16 @@
 ---
-title: " Map component| Microsoft Docs" 
+title: "Map component| Microsoft Docs" 
 description: "This sample component changes the user experience of interacting with address fields on the form." 
-ms.author: jdaly
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: concept-article
 ---
 
 # Implementing map component
 
-This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
+This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component  visually identifies a particular address on a map without navigating to another tab or screen.
 
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
@@ -28,14 +28,14 @@ You can download the complete sample component from [here](https://github.com/mi
 In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  
 
 > [!NOTE]
-> You can use any of the map API’s that are available in the market. In this example, we are going to show how to do it with the Google Map API. 
+> You can use any of the map APIs that are available in the market. In this example, we're going to show how to do it with the Google Map API. 
 You need to create an API key for the component to access the Google Map API. Follow the instructions(https://developers.google.com/maps/documentation/embed/get-api-key to generate one).
 
 Create a variable name `MAPS_API_KEY` that can be accessed in the context of the component.
 Google Map API allows you only to render the maps inside an `IFRAME`. So, you need to create an `IFRAME` element that is going to render the map using the URL we generate. 
-By default, we are setting the map to be hidden and display it only when the address value exists on the form.
+By default, we're setting the map to be hidden and display it only when the address value exists on the form.
 
-`buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element’s src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the component that the rendering has changed. 
+`buildMapUrl` and `renderMap` (you can even merge them into one) takes the address string and embeds it onto the map URL by encoding the address string and then sets the IFRAME element's src element to the URL respectively. Also, call the **notifyOutputChanged** method to ensure we notify the component that the rendering changed. 
  
 ```TypeScript
  public renderMap(mapUrl: string) {
@@ -51,7 +51,7 @@ By default, we are setting the map to be hidden and display it only when the add
 
 Ensure you call the `renderMap` function inside the [updateView](../reference/control/updateview.md) function to ensure the control is refreshed every time the view is updated. 
 
-### Related topics
+### Related articles
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>

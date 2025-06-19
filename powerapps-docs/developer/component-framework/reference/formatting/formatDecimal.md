@@ -1,8 +1,8 @@
 ---
 title: formatDecimal (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents the decimal value after being formatted.
-ms.author: hemantg
-author: HemantGaur
+author: anuitz
+ms.author: anuitz
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -3,9 +3,11 @@ title: "Don't use batch request types in plug-ins and workflow activities | Micr
 description: "You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity."
 suite: powerapps
 author: jowells
+ms.author: jowells
+ms.reviewer: jdaly
 ms.date: 02/08/2024
 ms.subservice: dataverse-developer
-ms.author: jowells
+
 search.audienceType: 
   - developer
 ---

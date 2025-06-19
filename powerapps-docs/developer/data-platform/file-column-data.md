@@ -3,7 +3,7 @@ title: "Use file column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in file columns."
 ms.date: 03/29/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer
@@ -66,9 +66,6 @@ name: Contoso Ltd.
 sample_filecolumn: <file id>
 sample_filecolumn_name: 25mb.pdf
 ```
-
-> [!NOTE]
-> You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
 
 More information:
 

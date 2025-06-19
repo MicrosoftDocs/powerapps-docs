@@ -1,12 +1,12 @@
 ---
-title: "Embed a canvas app on a model-driven form | MicrosoftDocs"
-description: "With embedded canvas apps, app makers can bring the power of canvas apps to their Power Apps model-driven forms." 
+title: "Embed a canvas app on a model-driven form"
+description: "With embedded canvas apps, app makers can bring the power of canvas apps to their Power Apps model-driven app forms." 
 ms.custom: "Steps to embedding a canvas app on a form"
-ms.date: 06/25/2019
+ms.date: 01/22/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -22,22 +22,21 @@ search.audienceType:
 ---
 # Embed a canvas app on a model-driven form
 
-Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 400 data sources.
+Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG Power Apps Studio. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
 ## Embedded canvas apps can help you build better solutions
 
-With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, it's possible to create rich visual areas on a form and display data from a variety of sources right next to data from Microsoft Dataverse.
+With embedded canvas apps, makers can bring the power of canvas apps to their model-driven app forms. Using embedded canvas apps, it's possible to create rich visual areas on a form and display data from a variety of sources right next to data from Microsoft Dataverse.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Embedded canvas app in a model-driven app form.](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
+:::image type="content" source="media/embed-canvas-app-in-form.png" alt-text="Embedded canvas app in a model-driven app form.":::
 
-Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app.
+Canvas apps are embedded in model-driven app forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app.
 
 ## Integrate canvas apps using custom pages in the modern app designer
 
 With the modern app designer, canvas apps can be accessed through a model-driven app by using a custom page.
 
-The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables or dashboards.
+The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables, dashboards, and web resources.
 
 ## Embed using the modern designer
 
@@ -45,11 +44,11 @@ Select the **Canvas app** control to add a canvas app to a main form using the f
 
 ## Embed using the classic designer
 
-Add canvas apps from an environment into a model-driven app that can either be contextually aware, or simply render the app within the model-driven experience. <br /> [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience).
+Add canvas apps from an environment into a model-driven app that can either be contextually aware, or simply render the app within the model-driven experience. More information: [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience).
 
 ### Sharing embedded canvas apps
 
-After an embedded canvas app has been added to your model-driven form, learn how to share the embedded canvas app with other users. More information: [Learn how to share an embedded canvas app](share-embedded-canvas-app.md).
+After an embedded canvas app is added to your model-driven form, learn how to share the embedded canvas app with other users. More information: [Learn how to share an embedded canvas app](share-embedded-canvas-app.md).
 
 For guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues, go to: [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md).
 

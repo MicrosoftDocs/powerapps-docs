@@ -1,61 +1,68 @@
 ---
-title: "Multistep Form (mspp_webform)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the Multistep Form (mspp_webform)  table/entity."
-ms.date: 06/04/2024
-ms.service: "powerapps"
-ms.topic: "reference"
-ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+title: "Multistep Form (mspp_webform) table/entity reference (Microsoft Dataverse)"
+description: "Includes schema information and supported messages for the Multistep Form (mspp_webform) table/entity with Microsoft Dataverse."
+ms.topic: generated-reference
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 ---
 
-# Multistep Form (mspp_webform)  table/entity reference
-
-> [!NOTE]
-> Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
+# Multistep Form (mspp_webform) table/entity reference (Microsoft Dataverse)
 
 Defines the necessary properties and relationships to the other key entities in order to control the initialization of the form within a web portal.
 
-**Added by**: Power Pages Apps Solution
-
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
-|-|-|-|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Create|POST /mspp_webforms<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE /mspp_webforms(*mspp_webformid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retrieve|GET /mspp_webforms(*mspp_webformid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET /mspp_webforms<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Update|PATCH /mspp_webforms(*mspp_webformid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+The following table lists the messages for the Multistep Form (mspp_webform) table.
+Messages represent operations that can be performed on the table. They may also be events.
+
+| Name <br />Is Event? |Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
+| `Create`<br />Event: True |`POST` /mspp_webforms<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
+| `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+| `Delete`<br />Event: True |`DELETE` /mspp_webforms(*mspp_webformid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
+| `Disassociate`<br />Event: True |[Disassociate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Disassociate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-disassociate-method-or-disassociaterequest)|
+| `Retrieve`<br />Event: True |`GET` /mspp_webforms(*mspp_webformid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api) |[Retrieve records](/power-apps/developer/data-platform/org-service/entity-operations-retrieve)|
+| `RetrieveEntityChanges`<br />Event: True | |<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
+| `RetrieveMultiple`<br />Event: True |`GET` /mspp_webforms<br />See [Query data](/power-apps/developer/data-platform/webapi/query-data-web-api) |[Query data](/power-apps/developer/data-platform/org-service/entity-operations-query-data)|
+| `Update`<br />Event: True |`PATCH` /mspp_webforms(*mspp_webformid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) |[Update records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-update)|
+| `UpdateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+| `Upsert`<br />Event: False |`PATCH` /mspp_webforms(*mspp_webformid*)<br />See [Upsert a table row](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#upsert-a-table-row) |<xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest>|
+| `UpsertMultiple`<br />Event: False |<xref:Microsoft.Dynamics.CRM.UpsertMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest>|
+
+
+## Events
+
+The following table lists the events for the Multistep Form (mspp_webform) table.
+Events are messages that exist so that you can subscribe to them. Unless you added the event, you shouldn't invoke the message, only subscribe to it.
+
+|Name|Web API Operation |SDK for .NET |
+| ---- | ----- |----- |
+| `BulkRetain`|<xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `PurgeRetainedContent`|<xref:Microsoft.Dynamics.CRM.PurgeRetainedContent?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `Retain`|<xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `RollbackRetain`|<xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ValidateRetentionConfig`|<xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 
 ## Properties
 
-|Property|Value|
-|--------|-----|
-|CollectionSchemaName|mspp_webforms|
-|DisplayCollectionName|Multistep Forms|
-|DisplayName|Multistep Form|
-|EntitySetName|mspp_webforms|
-|IsBPFEntity|False|
-|LogicalCollectionName|mspp_webforms|
-|LogicalName|mspp_webform|
-|OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|mspp_webformid|
-|PrimaryNameAttribute|mspp_name|
-|SchemaName|mspp_webform|
+The following table lists selected properties for the Multistep Form (mspp_webform) table.
 
-<a name="writable-attributes"></a>
+|Property|Value|
+| --- | --- |
+| **DisplayName** | **Multistep Form** |
+| **DisplayCollectionName** | **Multistep Forms** |
+| **SchemaName** | `mspp_webform` |
+| **CollectionSchemaName** | `mspp_webforms` |
+| **EntitySetName** | `mspp_webforms`|
+| **LogicalName** | `mspp_webform` |
+| **LogicalCollectionName** | `mspp_webforms` |
+| **PrimaryIdAttribute** | `mspp_webformid` |
+| **PrimaryNameAttribute** |`mspp_name` |
+| **TableType** | `Virtual` |
+| **OwnershipType** | `OrganizationOwned` |
 
 ## Writable columns/attributes
 
@@ -88,688 +95,540 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 
-
 ### <a name="BKMK_mspp_authenticationrequired"></a> mspp_authenticationrequired
 
 |Property|Value|
-|--------|-----|
-|Description|Redirect to sign in if the user is anonymous.|
-|DisplayName|Authentication Required|
+|---|---|
+|Description|**Redirect to sign in if the user is anonymous.**|
+|DisplayName|**Authentication Required**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_authenticationrequired|
+|LogicalName|`mspp_authenticationrequired`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_authenticationrequired Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_authenticationrequired`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_createdby"></a> mspp_createdby
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who created the record.|
-|DisplayName|Created By|
+|---|---|
+|Description|**Shows who created the record.**|
+|DisplayName|**Created By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_createdby|
+|LogicalName|`mspp_createdby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_mspp_createdon"></a> mspp_createdon
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was created.|
-|DisplayName|Created On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was created.**|
+|DisplayName|**Created On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_createdon|
+|LogicalName|`mspp_createdon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_mspp_editexistingrecordpermitted"></a> mspp_editexistingrecordpermitted
 
 |Property|Value|
-|--------|-----|
-|Description|Determines if an existing record can be edited. This setting is ignored If the form mode on the form step is set to edit mode. Otherwise, an edit form wouldn't function properly.|
-|DisplayName|Edit Existing Record Permitted|
+|---|---|
+|Description|**Determines if an existing record can be edited. This setting is ignored If the form mode on the form step is set to edit mode. Otherwise, an edit form wouldn't function properly.**|
+|DisplayName|**Edit Existing Record Permitted**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_editexistingrecordpermitted|
+|LogicalName|`mspp_editexistingrecordpermitted`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_editexistingrecordpermitted Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mspp_webform_mspp_editexistingrecordpermitted`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_editexpiredmessage"></a> mspp_editexpiredmessage
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Edit Expired Message|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Edit Expired Message**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_editexpiredmessage|
-|MaxLength|10000|
+|LogicalName|`mspp_editexpiredmessage`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
 
 ### <a name="BKMK_mspp_editexpiredstatecode"></a> mspp_editexpiredstatecode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Edit Expired State Code|
-|Format|None|
+|DisplayName|**Edit Expired State Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_editexpiredstatecode|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`mspp_editexpiredstatecode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_mspp_editexpiredstatuscode"></a> mspp_editexpiredstatuscode
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Edit Expired Status Code|
-|Format|None|
+|DisplayName|**Edit Expired Status Code**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_editexpiredstatuscode|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`mspp_editexpiredstatuscode`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_mspp_editnotpermittedmessage"></a> mspp_editnotpermittedmessage
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Edit Not Permitted Message|
-|Format|Text|
-|IsLocalizable|False|
+|DisplayName|**Edit Not Permitted Message**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_editnotpermittedmessage|
-|MaxLength|10000|
+|LogicalName|`mspp_editnotpermittedmessage`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
 
 ### <a name="BKMK_mspp_modifiedby"></a> mspp_modifiedby
 
 |Property|Value|
-|--------|-----|
-|Description|Shows who last updated the record.|
-|DisplayName|Modified By|
+|---|---|
+|Description|**Shows who last updated the record.**|
+|DisplayName|**Modified By**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_modifiedby|
+|LogicalName|`mspp_modifiedby`|
 |RequiredLevel|None|
-|Targets|systemuser|
 |Type|Lookup|
-
+|Targets|systemuser|
 
 ### <a name="BKMK_mspp_modifiedon"></a> mspp_modifiedon
 
 |Property|Value|
-|--------|-----|
-|DateTimeBehavior|UserLocal|
-|Description|Shows the date and time when the record was modified.|
-|DisplayName|Modified On|
-|Format|DateAndTime|
+|---|---|
+|Description|**Shows the date and time when the record was modified.**|
+|DisplayName|**Modified On**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_modifiedon|
+|LogicalName|`mspp_modifiedon`|
 |RequiredLevel|None|
 |Type|DateTime|
-
+|CanChangeDateTimeBehavior|True|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_mspp_multiplerecordsperuserpermitted"></a> mspp_multiplerecordsperuserpermitted
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Multiple Records Per User Permitted|
+|DisplayName|**Multiple Records Per User Permitted**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_multiplerecordsperuserpermitted|
+|LogicalName|`mspp_multiplerecordsperuserpermitted`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_multiplerecordsperuserpermitted Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 1
-
-
+|GlobalChoiceName|`mspp_webform_mspp_multiplerecordsperuserpermitted`|
+|DefaultValue|True|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_name"></a> mspp_name
 
 |Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**The name of the custom entity.**|
+|DisplayName|**Name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_name|
-|MaxLength|100|
+|LogicalName|`mspp_name`|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|100|
 
 ### <a name="BKMK_mspp_progressindicatorenabled"></a> mspp_progressindicatorenabled
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Enabled|
+|DisplayName|**Enabled**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_progressindicatorenabled|
+|LogicalName|`mspp_progressindicatorenabled`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_progressindicatorenabled Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_progressindicatorenabled`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_progressindicatorignorelaststep"></a> mspp_progressindicatorignorelaststep
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Ignore Last Step In Progress Count|
+|DisplayName|**Ignore Last Step In Progress Count**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_progressindicatorignorelaststep|
+|LogicalName|`mspp_progressindicatorignorelaststep`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_progressindicatorignorelaststep Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_progressindicatorignorelaststep`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_progressindicatorposition"></a> mspp_progressindicatorposition
 
 |Property|Value|
-|--------|-----|
-|Description|Location of the progress indicator relative to the form|
-|DisplayName|Position|
+|---|---|
+|Description|**Location of the progress indicator relative to the form**|
+|DisplayName|**Position**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_progressindicatorposition|
+|LogicalName|`mspp_progressindicatorposition`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|756150000|
+|GlobalChoiceName|`mspp_webform_mspp_progressindicatorposition`|
 
 #### mspp_progressindicatorposition Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|756150000|Top||
-|756150001|Bottom||
-|756150002|Left||
-|756150003|Right||
-
-
+|Value|Label|
+|---|---|
+|756150000|**Top**|
+|756150001|**Bottom**|
+|756150002|**Left**|
+|756150003|**Right**|
 
 ### <a name="BKMK_mspp_progressindicatorprependstepnum"></a> mspp_progressindicatorprependstepnum
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Prepend Step Number to Step Title|
+|DisplayName|**Prepend Step Number to Step Title**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_progressindicatorprependstepnum|
+|LogicalName|`mspp_progressindicatorprependstepnum`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_progressindicatorprependstepnum Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_progressindicatorprependstepnum`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_progressindicatortype"></a> mspp_progressindicatortype
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Type|
+|DisplayName|**Type**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_progressindicatortype|
+|LogicalName|`mspp_progressindicatortype`|
 |RequiredLevel|None|
 |Type|Picklist|
+|DefaultFormValue|756150000|
+|GlobalChoiceName|`mspp_webform_mspp_progressindicatortype`|
 
 #### mspp_progressindicatortype Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|756150000|Title||
-|756150001|Numeric (Step 1 of N)||
-|756150002|Progress Bar||
-
-
+|Value|Label|
+|---|---|
+|756150000|**Title**|
+|756150001|**Numeric (Step 1 of N)**|
+|756150002|**Progress Bar**|
 
 ### <a name="BKMK_mspp_provisionedlanguages"></a> mspp_provisionedlanguages
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Provisioned Languages|
-|Format|Language|
+|DisplayName|**Provisioned Languages**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_provisionedlanguages|
-|MaxValue|2147483647|
-|MinValue|0|
+|LogicalName|`mspp_provisionedlanguages`|
 |RequiredLevel|None|
 |Type|Integer|
-
+|MaxValue|2147483647|
+|MinValue|0|
 
 ### <a name="BKMK_mspp_savechangeswarningmessage"></a> mspp_savechangeswarningmessage
 
 |Property|Value|
-|--------|-----|
-|Description|Default message: Your changes have not been saved. To stay on the page so that you can save your changes, click Cancel.|
-|DisplayName|Save Changes Warning Message|
-|Format|Text|
-|IsLocalizable|False|
+|---|---|
+|Description|**Default message: Your changes have not been saved. To stay on the page so that you can save your changes, click Cancel.**|
+|DisplayName|**Save Changes Warning Message**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_savechangeswarningmessage|
-|MaxLength|10000|
+|LogicalName|`mspp_savechangeswarningmessage`|
 |RequiredLevel|None|
 |Type|Memo|
-
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|10000|
 
 ### <a name="BKMK_mspp_savechangeswarningonclose"></a> mspp_savechangeswarningonclose
 
 |Property|Value|
-|--------|-----|
-|Description|Displays a warning message to the user if they close the browser, or refresh the page, or click the previous button in a multiple step form and they have changes that haven't been saved.|
-|DisplayName|Display Save Changes Warning On Close|
+|---|---|
+|Description|**Displays a warning message to the user if they close the browser, or refresh the page, or click the previous button in a multiple step form and they have changes that haven't been saved.**|
+|DisplayName|**Display Save Changes Warning On Close**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_savechangeswarningonclose|
+|LogicalName|`mspp_savechangeswarningonclose`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_savechangeswarningonclose Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_savechangeswarningonclose`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_startnewsessiononload"></a> mspp_startnewsessiononload
 
 |Property|Value|
-|--------|-----|
+|---|---|
 |Description||
-|DisplayName|Start New Session On Load|
+|DisplayName|**Start New Session On Load**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_startnewsessiononload|
+|LogicalName|`mspp_startnewsessiononload`|
 |RequiredLevel|None|
 |Type|Boolean|
-
-#### mspp_startnewsessiononload Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
+|GlobalChoiceName|`mspp_webform_mspp_startnewsessiononload`|
+|DefaultValue|False|
+|True Label|Yes|
+|False Label|No|
 
 ### <a name="BKMK_mspp_startstep"></a> mspp_startstep
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Form Step associated with Multistep Form.|
-|DisplayName|Start Step|
+|---|---|
+|Description|**Unique identifier for Form Step associated with Multistep Form.**|
+|DisplayName|**Start Step**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_startstep|
+|LogicalName|`mspp_startstep`|
 |RequiredLevel|None|
-|Targets|mspp_webformstep|
 |Type|Lookup|
-
+|Targets|mspp_webformstep|
 
 ### <a name="BKMK_mspp_webformId"></a> mspp_webformId
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|Multistep Form|
+|---|---|
+|Description|**Unique identifier for entity instances**|
+|DisplayName|**Multistep Form**|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|mspp_webformid|
+|LogicalName|`mspp_webformid`|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
 
 ### <a name="BKMK_mspp_websiteid"></a> mspp_websiteid
 
 |Property|Value|
-|--------|-----|
-|Description|Unique identifier for Website entity associated with this record|
-|DisplayName|Website|
+|---|---|
+|Description|**Unique identifier for Website entity associated with this record**|
+|DisplayName|**Website**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|mspp_websiteid|
+|LogicalName|`mspp_websiteid`|
 |RequiredLevel|ApplicationRequired|
-|Targets|mspp_website|
 |Type|Lookup|
-
+|Targets|mspp_website|
 
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
-|--------|-----|
-|Description|Status of the Multistep Form|
-|DisplayName|Status|
-|IsValidForCreate|False|
+|---|---|
+|Description|**Status of the Multistep Form**|
+|DisplayName|**Status**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statecode|
+|LogicalName|`statecode`|
 |RequiredLevel|SystemRequired|
 |Type|State|
+|DefaultFormValue||
+|GlobalChoiceName|`mspp_webform_statecode`|
 
 #### statecode Choices/Options
 
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
+|Value|Details|
+|---|---|
+|0|Label: **Active**<br />DefaultStatus: 1<br />InvariantName: `Active`|
+|1|Label: **Inactive**<br />DefaultStatus: 2<br />InvariantName: `Inactive`|
 
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Multistep Form|
-|DisplayName|Status Reason|
+|---|---|
+|Description|**Reason for the status of the Multistep Form**|
+|DisplayName|**Status Reason**|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|statuscode|
+|LogicalName|`statuscode`|
 |RequiredLevel|None|
 |Type|Status|
+|DefaultFormValue||
+|GlobalChoiceName|`mspp_webform_statuscode`|
 
 #### statuscode Choices/Options
 
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
+|Value|Details|
+|---|---|
+|1|Label: **Active**<br />State:0<br />TransitionData: None|
+|2|Label: **Inactive**<br />State:1<br />TransitionData: None|
 
 
-<a name="read-only-attributes"></a>
+## Many-to-One relationships
 
-## Read-only columns/attributes
-
-These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
-
-- [mspp_createdbyName](#BKMK_mspp_createdbyName)
-- [mspp_createdbyYomiName](#BKMK_mspp_createdbyYomiName)
-- [mspp_modifiedbyName](#BKMK_mspp_modifiedbyName)
-- [mspp_modifiedbyYomiName](#BKMK_mspp_modifiedbyYomiName)
-- [mspp_startstepName](#BKMK_mspp_startstepName)
-- [mspp_websiteidName](#BKMK_mspp_websiteidName)
-
-
-### <a name="BKMK_mspp_createdbyName"></a> mspp_createdbyName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_createdbyname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_mspp_createdbyYomiName"></a> mspp_createdbyYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_createdbyyominame|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_mspp_modifiedbyName"></a> mspp_modifiedbyName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_modifiedbyname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_mspp_modifiedbyYomiName"></a> mspp_modifiedbyYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_modifiedbyyominame|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_mspp_startstepName"></a> mspp_startstepName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_startstepname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_mspp_websiteidName"></a> mspp_websiteidName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mspp_websiteidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-- [mspp_webform_webformmetadata_entityformforcreate](#BKMK_mspp_webform_webformmetadata_entityformforcreate)
-- [mspp_webformstep_webform](#BKMK_mspp_webformstep_webform)
-- [mspp_webpage_webform](#BKMK_mspp_webpage_webform)
-
-
-### <a name="BKMK_mspp_webform_webformmetadata_entityformforcreate"></a> mspp_webform_webformmetadata_entityformforcreate
-
-Same as the [mspp_webform_webformmetadata_entityformforcreate](mspp_webformmetadata.md#BKMK_mspp_webform_webformmetadata_entityformforcreate) many-to-one relationship for the [mspp_webformmetadata](mspp_webformmetadata.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mspp_webformmetadata|
-|ReferencingAttribute|mspp_entityformforcreate|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mspp_webform_webformmetadata_entityformforcreate|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_webformstep_webform"></a> mspp_webformstep_webform
-
-Same as the [mspp_webformstep_webform](mspp_webformstep.md#BKMK_mspp_webformstep_webform) many-to-one relationship for the [mspp_webformstep](mspp_webformstep.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mspp_webformstep|
-|ReferencingAttribute|mspp_webform|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mspp_webformstep_webform|
-|AssociatedMenuConfiguration|Behavior: UseLabel<br />Group: Details<br />Label: Steps<br />Order: 103100|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_mspp_webpage_webform"></a> mspp_webpage_webform
-
-Same as the [mspp_webpage_webform](mspp_webpage.md#BKMK_mspp_webpage_webform) many-to-one relationship for the [mspp_webpage](mspp_webpage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|mspp_webpage|
-|ReferencingAttribute|mspp_webform|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|mspp_webpage_webform|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 107000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-<a name="manytoone"></a>
-
-## Many-To-One Relationships
-
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+These relationships are many-to-one. Listed by **SchemaName**.
 
 - [mspp_systemuser_mspp_webform_createdby](#BKMK_mspp_systemuser_mspp_webform_createdby)
 - [mspp_systemuser_mspp_webform_modifiedby](#BKMK_mspp_systemuser_mspp_webform_modifiedby)
 - [mspp_webform_startstep](#BKMK_mspp_webform_startstep)
 - [mspp_website_webform](#BKMK_mspp_website_webform)
 
-
 ### <a name="BKMK_mspp_systemuser_mspp_webform_createdby"></a> mspp_systemuser_mspp_webform_createdby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser mspp_systemuser_mspp_webform_createdby](systemuser.md#BKMK_mspp_systemuser_mspp_webform_createdby)
 
-See the [mspp_systemuser_mspp_webform_createdby](systemuser.md#BKMK_mspp_systemuser_mspp_webform_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`mspp_createdby`|
+|ReferencingEntityNavigationPropertyName|`mspp_createdby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_systemuser_mspp_webform_modifiedby"></a> mspp_systemuser_mspp_webform_modifiedby
 
-**Added by**: System Solution Solution
+One-To-Many Relationship: [systemuser mspp_systemuser_mspp_webform_modifiedby](systemuser.md#BKMK_mspp_systemuser_mspp_webform_modifiedby)
 
-See the [mspp_systemuser_mspp_webform_modifiedby](systemuser.md#BKMK_mspp_systemuser_mspp_webform_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+|Property|Value|
+|---|---|
+|ReferencedEntity|`systemuser`|
+|ReferencedAttribute|`systemuserid`|
+|ReferencingAttribute|`mspp_modifiedby`|
+|ReferencingEntityNavigationPropertyName|`mspp_modifiedby`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_webform_startstep"></a> mspp_webform_startstep
 
-See the [mspp_webform_startstep](mspp_webformstep.md#BKMK_mspp_webform_startstep) one-to-many relationship for the [mspp_webformstep](mspp_webformstep.md) table/entity.
+One-To-Many Relationship: [mspp_webformstep mspp_webform_startstep](mspp_webformstep.md#BKMK_mspp_webform_startstep)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_webformstep`|
+|ReferencedAttribute|`mspp_webformstepid`|
+|ReferencingAttribute|`mspp_startstep`|
+|ReferencingEntityNavigationPropertyName|`mspp_startstep`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_mspp_website_webform"></a> mspp_website_webform
 
-See the [mspp_website_webform](mspp_website.md#BKMK_mspp_website_webform) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
+One-To-Many Relationship: [mspp_website mspp_website_webform](mspp_website.md#BKMK_mspp_website_webform)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`mspp_website`|
+|ReferencedAttribute|`mspp_websiteid`|
+|ReferencingAttribute|`mspp_websiteid`|
+|ReferencingEntityNavigationPropertyName|`mspp_websiteid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+
+## One-to-Many relationships
+
+These relationships are one-to-many. Listed by **SchemaName**.
+
+- [mspp_webform_webformmetadata_entityformforcreate](#BKMK_mspp_webform_webformmetadata_entityformforcreate)
+- [mspp_webformstep_webform](#BKMK_mspp_webformstep_webform)
+- [mspp_webpage_webform](#BKMK_mspp_webpage_webform)
+
+### <a name="BKMK_mspp_webform_webformmetadata_entityformforcreate"></a> mspp_webform_webformmetadata_entityformforcreate
+
+Many-To-One Relationship: [mspp_webformmetadata mspp_webform_webformmetadata_entityformforcreate](mspp_webformmetadata.md#BKMK_mspp_webform_webformmetadata_entityformforcreate)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_webformmetadata`|
+|ReferencingAttribute|`mspp_entityformforcreate`|
+|ReferencedEntityNavigationPropertyName|`mspp_webform_webformmetadata_entityformforcreate`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_webformstep_webform"></a> mspp_webformstep_webform
+
+Many-To-One Relationship: [mspp_webformstep mspp_webformstep_webform](mspp_webformstep.md#BKMK_mspp_webformstep_webform)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_webformstep`|
+|ReferencingAttribute|`mspp_webform`|
+|ReferencedEntityNavigationPropertyName|`mspp_webformstep_webform`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseLabel`<br />Group: `Details`<br />Label: Steps<br />MenuId: null<br />Order: 103100<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_mspp_webpage_webform"></a> mspp_webpage_webform
+
+Many-To-One Relationship: [mspp_webpage mspp_webpage_webform](mspp_webpage.md#BKMK_mspp_webpage_webform)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`mspp_webpage`|
+|ReferencingAttribute|`mspp_webform`|
+|ReferencedEntityNavigationPropertyName|`mspp_webpage_webform`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 107000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.mspp_webform?text=mspp_webform EntityType" />
+[Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference)  
+[Dataverse Web API Reference](/power-apps/developer/data-platform/webapi/reference/about)   
+<xref:Microsoft.Dynamics.CRM.mspp_webform?displayProperty=fullName>
