@@ -168,8 +168,6 @@ PowerApps uses DataTables in Microsoft Excel to connect to data in Excel workshe
 - Use descriptive column names in the DataTables.
 - Use Pascal casing. Each word of the DataTable name should begin with a capital letter, such as `EmployeeLeaveRequests`.
 
-### Untyped and dynamic objects
-
 ### Variable names
 
 Naming conventions for variables in canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your canvas app can make it easier for you and other collaborators to understand, use, and manage the variables.

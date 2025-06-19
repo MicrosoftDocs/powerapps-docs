@@ -193,7 +193,7 @@ The code works as so:
 
 - `Parameter` is the name of the input. One or more inputs are allowed
 
-- `DataType` is an argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, GUID, Hyperlink, Text, Time, Untyped Object
+- `DataType` is an argument passed into the function must match this data type. Available data types include Boolean, Color, Date, Datetime, Dynamic, GUID, Hyperlink, Text, and Time
 
 - `OutputDataType` is the data type the output of the function will be in
 

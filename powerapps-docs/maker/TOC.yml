@@ -314,7 +314,7 @@
         items:
         - name: Connections overview
           href: ./canvas-apps/connections-list.md
-        - name: Working with untyped and dynamic objects
+        - name: Working with dynamic values
           href: ./canvas-apps/untyped-and-dynamic-objects.md
         - name: Manage expired tokens
           href: ./canvas-apps/working-with-tokens.md  

@@ -92,8 +92,8 @@ Now we use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-r
 This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action with the project name, query ID, and the organization name. The query ID in this example (`Gallery2.Selected.Id`) refers to the query selected from the list of queries available through the gallery added earlier. Replace the gallery name as appropriate.
 
 
-### Adding untyped return values to your gallery
-The returned result of **GetQueryResultsV2** is dynamic. And the values are therefore untyped as well.    
+### Adding dynamic return values to your gallery
+The returned result of **GetQueryResultsV2** is dynamic. And the values are therefore dynamic as well.
 
 > [!div class="mx-imgBorder"]
 > ![Show work item fields of title, work item type.](./media/azure-devops/dynamic-return-results-message.png "Get query results from existing gallery based on the query selected.")
@@ -159,8 +159,8 @@ The app shows a list of all queries, and the list of work items for the selected
 
 7. Rearrange the data cards inside the edit form to create space where we'll add the save icon.
 
-### Adding untyped and dynamic return values to your forms
-So far we have been using the Edit form which simplifies the data access story by providing a common DataSource and Item property which all of the data cards in the form can work with.  If you use the Edit form, to access the untyped values make sure you set **both** the data source and the item properties as follows: (Substituting in your values for Organization and Project.)
+### Adding dynamic return values to your forms
+So far we have been using the Edit form which simplifies the data access story by providing a common DataSource and Item property which all of the data cards in the form can work with.  If you use the Edit form, to access the dynamic values make sure you set **both** the data source and the item properties as follows: (Substituting in your values for Organization and Project.)
 
  ```power-fx
     AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')

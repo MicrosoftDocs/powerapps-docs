@@ -95,11 +95,11 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported. Authors can add a Power Fx `Environment` language object to their app and access Dataverse actions.
 
-Authors can work with untyped object fields for both inputs and outputs. On the input side, for instance, many Dataverse actions require an untyped object as an argument. Authors can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You need to cast specific values for use in specific contexts for use in Power Apps such as a label.
+Authors can work with dynamic fields for both inputs and outputs. On the input side, for instance, many Dataverse actions require a dynamic value as an argument. Authors can now pass these arguments in by using ParseJSON to convert a Power Fx record into a dynamic value. On the output side, for actions that return dynamic values, you can simply `dot` into returned objects properties. You need to cast specific values for use in specific contexts for use in Power Apps such as a label.
 
 Without this feature, it was common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. If you have an app that uses Power Automate to call Dataverse actions, you see a banner suggesting you use this direct action approach instead.  
 
-Working with untyped fields isn't restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
+Working with dynamic fields isn't restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
 > [!NOTE]
 > 1. We do not fully support DV actions in  Power Fx commanding (specific to any actions call with parameters.) 
@@ -133,7 +133,7 @@ Unbound Dataverse actions are peer level to tables and need the parenting scope 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 
-For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md).
+For more details on how to use Dataverse actions in your formulas, see [Working with dynamic values](../untyped-and-dynamic-objects.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
 

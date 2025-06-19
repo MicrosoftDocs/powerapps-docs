@@ -66,7 +66,7 @@ Dynamic schema is a common type of result for action based connectors. Dynamic s
 > [!NOTE]
 > The [connector documentation](/connectors) shows dynamic schema results with this message **"The outputs of this operation are dynamic."** as the return value.
 
-For more information about how to work with dynamic schema in Power Apps, see [Working with Untyped and Dynamic objects](untyped-and-dynamic-objects.md) for an overview and [Connect to Azure DevOps from Power Apps](connections/azure-devops.md) for a detailed example.
+For more information about how to work with dynamic schema in Power Apps, see [Working with Dynamic values](untyped-and-dynamic-objects.md) for an overview and [Connect to Azure DevOps from Power Apps](connections/azure-devops.md) for a detailed example.
 
 ## Popular connectors
 

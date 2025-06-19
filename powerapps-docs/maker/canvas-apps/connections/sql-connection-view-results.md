@@ -57,15 +57,15 @@ Other tables can be accessed through their name, for example, `Table1`, `Table2`
 <datasourceName>.<StoredprocedureName>({<paramName1: value, paramName2: value, ... >}).ResultSets.Table1
 ```
 
-## Untyped results
+## Dynamic results
 
-Some complicated stored procedures return untyped results. This result is common for stored procedures that use temporary tables. Power Apps can't easily determine the results ahead of time. Therefore, the return is marked as *untyped* and you can't access these results directly. You must first provide a type.
+Some complicated stored procedures return dynamic results. This result is common for stored procedures that use temporary tables. Power Apps can't easily determine the results ahead of time. Therefore, the return is marked as *dynamic* and you can't access these results directly. You must first provide a type.
 
 You can access the data with the following data access example pattern.
 
 ### Data access example
 
-1. Pull the results into a variable named `MyUntypedObject`.
+1. Pull the results into a variable named `MyDynamicValue`.
 1. Pull `Table1` from that variable and put it into a variable named `table1`.
 
    > [!TIP]
@@ -76,14 +76,14 @@ You can access the data with the following data access example pattern.
 
 ```power-fx
 Set(
-    <MyUntypedObject>, // pull results into variable
+    <MyDynamicValue>, // pull results into variable
     <datasourceName>.<StoredprocedureName>( 
       { <paramName1>: "someString" }
     ).ResultSets
 );
 Set(
     table1, // put Table1 into table1
-    <MyUntypedObject>.Table1
+    <MyDynamicValue>.Table1
 );
 Set(
     TypedTable,

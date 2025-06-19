@@ -98,9 +98,9 @@ A stored procedure is *safe* if it has no action it performs that might be unwan
 If you check a stored procedure as safe, you can assign your stored procedure as an **Items** property in galleries for tables to use in your app.
 
 > [!IMPORTANT]
-> The schema of the return values of the stored procedure should be *static*, so the values don't change from call to call. For example, if a stored procedure returns two tables, then it *always* returns two tables. You can work with either typed or untyped results.
+> The schema of the return values of the stored procedure should be *static*, so the values don't change from call to call. For example, if a stored procedure returns two tables, then it *always* returns two tables. You can work with either specific or dynamic results.
 >
-> The structure of the results also need to be static. For example, if the schema of the results are *dynamic*, then results are untyped and you must provide a type in order to use them in Power Apps. For more information, see [Untyped results](sql-connection-view-results.md#untyped-results).
+> The structure of the results also need to be static. For example, if the schema of the results are *dynamic*, then results are dynamic and you must provide a specific type in order to use them in Power Apps. For more information, see [dynamic results](sql-connection-view-results.md#dynamic-results).
 
 ### SQL namespace prepended to stored procedure name
 
