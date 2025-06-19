@@ -27,7 +27,7 @@ This component supports the following responses from Copilot Studio:
 
 ## Prerequisites
 
-Requires the **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** environment setting enabled for model-driven apps. More information: [Copilot](/power-platform/admin/settings-features?tabs=new#copilot-preview)
+Requires the **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** environment setting enabled for model-driven apps. More information: [Copilot environment settings](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 
 ## Add an agent response component to a form
 
