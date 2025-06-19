@@ -28,16 +28,7 @@ This article explains how to set up and use the Dataverse MCP server with Claude
 
 ## Prerequisites
 
-Power Platform admin role.
-
-During this preview, only a new Dataverse environment provisioned as outlined here works with the MCP server.  
-
-After you create your environment for the preview, make a note of this information: 
-
-- [User credentials that you're using](#create-a-new-first-release-dataverse-environment)
-- [Environment name](#create-a-new-first-release-dataverse-environment)
-- [Connection URL](#create-a-dataverse-connection-for-the-mcp-configuration)
-- [Tenant ID](#get-the-tenant-id-of-your-dataverse-environment)
+Power Platform admin role. <!--Is this still required?  -->
 
 ## Create a Dataverse connection for the MCP configuration
 
@@ -105,7 +96,9 @@ Once you have Claude desktop installed, you can find and launch Claude from your
 1. Open Claude desktop and go to **File** > **Settings**.
 1. If you haven't configured any MCP servers for Claude desktop previously, you observe a **Settings** dialog. Select **Edit Config**.
 1. This takes you to the Claude desktop files. Open the **claude_desktop_config.json** file with your favorite JSON editor.
-1. Enter this text into configuration – replacing &lt;connection URL&gt; and &lt;Tenant Id&gt; from the [Prerequisites](#prerequisites) described earlier. Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. 
+1. Replace &lt;connection URL&gt; and &lt;Tenant Id&gt; with your connection URL and tenant ID. More information: [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration) and [Get the tenant ID of your Dataverse environment](#get-the-tenant-id-of-your-dataverse-environment)
+   
+   Use a &lt;friendly name&gt; for your Dataverse MCP server that you can easily remember, for example: *MyDataverseMCPServer*. 
 
 ```json
 {
@@ -114,11 +107,11 @@ Once you have Claude desktop installed, you can find and launch Claude from your
       "command": "Microsoft.PowerPlatform.Dataverse.MCP",
       "args": [
         "--ConnectionUrl",
-        "<URL from Prerequisite>",
+        "<URL for Dataverse connection>",
         "--MCPServerName",
         "DataverseMCPServer",
         "--TenantId",
-        "<Tenant Id GUID from Prerequisite>",
+        "<Tenant Id GUID>",
         "--EnableHttpLogging",
         "true",
         "--EnableMsalLogging",
