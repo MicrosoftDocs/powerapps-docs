@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/20/2025
+ms.date: 06/19/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -38,34 +38,6 @@ After you create your environment for the preview, make a note of this informati
 - [Environment name](#create-a-new-first-release-dataverse-environment)
 - [Connection URL](#create-a-dataverse-connection-for-the-mcp-configuration)
 - [Tenant ID](#get-the-tenant-id-of-your-dataverse-environment)
-
-## Create a new first release Dataverse environment
-
-1. Open a terminal or PowerShell console on your desktop in **Run as administrator** mode. For example, press the Windows key and type *Terminal*. Right-click **Terminal** and select **Run as administrator**.
-1. Download and install the Power Platform admin PowerShell module. More information: [Get started with the Power Platform admin module](/powershell/powerapps/get-started-powerapps-admin?view=pa-ps-latest).
-
-   `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-
-1. After the module is installed, run the following command. Replace &lt;friendly name&gt; with the environment name you want to use for MCP.
-
-   `New-AdminPowerAppEnvironment -DisplayName '<friendly name>' -Location unitedstatesfirstrelease -EnvironmentSku Trial -ProvisionDatabase`
-
-   > [!NOTE]
-   > You need to pass `Location` as *unitedstatesfirstrelease* and provide a friendly name for your environment. You're prompted for your credentials, so make a note of this because you need it throughout the instructions.
-
-   A list of attributes for your newly provisioned environment are displayed. This typically includes `EnvironmentName`, `DisplayName`, `Location` (expected value is unitedstatesfirstrelease), `CommonDataServiceDatabaseProvisioningState` (expected value is succeeded).
-
-1. Note both the `EnvironmentName` and `DisplayName` for later steps.
-1. Add sample data to the Dataverse environment, which helps you interact with the MCP server for evaluation. More information: [Add and remove sample data](/power-apps/developer/data-platform/sample-data)
-
-## Ensure the latest PowerAIExtensions solution is installed 
-
-You might need to update the version of the Microsoft Dynamics 365 – PowerAIExtensions solution in the environment if the version is earlier than 1.0.1.773.
-
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/)
-1. Go to **Environments**, and open your environment.
-1. On the command bar, select **Resources** > **Dynamics 365 Apps**.
-1. Next to **Microsoft Dynamics 365 – PowerAIExtensions** if there's an **Update available** link, select it, and update the solution.
 
 ## Create a Dataverse connection for the MCP configuration
 
@@ -236,7 +208,7 @@ These instructions help you configure a Dataverse MCP server at the user setting
 1. From this point on, you can interact with the MCP server via Agent mode of GitHub Copilot. For example, “list tables in Dataverse,” “describe table account,” or “how many accounts do I have,” and so on.
 
 > [!TIP]
-> If you other MCP servers registered with GitHub Copilot it's best to add "in Dataverse" to your prompt to be specific about which MCP server you’d like to use for your question.
+> If you have other MCP servers registered with GitHub Copilot, it's best to add "in Dataverse" to your prompt to be specific about which MCP server you’d like to use for your question.
 
 For more resources about how to use GitHub Copilot in VS Code:
 
@@ -262,10 +234,9 @@ The following Dataverse MCP tools are available. Your prompt in the MCP client l
 | `retrieve_knowledge`     | Use a preconfigured knowledge source to answer questions.                                                                 |
 | `update_record`          | Update a row in a Dataverse table.                                                                                          |
 
+## Related articles
+
 Learn more about MCP:
 
 - [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
 - [Anthropic and Introduction - Model Context Protocol](https://modelcontextprotocol.io/introduction)
-
-## Related articles
-
