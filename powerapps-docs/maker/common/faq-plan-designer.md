@@ -6,7 +6,7 @@ contributors: mduelae
 ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
-ms.date: 5/28/2025
+ms.date: 6/19/2025
 ms.author: norliu
 ms.reviewer: mkaur
 ms.collection: 
@@ -37,12 +37,9 @@ We evaluate the feature both qualitatively and quantitatively. To check quality,
 
 - To use this capability, you need a Microsoft Dataverse database in your environment.
 - This capability is powered by Azure OpenAI Service.
-- This capability is rolling out and might not be available in your region yet.
 - This capability can be subject to usage limits or capacity throttling.
 - This feature lets you use a maximum input size of 4,000 tokens, including both text and images (about 3,000 words if your input only has text).
-- This feature is generally available and is still rolling out so it might not be available in your region yet. Confirm that this feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport). 
-
-
+  
 ## What operational factors and settings allow for effective and responsible use of the Plan designer?
 
 - Use these tips to get the most out of this feature:
@@ -54,7 +51,8 @@ We evaluate the feature both qualitatively and quantitatively. To check quality,
 
 ## How do I provide feedback on the Plan designer?
 
-- Select the Thumbs button in the Plan designer to give feedback. Add details to help us understand your feedback.
+- Select the thumbs up or thumbs down in the plan document to provide feedback on a specific section. 
+- Select the **Give feedback** icon in the command bar to provide general feedback on the Plan designer experience. 
 
 ### See also
 [Overview of Plan designer](../plan-designer/plan-designer.md)

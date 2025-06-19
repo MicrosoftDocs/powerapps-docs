@@ -1,7 +1,7 @@
 ---
-title: "Work with Microsoft Dataverse data in your Azure solution (Microsoft Dataverse) | Microsoft Docs"
-description: "Provides an overview of passing data from Dataverse to an Azure cloud hosted solution."
-ms.date: 07/19/2024
+title: Work with Microsoft Dataverse data in your Azure solution
+description: Discover how pass data from Microsoft Dataverse to an Azure cloud-hosted solution.
+ms.date: 06/18/2025
 author: swylezol
 ms.author: swylezol
 ms.reviewer: pehecke

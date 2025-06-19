@@ -27,7 +27,7 @@ You can also [connect to on-premises SharePoint lists](connections/connection-sh
 
 You can create an app by using a list in SharePoint or Lists in two ways:
 
-- [Sign in to Power Apps and then create an app by connecting to list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
+- Sign in to Power Apps and then [create an app by connecting to list in SharePoint from Power Apps.](app-from-sharepoint.md#use-a-list-in-sharepoint-or-lists-to-create-an-app)
 - [Create an app directly from a list in SharePoint or Lists.](app-from-sharepoint.md#create-an-app-directly-from-a-list-in-sharepoint-or-lists)
 
 When the app is created, Power Apps Studio opens and shows an app with three screens:
