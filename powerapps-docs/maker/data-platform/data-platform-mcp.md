@@ -19,13 +19,33 @@ The Model Context Protocol (MCP) is an open protocol that enables seamless integ
 
 Once connected to the Dataverse MCP Server, you can choose from various tools in the Power Platform environment. These tools are: list tables, describe table, read data, create record, update record, list prompts, execute prompt, list knowledge sources, and retrieve knowledge.
 
-This article explains how to set up and use the Dataverse MCP server with Claude desktop or Visual Studio Code (VS Code) GitHub Copilot as an MCP client. By following the steps in this article, you can interact with Dataverse, asking natural language questions like "show me my contacts" and receive answers based on stored data.
+This article explains how to set up and use the Dataverse MCP server with Microsoft Copilot Studio, Claude desktop or Visual Studio Code (VS Code) GitHub Copilot as an MCP client. By following the steps in this article, you can interact with Dataverse, asking natural language questions like "show me my contacts" and receive answers based on stored data.
 
 [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
-Power Platform admin role. <!--Is this still required?  -->
+When using Dataverse MCP Server in Claude or VSCode GitHub copilot, you will need to create a local proxy for this. To do so, follow the steps:
+1. [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration)
+1. [Install the Dataverse MCP server local proxy]()
+1. [Get the tenant ID of your Dataverse environment]()
+
+Using Dataverse MCP Server in Copilot Studio does not require any of the above pre-requisites. 
+
+## Use the Dataverse MCP server in Microsoft Copilot Studio
+
+1. Go to [Power App](https://make.powerapps.com) and select your environment from the top right environment selector.
+1. From the left navigation pane, select **Agents** > **Create new agent**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Create**.
+1. Scroll down to the **Tools** section and select **+ Add tool**.
+1. Select **Microsoft Dataverse Connector**, and then select **Dataverse MCP Server**.
+   1. If you haven't yet created a Dataverse connection, you're prompted to do so.
+1. Select **Add to agent**.
+
+The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
+
+You can now interact with the Dataverse MCP Server tool in the **Test your agent** chat pane. Try commands like "list tables in Dataverse," "describe table account," or "how many accounts do I have."
+:::image type="content" source="media/copilot-studio-mcp.png" alt-text="Dataverse MCP in Copilot Studio" lightbox="media/copilot-studio-mcp.png":::
 
 ## Create a Dataverse connection for the MCP configuration
 
@@ -59,21 +79,6 @@ Here’s one of the ways to get tenant ID details:
 1. Go to https://make.powerapps.com.
 1. Select **Settings** (gear icon) on the top right, and then select **Session details**.
 1. Copy the value of the **Tenant ID** from the Power Apps session details. Make a note of this GUID because it's used in the configuration steps later.  
-
-## Use the Dataverse MCP server in Microsoft Copilot Studio
-
-1. Go to [Power App](https://make.powerapps.com) and select your environment from the top right environment selector.
-1. From the left navigation pane, select **Agents** > **Create new agent**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Create**.
-1. Scroll down to the **Tools** section and select **+ Add tool**.
-1. Select **Microsoft Dataverse Connector**, and then select **Dataverse MCP Server**.
-   1. If you haven't yet created a Dataverse connection, you're prompted to do so.
-1. Select **Add to agent**.
-
-The individual tools available on this MCP server can be viewed and modified by selecting **...** > **Edit** next to the **Dataverse MCP Server** tool.
-
-You can now interact with the Dataverse MCP Server tool in the **Test your agent** chat pane. Try commands like "list tables in Dataverse," "describe table account," or "how many accounts do I have."
-:::image type="content" source="media/copilot-studio-mcp.png" alt-text="Dataverse MCP in Copilot Studio" lightbox="media/copilot-studio-mcp.png":::
 
 ## Configure and use the Dataverse MCP server in Claude
 
