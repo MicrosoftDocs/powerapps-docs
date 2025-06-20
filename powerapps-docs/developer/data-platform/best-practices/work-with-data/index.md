@@ -1,8 +1,8 @@
 ---
 title: "Developers: Best practices and guidance around working with data for Microsoft Dataverse | Microsoft Docs"
 description: Best practices and guidance around working with data for developers of Microsoft Dataverse.
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: best-practice
 ms.date: 03/26/2021

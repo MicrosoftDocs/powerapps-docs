@@ -2,8 +2,8 @@
 title: "Perform conditional operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.date: 04/06/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

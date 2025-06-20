@@ -2,8 +2,8 @@
 title: "Execute messages in a single database transaction (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can execute two or more requests in a single database transaction using the ExecuteTransactionRequest class." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/21/2025
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
