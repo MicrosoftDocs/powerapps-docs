@@ -1,7 +1,7 @@
 ---
-title: "Update and delete table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to update and delete table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/22/2023
+title: "Update and delete table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to update and delete table rows using the SDK for .NET."
+ms.date: 06/20/2025
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl
@@ -22,23 +22,23 @@ This article includes examples using both late-bound and early-bound programming
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
-> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven't actually changed.
+> When updating a table row, only include the columns you're changing. Simply updating the columns of a table row that you previously retrieved update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values actually changed. This can also cause columns to appear to be updated in auditing data when in fact they haven't changed.
 >
-> You should create a new `Entity` instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the table row.
+> You should create a new `Entity` instance, set the ID attribute and any attribute values you're changing, and use that entity instance to update the table row.
 
 > [!NOTE]
-> The column definition includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these columns to a null value. If you attempt this you will get error code  `-2147220989` with the message `Attribute: <attribute name> cannot be set to NULL`.
+> The column definition includes a `RequiredLevel` property. When this is set to `SystemRequired`, you can't set these columns to a null value. If you attempt to set this column to a null value, you'll get error code  `-2147220989` with the message `Attribute: <attribute name> cannot be set to NULL`.
 > 
 > More information: [Column (attribute) requirement level](../entity-attribute-metadata.md#column-requirement-level)
 
 ## Basic update
 
-Both of the examples below use the [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A) to set column values for a table row that was previously retrieved.
+Both of the following examples use the [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A) to set column values for a table row that was previously retrieved.
 
 Use the [Entity.Id property](xref:Microsoft.Xrm.Sdk.Entity.Id) to transfer the unique identifier value of the retrieved row to the entity instance used to perform the update operation.
 
 > [!NOTE]
-> If you attempt to update a row without a primary key value you will get the error: `Entity Id must be specified for Update`.
+> If you attempt to update a row without a primary key value, you'll get the error: `Entity Id must be specified for Update`.
 > 
 > If you don't have a primary key value, you can also update rows using alternate keys. More information: [Update with Alternate Key](#update-with-alternate-key)
 
@@ -106,7 +106,7 @@ svc.Update(account);
 Instead of using the [IOrganizationService.Update method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A), you can use either the late-bound [Entity class](xref:Microsoft.Xrm.Sdk.Entity) or the generated early-bound entity classes with the [UpdateRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) by setting the entity instance to the [UpdateRequest.Target property](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target) and then using the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 > [!NOTE]
-> The [UpdateResponse class](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse) has no properties. While it is returned by the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), it isn't necessary to refer to it.
+> The [UpdateResponse class](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse) has no properties. While it's returned by the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), it isn't necessary to refer to it.
  
 ```csharp
 var request = new UpdateRequest()
@@ -135,7 +135,7 @@ In a similar manner to how you can [Create related table rows in one operation](
 To update related table rows, you have to retrieve a row with the related rows so that you can access the ID values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
 
 > [!IMPORTANT]
-> Updates to rows are made in a specific order. First, primary table rows are processed, and then related table rows are processed. If a change is made by the primary row for a lookup or related row column, and then a related row updates the same column, the related row value is retained. In general, a lookup column value and its equivalent in the [Entity.RelatedEntities](xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities) for the same relationship should not be used at the same time.
+> Updates to rows are made in a specific order. First, primary table rows are processed, and then related table rows are processed. If a change is made by the primary row for a lookup or related row column, and then a related row updates the same column, the related row value is retained. In general, a lookup column value and its equivalent in the [Entity.RelatedEntities](xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities) for the same relationship shouldn't be used at the same time.
 
 #### [Late-bound](#tab/late)
 
@@ -227,7 +227,7 @@ svc.Update(account);
 
 ## Check for duplicate records
 
-When updating a table row, you may change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
+When updating a table row, you might change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
 
 ## Update with Alternate Key
 
@@ -238,7 +238,7 @@ If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sd
 The following example shows how to update an `Account` using an alternate key defined for the `accountnumber` column (attribute).
 
 > [!IMPORTANT]
-> Most tables for business data do not have alternate keys defined. This method can only be used when the environment is configured to define an alternate key for a table.
+> Most tables for business data don't have alternate keys defined. This method can only be used when the environment is configured to define an alternate key for a table.
 
 ```csharp
 var accountNumberKey = new KeyAttributeCollection();
@@ -260,9 +260,9 @@ If you're updating or deleting elastic table data stored in partitions, be sure 
 
 ## Use Upsert
 
-Typically in data integration scenarios you need to create or update data in Dataverse from other sources. Dataverse may already have records with the same unique identifier, which may be an alternate key. If a table row exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is the scenario when you want to use upsert.
+Typically in data integration scenarios you need to create or update data in Dataverse from other sources. Dataverse might already have records with the same unique identifier, which might be an alternate key. If a table row exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This scenario is when you want to use upsert.
 
-The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account row is created, and the second time it's updated because it has an `accountnumber` value and there's an alternate key using that column (attrbute).
+The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account row is created, and the second time it's updated because it has an `accountnumber` value and there's an alternate key using that column (attribute).
 
 For both calls, the [UpsertResponse.RecordCreated property](xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated) indicates whether the operation created a row or not.
 
@@ -313,7 +313,7 @@ svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
 
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
+> Delete operations can initiate cascading operations that might delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
 
 ## Use the DeleteRequest class
 
@@ -340,9 +340,9 @@ svc.Execute(request);
 
 You can specify the optimistic concurrency behavior for the operation by setting the `ConcurrencyBehavior` property of the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> classes.
 
-The logic to update or delete the row may be based on stale data. If the current data is different because it has changed since it was retrieved, optimistic concurrency provides a way to cancel an update or delete operation so you might retrieve it again and use the current data to determine whether to proceed.
+The logic to update or delete the row might be based on stale data. If the current data is different because it has changed since it was retrieved, optimistic concurrency provides a way to cancel an update or delete operation so you might retrieve it again and use the current data to determine whether to proceed.
 
-To determine whether the row has been changed, you don't need to compare all the values, you can use the <xref:Microsoft.Xrm.Sdk.Entity.RowVersion> property to see if it has changed.
+To determine whether the row has changed, you don't need to compare all the values. You can use the <xref:Microsoft.Xrm.Sdk.Entity.RowVersion> property to see if it has changed.
 
 The following example succeeds only when:
 

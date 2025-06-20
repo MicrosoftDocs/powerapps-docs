@@ -1,7 +1,7 @@
 ---
 title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze performance data on plug-ins execution."
-ms.date: 08/15/2023
+ms.date: 06/20/2025
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -14,16 +14,16 @@ contributors:
 ---
 # Analyze plug-in performance
 
-When you add business logic to your plug-in you should be aware of the impact your plug-ins will have on overall system performance.
+When you add business logic to your plug-in you should be aware of the impact your plug-ins have on overall system performance.
 
 ## Time and resource constraints
 
-There is a hard **2-minute time limit** for a Dataverse message operation to complete. This limit includes executing the intended message operation and all registered synchronous plug-ins. There are also limitations on the amount of CPU and memory resources that can be used by extensions. If the limits are exceeded an exception is thrown and the entire message operation will be cancelled (rolled back).
+There's a hard **2-minute time limit** for a Dataverse message operation to complete. This limit includes executing the intended message operation and all registered synchronous plug-ins. There are also limitations on the amount of CPU and memory resources that extensions can use. If the limits are exceeded, Dataverse throws an exception and the entire message operation is canceled (rolled back).
 
-If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, that process will be killed by the platform. At that point any current extension in that process will fail with exceptions. However, the next time that the extension is executed it will run normally.
+If the time limit is exceeded, Dataverse throws a <xref:System.TimeoutException>. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, Dataverse kills that process. At that point any current extension in that process fails with exceptions. However, the next time that the extension is executed it will run normally.
 
 > [!IMPORTANT]
-> You cannot control how long the message operation or other synchronous registered plug-ins take to execute. You can only control how long your plug-in takes to execute based on its design and coding.
+> You can't control how long the message operation or other synchronous registered plug-ins take to execute. You can only control how long your plug-in takes to execute based on its design and coding.
 >
 > Our general recommendation is to limit the time your plug-in takes to execute to no more than 2 seconds.
 >
@@ -34,7 +34,7 @@ More information: [Best practices and guidance regarding plug-in and workflow de
 ## Monitor performance
 
 > [!IMPORTANT]
-> This feature is no longer operational or supported. Do not use.
+> This feature is no longer operational or supported. Don't use.
 >
 > This section will be removed in a future article update.
 
