@@ -4,7 +4,7 @@ description: "Download and launch the Plug-in Registration, Package Deployment, 
 ms.date: 05/27/2025
 ms.reviewer: pehecke
 ms.topic: article
-author: davidjenni # GitHub ID
+author: davidjenni 
 ms.subservice: "dataverse-developer"
 ms.author: davidjen
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" 
+description: "Describes options available when retrieving a row programmatically." 
 ms.date: 05/18/2023
 ms.reviewer: pehecke
 ms.topic: how-to

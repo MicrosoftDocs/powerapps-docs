@@ -1,12 +1,12 @@
 ---
-title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn how to query Microsoft Dataverse table data using SQL." 
 ms.date: 05/27/2025
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: "pnghub" # GitHub ID
+author: "pnghub" 
 ms.subservice: dataverse-developer
-ms.author: "gned" # MSFT alias of Microsoft employees only
+ms.author: "gned"
 search.audienceType: 
   - developer
 ---

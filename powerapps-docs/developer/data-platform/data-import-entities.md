@@ -1,12 +1,12 @@
 ---
-title: "Data import tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Lists the data import tables used to create data maps, configure and run data imports, and log failure information." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Data import tables (Microsoft Dataverse) | Microsoft Docs" 
+description: "Lists the data import tables used to create data maps, configure and run data imports, and log failure information." 
 ms.date: 08/03/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: mayadumesh 
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: mayadu
 search.audienceType: 
   - developer
 ---

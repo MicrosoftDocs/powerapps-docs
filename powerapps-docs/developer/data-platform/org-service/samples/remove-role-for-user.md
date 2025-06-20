@@ -1,6 +1,6 @@
 ---
-title: "Sample: Remove a role for a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to remove a role for a user " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Remove a role for a user (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to remove a role for a user " 
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew

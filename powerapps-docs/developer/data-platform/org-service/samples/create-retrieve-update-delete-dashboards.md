@@ -1,6 +1,6 @@
 ---
-title: "Create, retrieve, update, and delete dashboards (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to create, retrieve, update, and delete an user-owned dashboards." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create, retrieve, update, and delete dashboards (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to create, retrieve, update, and delete an user-owned dashboards." 
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde

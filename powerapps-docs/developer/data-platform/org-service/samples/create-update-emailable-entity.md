@@ -1,6 +1,6 @@
 ---
-title: " Create and update an emailable table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to create and update emailable table." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Create and update an emailable table (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to create and update emailable table." 
 ms.date: 04/03/2022
 author: mkannapiran
 ms.author: kamanick

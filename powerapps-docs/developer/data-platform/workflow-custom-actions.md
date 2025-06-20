@@ -1,6 +1,6 @@
 ---
-title: "Use Custom Process Actions with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create your own custom actions that extend the functionality of Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Custom Process Actions with code (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about how to create your own custom actions that extend the functionality of Microsoft Dataverse." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"

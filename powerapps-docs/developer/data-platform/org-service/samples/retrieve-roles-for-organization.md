@@ -1,6 +1,6 @@
 ---
-title: " Retrieve roles for an organization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to retrieve roles for an organization " # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Retrieve roles for an organization (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to retrieve roles for an organization " 
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew

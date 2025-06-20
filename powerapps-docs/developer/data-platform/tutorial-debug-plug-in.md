@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Debug a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The second of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Tutorial: Debug a plug-in (Microsoft Dataverse) | Microsoft Docs" 
+description: "The second of three tutorials that will show you how to work with plug-ins." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: tutorial

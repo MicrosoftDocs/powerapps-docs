@@ -1,12 +1,12 @@
 ---
-title: "Configure Exchange folder-level tracking rules (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Configure Exchange folder-level tracking rules (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn how to configure Exchange folder-level tracking rules" 
 ms.date: 03/24/2021
 ms.reviewer: pehecke
 ms.topic: how-to
-author: DanaMartens # GitHub ID
+author: DanaMartens 
 ms.subservice: dataverse-developer
-ms.author: dmartens # MSFT alias of Microsoft employees only
+ms.author: dmartens
 search.audienceType: 
   - developer
 ---

@@ -5,7 +5,7 @@ ms.date: 01/24/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: "NHelgren" # GitHub ID
+author: "NHelgren" 
 ms.author: nhelgren
 ms.reviewer: pehecke
 search.audienceType: 

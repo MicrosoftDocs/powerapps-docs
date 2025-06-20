@@ -1,13 +1,13 @@
 ---
-title: "Sample: Work with solutions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to work with solutions" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Work with solutions (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample shows how to work with solutions" 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 
 ms.topic: sample
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "shmcarth" 
+ms.author: "jdaly"
 search.audienceType:
   - developer
 ---

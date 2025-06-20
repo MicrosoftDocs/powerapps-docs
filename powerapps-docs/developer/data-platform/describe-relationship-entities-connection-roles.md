@@ -1,12 +1,12 @@
 ---
-title: "Describe a relationship between tables with connection roles (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describing a relationship between tables using create connection roles and connection role categories." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Describe a relationship between tables with connection roles (Microsoft Dataverse) | Microsoft Docs" 
+description: "Describing a relationship between tables using create connection roles and connection role categories." 
 ms.date: 03/11/2021
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: mayadumesh 
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: mayadu
 search.audienceType: 
   - developer
 ---

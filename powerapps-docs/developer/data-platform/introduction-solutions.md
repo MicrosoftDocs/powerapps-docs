@@ -2,7 +2,7 @@
 title: Introduction to solutions | Microsoft Docs
 description: Learn about using solutions to package your Microsoft Dataverse customizations.
 suite: powerapps
-author: shmcarth # GitHub ID
+author: shmcarth 
 ms.author: shmcarth
 ms.topic: concept-article
 ms.reviewer: pehecke

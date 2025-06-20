@@ -1,14 +1,14 @@
 ---
-title: "Use connections to link records to each other (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Connection tables help you enable, create, and query connections." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use connections to link records to each other (Microsoft Dataverse) | Microsoft Docs" 
+description: "Connection tables help you enable, create, and query connections." 
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

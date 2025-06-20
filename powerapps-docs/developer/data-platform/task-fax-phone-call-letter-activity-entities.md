@@ -1,14 +1,14 @@
 ---
-title: Activity tables for tasks, faxes, phone calls, and letters in Microsoft Dataverse # Intent and product brand in a unique string of 43-59 chars including spaces
-description: Explore using specialized tables to store business activities in your relationship management solution. # 115-145 characters including spaces. This abstract displays in the search result.
+title: Activity tables for tasks, faxes, phone calls, and letters in Microsoft Dataverse 
+description: Explore using specialized tables to store business activities in your relationship management solution. 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

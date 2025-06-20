@@ -1,6 +1,6 @@
 ---
-title: "Sample: Add a security principal (user or team) to a queue  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Add a security principal to a queue" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Add a security principal (user or team) to a queue  (Microsoft Dataverse) | Microsoft Docs" 
+description: "Add a security principal to a queue" 
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly

@@ -1,12 +1,12 @@
 ---
-title: "Add transformation mappings for import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Transformation mapping enables optional modification of source data before importation." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Add transformation mappings for import (Microsoft Dataverse) | Microsoft Docs" 
+description: "Transformation mapping enables optional modification of source data before importation." 
 ms.date: 08/03/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: mayadumesh 
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: mayadu
 search.audienceType: 
   - developer
 ---

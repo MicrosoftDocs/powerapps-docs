@@ -1,14 +1,14 @@
 ---
-title: "Recurring appointment partial expansion model (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The partial expansion model is an asynchronous job that runs at pre-specified intervals, defined at the organization level, and used to create recurring appointment instances." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Recurring appointment partial expansion model (Microsoft Dataverse) | Microsoft Docs" 
+description: "The partial expansion model is an asynchronous job that runs at pre-specified intervals, defined at the organization level, and used to create recurring appointment instances." 
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
 
 ms.topic: how-to
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

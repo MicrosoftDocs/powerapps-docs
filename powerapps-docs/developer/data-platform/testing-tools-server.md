@@ -1,12 +1,12 @@
 ---
-title: "Testing tools for server-side development (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about testing frameworks for server-side development." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Testing tools for server-side development (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about testing frameworks for server-side development." 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: concept-article
-author: "marcelbf" # GitHub ID
+author: "marcelbf" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 contributors:

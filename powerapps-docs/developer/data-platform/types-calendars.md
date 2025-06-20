@@ -1,12 +1,12 @@
 ---
-title: "Types of calendars (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Contains information about the types of calendars used in Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Types of calendars (Microsoft Dataverse) | Microsoft Docs" 
+description: "Contains information about the types of calendars used in Dataverse" 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 contributors:

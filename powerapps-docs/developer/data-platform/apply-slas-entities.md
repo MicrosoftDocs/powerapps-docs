@@ -1,5 +1,5 @@
 ---
-title: "Apply SLAs to tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Apply SLAs to tables (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about applying SLAs to custom tables by enabling tables for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
 ms.date: 07/19/2021
@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

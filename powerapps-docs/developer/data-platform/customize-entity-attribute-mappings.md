@@ -1,14 +1,14 @@
 ---
-title: "Customize table and column mappings in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about mapping columns between tables that have a relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Customize table and column mappings in Power Apps (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about mapping columns between tables that have a relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." 
 ms.custom: ""
 ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

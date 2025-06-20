@@ -1,12 +1,12 @@
 ---
-title: "Configure Azure integration (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about configuring Azure integration with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Configure Azure integration (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about configuring Azure integration with Microsoft Dataverse." 
 ms.date: 07/19/2024
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: "jaredha" # GitHub ID
+author: "jaredha" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 contributors:

@@ -1,6 +1,6 @@
 ---
-title: "Execute multiple requests using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Execute multiple requests using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" 
+description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." 
 ms.date: 02/28/2023
 ms.reviewer: pehecke
 ms.topic: how-to

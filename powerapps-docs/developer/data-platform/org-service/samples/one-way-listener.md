@@ -1,6 +1,6 @@
 ---
-title: "Sample: One-way listener (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how the application registers a remote service plugin that executes whenever  a message is posted to one-way endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: One-way listener (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample shows how the application registers a remote service plugin that executes whenever  a message is posted to one-way endpoint." 
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha

@@ -1,13 +1,13 @@
 ---
-title: "Transaction Currency (currency) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about transaction table, which is a multicurrency feature enabling users to perform financial transactions in multiple currencies. Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency using the base currency." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Transaction Currency (currency) table (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about transaction table, which is a multicurrency feature enabling users to perform financial transactions in multiple currencies. Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency using the base currency." 
 ms.custom: ""
 ms.date: 07/25/2024
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to add custom workflow activities to the workflow designer." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn how to add custom workflow activities to the workflow designer." 
 ms.date: 04/06/2022
 author: MsSQLGirl
 ms.author: jukoesma

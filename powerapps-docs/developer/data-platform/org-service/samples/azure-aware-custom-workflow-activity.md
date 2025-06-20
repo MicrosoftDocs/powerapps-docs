@@ -1,6 +1,6 @@
 ---
-title: "Azure aware custom workflow activity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample obtains the data context from the current Microsoft Dataverse operation and posts it to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Azure aware custom workflow activity (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample obtains the data context from the current Microsoft Dataverse operation and posts it to the Azure Service Bus." 
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha

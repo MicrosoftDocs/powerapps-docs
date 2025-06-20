@@ -1,6 +1,6 @@
 ---
-title: "Table column definitions messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "About the messages used to edit table column definitions, also known as properties or columns." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Table column definitions messages (Microsoft Dataverse) | Microsoft Docs" 
+description: "About the messages used to edit table column definitions, also known as properties or columns." 
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article

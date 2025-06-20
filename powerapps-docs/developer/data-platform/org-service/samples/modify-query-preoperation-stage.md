@@ -1,6 +1,6 @@
 ---
-title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." 
 ms.date: 04/03/2022
 author: MsSQLGirl
 ms.author: jukoesma

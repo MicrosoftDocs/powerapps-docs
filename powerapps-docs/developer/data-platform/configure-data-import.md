@@ -1,12 +1,12 @@
 ---
-title: "Configure data import (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Configuration information that is required for importing data is contained in the data import table and the import source file table." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Configure data import (Microsoft Dataverse) | Microsoft Docs" 
+description: "Configuration information that is required for importing data is contained in the data import table and the import source file table." 
 ms.date: 03/15/2021
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh # GitHub ID
+author: mayadumesh 
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: mayadu
 search.audienceType: 
   - developer
 ---

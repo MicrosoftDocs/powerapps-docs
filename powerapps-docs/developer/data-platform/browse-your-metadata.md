@@ -1,14 +1,14 @@
 ---
-title: "Browse table definitions in your environment (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can use the Metadata Browser to view tables and their properties in Microsoft Dataverse. The Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Browse table definitions in your environment (Microsoft Dataverse) | Microsoft Docs" 
+description: "You can use the Metadata Browser to view tables and their properties in Microsoft Dataverse. The Metadata Browser is a managed solution you can download and install on your organization." 
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
 
 ms.topic: how-to
-author: "phecke" # GitHub ID
+author: "phecke" 
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: "pehecke"
 search.audienceType: 
   - developer
 ---

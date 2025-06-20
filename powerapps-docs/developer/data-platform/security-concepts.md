@@ -6,9 +6,9 @@ ms.date: 03/11/2021
 ms.reviewer: "pehecke"
 
 ms.topic: concept-article
-author: "paulliew" # GitHub ID
+author: "paulliew" 
 ms.subservice: dataverse-developer
-ms.author: "paulliew" # MSFT alias of Microsoft employees only
+ms.author: "paulliew"
 search.audienceType: 
   - developer
 ---

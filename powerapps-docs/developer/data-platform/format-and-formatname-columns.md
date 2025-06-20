@@ -1,6 +1,6 @@
 ---
-title: "Format and FormatName columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about Format and FormatName columns that store the format values and are used by the controls and UI to know how to display the contents." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Format and FormatName columns (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about Format and FormatName columns that store the format values and are used by the controls and UI to know how to display the contents." 
 ms.date: 06/15/2022
 ms.reviewer: jdaly
 ms.topic: article

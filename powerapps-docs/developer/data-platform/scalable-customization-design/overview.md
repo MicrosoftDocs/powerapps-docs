@@ -4,7 +4,7 @@ description: "The first in a series of articles. This article introduces symptom
 ms.date: 04/23/2024
 ms.reviewer: pehecke
 ms.topic: overview
-author: rogergilchrist # GitHub ID
+author: rogergilchrist 
 ms.author: jdaly
 search.audienceType: 
   - developer

@@ -1,14 +1,14 @@
 ---
-title: "Field security entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using field security entities to apply field-level security, which restricts field access to specified users and teams." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Field security entities (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about using field security entities to apply field-level security, which restricts field access to specified users and teams." 
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
 
 ms.topic: how-to
-author: "paulliew" # GitHub ID
+author: "paulliew" 
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 ---

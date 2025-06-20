@@ -1,6 +1,6 @@
 ---
-title: "Sample: Retrieve all charts attached to a table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to retrieve charts attached to a table " # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Retrieve all charts attached to a table (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample showcases how to retrieve charts attached to a table " 
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde

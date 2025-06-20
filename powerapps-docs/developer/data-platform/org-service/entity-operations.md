@@ -1,6 +1,6 @@
 ---
-title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Entity class operations using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" 
+description: "Learn about the Entity class used for data operations using the Microsoft Dataverse SDK for .NET" 
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article

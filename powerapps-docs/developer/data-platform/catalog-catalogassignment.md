@@ -1,12 +1,12 @@
 ---
-title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Catalog and CatalogAssignment tables (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn how to use the Catalog and CatalogAssignment tables to expose events in your solution"
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: how-to
 author: "jaredha" #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "jdaly"
 search.audienceType: 
   - developer
 contributors:

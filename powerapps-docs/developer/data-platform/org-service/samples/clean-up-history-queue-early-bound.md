@@ -1,6 +1,6 @@
 ---
-title: "Sample: Clean up history for a queue (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to clean up history for a queue" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Clean up history for a queue (Microsoft Dataverse) | Microsoft Docs" 
+description: "This sample shows how to clean up history for a queue" 
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

@@ -1,14 +1,14 @@
 ---
-title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" 
+description: "Learn the subset of the Transact-SQL language supported by the Dataverse SQL endpoint." 
 ms.custom: ""
 ms.date: 10/09/2024
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "mayadumesh" 
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: "pehecke"
 search.audienceType: 
   - developer
 ---
