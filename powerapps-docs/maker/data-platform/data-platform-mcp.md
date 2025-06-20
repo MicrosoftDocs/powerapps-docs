@@ -21,10 +21,7 @@ Once connected to the Dataverse MCP Server, you can choose from various tools in
 
 This article explains how to set up and use the Dataverse MCP server with Claude desktop or Visual Studio Code (VS Code) GitHub Copilot as an MCP client. By following the steps in this article, you can interact with Dataverse, asking natural language questions like "show me my contacts" and receive answers based on stored data.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
