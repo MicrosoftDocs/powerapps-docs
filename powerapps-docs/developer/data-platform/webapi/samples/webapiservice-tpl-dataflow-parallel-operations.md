@@ -3,7 +3,7 @@ title: "Web API Parallel Operations with TPL Dataflow components Sample (C#) (Mi
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
 ms.date: 09/02/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

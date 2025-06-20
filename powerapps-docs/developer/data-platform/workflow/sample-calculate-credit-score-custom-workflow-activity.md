@@ -3,7 +3,7 @@ title: "Sample: Calculate a credit score with a custom workflow activity (Micros
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
 ms.date: 04/06/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

@@ -4,7 +4,7 @@ description: Learn about OData navigation property elements that are defined for
 ms.topic: how-to
 ms.date: 04/06/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

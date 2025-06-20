@@ -4,7 +4,7 @@ description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetecti
 ms.date: 12/31/2022
 ms.topic: how-to
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

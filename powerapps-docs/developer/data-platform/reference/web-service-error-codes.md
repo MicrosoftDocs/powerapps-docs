@@ -3,7 +3,7 @@ title: "Web service error codes (Microsoft Dataverse) | Microsoft Docs" # Intent
 description: "This topic lists the error codes you might encounter when you debug your code. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 02/24/2025
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: generated-reference
 search.audienceType: 

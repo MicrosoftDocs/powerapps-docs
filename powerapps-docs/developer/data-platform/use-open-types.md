@@ -4,7 +4,7 @@ description: Learn how to use open types with Microsoft Dataverse custom APIs.
 ms.date: 08/02/2023
 ms.topic: how-to
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType:

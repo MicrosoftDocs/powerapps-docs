@@ -3,7 +3,7 @@ title: "Do not use parallel execution within plug-ins and workflow activities | 
 description: "Multi or parallel threading within plug-ins or custom workflow activities is not supported."
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: article
 ms.subservice: dataverse-developer

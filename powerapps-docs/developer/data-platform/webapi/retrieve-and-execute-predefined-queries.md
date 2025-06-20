@@ -3,7 +3,7 @@ title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can use a predefined query to retrieve table data."
 ms.date: 09/27/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

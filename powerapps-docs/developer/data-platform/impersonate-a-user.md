@@ -3,7 +3,7 @@ title: "Impersonate a user (Microsoft Dataverse) | Microsoft Docs" # Intent and 
 description: "Learn how to write plug-in code to act on behalf of a specific user."
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: "article"
 ms.subservice: dataverse-developer

@@ -4,7 +4,7 @@ description: Learn about the HTTP methods and headers that form a part of HTTP r
 ms.topic: how-to
 ms.date: 08/29/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

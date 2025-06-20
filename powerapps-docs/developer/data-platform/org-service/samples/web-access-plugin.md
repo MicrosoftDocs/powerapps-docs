@@ -3,7 +3,7 @@ title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs
 description: "Learn how to write a plug-in that can access resources on the World Wide Web." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 01/24/2025
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

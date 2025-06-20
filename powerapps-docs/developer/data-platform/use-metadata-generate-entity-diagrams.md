@@ -5,7 +5,7 @@ ms.date: 01/04/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: MsSQLGirl # GitHub ID
-ms.author: sriknair # MSFT alias of Microsoft employees only
+ms.author: jukoesma # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer

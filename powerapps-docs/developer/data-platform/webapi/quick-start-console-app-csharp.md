@@ -4,7 +4,7 @@ description: "Walks you through creating a program to authenticate with the Micr
 ms.topic: quickstart
 ms.date: 06/22/2023
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

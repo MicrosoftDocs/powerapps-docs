@@ -5,7 +5,7 @@ ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

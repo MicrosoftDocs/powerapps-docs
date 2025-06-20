@@ -3,7 +3,7 @@ title: "Sample: Create, update related records early bound(Microsoft Dataverse) 
 description: "This sample shows how to create, retrieve, update, and delete operations on an account using the early bound class. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

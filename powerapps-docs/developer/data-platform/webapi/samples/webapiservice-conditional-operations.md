@@ -3,7 +3,7 @@ title: "Web API Conditional Operation sample (C#) (Microsoft Dataverse)| Microso
 description: "This sample shows how to perform conditional message operations when accessing table rows of the Microsoft Dataverse."
 ms.date: 09/02/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

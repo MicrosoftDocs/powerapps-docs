@@ -3,7 +3,7 @@ title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs" # Inte
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

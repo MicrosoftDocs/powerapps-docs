@@ -8,7 +8,7 @@ ms.custom:
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer

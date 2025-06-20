@@ -3,7 +3,7 @@ title: "Sample: File Operations using Dataverse SDK for .NET (Microsoft Datavers
 description: "This sample demonstrates how to perform operations with file columns using the Dataverse SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/04/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:

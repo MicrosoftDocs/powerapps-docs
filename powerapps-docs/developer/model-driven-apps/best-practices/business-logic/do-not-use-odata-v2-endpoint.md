@@ -3,7 +3,7 @@ title: Do not use the OData v2.0 endpoint
 description: Learn about the requirement to upgrade your code to use the Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint.
 suite: powerapps
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.date: 04/12/2023
 ms.reviewer: jdaly
 ms.topic: how-to

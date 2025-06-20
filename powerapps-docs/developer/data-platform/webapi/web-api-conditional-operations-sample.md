@@ -4,7 +4,7 @@ description: "This collection of samples demonstrate how to perform operations t
 ms.topic: sample
 ms.date: 03/22/2025
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

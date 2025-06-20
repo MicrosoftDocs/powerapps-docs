@@ -4,7 +4,7 @@ description: "Consider merging separate plug-ins/custom workflow activities into
 suite: powerapps
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 ms.subservice: dataverse-developer

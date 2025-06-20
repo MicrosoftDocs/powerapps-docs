@@ -3,7 +3,7 @@ title: "Web API WebApiService Parallel Operations Sample (C#) (Microsoft Dataver
 description: "This sample demonstrates sending requests in parallel using the .NET Task Parallel Library (TPL)."
 ms.date: 09/02/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

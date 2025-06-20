@@ -3,7 +3,7 @@ title: "Sample: File Operations using Dataverse Web API (Microsoft Dataverse) | 
 description: "This sample demonstrates how to perform operations with file columns using the Dataverse Web API." 
 ms.date: 10/28/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

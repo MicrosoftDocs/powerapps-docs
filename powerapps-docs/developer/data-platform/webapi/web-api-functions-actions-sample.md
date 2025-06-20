@@ -4,7 +4,7 @@ description: This collection of code samples demonstrates how to perform bound a
 ms.topic: sample
 ms.date: 09/02/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

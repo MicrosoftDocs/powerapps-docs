@@ -3,7 +3,7 @@ title: "Use ExecuteAsync to execute messages asynchronously  (Microsoft Datavers
 description: "You can use the ExecuteAsync message to import solutions asynchronously." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 

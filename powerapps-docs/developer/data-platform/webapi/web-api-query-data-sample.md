@@ -4,7 +4,7 @@ description: Use this sample code to learn how to query data using the Dataverse
 ms.topic: sample
 ms.date: 04/14/2023
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

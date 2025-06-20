@@ -3,7 +3,7 @@ title: "Web API Actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Action elements defined for the Dataverse Web API."
 ms.date: 04/06/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

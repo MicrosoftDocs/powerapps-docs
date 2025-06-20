@@ -3,7 +3,7 @@ title: "Order results using table columns with LINQ (Microsoft Dataverse) | Micr
 description: "Read how you can use lookup or choices (picklist) columns to order results within a LINQ query."
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 search.audienceType: 

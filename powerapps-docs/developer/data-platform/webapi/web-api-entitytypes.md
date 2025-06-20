@@ -3,7 +3,7 @@ title: Web API EntityTypes
 description: Learn about OData EntityTypes, which are named structured types with a key. EntityTypes describe the data types available in Dataverse Web API.
 ms.date: 05/18/2023
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

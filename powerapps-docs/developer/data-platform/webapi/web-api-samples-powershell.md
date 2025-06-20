@@ -4,7 +4,7 @@ description: "This article provides a description of Web API samples that are im
 ms.topic: sample
 ms.date: 05/14/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

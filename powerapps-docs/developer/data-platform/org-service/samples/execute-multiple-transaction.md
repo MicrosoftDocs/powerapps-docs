@@ -3,7 +3,7 @@ title: "Sample: Execute multiple requests in transaction (Microsoft Dataverse) |
 description: "This sample shows how to execute multiple request in transaction." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

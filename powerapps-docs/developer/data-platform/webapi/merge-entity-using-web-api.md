@@ -3,7 +3,7 @@ title: "Merge table rows using the Web API (Microsoft Dataverse)| Microsoft Docs
 description: "Read how to use the Merge unbound action to merge two table rows"
 ms.date: 08/30/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

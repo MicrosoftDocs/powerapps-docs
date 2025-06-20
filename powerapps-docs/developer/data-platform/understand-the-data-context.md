@@ -3,7 +3,7 @@ title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about the data that is passed to your plug-in when it is executed." 
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: concept-article
 ms.subservice: dataverse-developer

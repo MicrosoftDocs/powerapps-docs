@@ -4,7 +4,7 @@ description: Learn about building and packaging plug-in code for Microsoft Datav
 ms.date: 04/04/2025
 ms.topic: how-to
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.subservice: dataverse-developer
 search.audienceType:

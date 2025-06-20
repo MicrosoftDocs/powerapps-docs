@@ -4,7 +4,7 @@ description: "Code samples that demonstrate how to perform CRUD (Create, Retriev
 ms.topic: sample
 ms.date: 03/22/2025
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

@@ -6,7 +6,7 @@ ms.date: 04/14/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl # GitHub ID
-ms.author: sriknair # MSFT alias of Microsoft employees only
+ms.author: jukoesma # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

@@ -7,7 +7,7 @@ ms.reviewer: "jdaly"
 ms.topic: how-to
 author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 ---

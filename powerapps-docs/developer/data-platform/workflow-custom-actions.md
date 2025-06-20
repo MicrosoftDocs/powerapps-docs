@@ -6,7 +6,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

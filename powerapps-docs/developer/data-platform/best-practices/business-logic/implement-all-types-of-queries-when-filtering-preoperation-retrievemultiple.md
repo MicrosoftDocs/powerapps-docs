@@ -4,7 +4,7 @@ description: "For best performance and consistent results for all applications y
 suite: powerapps
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: article
 ms.subservice: dataverse-developer

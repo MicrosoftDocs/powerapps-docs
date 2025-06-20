@@ -3,7 +3,7 @@ title: Web API Service Documents
 description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
 ms.date: 01/10/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

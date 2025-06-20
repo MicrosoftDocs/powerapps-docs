@@ -3,7 +3,7 @@ title: "Use late-bound Entity class with a LINQ query (Microsoft Dataverse) | Mi
 description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 search.audienceType: 

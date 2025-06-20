@@ -3,7 +3,7 @@ title: "Sample: Create a basic plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a simple plug-in that creates a follow-up activity."
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:

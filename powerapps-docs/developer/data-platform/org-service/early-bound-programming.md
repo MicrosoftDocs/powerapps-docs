@@ -5,7 +5,7 @@ ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer

@@ -4,7 +4,7 @@ description: "Describes how to manage invalid characters with the Dataverse API.
 ms.date: 03/22/2022
 ms.topic: article
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 

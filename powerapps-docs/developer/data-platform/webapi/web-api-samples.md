@@ -4,7 +4,7 @@ description: "See C#, PowerShell, and JavaScript sample code that demonstrates h
 ms.topic: sample
 ms.date: 01/20/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

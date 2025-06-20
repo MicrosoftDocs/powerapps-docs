@@ -3,7 +3,7 @@ title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
 ms.date: 01/31/2025
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer

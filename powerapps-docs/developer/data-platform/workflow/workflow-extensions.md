@@ -3,7 +3,7 @@ title: "Workflow Extensions (Microsoft Dataverse) | Microsoft Docs" # Intent and
 description: "Learn how to add custom workflow activities to the workflow designer." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

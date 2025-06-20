@@ -3,7 +3,7 @@ title: "Send parallel requests (Dataverse)| Microsoft Docs"
 description: "When your application needs to send a large number of requests to Dataverse you can achieve much higher total throughput by sending requests in parallel using multiple threads."
 ms.date: 01/02/2023
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
 search.audienceType: 

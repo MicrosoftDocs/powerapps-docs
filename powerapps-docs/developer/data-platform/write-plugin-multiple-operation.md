@@ -4,7 +4,7 @@ description: Learn how to write plug-ins that use the bulk operation messages Cr
 ms.date: 08/02/2023
 ms.topic: how-to
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 

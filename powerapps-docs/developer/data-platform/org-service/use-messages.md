@@ -4,7 +4,7 @@ description: "Understand how messages are used to invoke operations using the SD
 ms.collection: get-started
 ms.date: 03/26/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: how-to
 search.audienceType: 

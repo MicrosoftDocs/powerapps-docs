@@ -4,7 +4,7 @@ description: Learn how to compose a GET request using the Microsoft Dataverse We
 ms.topic: how-to
 ms.date: 05/30/2023
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

@@ -3,7 +3,7 @@ title: "Web API Complex and Enumeration types (Microsoft Dataverse)| Microsoft D
 description: "Describes OData Complex and Enumeration types elements defined for the Dataverse Web API."
 ms.date: 08/30/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.service: powerapps
 applies_to: 

@@ -3,7 +3,7 @@ title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) |
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
 ms.date: 12/04/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: quickstart
 search.audienceType: 

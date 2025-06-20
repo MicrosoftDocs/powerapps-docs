@@ -5,7 +5,7 @@ ms.date: 12/16/2024
 ms.reviewer: pehecke
 ms.topic: how-to
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

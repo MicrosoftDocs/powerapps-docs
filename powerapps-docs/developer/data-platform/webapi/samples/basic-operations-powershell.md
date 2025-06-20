@@ -3,7 +3,7 @@ title: "Web API Basic Operations Sample (PowerShell)"
 description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse table rows, using the Dataverse Web API with PowerShell and Visual Studio Code."
 ms.date: 01/20/2024
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

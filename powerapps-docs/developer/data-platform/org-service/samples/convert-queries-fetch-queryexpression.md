@@ -3,7 +3,7 @@ title: "Sample: Convert queries between Fetch and QueryExpression"
 description: This sample shows how to convert queries between FetchXML and QueryExpression
 ms.date: 04/03/2022
 author: MsSQLGirl
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
