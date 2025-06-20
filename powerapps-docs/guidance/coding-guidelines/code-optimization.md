@@ -40,7 +40,7 @@ Concurrent(
 
 ### Coalesce Function
 
-The `Coalesce` function evaluates its arguments in order and returns the first value that's not blank or an empty string. Use this function to replace a blank value or empty string with a different value, but leave nonblank and nonempty string values unchanged. If all arguments are blank or empty strings, the function returns blank. `Coalesce` is a good way to convert empty strings to blank values
+The `Coalesce` function evaluates its arguments in order and returns the first value that's not blank or an empty string. Use this function to replace a blank value or empty string with a different value, but leave nonblank and nonempty string values unchanged. If all arguments are blank or empty strings, the function returns blank. `Coalesce` is a good way to convert empty strings to blank values.
 
 
 For example:
@@ -122,7 +122,7 @@ Refer to <https://Power Apps.microsoft.com/en-us/blog/app-startscreen-a-new-decl
 
 ### Named formulas
 
-Named formulas are static or constants that can be defined on App. Formulas section. Once declared in App. Formulas, they can be used anywhere in the app and their value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
+Named formulas are static or constants that can be defined on App.Formulas section. Once declared in App.Formulas, they can be used anywhere in the app and their value always remain up to date. Named Formulas in Power Apps enable the definition of values or sets of values that are automatically managed and updated by the platform. This functionality transfers the responsibility of value calculation and upkeep from the developer to Power Apps, streamlining the development process. Named Formulas in Power Apps are a powerful functionality that can significantly enhance app performance and maintainability.
 
 Named formulas can also address is declaring app themes. In many cases where enterprise apps are build, we want the app to have common themes to give consistent look and user experience. To create a theme, there are 10s and 100s of variables that need to be declared on App OnStart. This increased code length and initialization time of the app.
 
@@ -139,7 +139,7 @@ Set(BoardBlank, "---------------------------------------------------------------
 Set(BoardClassic, "RNBQKBNR\_\_PPPPPPPP------------------------\_--------\_\_pppppppp\_\_rnbqkbnr\_\_0000000000");
 ```
 
-The code can be moved to App. Formulas as follows:
+The code can be moved to App.Formulas as follows:
 
 ```powerappsfl
 BoardSize = 70;
@@ -183,9 +183,9 @@ Named Formulas in the `App.Formulas` property provide a more flexible and declar
 
 ### User defined functions
 
-User Defined Functions is an experimental functionality in Power Apps Authoring Studio that enables users to create their own custom function.
+User Defined Functions in Power Apps Authoring Studio enables users to create their own custom function.
 
-To use this feature, under experimental settings, select New analysis engine and User-defined function (UDFs)
+To use this feature, under preview settings, turn on User-defined function (UDFs). Preview functionality should not be used in production, which is why it is disabled by default, but will become generally available soon.
 
 Define a formula under `App.Formulas` as follows:
 
