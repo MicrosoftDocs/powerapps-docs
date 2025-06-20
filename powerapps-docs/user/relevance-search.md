@@ -23,6 +23,9 @@ With Dataverse search turned **On**, the search box is always available at the t
 
 Turn on Dataverse search to give users a better search experience in model-driven apps. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
 
+[!Note]
+If Dataverse search is set to "Default", the search box is not visible for searching content and generative AI experiences can be enabled.
+
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
 
