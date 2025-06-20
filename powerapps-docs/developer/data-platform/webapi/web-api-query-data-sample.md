@@ -3,7 +3,7 @@ title: Web API query data sample
 description: Use this sample code to learn how to query data using the Dataverse Web API. These samples use C# and client-side JavaScript.
 ms.topic: sample
 ms.date: 04/14/2023
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

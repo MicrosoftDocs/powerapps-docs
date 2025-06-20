@@ -2,7 +2,7 @@
 title: "Sample: IsSystemAdmin custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a plug-in to support a custom API"
 ms.date: 09/27/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample

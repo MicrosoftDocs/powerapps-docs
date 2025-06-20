@@ -3,7 +3,7 @@ title: Write plug-ins for CreateMultiple and UpdateMultiple
 description: Learn how to write plug-ins that use the bulk operation messages CreateMultiple and UpdateMultiple to operate on multiple rows of data in a Microsoft Dataverse table.
 ms.date: 08/02/2023
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer

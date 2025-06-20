@@ -3,7 +3,7 @@ title: Retrieve a table row using the Web API
 description: Learn how to compose a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier.
 ms.topic: how-to
 ms.date: 05/30/2023
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

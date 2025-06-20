@@ -4,7 +4,7 @@ description: Learn how to use the Web API to send a POST request to create a tab
 ms.date: 12/16/2024
 ms.service: powerapps
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

@@ -2,7 +2,7 @@
 title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#."
 ms.date: 09/02/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

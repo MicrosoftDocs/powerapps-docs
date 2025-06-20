@@ -2,7 +2,7 @@
 title: "Client-side JavaScript using Web API in model-driven apps | Microsoft Docs"
 description: "JavaScript can be used in HTML web resources, form scripts or ribbon commands to perform operations on Microsoft Dataverse for Apps data using Web API"
 ms.date: 04/06/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

@@ -2,7 +2,7 @@
 title: "Use OrganizationServiceContext (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The OrganizationServiceContext class lets you track changes, manage identities and relationships, and gives you access to the LINQ provider." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 11/10/2023
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: how-to

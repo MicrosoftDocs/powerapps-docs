@@ -4,7 +4,7 @@ description: "Learn how to write plug-in code and then register the compiled ass
 ms.date: 02/14/2025
 ms.reviewer: "pehecke"
 ms.topic: tutorial
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

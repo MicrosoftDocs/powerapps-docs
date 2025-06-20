@@ -6,7 +6,7 @@ ms.date: 09/07/2021
 
 ms.custom: 
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 ms.reviewer: pehecke

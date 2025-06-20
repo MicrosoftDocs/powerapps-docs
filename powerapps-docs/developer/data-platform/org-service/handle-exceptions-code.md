@@ -5,7 +5,7 @@ ms.collection: get-started
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 search.audienceType: 
   - developer

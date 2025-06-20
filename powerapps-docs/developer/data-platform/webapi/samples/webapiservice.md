@@ -2,7 +2,7 @@
 title: "WebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API"
 ms.date: 08/29/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 search.audienceType: 

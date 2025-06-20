@@ -3,7 +3,7 @@ title: "Implement all types of queries when filtering results using PreOperation
 description: "For best performance and consistent results for all applications you must implement filtering for all types of queries that can be used with plug-ins that are registered for the PreOperation stage of RetrieveMultiple."
 suite: powerapps
 ms.date: 04/03/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: article

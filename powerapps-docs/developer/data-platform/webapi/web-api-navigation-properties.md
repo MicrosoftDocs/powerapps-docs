@@ -3,7 +3,7 @@ title: Web API navigation properties
 description: Learn about OData navigation property elements that are defined for EntityTypes in the Microsoft Dataverse Web API.
 ms.topic: how-to
 ms.date: 04/06/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 ms.service: powerapps

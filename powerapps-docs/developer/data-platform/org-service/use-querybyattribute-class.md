@@ -2,7 +2,7 @@
 title: "Use the QueryByAttribute class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the QueryByAttribute class to build queries that test a set of columns against a set of values"
 ms.date: 04/03/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: "article"

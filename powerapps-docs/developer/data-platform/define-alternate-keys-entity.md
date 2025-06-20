@@ -4,7 +4,7 @@ description: "The topic explains about how to create alternate keys for a table.
 ms.date: 09/23/2024
 ms.reviewer: pehecke
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

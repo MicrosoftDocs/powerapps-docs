@@ -4,7 +4,7 @@ description: "Learn how to debug plug-ins using the Plug-in Registration tool." 
 ms.date: 05/10/2022
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

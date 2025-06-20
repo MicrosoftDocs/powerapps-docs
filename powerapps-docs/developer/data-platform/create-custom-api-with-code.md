@@ -1,7 +1,7 @@
 ---
 title: "Create a custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.date: 09/27/2022
 ms.topic: how-to

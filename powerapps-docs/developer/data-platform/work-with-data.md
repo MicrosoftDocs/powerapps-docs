@@ -4,7 +4,7 @@ description: "Microsoft Dataverse provides web services and APIs that you can us
 ms.date: 05/20/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

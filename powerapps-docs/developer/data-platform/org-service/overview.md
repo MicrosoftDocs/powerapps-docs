@@ -2,7 +2,7 @@
 title: "Use the SDK for .NET"
 description: "Learn how you can use the Microsoft Dataverse SDK for .NET to work with business data."
 ms.date: 09/27/2022
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: pehecke
 ms.topic: overview

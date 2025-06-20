@@ -2,7 +2,7 @@
 title: "Sample: SDK for .NET Use bulk operations (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample shows how to perform bulk create and update operations using several different approaches including the use of CreateMultipleRequest and UpdateMultipleRequest classes. The messages for these request classes are optimized to provide the most performant way to create or update records with Dataverse."
 ms.date: 06/01/2023
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 ms.reviewer: jdaly
 ms.topic: sample

@@ -4,7 +4,7 @@ description: "Learn how to register a plug-in assembly and step with the Microso
 ms.date: 08/28/2024
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

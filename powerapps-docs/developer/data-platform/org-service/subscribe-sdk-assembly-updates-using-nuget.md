@@ -5,7 +5,7 @@ ms.collection: get-started
 ms.date: 04/14/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: MicroSri # GitHub ID
+author: MsSQLGirl # GitHub ID
 ms.author: sriknair # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer

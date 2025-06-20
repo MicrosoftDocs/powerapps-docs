@@ -4,7 +4,7 @@ description: "Learn about the Entity class used for data operations using the Mi
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 search.audienceType: 
   - developer

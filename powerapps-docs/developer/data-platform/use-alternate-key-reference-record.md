@@ -4,7 +4,7 @@ description: Alternate keys can be used to create instances of Entity and Entity
 ms.date: 05/30/2023
 ms.reviewer: pehecke
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

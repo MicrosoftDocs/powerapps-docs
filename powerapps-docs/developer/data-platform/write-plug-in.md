@@ -4,7 +4,7 @@ description: "Learn how to write custom code to be executed in response to data 
 ms.date: 03/26/2024
 ms.reviewer: pehecke
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

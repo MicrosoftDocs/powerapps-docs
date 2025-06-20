@@ -4,7 +4,7 @@ description: "Learn about using the Metadata Diagram tool to visually show entit
 ms.date: 01/04/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: MicroSri # GitHub ID
+author: MsSQLGirl # GitHub ID
 ms.author: sriknair # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 

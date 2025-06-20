@@ -4,7 +4,7 @@ description: "Learn how to update and delete table rows using the SDK for .NET."
 ms.date: 07/22/2023
 ms.reviewer: pehecke
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.author: sriknair
 search.audienceType: 
   - developer

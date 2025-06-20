@@ -5,7 +5,7 @@ ms.collection: get-started
 ms.date: 01/24/2024
 ms.reviewer: pehecke
 ms.topic: article
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
 ms.author: sriknair
 search.audienceType: 

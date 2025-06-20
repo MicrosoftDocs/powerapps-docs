@@ -2,11 +2,11 @@
 title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze performance data on plug-ins execution."
 ms.date: 08/15/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: MicroSri
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
