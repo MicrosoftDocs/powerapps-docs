@@ -50,12 +50,9 @@ ms.collection:
 - [Build an agent to automate your business process (preview)](../canvas-apps/agent-builder.md)
 - [FAQ for the Plan designer](faq-plan-designer.md)
 - [Overview of Plan designer](../plan-designer/plan-designer.md)
-- [FAQ for rename controls in canvas apps with Copilot ](faq-rename-control.md)
+- [FAQ for rename controls in canvas apps with Copilot](faq-rename-control.md)
 - [Rename controls in canvas apps with Copilot (preview)](../canvas-apps/controls/copilot-rename-controls.md)
-<!-- TODO Add after PR 11054 is merged
-
 - [FAQ for Agent APIs](faq-agent-api-component.md)
 - [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 - [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md) 
--->
 - [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md)

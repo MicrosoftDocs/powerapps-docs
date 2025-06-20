@@ -46,8 +46,6 @@ In addition, makers are strongly encouraged to indicate to users where AI has be
 
 - [Bring intelligence into your component using Agent Xrm APIs (preview)](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 - [Bring intelligence into your app using Agent Xrm APIs (preview)](../../developer/model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
-<!-- TODO: Remove comment after PR 11197 is merged
-- [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md) 
--->
+- [Use Agent Response component in the model-driven app forms (preview)](../model-driven-apps/form-designer-add-configure-agent-response.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
