@@ -43,7 +43,7 @@ For more information about customizing your formula with tables, see these artic
   [Create an app from scratch](get-started-create-from-blank.md)<br>
   [Understand tables and records in Power Apps](working-with-tables.md)
 
-    > [!NOTE]
+  > [!NOTE]
   > To connect to data in an Excel workbook, host it in a cloud storage service like OneDrive. For more information, see [Connect to cloud-storage from Power Apps](connections/cloud-storage-blob-connections.md).
 
 ## Actions
