@@ -1,11 +1,11 @@
 ---
-title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Browse code samples of LINQ queries." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: MicroSri
-ms.author: sriknair
+title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs"
+description: "Browse code samples of LINQ queries."
+ms.date: 06/20/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: article
 search.audienceType: 
   - developer
 contributors:
@@ -17,13 +17,13 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This topic contains many code samples of LINQ queries.  
+This article contains many code samples of LINQ queries.  
   
 <a name="SimpleWhereClause"></a>
 
 ## Simple Where clause
 
- The following sample shows how to retrieve a list of accounts where the Name contains “Contoso”.  
+ The following sample shows how to retrieve a list of accounts where the Name contains "Contoso".  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -38,7 +38,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
- The following sample shows how to retrieve a list of accounts where the Name contains “Contoso” and Address1_City is “Redmond”.  
+ The following sample shows how to retrieve a list of accounts where the Name contains "Contoso" and Address1_City is "Redmond".  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -59,7 +59,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Join and simple Where clause
 
- The following sample shows how to retrieve the account Name and the contact LastName where the account Name contains “Contoso” and the contact LastName contains “Smith” and the contact is the Primary Contact for the account.  
+The following sample shows how to retrieve the account Name and the contact LastName where the account Name contains "Contoso" and the contact LastName contains "Smith" and the contact is the Primary Contact for the account.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -90,7 +90,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Distinct Operator
 
- The following sample shows how to retrieve a distinct list of contact last names. Although there may be duplicates, each name will be listed only once.  
+ The following sample shows how to retrieve a distinct list of contact last names. Although there might be duplicates, each name is listed only once.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -240,7 +240,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Late-binding left join
 
- The following sample shows a left join. A left join is designed to return parents with and without children from two sources. There is a correlation between parent and child, but no child may actually exist.  
+ The following sample shows a left join. A left join is designed to return parents with and without children from two sources. There's a correlation between parent and child, but no child might actually exist.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -266,7 +266,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Equals operator
 
- The following sample shows how to retrieve a list of contacts where the FirstName is “Colin”.  
+ The following sample shows how to retrieve a list of contacts where the FirstName is "Colin".  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -314,7 +314,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Not Equals operator
 
- The following sample shows how to retrieve a list of contacts where the Address1_City is not “Redmond”.  
+ The following sample shows how to retrieve a list of contacts where the Address1_City isn't "Redmond".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -335,7 +335,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
   
- The following sample shows how to retrieve a list of contacts where the FirstName is not “Colin”.  
+ The following sample shows how to retrieve a list of contacts where the FirstName isn't "Colin".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -361,7 +361,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use a method-based LINQ query with a Where clause
 
- The following sample shows how to retrieve a list of contacts where the LastName is “Smith” or contains “Smi”.  
+ The following sample shows how to retrieve a list of contacts where the LastName is "Smith" or contains "Smi".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -463,7 +463,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Contains operator
 
- The following sample shows how to retrieve contacts where the Description contains “Alpine”.  
+ The following sample shows how to retrieve contacts where the Description contains "Alpine".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -486,7 +486,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Does Not Contain operator
 
- The following sample shows how to retrieve contacts where the Description does not contain “Coho”.  
+ The following sample shows how to retrieve contacts where the Description doesn't contain "Coho".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -509,7 +509,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the StartsWith and EndsWith operators
 
- The following sample shows how to retrieve contacts where FirstName starts with “Bri”.  
+ The following sample shows how to retrieve contacts where FirstName starts with "Bri".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -528,7 +528,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 }
 ```  
 
- The following sample shows how to retrieve contacts where LastName ends with “cox”.  
+ The following sample shows how to retrieve contacts where LastName ends with "cox".
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -551,7 +551,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the And and Or operators
 
- The following sample shows how to retrieve contacts where Address1_City is “Redmond” or “Bellevue” and a CreditLimit that is greater than $200.  
+ The following sample shows how to retrieve contacts where Address1_City is "Redmond" or "Bellevue" and a CreditLimit that is greater than $200.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -661,7 +661,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the Skip and Take operators without paging
 
- The following sample shows how to retrieve just two rows after skipping two rows where the LastName is not “Parker” using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
+ The following sample shows how to retrieve just two rows after skipping two rows where the LastName isn't "Parker" using the [Skip](/dotnet/api/system.linq.enumerable.skip) and [Take](/dotnet/api/system.linq.enumerable.take)operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -686,7 +686,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
 ## Use the FirstOrDefault and SingleOrDefault operators
 
- The [FirstOrDefault](/dotnet/api/system.linq.enumerable.firstordefault) operator returns the first element of a sequence, or a default value if no element is found. The [SingleOrDefault](/dotnet/api/system.linq.enumerable.singleordefault) operator returns a single, specific element of a sequence, or a default value if that element is not found. The following sample shows how to use these operators.  
+ The [FirstOrDefault](/dotnet/api/system.linq.enumerable.firstordefault) operator returns the first element of a sequence, or a default value if no element is found. The [SingleOrDefault](/dotnet/api/system.linq.enumerable.singleordefault) operator returns a single, specific element of a sequence, or a default value if that element isn't found. The following sample shows how to use these operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -836,9 +836,9 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>
 
-## Use .value to retrieve the value of a column (attribute)
+## Accessing the value of a column (attribute)
 
- The following sample shows usage of Value to access the value of an attribute.  
+ The following sample shows usage of `Value` to access the value of an attribute.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))

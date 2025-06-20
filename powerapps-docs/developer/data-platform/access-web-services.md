@@ -3,11 +3,11 @@ title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
 ms.date: 06/10/2025
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: MicroSri
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

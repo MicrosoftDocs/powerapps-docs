@@ -4,9 +4,9 @@ description: "Describes special behavior in plug-ins and workflows for update ev
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

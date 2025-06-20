@@ -4,9 +4,9 @@ description: "Make data changes which bypass custom Dataverse logic."
 ms.date: 12/04/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

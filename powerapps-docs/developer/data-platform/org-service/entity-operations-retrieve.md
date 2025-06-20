@@ -1,11 +1,11 @@
 ---
-title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/18/2023
+title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes options available when retrieving a row programmatically."
+ms.date: 06/20/2025
 ms.reviewer: pehecke
 ms.topic: how-to
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
@@ -17,31 +17,31 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You will typically retrieve a row based on the results of a query and the query results should include a unique identifier for the row.
+You'll typically retrieve a row based on the results of a query and the query results should include a unique identifier for the row.
 
 > [!NOTE]
-> In the following examples the `accountid` variable represents the <xref:System.Guid> identifier for an account row.
+> In the following examples, the `accountid` variable represents the <xref:System.Guid> identifier for an account row.
 
-You have some options to define the data returned when you retrieve a row. You will use the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class to define which column (attribute) values you require.
+You have some options to define the data returned when you retrieve a row. You use the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class to define which column (attribute) values you require.
 
 
 > [!IMPORTANT]
-> When retrieving rows you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](../best-practices/work-with-data/retrieve-specific-columns-entity-via-query-apis.md)
+> When retrieving rows, you should only request the column values you need by setting the specific columns using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you shouldn't use this parameter set to true in production code. More information: [Don't retrieve Entity all columns via query APIs](../best-practices/work-with-data/retrieve-specific-columns-entity-via-query-apis.md)
 
-If you need to return related rows you can include a query with your retrieve request to define which related rows to return.
+If you need to return related rows, you can include a query with your retrieve request to define which related rows to return.
 
 ## Basic Retrieve
 
-You can retrieve individual rows using either the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> class to a reference row and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+You can retrieve individual rows using either the [IOrganizationService.Retrieve](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A) method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> class to a reference row and use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method.
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method.
+This example shows using the [](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A) method.
 
 ```csharp
 Entity entity = svc.Retrieve("account", accountid, new ColumnSet("name"));
 Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse> classes with the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method.
 
 ```csharp
 RetrieveRequest request = new RetrieveRequest()
@@ -55,16 +55,16 @@ Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
 > [!NOTE]
-> Most of the time you should use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method.
+> Most of the time you should use the [IOrganizationService.Retrieve](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A) method.
 >
-> Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. 
+> Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method for special circumstances as described below.
 > More information: 
 > - [Retrieve with related rows](#retrieve-with-related-rows)
 > - [Retrieve with an alternate key](#retrieve-with-an-alternate-key)
 
 ## Retrieve with related rows
 
-When you retrieve an individual row you can also include a query to include related rows by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.
+When you retrieve an individual row, you can also include a query to include related rows by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.
 
 You can define a query using any of the classes derived from <xref:Microsoft.Xrm.Sdk.Query.QueryBase> and associate it with a specific table row relationship. Add a collection of pairs of queries and relationships to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property using a <xref:Microsoft.Xrm.Sdk.RelationshipQueryCollection>.
 
@@ -111,6 +111,7 @@ Entity primaryContact = retrievedAccount
 
 Console.WriteLine("Primary Contact Fullname: {0}",primaryContact["fullname"]);
 ```
+
 The results of the sample could look like the following:
 
 ```
@@ -126,7 +127,7 @@ More information: [Query data using the SDK for .NET](entity-operations-query-da
 
 ## Retrieve with an alternate key
 
-If you have configured a table to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property.
+If you configured a table to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property.
 
 For example, if you define the `account` `accountnumber` column to be an alternate key, you can retrieve an account using the value of that column.
 
@@ -161,15 +162,15 @@ Entity entity = response.Entity;
 Console.WriteLine(entity["name"]);
 ```
 > [!NOTE]
-> Alternate keys are usually used only for data integration scenarios
+> Alternate keys are used only for data integration scenarios
 
 ## Retrieve records from elastic tables
 
-If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
+If you're retrieving elastic table data stored in partitions, be sure to specify the partition key when retrieving that data. More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Access Formatted values
 
-The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
+The method to access formatted values on a retrieve operation is the same you'll use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#formatted-values-are-returned-for-some-columns)
 
 <!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
 
