@@ -25,10 +25,10 @@ This article explains how to set up and use the Dataverse MCP server with Micros
 
 ## Prerequisites
 
-When using Dataverse MCP Server in Claude or VSCode GitHub copilot, you will need to create a local proxy for this. To do so, follow the steps:
+These are the prerequisites for using Dataverse MCP Server with Claude or GitHub Copilot in VSCode:
 1. [Create a Dataverse connection for the MCP configuration](#create-a-dataverse-connection-for-the-mcp-configuration)
-1. [Install the Dataverse MCP server local proxy]()
-1. [Get the tenant ID of your Dataverse environment]()
+1. [Install the Dataverse MCP server local proxy](#install-the-dataverse-mcp-server-local-proxy)
+1. [Get the tenant ID of your Dataverse environment](#get-the-tenant-id-of-your-dataverse-environment)
 
 Using Dataverse MCP Server in Copilot Studio does not require any of the above pre-requisites. 
 
