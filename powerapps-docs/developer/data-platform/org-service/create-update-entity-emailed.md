@@ -1,11 +1,11 @@
 ---
-title: "Create and update a table to send email activities to rows (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about creating a table that contains an email address column you can use to send email activities to rows for that table." 
+title: "Create and update a table to send email activities to rows (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about creating a table that contains an email address column you can use to send email activities to rows for that table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "NHelgren" 
-ms.author: "jdaly"
+author: "NHelgren" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

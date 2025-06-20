@@ -1,13 +1,13 @@
 ---
-title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" 
-description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." 
+title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
 ms.date: 12/04/2024
 ms.reviewer: pehecke
 ms.topic: how-to
-author: ritesp 
+author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: ritesp
+ms.author: ritesp # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 contributors:

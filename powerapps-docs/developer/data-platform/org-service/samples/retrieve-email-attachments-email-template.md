@@ -1,6 +1,6 @@
 ---
-title: "Sample: Retrieve email attachements for an email template(Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to retrieve email attachements associated with an email template" 
+title: "Sample: Retrieve email attachements for an email template(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to retrieve email attachements associated with an email template" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

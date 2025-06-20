@@ -1,6 +1,6 @@
 ---
-title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" 
-description: "Browse code samples of LINQ queries." 
+title: "Linq query examples (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Browse code samples of LINQ queries." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: MsSQLGirl
 ms.author: jukoesma

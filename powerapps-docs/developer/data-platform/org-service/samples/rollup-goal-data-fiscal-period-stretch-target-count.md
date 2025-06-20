@@ -1,6 +1,6 @@
 ---
-title: "Sample: Rollup goal data for a fiscal period against stretch target count (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to rollup goal data for a fiscal period against stretch target count." 
+title: "Sample: Rollup goal data for a fiscal period against stretch target count (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to rollup goal data for a fiscal period against stretch target count." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

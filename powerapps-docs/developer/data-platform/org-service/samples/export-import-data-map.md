@@ -1,13 +1,13 @@
 ---
-title: "Sample: Export and import data map (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to create a data map and export it" 
+title: "Sample: Export and import data map (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to create a data map and export it" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 05/24/2022
 ms.reviewer: "pehecke"
 
 ms.topic: sample
-author: "mayadumesh" 
-ms.author: "jdaly"
+author: "mayadumesh" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---

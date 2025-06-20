@@ -1,14 +1,14 @@
 ---
-title: "Enable and disable duplicate detection (Microsoft Dataverse) | Microsoft Docs" 
-description: "Describes how to enable duplicate detection for all data tables in an organization or for a specific table. Also, this article describes how to disable duplicate detection globally or for a specific table type." 
+title: "Enable and disable duplicate detection (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to enable duplicate detection for all data tables in an organization or for a specific table. Also, this article describes how to disable duplicate detection globally or for a specific table type." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" 
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

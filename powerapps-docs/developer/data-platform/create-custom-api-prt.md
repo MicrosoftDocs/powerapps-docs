@@ -1,12 +1,12 @@
 ---
-title: "Create a custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs" 
-description: "Create a custom API using the plug-in registration tool" 
+title: "Create a custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Create a custom API using the plug-in registration tool" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/27/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: marcelbf 
+author: marcelbf # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: marcelbf
+ms.author: marcelbf # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

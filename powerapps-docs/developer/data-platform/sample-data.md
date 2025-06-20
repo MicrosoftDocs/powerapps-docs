@@ -1,12 +1,12 @@
 ---
-title: "Add and remove sample data (Microsoft Dataverse) | Microsoft Learn" 
-description: "Learn how to install or uninstall sample data using the Web API or SDK for .NET." 
+title: "Add and remove sample data (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to install or uninstall sample data using the Web API or SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/28/2022
 ms.reviewer: pehecke
 ms.topic: how-to
-author: JimDaly 
+author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

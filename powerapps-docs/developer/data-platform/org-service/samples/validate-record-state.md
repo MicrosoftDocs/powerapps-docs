@@ -1,6 +1,6 @@
 ---
-title: " Validate and set record state (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample showcases how to validate a change of state of a table and set state." 
+title: " Validate and set record state (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to validate a change of state of a table and set state." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
 author: mkannapiran
 ms.author: kamanick

@@ -1,14 +1,14 @@
 ---
-title: "Use of Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" 
+title: "Use of Office365 authentication with Microsoft Dataverse (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the code changes required in applications that use Office365 authentication."
 ms.custom: ""
 ms.date: 12/04/2024
 ms.reviewer: "pehecke"
 
 ms.topic: how-to
-author: "phecke" 
+author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---

@@ -4,9 +4,9 @@ description: "Learn about available tools and resources when working with soluti
 ms.date: 03/27/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: shmcarth 
+author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: shmcarth
+ms.author: shmcarth # MSFT alias of Microsoft employees only
 ---
 
 # Developer tools and resources

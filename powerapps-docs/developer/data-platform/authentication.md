@@ -1,14 +1,14 @@
 ---
-title: "Authenticate with Microsoft Dataverse web services (Dataverse) | Microsoft Docs" 
-description: "Introduces authentication options that depend on the software framework you use." 
+title: "Authenticate with Microsoft Dataverse web services (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Introduces authentication options that depend on the software framework you use." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "paulliew" 
+author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

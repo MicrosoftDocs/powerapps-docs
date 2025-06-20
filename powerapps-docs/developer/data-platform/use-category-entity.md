@@ -1,6 +1,6 @@
 ---
-title: Structure Dataverse data with nested categories in Microsoft Dataverse 
-description: Discover how to structure the table rows using the Category table. 
+title: Structure Dataverse data with nested categories in Microsoft Dataverse # Intent and product brand in a unique string of 43-59 chars including spaces
+description: Discover how to structure the table rows using the Category table. # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 05/04/2021
 ms.reviewer: "pehecke"
@@ -8,7 +8,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

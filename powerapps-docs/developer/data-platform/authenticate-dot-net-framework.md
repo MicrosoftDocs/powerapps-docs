@@ -1,14 +1,14 @@
 ---
-title: "Authenticating .NET applications (Microsoft Dataverse) | Microsoft Docs" 
-description: "Provides an overview of .NET based application authentication with Microsoft Dataverse web services." 
+title: "Authenticating .NET applications (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Provides an overview of .NET based application authentication with Microsoft Dataverse web services." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/06/2022
 ms.reviewer: "pehecke"
 
 ms.topic: concept-article
-author: "paulliew" 
+author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

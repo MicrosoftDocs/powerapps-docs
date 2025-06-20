@@ -1,6 +1,6 @@
 ---
-title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn how to debug plug-ins using the Plug-in Registration tool." 
+title: "Debug plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to debug plug-ins using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/10/2022
 ms.reviewer: "pehecke"
 ms.topic: how-to

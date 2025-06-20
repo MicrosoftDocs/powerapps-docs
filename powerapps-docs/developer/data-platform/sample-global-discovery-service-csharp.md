@@ -1,6 +1,6 @@
 ---
-title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API and the Dataverse.Client.ServiceClient" 
+title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API and the Dataverse.Client.ServiceClient" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/04/2024
 author: ImadYanni
 ms.author: iyanni

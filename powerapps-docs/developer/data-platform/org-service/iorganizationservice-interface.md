@@ -1,6 +1,6 @@
 ---
-title: "IOrganizationService Interface (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about the common web service methods exposed to perform data operations in Microsoft Dataverse." 
+title: "IOrganizationService Interface (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the common web service methods exposed to perform data operations in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.date: 09/30/2022
 ms.reviewer: "pehecke"

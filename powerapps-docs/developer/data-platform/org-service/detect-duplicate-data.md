@@ -1,13 +1,13 @@
 ---
-title: "Detect duplicate data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" 
-description: "SDK for .NET allows you to detect duplicate rows in Microsoft Dataverse to maintain integrity of data" 
+title: "Detect duplicate data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "SDK for .NET allows you to detect duplicate rows in Microsoft Dataverse to maintain integrity of data" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/09/2021
 ms.reviewer: "pehecke"
 
 ms.topic: how-to
-author: "mayadumesh" 
-ms.author: "jdaly"
+author: "mayadumesh" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

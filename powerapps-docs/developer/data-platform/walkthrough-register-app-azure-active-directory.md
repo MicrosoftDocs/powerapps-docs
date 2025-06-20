@@ -5,9 +5,9 @@ keywords: ""
 ms.date: 02/24/2025
 ms.topic: tutorial
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
-author: "paulliew" 
+author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "paulliew"
+ms.author: "paulliew" # MSFT alias of Microsoft employees only
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer

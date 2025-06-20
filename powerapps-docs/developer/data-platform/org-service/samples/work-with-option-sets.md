@@ -1,6 +1,6 @@
 ---
-title: "Sample: Work with choices (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to work with choices" 
+title: "Sample: Work with choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to work with choices" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/06/2022
 author: mkannapiran
 ms.author: kamanick

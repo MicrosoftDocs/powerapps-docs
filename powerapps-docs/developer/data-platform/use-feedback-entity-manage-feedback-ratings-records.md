@@ -1,6 +1,6 @@
 ---
-title: "Use the Feedback table to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about the feedback table to obtain feedback and ratings for the records." 
+title: "Use the Feedback table to manage feedback and ratings for records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the feedback table to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
@@ -8,7 +8,7 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: JimDaly #TODO: NoOwner
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

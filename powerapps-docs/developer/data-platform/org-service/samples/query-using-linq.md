@@ -1,13 +1,13 @@
 ---
-title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample provides many examples of Language-Integrated Query (LINQ) with data from Dataverse." 
+title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample provides many examples of Language-Integrated Query (LINQ) with data from Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
 
 ms.topic: sample
-author: "phecke" 
-ms.author: "pehecke"
+author: "phecke" # GitHub ID
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---

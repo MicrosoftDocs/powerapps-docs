@@ -1,14 +1,14 @@
 ---
-title: "Upload and manage document templates (Microsoft Dataverse) | Microsoft Docs" 
+title: "Upload and manage document templates (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "In Microsoft Dataverse, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" 
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

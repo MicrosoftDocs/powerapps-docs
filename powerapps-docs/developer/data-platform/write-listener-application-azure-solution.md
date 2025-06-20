@@ -1,6 +1,6 @@
 ---
-title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" "
-description: "Learn how to write an Azure solution listener application that can read Dataverse messages posted to the Azure Service Bus." "
+title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
+description: "Learn how to write an Azure solution listener application that can read Dataverse messages posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
 ms.date: 08/21/2024
 author: jaredha
 ms.author: jaredha

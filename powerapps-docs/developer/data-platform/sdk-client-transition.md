@@ -1,14 +1,14 @@
 ---
-title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" 
-description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." 
+title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/17/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "phecke" 
+author: "phecke" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---

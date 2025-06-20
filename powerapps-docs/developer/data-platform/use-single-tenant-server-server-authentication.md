@@ -1,13 +1,13 @@
 ---
-title: "Use single-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn how to access Microsoft Dataverse data in a single tenant from an application or service without explicit user authentication." 
+title: "Use single-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to access Microsoft Dataverse data in a single tenant from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/06/2023
 ms.reviewer: "pehecke"
 ms.topic: how-to
-author: "paulliew" 
+author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 ---

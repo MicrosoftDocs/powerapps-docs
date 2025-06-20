@@ -1,6 +1,6 @@
 ---
-title: "Customize table definitions (Microsoft Dataverse) | Microsoft Docs" 
-description: "By defining or changing the table definitions, you can control the capabilities of a table." 
+title: "Customize table definitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "By defining or changing the table definitions, you can control the capabilities of a table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/04/2022
 ms.reviewer: pehecke
 ms.topic: article

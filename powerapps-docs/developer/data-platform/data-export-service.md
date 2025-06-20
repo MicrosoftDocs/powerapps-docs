@@ -1,12 +1,12 @@
 ---
-title: "Data export service (Microsoft Dataverse) | Microsoft Docs" 
-description: "Capabilities, prerequisites, API, and programming of the Data Export Service." 
+title: "Data export service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/02/2021
 ms.reviewer: pehecke
 ms.topic: article
-author: sabinn-msft 
+author: sabinn-msft # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: sabinn
+ms.author: sabinn # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

@@ -1,12 +1,12 @@
 ---
-title: "Saved queries (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn how saved queries enhance the search capabilities of Microsoft Dataverse." 
+title: "Saved queries (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how saved queries enhance the search capabilities of Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "caburk" 
+author: "caburk" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

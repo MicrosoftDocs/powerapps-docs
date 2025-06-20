@@ -1,6 +1,6 @@
 ---
-title: "Sample: Send bulk email and monitor results (Microsoft Dataverse) | Microsoft Docs" 
-description: "This samples hows how to send bulk emails and monitor results" 
+title: "Sample: Send bulk email and monitor results (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This samples hows how to send bulk emails and monitor results" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

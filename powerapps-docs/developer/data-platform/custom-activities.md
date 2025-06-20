@@ -1,14 +1,14 @@
 ---
-title: "Custom activities (Microsoft Dataverse) | Microsoft Docs" 
-description: "Custom activities support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS)" 
+title: "Custom activities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Custom activities support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS)" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 03/25/2018
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" 
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

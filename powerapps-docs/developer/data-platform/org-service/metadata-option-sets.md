@@ -1,6 +1,6 @@
 ---
-title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" 
-description: "Describes how to work with global and local choices (option sets) in code." 
+title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to work with global and local choices (option sets) in code." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 01/09/2023
 author: mkannapiran
 ms.author: kamanick

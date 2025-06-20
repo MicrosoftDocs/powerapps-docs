@@ -1,6 +1,6 @@
 ---
-title: "Sample: Work with activity party records (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to work with activity party records" 
+title: "Sample: Work with activity party records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to work with activity party records" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/17/2024
 author: phecke
 ms.author: pehecke

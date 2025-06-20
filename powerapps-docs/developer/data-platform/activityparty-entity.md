@@ -1,10 +1,10 @@
 ---
-title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs" 
+title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
 ms.date: 01/30/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: DanaMartens 
+author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dmartens
 search.audienceType: 

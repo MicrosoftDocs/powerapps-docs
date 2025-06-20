@@ -1,13 +1,13 @@
 ---
-title: "Supported customizations for Microsoft Dataverse" 
-description: "Learn how you can customize Microsoft Dataverse using available tools." 
+title: "Supported customizations for Microsoft Dataverse" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.date: 09/02/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: shmcarth 
+author: shmcarth # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: shmcarth
+ms.author: shmcarth # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:

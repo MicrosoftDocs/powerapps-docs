@@ -1,6 +1,6 @@
 ---
-title: "Sample: Convert fax to task (Microsoft Dataverse) | Microsoft Docs" 
-description: "Sample that showcases how to convert a fax into a task " 
+title: "Sample: Convert fax to task (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Sample that showcases how to convert a fax into a task " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly

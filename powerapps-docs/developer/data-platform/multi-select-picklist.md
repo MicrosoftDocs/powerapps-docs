@@ -1,6 +1,6 @@
 ---
-title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about choices columns that allow storing multiple choices in a single column." 
+title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about choices columns that allow storing multiple choices in a single column." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 01/09/2023
 ms.reviewer: jdaly
 ms.topic: article

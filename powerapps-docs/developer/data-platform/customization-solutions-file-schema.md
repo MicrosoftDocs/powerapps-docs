@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "schemas"
 ms.assetid: 71e3e594-0240-4af1-99b4-135042b7a000
 caps.latest.revision: 19
-author: "shmcarth" 
+author: "shmcarth" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly"
 search.audienceType: 

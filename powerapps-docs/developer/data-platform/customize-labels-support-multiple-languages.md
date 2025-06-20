@@ -1,12 +1,12 @@
 ---
-title: "Customize labels to support multiple languages (Microsoft Dataverse) | Microsoft Docs" 
-description: "Learn about customizing labels to support multiple languages." 
+title: "Customize labels to support multiple languages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about customizing labels to support multiple languages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/11/2021
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh 
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: mayadu
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

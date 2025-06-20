@@ -1,14 +1,14 @@
 ---
-title: "Time zone tables (Microsoft Dataverse) | Microsoft Docs" 
-description: "The time zone tables contain time zone information, such as supported time zone, time zone code, localized time zone, storing information on how times are calculated." 
+title: "Time zone tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The time zone tables contain time zone information, such as supported time zone, time zone code, localized time zone, storing information on how times are calculated." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/27/2020
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" 
+author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly"
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Sample: Work with views (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to work with views" 
+title: "Sample: Work with views (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to work with views" # 115-145 characters including spaces. This abstract displays in the search result.
 author: caburk
 ms.author: caburk
 ms.date: 06/10/2022

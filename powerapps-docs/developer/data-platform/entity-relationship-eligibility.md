@@ -1,12 +1,12 @@
 ---
-title: "Table relationship eligibility (Microsoft Dataverse) | Microsoft Docs" 
-description: "The article lists the messages that you can use to determine whether tables can participate in relationships" 
+title: "Table relationship eligibility (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The article lists the messages that you can use to determine whether tables can participate in relationships" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 07/20/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: mayadumesh 
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: mayadu
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---

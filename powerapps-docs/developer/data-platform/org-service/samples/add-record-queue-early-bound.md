@@ -1,6 +1,6 @@
 ---
-title: "Sample: Add a record to queue (Microsoft Dataverse) | Microsoft Docs" 
-description: "This sample shows how to add a record to a queue." 
+title: "Sample: Add a record to queue (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to add a record to a queue." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
