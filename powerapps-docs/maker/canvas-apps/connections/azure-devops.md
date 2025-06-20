@@ -38,8 +38,8 @@ You need the following:
 
 To connect to Azure DevOps, [edit](../edit-app.md) the [blank canvas app](../create-blank-app.md), and add the **Azure DevOps** data source.
 
-> [!div class="mx-imgBorder"]
->![Screenshot of connecting to Azure DevOps in the data source selection pane.](./media/azure-devops/add-data-source.png "Connect to Azure DevOps")
+
+:::image type="content" source="./media/azure-devops/add-data-source.png" alt-text="Screenshot of connecting to Azure DevOps in the data source selection pane.":::
 
 If you don't have an Azure DevOps connection, select **Connect**, follow the prompts to enter your details, and allow the app to connect.
 
@@ -51,28 +51,28 @@ In this section, you use the [ListQueriesInFolder](/connectors/visualstudioteams
 
 1. Enter the following formula for the **Items** property of the gallery. Replace the example parameter values with your own values.
 
-        ```power-fx
+    ```power-fx
     AzureDevOps.ListQueriesInFolder("Project", "Organization", "Folder").value
     ```
 
 
-> [!div class="mx-imgBorder"]
->![List queries in folder using formula added to Items property of the vertical gallery.](./media/azure-devops/list-queries-in-folder.png "List queries in folder using formula added to Items property of the vertical gallery.")
+:::image type="content" source="./media/azure-devops/list-queries-in-folder.png" alt-text="Screenshot of list queries in folder using formula added to Items property of the vertical gallery.":::
 
 The example uses the variables "Project", "Organization", and "Folder". The actual values are in the text boxes below the formula bar (highlighted). You find your Project and Organization values in the URL used to connect to Azure DevOps. The Folder is usually "Shared Queries" or "My Queries".
 
-> [!div class="mx-imgBorder"]
->![Locate the project and organization name for your Azure Dev Ops instance.](./media/azure-devops/find-azuredevops-project-name.png "Locate the project and organization name for your Azure Dev Ops instance.")
 
-If you get the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.<br>
-"AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' isn't authorized to access this resource."}
+:::image type="content" source="./media/azure-devops/find-azuredevops-project-name.png" alt-text="Screenshot of locating the project and organization name for your Azure DevOps instance.":::
+
+If you get the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.
+
+"AzureDevOps.ListQueriesInFolder failed:{\"status\":401,\"message\":\"TF400813:The user 'GUID' isn't authorized to access this resource.\"}"
 
 1. Set the **Layout** for the gallery to **Title and subtitle**.
 
 1. Choose the fields appropriate for Azure DevOps as **Name** and **FolderOptions** for the title and subtitles.
 
-> [!div class="mx-imgBorder"]
->![Gallery fields for listing queries.](./media/azure-devops/query-list-fields.png "Gallery fields for listing queries")
+
+:::image type="content" source="./media/azure-devops/query-list-fields.png" alt-text="Screenshot of gallery fields for listing queries.":::
 
 ## Step 3 - List work items
 
@@ -82,21 +82,21 @@ Use the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-resu
 
 1. Enter the following formula for the **Items** property of the gallery. Replace the example parameter values with your project and organization names.
 
-        ```power-fx
+    ```power-fx
     AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id), "Organization").value
     ```
 
-> [!div class="mx-imgBorder"]
->![Get query results from existing gallery based on the query selected..](./media/azure-devops/get-query-results.png "Get query results from existing gallery based on the query selected.")
+
+:::image type="content" source="./media/azure-devops/get-query-results.png" alt-text="Screenshot of get query results from existing gallery based on the query selected.":::
 
 This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action with the project name, query ID, and organization name. The query ID in this example (`Gallery2.Selected.Id`) refers to the query selected from the list of queries available through the gallery added earlier. Replace the gallery name as needed.
 
-
 ### Add dynamic return values to your gallery
+
 The result of **GetQueryResultsV2** is dynamic, so the values are dynamic as well.
 
-> [!div class="mx-imgBorder"]
-> ![Show work item fields of title, work item type.](./media/azure-devops/dynamic-return-results-message.png "Get query results from existing gallery based on the query selected.")
+
+:::image type="content" source="./media/azure-devops/dynamic-return-results-message.png" alt-text="Screenshot of work item fields of title, work item type.":::
 
 But you can access some of the values. Azure DevOps returns a basic set of values for all typed items. Select the data card in the gallery and insert two text labels. Set the text property of the labels as follows:
 
@@ -113,65 +113,70 @@ The app shows a list of all queries and the list of work items for the selected 
 
 1. Add **Edit form** to the screen and move it to the right side of the galleries.
 
-  > [!div class="mx-imgBorder"]
-  > ![Add edit form.](./media/azure-devops/add-edit-form.png "Add edit form.")
 
+:::image type="content" source="./media/azure-devops/add-edit-form.png" alt-text="Screenshot of adding an edit form.":::
 
 1. Set the **DataSource** property of the edit form to `AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id),"Organization").value`. Replace "Project" and "Organization" with your project and organization names.
 
-
 1. Set the **Item** property of the edit form to `Gallery2.Selected`.
 
-    This formula sets the **Item** property for the edit form to the work item that'1. Select **...** (ellipsis) > **Add a custom card**.
+This formula sets the **Item** property for the edit form to the work item that is selected.
 
-    ![Screenshot of adding a custom card in the edit form.](./media/azure-devops/add-custom-card.png "Add a custom card.").** 1. Move the data card to the top of the edit form.
+1. Select **...** (ellipsis) > **Add a custom card**.
 
-    :::image type="content" source="media/azure-devops/custom-card-top.png" alt-text="Screenshot of a custom card moved to the top section inside the edit form.":::type="content" source="media/azure-devops/custom-card-top.png" alt-text="Custom card moved to the top section inside the edit form.":1. Increase the size of the text input control.
 
-> [!div class="mx-imgBorder"]
->![Screenshot of a text input control inside a custom card.](./media/azure-devops/text-input-inside-custom-card.png "Text input control inside custom card.")]
+:::image type="content" source="./media/azure-devops/add-custom-card.png" alt-text="Screenshot of adding a custom card in the edit form.":::
+
+1. Move the data card to the top of the edit form.
+
+
+:::image type="content" source="./media/azure-devops/custom-card-top.png" alt-text="Screenshot of a custom card moved to the top section inside the edit form.":::
+
+1. Increase the size of the text input control.
+
+
+:::image type="content" source="./media/azure-devops/text-input-inside-custom-card.png" alt-text="Screenshot of a text input control inside a custom card.":::
+
 1. Set the **Default** property of the text input control to `Text(ThisItem.Value.'System.Title')`. The Text function returns the value as text.
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of a text input control referring to the title of the work item.](./media/azure-devops/title-custom-card.png "Text input control referring to title of the work item.")
 
-  This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.he work item.")
+:::image type="content" source="./media/azure-devops/title-custom-card.png" alt-text="Screenshot of a text input control referring to the title of the work item.":::
 
-  This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
+This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
 
 > [!TIP]
 > If your Azure DevOps project uses the **Description** field with HTML or rich text, use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) or label controls. The **Rich text editor** control helps display the description as rich text instead of HTML code.
 
-6. Repeat the previous steps to add another custom card, with a text input control inside with the **Default** property set to `Text(ThisItem.Value.'System.State')`.
+1. Repeat the previous steps to add another custom card, with a text input control inside with the **Default** property set to `Text(ThisItem.Value.'System.State')`.
 
-    This formula sets the default text inside the text input control to the **State** field from the selected Azure DevOps work item.
+This formula sets the default text inside the text input control to the **State** field from the selected Azure DevOps work item.
 
 1. Rearrange the data cards inside the edit form to create space for the save icon.
 
 ### Add dynamic return values to your forms
+
 So far, you use the Edit form, which simplifies data access by providing a common DataSource and Item property for all data cards in the form. To access dynamic values, set **both** the data source and the item properties as follows (replace Organization and Project with your values):
 
- ```power-fx
-    AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
-  ```
+```power-fx
+AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
+```
+
 When you pass the text property "WorkItemType", such as "Feature", you can switch between items like Features and Work Items. Because the set of fields for these items differs, the return type from this call is dynamic.
 
 Access specific values using the common method Text(ThisItem.Value.'System.Id'). Alternatively, access them through the more general dynamic response using Text(ThisItem.fields.System_Id). These dynamic value names aren't typically documented. To find the correct names for these fields, including non-standard fields, open the monitor tool and examine the data response for the GetWorkItemDetails call. See the image below for guidance.
 
 If you aren't using an Edit form but are using a container, retrieve these values with a formula like the one below, which gets information from a custom team field.
 
-
 ```power-fx
 Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType').fields.One_custom_CustomField1)
 ```
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the monitor tool showing work item details.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
->
-> 
+
+:::image type="content" source="./media/azure-devops/monitor-workitem-details.png" alt-text="Screenshot of the monitor tool showing work item details.":::
+
 ## Updating values in Azure DevOps
 
-To update a value in Azure DevOps, use the `UpdateWorkItem` function in the `OnSelect` property of a button. 
+To update a value in Azure DevOps, use the `UpdateWorkItem` function in the `OnSelect` property of a button.
 
 ```power-fx
 AzureDevOps.UpdateWorkItem(
@@ -183,10 +188,10 @@ AzureDevOps.UpdateWorkItem(
     }
 )
 ```
+
 The formula adds new sample text, but you can also use a Power Fx expression.
 
 Make sure the formula uses lowercase for built-in field names. For example, when you refer to the Description field, use `description: "This is a new description"` instead of `Description: "This is a new description"`. Incorrect casing can result in the error "400 Required parameter missing for requested operation: 'UpdateWorkItem'". For custom or dynamic values, use the display name as shown in the UI, such as 'Custom Field 1'. This naming convention is specific to Azure DevOps and might differ from other services.
-
 
 ## Next steps
 
