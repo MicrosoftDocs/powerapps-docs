@@ -27,7 +27,7 @@ Recording of run-time tracing information for Microsoft Dataverse is provided by
 
     This data can be found in model-driven applications by navigating to **Settings** and choosing the **Plug-in Trace Log** tile. The tile is only visible if you have access to the trace log table records in your assigned security role.
 
-    You might find it easier to view this data by using the Web API in your browser using the example shown in [Use Tracing](debug-plug-in.md#use-tracing) or by using the [Plug-in trace viewer](#plug-in-trace-viewer) community tool.
+    You may find it easier to view this data by using the Web API in your browser using the example shown in [Use Tracing](debug-plug-in.md#use-tracing) or by using the [Plugin Trace Viewer](#plugin-trace-viewer) community tool.
 
     > [!IMPORTANT]
     > Trace logging takes up organization storage space especially when many traces and exceptions are generated. You should only turn trace logging on for debugging and troubleshooting, and turn it off after your investigation is completed.  
@@ -90,9 +90,9 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 
 ## Community tools
 
-### Plug-in trace viewer
+### Plugin Trace Viewer
 
-**Plug-in Trace Viewer** is a tool that XrmToolbox community developed. See the [Community tools for Dataverse](community-tools.md) article for community developed tools.
+**[Plugin Trace Viewer](https://jonasr.app/PTV)** is a tool that XrmToolBox community developed. Please see the [Community tools for Dataverse](community-tools.md) topic for community developed tools.
 
 > [!NOTE]
 > Microsoft doesn't extend support to community tools.
