@@ -4,9 +4,9 @@ description: "The second of three tutorials that will show you how to work with 
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: tutorial
-author: MicroSri
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
