@@ -22,6 +22,10 @@ contributors:
 
 # Frequently asked questions about Dataverse search
 
+## What is Dataverse search?
+
+Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources, including the ability to quickly search for content in model-driven apps. For more details about Dataverse search and the experiences it enables see [What is Dataverse search]([url](power-apps/user/relevance-search-benefits).
+
 ## What is the scope of content searched by Dataverse search?
 
 Any file or Dataverse knowledge added to Agents or model-driven apps defines the scope of content that's searched.
@@ -118,6 +122,26 @@ When using the Dataverse search API, there's a throttling limit of one request p
 
 ## Does Dataverse search support US Government clouds?
 Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It's available in US Government Community Cloud (GCC), US GCC High and Department of Defense (DoD).
+
+## How is Dataverse search reported?
+In addition to the DB and File storage, Dataverse search includes the indexes that power different experiences. These indexes support search and generative AI across structured or tabular, as well as unstructured data stored in Dataverse (i.e. files).
+Storage consumed by Dataverse search was previously reported at the Environment level as a table called “RelevanceSearch” and is now reported as “DataverseSearch”. To know more about Dataverse search capacity storage reporting go to [url](power-platform/admin/capacity-storage)
+
+## What actions can Admins take to manage Dataverse search?
+To ensure optimal operations for the organization, Admins with the proper permissions can take a few different approaches to optimize storage consumption, including turning off Dataverse search, which is not recommended as it impacts all the enabled experiences, such as search and generative AI conversational experiences. To know more about how to manage Dataverse search go to [url](power-platform/admin/capacity-storage)
+
+## What happens if Dataverse search is turned off?
+
+| Feature |	Maker experience | End User Experience|
+|---------|---------|---------|
+| Microsoft Copilot Studio Agent – Add Knowledge  | - Cannot upload files - Cannot select Dataverse tables - Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer)  |
+| Microsoft Copilot Studio Agent – Using Copilot Chat	|	Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer) 
+| Model Driven Applications – Dataverse search  |	Search bar will not be visible in model-driven applications  | Search bar will not be visible in model-driven applications |
+| Model Driven Applications – Copilot Chat  | - Can use the Model Driven App for record management (add, edit, delete, etc.) - If enabled in the settings, cannot use Agent that rely on that indexed data: Agent will not provide results until Dataverse is enabled for the environment (call to action for environment’s Admin to enable it)  |
+| Prompt actions with AI Builder / Custom AI Prompts
+| - Microsoft Copilot Studio
+| - Power Apps
+| - Power Automate  | If enabled in the settings, prompts will not be grounded with Dataverse knowledge  |
 
 ### See also
 
