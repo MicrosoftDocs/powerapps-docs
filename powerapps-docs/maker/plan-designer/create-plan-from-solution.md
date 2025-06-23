@@ -22,7 +22,8 @@ Use Plan designer to create a plan for your existing solution. Plan designer gen
 1. Select **Select solution** and then choose a solution.
     
     > [!NOTE]  
-    > The solution must have at least one app and one associated table.  
+    > The solution must have at least one app and one associated table.
+    > This feature is currently supported in English only.  
 
 1. Select **Create plan**.
 
