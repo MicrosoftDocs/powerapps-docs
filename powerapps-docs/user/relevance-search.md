@@ -19,12 +19,12 @@ search.audienceType:
 
 # Search for records by using Dataverse search
 
-With Dataverse search turned **On**, the search box is always available at the top of every page in your app and becomes default global search experience for all your model-driven apps. You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you're looking for.
+With Dataverse search turned "**On**", the search box is always available at the top of every page in your app and becomes default global search experience for all your model-driven apps. In addition to enabling the search experience in Power Apps, Dataverse search also enables [certain generative AI experiences](https://learn.microsoft.com/en-us/power-apps/user/relevance-search-benefits). You can't switch to [quick find search, also known as categorized search](quick-find.md). Start a new search to quickly find the information you're looking for.
 
 Turn on Dataverse search to give users a better search experience in model-driven apps. Environment admins can manage their environments by selecting **Off** to opt out of this feature.
 
 [!Note]
-If Dataverse search is set to "Default", the search box is not visible for searching content and generative AI experiences can be enabled.
+If Dataverse search is set to "**Default**", the search box is not visible for searching content. Generative AI experiences remain available to be enabled.
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app.](media/new-search-exp.png "Search box in the header for an app")
