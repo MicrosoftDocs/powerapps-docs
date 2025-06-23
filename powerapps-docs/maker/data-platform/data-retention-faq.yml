@@ -4,11 +4,12 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 09/23/2024
+  ms.date: 04/11/2025
   ms.author: matp
   ms.reviewer: 
   contributors: gned
   ms.topic: faq
+  ms.subservice: dataverse-maker
 title: Dataverse long term data retention FAQ
 summary: This article provides information on frequently asked questions about long term data retention with Microsoft Dataverse.
 sections:
@@ -72,7 +73,7 @@ sections:
    
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
-       The feature is currently available in all public cloud regions and GCC. GCC High and DOD aren't currently supported.  
+       The feature is currently available in all public cloud regions. GCC, GCC High, and DOD aren't currently supported.  
 
    - question: Can data be moved from Dataverse long term store to my own data lake?
      answer: |

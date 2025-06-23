@@ -2,7 +2,7 @@
 title: "Cache schema data (Microsoft Dataverse) | Microsoft Docs"
 description: "Create a cache of schema definitions and track changes over time."
 ms.date: 10/17/2022
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

@@ -6,7 +6,7 @@ ms.date: 01/24/2023
 ms.reviewer: smurkute
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: how-to
 applies_to: Dynamics 365 apps
 ms.assetid: 
 ms.author: trdehove

@@ -78,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TenantId](#BKMK_TenantId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+- [Version](#BKMK_Version)
 
 ### <a name="BKMK_ApplicationId"></a> ApplicationId
 
@@ -345,6 +346,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxValue|2147483647|
 |MinValue|-1|
 
+### <a name="BKMK_Version"></a> Version
+
+|Property|Value|
+|---|---|
+|Description|**Version indicating the format of the FIC subject.**|
+|DisplayName||
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`version`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|2147483647|
+|MinValue|0|
+
 
 ## Read-only columns/attributes
 
@@ -579,7 +594,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 
@@ -788,6 +803,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [managedidentity_BulkDeleteFailures](#BKMK_managedidentity_BulkDeleteFailures)
 - [managedidentity_DuplicateBaseRecord](#BKMK_managedidentity_DuplicateBaseRecord)
 - [managedidentity_DuplicateMatchingRecord](#BKMK_managedidentity_DuplicateMatchingRecord)
+- [managedidentity_emailserverprofile_acsmanagedidentityid](#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
 - [managedidentity_emailserverprofile_managedidentityid](#BKMK_managedidentity_emailserverprofile_managedidentityid)
 - [managedidentity_KeyVaultReference](#BKMK_managedidentity_KeyVaultReference)
 - [managedidentity_MailboxTrackingFolders](#BKMK_managedidentity_MailboxTrackingFolders)
@@ -795,6 +811,7 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [managedidentity_pluginpackage](#BKMK_managedidentity_pluginpackage)
 - [managedidentity_PrincipalObjectAttributeAccesses](#BKMK_managedidentity_PrincipalObjectAttributeAccesses)
 - [managedidentity_ProcessSession](#BKMK_managedidentity_ProcessSession)
+- [managedidentity_ServiceEndpoint](#BKMK_managedidentity_ServiceEndpoint)
 - [ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId](#BKMK_ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId)
 - [managedidentity_SyncErrors](#BKMK_managedidentity_SyncErrors)
 - [PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity](#BKMK_PowerPagesManagedIdentity_ManagedIdentity_ManagedIdentity)
@@ -858,6 +875,18 @@ Many-To-One Relationship: [duplicaterecord managedidentity_DuplicateMatchingReco
 |ReferencedEntityNavigationPropertyName|`managedidentity_DuplicateMatchingRecord`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_managedidentity_emailserverprofile_acsmanagedidentityid"></a> managedidentity_emailserverprofile_acsmanagedidentityid
+
+Many-To-One Relationship: [emailserverprofile managedidentity_emailserverprofile_acsmanagedidentityid](emailserverprofile.md#BKMK_managedidentity_emailserverprofile_acsmanagedidentityid)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`emailserverprofile`|
+|ReferencingAttribute|`acsmanagedidentityid`|
+|ReferencedEntityNavigationPropertyName|`managedidentity_emailserverprofile_acsmanagedidentityid`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_managedidentity_emailserverprofile_managedidentityid"></a> managedidentity_emailserverprofile_managedidentityid
 
@@ -942,6 +971,18 @@ Many-To-One Relationship: [processsession managedidentity_ProcessSession](proces
 |ReferencedEntityNavigationPropertyName|`managedidentity_ProcessSession`|
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `DoNotDisplay`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: <br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_managedidentity_ServiceEndpoint"></a> managedidentity_ServiceEndpoint
+
+Many-To-One Relationship: [serviceendpoint managedidentity_ServiceEndpoint](serviceendpoint.md#BKMK_managedidentity_ServiceEndpoint)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`serviceendpoint`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencedEntityNavigationPropertyName|`managedidentity_ServiceEndpoint`|
+|IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId"></a> ManagedIdentity_SharePointManagedIdentity_ManagedIdentityId
 

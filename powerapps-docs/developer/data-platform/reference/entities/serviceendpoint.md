@@ -172,6 +172,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |8|**Webhook**|
 |9|**Event Grid**|
 |10|**Managed Data Lake**|
+|11|**Container Storage**|
 
 ### <a name="BKMK_Description"></a> Description
 
@@ -243,7 +244,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`managedidentityid`|
 |RequiredLevel|None|
 |Type|Lookup|
-|Targets||
+|Targets|managedidentity|
 
 ### <a name="BKMK_MessageCharset"></a> MessageCharset
 
@@ -265,6 +266,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**Default**|
 |1|**UTF8**|
+|2|**Windows1252**|
 
 ### <a name="BKMK_MessageFormat"></a> MessageFormat
 
@@ -802,6 +804,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [keyvaultreference_ServiceEndpoint](#BKMK_keyvaultreference_ServiceEndpoint)
 - [lk_serviceendpointbase_createdonbehalfby](#BKMK_lk_serviceendpointbase_createdonbehalfby)
 - [lk_serviceendpointbase_modifiedonbehalfby](#BKMK_lk_serviceendpointbase_modifiedonbehalfby)
+- [managedidentity_ServiceEndpoint](#BKMK_managedidentity_ServiceEndpoint)
 - [modifiedby_serviceendpoint](#BKMK_modifiedby_serviceendpoint)
 - [organization_serviceendpoint](#BKMK_organization_serviceendpoint)
 
@@ -856,6 +859,19 @@ One-To-Many Relationship: [systemuser lk_serviceendpointbase_modifiedonbehalfby]
 |ReferencingEntityNavigationPropertyName|`modifiedonbehalfby`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_managedidentity_ServiceEndpoint"></a> managedidentity_ServiceEndpoint
+
+One-To-Many Relationship: [managedidentity managedidentity_ServiceEndpoint](managedidentity.md#BKMK_managedidentity_ServiceEndpoint)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`managedidentity`|
+|ReferencedAttribute|`managedidentityid`|
+|ReferencingAttribute|`managedidentityid`|
+|ReferencingEntityNavigationPropertyName|`managedidentityid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_modifiedby_serviceendpoint"></a> modifiedby_serviceendpoint
 

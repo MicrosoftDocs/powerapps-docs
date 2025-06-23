@@ -3,13 +3,13 @@ title: Copilot in Power Apps overview (preview)
 description: Learn how Copilot in Microsoft Power Apps makes it easy to build apps by providing insights and actions in response to natural language requests.
 author: mduelae
 ms.author: tapanm
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
   - canvas
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 01/24/2025
+  - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
 ms.reviewer: 
 ms.date: 12/20/2024
@@ -59,7 +59,7 @@ If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-cop
 
 The following articles can help you build various apps in different scenarios using Copilot.
 
-- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+- [Create a plan using Plan designer](../plan-designer/create-plan.md)
 
 ### Copilot in canvas apps
 

@@ -6,7 +6,7 @@ author: clromano
 ms.author: clromano
 ms.date: 07/25/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
  - JimDaly

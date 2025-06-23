@@ -140,7 +140,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |---|---|
 |Description|**The name of the custom entity.**|
-|DisplayName|**msdyn_name**|
+|DisplayName|**msdyn\_name**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msdyn_name`|
@@ -427,7 +427,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`owningbusinessunit`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Lookup|
 |Targets|businessunit|
 

@@ -3,7 +3,7 @@ title: Manage connections in canvas apps
 description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business.
 author: lancedMicrosoft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 04/2/2025
@@ -89,7 +89,7 @@ In the list of connections, find the connection that you want to update or delet
 * To delete the connection, select delete.
 * Select the information icon to see the connection details.
 
-## Consent dialog fine-grained permssions
+## Consent dialog fine-grained permissions
 
 The consent dialog presents **fine-grained** permissions to end users. Instead of asking the user to give permissions to all actions a connector can perform, the consent dialog lists the specific permissions that the app uses. The operations that an app uses are captured and stored in the app metadata when app is saved. For example, if an app is published with the specific Read action, then it will initially just request permission for the Read action. If then the author subsequently adds **Create**, **Update**, and **Delete** record actions then the consent dialog will be presented to the user again for the aggregated permissions of **Read**, **Create**, **Update**, and **Delete**. If the author subsequently removes the **Delete** records action, then the consent dialog isn't presented again. The permissions continue with the maximum set of actions that have ever been used in the app at any point. If you wish to publish an app that only shows reduced permissions, the app must be republished under a different name. 
 

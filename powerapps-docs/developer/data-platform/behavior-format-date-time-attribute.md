@@ -3,7 +3,7 @@ title: "Configure the behavior and format of the date and time column using code
 description: "The DateTimeAttributeMetadata class is used to define and manage columns of type DateTime in Microsoft Dataverse."
 ms.date: 10/19/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

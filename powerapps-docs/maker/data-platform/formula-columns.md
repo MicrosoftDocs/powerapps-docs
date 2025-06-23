@@ -4,9 +4,9 @@ description: Learn how to create and use formula columns in Microsoft Dataverse.
 author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
-ms.custom: 
-ms.date: 11/19/2024
-ms.subservice: teams
+ms.custom: needs-feature-review
+ms.date: 06/23/2025
+ms.subservice: dataverse-maker
 ms.author: sriknair
 ms.reviewer: matp
 ms.collection: bap-ai-copilot
@@ -38,7 +38,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    # [Get formula suggestions (preview)](#tab/natural-language)
 
    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-   a.  Select the up and down arrows, and then select **Get formula suggestions**.<br />
+   a. Select the up and down arrows, and then select **Get formula suggestions**.<br />
        :::image type="content" source="media/formula-suggestions-selector.png" alt-text="Select the formula suggestions selector":::
    b. Type your question, such as *what is the Price times Quantity*, in the **Get formula suggestions** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
 

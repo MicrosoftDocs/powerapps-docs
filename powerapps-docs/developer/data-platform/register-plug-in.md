@@ -3,10 +3,10 @@ title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and 
 description: "Learn how to register a plug-in assembly and step with the Microsoft Dataverse event framework pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 08/28/2024
 ms.reviewer: "pehecke"
-ms.topic: "article"
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

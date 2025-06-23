@@ -5,10 +5,10 @@ keywords: ""
 ms.date: 09/07/2021
 
 ms.custom: 
-ms.topic: article
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer

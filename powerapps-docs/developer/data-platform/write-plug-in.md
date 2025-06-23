@@ -3,10 +3,10 @@ title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write custom code to be executed in response to data processing events."
 ms.date: 03/26/2024
 ms.reviewer: pehecke
-ms.topic: article
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

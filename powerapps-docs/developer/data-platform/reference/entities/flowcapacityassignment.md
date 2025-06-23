@@ -123,10 +123,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |Description|**Number of missing add-ons to be compliant**|
 |DisplayName|**CapacityOverage**|
-|IsValidForForm|True|
+|IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|`capacityoverage`|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|0|
@@ -165,7 +165,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`capacitytype`|
 |RequiredLevel|SystemRequired|
 |Type|Picklist|
-|DefaultFormValue||
+|DefaultFormValue|-1|
 |GlobalChoiceName|`flowcapacityassignment_capacitytype`|
 
 #### CapacityType Choices/Options
@@ -174,6 +174,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |---|---|
 |0|**PowerAutomateHostedRpa**|
 |1|**PowerAutomatePerProcess**|
+|2|**PowerAutomateProcessMining**|
 
 ### <a name="BKMK_Count"></a> Count
 
@@ -285,7 +286,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|`regarding`|
 |RequiredLevel|SystemRequired|
 |Type|Lookup|
-|Targets|flowmachine, flowmachinegroup, workflow|
+|Targets|flowmachine, flowmachinegroup, msdyn_pminferredtask, workflow|
 
 ### <a name="BKMK_regardingIdType"></a> regardingIdType
 
@@ -567,6 +568,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [business_unit_flowcapacityassignment](#BKMK_business_unit_flowcapacityassignment)
 - [flowcapacityassignment_flowmachine](#BKMK_flowcapacityassignment_flowmachine)
 - [flowcapacityassignment_flowmachinegroup](#BKMK_flowcapacityassignment_flowmachinegroup)
+- [flowcapacityassignment_msdyn_pminferredtask](#BKMK_flowcapacityassignment_msdyn_pminferredtask)
 - [flowcapacityassignment_workflow](#BKMK_flowcapacityassignment_workflow)
 - [lk_flowcapacityassignment_createdby](#BKMK_lk_flowcapacityassignment_createdby)
 - [lk_flowcapacityassignment_createdonbehalfby](#BKMK_lk_flowcapacityassignment_createdonbehalfby)
@@ -612,6 +614,19 @@ One-To-Many Relationship: [flowmachinegroup flowcapacityassignment_flowmachinegr
 |ReferencedAttribute|`flowmachinegroupid`|
 |ReferencingAttribute|`regarding`|
 |ReferencingEntityNavigationPropertyName|`regarding_flowmachinegroup`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
+
+### <a name="BKMK_flowcapacityassignment_msdyn_pminferredtask"></a> flowcapacityassignment_msdyn_pminferredtask
+
+One-To-Many Relationship: [msdyn_pminferredtask flowcapacityassignment_msdyn_pminferredtask](msdyn_pminferredtask.md#BKMK_flowcapacityassignment_msdyn_pminferredtask)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`msdyn_pminferredtask`|
+|ReferencedAttribute|`msdyn_pminferredtaskid`|
+|ReferencingAttribute|`regarding`|
+|ReferencingEntityNavigationPropertyName|`regarding_msdyn_pminferredtask`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `Cascade`<br />Assign: `Cascade`<br />Delete: `Cascade`<br />Merge: `NoCascade`<br />Reparent: `Cascade`<br />RollupView: `NoCascade`<br />Share: `Cascade`<br />Unshare: `Cascade`|
 

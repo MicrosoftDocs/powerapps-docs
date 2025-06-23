@@ -83,6 +83,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [processortype](#BKMK_processortype)
 - [requeuecount](#BKMK_requeuecount)
 - [retrycount](#BKMK_retrycount)
+- [slastatus](#BKMK_slastatus)
+- [slathresholddate](#BKMK_slathresholddate)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -155,7 +157,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 |CanChangeDateTimeBehavior|False|
 |DateTimeBehavior|UserLocal|
-|Format|DateOnly|
+|Format|DateAndTime|
 |ImeMode|Auto|
 |SourceTypeMask|0|
 
@@ -419,6 +421,46 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 |MaxValue|2147483647|
 |MinValue|0|
+
+### <a name="BKMK_slastatus"></a> slastatus
+
+|Property|Value|
+|---|---|
+|Description|**The SLA status provides more context for on the item processing status (In SLA, At Risk, Out of SLA).**|
+|DisplayName|**SLA Status**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`slastatus`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workqueueitem_slastatus`|
+
+#### slastatus Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**NotSet**|
+|1|**In**|
+|2|**AtRisk**|
+|3|**Out**|
+
+### <a name="BKMK_slathresholddate"></a> slathresholddate
+
+|Property|Value|
+|---|---|
+|Description|**Date and time on which the work queue item starts to be at risk of SLA violation.**|
+|DisplayName|**SLA Threshold Time**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`slathresholddate`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 

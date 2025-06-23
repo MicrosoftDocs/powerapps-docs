@@ -3,7 +3,7 @@ title: Sharing and assigning
 description: Learn about the security that applies to sharing and assigning records.
 ms.date: 04/06/2025
 ms.reviewer: pehecke
-ms.topic: article
+ms.topic: concept-article
 author: paulliew
 ms.subservice: dataverse-developer
 ms.author: paulliew

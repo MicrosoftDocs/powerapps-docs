@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
   - "dyn365-developer"
-ms.topic: article
+ms.topic: how-to
 ms.subservice: pcf
 contributors:
   - miglisic

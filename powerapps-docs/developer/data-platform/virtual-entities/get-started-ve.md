@@ -5,7 +5,7 @@ ms.date: 08/08/2024
 author: mkannapiran
 ms.author: kamanick
 ms.reviewer: pehecke
-ms.topic: conceptual
+ms.topic: get-started
 ms.collection: get-started
 applies_to: 
   - "Dynamics 365 (online)"

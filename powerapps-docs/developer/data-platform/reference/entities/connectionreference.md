@@ -63,6 +63,8 @@ The following table lists selected properties for the Connection Reference (conn
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ConnectionId](#BKMK_ConnectionId)
+- [ConnectionParametersConfig](#BKMK_ConnectionParametersConfig)
+- [ConnectionParameterSetConfig](#BKMK_ConnectionParameterSetConfig)
 - [connectionreferencedisplayname](#BKMK_connectionreferencedisplayname)
 - [connectionreferenceId](#BKMK_connectionreferenceId)
 - [ConnectionReferenceLogicalName](#BKMK_ConnectionReferenceLogicalName)
@@ -96,6 +98,40 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |ImeMode|Auto|
 |IsLocalizable|False|
 |MaxLength|1000|
+
+### <a name="BKMK_ConnectionParametersConfig"></a> ConnectionParametersConfig
+
+|Property|Value|
+|---|---|
+|Description|**Connection parameters that can be reused when creating connections in Microsoft Copilot Studio**|
+|DisplayName|**Connection Parameters Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectionparametersconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
+
+### <a name="BKMK_ConnectionParameterSetConfig"></a> ConnectionParameterSetConfig
+
+|Property|Value|
+|---|---|
+|Description|**The connection parameters set that can be reused when creating connections in Microsoft Copilot Studio**|
+|DisplayName|**Connection Parameters Set Config**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`connectionparametersetconfig`|
+|RequiredLevel|None|
+|Type|Memo|
+|Format|Text|
+|FormatName|Text|
+|ImeMode|Auto|
+|IsLocalizable|False|
+|MaxLength|1048576|
 
 ### <a name="BKMK_connectionreferencedisplayname"></a> connectionreferencedisplayname
 

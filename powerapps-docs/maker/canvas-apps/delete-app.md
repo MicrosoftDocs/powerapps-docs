@@ -3,7 +3,7 @@ title: Delete a canvas app
 description: Learn about how to delete an existing canvas app.
 author: mduelae
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 08/06/2020

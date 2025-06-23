@@ -5,7 +5,7 @@ author: anuitz
 ms.author: anuitz
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: concept-article
 ---
 
 # Implementing map component

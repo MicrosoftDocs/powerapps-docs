@@ -3,7 +3,7 @@ title: Understand canvas-app forms
 description: Learn about how to add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 04/27/2016

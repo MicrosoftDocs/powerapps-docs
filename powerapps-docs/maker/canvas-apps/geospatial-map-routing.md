@@ -2,7 +2,7 @@
 title: Calculate routes between waypoint pins on a map (preview)
 description: Add waypoint pins to a map and calculate routes between them in Power Apps.
 author: anuitz
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas, ce06122020
 ms.reviewer: mduelae
 ms.date: 3/3/2022

@@ -3,7 +3,7 @@ title: Known issues and limitations for Dataverse for Teams | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
 author: matthewbolanos
 
-ms.topic: conceptual
+ms.topic: troubleshooting-known-issue
 ms.custom: 
 ms.date: 02/02/2022
 ms.subservice: teams

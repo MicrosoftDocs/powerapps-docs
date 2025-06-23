@@ -1,11 +1,26 @@
 {
   "redirections": [
-   {
-      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
-      "redirect_url": "column-level-security",
+    {
+         "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+         "redirect_url": "column-level-security",
+         "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/test-engine/overview.md",
+      "redirect_url": "/power-platform/test-engine/overview",
       "redirect_document_id": "false"
-   }, 
-   {
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/powerfx.md",
+      "redirect_url": "/power-platform/test-engine/powerfx",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/yaml.md",
+      "redirect_url": "/power-platform/test-engine/yaml",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/quick-start-register-configure-simplespa-application-msal-js.md",
       "redirect_url": "webapi/quick-start-js-spa",
       "redirect_document_id": "false"
@@ -5032,7 +5047,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/samples/assign-record-to-new-owner.md",
-      "redirect_url": "../../../data-platform/org-service/samples/assign-record-to-new-owner",
+      "redirect_url": "../../../data-platform/org-service/samples/assign-records-to-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/assign-record-to-new-owner.md",
+      "redirect_url": "./assign-records-to-team",
       "redirect_document_id": false
     },
     {
@@ -8942,7 +8962,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
-      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-dynamic-values-that-previously-returned-boolean",
       "redirect_document_id": false
     },
     {
@@ -9153,6 +9173,16 @@
     {
       "source_path": "powerapps-docs/user/copilot-chat-in-webplayer.md",
       "redirect_url": "/power-platform/responsible-ai-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-template-options.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/power-apps/user/email-template-create",
       "redirect_document_id": "false"
     },
     {
@@ -9548,6 +9578,31 @@
     {
       "source_path": "powerapps-docs/maker/common/ai-plugin.md",
       "redirect_url": "../../../microsoft-copilot-studio/microsoft-copilot-extend-action-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/use-ai-builder.md",
+      "redirect_url": "../ai-builder/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/smartGrid.md",
+      "redirect_url": "../../power-apps/maker/model-driven-apps/power-apps-grid-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/well-written-input-text-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/faq-draft-with-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/common-performance-issue-resolutions.md",
+      "redirect_url": "../../../power-apps/maker/canvas-apps/create-performant-apps-overview",
       "redirect_document_id": false
     }
   ]

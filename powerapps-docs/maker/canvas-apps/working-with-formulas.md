@@ -5,7 +5,7 @@ author: gregli-msft
 
 ms.custom: canvas
 ms.collection: get-started
-ms.topic: conceptual
+ms.topic: get-started
 ms.reviewer: mkaur
 ms.date: 1/15/2024
 ms.subservice: canvas-maker

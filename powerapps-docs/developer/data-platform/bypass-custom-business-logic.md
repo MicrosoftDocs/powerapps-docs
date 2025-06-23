@@ -3,10 +3,10 @@ title: "Bypass custom Dataverse logic"
 description: "Make data changes which bypass custom Dataverse logic." 
 ms.date: 12/04/2024
 ms.reviewer: jdaly
-ms.topic: article
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

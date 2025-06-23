@@ -6,7 +6,7 @@ ms.date: 10/28/2024
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 author: "sabinn-msft"

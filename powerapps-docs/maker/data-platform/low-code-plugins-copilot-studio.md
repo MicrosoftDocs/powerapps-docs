@@ -5,9 +5,10 @@ author: mikefactorial
 ms.author: sriknair
 ms.reviewer: matp
 ms.service: powerapps
+ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 04/26/2024
-ms.custom: template-how-to
+ms.date: 06/23/2025
+ms.custom: needs-feature-review
 ms.collection: bap-ai-copilot
 ---
 # Create low-code plug-ins to use with a copilot (preview)

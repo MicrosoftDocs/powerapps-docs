@@ -2,8 +2,9 @@
 title: Page results using OData
 description: Learn how to use OData to page results when you retrieve data from Microsoft Dataverse Web API.
 ms.date: 07/11/2024
-author: MicroSri
-ms.author: sriknair
+ms.topic: how-to
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -14,7 +15,7 @@ contributors:
 ---
 # Page results using OData
 
-Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
+Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 table rows might be returned for each request. With both standard and elastic tables you can specify a max page size up to 5,000. Max page size requests larger than 5,000 are ignored for both standard and elastic tables.
 
 > [!NOTE]
 > Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. [Learn about using the $top query option to limit the number of rows](overview.md#limit-the-number-of-rows)

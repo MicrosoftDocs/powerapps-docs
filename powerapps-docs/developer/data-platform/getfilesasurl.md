@@ -3,7 +3,7 @@ title: "Grant limited access to Dataverse files using shared access signatures"
 description: "Learn how to create a shared access signature URL that enables anyone to download the file or image from Dataverse" 
 ms.date: 09/11/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: JimDaly
 ms.subservice: dataverse-developer
 ms.author: jdaly

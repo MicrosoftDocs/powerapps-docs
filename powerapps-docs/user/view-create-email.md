@@ -4,7 +4,7 @@ description: Understand the email experience
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 6/30/2021
 ms.subservice: end-user
 ms.author: smurkute

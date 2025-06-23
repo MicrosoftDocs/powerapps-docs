@@ -1,9 +1,9 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 04/04/2025
+ms.date: 06/10/2025
 ms.topic: how-to
-ms.author: msomara
+ms.author: saperlmu
 author: Mattp123
 ms.reviewer: matp
 ms.subservice: mda-maker
@@ -21,26 +21,19 @@ ms.custom:
 
 The rich text editor control is a lightweight, HTML-based editor built on the popular CKEditor. It lets you create, paste, and edit formatted text in your model-driven apps. To format text in the editor, you can [use the editor toolbar](#the-rich-text-editor-toolbar), insert HTML tags, or paste formatted text from other applications, like a web browser or Word.
 
-You can customize the editor's appearance, features, and behavior. The control's modern text experience is shown in the following screenshot.
+You can customize the editor's appearance, features, and behavior.
 
-:::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app.":::
-
-Currently, the rich text editor is available as two different experiences:
-
-- Modern text editor: New experience, set by default
-- Classic text editor: Original experience, to be deprecated April 18, 2025
+:::image type="content" source="./media/rich-text-control.png" alt-text="Screenshot of the default rich text editor in a model-driven app." lightbox="./media/rich-text-control.png":::
 
 ## Modern text editor enhancements
 
-The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new copilot feature to enhance your text editing capabilities.
+The modern text editor is designed to align with the familiar and intuitive interfaces of Microsoft applications such as Outlook, Word, and OneNote. This experience, set by default, introduces a modern design, dark mode, high contrast themes, and a new Copilot feature to enhance your text editing capabilities.
 
-> [!Note]
-> Certain functionalities that are available in the classic rich text editor experience aren't yet available in the modern experience. Such functionalities include:
-> - Configuration options, as described in this article for the classic experience
-> - Mentions
-> Learn more in [Modern text editor limitations](#modern-rich-text-editor-limitations)
+> [!NOTE]
+> The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
 
-### Enable the modern rich text editor experience from the classic experience
+<!-- No longer needed
+ ### Enable the modern rich text editor experience from the classic experience
 
 The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
 
@@ -52,62 +45,41 @@ The modern rich text editor is enabled by default, but if you're using the class
    - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
    - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
 1. Select **Save**.
-1. In the App Designer, select **Publish**.
+1. In the App Designer, select **Publish**. -->
 
-### Revert from the modern rich text editor experience to the classic experience
-
-If you need to revert to the classic rich text editor experience, follow the same steps in [Enable the modern rich text editor experience](#enable-the-modern-rich-text-editor-experience-from-the-classic-experience), but deselect the options you selected in Step 4.
-
-> [!IMPORTANT]
-> After April 18, 2025, the classic rich text editor experience will no longer be available. Customers who are using the classic version will be upgraded automatically to the modern rich text editor experience.
-
-### Modern rich text editor limitations
-
-When using the modern rich text editor, consider the limitations listed in this section. For questions about feature availability, contact Microsoft support.
-
-Notes:
-- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
-- Only the following file types for attachments are supported: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx
- 
-Knowledge management: 
-- A preview tab isn't currently available.
-
-Email templates and signatures: 
-- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor. Otherwise, use the classic editor. 
-
-## Add the rich text editor control to a text column
-
-The following configuration is available in the classic rich text editor experience.
-
-When you format a text column as rich text, the default rich text editor control is added automatically.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?powerappsEntities.enableColumnFormatUpdate=true&powerappsEntities.enableModernColumn=true).
-1. In the left navigation pane, select **Solutions**.
-1. Open a solution and a table in the solution.
-1. In the **Columns and data** area, select a text column.
-
-    If the table doesn't contain a text column, select **+** (**New column)** and enter a name for the column.
-
-1. In **Data type**, select **>** to the right of **Text**, and then select the appropriate **Rich text** option based on whether the column contains a single line of text or multiple lines.
-1. Save the column, and then add it to a form.
-
-## Add the rich text editor control to a text column in a form
-
-The following configuration is available in the classic rich text editor experience.
+## Add the rich text editor control to a text column on a form
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. In the left navigation pane, select **Solutions**.
-1. Open a solution and a table in the solution.
-1. In the **Data experiences** area, select **Forms**, and then find the form that contains the text column you want to add the rich text editor to.
-1. Select **&vellip;** > **Edit** > **Edit in new tab**.
-1. On the form designer canvas, select, add, or create a text column.
-1. In the column properties pane, expand the **Components** list, select **+ Component**, and then select **Rich Text Editor Control**.
+1. Open a solution and then open a table in the solution.
+1. In the **Data experiences** area, select **Forms**, and then open the form that contains the text column you want to add the rich text editor to.
+1. On the form designer canvas, select an existing text column. Alternatively, select **New table column** to create a new text column, enter a **Display name**, select **Text** > **Rich text** for the **Data type**, and then select **Save**.
+   :::image type="content" source="media/rich-text-column.png" alt-text="Rich text column":::
+   > [!NOTE]
+   > If you want to add the rich text editor control to a column that already exists, you must first change the column's data type to **Text** (if not already a text column) and then select the **Format** using the **Rich text** option.
+1. In the column **Properties** pane, expand the **Components** list, select **+ Component**, and then select **Rich Text Editor Control**.
 1. In the **Add Rich Text Editor Control** pane, select **Web**, **Phone**, and **Tablet** to allow apps running on any device to use the editor.
 
     If you want to [customize the editor](#customize-the-rich-text-editor-control), enter the relative URL of its configuration file, a JavaScript web resource that contains the properties you want to change, in the **Static value** box. If you leave this field empty, the editor uses its default configuration.
 
-1. Select **Done**.
+1. Select **Done**. The rich text column is added to the form.
+
+    :::image type="content" source="media/rich-text-column-on-form.png" alt-text="Screenshot of the rich text editor control on a model-driven app form." lightbox="media/rich-text-column-on-form.png":::
 1. Select **Save and publish** to apply your changes to the form.
+
+### Add the rich text editor control to a text column
+
+You can also create a column for a table that uses the rich text editor control. The following steps show you how to create a text column that can later be added to a form for a model-driven app.
+
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+1. In the left navigation pane, select **Solutions**.
+1. Open a solution and a table in the solution.
+1. In the **Schema** area, select **Columns**, and then open a text column.
+
+    If the table doesn't contain a text column, select **New column** and enter a name for the column.
+
+1. In the right pane, select **Format**, and then select **Rich text**.
+1. **Save** the column.
 
 ## Customize the rich text editor control
 
@@ -120,6 +92,10 @@ Power Apps allows you to change the properties of the rich text editor control t
 Up to three levels, or layers, of configuration can be applied to customize the rich text editor:
 
 1. At the most fundamental level, every instance of the control takes its configuration from the file `RTEGlobalConfiguration_Readonly.json`. The file is read-only, so you can't change these properties directly.
+   
+    > [!Note]
+    > RTEGlobalConfiguration.json doesn't apply to email, knowledge articles, email templates, and signatures.
+    
 1. At the next level, every instance of the control takes its configuration from the properties in the file `RTEGlobalConfiguration.json`, if any are present. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the read-only file.
 1. Finally, at the highest level, a specific instance of the control takes its configuration from a specific configuration file, if one exists. This configuration is layered on top of the previous one, so the properties in this file *replace* the same named properties in the two lower-level files.
 
@@ -131,33 +107,34 @@ We have to add a slight qualification here. The system doesn't replace *all* pro
 
     The file `RTEGlobalConfiguration.json` contains the rich text editor's default, or global, configuration. If you're customizing the control in, say, a contact form, you might name the file something like `RTEContactFormConfiguration.json`.
 
-1. Copy and paste the following code snippet in the file:
+2. Copy and paste the following code snippet in the file:
 
-    ```json
-    {
-    "defaultSupportedProps": {
-      "propertyName": "value",
-      "propertyName": "value",
-      "propertyName": "value"
-    },
-    }
-    ```
+```JSONCopy
+{
+"defaultSupportedProps": {
+  "propertyName": "value",
+  "propertyName": "value",
+  "propertyName": "value"
+},
+"propertyName": "value",
+"propertyName": "value",
+}
+```
+   The last *propertyName:value* pair doesn't end with a comma.
 
-    The last *propertyName:value* pair doesn't end with a comma.
-
-1. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
+3. Replace *propertyName* and *value* with the [rich text editor control properties](#rich-text-editor-properties) you want to change. String values must be enclosed in quotation marks.
 
       We provided a few [example configurations](#example-configurations) for you, but you can define others to suit your needs.
 
-1. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
-1. [Add the rich text editor control to a text column in a form](#add-the-rich-text-editor-control-to-a-text-column-in-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
+4. In Power Apps, [create a **JavaScript (JS)** type web resource](create-edit-web-resources.md) using the JSON file you created in step 1.
+5. [Add the rich text editor control to a text column on a form](#add-the-rich-text-editor-control-to-a-text-column-on-a-form), and in the **Add Rich Text Editor Control** pane > **Static value**, enter the relative URL of the JavaScript web resource.
 
       Although you can enter the absolute URL of the web resource, we recommend that you enter the relative URL. That way, the web resource still works if you import it as a solution into a different environment, provided the relative path is the same.
 
       For example, if the URL of the web resource is `https://yourorg.crm.dynamics.com/WebResources/rtecontactform`, the relative URL is */WebResources/rtecontactform*.
 
-1. Select **Done**.
-1. Select **Save and publish** to apply your changes to the form.
+6. Select **Done**.
+7. Select **Save and publish** to apply your changes to the form.
 
 ### Customize the rich text editor globally
 
@@ -166,12 +143,6 @@ The editable global configuration file `RTEGlobalConfiguration.json` is the seco
 If your business needs require you to customize the control everywhere, specify the values you need in the `RTEGlobalConfiguration.json` file. Use the read-only file as an example to make sure you enter property-value pairs in the right format.
 
 ## Use Copilot to refine text in the editor
-
-> [!IMPORTANT]
->
->- This feature is for early-access users. You can [opt in](/power-platform/admin/opt-in-early-access-updates) to use it for testing and adoption in your environments.
->- This feature is in early access only for new organizations. Existing organizations that are already using the feature can continue to use it, even if they didn't opt in for early access.  
->- This feature is available for Dynamics 365 Sales, including custom sales apps that have lead and opportunity entities added to the site map.
 
 Copilot uses natural language processing algorithms to help improve written content. You can [add Copilot to the rich text editor](../model-driven-apps/copilot-control.md) and then get suggestions to improve the grammar, clarity, or overall quality of your text. [Learn how to use Copilot in the rich text editor](../model-driven-apps/use-copilot-email-assist.md).
 
@@ -275,7 +246,6 @@ The following table describes the most commonly used properties, but you can con
 | extraPlugins | Appends plug-ins to the `plugins` list to load more plug-ins.<br/>Many plug-ins require other plug-ins to work. The rich text editor automatically adds them, and you can't use this property to override them. Use `removePlugins` instead. | See [defaultSupportedProps](#defaultsupportedprops) |
 | removePlugins | Lists plug-ins not to load. Use it to change which plug-ins are loaded without changing the `plugins` and `extraPlugins` lists. | See [defaultSupportedProps](#defaultsupportedprops) |
 | superimageImageMaxSize | Sets the maximum size in megabytes (MB) allowed for embedded images when using the superimage plug-in. | "5" |
-| [disallowedContent](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules) | Lets you prevent users from inserting elements that you don't want to have in your content. You can disallow entire elements or by attributes, classes, and styles. | See [defaultSupportedProps](#defaultsupportedprops) |
 | linkTargets | Allows you to configure which link target options are available for users when they create links:<br/>- "notSet": No target set<br/>- "frame": Opens the document in the specified frame<br/>- popupWindow": Opens the document in a popup window<br/>- "_blank": Opens the document in a new window or tab<br/>- "_top": Opens the document in the full body of the window<br/>- "_self": Opens the document in the same window or tab where the link is activated<br/>- "_parent": Opens the document in the parent frame | "notSet", "_blank" |
 | | |
 
@@ -328,42 +298,11 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 "enterMode": 2,
 ```
 
-### Paste or create HTML 5 content only
-
-Although the rich text editor control works best with HTML 5 content, you can use HTML 4 tags. In some cases, however, mixing HTML 4 and HTML 5 tags can create usability challenges. To make sure all content is HTML 5, provide all the supported HTML 5 tags in the `allowedContent` property. The editor control converts any noncompliant tags to their HTML 5 equivalent.
-
-Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
-
-```json
-"allowedContent": "a(*)[*]{*};abbr(*)[*]{*};address(*)[*]{*};area(*)[*]{*};article(*)[*]{*};aside(*)[*]{*};audio(*)[*]{*};b(*)[*]{*};base(*)[*]{*};bdi(*)[*]{*};bdo(*)[*]{*};blockquote(*)[*]{*};body(*)[*]{*};br(*)[*]{*};button(*)[*]{*};canvas(*)[*]{*};caption(*)[*]{*};cite(*)[*]{*};code(*)[*]{*};col(*)[*]{*};colgroup(*)[*]{*};data(*)[*]{*};datalist(*)[*]{*};dd(*)[*]{*};del(*)[*]{*};details(*)[*]{*};dfn(*)[*]{*};dialog(*)[*]{*};div(*)[*]{*};dl(*)[*]{*};dt(*)[*]{*};em(*)[*]{*};embed(*)[*]{*};fieldset(*)[*]{*};figcaption(*)[*]{*};figure(*)[*]{*};footer(*)[*]{*};form(*)[*]{*};h1(*)[*]{*};h2(*)[*]{*};h3(*)[*]{*};h4(*)[*]{*};h5(*)[*]{*};h6(*)[*]{*};head(*)[*]{*};header(*)[*]{*};hr(*)[*]{*};html(*)[*]{*};i(*)[*]{*};iframe(*)[*]{*};img(*)[*]{*};input(*)[*]{*};ins(*)[*]{*};kbd(*)[*]{*};label(*)[*]{*};legend(*)[*]{*};li(*)[*]{*};link(*)[*]{*};main(*)[*]{*};map(*)[*]{*};mark(*)[*]{*};meta(*)[*]{*};meter(*)[*]{*};nav(*)[*]{*};noscript(*)[*]{*};object(*)[*]{*};ol(*)[*]{*};optgroup(*)[*]{*};option(*)[*]{*};output(*)[*]{*};p(*)[*]{*};param(*)[*]{*};picture(*)[*]{*};pre(*)[*]{*};progress(*)[*]{*};q(*)[*]{*};rp(*)[*]{*};rt(*)[*]{*};ruby(*)[*]{*};s(*)[*]{*};samp(*)[*]{*};section(*)[*]{*};select(*)[*]{*};small(*)[*]{*};source(*)[*]{*};span(*)[*]{*};strong(*)[*]{*};style(*)[*]{*};sub(*)[*]{*};summary(*)[*]{*};sup(*)[*]{*};svg(*)[*]{*};table(*)[*]{*};tbody(*)[*]{*};td(*)[*]{*};template(*)[*]{*};textarea(*)[*]{*};tfoot(*)[*]{*};th(*)[*]{*};thead(*)[*]{*};time(*)[*]{*};title(*)[*]{*};tr(*)[*]{*};track(*)[*]{*};u(*)[*]{*};ul(*)[*]{*};var(*)[*]{*};video(*)[*]{*};wbr(*)[*]{*};",
-```
-
-### Paste or create plain text only
-
-Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
-
-```json
-"enterMode": 2,
-"shiftEnterMode": 2,
-"allowedContent": "*",
-"disallowedContent": "*",
-"forcePasteAsPlainText": true,
-"toolbar": [],
-"removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools",
-```
-
-Set this [individual property](#individual-properties) in your [configuration file](#levels-of-customization). Follow this value with a comma (`,`) unless it's the last property in the file.
-
-```json
-"disableImages": true,
-```
-
 ### Allow the editor to use the full screen
 
 Set these [individual properties](#individual-properties) in your [configuration file](#levels-of-customization). Each value except the last one must be followed by a comma (`,`).
 
 ```json
-"showAsTabControl": true,
 "showFullScreenExpander": true,
 ```
 
@@ -427,7 +366,7 @@ Set these [`defaultSupportedProps` properties](#defaultsupportedprops) in your [
 
 ```json
 "autoGrow_onStartup": false,
-"autoGrow_maxHeight": 0,
+"autoGrow_maxHeight": 8000,
 "autoGrow_minHeight": 30,
 "height": 30,
 ```
@@ -454,27 +393,6 @@ Set this [`defaultSupportedProps` property](#defaultsupportedprops) in your [con
 ```json
 "removePlugins": "contextmenu,liststyle,openlink,tableresize,tableselection,tabletools",
 ```
-
-## Find the configuration of a rich text editor control
-
-If you're not sure where the configuration of an instance of the rich text editor is coming from, you can find it using your browser's developer tools.
-
-1. In Microsoft Edge or Google Chrome, run your model-driven app and open a form that has the rich text editor control.
-1. Right-click the rich text editor content area and select **Inspect**.
-1. In the inspection pane, select the **Console** tab.
-1. Select the parent **Main.aspx** page in the list box on the command bar.
-
-  :::image type="content" source="media/cke-select-parent-main.png" alt-text="Screenshot of the browser developer tools, with the Console tab and main.aspx page highlighted.":::
-
-1. Select the **Clear console** icon on the inspection pane command bar, and then enter **CKEDITOR.config.** in the console.
-
-  :::image type="content" source="media/cke-clear-console.png" alt-text="Screenshot of the browser developer tools, with the Clear console icon highlighted.":::
-
-1. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
-
-  :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations.":::
-
-1. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
 
 ## The rich text editor toolbar
 
@@ -515,7 +433,7 @@ The following table describes the formatting tools that are available in the ric
 | ![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar | | When the window is too narrow to show the entire toolbar, select to expand the toolbar to a second row. |
 | | | | |
 
-> [!Tip]
+> [!TIP]
 > To use your browser's built-in spell checker, press the Ctrl key as you right-click the text you want to check. Otherwise, the right-click (context) menu provides contextual formatting for the element you select.  
 > An alternative to your browser's built-in spell checker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spell-check capabilities.
 
@@ -543,6 +461,26 @@ The following formatting tools are available in the rich text editor when it's o
  
 - In the default rich text editor configuration, if you drag and drop an image file into the rich text editor, it uploads the inline image to the `msdyn_richtextfiles` table. For appropriate users to be able to view the inline image, make sure you apply the correct permissions to `msdyn_richtextfiles`.
 
+## Rich text editor limitations
+
+When using the rich text editor, consider the limitations listed in this section. For questions about feature availability, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
+
+> [!IMPORTANT]
+> The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
+
+Limitations of the rich text editor include:
+
+- You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
+- The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
+
+Knowledge management:
+
+- A preview tab isn't currently available.
+
+Email templates and signatures:
+
+- If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
+
 ## Frequently asked questions
 
 ### Why are typed characters slow to display?
@@ -553,15 +491,29 @@ If you have a lot of content in the editor, the response time can increase. Keep
 
 If the image file name, including the path, is long, the file might fail to upload, or the preview might not be displayed. Try shortening the file name or moving it to a location with a shorter path, and then upload it again.
 
-### Why am I seeing HTML in my text?
+### Why do I see HTML in my text?
 
 If the rich text editor control is used in a column that isn't formatted for rich text, the content appears in the underlying HTML instead of as formatted text.
 
+### What's the size limit of HTML content?
+
+For the best performance, keep your HTML content to 1 MB or less. At larger sizes, you might notice slower response times for loading and editing.
+
 :::image type="content" source="./media/html-markup-issue.png" alt-text="Screenshot of HTML appearing in the editor content area.":::
 
-To resolve this issue, see make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
+To resolve this issue, make sure the [format of the column is set to **Rich text**](#add-the-rich-text-editor-control-to-a-text-column).
 
-### See also
+### I’ve exceeded the character limit but there are fewer characters than the limit. Why?
+
+The database stores the entire HTML formatting, not just the characters, which takes up extra space.
+
+### Why am I not seeing the modern rich text editor?
+
+The modern rich text editor control is part of the **New look for model-driven apps** and doesn’t appear unless the [app setting](app-properties.md) is turned on. Without the setting enabled, you might see an older version of the editor.
+
+:::image type="content" source="media/new-look-setting.png" alt-text="New look for model-driven apps app setting":::
+
+### Related information
 
 - [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
 - [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)

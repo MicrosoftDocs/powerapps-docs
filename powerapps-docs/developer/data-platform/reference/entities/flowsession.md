@@ -86,6 +86,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentCloudFlowRunSequenceId](#BKMK_ParentCloudFlowRunSequenceId)
+- [ParentDesktopFlowRunId](#BKMK_ParentDesktopFlowRunId)
 - [ParentWorkflowId](#BKMK_ParentWorkflowId)
 - [ProcessVersion](#BKMK_ProcessVersion)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
@@ -101,6 +102,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StartedOn](#BKMK_StartedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
+- [SubCategory](#BKMK_SubCategory)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [TriggerType](#BKMK_TriggerType)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -466,6 +468,19 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |MaxLength|1000|
 
+### <a name="BKMK_ParentDesktopFlowRunId"></a> ParentDesktopFlowRunId
+
+|Property|Value|
+|---|---|
+|Description|**The run id of the parent desktop flow run, only used when the Desktop Flow was run by a desktop flow.**|
+|DisplayName|**Parent Desktop Flow Run Id**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`parentdesktopflowrunid`|
+|RequiredLevel|None|
+|Type|Lookup|
+|Targets|flowsession|
+
 ### <a name="BKMK_ParentWorkflowId"></a> ParentWorkflowId
 
 |Property|Value|
@@ -733,6 +748,27 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |12|Label: **Ignored**<br />State:0<br />TransitionData: None|
 |13|Label: **Deleted**<br />State:1<br />TransitionData: None|
 |14|Label: **Terminated**<br />State:1<br />TransitionData: None|
+
+### <a name="BKMK_SubCategory"></a> SubCategory
+
+|Property|Value|
+|---|---|
+|Description|**Sub-Category of the flow session.**|
+|DisplayName|**Sub-Category**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`subcategory`|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`flowsession_subcategory`|
+
+#### SubCategory Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**Default**|
+|1|**Test**|
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
@@ -1082,6 +1118,7 @@ These relationships are many-to-one. Listed by **SchemaName**.
 - [FileAttachment_FlowSession_Outputs](#BKMK_FileAttachment_FlowSession_Outputs)
 - [flowmachine_flowsession_MachineId](#BKMK_flowmachine_flowsession_MachineId)
 - [flowmachinegroup_flowsession_MachineGroupId](#BKMK_flowmachinegroup_flowsession_MachineGroupId)
+- [flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-many-to-one)
 - [lk_flowsession_createdby](#BKMK_lk_flowsession_createdby)
 - [lk_flowsession_createdonbehalfby](#BKMK_lk_flowsession_createdonbehalfby)
 - [lk_flowsession_modifiedby](#BKMK_lk_flowsession_modifiedby)
@@ -1168,6 +1205,19 @@ One-To-Many Relationship: [flowmachinegroup flowmachinegroup_flowsession_Machine
 |ReferencingEntityNavigationPropertyName|`MachineGroupId`|
 |IsHierarchical||
 |CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `RemoveLink`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
+
+### <a name="BKMK_flowsession_flowsession_parentdesktopflowrunid-many-to-one"></a> flowsession_flowsession_parentdesktopflowrunid
+
+One-To-Many Relationship: [flowsession flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-one-to-many)
+
+|Property|Value|
+|---|---|
+|ReferencedEntity|`flowsession`|
+|ReferencedAttribute|`flowsessionid`|
+|ReferencingAttribute|`parentdesktopflowrunid`|
+|ReferencingEntityNavigationPropertyName|`parentdesktopflowrunid`|
+|IsHierarchical||
+|CascadeConfiguration|Archive: `NoCascade`<br />Assign: `NoCascade`<br />Delete: `NoCascade`<br />Merge: `NoCascade`<br />Reparent: `NoCascade`<br />RollupView: `NoCascade`<br />Share: `NoCascade`<br />Unshare: `NoCascade`|
 
 ### <a name="BKMK_lk_flowsession_createdby"></a> lk_flowsession_createdby
 
@@ -1284,10 +1334,12 @@ These relationships are one-to-many. Listed by **SchemaName**.
 - [flowsession_FileAttachments](#BKMK_flowsession_FileAttachments)
 - [flowsession_flowlog_flowsessionid](#BKMK_flowsession_flowlog_flowsessionid)
 - [flowsession_flowlog_parentobjectid](#BKMK_flowsession_flowlog_parentobjectid)
+- [flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-one-to-many)
 - [flowsession_MailboxTrackingFolders](#BKMK_flowsession_MailboxTrackingFolders)
 - [flowsession_PrincipalObjectAttributeAccesses](#BKMK_flowsession_PrincipalObjectAttributeAccesses)
 - [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
 - [flowsession_workflowbinary_FlowSessionId](#BKMK_flowsession_workflowbinary_FlowSessionId)
+- [taggedflowsession_FlowSession_flowsession](#BKMK_taggedflowsession_FlowSession_flowsession)
 
 ### <a name="BKMK_flowevent_flowsession"></a> flowevent_flowsession
 
@@ -1361,6 +1413,18 @@ Many-To-One Relationship: [flowlog flowsession_flowlog_parentobjectid](flowlog.m
 |IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
+### <a name="BKMK_flowsession_flowsession_parentdesktopflowrunid-one-to-many"></a> flowsession_flowsession_parentdesktopflowrunid
+
+Many-To-One Relationship: [flowsession flowsession_flowsession_parentdesktopflowrunid](#BKMK_flowsession_flowsession_parentdesktopflowrunid-many-to-one)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`flowsession`|
+|ReferencingAttribute|`parentdesktopflowrunid`|
+|ReferencedEntityNavigationPropertyName|`flowsession_flowsession_parentdesktopflowrunid`|
+|IsCustomizable|`True`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
 ### <a name="BKMK_flowsession_MailboxTrackingFolders"></a> flowsession_MailboxTrackingFolders
 
 Many-To-One Relationship: [mailboxtrackingfolder flowsession_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowsession_MailboxTrackingFolders)
@@ -1407,6 +1471,18 @@ Many-To-One Relationship: [workflowbinary flowsession_workflowbinary_FlowSession
 |ReferencingAttribute|`flowsessionid`|
 |ReferencedEntityNavigationPropertyName|`flowsession_workflowbinary_FlowSessionId`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_taggedflowsession_FlowSession_flowsession"></a> taggedflowsession_FlowSession_flowsession
+
+Many-To-One Relationship: [taggedflowsession taggedflowsession_FlowSession_flowsession](taggedflowsession.md#BKMK_taggedflowsession_FlowSession_flowsession)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`taggedflowsession`|
+|ReferencingAttribute|`flowsession`|
+|ReferencedEntityNavigationPropertyName|`taggedflowsession_FlowSession_flowsession`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 
