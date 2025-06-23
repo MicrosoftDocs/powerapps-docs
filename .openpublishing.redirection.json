@@ -8957,7 +8957,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
-      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-dynamic-values-that-previously-returned-boolean",
       "redirect_document_id": false
     },
     {

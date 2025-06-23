@@ -4,9 +4,11 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 08/06/2024
+ms.date: 06/17/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
+ms.reviewer: matp
+contributor: dingbx
 search.audienceType: 
   - maker
 ---
@@ -50,6 +52,39 @@ Copy data from your Excel or CSV file into the template that you created in the 
 1. After the file is uploaded and **Mapping status** indicates **Mapping was successful**, select **Import** from the top-right corner. Go to [Troubleshoot mapping errors with Excel](#troubleshoot-mapping-errors-with-excel) to navigate and fix any mapping errors.
    :::image type="content" source="media/data-platform-import-export/import-mapping-successful.png" alt-text="Import mapping successful":::
   After the import finishes successfully, you'll see the total number of inserts and updates.  
+
+#### New import from Excel (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+The new import experience lets users import data directly from an Excel file into existing Dataverse tables using a unified UI. This experience improves upon the original import method by offering:
+
+- **Assisted mapping**: Uses vector-based search to provide more contextually relevant column mapping suggestions.
+- **Sheet selection**: Users can choose which sheet to import from within a multi-sheet Excel file.
+- **Notifications**: Real-time feedback on import status, including success, in-progress, and error states.
+- **Error logs**: Downloadable logs to help users self-diagnose and resolve issues.
+- **Performance improvements**: Asynchronous ingestion offers better reliability and speed for large files.
+
+[!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
+
+##### Prerequisites
+
+To use the feature a Power Platform admin must enable the **"Import Excel to existing table with assisted mapping"** environment setting in the Power Platform admin center. Select the environment, and then select **Settings** > **Product** > **Features** and enable the **"Import Excel to existing table with assisted mapping"** setting.
+
+##### Import from Excel (preview) steps
+
+1. Go to the table you want to import data to, and then on the command bar select **Import** > **Import from Excel (Preview)**.
+1. Upload your Excel file and select the sheet to import.  
+   :::image type="content" source="./media/data-platform-import-export/import-v2-select-sheet.png" alt-text="Select the Excel sheet to import.":::
+1. Map columns. A primary key is required if you want to update existing records in the table. If no primary key is selected ("None" option), then all records from the Excel sheet or CSV file are added as new records.
+   :::image type="content" source="./media/data-platform-import-export/import-v2-mapping.png" alt-text="Map source columns to target attributes.":::
+1. Review the summary and select **Import**.
+
+Monitor the import status from notifications:
+
+- In progress: Ongoing import activity with the message **Your data is importing** displayed.  
+- Success: Data was processed or indexed with the message **Upload completed** displayed.  
+- Error: **Upload completed with some errors** displayed that includes a link to download logs for troubleshooting.
 
 ### Option 2: Import by bringing your own source file
 
