@@ -137,7 +137,7 @@ Change the column values in the organization table to change how auditing works 
 
 | Setting  | Description  | Updatable  |
 |-----------|-----------|-----------|
-| `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only the option value. | Yes  |
+| `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only the option value. The original user selected label choice persists in the audit records. | Yes  |
 | `IsSqlAuditWriteDisabled`  | If NoSql audits are enabled, stop writing data to sql audit table  | No, throws an error.  |
 | `ApplyRetentionToExistingLogs`  | Apply new retention policy to existing audit records  | No, is ignored. |
 

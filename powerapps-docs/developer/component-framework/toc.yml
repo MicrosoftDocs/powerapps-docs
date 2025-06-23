@@ -62,6 +62,8 @@ items:
       href: publish-components-app-source.md
     - name: Customize the editable grid control
       href: customize-editable-grid-control.md
+    - name: Bring intelligence into your components using Agent APIs
+      href: bring-intelligence-using-agent-apis.md
   - name: Troubleshooting
     items:
     - name: Common issues and workarounds
@@ -154,6 +156,15 @@ items:
         href: reference/controlattributes.md
       - name: ControlAttributesType
         href: reference/controlattributestype.md
+      - name: Copilot
+        href: reference/copilot.md
+        items:
+        - name: executeEvent
+          href: reference/copilot/executeevent.md
+        - name: executePrompt
+          href: reference/copilot/executeprompt.md
+        - name: MCSResponse
+          href: reference/copilot/mcsresponse.md
       - name: DataProviderCapabilities
         href: reference/dataprovidercapabilities.md
       - name: DataSet

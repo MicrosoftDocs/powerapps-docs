@@ -1,7 +1,7 @@
 ---
 title: Power Apps code readability
 description: Learn about how to optimize code readability in Power Apps.
-ms.date: 06/12/2024
+ms.date: 06/19/2025
 ms.topic: concept-article
 ms.subservice: guidance
 ms.service: powerapps
@@ -168,8 +168,6 @@ PowerApps uses DataTables in Microsoft Excel to connect to data in Excel workshe
 - Use descriptive column names in the DataTables.
 - Use Pascal casing. Each word of the DataTable name should begin with a capital letter, such as `EmployeeLeaveRequests`.
 
-### Untyped and dynamic objects
-
 ### Variable names
 
 Naming conventions for variables in canvas apps are important for maintaining readability, consistency, and clarity in your Power Apps projects. While no strict standard is enforced, adopting a consistent naming convention across your canvas app can make it easier for you and other collaborators to understand, use, and manage the variables.
@@ -238,21 +236,21 @@ These examples don't follow the collection name conventions:
 - `tempCollection`
 
 > [!TIP]
-> When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them very easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
+> When there are many collections in the app, you can just type the prefix in the formula bar to see a list of the available collections. As for variables, if you follow these guidelines to name your collections, you'll be able to find them easily in the formula bar as you develop your app. Ultimately, this approach leads to quicker app development.
 
 ## Comments and documentation
 
-As you write code for your application, emphasize the importance of comprehensive commenting. These comments not only serve as a helpful guide when you revisit the application months later but also extend a gesture of gratitude to the next developer who collaborates on the project.
+When you write code for your application, focus on adding clear comments. Comments help you understand your code later and make it easier for the next developer to work on the project.
 
-There are two primary types of comments to enhance code clarity: Power Apps supports two comment styles: line comments, denoted by double forward slashes (`//`) for single-line remarks, and block comments enclosed within `/*` and `*/` for multi-line annotations.
+Power Apps supports two comment styles to make your code clearer: line comments, which use double forward slashes (`//`) for single-line notes, and block comments, which use `/*` and `*/` for multi-line notes.
 
 ### Line comments
 
-Adding a double forward slash (`//`) to any line of code in PowerApps designates the rest of the line (including the `//`) as a comment.
+Add a double forward slash (`//`) to any line of code in Power Apps to make the rest of the line a comment.
 
-Utilize line comments to elucidate the functionality of the subsequent code. They can also serve to temporarily disable a line of code, making them beneficial for testing purposes.
+Use line comments to explain what the next line of code does. You can also use them to temporarily disable a line of code for testing.
 
-This example shows the use of line comments.
+Here's an example of a line comment.
 
 ```powerappsfl
 // ClearCollect function populates the Expenses2 collection with sample data
@@ -269,11 +267,11 @@ ClearCollect(
 
 ### Block comments
 
-Text enclosed within `/*` and `*/` is recognized as a block comment. Unlike line comments that apply to a single line, block comments can span multiple lines.
+Text between `/*` and `*/` is a block comment. Block comments can cover several lines, unlike line comments, which only cover one line.
 
-Block comments are useful for multiline explanations, such as documenting a code module header. They also facilitate temporarily disabling multiple lines of code during testing or debugging.
+Use block comments for longer explanations, like documenting a code module header. You can also use them to temporarily disable several lines of code during testing or debugging.
 
-For optimal code organization, it's advisable to add comments after utilizing the Format Text feature. This is beneficial if your comments precede a code block.
+For better code organization, add comments after you use the Format Text feature. This helps if your comments come before a code block.
 
 ```powerappsfl
 /*
@@ -293,47 +291,47 @@ Patch(
 )
 ```
 
-The Format Text feature follows these rules for existing comments:
+The Format Text feature follows these rules for comments:
 
-1. If a property begins with a block comment, the next line of code will be appended to it.
-1. If a property begins with a line comment, the next line of code won't be appended to it. Otherwise, the code is commented out.
-1. Line and block comments elsewhere in the property will be appended to the previous line of code.
+1. If a property starts with a block comment, the next line of code is added to it.
+1. If a property starts with a line comment, the next line of code isn't added to it. Otherwise, the code is commented out.
+1. Line and block comments elsewhere in the property are added to the previous line of code.
 
-Don't worry about adding too many comments or comments that are too long. All comments are stripped out when PowerApps creates the client app package. Therefore, they won't affect the package size or slow down the app download or loading times.
+Don't worry about adding too many or too long comments. Power Apps removes all comments when it creates the client app package, so comments don't affect package size or slow down app downloads or loading times.
 
 ### Modern app designer with comments
 
-In Power Apps, it's considered the best practice for makers to effectively utilize commenting features within both Power Apps Studio and Modern app designer.
+In Power Apps, it's best to use commenting features in both Power Apps Studio and Modern app designer.
 
-For optimal engagement in the Power Apps Studio, makers are advised to add comments using the following methods:
+To add comments in Power Apps Studio, use these methods:
 
 1. Right-click the ellipsis ("...") of any item in the Tree View.
 2. Right-click a component in the canvas area.
 3. Select the "Comments" button located on the command bar in the top right-hand corner of the screen.
 
-When mentioning colleagues in comments, it's recommended to use the "@" symbol followed by their name. This prompts a notification email for the tagged colleague, ensuring swift access to the comment. In cases where a tagged user lacks access to the app, the maker is prompted to share the app with them.
+When you mention a colleague in a comment, use the "@" symbol followed by their name. This sends a notification email to the person you tag. If the tagged user doesn't have access to the app, Power Apps prompts you to share the app with them.
 
-![A screenshot of an expenses app showing a person @ mentioned in the comment](media/image9.png)
+![Screenshot of an expenses app showing a person mentioned with @ in a comment.](media/image9.png)
 
 ### Indentation and formatting
 
-In Power Apps, indentation and formatting are crucial for maintaining a clear and organized structure in your app. Following best practices improve the readability of your formulas and controls.
+In Power Apps, indentation and formatting help keep your app clear and organized. Following best practices makes your formulas and controls easier to read.
 
 #### Formula bar
 
 ##### Indentation
 
-Although Power Apps doesn't enforce strict indentation, you can use spaces to visually separate different sections of your formulas. Press the space bar multiple times to create an indentation effect.
+Power Apps doesn't enforce strict indentation, but you can use spaces to separate different sections of your formulas. Press the space bar several times to create an indentation.
 
 ##### Line breaks
 
-You can break long formulas into multiple lines to enhance readability. Press Enter to create a line break within the formula bar.
+Break long formulas into multiple lines to make them easier to read. Press Enter to add a line break in the formula bar.
 
 #### Use the Format text command
 
-The "Format Text" command in the formula bar is designed to apply indentation, spacing, and line breaks to your Power Apps code. Utilize the "Format Text" command to establish a uniform coding style across your entire canvas app, ensuring a more efficient and error-resistant development process.
+The "Format Text" command in the formula bar adds indentation, spacing, and line breaks to your Power Apps code. Use the "Format Text" command to keep a consistent coding style in your canvas app and help prevent errors.
 
-![Screenshot of Power Apps studio with the Format text command highlighted](media/image10.png)
+![Screenshot of Power Apps Studio with the Format Text command highlighted.](media/image10.png)
 
 ## Next step
 

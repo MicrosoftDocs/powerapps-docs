@@ -142,8 +142,7 @@ Export data from a single table in a comma-separated value (CSV) format.
 
 1. After the export finishes successfully, select **Download exported data** to download the CSV file to the download folder specified in your web browser.
 
-   > [!div class="mx-imgBorder"]
-   > ![Sample export that shows successful export with link downloadable file.](./media/data-platform-import-export/export-success.png)
+   :::image type="content" source="media/data-platform-import-export/export-success.png" alt-text="Sample export that shows successful export with a link to the downloadable file.":::
 
 > [!NOTE]
 > Exports have a 12 minute time limit. If the volume of data exported exceeds 12 minutes the export will fail. If this occurs, export data in smaller segments.
