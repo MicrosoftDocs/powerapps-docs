@@ -26,8 +26,11 @@ contributors:
 
 Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources, including the ability to quickly search for content in model-driven apps. For more details about Dataverse search and the experiences it enables see [What is Dataverse search]([url](power-apps/user/relevance-search-benefits)).
 
-## What is the scope of content searched by Dataverse search?
+## What is the difference between "On" and "Default" state for Dataverse search?
+- When set to "**On**", the search bar in the header of all model-driven apps in the environment allowing your users to have a global-search experience is visible and generative AI experiences may be or are enabled.
+- When set to "**Default**", the search bar in the header of all model-driven apps in the environment allowing your users to have a global-search experience is hidden, and generative AI experiences may be enabled.
 
+## What is the scope of content searched by Dataverse search?
 Any file or Dataverse knowledge added to Agents or model-driven apps defines the scope of content that's searched.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
@@ -132,16 +135,7 @@ To ensure optimal operations for the organization, Admins with the proper permis
 
 ## What happens if Dataverse search is turned off?
 
-| Feature |	Maker experience | End User Experience|
-|---------|------------------|--------------------|
-| Microsoft Copilot Studio Agent – Add Knowledge  | - Cannot upload files - Cannot select Dataverse tables - Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer)  |
-| Microsoft Copilot Studio Agent – Using Copilot Chat	|	Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer) 
-| Model Driven Applications – Dataverse search  |	Search bar will not be visible in model-driven applications  | Search bar will not be visible in model-driven applications |
-| Model Driven Applications – Copilot Chat  | - Can use the Model Driven App for record management (add, edit, delete, etc.) - If enabled in the settings, cannot use Agent that rely on that indexed data: Agent will not provide results until Dataverse is enabled for the environment (call to action for environment’s Admin to enable it)  |
-| Prompt actions with AI Builder / Custom AI Prompts
-| - Microsoft Copilot Studio
-| - Power Apps
-| - Power Automate  | If enabled in the settings, prompts will not be grounded with Dataverse knowledge  |
+If Dataverse search is set to "**Off**" for the environment, it is not possible to use the search capability in the power-apps navigation bar, as well as any generative AI experience that rely on Dataverse such as uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio Agents, among other experiences. To see how these experiences are limited see [What is Dataverse search]([url](https://learn.microsoft.com/en-us/power-apps/user/relevance-search-benefits)).
 
 ### See also
 
