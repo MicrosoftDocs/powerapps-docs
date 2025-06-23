@@ -81,6 +81,14 @@ Multiple features within the Power Platform are enabled via Dataverse search, na
 
 Currently, the best option for a Maker is to request their environment or tenant Admin to turn Dataverse search “On” or “Default”, as its disablement leads to poor quality answers and overall generative AI experiences.
 
+## What happens if Dataverse search is turned off?
+
+| Feature |	Maker experience | End User Experience|
+|---------|------------------|--------------------|
+| Microsoft Copilot Studio Agent – Add Knowledge  | - Cannot upload files - Cannot select Dataverse tables - Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer)  |
+| Microsoft Copilot Studio Agent – Using Copilot Chat	|	Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (call to action for environment’s Admin to enable it)  | Agent will not provide results that rely on this indexed data until Dataverse search is enabled for the environment (default to Fallback answer) 
+| Model Driven Applications – Dataverse search  |	Search bar will not be visible in model-driven applications  | Search bar will not be visible in model-driven applications |
+
 ### See also
 
 [Search for tables and rows by using Dataverse search](relevance-search.md)<br/>
