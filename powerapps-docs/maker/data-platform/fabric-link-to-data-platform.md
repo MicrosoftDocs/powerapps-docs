@@ -4,10 +4,11 @@ description: This article shows you how to configure your Power Platform environ
 author: MilindaV2
 ms.author: Milindav
 ms.reviewer: matp
+contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 05/13/2025
+ms.date: 06/23/2025
 ms.custom: template-how-to
 ---
 # Link to Microsoft Fabric
@@ -67,7 +68,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
    > If your environment is linked to a Dynamics 365 finance and operations environment, the add tables option enables you to include tables from finance and operations apps. Learn more: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
 
 6. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
-7. If a new column is added to a table that’s already part of the profile (also known as a metadata change), you can use the **Refresh Fabric tables** option, from the command bar, to update the change in Fabric. The update will occur after the next table data change is triggered. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
+7. If a new column is added to a table that’s already part of the profile (also known as a metadata change), you can use the **Refresh Fabric tables** option, from the command bar, to update the change in Fabric. The update occurs after the next table data change is triggered. You might need to review the report and downstream data flows to confirm that they aren't impacted by the change.
 8. You can also **Unlink**, which removes the Fabric link to your Dataverse environment. When unlinking, the Fabric lakehouse is also removed.
 
 > [!NOTE]
