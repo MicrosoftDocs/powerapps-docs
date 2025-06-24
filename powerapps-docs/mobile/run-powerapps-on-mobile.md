@@ -1,13 +1,12 @@
 ---
 title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: trdehove
-
+author: Murugesh1985
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/01/2023
+ms.date: 06/24/2025
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: murugeshs
 ms.reviewer: smurkute
 ms.assetid: 
 search.audienceType: 
@@ -205,7 +204,12 @@ To see model-driven apps from non-production environments, select the **Settings
 
 ## Run an app
 
-To run an app on a mobile device, select the app tile. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email.
+To run an app on a mobile device, select the app tile from the **Home** or **All apps** screen in the Power Apps mobile app.
+ 
+Considerations when opening apps:
+ 
+- If you created the app, you see the app in the **Home** page > **Recommended apps** section.
+- If you didn't create the app and the app is shared with you, use search box in the **Apps** screen to find the app the first time. After you open the app, it shows up on the **Home** screen the next time you access it.
 
 ### Run a canvas app
 
