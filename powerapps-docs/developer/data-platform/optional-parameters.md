@@ -429,7 +429,13 @@ When you have a column configured to use the [masking rules](/power-platform/adm
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
+RetrieveMultipleRequest request = new()
+{
+   Query = query,
+   ["UnMaskedData"] = true
+};
 
+var response = (RetrieveMultipleResponse)service.Execute(request);
 ```
 
 ### [Web API](#tab/webapi)
@@ -437,12 +443,12 @@ When you have a column configured to use the [masking rules](/power-platform/adm
 **Request:**
 
 ```http
-
+TODO
 ```
 
 ---
 
-Learn more about this in [Retrieve unmasked data](column-level-security.md#retrieve-unmasked-data).
+[Learn more about retrieving unmasked data](column-level-security.md#retrieve-unmasked-data).
 
 
 ### See also

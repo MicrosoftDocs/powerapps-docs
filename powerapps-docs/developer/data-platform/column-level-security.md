@@ -20,17 +20,16 @@ This article explains how developers can work with column-level security capabil
 
 Detect which columns are secured by retrieving the definition of the column and examining the boolean [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured). The following query examples return all the secured columns for an environment.
 
-### [SDK for .NET](#tab/sdk)
-
 There are two ways to discover which columns are secured with code.
 
-#### Retrieve column data filtered on IsSecured
+### Retrieve column data filtered on IsSecured
 
 This method queries the organization's metadata to identify columns marked with the `IsSecured` property set to `true`. Everyone has access to view this data. [Learn how to Query schema definitions](query-schema-definitions.md)
 
 The resulting CSV file contains two columns: **Table** and **Column**, representing the schema names  of the tables and their secured
 columns, respectively.
 
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -111,11 +110,32 @@ static internal void GetSecuredColumns(IOrganizationService service,
 }
 ```
 
-#### Retrieve FieldSecurityProfile for System Administrator role
+#### [Web API](#tab/webapi)
+
+```json
+TODO
+```
+
+**Request**:
+
+```http
+TODO
+```
+
+**Response**:
+
+```http
+TODO
+```
+
+---
+
+### Retrieve FieldSecurityProfile for System Administrator role
 
 
-This method queries the Dataverse field permission table to identify columns that are secured by the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45`. This record manages access to secured columns for system administrators. Typically only system administrators have the `prvReadFieldPermission` privilege to retrieve this data. The returned list contains fully qualified column names in the format `TableName.ColumnName`, sorted alphabetically.
+This method queries the Dataverse field permission table to identify columns that are secured by the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45`. This record manages access to secured columns for system administrators. Typically, only system administrators have the `prvReadFieldPermission` privilege to retrieve this data. The returned list contains fully qualified column names in the format `TableName.ColumnName`, sorted alphabetically.
 
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -128,8 +148,8 @@ This method queries the Dataverse field permission table to identify columns tha
 /// A sorted list of strings representing the fully qualified names of secured columns.
 /// </returns>
 /// <exception cref="Exception">
-/// Thrown if the calling user does not have read access to the field permission table or if an error occurs
-/// while retrieving field permissions.
+/// Thrown if the calling user does not have read access to the field permission table 
+/// or if an error occurs while retrieving field permissions.
 /// </exception>
 static internal List<string> GetSecuredColumnList(IOrganizationService service)
 {
@@ -188,7 +208,7 @@ static internal List<string> GetSecuredColumnList(IOrganizationService service)
 }
 ```
 
-### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 ```json
 TODO
@@ -223,7 +243,6 @@ When all of these properties are false, the column can't be secured. Some column
 The following queries return this data so you can discover which columns in your environment can be secured:
 
 ### [SDK for .NET](#tab/sdk)
-
 
 This static method retrieves metadata about entity attributes, including security-related properties, and writes the information to a CSV file. The output file contains details such as whether columns are secured, can be secured for create, update, or read operations, and other relevant metadata.
 
@@ -507,18 +526,18 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
 
 You can associate system users and teams to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
 
-Associate field permissions to the field security profiles using the [`lk_fieldpermission_fieldsecurityprofileid` one-to-many relationship](reference/entities/fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission columns:
+Associate field permissions to the field security profiles using the [`lk_fieldpermission_fieldsecurityprofileid` one-to-many relationship](reference/entities/fieldsecurityprofile.md#BKMK_lk_fieldpermission_fieldsecurityprofileid). The following table describes important field permission table columns:
 
 
-|Column |Description  |
-|---------|---------|
-|`FieldSecurityProfileId`|Refers to the field security profile this field permission applies to.|
-|`EntityName`|The table that contains the secured column.|
-|`AttributeLogicalName`|The logical name of the secured column.|
-|`CanCreate`|Whether Create access is allowed.|
-|`CanRead`|Whether Read access is allowed.|
-|`CanUpdate`|Whether Update access is allowed.|
-|`CanReadUnmasked`|Whether an unmasked value can be retrieved when `CanRead` is **Allowed**.|
+|Column  |Type  |Description  |
+|---------|---------|---------|
+|`FieldSecurityProfileId`|Lookup|Refers to the field security profile this field permission applies to.|
+|`EntityName`|String|The table that contains the secured column.|
+|`AttributeLogicalName`|String|The logical name of the secured column.|
+|`CanCreate`|Choice|Whether create access is allowed.|
+|`CanRead`|Choice|Whether read access is allowed.|
+|`CanUpdate`|Choice|Whether update access is allowed.|
+|`CanReadUnmasked`|Choice|Whether an unmasked value can be retrieved when `CanRead` is **Allowed**.|
 
 The `CanCreate`, `CanRead`, and `CanUpdate` choice columns use the values defined by the `field_security_permission_type` global choice:
 
@@ -554,7 +573,7 @@ The `PrincipalObjectAttributeAccess.AttributeId` column uses the [AttributeMetad
 
 #### Retrieve column AttributeId example
 
-This example shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) when you need to.
+This example shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value you will need to set the `PrincipalObjectAttributeAccess.AttributeId` column value.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -736,21 +755,20 @@ static internal void GrantColumnAccess(
         tableLogicalName: record.LogicalName,
         columnLogicalName: columnLogicalName);
 
-    //int objectTypeCode = metadata.objectTypeCode;
+    // int objectTypeCode = metadata.objectTypeCode;
     Guid columnId = metadata.columnId;
 
-    // https://learn.microsoft.com/power-apps/developer/data-platform/reference/entities/principalobjectattributeaccess
     Entity poaa = new("principalobjectattributeaccess")
     {
-        //Unique identifier of the shared secured field
+        // Unique identifier of the shared secured field
         ["attributeid"] = columnId,
-        //Unique identifier of the entity instance with shared secured field
+        // Unique identifier of the entity instance with shared secured field
         ["objectid"] = record,
-        //Unique identifier of the principal to which secured field is shared
+        // Unique identifier of the principal to which secured field is shared
         ["principalid"] = principal,
         // Read permission for secured field instance
         ["readaccess"] = readAccess,
-        //Update permission for secured field instance
+        // Update permission for secured field instance
         ["updateaccess"] = updateAccess
     };
 
@@ -801,8 +819,6 @@ TODO
 These examples retrieve and update an existing [Field Sharing (PrincipalObjectAttributeAccess)](reference/entities/principalobjectattributeaccess.md) record to modify access to the specified field.
 
 ##### [SDK for .NET](#tab/sdk)
-
-This method updates or creates a record in the `PrincipalObjectAttributeAccess` table to reflect the specified access permissions. If no matching record is found, an exception is thrown.
 
 This example depends on the `RetrieveTableTypeCodeAndColumnId` example function found in [Retrieve column AttributeId example](#retrieve-column-attributeid-example).
 
@@ -960,8 +976,6 @@ These examples retrieve and delete an existing [Field Sharing (PrincipalObjectAt
 
 ##### [SDK for .NET](#tab/sdk)
 
-This method removes the access granted to a secure column for the specified principal. It throws an exception when no matching access record exists.
-
 This example depends on the `RetrieveTableTypeCodeAndColumnId` example function found in [Retrieve column AttributeId example](#retrieve-column-attributeid-example).
 
 ```csharp
@@ -982,8 +996,8 @@ This example depends on the `RetrieveTableTypeCodeAndColumnId` example function 
 /// is being revoked.
 /// </param>
 /// <exception cref="Exception">
-/// Thrown if no matching PrincipalObjectAttributeAccess record is found for the specified column, record, and
-/// principal.
+/// Thrown if no matching PrincipalObjectAttributeAccess record is found for the specified 
+/// column, record, and principal.
 /// </exception>
 internal static void RevokeColumnAccess(IOrganizationService service,
     EntityReference record,
@@ -1137,11 +1151,14 @@ The [Secured Masking Rule (MaskingRule)](reference/entities/maskingrule.md) tabl
 |`DisplayName`|String|The display name of the secured masking rule.|
 |`MaskedCharacter`|String|Character used to mask.|
 |`RegularExpression`|String|Regular Expression in C#.|
-|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized.|
+|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized. [Learn more about managed properties](/power-platform/alm/managed-properties-alm)|
 |`RichTestData`|String|Set rich text test data to test this secured masking rule.|
 |`MaskedRichTestData`|String|`RichTestData` column data evaluated by this secured masking rule.|
 |`TestData`|String|Set test data to test this secured masking rule.|
 |`MaskedTestData`|String|`TestData` column data evaluated by a secured masking rule.|
+
+> [!NOTE]
+> The `RichTestData`, `MaskedRichTestData`, `TestData`, and `MaskedTestData` columns exist to support the experience to test masking rules in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). [Learn more about creating masking rules](/power-platform/admin/create-manage-masking-rules#create-masking-rules).
 
 #### Secured Masking Column columns
 
@@ -1151,9 +1168,9 @@ The [Secured Masking Column (AttributeMaskingRule)](reference/entities/attribute
 |---|---|---|
 |`AttributeLogicalName`|String|Logical name of the column for which the secured masking rule is used.|
 |`EntityName`|String|Logical name of the table that contains the column.|
-|`MaskingRuleId`|Lookup|The Masking Rule that the column uses|
+|`MaskingRuleId`|Lookup|The masking rule that the column uses|
 |`UniqueName`|String|The unique name of the secured masking column.|
-|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized.|
+|`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized. [Learn more about managed properties](/power-platform/alm/managed-properties-alm)|
 
 
 ### Retrieve unmasked data
@@ -1186,8 +1203,9 @@ This method queries the `sample_example` table and retrieves specific columns, i
 /// <param name="service">
 /// The IOrganizationService instance used to execute the query.
 /// </param>
-/// <returns>An EntityCollection containing the retrieved entities. The collection includes unmasked data
-/// for the specified columns.</returns>
+/// <returns>An EntityCollection containing the retrieved entities. 
+/// The collection includes unmasked data for the specified columns.
+/// </returns>
 internal static EntityCollection GetUnmaskedExampleRows(IOrganizationService service)
 {
     QueryExpression query = new("sample_example")
