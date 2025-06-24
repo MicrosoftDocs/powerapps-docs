@@ -23,7 +23,7 @@ To use an app in offline mode, download the app and sync data to your device.
 
 You can sync data reliably only when the Power Apps mobile app or Field Service app is open, running in the foreground, and your device screen is unlocked. Learn more about sync behavior in [Work with canvas apps offline](canvas-mobile-offline-working.md).
 
-The background sync behavior on Windows depends on the **Let this app run in the background** setting.  
+The background sync can be enabled on Windows by changing the **Let this app run in the background** setting.  
 
 - If you're using Windows 10, see [Manage background activity for apps in Windows](https://support.microsoft.com/en-us/windows/manage-background-activity-for-apps-in-windows-4f32dffe-b97c-40e8-a790-3ca10373a1ef) for more information.
 
