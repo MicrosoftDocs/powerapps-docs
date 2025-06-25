@@ -22,7 +22,7 @@ The wrap feature in Power Apps enables you to create native mobile versions of y
 
 When you update and republish your app, the wrapped app is automatically updated for users.
 
----
+
 
 ## Steps to create a custom-branded native app using the wrap wizard
 
@@ -231,13 +231,13 @@ You can view your build in several ways:
 > [!NOTE]
 > To manually code sign an iOS app, unzip the IPA file using a Mac device.
 
----
+
 
 ## Test and distribute your app
 
 Test your app and distribute it as needed. If you encounter issues, see the [troubleshooting page](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
----
+
 
 ## Register your app on Azure portal manually (optional)
 
@@ -256,17 +256,17 @@ When registering, select an account type containing **Any Microsoft Entra direct
 > - Wrap only supports **Multitenant** account types currently. The single tenant account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - You must create a separate **Redirect URI** for each platform (iOS, Android).
 
----
 
 ## Sign your mobile app package manually (optional)
 
 You can sign your app automatically in **Step 2** or manually after building. [Code signing](overview.md#code-signing) is different for Android and iOS.
 
 **Advantages of automatic signing for iOS and Android (APK):**
-   - No need to repeat signing process during rewrapping
-   - No waiting for app developers to complete the process
-   - No need for Android Studio setup or remembering passwords
-   - No Mac device required for iOS signing
+
+- You don't need to repeat the signing process during rewrapping.
+- You don't have to wait for app developers to finish the process.
+- You don't need to set up Android Studio or remember passwords.
+- You don't need a Mac device for iOS signing.
 
 | Platform | Signing Method |
 |----------|---------------|
@@ -274,7 +274,7 @@ You can sign your app automatically in **Step 2** or manually after building. [C
 | Android | [Manual code sign for Android](code-sign-android.md) |
 | Google Play Store | [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing) |
 
----
+
 
 ## See also
 
