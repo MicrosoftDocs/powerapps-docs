@@ -155,9 +155,9 @@ To create objects such as apps, flows, sites, and agents, you need to save your 
 
     The plan is stored in a solution. This action enables the **Objects** view in Plan designer, so you can switch between the plan and the solution view without leaving Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
-> [!NOTE]
-> - The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
-> - Anyone who has access to our environment can also access your plan.
+  > [!NOTE]
+  > - The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
+  > - Anyone who has access to our environment can also access your plan.
 
 
 You’re now ready to [build your solutions](build-solution.md).
