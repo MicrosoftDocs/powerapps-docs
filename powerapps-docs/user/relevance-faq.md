@@ -24,7 +24,7 @@ contributors:
 
 ## What is Dataverse search?
 
-Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources, including the ability to quickly search for content in model-driven apps. For more details about Dataverse search and the experiences it enables see [What is Dataverse search]([url](power-apps/user/relevance-search-benefits)).
+Dataverse search is how Microsoft enables rich search and AI-powered experiences across different products that use Dataverse as one of the data sources, including the ability to quickly search for content in model-driven apps. For more details about Dataverse search and the experiences it enables see [What is Dataverse search](power-apps/user/relevance-search-benefits).
 
 ## What is the difference between "On" and "Default" state for Dataverse search?
 - When set to "**On**", the search bar in the header of all model-driven apps in the environment allowing your users to have a global-search experience is visible and generative AI experiences may be or are enabled.
