@@ -135,7 +135,7 @@ To ensure optimal operations for the organization, Admins with the proper permis
 
 ## What happens if Dataverse search is turned off?
 
-If Dataverse search is set to "**Off**" for the environment, it is not possible to use the search capability in the power-apps navigation bar, as well as any generative AI experience that rely on Dataverse such as uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio Agents, among other experiences. To see how these experiences are limited see [What is Dataverse search](https://learn.microsoft.com/en-us/power-apps/user/relevance-search-benefits).
+If Dataverse search is set to "**Off**" for the environment, it is not possible to use the search capability in the power-apps navigation bar, as well as any generative AI experience that rely on Dataverse such as uploaded files or using OneDrive or Sharepoint files in Microsoft Copilot Studio Agents, among other experiences. To see how these experiences are limited see [What is Dataverse search](/power-apps/user/relevance-search-benefits).
 
 ### See also
 
