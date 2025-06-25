@@ -128,7 +128,7 @@ Dataverse search strives to maintain functional parity between our commercially 
 
 ## How is Dataverse search reported?
 In addition to the DB and File storage, Dataverse search includes the indexes that power different experiences. These indexes support search and generative AI across structured or tabular, as well as unstructured data stored in Dataverse (i.e. files).
-Storage consumed by Dataverse search was previously reported at the Environment level as a table called “RelevanceSearch” and is now reported as “DataverseSearch”. To know more about Dataverse search capacity storage reporting go to [Dataverse capacity-based storage]([url](power-platform/admin/capacity-storage))
+Storage consumed by Dataverse search is reported at the Environment level as a table called “DataverseSearch”, previously reported as “RelevanceSearch”. To know more about Dataverse search capacity storage reporting go to [Dataverse capacity-based storage](/power-platform/admin/capacity-storage)
 
 ## What actions can Admins take to manage Dataverse search?
 To ensure optimal operations for the organization, Admins with the proper permissions can take a few different approaches to optimize storage consumption, including turning off Dataverse search, which is not recommended as it impacts all the enabled experiences, such as search and generative AI conversational experiences. To know more about how to manage Dataverse search go to [Dataverse capacity-based storage]([url](power-platform/admin/capacity-storage))
