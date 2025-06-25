@@ -166,22 +166,22 @@ Run these PowerShell commands as an Azure admin If you don't see permissions und
 
 ## Configure API permissions manually (optional)
 
-If you encounter errors, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
+If you get errors, manually configure API permissions. For more information, see [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
 ### Required API permissions
 
 | API Type                    | Specific API                                             | Reason                                                                                                                       |
 |----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Microsoft APIs**         | Dynamics CRM                                             | `user_impersonation` is needed in order for the application to call Dataverse on behalf of the user.                        |
-| **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
-| **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
-| **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
-| **APIs my organization uses** | Microsoft Mobile Application Management        | Required as Power Apps uses Intune SDK internally.               |
+| **Microsoft APIs**         | Dynamics CRM                                             | The application needs `user_impersonation` to call Dataverse for the user.                      |
+| **APIs my organization uses** | Azure API Connections                                      | The application needs `Runtime.All` to call any connector from Power Platform.                                   |
+| **APIs my organization uses** | PowerApps Service                                         | The application needs the `User` permission to contact Power Apps backend services from Power Platform.                                     |
+| **APIs my organization uses** | Power BI                                                 | The application needs Power BI permissions to access or embed Power BI content.                                          |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | The application needs this permission because Power Apps uses Intune SDK internally. |
 
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
----
+
 #### Add Redirect URIs as an app admin 
 
 1. In Azure Portal, go to your app registration > **Authentication**.
