@@ -55,9 +55,10 @@ If you don't set environment variables:
    - Add the path of `openssl.exe` (for example, `C:\Program Files\OpenSSL-Win64\bin`) to your PATH.
 
 
-### Generate keystore and key
+## **For manual signing process**
+### Generate signature hash key
 
-Run this command to generate a key:
+Run this command in the command prompt as an admin to generate a key:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
@@ -70,9 +71,9 @@ When prompted:
 
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-### Generate signature hash
+### Generate certificate
 
-Run this command to generate the signature hash:
+Run this command to generate certificate
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
@@ -81,14 +82,6 @@ keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl s
 When prompted, enter the keystore password you created earlier.
 
 :::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
-
-### Alternative command format
-
-If you have environment variables set, you can use the generic format:
-
-```
-keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000
-```
 
 **Parameters explained:**
 
@@ -101,62 +94,47 @@ keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -k
 | **keysize** | Size of each key |
 | **validity** | Validity of the key in days |
 
-**Examples:**
-- For Key Vault (automatic signing), use a `.pfx` extension: 
- 
-  ```
-  keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
-  ```
+## **For Key Vault signing process**
+### Generate signature hash key
 
-- For manual signing, use a `.jks` extension:  
-
-  ```
-  keytool -genkey -alias powerappswrap -keyalg RSA -keystore \Users\name\Desktop\powerappswrap.jks -keysize 2048 -validity 10000
-  ```
-
-
-## Export certificate and generate signature hash
-
-After generating the key, export the keystore certificate using the **exportcert** command:
+Run this command in the command prompt as an admin to generate a key:
 
 ```
-keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
+keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
 ```
 
-When prompted, enter the keystore password.
+When prompted:
+1. Enter a password for your keystore.
+1. Enter your name, organization, location, and other required details.
+1. Confirm the information.
+
+:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
+
+### Generate certificate
+
+Run this command to generate certificate
+
+```
+keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl sha1 -binary | openssl base64
+```
+
+When prompted, enter the keystore password you created earlier.
+
+:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
 
 **Parameters explained:**
 
 | Parameter | Description |
 |-----------|-------------|
-| **exportcert** | Reads the certificate from the keystore |
-| **alias** | Alias used when generating keys |
+| **genkey** | Command to generate a key |
+| **alias** | Alias for the keystore entry |
+| **keyalg** | Key algorithm name |
 | **keystore** | Name of the keystore |
-| **openssl** | Generates SHA1 key for Android |
-
-Add the generated signature hash in the **Redirect URI** when [registering the app](wrap-how-to.md#4-register-your-app).
-
-### Convert SHA1 hex to Base64-encoded signature hash
-
-If you see the error "The signature hash must be base64-encoded SHA1" in the Azure portal, follow these steps:
-
-1. Run the following command. Replace `<SIGNATURE_ALIAS>` and `<PATH_TO_KEYSTORE>` with your own values.  
-   ```
-   keytool -list -v -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE
-   ```
-
-2. When prompted, enter the keystore password.
-
-3. Copy the **SHA1** value from the **Certificate fingerprints** section.  
-   - For example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
-
-4. Use a "Hexadecimal to Base64" converter to convert the SHA1 value to Base64.  
-   - For example: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
-
-5. Use the Base64 value as the **Signature hash** in the Azure portal when [registering the app](wrap-how-to.md#4-register-your-app).
+| **keysize** | Size of each key |
+| **validity** | Validity of the key in days |
 
 
-## Manual signing of APK package
+## Manual signing of APK package (Not for KV signing)
 
 Follow these steps if you don't use automatic sign-in during wrap or if you try to upload an AAB file for Play Store. To avoid repeating this process, use automatic sign-in when possible.
 
