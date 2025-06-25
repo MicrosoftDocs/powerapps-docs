@@ -157,7 +157,7 @@ To create objects such as apps, flows, sites, and agents, you need to save your 
 
   > [!NOTE]
   > - The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
-  > - Anyone who has access to our environment can also access your plan.
+  > - Anyone with the required plan [privileges](plan-designer.md#prerequisites) can access your plan.
 
 
 You’re now ready to [build your solutions](build-solution.md).
