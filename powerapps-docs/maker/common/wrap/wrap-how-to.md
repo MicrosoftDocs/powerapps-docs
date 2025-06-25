@@ -85,12 +85,6 @@ When you update and republish your app, the wrapped app is automatically updated
    - If **On**: Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md)
    - If **Off**: You'll need to perform manual signing later
 
-   **Advantages of automatic signing for iOS and Android (APK):**
-   - No need to repeat signing process during rewrapping
-   - No waiting for app developers to complete the process
-   - No need for Android Studio setup or remembering passwords
-   - No Mac device required for iOS signing
-
    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
    > [!NOTE]
@@ -170,6 +164,24 @@ Run these PowerShell commands as an Azure admin If you don't see permissions und
 > [!NOTE]
 > If only the **Application name** field is visible, continue to the next steps and select **Android** as a target platform to display the signature hash field.
 
+## Configure API permissions manually (optional)
+
+If you encounter errors, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
+
+### Required API permissions
+
+| API Type                    | Specific API                                             | Reason                                                                                                                       |
+|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Microsoft APIs**         | Dynamics CRM                                             | `user_impersonation` is needed in order for the application to call Dataverse on behalf of the user.                        |
+| **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
+| **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
+| **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | Required as Power Apps uses Intune SDK internally.               |
+
+
+For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
+
+---
 #### Add Redirect URIs as an app admin 
 
 1. In Azure Portal, go to your app registration > **Authentication**.
@@ -246,31 +258,15 @@ When registering, select an account type containing **Any Microsoft Entra direct
 
 ---
 
-## Configure API permissions manually (optional)
-
-If you encounter errors, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
-
-### Required API permissions
-
-| API Type                    | Specific API                                             | Reason                                                                                                                       |
-|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Microsoft APIs**         | Dynamics CRM                                             | `user_impersonation` is needed in order for the application to call Dataverse on behalf of the user.                        |
-| **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
-| **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
-| **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
-| **APIs my organization uses** | Microsoft Mobile Application Management        | Required as Power Apps uses Intune SDK internally.               |
-
-
-
-
-
-For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
-
----
-
 ## Sign your mobile app package manually (optional)
 
 You can sign your app automatically in **Step 2** or manually after building. [Code signing](overview.md#code-signing) is different for Android and iOS.
+
+**Advantages of automatic signing for iOS and Android (APK):**
+   - No need to repeat signing process during rewrapping
+   - No waiting for app developers to complete the process
+   - No need for Android Studio setup or remembering passwords
+   - No Mac device required for iOS signing
 
 | Platform | Signing Method |
 |----------|---------------|
