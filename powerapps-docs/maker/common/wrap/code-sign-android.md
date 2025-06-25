@@ -94,10 +94,11 @@ When prompted, enter the keystore password you created earlier.
 | **keysize** | Size of each key |
 | **validity** | Validity of the key in days |
 
-## **For Key Vault signing process**
+## **For automatic key vault signing process**
+
 ### Generate signature hash key
 
-Run this command in the command prompt as an admin to generate a key:
+Open a command prompt as an admin and run this command to generate a key:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
@@ -112,7 +113,7 @@ When prompted:
 
 ### Generate certificate
 
-Run this command to generate certificate
+Run this command to generate a certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl sha1 -binary | openssl base64
@@ -126,12 +127,12 @@ When prompted, enter the keystore password you created earlier.
 
 | Parameter | Description |
 |-----------|-------------|
-| **genkey** | Command to generate a key |
-| **alias** | Alias for the keystore entry |
-| **keyalg** | Key algorithm name |
-| **keystore** | Name of the keystore |
-| **keysize** | Size of each key |
-| **validity** | Validity of the key in days |
+| **genkey** | Generates a key. |
+| **alias** | Alias for the keystore entry. |
+| **keyalg** | Key algorithm name. |
+| **keystore** | Name of the keystore. |
+| **keysize** | Size of each key. |
+| **validity** | Validity of the key in days. |
 
 
 ## Manual signing of APK package (Not for KV signing)
