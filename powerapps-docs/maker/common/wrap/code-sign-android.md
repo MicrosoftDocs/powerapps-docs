@@ -43,7 +43,7 @@ You need:
 ## Generate key and signature hash
 
 > [!NOTE]
-> Skip to [Manual signing](#manual-signing-of-apk-package) if you already generated keys and the signature hash when you created the [app registration](wrap-how-to.md#4-register-your-app).
+> Skip to [Manual signing](#manual-signing-of-apk-package-not-for-kv-signing) if you already generated keys and the signature hash when you created the [app registration](wrap-how-to.md#4-register-your-app).
 
 ### Set up environment variables
 
