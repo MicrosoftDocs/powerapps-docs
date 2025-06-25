@@ -46,7 +46,7 @@ Dataverse search delivers the following benefits:
 For more information about Dataverse search, see [Search for tables and rows by using Dataverse search](/powerapps/user/relevance-search).
 
 ## What makes Dataverse search?
-In addition to the DB Database and File storage, Dataverse search includes the indexes that power different experiences. These indexes support search and generative AI across structured or tabular, as well as unstructured data stored in Dataverse.
+In addition to the Database and File storage, Dataverse search includes the indexes that power different experiences. These indexes support search and generative AI across structured or tabular, as well as unstructured data stored in Dataverse.
 
 ## Experiences enabled by Dataverse search
 Multiple features within the Power Platform are enabled via Dataverse search, namely the Copilot indexes. These experiences include:
