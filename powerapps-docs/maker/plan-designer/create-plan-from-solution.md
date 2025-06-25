@@ -13,6 +13,9 @@ ms.reviewer: mkaur
 
 Use Plan designer to create a plan for your existing solution. Plan designer generates a detailed document that describes your solution. The plan covers the business problem, user requirements like user roles and stories, the data model, and technologies like apps. This feature saves time when you're trying to understand a solution's content and helps makers improve an existing solution.
 
+ > [!NOTE]  
+ > This feature is currently only supported in English.
+
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. In the navigation pane, select **Solutions**.
 1. Select **Create plan from a solution**. Or, from the list of solutions, select a solution, and then select **Commands** > **Create a plan**.
@@ -22,8 +25,8 @@ Use Plan designer to create a plan for your existing solution. Plan designer gen
 1. Select **Select solution** and then choose a solution.
     
     > [!NOTE]  
-    > - The solution must have at least one app and one associated table.
-    > - This feature is currently supported in English only.  
+    > The solution must have at least one app and one associated table.
+
 
 1. Select **Create plan**.
 
