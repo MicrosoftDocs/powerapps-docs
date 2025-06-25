@@ -4,7 +4,7 @@ description: Use Plan designer to create business solutions with AI-powered expe
 author: mduelae
 contributors:
 ms.topic: how-to
-ms.date: 6/13/2025
+ms.date: 6/25/2025
 ms.author: szlo
 ms.reviewer: mkaur
 ms.collection:
@@ -156,12 +156,13 @@ To create objects such as apps, flows, sites, and agents, you need to save your 
     The plan is stored in a solution. This action enables the **Objects** view in Plan designer, so you can switch between the plan and the solution view without leaving Plan designer. Learn more about solutions in [Solution view](../data-platform/solutions-area.md).
 
 > [!NOTE]
-> The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
+> - The solution name must only contain letters, numbers, and underscores. For more information, see [Create a solution](../data-platform/create-solution.md).
+> - Anyone who has access to our environment can also access your plan.
 
 
-1. You’re now ready to [build your solutions](build-solution.md).
+You’re now ready to [build your solutions](build-solution.md).
 
-    :::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot showing the 'Ready to build your solution' message.":::
+:::image type="content" source="media/create-a-plan/create-objects.png" alt-text="Screenshot showing the 'Ready to build your solution' message.":::
 
 ## Export your plan to a PDF
 
