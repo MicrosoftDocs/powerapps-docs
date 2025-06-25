@@ -53,29 +53,29 @@ Multiple features within the Power Platform are enabled via Dataverse search, na
 
 **Microsoft Copilot Studio Agents**
 
-1.	[Add Files as a knowledge source]([url](microsoft-copilot-studio/knowledge-add-file-upload))
-2.	[Add Dataverse as a knowledge source]([url](microsoft-copilot-studio/knowledge-add-dataverse))
-3.	[Add Sharepoint as a knowledge source]([url](microsoft-copilot-studio/knowledge-add-sharepoint))
-4.	[Add OneDrive as a knowledge source]([url](microsoft-copilot-studio/knowledge-add-unstructured-data))
-5.	[Agent Copilot]([url](microsoft-copilot-studio/guidance/generative-ai-math-data-queries))
+1.	[Add Files as a knowledge source](/microsoft-copilot-studio/knowledge-add-file-upload)
+2.	[Add Dataverse as a knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse)
+3.	[Add Sharepoint as a knowledge source](/microsoft-copilot-studio/knowledge-add-sharepoint)
+4.	[Add OneDrive as a knowledge source](/microsoft-copilot-studio/knowledge-add-unstructured-data)
+5.	[Agent Copilot](/microsoft-copilot-studio/guidance/generative-ai-math-data-queries)
 
 **Dynamics 365 Copilots**
 
-6.	[Sales Copilot]([url](dynamics365/sales/copilot-overview))
-7.	[Customer Service Copilot]([url](dynamics365/contact-center/use/use-copilot-features))
-8.	[Contact Center Copilot]([url](dynamics365/contact-center/administer/configure-copilot-features))
-9.	[Field Service Copilot]([url](dynamics365/field-service/copilot-side-pane))
+6.	[Sales Copilot](/dynamics365/sales/copilot-overview)
+7.	[Customer Service Copilot](/dynamics365/contact-center/use/use-copilot-features)
+8.	[Contact Center Copilot](/dynamics365/contact-center/administer/configure-copilot-features)
+9.	[Field Service Copilot](/dynamics365/field-service/copilot-side-pane)
 
 **Power Apps – Model-Driven Apps**
 
-10.	[Copilot for app users in model-driven apps]([url](power-apps/maker/model-driven-apps/add-ai-copilot))
-11.	[Dataverse search]([url](configure-relevance-search-organization?tabs=new))
+10.	[Copilot for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-ai-copilot)
+11.	[Dataverse search](/configure-relevance-search-organization?tabs=new)
 
 **Experiences across the Power Platform**
 
-12.	[In Power Apps / Power Automate]([url](ai-builder/prompt-library))
-13.	[In Microsoft Copilot Studio]([url](microsoft-copilot-studio/nlu-prompt-node))
-14.	[Power Apps / Power Automate - Custom AI Prompts]([url](ai-builder/create-a-custom-prompt))
+12.	[In Power Apps / Power Automate](/ai-builder/prompt-library)
+13.	[In Microsoft Copilot Studio](/microsoft-copilot-studio/nlu-prompt-node)
+14.	[Power Apps / Power Automate - Custom AI Prompts](/ai-builder/create-a-custom-prompt)
 
 # What actions can Makers take if Dataverse search is turned off for their environment?
 
