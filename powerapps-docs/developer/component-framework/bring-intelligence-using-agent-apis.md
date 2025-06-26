@@ -29,6 +29,9 @@ These APIs are designed to enhance integration with Microsoft Copilot Studio (MC
 |[copilot.executeEvent](reference/copilot/executeevent.md)|[!INCLUDE [executeevent-description](reference/copilot/includes/executeevent-description.md)]|
 |[copilot.executePrompt](reference/copilot/executeprompt.md)|[!INCLUDE [executeprompt-description](reference/copilot/includes/executeprompt-description.md)]|
 
+## Accessibility
+
+When creating a code component, ensure the following best practices in [code component accessibility checks](code-components-best-practices.md#check-accessibility) are followed to have an accessible experience.
 
 ### Related articles
 
