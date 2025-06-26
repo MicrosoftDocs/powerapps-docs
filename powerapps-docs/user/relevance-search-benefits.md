@@ -71,7 +71,7 @@ Dataverse search lets you use multiple features in Power Platform, including Cop
 **Power Apps – Model-Driven Apps**
 
 - [Copilot for app users in model-driven apps](/power-apps/maker/model-driven-apps/add-ai-copilot)
-- [Dataverse search](power-platform/admin/configure-relevance-search-organization)
+- [Dataverse search](/power-platform/admin/configure-relevance-search-organization)
 
 **Experiences across the Power Platform**
 
@@ -96,7 +96,7 @@ Currently, the best option for a maker is to request their environment or tenant
 [Search for tables and rows by using Dataverse search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about Dataverse search](relevance-faq.md)<br />
-[Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)<br/>   
+[Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)<br/>
 [Compare search options in Microsoft Dataverse](search.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
