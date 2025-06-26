@@ -22,7 +22,7 @@ Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow
 - `Xrm.Copilot` namespace used for client scripts in model-driven apps. This article describes these APIs.
 - [PCF (for use in custom controls)](../../component-framework/bring-intelligence-using-agent-apis.md).
 
-These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences.
+These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences. The APIs leverage the MCS agent configured as the Interactive agent in the model app designer. See more at [Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app#working-with-an-interactive-agent).
 
 |API|Description|
 |---------|---------|
@@ -36,4 +36,5 @@ These APIs are designed to enhance integration with Microsoft Copilot Studio (MC
 [Xrm.Copilot (Client API reference)](reference/xrm-copilot.md)  
 [Xrm.Copilot.executeEvent (Client API reference)](reference/Xrm-Copilot/executeevent.md)  
 [Xrm.Copilot.executePrompt (Client API reference)](reference/Xrm-Copilot/executeprompt.md)  
+[Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app#working-with-an-interactive-agent)
 [Copilot (Power Apps component framework API reference)](../../component-framework/reference/copilot.md)
