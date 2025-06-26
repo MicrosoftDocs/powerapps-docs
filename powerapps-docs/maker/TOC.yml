@@ -1441,8 +1441,6 @@
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
       href: ./model-driven-apps/app-value-proposition.md
-    - name: Build an app in three steps (preview)
-      href: ./model-driven-apps/build-app-three-steps.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
