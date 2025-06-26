@@ -1,7 +1,7 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.date: 06/16/2025
+ms.date: 06/26/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -53,7 +53,14 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 1. Within the **Trigger** node, select **Edit**.
    :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event.png" alt-text="Copilot Studio Trigger custom client event.":::   
 1. Within the **On Event Activity properties** pane, copy the **Event name** property string value to be passed from the agent response component. More information: [Change the trigger for a topic](/microsoft-copilot-studio/authoring-triggers)
-   :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event-properties.png" alt-text="Copilot Studio Trigger On Event property pane.":::   
+   :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event-properties.png" alt-text="Copilot Studio Trigger On Event property pane.":::
+
+## Accessibility
+
+When the MCS response is an Adaptive Card, ensure the following best practices are followed to have an accessible experience.
+
+- [Design best practices - Adaptive Cards](https://adaptivecards.microsoft.com/?topic=design-best-practices)
+- [Image - Adaptive Cards](https://adaptivecards.microsoft.com/?topic=Image)
 
 ## Limitations
 
@@ -67,6 +74,8 @@ The following component properties are currently not supported:
 - Component width
 - Component height
 - Bind to table column
+
+The component does not support passing additional context to MCS. If additional context is needed, create a custom PCF and use [Agent API executeEvent](../../developer/component-framework/bring-intelligence-using-agent-apis.md)
 
 The component isn't supported for mobile or tablets.
 
