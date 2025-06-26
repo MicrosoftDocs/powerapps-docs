@@ -22,7 +22,7 @@ Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow
 - `Context.Copilot` methods used for PCF controls. This is the subject of this article.
 - [Xrm.Copilot namespace used for client scripts in model-driven apps.](../model-driven-apps/clientapi/bring-intelligence-using-agent-apis.md)
 
-These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences. The APIs leverage the MCS agent configured as the Interactive agent in the model app designer.  See more at [Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app#working-with-an-interactive-agent). 
+These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences. The APIs leverage the MCS agent configured as the Interactive agent in the model app designer. See more at [Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent). 
 
 |API|Description|
 |---------|---------|
@@ -36,11 +36,11 @@ When creating a code component, ensure the following best practices in [code com
 
 ### Related articles
 
-[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)<br />
+[FAQ for Agent APIs and Agent Response component](../../maker/common/faq-agent-api-component.md)  
 [Copilot](reference/copilot.md)  
 [executeEvent](reference/copilot/executeevent.md)  
 [executePrompt](reference/copilot/executeprompt.md)  
-[Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app#working-with-an-interactive-agent)
+[Working with an interactive agent](../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent)  
 [Power Apps component framework overview](overview.md)  
 [Create your first code component](implementing-controls-using-typescript.md)  
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)  
