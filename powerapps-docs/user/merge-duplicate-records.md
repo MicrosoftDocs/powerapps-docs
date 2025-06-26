@@ -18,23 +18,23 @@ contributors:
 ---
 # Merge duplicate rows 
 
-Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
+Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows, such as accounts and contacts. When you merge a row, any related or child rows are also merged. Your administrator may also set up duplicate detection rules for other situations.  
 
 There are a few situations when duplicates may be found:  
 
 - When a row is created or updated.  
-- When  you're using Dynamics 365 for Outlook and you go from offline to online.  
+- When you're using Dynamics 365 for Outlook and you go from offline to online.  
 - When you import data using the Import Data wizard.  
-- Duplicates aren't detected when you merge rows, save an activity as completed, or change the status of a row, such as activating or reactivating a row.
+- Duplicates aren't detected when you merge rows, save an activity as completed, or change the status of a row. For example, when activating or reactivating a row.
   
-For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
+For example, let's say you enter a contact row, Jim Glynn, along with a mobile phone number. The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
   
  > [!div class="mx-imgBorder"] 
  > ![Duplicate contact row detected.](media/duplicates-detected.png "Duplicate contact row detected")  
   
- You're not sure if this is a new row (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
+ You're not sure if this is a different person that has the same name as an existing contact, so you select **Ignore And Save**.  
   
- Next, you go to the **My Active Contacts** list and see that now you have two rows with the same name. After reviewing the rows,  you  determine that they're duplicates that need to be merged.  
+ Next, you go to the **My Active Contacts** list and see that now you have two rows with the same name. After reviewing the rows, you determine that they're duplicates that need to be merged.  
  
  > [!div class="mx-imgBorder"] 
  > ![Duplicate contact row is detected.](media/duplicates-detected-1.png "Duplicate contact row is detected")  
@@ -64,17 +64,17 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 
 ### Limitations
 
-- You can only merge rows from Account, Contact, and Lead tables. Other out-of-box Dataverse tables and custom tables are not supported.
+- You can only merge rows from Account, Contact, and Lead tables. Other out-of-box Dataverse tables and custom tables aren't supported.
 - You can only merge two records at a time.
 - File and image columns can't be previewed. They display as base64 text. Go to the original records to view the file or image.
 - If a column or control for the column matches any of the following conditions, it will not show up in the merge dialog:  
-  - The column or containing section is [configured to be hidden by default in column or section properties](../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form). Hidden columns and sections can be forced to appear using Client API functions, but this does not make them eligible for merging.
+  - The column or containing section is [hidden by default in column or section properties](../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form). Hidden columns and sections can be forced to appear using Client API functions, but they still won't be eligible for merging.
   - The column's `ValidForUpdate` property is `False`.
   - The column is **Choice** or **Choices** type and it has either a parent choice or child choice column.
-  - The column is `parentaccountid` on the Account table. This is a system setting and cannot be changed. 
-  - The column is `parentcustomerid` on the Contact table. This is a system setting and cannot be changed.
-  - The column is `Owner` type (example: `ownerid`).
-  - The control for the columm does not have a class property.
-  - The control for the columm is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
+  - The column is `parentaccountid` on the Account table.
+  - The column is `parentcustomerid` on the Contact table.
+  - The column is **Owner** type (example: `ownerid`).
+  - The control for the column does not have a class property.
+  - The control for the column is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
