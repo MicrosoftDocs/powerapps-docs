@@ -48,9 +48,6 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >  To modify the columns that are visible for the current record in the duplicate detection dialog, administrators can modify the **Advanced Find View** for that entity. 
   
 ### How to merge duplicate rows
-> [!NOTE]
->  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
-  
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
    > [!div class="mx-imgBorder"] 
@@ -61,23 +58,23 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
    > [!NOTE]
    > If you run into issues during the merge process, uncheck **Enable parent check**. If files are deleted during the merge process, you can skip the parent check. This allows your merge to continue even if someone deletes a row from the set while the job is running in the background. For more information, see [Asynchronous processing of cascading transactions](/power-platform/admin/async-cascading#troubleshooting-file-deletion-issues-during-cascade-merge).
   
-     
    > [!div class="mx-imgBorder"] 
    > ![Dialog box for merging rows.](media/merge-dups.gif "Dialog box for merging rows")  
-  
 
 
-> [!IMPORTANT]
->  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
->   - The control does not have a class property.
->   - The column's metadata `ValidForUpdate` is False.
->   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
->   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
->   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
->   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed.
->   - The column is of type `Owner` (example: `ownerid`).
+### Limitations
 
-
+- You can only merge rows from Account, Contact, and Lead tables. Other out-of-box Dataverse tables and custom tables are not supported.
+- You can only merge two records at a time.
+- File and image columns can't be previewed. They display as base64 text. Go to the original records to view the file or image.
+- If a column or control for the column matches any of the following conditions, it will not show up in the merge dialog:  
+  - The column or containing section is [configured to be hidden by default in column or section properties](../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form). Hidden columns and sections can be forced to appear using Client API functions, but this does not make them eligible for merging.
+  - The column's `ValidForUpdate` property is `False`.
+  - The column is **Choice** or **Choices** type and it has either a parent choice or child choice column.
+  - The column is `parentaccountid` on the Account table. This is a system setting and cannot be changed. 
+  - The column is `parentcustomerid` on the Contact table. This is a system setting and cannot be changed.
+  - The column is `Owner` type (example: `ownerid`).
+  - The control for the columm does not have a class property.
+  - The control for the columm is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
