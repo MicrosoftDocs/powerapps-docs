@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 06/19/2025
+ms.date: 06/26/2025
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -100,6 +100,7 @@ As you author your app and create a connection to a data source, you might see t
 > [!NOTE]
 > - For detailed information about security considerations when using a relational database server, such as Microsoft SQL Server or Oracle, as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
 > - Power Apps doesn't support **External member** identities. For more information, see [Properties of a Microsoft Entra B2B collaboration user](/azure/active-directory/external-identities/user-properties).
+> - Gateway selection is not supported for custom connectors that use the anonymous authentication type.
 
 ### Microsoft Entra ID
 
