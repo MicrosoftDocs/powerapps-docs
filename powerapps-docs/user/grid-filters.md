@@ -1,12 +1,12 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: fikaradz 
+author: clromano 
 ms.component: pa-user
 ms.topic: how-to
 ms.date: 06/28/2024
 ms.subservice: end-user
-ms.author: fikaradz
+ms.author: clromano
 ms.reviewer: smurkute
 ms.assetid: 
 ms.custom: ignite-2024
