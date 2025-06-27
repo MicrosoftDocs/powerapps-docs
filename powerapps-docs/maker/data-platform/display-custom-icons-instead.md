@@ -25,7 +25,7 @@ Power Apps environment administrators and customizers can add graphics to a view
 
 This example displays custom icons in a view for the opportunity table, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard tables, such as the account or contact table, as well as custom tables. 
 
-:::image type="content" source="media/icon-in-opportunity-view.png" alt-text="All Opportunities view with Rating column displaying icons and text value.":::
+:::image type="content" source="media/icon-in-opportunity-view.png" alt-text="All Opportunities view with Rating column displaying icons and text value." lightbox="media/icon-in-opportunity-view.png":::
   
 Custom icons in list views can display in model-driven apps, mobile app, and App for Outlook.
 
