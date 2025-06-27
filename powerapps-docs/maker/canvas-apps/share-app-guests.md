@@ -5,7 +5,7 @@ author: alaug
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 8/22/2023
+ms.date: 6/27/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -24,10 +24,10 @@ Watch this video to learn how to share an app with guests:
 
 ## Prerequisites
 
-- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Configure external collaboration settings for B2B in Microsoft Entra External ID](/entra/external-id/external-collaboration-settings-configure)
 
   > [!NOTE]
-  > B2B external collaboration is enabled by default. However, you need to verify that the settings weren't changed by a tenant admin. For more information about Microsoft Entra B2B, see [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b).
+  > B2B external collaboration is enabled by default. However, you need to verify that the settings weren't changed by a tenant admin. For more information about Microsoft Entra B2B, see [Overview: B2B collaboration with external guests for your workforce](/entra/external-id/what-is-b2b).
 
 - Access to an account that can add guest users to a Microsoft Entra tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
@@ -41,36 +41,21 @@ Watch this video to learn how to share an app with guests:
 
 ## Steps to grant guest access
 
-1. In Microsoft Entra ID, select **New guest user**. More information: [Quickstart: Add a new guest user in Microsoft Entra ID](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
+1. In Microsoft Entra ID, select **New guest user**. More information: [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal)
 
     ![Add a guest in Microsoft Entra ID.](media/share-app/guest_access_doc_1.png "Add a guest in Microsoft Entra ID")
 
 2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
 
-   - To assign guest users from admin.microsoft.com, go to [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - To assign guest users from admin.microsoft.com, go to [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
 
-   - To assign guest users from portal.azure.com, go to [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
+   - To assign guest users from portal.azure.com, go to [Assign or remove licenses](/entra/fundamentals/licensing).
 
    > [!IMPORTANT]
    > You might need to disable the Microsoft 365 admin center preview to assign a license to a guest.
 
-3. Share the canvas app by performing these steps:
+3. [Share an app from Power Apps](Share an app from Power Apps)
 
-    1. Sign in to [Power Apps](https://make.powerapps.com).
-
-    1. On the left pane, select **Apps**.
-
-    1. Select a canvas app.
-
-    1. On the command bar, select **Share**.
-
-    1. Enter an email address for a guest user from a Microsoft Entra tenant. More information: [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b)
-
-       ![Share with guest.](media/share-app/guest_access_doc_2.png "Share with guest")
-
-After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing. You can also share the app URL directly with the guest instead. To find the URL, go to [Power Apps](https://make.powerapps.com), select **Apps** on left pane, select the app, and then select the **Details** tab. The app URL is displayed under **Web link**.
-
-![Guests receive app share email.](media/share-app/guest_access_doc_4.png "Guests receive app share email")
 
 ## Considerations and limitations for guest access
 
@@ -168,11 +153,11 @@ No. Authorization capabilities can and should be used to control which users acc
 
 ### Why can an Azure B2B user without a license access a model driven app?
 
-The detection of a previously licensed user no longer having a license isn't immediate. If you expect a user to lose access to an app using Dataverse, their authorization to the app or data should be updated. For example, the app should be unshared with the user or Dataverse security roles should be removed from the user.
+The detection of a previously licensed user no longer having a license isn't immediate. If you expect a user to lose access to an app using Dataverse, then their authorization to the app or data should be updated. For example, the app should be unshared with the user or Dataverse security roles should be removed from the user.
 
 ### Which connectors create connections in the resource tenant by default?
 
-Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. For more information on each connector as their may be restriction, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
+Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. For more information on each connector as there might be restriction, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Creates connection in resource tenant by default**                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
