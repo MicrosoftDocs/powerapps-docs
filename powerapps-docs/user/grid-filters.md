@@ -84,9 +84,9 @@ If your administrator has turned on quick find, then the search box shows **Quic
 >
 > ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning-smaller.png "Searching for keywords that begin with an asterisk will display a warning message.")
 
-## Filter and visualize data
+## Find and visualize data
 
-[Filter data with AI](filter-data-with-ai.md) and [visualize data with AI](visualize-data-in-copilot.md) using the natural language text input box.
+[Find data with AI](find-data-with-ai.md) and [visualize data with AI](visualize-data-in-copilot.md) using the natural language text input box.
 
 ## Row counter
 
