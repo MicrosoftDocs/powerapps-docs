@@ -24,7 +24,7 @@ Watch this video to learn how to share an app with guests:
 
 ## Prerequisites
 
-- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Configure external collaboration settings for B2B in Microsoft Entra External ID](/entra/external-id/external-collaboration-settings-configures)
+- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Configure external collaboration settings for B2B in Microsoft Entra External ID](/entra/external-id/external-collaboration-settings-configure)
 
   > [!NOTE]
   > B2B external collaboration is enabled by default. However, you need to verify that the settings weren't changed by a tenant admin. For more information about Microsoft Entra B2B, see [Overview: B2B collaboration with external guests for your workforce](/entra/external-id/what-is-b2b).
@@ -153,11 +153,11 @@ No. Authorization capabilities can and should be used to control which users acc
 
 ### Why can an Azure B2B user without a license access a model driven app?
 
-The detection of a previously licensed user no longer having a license isn't immediate. If you expect a user to lose access to an app using Dataverse, their authorization to the app or data should be updated. For example, the app should be unshared with the user or Dataverse security roles should be removed from the user.
+The detection of a previously licensed user no longer having a license isn't immediate. If you expect a user to lose access to an app using Dataverse, then their authorization to the app or data should be updated. For example, the app should be unshared with the user or Dataverse security roles should be removed from the user.
 
 ### Which connectors create connections in the resource tenant by default?
 
-Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. For more information on each connector as their may be restriction, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
+Users relying on Azure B2B to access an app only has implications on connectors that use Microsoft Entra ID for authentication. Some Microsoft Entra ID based connectors default to creating a connection in the resource tenant, while others default to creating a connection in the home tenant. Connectors that don't use any type of Microsoft Entra ID authentication work the same for guests and members in a tenant. The following table enumerates all connectors that do use Microsoft Entra ID authentication and default creates connections in the resource tenant. For more information on each connector as there might be restriction, see [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Creates connection in resource tenant by default**                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
