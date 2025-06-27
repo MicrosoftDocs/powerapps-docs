@@ -29,7 +29,7 @@ Wrap gives app makers benefits like improved adoption, better branding, and flex
 
 1. **Logout button**: There's no visible sign out button. 
    > [!NOTE]
-   > Users can select and hold the indented application to sign out. Makers should let users know about this method.
+   > Users can select and hold the intended application to sign out. Makers should let users know about this method.
 1. **Push notifications**: Push notifications aren't supported.
 1. **Navigation between apps**: You can't go directly from a specific screen in one app to a specific screen in another app. Only the home screen of the other app opens.
 1. **APK size limit**: APK files distributed through the Google Play Store are limited to 100 MB. To support larger apps (up to 150 MB), create an AAB file during the wrap process.

@@ -22,7 +22,7 @@ The wrap feature in Power Apps enables you to create native mobile versions of y
 
 When you update and republish your app, the wrapped app is automatically updated for users.
 
----
+
 
 ## Steps to create a custom-branded native app using the wrap wizard
 
@@ -84,12 +84,6 @@ When you update and republish your app, the wrapped app is automatically updated
 7. Set the **Sign my app** toggle to **On** or **Off**:
    - If **On**: Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md)
    - If **Off**: You'll need to perform manual signing later
-
-   **Advantages of automatic signing for iOS and Android (APK):**
-   - No need to repeat signing process during rewrapping
-   - No waiting for app developers to complete the process
-   - No need for Android Studio setup or remembering passwords
-   - No Mac device required for iOS signing
 
    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
@@ -170,6 +164,24 @@ Run these PowerShell commands as an Azure admin If you don't see permissions und
 > [!NOTE]
 > If only the **Application name** field is visible, continue to the next steps and select **Android** as a target platform to display the signature hash field.
 
+## Configure API permissions manually (optional)
+
+If you get errors, manually configure API permissions. For more information, see [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
+
+### Required API permissions
+
+| API Type                    | Specific API                                             | Reason                                                                                                                       |
+|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Microsoft APIs**         | Dynamics CRM                                             | The application needs `user_impersonation` to call Dataverse for the user.                      |
+| **APIs my organization uses** | Azure API Connections                                      | The application needs `Runtime.All` to call any connector from Power Platform.                                   |
+| **APIs my organization uses** | PowerApps Service                                         | The application needs the `User` permission to contact Power Apps backend services from Power Platform.                                     |
+| **APIs my organization uses** | Power BI                                                 | The application needs Power BI permissions to access or embed Power BI content.                                          |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | The application needs this permission because Power Apps uses Intune SDK internally. |
+
+
+For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
+
+
 #### Add Redirect URIs as an app admin 
 
 1. In Azure Portal, go to your app registration > **Authentication**.
@@ -219,13 +231,13 @@ You can view your build in several ways:
 > [!NOTE]
 > To manually code sign an iOS app, unzip the IPA file using a Mac device.
 
----
+
 
 ## Test and distribute your app
 
 Test your app and distribute it as needed. If you encounter issues, see the [troubleshooting page](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
----
+
 
 ## Register your app on Azure portal manually (optional)
 
@@ -244,33 +256,17 @@ When registering, select an account type containing **Any Microsoft Entra direct
 > - Wrap only supports **Multitenant** account types currently. The single tenant account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - You must create a separate **Redirect URI** for each platform (iOS, Android).
 
----
-
-## Configure API permissions manually (optional)
-
-If you encounter errors, you can manually configure API permissions. More information: [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal)
-
-### Required API permissions
-
-| API Type                    | Specific API                                             | Reason                                                                                                                       |
-|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Microsoft APIs**         | Dynamics CRM                                             | `user_impersonation` is needed in order for the application to call Dataverse on behalf of the user.                        |
-| **APIs my organization uses** | Azure API Connections                                      | `Runtime.All` is required to call any connector from the Power Platform.                                                     |
-| **APIs my organization uses** | PowerApps Service                                         | `User` permission is needed to contact Power Apps back-end services from Power Platform.                                     |
-| **APIs my organization uses** | Power BI                                                 | Power BI permissions are required if your app accesses or embeds Power BI content.                                           |
-| **APIs my organization uses** | Microsoft Mobile Application Management        | Required as Power Apps uses Intune SDK internally.               |
-
-
-
-
-
-For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
-
----
 
 ## Sign your mobile app package manually (optional)
 
 You can sign your app automatically in **Step 2** or manually after building. [Code signing](overview.md#code-signing) is different for Android and iOS.
+
+**Advantages of automatic signing for iOS and Android (APK):**
+
+- You don't need to repeat the signing process during rewrapping.
+- You don't have to wait for app developers to finish the process.
+- You don't need to set up Android Studio or remember passwords.
+- You don't need a Mac device for iOS signing.
 
 | Platform | Signing Method |
 |----------|---------------|
@@ -278,7 +274,7 @@ You can sign your app automatically in **Step 2** or manually after building. [C
 | Android | [Manual code sign for Android](code-sign-android.md) |
 | Google Play Store | [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing) |
 
----
+
 
 ## See also
 

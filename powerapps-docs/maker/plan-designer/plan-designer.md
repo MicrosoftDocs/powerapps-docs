@@ -4,7 +4,7 @@ description: Learn how to use Plan designer, an AI-powered tool in Power Platfor
 author: szlo
 contributors:
 ms.topic: how-to
-ms.date: 06/11/2025
+ms.date: 06/25/2025
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
@@ -29,6 +29,8 @@ Include a Dataverse database in your environment. Learn more in [Add a Microsoft
 If your environment doesn't meet the prerequisites and you have access to developer environments, you're routed to your own developer environment where you have permissions to create Dataverse tables. Learn more in [Create a developer environment with the Power Apps Developer Plan](/power-platform/developer/create-developer-environment).
 
 If your environment doesn't meet the prerequisites and you don't have access to existing developer environments or the ability to create new ones, you can't create plans in your current environment. In this situation, switch to an environment where you have the necessary permissions to create tables and start building your plan there.
+
+To create a plan, you must have a system admin or system customizer [security role](/power-platform/admin/security-roles-privileges). If you have a different security role, you will be redirected to your own developer environment to create a plan.
 
 ## Availability
 
