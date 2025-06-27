@@ -42,4 +42,4 @@ Other performance considerations can affect your app. For more information, see 
 
 - [Other performance considerations](app-performance-considerations.md): Discusses other factors that might affect performance.
 - [Build large complex apps](working-with-large-apps.md): Lists key factors to consider when building a large app.
-- [Canvas apps coding standards and guidelines](https://www.microsoft.com/en-us/power-platform/blog/wp-content/uploads/2024/06/- PowerApps-canvas-app-coding-standards-and-guidelines.pdf): Lists general coding and development guidelines that help you build an app.
+- [Canvas app coding standards and guidelines](https://www.microsoft.com/power-platform/blog/wp-content/uploads/2024/06/PowerApps-canvas-app-coding-standards-and-guidelines.pdf): Lists general coding and development guidelines that help you build an app.
