@@ -53,7 +53,7 @@
       href: ../user/unified-interface.md
     - name: AI features
       items:
-      - name: AI in apps overeview
+      - name: AI in apps overview
         href: ../user/ai-in-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
