@@ -25,10 +25,9 @@ Power Apps environment administrators and customizers can add graphics to a view
 
 This example displays custom icons in a view for the opportunity table, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard tables, such as the account or contact table, as well as custom tables. 
 
-> [!div class="mx-imgBorder"] 
-> ![All Opportunities view with Rating column displaying icons and text value.](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
+:::image type="content" source="media/icon-in-opportunity-view.png" alt-text="All Opportunities view with Rating column displaying icons and text value.":::
   
-Custom icons in list views can display in Unified Interface, legacy web client, mobile app, and App for Outlook. 
+Custom icons in list views can display in model-driven apps, mobile app, and App for Outlook.
 
 > [!NOTE]
 >
@@ -41,11 +40,11 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 2.  Write one or more JavaScript functions that establish which icons to show for which values (you typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#sample-javascript-function), later in this article.  
   
-3.  Sign into your environment as an administrator and open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
+3.  Sign into your environment and open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
   
-4.  The **Default Solution** pop-up window opens. Navigate to **Components** > **Web Resources** here.  
+4.  The solution tab opens. Go to **Components** > **Web Resources**.  
   
-5.  Now, upload your custom graphics, one at a time, as web resources. Select the **New** button in the toolbar to create a new web resource. Another pop-up window opens to help you create the resource. Follow these steps:  
+5.  Now, upload your custom graphics, one at a time, as web resources. Select **New** on the toolbar to create a new web resource. A pop-up window opens to help you create the resource. Follow these steps:  
   
     1.  Give the new resource a meaningful **Name**. This is the name that you use to refer to each graphic from your JavaScript code.  
   
@@ -71,7 +70,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
     5.  Select **Save** and then close the **Web Resource** window.  
   
-8.  With the **Default Solution** pop-up window still open, expand the **Components** > **Tables** tree and locate the table that you want to customize.  
+8.  With the solution tab still open, expand the **Components** > **Tables** tree and locate the table that you want to customize.  
   
 9. Expand your table and select its **Views** icon.  
   
@@ -91,14 +90,15 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 15. When you're ready, select **Publish All Customizations** to publish  your changes. Then, close the **Default Solution** window.  
   
-### Sample JavaScript function  
+### Sample JavaScript function
 The JavaScript function for displaying custom icons and tooltips expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text in multiple languages. For more information about the languages supported by the environment, see [Enable languages](/dynamics365/customer-engagement/admin/enable-languages) and [Install or upgrade language packs](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 Assuming you're adding custom icons for an option-set type of attribute, which has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid localization issues. 
 
-**Note**: If it's necessary to retrieve data to determine the icon, Unified Interface supports returning a JavaScript Promise object, which resolves to a boolean (similar to ribbon rules). Don't use a synchronous `XMLHttpRequest` (XHR) in your custom function.
+> [!NOTE]
+> If it's necessary to retrieve data to determine the icon, Unified Interface supports returning a JavaScript Promise object, which resolves to a boolean (similar to ribbon rules). Don't use a synchronous `XMLHttpRequest` (XHR) in your custom function.
   
-The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
+The sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the `opportunityratingcode` (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
 
 > [!IMPORTANT]
 > This sample requires the opportunity table, which is available with Dynamics 365 Sales app.
@@ -153,28 +153,25 @@ function displayIconTooltip(rowData, userLCID) {
 }  
 ```  
   
- <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
-  
- ![Custom column graphics example.](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  --> 
-
 ## Custom icon view display behavior
+
 ### Primary columns 
+
 In the grid list view, custom icons applied to the table primary column replace the default system-generated icon. 
 
-> [!div class="mx-imgBorder"] 
-> ![Primary column replaces default icon in the custom icon view.](media/mobile-primary-field-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
+:::image type="content" source="media/mobile-primary-field-custom-icon-display.png" alt-text="Primary column replaces default icon in the custom icon view.":::
 
-### Other columns 
+### Other columns
+
 In the grid list view, custom icons applied to a column that isn't the table primary column display as a secondary icon in addition to the default system-generated icon. 
 
-> [!div class="mx-imgBorder"] 
-> ![Not a table primary column custom icon view.](media/card-form-not-primary-field.png "Not a table primary column custom icon view")
+:::image type="content" source="media/card-form-not-primary-field.png" alt-text="Not a table primary column custom icon view.":::
 
 ### Card forms
+
 Custom icons replace the default system-generated icon when the view is configured to use a card form.
 
-> [!div class="mx-imgBorder"] 
-> ![Card view custom icon view.](media/card-view-icon-display.png "Card view custom icon view")
+:::image type="content" source="media/card-view-icon-display.png" alt-text="Card view custom icon view.":::
 
 ### See also
 
