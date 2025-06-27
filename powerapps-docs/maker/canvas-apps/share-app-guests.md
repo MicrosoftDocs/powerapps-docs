@@ -5,7 +5,7 @@ author: alaug
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 8/22/2023
+ms.date: 6/27/2025
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -56,10 +56,6 @@ Watch this video to learn how to share an app with guests:
 
 3. [Share an app from Power Apps](Share an app from Power Apps)
 
-
-After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing. You can also share the app URL directly with the guest instead. To find the URL, go to [Power Apps](https://make.powerapps.com), select **Apps** on left pane, select the app, and then select the **Details** tab. The app URL is displayed under **Web link**.
-
-![Guests receive app share email.](media/share-app/guest_access_doc_4.png "Guests receive app share email")
 
 ## Considerations and limitations for guest access
 
