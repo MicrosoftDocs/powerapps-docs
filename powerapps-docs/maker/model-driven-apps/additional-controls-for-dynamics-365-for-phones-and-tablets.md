@@ -176,6 +176,16 @@ The toggle control allows users to choose between binary values, such as on/off 
 
 :::image type="content" source="media/toggle-control-example.png" alt-text="Example toggle control in a model-driven app.":::
 
+### Multi-table Lookups
+
+The Multi-Table Lookup control allows users to select a record from more than one table using a single lookup field. It must be created using the Dataverse SDK or Web API, as the PowerApps Designer does not allow you to add this control yet. An XRMToolbox Tool is available titled "Polymorphic Lookup Creator" that allows for easier creation and updating of Multi-Table Lookups.
+
+> [!NOTE]
+> In the designer this field will display like a standard lookup, displaying the first relationship the Multi-Table Lookup is configured against.
+
+> [!NOTE]
+> When using a Multi-table lookup on a form, only tables inside the Model-Driven App the lookup is currently in will show to the user, even if the lookup has more tables configured against it.
+
 ## AI Builder
 
 ### Business card reader
