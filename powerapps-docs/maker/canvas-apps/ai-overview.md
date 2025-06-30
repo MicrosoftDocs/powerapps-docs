@@ -72,12 +72,9 @@ The following articles can help you build various apps in different scenarios us
 - [Build an agent to automate your business process (preview)](agent-builder.md)
 - [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
 
-
 ## Copilot in model-driven apps
 
-- [Add the Copilot control to the rich text editor](../model-driven-apps/copilot-control.md)
-- [Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
-- [Add Copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
+Model-driven apps support [AI features](../../user/ai-in-apps.md) to improve the efficiency and productivity of business processes with intelligent automation and assistance.
 
 ## Copilot feature use
 
@@ -86,8 +83,6 @@ The following articles can help you build various apps in different scenarios us
 - [Visualize data in a view with Copilot (preview)](../../user/visualize-data-in-copilot.md)
 
 ## Microsoft Dataverse
-
-
 
 - [Add knowledge to an existing copilot: Dataverse](../data-platform/data-platform-copilot.md)
 

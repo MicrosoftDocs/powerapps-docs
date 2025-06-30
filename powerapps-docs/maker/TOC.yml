@@ -51,17 +51,21 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Supervise agents using agent feed (preview)
-      href: ../user/supervise-agents-with-agent-feed.md
-    - name: Copilot features
+    - name: AI features
       items:
+      - name: AI in apps overview
+        href: ../user/ai-in-apps.md
+      - name: Supervise agents using agent feed (preview)
+        href: ../user/supervise-agents-with-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
         href: ../user/record-summaries.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
-      - name: Use Copilot to visualize data in a view (preview)
+      - name: Find data in a view (preview)
+        href: ../user/find-data-with-ai.md
+      - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
       - name: Use Copilot case summary in model-driven apps
         href: ../user/copilot-case-summary.md       
