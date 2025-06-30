@@ -4,7 +4,7 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: clromano 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 06/28/2024
+ms.date: 06/30/2025
 ms.subservice: end-user
 ms.author: clromano
 ms.reviewer: smurkute

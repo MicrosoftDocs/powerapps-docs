@@ -1,7 +1,7 @@
 ---
 title: Find data in a view with AI
 description: Learn how to find, filter, and sort data in a view using AI
-ms.date: 05/22/2025
+ms.date: 06/30/2025
 ms.reviewer: smurkute
 ms.topic: "how-to"
 author: clromano
@@ -21,7 +21,7 @@ Users can find, filter, and sort their data quickly with natural language, bypas
 
 ### Natural language search
 
-Using smart grid natural language search, you can ask data-related questions with natural language. For instance, requesting “cases with high priority with overdue follow-up by date” will filter your view to display only those relevant cases.
+Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
 
 :::image type="content" source="./media/smart_grid_search.png" alt-text="A screenshot of the natural language search box on grid page":::
 
@@ -35,7 +35,7 @@ Using smart grid natural language search, you can ask data-related questions wit
 
 ### Known limitations
 
-The following capabilities aren't supported:
+These capabilities aren't supported:
 
 - Query aggregation
 - Query grouping
@@ -43,8 +43,8 @@ The following capabilities aren't supported:
 
 ### Considerations
 
-- After executing a query, review the generated filter tags to ensure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results weren't filtered by that condition.
-- If Copilot doesn't produce the desired results, consider modifying your query by:
-  - Referring to data columns by their names as they appear in the grid header
-  - Separating multiple conditions with commas or periods
-- Search strings with two words or fewer will do a text search (previous functionality).  To do a Copilot search, use more than two words.  To perform a text search for more than two words, enclose the search term in single or double quotes.
+- After you run a query, check the generated filter tags to make sure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results aren't filtered by that condition.
+- If Copilot doesn't give the desired results, consider modifying your query by:
+  - Refer to data columns by the names shown in the grid header.
+  - Separate multiple conditions with commas or periods.
+- If your search string has two words or fewer, Copilot does a text search. To do a Copilot search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes.
