@@ -30,16 +30,16 @@ When you update and republish your app, the wrapped app is automatically updated
 
 ### 1. Sign in and start a wrap project
 
-1. Go to the [Power Apps maker portal](https://make.powerapps.com).
+1. Sign in to [Power Apps maker portal](https://make.powerapps.com).
 2. Select **Wrap** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 3. Select the app you want to wrap, then select **Wrap** on the command bar.
 
 ### 2. Select apps
 
-1. On the **Select the app(s) to wrap** screen, choose your primary app (the main app users see at launch) and any optional secondary apps to bundle.
+1. On the **Select the app(s) to wrap** screen, select your primary and secondary app.
 
-   - **Primary app**: The main app users see when the mobile app launches.
-   - **Secondary app(s)**: Optional additional apps bundled in the same mobile app package.
+   - **Primary app**: The main app end users see when the mobile app launches.
+   - **Secondary app(s)**: Optional other apps bundled in the same mobile app package.
 
    :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/select-apps-updated.png":::
 
@@ -54,18 +54,31 @@ When you update and republish your app, the wrapped app is automatically updated
 1. On the **Choose mobile platform to target** screen, enter a **Bundle ID**.
 
    > [!NOTE]
-   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+   > The **Bundle ID** is a unique identifier that you create for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
-2. Under **Target platform(s)**, select all the mobile platforms your users need.
+2.Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Select the **Azure Key Vault URI** from the list.  
-   If you do not see any entries, [create an Azure key vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
+3. [Create an Azure key vault](/azure/key-vault/general/quick-create-portal#create-a-vault) if you haven't created. Add the required tags.
 
-4. Create an Azure blob storage account and container if you have not already:
-   - More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal)
-   - Tutorial video: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6)
+4. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
+    Then select **New**> **More**> **Environment variable**, add the display name as "A_Wrap_KV_ResourceID".
 
-5. In your key vault in the [Azure portal](https://ms.portal.azure.com):
+5. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+
+6. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
+
+7. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
+    > [!NOTE]
+    > Guidelines for adding the input behind the environment variables for Key vault information:
+    > - Environment variables must not be empty or can contain multiple entries. 
+    > - Ensure that the resourceID added is correct (verify spelling).
+    > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard. 
+
+8. Create an Azure blob storage account and container if you have not already:
+   - More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
+   - Tutorial video: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
+
+9. In your key vault in the [Azure portal](https://ms.portal.azure.com):
    
    a. Go to **Secrets** to create a secret for your Azure blob storage access key.
       - More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
@@ -77,11 +90,10 @@ When you update and republish your app, the wrapped app is automatically updated
 
       :::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
 
-6. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
-
+10. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
    :::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
 
-7. Set the **Sign my app** toggle to **On** or **Off**:
+11. Set the **Sign my app** toggle to **On** or **Off**:
    - If **On**: Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md)
    - If **Off**: You'll need to perform manual signing later
 
@@ -95,7 +107,7 @@ When you update and republish your app, the wrapped app is automatically updated
    >
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
 
-8. Select **Next**.
+12. Select **Next**.
 
 ### 4. Register your app
 
@@ -222,6 +234,7 @@ For detailed steps, see [Request the permissions in the app registration portal]
 ### View your build
 
 You can view your build in several ways:
+
 - After building, select **View Builds**
 - Go to **Wrap projects** in the side pane, hover over the required project, and select it
 - Select the **View builds** option in the top header
@@ -230,8 +243,6 @@ You can view your build in several ways:
 
 > [!NOTE]
 > To manually code sign an iOS app, unzip the IPA file using a Mac device.
-
-
 
 ## Test and distribute your app
 
