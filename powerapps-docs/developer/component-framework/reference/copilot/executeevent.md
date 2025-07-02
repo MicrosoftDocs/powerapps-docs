@@ -50,6 +50,10 @@ const response = await context.copilot.executeEvent(
     { id:"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"}); 
 ```
 
+### Accessing eventParameters
+
+Within the MCS topic, the `eventParameters` from the API call can be accessed using the variable `Activity.Value`. Use [Parse value node](/microsoft-copilot-studio/authoring-variables?tabs=webApp#parse-value-node) to convert the JSON into a record with one or more field.
+
 ### Response
 
 ```json
