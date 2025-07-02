@@ -24,7 +24,7 @@ Agent APIs are a set of interfaces introduced in Microsoft Power Apps that allow
 
 These APIs are designed to enhance integration with Microsoft Copilot Studio (MCS), enabling more intelligent and responsive app experiences. The APIs use a single MCS agent that is either:
 - Interactive agent selected in the model app designer of custom apps. See more at [Working with an interactive agent](../../../maker/model-driven-apps/add-agents-to-app.md#working-with-an-interactive-agent).
-- Model app containing lead or opportunity table, which uses the "Copilot in Dynamics 365 Sales" agent implicitly used.
+- Model app containing lead or opportunity table, which implicitly uses the "Copilot in Dynamics 365 Sales" agent.
 
 |API|Description|
 |---------|---------|
