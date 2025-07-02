@@ -14,7 +14,7 @@ ms.custom: template-how-to
 > [!IMPORTANT]
 >
 > - This feature is deprioritized and will not be delivered.
-> - Beginning July 31, 2025, existing model-driven or canvas apps that use this email validation feature will stop displaying the validation results for the email addresses entered in the forms. Any custom function or logic implemented by makers that use this specific email address control type might stop functioning and must be updated to use the standard email address control type. If you haven't developed custom functions, forms continue to work as before.
+> - Beginning July 31, 2025, existing model-driven or canvas apps that use this email validation feature will stop displaying the validation results for the email addresses entered in forms. Any custom function or logic implemented by makers that use this specific email address control type might stop functioning and must be updated to use the standard email address control type. If you haven't developed custom functions, forms continue to work as before.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
