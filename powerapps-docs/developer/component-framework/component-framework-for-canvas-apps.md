@@ -56,7 +56,7 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 After you enable the Power Apps component framework feature in your environment, you can start implementing the logic for code components. For a step-by-step tutorial, go to [Create your first code component](implementing-controls-using-typescript.md).
 
-Code components do not support custom authentication in canvas apps, among other [limitations](limitations.md).
+We recommend that you check the [limitations](limitations.md) of code components in canvas apps before starting implementation.
 
 ## Add components to a canvas app
 
