@@ -63,7 +63,12 @@ When you update and republish your app, the wrapped app is automatically updated
 4. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
     Then select **New**> **More**> **Environment variable**, add the display name as "A_Wrap_KV_ResourceID".
 
+    :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
+
+
 5. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+
+:::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
 
 6. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
 
