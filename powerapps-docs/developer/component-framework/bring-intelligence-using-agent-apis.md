@@ -13,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# Bring intelligence into your component using Agent Xrm APIs (preview)
+# Bring intelligence into your component using Agent APIs (preview)
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
