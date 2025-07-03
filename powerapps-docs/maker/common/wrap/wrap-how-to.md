@@ -56,36 +56,37 @@ When you update and republish your app, the wrapped app is automatically updated
    > [!NOTE]
    > The **Bundle ID** is a unique identifier that you create for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
-2.Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
+2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. [Create an Azure key vault](/azure/key-vault/general/quick-create-portal#create-a-vault) if you haven't created. Add the required tags.
+3. Toggle ON for Signing your app automatically.
+   i. If you choose to sign the app automatically, [Create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) if you haven't created. Add the required tags, secrets and certificates mentioned in the link for automatic signing process.
 
-4. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
-    Then select **New**> **More**> **Environment variable**, add the display name as "A_Wrap_KV_ResourceID".
+  ii. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
+    Then select **New**> **More**> **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
 
     :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
 
 
-5. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+  iii. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
 
-:::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
+    :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
 
-6. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
+  iv. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
 
-7. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
+  v. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
     > [!NOTE]
     > Guidelines for adding the input behind the environment variables for Key vault information:
     > - Environment variables must not be empty or can contain multiple entries. 
     > - Ensure that the resourceID added is correct (verify spelling).
     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard. 
 
-8. Create an Azure blob storage account and container if you have not already:
+4. Toggle ON "Azure blob storage" to upload your build in azure blob storage. Create an Azure blob storage account and container if you have not already:
    - More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
    - Tutorial video: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
-
-9. In your key vault in the [Azure portal](https://ms.portal.azure.com):
-   
-   a. Go to **Secrets** to create a secret for your Azure blob storage access key.
+    > [!NOTE]
+    > You can download the link from the wrap wizard even without using the blob storage mechanism
+    
+   a.In your key vault in the [Azure portal](https://ms.portal.azure.com), Go to **Secrets** to create a secret fr your Azure blob storage access key.
       - More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
           :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
       - To view and copy your access key: [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
@@ -95,10 +96,10 @@ When you update and republish your app, the wrapped app is automatically updated
 
       :::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
 
-10. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
+c. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
    :::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
 
-11. Set the **Sign my app** toggle to **On** or **Off**:
+d. Set the **Sign my app** toggle to **On** or **Off**:
    - If **On**: Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md)
    - If **Off**: You'll need to perform manual signing later
 
@@ -112,7 +113,7 @@ When you update and republish your app, the wrapped app is automatically updated
    >
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
 
-12. Select **Next**.
+5. Select **Next**.
 
 ### 4. Register your app
 
@@ -159,6 +160,19 @@ Azure admin grants API permissions during registration. More information: [Grant
 
 :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
+### Required API permissions
+
+| API Type                    | Specific API                                             | Reason                                                                                                                       |
+|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Microsoft APIs**         | Dynamics CRM                                             | The application needs `user_impersonation` to call Dataverse for the user.                      |
+| **APIs my organization uses** | Azure API Connections                                      | The application needs `Runtime.All` to call any connector from Power Platform.                                   |
+| **APIs my organization uses** | PowerApps Service                                         | The application needs the `User` permission to contact Power Apps backend services from Power Platform.                                     |
+| **APIs my organization uses** | Power BI                                                 | The application needs Power BI permissions to access or embed Power BI content.                                          |
+| **APIs my organization uses** | Microsoft Mobile Application Management        | The application needs this permission because Power Apps uses Intune SDK internally. |
+
+
+For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
+
 Run these PowerShell commands as an Azure admin If you don't see permissions under **APIs my organization uses**
 
 1. Ensure the module [Microsoft Graph](https://www.powershellgallery.com/packages/Microsoft.Graph/) is available or install it:
@@ -184,19 +198,6 @@ Run these PowerShell commands as an Azure admin If you don't see permissions und
 ## Configure API permissions manually (optional)
 
 If you get errors, manually configure API permissions. For more information, see [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
-
-### Required API permissions
-
-| API Type                    | Specific API                                             | Reason                                                                                                                       |
-|----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Microsoft APIs**         | Dynamics CRM                                             | The application needs `user_impersonation` to call Dataverse for the user.                      |
-| **APIs my organization uses** | Azure API Connections                                      | The application needs `Runtime.All` to call any connector from Power Platform.                                   |
-| **APIs my organization uses** | PowerApps Service                                         | The application needs the `User` permission to contact Power Apps backend services from Power Platform.                                     |
-| **APIs my organization uses** | Power BI                                                 | The application needs Power BI permissions to access or embed Power BI content.                                          |
-| **APIs my organization uses** | Microsoft Mobile Application Management        | The application needs this permission because Power Apps uses Intune SDK internally. |
-
-
-For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
 
 #### Add Redirect URIs as an app admin 
@@ -254,7 +255,6 @@ You can view your build in several ways:
 Test your app and distribute it as needed. If you encounter issues, see the [troubleshooting page](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
 
-
 ## Register your app on Azure portal manually (optional)
 
 You can create your app registration automatically in the wizard or manually in Azure. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
@@ -286,11 +286,9 @@ You can sign your app automatically in **Step 2** or manually after building. [C
 
 | Platform | Signing Method |
 |----------|---------------|
-| iOS | [Manual code sign for iOS](code-sign-ios.md) |
-| Android | [Manual code sign for Android](code-sign-android.md) |
-| Google Play Store | [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing) |
-
-
+| iOS                  | [Manual code sign for iOS](code-sign-ios.md) |
+| Android              | [Manual code sign for Android](code-sign-android.md) |
+| Google Play Store    | [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing) |
 
 ## See also
 
