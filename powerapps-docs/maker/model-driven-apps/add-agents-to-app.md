@@ -97,6 +97,23 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 1. Save and publish the agent.
 1. Switch to the app designer browser tab to save and publish the app.
 
+### Limitations
+
+The interactive agent is not able to be defined or referenced in App Designer for these Microsoft model-driven apps
+
+- Connected Field Service
+- Customer Insights
+- Customer Service Hub
+- Customer Services workspace
+- Dynamics 365 App for Outlook
+- Field Service
+- Field Service Mobile
+- Inventory Visibility
+- Omni Channel Engagement Hub
+- Project Operations
+- Sales Hub
+- Sustainability
+
 ## Related information
 
 [Overview of App Designer](app-designer-overview.md)<br/>
