@@ -58,50 +58,46 @@ When you update and republish your app, the wrapped app is automatically updated
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Toggle ON for Signing your app automatically.
-   i. If you choose to sign the app automatically, [Create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) if you haven't created. Add the required tags, secrets and certificates mentioned in the link for automatic signing process.
+3. Turn **ON** automatic app signing. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing.
 
-  ii. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
+4. Add the environment variable if not created already, to create the environment variable, go to [Power Apps](https://make.powerapps.com)> **Solutions**> **Default solution**.
     Then select **New**> **More**> **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
-
     :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
 
 
-  iii. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+ 5. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+     :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
 
-    :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
+6. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
 
-  iv. To add the input to the environment variable, go to **Power Apps**> **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
-
-  v. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
+7. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
     > [!NOTE]
     > Guidelines for adding the input behind the environment variables for Key vault information:
     > - Environment variables must not be empty or can contain multiple entries. 
     > - Ensure that the resourceID added is correct (verify spelling).
     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard. 
 
-4. Toggle ON "Azure blob storage" to upload your build in azure blob storage. Create an Azure blob storage account and container if you have not already:
-   - More information: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
-   - Tutorial video: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
+8. Turn **ON** Azure blob storage to upload your build to Azure blob storage. If you haven't already, create an Azure blob storage account and container.
+   - More about creating a storage account: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
+   - Watch a tutorial: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
     > [!NOTE]
-    > You can download the link from the wrap wizard even without using the blob storage mechanism
+    > You can download the link from the wrap wizard if you don't use the blob storage mechanism.
     
-   a.In your key vault in the [Azure portal](https://ms.portal.azure.com), Go to **Secrets** to create a secret fr your Azure blob storage access key.
-      - More information: [Add a secret to Key Vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
+9. In your key vault in the [Azure portal](https://ms.portal.azure.com), 
+    1. Go to **Secrets** to create a secret fr your Azure blob storage access key. More information: [Add a secret to key vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault).
           :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
-      - To view and copy your access key: [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+      To view and copy your access key: [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
           :::image type="content" source="media/how-to-v2/view-access-key.png" alt-text="Screenshot that shows access key" lightbox="media/how-to-v2/view-access-key.png":::
 
-   b. Enter the Azure blob storage access key in the **Secret value** field.
+     2. Enter the Azure blob storage access key in the **Secret value** field.
+        :::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
 
-      :::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
-
-c. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
+10. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
    :::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
 
-d. Set the **Sign my app** toggle to **On** or **Off**:
+11. Set the **Sign my app** toggle to **On** or **Off**:
    - If **On**: Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md)
-   - If **Off**: You'll need to perform manual signing later
+   - If **Off**: You'll need to perform manual signing later.
 
    :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
 
