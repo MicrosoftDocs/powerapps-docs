@@ -68,23 +68,23 @@ When you update and republish your app, the wrapped app is automatically updated
    >
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
   
-  a. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri), if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing. Add the environment variable if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.  
-     Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
-    :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
-  
-  b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
-     :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
-
-  c. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
-
-  d. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
-     > [!NOTE]
-     > Guidelines for adding the input behind the environment variables for Key vault information:
-     > - Environment variables must not be empty or can contain multiple entries.
-     > - Ensure that the resourceID added is correct (verify spelling).
-     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
-
-  e. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
+      a. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri), if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing. Add the environment     variable  if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.  
+         Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
+        :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
+      
+      b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**. 
+         :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
+    
+      c. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
+    
+      d. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
+         > [!NOTE]
+         > Guidelines for adding the input behind the environment variables for Key vault information:
+         > - Environment variables must not be empty or can contain multiple entries.
+         > - Ensure that the resourceID added is correct (verify spelling).
+         > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
+    
+      e. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
 
 4. Turn **ON** Azure blob storage to upload your build to Azure blob storage. If you haven't already, create an Azure blob storage account and container.
    - More about creating a storage account: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
