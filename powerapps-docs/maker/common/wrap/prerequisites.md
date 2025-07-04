@@ -36,7 +36,7 @@ Before you use Wrap to create native mobile apps from your Power Apps canvas app
 
 1. An Azure admin must grant you access to use the specific wrap app. More information: [API permissions](wrap-how-to.md#grant-api-permissions-as-an-azure-tenant-admin).
 1. Your apps must be part of a [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If not, add them to an existing or new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
-1. You need an Azure key vault to perform the automatic sign-in process through Wrap wizard. Make sure your Azure key vault is in your tenant's default subscription. If not, create one using your default subscription. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
+1. You need an Azure key vault to perform the automatic sign-in process through Wrap wizard. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 1. Check the policies enabled for your application. More information: [Conditional Access policy templates](/entra/identity/conditional-access/concept-conditional-access-policy-common)
 1. If multifactor authentication (MFA) is enabled, make sure MFA is enabled for the accounts you'll use to sign in, or disable the conditional access policies.
 
