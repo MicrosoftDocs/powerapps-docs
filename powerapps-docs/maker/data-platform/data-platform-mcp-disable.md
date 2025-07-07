@@ -1,6 +1,6 @@
 ---
-title: Disable connect to Dataverse with model context protocol (MCP) using advanced connector policies
-description: Step-by-step instructions for how to disable a Power Platform environment that has been setup and connected to use Microsoft Dataverse with a model context protocol server. 
+title: Disable a Dataverse model context protocol (MCP) server
+description: Step-by-step instructions about how to disable a Microsoft Dataverse model context protocol server using advanced connector policies. 
 author: anibakore-msft
 ms.component: cds
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms. reviewer: matp
 search.audienceType: 
   - maker
 ---
-# Disable Dataverse a model context protocol server using advanced connector policies
+# Disable a Dataverse MCP server using advanced connector policies
 
 Dataverse model context protocol (MCP) is provided through the connector infrastructure. While the Dataverse connector itself is a non-blockable connector—meaning you can't disable it using traditional data Loss prevention (DLP) settings within the Power Platform admin cnter—you can selectively disable the Dataverse MCP server by leveraging advanced connector policies.
 
