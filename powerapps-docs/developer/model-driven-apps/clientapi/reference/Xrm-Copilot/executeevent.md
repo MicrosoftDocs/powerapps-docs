@@ -36,85 +36,9 @@ contributors:
 
 An array of [MCSResponse](mcsresponse.md)
 
-## Accessing app context
+[!INCLUDE [accessing-app-context](../../includes/accessing-app-context.md)]
 
-When an Agent API is called, context for the app is passed to the MCS topic through a set of variables. The following are context variables:
-
-| Variable | Description |
-| -- | -- |
-| Global.PA__Copilot_Model_PageContext.pageContext.id.guid | ID of the table record on the main form |
-| Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName | Logical name of the table in the main page |
-| Global.PA__Copilot_Model_PageContext.pageContext.pageName | Name of the main page |
-| Global.PA__Copilot_Model_PageContext.pageContext.pageType | Type of the main page |
-| Global.PA__Copilot_Model_AppUniqueNameContext.appUniqueNameContext.appUniqueName | Unique name of the model-driven app |
-
-For example, using **Global.PA__Copilot_Model_PageContext.pageContext.id.guid** and **Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName**, the form's record can be retrieved from Dataverse.
-
-## Accessing eventParameters
-
-Within the MCS topic, the `eventParameters` from the API call can be accessed using the variable `Activity.Value`. Use [Parse value node](/microsoft-copilot-studio/authoring-variables?tabs=webApp#parse-value-node) to convert the JSON into a record with one or more fields. Selecting **From sample data** for **Data type** allows providing a JSON example to create the record.
-
-## Example
-
-In Microsoft Copilot Studio, a custom topic is registered that accepts ID (entity record ID) as input parameter. Based on the input, it fetches the related activities of that entity record and returns the results as an MCS event activity.
-
-```javascript
-const response = await Xrm.Copilot.executeEvent(
-   "Microsoft.PowerApps.Copilot.RelatedActivities", 
-   { id:"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"});
-```
-
-### Response
-
-```json
-[
-    {
-        "type": "event",
-        "timestamp": "2025-02-05T16:05:53.4074714+00:00",
-        "replyToId": "bbbbbbbb-1111-2222-3333-cccccccccccc",
-        "attachments": [],
-        "value": {
-            "@odata.context": "https://[ORG URI]/api/data/v9.2/$metadata#activitypointers(subject,prioritycode)",
-            "value": [
-                {
-                    "@odata.etag": "W/\"6825587\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "cccccccc-2222-3333-4444-dddddddddddd",
-                    "activitytypecode": "phonecall",
-                    "prioritycode": 2,
-                    "subject": "Discuss new opportunity (sample)"
-                },
-                {
-                    "@odata.etag": "W/\"6826236\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "dddddddd-3333-4444-5555-eeeeeeeeeeee",
-                    "activitytypecode": "phonecall",
-                    "prioritycode": 2,
-                    "subject": "Likes our new products (sample)"
-                },
-                {
-                    "@odata.etag": "W/\"6818374\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "eeeeeeee-4444-5555-6666-ffffffffffff",
-                    "activitytypecode": "task",
-                    "prioritycode": 1,
-                    "subject": "Pain admitted by sponsor (sample)"
-                },
-                {
-                    "@odata.etag": "W/\"6818471\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "ffffffff-5555-6666-7777-aaaaaaaaaaaa",
-                    "activitytypecode": "task",
-                    "prioritycode": 1,
-                    "subject": "Pre-proposal review conducted (sample)"
-                }
-            ]
-        },
-        "name": "MS.CopilotApiDemo.RelatedActivities"
-    }
-]
-```
-
+[!INCLUDE [accessing-event-parameters](../../includes/accessing-event-parameters.md)]
 
 
 ### Related articles
