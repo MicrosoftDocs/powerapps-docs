@@ -1,6 +1,11 @@
 {
   "redirections": [
-    {
+   {
+      "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
+      "redirect_url": "bulk-operations#deletemultiple",
+      "redirect_document_id": "false"
+   }, 
+   {
       "source_path": "powerapps-docs/developer/test-engine/overview.md",
       "redirect_url": "/power-platform/test-engine/overview",
       "redirect_document_id": "false"
