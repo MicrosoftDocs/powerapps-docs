@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting common issues with link to Fabric with Microsoft Dataverse
 description: This article provides information about how to troubleshoot common issues with link to Fabric with Microsoft Dataverse
-author: MilindaV2
-ms.author: Milindav
+author: swatimadhukargit
+ms.author: swatim
 ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 05/13/2025
+ms.date: 07/07/2025
 ms.custom: template-how-to
 ---
 # Troubleshooting common issues with link to Fabric
