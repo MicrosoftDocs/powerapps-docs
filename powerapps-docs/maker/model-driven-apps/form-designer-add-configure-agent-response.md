@@ -64,7 +64,7 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
 When the agent response component calls the Copilot Studio topic, it passes context for the app through a set of variables. The following are context variables available as [Copilot Studio global variables](/microsoft-copilot-studio/authoring-variables-bot).
 
-[!INCLUDE [app-context-table](../../../model-driven-apps/clientapi/includes/app-context-table.md)]
+[!INCLUDE [app-context-table](../../developer/model-driven-apps/clientapi/includes/app-context-table.md)]
 
 ## Accessibility
 
