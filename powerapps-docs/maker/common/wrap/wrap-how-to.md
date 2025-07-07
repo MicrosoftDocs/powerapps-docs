@@ -109,13 +109,14 @@ On the **Register your app** screen, register your application in Azure to estab
   2. Provide:
      - **Application name**: The customer-facing name of your app
      - **Android signature hash** (if targeting Android): A 28-character alphanumeric string
+       :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
   3. In the Microsoft Entra admin center, go to App registrations and select your app. In the Essentials section, locate Supported account types, set it to Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant).
+      :::image type="content" source="media/how-to-v2/registration-multitenant.png" alt-text="Screenshot that shows multitenant registration screen" lightbox="media/how-to-v2/registration-multitenant.png":::
   4. Save your changes.
 
      > [!NOTE]
      > If the signature hash key already exists, you can reuse it.
 
-     :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
      
 #### Configure admin allowed third-party apps as an azure tenant admin
 
@@ -138,9 +139,8 @@ After completing these steps, the registration screen will look like this:
 
 #### Grant API permissions as an Azure tenant admin
 
-Azure admin grants API permissions during registration. More information: [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
-
-:::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
+Azure admin grants API permissions during registration. Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app. For more information, see [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
+    :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 Run these PowerShell commands as an Azure admin If you don't see permissions under **APIs my organization uses**
 
@@ -182,12 +182,13 @@ If you get errors, manually configure API permissions. For more information, see
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
 
-#### Add Redirect URIs as an app admin 
+#### Add Redirect URIs as an app admin
 
 1. In Azure Portal, go to your app registration > **Authentication**.
 2. Select **Add a platform** and choose **iOS** or **Android**.
 3. For iOS, enter the **Bundle ID**.  
    For Android, enter both the **Bundle ID** and **Signature hash key**.
+    :::image type="content" source="media/how-to-v2/redirect-uri.png" alt-text="Screenshot that shows redirect URIs for the app." lightbox="media/how-to-v2/redirect-uri.png":::
 
 ### 5. Configure branding
 
