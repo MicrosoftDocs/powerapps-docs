@@ -1,10 +1,10 @@
 ## Accessing eventParameters
 
-Within the MCS topic, the `eventParameters` from the API call can be accessed using the variable `Activity.Value`. Use [Parse value node](/microsoft-copilot-studio/authoring-variables?tabs=webApp#parse-value-node) to convert the JSON into a record with one or more fields. Selecting **From sample data** for **Data type** allows providing a JSON example to create the record.
+Within the Copilot Studio topic, the `eventParameters` from the API call can be accessed using the variable `Activity.Value`. Use [Parse value node](/microsoft-copilot-studio/authoring-variables?tabs=webApp#parse-value-node) to convert the JSON into a record with one or more fields. Selecting **From sample data** for **Data type** allows providing a JSON example to create the record.
 
 ### Example
 
-In Microsoft Copilot Studio, where a topic is registered that accepts an ID (entity record ID) as an input parameter. Based on the input, it retrieves the related activities of that entity record and returns the results as an MCS event activity. The PCF context API enables the execution of these methods within the context of PCF controls. 
+In Microsoft Copilot Studio, where a topic is registered that accepts an ID (entity record ID) as an input parameter. Based on the input, it retrieves the related activities of that entity record and returns the results as an Copilot Studio event activity. The PCF context API enables the execution of these methods within the context of PCF controls. 
 
 ```javascript
 const response = await context.copilot.executeEvent( 
