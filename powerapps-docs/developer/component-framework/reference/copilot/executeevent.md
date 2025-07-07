@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
-| `eventName` | string | Yes | Event Name registered in the MCS topic  |
+| `eventName` | string | Yes | Event Name registered in the Copilot Studio topic  |
 | `eventParameters` | Unknown  | Yes | Parameters needed for the event execution. These depend on what the topic does.|
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
@@ -42,7 +42,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ## Accessing app context
 
-When an Agent API is called, context for the app is passed to the MCS topic through a set of variables. The following are context variables available as [Copilot Studio global variables](/microsoft-copilot-studio/authoring-variables-bot).
+When an Agent API is called, context for the app is passed to the Copilot Studio topic through a set of variables. The following are context variables available as [Copilot Studio global variables](/microsoft-copilot-studio/authoring-variables-bot).
 
 [!INCLUDE [app-context-table](../../../model-driven-apps/clientapi/includes/app-context-table.md)]
 
