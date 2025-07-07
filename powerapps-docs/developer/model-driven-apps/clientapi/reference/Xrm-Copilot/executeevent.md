@@ -38,7 +38,7 @@ An array of [MCSResponse](mcsresponse.md)
 
 ## Accessing app context
 
-When an Agent API is called, context for the app is passed to the MCS topic through a set of variables. The following are context variables:
+When an Agent API is called, context for the app is passed to the MCS topic through a set of variables. The following are context variables available as [Copilot Studio global variables](/microsoft-copilot-studio/authoring-variables-bot).
 
 [!INCLUDE [app-context-table](../../includes/app-context-table.md)]
 
