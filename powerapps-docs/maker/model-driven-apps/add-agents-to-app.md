@@ -99,7 +99,7 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 
 ### Limitations
 
-The interactive agent is not able to be defined or referenced in App Designer for these Microsoft model-driven apps
+The interactive agent isn't able to be defined or referenced in app designer for these Microsoft model-driven apps:
 
 - Connected Field Service
 - Customer Insights

@@ -1,7 +1,7 @@
 ---
 title: "Add agent response using the form designer" 
 description: Learn how to add the agent response component to model forms to call Copilot Studio topics.
-ms.date: 06/26/2025
+ms.date: 07/07/2025
 ms.reviewer: matp
 ms.topic: how-to
 author: adrianorth
@@ -62,11 +62,11 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
 ## Accessing app context
 
-When the Agent Response component calls the MCS topic, it passes context for the app through a set of variables. See [Agent API accessing app context](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in MCS.
+When the agent response component calls the Copilot Studio topic, it passes context for the app through a set of variables. Go to [Agent API accessing app context](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in Copilot Studio.
 
 ## Accessibility
 
-When the MCS response is an Adaptive Card, ensure the following best practices are followed to have an accessible experience.
+When the Copilot Studio response is an Adaptive Card, ensure the following best practices are followed to have an accessible experience.
 
 - [Design best practices - Adaptive Cards](https://adaptivecards.microsoft.com/?topic=design-best-practices)
 - [Image - Adaptive Cards](https://adaptivecards.microsoft.com/?topic=Image)
