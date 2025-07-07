@@ -62,7 +62,7 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
 ## Accessing app context
 
-When the agent response component calls the Copilot Studio topic, it passes context for the app through a set of variables. Go to [Agent API accessing app context](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in Copilot Studio.
+When the agent response component calls the Copilot Studio topic, it passes context for the app through a set of variables. Go to [Accessing app context](../../developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in Copilot Studio.
 
 ## Accessibility
 
