@@ -36,7 +36,13 @@ contributors:
 
 An array of [MCSResponse](mcsresponse.md)
 
-[!INCLUDE [accessing-app-context](../../includes/accessing-app-context.md)]
+## Accessing app context
+
+When an Agent API is called, context for the app is passed to the MCS topic through a set of variables. The following are context variables:
+
+[!INCLUDE [app-context-table](../../includes/app-context-table.md)]
+
+For example, using `Global.PA__Copilot_Model_PageContext.pageContext.id.guid` and `Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName`, the form's record can be retrieved from Dataverse.
 
 [!INCLUDE [accessing-event-parameters](../../includes/accessing-event-parameters.md)]
 
