@@ -1,5 +1,6 @@
 ---
 title: Customize and build your mobile app using the wrap wizard
+description: Learn about the steps to build and customize your mobile app using wrap wizard.
 author: komala2019
 ms.topic: how-to
 ms.custom: canvas
@@ -53,7 +54,7 @@ When you update and republish your app, the wrapped app is automatically updated
 1. On the **Choose mobile platform to target** screen, enter a **Bundle ID**.
 
    > [!NOTE]
-   > The **Bundle ID** is a unique identifier that you create for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+   > The **Bundle ID** is a unique identifier that you create for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
@@ -68,7 +69,7 @@ When you update and republish your app, the wrapped app is automatically updated
    >
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
   
-   a. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault-uri), if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing. Add the environment variable         if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.
+   a. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault), if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing. Add the environment variable         if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.
       Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
   
