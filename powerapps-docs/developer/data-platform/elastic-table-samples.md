@@ -3,8 +3,8 @@ title: Elastic table sample code
 description: Learn about the sample code that is available on GitHub for Dataverse elastic table operations and the ExecuteCosmosSqlQuery message.
 ms.topic: article
 ms.date: 12/04/2023
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 contributors:
  - sumantb-msft
