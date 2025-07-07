@@ -60,6 +60,9 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
    :::image type="content" source="media/form-designer-add-configure-agent-response/copilot-studio-topic-trigger-event-properties.png" alt-text="Copilot Studio Trigger On Event property pane.":::
 
+## Accessing app context
+
+When the Agent Response component calls the MCS topic, it passes context for the app through a set of variables. See [](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in MCS.
 
 ## Accessibility
 
