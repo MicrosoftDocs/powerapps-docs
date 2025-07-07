@@ -62,7 +62,7 @@ Requires the **Allow users to analyze data using an AI-powered chat experience i
 
 ## Accessing app context
 
-When the Agent Response component calls the MCS topic, it passes context for the app through a set of variables. See [Accessing app context](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in MCS.
+When the Agent Response component calls the MCS topic, it passes context for the app through a set of variables. See [Agent API accessing app context](/developer/component-framework/reference/copilot/executeevent.md#accessing-app-context) for the context variables to use in MCS.
 
 ## Accessibility
 
