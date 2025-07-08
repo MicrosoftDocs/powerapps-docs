@@ -32,6 +32,7 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 1. Select the **Microsoft Dataverse** connector, and then select **Edit actions**.
    :::image type="content" source="media/data-platform-mcp/data-platform-connector.png" alt-text="Screenshot showing where to select the Microsoft Dataverse connector and then select Edit actions" lightbox="media/data-platform-mcp/data-platform-connector.png":::
 1. Locate the action named **Dataverse MCP Server**, and turn **Off** this action as needed for your environment group.
+   :::image type="content" source="media/data-platform-mcp/dataverse-mcp-server-action.png" alt-text="Screenshot of the Dataverse MCP server action" lightbox="media/data-platform-mcp/dataverse-mcp-server-action.png":::
 1. Select **Save** and then select **Publish rules** to the enable the rule.
 
 ## Related articles
