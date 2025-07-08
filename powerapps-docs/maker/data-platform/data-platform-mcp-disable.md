@@ -30,7 +30,7 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 1. Select **New group** to create a new environment group or select an existing group where you want to turn off the Dataverse MCP server.
 1. Open the environment group, and then on the **Rules** tab select **Advanced connector policies (preview)**.
 1. Select the **Microsoft Dataverse** connector, and then select **Edit actions**.
-   :::image type="content" source="media/data-platform-mcp/data-platform-connector.png" alt-text="Screenshot showing where to select the Microsoft Dataverse connector and then select Edit actions":::
+   :::image type="content" source="media/data-platform-mcp/data-platform-connector.png" alt-text="Screenshot showing where to select the Microsoft Dataverse connector and then select Edit actions" lightbox="media/data-platform-mcp/data-platform-connector.png":::
 1. Locate the action named **Dataverse MCP Server**, and turn **Off** this action as needed for your environment group.
 1. Select **Save** and then select **Publish rules** to the enable the rule.
 
