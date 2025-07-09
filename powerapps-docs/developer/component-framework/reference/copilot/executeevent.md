@@ -3,7 +3,7 @@ title: executeEvent (Power Apps component framework API reference) (preview)
 description: Executes a Microsoft Copilot Studio topic based on the registered Event Name. 
 author: adrianorth
 ms.author: aorth
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name| Type| Required | Description|
 | --- | --- | --- | --- |
-| `eventName` | string | Yes | Event Name registered in the MCS topic  |
+| `eventName` | string | Yes | Event Name registered in the Copilot Studio topic  |
 | `eventParameters` | Unknown  | Yes | Parameters needed for the event execution. These depend on what the topic does.|
 | `successCallback` | Function | Yes | A function to call when the operation succeeds.|
 | `errorCallback`   | Function | Yes | A function to call when the operation fails.|
@@ -40,50 +40,15 @@ Type: `Promise<`[MCSResponse](mcsresponse.md)`>`
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [MCSResponse](mcsresponse.md)
 
-## Example
+## Accessing app context
 
-In Microsoft Copilot Studio, where a topic is registered that accepts an ID (entity record ID) as an input parameter. Based on the input, it retrieves the related activities of that entity record and returns the results as an MCS event activity. The PCF context API enables the execution of these methods within the context of PCF controls. 
+When an Agent API is called, context for the app is passed to the Copilot Studio topic through a set of variables. The following are context variables available as [Copilot Studio global variables](/microsoft-copilot-studio/authoring-variables-bot).
 
-```typescript
-const response = await context.copilot.executeEvent( 
-    "Microsoft.PowerApps.Copilot.RelatedActivities", 
-    { id:"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"}); 
-```
+[!INCLUDE [app-context-table](../../../model-driven-apps/clientapi/includes/app-context-table.md)]
 
-### Response
+For example, using `Global.PA__Copilot_Model_PageContext.pageContext.id.guid` and `Global.PA__Copilot_Model_PageContext.pageContext.entityTypeName`, the form's record can be retrieved from Dataverse.
 
-```json
-[
-    {
-        "type": "event",
-        "timestamp": "2025-02-05T16:05:53.4074714+00:00",
-        "replyToId": "bbbbbbbb-1111-2222-3333-cccccccccccc",
-        "attachments": [],
-        "value": {
-            "@odata.context": "https://*.dynamics.com/api/data/v9.2/$metadata#activitypointers(subject,prioritycode)",
-            "value": [
-                {
-                    "@odata.etag": "W/\"6825587\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "cccccccc-2222-3333-4444-dddddddddddd",
-                    "activitytypecode": "phonecall",
-                    "prioritycode": 2,
-                    "subject": "Discuss new opportunity (sample)"
-                },
-                {
-                    "@odata.etag": "W/\"6826236\"",
-                    "@odata.type": "#Microsoft.Dynamics.CRM.phonecall",
-                    "activityid": "dddddddd-3333-4444-5555-eeeeeeeeeeee",
-                    "activitytypecode": "phonecall",
-                    "prioritycode": 2,
-                    "subject": "Likes our new products (sample)"
-                }
-            ]
-        },
-        "name": "MS.CopilotApiDemo.RelatedActivities"
-    }
-]
-```
+[!INCLUDE [accessing-event-parameters](../../../model-driven-apps/clientapi/includes/accessing-event-parameters.md)]
 
 
 ### Related articles

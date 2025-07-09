@@ -1,14 +1,14 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 06/04/2025
-ms.reviewer: "matp"
-ms.topic: "how-to"
-author: "adrianorth"
+ms.date: 07/07/2025
+ms.reviewer: matp
+ms.topic: how-to
+author: adrianorth
 ms.subservice: mda-maker
-ms.author: "aorth"
+ms.author: aorth
 contributors: Jacob-Wilkinson
-ms.service: "powerapps"
+ms.service: powerapps
 search.audienceType: 
   - maker
 ---
@@ -36,7 +36,7 @@ Autonomous agents can be added to model-driven apps to assist users with task co
 [Learn more about how to supervise agents](../../user/supervise-agents-with-agent-feed.md)
 
 > [!IMPORTANT]
-> Currently, only the owner of an agent can view and supervise that agent’s data in a model-driven app.
+> Currently, only the owner of an agent can view and supervise that agent's data in a model-driven app.
 
 ## Add an autonomous agent to an app
 
@@ -96,6 +96,23 @@ When an interactive agent is created, it's named as **Copilot in Power Apps - \<
 1. Switch to the **Copilot Studio** browser tab to add topics, knowledge, and so on, to the agent.
 1. Save and publish the agent.
 1. Switch to the app designer browser tab to save and publish the app.
+
+### Limitations
+
+The interactive agent isn't able to be defined or referenced in app designer for these Microsoft model-driven apps:
+
+- Connected Field Service
+- Customer Insights
+- Customer Service Hub
+- Customer Services workspace
+- Dynamics 365 App for Outlook
+- Field Service
+- Field Service Mobile
+- Inventory Visibility
+- Omni Channel Engagement Hub
+- Project Operations
+- Sales Hub
+- Sustainability
 
 ## Related information
 
