@@ -23,6 +23,7 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 
 - A Power Platform with Dataverse environment setup with MCP via connector as described in [Connect to Dataverse with model context protocol (preview)](data-platform-mcp.md).
 - Power Platform administrator role in order to manage environment group and connector policies.
+- The steps described in this article require that the environment be a Managed Environment.
 
 ## Disable a Dataverse a model context protocol
 
