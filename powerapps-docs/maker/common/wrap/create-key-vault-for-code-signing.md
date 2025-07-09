@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 5/9/2024
+ms.date: 07/09/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -14,7 +14,7 @@ contributors:
   - mduelae
 ---
 
-# Azure key vault for wrap using default subscription
+# Azure key vault for wrap
 
 Azure key vault is a cloud-based service that securely stores secrets like certificates, passwords, keys, and other sensitive information. To learn more, see [Introduction to Azure key vault](/azure/key-vault/general/overview). Set up Azure key vault to create Azure blob storage and use the automatic signing process in wrap.
 
@@ -23,15 +23,14 @@ This article explains how to use an existing Azure Key Vault or create a new one
 ## Prerequisites
 
 - Microsoft Entra subscription to [create a key vault](/azure/key-vault/general/quick-create-portal).
-- Make sure your subscription ID is set as the default. More information: [Get subscription information](/cli/azure/manage-azure-subscriptions-azure-cli?tabs=bash#get-subscription-information)
 - Admin access for your tenant.
 - An [Apple account](https://developer.apple.com) enrolled in the Apple Developer Program or Apple Enterprise Developer Program.
 - Create a [distribution certificate](code-sign-ios.md#create-distribution-certificate), [ad-hoc provisioning profile](code-sign-ios.md#create-ios-provisioning-profile), or enterprise provisioning profile.
 
-## Configure key vault URI
+## Configure key vault
 
 > [!IMPORTANT]
-> Before configuring the Key Vault URI, you need to create an Azure Key Vault. Follow the steps in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
+> Before configuring the Key Vault, you need to create an Azure Key Vault. Follow the steps in [Create a vault](/azure/key-vault/general/quick-create-portal#create-a-vault).
 
 1. **Create a service principal for Wrap KeyVault Access App**
 
@@ -44,7 +43,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
 
 2. **Assign Reader role to the service principal**
 
-   Add a **Reader** role assignment to the Wrap Key Vault Access App in the **Access Control (IAM)** of your default subscription and the Key Vault.
+   Add a **Reader** role assignment to the Wrap Key Vault Access App in the **Access Control (IAM)** of your subscription and the Key Vault.
 
    1. In the Azure portal, select **Access control (IAM)** and then **Add** > **Add role assignment**.
    2. Go to the **Members** tab, select **Job function roles**, and ensure **Reader** is selected.
@@ -62,9 +61,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
       > [!div class="mx-imgBorder"] 
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
-3. **Create or access an existing Key Vault**
-
-   Ensure the Key Vault is in your tenant's default subscription. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
+3. Create or access an existing Key Vault. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
 4. **Add access policies for the Key Vault**
 
