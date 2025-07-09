@@ -74,6 +74,8 @@ You're now editing the app in the Power Apps Studio version you've selected. Sin
         > [!NOTE]
         > If you choose to restore the app to a previous version, you'll lose any changes made between your latest and previous app versions.
 
+- You cannot change authoring versions if coauthoring is enabled.
+
 ### See also
 
 - [Setting an environment refresh cadence](/power-platform/admin/create-environment#setting-an-environment-refresh-cadence)
