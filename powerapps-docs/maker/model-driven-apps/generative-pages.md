@@ -11,6 +11,8 @@ applies_to:
   - PowerApps
 search.audienceType: 
   - maker
+ms.collection: 
+  - bap-ai-copilot 
 ---
 # Describe a page using natural language (preview)
 
@@ -57,12 +59,16 @@ Refine the output by iterating on the description to fix errors, adjust layout, 
 
 When you're satisfied with the generated page, select **Save and Publish** to make the page available when you play the model-driven app.
 
-> [!NOTE]
-> Currently, publishing must be done separately for each generative page that you want to play in the app.
 
-<!-- ## Limitations 
+ ## Limitations 
 
-What are the limitations of the generative page for public preview? -->
+<!-- These are assumptions made from the private preview source doc as I didn't add all of them. Please add or remove what the limitations are for generative page for public preview. -->
+
+- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. Currently, no other data sources can be used.  
+- Currently you can't edit the generated code.
+- Currently, generated pages can't be exported and imported in other Power Platform with Dataverse environments.
+- The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
+- You must add all needed Dataverse tables in the first prompt.
 
 ## Frequently asked questions
 <!--Please verify whether these FAQs apply to the public preview -->

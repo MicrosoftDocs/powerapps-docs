@@ -2641,3 +2641,5 @@
     href: ./common/faq-visualize-view.md
   - name: FAQ for Agent APIs in model-driven apps
     href: ./common/faq-agent-api-component.md
+  - name: FAQ about using generative pages with model-driven apps
+    href: ./common/faqs-generative-pages-model-driven.md
