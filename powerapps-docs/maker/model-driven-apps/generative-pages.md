@@ -35,7 +35,7 @@ After you describe the page, the system then processes your requirements and  sp
    A full-page generative page experience opens.
 1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. All cards should have fixed size and tall enough to fit 4 lines of titles. Include name, entityimage on the top, and website, email, phone number. Make the component fill 100% of the space. Make the gallery scrollable by using data from the Account table*.
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
-   :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page":::
+   :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload an image to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image.
 1. When you're finished describing the page, press Enter or select **Generate page**.

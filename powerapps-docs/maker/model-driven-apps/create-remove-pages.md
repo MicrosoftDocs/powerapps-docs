@@ -1,7 +1,7 @@
 ---
 title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
-ms.date: 01/27/2025
+ms.date: 07/10/2025
 ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
@@ -32,6 +32,7 @@ To create a page, follow these steps:
    - **Custom page**: Design and build a page that's based on a canvas app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
    - **Web resource**: Select a web resource from a list of web resources. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
    - **Navigation link**: Enter a direct link to a web resource. [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
+   - **Describe a page**. Use natural language to create a generative page that's generated using AI. More information: [Describe a page using natural language (preview)](generative-pages.md)
 1. If you don't want your page to appear in the app's site map, clear the **Show in navigation** option.
   :::image type="content" source="media/add-table-view-and-form-pages.png" alt-text="Add a table to a page":::
 1. Select **Add**.
