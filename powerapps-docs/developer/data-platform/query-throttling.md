@@ -5,9 +5,9 @@ ms.date: 01/08/2025
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
