@@ -2421,6 +2421,8 @@
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+    - name: Disable a Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
