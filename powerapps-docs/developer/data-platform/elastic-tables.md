@@ -3,8 +3,8 @@ title: Elastic tables for developers
 description: This article provides information to developers about Dataverse elastic tables and how to use elastic tables using code.
 ms.topic: article
 ms.date: 12/04/2023
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 contributors:
  - sumantb-msft

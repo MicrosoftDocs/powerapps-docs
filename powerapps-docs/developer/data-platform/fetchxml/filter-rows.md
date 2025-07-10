@@ -4,9 +4,9 @@ description: Learn how to use FetchXml to filter rows when you retrieve data fro
 ms.date: 04/01/2024
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

@@ -4,9 +4,9 @@ description: Learn how to optimize performance when you retrieve data from Micro
 ms.date: 01/06/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
