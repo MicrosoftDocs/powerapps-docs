@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: sabinn-msft
 ms.component: cds
 ms.topic: how-to
-ms.date: 06/19/2025
+ms.date: 07/08/2025
 ms.subservice: dataverse-maker
 ms.author: sabinn
 ms. reviewer: matp
@@ -233,6 +233,8 @@ The following Dataverse MCP tools are available. Your prompt in the MCP client l
 | `update_record`          | Update a row in a Dataverse table.                                                                                          |
 
 ## Related articles
+
+[Disable a Dataverse MCP server using advanced connector policies](data-platform-mcp-disable.md)
 
 Learn more about MCP:
 

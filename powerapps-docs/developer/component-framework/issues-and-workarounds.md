@@ -3,7 +3,7 @@ title: Common issues and workarounds (Power Apps Component Framework) | Microsof
 description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
 author: anuitz
 ms.author: anuitz
-ms.date: 10/28/2024
+ms.date: 07/01/2025
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -164,13 +164,13 @@ Power Apps component framework dataset component currently does not properly sho
 No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
 
-## Authentication for third party services fails in Canvas
+## Custom authentication fails in Canvas
 
-PCF authentication for third parties isn't supported.
+Custom authentication within PCF controls is not supported within canvas apps.
 
 **Workaround**
 
-Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
+Use [connectors](../../maker/canvas-apps/connections-list.md) to handle authentication.
 
 ## Control can't finish loading
 
