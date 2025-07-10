@@ -4,9 +4,9 @@ description: Learn how to use the Dataverse SDK for .NET or Web API to send a re
 ms.date: 01/26/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

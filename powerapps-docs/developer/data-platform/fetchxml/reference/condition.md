@@ -1,8 +1,8 @@
 ---
 title: condition element
 description: Use this element to specify a condition to be evaluated as part of a filter for each row in the containing entity or link-entity elements to be returned.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 02/29/2024
 ms.topic: reference

@@ -1106,10 +1106,11 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 
 #### [SDK for .NET](#tab/sdk)
 
-> [!NOTE]
-> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. [Learn more about using messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
+
+> [!NOTE]
+> The [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) is now available to use.
 
 ```csharp
 public static void DeleteMultipleExample(IOrganizationService service)
@@ -1147,10 +1148,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-This example shows how to use the `DeleteMultiple` action to delete multiple rows from `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows.
-
-> [!NOTE]
-> Currently, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public in the coming weeks. You can use it while it's private.
+This example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows.
 
 **Request:**
 

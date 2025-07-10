@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 06/18/2025
+ms.date: 07/09/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -54,7 +54,7 @@ When you update and republish your app, the wrapped app is automatically updated
 1. On the **Choose mobile platform to target** screen, enter a **Bundle ID**.
 
    > [!NOTE]
-   > The **Bundle ID** is a unique identifier that you create for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
+   > The **Bundle ID** is a unique identifier for your app. It must contain one period (.) and no spaces. Use this same bundle ID when [creating the Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault) after generating and uploading your iOS or Android certificates. If you have already created the Azure Key Vault, verify the bundle ID in the **Tags** section of the [Azure portal](https://portal.azure.com).
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 

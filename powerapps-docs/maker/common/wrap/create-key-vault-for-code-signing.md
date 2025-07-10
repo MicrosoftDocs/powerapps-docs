@@ -5,7 +5,7 @@ author: komala2019
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 5/9/2024
+ms.date: 07/09/2025
 ms.subservice: canvas-maker
 ms.author: koagarwa
 search.audienceType: 
@@ -61,7 +61,7 @@ This article explains how to use an existing Azure Key Vault or create a new one
       > [!div class="mx-imgBorder"] 
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
-3. **Create or access an existing Key Vault**. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
+3. Create or access an existing Key Vault. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
 4. **Add access policies for the Key Vault**
 
