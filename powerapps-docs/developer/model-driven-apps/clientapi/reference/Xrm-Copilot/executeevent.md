@@ -46,6 +46,18 @@ For example, using `Global.PA__Copilot_Model_PageContext.pageContext.id.guid` an
 
 [!INCLUDE [accessing-event-parameters](../../includes/accessing-event-parameters.md)]
 
+### Example
+
+In Microsoft Copilot Studio, where a topic is registered that accepts an ID (entity record ID) as an input parameter. Based on the input, it retrieves the related activities of that entity record and returns the results as an Copilot Studio event activity.
+
+```javascript
+const response = await Xrm.Copilot.executeEvent( 
+    "Microsoft.PowerApps.Copilot.RelatedActivities", 
+    { id:"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"}); 
+```
+
+[!INCLUDE [accessing-event-parameters-response](../../includes/accessing-event-parameters-response.md)]
+
 
 ### Related articles
 
