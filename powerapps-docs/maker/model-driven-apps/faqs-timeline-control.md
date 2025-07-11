@@ -66,6 +66,10 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
    :::image type="content" source="media/faqs-timeline-control/enable-user-posts-property.png" alt-text="Enable user post property":::
 
+## Do timeline records automatically refresh? 
+
+No. The timeline doesn’t automatically refresh records. For example, if you update a record when you reply to an email, you must manually refresh the timeline to see the updated record. 
+
 ## Why do the "Modified On" columns of my records get changed when no changes are made to them?
 
 This can be caused by the cascading behavior with the parent record. For example, when a case is assigned to another user. Go to [Table Relationships](../data-platform/create-edit-entity-relationships.md) for information about how to configure this behavior.
