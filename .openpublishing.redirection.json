@@ -1,11 +1,16 @@
 {
   "redirections": [
-    {
+   {
          "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
          "redirect_url": "column-level-security",
          "redirect_document_id": "false"
-    }, 
-    {
+   }, 
+   {
+      "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
+      "redirect_url": "bulk-operations#deletemultiple",
+      "redirect_document_id": "false"
+   }, 
+   {
       "source_path": "powerapps-docs/developer/test-engine/overview.md",
       "redirect_url": "/power-platform/test-engine/overview",
       "redirect_document_id": "false"
@@ -9603,6 +9608,11 @@
     {
       "source_path": "powerapps-docs/maker/canvas-apps/common-performance-issue-resolutions.md",
       "redirect_url": "../../../power-apps/maker/canvas-apps/create-performant-apps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/build-app-three-steps.md",
+      "redirect_url": "../../../power-apps/maker/model-driven-apps/build-first-model-driven-app",
       "redirect_document_id": false
     }
   ]
