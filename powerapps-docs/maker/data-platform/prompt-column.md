@@ -33,8 +33,10 @@ Example use cases:
 
 ## Prerequisites
 
-- •	Prompt columns use the same licensing model as AI builder prompts. More information: [Prompts overview](/ai-builder/prompts-overview#prerequisites)
-- •	Copilot and AI Prompts features turned On in the Features area for the environment settings. More information: [Manage feature settings](/power-platform/admin/settings-features?tabs=new#copilot-preview)
+- Prompt columns use the same licensing model as AI builder prompts. More information: [Prompts overview](/ai-builder/prompts-overview#prerequisites)
+- Copilot and AI Prompts features turned On in the Features area for the environment settings. More information: [Manage feature settings](/power-platform/admin/settings-features?tabs=new#copilot-preview)
+
+<!--Are there other prereqs such as does the environment have to be in a specific region, such as US? -->
 
 ## Create a prompt column 
 
