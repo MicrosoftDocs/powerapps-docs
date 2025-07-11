@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: mduelae
   ms.author: tapanm
-  ms.date: 09/04/2020 
+  ms.date: 07/10/2025 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -35,16 +35,16 @@ landingContent:
             url: /training/modules/get-started-with-powerapps/
 
   # Card
-  - title: Explore and create
+  - title: Create a canvas app
     linkLists:
-       - linkListType: quickstart
+       - linkListType: how-to-guide
          links:
-          - text: Explore sample apps
-            url: open-and-run-a-sample-app.md 
-          - text: Create your first app
-            url: get-started-test-drive.md  
-          - text: Create a canvas app from Dataverse
-            url: data-platform-create-app.md
+          - text: Create a blank canvas app
+            url: create-blank-app.md
+          - text: Create an app from conversation 
+            url: ai-conversations-create-app.md  
+          - text: Create a canvas app using Dataverse
+            url: data-platform-create-app-scratch.md
        - linkListType: learn
          links:
           - text: Create canvas apps in Power Apps
@@ -57,8 +57,8 @@ landingContent:
          links:
           - text: Add and configure controls
             url: add-configure-controls.md
-          - text: Screens and layouts
-            url: set-aspect-ratio-portrait-landscape.md
+          - text: Add and navigate screens
+            url: add-screen-context-variables.md
           - text: Add forms
             url: add-form.md
        - linkListType: learn
@@ -129,7 +129,7 @@ landingContent:
         links:
           - text: Test using Test Studio
             url: test-studio.md
-          - text: Debug using Monitor
+          - text: Debug using Live monitor
             url: ../monitor-canvasapps.md
           - text: Analyze app telemetry using Application Insights
             url: application-insights.md
