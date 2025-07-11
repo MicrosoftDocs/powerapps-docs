@@ -25,7 +25,7 @@ Microsoft Dataverse model context protocol (MCP) is provided through the connect
 - Power Platform administrator role in order to manage environment group and connector policies.
 - The steps described in this article require that the environment be a Managed Environment.
 
-## Disable a Dataverse a model context protocol
+## Disable a Dataverse MCP server
 
 1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Manage**, and then select **Environment groups**. 
 1. Select **New group** to create a new environment group or select an existing group where you want to turn off the Dataverse MCP server.
