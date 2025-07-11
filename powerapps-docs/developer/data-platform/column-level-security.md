@@ -112,20 +112,92 @@ static internal void GetSecuredColumns(IOrganizationService service,
 
 #### [Web API](#tab/webapi)
 
+This JSON represents the [EntityQueryExpression](/power-apps/developer/data-platform/webapi/reference/entityqueryexpression) data used with the `Query` parameter with the [RetrieveMetadataChanges Function](/power-apps/developer/data-platform/webapi/reference/retrievemetadatachanges) to return data about columns that are secured using the [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata)`.IsSecured` property.
+
 ```json
-TODO
+{
+   "Properties": {
+      "AllProperties": false,
+      "PropertyNames": ["SchemaName","Attributes"]
+   },
+   "Criteria": {
+      "FilterOperator": "And",
+      "Conditions": []
+   },
+   "AttributeQuery": {
+      "Properties": {
+         "AllProperties": false,
+         "PropertyNames": [
+            "SchemaName", "IsSecured"
+         ]
+      },
+      "Criteria": {
+         "FilterOperator": "And",
+         "Conditions": [
+            {
+               "ConditionOperator": "Equals",
+               "PropertyName": "IsSecured",
+               "Value": {
+                  "Type": "System.Boolean",
+                  "Value": "true"
+               }
+            }
+         ]
+      }
+   }
+}
 ```
 
 **Request**:
 
+This JSON is URL encoded before sending:
+
 ```http
-TODO
+GET [ORGANIZATION URI]/api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1=%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b%22SchemaName%22%2c%22Attributes%22%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b%5d+%7d%2c+%22AttributeQuery%22%3a+%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b+%22SchemaName%22%2c+%22IsSecured%22+%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b+%7b+%22ConditionOperator%22%3a+%22Equals%22%2c+%22PropertyName%22%3a+%22IsSecured%22%2c+%22Value%22%3a+%7b+%22Type%22%3a+%22System.Boolean%22%2c+%22Value%22%3a+%22true%22+%7d+%7d+%5d+%7d+%7d+%7d HTTP/1.1
+Consistency: Strong
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-MaxVersion: 4.0
+OData-Version: 4.0
 ```
 
 **Response**:
 
+> [!NOTE]
+> The data represented in this response has been edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative secured column. In reality, the total amount of data returned is quite large depending on the number of tables in your environment.
+
+This example shows how the [Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals) is one of the secured columns.
+
 ```http
-TODO
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Content-Length: 5324876
+
+{
+   "@odata.context": "[ORGANIZATION URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse",
+   "ServerVersionStamp": "152647645!07/11/2025 22:09:13",
+   "DeletedMetadata": {
+      "Count": 0,
+      "IsReadOnly": false,
+      "Keys": [],
+      "Values": []
+   },
+   "EntityMetadata": [
+      {
+         "SchemaName": "Account",
+         "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+         "Attributes": [
+            {
+               "SchemaName": "OpenDeals",
+               "MetadataId": "e10cdd44-5c7f-4ac8-a5d1-b2118926f2bd",
+               "IsSecured": true
+            }
+         ]
+      },
+      Truncated for brevity...
+   ]
+}
 ```
 
 ---
@@ -210,20 +282,44 @@ static internal List<string> GetSecuredColumnList(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-```json
-TODO
-```
+Only a user that has system administrator privileges can use this request, but it returns a much smaller total payload that may be easier to work with.
 
 **Request**:
 
 ```http
-TODO
+GET https://[ORGANIZATION URI]/api/data/v9.2/fieldsecurityprofiles(572329c1-a042-4e22-be47-367c6374ea45)/lk_fieldpermission_fieldsecurityprofileid?$select=entityname,attributelogicalname&$count=true HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+Prefer: odata.include-annotations="*"
+OData-Version: 4.0
+OData-MaxVersion: 4.0
 ```
 
 **Response**:
 
+This example shows how the [Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals) is one of the secured columns.
+
 ```http
-TODO
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+   "@odata.context": "[ORGANIZATION URI]/api/data/v9.2/$metadata#fieldpermissions(entityname,attributelogicalname)",
+   "@odata.count": 1,
+   "@Microsoft.Dynamics.CRM.totalrecordcount": 1,
+   "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+   "value": [
+      {
+         "@odata.etag": "W/\"15577006\"",
+         "entityname@OData.Community.Display.V1.FormattedValue": "Account",
+         "entityname": "account",
+         "attributelogicalname": "opendeals",
+         "fieldpermissionid": "9b2606bb-0144-413a-ac56-be26922d4edb"
+      }
+   ]
+}
 ```
 
 ---
@@ -353,20 +449,112 @@ static internal void DumpColumnSecurityInfo(IOrganizationService service,
 
 ### [Web API](#tab/webapi)
 
+This JSON represents the [EntityQueryExpression](/power-apps/developer/data-platform/webapi/reference/entityqueryexpression) data used with the `Query` parameter with the [RetrieveMetadataChanges Function](/power-apps/developer/data-platform/webapi/reference/retrievemetadatachanges) to return data about whether columns can be secured using the [AttributeMetadata](/power-apps/developer/data-platform/webapi/reference/attributemetadata)`.IsSecured` property.
+
 ```json
-TODO
+{
+   "Properties": {
+      "AllProperties": false,
+      "PropertyNames": ["SchemaName","Attributes"]
+   },
+   "Criteria": {
+      "FilterOperator": "And",
+      "Conditions": [
+         {
+            "ConditionOperator": "Equals",
+            "PropertyName": "IsPrivate",
+            "Value": {
+               "Type": "System.Boolean",
+               "Value": "false"
+            }
+         }
+      ]
+   },
+   "AttributeQuery": {
+      "Properties": {
+         "AllProperties": false,
+         "PropertyNames": [
+            "SchemaName",
+            "AttributeTypeName",
+            "IsPrimaryName",
+            "IsSecured",
+            "CanBeSecuredForCreate",
+            "CanBeSecuredForUpdate",
+            "CanBeSecuredForRead"
+         ]
+      },
+      "Criteria": {
+         "FilterOperator": "And",
+         "Conditions": [
+            {
+               "ConditionOperator": "NotEquals",
+               "PropertyName": "AttributeTypeName",
+               "Value": {
+                  "Type": "Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName",
+                  "Value": "VirtualType"
+               }
+            }
+         ]
+      }
+   }
+}
 ```
 
 **Request**:
 
 ```http
-TODO
+GET [ORGANIZATION URI]/api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1=+%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b%22SchemaName%22%2c%22Attributes%22%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b+%7b+%22ConditionOperator%22%3a+%22Equals%22%2c+%22PropertyName%22%3a+%22IsPrivate%22%2c+%22Value%22%3a+%7b+%22Type%22%3a+%22System.Boolean%22%2c+%22Value%22%3a+%22false%22+%7d+%7d+%5d+%7d%2c+%22AttributeQuery%22%3a+%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b+%22SchemaName%22%2c+%22AttributeTypeName%22%2c+%22IsPrimaryName%22%2c+%22IsSecured%22%2c+%22CanBeSecuredForCreate%22%2c+%22CanBeSecuredForUpdate%22%2c+%22CanBeSecuredForRead%22+%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b+%7b+%22ConditionOperator%22%3a+%22NotEquals%22%2c+%22PropertyName%22%3a+%22AttributeTypeName%22%2c+%22Value%22%3a+%7b+%22Type%22%3a+%22Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName%22%2c+%22Value%22%3a+%22VirtualType%22+%7d+%7d+%5d+%7d+%7d+%7d HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-MaxVersion: 4.0
+OData-Version: 4.0
 ```
 
 **Response**:
 
+> [!NOTE]
+> The data in this response is edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative column from one table. In reality, the total amount of data returned is quite large depending on the number of tables and columns in your environment.
+
+This example shows the requested properties of the [Account.AccountCategoryCode column](/power-apps/developer/data-platform/reference/entities/account#BKMK_AccountCategoryCode) is one of the secured columns.
+
 ```http
-TODO
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+   "@odata.context": "[ORGANIZATION URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse",
+   "ServerVersionStamp": "152647645!07/11/2025 23:37:54",
+   "DeletedMetadata": {
+      "Count": 0,
+      "IsReadOnly": false,
+      "Keys": [],
+      "Values": []
+   },
+   "EntityMetadata": [
+      {
+         "SchemaName": "Account",
+         "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+         "Attributes": [
+            {
+               "CanBeSecuredForRead": true,
+               "CanBeSecuredForCreate": true,
+               "CanBeSecuredForUpdate": true,
+               "IsPrimaryName": false,
+               "IsSecured": false,
+               "LogicalName": "accountcategorycode",
+               "SchemaName": "AccountCategoryCode",
+               "MetadataId": "118771ca-6fb9-4f60-8fd4-99b6124b63ad",
+               "AttributeTypeName": {
+                  "Value": "PicklistType"
+               }
+            },
+            Truncated for brevity...
+         ]
+      },
+      Truncated for brevity...
+   ]
+}
 ```
 
 ---
