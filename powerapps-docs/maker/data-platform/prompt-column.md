@@ -82,8 +82,7 @@ Here are some best practices for writing prompts:
 Do a quick test of your AI prompt. Create a test record with appropriate values in all your input columns to use for testing. For example, create a *Name* column in the table and enter some value that is used to identify the test record, such as testing prompts.
 
 1. Create or select a prompt column.
-1. Add or edit the prompt.
-1. Select the input column to get to the **Filter knowledge** pop-up screen.
+1. While editing the prompt in a prompt column, select the input column to get to the **Filter knowledge** pop-up screen.
 1. Select the **Filter attribute** option. 
    :::image type="content" source="media/prompt-columns/prompt-column-filter-attribute.png" alt-text="Filter attribute option":::
 1. Select the **Filter attribute** dropdown list and select a filter, such as *Name*. 
@@ -98,9 +97,16 @@ Do a quick test of your AI prompt. Create a test record with appropriate values 
 
 ## View prompt column results
 
-<!-- Continue here-->
-Create a model-driven app to easily view and validate your prompt column results. 
-1.	Go to PowerApps.  https://make.powerapps.com/.
-1.	Select Tables on the left navigation pane. 
-2.	Open your table, and then on the command bar select Create an app.  
-3.	Enter an App name for your app.
+Create a model-driven app to view and validate your prompt column results.
+
+1. Go to [PowerApps](https://make.powerapps.com/).
+1. Open an app for editing or create a new app. More information: [Create an app](create-edit-apps-portal.md#create-an-app)
+1. In the app designer, select **Edit form** to edit the table form for the table that has the prompt columns.  
+1. The form designer opens. Select all the input and prompt columns you want to add to the form. 
+1. Select **Save and publish**. 
+1. Go to the **Tables** area in Power Apps, and select **Views**.
+
+<!-- What should the user do next? What should they expect to see? What view do they open, etc? -->
+
+## Related articles
+<!-- What's the RAI FAQ for this feature? -->
