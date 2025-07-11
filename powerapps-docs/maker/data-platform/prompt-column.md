@@ -100,7 +100,7 @@ Do a quick test of your AI prompt. Create a test record with appropriate values 
 Create a model-driven app to view and validate your prompt column results.
 
 1. Go to [PowerApps](https://make.powerapps.com/).
-1. Open an app for editing or create a new app. More information: [Create an app](create-edit-apps-portal.md#create-an-app)
+1. Open an app for editing or create a new app. More information:[Create a model-driven app](../model-driven-apps/create-model-driven-app.md)
 1. In the app designer, select **Edit form** to edit the table form for the table that has the prompt columns.  
 1. The form designer opens. Select all the input and prompt columns you want to add to the form. 
 1. Select **Save and publish**. 
