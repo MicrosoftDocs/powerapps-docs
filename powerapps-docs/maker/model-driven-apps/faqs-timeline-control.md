@@ -68,7 +68,7 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
 ## Do timeline records automatically refresh? 
 
-No. The timeline doesn’t automatically refresh records. For example, if you update a record when you reply to an email, you must manually refresh the timeline to see the updated record. 
+No. The timeline doesn’t automatically refresh records. You must manually refresh the timeline to see updates made to a record. For example, if you update a record when you reply to an email, you must manually refresh the timeline to see the updated record. 
 
 ## Why do the "Modified On" columns of my records get changed when no changes are made to them?
 
