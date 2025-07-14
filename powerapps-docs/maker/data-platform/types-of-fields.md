@@ -84,6 +84,8 @@ There are three basic text column types. All values indicated here are in number
 |Text Area   | 100        |  4000       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use for smaller amounts of text.       |
 |Multiline Text   | 150        |  1048576       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use when large amounts of text are needed.       |
 
+If you reduce the maximum number of characters for the column, existing data won't be truncated. The limit applies to new rows.
+
 ## Choices
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that are available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
