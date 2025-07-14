@@ -259,7 +259,6 @@ The following table describes more properties you can use to customize the rich 
 | disableContentSanitization | Content sanitization removes some custom attributes or tags from rich text content. It's disabled by default to allow copying and pasting of rich text content from external sources. This property applies only to edit mode. When the editor control is read-only or disabled, content is always sanitized. | true |
 | disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column configured to use the rich text editor control. | false |
 | disableImages | Determines whether images can be inserted in the editor. This property has highest priority. When this property is set to true, images are disabled, regardless of the value of the `imageEntity` property. | false |
-| externalPlugins | Lists external plug-ins or plug-ins that you create that can be used in the rich text editor control.<br/>Syntax: "name": "*pluginName*", "path": "*pathToPlugin*" (the path value can be an absolute or relative URL) | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | imageEntity | To enforce more security on [images](/power-apps/developer/data-platform/image-attributes) by using a table other than the default, set this property and specify a different table.<br>Syntax: "imageEntityName": "*tableName*", "imageFileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
 | readOnlySettings | These properties determine the behavior of the column when viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | sanitizerAllowlist | Lists other kinds of content that can be displayed in the editor. | See [defaultSupportedProps](#defaultsupportedprops) |
@@ -481,6 +480,8 @@ Knowledge management:
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
+- Nested HTML structures—such as deeply nested <div> or <table> elements—can cause rendering problems in the modern Rich Text Editor. Recommendation: Simplify the HTML structure by removing unnecessary nested <div> or <table> tags to ensure consistent rendering across clients.
+
 
 ## Frequently asked questions
 
