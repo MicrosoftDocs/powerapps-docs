@@ -17,7 +17,11 @@ search.audienceType:
 
 For instructions about how to enable and use the command checker, go to  [Troubleshooting ribbon issues in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues)
 
-If an error dialog box displays "We can't compete the action you've selected" when trying to use the command action for activities on a timeline, it might be that the command action is hidden by custom rules. You can confirm by checking if the same action is hidden from **Related** > **Activities**.
+If you try to use the command action for activities on a timeline but the command action is hidden by custom rules, you might get the following error message:
+
+"We can't compete the action you've selected." 
+
+You can check whether the action is hidden by navigating to **Related** > **Activities**.
 
 :::image type="content" source="media/related-activities.png" alt-text="Go to related activities in the timeline":::
 
@@ -39,7 +43,7 @@ If you can't find the command action from the related activity grid, you can fur
 
    :::image type="content" source="media/start-command-checker.png" alt-text="Start command  checker":::
 
-1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab on the right to find out what custom rules are used to hide the command action.
+1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab to find out what custom rules are used to hide the command action.
 
    :::image type="content" source="media/find-group-id.png" alt-text="Find group ID":::
 
@@ -54,7 +58,7 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
    :::image type="content" source="media/faqs-timeline-control/enable-posts-csac.png" alt-text="Enable post from Customer Service admin center":::
 
-1. Check if the current table has the post configuration property activated. Go to **Settings** > **Activity Feeds configurations** > **Post Configurations**. In the example below, it's active for cases.
+1. Check if the current table has the post configuration property activated. Go to **Settings** > **Activity Feeds configurations** > **Post Configurations**. In the following example, it's active for cases.
 
    :::image type="content" source="media/faqs-timeline-control/post-configurations-enabled.png" alt-text="Enabled post configuration for tables":::
 
@@ -72,7 +76,7 @@ No. The timeline doesn’t automatically refresh records. You must manually refr
 
 ## Why do the "Modified On" columns of my records get changed when no changes are made to them?
 
-This can be caused by the cascading behavior with the parent record. For example, when a case is assigned to another user. Go to [Table Relationships](../data-platform/create-edit-entity-relationships.md) for information about how to configure this behavior.
+The cascading behavior with the parent record can cause this scenario. For example, it can occur when a case is assigned to another user. Go to [Table Relationships](../data-platform/create-edit-entity-relationships.md) for information about how to configure this behavior.
 
 Alternatively, you can configure timeline to sort notes by their **Created on** date. More information: [Notes on timeline](set-up-timeline-control.md#notes-on-timeline)
 
