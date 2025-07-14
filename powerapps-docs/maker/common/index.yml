@@ -18,6 +18,20 @@ metadata:
 landingContent:
 
   # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Copilot in Power Apps overview 
+            url: ../plan-designer/plan-designer.md
+          - text: Enable or disable Copilot 
+            url: ../canvas-apps/ai-overview.md#disable-copilot-in-power-apps
+          - text: Copilot feature settings in Power Platform admin center
+            url: /power-platform/admin/settings-feature
+          - text: FAQ about using AI responsibly 
+            url: responsible-ai-overview.md
+
+  # Card 
   - title: Plan desiger in Power Apps
     linkLists:
        - linkListType: how-to-guide
