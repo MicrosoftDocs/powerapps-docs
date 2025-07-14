@@ -1,0 +1,156 @@
+### YamlMime:Landing
+
+title: Copilot in Power Apps documentation
+summary: Learn how Copilot in Microsoft Power Apps makes it easy to build apps by providing insights and actions in response to natural language requests.
+metadata:
+  title: Copilot in Power Apps documentation
+  description: Provides access to Copilot documentation in Power Apps
+  services: service  
+  ms.subservice: canvas-maker
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: mduelae
+  ms.author: tapanm
+  ms.date: 07/14/2025 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Plan desiger in Power Apps
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Overview and prerequisites 
+            url: ../plan-designer/plan-designer.md
+          - text: Create a plan
+            url: ../plan-designer/create-plan.md
+          - text: FAQ for the Plan designer
+            url: faq-plan-designer.md
+
+
+  # Card
+  - title: Copilot in canvas apps
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Build apps through conversation with Copilot
+            url: ../canvas-apps/ai-conversations-create-app.md
+          - text: Edit your app with Copilot
+            url: ../canvas-apps/ai-edit-app.md
+          - text: Use field suggestions by Copilot
+            url: ../canvas-apps/ai-field-suggestions.md
+          - text: Use Copilot to create and edit Power Fx formulas
+            url: ../canvas-apps/ai-formulas-formulabar.md
+          - text: Add a Copilot control to a canvas app (preview)
+            url: ../canvas-apps/add-ai-copilot.md
+          - text: Rename controls in canvas apps with Copilot (preview)
+            url: ../canvas-apps/controls/copilot-rename-controls.md
+          - text: Build an agent to automate your business process (preview)
+            url: ../canvas-apps//canvas-apps/agent-builder.md 
+          - text: Add a custom Copilot to a canvas app (preview)
+            url: ../canvas-apps/add-custom-copilot.md   
+
+
+  # Card
+  - title: Copiot in model-driven apps
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add and configure controls
+            url: add-configure-controls.md
+          - text: Add and navigate screens
+            url: add-screen-context-variables.md
+          - text: Add forms
+            url: add-form.md
+       - linkListType: learn
+         links:
+          - text: Use the UI and controls in canvas apps
+            url: /training/paths/ui-controls-canvas-app-powerapps/
+
+  # Card
+  - title: Use Copilot features
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Galleries
+            url: customize-layout-sharepoint.md
+          - text: Forms
+            url: customize-forms-sharepoint.md
+          - text: Cards
+            url: customize-card.md
+          - text: Accessibility
+            url: accessible-apps.md
+
+  # Card
+  - title: Understand building blocks
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Connectors
+            url: connections-list.md
+          - text: Delegation
+            url: delegation-overview.md
+          - text: Data sources
+            url: working-with-data-sources.md
+          - text: Tables and records
+            url: working-with-tables.md  
+
+  # Card
+  - title: Manage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Save and publish
+            url: save-publish-app.md
+          - text: Share an app
+            url: share-app.md
+          - text: Edit an app
+            url: edit-app.md
+          - text: Licensing
+            url: license-designation.md
+
+  # Card
+  - title: Application Lifecycle Management (ALM)
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Create a canvas app within a Dataverse solution
+            url: add-app-solution.md
+          - text: Reuse canvas app components
+            url: create-component.md
+          - text: ALM with Microsoft Power Platform
+            url: /power-platform/alm/overview-alm
+          - text: Integrate with other websites
+            url: embed-apps-dev.md
+
+    # Card
+  - title: Test, debug and optimize
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Test using Test Studio
+            url: test-studio.md
+          - text: Debug using Live monitor
+            url: ../monitor-canvasapps.md
+          - text: Analyze app telemetry using Application Insights
+            url: application-insights.md
+          - text: Performance tips
+            url: performance-tips.md
+
+  # Card
+  - title: Reference and advanced learning
+    linkLists:
+       - linkListType: reference
+         links:
+          - text: Controls and properties reference
+            url: reference-properties.md
+          - text: Formula reference
+            url: formula-reference.md
+       - linkListType: learn
+         links:
+          - text: Use advanced data options and connectors
+            url: /training/paths/advanced-data-options-and-connectors/
+          - text: Master advanced techniques
+            url: /training/paths/understand-advanced-topics/
