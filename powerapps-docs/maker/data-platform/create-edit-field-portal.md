@@ -106,7 +106,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 |<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Choice**|Displays a list of options where only one can be selected.|
 |**Yes/No**|Displays Yes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
-| **Prompt**  | hold textual inputs that serve as prompts for AI models. These prompts can be anything from simple commands to complex queries. More information: [Prompt columns](prompt-column.md) |
+| **Prompt**  | Holds textual inputs that serve as prompts for AI models. These prompts can be anything from simple commands to complex queries. More information: [Prompt columns](prompt-column.md) |
 
 ## Save new column
 
