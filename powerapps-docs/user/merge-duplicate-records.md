@@ -4,7 +4,7 @@ description: How to merge duplicate records
 author: smurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/27/2023
 ms.subservice: end-user
 ms.author: smurkute

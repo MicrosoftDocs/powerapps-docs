@@ -3,8 +3,8 @@ title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft D
 description: "Learn about managed code development tools and requirements."
 ms.collection: get-started
 ms.date: 04/03/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 

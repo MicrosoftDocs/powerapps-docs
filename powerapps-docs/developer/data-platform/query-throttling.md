@@ -5,9 +5,9 @@ ms.date: 01/08/2025
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: pnghub
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: gned
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
@@ -29,10 +29,10 @@ Throttling can manifest in three ways:
 
 |Error code<br />Hex code|Name|Message|
 |---|---|---|
-|`-2147187388`<br />`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.`|
-|`-2147187132`<br />`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
-|`-2147186876`<br />`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` |
-|`-2147186875`<br />`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` |
+|`-2147187388`<br />`0x80048544`|`DataEngineQueryThrottling`|`This query cannot be executed because it conflicts with query throttling.` <br />or <br /> `This query is throttled as it negatively impacts the database health.`|
+|`-2147187132`<br />`0x80048644`|`DataEngineLeadingWildcardQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`<br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a leading wildcard value in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186876`<br />`0x80048744`|`DataEngineComputedColumnQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.` <br />or <br /> `This query is throttled as it negatively impacts the database health; the query uses a computed column in a filter condition, which will cause the query to be throttled more aggressively.`|
+|`-2147186875`<br />`0x80048745`|`DataEnginePerformanceValidationIssuesQueryThrottling`|`This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.` <br />or <br /> `This query is throttled as it negatively impacts the database health; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively.`|
 
 ## <a name="DataEnginePerformanceValidationIssuesQueryThrottling"></a> Dataverse error for query throttling caused by anti-patterns
 
@@ -43,7 +43,9 @@ When a query fails due to throttling and the query is using one of the anti-patt
 > Name: `DataEnginePerformanceValidationIssuesQueryThrottling`<br />
 > Code: `0x80048745`<br />
 > Number: `-2147186875`<br />
-> Message: `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
+> Message: `This query cannot be executed because it conflicts with Query Throttling; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952` 
+<br />or <br /> 
+`This query is throttled as it negatively impacts the database health; the query has performance validation issues ({0}), which will cause the query to be throttled more aggressively. Please refer to this document: https://go.microsoft.com/fwlink/?linkid=2162952`
 
 [!INCLUDE [cc-query-antipattern-enum-table](includes/cc-query-antipattern-enum-table.md)]
 

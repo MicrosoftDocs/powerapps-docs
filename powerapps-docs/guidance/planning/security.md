@@ -3,7 +3,7 @@ title: Design - Securing the app and data | Microsoft Docs
 description: This article explains general security concepts for people undertaking a Power Apps project, explaining security layers and how to apply them.
 author: taiki-yoshida
 
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: guidance
 ms.date: 06/16/2020
 ms.subservice: guidance

@@ -27,7 +27,7 @@ contributors:
 |---|---|---|---|
 |`entityLogicalName`|String|Yes|The table logical name of the records you want to retrieve. For example: `account`.|
 |`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
-|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
+|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5,000 records for standard tables, 500 for elastic tables.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or the maximum limit for the table type, the `nextLink` column in the returned promise object will contain a link to retrieve records.|
 |`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
 |`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 

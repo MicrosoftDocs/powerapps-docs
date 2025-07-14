@@ -2,11 +2,11 @@
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: MicroSri
+ms.reviewer: pehecke
+ms.topic: article
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:

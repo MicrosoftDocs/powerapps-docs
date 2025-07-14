@@ -4,7 +4,7 @@ description: Learn about creating, using, sharing, and certifying custom connect
 author: lancedMicrosoft
 
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/05/2017

@@ -1,10 +1,10 @@
 ---
 title: Create elastic tables using code
 description: Learn how to create Dataverse elastic tables with code.
-ms.topic: article
+ms.topic: how-to
 ms.date: 02/22/2024
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

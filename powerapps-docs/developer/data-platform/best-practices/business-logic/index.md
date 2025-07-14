@@ -5,7 +5,7 @@ suite: powerapps
 author: jowells
 ms.author: jowells
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: best-practice
 ms.date: 04/03/2025
 ms.subservice: dataverse-developer
 search.audienceType: 

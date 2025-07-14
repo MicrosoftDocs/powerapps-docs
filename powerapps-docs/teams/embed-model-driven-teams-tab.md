@@ -3,7 +3,7 @@ title: Embed a model-driven app as tab app (preview)
 description: "Embed a model-driven app as tab app"
 author: mattp123
 ms.component: pa-user
-ms.topic: article
+ms.topic: how-to
 ms.date: 12/10/2024
 ms.subservice: teams
 ms.author: matp

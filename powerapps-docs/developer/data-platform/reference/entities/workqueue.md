@@ -22,6 +22,7 @@ Messages represent operations that can be performed on the table. They may also 
 | `Assign`<br />Event: True |`PATCH` /workqueues(*workqueueid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) the `ownerid` property. |<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 | `Associate`<br />Event: True |[Associate records](/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api) |[Associate records](/power-apps/developer/data-platform/org-service/entity-operations-associate-disassociate#use-the-associate-method-or-associaterequest)|
 | `ClearWorkQueue`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ClearWorkQueue?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
+| `ComputeSlaWorkQueueItem`<br />Event: False |<xref:Microsoft.Dynamics.CRM.ComputeSlaWorkQueueItem?displayProperty=nameWithType /> |[Learn to use messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages)|
 | `Create`<br />Event: True |`POST` /workqueues<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api) |[Create records](/power-apps/developer/data-platform/org-service/entity-operations-create#basic-create)|
 | `CreateMultiple`<br />Event: True |<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType /> |<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 | `Delete`<br />Event: True |`DELETE` /workqueues(*workqueueid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete) |[Delete records](/power-apps/developer/data-platform/org-service/entity-operations-update-delete#basic-delete)|
@@ -64,6 +65,7 @@ The following table lists selected properties for the Work Queue (workqueue) tab
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [allowupdateinputwhileprocessing](#BKMK_allowupdateinputwhileprocessing)
+- [continueprocessingifslaviolated](#BKMK_continueprocessingifslaviolated)
 - [defaultitemtimetoliveinminutes](#BKMK_defaultitemtimetoliveinminutes)
 - [description](#BKMK_description)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -77,6 +79,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [prioritytype](#BKMK_prioritytype)
+- [slathresholdinpercentage](#BKMK_slathresholdinpercentage)
+- [slathresholdmodifiedon](#BKMK_slathresholdmodifiedon)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -100,6 +104,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |GlobalChoiceName|`workqueue_allowupdateinputwhileprocessing`|
 
 #### allowupdateinputwhileprocessing Choices/Options
+
+|Value|Label|
+|---|---|
+|0|**NotSet**|
+|1|**No**|
+|2|**Yes**|
+
+### <a name="BKMK_continueprocessingifslaviolated"></a> continueprocessingifslaviolated
+
+|Property|Value|
+|---|---|
+|Description|**Indicates whether item should be processed even if SLA is violated. Default value is NotSet.**|
+|DisplayName|**Continue to process item even if SLA is violated**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`continueprocessingifslaviolated`|
+|RequiredLevel|None|
+|Type|Picklist|
+|DefaultFormValue|0|
+|GlobalChoiceName|`workqueue_continueprocessingifslaviolated`|
+
+#### continueprocessingifslaviolated Choices/Options
 
 |Value|Label|
 |---|---|
@@ -309,6 +335,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Value|Label|
 |---|---|
 |0|**Fifo**|
+
+### <a name="BKMK_slathresholdinpercentage"></a> slathresholdinpercentage
+
+|Property|Value|
+|---|---|
+|Description|**The SLA Threshold in percentage for items added to the work queue.**|
+|DisplayName|**SLA Threshold in Percentage**|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|`slathresholdinpercentage`|
+|RequiredLevel|None|
+|Type|Integer|
+|MaxValue|100|
+|MinValue|0|
+
+### <a name="BKMK_slathresholdmodifiedon"></a> slathresholdmodifiedon
+
+|Property|Value|
+|---|---|
+|Description|**Date and time that the SLA Threshold was modified on.**|
+|DisplayName|**SLA Threshold Modified On**|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|`slathresholdmodifiedon`|
+|RequiredLevel|None|
+|Type|DateTime|
+|CanChangeDateTimeBehavior|False|
+|DateTimeBehavior|UserLocal|
+|Format|DateAndTime|
+|ImeMode|Inactive|
+|SourceTypeMask|0|
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -843,6 +900,7 @@ One-To-Many Relationship: [systemuser user_workqueue](systemuser.md#BKMK_user_wo
 These relationships are one-to-many. Listed by **SchemaName**.
 
 - [flowevent_workqueue](#BKMK_flowevent_workqueue)
+- [savingrule_workqueue](#BKMK_savingrule_workqueue)
 - [workqueue_AsyncOperations](#BKMK_workqueue_AsyncOperations)
 - [workqueue_BulkDeleteFailures](#BKMK_workqueue_BulkDeleteFailures)
 - [workqueue_DuplicateBaseRecord](#BKMK_workqueue_DuplicateBaseRecord)
@@ -865,6 +923,18 @@ Many-To-One Relationship: [flowevent flowevent_workqueue](flowevent.md#BKMK_flow
 |ReferencingAttribute|`parentobjectid`|
 |ReferencedEntityNavigationPropertyName|`flowevent_workqueue`|
 |IsCustomizable|`False`|
+|AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
+
+### <a name="BKMK_savingrule_workqueue"></a> savingrule_workqueue
+
+Many-To-One Relationship: [savingrule savingrule_workqueue](savingrule.md#BKMK_savingrule_workqueue)
+
+|Property|Value|
+|---|---|
+|ReferencingEntity|`savingrule`|
+|ReferencingAttribute|`workqueueid`|
+|ReferencedEntityNavigationPropertyName|`savingrule_workqueue`|
+|IsCustomizable|`True`|
 |AssociatedMenuConfiguration|AvailableOffline: True<br />Behavior: `UseCollectionName`<br />Group: `Details`<br />Label: <br />MenuId: null<br />Order: 10000<br />QueryApi: null<br />ViewId: `00000000-0000-0000-0000-000000000000`|
 
 ### <a name="BKMK_workqueue_AsyncOperations"></a> workqueue_AsyncOperations

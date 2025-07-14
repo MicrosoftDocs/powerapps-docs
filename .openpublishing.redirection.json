@@ -1,5 +1,25 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
+      "redirect_url": "bulk-operations#deletemultiple",
+      "redirect_document_id": "false"
+   }, 
+   {
+      "source_path": "powerapps-docs/developer/test-engine/overview.md",
+      "redirect_url": "/power-platform/test-engine/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/powerfx.md",
+      "redirect_url": "/power-platform/test-engine/powerfx",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/test-engine/yaml.md",
+      "redirect_url": "/power-platform/test-engine/yaml",
+      "redirect_document_id": "false"
+    },
     {
       "source_path": "powerapps-docs/developer/data-platform/quick-start-register-configure-simplespa-application-msal-js.md",
       "redirect_url": "webapi/quick-start-js-spa",
@@ -8942,7 +8962,7 @@
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
-      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-dynamic-values-that-previously-returned-boolean",
       "redirect_document_id": false
     },
     {
@@ -9153,6 +9173,16 @@
     {
       "source_path": "powerapps-docs/user/copilot-chat-in-webplayer.md",
       "redirect_url": "/power-platform/responsible-ai-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-template-options.md",
+      "redirect_url": "/power-apps/user/email-template-create",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/power-apps/user/email-template-create",
       "redirect_document_id": "false"
     },
     {
@@ -9558,6 +9588,26 @@
     {
       "source_path": "powerapps-docs/user/smartGrid.md",
       "redirect_url": "../../power-apps/maker/model-driven-apps/power-apps-grid-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/well-written-input-text-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/faq-draft-with-copilot.md",
+      "redirect_url": "/power-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/common-performance-issue-resolutions.md",
+      "redirect_url": "../../../power-apps/maker/canvas-apps/create-performant-apps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/build-app-three-steps.md",
+      "redirect_url": "../../../power-apps/maker/model-driven-apps/build-first-model-driven-app",
       "redirect_document_id": false
     }
   ]

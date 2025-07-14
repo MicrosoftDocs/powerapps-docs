@@ -4,7 +4,7 @@ description: Learn how to use AI-generated optional suggestions for fields in a 
 ms.date: 03/28/2025
 ms.custom: 
   - responsible-ai-faqs
-ms.topic: article
+ms.topic: how-to
 ms.component: pa-user
 ms.subservice: end-user
 author: MitiJ 

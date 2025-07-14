@@ -3,16 +3,16 @@ title: Copilot in Power Apps overview (preview)
 description: Learn how Copilot in Microsoft Power Apps makes it easy to build apps by providing insights and actions in response to natural language requests.
 author: mduelae
 ms.author: tapanm
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
   - canvas
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-gen-desc
-  - ai-seo-date: 4/16/2025
+  - ai-seo-date: 5/25/2025
 ai-usage: ai-assisted
 ms.reviewer: 
-ms.date: 12/20/2024
+ms.date: 06/27/2025
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
@@ -59,9 +59,9 @@ If you need to disable Copilot, see [Disable Copilot in Power Apps](#disable-cop
 
 The following articles can help you build various apps in different scenarios using Copilot.
 
-- [Use the Plan designer (preview)](../plan-designer/plan-designer.md)
+- [Create a plan using Plan designer](../plan-designer/create-plan.md)
 
-### Copilot in canvas apps
+## Copilot in canvas apps
 
 - [Build apps through conversation](ai-conversations-create-app.md)
 - [Edit your app with Copilot (preview)](ai-edit-app.md)
@@ -72,22 +72,17 @@ The following articles can help you build various apps in different scenarios us
 - [Build an agent to automate your business process (preview)](agent-builder.md)
 - [Rename controls in canvas apps with Copilot (preview)](./controls/copilot-rename-controls.md)
 
+## Copilot in model-driven apps
 
-### Copilot in model-driven apps
+Model-driven apps support [AI features](../../user/ai-in-apps.md) to improve the efficiency and productivity of business processes with intelligent automation and assistance.
 
-- [Add the Copilot control to the rich text editor](../model-driven-apps/copilot-control.md)
-- [Use Copilot in the email rich text editor](../model-driven-apps/use-copilot-email-assist.md)
-- [Add Copilot for app users in model-driven apps](../model-driven-apps/add-ai-copilot.md)
-
-### Copilot feature use
+## Copilot feature use
 
 - [Filter, sort, and search galleries with Copilot (preview)](../../user/smartgrid.md)
 - [Draft well-written input text with Copilot (preview)](../../user/well-written-input-text-copilot.md)
 - [Visualize data in a view with Copilot (preview)](../../user/visualize-data-in-copilot.md)
 
-### Microsoft Dataverse
-
-
+## Microsoft Dataverse
 
 - [Add knowledge to an existing copilot: Dataverse](../data-platform/data-platform-copilot.md)
 
@@ -116,7 +111,7 @@ Preview Copilot features are enabled by default, but your admin can turn them of
 > [!NOTE]
 > Turning off Copilot for your tenant disables Copilot for makers only. It doesn't disable the [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
 
-## Related information
+### Related information
 
 - [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 - [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)

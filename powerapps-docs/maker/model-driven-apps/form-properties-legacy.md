@@ -11,7 +11,7 @@ applies_to:
 ms.subservice: mda-maker
 ms.author: matp
 ms.date: 10/17/2023
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
 search.audienceType: 
   - maker

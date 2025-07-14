@@ -3,7 +3,7 @@ title: "Work with image column definitions using code"
 description: "Learn about how to create, retrieve, update and delete image column definitions using code." 
 ms.date: 01/17/2024
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 author: mkannapiran
 ms.author: kamanick
 ms.subservice: dataverse-developer

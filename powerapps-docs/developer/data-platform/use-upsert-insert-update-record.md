@@ -3,10 +3,10 @@ title: "Use Upsert to Create or Update a record (Microsoft Dataverse) | Microsof
 description: "When loading data into Dataverse from an external system, you may not know if a record already exists in Dataverse or not. If it exists, it should be updated, otherwise it should be created. Upsert is a combination of Update or Insert that enables the server to detect whether a record exists or not and apply the appropriate Update or Create operation in Dataverse. " 
 ms.date: 05/30/2023
 ms.reviewer: pehecke
-ms.topic: article
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType:
   - developer
 contributors:

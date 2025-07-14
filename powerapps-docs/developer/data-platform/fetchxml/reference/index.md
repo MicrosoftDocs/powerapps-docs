@@ -1,8 +1,8 @@
 ---
 title: FetchXml reference
 description: The articles in this section describe elements you use to compose a query using FetchXml. FetchXml is a proprietary XML based language that is used in Microsoft Dataverse to retrieve data.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 02/29/2024
 ms.topic: reference

@@ -4,7 +4,7 @@ description: "Learn how to view the history of a solution"
 keywords: 
 ms.date: 07/16/2024
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 
 author: Mattp123
 ms.subservice: dataverse-maker

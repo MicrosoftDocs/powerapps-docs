@@ -4,9 +4,9 @@ description: Learn how to use QueryExpression to retrieve aggregated data from M
 ms.date: 04/11/2025
 ms.reviewer: jdaly
 ms.topic: how-to
-author: olegovanesyan
+author: MsSQLGirl
+ms.author: jukoesma
 ms.subservice: dataverse-developer
-ms.author: olegov
 search.audienceType: 
   - developer
 contributors:

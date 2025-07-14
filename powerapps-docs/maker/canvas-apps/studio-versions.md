@@ -3,7 +3,7 @@ title: Change authoring version for Power Apps Studio
 description: Learn about how to change the authoring version for Power Apps Studio.
 author: emcoope-msft
 
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 3/26/2025
@@ -73,6 +73,8 @@ You're now editing the app in the Power Apps Studio version you've selected. Sin
 
         > [!NOTE]
         > If you choose to restore the app to a previous version, you'll lose any changes made between your latest and previous app versions.
+
+- You cannot change authoring versions if coauthoring is enabled.
 
 ### See also
 

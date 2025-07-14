@@ -1,13 +1,13 @@
 ---
-title: "Get started with Power Apps| MicrosoftDocs"
+title: Get started with Power Apps| MicrosoftDocs
 description: How to navigate the Power Apps home page. 
-ms.custom: ""
-ms.date: 4/3/2025
-ms.reviewer: "mkaur"
+ms.custom: 
+ms.date: 5/29/2025
+ms.reviewer: mkaur
 ms.topic: overview
-author: "mkaur"
+author: "mduelae"
 ms.subservice: common
-ms.author: "mkaur"
+ms.author: mkaur
 search.audienceType: 
   - maker, admin
 contributors:
@@ -26,34 +26,33 @@ If your organization has AI enabled then it also includes the new [Copilot](ai-o
 
 Select the appropriate tab below to know more.
 
-> [!div class="mx-imgBorder"]
-> ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
+:::image type="content" source="media/intro-maker-portal/homepage-new-look.png" alt-text="Screenshot of Power Apps home page." lightbox="media/intro-maker-portal/homepage-new-look.png":::
+
 
 Legend:
 
 1. [Left navigation pane](#1--left-navigation-pane)
 1. [Search](#2--search)
 1. [Environment information and settings](#3--environment-information-and-settings)
-1. [Try the new Power Apps experience](#4---try-the-new-power-apps-experience)
-1. [Copilot in Power Apps](#5---copilot-in-power-apps)
-1. [Build apps](#6--build-apps)
+1. [Create a plan](#4---create-a-plan)
+1. [Plans](#6--build-apps)
+1. [Build Apps](#6--build-apps)
 
 
 ## 1 – Left navigation pane
 
 Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
-> [!div class="mx-imgBorder"]
-> ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane.")
+:::image type="content" source="media/intro-maker-portal/default-nav-1.png" alt-text="Screenshot of Power Apps home page navigation pane." lightbox="media/intro-maker-portal/default-nav-1.png":::
 
 Legend:
 
 1. **Home**: Takes you to the Power Apps home page.
 1. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 1. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
-1. **Plans**: View and edit your plans. More information: [Use the Plan designer (preview)](../plan-designer/plan-designer.md).
-1. **AI hub**: Create and use AI models that optimize your business processes. More information: [Overview of AI Builder](/ai-builder/overview).
+1. **Plans**: View and edit your plans. More information: [Overview of Plan designer](../plan-designer/plan-designer.md).
 1. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+1. **AI hub**: Create and use AI models that optimize your business processes. More information: [Overview of AI Builder](/ai-builder/overview).
 1. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
 1. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
 1. **Power Platform**: Explore other Power Platform products or service.
@@ -76,12 +75,8 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all
 
-To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**.
+To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**. To keep it pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
-> [!div class="mx-imgBorder"]
-> ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
-
-Select **Discover all** to see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
 ### Move up or move down
 
@@ -141,41 +136,38 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 
 ### Help
 
-In the header, select the question mark icon to find more information about either canvas apps or model-driven apps.
+In the header, select the question mark icon to find more information about [Power Apps](../../index.yml)
 
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
 Find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community where you can share information with users in other organizations, and the Power Apps blog where the newest features are announced.
 
-## 4 - Try the new Power Apps experience
 
-Turn on the **Try the new Power Apps experience** toggle to [use the Plan designer (preview)](../plan-designer/plan-designer.md).
+## 4 - Create a plan
 
-## 5 - Copilot in Power Apps
+Use Plan designer to create user roles, data tables, and apps that address your business needs. Learn more in [Create a plan using Plan designer](../plan-designer/create-plan.md).
 
-If your organization has [Copilot in Power Apps (preview)](ai-overview.md) enabled then you'll see Copilot assistant on the Power Apps Home screen. For more information, see [Build apps through conversation (preview)](ai-conversations-create-app.md).
+## 5 – View and edit your plans
+
+Use the **Plans** menu in the left navigation pane to [access and edit your plans](../plan-designer/create-plan.md#view-and-edit-plans).
 
 ## 6 – Build apps
 
 Build apps that provide rich business logic and workflow capabilities to transform manual business operations into digital, automated processes.
 
-To create an app, select from the following options:
+To create an app, select **Create** and then choose from the following options:
 
-- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build a table, select a [Dataverse table](data-platform-create-app.md), or choose from an external data source like [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/sql-connection-overview.md) to start building your app.
-  
-  > [!NOTE]
-  > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
-   
+- **Start with Copilot**: [Build apps through conversation](ai-conversations-create-app.md)
+- **Start with data**: [Create a canvas app using Microsoft Dataverse](data-platform-create-app-scratch.md) or [Create a canvas app based on Excel data](get-started-create-from-blank.md)
+- **Start with a blank app**: [Create a blank canvas app from scratch](create-blank-app.md)
 - **Start with a page design**: Select the type of app you want to create. Use the **Filter** option in the top-right to narrow templates by app type or features like offline use, responsive design, or embedding into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md).
 - **Start with an app template**: Choose from app templates, including data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md).
 
   > [!NOTE]
   >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
-- **Your apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play** or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
-
-
+- **Apps**: On the **Home** page, find the apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Hover over the app name to **Edit**, **Play, or select **Commands** to perform various actions such as share the app, view app details, and access app settings.
 
 ### Permissions for Dataverse
 

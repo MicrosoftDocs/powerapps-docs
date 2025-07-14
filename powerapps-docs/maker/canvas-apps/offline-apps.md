@@ -3,7 +3,7 @@ title: Develop offline-capable canvas apps
 description: Learn about how to develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mustlaz
 ms.subservice: canvas-developer
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 03/18/2024
@@ -46,6 +46,8 @@ Watch this video to learn how to create offline enabled canvas apps which don't 
 These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that Power Apps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You'll generally have 30-70 megabytes of available memory.
 
 The functions also don't automatically resolve merge conflicts when a device comes online. Configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+
+After using **LoadData** to populate a collection, that collection cannot be used to update Dataverse data which includes a lookup field. Doing so will result in the lookup field not being updated.
 
 For updates on offline capabilities, return to this topic, and subscribe to the [Power Apps blog](https://powerapps.microsoft.com/blog/).
 

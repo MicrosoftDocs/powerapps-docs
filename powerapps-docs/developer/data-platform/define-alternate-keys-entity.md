@@ -3,10 +3,10 @@ title: "Work with alternate keys (Microsoft Dataverse) | Microsoft Docs" # Inten
 description: "The topic explains about how to create alternate keys for a table. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/23/2024
 ms.reviewer: pehecke
-ms.topic: article
-author: MicroSri
+ms.topic: how-to
+author: MsSQLGirl
 ms.subservice: dataverse-developer
-ms.author: sriknair
+ms.author: jukoesma
 search.audienceType: 
   - developer
 ---

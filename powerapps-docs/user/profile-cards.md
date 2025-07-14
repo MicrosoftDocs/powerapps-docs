@@ -5,7 +5,7 @@ ms.custom: ""
 author: shwetamurkute
 
 ms.component: pa-user
-ms.topic: conceptual
+ms.topic: article
 ms.date: 09/14/2020
 ms.subservice: end-user
 ms.author: smurkute

@@ -2,7 +2,7 @@
 title: Optimize for devices (preview)
 description: Learn which controls and properties are supported for device-optimized screens.
 author: anuitz
-ms.topic: conceptual
+ms.topic: article
 ms.custom: canvas
 ms.reviewer: smurkute
 ms.date: 05/01/2024

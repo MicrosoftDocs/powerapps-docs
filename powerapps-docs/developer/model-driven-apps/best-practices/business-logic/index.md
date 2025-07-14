@@ -6,7 +6,7 @@ author: sriharibs-msft
 ms.author: srihas
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: best-practice
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

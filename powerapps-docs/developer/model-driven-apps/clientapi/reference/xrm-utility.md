@@ -1,5 +1,5 @@
 ---
-title: "Xrm.Utility (Client API reference)"
+title: "Xrm.Utility (Client API reference) in model-driven apps"
 description: Provides container for useful methods.
 author: sriharibs-msft
 ms.author: srihas

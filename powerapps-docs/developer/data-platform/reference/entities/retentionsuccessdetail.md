@@ -405,7 +405,7 @@ These columns/attributes return false for both **IsValidForCreate** and **IsVali
 |Property|Value|
 |---|---|
 |Description||
-|DisplayName|**msft_DataState**|
+|DisplayName|**msft\_DataState**|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|`msft_datastate`|
