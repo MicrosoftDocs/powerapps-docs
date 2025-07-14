@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 07/11/2025
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.author: saperlmu
 author: Mattp123
@@ -31,21 +31,6 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 > [!NOTE]
 > The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
-
-<!-- No longer needed
- ### Enable the modern rich text editor experience from the classic experience
-
-The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
-
-1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
-1. On the command bar, select **Settings**. The settings page displays.
-1. In the left pane, in **Settings**, select **Features**. The features page displays.
-1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
-   - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
-   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
-   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
-1. Select **Save**.
-1. In the App Designer, select **Publish**. -->
 
 ## Add the rich text editor control to a text column on a form
 
@@ -480,8 +465,7 @@ Knowledge management:
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
-- Nested HTML structures—such as deeply nested <div> or <table> elements—can cause rendering problems in the modern Rich Text Editor. Recommendation: Simplify the HTML structure by removing unnecessary nested <div> or <table> tags to ensure consistent rendering across clients.
-
+- Nested HTML structures—such as deeply nested &lt;div&gt; or &lt;table&gt; elements—can cause rendering problems in the rich text editor. We recommend that you simplify the HTML structure by removing unnecessary nested &lt;div&gt; or &lt;table&gt; tags to ensure consistent rendering across clients.
 
 ## Frequently asked questions
 
