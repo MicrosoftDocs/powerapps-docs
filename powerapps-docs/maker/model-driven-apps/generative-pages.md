@@ -94,4 +94,4 @@ No. Code editing isn't currently supported. You can view the generated code, but
 
 ## Related articles
 
-<!-- Create an RAI FAQ with the AI impact section from the source doc? If not, what RAI FAQ do we link to for this?-->
+[FAQ about generative pages in model-driven apps](../common/faq-generative-pages-model-driven.md)
