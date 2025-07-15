@@ -29,8 +29,10 @@ Turn off a model-driven app to hide it from users who otherwise would be able to
 The **Status** of the app appears as **Off** from the solution's **Objects** view.
 
 > [!NOTE]
+>
 > - Apps that are turned off are still visible to other users from the **Apps** area of Power Apps.
 > - While a model-driven app is in a turned off state, it can't be played or shared from make.powerapps.com, however direct links to the app will continue to work.
+> - Managed model-driven apps can't be turned off.
 
 ## Turn on a model-driven app
 
