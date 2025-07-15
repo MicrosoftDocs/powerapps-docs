@@ -5,7 +5,7 @@ author: smurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 11/27/2023
+ms.date: 07/15/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -18,9 +18,9 @@ contributors:
 ---
 # Merge duplicate rows 
 
-Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
+Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator can also set up duplicate detection rules for other situations.  
 
-There are a few situations when duplicates may be found:  
+There are a few situations when duplicates might be found:  
 
 - When a row is created or updated.  
 - When  you're using Dynamics 365 for Outlook and you go from offline to online.  
@@ -49,7 +49,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   
 ### How to merge duplicate rows
 > [!NOTE]
->  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
+>  Merging rows is only supported for account, contact, and lead tables, it doesn't support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
   
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
@@ -69,16 +69,16 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 
 > [!IMPORTANT]
 >  If a column or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
->   - The control does not have a class property.
+>   - The field or containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It's possible to show it using the client API.
+>   - The control doesn't have a class property.
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 >   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
->   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
->   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed.
+>   - The column is `parentaccountid` on the Account table; this is a system setting and can't be changed. 
+>   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and can't be changed.
 >   - The column is of type `Owner` (example: `ownerid`).
 
 > [!IMPORTANT]
-> Merging records with a SharePoint Documents library only merges the records and not the Documents libraries.  See details in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
+> Merging records with a SharePoint documents library only merges the records and not the documents libraries. Learn more in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

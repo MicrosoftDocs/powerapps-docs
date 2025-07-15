@@ -5,7 +5,7 @@ author: shwetamurkute
 ms.reviewer: smurkute
 ms.topic: how-to
 ms.component: model
-ms.date: 12/14/2020
+ms.date: 07/15/2025
 ms.subservice: end-user
 ms.author: smurkute
 search.audienceType: 
@@ -23,8 +23,8 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 -   [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint)  
 
 > [!IMPORTANT]
-> - SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site.
-> - SharePoint Document libraries are not merged when records are merged. The subordinate record is deactivated, but its SharePoint folder and documents remain accessible unless manually deleted.
+> - When you delete a SharePoint managed document using a Power Apps or Dynamics 365 customer engagement app, the app permanently deletes the document from both the app and the SharePoint site.
+> - When you merge records, the app doesn't merge SharePoint document libraries. The app deactivates the subordinate record, but its SharePoint folder and documents remain accessible unless you delete them manually.
 
 ## Where do you access the documents from?
 
@@ -124,7 +124,7 @@ You can create new or edit existing SharePoint locations from your app in Datave
    > [!div class="mx-imgBorder"]
    > ![Add Location.](media/add_location.png "Add Location")
 
-3. The display name, parent site, and folder name are automatically populated. Change the details if required, and then select **Save**.
+3. The display name, parent site, and folder name are automatically populated. Change the details if necessary, and then select **Save**.
 
 ## Files tab FAQ
 
