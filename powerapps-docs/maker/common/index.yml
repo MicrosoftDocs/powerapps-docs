@@ -26,7 +26,7 @@ landingContent:
             url: ../plan-designer/plan-designer.md
           - text: Enable or disable Copilot 
             url: ../canvas-apps/ai-overview.md#disable-copilot-in-power-apps
-          - text: Copilot feature settings in Power Platform admin center
+          - text: Copilot admin settings
             url: /power-platform/admin/settings-feature
           - text: FAQ about using AI responsibly 
             url: responsible-ai-overview.md
