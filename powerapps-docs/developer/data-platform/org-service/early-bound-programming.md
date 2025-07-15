@@ -4,8 +4,8 @@ description: "Describes the different programming styles available when using th
 ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: pehecke
 search.audienceType: 
   - developer

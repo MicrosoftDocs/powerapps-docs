@@ -14,47 +14,31 @@ search.audienceType:
 
 # Benefits and limitations of Wrap
 
-Wrap offers several benefits, effectively addressing challenges like increasing adoption rates, enhancing branding flexibility, and supporting custom distribution channels.
+Wrap gives app makers benefits like improved adoption, better branding, and flexible distribution options. But it also has some limitations you need to consider.
 
-## Benefits of Wrap
+## Benefits of wrap
 
-1. **Improved app adoption**: App makers can distribute their applications more effectively, making it easier for users to find and use the app directly by searching for its name in the App Store or Play Store and opening it. This streamlined process eliminates the need for additional steps, enhancing user experience and adoption rates.
-
-1. **Enhanced branding flexibility**: App makers have greater freedom to customize their app's branding, which streamlines both the distribution process and user engagement.
-
-1. **Custom distribution channels**: App makers now have the flexibility to distribute their apps through their own preferred channels, providing more control and potentially reaching their target audience more effectively, rather than relying solely on standard platforms like the Play Store or App Store.
-
-1. **Power Apps Mobile for Frontline Workers (FLWs)**: Power Apps Mobile is designed primarily for frontline workers (FLWs). To enable FLWs outside of the organization to log in, the wrap APK supports guest account logins. Follow the steps mentioned in [Frequently asked questions for wrap: Why am I not able to sign into my wrapped application?](faq.yml) to log in.
-
-1. **Access without MFA or Intune**: The Power Apps mobile app can be accessed without multifactor authentication (MFA) or installing Microsoft Intune if the organization's conditional policies allow it.
-
-1. **Offline Features**: The wrap app supports offline features.
+1. **Improved app adoption**: Users easily find and use your app by searching for its name in the App Store or Play Store. This direct access streamlines the experience and increases adoption rates.
+1. **Enhanced branding flexibility**: Makers customize their app's branding, improving both distribution and user engagement.
+1. **Custom distribution channels**: Distribute your apps through preferred channels, so you have more control and can reach your target audience more effectively, instead of relying only on standard platforms.
+1. **Power Apps mobile for frontline workers (FLWs)**: Power Apps Mobile is for frontline workers. The wrap APK lets guest accounts sign in, so frontline workers outside your organization can use it. For details, see [Frequently asked questions for wrap: Why am I not able to sign into my wrapped application?](faq.yml).
+1. **Access without MFA or Intune**: You can use the Power Apps mobile app without multifactor authentication (MFA) or Microsoft Intune if your organization's conditional access policies allow it.
+1. **Offline features**: Wrap apps support offline capabilities.
 
 ## Limitations of Wrap
 
-1. **Logout button**: The sign out button option for the user is missing.
+1. **Logout button**: There's no visible sign out button. 
    > [!NOTE]
-   > Users can long press the indented application for which they want to sign out. To make this feature discoverable, we recommend that makers provide a notification to their users.
-
-1. **Push notifications**:  Currently, the app does not support push notifications.
-
-1. **Navigation**: Wrap doesn't support navigating from a specific screen of one app to a specific screen of another app. When users attempt to navigate, only the home screen of the other app is opened. For example, consider a primary app with screens A1, A2, and A3, and a secondary app with screens B1, B2, and B3. Currently, users can only navigate from any screen in App A to the home screen of App B. Direct navigation between individual screens of App A and App B isn't supported.
-
-1. **APK size**: If your distribution method is via the Google Play Store, the APK file size is limited to 100 MB. We recommend creating an AAB file instead of an APK file during the wrap process, as AAB files support sizes up to 150 MB for the Play Store.
-
-1. **Android hardware back button**: The Android hardware back button doesn't sync coherently with the application back button.
-
-1. **Feedback**:  Currently, users can't provide feedback inside wrap.
-
-1. **Surveys**: Users don't receive surveys for the wrap.
-
-1. **Sovereign cloud**: Wrap is currently not supported in the sovereign cloud.
-
-1. **Full Image View**: Offline-enabled Wrap apps support viewing images as thumbnails but don't currently support viewing images in full view. 
-
-1. **VPN**: If you're connected to VPN, the wrap wizard currently doesn't support creating a wrapped app. We're working on alternatives and will update you shortly. 
-
-1. **Intune**: If you use Intune to download the IPA, the wrapped application currently doesn't work. We're fixing the bug and will release the update soon.
+   > Users can select and hold the intended application to sign out. Makers should let users know about this method.
+1. **Push notifications**: Push notifications aren't supported.
+1. **Navigation between apps**: You can't go directly from a specific screen in one app to a specific screen in another app. Only the home screen of the other app opens.
+1. **APK size limit**: APK files distributed through the Google Play Store are limited to 100 MB. To support larger apps (up to 150 MB), create an AAB file during the wrap process.
+1. **Android hardware back button**: The Android hardware back button doesn't always sync with the application back button.
+1. **Feedback**: You can't provide feedback in the wrap app.
+1. **Surveys**: Surveys aren't available for wrap users.
+1. **Sovereign cloud**: Wrap doesn't support sovereign cloud environments.
+1. **Full image view (offline)**: Offline-enabled wrap apps only show image thumbnails, not full image views.
+1. **VPN**: The wrap wizard doesn't support creating a wrapped app while you're connected to a VPN. Updates are in progress.
 
 ### See also
 

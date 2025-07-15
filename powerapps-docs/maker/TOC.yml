@@ -51,17 +51,21 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Supervise agents using agent feed (preview)
-      href: ../user/supervise-agents-with-agent-feed.md
-    - name: Copilot features
+    - name: AI features
       items:
+      - name: AI in apps overview
+        href: ../user/ai-in-apps.md
+      - name: Supervise agents using agent feed (preview)
+        href: ../user/supervise-agents-with-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
         href: ../user/record-summaries.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
-      - name: Use Copilot to visualize data in a view (preview)
+      - name: Find data in a view (preview)
+        href: ../user/find-data-with-ai.md
+      - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
       - name: Use Copilot case summary in model-driven apps
         href: ../user/copilot-case-summary.md       
@@ -314,7 +318,7 @@
         items:
         - name: Connections overview
           href: ./canvas-apps/connections-list.md
-        - name: Working with untyped and dynamic objects
+        - name: Working with dynamic values
           href: ./canvas-apps/untyped-and-dynamic-objects.md
         - name: Manage expired tokens
           href: ./canvas-apps/working-with-tokens.md  
@@ -396,7 +400,7 @@
             href: ./canvas-apps/inline-actions.md
           - name: Add comments
             href: ./canvas-apps/comments.md
-          - name: Understand coauthoring
+          - name: Understand coauthoring and copresence
             href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
@@ -1244,6 +1248,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Code signing process for AAB file
+        href: ./common/wrap/code-sign-aab-file.md
       - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
@@ -1439,8 +1445,6 @@
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
       href: ./model-driven-apps/app-value-proposition.md
-    - name: Build an app in three steps (preview)
-      href: ./model-driven-apps/build-app-three-steps.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
@@ -1597,6 +1601,8 @@
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
+          - name: Add the agent response component
+            href: ./model-driven-apps/form-designer-add-configure-agent-response.md
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
@@ -2415,6 +2421,8 @@
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+    - name: Disable the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2629,3 +2637,5 @@
     href: ./common/faq-rename-control.md
   - name: FAQ about Copilot visualizations on a view
     href: ./common/faq-visualize-view.md
+  - name: FAQ for Agent APIs in model-driven apps
+    href: ./common/faq-agent-api-component.md

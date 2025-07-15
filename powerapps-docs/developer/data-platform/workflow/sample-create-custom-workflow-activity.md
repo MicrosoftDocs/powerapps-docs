@@ -2,8 +2,8 @@
 title: "Sample: Create a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates how to write a custom workflow activity that can create an account and a task for the account. This sample uses early binding."
 ms.date: 04/06/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType:
   - developer

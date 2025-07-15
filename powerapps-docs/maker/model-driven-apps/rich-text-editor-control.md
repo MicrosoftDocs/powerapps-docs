@@ -1,7 +1,7 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 06/10/2025
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.author: saperlmu
 author: Mattp123
@@ -31,21 +31,6 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 > [!NOTE]
 > The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
-
-<!-- No longer needed
- ### Enable the modern rich text editor experience from the classic experience
-
-The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
-
-1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
-1. On the command bar, select **Settings**. The settings page displays.
-1. In the left pane, in **Settings**, select **Features**. The features page displays.
-1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
-   - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
-   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
-   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
-1. Select **Save**.
-1. In the App Designer, select **Publish**. -->
 
 ## Add the rich text editor control to a text column on a form
 
@@ -259,7 +244,6 @@ The following table describes more properties you can use to customize the rich 
 | disableContentSanitization | Content sanitization removes some custom attributes or tags from rich text content. It's disabled by default to allow copying and pasting of rich text content from external sources. This property applies only to edit mode. When the editor control is read-only or disabled, content is always sanitized. | true |
 | disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column configured to use the rich text editor control. | false |
 | disableImages | Determines whether images can be inserted in the editor. This property has highest priority. When this property is set to true, images are disabled, regardless of the value of the `imageEntity` property. | false |
-| externalPlugins | Lists external plug-ins or plug-ins that you create that can be used in the rich text editor control.<br/>Syntax: "name": "*pluginName*", "path": "*pathToPlugin*" (the path value can be an absolute or relative URL) | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | imageEntity | To enforce more security on [images](/power-apps/developer/data-platform/image-attributes) by using a table other than the default, set this property and specify a different table.<br>Syntax: "imageEntityName": "*tableName*", "imageFileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
 | readOnlySettings | These properties determine the behavior of the column when viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | sanitizerAllowlist | Lists other kinds of content that can be displayed in the editor. | See [defaultSupportedProps](#defaultsupportedprops) |
@@ -468,10 +452,11 @@ When using the rich text editor, consider the limitations listed in this section
 > [!IMPORTANT]
 > The modern rich text editor is a new experience. For the functionality to work correctly, you must remove the classic version. Otherwise, your templates might not display correctly.
 
-Limitations of the rich text editor include:
+Rich text editor limitations include the following:
 
 - You can't use rich text editor content from any external sources like Microsoft Word, Excel, and so forth.
 - The following file types for attachments are supported out of the box: .aac, .avi, .csv, .doc, .docx, .gif, .html, .jpeg, .mid, .midi, .mp3, .mp4, .mpeg, .msg, .pdf, .png, .ppt, .pptx, .svg, .txt, .vsd, .wav, .xls, .xlsm, and .xlsx. You can configure the allowed extensions for your environment in your advanced settings by going to **Administration** > **General** > **Set blocked file extensions for attachments** and removing the extensions you want to allow.
+- Non-Microsoft plugins aren't supported.
 
 Knowledge management:
 
@@ -480,12 +465,40 @@ Knowledge management:
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
+- Nested HTML structures—such as deeply nested &lt;div&gt; or &lt;table&gt; elements—can cause rendering problems in the rich text editor. We recommend that you simplify the HTML structure by removing unnecessary nested &lt;div&gt; or &lt;table&gt; tags to ensure consistent rendering across clients.
 
 ## Frequently asked questions
 
 ### Why are typed characters slow to display?
 
 If you have a lot of content in the editor, the response time can increase. Keep the content to 1 MB or less for the best performance. Spelling or grammar checks can also slow the typing performance.
+
+### Why doesn't my content render until the editor is refreshed? 
+
+This behavior occurs when custom code injects content into the rich text editor without triggering a re-render of the control. The rich text editor doesn’t automatically detect external updates unless it's explicitly notified.
+
+To work around this issue, you can do either of the following actions: 
+
+- Use an event listener (for example, formContext.data.entity.addOnSave) to trigger a refresh after content is injected. 
+
+- Use formContext.ui.refreshRibbon() or a similar API to force an update.
+   
+Example: 
+```
+window.top.addEventListener('rteEditorReady', (event) => {
+    const { parentEntity } = event.detail;
+
+    if (parentEntity?.typeName === 'email' &&
+        parentEntity?.fieldName === 'description') {
+
+        const descriptionAttr = Xrm.Page.getAttribute("description");
+        if (descriptionAttr) {
+            descriptionAttr.setValue(emailSignature);
+        }
+    }
+}, { once: true });
+```
+In this example, the event listener is automatically removed after the rteEditorReady event is triggered. This ensures the listener runs only once, helping to prevent memory leaks and unnecessary resource usage.
 
 ### Why can't I upload an image? Why does the image preview fail to load?
 

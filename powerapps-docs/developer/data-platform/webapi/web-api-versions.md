@@ -2,8 +2,8 @@
 title: "Microsoft Dataverse Web API versions (Dataverse)| Microsoft Docs"
 description: "Read how versioning of Microsoft Dataverse Web API works. Dataverse Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.date: 04/06/2022
-author: MicroSri
-ms.author: sriknair
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

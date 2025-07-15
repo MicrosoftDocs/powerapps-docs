@@ -1,9 +1,9 @@
 ---
 title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
-ms.date: 12/04/2024
-author: MicroSri
-ms.author: sriknair
+ms.date: 06/20/2025
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: quickstart
 search.audienceType: 
@@ -17,12 +17,12 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This topic shows you how to begin using classes in the SDK for .NET assemblies to work with Microsoft Dataverse business data. You will create a minimal console application to connect to your environment's Organization service using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class and execute a web service operation.
+This article shows you how to begin using classes in the SDK for .NET assemblies to work with Microsoft Dataverse business data. You'll create a minimal console application to connect to your environment's Organization service using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class and execute a web service operation.
 
-Your application will call the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated [WhoAmIResponse.UserId](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId) value which is the unique identifier of your Dataverse system user account.
+Your application calls the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated [WhoAmIResponse.UserId](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId) value that is the unique identifier of your Dataverse system user account.
 
 > [!NOTE]
-> This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
+> This quick start example doesn't include exception handling for brevity. This quick start is a minimum code example of what you need to connect to and use the SDK for .NET.
 
 You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's [README](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/GetStarted/README.md) for more details.
 
@@ -39,7 +39,7 @@ Read the following important information about using a connection string or user
 
 ## Create Visual Studio project
 
-1. Create a new .NET console app project. For this project we are using Visual Studio 2022 and targeting .NET 6.
+1. Create a new .NET console app project. For this project, we're using Visual Studio 2022 and targeting .NET 6.
 
     ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
 
@@ -52,7 +52,7 @@ Read the following important information about using a connection string or user
     ![Install Microsoft.PowerPlatform.Dataverse.Client NuGet package.](../media/quick-start-org-service-console-app-3.png)
 
 > [!NOTE]
-> Your will be prompted to OK the preview changes, and then select **I Accept** in the **Licence Acceptance** dialog.
+> You are prompted to OK the preview changes, and then select **I Accept** in the **Licence Acceptance** dialog.
 
 ## Add application code
 
@@ -104,7 +104,7 @@ Read the following important information about using a connection string or user
     > [!NOTE]
     > You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
     >
-    > While this code sample places the username/password information in the code for simplicity, other code samples will use the more recommended approach of prompting for that information or storing it in a separate App.config or appsettings.json file.
+    > While this code sample places the username/password information in the code for simplicity, other code samples use the more recommended approach of prompting for that information or storing it in a separate App.config or appsettings.json file.
     >
     > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
@@ -177,7 +177,7 @@ Now that you have a simple console program that connects to Dataverse, use this 
 ### Try other IOrganizationService interface methods
 
 > [!TIP]
-> In our documentation you can find many example methods like this `WhoAmIExample` which accept an `IOrganizationService service` parameter.
+> In our documentation, you can find many example methods like this `WhoAmIExample` that accept an `IOrganizationService service` parameter.
 
 Try the examples for these [IOrganizationService methods](xref:Microsoft.Xrm.Sdk.IOrganizationService) methods:
 

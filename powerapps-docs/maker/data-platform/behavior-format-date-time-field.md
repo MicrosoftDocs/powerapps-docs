@@ -2,7 +2,7 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 05/28/2024
+ms.date: 06/18/2025
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,8 +32,8 @@ Two options are available for date and time columns.
 
 Dataverse stores all date and time values in UTC time zone. When your app displays values or processing values entered by users, Dataverse and model-driven apps can adjust for the user's time zone with these **Behavior** options.
 
-- **User local**: Adjust values for the user's time zone. This is the default behavior. You can [change this once to another behavior](#change-user-local-behavior).
-- **Time zone independent**: No time zone conversion.
+- **User local**: Adjust values for the user's time zone. This is the default behavior for the **Date and time** format. You can [change this once to another behavior](#change-user-local-behavior).
+- **Time zone independent**: No time zone conversion. This is the default behavior for the **Date only** format. 
 - **Date only**: No time zone conversion. Unlike **Time zone independent**, the time portion isn't stored.
 
 The user's time zone is set in [personal options](../../user/set-personal-options.md#general-tab-options), not the system time zone in Windows, Android, iOS, or macOS. However, the [system time zone might affect client scripts that work with JavaScript Dates](#get-values-with-client-api).
