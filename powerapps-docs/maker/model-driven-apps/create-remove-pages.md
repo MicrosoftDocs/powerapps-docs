@@ -27,12 +27,12 @@ To create a page, follow these steps:
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then **Edit** the app you want.
 1. In the app designer on the **Pages** tab, select **New**.
 1. Select the page type, and then select **Next**:  
+   - **Describe a page**. Use natural language to create a generative page that's generated using AI. More information: [Describe a page using natural language (preview)](generative-pages.md)
    - **Dataverse table**: Display records of a standard or custom table in a full-page list view. Creating a data view page also adds an associated form page for viewing and editing data on a selected record. More information: [Tables in Dataverse](../data-platform/entity-overview.md)
    - **Dashboard**: Display charts and tables from multiple entities to visualize data on a single page. Select one or more system, interactive, or Power BI dashboards. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
    - **Custom page**: Design and build a page that's based on a canvas app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
    - **Web resource**: Select a web resource from a list of web resources. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
    - **Navigation link**: Enter a direct link to a web resource. [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-   - **Describe a page**. Use natural language to create a generative page that's generated using AI. More information: [Describe a page using natural language (preview)](generative-pages.md)
 1. If you don't want your page to appear in the app's site map, clear the **Show in navigation** option.
   :::image type="content" source="media/add-table-view-and-form-pages.png" alt-text="Add a table to a page":::
 1. Select **Add**.

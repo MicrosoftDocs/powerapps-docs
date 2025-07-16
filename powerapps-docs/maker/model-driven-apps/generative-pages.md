@@ -1,5 +1,5 @@
 ---
-title: Describe a page using natural language with model-driven apps in Power Apps
+title: Generate a page using natural language with model-driven apps in Power Apps
 description: Learn how to use natural language to create an AI-generative page to use with a model-driven app.
 author: jasongre
 ms.subservice: mda-maker
@@ -14,19 +14,20 @@ search.audienceType:
 ms.collection: 
   - bap-ai-copilot 
 ---
-# Describe a page using natural language (preview)
+# Generate a page using natural language (preview)
 
 [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-banner.md)]
 
-Use natural language to create a *generative page* that's generated using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like. 
+Use natural language to build a *generative page* that's created using AI. Generative pages are an AI-driven experience designed to simplify, accelerate, and improve your app design process in model-driven apps. By interacting with the app agent, you create fully functional pages in your model-driven apps by describing what you need in natural language and specifying which Microsoft Dataverse tables to reference. You can even attach an image of what you’d like the page to look like. 
 
-After you describe the page, the system then processes your requirements and  specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
+After you describe the page, the system then processes your requirements and specifications and intelligently generates React code that covers both the front-end user experience by selecting the right components and determining the best layout, and the corresponding business logic. Through an interactive, conversational experience, you can refine the page design in real time, adjusting elements, layout, and functionality to perfectly match your vision.
 
 [!INCLUDE [preview-note-pp.md](../../../shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
-<!-- There were several requirements that appear to be for early release. What are the requirements for public preview? Do you need an of the AI/Copilot environment settings enabled-->
+- The Power Platform environment must be located in the US region.
+- The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
 
 ## Create a generative page in model-driven apps
 
@@ -35,12 +36,12 @@ After you describe the page, the system then processes your requirements and  sp
 1. In the app designer, select **Add a page** > **Describe a page**.
 
    A full-page generative page experience opens.
-1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. All cards should have fixed size and tall enough to fit 4 lines of titles. Include name, entityimage on the top, and website, email, phone number. Make the component fill 100% of the space. Make the gallery scrollable by using data from the Account table*.
+1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*.
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
 1. Optionally upload an image to guide the UI of your generated page by selecting **Add data** > **Attach image**. This can be a rough napkin sketch or a higher resolution image.
-1. When you're finished describing the page, press Enter or select **Generate page**.
+1. When you're finished describing the page, select **Generate page**.
 
 When the agent finishes building your page, the user experience is displayed. If the user experience isn't already displayed, you can view it by selecting **Preview**.
 
@@ -53,22 +54,22 @@ Select **Code** to view the code generated by the app agent.
 > [!NOTE]
 > Currently, you can't edit the generative page code.
 
-Refine the output by iterating on the description to fix errors, adjust layout, or add more functionality.
+Refine the output by iteratively chatting with the app agent to fix errors, adjust layout, or add more functionality.
 
 :::image type="content" source="media/generative-page/generative-page-view-code-iterate.png" alt-text="View generative page code and iterate on the design":::
 
 When you're satisfied with the generated page, select **Save and Publish** to make the page available when you play the model-driven app.
 
+## Limitations
 
- ## Limitations 
+These are the current limitations of generative pages:
 
-<!-- These are assumptions made from the private preview source doc as I didn't add all of them. Please add or remove what the limitations are for generative page for public preview. -->
-
-- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. Currently, no other data sources can be used.  
-- Currently you can't edit the generated code.
-- Currently, generated pages can't be exported and imported in other Power Platform with Dataverse environments.
+- Working with data. Your page can connect to only Dataverse tables (up to 6 for a single page). You can perform create, read, update, and delete (CRUD) operations against these tables. No other data sources can be used.  
+- You can't edit the generated code.
+- Generated pages can't be exported and imported in other Power Platform with Dataverse environments.
 - The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
 - You must add all needed Dataverse tables in the first prompt.
+- Only US English is supported.
 
 ## Frequently asked questions
 <!--Please verify whether these FAQs apply to the public preview -->
@@ -91,6 +92,17 @@ Currently, you can't move generated pages between environments.
 ### Can I edit the generated code manually?
 
 No. Code editing isn't currently supported. You can view the generated code, but any refinements must be made through the conversational interface with the app agent.
+
+## How do I give feedback on the feature?
+
+The best way to give feedback on generative pages is to use the thumbs up/down buttons in the chat experience that are available after each iteration. We also strongly encourage you to select **Yes** on **Share relevant content samples and additional log files** so that we can debug or attempt to recreate any issues you encountered with the feature.
+
+## What if I don't see generative pages enabled in my environment?
+
+There are two reasons you may not see the feature enabled in your environment:
+
+- Confirm your environment is in the US region.
+- Power Platform admins should check that the **Enable new AI-powered Copilot features for people who make apps** environment setting is enabled. This setting can be found in the Power Platform admin center under environment > **Settings** > **Features**.
 
 ## Related articles
 
