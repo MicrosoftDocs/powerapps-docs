@@ -24,8 +24,8 @@ landingContent:
          links:
           - text: Copilot in Power Apps overview 
             url: ../canvas-apps/ai-overview.md
-          - text: Enable or disable Copilot 
-            url: ../canvas-apps/ai-overview.md#disable-copilot-in-power-apps
+          - text: Turn off Copilot 
+            url: ../canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
           - text: Copilot admin settings
             url: /power-platform/admin/settings-feature
           - text: FAQ about using AI responsibly 
