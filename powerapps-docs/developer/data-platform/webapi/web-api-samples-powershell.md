@@ -1,8 +1,8 @@
 ---
-title: "Web API  Data operations Samples PowerShell"
+title: "Web API Data operations Samples PowerShell"
 description: "This article provides a description of Web API samples that are implemented using PowerShell"
 ms.topic: sample
-ms.date: 05/14/2024
+ms.date: 07/16/2025
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ contributors:
 
 # Web API Data operations Samples (PowerShell)
 
-This article provides common understanding about Web API samples using PowerShell. Currently, there's only one sample, but we plan to add more. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this article.
+This article provides common understanding about Web API samples using PowerShell. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this article.
 
 ## Web API Samples using PowerShell
 
