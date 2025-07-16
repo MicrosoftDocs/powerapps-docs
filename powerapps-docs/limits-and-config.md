@@ -6,6 +6,7 @@ ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 5/21/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
