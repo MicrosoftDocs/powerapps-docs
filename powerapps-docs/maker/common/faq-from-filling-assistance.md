@@ -2,6 +2,7 @@
 title: FAQ about form fill assistance
 description: This FAQ provides information about the AI technology used in the form fill assistance feature with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
 ms.date: 05/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: faq
