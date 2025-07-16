@@ -2,6 +2,7 @@
 title: FAQ for edit your app with Copilot 
 description: FAQ that discusses continuing to edit your app with Copilot and the key considerations for making use of this technology responsibly.
 ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - transparency-note
 ms.topic: faq

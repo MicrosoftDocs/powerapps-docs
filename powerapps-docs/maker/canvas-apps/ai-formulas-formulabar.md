@@ -4,6 +4,7 @@ description: Learn how to use Copilot, an AI feature in Power Apps, to create an
 author: warrenbryant-msft
 ms.author: warrenbryant
 ms.date: 5/27/2025
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mkaur
 ms.subservice: canvas-maker
