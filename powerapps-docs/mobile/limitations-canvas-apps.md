@@ -28,7 +28,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
 |Dataverse table types| Virtual tables and elastic tables aren't supported in offline mode.|
 |Shared offline profile| If the same, offline profile is used in a canvas app and in a model-driven app, it creates two, separate local databases. |
-| Power Automate flows| Power Automate flows aren't supported in offline mode. Flows require an active internet connection to trigger and execute.| 
+| Power Automate flows| Power Automate flows aren't supported in offline mode.| 
 
 > [!NOTE]
 > If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
