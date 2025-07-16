@@ -7,6 +7,7 @@ ms.custom:
   - responsible-ai-faqs
 ms.topic: faq
 ms.date: 6/19/2025
+ms.update-cycle: 180-days
 ms.author: norliu
 ms.reviewer: mkaur
 ms.collection: 

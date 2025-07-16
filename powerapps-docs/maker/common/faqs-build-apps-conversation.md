@@ -2,6 +2,7 @@
 title: FAQ for building apps and tables through conversation
 description: FAQ that discusses building apps through conversation and the key considerations for making use of this technology responsibly.
 ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: faq
