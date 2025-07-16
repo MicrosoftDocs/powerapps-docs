@@ -1,5 +1,5 @@
 ---
-title: "Web API  Data operations Samples PowerShell"
+title: "Web API Data operations Samples PowerShell"
 description: "This article provides a description of Web API samples that are implemented using PowerShell"
 ms.topic: sample
 ms.date: 07/16/2025
