@@ -35,7 +35,7 @@ There are two ways to open a live monitor session.
 
    :::image type="content" source="media/create-monitor-session.png" alt-text="Sample model-driven app":::
 
-1. On the **Live monitor** browser tab that opens, select **Play model-driven** app on the command bar.
+1. On the **Live monitor** browser tab that opens, select **Play model-driven app** on the command bar.
 1. When prompted, select **Join**.
 1. The app loads in a new browser tab with a message indicating the monitoring session. Switch back to the live monitor tab to view activity.
    :::image type="content" source="media/monitored-app-session.png" alt-text="Monitored app session with message This app is currently connected to a monitor session." lightbox="media/monitored-app-session.png":::
