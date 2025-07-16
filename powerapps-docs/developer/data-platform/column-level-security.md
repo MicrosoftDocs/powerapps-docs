@@ -20,7 +20,10 @@ This article explains how developers can work with column-level security capabil
 
 Detect which columns are secured by retrieving the definition of the column and examining the boolean [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured). The following query examples return all the secured columns for an environment.
 
-There are two ways to discover which columns are secured with code.
+There are two ways to discover which columns are secured with code. These ways are described in the following two sections:
+
+- [Retrieve column data filtered on IsSecured](#retrieve-column-data-filtered-on-issecured)
+- [Retrieve FieldSecurityProfile for System Administrator role](#retrieve-fieldsecurityprofile-for-system-administrator-role)
 
 ### Retrieve column data filtered on IsSecured
 
@@ -154,7 +157,6 @@ This JSON is URL encoded before sending:
 
 ```http
 GET [ORGANIZATION URI]/api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1=%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b%22SchemaName%22%2c%22Attributes%22%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b%5d+%7d%2c+%22AttributeQuery%22%3a+%7b+%22Properties%22%3a+%7b+%22AllProperties%22%3a+false%2c+%22PropertyNames%22%3a+%5b+%22SchemaName%22%2c+%22IsSecured%22+%5d+%7d%2c+%22Criteria%22%3a+%7b+%22FilterOperator%22%3a+%22And%22%2c+%22Conditions%22%3a+%5b+%7b+%22ConditionOperator%22%3a+%22Equals%22%2c+%22PropertyName%22%3a+%22IsSecured%22%2c+%22Value%22%3a+%7b+%22Type%22%3a+%22System.Boolean%22%2c+%22Value%22%3a+%22true%22+%7d+%7d+%5d+%7d+%7d+%7d HTTP/1.1
-Consistency: Strong
 Accept: application/json
 Authorization: Bearer [REDACTED]
 OData-MaxVersion: 4.0
@@ -205,9 +207,11 @@ Content-Length: 5324876
 ### Retrieve FieldSecurityProfile for System Administrator role
 
 
-This method queries the Dataverse field permission table to identify columns that are secured by the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45`. This record manages access to secured columns for system administrators. Typically, only system administrators have the `prvReadFieldPermission` privilege to retrieve this data. The returned list contains fully qualified column names in the format `TableName.ColumnName`, sorted alphabetically.
+This method queries the Dataverse field permission table to identify columns that are secured by the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45`. This record manages access to secured columns for system administrators. Typically, only system administrators have the `prvReadFieldPermission` privilege to retrieve this data. 
 
 #### [SDK for .NET](#tab/sdk)
+
+The static `GetSecuredColumnList` method returns fully qualified column names in the format `TableName.ColumnName`, sorted alphabetically.
 
 ```csharp
 /// <summary>
@@ -282,7 +286,6 @@ static internal List<string> GetSecuredColumnList(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-Only a user that has system administrator privileges can use this request, but it returns a much smaller total payload that may be easier to work with.
 
 **Request**:
 
@@ -297,7 +300,7 @@ OData-MaxVersion: 4.0
 
 **Response**:
 
-This example shows how the [Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals) is one of the secured columns.
+The results in this example were edited for brevity to show only one example column ([Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals)).
 
 ```http
 HTTP/1.1 200 OK
@@ -307,8 +310,8 @@ Preference-Applied: odata.include-annotations="*"
 
 {
    "@odata.context": "[ORGANIZATION URI]/api/data/v9.2/$metadata#fieldpermissions(entityname,attributelogicalname)",
-   "@odata.count": 1,
-   "@Microsoft.Dynamics.CRM.totalrecordcount": 1,
+   "@odata.count": 20,
+   "@Microsoft.Dynamics.CRM.totalrecordcount": 20,
    "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
    "value": [
       {
@@ -317,7 +320,8 @@ Preference-Applied: odata.include-annotations="*"
          "entityname": "account",
          "attributelogicalname": "opendeals",
          "fieldpermissionid": "9b2606bb-0144-413a-ac56-be26922d4edb"
-      }
+      },
+      Truncated for brevity...
    ]
 }
 ```
@@ -326,7 +330,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Discover which columns can be secured
 
-You can't secure every column. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. The good news is that you don't need to manually check each column to find out if you can secure it.
+You can't secure every column. When you [enable column security](/power-platform/admin/field-level-security#enable-column-security) using [Power Apps](https://make.powerapps.com/), the **Enable column security** checkbox is disabled for certain fields. You don't need to manually check each column to find out if you can secure it. Write a query to retrieve which columns you can secure.
 
 Three boolean [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) properties control whether you can secure any column:
 
@@ -340,7 +344,7 @@ The following queries return this data so you can discover which columns in your
 
 ### [SDK for .NET](#tab/sdk)
 
-This static method retrieves metadata about entity attributes, including security-related properties, and writes the information to a CSV file. The output file contains details such as whether columns are secured, can be secured for create, update, or read operations, and other relevant metadata.
+This static `DumpColumnSecurityInfo` method retrieves metadata about entity attributes, including security-related properties, and writes the information to a CSV file. The output file contains details such as whether columns are secured, can be secured for create, update, or read operations, and other relevant metadata.
 
 ```csharp
 /// <summary>
@@ -444,7 +448,7 @@ static internal void DumpColumnSecurityInfo(IOrganizationService service,
 }
 ```
 
-[Learn how to Query schema definitions](query-schema-definitions.md)
+
 
 
 ### [Web API](#tab/webapi)
@@ -557,16 +561,18 @@ OData-Version: 4.0
 }
 ```
 
+[Learn how to Query schema definitions](query-schema-definitions.md)
+
 ---
 
 ## Secure a column with code
 
-[Securing a column](/power-platform/admin/field-level-security#enable-column-securit) is easiest to do using [Power Apps](https://make.powerapps.com/), but you can use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
+It is easiest to [Secure a column](/power-platform/admin/field-level-security#enable-column-securit) using [Power Apps](https://make.powerapps.com/). If you need to automate this, use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
 
 
 ### [SDK for .NET](#tab/sdk)
 
-This method retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
+This static `SetColumnIsSecured` method retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
 
 ```csharp
 /// <summary>
@@ -656,8 +662,105 @@ static internal void SetColumnIsSecured(
 
 ### [Web API](#tab/webapi)
 
+The following `Set-ColumnIsSecured-Example` PowerShell function retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
+
+This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-column-function) and [Update-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#update-column-function) functions defined by the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) used by other PowerShell samples.
+
 ```powershell
-TODO
+<#
+.SYNOPSIS
+    Sets the IsSecured property of a specified column in a Dataverse table.
+
+.DESCRIPTION
+    This function retrieves a column definition from a Dataverse table and updates its IsSecured property.
+    If the column is already set to the desired value, no action is taken.
+
+.PARAMETER tableLogicalName
+    The logical name of the table containing the column.
+
+.PARAMETER logicalName
+    The logical name of the column to update.
+
+.PARAMETER type
+    The type of the column (e.g., String, Integer, DateTime).
+
+.PARAMETER value
+    The boolean value to set for the IsSecured property.
+
+.PARAMETER solutionUniqueName
+    The unique name of the solution where the column update should be tracked.
+
+.EXAMPLE
+    $setColumnSecuredParams = @{
+    tableLogicalName = "account"
+    logicalName = "revenue"
+    type = "Money"
+    value = $true
+    solutionUniqueName = "MySolution"
+    }
+
+    Set-ColumnIsSecured-Example @setColumnSecuredParams
+    
+    Sets the revenue column in the account table to be secured.
+
+.NOTES
+    Requires appropriate permissions to modify table schema in Dataverse.
+#>
+function Set-ColumnIsSecured-Example {
+   param(
+      [Parameter(Mandatory)] 
+      [string] 
+      $tableLogicalName,
+      [Parameter(Mandatory)] 
+      [string] 
+      $logicalName,
+      [Parameter(Mandatory)] 
+      [string] 
+      $type,
+      [Parameter(Mandatory)] 
+      [bool] 
+      $value,
+      [Parameter(Mandatory)] 
+      [string] 
+      $solutionUniqueName
+   )
+
+   # Retrieve the column definition
+   $getColumnParams = @{
+      tableLogicalName = $tableLogicalName
+      logicalName      = $logicalName
+      type             = $type
+   }
+
+   $columnDefinition = Get-Column @getColumnParams
+   
+   if ($null -eq $columnDefinition) {
+      throw "Column $logicalName not found in table $tableLogicalName."
+   }
+   if ($columnDefinition.IsSecured -eq $value) {
+      return
+   }
+   else {
+      # Update the column definition to set IsSecured
+      $columnDefinition.IsSecured = $value
+
+      try {
+
+         $updateColumnParams = @{
+            tableLogicalName   = $tableLogicalName
+            column             = $columnDefinition
+            type               = $type
+            solutionUniqueName = $solutionUniqueName
+            mergeLabels        = $true
+         }
+
+         Update-Column @updateColumnParams
+      }
+      catch {
+         throw "Failed to update column $logicalName in table ${$tableLogicalName}: $_.Exception.Message"
+      }
+   }
+}
 ```
 
 [Learn how to update a column using the Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column)
@@ -666,7 +769,7 @@ TODO
 
 ## Provide access to secured columns
 
-When a column is secured, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
+By default, when a column is secured, only people who have the system administrator security role can read or set the value. A system administrator can provide other users access to secured columns in two ways:
 
 - [Manage access using field security profiles](#manage-access-using-field-security-profiles): Use field security profiles to give access to column data for all records to groups.
 - [Share data in secured fields](#share-data-in-secured-fields): Use field sharing to give a specific principal or team access to data in a secure column for a specific record.
@@ -720,12 +823,14 @@ Associate field permissions to the field security profiles using the [`lk_fieldp
 |Column  |Type  |Description  |
 |---------|---------|---------|
 |`FieldSecurityProfileId`|Lookup|Refers to the field security profile this field permission applies to.|
-|`EntityName`|String|The table that contains the secured column.|
+|`EntityName`|String|The logical name of the table that contains the secured column.|
 |`AttributeLogicalName`|String|The logical name of the secured column.|
-|`CanCreate`|Choice|Whether create access is allowed.|
-|`CanRead`|Choice|Whether read access is allowed.|
-|`CanUpdate`|Choice|Whether update access is allowed.|
+|`CanCreate`|Choice|Whether create access is allowed. See [Field security permission type options](#field-security-permission-type-options)|
+|`CanRead`|Choice|Whether read access is allowed. [Field security permission type options](#field-security-permission-type-options)|
+|`CanUpdate`|Choice|Whether update access is allowed. [Field security permission type options](#field-security-permission-type-options)|
 |`CanReadUnmasked`|Choice|Whether an unmasked value can be retrieved when `CanRead` is **Allowed**.|
+
+#### Field security permission type options
 
 The `CanCreate`, `CanRead`, and `CanUpdate` choice columns use the values defined by the `field_security_permission_type` global choice:
 
@@ -984,21 +1089,40 @@ static internal void GrantColumnAccess(
 
 ##### [Web API](#tab/webapi)
 
-```json
-TODO
-```
+This example grants the user with `systemuserid` value of `d93e9712-5c0b-f011-bae2-7c1e526458ff` read access to the value of the column that has `AttributeMetadata.MetadataId` of `0134fc5f-cb61-f011-bec2-00224823101f` for the `sample_example` table record with primary key value of `eccf556c-cb61-f011-bec2-7ced8d1ef7ad`.
+
 
 **Request**:
 
 ```http
-TODO
+POST [ORGANIZATION URI]/api/data/v9.2/principalobjectattributeaccessset HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+
+{
+  "objectid_sample_example@odata.bind": "/sample_examples(eccf556c-cb61-f011-bec2-7ced8d1ef7ad)",
+  "attributeid": "0134fc5f-cb61-f011-bec2-00224823101f",
+  "updateaccess": false,
+  "principalid_systemuser@odata.bind": "/systemusers(d93e9712-5c0b-f011-bae2-7c1e526458ff)",
+  "@odata.type": "Microsoft.Dynamics.CRM.principalobjectattributeaccess",
+  "readaccess": true
+}
 ```
 
 **Response**:
 
+The primary key value for the created record is `784a01b1-cb61-f011-bec2-00224823101f`.  Use this to modify or delete access.
+
 ```http
-TODO
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [ORGANIZATION URI]/api/data/v9.2/principalobjectattributeaccessset(784a01b1-cb61-f011-bec2-00224823101f)
 ```
+
+[Learn to create a table row using the Web API](webapi/create-entity-web-api.md)
 
 ---
 
@@ -1140,21 +1264,32 @@ static internal void ModifyColumnAccess(
 
 ##### [Web API](#tab/webapi)
 
-```json
-TODO
-```
+This example modifies the access granted in the [Grant column access example](#grant-column-access-example) to include update access.
 
 **Request**:
 
 ```http
-TODO
+PATCH [ORGANIZATION URI]/api/data/v9.2/principalobjectattributeaccessset(784a01b1-cb61-f011-bec2-00224823101f) HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-Version: 4.0
+If-Match: *
+OData-MaxVersion: 4.0
+Content-Type: application/json
+
+{
+  "updateaccess": true
+}
 ```
 
 **Response**:
 
 ```http
-TODO
+HTTP/1.1 204 No Content
+OData-Version: 4.0
 ```
+
+[Learn how to update a record using Web API](webapi/update-delete-entities-using-web-api.md#basic-update)
 
 ---
 
@@ -1228,7 +1363,6 @@ internal static void RevokeColumnAccess(IOrganizationService service,
                         conditionOperator: ConditionOperator.Equal,
                         value:objectTypeCode)
                 },
-
                 {
                     new ConditionExpression(
                         attributeName:"principalid",
@@ -1262,21 +1396,27 @@ internal static void RevokeColumnAccess(IOrganizationService service,
 
 ##### [Web API](#tab/webapi)
 
-```json
-TODO
-```
+This example removes the access that was granted in the [Grant column access example](#grant-column-access-example).
+
 
 **Request**:
 
 ```http
-TODO
+DELETE [ORGANIZATION URI]/api/data/v9.2/principalobjectattributeaccessset(784a01b1-cb61-f011-bec2-00224823101f) HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-MaxVersion: 4.0
+OData-Version: 4.0
 ```
 
 **Response**:
 
 ```http
-TODO
+HTTP/1.1 204 No Content
+OData-Version: 4.0
 ```
+
+[Learn to delete a record using Web API](webapi/update-delete-entities-using-web-api.md#basic-delete)
 
 ---
 
@@ -1417,8 +1557,6 @@ internal static EntityCollection GetUnmaskedExampleRows(IOrganizationService ser
     RetrieveMultipleRequest request = new()
     {
         Query = query,
-        // This example uses 'UnMaskedData' as an optional parameter
-        // https://learn.microsoft.com/power-apps/developer/data-platform/optional-parameters
         ["UnMaskedData"] = true
     };
 
@@ -1433,7 +1571,57 @@ internal static EntityCollection GetUnmaskedExampleRows(IOrganizationService ser
 **Request:**
 
 ```http
+GET [ORGANIZATION URI]/api/data/v9.2/sample_examples?$select=sample_name,sample_email,sample_governmentid,sample_telephonenumber,sample_dateofbirth&$orderby=sample_name%20desc&UnMaskedData=true HTTP/1.1
+Accept: application/json
+Authorization: Bearer [Redacted]
+Prefer: odata.include-annotations="*"
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+```
 
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+   "@odata.context": "[ORGANIZATION URI]/api/data/v9.2/$metadata#sample_examples(sample_name,sample_email,sample_governmentid,sample_telephonenumber,sample_dateofbirth)",
+   "@Microsoft.Dynamics.CRM.totalrecordcount": -1,
+   "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+   "@Microsoft.Dynamics.CRM.globalmetadataversion": "153019637",
+   "value": [
+      {
+         "@odata.etag": "W/\"153019647\"",
+         "sample_email": "jaydenp@adatum.com",
+         "sample_governmentid": "***-**-5353",
+         "sample_dateofbirth": "3/25/1974",
+         "sample_name": "Jayden Phillips",
+         "sample_exampleid": "eccf556c-cb61-f011-bec2-7ced8d1ef7ad",
+         "sample_telephonenumber": "(736) 555-9012"
+      },
+      {
+         "@odata.etag": "W/\"153012339\"",
+         "sample_email": "benjamin@adventure-works.com",
+         "sample_governmentid": "***-**-7508",
+         "sample_dateofbirth": "6/18/1984",
+         "sample_name": "Benjamin Stuart",
+         "sample_exampleid": "edcf556c-cb61-f011-bec2-7ced8d1ef7ad",
+         "sample_telephonenumber": "(195) 555-7901"
+      },
+      {
+         "@odata.etag": "W/\"153012340\"",
+         "sample_email": "avery@alpineskihouse.com",
+         "sample_governmentid": "***-**-1720",
+         "sample_dateofbirth": "9/4/1994",
+         "sample_name": "Avery Howard",
+         "sample_exampleid": "eecf556c-cb61-f011-bec2-7ced8d1ef7ad",
+         "sample_telephonenumber": "(152) 555-5591"
+      }
+   ]
+}
 ```
 
 ---
