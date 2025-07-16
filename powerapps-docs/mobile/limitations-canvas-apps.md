@@ -28,6 +28,7 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Connectors|Non-Dataverse connectors, like SharePoint, aren't supported in offline mode.|
 |Dataverse table types| Virtual tables and elastic tables aren't supported in offline mode.|
 |Shared offline profile| If the same, offline profile is used in a canvas app and in a model-driven app, it creates two, separate local databases. |
+| Power Automate flows| Power Automate flows aren't supported in offline mode. Flows require an active internet connection to trigger and execute.| 
 
 > [!NOTE]
 > If your app connects to data from Excel, CSV files, or SharePoint lists, you can [start with Copilot](/power-apps/maker/data-platform/create-edit-entities-portal?#tabpanel_1_sharepoint) to import data to Dataverse. Once your data is in Dataverse, you can turn on offline support for your canvas apps with one selection.
@@ -38,7 +39,6 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Area |Description|  
 |-------------|---------| 
 |Offline record limit|The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records fail. This number also includes hidden tables used for offline capabilities.|
-| Power automate| Power automate flows aren't supported in offline mode.|
 | Power Fx functions|The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions: Relate, Unrelate |
 |Relationship |In offline mode, canvas apps don't support many-to-many relationships. <br><br>Filtering on column lookups is limited to one level of the relationship when the app is configured for offline use. Self-referential lookups are also not supported in offline mode. Consider following examples to understand the relationship with Account and Contact information. <br><br> **Supported Lookups**: <br><br>Lookups are supported for one level of relationship. For example:  <br><br>`Filter(Account, 'ContactID'.'Zipcode' = "11056")` <br><br>This retrieves all accounts with the zipcode 11056. <br><br> **Unsupported Lookups**: <br><br> 1. **Self-referential Lookups**: Self-referential lookups aren't supported. For example: <br><br>`Filter(Account, 'Parent Account'. 'Name' = "John Doe")` <br><br>This doesn't work because the parent account is a self-reference to the account table. <br><br> 2. **Multi-level Relationship Lookups**: Lookups involving more than one level of the relationship aren't supported. For example: <br><br>`Filter(Account, 'ContactID'.'Map'.Latitude = "38'53")` <br><br> This doesn't work because it involves more than one level of relationship (Account > Contact > Map). <br><br>  **Note**: The same limitations apply to the lookup function and the filter function mentioned earlier.|
 |Tables | Notes aren't supported in offline mode in canvas apps. |
