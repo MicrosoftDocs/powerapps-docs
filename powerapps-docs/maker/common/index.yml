@@ -32,7 +32,7 @@ landingContent:
             url: responsible-ai-overview.md
 
   # Card 
-  - title: Create plans in Power Apps
+  - title: Use Plan designer
     linkLists:
        - linkListType: how-to-guide
          links:
