@@ -94,7 +94,7 @@ landingContent:
             url: ../../user/copilot-case-summary.md
  
   # Card
-  - title: Setup Copilot features in model-driven apps
+  - title: Setup AI features in model-driven apps
     linkLists:
       - linkListType: how-to-guide
         links:
