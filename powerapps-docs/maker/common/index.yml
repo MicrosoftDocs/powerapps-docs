@@ -45,7 +45,7 @@ landingContent:
 
 
   # Card
-  - title: Copilot in canvas apps
+  - title: Create canvas apps with Copilot
     linkLists:
        - linkListType: how-to-guide
          links:
@@ -53,6 +53,8 @@ landingContent:
             url: ../canvas-apps/ai-conversations-create-app.md
           - text: Edit your app with Copilot
             url: ../canvas-apps/ai-edit-app.md
+          - text: Create an app description with Copilot (preview)
+            url: ../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview
           - text: Use field suggestions by Copilot
             url: ../canvas-apps/ai-field-suggestions.md
           - text: Use Copilot to create and edit Power Fx formulas
@@ -68,7 +70,7 @@ landingContent:
 
 
  # Card
-  - title: Use agents to facilitate tasks in model-driven apps
+  - title: Use AI to facilitate tasks in model-driven apps
     linkLists:
        - linkListType: how-to-guide
          links:
@@ -80,7 +82,7 @@ landingContent:
             url: ../../user/form-filling-assistance.md
           - text: Smart paste into forms
             url: ../../user/form-filling-assistance.md#use-smart-paste-preview
-          - text: Draft richer text
+          - text: Use Copilot in the email rich text editor
             url: ../model-driven-apps/use-copilot-email-assist.md
           - text: Explore data in a view (preview)
             url: ../../user/find-data-with-ai.md
@@ -92,7 +94,7 @@ landingContent:
             url: ../../user/copilot-case-summary.md
  
   # Card
-  - title: Setup AI features in model-driven apps
+  - title: Setup Copilot features in model-driven apps
     linkLists:
       - linkListType: how-to-guide
         links:
