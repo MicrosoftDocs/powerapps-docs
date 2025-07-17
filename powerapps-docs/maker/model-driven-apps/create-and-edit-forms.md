@@ -3,6 +3,7 @@ title: "Create, edit, or configure forms using the model-driven form designer | 
 description: Learn how to create and edit model-driven app forms
 ms.custom: ""
 ms.date: 05/29/2025
+ms.update-cycle: 180-days
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

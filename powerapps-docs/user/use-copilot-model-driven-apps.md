@@ -5,6 +5,7 @@ author: srihas
 ms.component: pa-user
 ms.topic: overview
 ms.date: 06/10/2025
+ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
 ms.custom: ""

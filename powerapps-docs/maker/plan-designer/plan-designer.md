@@ -5,6 +5,7 @@ author: szlo
 contributors:
 ms.topic: how-to
 ms.date: 06/25/2025
+ms.update-cycle: 180-days
 ms.author: mkaur
 ms.reviewer: mkaur
 ms.collection:
