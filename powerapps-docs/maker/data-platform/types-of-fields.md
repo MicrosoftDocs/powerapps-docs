@@ -258,7 +258,7 @@ Built on Power Fx, use a formula column to perform operations that return values
 
 ## Prompt columns
 
-Prompt columns hold textual inputs that serve as prompts for AI models. These prompts can be anything from simple commands to complex queries. More information: [Prompt columns](prompt-column.md)
+Prompt columns allow AI prompts to be defined and the generative AI results are stored in the table column. More information: [Prompt columns](prompt-column.md)
 
 ## Searching and sorting columns
 

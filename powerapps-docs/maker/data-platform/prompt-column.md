@@ -21,7 +21,9 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-A prompt column in Microsoft Dataverse is a specialized data column designed to hold textual inputs that serve as prompts for AI models. These prompts can be anything from simple commands to complex queries. The AI model processes these prompts to generate relevant responses based on the input provided. This feature is particularly useful for automating content creation, data analysis, and decision-making tasks.
+A prompt column is an AI-powered data type in Microsoft Dataverse that enables you to define natural language prompts tied to other columns in your table. The AI model processes these prompts to generate relevant responses based on specified input columns. The result is immediately stored in the prompt column, ready to be used in apps, workflows, or reports.
+
+The key function is that the prompt column contains generative AI result stored in the table persistently. This is how customer data is enriched using generative AI and brings value to their data.
 
 Example use cases:
 
@@ -103,7 +105,7 @@ Test your AI prompt. Create a test record with appropriate values in all your in
 Create a model-driven app to view and validate your prompt column results.
 
 1. Go to [Power Apps](https://make.powerapps.com/).
-1. Open an app for editing or create a new app. More information:[Create a model-driven app](../model-driven-apps/create-model-driven-app.md)
+1. Open an app for editing or create a new app. More information: [Create a model-driven app](../model-driven-apps/create-model-driven-app.md)
 1. In the app designer, select **Edit form** to edit the table form for the table that has the prompt columns.  
 1. The form designer opens. Select all the input and prompt columns you want to add to the form. 
 1. Select **Save and publish**. 
