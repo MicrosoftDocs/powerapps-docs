@@ -8,6 +8,7 @@ ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 author: "Mattp123"
+ms.collection: bap-ai-copilot
 search.audienceType: 
   - maker
 ---
