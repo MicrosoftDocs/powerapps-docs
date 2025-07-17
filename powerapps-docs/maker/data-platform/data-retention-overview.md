@@ -8,7 +8,7 @@ ms.author: matp
 ms.reviewer: matp
 contributors: neerajatmsft
 ms.topic: overview
-ms.date: 04/08/2025
+ms.date: 07/16/2025
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -108,7 +108,7 @@ Dataverse long term retention requires no additional storage purchases and it do
 For example:
 
 - Suppose the database capacity consumed by Contoso is 1,000 GB today and the scheduled long term retention policy was run and retains 200 GB of data with Dataverse long term retention.
-- With an average compression of at lease 50%, the retained data size is 100 GB, a savings of 50% compared to when the data was in the active state.
+- With an average compression of at least 50%, the retained data size is 100 GB, a savings of 50% compared to when the data was in the active state.
 - This implies Contoso now has 800 GB of active data and 100 GB of inactive data in Dataverse.
 - In this scenario, the [storage capacity reports](#storage-capacity-reports) display the database usage as 900 GB (800 GB + 100 GB).
 

@@ -1,7 +1,8 @@
 ---
 title: Add the rich text editor control to a model-driven app
 description: Learn how to add and customize the rich text editor control in Power Apps model-driven apps to create and edit formatted text.
-ms.date: 07/11/2025
+ms.date: 07/14/2025
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.author: saperlmu
 author: Mattp123
@@ -31,21 +32,6 @@ The modern text editor is designed to align with the familiar and intuitive inte
 
 > [!NOTE]
 > The classic version of the rich text editor was deprecated as of April 2025. If you have issues with upgrading or using the modern rich text editor, contact [Microsoft Customer Support](/power-platform/admin/get-help-support).
-
-<!-- No longer needed
- ### Enable the modern rich text editor experience from the classic experience
-
-The modern rich text editor is enabled by default, but if you're using the classic experience, complete the following steps to switch to the modern rich text editor experience.
-
-1. In Dynamics 365, right-click the app for which you want to enable the modern rich text editor experience, and then select **OPEN IN APP DESIGNER**. Power Apps opens the App Designer.
-1. On the command bar, select **Settings**. The settings page displays.
-1. In the left pane, in **Settings**, select **Features**. The features page displays.
-1. Set the toggle to **Yes** for any or all of the following options, depending on your needs:
-   - **Enable a modern RichTextEditor control experience and email descriptions**: Enables the modern rich text editor control experience for email descriptions. This setting overrides any customizations you previously made on the rich text editor's classic (default) email experience.
-   - **Enable a modern RichTextEditor control experience for default controls**: Enables the modern rich text editor experience for default, nonconfigured instances.
-   - **Enable a modern RichTextEditor control experience for notes authoring**: Enables the modern rich text editor experience for notes. This setting overrides any customizations you previously made on the rich text editor's classic (default) notes authoring experience.
-1. Select **Save**.
-1. In the App Designer, select **Publish**. -->
 
 ## Add the rich text editor control to a text column on a form
 
@@ -259,7 +245,6 @@ The following table describes more properties you can use to customize the rich 
 | disableContentSanitization | Content sanitization removes some custom attributes or tags from rich text content. It's disabled by default to allow copying and pasting of rich text content from external sources. This property applies only to edit mode. When the editor control is read-only or disabled, content is always sanitized. | true |
 | disableDefaultImageProcessing | By default, images that are inserted in the editor are uploaded to the `attachmentEntity` defined in the configuration. External users might lack privileges to view the content in the table. Instead, set this property to true to store images as base64 strings directly in the column configured to use the rich text editor control. | false |
 | disableImages | Determines whether images can be inserted in the editor. This property has highest priority. When this property is set to true, images are disabled, regardless of the value of the `imageEntity` property. | false |
-| externalPlugins | Lists external plug-ins or plug-ins that you create that can be used in the rich text editor control.<br/>Syntax: "name": "*pluginName*", "path": "*pathToPlugin*" (the path value can be an absolute or relative URL) | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | imageEntity | To enforce more security on [images](/power-apps/developer/data-platform/image-attributes) by using a table other than the default, set this property and specify a different table.<br>Syntax: "imageEntityName": "*tableName*", "imageFileAttributeName": "*attributeNameofBlobReference*" | See [defaultSupportedProps](#defaultsupportedprops) |
 | readOnlySettings | These properties determine the behavior of the column when viewed in a read-only or disabled state. You can specify any supported property. | None; see [defaultSupportedProps](#defaultsupportedprops) for an example |
 | sanitizerAllowlist | Lists other kinds of content that can be displayed in the editor. | See [defaultSupportedProps](#defaultsupportedprops) |
@@ -481,6 +466,7 @@ Knowledge management:
 Email templates and signatures:
 
 - If you experience an issue with the way an email template renders, we recommend that you recreate it in the modern editor.
+- Nested HTML structures—such as deeply nested &lt;div&gt; or &lt;table&gt; elements—can cause rendering problems in the rich text editor. We recommend that you simplify the HTML structure by removing unnecessary nested &lt;div&gt; or &lt;table&gt; tags to ensure consistent rendering across clients.
 
 ## Frequently asked questions
 

@@ -3,6 +3,7 @@ title: Get started with Power Apps| MicrosoftDocs
 description: How to navigate the Power Apps home page. 
 ms.custom: 
 ms.date: 5/29/2025
+ms.update-cycle: 180-days
 ms.reviewer: mkaur
 ms.topic: overview
 author: "mduelae"

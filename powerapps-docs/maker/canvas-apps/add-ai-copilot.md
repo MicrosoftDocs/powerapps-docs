@@ -11,6 +11,7 @@ ms.collection:
     - get started
 ms.reviewer: 
 ms.date: 5/25/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
