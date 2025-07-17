@@ -440,10 +440,20 @@ var response = (RetrieveMultipleResponse)service.Execute(request);
 
 ### [Web API](#tab/webapi)
 
+Use the `UnMaskedData=true` query option to indicate that unmasked values should be returned.
+
+> [!IMPORTANT]
+> The `UnMaskedData` option is case sensitive. If you use the incorrect parameter value you will get this error:
+> `{"error":{"code":"0x80060888","message":"The query parameter [REDACTED] is not supported"}}`
+
 **Request:**
 
 ```http
-TODO
+GET [ORGANIZATION URI]/api/data/v9.2/sample_examples?$select=sample_name,sample_email,sample_governmentid,sample_telephonenumber,sample_dateofbirth&$orderby=sample_name desc&UnMaskedData=true HTTP/1.1
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-Version: 4.0
+OData-MaxVersion: 4.0
 ```
 
 ---
