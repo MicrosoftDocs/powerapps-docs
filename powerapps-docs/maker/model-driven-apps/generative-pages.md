@@ -28,6 +28,7 @@ After you describe the page, the system then processes your requirements and spe
 
 - The Power Platform environment must be located in the US region.
 - The **Enable new AI-powered Copilot features for people who make apps** environment setting must be enabled. More information: [Copilot environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview)
+- This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 ## Create a generative page in model-driven apps
 
@@ -70,6 +71,7 @@ These are the current limitations of generative pages:
 - The publish action is only applied to the current generative page. As such, you must select **Publish** on each generative page in your app for it to be available in the played app.
 - You must add all needed Dataverse tables in the first prompt.
 - Only US English is supported.
+- Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.  
 
 ## Frequently asked questions
 <!--Please verify whether these FAQs apply to the public preview -->
