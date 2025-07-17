@@ -23,14 +23,14 @@ search.audienceType:
 
 A prompt column is an AI-powered data type in Microsoft Dataverse that enables you to define natural language prompts tied to other columns in your table. The AI model processes these prompts to generate relevant responses based on specified input columns. The result is immediately stored in the prompt column, ready to be used in apps, workflows, or reports.
 
-The key function is that the prompt column contains generative AI result stored in the table persistently. This is how customer data is enriched using generative AI and brings value to their data.
+The key function is that the prompt column contains generative AI results stored in the table persistently. This is how customer data is enriched using generative AI and brings value to their data.
 
 Example use cases:
 
 - Customer support: Automate responses to frequently asked questions by using AI prompts to generate accurate and timely replies based on customer inquiries stored in Dataverse.
 - Content creation: Use prompts to assist in writing articles, reports, or marketing materials by generating text that aligns with the input provided.
 - Data analysis: Use AI prompts to analyze complex datasets and generate insights, sentiments, extract, and classify contents or summaries that help in making informed decisions.
-- Workflow automation: Integrate AI prompts into business workflows to automatically run tasks such as scheduling, reporting, and data entry.
+- Workflow automation: Integrate AI prompts into business workflows to automatically do tasks such as scheduling, reporting, and data entry.
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
@@ -38,8 +38,6 @@ Example use cases:
 
 - Prompt columns use the same licensing model as AI builder prompts. More information: [Prompts overview](/ai-builder/prompts-overview#prerequisites)
 - Copilot and AI Prompts features turned On in the Features area for the environment settings. More information: [Manage feature settings](/power-platform/admin/settings-features?tabs=new#copilot-preview)
-
-<!--Are there other prereqs such as does the environment have to be in a specific region, such as US? -->
 
 ## Create a prompt column 
 
@@ -72,19 +70,19 @@ Here are some best practices for writing prompts:
 
 ## Add input columns
 
-1. Replace default input text by selecting it and then selecting **Delete**.
+1. Replace default input text by selecting it and then select **Delete**.
 1. Select **+Add content**, and then select the table.
 1. The column dropdown list appears. Select the input column from the list of columns from your table, and then select **Add**. In this example, the *Customer feedback* column is selected.
    :::image type="content" source="media/prompt-columns/prompt-column-add-columns.png" alt-text="Add an input column":::
 
-   - There can be more than one input column in each prompt.
+   - You can use more than one input column in each prompt.
    - Input columns can’t be formula columns, file columns, image data type, or another prompt column. If you select these data types, their input value is ignored.
 
 1. Select **Save**.
 
 ## Test and refine prompts
 
-Test your AI prompt. Create a test record with appropriate values in all your input columns to use for testing. For example, create a *Name* column in the table and enter some value that is used to identify the test record, such as *testing prompts*.
+Test your AI prompt. Create a test record with appropriate values in all your input columns for testing. For example, create a *Name* column in the table and enter some value that is used to identify the test record, such as *testing prompts*.
 
 1. Create or select a prompt column.
 1. While editing the prompt in a prompt column, select the input column to open the **Filter knowledge** pop-up screen.
@@ -104,14 +102,12 @@ Test your AI prompt. Create a test record with appropriate values in all your in
 
 Create a model-driven app to view and validate your prompt column results.
 
-1. Go to [Power Apps](https://make.powerapps.com/).
-1. Open an app for editing or create a new app. More information: [Create a model-driven app](../model-driven-apps/create-model-driven-app.md)
+1. Go to [Power Apps](https://make.powerapps.com/), and then open an app for editing or create a new app. More information: [Create a model-driven app](../model-driven-apps/create-model-driven-app.md)
 1. In the app designer, select **Edit form** to edit the table form for the table that has the prompt columns.  
 1. The form designer opens. Select all the input and prompt columns you want to add to the form. 
 1. Select **Save and publish**. 
-1. Go to the **Tables** area in Power Apps, and select **Views**.
-
-<!-- After selecting Views, what should the user do next? What should they expect to see? What view do they open, etc? -->
+1. Go to the **Tables** area in Power Apps and select **Views**.
+1. Observe the values in the records including new records that contain prompt column values.
 
 ## Related articles
 <!-- What's the RAI FAQ for this feature? -->
