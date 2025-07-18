@@ -35,7 +35,7 @@ To use this Copilot visualization, your administrator must enable it. For more i
 
 When you navigate to a grid page, you can see the **Visualize** option on top of the page.
 
-:::image type="content" source="media/visualize-data/visualize-data-button.png" alt-text="Screenshot that shows Visualize button on the page.":::
+:::image type="content" source="media/visualize-data/visualize-data-button.png" alt-text="Screenshot that shows Visualize button on the page." lightbox="media/visualize-data/visualize-data-button.png":::
 
 When you select **Visualize**, the chart pane opens next to the grid, complementing the table of rows. If the table has system or personal charts, the default chart for the table is shown. If the table doesn't have charts, Copilot generates a visualization for the view based on the visible columns and filters. The visualization is a chart that aggregates the data in the view.
 
