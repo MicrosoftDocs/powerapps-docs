@@ -110,4 +110,5 @@ Create a model-driven app to view and validate your prompt column results.
 1. Observe the values in the records including new records that contain prompt column values.
 
 ## Related articles
-<!-- What's the RAI FAQ for this feature? -->
+
+For information about how the AI is used with this feature, go to [FAQ for prompts and text generation capabilities](/ai-builder/faqs-text-generation)
