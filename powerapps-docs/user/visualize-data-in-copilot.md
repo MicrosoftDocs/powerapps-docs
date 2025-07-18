@@ -39,9 +39,9 @@ When you navigate to a grid page, you can see the **Visualize** option on top of
 
 When you select **Visualize**, the chart pane opens next to the grid, complementing the table of rows. If the table has system or personal charts, the default chart for the table is shown. If the table doesn't have charts, Copilot generates a visualization for the view based on the visible columns and filters. The visualization is a chart that aggregates the data in the view.
 
-:::image type="content" source="media/visualize-data/visualize-data-chart.png" alt-text="Screenshot showing data visualization in the form of a chart on the page." lightbox="media/visualize-data-chart.png":::
+:::image type="content" source="media/visualize-data/visualize-data-chart.png" alt-text="Screenshot showing data visualization in the form of a chart on the page." lightbox="media/visualize-data/visualize-data-chart.png":::
 
-:::image type="content" source="media/visualize-data/visualize-data-chart-highlighted.png" alt-text="Screenshot showing highlighted chart to visualize the data on the page." lightbox="media/visualize-data-chart-highlighted.png":::
+:::image type="content" source="media/visualize-data/visualize-data-chart-highlighted.png" alt-text="Screenshot showing highlighted chart to visualize the data on the page." lightbox="media/visualize-data/visualize-data-chart-highlighted.png":::
 
 If Copilot generated a visualization for the view, you could edit the chart by changing the chart type or the columns that are visualized or both. If you add or remove columns from the view, Copilot automatically regenerates the chart by considering the updated set of columns for the visualization. If you add or remove filters, Copilot automatically refreshes the chart without changing the visualization. The asterisk (*) next to the chart name indicates that the chart is not saved yet. 
 
