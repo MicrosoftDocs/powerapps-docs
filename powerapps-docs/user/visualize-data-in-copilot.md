@@ -69,12 +69,12 @@ Hover over the charts to examine data points or select chart elements to drill i
 
 You use natural language prompts in the Copilot bar on the grid page to visualize data in the view. Here are example prompts to help you understand the types of requests supported.
 
-- Visualize data as a bar chart.  
-- Customers by location. Use the prompt [table name] by [column] generically depending on the table you're visualizing.  
--	Trend of orders created during this fiscal year.  
--	Visualize average revenue per month as a column chart.  
--	Visualize high-priority cases as a chart.  
--	Visualize data as a bubble chart.  
+- *Visualize data as a bar chart.*  
+- *Customers by location. Use the prompt [table name] by [column] generically depending on the table you're visualizing.*  
+- *Trend of orders created during this fiscal year.*
+- *Visualize average revenue per month as a column chart.*
+- *Visualize high-priority cases as a chart.*  
+- *Visualize data as a bubble chart.*  
 
 :::image type="content" source="media/visualize-data/visualize-natural-language.png" alt-text="Screenshot showing natural language prompt for data visualization.":::
 
