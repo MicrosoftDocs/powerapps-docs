@@ -1,7 +1,7 @@
 ---
 title: "Work with pages in model-driven apps"
 description: Learn how to create, edit, and remove pages in model-driven apps.
-ms.date: 01/27/2025
+ms.date: 07/10/2025
 ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
@@ -27,6 +27,7 @@ To create a page, follow these steps:
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Apps**, and then **Edit** the app you want.
 1. In the app designer on the **Pages** tab, select **New**.
 1. Select the page type, and then select **Next**:  
+   - **Describe a page**. Use natural language to create a generative page that's generated using AI. More information: [Describe a page using natural language (preview)](generative-pages.md)
    - **Dataverse table**: Display records of a standard or custom table in a full-page list view. Creating a data view page also adds an associated form page for viewing and editing data on a selected record. More information: [Tables in Dataverse](../data-platform/entity-overview.md)
    - **Dashboard**: Display charts and tables from multiple entities to visualize data on a single page. Select one or more system, interactive, or Power BI dashboards. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
    - **Custom page**: Design and build a page that's based on a canvas app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)

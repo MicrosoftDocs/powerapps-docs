@@ -2,6 +2,7 @@
 title: Use row summaries in model-driven apps 
 description: Learn how to access and utilize AI-generated row summaries in main forms.
 ms.date: 05/22/2025
+ms.update-cycle: 180-days
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user

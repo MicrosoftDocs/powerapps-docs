@@ -2,6 +2,7 @@
 title: FAQ about using Copilot in the rich text editor
 description: Learn how to effectively and responsibly use Copilot in the rich text editor to generate tailored responses to your customers with AI assistance.
 ms.date: 05/28/2025
+ms.update-cycle: 180-days
 ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap

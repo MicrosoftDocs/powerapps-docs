@@ -13,6 +13,7 @@ ms.custom:
 ai-usage: ai-assisted
 ms.reviewer: 
 ms.date: 06/27/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker

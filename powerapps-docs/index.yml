@@ -62,7 +62,7 @@ additionalContent:
           links:
             - text: Get started with AI copilot (preview)
               url: maker/canvas-apps/ai-overview.md
-            - text: Build apps through conversation (preview)
+            - text: Build apps through conversation
               url: maker/canvas-apps/ai-conversations-create-app.md
             - text: Add a Copilot control to a canvas app (preview)
               url: maker/canvas-apps/add-ai-copilot.md
