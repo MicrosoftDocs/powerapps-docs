@@ -1513,7 +1513,7 @@
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
-          - name: Use monitor to troubleshoot custom pages
+          - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
         - name: Create a generative page
           href: ./model-driven-apps/generative-pages.md
@@ -1679,7 +1679,7 @@
             href: ./model-driven-apps/form-component-control.md
         - name: Troubleshoot forms
           items:
-          - name: Use Monitor to troubleshoot forms
+          - name: Use live monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
@@ -1699,7 +1699,7 @@
           href: ./model-driven-apps/page-code-components.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
-        - name: Use monitor to troubleshoot custom pages
+        - name: Use live monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
       - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
