@@ -58,18 +58,7 @@ When you update and republish your app, the wrapped app is automatically updated
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Turn **ON** automatic app signing (Optional).
-   :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
-
-   > [!NOTE]
-   > Manual signing options:
-   > - [Code sign for iOS](code-sign-ios.md)
-   > - [Code sign for Android](code-sign-android.md)
-   > - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-   >
-   > You must manually sign AAB files regardless of the signing option selected in the wizard.
-  
-   a. If you choose automatic signing, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault), if you haven't created one. Add the required tags, secrets, and certificates described in the link for automatic signing. Add the environment variable         if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.
+3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault). Add the required tags, secrets, and certificates. Add the environment variable if not created already. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**.
       Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
   
@@ -87,7 +76,7 @@ When you update and republish your app, the wrapped app is automatically updated
 
    e. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
 
-4. Turn **ON** Azure blob storage to upload your build to Azure blob storage. If you haven't already, create an Azure blob storage account and container.
+4. You need to have Azure blob storage account and container, to upload your build to Azure blob storage. If you haven't already created, create one.
    - More about creating a storage account: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
    - Watch a tutorial: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
    > [!NOTE]
@@ -105,7 +94,19 @@ When you update and republish your app, the wrapped app is automatically updated
    4. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
       :::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
 
-5. Select **Next**.
+5. Turn **ON** automatic app signing (Optional).
+   :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
+
+   > [!NOTE]
+   > Manual signing options:
+   > - [Code sign for iOS](code-sign-ios.md)
+   > - [Code sign for Android](code-sign-android.md)
+   > - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+   >
+   > You must manually sign AAB files regardless of the signing option selected in the wizard.
+  
+
+6. Select **Next**.
 
 ### 4. Register your app
 
