@@ -2,6 +2,7 @@
 title: FAQs about using Copilot with Power Fx
 description: FAQ that discusses Copilot and Power Fx
 ms.date: 5/28/2025
+ms.update-cycle: 180-days
 ms.custom:
   - transparency-note
 ms.topic: faq
