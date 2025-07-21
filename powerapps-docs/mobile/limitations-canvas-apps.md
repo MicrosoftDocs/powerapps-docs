@@ -55,4 +55,9 @@ Before you set up the mobile app in offline mode, be sure to read through the fo
 |Auto-generated offline profile| The auto-generated offline profile doesn't handle filters. As a result, for each table used in the app, it downloads *all* rows to which the user has permissions.|
 
 ### See also
-[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)
+
+[Troubleshoot offline sync errors in the Power Apps mobile app](/troubleshoot/power-platform/power-apps/mobile-apps/mobile-offline-troubleshooting)    
+
+[Supported platforms for running apps using the Power Apps mobile app](/power-apps/limits-and-config#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)   
+
+
