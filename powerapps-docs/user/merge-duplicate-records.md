@@ -77,6 +77,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   - The column is **Owner** type (example: `ownerid`).
   - The control for the column does not have a class property.
   - The control for the column is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
+- Merging records with a SharePoint documents library only merges the records and not the documents libraries. Learn more in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
