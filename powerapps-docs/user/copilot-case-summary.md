@@ -6,7 +6,7 @@ ms.author: mgandham
 ms.reviewer: gandhamm
 ms.topic: how-to
 ms.collection: 
-ms.date: 04/11/2025
+ms.date: 07/08/2025
 ms.custom: bap-template 
 ---
 
@@ -16,7 +16,7 @@ Copilot case summaries help users quickly understand the context of a case and r
 
 ## View case summary card
 
-Copilot case summary is enabled by default for all model-driven apps that use the **incident** table. When you open a case record, the case summary card appears. The card is collapsed by default. When you expand the card, Copilot generates and displays the case summary.
+Copilot case summary is enabled by default for all model-driven apps that use the **incident** table. When you open a case record, the case summary card appears. When you open the case or custom record in a new session the summary card is expanded by default until you collapse it for the first time. The card then remains in collapsed state
 
 Based on the case form configured, users see the summary either on the top of the case form or within the form.
 > [!NOTE]

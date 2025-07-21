@@ -5,7 +5,7 @@ author: smurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 11/27/2023
+ms.date: 07/15/2025
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -20,7 +20,8 @@ contributors:
 
 Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows, such as accounts and contacts. When you merge a row, any related or child rows are also merged. Your administrator may also set up duplicate detection rules for other situations.  
 
-There are a few situations when duplicates may be found:  
+
+There are a few situations when duplicates might be found:  
 
 - When a row is created or updated.  
 - When you're using Dynamics 365 for Outlook and you go from offline to online.  
@@ -48,6 +49,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >  To modify the columns that are visible for the current record in the duplicate detection dialog, administrators can modify the **Advanced Find View** for that entity. 
   
 ### How to merge duplicate rows
+
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
    > [!div class="mx-imgBorder"] 
@@ -60,7 +62,6 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   
    > [!div class="mx-imgBorder"] 
    > ![Dialog box for merging rows.](media/merge-dups.gif "Dialog box for merging rows")  
-
 
 ### Limitations
 
@@ -76,5 +77,6 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   - The column is **Owner** type (example: `ownerid`).
   - The control for the column does not have a class property.
   - The control for the column is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

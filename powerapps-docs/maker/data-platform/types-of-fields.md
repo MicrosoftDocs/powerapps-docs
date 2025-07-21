@@ -1,12 +1,13 @@
 ---
 title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
-ms.date: 01/06/2025
+ms.date: 07/11/2025
 ms.topic: article
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: matp
 ms.reviewer: matp
+ms.collection: bap-ai-copilot
 search.audienceType: 
   - maker
 ---
@@ -83,6 +84,8 @@ There are three basic text column types. All values indicated here are in number
 |Text    |    100     |  4000       |  Accepts a single line of text.       |
 |Text Area   | 100        |  4000       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use for smaller amounts of text.       |
 |Multiline Text   | 150        |  1048576       |  Accepts multiple lines of text. The number of rows displayed for the column can be configured. Use when large amounts of text are needed.       |
+
+If you reduce the maximum number of characters for the column, existing data won't be truncated. The limit applies to new rows.
 
 ## Choices
 
@@ -253,6 +256,10 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 ## Fx Formula columns
 
 Built on Power Fx, use a formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)
+
+## Prompt columns
+
+Prompt columns allow AI prompts to be defined and the generative AI results are stored in the table column. More information: [Prompt columns](prompt-column.md)
 
 ## Searching and sorting columns
 
