@@ -65,11 +65,11 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 
 ### Limitations
 
-- You can only merge rows from Account, Contact, and Lead tables. Other out-of-box Dataverse tables and custom tables aren't supported.
+- You can merge rows only from Account, Contact, and Lead tables. Other out-of-box Dataverse tables and custom tables aren't supported.
 - You can only merge two records at a time.
-- File and image columns can't be previewed. They display as base64 text. Go to the original records to view the file or image.
-- If a column or control for the column matches any of the following conditions, it will not show up in the merge dialog:  
-  - The column or containing section is [hidden by default in column or section properties](../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form). Hidden columns and sections can be forced to appear using Client API functions, but they still won't be eligible for merging.
+- File and image columns can't be previewed. They show as base64 text. Go to the original records to view the file or image.
+- If a column or control for the column matches any of the following conditions, it doesn't appear in the merge dialog:  
+  - The column or containing section is [hidden by default in column or section properties](../maker/model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form). Hidden columns and sections can be forced to appear using Client API functions, but they still aren't be eligible for merging.
   - The column's `ValidForUpdate` property is `False`.
   - The column is **Choice** or **Choices** type and it has either a parent choice or child choice column.
   - The column is `parentaccountid` on the Account table.
@@ -77,7 +77,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   - The column is **Owner** type (example: `ownerid`).
   - The control for the column does not have a class property.
   - The control for the column is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
-- Merging records with a SharePoint documents library only merges the records and not the documents libraries. Learn more in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
+- Merging records with a SharePoint documents library merges only the records, not the documents libraries. Learn more in [Collaborate using SharePoint](collaborate-using-sharepoint.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
