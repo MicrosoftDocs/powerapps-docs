@@ -59,6 +59,7 @@ When you update and republish your app, the wrapped app is automatically updated
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md#configure-key-vault). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
+
    a. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
   
