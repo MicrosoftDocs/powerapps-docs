@@ -28,6 +28,10 @@ This article contains information on supported device platforms, web browser req
 
 ## Supported platforms for running apps using the Power Apps mobile app
 
+> [!NOTE]
+> - To ensure optimal user experience, we recommend that you test your app on the specific devices intended for production deployment. 
+> - Performance testing and results may vary between device types such as mobile, desktop, and laptops because of factors such as processing power, memory capacity, network connectivity, app complexity and other apps running in parallel in a device. Hence, ensure the test results meet your business requirements before you roll out the solutions in production.
+
 | **Platform** | **Version**
 | --- | --- |
 | iOS |The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.|
