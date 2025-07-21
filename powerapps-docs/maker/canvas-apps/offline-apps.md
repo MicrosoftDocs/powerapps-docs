@@ -47,6 +47,8 @@ These functions are limited by the amount of available app memory because they o
 
 The functions also don't automatically resolve merge conflicts when a device comes online. Configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
 
+After using **LoadData** to populate a collection, that collection cannot be used to update Dataverse data which includes a lookup field. Doing so will result in the lookup field not being updated.
+
 For updates on offline capabilities, return to this topic, and subscribe to the [Power Apps blog](https://powerapps.microsoft.com/blog/).
 
 ## Overview

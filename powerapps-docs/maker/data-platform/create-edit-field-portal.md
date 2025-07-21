@@ -2,12 +2,13 @@
 title: "Create and edit columns in Dataverse using Power Apps"
 description: Learn how to create and edit table columns with Power Apps.
 ms.custom: ""
-ms.date: 06/13/2025
+ms.date: 07/11/2025
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 author: "Mattp123"
+ms.collection: bap-ai-copilot
 search.audienceType: 
   - maker
 ---
@@ -106,6 +107,8 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 |<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Choice**|Displays a list of options where only one can be selected.|
 |**Yes/No**|Displays Yes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
+| **Formula**   |  Built on Power Fx, use a formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)  |
+| **Prompt**  | Prompt columns allow AI prompts to be defined and the generative AI results are stored in the table column. More information: [Prompt columns](prompt-column.md) |
 
 ## Save new column
 

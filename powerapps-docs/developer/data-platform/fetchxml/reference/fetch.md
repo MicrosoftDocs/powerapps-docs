@@ -1,8 +1,8 @@
 ---
 title: fetch element
 description: Use this element as the root element in the query.
-author: pnghub
-ms.author: gned
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.date: 02/29/2024
 ms.topic: reference

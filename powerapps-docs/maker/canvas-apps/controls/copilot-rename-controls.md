@@ -8,6 +8,7 @@ ms.collection:
   - get started
 ms.reviewer: mkaur
 ms.date: 5/29/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: mamali
 search.audienceType:

@@ -17,7 +17,7 @@ contributors:
 # Write Telemetry to your Application Insights resource using ILogger
 
 > [!IMPORTANT]
-> To use this capability, you must first enable the Application Insights integration feature. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
+> To use this capability, you must first enable the Application Insights integration feature using an administrator account. Ensure that the user enabling the feature has the necessary privileges to modify the Dataverse organization (such as System Administrator role or being a Power Platform/Dynamics 365 admin) and has contributor access to the Application Insights resource. If a user without the necessary permissions enables the integration, telemetry data will not be written to Application Insights. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
 > There's presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the SDK for .NET assemblies write telemetry to your Application Insights resource.

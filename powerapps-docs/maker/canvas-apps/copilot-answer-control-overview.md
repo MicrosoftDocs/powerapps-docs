@@ -9,6 +9,7 @@ ms.collection:
     - get started
 ms.reviewer: mkaur
 ms.date: 5/27/2025
+ms.update-cycle: 180-days
 ms.subservice: canvas-maker
 ms.author: arijitba
 search.audienceType: 

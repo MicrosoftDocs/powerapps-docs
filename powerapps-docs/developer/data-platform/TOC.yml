@@ -137,11 +137,8 @@
     - name: "Dataverse SQL"
       href: how-dataverse-sql-differs-from-transact-sql.md
     - name: Bulk Operation messages
-      displayName: CreateMultiple, UpdateMultiple, UpsertMultiple
+      displayName: CreateMultiple, UpdateMultiple, UpsertMultiple, DeleteMultiple
       href: bulk-operations.md
-      items:
-        - name: Use DeleteMultiple (preview)
-          href: deletemultiple.md
     - name: Restore deleted records (preview)
       displayName: RecycleBin, Restore
       href: restore-deleted-records.md

@@ -51,17 +51,21 @@
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Supervise agents using agent feed (preview)
-      href: ../user/supervise-agents-with-agent-feed.md
-    - name: Copilot features
+    - name: AI features
       items:
+      - name: AI in apps overview
+        href: ../user/ai-in-apps.md
+      - name: Supervise agents using agent feed (preview)
+        href: ../user/supervise-agents-with-agent-feed.md
       - name: Use form fill assistance
         href: ../user/form-filling-assistance.md
       - name: Use row summary
         href: ../user/record-summaries.md
       - name: Use Copilot chat
         href: ../user/use-copilot-model-driven-apps.md
-      - name: Use Copilot to visualize data in a view (preview)
+      - name: Find data in a view (preview)
+        href: ../user/find-data-with-ai.md
+      - name: Visualize data in a view (preview)
         href: ../user/visualize-data-in-copilot.md
       - name: Use Copilot case summary in model-driven apps
         href: ../user/copilot-case-summary.md       
@@ -1441,8 +1445,6 @@
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
       href: ./model-driven-apps/app-value-proposition.md
-    - name: Build an app in three steps (preview)
-      href: ./model-driven-apps/build-app-three-steps.md
     - name: Release channels for model-driven apps
       items:
       - name: Release channel overview
@@ -1511,8 +1513,10 @@
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
-          - name: Use monitor to troubleshoot custom pages
+          - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+        - name: Create a generative page
+          href: ./model-driven-apps/generative-pages.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views
@@ -1675,7 +1679,7 @@
             href: ./model-driven-apps/form-component-control.md
         - name: Troubleshoot forms
           items:
-          - name: Use Monitor to troubleshoot forms
+          - name: Use live monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
@@ -1695,7 +1699,7 @@
           href: ./model-driven-apps/page-code-components.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
-        - name: Use monitor to troubleshoot custom pages
+        - name: Use live monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
       - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
@@ -2108,6 +2112,8 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Prompt columns (preview)
+      href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:
       - name: Power Fx formula columns
@@ -2419,6 +2425,8 @@
       href: ./data-platform/data-platform-mcp.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+    - name: Disable the Dataverse MCP server
+      href: ./data-platform/data-platform-mcp-disable.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
@@ -2635,3 +2643,5 @@
     href: ./common/faq-visualize-view.md
   - name: FAQ for Agent APIs in model-driven apps
     href: ./common/faq-agent-api-component.md
+  - name: FAQ about generative pages in model-driven apps
+    href: ./common/faq-generative-pages-model-driven.md

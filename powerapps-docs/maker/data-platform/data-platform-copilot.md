@@ -5,6 +5,7 @@ author: mattp123
 ms.topic: overview
 ms.collection: bap-ai-copilot
 ms.date: 05/29/2025
+ms.update-cycle: 180-days
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
