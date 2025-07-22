@@ -42,7 +42,7 @@ Open the diagnostics page in your browser by typing https://*environmentURL*/Web
 
 In order for an app to be visible to a user, both the results for **License** and **Security** must be **Yes**. If a user doesn't have an appropriate license, the error message might give information about what **service plans** could be used to give access to the app. Note that **Licenses** aren't the same as service plans. A **License** is what is assigned to users in Microsoft Entra and usually has multiple service plans. For a list of all licenses and what service plans are included, go to the [licensing service plan reference](/entra/identity/users/licensing-service-plan-reference). Referencing the Microsoft Dataverse licensing error message and the service plan reference list can help diagnose user licensing issues. 
 
-Also be aware that Dataverse caches the service plans that are assigned to users, so Microsoft Entra License assignments might not immediately reflect in Dataverse. To update the cached service plan assignments in Dataverse, have users sign out and sign back in. If the issue persists, it could be a result of Microsoft Entra caching, and the user should wait  about 30 minutes, then sign out and sign back in again.
+Also be aware that Dataverse caches the service plans that are assigned to users, so Microsoft Entra License assignments might not immediately reflect in Dataverse. To update the cached service plan assignments in Dataverse, have users sign out and sign back in. If the issue persists, it could be a result of Microsoft Entra caching, and the user should wait about 30 minutes, then sign out and sign back in again.
 
 ### Example results
 
