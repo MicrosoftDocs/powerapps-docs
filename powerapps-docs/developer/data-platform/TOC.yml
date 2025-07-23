@@ -439,8 +439,8 @@
           href: entity-attribute-metadata-messages.md
         - name: Behavior and format of the date and time column
           href: behavior-format-date-time-attribute.md
-        - name: Formula, calculated, and rollup columns
-          href: calculated-rollup-attributes.md
+        - name: Specialized columns
+          href: specialized-columns.md
         - name: Create auto-number columns
           href: create-auto-number-attributes.md
         - name: Choices

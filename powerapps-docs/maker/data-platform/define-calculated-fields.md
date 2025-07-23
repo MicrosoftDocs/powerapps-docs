@@ -228,7 +228,7 @@ You should be aware of certain conditions and limitations when working with calc
 [Create and edit columns](create-edit-fields.md)   
 [Define rollup columns that aggregate values](define-rollup-fields.md)   
 [Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)   
-[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
+[Specialized columns](../../developer/data-platform/specialized-columns.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
