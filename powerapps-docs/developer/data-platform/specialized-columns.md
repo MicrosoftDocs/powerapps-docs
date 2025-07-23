@@ -22,6 +22,7 @@ This article focuses on how these columns are defined in the column definitions 
 - [Work with formula columns (preview)](../../maker/data-platform/formula-columns.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
+- [Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
   
 <a name="BKMK_CommonElements"></a>
 
@@ -192,9 +193,10 @@ The `SourceTypeMask` property for those columns that support calculated and roll
 ### See also  
 
 [Column definitions](entity-attribute-metadata.md)   
-[Work with formula columns (preview)](../../maker/data-platform/formula-columns.md)   
+[Work with formula columns](../../maker/data-platform/formula-columns.md)   
 [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
 [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)   
 [Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)   
+[Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
