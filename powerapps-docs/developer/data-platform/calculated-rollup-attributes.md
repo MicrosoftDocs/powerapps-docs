@@ -1,6 +1,6 @@
 ---
-title: Formula, calculated, and rollup columns using code
-description: "Learn about common elements and characteristics that formula, calculated, and rollup columns use. Learn how to retrieve a calculated rollup column value immediately, and about the SourceTypeMasks enumeration." 
+title: Specialized columns using code
+description: "Learn about common elements and characteristics that formula, calculated, rollup, and prompt columns use. Learn how to retrieve a calculated rollup column value immediately, and about the SourceTypeMasks enumeration." 
 ms.date: 09/15/2023
 ms.reviewer: jdaly
 ms.topic: article
@@ -13,9 +13,9 @@ contributors:
  - JimDaly
  - sanjeevgoyalmsft
 ---
-# Formula, calculated, and rollup columns using code
+# Formula, calculated, rollup, and prompt columns using code
 
-*Formula*, *calculated*, and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than with code.
+*Formula*, *calculated*, *rollup*, and *prompt* columns free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than with code.
 
 This article focuses on how these columns are defined in the column definitions and APIs to interact with rollup columns. We don't support defining the formulas with code. You need to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to set the formulas for the respective type of column. Learn how:
 
@@ -42,9 +42,9 @@ All columns that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata
 |1|Calculated column|
 |2|Rollup column|
 |3|Formula column|
-
+|4|Prompt column|
   
-Formula, calculated, and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following tables show the available column types and which source types are supported:
+Formula, calculated, rollup, and prompt columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following tables show the available column types and which source types are supported:
 
 
 |Type|Supported source types|
@@ -52,7 +52,7 @@ Formula, calculated, and rollup columns are based on existing column types that 
 |<xref:Microsoft.Xrm.Sdk.Metadata.BooleanAttributeMetadata>|Formula, Calculated, & Rollup|
 |<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> |Formula, Calculated, & Rollup|
 |<xref:Microsoft.Xrm.Sdk.Metadata.DecimalAttributeMetadata>|Formula, Calculated, & Rollup|
-|<xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata>|Formula, Calculated, & Rollup|
+|<xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata>|Formula, Calculated, Rollup, & Prompt|
 |<xref:Microsoft.Xrm.Sdk.Metadata.IntegerAttributeMetadata>|Calculated & Rollup only|
 |<xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata>|Calculated & Rollup only|
 |<xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata>|Calculated & Rollup only|
@@ -144,6 +144,13 @@ This message is a synchronous operation for just the column identified in the re
 - Rollup column formulas can't use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
   
 <a name="BKMK_SourceTypeMasks"></a>
+
+## Prompt columns
+Prompt column values are populated when records are created and when the input column values are updated. When prompt columns are added to tables with records, the existing records’ new prompt columns aren’t populated automatically. Outputs persist in the database and can be used for filtering and sorting like regular columns. 
+
+### Limitations
+- Create and update for prompt column using API is not supported at this time.
+- Importing and exporting solutions with prompt columns is not supported at this time.
 
 ## SourceTypeMasks enumeration
 
