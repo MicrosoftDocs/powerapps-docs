@@ -222,7 +222,7 @@ Certain table  forms, such as Account or Contact, out-of-the-box, contain the as
 
 [Create and edit columns](create-edit-fields.md)   
 [Define calculated columns](define-calculated-fields.md)   
-[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)   
+[Specialized columns](../../developer/data-platform/specialized-columns.md)   
 [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)   
 [Define and query hierarchically related data](define-query-hierarchical-data.md)
 
