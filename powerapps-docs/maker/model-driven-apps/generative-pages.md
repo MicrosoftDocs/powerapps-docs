@@ -72,7 +72,7 @@ These are the current limitations of generative pages:
 - You must add all needed Dataverse tables in the first prompt.
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.  
-- You can currently only access your last 5 iterations with the agent. 
+- You can only access your last 5 iterations with the agent. 
 
 ## Frequently asked questions
 
