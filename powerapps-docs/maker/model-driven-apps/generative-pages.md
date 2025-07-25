@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 07/10/2025
+ms.date: 07/25/2025
 ms.topic: how-to
 applies_to: 
   - PowerApps
