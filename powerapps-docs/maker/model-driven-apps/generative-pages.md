@@ -72,12 +72,17 @@ These are the current limitations of generative pages:
 - You must add all needed Dataverse tables in the first prompt.
 - Only US English is supported.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.  
+- You can currently only access your last 5 iterations with the agent. 
 
 ## Frequently asked questions
-<!--Please verify whether these FAQs apply to the public preview -->
+
 ### Can I start designing my app in Plan Designer and then use generative pages? 
 
 Yes, while there's currently no direct integration between Plan designer and generative pages, you can use Plan designer to define your tables and apps, and then switch to the app designer to create any desired generative pages.
+
+### Are there any additional fees or credits needed to use generative pages? 
+
+No, the maker experience for generative pages (and plan designer) do not require any additional AI or message credits. 
 
 ### What kind of images work best for guiding the UI generation?
 
