@@ -63,6 +63,9 @@ new data source will be named “NewConnector”. Your formulas will still refer
 
 ## Fixing broken formula references to data source names
 
+### Note for users in Microsoft DoD Cloud and maybe GCC, GCC-H Clouds
+This feature is not available.
+
 Using the new “Rename” feature, you can rename your action-based connectors and
 fix up your formulas automatically.
 
