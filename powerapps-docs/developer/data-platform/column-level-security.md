@@ -1,7 +1,7 @@
 ---
 title: Column-level security with code
 description: "Learn how developers use code to secure data for specific columns or fields in a table so that only specified users and teams can view or set the values."
-ms.date: 07/28/2025
+ms.date: 07/29/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: paulliew
@@ -335,102 +335,8 @@ The following `Set-ColumnIsSecured-Example` PowerShell function retrieves the cu
 
 This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-column-function) and [Update-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#update-column-function) functions defined by the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) used by other PowerShell samples.
 
-```powershell
-<#
-.SYNOPSIS
-    Sets the IsSecured property of a specified column in a Dataverse table.
 
-.DESCRIPTION
-    This function retrieves a column definition from a Dataverse table and updates its IsSecured property.
-    If the column is already set to the desired value, no action is taken.
-
-.PARAMETER tableLogicalName
-    The logical name of the table containing the column.
-
-.PARAMETER logicalName
-    The logical name of the column to update.
-
-.PARAMETER type
-    The type of the column (e.g., String, Integer, DateTime).
-
-.PARAMETER value
-    The boolean value to set for the IsSecured property.
-
-.PARAMETER solutionUniqueName
-    The unique name of the solution where the column update should be tracked.
-
-.EXAMPLE
-    $setColumnSecuredParams = @{
-    tableLogicalName = "account"
-    logicalName = "revenue"
-    type = "Money"
-    value = $true
-    solutionUniqueName = "MySolution"
-    }
-
-    Set-ColumnIsSecured-Example @setColumnSecuredParams
-    
-    Sets the revenue column in the account table to be secured.
-
-.NOTES
-    Requires appropriate permissions to modify table schema in Dataverse.
-#>
-function Set-ColumnIsSecured-Example {
-   param(
-      [Parameter(Mandatory)] 
-      [string] 
-      $tableLogicalName,
-      [Parameter(Mandatory)] 
-      [string] 
-      $logicalName,
-      [Parameter(Mandatory)] 
-      [string] 
-      $type,
-      [Parameter(Mandatory)] 
-      [bool] 
-      $value,
-      [Parameter(Mandatory)] 
-      [string] 
-      $solutionUniqueName
-   )
-
-   # Retrieve the column definition
-   $getColumnParams = @{
-      tableLogicalName = $tableLogicalName
-      logicalName      = $logicalName
-      type             = $type
-   }
-
-   $columnDefinition = Get-Column @getColumnParams
-   
-   if ($null -eq $columnDefinition) {
-      throw "Column $logicalName not found in table $tableLogicalName."
-   }
-   if ($columnDefinition.IsSecured -eq $value) {
-      return
-   }
-   else {
-      # Update the column definition to set IsSecured
-      $columnDefinition.IsSecured = $value
-
-      try {
-
-         $updateColumnParams = @{
-            tableLogicalName   = $tableLogicalName
-            column             = $columnDefinition
-            type               = $type
-            solutionUniqueName = $solutionUniqueName
-            mergeLabels        = $true
-         }
-
-         Update-Column @updateColumnParams
-      }
-      catch {
-         throw "Failed to update column $logicalName in table ${$tableLogicalName}: $_.Exception.Message"
-      }
-   }
-}
-```
+:::code language="csharp" source="~/../PowerApps-Samples/dataverse/webapi/PS/ColumnLevelSecurity/Examples.ps1" id="Set-ColumnIsSecured-Example":::
 
 [Learn how to update a column using the Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column)
 
