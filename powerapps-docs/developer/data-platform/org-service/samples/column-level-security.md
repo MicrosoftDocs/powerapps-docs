@@ -1,6 +1,6 @@
 ---
 title: "Sample: Column-level security using Dataverse SDK for .NET"
-description: "This sample shows how to work with column-level security using the Dataverse SDK for .NET.".
+description: "This sample shows how to work with column-level security using the Dataverse SDK for .NET."
 ms.date: 07/28/2025
 author: JimDaly
 ms.author: jdaly

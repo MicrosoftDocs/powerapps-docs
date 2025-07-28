@@ -1,7 +1,7 @@
 ---
 title: Column-level security with code
 description: "Learn how developers use code to secure data for specific columns or fields in a table so that only specified users and teams can view or set the values."
-ms.date: 06/23/2025
+ms.date: 07/28/2025
 ms.reviewer: jdaly
 ms.topic: article
 author: paulliew
@@ -326,7 +326,6 @@ It is easiest to [Secure a column](/power-platform/admin/field-level-security#en
 This static `SetColumnIsSecured` method retrieves the current definition of the specified column and updates its security status only if the provided value differs from the current value. If the column is already set to the specified security status, no update request is sent.
 
 :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/Examples.cs" id="SetColumnIsSecured":::
-
 
 [Learn how to update a column using the SDK for .NET](org-service/metadata-attributemetadata.md#update-a-column)
 
