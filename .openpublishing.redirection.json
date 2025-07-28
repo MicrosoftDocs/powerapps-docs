@@ -1,9 +1,24 @@
 {
   "redirections": [
    {
-         "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
-         "redirect_url": "column-level-security",
-         "redirect_document_id": "false"
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/enable-field-security-entity.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-permissions.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/retrieve-field-sharing-records.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
+      "redirect_url": "column-level-security",
+      "redirect_document_id": "false"
    }, 
    {
       "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",

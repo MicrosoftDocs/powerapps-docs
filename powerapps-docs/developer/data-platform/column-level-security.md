@@ -1629,4 +1629,5 @@ Preference-Applied: odata.include-annotations="*"
 ### Related articles
 
 [Security and data access](security-model.md)   
-[Sharing and assigning](security-sharing-assigning.md)
+[Sharing and assigning](security-sharing-assigning.md)   
+[Sample: Add a record to a queue](org-service/samples/column-level-security.md)
