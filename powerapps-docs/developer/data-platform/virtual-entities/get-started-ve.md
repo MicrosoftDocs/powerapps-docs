@@ -70,6 +70,7 @@ The following are limitations of virtual tables that should be considered.
 - A virtual table can't represent an activity and don't support business process flows.
 - Once created, a virtual table can't be changed to be a standard (nonvirtual) table.  The reverse is also true whereas a standard table can't be converted into a virtual table.
 - Selecting attributes in Retrieve and RetrieveMultiple queries won't be applied since all attributes are returned
+- Reduce and limit including virtual table lookup columns in your grid view. It can take a while to read the virtual table lookup columns.
 
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 
