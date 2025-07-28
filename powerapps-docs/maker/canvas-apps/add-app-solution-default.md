@@ -90,6 +90,8 @@ To view canvas app and cloud flow objects in a solution, use the [solution view]
 
 Once the feature is enabled, use solutions [export](../data-platform/export-solutions.md) and [import](../data-platform/import-update-export-solutions.md) instead of [exporting and importing legacy packages of canvas apps and flows](export-import-app.md). Legacy packages can be imported in environments with the environment setting turned off.
 
+## Move flows into a solution with PowerShell
+
 Use the [Add-AdminFlowsToSolution](/powershell/module/microsoft.powerapps.administration.powershell/add-adminflowstosolution) cmdlet to move non-solution Power Automate flows into a solution for better lifecycle management and deployment. This command lets you migrate multiple flows by specifying environment and solution IDs, and targeting flows by name or ID. For more information, see [Microsoft.PowerApps.Administration.PowerShell Module](/powershell/module/microsoft.powerapps.administration.powershell).
 
 ## Considerations
