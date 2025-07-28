@@ -19,6 +19,11 @@
       "source_path": "powerapps-docs/developer/data-platform/field-security-entities.md",
       "redirect_url": "column-level-security",
       "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/calculated-rollup-attributes.md",
+      "redirect_url": "specialized-columns.md",
+      "redirect_document_id": "false"
    }, 
    {
       "source_path": "powerapps-docs/developer/data-platform/deletemultiple.md",
