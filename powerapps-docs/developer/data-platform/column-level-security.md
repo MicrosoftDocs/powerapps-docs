@@ -336,7 +336,7 @@ The following `Set-ColumnIsSecured-Example` PowerShell function retrieves the cu
 This function depends on [Get-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-column-function) and [Update-Column](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#update-column-function) functions defined by the [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md) used by other PowerShell samples.
 
 
-:::code language="csharp" source="~/../PowerApps-Samples/dataverse/webapi/PS/ColumnLevelSecurity/Examples.ps1" id="Set-ColumnIsSecured-Example":::
+:::code language="powershell" source="~/../PowerApps-Samples/dataverse/webapi/PS/ColumnLevelSecurity/Examples.ps1" id="Set-ColumnIsSecured-Example":::
 
 [Learn how to update a column using the Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column)
 
