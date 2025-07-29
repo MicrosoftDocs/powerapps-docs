@@ -56,7 +56,7 @@ If you don't set environment variables:
 
 
 ## **For manual signing process**
-### Generate signature hash key and certificate
+### Generate signature hash key
 
 Run this command in the command prompt as an admin to generate a key:
 
@@ -96,7 +96,7 @@ When prompted, enter the keystore password you created earlier.
 
 ## **For automatic key vault signing process**
 
-### Generate signature hash key and certificate
+### Generate signature hash key
 
 Open a command prompt as an admin and run this command to generate a key:
 
