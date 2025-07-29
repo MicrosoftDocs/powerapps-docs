@@ -87,3 +87,9 @@ Note the following limitations with the 'optimize for devices' feature.
 - Multiple **Barcode reader** controls on a single screen aren't supported.
 - Multiple **Camera** controls on a single screen aren't supported.
 - In the **Camera** control, the **Display mode** property of the parent control isn't supported. For example, if the camera control is part of a form that is set to view mode, the camera might still be in edit mode.
+
+### Related information
+
+[Supported platforms for running apps using the Power Apps mobile app](/power-apps/limits-and-config#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)   
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

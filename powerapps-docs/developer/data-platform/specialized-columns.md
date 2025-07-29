@@ -1,27 +1,28 @@
 ---
-title: Formula, calculated, and rollup columns using code
-description: "Learn about common elements and characteristics that formula, calculated, and rollup columns use. Learn how to retrieve a calculated rollup column value immediately, and about the SourceTypeMasks enumeration." 
-ms.date: 09/15/2023
+title: Specialized columns using code
+description: "Learn about common elements and characteristics that formula, calculated, rollup, and prompt columns use. Learn how to retrieve a calculated rollup column value immediately, and about the SourceTypeMasks enumeration." 
+ms.date: 07/23/2025
 ms.reviewer: jdaly
 ms.topic: article
-author: mkannapiran
-ms.author: kamanick
+author: MsSQLGirl
 ms.subservice: dataverse-developer
+ms.author: jukoesma
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
  - sanjeevgoyalmsft
 ---
-# Formula, calculated, and rollup columns using code
+# Specialized columns using code
 
-*Formula*, *calculated*, and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than with code.
+*Formula*, *calculated*, *rollup*, and *prompt* columns free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than with code.
 
 This article focuses on how these columns are defined in the column definitions and APIs to interact with rollup columns. We don't support defining the formulas with code. You need to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to set the formulas for the respective type of column. Learn how:
 
 - [Work with formula columns (preview)](../../maker/data-platform/formula-columns.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
+- [Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
   
 <a name="BKMK_CommonElements"></a>
 
@@ -42,9 +43,10 @@ All columns that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata
 |1|Calculated column|
 |2|Rollup column|
 |3|Formula column|
+|4|Prompt column|
 
   
-Formula, calculated, and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following tables show the available column types and which source types are supported:
+Formula, calculated, rollup, and prompt columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following tables show the available column types and which source types are supported:
 
 
 |Type|Supported source types|
@@ -52,7 +54,7 @@ Formula, calculated, and rollup columns are based on existing column types that 
 |<xref:Microsoft.Xrm.Sdk.Metadata.BooleanAttributeMetadata>|Formula, Calculated, & Rollup|
 |<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> |Formula, Calculated, & Rollup|
 |<xref:Microsoft.Xrm.Sdk.Metadata.DecimalAttributeMetadata>|Formula, Calculated, & Rollup|
-|<xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata>|Formula, Calculated, & Rollup|
+|<xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata>|Formula, Calculated, Rollup, & Prompt|
 |<xref:Microsoft.Xrm.Sdk.Metadata.IntegerAttributeMetadata>|Calculated & Rollup only|
 |<xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata>|Calculated & Rollup only|
 |<xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata>|Calculated & Rollup only|
@@ -62,26 +64,21 @@ Each of these types of column has the following properties to support formulas, 
 | Property  |Definition|
 |---------|--------|
 |`FormulaDefinition`| Contains the definition of the formula used to perform the calculation or rollup. Formula columns are defined using YAML. Calculated and rollup columns are defined using XAML. The only supported way to change this value is through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) editor.|
-|`SourceTypeMask`| The bitmask value of this read-only property describes the types of sources used in the formula of the column or if the formula of the column isn't valid.<br /><br /> -   0: `Undefined`. The default value for simple and rollup columns.<br />-   1: `Simple`. The formula or calculated column refers to a column in the same record.<br />-   2: `Related`. The formula or calculated column refers to a column in a related record.<br />-   4: `Logical`. The formula or calculated column refers to a column in the same record that is stored in a different database table. More information: [Logical columns](entity-attribute-metadata.md#logical-columns)<br />-   8: `Calculated`. The formula or calculated column refers to another formula or calculated column.<br />-   16: `Rollup`. The formula or calculated column refers a rollup column.<br />-   32: `Invalid`. The formula, calculated, or rollup column is invalid.<br />Typically, a column is invalid when it refers to a column that no longer exists.<br /><br />**Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
+|`SourceTypeMask`| The bitmask value of this read-only property describes the types of sources used in the formula of the column or if the formula of the column isn't valid.<br /><br /> -   0: `Undefined`. The default value for simple and rollup columns.<br />-   1: `Simple`. The formula or calculated column refers to a column in the same record.<br />-   2: `Related`. The formula or calculated column refers to a column in a related record.<br />-   4: `Logical`. The formula or calculated column refers to a column in the same record that is stored in a different database table. More information: [Logical columns](entity-attribute-metadata.md#logical-columns)<br />-   8: `Calculated`. The formula or calculated column refers to another formula or calculated column.<br />-   16: `Rollup`. The formula or calculated column refers a rollup column.<br />-   32: `Invalid`. The formula, calculated, or rollup column is invalid.<br />Typically, a column is invalid when it refers to a column that no longer exists.<br /><br />**Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](specialized-columns.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
 
 ## Formula and calculated columns
 
 Formula and calculated columns are calculated in real-time when they're retrieved. Formula and calculated can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns.
   
 Only calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
-  
-### Limitations
 
-Formula and calculated columns have the following limitations:
-
-#### Formula columns
+### Formula column limitations
 
 - Formula columns don't have values when a user with mobile client is offline.  
 - `MaxValue` and `MinValue` column definitions properties can't be set on formula columns. More information: 
 [Guidelines and limitations](../../maker/data-platform/formula-columns.md#guidelines-and-limitations)
 
-
-#### Calculated columns
+### Calculated column limitations
 
 You can't use values in calculated columns on a *[Logical value](entity-attribute-metadata.md#logical-columns)* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction is ignored and doesn't throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions.
   
@@ -109,7 +106,7 @@ The **Mass Calculated Rollup Fields** job occurs immediately when a solution con
 Each rollup column for a table will also include two supporting columns for the rollup column:  
   
 - *\<attribute SchemaName>* `_Date`: DateTime – When the rollup was last calculated.  
-- *\<attribute SchemaName>* `_State`: Integer – The state of the rollup calculation. More information: [Rollup state values](calculated-rollup-attributes.md#BKMK_RollupStateValues)  
+- *\<attribute SchemaName>* `_State`: Integer – The state of the rollup calculation. More information: [Rollup state values](specialized-columns.md#BKMK_RollupStateValues)  
   
 <a name="BKMK_RollupStateValues"></a>
 
@@ -133,7 +130,7 @@ Rollup columns support a `CalculateRollupField` message that developers can use 
 
 This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns don't take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
   
-### Limitations
+### Rollup column limitations
 
 - Rollup columns can't be used as a workflow event or wait condition. These columns don't raise the event to trigger workflows.  
 - The `ModifiedBy` and `ModifiedOn` columns for the table aren't updated when the rollup column is updated.  
@@ -144,6 +141,15 @@ This message is a synchronous operation for just the column identified in the re
 - Rollup column formulas can't use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
   
 <a name="BKMK_SourceTypeMasks"></a>
+
+## Prompt columns
+
+Prompt column values are populated when records are created and when the input column values are updated. When prompt columns are added to tables with records, the existing records' new prompt columns aren't populated automatically. Outputs persist in the database and can be used for filtering and sorting like regular columns.
+
+### Prompt column limitations
+
+- Create and update for prompt column using API is not supported at this time.
+- Importing and exporting solutions with prompt columns is not supported at this time.
 
 ## SourceTypeMasks enumeration
 
@@ -187,9 +193,10 @@ The `SourceTypeMask` property for those columns that support calculated and roll
 ### See also  
 
 [Column definitions](entity-attribute-metadata.md)   
-[Work with formula columns (preview)](../../maker/data-platform/formula-columns.md)   
+[Work with formula columns](../../maker/data-platform/formula-columns.md)   
 [Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
 [Define rollup columns](../../maker/data-platform/define-rollup-fields.md)   
 [Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)   
+[Prompt columns (preview)](../../maker/data-platform/prompt-column.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
