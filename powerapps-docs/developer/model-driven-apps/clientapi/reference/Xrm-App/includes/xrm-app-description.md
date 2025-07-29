@@ -1,0 +1,1 @@
+Provides app-related methods.
