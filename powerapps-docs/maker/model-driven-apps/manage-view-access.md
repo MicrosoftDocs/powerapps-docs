@@ -2,7 +2,7 @@
 title: "Manage access to public system views"
 description: "Learn how to managed access with security roles to public system views for model-driven apps in Microsoft Power Apps"
 ms.custom: ""
-ms.date: 06/23/2025
+ms.date: 07/29/2025
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
