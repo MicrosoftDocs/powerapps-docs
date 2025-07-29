@@ -22,7 +22,7 @@ This sample shows how to perform the following column-level security operations 
 ## How to run this sample
 
 1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy.
-1. Follow the instructions in the [Configure users](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/README.md#configure-users) to create a second application user account without the system administrator role.
+1. Follow the instructions in the [Configure users](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/README.md#configure-users) section to create a second application user account without the system administrator role.
 1. Edit the `/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/appsettings.json` file to define a connection string specifying the Microsoft Dataverse instance you want to connect to for both the system administrator and second application user.
 1. Open the sample solution in Visual Studio and press **F5** to run the sample.
 
@@ -51,12 +51,12 @@ The static `Setup` method in this sample does the following:
 1. Create a solution publisher named `ColumnLevelSecuritySamplePublisher` with customization prefix of `sample` if it doesn't exist.
 1. Create a solution named `ColumnLevelSecuritySampleSolution` if it doesn't exist. All subsequent items created are created in the context of this solution.
 1. Create a table named `sample_Example` if it doesn't exist.
-1. Create 4 string columns in the `sample_Example` table if they don't exist. The table names are:
+1. Create 4 string columns in the `sample_Example` table if they don't exist. The table schema names are:
 
-   `sample_Email`
-   `sample_GovernmentId`
-   `sample_TelephoneNumber`
-   `sample_DateOfBirth`
+   - `sample_Email`
+   - `sample_GovernmentId`
+   - `sample_TelephoneNumber`
+   - `sample_DateOfBirth`
 
 1. Remove any existing sample data in the `sample_Example` table.
 1. Add three rows of sample data with information in each column of the `sample_Example` table.
@@ -99,7 +99,7 @@ The static `Run` method in this sample does the following:
 
 #### Masking
 
-1. Retrieve ID values for existing masking rules. Create new [Secured Masking Column (AttributeMaskingRule)](../../reference/entities/attributemaskingrule.md) records to specify masking rules for columns of the sample_Example table.
+1. Retrieve ID values for existing masking rules. Create new [Secured Masking Column (AttributeMaskingRule)](../../reference/entities/attributemaskingrule.md) records to specify masking rules for columns of the `sample_Example` table.
 1. Update the `canreadunmasked` column values of the [Field Permission (FieldPermission)](../../reference/entities/fieldpermission.md) records created earlier.
 1. Wait 30 seconds for the cache to catch up with the new objects created.
 1. Demonstrate that the application user can now retrieve data with masked values.
@@ -117,6 +117,6 @@ Use an exported solution to test the functionality of the sample configurations 
 
 The static `Cleanup` method in this sample does the following:
 
-When the `SampleSettings.DeleteCreatedObjects` setting in`appsettings.json` is `true`, the `Cleanup` method will try to delete all components created during Setup or Run. The goal is to return the environment to the original state. If you don't want the items to be deleted, you can change the setting to `false`.
+When the `SampleSettings.DeleteCreatedObjects` setting in `appsettings.json` is `true`, the `Cleanup` method will try to delete all components created during `Setup` or `Run`. The goal is to return the environment to the original state. If you don't want the items to be deleted, you can change the setting to `false`.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
