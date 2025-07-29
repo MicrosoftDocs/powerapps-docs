@@ -134,11 +134,25 @@ On the **Register your app** screen, register your application in Azure to estab
 
 The wrap wizard configures required API permissions automatically. To grant admin access:
 
+# [For Windows](#tab/windows)
+
 1. Open Windows PowerShell as administrator.
 2. Run these commands:
    ```powershell
    Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+   Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
+   Add-AdminAllowedThirdPartyApps
+   Get-AdminAllowedThirdPartyApps
+   ```
+3. Provide the App ID when prompted.
+
+# [For Mac](#tab/mac)
+
+1. Open Azure PowerShell as tenant admin.
+2. Run these commands:
+   ```powershell
+   Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -AllowClobber -Force
    Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
    Add-AdminAllowedThirdPartyApps
    Get-AdminAllowedThirdPartyApps
