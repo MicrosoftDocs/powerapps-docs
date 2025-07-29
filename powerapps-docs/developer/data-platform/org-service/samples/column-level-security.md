@@ -18,13 +18,18 @@ contributors:
 This sample shows how to perform column-level security operations using [Dataverse SDK for .NET](../overview.md).
 
 > [!div class="nextstepaction"]
-> [SDK for .NET column-level security sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity)
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity)
+
+## Prerequisites
+
+- Microsoft Visual Studio 2022
+- Access to Dataverse with system administrator privileges.
 
 ## How to run this sample
 
 1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy.
 1. Follow the instructions in the [Configure users](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/README.md#configure-users) section to create a second application user account without the system administrator role.
-1. Edit the `/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/appsettings.json` file to define a connection string specifying the Microsoft Dataverse instance you want to connect to for both the system administrator and second application user.
+1. Edit the [/ColumnLevelSecurity/appsettings.json](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/appsettings.json) file to define a connection string specifying the Microsoft Dataverse instance you want to connect to for both the system administrator and second application user.
 1. Open the sample solution in Visual Studio and press **F5** to run the sample.
 
 ## What this sample does
@@ -41,16 +46,31 @@ This sample demonstrates the capabilities described in [Column-level security wi
 - Enable masking of secured columns
 - Retrieve unmasked values for secured columns
 
+## Sample files
+
+The code for this sample is in the following files:
+
+|File|Description|
+|---------|---------|
+|`Program.cs`|Controls the flow of the sample. Contains definition of `Setup`, `Run`, and `Cleanup` methods and calls them in the `Main` method.|
+|`Examples.cs`|Contains methods that demonstrate operations related to column-level security operations.|
+|`Helpers.cs`|Contains methods used by the sample to manage setting up and running the sample. These methods aren't the focus of this sample.|
+
+This sample is designed to be resilient when errors occur so you should be able to run the sample again if it failed previously.
+
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample does the following operations:
+In order to create the scenario described in [What this sample does](#what-this-sample-does), the sample does the following operations:
 
 ### Setup
 
 The static `Setup` method in this sample does the following operations:
 
 1. Create a solution publisher named `ColumnLevelSecuritySamplePublisher` with customization prefix of `sample` if it doesn't exist.
-1. Create a solution named `ColumnLevelSecuritySampleSolution` if it doesn't exist. All subsequent items created are created in the context of this solution.
+1. Create a solution named `ColumnLevelSecuritySampleSolution` associated with the publisher if it doesn't exist. 
+
+   All subsequent solution-aware items are created in the context of this solution.
+
 1. Create a table named `sample_Example` if it doesn't exist.
 1. Create four string columns in the `sample_Example` table if they don't exist. The table schema names are:
 

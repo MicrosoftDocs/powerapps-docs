@@ -17,7 +17,7 @@ contributors:
 This sample shows how to perform column-level security operations using [Dataverse Web API](../overview.md) with PowerShell.
 
 > [!div class="nextstepaction"]
-> [View this sample code on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/ColumnLevelSecurity)
+> [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/ColumnLevelSecurity)
 
 ## Prerequisites
 
@@ -90,16 +90,21 @@ This sample is designed to be resilient when errors occur so you should be able 
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample does the following operations:
+In order to create the scenario described in [What this sample does](#what-this-sample-does), the sample does the following operations:
 
 ### Setup
 
 The `Setup` function in this sample does the following operations:
 
 1. Create a solution publisher named `ColumnLevelSecuritySamplePublisher` with customization prefix of `sample` if it doesn't exist.
-1. Create a solution named `ColumnLevelSecuritySampleSolution` if it doesn't exist. All subsequent items created are created in the context of this solution.
+1. Create a solution named `ColumnLevelSecuritySampleSolution` associated to the publisher if it doesn't exist. 
+
+   All subsequent solution-aware items are created in the context of this solution.
+
 1. Create a table named `sample_Example` if it doesn't exist.
-1. Create four string columns in the `sample_Example` table if they don't exist. The table schema names are:
+1. Create four string columns in the `sample_Example` table if they don't exist.
+
+   The table schema names are:
 
    - `sample_Email`
    - `sample_GovernmentId`
