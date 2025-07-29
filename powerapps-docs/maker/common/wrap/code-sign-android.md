@@ -19,7 +19,7 @@ contributors:
 This article explains how to manually code sign your Android (APK) app for Power Apps wrap. Sign your app for Android if you select Android as one of the [platforms](overview.md#app-platforms) when you create and build your [wrap project](wrap-how-to.md#steps-to-create-a-custom-branded-native-app-using-the-wrap-wizard).
 
 > [!IMPORTANT]
-To sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
+> To sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Before you begin
 
