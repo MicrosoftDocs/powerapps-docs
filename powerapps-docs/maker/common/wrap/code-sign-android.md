@@ -69,6 +69,14 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
+After generating the key, export the keystore certificate using the **exportcert** command:
+
+```
+keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
+```
+
+When prompted, enter the keystore password.
+
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
 ### Generate certificate
@@ -93,6 +101,8 @@ When prompted, enter the keystore password you created earlier.
 | **keystore** | Name of the keystore |
 | **keysize** | Size of each key |
 | **validity** | Validity of the key in days |
+| **exportcert** | Reads the certificate from the keystore |
+| **openssl** | Generates SHA1 key for Android |
 
 ## **For automatic key vault signing process**
 
@@ -108,6 +118,14 @@ When prompted:
 1. Enter a password for your keystore.
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
+
+After generating the key, export the keystore certificate using the **exportcert** command:
+
+```
+keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
+```
+
+When prompted, enter the keystore password.
 
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
@@ -133,6 +151,8 @@ When prompted, enter the keystore password you created earlier.
 | **keystore** | Name of the keystore. |
 | **keysize** | Size of each key. |
 | **validity** | Validity of the key in days. |
+| **exportcert** | Reads the certificate from the keystore |
+| **openssl** | Generates SHA1 key for Android |
 
 
 ## Manual signing of APK package (Not for KV signing)
