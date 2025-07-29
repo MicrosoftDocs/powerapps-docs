@@ -1517,8 +1517,10 @@
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
-          - name: Use monitor to troubleshoot custom pages
+          - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+        - name: Create a generative page
+          href: ./model-driven-apps/generative-pages.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views
@@ -1681,7 +1683,7 @@
             href: ./model-driven-apps/form-component-control.md
         - name: Troubleshoot forms
           items:
-          - name: Use Monitor to troubleshoot forms
+          - name: Use live monitor to troubleshoot forms
             href: ./model-driven-apps/monitor-form-checker.md#filter-live-monitor-for-form-related-issues
       - name: Use custom pages within model-driven apps
         items:
@@ -1701,7 +1703,7 @@
           href: ./model-driven-apps/page-code-components.md
         - name: Known issues with custom pages
           href: ./model-driven-apps/model-app-page-issues.md
-        - name: Use monitor to troubleshoot custom pages
+        - name: Use live monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
       - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
@@ -2114,6 +2116,8 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Prompt columns (preview)
+      href: ./data-platform/prompt-column.md
     - name: Work with Power Fx formula columns
       items:
       - name: Power Fx formula columns
@@ -2643,3 +2647,5 @@
     href: ./common/faq-visualize-view.md
   - name: FAQ for Agent APIs in model-driven apps
     href: ./common/faq-agent-api-component.md
+  - name: FAQ about generative pages in model-driven apps
+    href: ./common/faq-generative-pages-model-driven.md
