@@ -14,7 +14,7 @@ contributors:
 ---
 # Sample: Column-level security using Dataverse Web API (PowerShell)
 
-This sample shows how to perform column-level security operations using [Dataverse Web API](../overview.md) with PowerShell.
+This sample shows how to perform [column-level security](../../column-level-security.md) operations using [Dataverse Web API](../overview.md) with PowerShell.
 
 > [!div class="nextstepaction"]
 > [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/PS/ColumnLevelSecurity)
@@ -171,5 +171,9 @@ Use an exported solution to test the functionality of the sample configurations 
 The static `Cleanup` function in this sample does the following operations:
 
 When the `$DELETE_CREATED_OBJECTS` setting in `Helpers.ps1` is `true`, the `Cleanup` function tries to delete all components created during `Setup` or `Run`. The goal is to return the environment to the original state. If you don't want the items to be deleted, you can change the setting to `false`.
+
+### Related samples
+
+[Sample: Column-level security using Dataverse SDK for .NET](../../org-service/samples/column-level-security.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

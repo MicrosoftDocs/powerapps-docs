@@ -15,7 +15,7 @@ contributors:
 ---
 # Sample: Column-level security using Dataverse SDK for .NET
 
-This sample shows how to perform column-level security operations using [Dataverse SDK for .NET](../overview.md).
+This sample shows how to perform [column-level security](../../column-level-security.md) operations using [Dataverse SDK for .NET](../overview.md).
 
 > [!div class="nextstepaction"]
 > [View this sample on Github](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity)
@@ -139,5 +139,9 @@ Use an exported solution to test the functionality of the sample configurations 
 The static `Cleanup` method in this sample does the following operations:
 
 When the `SampleSettings.DeleteCreatedObjects` setting in `appsettings.json` is `true`, the `Cleanup` method tries to delete all components created during `Setup` or `Run`. The goal is to return the environment to the original state. If you don't want the items to be deleted, you can change the setting to `false`.
+
+### Related samples
+
+[Sample: Column-level security using Dataverse Web API (PowerShell)](column-level-security-powershell.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
