@@ -31,7 +31,7 @@ landingContent:
           - text: Copilot admin settings
             url: /power-platform/admin/settings-feature
           - text: FAQ about using AI responsibly
-            url: responsible-ai-overview.md
+            url: maker/common/responsible-ai-overview.md
 
   # Card
   - title: Use Plan designer
@@ -41,11 +41,11 @@ landingContent:
         links:
 
           - text: Overview and prerequisites
-            url: ../plan-designer/plan-designer.md
+            url: maker/plan-designer/plan-designer.md
           - text: Create a plan
-            url: ../plan-designer/create-plan.md
+            url: maker/plan-designer/create-plan.md
           - text: FAQ for the Plan designer
-            url: faq-plan-designer.md
+            url: maker/common/faq-plan-designer.md
 
   # Card
   - title: Copilot chat features
