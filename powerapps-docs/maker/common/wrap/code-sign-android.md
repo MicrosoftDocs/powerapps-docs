@@ -111,8 +111,6 @@ When prompted:
 
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-After generating the key, export the keystore certificate using the **exportcert** command:
-
 After generating the key, run this command to generate a certificate:
 
 ```
