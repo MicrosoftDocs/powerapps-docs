@@ -12,13 +12,13 @@ search.audienceType:
 ---
 # Column-level security with code
 
-Column-level security is applied for columns that contain particularly sensitive information. Passwords, bank account numbers, government ID, telephone numbers or email addresses can be secured at the column level.
+Column-level security is applied for columns that contain sensitive information. Passwords, bank account numbers, government ID, telephone numbers, or email addresses can be secured at the column level.
 
 This article explains how developers can work with column-level security capabilities using code and the Dataverse SDK for .NET or Web API. You don't need to write code to use this feature. [Learn how to configure column-level security to control access](/power-platform/admin/field-level-security). Developers should also understand how to configure column-level security using [Power Apps](https://powerapps.microsoft.com/).
 
 ## Discover which columns are secured
 
-Detect which columns are secured by retrieving the definition of the column and examining the boolean [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured). The following query examples return all the secured columns for an environment.
+Detect which columns are secured by retrieving the definition of the column and examining the boolean [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured). 
 
 There are two ways to discover which columns are secured with code. These ways are described in the following two sections:
 
@@ -89,7 +89,7 @@ OData-Version: 4.0
 **Response**:
 
 > [!NOTE]
-> The data represented in this response has been edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative secured column. In reality, the total amount of data returned is quite large depending on the number of tables in your environment.
+> The data represented in this response was edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative secured column. In reality, the total amount of data returned is large depending on the number of tables in your environment.
 
 This example shows how the [Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals) is one of the secured columns.
 
@@ -130,7 +130,7 @@ Content-Length: 5324876
 ### Retrieve FieldSecurityProfile for System Administrator role
 
 
-This method queries the Dataverse field permission table to identify columns that are secured by the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45`. This record manages access to secured columns for system administrators. Typically, only system administrators have the `prvReadFieldPermission` privilege to retrieve this data. 
+This method queries the Dataverse field permission table to identify columns that the [Field Security Profile (FieldSecurityProfile)](reference/entities/fieldsecurityprofile.md) record with ID `572329c1-a042-4e22-be47-367c6374ea45` secures. This record manages access to secured columns for system administrators. Typically, only system administrators have the `prvReadFieldPermission` privilege to retrieve this data.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -268,7 +268,7 @@ OData-Version: 4.0
 **Response**:
 
 > [!NOTE]
-> The data in this response is edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative column from one table. In reality, the total amount of data returned is quite large depending on the number of tables and columns in your environment.
+> The data in this response is edited to remove null property values returned in the `EntityMetadata` property and it only returns a single representative column from one table. In reality, the total amount of data returned is large depending on the number of tables and columns in your environment.
 
 This example shows the requested properties of the [Account.AccountCategoryCode column](/power-apps/developer/data-platform/reference/entities/account#BKMK_AccountCategoryCode) is one of the secured columns.
 
@@ -318,7 +318,7 @@ OData-Version: 4.0
 
 ## Secure a column with code
 
-It is easiest to [Secure a column](/power-platform/admin/field-level-security#enable-column-securit) using [Power Apps](https://make.powerapps.com/). If you need to automate this, use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
+It's easiest to [Secure a column](/power-platform/admin/field-level-security#enable-column-securit) using [Power Apps](https://make.powerapps.com/). If you need to automate securing a column, use code to update the column definition to set the [AttributeMetadata.IsSecured property](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.issecured) property as shown in the following examples:
 
 
 ### [SDK for .NET](#tab/sdk)
@@ -400,8 +400,8 @@ Associate field permissions to the field security profiles using the [`lk_fieldp
 |`EntityName`|String|The logical name of the table that contains the secured column.|
 |`AttributeLogicalName`|String|The logical name of the secured column.|
 |`CanCreate`|Choice|Whether create access is allowed. See [Field security permission type options](#field-security-permission-type-options)|
-|`CanRead`|Choice|Whether read access is allowed. [Field security permission type options](#field-security-permission-type-options)|
-|`CanUpdate`|Choice|Whether update access is allowed. [Field security permission type options](#field-security-permission-type-options)|
+|`CanRead`|Choice|Whether read access is allowed. See [Field security permission type options](#field-security-permission-type-options)|
+|`CanUpdate`|Choice|Whether update access is allowed. See [Field security permission type options](#field-security-permission-type-options)|
 |`CanReadUnmasked`|Choice|Whether an unmasked value can be retrieved when `CanRead` is **Allowed**.|
 
 #### Field security permission type options
@@ -436,15 +436,15 @@ The `PrincipalObjectAttributeAccess` table has these columns:
 
 #### Getting column AttributeId
 
-The `PrincipalObjectAttributeAccess.AttributeId` column uses the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) rather than the column logical name. You need to retrieve this from the metadata. If your application has a metadata cache, you can include this data and access it as needed.
+The `PrincipalObjectAttributeAccess.AttributeId` column uses the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) rather than the column logical name. You need to retrieve this value from the metadata. If your application has a metadata cache, you can include this data and access it as needed.
 
 #### Retrieve column AttributeId example
 
-This example shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value you will need to set the `PrincipalObjectAttributeAccess.AttributeId` column value.
+This example shows how to get the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value you need to set the `PrincipalObjectAttributeAccess.AttributeId` column value.
 
 ##### [SDK for .NET](#tab/sdk)
 
-The [Grant column access](#grant-column-access-example), [Modify column access](#modify-column-access-example), and [Revoke column access](#revoke-column-access-example) SDK for .NET examples use this `RetrieveColumnId` static method to retrieve the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value used in the `PrincipalObjectAttributeAccess.AttributeId` column.
+The [Grant column access](#grant-column-access-example), [Modify column access](#modify-column-access-example), and [Revoke column access](#revoke-column-access-example) SDK for .NET examples use the `RetrieveColumnId` static method to retrieve the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) value used in the `PrincipalObjectAttributeAccess.AttributeId` column.
 
 :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/Examples.cs" id="RetrieveColumnId":::
 
@@ -519,7 +519,7 @@ Content-Type: application/json
 
 **Response**:
 
-The primary key value for the created record is `784a01b1-cb61-f011-bec2-00224823101f`.  Use this to modify or delete access.
+The primary key value for the created record is `784a01b1-cb61-f011-bec2-00224823101f`. Use this value to identify records to modify or delete access.
 
 ```http
 HTTP/1.1 204 No Content
