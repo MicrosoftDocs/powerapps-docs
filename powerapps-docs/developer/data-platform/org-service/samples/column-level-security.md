@@ -142,6 +142,6 @@ When the `SampleSettings.DeleteCreatedObjects` setting in `appsettings.json` is 
 
 ### Related samples
 
-[Sample: Column-level security using Dataverse Web API (PowerShell)](column-level-security-powershell.md)
+[Sample: Column-level security using Dataverse Web API (PowerShell)](../../webapi/samples/column-level-security-powershell.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
