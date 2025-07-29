@@ -56,7 +56,7 @@ If you don't set environment variables:
 
 
 ## **For manual signing process**
-### Generate signature hash key
+### Generate signature hash key and certificate
 
 Run this command in the command prompt as an admin to generate a key:
 
@@ -69,19 +69,9 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-After generating the key, export the keystore certificate using the **exportcert** command:
-
-```
-keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
-```
-
-When prompted, enter the keystore password.
-
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-### Generate certificate
-
-Run this command to generate certificate
+After generating the key, run this command to generate certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
@@ -106,7 +96,7 @@ When prompted, enter the keystore password you created earlier.
 
 ## **For automatic key vault signing process**
 
-### Generate signature hash key
+### Generate signature hash key and certificate
 
 Open a command prompt as an admin and run this command to generate a key:
 
@@ -119,19 +109,11 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-After generating the key, export the keystore certificate using the **exportcert** command:
-
-```
-keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64
-```
-
-When prompted, enter the keystore password.
-
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-### Generate certificate
+After generating the key, export the keystore certificate using the **exportcert** command:
 
-Run this command to generate a certificate:
+After generating the key, run this command to generate a certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl sha1 -binary | openssl base64
