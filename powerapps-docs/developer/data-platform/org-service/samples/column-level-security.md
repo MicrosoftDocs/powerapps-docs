@@ -1,10 +1,11 @@
 ---
 title: "Sample: Column-level security using Dataverse SDK for .NET"
 description: "This sample shows how to work with column-level security using the Dataverse SDK for .NET."
-ms.date: 07/28/2025
-author: JimDaly
-ms.author: jdaly
-ms.reviewer: pehecke
+ms.date: 07/30/2025
+author: paulliew
+ms.subservice: dataverse-developer
+ms.author: paulliew
+ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
@@ -14,7 +15,7 @@ contributors:
 ---
 # Sample: Column-level security using Dataverse SDK for .NET
 
-This sample shows how to perform the following column-level security operations using [Dataverse SDK for .NET](../overview.md).
+This sample shows how to perform column-level security operations using [Dataverse SDK for .NET](../overview.md).
 
 > [!div class="nextstepaction"]
 > [SDK for .NET column-level security sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity)

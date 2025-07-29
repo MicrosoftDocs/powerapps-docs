@@ -778,4 +778,5 @@ Preference-Applied: odata.include-annotations="*"
 
 [Security and data access](security-model.md)   
 [Sharing and assigning](security-sharing-assigning.md)   
-[Sample: Column-level security using Dataverse SDK for .NET](org-service/samples/column-level-security.md)
+[Sample: Column-level security using Dataverse SDK for .NET](org-service/samples/column-level-security.md)   
+[Sample: Column-level security using Dataverse Web API (PowerShell)](webapi/samples/column-level-security-powershell.md)
