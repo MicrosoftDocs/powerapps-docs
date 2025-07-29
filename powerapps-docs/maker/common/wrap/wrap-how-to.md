@@ -159,6 +159,8 @@ The wrap wizard configures required API permissions automatically. To grant admi
    ```
 3. Provide the App ID when prompted.
 
+---
+
 After completing these steps, the registration screen will look like this:
 
 :::image type="content" source="media/how-to-v2/new-app-reg-updated.png" alt-text="Screenshot that shows registration screen with green ticks for steps completed" lightbox="media/how-to-v2/new-app-reg-updated.png":::
