@@ -49,3 +49,9 @@ For a canvas app running on Power Apps mobile, there are UI elements, their curr
 If the **Optimize for devices** option is off for that screen, the screen loads and displays in a web view, running similarly to how it would in a desktop's web browser. When **Optimize for devices** is on, each element's current state is passed over to the device where it renders that same element, but using native UI. So now we have a natively rendered, long blue button in the upper-left corner. Business logic modifies state or takes actions, which runs the same way it did before. When the natively rendered button is selected, the device runs Power Fx and the user is navigated to the specified screen.
 
 Each [control needs a device-optimized](./optimize-for-devices-controls.md), native equivalent that supports the same properties so it can render the way a maker expects. During preview, there are some [limitations](optimize-for-devices-controls.md#known-limitations) to which controls and properties are supported. Whether a control is classic or modern, it filters the list of controls for device-optimized ones.
+
+### Related information
+
+[Supported platforms for running apps using the Power Apps mobile app](/power-apps/limits-and-config#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)   
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
