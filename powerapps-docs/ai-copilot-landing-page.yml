@@ -25,11 +25,11 @@ landingContent:
         links:
 
           - text: Copilot in Power Apps overview
-            url: ../canvas-apps/ai-overview.md
+            url: maker/canvas-apps/ai-overview.md
           - text: Turn off Copilot
-            url: ../canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
+            url: maker/canvas-apps/ai-overview.md#turn-off-copilot-preview-features-in-power-apps
           - text: Copilot admin settings
-            url: /power-platform/admin/settings-feature
+            url: /power-platform/admin/settings-features
           - text: FAQ about using AI responsibly
             url: maker/common/responsible-ai-overview.md
 
@@ -67,11 +67,11 @@ landingContent:
         links:
 
           - text: Supervise agents using agent feed (preview)
-            url: ../../user/supervise-agents-with-agent-feed.md
+            url: user/supervise-agents-with-agent-feed.md
           - text: Add agents to be supervised in app (preview)
-            url: ../model-driven-apps/add-agents-to-app.md
+            url: maker/model-driven-apps/add-agents-to-app.md
           - text: Add an agent response control (preview)
-            url: ../model-driven-apps/form-designer-add-configure-agent-response.md
+            url: maker/model-driven-apps/form-designer-add-configure-agent-response.md
           - text: Build an agent to automate your business process (preview)
             url: maker/canvas-apps/agent-builder.md
 
@@ -85,7 +85,7 @@ landingContent:
           - text: Get assistance filling forms
             url: user/form-filling-assistance.md
           - text: Smart paste into forms (preview)
-            url: user/form-filling-assistance.md#smart-paste-into-forms-preview
+            url: user/form-filling-assistance.md#use-smart-paste-preview
           - text: Use Copilot in the email rich text editor
             url: maker/model-driven-apps/use-copilot-email-assist.md
 
@@ -103,7 +103,7 @@ landingContent:
           - text: See row summaries in a form and view
             url: user/record-summaries.md
           - text: Create a custom row summary
-            url: maker/data-platform/configure-form-row-summary.md#create-a-custom-row-summary
+            url: maker/data-platform/configure-form-row-summary.md
 
   # Card
   - title: Summarization and contextual insight
@@ -145,7 +145,7 @@ landingContent:
         links:
 
           - text: Add a Copilot control to a canvas app (preview)
-            url: amaker/canvas-apps/add-ai-copilot.md
+            url: maker/canvas-apps/add-ai-copilot.md
           - text: Add a custom Copilot to a canvas app (preview)
             url: maker/canvas-apps/add-custom-copilot.md
 
