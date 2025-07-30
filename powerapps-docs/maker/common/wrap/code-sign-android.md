@@ -58,7 +58,7 @@ If you don't set environment variables:
 ## **For manual signing process**
 ### Generate signature hash key and certificate
 
-Run this command in the command prompt as an admin to generate a key:
+Run this command in the command prompt:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
@@ -69,9 +69,9 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
+:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="Screenshot of keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-After generating the key, run this command to generate certificate:
+Run this command to generate key and certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
@@ -98,7 +98,7 @@ When prompted, enter the keystore password you created earlier.
 
 ### Generate signature hash key and certificate
 
-Open a command prompt as an admin and run this command to generate a key:
+Run this command in the command prompt:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
@@ -111,7 +111,7 @@ When prompted:
 
 :::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
 
-After generating the key, run this command to generate a certificate:
+Run this command to generate key and certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl sha1 -binary | openssl base64
