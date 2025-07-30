@@ -19,7 +19,7 @@ contributors:
 This article explains how to manually code sign your Android (APK) app for Power Apps wrap. Sign your app for Android if you select Android as one of the [platforms](overview.md#app-platforms) when you create and build your [wrap project](wrap-how-to.md#steps-to-create-a-custom-branded-native-app-using-the-wrap-wizard).
 
 > [!IMPORTANT]
-To sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
+> To sign an AAB app for Google Play distribution, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Before you begin
 
@@ -56,9 +56,9 @@ If you don't set environment variables:
 
 
 ## **For manual signing process**
-### Generate signature hash key
+### Generate signature hash key and certificate
 
-Run this command in the command prompt as an admin to generate a key:
+Run this command in the command prompt:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000
@@ -69,11 +69,7 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
-
-### Generate certificate
-
-Run this command to generate certificate
+Run this command to generate key and certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.jks | openssl sha1 -binary | openssl base64
@@ -93,12 +89,14 @@ When prompted, enter the keystore password you created earlier.
 | **keystore** | Name of the keystore |
 | **keysize** | Size of each key |
 | **validity** | Validity of the key in days |
+| **exportcert** | Reads the certificate from the keystore |
+| **openssl** | Generates SHA1 key for Android |
 
 ## **For automatic key vault signing process**
 
-### Generate signature hash key
+### Generate signature hash key and certificate
 
-Open a command prompt as an admin and run this command to generate a key:
+Run this command in the command prompt:
 
 ```
 keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000
@@ -109,11 +107,7 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
-
-### Generate certificate
-
-Run this command to generate a certificate:
+Run this command to generate key and certificate:
 
 ```
 keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl sha1 -binary | openssl base64
@@ -121,7 +115,7 @@ keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl s
 
 When prompted, enter the keystore password you created earlier.
 
-:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
+:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="Screenshot of keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
 
 **Parameters explained:**
 
@@ -133,6 +127,8 @@ When prompted, enter the keystore password you created earlier.
 | **keystore** | Name of the keystore. |
 | **keysize** | Size of each key. |
 | **validity** | Validity of the key in days. |
+| **exportcert** | Reads the certificate from the keystore |
+| **openssl** | Generates SHA1 key for Android |
 
 
 ## Manual signing of APK package (Not for KV signing)
