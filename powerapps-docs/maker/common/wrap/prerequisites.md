@@ -42,7 +42,7 @@ Before you use Wrap to create native mobile apps from your Power Apps canvas app
 
 ## Sign-in options in Wrap
 
-- **Manual code sign-in for Android and iOS**: This option is best for most scenarios. For Android, [generate keys](code-sign-android.md#generate-key-and-signature-hash) and [generate a signature hash](code-sign-android.md#generate-signature-hash-key) before you start. You need the signature hash to set up the [Redirect URI](overview.md#redirect-uri). More information: [manual code sign-in for Android](code-sign-android.md).
+- **Manual code sign-in for Android and iOS**: This option is best for most scenarios. For Android, [generate keys](code-sign-android.md#generate-key-and-signature-hash) and [generate a signature hash](code-sign-android.md#generate-signature-hash-key-and-certificate) before you start. You need the signature hash to set up the [Redirect URI](overview.md#redirect-uri). More information: [manual code sign-in for Android](code-sign-android.md).
 - **Automatic sign-in using Wrap wizard**: This option requires an Azure key vault. More information: [creating a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
 ## Add canvas app to a solution

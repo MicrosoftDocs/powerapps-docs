@@ -2,17 +2,17 @@
 title: Get the session or app ID
 description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
 author: mduelae
-
 ms.subservice: troubleshoot
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/09/2021
+ms.date: 06/02/2025
 ms.author: tapanm
 search.audienceType: 
   - maker
 contributors:
   - mduelae
+  - vamseedillimsft
 ---
 # Get session and app ID details
 
@@ -72,6 +72,17 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 1. Select **About**.
    :::image type="content" source="media/get-sessionid/session-details-mda.png" alt-text="Session ID displayed with session details":::
 
+### When running a model-driven app on a phone or a tablet
+
+1. In the upper left corner, select the hamburger icon (the three lines).
+:::image type="content" source="media/get-sessionid/navigation-option.png" alt-text="Hamburger icon at the top left corner with Enabled users list":::
+1. Select the settings icon (gear) in the lower left corner of the screen.
+:::image type="content" source="media/get-sessionid/setting-option.png" alt-text="Navigation pane showing different options icons along with settings icon":::
+1. Select **Session Details** at the bottom of the screen.
+:::image type="content" source="media/get-sessionid/setting-screen.png" alt-text="Setting screen showing session details option":::
+1. Review the session details.
+:::image type="content" source="media/get-sessionid/session-details-screen.png" alt-text="Session details":::
+
 ## Get the session ID for Power Apps (make.powerapps.com)
 
 1. Sign into Power Apps (make.powerapps.com), and then, on the command bar, select **Settings** (gear).
@@ -94,7 +105,5 @@ Get the app ID for either a canvas or model-driven app:
     The app ID appears at the bottom of the **Details** pane for that app.
 
     ![Copy app ID from details.](./media/get-sessionid/app-id.png "Copy app ID from details")
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
