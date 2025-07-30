@@ -240,6 +240,6 @@ When you run the program using the `OutputQueryExpression` method, the output sh
 
 ### Related articles
 
-[Query data using QueryExpression](overview.md)
-[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)
+[Query data using QueryExpression](overview.md)  
+[Sample: Retrieve multiple with the QueryExpression class](../samples/retrieve-multiple-queryexpression-class.md)  
 [Sample: Use QueryExpression with a paging cookie](../samples/use-queryexpression-with-a-paging-cookie.md)
