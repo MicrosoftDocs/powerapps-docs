@@ -6,7 +6,7 @@ author: gregli-msft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/25/2025
+ms.date: 07/30/2025
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -185,7 +185,9 @@ Then you can simply use **Radius** anywhere that you can use a number, and it wi
 If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **[@Radius]**.
 
 ### Reserved variable names
-Avoid using any of the following variable names. These are names of App properties and using them can cause variable-name collisions that result in unexpected app behavior. 
+
+Avoid using any of the following variable names. These are names of app properties and using them can cause variable-name collisions that result in unexpected app behavior. 
+
 - ActiveScreen
 - DesignHeight
 - DesignWidth
