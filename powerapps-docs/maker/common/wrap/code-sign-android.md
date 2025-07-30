@@ -69,8 +69,6 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="Screenshot of keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
-
 Run this command to generate key and certificate:
 
 ```
@@ -109,8 +107,6 @@ When prompted:
 1. Enter your name, organization, location, and other required details.
 1. Confirm the information.
 
-:::image type="content" source="media/code-sign-android/codeSignIn1.png" alt-text="A screenshot with keytool command using the parameters in the preceding example." lightbox="media/code-sign-android/codeSignIn1.png":::
-
 Run this command to generate key and certificate:
 
 ```
@@ -119,7 +115,7 @@ keytool -exportcert -alias powerappswrap -keystore powerappswrap.pfx | openssl s
 
 When prompted, enter the keystore password you created earlier.
 
-:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="A screenshot with keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
+:::image type="content" source="media/code-sign-android/codeSignIn3.png" alt-text="Screenshot of keytool command using the parameters in the example shown earlier." lightbox="media/code-sign-android/codeSignIn3.png":::
 
 **Parameters explained:**
 
